@@ -30,3 +30,6 @@ Pour un hébergement GitHub Pages, déposer les fichiers à la racine du dépôt
 3. Intégrer `Qui ment le mieux ?`
 4. Ajouter une vraie couche multijoueur avec création/jonction de rooms
 5. Remplacer les avatars emoji par les personnages officiels AK'Games
+
+
+PERSOS A FAIRE FINI
