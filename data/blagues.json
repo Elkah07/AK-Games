@@ -1,0 +1,702 @@
+[
+  {
+    "id": "nulles_001_pourquoi_les_plongeurs_plongent_ils_toujours_en_ar",
+    "setup": "Pourquoi les plongeurs plongent-ils toujours en arrière ?",
+    "punchline": "Parce que sinon ils tombent dans le bateau.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_002_quel_est_le_comble_pour_un_electricien",
+    "setup": "Quel est le comble pour un électricien ?",
+    "punchline": "De ne pas être au courant.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_003_pourquoi_les_squelettes_ne_se_battent_jamais_entre",
+    "setup": "Pourquoi les squelettes ne se battent jamais entre eux ?",
+    "punchline": "Parce qu'ils n'ont pas le cran.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_004_que_dit_une_imprimante_dans_l_eau",
+    "setup": "Que dit une imprimante dans l'eau ?",
+    "punchline": "J'ai papier.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_005_pourquoi_les_maths_sont_tristes",
+    "setup": "Pourquoi les maths sont tristes ?",
+    "punchline": "Parce qu'elles ont trop de problèmes.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_006_quel_fruit_deteste_le_plus_attendre",
+    "setup": "Quel fruit déteste le plus attendre ?",
+    "punchline": "La poire, parce qu'elle poireaute.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_007_que_fait_un_crocodile_quand_il_rencontre_une_super",
+    "setup": "Que fait un crocodile quand il rencontre une superbe femelle ?",
+    "punchline": "Il Lacoste.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_008_pourquoi_les_poissons_n_aiment_pas_le_tennis",
+    "setup": "Pourquoi les poissons n'aiment pas le tennis ?",
+    "punchline": "Parce qu'ils ont peur du filet.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_009_quel_est_le_sport_prefere_des_insectes",
+    "setup": "Quel est le sport préféré des insectes ?",
+    "punchline": "Le criquet.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_010_pourquoi_les_canards_ont_ils_autant_de_plumes",
+    "setup": "Pourquoi les canards ont-ils autant de plumes ?",
+    "punchline": "Pour couvrir leur derrière.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_011_que_dit_un_mur_a_un_autre_mur",
+    "setup": "Que dit un mur à un autre mur ?",
+    "punchline": "On se retrouve à l'angle.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_012_quel_est_le_comble_pour_un_jardinier",
+    "setup": "Quel est le comble pour un jardinier ?",
+    "punchline": "Raconter des salades.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_013_pourquoi_les_vaches_ferment_elles_les_yeux_pendant",
+    "setup": "Pourquoi les vaches ferment-elles les yeux pendant la traite ?",
+    "punchline": "Pour faire du lait concentré.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_014_que_fait_une_fraise_sur_un_cheval",
+    "setup": "Que fait une fraise sur un cheval ?",
+    "punchline": "Tagada tagada.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_015_comment_appelle_t_on_un_chat_tombe_dans_un_pot_de_",
+    "setup": "Comment appelle-t-on un chat tombé dans un pot de peinture le jour de Noël ?",
+    "punchline": "Un chat-peint de Noël.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_016_pourquoi_les_ordinateurs_ont_ils_froid",
+    "setup": "Pourquoi les ordinateurs ont-ils froid ?",
+    "punchline": "Parce qu'ils laissent leurs fenêtres ouvertes.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_017_que_dit_un_zero_a_un_huit",
+    "setup": "Que dit un zéro à un huit ?",
+    "punchline": "Jolie ceinture.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_018_pourquoi_le_calendrier_est_il_toujours_stresse",
+    "setup": "Pourquoi le calendrier est-il toujours stressé ?",
+    "punchline": "Parce que ses jours sont comptés.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_019_quel_est_le_gateau_prefere_des_arbres",
+    "setup": "Quel est le gâteau préféré des arbres ?",
+    "punchline": "Le mille-feuille.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_020_pourquoi_les_fantomes_mentent_ils_mal",
+    "setup": "Pourquoi les fantômes mentent-ils mal ?",
+    "punchline": "Parce qu'on peut lire à travers eux.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_021_que_dit_une_ampoule_quand_elle_a_une_idee",
+    "setup": "Que dit une ampoule quand elle a une idée ?",
+    "punchline": "Ça m'éclaire.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_022_pourquoi_les_escargots_n_aiment_ils_pas_les_demena",
+    "setup": "Pourquoi les escargots n'aiment-ils pas les déménagements ?",
+    "punchline": "Parce qu'ils ont déjà leur maison sur le dos.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_023_quel_est_le_comble_pour_un_serrurier",
+    "setup": "Quel est le comble pour un serrurier ?",
+    "punchline": "Se faire mettre à la porte.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_024_pourquoi_la_banane_va_t_elle_chez_le_medecin",
+    "setup": "Pourquoi la banane va-t-elle chez le médecin ?",
+    "punchline": "Parce qu'elle ne se sent pas dans sa peau.",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "nulles_025_que_dit_un_citron_cambrioleur",
+    "setup": "Que dit un citron cambrioleur ?",
+    "punchline": "Plus un zeste !",
+    "category": "nulles",
+    "adult": false
+  },
+  {
+    "id": "absurdes_001_j_ai_croise_un_escargot_presse_ce_matin",
+    "setup": "J'ai croisé un escargot pressé ce matin.",
+    "punchline": "Il avait pris un raccourci de trois centimètres.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_002_mon_frigo_et_moi_on_ne_se_parle_plus",
+    "setup": "Mon frigo et moi, on ne se parle plus.",
+    "punchline": "Il est devenu beaucoup trop froid.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_003_j_ai_achete_une_chaise_tres_timide",
+    "setup": "J'ai acheté une chaise très timide.",
+    "punchline": "Elle n'ose jamais prendre place.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_004_mon_cactus_m_a_demande_de_prendre_mes_distances",
+    "setup": "Mon cactus m'a demandé de prendre mes distances.",
+    "punchline": "Il trouve notre relation trop piquante.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_005_j_ai_voulu_apprendre_la_patience_a_mon_micro_ondes",
+    "setup": "J'ai voulu apprendre la patience à mon micro-ondes.",
+    "punchline": "Il m'a dit d'attendre une minute.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_006_mon_reveil_a_demissionne",
+    "setup": "Mon réveil a démissionné.",
+    "punchline": "Il en avait marre qu'on le frappe tous les matins.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_007_j_ai_un_ami_invisible_tres_susceptible",
+    "setup": "J'ai un ami invisible très susceptible.",
+    "punchline": "Il ne supporte pas qu'on l'ignore.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_008_mon_miroir_me_copie_depuis_des_annees",
+    "setup": "Mon miroir me copie depuis des années.",
+    "punchline": "Je vais finir par porter plainte.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_009_j_ai_lance_une_entreprise_de_parachutes_d_occasion",
+    "setup": "J'ai lancé une entreprise de parachutes d'occasion.",
+    "punchline": "Pour l'instant, aucun client ne revient.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_010_ma_plante_verte_suit_une_therapie",
+    "setup": "Ma plante verte suit une thérapie.",
+    "punchline": "Elle avait besoin de tourner la page... enfin, la feuille.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_011_j_ai_demande_a_ma_valise_si_elle_allait_bien",
+    "setup": "J'ai demandé à ma valise si elle allait bien.",
+    "punchline": "Elle m'a répondu qu'elle avait beaucoup de bagages émotionnels.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_012_mon_canape_connait_tous_mes_secrets",
+    "setup": "Mon canapé connaît tous mes secrets.",
+    "punchline": "Heureusement, il ne bouge jamais de chez moi.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_013_j_ai_adopte_une_horloge",
+    "setup": "J'ai adopté une horloge.",
+    "punchline": "Depuis, elle passe son temps à me donner l'heure sans que je demande.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_014_mon_aspirateur_est_tres_ambitieux",
+    "setup": "Mon aspirateur est très ambitieux.",
+    "punchline": "Il veut gravir les échelons, mais il reste au ras du sol.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_015_j_ai_essaye_de_discuter_avec_une_porte",
+    "setup": "J'ai essayé de discuter avec une porte.",
+    "punchline": "La conversation était fermée.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_016_mon_telephone_fait_du_yoga",
+    "setup": "Mon téléphone fait du yoga.",
+    "punchline": "Il passe sa vie en mode avion.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_017_j_ai_vu_un_nuage_tres_organise",
+    "setup": "J'ai vu un nuage très organisé.",
+    "punchline": "Il avait un plan pluie.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_018_mon_grille_pain_est_susceptible",
+    "setup": "Mon grille-pain est susceptible.",
+    "punchline": "Il prend tout au premier degré.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_019_j_ai_donne_un_gps_a_mon_poisson",
+    "setup": "J'ai donné un GPS à mon poisson.",
+    "punchline": "Il tourne toujours en rond, mais avec assurance.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_020_mon_oreiller_a_ecrit_mes_memoires",
+    "setup": "Mon oreiller a écrit mes mémoires.",
+    "punchline": "Il connaît toute l'histoire de mes nuits.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_021_j_ai_achete_des_chaussures_philosophiques",
+    "setup": "J'ai acheté des chaussures philosophiques.",
+    "punchline": "Elles remettent chaque pas en question.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_022_mon_parapluie_est_optimiste",
+    "setup": "Mon parapluie est optimiste.",
+    "punchline": "Il voit toujours le verre à moitié plein.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_023_j_ai_croise_un_fantome_au_chomage",
+    "setup": "J'ai croisé un fantôme au chômage.",
+    "punchline": "Il cherchait un poste à hanter.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_024_mon_chargeur_me_juge",
+    "setup": "Mon chargeur me juge.",
+    "punchline": "Il dit que je manque d'énergie.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "absurdes_025_j_ai_demande_conseil_a_une_boussole",
+    "setup": "J'ai demandé conseil à une boussole.",
+    "punchline": "Elle m'a remis dans la bonne direction.",
+    "category": "absurdes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_001_qu_est_ce_qui_est_jaune_et_qui_attend",
+    "setup": "Qu'est-ce qui est jaune et qui attend ?",
+    "punchline": "Jonathan.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_002_qu_est_ce_qui_est_vert_et_qui_monte_et_qui_descend",
+    "setup": "Qu'est-ce qui est vert et qui monte et qui descend ?",
+    "punchline": "Un petit pois dans un ascenseur.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_003_qu_est_ce_qui_fait_le_tour_du_monde_sans_bouger",
+    "setup": "Qu'est-ce qui fait le tour du monde sans bouger ?",
+    "punchline": "Un timbre.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_004_qu_est_ce_qui_a_des_dents_mais_ne_mord_jamais",
+    "setup": "Qu'est-ce qui a des dents mais ne mord jamais ?",
+    "punchline": "Un peigne.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_005_qu_est_ce_qui_monte_mais_ne_redescend_jamais",
+    "setup": "Qu'est-ce qui monte mais ne redescend jamais ?",
+    "punchline": "Ton âge.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_006_qu_est_ce_qui_devient_plus_humide_en_sechant",
+    "setup": "Qu'est-ce qui devient plus humide en séchant ?",
+    "punchline": "Une serviette.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_007_qu_est_ce_qui_a_un_cou_mais_pas_de_tete",
+    "setup": "Qu'est-ce qui a un cou mais pas de tête ?",
+    "punchline": "Une bouteille.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_008_qu_est_ce_qui_a_quatre_pieds_mais_ne_marche_pas",
+    "setup": "Qu'est-ce qui a quatre pieds mais ne marche pas ?",
+    "punchline": "Une table.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_009_qu_est_ce_qui_peut_remplir_une_piece_sans_prendre_",
+    "setup": "Qu'est-ce qui peut remplir une pièce sans prendre de place ?",
+    "punchline": "La lumière.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_010_plus_j_en_ai_moins_je_vois_qui_suis_je",
+    "setup": "Plus j'en ai, moins je vois. Qui suis-je ?",
+    "punchline": "Le brouillard.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_011_je_suis_plein_de_trous_mais_je_retiens_l_eau_qui_s",
+    "setup": "Je suis plein de trous mais je retiens l'eau. Qui suis-je ?",
+    "punchline": "Une éponge.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_012_je_commence_la_nuit_et_je_termine_le_matin_qui_sui",
+    "setup": "Je commence la nuit et je termine le matin. Qui suis-je ?",
+    "punchline": "La lettre N.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_013_qu_est_ce_qui_court_sans_jamais_avoir_de_jambes",
+    "setup": "Qu'est-ce qui court sans jamais avoir de jambes ?",
+    "punchline": "L'eau.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_014_qu_est_ce_qui_a_une_tete_et_une_queue_mais_pas_de_",
+    "setup": "Qu'est-ce qui a une tête et une queue mais pas de corps ?",
+    "punchline": "Une pièce de monnaie.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_015_qu_est_ce_qu_on_casse_avant_de_l_utiliser",
+    "setup": "Qu'est-ce qu'on casse avant de l'utiliser ?",
+    "punchline": "Un œuf.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_016_qu_est_ce_qui_peut_etre_casse_sans_etre_touche",
+    "setup": "Qu'est-ce qui peut être cassé sans être touché ?",
+    "punchline": "Une promesse.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_017_qu_est_ce_qui_t_appartient_mais_que_les_autres_uti",
+    "setup": "Qu'est-ce qui t'appartient mais que les autres utilisent plus que toi ?",
+    "punchline": "Ton prénom.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_018_qu_est_ce_qui_a_beaucoup_de_cles_mais_n_ouvre_aucu",
+    "setup": "Qu'est-ce qui a beaucoup de clés mais n'ouvre aucune porte ?",
+    "punchline": "Un piano.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_019_qu_est_ce_qui_est_toujours_devant_toi_mais_que_tu_",
+    "setup": "Qu'est-ce qui est toujours devant toi mais que tu ne peux jamais voir ?",
+    "punchline": "Le futur.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_020_qu_est_ce_qui_a_des_aiguilles_mais_ne_pique_pas",
+    "setup": "Qu'est-ce qui a des aiguilles mais ne pique pas ?",
+    "punchline": "Une horloge.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_021_quel_mois_de_l_annee_a_28_jours",
+    "setup": "Quel mois de l'année a 28 jours ?",
+    "punchline": "Tous.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_022_qu_est_ce_qui_descend_mais_ne_monte_jamais",
+    "setup": "Qu'est-ce qui descend mais ne monte jamais ?",
+    "punchline": "La pluie.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_023_qu_est_ce_qui_peut_voyager_partout_en_restant_dans",
+    "setup": "Qu'est-ce qui peut voyager partout en restant dans un coin ?",
+    "punchline": "Un timbre.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_024_plus_tu_en_prends_plus_tu_en_laisses_derriere_toi_",
+    "setup": "Plus tu en prends, plus tu en laisses derrière toi. Qu'est-ce que c'est ?",
+    "punchline": "Des pas.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "devinettes_025_qu_est_ce_qui_a_un_il_mais_ne_voit_pas",
+    "setup": "Qu'est-ce qui a un œil mais ne voit pas ?",
+    "punchline": "Une aiguille.",
+    "category": "devinettes",
+    "adult": false
+  },
+  {
+    "id": "observation_001_pourquoi_ouvre_t_on_le_frigo_trois_fois_en_dix_min",
+    "setup": "Pourquoi ouvre-t-on le frigo trois fois en dix minutes ?",
+    "punchline": "Parce qu'on espère qu'une raclette va apparaître spontanément.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_002_le_vrai_test_de_maturite",
+    "setup": "Le vrai test de maturité ?",
+    "punchline": "Réussir à jeter une boîte vide au lieu de la remettre dans le placard.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_003_pourquoi_le_mot_de_passe_wi_fi_est_il_toujours_le_",
+    "setup": "Pourquoi le mot de passe Wi-Fi est-il toujours le secret le mieux gardé d'une maison ?",
+    "punchline": "Parce qu'il donne plus de pouvoir que les clés.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_004_mon_niveau_de_sport_prefere",
+    "setup": "Mon niveau de sport préféré ?",
+    "punchline": "Changer de côté dans le lit.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_005_pourquoi_repond_on_quoi_avant_de_comprendre_finale",
+    "setup": "Pourquoi répond-on « quoi ? » avant de comprendre finalement ce qu'on vient d'entendre ?",
+    "punchline": "Le cerveau aime demander un délai supplémentaire.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_006_une_reunion_aurait_pu_etre_un_mail",
+    "setup": "Une réunion aurait pu être un mail.",
+    "punchline": "Et le mail aurait pu être ignoré.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_007_pourquoi_range_t_on_tellement_bien_quelque_chose_q",
+    "setup": "Pourquoi range-t-on tellement bien quelque chose qu'on ne le retrouve plus jamais ?",
+    "punchline": "Parce que le rangement est parfois une disparition organisée.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_008_le_plus_grand_mensonge_du_dimanche_soir",
+    "setup": "Le plus grand mensonge du dimanche soir ?",
+    "punchline": "Demain, je me couche tôt.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_009_pourquoi_une_minute_au_micro_ondes_dure_t_elle_plu",
+    "setup": "Pourquoi une minute au micro-ondes dure-t-elle plus longtemps qu'une heure sur TikTok ?",
+    "punchline": "La physique refuse d'en parler.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_010_le_telephone_tombe_toujours_sur_l_ecran",
+    "setup": "Le téléphone tombe toujours sur l'écran.",
+    "punchline": "La tartine a enfin trouvé un rival.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_011_pourquoi_met_on_une_alarme_puis_cinq_autres",
+    "setup": "Pourquoi met-on une alarme puis cinq autres ?",
+    "punchline": "Parce qu'on croit profondément au développement personnel de notre futur nous.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_012_le_panier_a_linge_a_une_competence_speciale",
+    "setup": "Le panier à linge a une compétence spéciale.",
+    "punchline": "Il se remplit plus vite qu'on ne peut le vider.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_013_pourquoi_les_chaussettes_disparaissent_elles_dans_",
+    "setup": "Pourquoi les chaussettes disparaissent-elles dans la machine ?",
+    "punchline": "Elles ont un programme d'évasion.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_014_la_difference_entre_je_regarde_un_episode_et_la_re",
+    "setup": "La différence entre « je regarde un épisode » et la réalité ?",
+    "punchline": "Environ sept épisodes.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_015_pourquoi_les_gens_parlent_ils_plus_fort_au_telepho",
+    "setup": "Pourquoi les gens parlent-ils plus fort au téléphone quand le réseau est mauvais ?",
+    "punchline": "Parce qu'apparemment, les ondes ont besoin d'encouragement.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_016_le_canape_sait_exactement_quand_tu_dois_faire_quel",
+    "setup": "Le canapé sait exactement quand tu dois faire quelque chose.",
+    "punchline": "C'est là qu'il devient soudain incroyablement confortable.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_017_pourquoi_cherche_t_on_son_telephone_avec_la_lampe_",
+    "setup": "Pourquoi cherche-t-on son téléphone avec la lampe de son téléphone ?",
+    "punchline": "Parce que la panique désactive temporairement le cerveau.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_018_le_mot_rapidement_dans_une_recette",
+    "setup": "Le mot « rapidement » dans une recette ?",
+    "punchline": "Le début d'un mensonge.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_019_pourquoi_les_sacs_de_courses_ont_ils_tous_la_meme_",
+    "setup": "Pourquoi les sacs de courses ont-ils tous la même mission ?",
+    "punchline": "Couper la circulation dans tes doigts à trois mètres de chez toi.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_020_le_meilleur_moyen_de_se_souvenir_d_une_tache_impor",
+    "setup": "Le meilleur moyen de se souvenir d'une tâche importante ?",
+    "punchline": "S'en souvenir exactement quand il est trop tard.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_021_pourquoi_nettoie_t_on_tout_l_appartement_avant_la_",
+    "setup": "Pourquoi nettoie-t-on tout l'appartement avant la visite d'une personne qui sait parfaitement qu'on n'est pas comme ça ?",
+    "punchline": "Pour entretenir la légende.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_022_le_vrai_luxe_adulte",
+    "setup": "Le vrai luxe adulte ?",
+    "punchline": "Annuler un plan et rester chez soi sans culpabiliser.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_023_pourquoi_les_ecouteurs_se_nouent_ils_seuls_dans_un",
+    "setup": "Pourquoi les écouteurs se nouent-ils seuls dans une poche vide ?",
+    "punchline": "Ils ont une vie sociale.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_024_le_plus_grand_risque_d_un_message_vocal_de_six_min",
+    "setup": "Le plus grand risque d'un message vocal de six minutes ?",
+    "punchline": "Découvrir qu'il ne disait finalement rien.",
+    "category": "observation",
+    "adult": false
+  },
+  {
+    "id": "observation_025_pourquoi_un_carton_vide_reste_t_il_chez_nous_trois",
+    "setup": "Pourquoi un carton vide reste-t-il chez nous trois mois ?",
+    "punchline": "Parce qu'il pourrait servir. À quoi ? Personne ne le saura jamais.",
+    "category": "observation",
+    "adult": false
+  }
+]

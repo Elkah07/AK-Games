@@ -6,7 +6,9 @@ const state = {
   players: [],
   draftPlayer: { name: "", avatarId: null },
   currentCategory: null,
-  quiDeNous: null
+  quiDeNous: null,
+  laughDuel: null,
+  bestLiar: null
 };
 
 const avatars = [
@@ -76,6 +78,23 @@ const whoUsCategoryLabels = {
   soiree: "🎉 Soirée",
   relations: "💘 Relations & crush",
   adulte: "🔞 Osé"
+};
+
+const laughCategoryLabels = {
+  nulles: "🥴 Blagues nulles",
+  absurdes: "🌀 Absurdes",
+  devinettes: "❓ Devinettes",
+  observation: "👀 Vie quotidienne",
+  adulte: "🔞 Adulte"
+};
+
+const liarCategoryLabels = {
+  excuses: "🧾 Excuses",
+  improbable: "🛸 Improbable",
+  quotidien: "🏠 Quotidien",
+  dossiers: "👀 Dossiers",
+  chaos: "💥 Chaos",
+  adulte: "🔞 Adulte"
 };
 
 const screen = document.querySelector("#screen");
@@ -374,11 +393,17 @@ function renderGames() {
   title.textContent = category.name;
   setBackVisible(true);
 
+  const readyGames = new Set([
+    "Qui de nous ?",
+    "Le premier qui rit a perdu",
+    "Qui ment le mieux ?"
+  ]);
+
   screen.innerHTML = `
     <section class="game-list">
       ${category.games.map(game => {
         const disabled = game === "Blind Test";
-        const ready = game === "Qui de nous ?";
+        const ready = readyGames.has(game);
 
         return `
           <button class="game-card ${disabled ? "disabled" : ""}" ${disabled ? "disabled" : ""} data-game="${escapeHtml(game)}">
@@ -399,16 +424,35 @@ function renderGames() {
     btn.addEventListener("click", () => {
       const game = btn.dataset.game;
 
+      if (readyGames.has(game) && state.mode !== "single") {
+        pushScreen("games");
+        renderMultiNotReady(game);
+        return;
+      }
+
       if (game === "Qui de nous ?") {
-        if (state.mode !== "single") {
-          pushScreen("games");
-          renderMultiNotReady(game);
+        pushScreen("games");
+        resetWhoUsState();
+        renderWhoUsSetup();
+        return;
+      }
+
+      if (game === "Le premier qui rit a perdu") {
+        pushScreen("games");
+        resetLaughDuelState();
+        renderLaughDuelSetup();
+        return;
+      }
+
+      if (game === "Qui ment le mieux ?") {
+        if (state.players.length < 3) {
+          alert("« Qui ment le mieux ? » nécessite au moins 3 joueurs.");
           return;
         }
 
         pushScreen("games");
-        resetWhoUsState();
-        renderWhoUsSetup();
+        resetBestLiarState();
+        renderBestLiarSetup();
         return;
       }
 
@@ -977,6 +1021,1053 @@ function renderWhoUsAward(icon, label, player, detail) {
 }
 
 
+
+/* =========================================================
+   LE PREMIER QUI RIT A PERDU
+   ========================================================= */
+
+function resetLaughDuelState() {
+  state.laughDuel = {
+    player1Id: state.players[0]?.id || null,
+    player2Id: state.players[1]?.id || null,
+    mode: "sudden",
+    categories: ["nulles", "absurdes", "devinettes", "observation"],
+    includeAdult: false,
+    jokePool: [],
+    usedJokeIds: [],
+    currentTurnId: null,
+    currentJoke: null,
+    punchlineVisible: false,
+    lives: {}
+  };
+}
+
+function renderLaughDuelSetup() {
+  if (!state.laughDuel) resetLaughDuelState();
+  const game = state.laughDuel;
+
+  title.textContent = "Le premier qui rit a perdu";
+  setBackVisible(true);
+
+  screen.innerHTML = `
+    <section class="hero compact-hero">
+      <h2>😂 Le premier qui rit a perdu</h2>
+      <p>Deux joueurs face à face. À tour de rôle, l’un raconte une blague. Le premier qui rigole perd.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Choisissez les deux adversaires</h2>
+
+      <div class="duel-player-select">
+        <div>
+          <label class="helper" for="laughPlayer1">Joueur 1</label>
+          <select id="laughPlayer1" class="text-input">
+            ${state.players.map(player => `
+              <option value="${player.id}" ${game.player1Id === player.id ? "selected" : ""}>
+                ${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)}
+              </option>
+            `).join("")}
+          </select>
+        </div>
+
+        <div class="duel-vs">VS</div>
+
+        <div>
+          <label class="helper" for="laughPlayer2">Joueur 2</label>
+          <select id="laughPlayer2" class="text-input">
+            ${state.players.map(player => `
+              <option value="${player.id}" ${game.player2Id === player.id ? "selected" : ""}>
+                ${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)}
+              </option>
+            `).join("")}
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Règle du duel</h2>
+      <div class="stacked-choice">
+        <label class="option-card mini-option">
+          <input type="radio" name="laughMode" value="sudden" ${game.mode === "sudden" ? "checked" : ""}>
+          <span>
+            <strong>⚡ Mort subite</strong><br>
+            <span class="helper">Le premier rire met immédiatement fin au duel.</span>
+          </span>
+        </label>
+
+        <label class="option-card mini-option">
+          <input type="radio" name="laughMode" value="lives" ${game.mode === "lives" ? "checked" : ""}>
+          <span>
+            <strong>❤️ 3 vies</strong><br>
+            <span class="helper">Chaque rire fait perdre une vie. Le premier à zéro perd.</span>
+          </span>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Types de blagues</h2>
+      <div class="check-grid">
+        ${["nulles", "absurdes", "devinettes", "observation"].map(cat => `
+          <label class="option-card mini-option">
+            <input type="checkbox" data-laugh-cat="${cat}" ${game.categories.includes(cat) ? "checked" : ""}>
+            <span><strong>${laughCategoryLabels[cat]}</strong></span>
+          </label>
+        `).join("")}
+      </div>
+    </section>
+
+    ${state.adult ? `
+      <section class="card">
+        <label class="option-card">
+          <input id="laughAdultToggle" type="checkbox" ${game.includeAdult ? "checked" : ""}>
+          <span>
+            <strong>🔞 Ajouter l’humour adulte</strong><br>
+            <span class="helper">Ajoute des blagues plus suggestives au tirage.</span>
+          </span>
+        </label>
+      </section>
+    ` : ""}
+
+    <button id="startLaughDuel" class="primary-btn full">Lancer le duel</button>
+  `;
+
+  document.querySelector("#laughPlayer1").addEventListener("change", e => game.player1Id = e.target.value);
+  document.querySelector("#laughPlayer2").addEventListener("change", e => game.player2Id = e.target.value);
+
+  document.querySelectorAll('input[name="laughMode"]').forEach(input => {
+    input.addEventListener("change", e => game.mode = e.target.value);
+  });
+
+  document.querySelectorAll("[data-laugh-cat]").forEach(input => {
+    input.addEventListener("change", () => {
+      const cat = input.dataset.laughCat;
+      if (input.checked && !game.categories.includes(cat)) game.categories.push(cat);
+      if (!input.checked) game.categories = game.categories.filter(c => c !== cat);
+    });
+  });
+
+  const adultToggle = document.querySelector("#laughAdultToggle");
+  if (adultToggle) {
+    adultToggle.addEventListener("change", e => game.includeAdult = e.target.checked);
+  }
+
+  document.querySelector("#startLaughDuel").addEventListener("click", startLaughDuel);
+}
+
+async function startLaughDuel() {
+  const game = state.laughDuel;
+
+  if (!game.player1Id || !game.player2Id || game.player1Id === game.player2Id) {
+    alert("Choisis deux joueurs différents.");
+    return;
+  }
+
+  if (!game.categories.length && !game.includeAdult) {
+    alert("Choisis au moins un type de blague.");
+    return;
+  }
+
+  screen.innerHTML = `<div class="notice">Préparation du duel…</div>`;
+
+  try {
+    const classicResponse = await fetch("data/blagues.json");
+    if (!classicResponse.ok) throw new Error("Impossible de charger les blagues.");
+
+    const classicJokes = await classicResponse.json();
+    let pool = classicJokes.filter(joke => game.categories.includes(joke.category));
+
+    if (state.adult && game.includeAdult) {
+      const adultResponse = await fetch("data/blagues-adulte.json");
+      if (!adultResponse.ok) throw new Error("Impossible de charger les blagues adultes.");
+      const adultJokes = await adultResponse.json();
+      pool = pool.concat(adultJokes);
+    }
+
+    if (!pool.length) throw new Error("Aucune blague disponible avec ces réglages.");
+
+    game.jokePool = shuffleArray(pool);
+    game.usedJokeIds = [];
+    game.currentTurnId = Math.random() < 0.5 ? game.player1Id : game.player2Id;
+    game.currentJoke = null;
+    game.punchlineVisible = false;
+    game.lives = {
+      [game.player1Id]: game.mode === "lives" ? 3 : 1,
+      [game.player2Id]: game.mode === "lives" ? 3 : 1
+    };
+
+    state.history = [];
+    renderLaughDuelIntro();
+  } catch (error) {
+    screen.innerHTML = `
+      <div class="notice">
+        <strong>Impossible de lancer le duel.</strong><br>
+        ${escapeHtml(error.message)}
+      </div>
+      <button id="retryLaugh" class="primary-btn full">Réessayer</button>
+    `;
+
+    document.querySelector("#retryLaugh").addEventListener("click", startLaughDuel);
+  }
+}
+
+function getLaughPlayers() {
+  const game = state.laughDuel;
+  const player1 = state.players.find(player => player.id === game.player1Id);
+  const player2 = state.players.find(player => player.id === game.player2Id);
+  return { player1, player2 };
+}
+
+function getOtherLaughPlayer(playerId) {
+  const { player1, player2 } = getLaughPlayers();
+  return player1.id === playerId ? player2 : player1;
+}
+
+function renderLaughDuelIntro() {
+  const game = state.laughDuel;
+  const teller = state.players.find(player => player.id === game.currentTurnId);
+  const listener = getOtherLaughPlayer(teller.id);
+
+  title.textContent = "Le duel commence";
+  setBackVisible(false);
+
+  screen.innerHTML = `
+    <section class="duel-stage">
+      <div class="duel-faces">
+        <div class="duel-face-card active">
+          <span>${avatarById(teller.avatarId).emoji}</span>
+          <strong>${escapeHtml(teller.name)}</strong>
+          <small>Commence à faire rire</small>
+        </div>
+
+        <div class="duel-vs big">VS</div>
+
+        <div class="duel-face-card">
+          <span>${avatarById(listener.avatarId).emoji}</span>
+          <strong>${escapeHtml(listener.name)}</strong>
+          <small>Garde ton sérieux</small>
+        </div>
+      </div>
+
+      <h2>Ne riez surtout pas.</h2>
+      <p>${game.mode === "lives" ? "Vous avez 3 vies chacun." : "Le premier rire met fin au duel."}</p>
+    </section>
+
+    <button id="beginLaughTurn" class="primary-btn full">Commencer</button>
+  `;
+
+  document.querySelector("#beginLaughTurn").addEventListener("click", renderLaughTurnChoice);
+}
+
+function renderLaughLives() {
+  const game = state.laughDuel;
+  const { player1, player2 } = getLaughPlayers();
+
+  if (game.mode !== "lives") return "";
+
+  return `
+    <div class="lives-row">
+      <span>${avatarById(player1.avatarId).emoji} ${escapeHtml(player1.name)} : ${"❤️".repeat(game.lives[player1.id])}${"🖤".repeat(3 - game.lives[player1.id])}</span>
+      <span>${avatarById(player2.avatarId).emoji} ${escapeHtml(player2.name)} : ${"❤️".repeat(game.lives[player2.id])}${"🖤".repeat(3 - game.lives[player2.id])}</span>
+    </div>
+  `;
+}
+
+function renderLaughTurnChoice() {
+  const game = state.laughDuel;
+  const teller = state.players.find(player => player.id === game.currentTurnId);
+  const listener = getOtherLaughPlayer(teller.id);
+
+  title.textContent = `${teller.name}, à toi`;
+  setBackVisible(false);
+
+  screen.innerHTML = `
+    ${renderLaughLives()}
+
+    <section class="question-stage laugh-turn-stage">
+      <div class="giant-avatar">${avatarById(teller.avatarId).emoji}</div>
+      <span class="category-chip">À toi de faire rire ${escapeHtml(listener.name)}</span>
+      <h2>${escapeHtml(teller.name)}, choisis ton arme.</h2>
+      <p>Tu peux utiliser une blague de l’application ou raconter la tienne.</p>
+    </section>
+
+    <div class="grid grid-2">
+      <button id="giveJoke" class="card action-card">
+        <strong>🎲 Donne-moi une blague</strong>
+        <span>L’application t’en tire une au hasard.</span>
+      </button>
+
+      <button id="ownJoke" class="card action-card">
+        <strong>😏 J’en ai une</strong>
+        <span>Raconte ta propre blague.</span>
+      </button>
+    </div>
+  `;
+
+  document.querySelector("#giveJoke").addEventListener("click", drawLaughJoke);
+  document.querySelector("#ownJoke").addEventListener("click", renderOwnLaughJoke);
+}
+
+function drawLaughJoke() {
+  const game = state.laughDuel;
+  let available = game.jokePool.filter(joke => !game.usedJokeIds.includes(joke.id));
+
+  if (!available.length) {
+    game.usedJokeIds = [];
+    available = [...game.jokePool];
+  }
+
+  game.currentJoke = available[Math.floor(Math.random() * available.length)];
+  game.usedJokeIds.push(game.currentJoke.id);
+  game.punchlineVisible = false;
+
+  renderLaughJokeCard();
+}
+
+function renderLaughJokeCard() {
+  const game = state.laughDuel;
+  const teller = state.players.find(player => player.id === game.currentTurnId);
+  const listener = getOtherLaughPlayer(teller.id);
+  const joke = game.currentJoke;
+
+  title.textContent = "Fais-le/la craquer";
+  setBackVisible(false);
+
+  screen.innerHTML = `
+    ${renderLaughLives()}
+
+    <section class="joke-card">
+      <span class="category-chip">${laughCategoryLabels[joke.category] || "😂 Blague"}</span>
+      <h2>${escapeHtml(joke.setup)}</h2>
+
+      ${game.punchlineVisible ? `
+        <div class="punchline">${escapeHtml(joke.punchline)}</div>
+      ` : `
+        <button id="revealPunchline" class="secondary-btn">Révéler la chute</button>
+      `}
+    </section>
+
+    ${game.punchlineVisible ? renderLaughOutcomeButtons(teller, listener) : ""}
+  `;
+
+  const revealBtn = document.querySelector("#revealPunchline");
+  if (revealBtn) {
+    revealBtn.addEventListener("click", () => {
+      game.punchlineVisible = true;
+      renderLaughJokeCard();
+    });
+  }
+
+  bindLaughOutcomeButtons();
+}
+
+function renderOwnLaughJoke() {
+  const game = state.laughDuel;
+  const teller = state.players.find(player => player.id === game.currentTurnId);
+  const listener = getOtherLaughPlayer(teller.id);
+
+  title.textContent = "Ta blague, ton moment";
+  setBackVisible(false);
+
+  screen.innerHTML = `
+    ${renderLaughLives()}
+
+    <section class="question-stage laugh-turn-stage">
+      <div class="giant-avatar">${avatarById(teller.avatarId).emoji}</div>
+      <span class="category-chip">Blague personnelle</span>
+      <h2>Vas-y ${escapeHtml(teller.name)}.</h2>
+      <p>Fais rire ${escapeHtml(listener.name)}. Quand tu as terminé, indique ce qu’il s’est passé.</p>
+    </section>
+
+    ${renderLaughOutcomeButtons(teller, listener)}
+  `;
+
+  bindLaughOutcomeButtons();
+}
+
+function renderLaughOutcomeButtons(teller, listener) {
+  return `
+    <section class="laugh-outcomes">
+      <button class="primary-btn laugh-result-btn" data-laugh-result="listener">
+        😂 ${escapeHtml(listener.name)} a ri
+      </button>
+
+      <button class="danger-btn laugh-result-btn" data-laugh-result="teller">
+        🤦 ${escapeHtml(teller.name)} a ri à sa propre blague
+      </button>
+
+      <button class="secondary-btn laugh-result-btn" data-laugh-result="none">
+        😐 Personne n’a ri
+      </button>
+    </section>
+  `;
+}
+
+function bindLaughOutcomeButtons() {
+  document.querySelectorAll("[data-laugh-result]").forEach(btn => {
+    btn.addEventListener("click", () => handleLaughResult(btn.dataset.laughResult));
+  });
+}
+
+function handleLaughResult(resultType) {
+  const game = state.laughDuel;
+  const teller = state.players.find(player => player.id === game.currentTurnId);
+  const listener = getOtherLaughPlayer(teller.id);
+
+  if (resultType === "none") {
+    game.currentTurnId = listener.id;
+    game.currentJoke = null;
+    game.punchlineVisible = false;
+    renderLaughTurnTransition(teller, listener, null);
+    return;
+  }
+
+  const laughingPlayer = resultType === "listener" ? listener : teller;
+  game.lives[laughingPlayer.id] -= 1;
+
+  if (game.lives[laughingPlayer.id] <= 0) {
+    const winner = getOtherLaughPlayer(laughingPlayer.id);
+    renderLaughDuelEnd(winner, laughingPlayer);
+    return;
+  }
+
+  const nextTeller = listener;
+  game.currentTurnId = nextTeller.id;
+  game.currentJoke = null;
+  game.punchlineVisible = false;
+
+  renderLaughTurnTransition(teller, nextTeller, laughingPlayer);
+}
+
+function renderLaughTurnTransition(previousTeller, nextTeller, laughingPlayer) {
+  title.textContent = laughingPlayer ? "Un rire de moins" : "Toujours sérieux";
+  setBackVisible(false);
+
+  const alcoholText = state.alcohol && laughingPlayer
+    ? `<div class="alcohol-callout">🍻 ${escapeHtml(laughingPlayer.name)} prend une petite gorgée pour ce rire.</div>`
+    : "";
+
+  screen.innerHTML = `
+    <section class="handoff-stage">
+      <div class="success-mark">${laughingPlayer ? "😂" : "😐"}</div>
+      <h2>${laughingPlayer ? `${escapeHtml(laughingPlayer.name)} a craqué !` : "Personne n’a ri."}</h2>
+      <p>C’est maintenant à <strong>${escapeHtml(nextTeller.name)}</strong> de tenter sa chance.</p>
+    </section>
+
+    ${alcoholText}
+
+    <button id="nextLaughTurn" class="primary-btn full">Tour suivant</button>
+  `;
+
+  document.querySelector("#nextLaughTurn").addEventListener("click", renderLaughTurnChoice);
+}
+
+function renderLaughDuelEnd(winner, loser) {
+  title.textContent = "Fin du duel";
+  setBackVisible(false);
+
+  screen.innerHTML = `
+    <section class="winner-stage">
+      <div class="winner-crown">👑</div>
+      <div class="giant-avatar">${avatarById(winner.avatarId).emoji}</div>
+      <h2>${escapeHtml(winner.name)} gagne le duel !</h2>
+      <p>${escapeHtml(loser.name)} a été la première personne à craquer.</p>
+    </section>
+
+    ${state.alcohol ? `<div class="alcohol-callout">🍻 ${escapeHtml(loser.name)} prend une gorgée de défaite.</div>` : ""}
+
+    <div class="toolbar">
+      <button id="laughRematch" class="secondary-btn">Revanche</button>
+      <button id="laughOtherGame" class="primary-btn">Choisir un autre jeu</button>
+    </div>
+  `;
+
+  document.querySelector("#laughRematch").addEventListener("click", () => {
+    const game = state.laughDuel;
+    game.currentTurnId = Math.random() < 0.5 ? game.player1Id : game.player2Id;
+    game.currentJoke = null;
+    game.punchlineVisible = false;
+    game.usedJokeIds = [];
+    game.lives = {
+      [game.player1Id]: game.mode === "lives" ? 3 : 1,
+      [game.player2Id]: game.mode === "lives" ? 3 : 1
+    };
+    renderLaughDuelIntro();
+  });
+
+  document.querySelector("#laughOtherGame").addEventListener("click", () => {
+    state.laughDuel = null;
+    renderPlayChoice();
+  });
+}
+
+/* =========================================================
+   QUI MENT LE MIEUX ?
+   ========================================================= */
+
+function resetBestLiarState() {
+  state.bestLiar = {
+    roundCount: 5,
+    categories: ["excuses", "improbable", "quotidien", "dossiers", "chaos"],
+    includeAdult: false,
+    prompts: [],
+    currentRound: 0,
+    currentWriterIndex: 0,
+    currentVoterIndex: 0,
+    currentAnswers: [],
+    currentVotes: {},
+    scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    rounds: []
+  };
+}
+
+function renderBestLiarSetup() {
+  if (!state.bestLiar) resetBestLiarState();
+  const game = state.bestLiar;
+
+  title.textContent = "Qui ment le mieux ?";
+  setBackVisible(true);
+
+  screen.innerHTML = `
+    <section class="hero compact-hero">
+      <h2>🤥 Qui ment le mieux ?</h2>
+      <p>Tout le monde invente un mensonge. Les réponses sont mélangées, puis le groupe vote pour la plus convaincante.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Nombre de manches</h2>
+      <div class="choice-row">
+        ${[3, 5, 10].map(n => `
+          <button class="choice-pill ${game.roundCount === n ? "active" : ""}" data-liar-rounds="${n}">${n}</button>
+        `).join("")}
+      </div>
+
+      <div class="form-group top-gap">
+        <label for="customLiarRounds">Personnalisé</label>
+        <input id="customLiarRounds" class="text-input" type="number" min="1" max="30" value="${game.roundCount}">
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Types de situations</h2>
+      <div class="check-grid">
+        ${["excuses", "improbable", "quotidien", "dossiers", "chaos"].map(cat => `
+          <label class="option-card mini-option">
+            <input type="checkbox" data-liar-cat="${cat}" ${game.categories.includes(cat) ? "checked" : ""}>
+            <span><strong>${liarCategoryLabels[cat]}</strong></span>
+          </label>
+        `).join("")}
+      </div>
+    </section>
+
+    ${state.adult ? `
+      <section class="card">
+        <label class="option-card">
+          <input id="liarAdultToggle" type="checkbox" ${game.includeAdult ? "checked" : ""}>
+          <span>
+            <strong>🔞 Ajouter les situations adultes</strong><br>
+            <span class="helper">Ajoute des scénarios de crush, ex et rendez-vous plus osés.</span>
+          </span>
+        </label>
+      </section>
+    ` : ""}
+
+    <section class="notice">
+      Minimum : 3 joueurs. Il est impossible de voter pour son propre mensonge.
+    </section>
+
+    <button id="startBestLiar" class="primary-btn full">Lancer la partie</button>
+  `;
+
+  document.querySelectorAll("[data-liar-rounds]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      game.roundCount = Number(btn.dataset.liarRounds);
+      renderBestLiarSetup();
+    });
+  });
+
+  document.querySelector("#customLiarRounds").addEventListener("input", e => {
+    game.roundCount = Math.max(1, Math.min(30, Number(e.target.value) || 1));
+  });
+
+  document.querySelectorAll("[data-liar-cat]").forEach(input => {
+    input.addEventListener("change", () => {
+      const cat = input.dataset.liarCat;
+      if (input.checked && !game.categories.includes(cat)) game.categories.push(cat);
+      if (!input.checked) game.categories = game.categories.filter(c => c !== cat);
+    });
+  });
+
+  const adultToggle = document.querySelector("#liarAdultToggle");
+  if (adultToggle) {
+    adultToggle.addEventListener("change", e => game.includeAdult = e.target.checked);
+  }
+
+  document.querySelector("#startBestLiar").addEventListener("click", startBestLiarGame);
+}
+
+async function startBestLiarGame() {
+  const game = state.bestLiar;
+
+  if (state.players.length < 3) {
+    alert("Ajoute au moins 3 joueurs.");
+    return;
+  }
+
+  if (!game.categories.length && !game.includeAdult) {
+    alert("Choisis au moins une catégorie.");
+    return;
+  }
+
+  screen.innerHTML = `<div class="notice">Préparation du concours de mythos…</div>`;
+
+  try {
+    const classicResponse = await fetch("data/qui-ment-prompts.json");
+    if (!classicResponse.ok) throw new Error("Impossible de charger les situations.");
+
+    const classicPrompts = await classicResponse.json();
+    let pool = classicPrompts.filter(prompt => game.categories.includes(prompt.category));
+
+    if (state.adult && game.includeAdult) {
+      const adultResponse = await fetch("data/qui-ment-prompts-adulte.json");
+      if (!adultResponse.ok) throw new Error("Impossible de charger les situations adultes.");
+      const adultPrompts = await adultResponse.json();
+      pool = pool.concat(adultPrompts);
+    }
+
+    if (!pool.length) throw new Error("Aucune situation disponible avec ces réglages.");
+
+    game.prompts = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.roundCount = game.prompts.length;
+    game.currentRound = 0;
+    game.currentWriterIndex = 0;
+    game.currentVoterIndex = 0;
+    game.currentAnswers = [];
+    game.currentVotes = {};
+    game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.rounds = [];
+
+    state.history = [];
+    renderBestLiarRoundIntro();
+  } catch (error) {
+    screen.innerHTML = `
+      <div class="notice">
+        <strong>Impossible de lancer le jeu.</strong><br>
+        ${escapeHtml(error.message)}
+      </div>
+      <button id="retryBestLiar" class="primary-btn full">Réessayer</button>
+    `;
+
+    document.querySelector("#retryBestLiar").addEventListener("click", startBestLiarGame);
+  }
+}
+
+function currentBestLiarPrompt() {
+  return state.bestLiar.prompts[state.bestLiar.currentRound];
+}
+
+function renderBestLiarRoundIntro() {
+  const game = state.bestLiar;
+  const prompt = currentBestLiarPrompt();
+
+  game.currentWriterIndex = 0;
+  game.currentVoterIndex = 0;
+  game.currentAnswers = [];
+  game.currentVotes = {};
+
+  title.textContent = `Manche ${game.currentRound + 1}/${game.roundCount}`;
+  setBackVisible(false);
+
+  screen.innerHTML = `
+    <section class="game-progress">
+      <span>Manche ${game.currentRound + 1}/${game.roundCount}</span>
+      <div class="progress-track">
+        <div class="progress-fill" style="width:${((game.currentRound + 1) / game.roundCount) * 100}%"></div>
+      </div>
+    </section>
+
+    <section class="question-stage liar-prompt-stage">
+      <span class="category-chip">${liarCategoryLabels[prompt.category] || "🤥 Mensonge"}</span>
+      <h2>${escapeHtml(prompt.prompt)}</h2>
+      <p>Inventez chacun votre meilleure réponse. Plus elle semble crédible, plus vous avez de chances de piéger le groupe.</p>
+    </section>
+
+    <button id="startWritingLies" class="primary-btn full">Commencer les réponses</button>
+  `;
+
+  document.querySelector("#startWritingLies").addEventListener("click", renderBestLiarWriterGate);
+}
+
+function renderBestLiarWriterGate() {
+  const game = state.bestLiar;
+  const writer = state.players[game.currentWriterIndex];
+
+  title.textContent = "Réponse secrète";
+
+  screen.innerHTML = `
+    <section class="handoff-stage">
+      <div class="giant-avatar">${avatarById(writer.avatarId).emoji}</div>
+      <h2>${escapeHtml(writer.name)}, à toi d’inventer.</h2>
+      <p>Prends le téléphone sans montrer ta réponse aux autres.</p>
+    </section>
+
+    <button id="readyToLie" class="primary-btn full">Je suis prêt(e)</button>
+  `;
+
+  document.querySelector("#readyToLie").addEventListener("click", renderBestLiarWriterForm);
+}
+
+function renderBestLiarWriterForm() {
+  const game = state.bestLiar;
+  const writer = state.players[game.currentWriterIndex];
+  const prompt = currentBestLiarPrompt();
+
+  title.textContent = `${writer.name} invente`;
+
+  screen.innerHTML = `
+    <section class="card">
+      <span class="category-chip">${liarCategoryLabels[prompt.category] || "🤥"}</span>
+      <h2>${escapeHtml(prompt.prompt)}</h2>
+    </section>
+
+    <section class="card">
+      <div class="form-group">
+        <label for="lieAnswer">Ton mensonge</label>
+        <textarea id="lieAnswer" class="text-input text-area" maxlength="280" placeholder="Écris une réponse suffisamment crédible pour tromper les autres…"></textarea>
+        <span id="lieCounter" class="helper">0/280</span>
+      </div>
+    </section>
+
+    <button id="saveLieAnswer" class="primary-btn full">Valider ma réponse</button>
+  `;
+
+  const textarea = document.querySelector("#lieAnswer");
+  const counter = document.querySelector("#lieCounter");
+
+  textarea.addEventListener("input", () => {
+    counter.textContent = `${textarea.value.length}/280`;
+  });
+
+  document.querySelector("#saveLieAnswer").addEventListener("click", () => {
+    const answer = textarea.value.trim();
+
+    if (answer.length < 3) {
+      alert("Écris une réponse un peu plus complète.");
+      return;
+    }
+
+    game.currentAnswers.push({
+      id: `answer_${game.currentRound}_${writer.id}`,
+      playerId: writer.id,
+      text: answer
+    });
+
+    game.currentWriterIndex += 1;
+
+    if (game.currentWriterIndex < state.players.length) {
+      renderBestLiarAnswerSaved();
+    } else {
+      game.currentAnswers = shuffleArray(game.currentAnswers);
+      renderBestLiarRevealAnswers();
+    }
+  });
+}
+
+function renderBestLiarAnswerSaved() {
+  const nextWriter = state.players[state.bestLiar.currentWriterIndex];
+
+  title.textContent = "Réponse enregistrée";
+
+  screen.innerHTML = `
+    <section class="handoff-stage">
+      <div class="success-mark">✓</div>
+      <h2>Mensonge enregistré.</h2>
+      <p>Passe maintenant le téléphone à <strong>${escapeHtml(nextWriter.name)}</strong>.</p>
+    </section>
+
+    <button id="nextLieWriter" class="primary-btn full">Continuer</button>
+  `;
+
+  document.querySelector("#nextLieWriter").addEventListener("click", renderBestLiarWriterGate);
+}
+
+function renderBestLiarRevealAnswers() {
+  const game = state.bestLiar;
+  const prompt = currentBestLiarPrompt();
+
+  title.textContent = "Les mensonges sont prêts";
+  setBackVisible(false);
+
+  screen.innerHTML = `
+    <section class="card centered-card">
+      <span class="category-chip">${liarCategoryLabels[prompt.category] || "🤥"}</span>
+      <h2>${escapeHtml(prompt.prompt)}</h2>
+      <p class="helper">Lisez toutes les réponses à voix haute. Les auteurs restent secrets jusqu’aux résultats.</p>
+    </section>
+
+    <section class="anonymous-answer-list">
+      ${game.currentAnswers.map((answer, index) => `
+        <article class="anonymous-answer-card">
+          <span class="answer-number">${index + 1}</span>
+          <p>${escapeHtml(answer.text)}</p>
+        </article>
+      `).join("")}
+    </section>
+
+    <button id="startLieVotes" class="primary-btn full">Passer aux votes</button>
+  `;
+
+  document.querySelector("#startLieVotes").addEventListener("click", () => {
+    game.currentVoterIndex = 0;
+    renderBestLiarVoterGate();
+  });
+}
+
+function renderBestLiarVoterGate() {
+  const game = state.bestLiar;
+  const voter = state.players[game.currentVoterIndex];
+
+  title.textContent = "Vote secret";
+
+  screen.innerHTML = `
+    <section class="handoff-stage">
+      <div class="giant-avatar">${avatarById(voter.avatarId).emoji}</div>
+      <h2>${escapeHtml(voter.name)}, choisis le meilleur mensonge.</h2>
+      <p>Tu ne pourras pas voter pour ta propre réponse.</p>
+    </section>
+
+    <button id="readyToVoteLie" class="primary-btn full">Je suis prêt(e)</button>
+  `;
+
+  document.querySelector("#readyToVoteLie").addEventListener("click", renderBestLiarVoteChoice);
+}
+
+function renderBestLiarVoteChoice() {
+  const game = state.bestLiar;
+  const voter = state.players[game.currentVoterIndex];
+
+  title.textContent = `${voter.name} vote`;
+
+  const availableAnswers = game.currentAnswers.filter(answer => answer.playerId !== voter.id);
+
+  screen.innerHTML = `
+    <section class="card centered-card">
+      <span class="category-chip">Vote secret</span>
+      <h2>Quel mensonge mérite ton vote ?</h2>
+      <p class="helper">Choisis la réponse la plus drôle, crédible ou brillamment inventée.</p>
+    </section>
+
+    <section class="anonymous-answer-list">
+      ${availableAnswers.map(answer => {
+        const originalIndex = game.currentAnswers.findIndex(item => item.id === answer.id);
+
+        return `
+          <button class="anonymous-answer-card vote-answer-card" data-lie-vote="${answer.id}">
+            <span class="answer-number">${originalIndex + 1}</span>
+            <p>${escapeHtml(answer.text)}</p>
+          </button>
+        `;
+      }).join("")}
+    </section>
+  `;
+
+  document.querySelectorAll("[data-lie-vote]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      game.currentVotes[voter.id] = btn.dataset.lieVote;
+      game.currentVoterIndex += 1;
+
+      if (game.currentVoterIndex < state.players.length) {
+        renderBestLiarVoteSaved();
+      } else {
+        renderBestLiarResults();
+      }
+    });
+  });
+}
+
+function renderBestLiarVoteSaved() {
+  const nextVoter = state.players[state.bestLiar.currentVoterIndex];
+
+  title.textContent = "Vote enregistré";
+
+  screen.innerHTML = `
+    <section class="handoff-stage">
+      <div class="success-mark">✓</div>
+      <h2>Vote enregistré.</h2>
+      <p>Passe maintenant le téléphone à <strong>${escapeHtml(nextVoter.name)}</strong>.</p>
+    </section>
+
+    <button id="nextLieVoter" class="primary-btn full">Continuer</button>
+  `;
+
+  document.querySelector("#nextLieVoter").addEventListener("click", renderBestLiarVoterGate);
+}
+
+function calculateBestLiarResults() {
+  const game = state.bestLiar;
+  const counts = Object.fromEntries(game.currentAnswers.map(answer => [answer.id, 0]));
+
+  Object.values(game.currentVotes).forEach(answerId => {
+    counts[answerId] += 1;
+  });
+
+  const resultRows = game.currentAnswers
+    .map(answer => {
+      const author = state.players.find(player => player.id === answer.playerId);
+      return {
+        ...answer,
+        author,
+        votes: counts[answer.id]
+      };
+    })
+    .sort((a, b) => b.votes - a.votes);
+
+  const maxVotes = Math.max(...resultRows.map(row => row.votes));
+  const winners = resultRows.filter(row => row.votes === maxVotes);
+
+  return { resultRows, winners, maxVotes };
+}
+
+function renderBestLiarResults() {
+  const game = state.bestLiar;
+  const prompt = currentBestLiarPrompt();
+  const result = calculateBestLiarResults();
+
+  result.resultRows.forEach(row => {
+    game.scores[row.playerId] += row.votes;
+  });
+
+  game.rounds.push({
+    prompt,
+    answers: game.currentAnswers.map(answer => ({ ...answer })),
+    votes: { ...game.currentVotes },
+    winners: result.winners.map(row => row.playerId)
+  });
+
+  title.textContent = "Les masques tombent";
+
+  const alcoholText = state.alcohol && result.winners.length
+    ? `<div class="alcohol-callout">🍻 ${result.winners.map(row => escapeHtml(row.author.name)).join(" et ")} ${result.winners.length > 1 ? "distribuent" : "distribue"} 2 petites gorgées.</div>`
+    : "";
+
+  screen.innerHTML = `
+    <section class="card centered-card">
+      <span class="category-chip">${liarCategoryLabels[prompt.category] || "🤥"}</span>
+      <h2>${escapeHtml(prompt.prompt)}</h2>
+    </section>
+
+    ${result.winners.length > 1 ? `
+      <section class="special-event tie">
+        <strong>⚔️ Égalité parfaite.</strong>
+        <p>${result.winners.map(row => escapeHtml(row.author.name)).join(" et ")} remportent cette manche.</p>
+      </section>
+    ` : `
+      <section class="special-event unanimity">
+        <strong>🤥 Meilleur mensonge de la manche</strong>
+        <p>${escapeHtml(result.winners[0].author.name)} remporte ${result.maxVotes} vote${result.maxVotes > 1 ? "s" : ""}.</p>
+      </section>
+    `}
+
+    <section class="liar-results-list">
+      ${result.resultRows.map((row, index) => {
+        const percentage = Math.round((row.votes / state.players.length) * 100);
+
+        return `
+          <article class="liar-result-card ${index === 0 ? "winner" : ""}">
+            <div class="liar-result-header">
+              <span class="result-avatar">${avatarById(row.author.avatarId).emoji}</span>
+              <div>
+                <strong>${escapeHtml(row.author.name)}</strong>
+                <span>${row.votes} vote${row.votes > 1 ? "s" : ""} · ${percentage}%</span>
+              </div>
+            </div>
+
+            <p>« ${escapeHtml(row.text)} »</p>
+          </article>
+        `;
+      }).join("")}
+    </section>
+
+    ${alcoholText}
+
+    <section class="score-strip">
+      ${[...state.players]
+        .sort((a, b) => game.scores[b.id] - game.scores[a.id])
+        .map(player => `
+          <span>${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} <strong>${game.scores[player.id]}</strong></span>
+        `).join("")}
+    </section>
+
+    <button id="nextLiarRound" class="primary-btn full">
+      ${game.currentRound + 1 >= game.roundCount ? "Voir le classement final" : "Manche suivante"}
+    </button>
+  `;
+
+  document.querySelector("#nextLiarRound").addEventListener("click", () => {
+    if (game.currentRound + 1 >= game.roundCount) {
+      renderBestLiarEnd();
+    } else {
+      game.currentRound += 1;
+      renderBestLiarRoundIntro();
+    }
+  });
+}
+
+function renderBestLiarEnd() {
+  const game = state.bestLiar;
+  const ranking = [...state.players].sort((a, b) => game.scores[b.id] - game.scores[a.id]);
+  const topScore = game.scores[ranking[0].id];
+  const champions = ranking.filter(player => game.scores[player.id] === topScore);
+
+  title.textContent = "Classement final";
+  setBackVisible(false);
+
+  screen.innerHTML = `
+    <section class="winner-stage">
+      <div class="winner-crown">🤥👑</div>
+      <h2>${champions.length === 1 ? "Le Mytho suprême est…" : "Les Mythos suprêmes sont…"}</h2>
+
+      <div class="champion-row">
+        ${champions.map(player => `
+          <div class="champion-card">
+            <span>${avatarById(player.avatarId).emoji}</span>
+            <strong>${escapeHtml(player.name)}</strong>
+            <small>${game.scores[player.id]} votes gagnés</small>
+          </div>
+        `).join("")}
+      </div>
+    </section>
+
+    <section class="final-ranking">
+      ${ranking.map((player, index) => `
+        <div class="ranking-row">
+          <span class="ranking-position">${index + 1}</span>
+          <span class="result-avatar">${avatarById(player.avatarId).emoji}</span>
+          <strong>${escapeHtml(player.name)}</strong>
+          <span>${game.scores[player.id]} pts</span>
+        </div>
+      `).join("")}
+    </section>
+
+    <div class="toolbar">
+      <button id="replayBestLiar" class="secondary-btn">Rejouer</button>
+      <button id="otherGameBestLiar" class="primary-btn">Choisir un autre jeu</button>
+    </div>
+  `;
+
+  document.querySelector("#replayBestLiar").addEventListener("click", () => {
+    resetBestLiarState();
+    renderBestLiarSetup();
+  });
+
+  document.querySelector("#otherGameBestLiar").addEventListener("click", () => {
+    state.bestLiar = null;
+    renderPlayChoice();
+  });
+}
+
+
 function renderJoin() {
   title.textContent = "Rejoindre une partie";
   setBackVisible(true);
@@ -1036,6 +2127,8 @@ function renderSettings() {
     state.draftPlayer = { name: "", avatarId: null };
     state.currentCategory = null;
     state.quiDeNous = null;
+    state.laughDuel = null;
+    state.bestLiar = null;
 
     renderHome();
   });
@@ -1075,7 +2168,11 @@ backBtn.addEventListener("click", () => {
 });
 
 settingsBtn.addEventListener("click", () => {
-  if (state.quiDeNous && state.quiDeNous.questions.length) return;
+  const whoUsActive = state.quiDeNous && state.quiDeNous.questions.length;
+  const laughActive = state.laughDuel && state.laughDuel.jokePool.length;
+  const liarActive = state.bestLiar && state.bestLiar.prompts.length;
+
+  if (whoUsActive || laughActive || liarActive) return;
   renderSettings();
 });
 

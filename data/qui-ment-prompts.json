@@ -1,0 +1,602 @@
+[
+  {
+    "id": "excuses_001_invente_la_meilleure_excuse_pour_expliquer_pourquo",
+    "prompt": "Invente la meilleure excuse pour expliquer pourquoi tu es arrivé(e) deux heures en retard.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_002_invente_une_excuse_credible_pour_avoir_oublie_l_an",
+    "prompt": "Invente une excuse crédible pour avoir oublié l'anniversaire de quelqu'un.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_003_invente_la_meilleure_raison_pour_ne_pas_etre_venu_",
+    "prompt": "Invente la meilleure raison pour ne pas être venu(e) travailler aujourd'hui.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_004_invente_une_excuse_pour_expliquer_pourquoi_tu_as_c",
+    "prompt": "Invente une excuse pour expliquer pourquoi tu as cassé quelque chose chez un ami.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_005_invente_une_excuse_pour_avoir_ignore_tous_les_mess",
+    "prompt": "Invente une excuse pour avoir ignoré tous les messages du groupe pendant trois jours.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_006_invente_une_raison_pour_justifier_que_tu_n_as_plus",
+    "prompt": "Invente une raison pour justifier que tu n'as plus ton téléphone.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_007_invente_une_excuse_pour_expliquer_pourquoi_tu_conn",
+    "prompt": "Invente une excuse pour expliquer pourquoi tu connais parfaitement le profil Instagram d'un inconnu.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_008_invente_la_meilleure_excuse_pour_avoir_mange_le_de",
+    "prompt": "Invente la meilleure excuse pour avoir mangé le dernier morceau sans demander.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_009_invente_une_excuse_pour_avoir_rate_ton_train_alors",
+    "prompt": "Invente une excuse pour avoir raté ton train alors que tu étais déjà à la gare.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_010_invente_une_raison_pour_expliquer_pourquoi_tu_port",
+    "prompt": "Invente une raison pour expliquer pourquoi tu portes deux chaussures différentes.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_011_invente_une_excuse_pour_etre_sorti_e_d_une_fete_sa",
+    "prompt": "Invente une excuse pour être sorti(e) d'une fête sans dire au revoir.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_012_invente_une_explication_pour_justifier_un_achat_co",
+    "prompt": "Invente une explication pour justifier un achat complètement inutile à 300 euros.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_013_invente_une_excuse_pour_expliquer_pourquoi_ton_voi",
+    "prompt": "Invente une excuse pour expliquer pourquoi ton voisin a appelé la police.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_014_invente_une_raison_pour_justifier_que_tu_as_dormi_",
+    "prompt": "Invente une raison pour justifier que tu as dormi jusqu'à 17 heures.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_015_invente_une_excuse_pour_avoir_envoye_un_message_tr",
+    "prompt": "Invente une excuse pour avoir envoyé un message très gênant à la mauvaise personne.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_016_invente_une_raison_pour_expliquer_pourquoi_tu_as_u",
+    "prompt": "Invente une raison pour expliquer pourquoi tu as un cône de chantier chez toi.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_017_invente_une_excuse_pour_expliquer_pourquoi_tu_es_d",
+    "prompt": "Invente une excuse pour expliquer pourquoi tu es dans une ville où tu ne devais absolument pas être.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_018_invente_une_raison_pour_justifier_une_absence_tota",
+    "prompt": "Invente une raison pour justifier une absence totale de 24 heures.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_019_invente_une_excuse_pour_expliquer_pourquoi_tu_as_c",
+    "prompt": "Invente une excuse pour expliquer pourquoi tu as changé de coiffure au milieu de la nuit.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "excuses_020_invente_la_meilleure_raison_pour_avoir_bloque_quel",
+    "prompt": "Invente la meilleure raison pour avoir bloqué quelqu'un puis l'avoir débloqué dix minutes plus tard.",
+    "category": "excuses",
+    "adult": false
+  },
+  {
+    "id": "improbable_001_explique_comment_tu_as_accidentellement_ete_invite",
+    "prompt": "Explique comment tu as accidentellement été invité(e) à un mariage de célébrités.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_002_explique_pourquoi_un_pingouin_connait_ton_prenom",
+    "prompt": "Explique pourquoi un pingouin connaît ton prénom.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_003_raconte_comment_tu_es_devenu_e_proprietaire_d_un_b",
+    "prompt": "Raconte comment tu es devenu(e) propriétaire d'un bateau sans l'avoir acheté.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_004_explique_comment_tu_t_es_retrouve_e_dans_les_couli",
+    "prompt": "Explique comment tu t'es retrouvé(e) dans les coulisses d'un concert sans billet.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_005_raconte_pourquoi_une_ville_entiere_te_recherche_al",
+    "prompt": "Raconte pourquoi une ville entière te recherche alors que tu n'as rien fait d'illégal.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_006_explique_comment_tu_as_passe_une_nuit_dans_un_muse",
+    "prompt": "Explique comment tu as passé une nuit dans un musée fermé.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_007_raconte_comment_tu_as_ete_confondu_e_avec_une_pers",
+    "prompt": "Raconte comment tu as été confondu(e) avec une personnalité très connue.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_008_explique_pourquoi_tu_as_recu_une_lettre_officielle",
+    "prompt": "Explique pourquoi tu as reçu une lettre officielle d'un roi ou d'une reine.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_009_raconte_comment_un_inconnu_t_a_confie_une_valise_m",
+    "prompt": "Raconte comment un inconnu t'a confié une valise mystérieuse.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_010_explique_comment_tu_as_gagne_un_concours_auquel_tu",
+    "prompt": "Explique comment tu as gagné un concours auquel tu ne t'étais jamais inscrit(e).",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_011_raconte_pourquoi_tu_as_du_fuir_un_hotel_en_peignoi",
+    "prompt": "Raconte pourquoi tu as dû fuir un hôtel en peignoir.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_012_explique_comment_tu_t_es_retrouve_e_dans_un_helico",
+    "prompt": "Explique comment tu t'es retrouvé(e) dans un hélicoptère par erreur.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_013_raconte_comment_tu_as_provoque_un_embouteillage_sa",
+    "prompt": "Raconte comment tu as provoqué un embouteillage sans conduire de voiture.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_014_explique_pourquoi_tu_as_ete_applaudi_e_par_cent_pe",
+    "prompt": "Explique pourquoi tu as été applaudi(e) par cent personnes sans savoir pourquoi.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_015_raconte_comment_tu_t_es_reveille_e_avec_un_tatouag",
+    "prompt": "Raconte comment tu t'es réveillé(e) avec un tatouage que tu n'avais pas la veille.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_016_explique_pourquoi_un_animal_sauvage_te_suit_depuis",
+    "prompt": "Explique pourquoi un animal sauvage te suit depuis trois jours.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_017_raconte_comment_tu_as_ete_recrute_e_par_une_equipe",
+    "prompt": "Raconte comment tu as été recruté(e) par une équipe sportive professionnelle pendant une soirée.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_018_explique_comment_ton_prenom_s_est_retrouve_sur_un_",
+    "prompt": "Explique comment ton prénom s'est retrouvé sur un panneau lumineux géant.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_019_raconte_pourquoi_tu_as_du_appeler_une_ambassade_po",
+    "prompt": "Raconte pourquoi tu as dû appeler une ambassade pour rentrer chez toi.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "improbable_020_explique_comment_tu_es_devenu_e_le_personnage_prin",
+    "prompt": "Explique comment tu es devenu(e) le personnage principal d'un reportage télé sans le savoir.",
+    "category": "improbable",
+    "adult": false
+  },
+  {
+    "id": "quotidien_001_quelle_est_la_chose_la_plus_etrange_que_tu_pretend",
+    "prompt": "Quelle est la chose la plus étrange que tu prétends faire tous les matins ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_002_quel_objet_totalement_inutile_pretends_tu_toujours",
+    "prompt": "Quel objet totalement inutile prétends-tu toujours avoir dans ton sac ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_003_quelle_habitude_bizarre_pourrais_tu_faire_croire_a",
+    "prompt": "Quelle habitude bizarre pourrais-tu faire croire au groupe que tu as depuis l'enfance ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_004_quel_faux_talent_pourrais_tu_convaincre_tout_le_mo",
+    "prompt": "Quel faux talent pourrais-tu convaincre tout le monde de posséder ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_005_quelle_celebrite_pourrais_tu_pretendre_avoir_crois",
+    "prompt": "Quelle célébrité pourrais-tu prétendre avoir croisée au supermarché ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_006_quel_metier_improbable_pourrais_tu_pretendre_avoir",
+    "prompt": "Quel métier improbable pourrais-tu prétendre avoir exercé pendant une semaine ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_007_quelle_regle_absurde_pourrais_tu_pretendre_imposer",
+    "prompt": "Quelle règle absurde pourrais-tu prétendre imposer chez toi ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_008_quel_plat_catastrophique_pourrais_tu_faire_passer_",
+    "prompt": "Quel plat catastrophique pourrais-tu faire passer pour ta spécialité ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_009_quel_objet_pourrais_tu_pretendre_collectionner_sec",
+    "prompt": "Quel objet pourrais-tu prétendre collectionner secrètement ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_010_quelle_phobie_completement_improbable_pourrais_tu_",
+    "prompt": "Quelle phobie complètement improbable pourrais-tu inventer ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_011_quel_surnom_ridicule_pourrais_tu_pretendre_avoir_e",
+    "prompt": "Quel surnom ridicule pourrais-tu prétendre avoir eu au collège ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_012_quelle_application_pourrais_tu_pretendre_consulter",
+    "prompt": "Quelle application pourrais-tu prétendre consulter cinquante fois par jour ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_013_quelle_depense_absurde_pourrais_tu_faire_croire_qu",
+    "prompt": "Quelle dépense absurde pourrais-tu faire croire que tu assumes parfaitement ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_014_quel_rituel_avant_de_dormir_pourrais_tu_inventer_p",
+    "prompt": "Quel rituel avant de dormir pourrais-tu inventer pour paraître crédible ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_015_quel_mensonge_sur_ta_routine_sportive_pourrait_sem",
+    "prompt": "Quel mensonge sur ta routine sportive pourrait sembler presque vrai ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_016_quelle_rencontre_improbable_dans_les_transports_po",
+    "prompt": "Quelle rencontre improbable dans les transports pourrais-tu inventer ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_017_quel_service_etrange_pourrais_tu_pretendre_rendre_",
+    "prompt": "Quel service étrange pourrais-tu prétendre rendre régulièrement à ton voisinage ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_018_quelle_regle_alimentaire_etrange_pourrais_tu_prete",
+    "prompt": "Quelle règle alimentaire étrange pourrais-tu prétendre suivre depuis des années ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_019_quel_objet_casse_pourrais_tu_faire_croire_que_tu_c",
+    "prompt": "Quel objet cassé pourrais-tu faire croire que tu continues d'utiliser normalement ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "quotidien_020_quelle_chose_completement_banale_pourrais_tu_trans",
+    "prompt": "Quelle chose complètement banale pourrais-tu transformer en anecdote incroyable ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "dossiers_001_invente_le_secret_le_plus_credible_que_tu_pourrais",
+    "prompt": "Invente le secret le plus crédible que tu pourrais cacher au groupe depuis des années.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_002_invente_une_raison_pour_laquelle_ton_ex_pourrait_e",
+    "prompt": "Invente une raison pour laquelle ton ex pourrait encore avoir ton numéro enregistré.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_003_invente_le_contenu_le_plus_compromettant_possible_",
+    "prompt": "Invente le contenu le plus compromettant possible d'un dossier caché sur ton téléphone.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_004_invente_une_personne_celebre_que_tu_pourrais_prete",
+    "prompt": "Invente une personne célèbre que tu pourrais prétendre avoir déjà embrassée.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_005_invente_une_raison_credible_pour_laquelle_tu_as_de",
+    "prompt": "Invente une raison crédible pour laquelle tu as déjà menti sur ton âge.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_006_invente_le_pire_message_que_tu_pourrais_pretendre_",
+    "prompt": "Invente le pire message que tu pourrais prétendre avoir envoyé à ton ex.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_007_invente_une_situation_ou_tu_aurais_stalke_quelqu_u",
+    "prompt": "Invente une situation où tu aurais stalké quelqu'un beaucoup trop loin.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_008_invente_une_raison_pour_laquelle_tu_aurais_cree_un",
+    "prompt": "Invente une raison pour laquelle tu aurais créé un faux compte sur un réseau social.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_009_invente_une_chose_que_tu_pourrais_pretendre_avoir_",
+    "prompt": "Invente une chose que tu pourrais prétendre avoir cachée à tes parents pendant dix ans.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_010_invente_une_situation_ou_tu_aurais_du_fuir_quelqu_",
+    "prompt": "Invente une situation où tu aurais dû fuir quelqu'un au milieu d'un rendez-vous.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_011_invente_le_plus_gros_mensonge_que_tu_pourrais_avoi",
+    "prompt": "Invente le plus gros mensonge que tu pourrais avoir raconté pour éviter une soirée.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_012_invente_une_anecdote_credible_ou_tu_aurais_ete_sur",
+    "prompt": "Invente une anecdote crédible où tu aurais été surpris(e) en train de fouiller quelque part.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_013_invente_une_raison_pour_laquelle_tu_connaitrais_le",
+    "prompt": "Invente une raison pour laquelle tu connaîtrais le mot de passe d'un ex.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_014_invente_une_personne_du_groupe_que_tu_pourrais_pre",
+    "prompt": "Invente une personne du groupe que tu pourrais prétendre avoir rencontrée bien avant les autres.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_015_invente_une_situation_ou_tu_aurais_fait_semblant_d",
+    "prompt": "Invente une situation où tu aurais fait semblant de ne pas reconnaître quelqu'un.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_016_invente_le_dernier_mensonge_que_tu_pourrais_avoir_",
+    "prompt": "Invente le dernier mensonge que tu pourrais avoir raconté cette semaine.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_017_invente_une_raison_credible_pour_laquelle_quelqu_u",
+    "prompt": "Invente une raison crédible pour laquelle quelqu'un t'aurait bloqué(e).",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_018_invente_une_anecdote_ou_tu_aurais_ete_pris_e_en_fl",
+    "prompt": "Invente une anecdote où tu aurais été pris(e) en flagrant délit de mensonge.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_019_invente_une_chose_genante_que_tu_pourrais_pretendr",
+    "prompt": "Invente une chose gênante que tu pourrais prétendre avoir dans tes notes de téléphone.",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "dossiers_020_invente_une_histoire_credible_qui_commencerait_par",
+    "prompt": "Invente une histoire crédible qui commencerait par « personne ici n'est au courant, mais… ».",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "chaos_001_explique_pourquoi_tu_es_interdit_e_d_entree_dans_u",
+    "prompt": "Explique pourquoi tu es interdit(e) d'entrée dans un parc d'attractions.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_002_raconte_comment_une_soiree_tranquille_a_fini_avec_",
+    "prompt": "Raconte comment une soirée tranquille a fini avec trois pompiers devant chez toi.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_003_explique_pourquoi_tu_as_du_courir_dans_un_aeroport",
+    "prompt": "Explique pourquoi tu as dû courir dans un aéroport sans bagage.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_004_raconte_comment_tu_as_accidentellement_lance_une_r",
+    "prompt": "Raconte comment tu as accidentellement lancé une rumeur dans toute une ville.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_005_explique_pourquoi_une_chevre_a_detruit_ton_projet_",
+    "prompt": "Explique pourquoi une chèvre a détruit ton projet de vacances.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_006_raconte_comment_tu_as_termine_une_soiree_avec_les_",
+    "prompt": "Raconte comment tu as terminé une soirée avec les clés d'une voiture qui n'était pas la tienne.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_007_explique_pourquoi_tu_as_ete_poursuivi_e_par_une_ma",
+    "prompt": "Explique pourquoi tu as été poursuivi(e) par une mascotte géante.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_008_raconte_comment_tu_as_provoque_une_panne_de_couran",
+    "prompt": "Raconte comment tu as provoqué une panne de courant dans un bâtiment entier.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_009_explique_pourquoi_tu_as_du_dormir_dans_un_lieu_tot",
+    "prompt": "Explique pourquoi tu as dû dormir dans un lieu totalement improbable.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_010_raconte_comment_tu_as_perdu_tous_tes_vetements_san",
+    "prompt": "Raconte comment tu as perdu tous tes vêtements sans te faire voler.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_011_explique_pourquoi_tu_as_du_faire_semblant_d_etre_m",
+    "prompt": "Explique pourquoi tu as dû faire semblant d'être membre du personnel pendant une heure.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_012_raconte_comment_tu_as_fini_sur_scene_devant_des_ce",
+    "prompt": "Raconte comment tu as fini sur scène devant des centaines de personnes.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_013_explique_pourquoi_un_groupe_d_inconnus_pense_que_t",
+    "prompt": "Explique pourquoi un groupe d'inconnus pense que tu t'appelles Kevin.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_014_raconte_comment_tu_as_adopte_un_animal_sans_t_en_r",
+    "prompt": "Raconte comment tu as adopté un animal sans t'en rendre compte.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_015_explique_pourquoi_tu_as_du_cacher_une_enorme_statu",
+    "prompt": "Explique pourquoi tu as dû cacher une énorme statue dans ton salon.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_016_raconte_comment_tu_t_es_retrouve_e_au_milieu_d_une",
+    "prompt": "Raconte comment tu t'es retrouvé(e) au milieu d'une manifestation pour une cause que tu ne connaissais pas.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_017_explique_pourquoi_tu_as_passe_une_nuit_entiere_dan",
+    "prompt": "Explique pourquoi tu as passé une nuit entière dans une voiture qui n'était pas la tienne.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_018_raconte_comment_un_simple_diner_a_fini_en_evacuati",
+    "prompt": "Raconte comment un simple dîner a fini en évacuation complète du bâtiment.",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_019_explique_pourquoi_tu_as_du_traverser_une_ville_deg",
+    "prompt": "Explique pourquoi tu as dû traverser une ville déguisé(e).",
+    "category": "chaos",
+    "adult": false
+  },
+  {
+    "id": "chaos_020_raconte_la_meilleure_fausse_histoire_expliquant_po",
+    "prompt": "Raconte la meilleure fausse histoire expliquant pourquoi ton nom est désormais connu dans un commissariat.",
+    "category": "chaos",
+    "adult": false
+  }
+]
