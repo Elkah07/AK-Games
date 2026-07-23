@@ -1,95 +1,104 @@
-AK'Games — V0.3
-=================
+AK'Games — V0.4 MULTIJOUEUR
+================================
 
-Cette mise à jour ajoute deux nouveaux jeux complets et conserve « Qui de nous ? ».
+Cette mise à jour se pose PAR-DESSUS la V0.3.
 
-JEUX JOUABLES SUR UN SEUL TÉLÉPHONE
-------------------------------------
-1. Qui de nous ?
-2. Le premier qui rit a perdu
-3. Qui ment le mieux ?
-
-LE PREMIER QUI RIT A PERDU
----------------------------
-- Duel face à face entre 2 joueurs choisis dans le groupe
-- Deux règles :
-  - Mort subite
-  - 3 vies
-- À chaque tour :
-  - « Donne-moi une blague »
-  - « J’en ai une »
-- Pour une blague de l’app :
-  - affichage de la question
-  - bouton pour révéler la chute
-- Résultats possibles :
-  - l’adversaire a ri
-  - le joueur a ri à sa propre blague
-  - personne n’a ri
-- 100 blagues classiques
-- 30 blagues adultes optionnelles
-- Mode alcool compatible
-- Revanche immédiate
-
-QUI MENT LE MIEUX ?
+FICHIERS À REMPLACER
 --------------------
-- Minimum 3 joueurs
-- 3, 5, 10 manches ou nombre personnalisé
-- 5 catégories classiques :
-  - Excuses
-  - Improbable
-  - Quotidien
-  - Dossiers
-  - Chaos
-- Catégorie adulte optionnelle
-- Chaque joueur écrit secrètement son mensonge
-- Les réponses sont mélangées et affichées anonymement
-- Chaque joueur vote secrètement
-- Impossible de voter pour sa propre réponse
-- Révélation des auteurs et des votes
-- Score cumulé sur toute la partie
-- Classement final
-- Titre « Mytho suprême »
-- Mode alcool compatible
-- 100 situations classiques
-- 30 situations adultes
+- index.html
+- firebase.json
 
-QUI DE NOUS ?
---------------
-Les fichiers de questions de la V0.2 sont inclus dans le pack :
-- 200 questions classiques
-- 100 questions adultes
+FICHIERS À AJOUTER
+------------------
+- firebase.js
+- multiplayer.js
+- database.rules.json
 
-FICHIERS À METTRE À JOUR
--------------------------
-À remplacer :
-- app.js
-- styles.css
+STYLE À AJOUTER
+---------------
+Le fichier `styles-multiplayer.css` contient uniquement les nouveaux styles.
 
-À ajouter / remplacer :
-- dossier data/
+Copie tout son contenu et colle-le À LA FIN de ton `styles.css` actuel.
+Ne remplace pas ton `styles.css` V0.3 par ce petit fichier.
 
-Le dossier data contient :
-- qui-de-nous.json
-- qui-de-nous-adulte.json
-- blagues.json
-- blagues-adulte.json
-- qui-ment-prompts.json
-- qui-ment-prompts-adulte.json
+CE QUI EST MAINTENANT FONCTIONNEL
+---------------------------------
+- Authentification Firebase anonyme automatique
+- Création d'un vrai salon
+- Code de salon de type AK-7F3K
+- Rejoindre un salon depuis un autre téléphone
+- Lobby synchronisé en temps réel
+- Liste des joueurs synchronisée
+- Indicateur connecté / déconnecté
+- Les options Adulte et Alcool sont transmises aux invités
+- Le salon reste actif entre les jeux
+- Reconnexion automatique au salon après actualisation de la page
+- L'hôte peut fermer le salon
+- Un invité peut quitter le salon
 
-DÉPLOIEMENT
+QUI DE NOUS ? EN MULTIJOUEUR
+-----------------------------
+- L'hôte configure et lance le jeu
+- La question apparaît sur tous les téléphones
+- Chaque joueur vote secrètement sur son propre téléphone
+- Le compteur de votes se synchronise en direct
+- L'hôte peut révéler les résultats quand tout le monde a voté
+- L'hôte peut aussi révéler avant si quelqu'un bloque la partie
+- Les résultats apparaissent simultanément sur tous les téléphones
+- Unanimité, égalité et auto-dénonciation
+- Mode alcool conservé
+- Bilan final synchronisé
+- Retour au même lobby après la partie
+
+LES AUTRES JEUX
+---------------
+- `Le premier qui rit a perdu` reste jouable sur un seul téléphone.
+- `Qui ment le mieux ?` reste jouable sur un seul téléphone.
+- Leur adaptation chacun sur son téléphone viendra ensuite.
+
+INSTALLATION
 ------------
-Après avoir remplacé les fichiers dans ton Codespace :
+1. Assure-toi d'avoir déjà installé la V0.3.
 
-git add .
-git commit -m "Ajout des jeux rire et mensonge"
-git push
+2. Remplace :
+   - index.html
+   - firebase.json
+
+3. Ajoute :
+   - firebase.js
+   - multiplayer.js
+   - database.rules.json
+
+4. Ouvre `styles-multiplayer.css`, copie tout et colle-le à la fin de ton `styles.css`.
+
+5. Dans le terminal :
+
+firebase deploy --only database
 firebase deploy --only hosting
 
-VÉRIFICATIONS EFFECTUÉES
--------------------------
-- Syntaxe JavaScript validée avec Node
-- Les 6 bases JSON sont valides
-- Aucun doublon d’identifiant dans les bases JSON
-- Les trois mécaniques de jeu sont bien présentes dans app.js
+6. Puis sauvegarde sur GitHub :
 
-Le mode multijoueur chacun sur son téléphone reste à connecter à Firebase dans une prochaine étape.
+git add .
+git commit -m "Ajout du multijoueur Firebase"
+git push
+
+TEST RECOMMANDÉ
+---------------
+Téléphone 1 :
+- Créer une partie
+- Choisir prénom + personnage
+- Noter le code AK-XXXX
+
+Téléphone 2 :
+- Ouvrir https://ak-games-4a2cd.web.app
+- Rejoindre une partie
+- Entrer le code
+- Choisir prénom + personnage
+
+Sur le téléphone de l'hôte :
+- Choisir les jeux
+- Jeux d'ambiance
+- Qui de nous ?
+- Lancer la partie
+
+Les deux téléphones doivent recevoir la même question et voter séparément.
