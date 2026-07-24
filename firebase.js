@@ -197,6 +197,7 @@
       state: {
         type: "who-us",
         phase: "question",
+        sessionGameId: payload.sessionGameId,
         questions: payload.questions,
         currentIndex: 0,
         settings: payload.settings,
@@ -234,6 +235,7 @@
     updates[`rooms/${key}/game/state/phase`] = isFinished ? "final" : "question";
     updates[`rooms/${key}/game/state/currentIndex`] = nextIndex;
     updates[`rooms/${key}/game/state/currentResult`] = null;
+    updates[`rooms/${key}/game/state/finishedAt`] = isFinished ? serverTimestamp() : null;
     updates[`rooms/${key}/game/state/updatedAt`] = serverTimestamp();
     updates[`rooms/${key}/game/votes`] = null;
 
@@ -242,6 +244,65 @@
 
   async function returnToLobby(code) {
     await db.ref(`rooms/${normalizeCode(code)}/game`).remove();
+  }
+
+  async function recordSessionResult(code, summary) {
+    const user = await ready();
+    const key = normalizeCode(code);
+
+    if (!summary?.id) {
+      throw new Error("Résultat de soirée invalide.");
+    }
+
+    const roomMetaSnapshot = await db.ref(`rooms/${key}/meta`).once("value");
+    const roomMeta = roomMetaSnapshot.val();
+
+    if (!roomMeta || roomMeta.hostUid !== user.uid) {
+      throw new Error("Seul l'hôte peut enregistrer le score de la soirée.");
+    }
+
+    const sessionRef = db.ref(`rooms/${key}/session`);
+    const transaction = await sessionRef.transaction(currentValue => {
+      const session = currentValue || {};
+      const history = { ...(session.history || {}) };
+
+      if (history[summary.id]) {
+        return;
+      }
+
+      const scores = { ...(session.scores || {}) };
+      Object.entries(summary.points || {}).forEach(([uid, value]) => {
+        scores[uid] = Number(scores[uid] || 0) + Number(value || 0);
+      });
+
+      history[summary.id] = {
+        id: summary.id,
+        gameType: summary.gameType,
+        gameName: summary.gameName,
+        icon: summary.icon,
+        endedAt: Number(summary.endedAt || Date.now()),
+        points: summary.points || {},
+        winnerIds: summary.winnerIds || [],
+        detail: summary.detail || "Partie terminée",
+        players: summary.players || {}
+      };
+
+      return {
+        ...session,
+        scores,
+        history,
+        gamesPlayed: Number(session.gamesPlayed || 0) + 1,
+        lastGame: summary.replay || null,
+        updatedAt: Date.now()
+      };
+    }, undefined, false);
+
+    if (transaction.committed) {
+      return true;
+    }
+
+    const existingSnapshot = await sessionRef.child(`history/${summary.id}`).once("value");
+    return existingSnapshot.exists();
   }
 
 
@@ -302,6 +363,7 @@
     revealWhoUsResults,
     nextWhoUsQuestion,
     returnToLobby,
+    recordSessionResult,
     setGame,
     updateGame,
     writeOwnGameEntry,

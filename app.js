@@ -158,7 +158,7 @@ function renderHome() {
       </button>
     </section>
 
-    <div class="notice">V0.5 : 3 jeux sont maintenant jouables sur un ou plusieurs téléphones.</div>
+    <div class="notice">V0.6 : salon persistant, score cumulé, historique et soirée continue.</div>
   `;
 
   document.querySelectorAll("[data-home-action]").forEach(btn => {

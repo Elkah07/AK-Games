@@ -17,6 +17,8 @@
   state.multiRenderKey = null;
   state.multiProcessingActionId = null;
   state.multiLobbyTimer = null;
+  state.multiSessionRecordingId = null;
+  state.multiSessionRecordingPromise = null;
 
   const SESSION_KEY = "akgames_multiplayer_session_v1";
 
@@ -277,6 +279,14 @@
     setBackVisible(false);
 
     const onlineCount = state.players.filter(player => player.online).length;
+    const eveningSession = state.roomData?.session || {};
+    const eveningScores = eveningSession.scores || {};
+    const eveningLeaderboard = [...state.players].sort(
+      (a, b) => Number(eveningScores[b.id] || 0) - Number(eveningScores[a.id] || 0)
+    );
+    const eveningHistory = Object.values(eveningSession.history || {})
+      .sort((a, b) => Number(b.endedAt || 0) - Number(a.endedAt || 0))
+      .slice(0, 8);
 
     screen.innerHTML = `
       <section class="room-code-card">
@@ -329,15 +339,65 @@
         </div>
       </section>
 
+      <section class="evening-panel">
+        <div class="room-section-heading">
+          <div>
+            <span class="room-kicker">SCORE DE LA SOIRÉE</span>
+            <h2 class="section-title">${Number(eveningSession.gamesPlayed || 0)} partie${Number(eveningSession.gamesPlayed || 0) > 1 ? "s" : ""} terminée${Number(eveningSession.gamesPlayed || 0) > 1 ? "s" : ""}</h2>
+          </div>
+          <span class="badge">🏆 Cumul</span>
+        </div>
+
+        <div class="evening-leaderboard">
+          ${eveningLeaderboard.map((player, index) => `
+            <div class="evening-score-row ${index === 0 && Number(eveningSession.gamesPlayed || 0) > 0 ? "leader" : ""}">
+              <span class="ranking-position">${index + 1}</span>
+              <span class="result-avatar">${avatarById(player.avatarId).emoji}</span>
+              <strong>${escapeHtml(player.name)}</strong>
+              <span class="evening-score">${Number(eveningScores[player.id] || 0)} pts</span>
+            </div>
+          `).join("")}
+        </div>
+      </section>
+
+      <section class="evening-panel">
+        <div class="room-section-heading">
+          <h2 class="section-title">Historique de la soirée</h2>
+          <span class="online-count">${eveningHistory.length ? `${eveningHistory.length} récente${eveningHistory.length > 1 ? "s" : ""}` : "Aucune partie"}</span>
+        </div>
+
+        ${eveningHistory.length ? `
+          <div class="evening-history-list">
+            ${eveningHistory.map(entry => `
+              <article class="evening-history-item">
+                <span class="evening-history-icon">${entry.icon || "🎮"}</span>
+                <div>
+                  <strong>${escapeHtml(entry.gameName || "Jeu")}</strong>
+                  <span>${escapeHtml(entry.detail || "Partie terminée")}</span>
+                </div>
+                <time>${formatEveningTime(entry.endedAt)}</time>
+              </article>
+            `).join("")}
+          </div>
+        ` : `
+          <div class="notice">Le premier résultat de la soirée apparaîtra ici.</div>
+        `}
+      </section>
+
       ${state.isHost ? `
-        <button id="openMultiplayerGames" class="primary-btn full" ${state.players.length < 2 ? "disabled" : ""}>
-          ${state.players.length < 2 ? "En attente d'au moins un autre joueur…" : "Choisir un jeu"}
-        </button>
+        <section class="evening-action-grid">
+          <button id="openMultiplayerGames" class="primary-btn" ${state.players.length < 2 ? "disabled" : ""}>
+            ${state.players.length < 2 ? "En attente d'un autre joueur…" : "🎮 Choisir un jeu"}
+          </button>
+          <button id="randomMultiplayerGame" class="secondary-btn" ${state.players.length < 2 ? "disabled" : ""}>
+            🎲 Jeu aléatoire
+          </button>
+        </section>
       ` : `
         <section class="waiting-host-card">
           <div class="waiting-pulse">🎮</div>
           <h2>En attente de l'hôte</h2>
-          <p>La partie démarrera automatiquement sur ton téléphone.</p>
+          <p>La prochaine partie démarrera automatiquement sur ton téléphone, sans ressaisir le code.</p>
         </section>
       `}
 
@@ -364,6 +424,19 @@
         renderPlayChoice();
       });
     }
+
+    document.querySelector("#randomMultiplayerGame")?.addEventListener("click", async event => {
+      if (state.players.length < 2) return;
+      event.currentTarget.disabled = true;
+
+      try {
+        await launchRandomMultiplayerGame();
+      } catch (error) {
+        console.error(error);
+        event.currentTarget.disabled = false;
+        alert(error.message || "Impossible de lancer un jeu aléatoire.");
+      }
+    });
 
     document.querySelector("#leaveMultiplayerRoom").addEventListener("click", async () => {
       const message = state.isHost ? "Fermer ce salon pour tout le monde ?" : "Quitter ce salon ?";
@@ -593,10 +666,13 @@
       );
 
       await AKFirebase.startWhoUsGame(state.roomCode, {
+        sessionGameId: createSessionGameId("who-us"),
         questions,
         settings: {
+          categories: [...game.categories],
+          questionCount: Number(game.questionCount || questions.length),
           alcoholIntensity: game.alcoholIntensity,
-          includeAdult: game.includeAdult
+          includeAdult: Boolean(game.includeAdult)
         }
       });
 
@@ -1044,32 +1120,11 @@
         )}
       </section>
 
-      ${state.isHost ? `
-        <button id="multiBackToLobby" class="primary-btn full">Retourner au salon</button>
-      ` : `
-        <section class="waiting-host-card">
-          <div class="waiting-pulse">🎮</div>
-          <h2>La partie est terminée</h2>
-          <p>L'hôte peut maintenant vous ramener au salon pour choisir un autre jeu.</p>
-        </section>
-      `}
+      ${renderPostGameContinuation(gameState)}
     `;
 
-    const lobbyButton = document.querySelector("#multiBackToLobby");
-
-    if (lobbyButton) {
-      lobbyButton.addEventListener("click", async () => {
-        lobbyButton.disabled = true;
-
-        try {
-          await AKFirebase.returnToLobby(state.roomCode);
-        } catch (error) {
-          console.error(error);
-          lobbyButton.disabled = false;
-          alert("Impossible de retourner au salon.");
-        }
-      });
-    }
+    ensureEveningResult(gameState);
+    bindPostGameContinuation(gameState);
   }
 
 
@@ -1114,6 +1169,527 @@
 
   function playerById(id) {
     return state.players.find(player => player.id === id) || null;
+  }
+
+  /* =========================================================
+     AK'GAMES V0.6 — SOIRÉE CONTINUE
+     ========================================================= */
+
+  function createSessionGameId(type) {
+    return `${type}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+  }
+
+  function formatEveningTime(timestamp) {
+    const value = Number(timestamp || 0);
+    if (!value) return "";
+
+    try {
+      return new Date(value).toLocaleTimeString("fr-FR", {
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+    } catch {
+      return "";
+    }
+  }
+
+  function gamePresentation(type) {
+    const presentations = {
+      "who-us": { name: "Qui de nous ?", icon: "👥" },
+      "best-liar": { name: "Qui ment le mieux ?", icon: "🤥" },
+      "laugh-duel": { name: "Le premier qui rit a perdu", icon: "😂" }
+    };
+
+    return presentations[type] || { name: "Jeu AK'Games", icon: "🎮" };
+  }
+
+  function snapshotPlayers() {
+    return Object.fromEntries(
+      state.players.map(player => [
+        player.id,
+        {
+          name: player.name,
+          avatarId: player.avatarId
+        }
+      ])
+    );
+  }
+
+  function addEveningPoints(points, ids, amount) {
+    (ids || []).forEach(id => {
+      if (!id || amount <= 0) return;
+      points[id] = Number(points[id] || 0) + Number(amount || 0);
+    });
+  }
+
+  function topIdsFromStats(stats, key) {
+    const rows = state.players.map(player => ({
+      id: player.id,
+      value: Number(stats?.[player.id]?.[key] || 0)
+    }));
+    const max = rows.length ? Math.max(...rows.map(row => row.value)) : 0;
+    return max > 0 ? rows.filter(row => row.value === max).map(row => row.id) : [];
+  }
+
+  function replayDescriptorFromGame(gameState) {
+    if (!gameState) return null;
+
+    if (gameState.type === "who-us") {
+      return {
+        type: "who-us",
+        config: {
+          questionCount: Number(gameState.settings?.questionCount || gameState.questions?.length || 10),
+          categories: [...(gameState.settings?.categories || ["drole", "chaos", "dossiers", "amitie", "soiree", "relations"])],
+          includeAdult: Boolean(gameState.settings?.includeAdult),
+          alcoholIntensity: gameState.settings?.alcoholIntensity || "normal"
+        }
+      };
+    }
+
+    if (gameState.type === "best-liar") {
+      return {
+        type: "best-liar",
+        config: {
+          roundCount: Number(gameState.settings?.roundCount || gameState.prompts?.length || 5),
+          categories: [...(gameState.settings?.categories || ["excuses", "improbable", "quotidien", "dossiers", "chaos"])],
+          includeAdult: Boolean(gameState.settings?.includeAdult)
+        }
+      };
+    }
+
+    if (gameState.type === "laugh-duel") {
+      return {
+        type: "laugh-duel",
+        config: {
+          player1Id: gameState.player1Id,
+          player2Id: gameState.player2Id,
+          mode: gameState.mode || "sudden",
+          categories: [...(gameState.settings?.categories || ["nulles", "absurdes", "devinettes", "observation"])],
+          includeAdult: Boolean(gameState.settings?.includeAdult)
+        }
+      };
+    }
+
+    return null;
+  }
+
+  function buildWhoUsSessionSummary(gameState) {
+    const awards = calculateMultiFinalAwards(gameState);
+    const points = {};
+    const designatedIds = topIdsFromStats(awards.stats, "received");
+    const peopleVoiceIds = topIdsFromStats(awards.stats, "majorityMatches");
+    const freeSpiritIds = topIdsFromStats(awards.stats, "uniqueChoices");
+
+    addEveningPoints(points, designatedIds, 3);
+    addEveningPoints(points, peopleVoiceIds, 2);
+    addEveningPoints(points, freeSpiritIds, 1);
+
+    const names = designatedIds
+      .map(id => playerById(id)?.name)
+      .filter(Boolean);
+
+    return {
+      points,
+      winnerIds: designatedIds,
+      detail: names.length
+        ? `${names.join(" et ")} ${names.length > 1 ? "sont les plus désignés" : "est la personne la plus désignée"}`
+        : `${Object.keys(gameState.rounds || {}).length} questions terminées`
+    };
+  }
+
+  function buildBestLiarSessionSummary(gameState) {
+    const rawScores = gameState.scores || {};
+    const positiveValues = [...new Set(
+      state.players
+        .map(player => Number(rawScores[player.id] || 0))
+        .filter(value => value > 0)
+    )].sort((a, b) => b - a);
+
+    const podiumPoints = [3, 2, 1];
+    const points = {};
+
+    positiveValues.slice(0, 3).forEach((scoreValue, index) => {
+      const ids = state.players
+        .filter(player => Number(rawScores[player.id] || 0) === scoreValue)
+        .map(player => player.id);
+      addEveningPoints(points, ids, podiumPoints[index]);
+    });
+
+    const topScore = positiveValues[0] || 0;
+    const winnerIds = topScore > 0
+      ? state.players.filter(player => Number(rawScores[player.id] || 0) === topScore).map(player => player.id)
+      : [];
+    const names = winnerIds.map(id => playerById(id)?.name).filter(Boolean);
+
+    return {
+      points,
+      winnerIds,
+      detail: names.length
+        ? `${names.join(" et ")} ${names.length > 1 ? "remportent" : "remporte"} le concours de mythos`
+        : "Concours terminé sans vote gagnant"
+    };
+  }
+
+  function buildLaughSessionSummary(gameState) {
+    const winner = playerById(gameState.winnerId);
+    const points = {};
+    addEveningPoints(points, winner ? [winner.id] : [], 3);
+
+    return {
+      points,
+      winnerIds: winner ? [winner.id] : [],
+      detail: winner
+        ? `${winner.name} remporte le duel`
+        : "Duel terminé"
+    };
+  }
+
+  function buildEveningSessionSummary(gameState) {
+    if (!gameState) return null;
+
+    const presentation = gamePresentation(gameState.type);
+    const resultId = gameState.sessionGameId || `${gameState.type}_${Number(gameState.startedAt || 0)}`;
+    let result;
+
+    if (gameState.type === "who-us") {
+      result = buildWhoUsSessionSummary(gameState);
+    } else if (gameState.type === "best-liar") {
+      result = buildBestLiarSessionSummary(gameState);
+    } else if (gameState.type === "laugh-duel") {
+      result = buildLaughSessionSummary(gameState);
+    } else {
+      return null;
+    }
+
+    return {
+      id: resultId,
+      gameType: gameState.type,
+      gameName: presentation.name,
+      icon: presentation.icon,
+      endedAt: Number(gameState.finishedAt || Date.now()),
+      points: result.points,
+      winnerIds: result.winnerIds,
+      detail: result.detail,
+      players: snapshotPlayers(),
+      replay: replayDescriptorFromGame(gameState)
+    };
+  }
+
+  function ensureEveningResult(gameState) {
+    if (!state.isHost) return Promise.resolve(false);
+
+    const summary = buildEveningSessionSummary(gameState);
+    if (!summary) return Promise.resolve(false);
+
+    const existing = state.roomData?.session?.history?.[summary.id];
+    if (existing) return Promise.resolve(true);
+
+    if (
+      state.multiSessionRecordingId === summary.id
+      && state.multiSessionRecordingPromise
+    ) {
+      return state.multiSessionRecordingPromise;
+    }
+
+    state.multiSessionRecordingId = summary.id;
+    state.multiSessionRecordingPromise = AKFirebase.recordSessionResult(state.roomCode, summary)
+      .catch(error => {
+        console.error("Impossible d'enregistrer le résultat de la soirée :", error);
+        return false;
+      })
+      .finally(() => {
+        if (state.multiSessionRecordingId === summary.id) {
+          state.multiSessionRecordingId = null;
+          state.multiSessionRecordingPromise = null;
+        }
+      });
+
+    return state.multiSessionRecordingPromise;
+  }
+
+  function sessionScoresIncludingCurrent(gameState) {
+    const summary = buildEveningSessionSummary(gameState);
+    const session = state.roomData?.session || {};
+    const scores = { ...(session.scores || {}) };
+    const alreadyRecorded = summary && Boolean(session.history?.[summary.id]);
+
+    state.players.forEach(player => {
+      scores[player.id] = Number(scores[player.id] || 0);
+    });
+
+    if (summary && !alreadyRecorded) {
+      Object.entries(summary.points || {}).forEach(([id, value]) => {
+        scores[id] = Number(scores[id] || 0) + Number(value || 0);
+      });
+    }
+
+    return { summary, scores };
+  }
+
+  function renderPostGameContinuation(gameState) {
+    const { summary, scores } = sessionScoresIncludingCurrent(gameState);
+    const ranking = [...state.players].sort(
+      (a, b) => Number(scores[b.id] || 0) - Number(scores[a.id] || 0)
+    );
+    const pointRows = Object.entries(summary?.points || {})
+      .filter(([, value]) => Number(value || 0) > 0)
+      .sort((a, b) => Number(b[1]) - Number(a[1]));
+
+    return `
+      <section class="evening-panel post-game-evening">
+        <div class="room-section-heading">
+          <div>
+            <span class="room-kicker">SOIRÉE CONTINUE</span>
+            <h2 class="section-title">Classement général</h2>
+          </div>
+          <span class="badge green">🏆 Score cumulé</span>
+        </div>
+
+        ${pointRows.length ? `
+          <div class="points-earned">
+            ${pointRows.map(([id, value]) => {
+              const player = playerById(id);
+              return `
+                <span>
+                  ${avatarById(player?.avatarId).emoji}
+                  ${escapeHtml(player?.name || "Joueur")}
+                  <strong>+${Number(value)} pt${Number(value) > 1 ? "s" : ""}</strong>
+                </span>
+              `;
+            }).join("")}
+          </div>
+        ` : `
+          <div class="notice">Aucun point de soirée n’est ajouté pour cette partie.</div>
+        `}
+
+        <div class="evening-leaderboard">
+          ${ranking.map((player, index) => `
+            <div class="evening-score-row ${index === 0 ? "leader" : ""}">
+              <span class="ranking-position">${index + 1}</span>
+              <span class="result-avatar">${avatarById(player.avatarId).emoji}</span>
+              <strong>${escapeHtml(player.name)}</strong>
+              <span class="evening-score">${Number(scores[player.id] || 0)} pts</span>
+            </div>
+          `).join("")}
+        </div>
+      </section>
+
+      ${state.isHost ? `
+        <section class="post-game-controls">
+          <button id="eveningReplayGame" class="primary-btn">🔁 Rejouer</button>
+          <button id="eveningRandomGame" class="secondary-btn">🎲 Jeu aléatoire</button>
+          <button id="eveningChooseGame" class="secondary-btn">🎮 Choisir un autre jeu</button>
+          <button id="eveningReturnLobby" class="secondary-btn">🏠 Retour au salon</button>
+        </section>
+      ` : `
+        <section class="waiting-host-card">
+          <div class="waiting-pulse">🎮</div>
+          <h2>La soirée continue</h2>
+          <p>L’hôte choisit la prochaine partie. Tu restes dans le même salon.</p>
+        </section>
+      `}
+    `;
+  }
+
+  function setPostGameButtonsDisabled(disabled) {
+    [
+      "#eveningReplayGame",
+      "#eveningRandomGame",
+      "#eveningChooseGame",
+      "#eveningReturnLobby"
+    ].forEach(selector => {
+      const button = document.querySelector(selector);
+      if (button) button.disabled = disabled;
+    });
+  }
+
+  async function launchReplayDescriptor(descriptor) {
+    if (!state.isHost || !descriptor?.type) return;
+
+    state.multiRenderKey = null;
+
+    if (descriptor.type === "who-us") {
+      const config = descriptor.config || {};
+      state.quiDeNous = {
+        questionCount: Number(config.questionCount || 10),
+        categories: [...(config.categories || ["drole", "chaos", "dossiers", "amitie", "soiree", "relations"])],
+        includeAdult: Boolean(state.adult && config.includeAdult),
+        alcoholIntensity: config.alcoholIntensity || "normal",
+        questions: [],
+        currentIndex: 0,
+        currentVoterIndex: 0,
+        currentVotes: {},
+        rounds: []
+      };
+      await startWhoUsGame();
+      return;
+    }
+
+    if (descriptor.type === "best-liar") {
+      if (state.players.length < 3) {
+        throw new Error("« Qui ment le mieux ? » nécessite au moins 3 joueurs.");
+      }
+
+      const config = descriptor.config || {};
+      state.bestLiar = {
+        roundCount: Number(config.roundCount || 5),
+        categories: [...(config.categories || ["excuses", "improbable", "quotidien", "dossiers", "chaos"])],
+        includeAdult: Boolean(state.adult && config.includeAdult),
+        prompts: [],
+        currentRound: 0,
+        currentWriterIndex: 0,
+        currentVoterIndex: 0,
+        currentAnswers: [],
+        currentVotes: {},
+        scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+        rounds: []
+      };
+      await startBestLiarGame();
+      return;
+    }
+
+    if (descriptor.type === "laugh-duel") {
+      const config = descriptor.config || {};
+      const availableIds = state.players.map(player => player.id);
+      let player1Id = availableIds.includes(config.player1Id) ? config.player1Id : availableIds[0];
+      let player2Id = availableIds.includes(config.player2Id) ? config.player2Id : availableIds[1];
+
+      if (!player1Id || !player2Id || player1Id === player2Id) {
+        const shuffled = shuffleArray(availableIds);
+        [player1Id, player2Id] = shuffled;
+      }
+
+      state.laughDuel = {
+        player1Id,
+        player2Id,
+        mode: config.mode || "sudden",
+        categories: [...(config.categories || ["nulles", "absurdes", "devinettes", "observation"])],
+        includeAdult: Boolean(state.adult && config.includeAdult),
+        jokePool: [],
+        usedJokeIds: [],
+        currentTurnId: null,
+        currentJoke: null,
+        punchlineVisible: false,
+        lives: {}
+      };
+      await startLaughDuel();
+    }
+  }
+
+  async function launchRandomMultiplayerGame() {
+    if (!state.isHost || state.players.length < 2) return;
+
+    const availableTypes = ["who-us", "laugh-duel"];
+    if (state.players.length >= 3) {
+      availableTypes.push("best-liar");
+    }
+
+    const lastType = state.roomData?.session?.lastGame?.type;
+    const choices = availableTypes.length > 1
+      ? availableTypes.filter(type => type !== lastType)
+      : availableTypes;
+    const selectedType = choices[Math.floor(Math.random() * choices.length)];
+
+    if (selectedType === "who-us") {
+      await launchReplayDescriptor({
+        type: "who-us",
+        config: {
+          questionCount: 10,
+          categories: ["drole", "chaos", "dossiers", "amitie", "soiree", "relations"],
+          includeAdult: false,
+          alcoholIntensity: "normal"
+        }
+      });
+      return;
+    }
+
+    if (selectedType === "best-liar") {
+      await launchReplayDescriptor({
+        type: "best-liar",
+        config: {
+          roundCount: 5,
+          categories: ["excuses", "improbable", "quotidien", "dossiers", "chaos"],
+          includeAdult: false
+        }
+      });
+      return;
+    }
+
+    const shuffledPlayers = shuffleArray(state.players);
+    await launchReplayDescriptor({
+      type: "laugh-duel",
+      config: {
+        player1Id: shuffledPlayers[0]?.id,
+        player2Id: shuffledPlayers[1]?.id,
+        mode: "sudden",
+        categories: ["nulles", "absurdes", "devinettes", "observation"],
+        includeAdult: false
+      }
+    });
+  }
+
+  async function handlePostGameAction(action, gameState) {
+    if (!state.isHost) return;
+
+    setPostGameButtonsDisabled(true);
+    const resultRecorded = await ensureEveningResult(gameState);
+
+    if (!resultRecorded) {
+      setPostGameButtonsDisabled(false);
+      alert("Le score de la soirée n’a pas pu être enregistré. Réessaie dans un instant.");
+      return;
+    }
+
+    try {
+      if (action === "replay") {
+        const descriptor = replayDescriptorFromGame(gameState);
+        if (!descriptor) throw new Error("Cette partie ne peut pas être rejouée.");
+        await launchReplayDescriptor(descriptor);
+        return;
+      }
+
+      if (action === "random") {
+        await launchRandomMultiplayerGame();
+        return;
+      }
+
+      clearMultiLobbyTimer();
+      await AKFirebase.returnToLobby(state.roomCode);
+
+      if (action === "choose") {
+        state.multiView = "browse";
+        state.multiRenderKey = null;
+        state.history = ["lobby"];
+        renderPlayChoice();
+        return;
+      }
+
+      state.multiView = "lobby";
+      state.multiRenderKey = null;
+      renderLobby();
+    } catch (error) {
+      console.error(error);
+      setPostGameButtonsDisabled(false);
+      alert(error.message || "Impossible de préparer la suite de la soirée.");
+    }
+  }
+
+  function bindPostGameContinuation(gameState) {
+    document.querySelector("#eveningReplayGame")?.addEventListener("click", () => {
+      handlePostGameAction("replay", gameState);
+    });
+
+    document.querySelector("#eveningRandomGame")?.addEventListener("click", () => {
+      handlePostGameAction("random", gameState);
+    });
+
+    document.querySelector("#eveningChooseGame")?.addEventListener("click", () => {
+      handlePostGameAction("choose", gameState);
+    });
+
+    document.querySelector("#eveningReturnLobby")?.addEventListener("click", () => {
+      handlePostGameAction("lobby", gameState);
+    });
   }
 
   function renderMultiProgress(current, total, label = "Manche") {
@@ -1207,9 +1783,12 @@
         state: {
           type: "best-liar",
           phase: "answering",
+          sessionGameId: createSessionGameId("best-liar"),
           prompts,
           currentRound: 0,
           settings: {
+            categories: [...game.categories],
+            roundCount: Number(game.roundCount || prompts.length),
             includeAdult: Boolean(game.includeAdult)
           },
           scores,
@@ -1654,28 +2233,11 @@
         `).join("")}
       </section>
 
-      <section class="auto-lobby-countdown">
-        <strong>Retour automatique au salon</strong>
-        <span>dans quelques secondes…</span>
-      </section>
-
-      ${state.isHost ? `<button id="liarLobbyNow" class="primary-btn full">Retourner au salon maintenant</button>` : ""}
+      ${renderPostGameContinuation(gameState)}
     `;
 
-    document.querySelector("#liarLobbyNow")?.addEventListener("click", async event => {
-      event.currentTarget.disabled = true;
-      clearMultiLobbyTimer();
-
-      try {
-        await AKFirebase.returnToLobby(state.roomCode);
-      } catch (error) {
-        console.error(error);
-        event.currentTarget.disabled = false;
-        alert("Impossible de retourner au salon.");
-      }
-    });
-
-    scheduleAutomaticLobbyReturn();
+    ensureEveningResult(gameState);
+    bindPostGameContinuation(gameState);
   }
 
   /* -------------------------
@@ -1727,10 +2289,12 @@
         state: {
           type: "laugh-duel",
           phase: "turn-choice",
+          sessionGameId: createSessionGameId("laugh-duel"),
           player1Id: game.player1Id,
           player2Id: game.player2Id,
           mode: game.mode,
           settings: {
+            categories: [...game.categories],
             includeAdult: Boolean(game.includeAdult)
           },
           jokes,
@@ -2211,28 +2775,11 @@
 
       ${state.alcohol && loser ? `<div class="alcohol-callout">🍻 ${escapeHtml(loser.name)} prend une gorgée de défaite.</div>` : ""}
 
-      <section class="auto-lobby-countdown">
-        <strong>Retour automatique au salon</strong>
-        <span>dans quelques secondes…</span>
-      </section>
-
-      ${state.isHost ? `<button id="laughLobbyNow" class="primary-btn full">Retourner au salon maintenant</button>` : ""}
+      ${renderPostGameContinuation(gameState)}
     `;
 
-    document.querySelector("#laughLobbyNow")?.addEventListener("click", async event => {
-      event.currentTarget.disabled = true;
-      clearMultiLobbyTimer();
-
-      try {
-        await AKFirebase.returnToLobby(state.roomCode);
-      } catch (error) {
-        console.error(error);
-        event.currentTarget.disabled = false;
-        alert("Impossible de retourner au salon.");
-      }
-    });
-
-    scheduleAutomaticLobbyReturn();
+    ensureEveningResult(gameState);
+    bindPostGameContinuation(gameState);
   }
 
   async function restoreMultiplayerSession() {
