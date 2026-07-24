@@ -1,4 +1,4 @@
-const CACHE_VERSION = "akgames-v0.7";
+const CACHE_VERSION = "akgames-v0.8";
 const APP_SHELL = [
   "/",
   "/index.html",
@@ -26,7 +26,13 @@ const APP_SHELL = [
   "/data/je-nai-jamais.json",
   "/data/je-nai-jamais-adulte.json",
   "/data/tu-preferes.json",
-  "/data/tu-preferes-adulte.json"
+  "/data/tu-preferes-adulte.json",
+  "/data/meme-cerveau.json",
+  "/data/meme-cerveau-adulte.json",
+  "/data/minorite.json",
+  "/data/minorite-adulte.json",
+  "/data/qui-a-repondu.json",
+  "/data/qui-a-repondu-adulte.json"
 ];
 
 self.addEventListener("install", event => {

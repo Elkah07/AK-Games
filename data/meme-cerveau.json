@@ -1,0 +1,452 @@
+[
+  {
+    "id": "meme_cerveau_001",
+    "prompt": "Donne un animal qu’on associe immédiatement à la paresse.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_002",
+    "prompt": "Cite une couleur qu’on choisit rarement pour une voiture.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_003",
+    "prompt": "Donne un objet qu’on oublie toujours avant de partir en vacances.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_004",
+    "prompt": "Cite un aliment qu’on mange souvent devant une série.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_005",
+    "prompt": "Donne un métier que les enfants veulent souvent faire.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_006",
+    "prompt": "Cite une excuse classique pour arriver en retard.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_007",
+    "prompt": "Donne une chanson que presque tout le monde connaît par cœur.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_008",
+    "prompt": "Cite un endroit où il est très gênant de rire.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_009",
+    "prompt": "Donne un prénom de chien très classique.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_010",
+    "prompt": "Cite un film qu’on peut revoir dix fois.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_011",
+    "prompt": "Donne un objet qu’on trouve dans presque toutes les cuisines.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_012",
+    "prompt": "Cite une application qu’on ouvre sans réfléchir.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_013",
+    "prompt": "Donne quelque chose qu’on fait dès qu’on rentre chez soi.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_014",
+    "prompt": "Cite une ville parfaite pour un week-end.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_015",
+    "prompt": "Donne un mot qu’on dit quand on ne sait pas quoi répondre.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_016",
+    "prompt": "Cite un cadeau qui peut facilement décevoir.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_017",
+    "prompt": "Donne une chose qu’on vérifie avant de fermer la porte.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_018",
+    "prompt": "Cite un animal qui ferait un très mauvais colocataire.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_019",
+    "prompt": "Donne un plat qu’on commande quand on ne veut pas cuisiner.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_020",
+    "prompt": "Cite un objet qu’on perd souvent dans son lit.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_021",
+    "prompt": "Donne une raison d’annuler une sortie au dernier moment.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_022",
+    "prompt": "Cite une odeur qui rappelle l’enfance.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_023",
+    "prompt": "Donne une célébrité que beaucoup de gens reconnaissent immédiatement.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_024",
+    "prompt": "Cite une boisson qu’on commande en terrasse.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_025",
+    "prompt": "Donne un mot qu’on utilise beaucoup trop dans les messages.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_026",
+    "prompt": "Cite une chose qu’on emporte à la plage.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_027",
+    "prompt": "Donne une activité parfaite un dimanche pluvieux.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_028",
+    "prompt": "Cite un objet qu’on ne prête pas facilement.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_029",
+    "prompt": "Donne un lieu où tout le monde parle trop fort.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_030",
+    "prompt": "Cite une série qu’on lance juste pour avoir un bruit de fond.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_031",
+    "prompt": "Donne une chose qu’on fait discrètement pendant une réunion.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_032",
+    "prompt": "Cite un fruit qu’on achète puis qu’on oublie.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_033",
+    "prompt": "Donne un vêtement qu’on garde alors qu’on ne le porte plus.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_034",
+    "prompt": "Cite une phrase typique d’un parent.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_035",
+    "prompt": "Donne un super-pouvoir que beaucoup de gens choisiraient.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_036",
+    "prompt": "Cite un objet qui devrait toujours être chargé.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_037",
+    "prompt": "Donne un pays qu’on rêve souvent de visiter.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_038",
+    "prompt": "Cite une chose qu’on remet toujours au lendemain.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_039",
+    "prompt": "Donne un jeu de société connu de presque tout le monde.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_040",
+    "prompt": "Cite une nourriture qu’on adore ou qu’on déteste, sans entre-deux.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_041",
+    "prompt": "Donne un endroit où l’on cherche toujours une prise électrique.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_042",
+    "prompt": "Cite un objet inutile qu’on garde dans un tiroir.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_043",
+    "prompt": "Donne un mot qu’on prononce mal quand on est fatigué.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_044",
+    "prompt": "Cite un achat qu’on regrette souvent après quelques jours.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_045",
+    "prompt": "Donne une raison de regarder son téléphone en pleine nuit.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_046",
+    "prompt": "Cite une chose qu’on fait quand personne ne regarde.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_047",
+    "prompt": "Donne un animal qu’on aimerait voir parler.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_048",
+    "prompt": "Cite un parfum de glace très populaire.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_049",
+    "prompt": "Donne un appareil qui tombe toujours en panne au mauvais moment.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_050",
+    "prompt": "Cite une chose qu’on oublie dans une chambre d’hôtel.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_051",
+    "prompt": "Donne une activité qu’on prétend aimer pour faire plaisir.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_052",
+    "prompt": "Cite un sujet de conversation qui revient toujours en famille.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_053",
+    "prompt": "Donne un objet qu’on retrouve au fond de presque tous les sacs.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_054",
+    "prompt": "Cite un mot qui peut immédiatement gâcher une soirée.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_055",
+    "prompt": "Donne une chose qu’on fait avant une photo de groupe.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_056",
+    "prompt": "Cite une destination de vacances très classique.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_057",
+    "prompt": "Donne une nourriture qu’on mange directement dans l’emballage.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_058",
+    "prompt": "Cite une raison de ne pas répondre à un message.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_059",
+    "prompt": "Donne un personnage fictif que tout le monde connaît.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_060",
+    "prompt": "Cite un objet qui disparaît toujours au bureau.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_061",
+    "prompt": "Donne une chose qu’on promet après une soirée trop longue.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_062",
+    "prompt": "Cite un sport qu’on regarde plus qu’on ne le pratique.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_063",
+    "prompt": "Donne un mot qu’on utilise pour éviter de dire non.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_064",
+    "prompt": "Cite une habitude qu’on prend en vacances.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_065",
+    "prompt": "Donne un aliment qu’on mange même quand on n’a plus faim.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_066",
+    "prompt": "Cite un endroit où l’on fait semblant de savoir où aller.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_067",
+    "prompt": "Donne une chose qu’on nettoie juste avant l’arrivée d’invités.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_068",
+    "prompt": "Cite une musique idéale pour démarrer une soirée.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_069",
+    "prompt": "Donne un objet qu’on achète souvent en double sans le vouloir.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_070",
+    "prompt": "Cite une peur irrationnelle assez répandue.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_071",
+    "prompt": "Donne une chose qu’on fait dès qu’il commence à pleuvoir.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_072",
+    "prompt": "Cite un type de photo qu’on retrouve dans tous les téléphones.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_073",
+    "prompt": "Donne un plat que presque tout le monde sait préparer.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_074",
+    "prompt": "Cite un endroit où l’on perd complètement la notion du temps.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_075",
+    "prompt": "Donne une phrase qu’on dit quand on a cassé quelque chose.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_076",
+    "prompt": "Cite une chose qu’on ferait avec un million d’euros.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_077",
+    "prompt": "Donne un objet qu’on oublie souvent dans une autre pièce.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_078",
+    "prompt": "Cite un animal qui a l’air naturellement coupable.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_079",
+    "prompt": "Donne une activité qu’on commence avec motivation puis qu’on abandonne.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_080",
+    "prompt": "Cite une chose qu’on trouve toujours trop chère.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_081",
+    "prompt": "Donne un bruit qu’on déteste entendre le matin.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_082",
+    "prompt": "Cite une chose qu’on fait avant de dormir.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_083",
+    "prompt": "Donne une nourriture qui sent meilleur qu’elle n’est belle.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_084",
+    "prompt": "Cite un endroit où l’on évite de croiser quelqu’un qu’on connaît.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_085",
+    "prompt": "Donne un objet qu’on regarde sans vraiment savoir l’utiliser.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_086",
+    "prompt": "Cite une résolution qu’on ne tient presque jamais.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_087",
+    "prompt": "Donne un mot qui résume une soirée réussie.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_088",
+    "prompt": "Cite une chose qu’on fait toujours trop tard.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_089",
+    "prompt": "Donne un cadeau parfait pour quelqu’un qu’on connaît peu.",
+    "category": "classic"
+  },
+  {
+    "id": "meme_cerveau_090",
+    "prompt": "Cite un détail qui peut rendre une chambre d’hôtel parfaite.",
+    "category": "classic"
+  }
+]

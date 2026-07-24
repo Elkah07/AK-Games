@@ -19,6 +19,9 @@
   state.multiLobbyTimer = null;
   state.multiSessionRecordingId = null;
   state.multiSessionRecordingPromise = null;
+  state.sameBrain = state.sameBrain || null;
+  state.minorityGame = state.minorityGame || null;
+  state.whoAnswered = state.whoAnswered || null;
 
   const SESSION_KEY = "akgames_multiplayer_session_v1";
 
@@ -32,6 +35,12 @@
   const localStartActionTruthGame = startActionTruthGame;
   const localRenderAmbiancePollSetup = renderAmbiancePollSetup;
   const localStartAmbiancePollGame = startAmbiancePollGame;
+  const localRenderSameBrainSetup = renderSameBrainSetup;
+  const localStartSameBrainGame = startSameBrainGame;
+  const localRenderMinoritySetup = renderMinoritySetup;
+  const localStartMinorityGame = startMinorityGame;
+  const localRenderWhoAnsweredSetup = renderWhoAnsweredSetup;
+  const localStartWhoAnsweredGame = startWhoAnsweredGame;
 
   function isMultiplayer() {
     return state.mode === "multi-host" || state.mode === "multi-guest";
@@ -154,6 +163,12 @@
           return;
         }
 
+        if (["same-brain", "minority", "who-answered"].includes(gameState?.type)) {
+          state.multiView = "v08-game";
+          syncMultiV08Game(room);
+          return;
+        }
+
         if (
           state.mode === "multi-guest"
           || state.multiView === "lobby"
@@ -161,6 +176,7 @@
           || state.multiView === "best-liar-game"
           || state.multiView === "laugh-duel-game"
           || state.multiView === "ambiance-game"
+          || state.multiView === "v08-game"
         ) {
           clearMultiLobbyTimer();
           state.multiView = "lobby";
@@ -170,6 +186,9 @@
           state.laughDuel = null;
           state.actionTruth = null;
           state.ambiancePoll = null;
+          state.sameBrain = null;
+          state.minorityGame = null;
+          state.whoAnswered = null;
           renderLobby();
         }
       },
@@ -561,7 +580,10 @@
       "Je n’ai jamais",
       "Je n’ai jamais +18",
       "Tu préfères",
-      "Tu préfères +18"
+      "Tu préfères +18",
+      "Même cerveau",
+      "Minorité",
+      "Qui a répondu ça ?"
     ]);
 
     screen.innerHTML = `
@@ -654,6 +676,34 @@
           pushScreen("games");
           resetAmbiancePollState("would", game.includes("+18"));
           renderAmbiancePollSetup();
+          return;
+        }
+
+        if (game === "Même cerveau") {
+          state.multiView = "same-brain-setup";
+          pushScreen("games");
+          resetSameBrainState();
+          renderSameBrainSetup();
+          return;
+        }
+
+        if (game === "Minorité") {
+          state.multiView = "minority-setup";
+          pushScreen("games");
+          resetMinorityState();
+          renderMinoritySetup();
+          return;
+        }
+
+        if (game === "Qui a répondu ça ?") {
+          if (state.players.length < 3) {
+            alert("« Qui a répondu ça ? » nécessite au moins 3 joueurs.");
+            return;
+          }
+          state.multiView = "who-answered-setup";
+          pushScreen("games");
+          resetWhoAnsweredState();
+          renderWhoAnsweredSetup();
           return;
         }
 
@@ -1243,7 +1293,10 @@
       "laugh-duel": { name: "Le premier qui rit a perdu", icon: "😂" },
       "action-truth": { name: "Action ou Vérité", icon: "🎭" },
       "never-have-i-ever": { name: "Je n’ai jamais", icon: "🙋" },
-      "would-you-rather": { name: "Tu préfères", icon: "⚖️" }
+      "would-you-rather": { name: "Tu préfères", icon: "⚖️" },
+      "same-brain": { name: "Même cerveau", icon: "🧠" },
+      "minority": { name: "Minorité", icon: "🪩" },
+      "who-answered": { name: "Qui a répondu ça ?", icon: "🕵️" }
     };
 
     return presentations[type] || { name: "Jeu AK'Games", icon: "🎮" };
@@ -1328,6 +1381,16 @@
     }
 
     if (gameState.type === "never-have-i-ever" || gameState.type === "would-you-rather") {
+      return {
+        type: gameState.type,
+        config: {
+          roundCount: Number(gameState.settings?.roundCount || gameState.items?.length || 10),
+          includeAdult: Boolean(gameState.settings?.includeAdult)
+        }
+      };
+    }
+
+    if (["same-brain", "minority", "who-answered"].includes(gameState.type)) {
       return {
         type: gameState.type,
         config: {
@@ -1424,7 +1487,7 @@
       result = buildBestLiarSessionSummary(gameState);
     } else if (gameState.type === "laugh-duel") {
       result = buildLaughSessionSummary(gameState);
-    } else if (["action-truth", "never-have-i-ever", "would-you-rather"].includes(gameState.type)) {
+    } else if (["action-truth", "never-have-i-ever", "would-you-rather", "same-brain", "minority", "who-answered"].includes(gameState.type)) {
       result = buildAmbianceSessionSummary(gameState);
     } else {
       return null;
@@ -1652,6 +1715,28 @@
       return;
     }
 
+    if (descriptor.type === "same-brain") {
+      const config = descriptor.config || {};
+      state.sameBrain = { roundCount: Number(config.roundCount || 10), includeAdult: Boolean(state.adult && config.includeAdult), items: [], currentIndex: 0, currentWriterIndex: 0, answers: {}, scores: Object.fromEntries(state.players.map(player => [player.id, 0])), rounds: [] };
+      await startSameBrainGame();
+      return;
+    }
+
+    if (descriptor.type === "minority") {
+      const config = descriptor.config || {};
+      state.minorityGame = { roundCount: Number(config.roundCount || 10), includeAdult: Boolean(state.adult && config.includeAdult), items: [], currentIndex: 0, currentVoterIndex: 0, votes: {}, scores: Object.fromEntries(state.players.map(player => [player.id, 0])), rounds: [] };
+      await startMinorityGame();
+      return;
+    }
+
+    if (descriptor.type === "who-answered") {
+      if (state.players.length < 3) throw new Error("« Qui a répondu ça ? » nécessite au moins 3 joueurs.");
+      const config = descriptor.config || {};
+      state.whoAnswered = { roundCount: Number(config.roundCount || Math.max(6, state.players.length)), includeAdult: Boolean(state.adult && config.includeAdult), items: [], currentIndex: 0, currentWriterIndex: 0, currentVoterIndex: 0, answers: {}, votes: {}, authorOrder: shuffleArray(state.players.map(player => player.id)), scores: Object.fromEntries(state.players.map(player => [player.id, 0])), rounds: [] };
+      await startWhoAnsweredGame();
+      return;
+    }
+
     if (descriptor.type === "laugh-duel") {
       const config = descriptor.config || {};
       const availableIds = state.players.map(player => player.id);
@@ -1683,9 +1768,9 @@
   async function launchRandomMultiplayerGame() {
     if (!state.isHost || state.players.length < 2) return;
 
-    const availableTypes = ["who-us", "laugh-duel", "action-truth", "never-have-i-ever", "would-you-rather"];
+    const availableTypes = ["who-us", "laugh-duel", "action-truth", "never-have-i-ever", "would-you-rather", "same-brain", "minority"];
     if (state.players.length >= 3) {
-      availableTypes.push("best-liar");
+      availableTypes.push("best-liar", "who-answered");
     }
 
     const lastType = state.roomData?.session?.lastGame?.type;
@@ -1731,6 +1816,21 @@
 
     if (selectedType === "would-you-rather") {
       await launchReplayDescriptor({ type: "would-you-rather", config: { roundCount: 10, includeAdult: false } });
+      return;
+    }
+
+    if (selectedType === "same-brain") {
+      await launchReplayDescriptor({ type: "same-brain", config: { roundCount: 10, includeAdult: false } });
+      return;
+    }
+
+    if (selectedType === "minority") {
+      await launchReplayDescriptor({ type: "minority", config: { roundCount: 10, includeAdult: false } });
+      return;
+    }
+
+    if (selectedType === "who-answered") {
+      await launchReplayDescriptor({ type: "who-answered", config: { roundCount: Math.max(6, state.players.length), includeAdult: false } });
       return;
     }
 
@@ -3151,6 +3251,464 @@
     ensureEveningResult(gameState);
     bindPostGameContinuation(gameState);
   }
+
+
+  /* =========================================================
+     AK'GAMES V0.8 — CONNEXION & SECRETS MULTIJOUEUR
+     ========================================================= */
+
+  renderSameBrainSetup = function () {
+    if (!isMultiplayer()) return localRenderSameBrainSetup();
+    if (!state.sameBrain) resetSameBrainState();
+    const game = state.sameBrain;
+    title.textContent = "Même cerveau";
+    setBackVisible(true);
+    screen.innerHTML = `
+      <section class="game-cover game-cover-brain"><span class="game-cover-icon">🧠</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>Même cerveau</h2><p>Tout le monde répond en même temps. Les réponses identiques connectent les cerveaux.</p></div></section>
+      <section class="card setup-card-v07"><div class="form-group"><label for="multiBrainRounds">Nombre de questions</label><select id="multiBrainRounds" class="text-input">${[6,8,10,15].map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} questions</option>`).join("")}</select></div></section>
+      ${state.adult ? `<label class="option-card premium-toggle"><input id="multiBrainAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Crushs, rendez-vous et petits dossiers.</span></span></label>` : ""}
+      <div class="notice">Un mot ou une courte expression. Plus la réponse est spontanée, plus le match est savoureux.</div>
+      ${state.isHost ? `<button id="startMultiBrain" class="primary-btn full">Connecter tous les cerveaux</button>` : renderMultiWaiting("En attente de l’hôte", "La partie commencera sur tous les écrans.", "👑")}
+    `;
+    document.querySelector("#multiBrainRounds")?.addEventListener("change", event => game.roundCount = Number(event.target.value));
+    document.querySelector("#multiBrainAdult")?.addEventListener("change", event => game.includeAdult = event.target.checked);
+    document.querySelector("#startMultiBrain")?.addEventListener("click", startSameBrainGame);
+  };
+
+  startSameBrainGame = async function () {
+    if (!isMultiplayer()) return localStartSameBrainGame();
+    if (!state.isHost) return;
+    const game = state.sameBrain;
+    screen.innerHTML = `<div class="notice">Connexion des neurones…</div>`;
+    try {
+      let pool = await loadJsonFile("data/meme-cerveau.json", "Impossible de charger les questions de Même cerveau.");
+      if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/meme-cerveau-adulte.json", "Impossible de charger les questions adultes."));
+      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+      await AKFirebase.setGame(state.roomCode, {
+        state: {
+          type: "same-brain", phase: "answering", sessionGameId: createSessionGameId("same-brain"),
+          items, currentIndex: 0, scores, rounds: {}, currentResult: null,
+          settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult) },
+          startedAt: Date.now(), updatedAt: Date.now()
+        },
+        answers: {}
+      });
+      state.multiView = "v08-game";
+    } catch (error) {
+      console.error(error);
+      alert(error.message || "Impossible de lancer la partie.");
+      renderSameBrainSetup();
+    }
+  };
+
+  renderMinoritySetup = function () {
+    if (!isMultiplayer()) return localRenderMinoritySetup();
+    if (!state.minorityGame) resetMinorityState();
+    const game = state.minorityGame;
+    title.textContent = "Minorité";
+    setBackVisible(true);
+    screen.innerHTML = `
+      <section class="game-cover game-cover-minority"><span class="game-cover-icon">🪩</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>Minorité</h2><p>Trois choix secrets. Le ou les camps les moins populaires prennent le point.</p></div></section>
+      <section class="card setup-card-v07"><div class="form-group"><label for="multiMinorityRounds">Nombre de questions</label><select id="multiMinorityRounds" class="text-input">${[6,8,10,15].map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} questions</option>`).join("")}</select></div></section>
+      ${state.adult ? `<label class="option-card premium-toggle"><input id="multiMinorityAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Relations, flirt et préférences plus personnelles.</span></span></label>` : ""}
+      ${state.isHost ? `<button id="startMultiMinority" class="primary-btn full">Lancer le vote secret</button>` : renderMultiWaiting("En attente de l’hôte", "La partie commencera automatiquement.", "👑")}
+    `;
+    document.querySelector("#multiMinorityRounds")?.addEventListener("change", event => game.roundCount = Number(event.target.value));
+    document.querySelector("#multiMinorityAdult")?.addEventListener("change", event => game.includeAdult = event.target.checked);
+    document.querySelector("#startMultiMinority")?.addEventListener("click", startMinorityGame);
+  };
+
+  startMinorityGame = async function () {
+    if (!isMultiplayer()) return localStartMinorityGame();
+    if (!state.isHost) return;
+    const game = state.minorityGame;
+    screen.innerHTML = `<div class="notice">Ouverture du scrutin…</div>`;
+    try {
+      let pool = await loadJsonFile("data/minorite.json", "Impossible de charger les questions de Minorité.");
+      if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/minorite-adulte.json", "Impossible de charger les questions adultes."));
+      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+      await AKFirebase.setGame(state.roomCode, {
+        state: {
+          type: "minority", phase: "voting", sessionGameId: createSessionGameId("minority"),
+          items, currentIndex: 0, scores, rounds: {}, currentResult: null,
+          settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult) },
+          startedAt: Date.now(), updatedAt: Date.now()
+        },
+        votes: {}
+      });
+      state.multiView = "v08-game";
+    } catch (error) {
+      console.error(error);
+      alert(error.message || "Impossible de lancer la partie.");
+      renderMinoritySetup();
+    }
+  };
+
+  renderWhoAnsweredSetup = function () {
+    if (!isMultiplayer()) return localRenderWhoAnsweredSetup();
+    if (!state.whoAnswered) resetWhoAnsweredState();
+    const game = state.whoAnswered;
+    title.textContent = "Qui a répondu ça ?";
+    setBackVisible(true);
+    const minimum = Math.max(6, state.players.length);
+    const choices = [minimum, 8, 10, 15].filter((value, index, array) => array.indexOf(value) === index);
+    screen.innerHTML = `
+      <section class="game-cover game-cover-who"><span class="game-cover-icon">🕵️</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>Qui a répondu ça ?</h2><p>Tout le monde écrit sur son téléphone. Une réponse devient mystérieuse et le groupe enquête.</p></div></section>
+      <section class="card setup-card-v07"><div class="form-group"><label for="multiWhoRounds">Nombre de manches</label><select id="multiWhoRounds" class="text-input">${choices.map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} manches</option>`).join("")}</select></div></section>
+      ${state.adult ? `<label class="option-card premium-toggle"><input id="multiWhoAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Crushs, relations et réponses plus révélatrices.</span></span></label>` : ""}
+      <div class="notice">Les bons détectives gagnent 1 point. L’auteur gagne 1 point par personne trompée.</div>
+      ${state.isHost ? `<button id="startMultiWho" class="primary-btn full">Ouvrir l’enquête</button>` : renderMultiWaiting("En attente de l’hôte", "Les carnets secrets vont bientôt s’ouvrir.", "👑")}
+    `;
+    document.querySelector("#multiWhoRounds")?.addEventListener("change", event => game.roundCount = Number(event.target.value));
+    document.querySelector("#multiWhoAdult")?.addEventListener("change", event => game.includeAdult = event.target.checked);
+    document.querySelector("#startMultiWho")?.addEventListener("click", startWhoAnsweredGame);
+  };
+
+  startWhoAnsweredGame = async function () {
+    if (!isMultiplayer()) return localStartWhoAnsweredGame();
+    if (!state.isHost) return;
+    if (state.players.length < 3) {
+      alert("« Qui a répondu ça ? » nécessite au moins 3 joueurs.");
+      return;
+    }
+    const game = state.whoAnswered;
+    screen.innerHTML = `<div class="notice">Distribution des carnets secrets…</div>`;
+    try {
+      let pool = await loadJsonFile("data/qui-a-repondu.json", "Impossible de charger les questions.");
+      if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/qui-a-repondu-adulte.json", "Impossible de charger les questions adultes."));
+      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+      const authorOrder = shuffleArray(state.players.map(player => player.id));
+      await AKFirebase.setGame(state.roomCode, {
+        state: {
+          type: "who-answered", phase: "answering", sessionGameId: createSessionGameId("who-answered"),
+          items, currentIndex: 0, authorOrder, scores, rounds: {}, currentResult: null,
+          settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult) },
+          startedAt: Date.now(), updatedAt: Date.now()
+        },
+        answers: {}, votes: {}
+      });
+      state.multiView = "v08-game";
+    } catch (error) {
+      console.error(error);
+      alert(error.message || "Impossible de lancer la partie.");
+      renderWhoAnsweredSetup();
+    }
+  };
+
+  function syncMultiV08Game(room) {
+    const gameState = room.game?.state;
+    if (!gameState) return;
+    if (gameState.phase !== "final") clearMultiLobbyTimer();
+
+    if (gameState.type === "same-brain") {
+      const answers = room.game?.answers || {};
+      processMultiSameBrain(gameState, answers);
+      const renderKey = [gameState.type, gameState.phase, gameState.currentIndex, Object.keys(answers).length, answers[state.currentUid]?.text || "", JSON.stringify(gameState.currentResult || {}), JSON.stringify(gameState.scores || {})].join("|");
+      if (state.multiRenderKey === renderKey) return;
+      state.multiRenderKey = renderKey;
+      if (gameState.phase === "final") renderMultiV08Final(gameState);
+      else if (gameState.phase === "results") renderMultiSameBrainResults(gameState);
+      else renderMultiSameBrainAnswer(gameState, answers);
+      return;
+    }
+
+    if (gameState.type === "minority") {
+      const votes = room.game?.votes || {};
+      processMultiMinority(gameState, votes);
+      const renderKey = [gameState.type, gameState.phase, gameState.currentIndex, Object.keys(votes).length, votes[state.currentUid], JSON.stringify(gameState.currentResult || {}), JSON.stringify(gameState.scores || {})].join("|");
+      if (state.multiRenderKey === renderKey) return;
+      state.multiRenderKey = renderKey;
+      if (gameState.phase === "final") renderMultiV08Final(gameState);
+      else if (gameState.phase === "results") renderMultiMinorityResults(gameState);
+      else renderMultiMinorityVote(gameState, votes);
+      return;
+    }
+
+    if (gameState.type === "who-answered") {
+      const answers = room.game?.answers || {};
+      const votes = room.game?.votes || {};
+      processMultiWhoAnswered(gameState, answers, votes);
+      const renderKey = [gameState.type, gameState.phase, gameState.currentIndex, Object.keys(answers).length, Object.keys(votes).length, answers[state.currentUid]?.text || "", votes[state.currentUid] || "", gameState.mysteryAuthorId || "", JSON.stringify(gameState.currentResult || {}), JSON.stringify(gameState.scores || {})].join("|");
+      if (state.multiRenderKey === renderKey) return;
+      state.multiRenderKey = renderKey;
+      if (gameState.phase === "final") renderMultiV08Final(gameState);
+      else if (gameState.phase === "results") renderMultiWhoAnsweredResults(gameState);
+      else if (gameState.phase === "voting") renderMultiWhoAnsweredVote(gameState, votes);
+      else renderMultiWhoAnsweredAnswer(gameState, answers);
+    }
+  }
+
+  function processMultiSameBrain(gameState, answers) {
+    if (!state.isHost || gameState.phase !== "answering" || Object.keys(answers).length < state.players.length) return;
+    const processingId = `same-brain_${gameState.currentIndex}_${Object.keys(answers).length}`;
+    if (state.multiProcessingActionId === processingId) return;
+    state.multiProcessingActionId = processingId;
+    const groups = {};
+    Object.entries(answers).forEach(([id, entry]) => {
+      const key = normalizeBrainAnswer(entry?.text || "") || `unique_${id}`;
+      if (!groups[key]) groups[key] = [];
+      groups[key].push(id);
+    });
+    const points = {};
+    const scores = { ...(gameState.scores || {}) };
+    Object.values(groups).forEach(ids => {
+      const amount = ids.length >= 2 ? Math.min(3, ids.length - 1) : 0;
+      ids.forEach(id => {
+        points[id] = amount;
+        scores[id] = Number(scores[id] || 0) + amount;
+      });
+    });
+    AKFirebase.updateGame(state.roomCode, {
+      "state/phase": "results",
+      "state/currentResult": { answers, points, itemId: gameState.items?.[gameState.currentIndex]?.id || "" },
+      "state/scores": scores,
+      [`state/rounds/${gameState.currentIndex}`]: { answers, points },
+      "state/updatedAt": Date.now()
+    }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
+  }
+
+  function renderMultiSameBrainAnswer(gameState, answers) {
+    const item = gameState.items?.[gameState.currentIndex];
+    const own = answers[state.currentUid];
+    title.textContent = "Même cerveau";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Question")}
+      ${own ? renderMultiWaiting("Réponse verrouillée", `${Object.keys(answers).length}/${state.players.length} cerveaux connectés.`, "🔒") : `
+        <section class="v08-question-card brain-question-card"><span>🧠</span><small>RÉPONDS DU PREMIER COUP</small><h2>${escapeHtml(item?.prompt || "")}</h2></section>
+        <section class="card"><div class="form-group"><label for="multiBrainAnswer">Ta réponse</label><input id="multiBrainAnswer" class="text-input v08-answer-input" maxlength="45" autocomplete="off" placeholder="Un mot ou une courte expression"></div></section>
+        <button id="sendMultiBrain" class="primary-btn full">Verrouiller ma réponse</button>
+      `}
+      ${renderPlayerSubmissionStatus(answers, "A répondu", "Réfléchit…")}
+    `;
+    document.querySelector("#sendMultiBrain")?.addEventListener("click", async event => {
+      const input = document.querySelector("#multiBrainAnswer");
+      const text = input?.value.trim();
+      if (!text) return alert("Écris une réponse avant de continuer.");
+      event.currentTarget.disabled = true;
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { text, submittedAt: Date.now() }); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; alert("La réponse n’a pas pu être envoyée."); }
+    });
+  }
+
+  function renderMultiSameBrainResults(gameState) {
+    const item = gameState.items?.[gameState.currentIndex];
+    const result = gameState.currentResult || {};
+    const matched = Object.values(result.points || {}).some(value => Number(value) > 0);
+    title.textContent = matched ? "Connexion détectée" : "Cerveaux indépendants";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="reveal-stage reveal-v07 brain-reveal"><span class="game-cover-icon">${matched ? "⚡" : "🧠"}</span><h2>${matched ? "Des cerveaux se sont connectés !" : "Aucun match cette fois"}</h2><p>${escapeHtml(item?.prompt || "")}</p></section>
+      <section class="brain-answer-wall">${state.players.map(player => {
+        const points = Number(result.points?.[player.id] || 0);
+        return `<article class="brain-answer-tile ${points ? "matched" : ""}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><p>${escapeHtml(result.answers?.[player.id]?.text || "")}</p>${points ? `<em>+${points} pt${points > 1 ? "s" : ""}</em>` : `<small>réponse unique</small>`}</article>`;
+      }).join("")}</section>
+      ${state.alcohol && !matched ? `<div class="alcohol-callout">🍻 Aucun match : tout le monde prend une petite gorgée de désynchronisation.</div>` : ""}
+      ${state.isHost ? `<button id="nextMultiBrain" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Question suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La suite apparaîtra automatiquement.", "👑")}
+    `;
+    document.querySelector("#nextMultiBrain")?.addEventListener("click", event => advanceMultiV08Round(event, gameState, "answering", "answers"));
+  }
+
+  function processMultiMinority(gameState, votes) {
+    if (!state.isHost || gameState.phase !== "voting" || Object.keys(votes).length < state.players.length) return;
+    const processingId = `minority_${gameState.currentIndex}_${Object.keys(votes).length}`;
+    if (state.multiProcessingActionId === processingId) return;
+    state.multiProcessingActionId = processingId;
+    const item = gameState.items?.[gameState.currentIndex];
+    const counts = (item?.options || []).map((_, index) => Object.values(votes).filter(value => Number(value) === index).length);
+    const positive = counts.filter(value => value > 0);
+    const allEqual = positive.length <= 1 || new Set(positive).size === 1;
+    const minPositive = positive.length ? Math.min(...positive) : 0;
+    const minorityOptions = allEqual ? [] : counts.map((count, index) => count === minPositive && count > 0 ? index : null).filter(index => index !== null);
+    const winnerIds = Object.entries(votes).filter(([, value]) => minorityOptions.includes(Number(value))).map(([id]) => id);
+    const scores = { ...(gameState.scores || {}) };
+    winnerIds.forEach(id => scores[id] = Number(scores[id] || 0) + 1);
+    AKFirebase.updateGame(state.roomCode, {
+      "state/phase": "results",
+      "state/currentResult": { votes, counts, minorityOptions, winnerIds, itemId: item?.id || "" },
+      "state/scores": scores,
+      [`state/rounds/${gameState.currentIndex}`]: { votes, counts, minorityOptions, winnerIds },
+      "state/updatedAt": Date.now()
+    }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
+  }
+
+  function renderMultiMinorityVote(gameState, votes) {
+    const item = gameState.items?.[gameState.currentIndex];
+    const ownVote = votes[state.currentUid];
+    title.textContent = "Minorité";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Question")}
+      ${ownVote !== undefined && ownVote !== null ? renderMultiWaiting("Vote enregistré", `${Object.keys(votes).length}/${state.players.length} réponses reçues.`, "🔒") : `
+        <section class="v08-question-card minority-question-card"><span>🪩</span><small>CHOISIS TA VOIE</small><h2>${escapeHtml(item?.question || "")}</h2></section>
+        <section class="minority-choice-grid">${(item?.options || []).map((option, index) => `<button class="minority-choice" data-multi-minority="${index}"><small>OPTION ${String.fromCharCode(65 + index)}</small><strong>${escapeHtml(option)}</strong></button>`).join("")}</section>
+      `}
+      ${renderPlayerSubmissionStatus(votes, "A voté", "Réfléchit…")}
+    `;
+    document.querySelectorAll("[data-multi-minority]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-multi-minority]").forEach(itemButton => itemButton.disabled = true);
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "votes", Number(button.dataset.multiMinority)); }
+      catch (error) { console.error(error); alert("Le vote n’a pas pu être envoyé."); }
+    }));
+  }
+
+  function renderMultiMinorityResults(gameState) {
+    const item = gameState.items?.[gameState.currentIndex];
+    const result = gameState.currentResult || {};
+    title.textContent = result.winnerIds?.length ? "La minorité gagne" : "Égalité totale";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="reveal-stage reveal-v07 minority-reveal"><span class="game-cover-icon">🪩</span><h2>${result.winnerIds?.length ? "Les esprits rares prennent le point" : "Impossible de départager le groupe"}</h2><p>${escapeHtml(item?.question || "")}</p></section>
+      <section class="minority-results">${(item?.options || []).map((option, index) => `<article class="minority-result ${result.minorityOptions?.includes(index) ? "winner" : ""}"><div><small>OPTION ${String.fromCharCode(65 + index)}</small><strong>${escapeHtml(option)}</strong></div><span>${Number(result.counts?.[index] || 0)} vote${Number(result.counts?.[index] || 0) > 1 ? "s" : ""}</span></article>`).join("")}</section>
+      <section class="poll-results-grid">${state.players.map(player => `<article class="poll-result-person"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(item?.options?.[Number(result.votes?.[player.id])] || "")}</small>${result.winnerIds?.includes(player.id) ? `<em>+1 pt minorité</em>` : ""}</article>`).join("")}</section>
+      ${state.alcohol && result.winnerIds?.length ? `<div class="alcohol-callout">🍻 La majorité prend une petite gorgée. La minorité savoure.</div>` : ""}
+      ${state.isHost ? `<button id="nextMultiMinority" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Question suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La suite apparaîtra automatiquement.", "👑")}
+    `;
+    document.querySelector("#nextMultiMinority")?.addEventListener("click", event => advanceMultiV08Round(event, gameState, "voting", "votes"));
+  }
+
+  function processMultiWhoAnswered(gameState, answers, votes) {
+    if (!state.isHost) return;
+    if (gameState.phase === "answering" && Object.keys(answers).length >= state.players.length) {
+      const processingId = `who-answering_${gameState.currentIndex}_${Object.keys(answers).length}`;
+      if (state.multiProcessingActionId === processingId) return;
+      state.multiProcessingActionId = processingId;
+      const authorId = gameState.authorOrder?.[Number(gameState.currentIndex || 0) % (gameState.authorOrder?.length || 1)];
+      AKFirebase.updateGame(state.roomCode, {
+        "state/phase": "voting",
+        "state/mysteryAuthorId": authorId,
+        "state/answerSnapshot": answers,
+        "state/updatedAt": Date.now(),
+        votes: null
+      }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
+      return;
+    }
+
+    if (gameState.phase === "voting") {
+      const needed = Math.max(0, state.players.length - 1);
+      if (Object.keys(votes).length < needed) return;
+      const processingId = `who-voting_${gameState.currentIndex}_${Object.keys(votes).length}`;
+      if (state.multiProcessingActionId === processingId) return;
+      state.multiProcessingActionId = processingId;
+      const authorId = gameState.mysteryAuthorId;
+      const validVotes = Object.fromEntries(Object.entries(votes).filter(([id]) => id !== authorId));
+      const correctIds = Object.entries(validVotes).filter(([, guess]) => guess === authorId).map(([id]) => id);
+      const fooledIds = Object.entries(validVotes).filter(([, guess]) => guess !== authorId).map(([id]) => id);
+      const scores = { ...(gameState.scores || {}) };
+      correctIds.forEach(id => scores[id] = Number(scores[id] || 0) + 1);
+      scores[authorId] = Number(scores[authorId] || 0) + fooledIds.length;
+      const result = { authorId, correctIds, fooledIds, votes: validVotes, answers: gameState.answerSnapshot || answers, itemId: gameState.items?.[gameState.currentIndex]?.id || "" };
+      AKFirebase.updateGame(state.roomCode, {
+        "state/phase": "results",
+        "state/currentResult": result,
+        "state/scores": scores,
+        [`state/rounds/${gameState.currentIndex}`]: result,
+        "state/updatedAt": Date.now()
+      }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
+    }
+  }
+
+  function renderMultiWhoAnsweredAnswer(gameState, answers) {
+    const item = gameState.items?.[gameState.currentIndex];
+    const own = answers[state.currentUid];
+    title.textContent = "Qui a répondu ça ?";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Enquête")}
+      ${own ? renderMultiWaiting("Réponse déposée", `${Object.keys(answers).length}/${state.players.length} carnets remplis.`, "🔒") : `
+        <section class="v08-question-card who-question-card"><span>🕵️</span><small>RÉPONSE ANONYME</small><h2>${escapeHtml(item?.prompt || "")}</h2></section>
+        <section class="card"><div class="form-group"><label for="multiWhoAnswer">Ta réponse</label><textarea id="multiWhoAnswer" class="text-input text-area multi-answer-textarea" maxlength="180" placeholder="Écris une réponse courte et reconnaissable…"></textarea></div></section>
+        <button id="sendMultiWhoAnswer" class="primary-btn full">Déposer anonymement</button>
+      `}
+      ${renderPlayerSubmissionStatus(answers, "A répondu", "Écrit…")}
+    `;
+    document.querySelector("#sendMultiWhoAnswer")?.addEventListener("click", async event => {
+      const text = document.querySelector("#multiWhoAnswer")?.value.trim();
+      if (!text) return alert("Écris une réponse avant de continuer.");
+      event.currentTarget.disabled = true;
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { text, submittedAt: Date.now() }); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; alert("La réponse n’a pas pu être envoyée."); }
+    });
+  }
+
+  function renderMultiWhoAnsweredVote(gameState, votes) {
+    const item = gameState.items?.[gameState.currentIndex];
+    const authorId = gameState.mysteryAuthorId;
+    const isAuthor = state.currentUid === authorId;
+    const ownVote = votes[state.currentUid];
+    const ownPlayer = playerById(state.currentUid);
+    const candidates = state.players.filter(player => player.id !== state.currentUid);
+    title.textContent = "Qui a répondu ça ?";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Enquête")}
+      <section class="mystery-answer-card"><small>${escapeHtml(item?.prompt || "")}</small><blockquote>« ${escapeHtml(gameState.answerSnapshot?.[authorId]?.text || "") } »</blockquote><span>QUI A ÉCRIT ÇA ?</span></section>
+      ${isAuthor ? renderMultiWaiting("Tu connais déjà la réponse", "Essaie de garder ton meilleur visage innocent.", avatarById(ownPlayer?.avatarId).emoji) : ownVote ? renderMultiWaiting("Soupçon enregistré", `${Object.keys(votes).length}/${Math.max(1, state.players.length - 1)} enquêteurs ont voté.`, "🔒") : `<section class="suspect-grid">${candidates.map(player => `<button class="suspect-card" data-multi-who-vote="${player.id}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong></button>`).join("")}</section>`}
+      ${renderPlayerSubmissionStatus({ ...votes, [authorId]: "author" }, "Prêt", "Cherche…")}
+    `;
+    document.querySelectorAll("[data-multi-who-vote]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-multi-who-vote]").forEach(itemButton => itemButton.disabled = true);
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "votes", button.dataset.multiWhoVote); }
+      catch (error) { console.error(error); alert("Le soupçon n’a pas pu être envoyé."); }
+    }));
+  }
+
+  function renderMultiWhoAnsweredResults(gameState) {
+    const item = gameState.items?.[gameState.currentIndex];
+    const result = gameState.currentResult || {};
+    const author = playerById(result.authorId);
+    title.textContent = "Identité révélée";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="reveal-stage reveal-v07 who-reveal"><span class="game-cover-icon">${avatarById(author?.avatarId).emoji}</span><h2>C’était ${escapeHtml(author?.name || "un joueur")} !</h2><p>« ${escapeHtml(result.answers?.[result.authorId]?.text || "") } »</p></section>
+      <section class="who-vote-results">${state.players.filter(player => player.id !== result.authorId).map(voter => {
+        const guessed = playerById(result.votes?.[voter.id]);
+        const correct = result.correctIds?.includes(voter.id);
+        return `<article class="who-vote-row ${correct ? "correct" : "fooled"}"><span>${avatarById(voter.avatarId).emoji}</span><strong>${escapeHtml(voter.name)}</strong><small>a choisi ${escapeHtml(guessed?.name || "?")}</small><em>${correct ? "+1 pt" : "trompé·e"}</em></article>`;
+      }).join("")}</section>
+      <details class="answer-wall-details"><summary>Voir toutes les réponses</summary><div class="anonymous-answer-list">${state.players.map(player => `<article class="anonymous-answer-card"><span class="answer-number">${avatarById(player.avatarId).emoji}</span><p><strong>${escapeHtml(player.name)}</strong><br>${escapeHtml(result.answers?.[player.id]?.text || "")}</p></article>`).join("")}</div></details>
+      ${result.fooledIds?.length ? `<div class="special-event"><strong>🕵️ ${escapeHtml(author?.name || "L’auteur")} a trompé ${result.fooledIds.length} personne${result.fooledIds.length > 1 ? "s" : ""}</strong><p>+${result.fooledIds.length} point${result.fooledIds.length > 1 ? "s" : ""} de couverture parfaite.</p></div>` : `<div class="notice">Tout le monde a retrouvé l’auteur. Couverture grillée.</div>`}
+      ${state.alcohol && result.fooledIds?.length ? `<div class="alcohol-callout">🍻 Les enquêteurs trompés prennent une petite gorgée.</div>` : ""}
+      ${state.isHost ? `<button id="nextMultiWho" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Enquête suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La prochaine enquête apparaîtra automatiquement.", "👑")}
+    `;
+    document.querySelector("#nextMultiWho")?.addEventListener("click", event => advanceMultiV08Round(event, gameState, "answering", "answers,votes"));
+  }
+
+  async function advanceMultiV08Round(event, gameState, nextPhase, collections) {
+    event.currentTarget.disabled = true;
+    const next = Number(gameState.currentIndex || 0) + 1;
+    const finished = next >= (gameState.items || []).length;
+    const updates = {
+      "state/phase": finished ? "final" : nextPhase,
+      "state/currentIndex": finished ? gameState.currentIndex : next,
+      "state/currentResult": null,
+      "state/mysteryAuthorId": null,
+      "state/answerSnapshot": null,
+      "state/finishedAt": finished ? Date.now() : null,
+      "state/updatedAt": Date.now()
+    };
+    String(collections || "").split(",").filter(Boolean).forEach(collection => { updates[collection] = null; });
+    try { await AKFirebase.updateGame(state.roomCode, updates); }
+    catch (error) { console.error(error); event.currentTarget.disabled = false; alert("Impossible de passer à la suite."); }
+  }
+
+  function renderMultiV08Final(gameState) {
+    const ranking = [...state.players].sort((a, b) => Number(gameState.scores?.[b.id] || 0) - Number(gameState.scores?.[a.id] || 0));
+    const presentation = gamePresentation(gameState.type);
+    title.textContent = "Classement final";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="winner-stage winner-stage-v07 v08-final-stage"><div class="winner-crown">${presentation.icon}🏆</div><h2>La manche est terminée</h2><p>Les points rejoignent maintenant le classement général de la soirée.</p></section>
+      <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(gameState.scores?.[player.id] || 0)} pts</span></div>`).join("")}</section>
+      ${renderPostGameContinuation(gameState)}
+    `;
+    ensureEveningResult(gameState);
+    bindPostGameContinuation(gameState);
+  }
+
 
   async function restoreMultiplayerSession() {
     const raw = localStorage.getItem(SESSION_KEY);

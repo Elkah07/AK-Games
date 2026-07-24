@@ -1,0 +1,752 @@
+[
+  {
+    "id": "minorite_001",
+    "question": "Pour un week-end improvisé, tu choisis…",
+    "options": [
+      "Mer",
+      "Montagne",
+      "Grande ville"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_002",
+    "question": "Tu ne peux garder qu’une seule application…",
+    "options": [
+      "Messages",
+      "Musique",
+      "Cartes"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_003",
+    "question": "Pour le petit-déjeuner parfait…",
+    "options": [
+      "Sucré",
+      "Salé",
+      "Rien du tout"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_004",
+    "question": "Tu gagnes un billet gratuit pour…",
+    "options": [
+      "Un concert",
+      "Un parc d’attractions",
+      "Un match"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_005",
+    "question": "Dans une maison idéale, tu veux absolument…",
+    "options": [
+      "Une piscine",
+      "Un grand jardin",
+      "Une salle cinéma"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_006",
+    "question": "Tu dois vivre un mois sans…",
+    "options": [
+      "Réseaux sociaux",
+      "Séries et films",
+      "Musique"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_007",
+    "question": "Pour une soirée tranquille…",
+    "options": [
+      "Jeux de société",
+      "Film",
+      "Discussion jusqu’à tard"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_008",
+    "question": "Tu adoptes un animal…",
+    "options": [
+      "Chien",
+      "Chat",
+      "Animal exotique"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_009",
+    "question": "Ton téléphone ne peut plus servir qu’à…",
+    "options": [
+      "Appeler",
+      "Prendre des photos",
+      "Écouter de la musique"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_010",
+    "question": "Tu préfères être connu pour…",
+    "options": [
+      "Ton humour",
+      "Ton talent",
+      "Ta gentillesse"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_011",
+    "question": "Au restaurant, tu commandes d’abord…",
+    "options": [
+      "Entrée",
+      "Plat",
+      "Dessert"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_012",
+    "question": "Tu pars sans préparation vers…",
+    "options": [
+      "Un pays chaud",
+      "Un pays froid",
+      "Une île isolée"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_013",
+    "question": "Tu dois apprendre instantanément…",
+    "options": [
+      "Une langue",
+      "Un instrument",
+      "Un sport"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_014",
+    "question": "Ton logement idéal se trouve…",
+    "options": [
+      "En centre-ville",
+      "À la campagne",
+      "Près de la mer"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_015",
+    "question": "Tu ne peux regarder qu’un genre…",
+    "options": [
+      "Comédie",
+      "Thriller",
+      "Fantastique"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_016",
+    "question": "Pour te réveiller…",
+    "options": [
+      "Café",
+      "Douche",
+      "Musique"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_017",
+    "question": "Tu reçois 10 000 euros à dépenser uniquement dans…",
+    "options": [
+      "Voyages",
+      "Vêtements",
+      "Technologie"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_018",
+    "question": "Tu préfères avoir toujours…",
+    "options": [
+      "Trop chaud",
+      "Trop froid",
+      "Un peu faim"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_019",
+    "question": "Ton anniversaire idéal…",
+    "options": [
+      "Grosse fête",
+      "Petit comité",
+      "Voyage solo"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_020",
+    "question": "Tu dois choisir un super-pouvoir…",
+    "options": [
+      "Voler",
+      "Lire les pensées",
+      "Arrêter le temps"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_021",
+    "question": "Pour une journée sans obligations…",
+    "options": [
+      "Dormir",
+      "Sortir",
+      "Créer quelque chose"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_022",
+    "question": "Tu ne peux manger qu’une cuisine…",
+    "options": [
+      "Italienne",
+      "Japonaise",
+      "Mexicaine"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_023",
+    "question": "Tu préfères une vie…",
+    "options": [
+      "Très stable",
+      "Pleine de surprises",
+      "Toujours en voyage"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_024",
+    "question": "Pour faire rire le groupe…",
+    "options": [
+      "Imitation",
+      "Anecdote gênante",
+      "Blague nulle"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_025",
+    "question": "Tu serais meilleur dans…",
+    "options": [
+      "Un jeu de stratégie",
+      "Un jeu de rapidité",
+      "Un jeu de bluff"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_026",
+    "question": "Tu dois perdre un sens…",
+    "options": [
+      "Goût",
+      "Odorat",
+      "Sens de l’orientation"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_027",
+    "question": "Tu préfères recevoir…",
+    "options": [
+      "Un cadeau utile",
+      "Une surprise folle",
+      "De l’argent"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_028",
+    "question": "Tu ne peux conserver qu’un meuble…",
+    "options": [
+      "Lit",
+      "Canapé",
+      "Table"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_029",
+    "question": "Pour une nuit blanche…",
+    "options": [
+      "Danser",
+      "Parler",
+      "Jouer"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_030",
+    "question": "Tu préfères être toujours…",
+    "options": [
+      "En avance",
+      "Pile à l’heure",
+      "Un peu en retard"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_031",
+    "question": "Tu dois vivre dans une époque…",
+    "options": [
+      "Passé",
+      "Présent",
+      "Futur"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_032",
+    "question": "Une journée parfaite commence par…",
+    "options": [
+      "Un message gentil",
+      "Un bon repas",
+      "Aucune alarme"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_033",
+    "question": "Tu veux maîtriser…",
+    "options": [
+      "La cuisine",
+      "La danse",
+      "Le bricolage"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_034",
+    "question": "Tu dois choisir un transport quotidien…",
+    "options": [
+      "Vélo",
+      "Train",
+      "Voiture"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_035",
+    "question": "Pour un défi télévisé…",
+    "options": [
+      "Cuisine",
+      "Survie",
+      "Culture générale"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_036",
+    "question": "Tu préfères avoir une mémoire…",
+    "options": [
+      "Photographique",
+      "Sélective",
+      "Très créative"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_037",
+    "question": "Tu ne peux garder qu’une saison…",
+    "options": [
+      "Été",
+      "Automne",
+      "Hiver"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_038",
+    "question": "Ton talent caché idéal…",
+    "options": [
+      "Chanter",
+      "Dessiner",
+      "Faire rire"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_039",
+    "question": "Pour une soirée déguisée…",
+    "options": [
+      "Personnage de film",
+      "Animal",
+      "Célébrité"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_040",
+    "question": "Tu dois choisir une colocation avec…",
+    "options": [
+      "Une star",
+      "Ton meilleur ami",
+      "Un inconnu très riche"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_041",
+    "question": "Tu préfères ne plus jamais…",
+    "options": [
+      "Faire la queue",
+      "Avoir de publicité",
+      "Recevoir de spam"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_042",
+    "question": "Pour te détendre…",
+    "options": [
+      "Bain",
+      "Promenade",
+      "Sieste"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_043",
+    "question": "Tu ne peux écouter qu’un style…",
+    "options": [
+      "Pop",
+      "Rap",
+      "Rock"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_044",
+    "question": "Tu préfères gagner…",
+    "options": [
+      "Du temps",
+      "De l’argent",
+      "De l’énergie"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_045",
+    "question": "Tu dois choisir une compétence sociale…",
+    "options": [
+      "Convaincre",
+      "Rassurer",
+      "Faire rire"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_046",
+    "question": "Pour un pique-nique…",
+    "options": [
+      "Sandwichs",
+      "Salades",
+      "Tout sucré"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_047",
+    "question": "Tu préfères une soirée…",
+    "options": [
+      "Planifiée",
+      "Improvisée",
+      "Qui finit tôt"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_048",
+    "question": "Tu dois porter une seule couleur…",
+    "options": [
+      "Noir",
+      "Blanc",
+      "Couleur vive"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_049",
+    "question": "Pour une photo parfaite…",
+    "options": [
+      "Paysage",
+      "Portrait",
+      "Photo spontanée"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_050",
+    "question": "Tu préfères vivre sans…",
+    "options": [
+      "Climatisation",
+      "Chauffage",
+      "Ascenseur"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_051",
+    "question": "Tu choisis un abonnement à vie…",
+    "options": [
+      "Streaming",
+      "Livraison de repas",
+      "Salle de sport"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_052",
+    "question": "Tu dois devenir expert en…",
+    "options": [
+      "Histoire",
+      "Science",
+      "Psychologie"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_053",
+    "question": "Pour les vacances…",
+    "options": [
+      "Tout planifier",
+      "Improviser",
+      "Suivre le groupe"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_054",
+    "question": "Tu ne peux garder qu’un plaisir…",
+    "options": [
+      "Manger",
+      "Dormir",
+      "Voyager"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_055",
+    "question": "Tu préfères être applaudi pour…",
+    "options": [
+      "Une idée",
+      "Une performance",
+      "Un acte courageux"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_056",
+    "question": "Tu dois changer de prénom pour…",
+    "options": [
+      "Un prénom classique",
+      "Un prénom rare",
+      "Un surnom"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_057",
+    "question": "Tu préfères que la soirée se termine par…",
+    "options": [
+      "Un dernier jeu",
+      "Une discussion profonde",
+      "Une commande de nourriture"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_058",
+    "question": "Pour prendre une décision difficile…",
+    "options": [
+      "Tu listes tout",
+      "Tu suis ton instinct",
+      "Tu demandes au groupe"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_059",
+    "question": "Tu dois recevoir une notification chaque heure…",
+    "options": [
+      "Une blague",
+      "Une citation",
+      "Une météo inutile"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_060",
+    "question": "Tu préfères avoir toujours…",
+    "options": [
+      "La bonne musique",
+      "La bonne tenue",
+      "La bonne réponse"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_061",
+    "question": "Pour gagner un concours…",
+    "options": [
+      "Tu bluffes",
+      "Tu t’entraînes",
+      "Tu improvises"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_062",
+    "question": "Tu dois habiter dans…",
+    "options": [
+      "Un loft",
+      "Une petite maison",
+      "Un appartement avec vue"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_063",
+    "question": "Tu choisis une soirée thématique…",
+    "options": [
+      "Années 2000",
+      "Cinéma",
+      "Pyjama"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_064",
+    "question": "Tu préfères apprendre par…",
+    "options": [
+      "La pratique",
+      "Les vidéos",
+      "Les explications"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_065",
+    "question": "Tu ne peux plus utiliser qu’un emoji…",
+    "options": [
+      "😂",
+      "❤️",
+      "😭"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_066",
+    "question": "Tu dois avoir un rire…",
+    "options": [
+      "Très discret",
+      "Contagieux",
+      "Complètement absurde"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_067",
+    "question": "Tu préfères être reconnu dans la rue pour…",
+    "options": [
+      "Une vidéo drôle",
+      "Une invention",
+      "Un exploit sportif"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_068",
+    "question": "Tu dois choisir un repas de secours…",
+    "options": [
+      "Pâtes",
+      "Pizza",
+      "Céréales"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_069",
+    "question": "Tu préfères un ami qui…",
+    "options": [
+      "Dit toujours la vérité",
+      "Est toujours disponible",
+      "Fait toujours rire"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_070",
+    "question": "Tu choisis un bouton magique…",
+    "options": [
+      "Annuler",
+      "Rejouer",
+      "Avancer de 10 ans"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_071",
+    "question": "Tu dois passer une heure dans…",
+    "options": [
+      "Un ascenseur",
+      "Une file d’attente",
+      "Une salle d’attente"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_072",
+    "question": "Tu préfères organiser…",
+    "options": [
+      "Une fête",
+      "Un voyage",
+      "Un projet secret"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_073",
+    "question": "Pour une compétition de groupe…",
+    "options": [
+      "Tu veux être capitaine",
+      "Stratège",
+      "Électron libre"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_074",
+    "question": "Tu dois recevoir un surnom…",
+    "options": [
+      "Mignon",
+      "Ridicule",
+      "Mystérieux"
+    ],
+    "category": "classic"
+  },
+  {
+    "id": "minorite_075",
+    "question": "Tu préfères connaître…",
+    "options": [
+      "Ton avenir",
+      "Les pensées des autres",
+      "La vérité sur tout"
+    ],
+    "category": "classic"
+  }
+]

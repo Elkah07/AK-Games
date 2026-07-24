@@ -1,0 +1,302 @@
+[
+  {
+    "id": "minorite_adulte_001",
+    "question": "Pour un premier rendez-vous…",
+    "options": [
+      "Bar",
+      "Restaurant",
+      "Balade nocturne"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_002",
+    "question": "Le détail le plus séduisant…",
+    "options": [
+      "Le regard",
+      "La voix",
+      "L’humour"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_003",
+    "question": "Tu préfères un crush…",
+    "options": [
+      "Mystérieux",
+      "Très direct",
+      "Meilleur ami d’abord"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_004",
+    "question": "Pour flirter, tu utilises surtout…",
+    "options": [
+      "Les messages",
+      "Le regard",
+      "Les blagues"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_005",
+    "question": "Le pire pendant un rendez-vous…",
+    "options": [
+      "Les silences",
+      "Le téléphone",
+      "Parler de son ex"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_006",
+    "question": "Tu préfères recevoir…",
+    "options": [
+      "Un long message",
+      "Une surprise",
+      "Une invitation spontanée"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_007",
+    "question": "Le geste romantique idéal…",
+    "options": [
+      "Fleurs",
+      "Dîner préparé",
+      "Voyage surprise"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_008",
+    "question": "Tu serais le plus jaloux de…",
+    "options": [
+      "Un ex",
+      "Un collègue",
+      "Un meilleur ami"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_009",
+    "question": "Tu préfères une relation…",
+    "options": [
+      "Très fusionnelle",
+      "Très indépendante",
+      "Un équilibre strict"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_010",
+    "question": "Pour avouer un crush…",
+    "options": [
+      "En face",
+      "Par message",
+      "Avec l’aide d’un ami"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_011",
+    "question": "Le plus gros red flag…",
+    "options": [
+      "Mensonge",
+      "Jalousie",
+      "Indifférence"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_012",
+    "question": "Tu préfères être séduit par…",
+    "options": [
+      "Un compliment",
+      "Une attention",
+      "Une audace"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_013",
+    "question": "Le rendez-vous le plus risqué…",
+    "options": [
+      "Avec un ex",
+      "Avec un collègue",
+      "Avec l’ami d’un ami"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_014",
+    "question": "Tu préfères une personne…",
+    "options": [
+      "Très drôle",
+      "Très douce",
+      "Très ambitieuse"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_015",
+    "question": "Pour relancer quelqu’un…",
+    "options": [
+      "Un meme",
+      "Une question",
+      "Un message direct"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_016",
+    "question": "Tu pardonnerais plus facilement…",
+    "options": [
+      "Un oubli",
+      "Une maladresse",
+      "Un petit mensonge"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_017",
+    "question": "Tu préfères un baiser…",
+    "options": [
+      "Spontané",
+      "Attendu",
+      "Sous la pluie"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_018",
+    "question": "Le plus important dans l’attirance…",
+    "options": [
+      "Le physique",
+      "La connexion",
+      "Le mystère"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_019",
+    "question": "Tu préfères être appelé…",
+    "options": [
+      "Mon cœur",
+      "Mon amour",
+      "Un surnom inventé"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_020",
+    "question": "Pour une soirée à deux…",
+    "options": [
+      "Sortie chic",
+      "Canapé",
+      "Aventure imprévue"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_021",
+    "question": "Tu préfères une déclaration…",
+    "options": [
+      "Privée",
+      "Publique",
+      "Complètement inattendue"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_022",
+    "question": "Le plus gênant à envoyer par erreur…",
+    "options": [
+      "Un vocal",
+      "Une photo",
+      "Un message sur la personne"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_023",
+    "question": "Tu préfères savoir…",
+    "options": [
+      "Qui a un crush sur toi",
+      "Qui t’a stalké",
+      "Qui parle de toi"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_024",
+    "question": "Une relation commence mieux par…",
+    "options": [
+      "Un coup de foudre",
+      "Une amitié",
+      "Un défi"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_025",
+    "question": "Tu préfères un partenaire…",
+    "options": [
+      "Très démonstratif",
+      "Très protecteur",
+      "Très indépendant"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_026",
+    "question": "Le meilleur compliment concerne…",
+    "options": [
+      "Le physique",
+      "La personnalité",
+      "Le talent"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_027",
+    "question": "Tu choisirais une escapade…",
+    "options": [
+      "Hôtel chic",
+      "Cabane isolée",
+      "Ville inconnue"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_028",
+    "question": "Tu préfères recevoir un message…",
+    "options": [
+      "Au réveil",
+      "En pleine journée",
+      "Juste avant de dormir"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_029",
+    "question": "Tu préfères une personne qui…",
+    "options": [
+      "Te rassure",
+      "Te challenge",
+      "Te surprend"
+    ],
+    "category": "adult"
+  },
+  {
+    "id": "minorite_adulte_030",
+    "question": "Pour réparer une dispute…",
+    "options": [
+      "Parler tout de suite",
+      "Faire une pause",
+      "Préparer une surprise"
+    ],
+    "category": "adult"
+  }
+]

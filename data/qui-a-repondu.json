@@ -1,0 +1,452 @@
+[
+  {
+    "id": "qui_repondu_001",
+    "prompt": "Quelle est la chose la plus inutile que tu sais faire ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_002",
+    "prompt": "Quel achat à moins de 20 euros a vraiment amélioré ta vie ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_003",
+    "prompt": "Quelle règle sociale supprimerais-tu immédiatement ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_004",
+    "prompt": "Quel serait ton nom de scène ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_005",
+    "prompt": "Quelle est ta pire habitude quand tu es seul ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_006",
+    "prompt": "Quel objet de ton quotidien mériterait une télécommande ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_007",
+    "prompt": "Quelle excuse absurde pourrais-tu utiliser pour manquer le travail ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_008",
+    "prompt": "Quel personnage fictif ferait un excellent président ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_009",
+    "prompt": "Quelle nourriture défendrais-tu même si tout le monde la déteste ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_010",
+    "prompt": "Quel est le compliment le plus étrange qu’on pourrait te faire ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_011",
+    "prompt": "Quelle petite chose suffit à gâcher ta journée ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_012",
+    "prompt": "Quel talent totalement inutile aimerais-tu maîtriser ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_013",
+    "prompt": "Quel serait le titre de ton autobiographie ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_014",
+    "prompt": "Quelle célébrité choisirais-tu comme colocataire ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_015",
+    "prompt": "Quelle est la chose la plus gênante que tu fais quand tu paniques ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_016",
+    "prompt": "Quel mensonge innocent racontais-tu enfant ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_017",
+    "prompt": "Quelle application devrait disparaître pendant une semaine ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_018",
+    "prompt": "Quel plat représenterait le mieux ta personnalité ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_019",
+    "prompt": "Quelle serait ta première décision si tu devenais maire ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_020",
+    "prompt": "Quel bruit pourrait te faire quitter une pièce immédiatement ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_021",
+    "prompt": "Quelle est la pire idée de cadeau pour toi ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_022",
+    "prompt": "Quel objet emporterais-tu dans une apocalypse très peu sérieuse ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_023",
+    "prompt": "Quelle chanson devrait jouer chaque fois que tu entres dans une pièce ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_024",
+    "prompt": "Quel surnom ridicule pourrait pourtant te convenir ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_025",
+    "prompt": "Quelle invention n’aurait jamais dû exister ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_026",
+    "prompt": "Quel est ton réflexe le moins glorieux quand tu as peur ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_027",
+    "prompt": "Quelle chose fais-tu beaucoup mieux que la moyenne ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_028",
+    "prompt": "Quel serait ton métier dans un autre univers ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_029",
+    "prompt": "Quelle mode du passé devrait revenir ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_030",
+    "prompt": "Quel animal représente ton énergie aujourd’hui ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_031",
+    "prompt": "Quelle est la pire phrase pour commencer une conversation ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_032",
+    "prompt": "Quel objet de chez toi te juge probablement en silence ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_033",
+    "prompt": "Quelle promesse te fais-tu souvent sans la tenir ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_034",
+    "prompt": "Quel est le meilleur moyen de te convaincre de sortir ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_035",
+    "prompt": "Quelle serait ta devise officielle ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_036",
+    "prompt": "Quel aliment pourrais-tu manger trois jours de suite ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_037",
+    "prompt": "Quelle compétence aimerais-tu télécharger instantanément ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_038",
+    "prompt": "Quel lieu banal te rend étonnamment heureux ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_039",
+    "prompt": "Quelle décision prendrais-tu avec un bouton magique ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_040",
+    "prompt": "Quel est ton plus grand talent pour perdre du temps ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_041",
+    "prompt": "Quelle chose pourrais-tu enseigner sans préparation ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_042",
+    "prompt": "Quel serait ton rôle dans un braquage de film ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_043",
+    "prompt": "Quelle est la chose la plus suspecte dans ton historique de recherche ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_044",
+    "prompt": "Quel objet devrait être interdit après minuit ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_045",
+    "prompt": "Quelle est ta technique secrète pour éviter une conversation ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_046",
+    "prompt": "Quel serait le nom de ton bateau ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_047",
+    "prompt": "Quelle chose très banale te fait beaucoup trop rire ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_048",
+    "prompt": "Quel est ton repas de secours absolu ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_049",
+    "prompt": "Quelle habitude aimerais-tu voler à quelqu’un du groupe ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_050",
+    "prompt": "Quel serait ton dernier message avant de disparaître d’internet ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_051",
+    "prompt": "Quelle est la meilleure excuse pour ne pas partager sa nourriture ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_052",
+    "prompt": "Quel métier ne pourrais-tu jamais exercer ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_053",
+    "prompt": "Quel mot utilises-tu beaucoup trop ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_054",
+    "prompt": "Quelle est ta réaction automatique devant une mauvaise nouvelle ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_055",
+    "prompt": "Quel objet de luxe achèterais-tu si tu devenais riche demain ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_056",
+    "prompt": "Quelle est la pire façon de te réveiller ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_057",
+    "prompt": "Quel jeu télévisé pourrais-tu gagner ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_058",
+    "prompt": "Quelle chose cacherais-tu dans une capsule temporelle ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_059",
+    "prompt": "Quel personnage de dessin animé serait ton meilleur ami ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_060",
+    "prompt": "Quelle est ta plus grande faiblesse face à une promotion ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_061",
+    "prompt": "Quel serait ton parfum de glace personnalisé ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_062",
+    "prompt": "Quelle rumeur absurde pourrait être crédible sur toi ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_063",
+    "prompt": "Quel est le meilleur conseil qu’on ne t’a jamais demandé ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_064",
+    "prompt": "Quelle chose ferais-tu si personne ne pouvait te juger ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_065",
+    "prompt": "Quel objet n’achèterais-tu jamais d’occasion ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_066",
+    "prompt": "Quelle est la pire chanson pour un mariage ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_067",
+    "prompt": "Quel endroit choisirais-tu pour te cacher pendant une journée ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_068",
+    "prompt": "Quelle qualité te sauve souvent la mise ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_069",
+    "prompt": "Quel serait ton pouvoir secret le moins impressionnant ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_070",
+    "prompt": "Quelle est la chose la plus courageuse que tu pourrais faire ce soir ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_071",
+    "prompt": "Quel défi accepterais-tu pour 100 euros ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_072",
+    "prompt": "Quelle est ta stratégie quand tu ne connais personne à une fête ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_073",
+    "prompt": "Quel objet devrait avoir une alarme intégrée ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_074",
+    "prompt": "Quelle est la meilleure façon de terminer une soirée ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_075",
+    "prompt": "Quel serait ton costume de super-héros ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_076",
+    "prompt": "Quelle activité te transforme immédiatement en compétiteur ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_077",
+    "prompt": "Quel mot pourrait résumer ton année ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_078",
+    "prompt": "Quelle est la chose la plus bizarre que tu trouves normale ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_079",
+    "prompt": "Quel plat cuisinerais-tu pour impressionner quelqu’un ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_080",
+    "prompt": "Quelle est la première chose que tu ferais avec une journée de 30 heures ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_081",
+    "prompt": "Quel souvenir voudrais-tu revivre exactement une fois ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_082",
+    "prompt": "Quelle règle inventerais-tu pour cette soirée ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_083",
+    "prompt": "Quel serait le titre d’un film sur notre groupe ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_084",
+    "prompt": "Quelle chose te fait instantanément perdre patience ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_085",
+    "prompt": "Quel objet symbolise le mieux ton organisation ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_086",
+    "prompt": "Quelle réponse donnerais-tu à une question que personne n’a posée ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_087",
+    "prompt": "Quel serait ton mot de passe si la sécurité n’existait pas ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_088",
+    "prompt": "Quelle est la chose la plus drôle que tu pourrais mettre sur une pierre tombale ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_089",
+    "prompt": "Quel membre du groupe survivrait le mieux sur une île déserte, sans le nommer ?",
+    "category": "classic"
+  },
+  {
+    "id": "qui_repondu_090",
+    "prompt": "Quelle compétence du groupe aimerais-tu emprunter pendant une journée ?",
+    "category": "classic"
+  }
+]

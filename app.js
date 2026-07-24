@@ -2717,3 +2717,770 @@ settingsBtn.addEventListener("click", event => {
 }, true);
 
 renderHome();
+
+/* =========================================================
+   AK'GAMES V0.8 — CONNEXION & SECRETS
+   Même cerveau · Minorité · Qui a répondu ça ?
+   ========================================================= */
+
+state.sameBrain = null;
+state.minorityGame = null;
+state.whoAnswered = null;
+
+const V08_NEW_GAMES = new Set([
+  "Même cerveau",
+  "Minorité",
+  "Qui a répondu ça ?"
+]);
+
+const V08_READY_GAMES = new Set([...V07_READY_GAMES, ...V08_NEW_GAMES]);
+const V08_GAME_ICONS = {
+  ...V07_GAME_ICONS,
+  "Même cerveau": "🧠",
+  "Minorité": "🪩",
+  "Qui a répondu ça ?": "🕵️"
+};
+
+renderHome = function () {
+  state.history = [];
+  title.textContent = "La soirée commence ici";
+  setBackVisible(false);
+
+  screen.innerHTML = `
+    <section class="home-hero-v07 home-hero-v08">
+      <div class="home-logo-shell">
+        <img src="icons/icon-192.png" alt="" class="home-logo-v07">
+      </div>
+      <div class="home-hero-copy">
+        <span class="home-kicker">LA BOÎTE À JEUX QUI TIENT DANS UNE POCHE</span>
+        <h2>Une soirée.<br><em>Zéro temps mort.</em></h2>
+        <p>Crée un salon, rassemble la bande et enchaîne les jeux sans jamais quitter la partie.</p>
+        <div class="home-stat-row">
+          <span>🎮 9 jeux complets</span>
+          <span>📲 1 ou plusieurs téléphones</span>
+          <span>⚡ lancement express</span>
+        </div>
+      </div>
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
+    </section>
+
+    <section class="home-action-stack">
+      <button class="home-action-card home-action-primary" data-home-action="create">
+        <span class="home-action-icon">✦</span>
+        <span class="home-action-copy">
+          <small>MODE SOIRÉE</small>
+          <strong>Créer une partie</strong>
+          <span>Ouvre un salon et joue chacun sur son téléphone.</span>
+        </span>
+        <span class="home-action-arrow">→</span>
+      </button>
+
+      <div class="home-action-grid">
+        <button class="home-action-card home-action-secondary" data-home-action="join">
+          <span class="home-action-icon">⌁</span>
+          <span class="home-action-copy">
+            <small>J’AI UN CODE</small>
+            <strong>Rejoindre</strong>
+            <span>Retrouve tes amis en quelques secondes.</span>
+          </span>
+          <span class="home-action-arrow">→</span>
+        </button>
+
+        <button class="home-action-card home-action-secondary home-action-phone" data-home-action="single">
+          <span class="home-action-icon">▣</span>
+          <span class="home-action-copy">
+            <small>PASS & PLAY</small>
+            <strong>Un téléphone</strong>
+            <span>Ajoutez les joueurs puis passez-vous l’écran.</span>
+          </span>
+          <span class="home-action-arrow">→</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="home-feature-strip">
+      <article><span>🧠</span><div><strong>Connexion & Secrets</strong><small>Même cerveau, Minorité, Qui a répondu ça ?</small></div></article>
+      <article><span>🏆</span><div><strong>Soirée continue</strong><small>Score cumulé et historique conservés</small></div></article>
+      <article><span>🌙</span><div><strong>9 jeux complets</strong><small>Ambiance, bluff, rire et révélations</small></div></article>
+    </section>
+  `;
+
+  document.querySelectorAll("[data-home-action]").forEach(button => {
+    button.addEventListener("click", () => {
+      const action = button.dataset.homeAction;
+      if (action === "single") {
+        state.mode = "single";
+        pushScreen("home");
+        renderSetup();
+      } else if (action === "create") {
+        state.mode = "multi-host";
+        pushScreen("home");
+        renderSetup();
+      } else {
+        pushScreen("home");
+        renderJoin();
+      }
+    });
+  });
+};
+
+renderGames = function () {
+  const category = categories.find(item => item.id === state.currentCategory);
+  title.textContent = category.name;
+  setBackVisible(true);
+
+  screen.innerHTML = `
+    <section class="catalog-intro">
+      <span>${category.emoji}</span>
+      <div>
+        <small>CATÉGORIE</small>
+        <strong>${escapeHtml(category.name)}</strong>
+        <p>${escapeHtml(category.description)}</p>
+      </div>
+    </section>
+
+    <section class="game-list game-list-v07">
+      ${category.games.map(game => {
+        const disabled = game === "Blind Test";
+        const ready = V08_READY_GAMES.has(game);
+        const isNew = V08_NEW_GAMES.has(game);
+        const icon = V08_GAME_ICONS[game] || "🎲";
+
+        return `
+          <button class="game-card game-card-v07 ${disabled ? "disabled" : ""} ${isNew ? "game-card-new" : ""}" ${disabled ? "disabled" : ""} data-game="${escapeHtml(game)}">
+            <span class="game-card-icon">${icon}</span>
+            <span class="game-card-copy">
+              <strong>${escapeHtml(game)} ${isNew ? `<span class="new-ribbon">NOUVEAU</span>` : ""}</strong>
+              <span class="helper">${disabled ? "Bientôt disponible" : ready ? "Prêt à lancer" : "À intégrer"}</span>
+              <span class="game-meta">
+                ${ready ? `<span class="badge green">✓ disponible</span>` : `<span class="badge">bientôt</span>`}
+                ${state.alcohol && ready ? `<span class="badge green">🍻 option alcool</span>` : ""}
+                ${game.includes("+18") ? `<span class="badge orange">🔞 adulte</span>` : ""}
+              </span>
+            </span>
+            <span class="game-card-chevron">›</span>
+          </button>
+        `;
+      }).join("")}
+    </section>
+  `;
+
+  document.querySelectorAll("[data-game]:not([disabled])").forEach(button => {
+    button.addEventListener("click", () => {
+      const game = button.dataset.game;
+
+      if (game === "Qui de nous ?") {
+        pushScreen("games");
+        resetWhoUsState();
+        renderWhoUsSetup();
+        return;
+      }
+      if (game === "Le premier qui rit a perdu") {
+        pushScreen("games");
+        resetLaughDuelState();
+        renderLaughDuelSetup();
+        return;
+      }
+      if (game === "Qui ment le mieux ?") {
+        if (state.players.length < 3) {
+          alert("« Qui ment le mieux ? » nécessite au moins 3 joueurs.");
+          return;
+        }
+        pushScreen("games");
+        resetBestLiarState();
+        renderBestLiarSetup();
+        return;
+      }
+      if (game === "Action ou Vérité" || game === "Action ou Vérité +18") {
+        pushScreen("games");
+        resetActionTruthState(game.includes("+18"));
+        renderActionTruthSetup();
+        return;
+      }
+      if (game === "Je n’ai jamais" || game === "Je n’ai jamais +18") {
+        pushScreen("games");
+        resetAmbiancePollState("never", game.includes("+18"));
+        renderAmbiancePollSetup();
+        return;
+      }
+      if (game === "Tu préfères" || game === "Tu préfères +18") {
+        pushScreen("games");
+        resetAmbiancePollState("would", game.includes("+18"));
+        renderAmbiancePollSetup();
+        return;
+      }
+      if (game === "Même cerveau") {
+        pushScreen("games");
+        resetSameBrainState();
+        renderSameBrainSetup();
+        return;
+      }
+      if (game === "Minorité") {
+        pushScreen("games");
+        resetMinorityState();
+        renderMinoritySetup();
+        return;
+      }
+      if (game === "Qui a répondu ça ?") {
+        if (state.players.length < 3) {
+          alert("« Qui a répondu ça ? » nécessite au moins 3 joueurs.");
+          return;
+        }
+        pushScreen("games");
+        resetWhoAnsweredState();
+        renderWhoAnsweredSetup();
+        return;
+      }
+
+      renderGamePlaceholder(game);
+    });
+  });
+};
+
+function normalizeBrainAnswer(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/\b(un|une|le|la|les|des|du|de|l|d)\b/g, " ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function scoreRanking(scores) {
+  return [...state.players].sort((a, b) => Number(scores[b.id] || 0) - Number(scores[a.id] || 0));
+}
+
+function renderV08Final({ icon, titleText, description, scores, replayId, otherId, replay, other }) {
+  const ranking = scoreRanking(scores);
+  title.textContent = "Classement final";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="winner-stage winner-stage-v07 v08-final-stage">
+      <div class="winner-crown">${icon}🏆</div>
+      <h2>${escapeHtml(titleText)}</h2>
+      <p>${escapeHtml(description)}</p>
+    </section>
+    <section class="final-ranking">
+      ${ranking.map((player, index) => `
+        <div class="ranking-row">
+          <span class="ranking-position">${index + 1}</span>
+          <span class="result-avatar">${avatarById(player.avatarId).emoji}</span>
+          <strong>${escapeHtml(player.name)}</strong>
+          <span>${Number(scores[player.id] || 0)} pts</span>
+        </div>
+      `).join("")}
+    </section>
+    <div class="toolbar"><button id="${replayId}" class="secondary-btn">Rejouer</button><button id="${otherId}" class="primary-btn">Autre jeu</button></div>
+  `;
+  document.querySelector(`#${replayId}`).addEventListener("click", replay);
+  document.querySelector(`#${otherId}`).addEventListener("click", other);
+}
+
+/* ---------- MÊME CERVEAU ---------- */
+
+function resetSameBrainState() {
+  state.sameBrain = {
+    roundCount: 10,
+    includeAdult: false,
+    items: [],
+    currentIndex: 0,
+    currentWriterIndex: 0,
+    answers: {},
+    scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    rounds: []
+  };
+}
+
+function renderSameBrainSetup() {
+  if (!state.sameBrain) resetSameBrainState();
+  const game = state.sameBrain;
+  title.textContent = "Même cerveau";
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-brain">
+      <span class="game-cover-icon">🧠</span>
+      <div><small>CONNEXION & SECRETS</small><h2>Même cerveau</h2><p>Écrivez sans vous concerter. Les réponses identiques font grimper le score.</p></div>
+    </section>
+    <section class="card setup-card-v07">
+      <div class="form-group"><label for="brainRounds">Nombre de questions</label><select id="brainRounds" class="text-input">${[6, 8, 10, 15].map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} questions</option>`).join("")}</select></div>
+    </section>
+    ${state.adult ? `<label class="option-card premium-toggle"><input id="brainAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Crushs, rendez-vous et petits dossiers.</span></span></label>` : ""}
+    <div class="notice">Une réponse courte fonctionne mieux : un mot ou une petite expression.</div>
+    <button id="startSameBrain" class="primary-btn full">Synchroniser les cerveaux</button>
+  `;
+  document.querySelector("#brainRounds").addEventListener("change", event => game.roundCount = Number(event.target.value));
+  document.querySelector("#brainAdult")?.addEventListener("change", event => game.includeAdult = event.target.checked);
+  document.querySelector("#startSameBrain").addEventListener("click", startSameBrainGame);
+}
+
+async function startSameBrainGame() {
+  const game = state.sameBrain;
+  screen.innerHTML = `<div class="notice">Connexion des neurones…</div>`;
+  try {
+    let pool = await loadJsonFile("data/meme-cerveau.json", "Impossible de charger les questions de Même cerveau.");
+    if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/meme-cerveau-adulte.json", "Impossible de charger les questions adultes."));
+    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.currentIndex = 0;
+    game.currentWriterIndex = 0;
+    game.answers = {};
+    game.rounds = [];
+    game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    renderSameBrainGate();
+  } catch (error) {
+    alert(error.message);
+    renderSameBrainSetup();
+  }
+}
+
+function renderSameBrainGate() {
+  const game = state.sameBrain;
+  if (game.currentIndex >= game.items.length) {
+    renderSameBrainEnd();
+    return;
+  }
+  if (game.currentWriterIndex >= state.players.length) {
+    renderSameBrainReveal();
+    return;
+  }
+  const player = state.players[game.currentWriterIndex];
+  title.textContent = "Réponse secrète";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${renderV08Progress(game.currentIndex + 1, game.items.length, "Question")}
+    <section class="handoff-stage handoff-v07">
+      <div class="giant-avatar">${avatarById(player.avatarId).emoji}</div>
+      <span class="category-chip">ÉCRAN PRIVÉ</span>
+      <h2>Passe le téléphone à ${escapeHtml(player.name)}</h2>
+      <p>Un mot, pas de concertation, et surtout pas de regard par-dessus l’épaule.</p>
+      <button id="openBrainAnswer" class="primary-btn">Je suis ${escapeHtml(player.name)}</button>
+    </section>
+  `;
+  document.querySelector("#openBrainAnswer").addEventListener("click", renderSameBrainAnswer);
+}
+
+function renderV08Progress(current, total, label) {
+  return `<section class="game-progress"><span>${escapeHtml(label)} ${current}/${total}</span><div class="progress-track"><div class="progress-fill" style="width:${Math.min(100, (current / Math.max(1, total)) * 100)}%"></div></div></section>`;
+}
+
+function renderSameBrainAnswer() {
+  const game = state.sameBrain;
+  const item = game.items[game.currentIndex];
+  const player = state.players[game.currentWriterIndex];
+  title.textContent = "Même cerveau";
+  screen.innerHTML = `
+    ${renderV08Progress(game.currentIndex + 1, game.items.length, "Question")}
+    <section class="v08-question-card brain-question-card"><span>🧠</span><small>RÉPONDS DU PREMIER COUP</small><h2>${escapeHtml(item.prompt)}</h2></section>
+    <section class="card"><div class="form-group"><label for="brainAnswer">Ta réponse, ${escapeHtml(player.name)}</label><input id="brainAnswer" class="text-input v08-answer-input" maxlength="45" autocomplete="off" placeholder="Un mot ou une courte expression"></div></section>
+    <button id="saveBrainAnswer" class="primary-btn full">Verrouiller ma réponse</button>
+  `;
+  const input = document.querySelector("#brainAnswer");
+  input.focus();
+  const save = () => {
+    const value = input.value.trim();
+    if (!value) return alert("Écris une réponse avant de continuer.");
+    game.answers[player.id] = value;
+    game.currentWriterIndex += 1;
+    renderSameBrainGate();
+  };
+  document.querySelector("#saveBrainAnswer").addEventListener("click", save);
+  input.addEventListener("keydown", event => { if (event.key === "Enter") save(); });
+}
+
+function calculateSameBrainRound(game) {
+  const groups = {};
+  Object.entries(game.answers).forEach(([id, answer]) => {
+    const key = normalizeBrainAnswer(answer) || `unique_${id}`;
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(id);
+  });
+  const matchedIds = [];
+  const points = {};
+  Object.values(groups).forEach(ids => {
+    const amount = ids.length >= 2 ? Math.min(3, ids.length - 1) : 0;
+    ids.forEach(id => {
+      points[id] = amount;
+      if (amount) {
+        game.scores[id] = Number(game.scores[id] || 0) + amount;
+        matchedIds.push(id);
+      }
+    });
+  });
+  return { groups, points, matchedIds };
+}
+
+function renderSameBrainReveal() {
+  const game = state.sameBrain;
+  const item = game.items[game.currentIndex];
+  const result = calculateSameBrainRound(game);
+  game.rounds.push({ itemId: item.id, answers: { ...game.answers }, points: result.points });
+  title.textContent = result.matchedIds.length ? "Connexion détectée" : "Cerveaux indépendants";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="reveal-stage reveal-v07 brain-reveal"><span class="game-cover-icon">${result.matchedIds.length ? "⚡" : "🧠"}</span><h2>${result.matchedIds.length ? "Des cerveaux se sont connectés !" : "Aucun match cette fois"}</h2><p>${escapeHtml(item.prompt)}</p></section>
+    <section class="brain-answer-wall">
+      ${state.players.map(player => {
+        const points = Number(result.points[player.id] || 0);
+        return `<article class="brain-answer-tile ${points ? "matched" : ""}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><p>${escapeHtml(game.answers[player.id])}</p>${points ? `<em>+${points} pt${points > 1 ? "s" : ""}</em>` : `<small>réponse unique</small>`}</article>`;
+      }).join("")}
+    </section>
+    ${state.alcohol && !result.matchedIds.length ? `<div class="alcohol-callout">🍻 Aucun match : tout le monde prend une petite gorgée de désynchronisation.</div>` : ""}
+    <button id="nextBrainRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Question suivante"}</button>
+  `;
+  document.querySelector("#nextBrainRound").addEventListener("click", () => {
+    game.currentIndex += 1;
+    game.currentWriterIndex = 0;
+    game.answers = {};
+    renderSameBrainGate();
+  });
+}
+
+function renderSameBrainEnd() {
+  const game = state.sameBrain;
+  renderV08Final({
+    icon: "🧠",
+    titleText: "Vos cerveaux ont rendu leur verdict",
+    description: "Les réponses identiques rapportaient jusqu’à trois points.",
+    scores: game.scores,
+    replayId: "replaySameBrain",
+    otherId: "otherSameBrain",
+    replay: () => { resetSameBrainState(); renderSameBrainSetup(); },
+    other: () => { state.sameBrain = null; renderPlayChoice(); }
+  });
+}
+
+/* ---------- MINORITÉ ---------- */
+
+function resetMinorityState() {
+  state.minorityGame = {
+    roundCount: 10,
+    includeAdult: false,
+    items: [],
+    currentIndex: 0,
+    currentVoterIndex: 0,
+    votes: {},
+    scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    rounds: []
+  };
+}
+
+function renderMinoritySetup() {
+  if (!state.minorityGame) resetMinorityState();
+  const game = state.minorityGame;
+  title.textContent = "Minorité";
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-minority"><span class="game-cover-icon">🪩</span><div><small>CONNEXION & SECRETS</small><h2>Minorité</h2><p>Trois choix. Un seul objectif : ne surtout pas penser comme tout le monde.</p></div></section>
+    <section class="card setup-card-v07"><div class="form-group"><label for="minorityRounds">Nombre de questions</label><select id="minorityRounds" class="text-input">${[6, 8, 10, 15].map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} questions</option>`).join("")}</select></div></section>
+    ${state.adult ? `<label class="option-card premium-toggle"><input id="minorityAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Relations, flirt et préférences plus personnelles.</span></span></label>` : ""}
+    <div class="notice">Le ou les choix les moins populaires rapportent un point. Une égalité parfaite ne rapporte rien.</div>
+    <button id="startMinority" class="primary-btn full">Entrer dans la minorité</button>
+  `;
+  document.querySelector("#minorityRounds").addEventListener("change", event => game.roundCount = Number(event.target.value));
+  document.querySelector("#minorityAdult")?.addEventListener("change", event => game.includeAdult = event.target.checked);
+  document.querySelector("#startMinority").addEventListener("click", startMinorityGame);
+}
+
+async function startMinorityGame() {
+  const game = state.minorityGame;
+  screen.innerHTML = `<div class="notice">Préparation des choix impossibles…</div>`;
+  try {
+    let pool = await loadJsonFile("data/minorite.json", "Impossible de charger les questions de Minorité.");
+    if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/minorite-adulte.json", "Impossible de charger les questions adultes."));
+    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.currentIndex = 0;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    game.rounds = [];
+    game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    renderMinorityGate();
+  } catch (error) {
+    alert(error.message);
+    renderMinoritySetup();
+  }
+}
+
+function renderMinorityGate() {
+  const game = state.minorityGame;
+  if (game.currentIndex >= game.items.length) return renderMinorityEnd();
+  if (game.currentVoterIndex >= state.players.length) return renderMinorityReveal();
+  const player = state.players[game.currentVoterIndex];
+  title.textContent = "Vote secret";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${renderV08Progress(game.currentIndex + 1, game.items.length, "Question")}
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(player.avatarId).emoji}</div><span class="category-chip">ÉCRAN PRIVÉ</span><h2>Passe le téléphone à ${escapeHtml(player.name)}</h2><p>Choisis avec ton instinct. Ou tente de deviner l’instinct des autres.</p><button id="openMinorityVote" class="primary-btn">Je suis ${escapeHtml(player.name)}</button></section>
+  `;
+  document.querySelector("#openMinorityVote").addEventListener("click", renderMinorityVote);
+}
+
+function renderMinorityVote() {
+  const game = state.minorityGame;
+  const item = game.items[game.currentIndex];
+  title.textContent = "Minorité";
+  screen.innerHTML = `
+    ${renderV08Progress(game.currentIndex + 1, game.items.length, "Question")}
+    <section class="v08-question-card minority-question-card"><span>🪩</span><small>CHOISIS TA VOIE</small><h2>${escapeHtml(item.question)}</h2></section>
+    <section class="minority-choice-grid">${item.options.map((option, index) => `<button class="minority-choice" data-minority-vote="${index}"><small>OPTION ${String.fromCharCode(65 + index)}</small><strong>${escapeHtml(option)}</strong></button>`).join("")}</section>
+  `;
+  document.querySelectorAll("[data-minority-vote]").forEach(button => button.addEventListener("click", () => {
+    const player = state.players[game.currentVoterIndex];
+    game.votes[player.id] = Number(button.dataset.minorityVote);
+    game.currentVoterIndex += 1;
+    renderMinorityGate();
+  }));
+}
+
+function calculateMinorityRound(game) {
+  const item = game.items[game.currentIndex];
+  const counts = item.options.map((_, index) => Object.values(game.votes).filter(value => Number(value) === index).length);
+  const positive = counts.filter(value => value > 0);
+  const allEqual = positive.length <= 1 || new Set(positive).size === 1;
+  const minPositive = positive.length ? Math.min(...positive) : 0;
+  const minorityOptions = allEqual ? [] : counts.map((count, index) => count === minPositive && count > 0 ? index : null).filter(index => index !== null);
+  const winnerIds = Object.entries(game.votes).filter(([, choice]) => minorityOptions.includes(Number(choice))).map(([id]) => id);
+  winnerIds.forEach(id => game.scores[id] = Number(game.scores[id] || 0) + 1);
+  return { counts, minorityOptions, winnerIds };
+}
+
+function renderMinorityReveal() {
+  const game = state.minorityGame;
+  const item = game.items[game.currentIndex];
+  const result = calculateMinorityRound(game);
+  game.rounds.push({ itemId: item.id, votes: { ...game.votes }, ...result });
+  title.textContent = result.winnerIds.length ? "La minorité gagne" : "Égalité totale";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="reveal-stage reveal-v07 minority-reveal"><span class="game-cover-icon">🪩</span><h2>${result.winnerIds.length ? "Les esprits rares prennent le point" : "Impossible de départager le groupe"}</h2><p>${escapeHtml(item.question)}</p></section>
+    <section class="minority-results">${item.options.map((option, index) => `<article class="minority-result ${result.minorityOptions.includes(index) ? "winner" : ""}"><div><small>OPTION ${String.fromCharCode(65 + index)}</small><strong>${escapeHtml(option)}</strong></div><span>${result.counts[index]} vote${result.counts[index] > 1 ? "s" : ""}</span></article>`).join("")}</section>
+    <section class="poll-results-grid">${state.players.map(player => `<article class="poll-result-person"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(item.options[game.votes[player.id]])}</small>${result.winnerIds.includes(player.id) ? `<em>+1 pt minorité</em>` : ""}</article>`).join("")}</section>
+    ${state.alcohol && result.winnerIds.length ? `<div class="alcohol-callout">🍻 La majorité prend une petite gorgée. La minorité savoure sa victoire.</div>` : ""}
+    <button id="nextMinorityRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Question suivante"}</button>
+  `;
+  document.querySelector("#nextMinorityRound").addEventListener("click", () => {
+    game.currentIndex += 1;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    renderMinorityGate();
+  });
+}
+
+function renderMinorityEnd() {
+  const game = state.minorityGame;
+  renderV08Final({
+    icon: "🪩",
+    titleText: "Les électrons libres sont devant",
+    description: "Chaque choix réellement minoritaire rapportait un point.",
+    scores: game.scores,
+    replayId: "replayMinority",
+    otherId: "otherMinority",
+    replay: () => { resetMinorityState(); renderMinoritySetup(); },
+    other: () => { state.minorityGame = null; renderPlayChoice(); }
+  });
+}
+
+/* ---------- QUI A RÉPONDU ÇA ? ---------- */
+
+function resetWhoAnsweredState() {
+  state.whoAnswered = {
+    roundCount: Math.max(6, state.players.length),
+    includeAdult: false,
+    items: [],
+    currentIndex: 0,
+    currentWriterIndex: 0,
+    currentVoterIndex: 0,
+    answers: {},
+    votes: {},
+    authorOrder: shuffleArray(state.players.map(player => player.id)),
+    scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    rounds: []
+  };
+}
+
+function renderWhoAnsweredSetup() {
+  if (!state.whoAnswered) resetWhoAnsweredState();
+  const game = state.whoAnswered;
+  title.textContent = "Qui a répondu ça ?";
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-who"><span class="game-cover-icon">🕵️</span><div><small>CONNEXION & SECRETS</small><h2>Qui a répondu ça ?</h2><p>Tout le monde répond. Une réponse devient mystérieuse. À vous de retrouver son auteur.</p></div></section>
+    <section class="card setup-card-v07"><div class="form-group"><label for="whoAnsweredRounds">Nombre de manches</label><select id="whoAnsweredRounds" class="text-input">${[Math.max(6, state.players.length), 8, 10, 15].filter((value, index, array) => array.indexOf(value) === index).map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} manches</option>`).join("")}</select></div></section>
+    ${state.adult ? `<label class="option-card premium-toggle"><input id="whoAnsweredAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Crushs, relations et réponses plus révélatrices.</span></span></label>` : ""}
+    <div class="notice">Bonne réponse : +1 point. L’auteur gagne un point pour chaque personne trompée.</div>
+    <button id="startWhoAnswered" class="primary-btn full">Ouvrir l’enquête</button>
+  `;
+  document.querySelector("#whoAnsweredRounds").addEventListener("change", event => game.roundCount = Number(event.target.value));
+  document.querySelector("#whoAnsweredAdult")?.addEventListener("change", event => game.includeAdult = event.target.checked);
+  document.querySelector("#startWhoAnswered").addEventListener("click", startWhoAnsweredGame);
+}
+
+async function startWhoAnsweredGame() {
+  const game = state.whoAnswered;
+  screen.innerHTML = `<div class="notice">Distribution des carnets secrets…</div>`;
+  try {
+    let pool = await loadJsonFile("data/qui-a-repondu.json", "Impossible de charger les questions.");
+    if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/qui-a-repondu-adulte.json", "Impossible de charger les questions adultes."));
+    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.currentIndex = 0;
+    game.currentWriterIndex = 0;
+    game.currentVoterIndex = 0;
+    game.answers = {};
+    game.votes = {};
+    game.authorOrder = shuffleArray(state.players.map(player => player.id));
+    game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.rounds = [];
+    renderWhoAnsweredWriteGate();
+  } catch (error) {
+    alert(error.message);
+    renderWhoAnsweredSetup();
+  }
+}
+
+function currentMysteryAuthorId(game) {
+  return game.authorOrder[game.currentIndex % game.authorOrder.length];
+}
+
+function eligibleWhoAnsweredVoters(game) {
+  const authorId = currentMysteryAuthorId(game);
+  return state.players.filter(player => player.id !== authorId);
+}
+
+function renderWhoAnsweredWriteGate() {
+  const game = state.whoAnswered;
+  if (game.currentIndex >= game.items.length) return renderWhoAnsweredEnd();
+  if (game.currentWriterIndex >= state.players.length) {
+    game.currentVoterIndex = 0;
+    return renderWhoAnsweredVoteGate();
+  }
+  const player = state.players[game.currentWriterIndex];
+  title.textContent = "Réponse anonyme";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${renderV08Progress(game.currentIndex + 1, game.items.length, "Enquête")}
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(player.avatarId).emoji}</div><span class="category-chip">ÉCRAN PRIVÉ</span><h2>Passe le téléphone à ${escapeHtml(player.name)}</h2><p>Réponds sincèrement ou brillamment. Ton identité sera cachée.</p><button id="openWhoAnswer" class="primary-btn">Je suis ${escapeHtml(player.name)}</button></section>
+  `;
+  document.querySelector("#openWhoAnswer").addEventListener("click", renderWhoAnsweredWrite);
+}
+
+function renderWhoAnsweredWrite() {
+  const game = state.whoAnswered;
+  const item = game.items[game.currentIndex];
+  const player = state.players[game.currentWriterIndex];
+  title.textContent = "Qui a répondu ça ?";
+  screen.innerHTML = `
+    ${renderV08Progress(game.currentIndex + 1, game.items.length, "Enquête")}
+    <section class="v08-question-card who-question-card"><span>🕵️</span><small>RÉPONSE ANONYME</small><h2>${escapeHtml(item.prompt)}</h2></section>
+    <section class="card"><div class="form-group"><label for="whoAnswer">Ta réponse, ${escapeHtml(player.name)}</label><textarea id="whoAnswer" class="text-input text-area multi-answer-textarea" maxlength="180" placeholder="Écris une réponse courte et reconnaissable…"></textarea></div></section>
+    <button id="saveWhoAnswer" class="primary-btn full">Déposer anonymement</button>
+  `;
+  const input = document.querySelector("#whoAnswer");
+  input.focus();
+  document.querySelector("#saveWhoAnswer").addEventListener("click", () => {
+    const value = input.value.trim();
+    if (!value) return alert("Écris une réponse avant de continuer.");
+    game.answers[player.id] = value;
+    game.currentWriterIndex += 1;
+    renderWhoAnsweredWriteGate();
+  });
+}
+
+function renderWhoAnsweredVoteGate() {
+  const game = state.whoAnswered;
+  const voters = eligibleWhoAnsweredVoters(game);
+  if (game.currentVoterIndex >= voters.length) return renderWhoAnsweredReveal();
+  const voter = voters[game.currentVoterIndex];
+  title.textContent = "Enquête secrète";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${renderV08Progress(game.currentIndex + 1, game.items.length, "Enquête")}
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(voter.avatarId).emoji}</div><span class="category-chip">À TOI D’ENQUÊTER</span><h2>Passe le téléphone à ${escapeHtml(voter.name)}</h2><p>Une réponse a été choisie. Retrouve son auteur sans te faire influencer.</p><button id="openWhoVote" class="primary-btn">Je suis ${escapeHtml(voter.name)}</button></section>
+  `;
+  document.querySelector("#openWhoVote").addEventListener("click", renderWhoAnsweredVote);
+}
+
+function renderWhoAnsweredVote() {
+  const game = state.whoAnswered;
+  const item = game.items[game.currentIndex];
+  const authorId = currentMysteryAuthorId(game);
+  const voter = eligibleWhoAnsweredVoters(game)[game.currentVoterIndex];
+  const candidates = state.players.filter(player => player.id !== voter.id);
+  title.textContent = "Qui a répondu ça ?";
+  screen.innerHTML = `
+    ${renderV08Progress(game.currentIndex + 1, game.items.length, "Enquête")}
+    <section class="mystery-answer-card"><small>${escapeHtml(item.prompt)}</small><blockquote>« ${escapeHtml(game.answers[authorId])} »</blockquote><span>QUI A ÉCRIT ÇA ?</span></section>
+    <section class="suspect-grid">${candidates.map(player => `<button class="suspect-card" data-who-vote="${player.id}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong></button>`).join("")}</section>
+  `;
+  document.querySelectorAll("[data-who-vote]").forEach(button => button.addEventListener("click", () => {
+    game.votes[voter.id] = button.dataset.whoVote;
+    game.currentVoterIndex += 1;
+    renderWhoAnsweredVoteGate();
+  }));
+}
+
+function calculateWhoAnsweredRound(game) {
+  const authorId = currentMysteryAuthorId(game);
+  const correctIds = Object.entries(game.votes).filter(([, guess]) => guess === authorId).map(([id]) => id);
+  const fooledIds = Object.entries(game.votes).filter(([, guess]) => guess !== authorId).map(([id]) => id);
+  correctIds.forEach(id => game.scores[id] = Number(game.scores[id] || 0) + 1);
+  game.scores[authorId] = Number(game.scores[authorId] || 0) + fooledIds.length;
+  return { authorId, correctIds, fooledIds };
+}
+
+function renderWhoAnsweredReveal() {
+  const game = state.whoAnswered;
+  const item = game.items[game.currentIndex];
+  const result = calculateWhoAnsweredRound(game);
+  const author = state.players.find(player => player.id === result.authorId);
+  game.rounds.push({ itemId: item.id, answers: { ...game.answers }, votes: { ...game.votes }, ...result });
+  title.textContent = "Identité révélée";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="reveal-stage reveal-v07 who-reveal"><span class="game-cover-icon">${avatarById(author.avatarId).emoji}</span><h2>C’était ${escapeHtml(author.name)} !</h2><p>« ${escapeHtml(game.answers[result.authorId])} »</p></section>
+    <section class="who-vote-results">${eligibleWhoAnsweredVoters(game).map(voter => {
+      const guessed = state.players.find(player => player.id === game.votes[voter.id]);
+      const correct = result.correctIds.includes(voter.id);
+      return `<article class="who-vote-row ${correct ? "correct" : "fooled"}"><span>${avatarById(voter.avatarId).emoji}</span><strong>${escapeHtml(voter.name)}</strong><small>a choisi ${escapeHtml(guessed?.name || "?")}</small><em>${correct ? "+1 pt" : `trompé·e`}</em></article>`;
+    }).join("")}</section>
+    <details class="answer-wall-details"><summary>Voir toutes les réponses</summary><div class="anonymous-answer-list">${state.players.map(player => `<article class="anonymous-answer-card"><span class="answer-number">${avatarById(player.avatarId).emoji}</span><p><strong>${escapeHtml(player.name)}</strong><br>${escapeHtml(game.answers[player.id])}</p></article>`).join("")}</div></details>
+    ${result.fooledIds.length ? `<div class="special-event"><strong>🕵️ ${escapeHtml(author.name)} a trompé ${result.fooledIds.length} personne${result.fooledIds.length > 1 ? "s" : ""}</strong><p>+${result.fooledIds.length} point${result.fooledIds.length > 1 ? "s" : ""} d’auteur mystérieux.</p></div>` : `<div class="notice">Tout le monde a retrouvé l’auteur. Couverture grillée.</div>`}
+    ${state.alcohol && result.fooledIds.length ? `<div class="alcohol-callout">🍻 Les enquêteurs trompés prennent une petite gorgée.</div>` : ""}
+    <button id="nextWhoAnswered" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Enquête suivante"}</button>
+  `;
+  document.querySelector("#nextWhoAnswered").addEventListener("click", () => {
+    game.currentIndex += 1;
+    game.currentWriterIndex = 0;
+    game.currentVoterIndex = 0;
+    game.answers = {};
+    game.votes = {};
+    renderWhoAnsweredWriteGate();
+  });
+}
+
+function renderWhoAnsweredEnd() {
+  const game = state.whoAnswered;
+  renderV08Final({
+    icon: "🕵️",
+    titleText: "L’enquête est classée",
+    description: "Les bons détectives et les auteurs les plus trompeurs ont marqué des points.",
+    scores: game.scores,
+    replayId: "replayWhoAnswered",
+    otherId: "otherWhoAnswered",
+    replay: () => { resetWhoAnsweredState(); renderWhoAnsweredSetup(); },
+    other: () => { state.whoAnswered = null; renderPlayChoice(); }
+  });
+}
+
+settingsBtn.addEventListener("click", event => {
+  const v08Active = Boolean(
+    state.sameBrain?.items?.length
+    || state.minorityGame?.items?.length
+    || state.whoAnswered?.items?.length
+  );
+  if (!v08Active) return;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+}, true);
+
+renderHome();
