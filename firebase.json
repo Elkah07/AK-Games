@@ -7,7 +7,15 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "README*",
+      "database.rules.json",
+      "styles-multiplayer.css",
+      "styles-pwa.css",
+      "audit-*.html",
+      "**/*.zip",
+      "**/*.xlsx",
+      "**/*.md"
     ],
     "headers": [
       {

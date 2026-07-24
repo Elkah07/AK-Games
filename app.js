@@ -2076,7 +2076,7 @@ function renderJoin() {
     <section class="card">
       <div class="form-group">
         <label for="roomCode">Code du salon</label>
-        <input id="roomCode" class="text-input" maxlength="7" placeholder="AK-5824">
+        <input id="roomCode" class="text-input" maxlength="9" placeholder="AK-5824QX">
       </div>
     </section>
 
@@ -4896,10 +4896,10 @@ renderHome = function () {
     <section class="home-hero-v07 home-hero-v08 home-hero-v09 home-hero-v014">
       <div class="home-logo-shell"><img src="icons/icon-192.png" alt="" class="home-logo-v07"></div>
       <div class="home-hero-copy">
-        <span class="home-kicker">30 JEUX. UNE SEULE ROOM. AUCUN TEMPS MORT.</span>
+        <span class="home-kicker">${V014_READY_GAMES.size} JEUX. UNE SEULE ROOM. AUCUN TEMPS MORT.</span>
         <h2>La soirée tient<br><em>dans ta poche.</em></h2>
         <p>Défis, quiz, bluff, scénarios et jeux adultes : crée le salon et laisse AK’Games faire circuler le chaos.</p>
-        <div class="home-stat-row"><span>🎮 30 jeux complets</span><span>📲 solo ou multijoueur</span><span>🏆 score de soirée</span></div>
+        <div class="home-stat-row"><span>🎮 ${V014_READY_GAMES.size} jeux complets</span><span>📲 solo ou multijoueur</span><span>🏆 score de soirée</span></div>
       </div>
       <div class="hero-orb hero-orb-one"></div><div class="hero-orb hero-orb-two"></div><div class="hero-grid-glow"></div>
     </section>

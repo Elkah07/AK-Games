@@ -451,10 +451,10 @@
 
       ${state.isHost ? `
         <section class="evening-action-grid">
-          <button id="openMultiplayerGames" class="primary-btn" ${state.players.length < 2 ? "disabled" : ""}>
-            ${state.players.length < 2 ? "En attente d'un autre joueur…" : "🎮 Choisir un jeu"}
+          <button id="openMultiplayerGames" class="primary-btn" ${onlineCount < 2 ? "disabled" : ""}>
+            ${onlineCount < 2 ? "En attente d'un autre joueur en ligne…" : "🎮 Choisir un jeu"}
           </button>
-          <button id="randomMultiplayerGame" class="secondary-btn" ${state.players.length < 2 ? "disabled" : ""}>
+          <button id="randomMultiplayerGame" class="secondary-btn" ${onlineCount < 2 ? "disabled" : ""}>
             🎲 Jeu aléatoire
           </button>
         </section>
@@ -483,7 +483,7 @@
     const openGamesButton = document.querySelector("#openMultiplayerGames");
     if (openGamesButton) {
       openGamesButton.addEventListener("click", () => {
-        if (state.players.length < 2) return;
+        if (onlineCount < 2) return;
         state.multiView = "browse";
         state.history = ["lobby"];
         renderPlayChoice();
@@ -491,7 +491,7 @@
     }
 
     document.querySelector("#randomMultiplayerGame")?.addEventListener("click", async event => {
-      if (state.players.length < 2) return;
+      if (onlineCount < 2) return;
       event.currentTarget.disabled = true;
 
       try {
@@ -542,7 +542,7 @@
       <section class="card">
         <div class="form-group">
           <label for="roomCode">Code du salon</label>
-          <input id="roomCode" class="text-input room-code-input" maxlength="7" autocomplete="off" placeholder="AK-7F3K">
+          <input id="roomCode" class="text-input room-code-input" maxlength="9" autocomplete="off" placeholder="AK-7F3K9Q">
         </div>
       </section>
 
@@ -558,13 +558,13 @@
         value = value.slice(2);
       }
 
-      input.value = value.length ? `AK-${value.slice(0, 4)}` : "";
+      input.value = value.length ? `AK-${value.slice(0, 6)}` : "";
     });
 
     document.querySelector("#joinBtn").addEventListener("click", async () => {
       const code = input.value;
 
-      if (AKFirebase.normalizeCode(code).length !== 4) {
+      if (AKFirebase.normalizeCode(code).length !== 6) {
         alert("Entre un code de salon complet.");
         return;
       }
@@ -576,6 +576,12 @@
 
         if (!meta) {
           alert("Ce salon n'existe pas ou a été fermé.");
+          renderJoin();
+          return;
+        }
+
+        if (meta.status && meta.status !== "lobby") {
+          alert("Une partie est déjà en cours. Réessaie quand le groupe sera revenu au salon.");
           renderJoin();
           return;
         }
@@ -1281,7 +1287,7 @@
   }
 
   function randomActionId(prefix) {
-    return `${prefix}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+    return `${prefix}_${AKFirebase.now()}_${Math.random().toString(36).slice(2, 8)}`;
   }
 
   async function sendMultiAction(type, payload = {}) {
@@ -1289,7 +1295,7 @@
       id: randomActionId(type),
       type,
       payload,
-      createdAt: Date.now()
+      createdAt: AKFirebase.now()
     });
   }
 
@@ -1302,7 +1308,7 @@
      ========================================================= */
 
   function createSessionGameId(type) {
-    return `${type}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+    return `${type}_${AKFirebase.now()}_${Math.random().toString(36).slice(2, 8)}`;
   }
 
   function formatEveningTime(timestamp) {
@@ -1559,7 +1565,7 @@
       gameType: gameState.type,
       gameName: presentation.name,
       icon: presentation.icon,
-      endedAt: Number(gameState.finishedAt || Date.now()),
+      endedAt: Number(gameState.finishedAt || AKFirebase.now()),
       points: result.points,
       winnerIds: result.winnerIds,
       detail: result.detail,
@@ -2126,8 +2132,8 @@
           rounds: {},
           currentResult: null,
           answerOrder: null,
-          startedAt: Date.now(),
-          updatedAt: Date.now()
+          startedAt: AKFirebase.now(),
+          updatedAt: AKFirebase.now()
         }
       });
 
@@ -2275,7 +2281,7 @@
           id: randomActionId("answer"),
           playerId: state.currentUid,
           text,
-          submittedAt: Date.now()
+          submittedAt: AKFirebase.now()
         });
       } catch (error) {
         console.error(error);
@@ -2296,7 +2302,7 @@
           "state/phase": "voting",
           "state/answerOrder": shuffleArray(Object.keys(liveAnswers)),
           "state/currentResult": null,
-          "state/updatedAt": Date.now(),
+          "state/updatedAt": AKFirebase.now(),
           votes: null
         });
       } catch (error) {
@@ -2430,7 +2436,7 @@
           "state/currentResult": result,
           [`state/rounds/${gameState.currentRound}`]: result,
           "state/scores": scores,
-          "state/updatedAt": Date.now()
+          "state/updatedAt": AKFirebase.now()
         });
       } catch (error) {
         console.error(error);
@@ -2515,8 +2521,8 @@
           "state/currentRound": finished ? gameState.currentRound : nextRound,
           "state/currentResult": null,
           "state/answerOrder": null,
-          "state/finishedAt": finished ? Date.now() : null,
-          "state/updatedAt": Date.now(),
+          "state/finishedAt": finished ? AKFirebase.now() : null,
+          "state/updatedAt": AKFirebase.now(),
           answers: null,
           votes: null
         });
@@ -2642,8 +2648,8 @@
           lastResult: null,
           winnerId: null,
           loserId: null,
-          startedAt: Date.now(),
-          updatedAt: Date.now()
+          startedAt: AKFirebase.now(),
+          updatedAt: AKFirebase.now()
         }
       });
 
@@ -2764,7 +2770,7 @@
             "state/jokeSource": "own",
             "state/currentJoke": null,
             "state/punchlineVisible": true,
-            "state/updatedAt": Date.now(),
+            "state/updatedAt": AKFirebase.now(),
             actions: null
           });
           return;
@@ -2787,7 +2793,7 @@
           "state/currentJoke": joke,
           "state/punchlineVisible": false,
           "state/usedJokeIds": [...usedJokeIds, joke.id],
-          "state/updatedAt": Date.now(),
+          "state/updatedAt": AKFirebase.now(),
           actions: null
         });
         return;
@@ -2796,7 +2802,7 @@
       if (gameState.phase === "joke" && action.type === "reveal-punchline") {
         await AKFirebase.updateGame(state.roomCode, {
           "state/punchlineVisible": true,
-          "state/updatedAt": Date.now(),
+          "state/updatedAt": AKFirebase.now(),
           actions: null
         });
         return;
@@ -2832,8 +2838,8 @@
             "state/lastResult": lastResult,
             "state/winnerId": winnerId,
             "state/loserId": laughingId,
-            "state/finishedAt": Date.now(),
-            "state/updatedAt": Date.now(),
+            "state/finishedAt": AKFirebase.now(),
+            "state/updatedAt": AKFirebase.now(),
             actions: null
           });
           return;
@@ -2848,7 +2854,7 @@
           "state/punchlineVisible": false,
           "state/lastResult": lastResult,
           "state/turnNumber": Number(gameState.turnNumber || 1) + 1,
-          "state/updatedAt": Date.now(),
+          "state/updatedAt": AKFirebase.now(),
           actions: null
         });
         return;
@@ -3078,7 +3084,7 @@
         await AKFirebase.updateGame(state.roomCode, {
           "state/phase": "turn-choice",
           "state/lastResult": null,
-          "state/updatedAt": Date.now(),
+          "state/updatedAt": AKFirebase.now(),
           actions: null
         });
       } catch (error) {
@@ -3175,7 +3181,7 @@
         type: "action-truth", phase: "prompt", sessionGameId: createSessionGameId("action-truth"), prompts,
         currentIndex: 0, currentPlayerId: state.players[0]?.id, scores, results: {},
         settings: { roundCount: prompts.length, mode: game.mode, includeAdult: Boolean(game.includeAdult) },
-        startedAt: Date.now(), updatedAt: Date.now()
+        startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
       }});
       state.multiView = "ambiance-game";
     } catch (error) {
@@ -3216,7 +3222,7 @@
         type, phase: "voting", sessionGameId: createSessionGameId(type), items, currentIndex: 0,
         scores, rounds: {}, currentResult: null,
         settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult) },
-        startedAt: Date.now(), updatedAt: Date.now()
+        startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
       }, votes: {} });
       state.multiView = "ambiance-game";
     } catch (error) {
@@ -3268,8 +3274,8 @@
       "state/currentPlayerId": finished ? gameState.currentPlayerId : nextPlayer?.id,
       "state/scores": scores,
       [`state/results/${gameState.currentIndex}`]: { playerId: gameState.currentPlayerId, completed, promptId: gameState.prompts?.[gameState.currentIndex]?.id || "" },
-      "state/finishedAt": finished ? Date.now() : null,
-      "state/updatedAt": Date.now(), actions: null
+      "state/finishedAt": finished ? AKFirebase.now() : null,
+      "state/updatedAt": AKFirebase.now(), actions: null
     }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
   }
 
@@ -3307,7 +3313,7 @@
     minorityIds.forEach(id => scores[id] = Number(scores[id] || 0) + 1);
     AKFirebase.updateGame(state.roomCode, {
       "state/phase": "results", "state/currentResult": { votes, counts, minority, minorityIds, itemId: item?.id || "" },
-      "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: { votes, counts, minorityIds }, "state/updatedAt": Date.now()
+      "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: { votes, counts, minorityIds }, "state/updatedAt": AKFirebase.now()
     }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
   }
 
@@ -3345,7 +3351,7 @@
       event.currentTarget.disabled = true;
       const next = Number(gameState.currentIndex || 0) + 1;
       const finished = next >= (gameState.items || []).length;
-      try { await AKFirebase.updateGame(state.roomCode, { "state/phase": finished ? "final" : "voting", "state/currentIndex": finished ? gameState.currentIndex : next, "state/currentResult": null, "state/finishedAt": finished ? Date.now() : null, "state/updatedAt": Date.now(), votes: null }); }
+      try { await AKFirebase.updateGame(state.roomCode, { "state/phase": finished ? "final" : "voting", "state/currentIndex": finished ? gameState.currentIndex : next, "state/currentResult": null, "state/finishedAt": finished ? AKFirebase.now() : null, "state/updatedAt": AKFirebase.now(), votes: null }); }
       catch (error) { console.error(error); event.currentTarget.disabled = false; alert("Impossible de passer à la suite."); }
     });
   }
@@ -3402,7 +3408,7 @@
           type: "same-brain", phase: "answering", sessionGameId: createSessionGameId("same-brain"),
           items, currentIndex: 0, scores, rounds: {}, currentResult: null,
           settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult) },
-          startedAt: Date.now(), updatedAt: Date.now()
+          startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
         },
         answers: {}
       });
@@ -3446,7 +3452,7 @@
           type: "minority", phase: "voting", sessionGameId: createSessionGameId("minority"),
           items, currentIndex: 0, scores, rounds: {}, currentResult: null,
           settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult) },
-          startedAt: Date.now(), updatedAt: Date.now()
+          startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
         },
         votes: {}
       });
@@ -3498,7 +3504,7 @@
           type: "who-answered", phase: "answering", sessionGameId: createSessionGameId("who-answered"),
           items, currentIndex: 0, authorOrder, scores, rounds: {}, currentResult: null,
           settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult) },
-          startedAt: Date.now(), updatedAt: Date.now()
+          startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
         },
         answers: {}, votes: {}
       });
@@ -3578,7 +3584,7 @@
       "state/currentResult": { answers, points, itemId: gameState.items?.[gameState.currentIndex]?.id || "" },
       "state/scores": scores,
       [`state/rounds/${gameState.currentIndex}`]: { answers, points },
-      "state/updatedAt": Date.now()
+      "state/updatedAt": AKFirebase.now()
     }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
   }
 
@@ -3601,7 +3607,7 @@
       const text = input?.value.trim();
       if (!text) return alert("Écris une réponse avant de continuer.");
       event.currentTarget.disabled = true;
-      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { text, submittedAt: Date.now() }); }
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { text, submittedAt: AKFirebase.now() }); }
       catch (error) { console.error(error); event.currentTarget.disabled = false; alert("La réponse n’a pas pu être envoyée."); }
     });
   }
@@ -3643,7 +3649,7 @@
       "state/currentResult": { votes, counts, minorityOptions, winnerIds, itemId: item?.id || "" },
       "state/scores": scores,
       [`state/rounds/${gameState.currentIndex}`]: { votes, counts, minorityOptions, winnerIds },
-      "state/updatedAt": Date.now()
+      "state/updatedAt": AKFirebase.now()
     }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
   }
 
@@ -3693,7 +3699,7 @@
         "state/phase": "voting",
         "state/mysteryAuthorId": authorId,
         "state/answerSnapshot": answers,
-        "state/updatedAt": Date.now(),
+        "state/updatedAt": AKFirebase.now(),
         votes: null
       }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
       return;
@@ -3718,7 +3724,7 @@
         "state/currentResult": result,
         "state/scores": scores,
         [`state/rounds/${gameState.currentIndex}`]: result,
-        "state/updatedAt": Date.now()
+        "state/updatedAt": AKFirebase.now()
       }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
     }
   }
@@ -3741,7 +3747,7 @@
       const text = document.querySelector("#multiWhoAnswer")?.value.trim();
       if (!text) return alert("Écris une réponse avant de continuer.");
       event.currentTarget.disabled = true;
-      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { text, submittedAt: Date.now() }); }
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { text, submittedAt: AKFirebase.now() }); }
       catch (error) { console.error(error); event.currentTarget.disabled = false; alert("La réponse n’a pas pu être envoyée."); }
     });
   }
@@ -3799,8 +3805,8 @@
       "state/currentResult": null,
       "state/mysteryAuthorId": null,
       "state/answerSnapshot": null,
-      "state/finishedAt": finished ? Date.now() : null,
-      "state/updatedAt": Date.now()
+      "state/finishedAt": finished ? AKFirebase.now() : null,
+      "state/updatedAt": AKFirebase.now()
     };
     String(collections || "").split(",").filter(Boolean).forEach(collection => { updates[collection] = null; });
     try { await AKFirebase.updateGame(state.roomCode, updates); }
@@ -3833,7 +3839,7 @@
   function startV09MultiCountdown(endsAt, onExpire) {
     clearV09MultiTimer();
     const tick = () => {
-      const left = Math.max(0, Math.ceil((Number(endsAt || 0) - Date.now()) / 1000));
+      const left = Math.max(0, Math.ceil((Number(endsAt || 0) - AKFirebase.now()) / 1000));
       const node = document.querySelector("#v09MultiCountdown");
       const ring = document.querySelector("#v09MultiTimerRing");
       if (node) node.textContent = String(left);
@@ -3851,7 +3857,7 @@
   }
 
   function renderMultiV09Timer({ endsAt, total, kicker, heading, text, icon = "⏱️" }) {
-    const left = Math.max(0, Math.ceil((Number(endsAt || 0) - Date.now()) / 1000));
+    const left = Math.max(0, Math.ceil((Number(endsAt || 0) - AKFirebase.now()) / 1000));
     return `
       <section class="timer-stage v09-timer-stage">
         <span class="category-chip">${escapeHtml(kicker)}</span>
@@ -3947,7 +3953,7 @@
         type: "almost-impostor", phase: "roles", sessionGameId: createSessionGameId("almost-impostor"), items,
         currentIndex: 0, impostorOrder, impostorId: impostorOrder[0], scores, rounds: {}, currentResult: null,
         settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult), discussionSeconds: Number(game.discussionSeconds || 60) },
-        startedAt: Date.now(), updatedAt: Date.now()
+        startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
       }, answers: {}, votes: {}, actions: {} });
       state.multiView = "v09-game";
     } catch (error) {
@@ -3993,7 +3999,7 @@
         currentIndex: 0, speakerOrder: shuffledSpeakers, roleOrder, speakerId: shuffledSpeakers[0], role: roleOrder[0],
         scores, rounds: {}, currentResult: null,
         settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult), speechSeconds: Number(game.speechSeconds || 60) },
-        startedAt: Date.now(), updatedAt: Date.now()
+        startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
       }, answers: {}, votes: {}, actions: {} });
       state.multiView = "v09-game";
     } catch (error) {
@@ -4040,7 +4046,7 @@
         type: "who-am-i", phase: "reveal", sessionGameId: createSessionGameId("who-am-i"), items,
         currentIndex: 0, guesserOrder: shuffledGuessers, guesserId: shuffledGuessers[0], scores, rounds: {}, currentResult: null,
         settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult), categoryMode: game.categoryMode, durationSeconds: Number(game.durationSeconds || 60) },
-        startedAt: Date.now(), updatedAt: Date.now()
+        startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
       }, answers: {}, votes: {}, actions: {} });
       state.multiView = "v09-game";
     } catch (error) {
@@ -4102,14 +4108,14 @@
       const id = `v09_imp_roles_${round}`;
       if (state.multiProcessingActionId === id) return;
       state.multiProcessingActionId = id;
-      AKFirebase.updateGame(state.roomCode, { "state/phase": "discussion", "state/discussionEndsAt": Date.now() + Number(gameState.settings?.discussionSeconds || 60) * 1000, answers: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "discussion", "state/discussionEndsAt": AKFirebase.now() + Number(gameState.settings?.discussionSeconds || 60) * 1000, answers: null, "state/updatedAt": AKFirebase.now() }).finally(() => { state.multiProcessingActionId = null; });
       return;
     }
-    if (gameState.phase === "discussion" && Number(gameState.discussionEndsAt || 0) <= Date.now()) {
+    if (gameState.phase === "discussion" && Number(gameState.discussionEndsAt || 0) <= AKFirebase.now()) {
       const id = `v09_imp_timer_${round}`;
       if (state.multiProcessingActionId === id) return;
       state.multiProcessingActionId = id;
-      AKFirebase.updateGame(state.roomCode, { "state/phase": "voting", votes: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "voting", votes: null, "state/updatedAt": AKFirebase.now() }).finally(() => { state.multiProcessingActionId = null; });
       return;
     }
     if (gameState.phase === "voting" && Object.keys(votes).length >= state.players.length) {
@@ -4126,7 +4132,7 @@
       correctIds.forEach(id2 => scores[id2] = Number(scores[id2] || 0) + 1);
       if (!caught) scores[gameState.impostorId] = Number(scores[gameState.impostorId] || 0) + 2;
       const result = { caught, topIds, counts, correctIds, votes, guess: null, guessCorrect: false, impostorId: gameState.impostorId, itemId: gameState.items?.[round]?.id || "" };
-      AKFirebase.updateGame(state.roomCode, { "state/phase": caught ? "guessing" : "results", "state/currentResult": result, "state/scores": scores, votes: null, actions: null, [`state/rounds/${round}`]: result, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+      AKFirebase.updateGame(state.roomCode, { "state/phase": caught ? "guessing" : "results", "state/currentResult": result, "state/scores": scores, votes: null, actions: null, [`state/rounds/${round}`]: result, "state/updatedAt": AKFirebase.now() }).finally(() => { state.multiProcessingActionId = null; });
       return;
     }
     if (gameState.phase === "guessing") {
@@ -4140,7 +4146,7 @@
       const scores = { ...(gameState.scores || {}) };
       if (correct) scores[gameState.impostorId] = Number(scores[gameState.impostorId] || 0) + 1;
       const result = { ...(gameState.currentResult || {}), guess: action.payload.guess, guessCorrect: correct };
-      AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${round}`]: result, actions: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${round}`]: result, actions: null, "state/updatedAt": AKFirebase.now() }).finally(() => { state.multiProcessingActionId = null; });
     }
   }
 
@@ -4162,7 +4168,7 @@
     `;
     document.querySelector("#seenMultiImpostorRole")?.addEventListener("click", async event => {
       event.currentTarget.disabled = true;
-      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { seen: true, submittedAt: Date.now() }); }
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { seen: true, submittedAt: AKFirebase.now() }); }
       catch (error) { console.error(error); event.currentTarget.disabled = false; }
     });
   }
@@ -4181,7 +4187,7 @@
       const id = `v09_imp_expire_${gameState.currentIndex}`;
       if (state.multiProcessingActionId === id) return;
       state.multiProcessingActionId = id;
-      try { await AKFirebase.updateGame(state.roomCode, { "state/phase": "voting", votes: null, "state/updatedAt": Date.now() }); }
+      try { await AKFirebase.updateGame(state.roomCode, { "state/phase": "voting", votes: null, "state/updatedAt": AKFirebase.now() }); }
       finally { state.multiProcessingActionId = null; }
     };
     document.querySelector("#multiImpostorVoteNow")?.addEventListener("click", expire);
@@ -4249,14 +4255,14 @@
       const id = `v09_exp_ready_${round}_${action.id}`;
       if (state.multiProcessingActionId === id) return;
       state.multiProcessingActionId = id;
-      AKFirebase.updateGame(state.roomCode, { "state/phase": "speaking", "state/speechEndsAt": Date.now() + Number(gameState.settings?.speechSeconds || 60) * 1000, actions: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "speaking", "state/speechEndsAt": AKFirebase.now() + Number(gameState.settings?.speechSeconds || 60) * 1000, actions: null, "state/updatedAt": AKFirebase.now() }).finally(() => { state.multiProcessingActionId = null; });
       return;
     }
-    if (gameState.phase === "speaking" && Number(gameState.speechEndsAt || 0) <= Date.now()) {
+    if (gameState.phase === "speaking" && Number(gameState.speechEndsAt || 0) <= AKFirebase.now()) {
       const id = `v09_exp_timer_${round}`;
       if (state.multiProcessingActionId === id) return;
       state.multiProcessingActionId = id;
-      AKFirebase.updateGame(state.roomCode, { "state/phase": "voting", votes: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "voting", votes: null, "state/updatedAt": AKFirebase.now() }).finally(() => { state.multiProcessingActionId = null; });
       return;
     }
     const expected = Math.max(0, state.players.length - 1);
@@ -4270,7 +4276,7 @@
       correctIds.forEach(id2 => scores[id2] = Number(scores[id2] || 0) + 1);
       scores[gameState.speakerId] = Number(scores[gameState.speakerId] || 0) + Math.min(3, fooledIds.length);
       const result = { speakerId: gameState.speakerId, role: gameState.role, votes, correctIds, fooledIds, itemId: gameState.items?.[round]?.id || "" };
-      AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${round}`]: result, votes: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${round}`]: result, votes: null, "state/updatedAt": AKFirebase.now() }).finally(() => { state.multiProcessingActionId = null; });
     }
   }
 
@@ -4309,7 +4315,7 @@
       const id = `v09_exp_expire_${gameState.currentIndex}`;
       if (state.multiProcessingActionId === id) return;
       state.multiProcessingActionId = id;
-      try { await AKFirebase.updateGame(state.roomCode, { "state/phase": "voting", votes: null, "state/updatedAt": Date.now() }); }
+      try { await AKFirebase.updateGame(state.roomCode, { "state/phase": "voting", votes: null, "state/updatedAt": AKFirebase.now() }); }
       finally { state.multiProcessingActionId = null; }
     };
     document.querySelector("#multiExpertVoteNow")?.addEventListener("click", expire);
@@ -4364,12 +4370,12 @@
       const id = `v09_who_ready_${round}_${Object.keys(answers).length}`;
       if (state.multiProcessingActionId === id) return;
       state.multiProcessingActionId = id;
-      AKFirebase.updateGame(state.roomCode, { "state/phase": "playing", "state/roundEndsAt": Date.now() + Number(gameState.settings?.durationSeconds || 60) * 1000, answers: null, actions: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "playing", "state/roundEndsAt": AKFirebase.now() + Number(gameState.settings?.durationSeconds || 60) * 1000, answers: null, actions: null, "state/updatedAt": AKFirebase.now() }).finally(() => { state.multiProcessingActionId = null; });
       return;
     }
     if (gameState.phase !== "playing") return;
     const action = actions[gameState.guesserId];
-    const expired = Number(gameState.roundEndsAt || 0) <= Date.now();
+    const expired = Number(gameState.roundEndsAt || 0) <= AKFirebase.now();
     if (!action?.payload?.found && !expired) return;
     const id = `v09_who_finish_${round}_${action?.id || "timer"}`;
     if (state.multiProcessingActionId === id) return;
@@ -4381,7 +4387,7 @@
       state.players.filter(player => player.id !== gameState.guesserId).forEach(player => scores[player.id] = Number(scores[player.id] || 0) + 1);
     }
     const result = { guesserId: gameState.guesserId, found, itemId: gameState.items?.[round]?.id || "" };
-    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${round}`]: result, actions: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${round}`]: result, actions: null, "state/updatedAt": AKFirebase.now() }).finally(() => { state.multiProcessingActionId = null; });
   }
 
   function renderMultiWhoAmIReveal(gameState, answers) {
@@ -4400,7 +4406,7 @@
     `;
     document.querySelector("#multiWhoAmISeen")?.addEventListener("click", async event => {
       event.currentTarget.disabled = true;
-      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { seen: true, submittedAt: Date.now() }); }
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { seen: true, submittedAt: AKFirebase.now() }); }
       catch (error) { console.error(error); event.currentTarget.disabled = false; }
     });
   }
@@ -4453,8 +4459,8 @@
       "state/discussionEndsAt": null,
       "state/speechEndsAt": null,
       "state/roundEndsAt": null,
-      "state/finishedAt": finished ? Date.now() : null,
-      "state/updatedAt": Date.now()
+      "state/finishedAt": finished ? AKFirebase.now() : null,
+      "state/updatedAt": AKFirebase.now()
     };
     if (!finished) Object.entries(extra || {}).forEach(([key, value]) => updates[`state/${key}`] = value);
     String(collections || "").split(",").filter(Boolean).forEach(collection => updates[collection] = null);
@@ -4531,7 +4537,7 @@
     const token = state.v014MultiTimerToken;
     const tick = () => {
       if (token !== state.v014MultiTimerToken) return;
-      const left = Math.max(0, Math.ceil((Number(endAt || 0) - Date.now()) / 1000));
+      const left = Math.max(0, Math.ceil((Number(endAt || 0) - AKFirebase.now()) / 1000));
       const node = document.querySelector("#v014MultiCountdown");
       if (node) node.textContent = String(left);
       const fill = document.querySelector("#v014MultiTimerFill");
@@ -4621,10 +4627,10 @@
           questionMode: Boolean(game.config.questionMode),
           drinkingGame: Boolean(game.config.drinkingGame)
         },
-        bombEndsAt: game.engine === "bomb" ? Date.now() + Number(game.durationSeconds || 25) * 1000 : null,
-        turnEndsAt: game.engine === "turn" && game.config.timer ? Date.now() + Number(game.durationSeconds || 45) * 1000 : null,
-        startedAt: Date.now(),
-        updatedAt: Date.now()
+        bombEndsAt: game.engine === "bomb" ? AKFirebase.now() + Number(game.durationSeconds || 25) * 1000 : null,
+        turnEndsAt: game.engine === "turn" && game.config.timer ? AKFirebase.now() + Number(game.durationSeconds || 45) * 1000 : null,
+        startedAt: AKFirebase.now(),
+        updatedAt: AKFirebase.now()
       };
       await AKFirebase.setGame(state.roomCode, { state: baseState, votes: null, answers: null, actions: null });
     } catch (error) {
@@ -4691,7 +4697,7 @@
   function processMultiMegaTurn(gameState, actions) {
     if (!state.isHost || gameState.phase !== "turn") return;
     const action = actions[gameState.currentPlayerId];
-    const expired = Number(gameState.turnEndsAt || 0) > 0 && Number(gameState.turnEndsAt) <= Date.now();
+    const expired = Number(gameState.turnEndsAt || 0) > 0 && Number(gameState.turnEndsAt) <= AKFirebase.now();
     if (!action && !expired) return;
     const actionId = action?.id || `timer_${gameState.currentIndex}`;
     const lock = `mega_turn_${gameState.currentIndex}_${actionId}`;
@@ -4710,9 +4716,9 @@
       "state/currentPlayerId": nextPlayer,
       "state/scores": scores,
       [`state/rounds/${round}`]: { playerId: gameState.currentPlayerId, success, itemId: megaMultiCurrentItem(gameState)?.id || "" },
-      "state/turnEndsAt": finished ? null : gameState.settings?.durationSeconds && V014_GAME_CONFIGS[gameState.settings?.gameName]?.timer ? Date.now() + Number(gameState.settings.durationSeconds) * 1000 : null,
-      "state/finishedAt": finished ? Date.now() : null,
-      "state/updatedAt": Date.now(),
+      "state/turnEndsAt": finished ? null : gameState.settings?.durationSeconds && V014_GAME_CONFIGS[gameState.settings?.gameName]?.timer ? AKFirebase.now() + Number(gameState.settings.durationSeconds) * 1000 : null,
+      "state/finishedAt": finished ? AKFirebase.now() : null,
+      "state/updatedAt": AKFirebase.now(),
       actions: null
     }).finally(() => { state.multiProcessingActionId = null; });
   }
@@ -4732,7 +4738,7 @@
         <div class="prompt-player"><span>${avatarById(player?.avatarId).emoji}</span><div><small>C’EST AU TOUR DE</small><strong>${escapeHtml(player?.name || "Joueur")}</strong></div></div>
         <span class="prompt-type-chip">${escapeHtml(gameState.settings?.icon || "🎯")} ${escapeHtml(gameState.settings?.gameName || "DÉFI").toUpperCase()}</span>
         <h2>${privatePrompt && !isCurrent ? "Sujet privé sur le téléphone du joueur" : escapeHtml(prompt)}</h2>
-        ${gameState.turnEndsAt ? `<div class="mega-mini-timer"><strong id="v014MultiCountdown">${Math.max(0, Math.ceil((Number(gameState.turnEndsAt) - Date.now()) / 1000))}</strong><span>secondes</span><div class="progress-track"><div id="v014MultiTimerFill" class="progress-fill"></div></div></div>` : ""}
+        ${gameState.turnEndsAt ? `<div class="mega-mini-timer"><strong id="v014MultiCountdown">${Math.max(0, Math.ceil((Number(gameState.turnEndsAt) - AKFirebase.now()) / 1000))}</strong><span>secondes</span><div class="progress-track"><div id="v014MultiTimerFill" class="progress-fill"></div></div></div>` : ""}
       </section>
       ${isCurrent ? pending ? renderMultiWaiting("Réponse envoyée", "Le tour suivant arrive automatiquement.", "✓") : `<section class="decision-grid"><button id="multiMegaSuccess" class="primary-btn">✓ Réussi</button><button id="multiMegaSkip" class="secondary-btn">Passer</button></section>` : renderMultiWaiting(`Tour de ${player?.name || "la personne"}`, privatePrompt ? "Le sujet reste privé jusqu’à la fin du tour." : "Encouragez, observez et décidez ensemble.", avatarById(player?.avatarId).emoji)}
       ${state.alcohol && !gameState.settings?.drinkingGame ? `<div class="alcohol-callout">🍻 Une carte passée peut valoir une petite gorgée, sans pression.</div>` : ""}`;
@@ -4751,7 +4757,7 @@
     const scores = { ...(gameState.scores || {}) };
     state.players.forEach(player => { if (Number(votes[player.id]) === correct) scores[player.id] = Number(scores[player.id] || 0) + 1; });
     const result = { itemId: item?.id || "", correct, votes: { ...votes } };
-    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/updatedAt": AKFirebase.now() }).finally(() => { state.multiProcessingActionId = null; });
   }
 
   function renderMultiMegaQuizVote(gameState, votes) {
@@ -4798,7 +4804,7 @@
     const scores = { ...(gameState.scores || {}) };
     state.players.forEach(player => { if (Number(votes[player.id]) === chosen) scores[player.id] = Number(scores[player.id] || 0) + 1; });
     const result = { itemId: megaMultiCurrentItem(gameState)?.id || "", chosen, counts, votes: { ...votes } };
-    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/updatedAt": AKFirebase.now() }).finally(() => { state.multiProcessingActionId = null; });
   }
 
   function renderMultiMegaScenarioVote(gameState, votes) {
@@ -4833,7 +4839,7 @@
   function processMultiMegaBomb(gameState, actions) {
     if (!state.isHost || gameState.phase !== "playing") return;
     const action = actions[gameState.currentPlayerId];
-    const expired = Number(gameState.bombEndsAt || 0) <= Date.now();
+    const expired = Number(gameState.bombEndsAt || 0) <= AKFirebase.now();
     if (!action && !expired) return;
     const lock = `mega_bomb_${gameState.currentIndex}_${action?.id || "timer"}`;
     if (state.multiProcessingActionId === lock) return;
@@ -4841,14 +4847,14 @@
     if (action?.payload?.pass && !expired) {
       const index = state.players.findIndex(player => player.id === gameState.currentPlayerId);
       const next = state.players[(index + 1) % Math.max(1, state.players.length)]?.id || gameState.currentPlayerId;
-      AKFirebase.updateGame(state.roomCode, { "state/currentPlayerId": next, "state/updatedAt": Date.now(), actions: null }).finally(() => { state.multiProcessingActionId = null; });
+      AKFirebase.updateGame(state.roomCode, { "state/currentPlayerId": next, "state/updatedAt": AKFirebase.now(), actions: null }).finally(() => { state.multiProcessingActionId = null; });
       return;
     }
     const loserId = gameState.currentPlayerId;
     const scores = { ...(gameState.scores || {}) };
     state.players.filter(player => player.id !== loserId).forEach(player => scores[player.id] = Number(scores[player.id] || 0) + 1);
     const result = { loserId, itemId: megaMultiCurrentItem(gameState)?.id || "" };
-    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/bombEndsAt": null, "state/updatedAt": Date.now(), actions: null }).finally(() => { state.multiProcessingActionId = null; });
+    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/bombEndsAt": null, "state/updatedAt": AKFirebase.now(), actions: null }).finally(() => { state.multiProcessingActionId = null; });
   }
 
   function renderMultiMegaBomb(gameState, actions) {
@@ -4860,7 +4866,7 @@
     setBackVisible(false);
     screen.innerHTML = `
       ${multiMegaProgress(gameState, "Bombe")}
-      <section class="bomb-stage"><div class="bomb-icon">💣</div><div class="bomb-countdown"><strong id="v014MultiCountdown">${Math.max(0, Math.ceil((Number(gameState.bombEndsAt || 0) - Date.now()) / 1000))}</strong><span>secondes</span></div><span class="category-chip">${avatarById(player?.avatarId).emoji} ${escapeHtml(player?.name || "Joueur").toUpperCase()}</span><h2>${escapeHtml(item?.category || "Catégorie")}</h2><p>${isCurrent ? "Donne une réponse, puis passe la bombe." : `La bombe est chez ${escapeHtml(player?.name || "la personne")}.`}</p><div class="progress-track"><div id="v014MultiTimerFill" class="progress-fill"></div></div></section>
+      <section class="bomb-stage"><div class="bomb-icon">💣</div><div class="bomb-countdown"><strong id="v014MultiCountdown">${Math.max(0, Math.ceil((Number(gameState.bombEndsAt || 0) - AKFirebase.now()) / 1000))}</strong><span>secondes</span></div><span class="category-chip">${avatarById(player?.avatarId).emoji} ${escapeHtml(player?.name || "Joueur").toUpperCase()}</span><h2>${escapeHtml(item?.category || "Catégorie")}</h2><p>${isCurrent ? "Donne une réponse, puis passe la bombe." : `La bombe est chez ${escapeHtml(player?.name || "la personne")}.`}</p><div class="progress-track"><div id="v014MultiTimerFill" class="progress-fill"></div></div></section>
       ${isCurrent ? pending ? renderMultiWaiting("Action envoyée", "La bombe change de téléphone…", "💣") : `<section class="decision-grid"><button id="multiPassBomb" class="primary-btn">Répondu, je passe →</button><button id="multiBoomBomb" class="danger-btn">💥 BOOM</button></section>` : renderMultiWaiting("Reste prêt·e", "Ton téléphone s’activera quand la bombe arrivera chez toi.", "⏳")}`;
     document.querySelector("#multiPassBomb")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-bomb", { pass: true }).catch(() => event.currentTarget.disabled = false); });
     document.querySelector("#multiBoomBomb")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-bomb", { explode: true }).catch(() => event.currentTarget.disabled = false); });
@@ -4886,9 +4892,9 @@
         "state/currentIndex": finished ? gameState.currentIndex : next,
         "state/currentResult": null,
         "state/currentPlayerId": ids[Math.floor(Math.random() * Math.max(1, ids.length))] || null,
-        "state/bombEndsAt": finished ? null : Date.now() + Number(gameState.settings?.durationSeconds || 25) * 1000,
-        "state/finishedAt": finished ? Date.now() : null,
-        "state/updatedAt": Date.now(), actions: null, votes: null, answers: null
+        "state/bombEndsAt": finished ? null : AKFirebase.now() + Number(gameState.settings?.durationSeconds || 25) * 1000,
+        "state/finishedAt": finished ? AKFirebase.now() : null,
+        "state/updatedAt": AKFirebase.now(), actions: null, votes: null, answers: null
       }); } catch (error) { console.error(error); event.currentTarget.disabled = false; }
     });
   }
@@ -4900,7 +4906,7 @@
       const lock = `mega_know_target_${gameState.currentIndex}`;
       if (state.multiProcessingActionId === lock) return;
       state.multiProcessingActionId = lock;
-      AKFirebase.updateGame(state.roomCode, { "state/phase": "guessing", "state/secretAnswer": Number(targetAnswer), "state/updatedAt": Date.now(), votes: null }).finally(() => { state.multiProcessingActionId = null; });
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "guessing", "state/secretAnswer": Number(targetAnswer), "state/updatedAt": AKFirebase.now(), votes: null }).finally(() => { state.multiProcessingActionId = null; });
       return;
     }
     if (gameState.phase !== "guessing" || Object.keys(votes).length < megaMultiExpectedVotes(gameState)) return;
@@ -4913,7 +4919,7 @@
     correctIds.forEach(id => scores[id] = Number(scores[id] || 0) + 1);
     if (correctIds.length >= Math.ceil(Math.max(1, state.players.length - 1) / 2)) scores[gameState.targetId] = Number(scores[gameState.targetId] || 0) + 1;
     const result = { targetId: gameState.targetId, secretAnswer: secret, correctIds, votes: { ...votes }, itemId: megaMultiCurrentItem(gameState)?.id || "" };
-    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/updatedAt": AKFirebase.now() }).finally(() => { state.multiProcessingActionId = null; });
   }
 
   function renderMultiMegaKnowTarget(gameState, answers) {
@@ -4968,7 +4974,7 @@
       const lock = `mega_rank_target_${gameState.currentIndex}`;
       if (state.multiProcessingActionId === lock) return;
       state.multiProcessingActionId = lock;
-      AKFirebase.updateGame(state.roomCode, { "state/phase": "guessing", "state/secretRanking": targetAnswer.ranking, "state/updatedAt": Date.now(), votes: null }).finally(() => { state.multiProcessingActionId = null; });
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "guessing", "state/secretRanking": targetAnswer.ranking, "state/updatedAt": AKFirebase.now(), votes: null }).finally(() => { state.multiProcessingActionId = null; });
       return;
     }
     if (gameState.phase !== "guessing" || Object.keys(votes).length < megaMultiExpectedVotes(gameState)) return;
@@ -4981,7 +4987,7 @@
     correctIds.forEach(id => scores[id] = Number(scores[id] || 0) + 2);
     if (correctIds.length) scores[gameState.targetId] = Number(scores[gameState.targetId] || 0) + 1;
     const result = { targetId: gameState.targetId, ranking: gameState.secretRanking || [], correctIds, votes: { ...votes }, itemId: megaMultiCurrentItem(gameState)?.id || "" };
-    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/updatedAt": AKFirebase.now() }).finally(() => { state.multiProcessingActionId = null; });
   }
 
   function renderMultiMegaRankingTarget(gameState, answers) {
@@ -5011,7 +5017,7 @@
     document.querySelector("#multiRankUndo")?.addEventListener("click", () => { draft.pop(); sessionStorage.setItem(draftKey, JSON.stringify(draft)); renderMultiMegaRankingTarget(gameState, answers); });
     document.querySelector("#multiRankConfirm")?.addEventListener("click", async event => {
       event.currentTarget.disabled = true;
-      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { ranking: draft, submittedAt: Date.now() }); sessionStorage.removeItem(draftKey); }
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { ranking: draft, submittedAt: AKFirebase.now() }); sessionStorage.removeItem(draftKey); }
       catch (error) { console.error(error); event.currentTarget.disabled = false; }
     });
   }
@@ -5054,8 +5060,8 @@
       "state/phase": finished ? "final" : nextPhase,
       "state/currentIndex": finished ? gameState.currentIndex : next,
       "state/currentResult": null,
-      "state/finishedAt": finished ? Date.now() : null,
-      "state/updatedAt": Date.now()
+      "state/finishedAt": finished ? AKFirebase.now() : null,
+      "state/updatedAt": AKFirebase.now()
     };
     if (!finished) Object.entries(extras || {}).forEach(([key, value]) => updates[`state/${key}`] = value);
     (collections || []).forEach(collection => updates[collection] = null);

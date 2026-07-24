@@ -24,6 +24,17 @@
   const auth = firebase.auth();
   const db = firebase.database();
   let currentUser = null;
+  let serverTimeOffset = 0;
+
+  db.ref(".info/serverTimeOffset").on(
+    "value",
+    snapshot => {
+      serverTimeOffset = Number(snapshot.val() || 0);
+    },
+    () => {
+      serverTimeOffset = 0;
+    }
+  );
 
   const readyPromise = new Promise((resolve, reject) => {
     auth.onAuthStateChanged(async user => {
@@ -44,6 +55,7 @@
   });
 
   const serverTimestamp = () => firebase.database.ServerValue.TIMESTAMP;
+  const now = () => Date.now() + serverTimeOffset;
 
   function normalizeCode(value) {
     return String(value || "")
@@ -61,7 +73,7 @@
   function randomRoomCode() {
     const alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
     let code = "";
-    for (let i = 0; i < 4; i += 1) {
+    for (let i = 0; i < 6; i += 1) {
       code += alphabet[Math.floor(Math.random() * alphabet.length)];
     }
     return code;
@@ -139,6 +151,10 @@
       throw new Error("Ce salon n'existe pas ou n'est plus disponible.");
     }
 
+    if (meta.status && meta.status !== "lobby") {
+      throw new Error("Une partie est déjà en cours dans ce salon. Rejoins-le à la prochaine manche.");
+    }
+
     await db.ref(`rooms/${key}/players/${user.uid}`).set({
       name,
       avatarId,
@@ -192,8 +208,9 @@
 
   async function startWhoUsGame(code, payload) {
     const key = normalizeCode(code);
+    const updates = {};
 
-    await db.ref(`rooms/${key}/game`).set({
+    updates[`rooms/${key}/game`] = {
       state: {
         type: "who-us",
         phase: "question",
@@ -207,7 +224,11 @@
         updatedAt: serverTimestamp()
       },
       votes: {}
-    });
+    };
+    updates[`rooms/${key}/meta/status`] = "playing";
+    updates[`rooms/${key}/meta/updatedAt`] = serverTimestamp();
+
+    await db.ref().update(updates);
   }
 
   async function castWhoUsVote(code, targetUid) {
@@ -243,7 +264,14 @@
   }
 
   async function returnToLobby(code) {
-    await db.ref(`rooms/${normalizeCode(code)}/game`).remove();
+    const key = normalizeCode(code);
+    const updates = {};
+
+    updates[`rooms/${key}/game`] = null;
+    updates[`rooms/${key}/meta/status`] = "lobby";
+    updates[`rooms/${key}/meta/updatedAt`] = serverTimestamp();
+
+    await db.ref().update(updates);
   }
 
   async function recordSessionResult(code, summary) {
@@ -280,7 +308,7 @@
         gameType: summary.gameType,
         gameName: summary.gameName,
         icon: summary.icon,
-        endedAt: Number(summary.endedAt || Date.now()),
+        endedAt: Number(summary.endedAt || now()),
         points: summary.points || {},
         winnerIds: summary.winnerIds || [],
         detail: summary.detail || "Partie terminée",
@@ -293,7 +321,7 @@
         history,
         gamesPlayed: Number(session.gamesPlayed || 0) + 1,
         lastGame: summary.replay || null,
-        updatedAt: Date.now()
+        updatedAt: now()
       };
     }, undefined, false);
 
@@ -308,7 +336,13 @@
 
   async function setGame(code, payload) {
     const key = normalizeCode(code);
-    await db.ref(`rooms/${key}/game`).set(payload);
+    const updates = {};
+
+    updates[`rooms/${key}/game`] = payload;
+    updates[`rooms/${key}/meta/status`] = payload ? "playing" : "lobby";
+    updates[`rooms/${key}/meta/updatedAt`] = serverTimestamp();
+
+    await db.ref().update(updates);
   }
 
   async function updateGame(code, updates) {
@@ -368,6 +402,7 @@
     updateGame,
     writeOwnGameEntry,
     clearOwnGameEntry,
+    now,
     getCurrentUser: () => currentUser
   };
 })();

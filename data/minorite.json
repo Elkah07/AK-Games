@@ -171,7 +171,7 @@
   },
   {
     "id": "minorite_018",
-    "question": "Tu préfères avoir toujours…",
+    "question": "Quel inconfort permanent tu choisis ?",
     "options": [
       "Trop chaud",
       "Trop froid",
@@ -591,7 +591,7 @@
   },
   {
     "id": "minorite_060",
-    "question": "Tu préfères avoir toujours…",
+    "question": "Quel avantage permanent tu choisis ?",
     "options": [
       "La bonne musique",
       "La bonne tenue",

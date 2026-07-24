@@ -102,7 +102,16 @@
 
     navigator.serviceWorker.addEventListener("controllerchange", () => {
       if (reloading) return;
+
+      // Une mise à jour ne doit jamais recharger l'app au milieu d'une partie.
+      if (hasActiveSession()) {
+        localStorage.setItem("akgames_update_pending", "yes");
+        showBackToast("Mise à jour prête. Elle sera appliquée au prochain redémarrage.");
+        return;
+      }
+
       reloading = true;
+      localStorage.removeItem("akgames_update_pending");
       window.location.reload();
     });
   }
@@ -128,27 +137,33 @@
   }
 
   function hasActiveSession() {
+    if (typeof state !== "object" || !state) return false;
+
     const roomActive = Boolean(state.roomCode);
+    const activeSoloKeys = [
+      "quiDeNous",
+      "laughDuel",
+      "bestLiar",
+      "actionTruth",
+      "ambiancePoll",
+      "sameBrain",
+      "minorityGame",
+      "whoAnswered",
+      "almostImpostor",
+      "fakeExpert",
+      "whoAmI",
+      "megaGame"
+    ];
 
-    const whoUsActive = Boolean(
-      state.quiDeNous
-      && Array.isArray(state.quiDeNous.questions)
-      && state.quiDeNous.questions.length
-    );
+    const soloGameActive = activeSoloKeys.some(key => {
+      const game = state[key];
+      if (!game || typeof game !== "object") return false;
 
-    const laughActive = Boolean(
-      state.laughDuel
-      && Array.isArray(state.laughDuel.jokePool)
-      && state.laughDuel.jokePool.length
-    );
+      return ["questions", "jokePool", "prompts", "items", "cards"]
+        .some(collection => Array.isArray(game[collection]) && game[collection].length > 0);
+    });
 
-    const liarActive = Boolean(
-      state.bestLiar
-      && Array.isArray(state.bestLiar.prompts)
-      && state.bestLiar.prompts.length
-    );
-
-    return roomActive || whoUsActive || laughActive || liarActive;
+    return roomActive || soloGameActive;
   }
 
   function armBackGuard() {
