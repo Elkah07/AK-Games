@@ -15,6 +15,8 @@
   state.roomData = null;
   state.multiView = null;
   state.multiRenderKey = null;
+  state.multiProcessingActionId = null;
+  state.multiLobbyTimer = null;
 
   const SESSION_KEY = "akgames_multiplayer_session_v1";
 
@@ -22,6 +24,8 @@
   const localRenderLobby = renderLobby;
   const localRenderGames = renderGames;
   const localStartWhoUsGame = startWhoUsGame;
+  const localStartLaughDuel = startLaughDuel;
+  const localStartBestLiarGame = startBestLiarGame;
 
   function isMultiplayer() {
     return state.mode === "multi-host" || state.mode === "multi-guest";
@@ -126,10 +130,31 @@
           return;
         }
 
-        if (state.mode === "multi-guest" || state.multiView === "lobby" || state.multiView === "who-us-game") {
+        if (gameState?.type === "best-liar") {
+          state.multiView = "best-liar-game";
+          syncMultiBestLiar(room);
+          return;
+        }
+
+        if (gameState?.type === "laugh-duel") {
+          state.multiView = "laugh-duel-game";
+          syncMultiLaughDuel(room);
+          return;
+        }
+
+        if (
+          state.mode === "multi-guest"
+          || state.multiView === "lobby"
+          || state.multiView === "who-us-game"
+          || state.multiView === "best-liar-game"
+          || state.multiView === "laugh-duel-game"
+        ) {
+          clearMultiLobbyTimer();
           state.multiView = "lobby";
           state.multiRenderKey = null;
           state.quiDeNous = null;
+          state.bestLiar = null;
+          state.laughDuel = null;
           renderLobby();
         }
       },
@@ -451,7 +476,7 @@
       <section class="game-list">
         ${category.games.map(game => {
           const disabled = game === "Blind Test";
-          const multiReady = game === "Qui de nous ?";
+          const multiReady = localReadyGames.has(game);
           const locallyReady = localReadyGames.has(game);
 
           return `
@@ -471,7 +496,6 @@
 
               <div class="game-meta">
                 ${multiReady ? `<span class="badge green">📲 multijoueur</span>` : ""}
-                ${locallyReady && !multiReady ? `<span class="badge">📱 un téléphone</span>` : ""}
               </div>
             </button>
           `;
@@ -488,6 +512,32 @@
           pushScreen("games");
           resetWhoUsState();
           renderWhoUsSetup();
+          return;
+        }
+
+        if (game === "Le premier qui rit a perdu") {
+          if (state.players.length < 2) {
+            alert("Ce duel nécessite au moins 2 joueurs.");
+            return;
+          }
+
+          state.multiView = "laugh-duel-setup";
+          pushScreen("games");
+          resetLaughDuelState();
+          renderLaughDuelSetup();
+          return;
+        }
+
+        if (game === "Qui ment le mieux ?") {
+          if (state.players.length < 3) {
+            alert("« Qui ment le mieux ? » nécessite au moins 3 joueurs.");
+            return;
+          }
+
+          state.multiView = "best-liar-setup";
+          pushScreen("games");
+          resetBestLiarState();
+          renderBestLiarSetup();
           return;
         }
 
@@ -1020,6 +1070,1169 @@
         }
       });
     }
+  }
+
+
+  /* =========================================================
+     AK'GAMES V0.5 — DEUX NOUVEAUX JEUX MULTIJOUEURS
+     ========================================================= */
+
+  function clearMultiLobbyTimer() {
+    if (state.multiLobbyTimer) {
+      window.clearTimeout(state.multiLobbyTimer);
+    }
+
+    state.multiLobbyTimer = null;
+  }
+
+  function scheduleAutomaticLobbyReturn(delay = 12000) {
+    if (!state.isHost || state.multiLobbyTimer) return;
+
+    state.multiLobbyTimer = window.setTimeout(async () => {
+      state.multiLobbyTimer = null;
+
+      try {
+        await AKFirebase.returnToLobby(state.roomCode);
+      } catch (error) {
+        console.error("Retour automatique au salon impossible :", error);
+      }
+    }, delay);
+  }
+
+  function randomActionId(prefix) {
+    return `${prefix}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+  }
+
+  async function sendMultiAction(type, payload = {}) {
+    await AKFirebase.writeOwnGameEntry(state.roomCode, "actions", {
+      id: randomActionId(type),
+      type,
+      payload,
+      createdAt: Date.now()
+    });
+  }
+
+  function playerById(id) {
+    return state.players.find(player => player.id === id) || null;
+  }
+
+  function renderMultiProgress(current, total, label = "Manche") {
+    const safeTotal = Math.max(Number(total || 0), 1);
+    const safeCurrent = Math.min(Math.max(Number(current || 1), 1), safeTotal);
+
+    return `
+      <section class="game-progress">
+        <span>${escapeHtml(label)} ${safeCurrent}/${safeTotal}</span>
+        <div class="progress-track">
+          <div class="progress-fill" style="width:${(safeCurrent / safeTotal) * 100}%"></div>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderMultiWaiting(titleText, text, emoji = "⏳") {
+    return `
+      <section class="multiplayer-wait-card">
+        <div class="waiting-pulse">${emoji}</div>
+        <h2>${escapeHtml(titleText)}</h2>
+        <p>${escapeHtml(text)}</p>
+      </section>
+    `;
+  }
+
+  function renderPlayerSubmissionStatus(collection, doneLabel, waitingLabel) {
+    return `
+      <section class="submission-status-grid">
+        ${state.players.map(player => {
+          const done = Boolean(collection?.[player.id]);
+          const avatar = avatarById(player.avatarId);
+
+          return `
+            <div class="submission-status ${done ? "done" : "waiting"}">
+              <span>${avatar.emoji}</span>
+              <strong>${escapeHtml(player.name)}</strong>
+              <small>${done ? escapeHtml(doneLabel) : escapeHtml(waitingLabel)}</small>
+            </div>
+          `;
+        }).join("")}
+      </section>
+    `;
+  }
+
+  /* -------------------------
+     QUI MENT LE MIEUX ?
+     ------------------------- */
+
+  startBestLiarGame = async function () {
+    if (!isMultiplayer()) {
+      return localStartBestLiarGame();
+    }
+
+    if (!state.isHost) return;
+
+    const game = state.bestLiar;
+
+    if (state.players.length < 3) {
+      alert("Ajoute au moins 3 joueurs.");
+      return;
+    }
+
+    if (!game.categories.length && !game.includeAdult) {
+      alert("Choisis au moins une catégorie.");
+      return;
+    }
+
+    screen.innerHTML = `<div class="notice">Synchronisation du concours de mythos…</div>`;
+
+    try {
+      const classicResponse = await fetch("data/qui-ment-prompts.json");
+      if (!classicResponse.ok) throw new Error("Impossible de charger les situations.");
+
+      const classicPrompts = await classicResponse.json();
+      let pool = classicPrompts.filter(prompt => game.categories.includes(prompt.category));
+
+      if (state.adult && game.includeAdult) {
+        const adultResponse = await fetch("data/qui-ment-prompts-adulte.json");
+        if (!adultResponse.ok) throw new Error("Impossible de charger les situations adultes.");
+        const adultPrompts = await adultResponse.json();
+        pool = pool.concat(adultPrompts);
+      }
+
+      if (!pool.length) throw new Error("Aucune situation disponible avec ces réglages.");
+
+      const prompts = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+
+      await AKFirebase.setGame(state.roomCode, {
+        state: {
+          type: "best-liar",
+          phase: "answering",
+          prompts,
+          currentRound: 0,
+          settings: {
+            includeAdult: Boolean(game.includeAdult)
+          },
+          scores,
+          rounds: {},
+          currentResult: null,
+          answerOrder: null,
+          startedAt: Date.now(),
+          updatedAt: Date.now()
+        }
+      });
+
+      state.multiView = "best-liar-game";
+    } catch (error) {
+      console.error(error);
+      alert(error.message || "Impossible de lancer la partie.");
+      renderBestLiarSetup();
+    }
+  };
+
+  function syncMultiBestLiar(room) {
+    const gameState = room.game?.state;
+    const answers = room.game?.answers || {};
+    const votes = room.game?.votes || {};
+
+    if (!gameState || gameState.type !== "best-liar") return;
+
+    if (gameState.phase !== "final") {
+      clearMultiLobbyTimer();
+    }
+
+    state.bestLiar = {
+      ...(state.bestLiar || {}),
+      prompts: gameState.prompts || [],
+      currentRound: Number(gameState.currentRound || 0),
+      scores: gameState.scores || {},
+      rounds: gameState.rounds || {},
+      currentAnswers: answers,
+      currentVotes: votes
+    };
+
+    const renderKey = [
+      "best-liar",
+      gameState.phase,
+      gameState.currentRound,
+      Object.keys(answers).length,
+      Object.keys(votes).length,
+      Boolean(answers[state.currentUid]),
+      votes[state.currentUid] || "",
+      JSON.stringify(gameState.currentResult || {}),
+      JSON.stringify(gameState.scores || {})
+    ].join("|");
+
+    if (state.multiRenderKey === renderKey) return;
+    state.multiRenderKey = renderKey;
+
+    if (gameState.phase === "answering") {
+      renderMultiBestLiarAnswering(gameState, answers);
+      return;
+    }
+
+    if (gameState.phase === "voting") {
+      renderMultiBestLiarVoting(gameState, answers, votes);
+      return;
+    }
+
+    if (gameState.phase === "results") {
+      renderMultiBestLiarResults(gameState);
+      return;
+    }
+
+    if (gameState.phase === "final") {
+      renderMultiBestLiarFinal(gameState);
+    }
+  }
+
+  function renderMultiBestLiarAnswering(gameState, answers) {
+    const prompt = gameState.prompts?.[gameState.currentRound];
+    if (!prompt) return;
+
+    const ownAnswer = answers[state.currentUid] || null;
+    const answerCount = Object.keys(answers).length;
+    const totalPlayers = state.players.length;
+
+    title.textContent = "Qui ment le mieux ?";
+    setBackVisible(false);
+
+    screen.innerHTML = `
+      ${renderMultiProgress(gameState.currentRound + 1, gameState.prompts.length)}
+
+      <section class="card centered-card">
+        <span class="category-chip">${liarCategoryLabels[prompt.category] || "🤥 Mensonge"}</span>
+        <h2>${escapeHtml(prompt.prompt)}</h2>
+        <p class="helper">Invente une réponse crédible, drôle ou délicieusement douteuse.</p>
+      </section>
+
+      ${ownAnswer ? `
+        ${renderMultiWaiting(
+          "Ton mensonge est enregistré",
+          `${answerCount}/${totalPlayers} joueurs ont répondu. Les auteurs resteront secrets.`,
+          "🤐"
+        )}
+      ` : `
+        <section class="card">
+          <div class="form-group">
+            <label for="multiLieAnswer">Ton mensonge secret</label>
+            <textarea
+              id="multiLieAnswer"
+              class="text-input text-area multi-answer-textarea"
+              maxlength="280"
+              placeholder="Écris une réponse suffisamment crédible pour tromper le groupe…"
+            ></textarea>
+            <span id="multiLieCounter" class="helper">0/280</span>
+          </div>
+        </section>
+
+        <button id="submitMultiLie" class="primary-btn full">Valider mon mensonge</button>
+      `}
+
+      ${state.isHost ? `
+        <section class="host-control-card">
+          <div>
+            <strong>👑 Contrôle de l'hôte</strong>
+            <span>${answerCount}/${totalPlayers} réponses reçues</span>
+          </div>
+          <button id="beginMultiLieVotes" class="primary-btn" ${answerCount < totalPlayers ? "disabled" : ""}>
+            Passer aux votes
+          </button>
+        </section>
+      ` : ""}
+
+      ${renderPlayerSubmissionStatus(answers, "Réponse prête", "Réfléchit encore")}
+    `;
+
+    const textarea = document.querySelector("#multiLieAnswer");
+    const counter = document.querySelector("#multiLieCounter");
+
+    textarea?.addEventListener("input", () => {
+      counter.textContent = `${textarea.value.length}/280`;
+    });
+
+    document.querySelector("#submitMultiLie")?.addEventListener("click", async event => {
+      const text = textarea.value.trim();
+
+      if (text.length < 3) {
+        alert("Écris une réponse un peu plus complète.");
+        return;
+      }
+
+      event.currentTarget.disabled = true;
+
+      try {
+        await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", {
+          id: randomActionId("answer"),
+          playerId: state.currentUid,
+          text,
+          submittedAt: Date.now()
+        });
+      } catch (error) {
+        console.error(error);
+        event.currentTarget.disabled = false;
+        alert("Ton mensonge n'a pas pu être envoyé.");
+      }
+    });
+
+    document.querySelector("#beginMultiLieVotes")?.addEventListener("click", async event => {
+      const liveAnswers = state.roomData?.game?.answers || {};
+
+      if (Object.keys(liveAnswers).length < state.players.length) return;
+
+      event.currentTarget.disabled = true;
+
+      try {
+        await AKFirebase.updateGame(state.roomCode, {
+          "state/phase": "voting",
+          "state/answerOrder": shuffleArray(Object.keys(liveAnswers)),
+          "state/currentResult": null,
+          "state/updatedAt": Date.now(),
+          votes: null
+        });
+      } catch (error) {
+        console.error(error);
+        event.currentTarget.disabled = false;
+        alert("Impossible de lancer les votes.");
+      }
+    });
+  }
+
+  function renderMultiBestLiarVoting(gameState, answers, votes) {
+    const prompt = gameState.prompts?.[gameState.currentRound];
+    if (!prompt) return;
+
+    const answerOrder = Array.isArray(gameState.answerOrder)
+      ? gameState.answerOrder
+      : Object.keys(answers);
+
+    const availableAnswerIds = answerOrder.filter(answerUid => answerUid !== state.currentUid && answers[answerUid]);
+    const ownVote = votes[state.currentUid] || null;
+    const voteCount = Object.keys(votes).length;
+    const totalPlayers = state.players.length;
+
+    title.textContent = "Vote secret";
+    setBackVisible(false);
+
+    screen.innerHTML = `
+      ${renderMultiProgress(gameState.currentRound + 1, gameState.prompts.length)}
+
+      <section class="card centered-card">
+        <span class="category-chip">Vote anonyme</span>
+        <h2>${escapeHtml(prompt.prompt)}</h2>
+        <p class="helper">Choisis le mensonge le plus convaincant. Ta propre réponse est masquée.</p>
+      </section>
+
+      ${ownVote ? `
+        ${renderMultiWaiting(
+          "Ton vote est enregistré",
+          `${voteCount}/${totalPlayers} joueurs ont voté.`,
+          "🗳️"
+        )}
+      ` : `
+        <section class="anonymous-answer-list">
+          ${availableAnswerIds.map((answerUid, index) => `
+            <button class="anonymous-answer-card vote-answer-card" data-multi-lie-vote="${answerUid}">
+              <span class="answer-number">${index + 1}</span>
+              <p>${escapeHtml(answers[answerUid].text)}</p>
+            </button>
+          `).join("")}
+        </section>
+      `}
+
+      ${state.isHost ? `
+        <section class="host-control-card">
+          <div>
+            <strong>👑 Contrôle de l'hôte</strong>
+            <span>${voteCount}/${totalPlayers} votes reçus</span>
+          </div>
+          <button id="revealMultiLieResults" class="primary-btn" ${voteCount === 0 ? "disabled" : ""}>
+            ${voteCount >= totalPlayers ? "Révéler les résultats" : "Révéler maintenant"}
+          </button>
+        </section>
+      ` : ""}
+
+      ${renderPlayerSubmissionStatus(votes, "A voté", "Choisit encore")}
+    `;
+
+    document.querySelectorAll("[data-multi-lie-vote]").forEach(button => {
+      button.addEventListener("click", async () => {
+        if (votes[state.currentUid]) return;
+
+        button.disabled = true;
+
+        try {
+          await AKFirebase.writeOwnGameEntry(
+            state.roomCode,
+            "votes",
+            button.dataset.multiLieVote
+          );
+        } catch (error) {
+          console.error(error);
+          button.disabled = false;
+          alert("Ton vote n'a pas pu être envoyé.");
+        }
+      });
+    });
+
+    document.querySelector("#revealMultiLieResults")?.addEventListener("click", async event => {
+      const liveAnswers = state.roomData?.game?.answers || {};
+      const liveVotes = state.roomData?.game?.votes || {};
+      const voteValues = Object.values(liveVotes);
+
+      if (!voteValues.length) return;
+
+      const counts = Object.fromEntries(Object.keys(liveAnswers).map(uid => [uid, 0]));
+      voteValues.forEach(uid => {
+        if (Object.prototype.hasOwnProperty.call(counts, uid)) counts[uid] += 1;
+      });
+
+      const rows = Object.entries(liveAnswers)
+        .map(([uid, answer]) => ({
+          playerId: uid,
+          answerId: answer.id,
+          text: answer.text,
+          votes: counts[uid] || 0
+        }))
+        .sort((a, b) => b.votes - a.votes);
+
+      const maxVotes = rows.length ? rows[0].votes : 0;
+      const winnerIds = rows.filter(row => row.votes === maxVotes && maxVotes > 0).map(row => row.playerId);
+      const scores = { ...(gameState.scores || {}) };
+
+      rows.forEach(row => {
+        scores[row.playerId] = Number(scores[row.playerId] || 0) + Number(row.votes || 0);
+      });
+
+      const result = {
+        prompt,
+        rows,
+        votes: liveVotes,
+        winnerIds,
+        maxVotes,
+        totalVotes: voteValues.length
+      };
+
+      event.currentTarget.disabled = true;
+
+      try {
+        await AKFirebase.updateGame(state.roomCode, {
+          "state/phase": "results",
+          "state/currentResult": result,
+          [`state/rounds/${gameState.currentRound}`]: result,
+          "state/scores": scores,
+          "state/updatedAt": Date.now()
+        });
+      } catch (error) {
+        console.error(error);
+        event.currentTarget.disabled = false;
+        alert("Impossible de révéler les résultats.");
+      }
+    });
+  }
+
+  function renderMultiBestLiarResults(gameState) {
+    const result = gameState.currentResult || gameState.rounds?.[gameState.currentRound];
+    if (!result) return;
+
+    const winnerNames = (result.winnerIds || [])
+      .map(id => playerById(id)?.name)
+      .filter(Boolean);
+
+    title.textContent = "Les masques tombent";
+    setBackVisible(false);
+
+    screen.innerHTML = `
+      ${renderMultiProgress(gameState.currentRound + 1, gameState.prompts.length)}
+
+      <section class="card centered-card">
+        <span class="category-chip">${liarCategoryLabels[result.prompt?.category] || "🤥"}</span>
+        <h2>${escapeHtml(result.prompt?.prompt || "")}</h2>
+      </section>
+
+      <section class="special-event ${winnerNames.length > 1 ? "tie" : "unanimity"}">
+        <strong>${winnerNames.length > 1 ? "⚔️ Égalité parfaite" : "🤥 Meilleur mensonge de la manche"}</strong>
+        <p>${escapeHtml(winnerNames.join(" et ") || "Personne")} ${winnerNames.length > 1 ? "remportent" : "remporte"} cette manche.</p>
+      </section>
+
+      <section class="liar-results-list">
+        ${(result.rows || []).map((row, index) => {
+          const author = playerById(row.playerId);
+          const denominator = Math.max(Number(result.totalVotes || 0), 1);
+          const percentage = Math.round((Number(row.votes || 0) / denominator) * 100);
+
+          return `
+            <article class="liar-result-card ${index === 0 && row.votes > 0 ? "winner" : ""}">
+              <div class="liar-result-header">
+                <span class="result-avatar">${avatarById(author?.avatarId).emoji}</span>
+                <div>
+                  <strong>${escapeHtml(author?.name || "Joueur")}</strong>
+                  <span>${row.votes} vote${row.votes > 1 ? "s" : ""} · ${percentage}%</span>
+                </div>
+              </div>
+              <p>« ${escapeHtml(row.text)} »</p>
+            </article>
+          `;
+        }).join("")}
+      </section>
+
+      ${state.alcohol && winnerNames.length ? `
+        <div class="alcohol-callout">🍻 ${escapeHtml(winnerNames.join(" et "))} ${winnerNames.length > 1 ? "distribuent" : "distribue"} 2 petites gorgées.</div>
+      ` : ""}
+
+      <section class="score-strip">
+        ${[...state.players]
+          .sort((a, b) => Number(gameState.scores?.[b.id] || 0) - Number(gameState.scores?.[a.id] || 0))
+          .map(player => `
+            <span>${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} <strong>${Number(gameState.scores?.[player.id] || 0)}</strong></span>
+          `).join("")}
+      </section>
+
+      ${state.isHost ? `
+        <button id="nextMultiLieRound" class="primary-btn full">
+          ${gameState.currentRound + 1 >= gameState.prompts.length ? "Voir le classement final" : "Manche suivante"}
+        </button>
+      ` : renderMultiWaiting("En attente de l'hôte", "La prochaine manche apparaîtra automatiquement.", "👑")}
+    `;
+
+    document.querySelector("#nextMultiLieRound")?.addEventListener("click", async event => {
+      const nextRound = gameState.currentRound + 1;
+      const finished = nextRound >= gameState.prompts.length;
+      event.currentTarget.disabled = true;
+
+      try {
+        await AKFirebase.updateGame(state.roomCode, {
+          "state/phase": finished ? "final" : "answering",
+          "state/currentRound": finished ? gameState.currentRound : nextRound,
+          "state/currentResult": null,
+          "state/answerOrder": null,
+          "state/finishedAt": finished ? Date.now() : null,
+          "state/updatedAt": Date.now(),
+          answers: null,
+          votes: null
+        });
+      } catch (error) {
+        console.error(error);
+        event.currentTarget.disabled = false;
+        alert("Impossible de passer à la suite.");
+      }
+    });
+  }
+
+  function renderMultiBestLiarFinal(gameState) {
+    const ranking = [...state.players].sort(
+      (a, b) => Number(gameState.scores?.[b.id] || 0) - Number(gameState.scores?.[a.id] || 0)
+    );
+    const topScore = ranking.length ? Number(gameState.scores?.[ranking[0].id] || 0) : 0;
+    const champions = ranking.filter(player => Number(gameState.scores?.[player.id] || 0) === topScore);
+
+    title.textContent = "Classement final";
+    setBackVisible(false);
+
+    screen.innerHTML = `
+      <section class="winner-stage">
+        <div class="winner-crown">🤥👑</div>
+        <h2>${champions.length === 1 ? "Le Mytho suprême est…" : "Les Mythos suprêmes sont…"}</h2>
+        <div class="champion-row">
+          ${champions.map(player => `
+            <div class="champion-card">
+              <span>${avatarById(player.avatarId).emoji}</span>
+              <strong>${escapeHtml(player.name)}</strong>
+              <small>${Number(gameState.scores?.[player.id] || 0)} votes gagnés</small>
+            </div>
+          `).join("")}
+        </div>
+      </section>
+
+      <section class="final-ranking">
+        ${ranking.map((player, index) => `
+          <div class="ranking-row">
+            <span class="ranking-position">${index + 1}</span>
+            <span class="result-avatar">${avatarById(player.avatarId).emoji}</span>
+            <strong>${escapeHtml(player.name)}</strong>
+            <span>${Number(gameState.scores?.[player.id] || 0)} pts</span>
+          </div>
+        `).join("")}
+      </section>
+
+      <section class="auto-lobby-countdown">
+        <strong>Retour automatique au salon</strong>
+        <span>dans quelques secondes…</span>
+      </section>
+
+      ${state.isHost ? `<button id="liarLobbyNow" class="primary-btn full">Retourner au salon maintenant</button>` : ""}
+    `;
+
+    document.querySelector("#liarLobbyNow")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      clearMultiLobbyTimer();
+
+      try {
+        await AKFirebase.returnToLobby(state.roomCode);
+      } catch (error) {
+        console.error(error);
+        event.currentTarget.disabled = false;
+        alert("Impossible de retourner au salon.");
+      }
+    });
+
+    scheduleAutomaticLobbyReturn();
+  }
+
+  /* -------------------------
+     LE PREMIER QUI RIT A PERDU
+     ------------------------- */
+
+  startLaughDuel = async function () {
+    if (!isMultiplayer()) {
+      return localStartLaughDuel();
+    }
+
+    if (!state.isHost) return;
+
+    const game = state.laughDuel;
+
+    if (!game.player1Id || !game.player2Id || game.player1Id === game.player2Id) {
+      alert("Choisis deux joueurs différents.");
+      return;
+    }
+
+    if (!game.categories.length && !game.includeAdult) {
+      alert("Choisis au moins un type de blague.");
+      return;
+    }
+
+    screen.innerHTML = `<div class="notice">Synchronisation du duel…</div>`;
+
+    try {
+      const classicResponse = await fetch("data/blagues.json");
+      if (!classicResponse.ok) throw new Error("Impossible de charger les blagues.");
+
+      const classicJokes = await classicResponse.json();
+      let pool = classicJokes.filter(joke => game.categories.includes(joke.category));
+
+      if (state.adult && game.includeAdult) {
+        const adultResponse = await fetch("data/blagues-adulte.json");
+        if (!adultResponse.ok) throw new Error("Impossible de charger les blagues adultes.");
+        const adultJokes = await adultResponse.json();
+        pool = pool.concat(adultJokes);
+      }
+
+      if (!pool.length) throw new Error("Aucune blague disponible avec ces réglages.");
+
+      const jokes = shuffleArray(pool).slice(0, Math.min(pool.length, 45));
+      const currentTurnId = Math.random() < 0.5 ? game.player1Id : game.player2Id;
+      const lifeCount = game.mode === "lives" ? 3 : 1;
+
+      await AKFirebase.setGame(state.roomCode, {
+        state: {
+          type: "laugh-duel",
+          phase: "turn-choice",
+          player1Id: game.player1Id,
+          player2Id: game.player2Id,
+          mode: game.mode,
+          settings: {
+            includeAdult: Boolean(game.includeAdult)
+          },
+          jokes,
+          usedJokeIds: [],
+          currentTurnId,
+          currentJoke: null,
+          jokeSource: null,
+          punchlineVisible: false,
+          lives: {
+            [game.player1Id]: lifeCount,
+            [game.player2Id]: lifeCount
+          },
+          turnNumber: 1,
+          lastResult: null,
+          winnerId: null,
+          loserId: null,
+          startedAt: Date.now(),
+          updatedAt: Date.now()
+        }
+      });
+
+      state.multiView = "laugh-duel-game";
+    } catch (error) {
+      console.error(error);
+      alert(error.message || "Impossible de lancer le duel.");
+      renderLaughDuelSetup();
+    }
+  };
+
+  function multiLaughPlayers(gameState) {
+    const player1 = playerById(gameState.player1Id);
+    const player2 = playerById(gameState.player2Id);
+    const teller = playerById(gameState.currentTurnId);
+    const listener = teller?.id === player1?.id ? player2 : player1;
+
+    return { player1, player2, teller, listener };
+  }
+
+  function renderMultiLaughLives(gameState) {
+    if (gameState.mode !== "lives") return "";
+
+    const { player1, player2 } = multiLaughPlayers(gameState);
+
+    return `
+      <div class="lives-row">
+        <span>${avatarById(player1?.avatarId).emoji} ${escapeHtml(player1?.name || "Joueur 1")} : ${"❤️".repeat(Number(gameState.lives?.[player1?.id] || 0))}${"🖤".repeat(Math.max(0, 3 - Number(gameState.lives?.[player1?.id] || 0)))}</span>
+        <span>${avatarById(player2?.avatarId).emoji} ${escapeHtml(player2?.name || "Joueur 2")} : ${"❤️".repeat(Number(gameState.lives?.[player2?.id] || 0))}${"🖤".repeat(Math.max(0, 3 - Number(gameState.lives?.[player2?.id] || 0)))}</span>
+      </div>
+    `;
+  }
+
+  function syncMultiLaughDuel(room) {
+    const gameState = room.game?.state;
+    const actions = room.game?.actions || {};
+
+    if (!gameState || gameState.type !== "laugh-duel") return;
+
+    if (gameState.phase !== "final") {
+      clearMultiLobbyTimer();
+    }
+
+    state.laughDuel = {
+      ...(state.laughDuel || {}),
+      ...gameState,
+      jokePool: gameState.jokes || []
+    };
+
+    if (state.isHost) {
+      processMultiLaughAction(gameState, actions);
+    }
+
+    const actionIds = Object.values(actions).map(action => action?.id).filter(Boolean).sort().join(",");
+    const renderKey = [
+      "laugh-duel",
+      gameState.phase,
+      gameState.currentTurnId,
+      gameState.turnNumber,
+      gameState.punchlineVisible,
+      gameState.currentJoke?.id || "",
+      JSON.stringify(gameState.lives || {}),
+      JSON.stringify(gameState.lastResult || {}),
+      actionIds
+    ].join("|");
+
+    if (state.multiRenderKey === renderKey) return;
+    state.multiRenderKey = renderKey;
+
+    if (gameState.phase === "turn-choice") {
+      renderMultiLaughTurnChoice(gameState);
+      return;
+    }
+
+    if (gameState.phase === "joke") {
+      renderMultiLaughJoke(gameState);
+      return;
+    }
+
+    if (gameState.phase === "transition") {
+      renderMultiLaughTransition(gameState);
+      return;
+    }
+
+    if (gameState.phase === "final") {
+      renderMultiLaughFinal(gameState);
+    }
+  }
+
+  async function processMultiLaughAction(gameState, actions) {
+    const actionEntries = Object.entries(actions || {})
+      .filter(([, action]) => action?.id)
+      .sort((a, b) => Number(a[1].createdAt || 0) - Number(b[1].createdAt || 0));
+
+    if (!actionEntries.length) return;
+
+    const [actorUid, action] = actionEntries[0];
+    if (state.multiProcessingActionId === action.id) return;
+
+    const { teller, listener } = multiLaughPlayers(gameState);
+    if (!teller || !listener || actorUid !== teller.id) {
+      state.multiProcessingActionId = action.id;
+      try {
+        await AKFirebase.updateGame(state.roomCode, { [`actions/${actorUid}`]: null });
+      } finally {
+        state.multiProcessingActionId = null;
+      }
+      return;
+    }
+
+    state.multiProcessingActionId = action.id;
+
+    try {
+      if (gameState.phase === "turn-choice" && (action.type === "draw-joke" || action.type === "own-joke")) {
+        if (action.type === "own-joke") {
+          await AKFirebase.updateGame(state.roomCode, {
+            "state/phase": "joke",
+            "state/jokeSource": "own",
+            "state/currentJoke": null,
+            "state/punchlineVisible": true,
+            "state/updatedAt": Date.now(),
+            actions: null
+          });
+          return;
+        }
+
+        const jokes = gameState.jokes || [];
+        let available = jokes.filter(joke => !(gameState.usedJokeIds || []).includes(joke.id));
+        let usedJokeIds = [...(gameState.usedJokeIds || [])];
+
+        if (!available.length) {
+          available = [...jokes];
+          usedJokeIds = [];
+        }
+
+        const joke = available[Math.floor(Math.random() * available.length)];
+
+        await AKFirebase.updateGame(state.roomCode, {
+          "state/phase": "joke",
+          "state/jokeSource": "app",
+          "state/currentJoke": joke,
+          "state/punchlineVisible": false,
+          "state/usedJokeIds": [...usedJokeIds, joke.id],
+          "state/updatedAt": Date.now(),
+          actions: null
+        });
+        return;
+      }
+
+      if (gameState.phase === "joke" && action.type === "reveal-punchline") {
+        await AKFirebase.updateGame(state.roomCode, {
+          "state/punchlineVisible": true,
+          "state/updatedAt": Date.now(),
+          actions: null
+        });
+        return;
+      }
+
+      if (gameState.phase === "joke" && action.type === "laugh-result") {
+        const resultType = action.payload?.result;
+        const lives = { ...(gameState.lives || {}) };
+        let laughingId = null;
+
+        if (resultType === "listener") laughingId = listener.id;
+        if (resultType === "teller") laughingId = teller.id;
+
+        if (laughingId) {
+          lives[laughingId] = Math.max(0, Number(lives[laughingId] || 0) - 1);
+        }
+
+        const lastResult = {
+          resultType: ["listener", "teller", "none"].includes(resultType) ? resultType : "none",
+          tellerId: teller.id,
+          listenerId: listener.id,
+          laughingId,
+          previousTurnId: teller.id,
+          nextTurnId: listener.id
+        };
+
+        if (laughingId && lives[laughingId] <= 0) {
+          const winnerId = laughingId === teller.id ? listener.id : teller.id;
+
+          await AKFirebase.updateGame(state.roomCode, {
+            "state/phase": "final",
+            "state/lives": lives,
+            "state/lastResult": lastResult,
+            "state/winnerId": winnerId,
+            "state/loserId": laughingId,
+            "state/finishedAt": Date.now(),
+            "state/updatedAt": Date.now(),
+            actions: null
+          });
+          return;
+        }
+
+        await AKFirebase.updateGame(state.roomCode, {
+          "state/phase": "transition",
+          "state/lives": lives,
+          "state/currentTurnId": listener.id,
+          "state/currentJoke": null,
+          "state/jokeSource": null,
+          "state/punchlineVisible": false,
+          "state/lastResult": lastResult,
+          "state/turnNumber": Number(gameState.turnNumber || 1) + 1,
+          "state/updatedAt": Date.now(),
+          actions: null
+        });
+        return;
+      }
+
+      await AKFirebase.updateGame(state.roomCode, { [`actions/${actorUid}`]: null });
+    } catch (error) {
+      console.error("Action du duel impossible :", error);
+    } finally {
+      state.multiProcessingActionId = null;
+    }
+  }
+
+  function renderMultiLaughDuelHeader(gameState) {
+    const { player1, player2, teller } = multiLaughPlayers(gameState);
+
+    return `
+      ${renderMultiLaughLives(gameState)}
+      <section class="duel-stage compact-multi-duel">
+        <div class="duel-faces">
+          <div class="duel-face-card ${teller?.id === player1?.id ? "active" : ""}">
+            <span>${avatarById(player1?.avatarId).emoji}</span>
+            <strong>${escapeHtml(player1?.name || "Joueur 1")}</strong>
+            <small>${teller?.id === player1?.id ? "Fait rire" : "Garde son sérieux"}</small>
+          </div>
+          <div class="duel-vs big">VS</div>
+          <div class="duel-face-card ${teller?.id === player2?.id ? "active" : ""}">
+            <span>${avatarById(player2?.avatarId).emoji}</span>
+            <strong>${escapeHtml(player2?.name || "Joueur 2")}</strong>
+            <small>${teller?.id === player2?.id ? "Fait rire" : "Garde son sérieux"}</small>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderMultiLaughTurnChoice(gameState) {
+    const { teller, listener } = multiLaughPlayers(gameState);
+    const isTeller = state.currentUid === teller?.id;
+    const isListener = state.currentUid === listener?.id;
+    const pendingAction = state.roomData?.game?.actions?.[state.currentUid] || null;
+
+    title.textContent = `Tour ${Number(gameState.turnNumber || 1)}`;
+    setBackVisible(false);
+
+    screen.innerHTML = `
+      ${renderMultiLaughDuelHeader(gameState)}
+
+      ${isTeller && pendingAction ? `
+        ${renderMultiWaiting("Action envoyée", "Le téléphone de l'hôte synchronise le duel…", "📡")}
+      ` : isTeller ? `
+        <section class="question-stage laugh-turn-stage laugh-phone-stage">
+          <div class="giant-avatar">${avatarById(teller.avatarId).emoji}</div>
+          <span class="category-chip">À toi de faire rire ${escapeHtml(listener.name)}</span>
+          <h2>${escapeHtml(teller.name)}, choisis ton arme.</h2>
+          <p>La blague apparaîtra uniquement sur ton écran.</p>
+        </section>
+        <div class="grid grid-2">
+          <button id="multiDrawJoke" class="card action-card">
+            <strong>🎲 Donne-moi une blague</strong>
+            <span>L’application t’en tire une au hasard.</span>
+          </button>
+          <button id="multiOwnJoke" class="card action-card">
+            <strong>😏 J’en ai une</strong>
+            <span>Raconte ta propre blague.</span>
+          </button>
+        </div>
+      ` : isListener ? `
+        ${renderMultiWaiting(
+          `${teller.name} prépare son attaque`,
+          "Regarde ton adversaire et garde ton visage le plus sérieux possible.",
+          "😐"
+        )}
+      ` : `
+        ${renderMultiWaiting(
+          `${teller.name} va tenter de faire rire ${listener.name}`,
+          "Les autres joueurs deviennent le public officiel du duel.",
+          "👀"
+        )}
+      `}
+    `;
+
+    document.querySelector("#multiDrawJoke")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      document.querySelector("#multiOwnJoke").disabled = true;
+
+      try {
+        await sendMultiAction("draw-joke");
+      } catch (error) {
+        console.error(error);
+        event.currentTarget.disabled = false;
+        document.querySelector("#multiOwnJoke").disabled = false;
+        alert("Impossible de tirer une blague.");
+      }
+    });
+
+    document.querySelector("#multiOwnJoke")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      document.querySelector("#multiDrawJoke").disabled = true;
+
+      try {
+        await sendMultiAction("own-joke");
+      } catch (error) {
+        console.error(error);
+        event.currentTarget.disabled = false;
+        document.querySelector("#multiDrawJoke").disabled = false;
+        alert("Impossible de commencer ton tour.");
+      }
+    });
+  }
+
+  function renderMultiLaughOutcomeButtons(teller, listener) {
+    return `
+      <section class="laugh-outcomes">
+        <button class="primary-btn laugh-result-btn" data-multi-laugh-result="listener">😂 ${escapeHtml(listener.name)} a ri</button>
+        <button class="danger-btn laugh-result-btn" data-multi-laugh-result="teller">🤦 ${escapeHtml(teller.name)} a ri à sa propre blague</button>
+        <button class="secondary-btn laugh-result-btn" data-multi-laugh-result="none">😐 Personne n’a ri</button>
+      </section>
+    `;
+  }
+
+  function renderMultiLaughJoke(gameState) {
+    const { teller, listener } = multiLaughPlayers(gameState);
+    const isTeller = state.currentUid === teller?.id;
+    const isListener = state.currentUid === listener?.id;
+    const pendingAction = state.roomData?.game?.actions?.[state.currentUid] || null;
+    const joke = gameState.currentJoke;
+    const canReport = gameState.jokeSource === "own" || gameState.punchlineVisible;
+
+    title.textContent = "Le duel est lancé";
+    setBackVisible(false);
+
+    screen.innerHTML = `
+      ${renderMultiLaughDuelHeader(gameState)}
+
+      ${isTeller && pendingAction ? `
+        ${renderMultiWaiting("Résultat envoyé", "Le duel se met à jour sur tous les téléphones…", "📡")}
+      ` : isTeller ? `
+        ${gameState.jokeSource === "app" && joke ? `
+          <section class="joke-card private-joke-card">
+            <span class="category-chip">${laughCategoryLabels[joke.category] || "😂 Blague"}</span>
+            <h2>${escapeHtml(joke.setup)}</h2>
+            ${gameState.punchlineVisible ? `
+              <div class="punchline">${escapeHtml(joke.punchline)}</div>
+            ` : `
+              <button id="multiRevealPunchline" class="secondary-btn">Révéler la chute</button>
+            `}
+          </section>
+        ` : `
+          <section class="question-stage laugh-turn-stage laugh-phone-stage">
+            <div class="giant-avatar">${avatarById(teller.avatarId).emoji}</div>
+            <span class="category-chip">Blague personnelle</span>
+            <h2>Vas-y ${escapeHtml(teller.name)}.</h2>
+            <p>Fais rire ${escapeHtml(listener.name)}, puis indique ce qu’il s’est passé.</p>
+          </section>
+        `}
+        ${canReport ? renderMultiLaughOutcomeButtons(teller, listener) : ""}
+      ` : isListener ? `
+        ${renderMultiWaiting(
+          `${teller.name} essaie de te faire rire`,
+          "Ne lis pas son écran. Regarde-le/la droit dans les yeux et tiens bon.",
+          "😶"
+        )}
+      ` : `
+        ${renderMultiWaiting(
+          `Duel en cours`,
+          `${teller.name} tente de faire rire ${listener.name}. Le public surveille tout.`,
+          "🍿"
+        )}
+      `}
+    `;
+
+    document.querySelector("#multiRevealPunchline")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+
+      try {
+        await sendMultiAction("reveal-punchline");
+      } catch (error) {
+        console.error(error);
+        event.currentTarget.disabled = false;
+        alert("Impossible de révéler la chute.");
+      }
+    });
+
+    document.querySelectorAll("[data-multi-laugh-result]").forEach(button => {
+      button.addEventListener("click", async () => {
+        document.querySelectorAll("[data-multi-laugh-result]").forEach(item => item.disabled = true);
+
+        try {
+          await sendMultiAction("laugh-result", { result: button.dataset.multiLaughResult });
+        } catch (error) {
+          console.error(error);
+          document.querySelectorAll("[data-multi-laugh-result]").forEach(item => item.disabled = false);
+          alert("Le résultat n'a pas pu être envoyé.");
+        }
+      });
+    });
+  }
+
+  function renderMultiLaughTransition(gameState) {
+    const result = gameState.lastResult || {};
+    const laughingPlayer = result.laughingId ? playerById(result.laughingId) : null;
+    const nextTeller = playerById(gameState.currentTurnId);
+
+    title.textContent = laughingPlayer ? "Un rire de moins" : "Toujours sérieux";
+    setBackVisible(false);
+
+    screen.innerHTML = `
+      ${renderMultiLaughLives(gameState)}
+      <section class="handoff-stage">
+        <div class="success-mark">${laughingPlayer ? "😂" : "😐"}</div>
+        <h2>${laughingPlayer ? `${escapeHtml(laughingPlayer.name)} a craqué !` : "Personne n’a ri."}</h2>
+        <p>C’est maintenant à <strong>${escapeHtml(nextTeller?.name || "l'autre joueur")}</strong> de tenter sa chance.</p>
+      </section>
+
+      ${state.alcohol && laughingPlayer ? `<div class="alcohol-callout">🍻 ${escapeHtml(laughingPlayer.name)} prend une petite gorgée pour ce rire.</div>` : ""}
+
+      ${state.isHost ? `
+        <button id="nextMultiLaughTurn" class="primary-btn full">Tour suivant</button>
+      ` : renderMultiWaiting("En attente de l'hôte", "Le prochain tour apparaîtra automatiquement.", "👑")}
+    `;
+
+    document.querySelector("#nextMultiLaughTurn")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+
+      try {
+        await AKFirebase.updateGame(state.roomCode, {
+          "state/phase": "turn-choice",
+          "state/lastResult": null,
+          "state/updatedAt": Date.now(),
+          actions: null
+        });
+      } catch (error) {
+        console.error(error);
+        event.currentTarget.disabled = false;
+        alert("Impossible de lancer le tour suivant.");
+      }
+    });
+  }
+
+  function renderMultiLaughFinal(gameState) {
+    const winner = playerById(gameState.winnerId);
+    const loser = playerById(gameState.loserId);
+
+    title.textContent = "Fin du duel";
+    setBackVisible(false);
+
+    screen.innerHTML = `
+      <section class="winner-stage">
+        <div class="winner-crown">👑</div>
+        <div class="giant-avatar">${avatarById(winner?.avatarId).emoji}</div>
+        <h2>${escapeHtml(winner?.name || "Le gagnant")} remporte le duel !</h2>
+        <p>${escapeHtml(loser?.name || "L'autre joueur")} a été la première personne à craquer.</p>
+      </section>
+
+      ${state.alcohol && loser ? `<div class="alcohol-callout">🍻 ${escapeHtml(loser.name)} prend une gorgée de défaite.</div>` : ""}
+
+      <section class="auto-lobby-countdown">
+        <strong>Retour automatique au salon</strong>
+        <span>dans quelques secondes…</span>
+      </section>
+
+      ${state.isHost ? `<button id="laughLobbyNow" class="primary-btn full">Retourner au salon maintenant</button>` : ""}
+    `;
+
+    document.querySelector("#laughLobbyNow")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      clearMultiLobbyTimer();
+
+      try {
+        await AKFirebase.returnToLobby(state.roomCode);
+      } catch (error) {
+        console.error(error);
+        event.currentTarget.disabled = false;
+        alert("Impossible de retourner au salon.");
+      }
+    });
+
+    scheduleAutomaticLobbyReturn();
   }
 
   async function restoreMultiplayerSession() {

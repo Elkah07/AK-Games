@@ -20,6 +20,16 @@
             "$uid": {
               ".write": "auth != null && root.child('rooms').child($roomCode).child('players').child(auth.uid).exists() && (auth.uid === $uid || root.child('rooms').child($roomCode).child('meta').child('hostUid').val() === auth.uid)"
             }
+          },
+          "answers": {
+            "$uid": {
+              ".write": "auth != null && root.child('rooms').child($roomCode).child('players').child(auth.uid).exists() && (auth.uid === $uid || root.child('rooms').child($roomCode).child('meta').child('hostUid').val() === auth.uid)"
+            }
+          },
+          "actions": {
+            "$uid": {
+              ".write": "auth != null && root.child('rooms').child($roomCode).child('players').child(auth.uid).exists() && (auth.uid === $uid || root.child('rooms').child($roomCode).child('meta').child('hostUid').val() === auth.uid)"
+            }
           }
         }
       }

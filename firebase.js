@@ -244,6 +244,47 @@
     await db.ref(`rooms/${normalizeCode(code)}/game`).remove();
   }
 
+
+  async function setGame(code, payload) {
+    const key = normalizeCode(code);
+    await db.ref(`rooms/${key}/game`).set(payload);
+  }
+
+  async function updateGame(code, updates) {
+    const key = normalizeCode(code);
+    const prefixedUpdates = {};
+
+    Object.entries(updates || {}).forEach(([path, value]) => {
+      prefixedUpdates[`rooms/${key}/game/${path}`] = value;
+    });
+
+    await db.ref().update(prefixedUpdates);
+  }
+
+  async function writeOwnGameEntry(code, collection, value) {
+    const allowedCollections = new Set(["answers", "votes", "actions"]);
+
+    if (!allowedCollections.has(collection)) {
+      throw new Error("Collection de jeu non autorisée.");
+    }
+
+    const user = await ready();
+    const key = normalizeCode(code);
+    await db.ref(`rooms/${key}/game/${collection}/${user.uid}`).set(value);
+  }
+
+  async function clearOwnGameEntry(code, collection) {
+    const allowedCollections = new Set(["answers", "votes", "actions"]);
+
+    if (!allowedCollections.has(collection)) {
+      throw new Error("Collection de jeu non autorisée.");
+    }
+
+    const user = await ready();
+    const key = normalizeCode(code);
+    await db.ref(`rooms/${key}/game/${collection}/${user.uid}`).remove();
+  }
+
   window.AKFirebase = {
     ready,
     auth,
@@ -261,6 +302,10 @@
     revealWhoUsResults,
     nextWhoUsQuestion,
     returnToLobby,
+    setGame,
+    updateGame,
+    writeOwnGameEntry,
+    clearOwnGameEntry,
     getCurrentUser: () => currentUser
   };
 })();

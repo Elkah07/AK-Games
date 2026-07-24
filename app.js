@@ -158,7 +158,7 @@ function renderHome() {
       </button>
     </section>
 
-    <div class="notice">V0.2 : « Qui de nous ? » est maintenant jouable sur un seul téléphone.</div>
+    <div class="notice">V0.5 : 3 jeux sont maintenant jouables sur un ou plusieurs téléphones.</div>
   `;
 
   document.querySelectorAll("[data-home-action]").forEach(btn => {

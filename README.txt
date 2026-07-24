@@ -1,82 +1,55 @@
-AK'Games — V0.4.1 PWA / MOBILE
-=================================
+AK'GAMES V0.5 — 3 JEUX MULTIJOUEURS
+====================================
 
-Cette mise à jour se pose APRÈS la V0.4 multijoueur.
+Ce ZIP contient uniquement les fichiers modifiés.
 
-IMPORTANT
----------
-Installe d'abord :
-1. La V0.3 avec les trois jeux
-2. La V0.4 multijoueur
-3. Puis cette V0.4.1 mobile
+NOUVEAUTÉS
+----------
+- « Qui ment le mieux ? » est maintenant jouable chacun sur son téléphone.
+  • chaque joueur écrit son mensonge sur son écran
+  • les réponses sont mélangées
+  • chacun vote sans pouvoir choisir sa propre réponse
+  • résultats et classement synchronisés
 
-FICHIERS À REMPLACER
---------------------
-- index.html
-- firebase.json
+- « Le premier qui rit a perdu » est maintenant synchronisé sur plusieurs téléphones.
+  • l'hôte choisit les deux adversaires
+  • le joueur qui raconte choisit une blague de l'app ou sa propre blague
+  • la blague de l'app s'affiche uniquement dans son interface
+  • vies, tours et résultat sont synchronisés pour tous les joueurs
+  • les autres joueurs suivent le duel comme spectateurs
 
-FICHIERS À AJOUTER
-------------------
-- manifest.webmanifest
-- service-worker.js
-- pwa.js
-- le dossier icons/
+- Retour automatique au salon après la fin de ces deux jeux.
+- Mise à jour du cache PWA vers AK'Games V0.5.
+- L'accueil indique désormais que 3 jeux sont disponibles sur un ou plusieurs téléphones.
 
-STYLE À AJOUTER
----------------
-Le fichier `styles-pwa.css` contient uniquement les nouveaux styles.
+INSTALLATION DANS LE CODESPACE
+------------------------------
+Remplace les 6 fichiers présents à la racine du projet par ceux du ZIP :
 
-Copie tout son contenu et colle-le À LA FIN de ton `styles.css` actuel.
-Ne remplace pas ton styles.css complet par styles-pwa.css.
+1. app.js
+2. firebase.js
+3. multiplayer.js
+4. styles.css
+5. database.rules.json
+6. service-worker.js
 
-CE QUI EST AJOUTÉ
------------------
-- Logo noir et violet intégré comme icône officielle provisoire
-- Icônes 192, 512, maskable, Apple Touch et favicons
-- Installation Android / Chrome comme application
-- Lancement en mode standalone, sans barre de navigateur
-- Écran de démarrage AK'Games
-- Service worker et cache de l'interface
-- Interface et jeux solo disponibles même si la connexion devient instable
-- Conservation de la room multijoueur via la V0.4
-- Gestion du bouton Retour Android
-- Retour vers l'écran précédent quand un écran interne est ouvert
-- Protection contre la fermeture brutale pendant une partie ou dans un salon
-- À l'accueil seulement : double pression rapide pour quitter
-- Raccourcis « Créer une partie » et « Rejoindre » depuis l'icône Android
+Aucun autre fichier ne doit être supprimé.
 
-BOUTON RETOUR DU TÉLÉPHONE
---------------------------
-- Sur un écran interne : revient dans AK'Games
-- Pendant une partie ou dans une room : ne quitte pas brutalement l'application
-- À l'accueil : un premier retour affiche un avertissement
-- Un second retour rapproché permet de quitter
+DÉPLOIEMENT
+-----------
+Dans le terminal du Codespace, exécute les commandes une par une :
 
-INSTALLATION
-------------
-Après avoir copié les fichiers :
-
+firebase deploy --only database
 firebase deploy --only hosting
 
-Puis sauvegarde sur GitHub :
-
 git add .
-git commit -m "Ajout de la PWA mobile AKGames"
+git commit -m "Ajout de deux jeux multijoueurs V0.5"
 git push
 
-INSTALLER SUR ANDROID
----------------------
-1. Ouvre https://ak-games-4a2cd.web.app dans Chrome
-2. Attends quelques secondes
-3. Appuie sur « Installer » dans la bannière AK'Games
-
-Si la bannière n'apparaît pas :
-- ouvre le menu ⋮ de Chrome
-- choisis « Installer l'application » ou « Ajouter à l'écran d'accueil »
-
-MISE À JOUR D'UNE ANCIENNE INSTALLATION
----------------------------------------
-Si une ancienne icône ou une ancienne version reste affichée :
-1. Désinstalle AK'Games du téléphone
-2. Recharge le site dans Chrome
-3. Réinstalle l'application
+TEST CONSEILLÉ
+--------------
+1. Ouvrir AK'Games sur trois appareils ou trois navigateurs.
+2. Créer un salon et faire rejoindre les autres joueurs.
+3. Tester « Qui ment le mieux ? » avec au moins 3 joueurs.
+4. Tester « Le premier qui rit a perdu » avec au moins 2 joueurs.
+5. Vérifier le retour automatique au salon après chaque partie.
