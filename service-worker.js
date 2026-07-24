@@ -1,4 +1,4 @@
-const CACHE_VERSION = "akgames-v1.0-audit3";
+const CACHE_VERSION = "akgames-v1.0-audit4";
 const APP_SHELL = [
   "/",
   "/index.html",

@@ -236,6 +236,19 @@
       state.turnEndsAt = now() + Number(state.settings.durationSeconds || 45) * 1000;
     }
 
+    const privateRoleGame = Number(state.itemCount || 0) > 0
+      && ["almost-impostor", "fake-expert", "who-am-i"].includes(type);
+
+    if (privateRoleGame) {
+      delete state.items;
+      delete state.impostorOrder;
+      delete state.impostorId;
+      delete state.roleOrder;
+      delete state.role;
+      delete state.guesserOrder;
+      delete state.speakerOrder;
+    }
+
     return repaired;
   }
 
@@ -366,7 +379,7 @@
     return { code: displayCode(key), key, uid: user.uid, room };
   }
 
-  function mergePrivateSubmissions(room, privateSubmissions, ownUid) {
+  function mergePrivateSubmissions(room, privateSubmissions, privateRoles, privateHostState) {
     if (!room?.game) return room;
 
     const merged = cloneValue(room);
@@ -395,6 +408,8 @@
       merged.game[collection] = visible;
     });
 
+    merged.game.privateRoles = cloneValue(privateRoles || {});
+    merged.game.privateHostState = cloneValue(privateHostState || null);
     return merged;
   }
 
@@ -402,49 +417,104 @@
     const key = normalizeCode(code);
     const roomRef = db.ref(`rooms/${key}`);
     let roomValue = null;
-    let privateValue = {};
-    let privateRef = null;
-    let privateHandler = null;
-    let currentPrivatePath = "";
+    let privateSubmissions = {};
+    let privateRoles = {};
+    let privateHostState = null;
+
+    let submissionsRef = null;
+    let submissionsHandler = null;
+    let rolesRef = null;
+    let rolesHandler = null;
+    let hostStateRef = null;
+    let hostStateHandler = null;
+
+    let submissionsPath = "";
+    let rolesPath = "";
+    let hostStatePath = "";
 
     const emit = () => {
-      callback(roomValue ? mergePrivateSubmissions(roomValue, privateValue, currentUser?.uid) : null);
+      callback(
+        roomValue
+          ? mergePrivateSubmissions(roomValue, privateSubmissions, privateRoles, privateHostState)
+          : null
+      );
     };
 
-    const bindPrivate = room => {
+    const unbindRef = (ref, handler) => {
+      if (ref && handler) ref.off("value", handler);
+    };
+
+    const bindSecretRefs = room => {
       if (!currentUser || !room?.meta) return;
       const isHost = room.meta.hostUid === currentUser.uid;
-      const nextPath = isHost
+
+      const nextSubmissionsPath = isHost
         ? `roomSecrets/${key}/submissions`
         : `roomSecrets/${key}/submissions/${currentUser.uid}`;
 
-      if (nextPath === currentPrivatePath) return;
-      if (privateRef && privateHandler) privateRef.off("value", privateHandler);
+      if (nextSubmissionsPath !== submissionsPath) {
+        unbindRef(submissionsRef, submissionsHandler);
+        submissionsPath = nextSubmissionsPath;
+        privateSubmissions = {};
+        submissionsRef = db.ref(nextSubmissionsPath);
+        submissionsHandler = snapshot => {
+          privateSubmissions = isHost
+            ? (snapshot.val() || {})
+            : (snapshot.exists() ? { [currentUser.uid]: snapshot.val() } : {});
+          emit();
+        };
+        submissionsRef.on("value", submissionsHandler, onError || console.error);
+      }
 
-      currentPrivatePath = nextPath;
-      privateValue = {};
-      privateRef = db.ref(nextPath);
-      privateHandler = snapshot => {
-        if (isHost) {
-          privateValue = snapshot.val() || {};
-        } else {
-          privateValue = snapshot.exists() ? { [currentUser.uid]: snapshot.val() } : {};
+      const nextRolesPath = isHost
+        ? `roomSecrets/${key}/roles`
+        : `roomSecrets/${key}/roles/${currentUser.uid}`;
+
+      if (nextRolesPath !== rolesPath) {
+        unbindRef(rolesRef, rolesHandler);
+        rolesPath = nextRolesPath;
+        privateRoles = {};
+        rolesRef = db.ref(nextRolesPath);
+        rolesHandler = snapshot => {
+          privateRoles = isHost
+            ? (snapshot.val() || {})
+            : (snapshot.exists() ? { [currentUser.uid]: snapshot.val() } : {});
+          emit();
+        };
+        rolesRef.on("value", rolesHandler, onError || console.error);
+      }
+
+      const nextHostStatePath = isHost ? `roomSecrets/${key}/hostState` : "";
+      if (nextHostStatePath !== hostStatePath) {
+        unbindRef(hostStateRef, hostStateHandler);
+        hostStatePath = nextHostStatePath;
+        privateHostState = null;
+        hostStateRef = null;
+        hostStateHandler = null;
+
+        if (nextHostStatePath) {
+          hostStateRef = db.ref(nextHostStatePath);
+          hostStateHandler = snapshot => {
+            privateHostState = snapshot.val() || null;
+            emit();
+          };
+          hostStateRef.on("value", hostStateHandler, onError || console.error);
         }
-        emit();
-      };
-      privateRef.on("value", privateHandler, onError || console.error);
+      }
     };
 
     const roomHandler = snapshot => {
       roomValue = snapshot.exists() ? snapshot.val() : null;
-      bindPrivate(roomValue);
+      bindSecretRefs(roomValue);
       emit();
     };
 
     roomRef.on("value", roomHandler, onError || console.error);
     return () => {
       roomRef.off("value", roomHandler);
-      if (privateRef && privateHandler) privateRef.off("value", privateHandler);
+      unbindRef(submissionsRef, submissionsHandler);
+      unbindRef(rolesRef, rolesHandler);
+      unbindRef(hostStateRef, hostStateHandler);
     };
   }
 
@@ -548,6 +618,128 @@
     return Boolean(result.committed);
   }
 
+
+  function buildPrivateRolesForRound(type, round, state, hostState, playerIds) {
+    const card = hostState?.items?.[round] || {};
+    const base = {
+      gameType: type,
+      round,
+      itemId: card.id || ""
+    };
+    const roles = {};
+
+    if (type === "almost-impostor") {
+      const impostorId = hostState.impostorOrder?.[round];
+      const options = [card.word, ...(card.decoys || [])].filter(Boolean);
+
+      playerIds.forEach(uid => {
+        const isImpostor = uid === impostorId;
+        roles[uid] = {
+          ...base,
+          isImpostor,
+          category: card.category || "mystère",
+          hint: card.hint || "",
+          word: isImpostor ? null : (card.word || ""),
+          guessOptions: isImpostor ? options : null
+        };
+      });
+    }
+
+    if (type === "fake-expert") {
+      const speakerId = hostState.speakerOrder?.[round];
+      const role = hostState.roleOrder?.[round] || "fake";
+
+      playerIds.forEach(uid => {
+        const isSpeaker = uid === speakerId;
+        roles[uid] = {
+          ...base,
+          isSpeaker,
+          speakerId,
+          topic: card.topic || "",
+          role: isSpeaker ? role : null,
+          facts: isSpeaker && role === "real" ? (card.facts || []) : null,
+          fakeTip: isSpeaker && role === "fake" ? (card.fakeTip || "") : null
+        };
+      });
+    }
+
+    if (type === "who-am-i") {
+      const guesserId = hostState.guesserOrder?.[round];
+
+      playerIds.forEach(uid => {
+        const isGuesser = uid === guesserId;
+        roles[uid] = {
+          ...base,
+          isGuesser,
+          guesserId,
+          label: isGuesser ? null : (card.label || ""),
+          category: isGuesser ? null : (card.category || "mystère"),
+          clues: isGuesser ? null : (card.clues || [])
+        };
+      });
+    }
+
+    return roles;
+  }
+
+  async function repairPrivateGameAfterPlayerRemoval(key, targetUid) {
+    const [roomSnapshot, hostStateSnapshot] = await Promise.all([
+      db.ref(`rooms/${key}`).once("value"),
+      db.ref(`roomSecrets/${key}/hostState`).once("value")
+    ]);
+
+    const room = roomSnapshot.val() || null;
+    const hostState = cloneValue(hostStateSnapshot.val() || null);
+    const updates = {
+      [`roomSecrets/${key}/submissions/${targetUid}`]: null,
+      [`roomSecrets/${key}/roles/${targetUid}`]: null
+    };
+
+    if (!room?.game?.state) {
+      updates[`roomSecrets/${key}`] = null;
+      await db.ref().update(updates);
+      return;
+    }
+
+    const state = room.game.state;
+    const type = state.type;
+
+    if (!hostState || !["almost-impostor", "fake-expert", "who-am-i"].includes(type)) {
+      await db.ref().update(updates);
+      return;
+    }
+
+    const playerIds = Object.keys(room.players || {});
+    const round = Number(state.currentIndex || 0);
+
+    if (type === "almost-impostor") {
+      hostState.impostorOrder = replaceRemovedInOrder(hostState.impostorOrder, targetUid, playerIds);
+    }
+
+    if (type === "fake-expert") {
+      hostState.speakerOrder = replaceRemovedInOrder(hostState.speakerOrder, targetUid, playerIds);
+      updates[`rooms/${key}/game/state/speakerId`] = hostState.speakerOrder?.[round] || playerIds[0] || null;
+      updates[`rooms/${key}/game/state/publicTopic`] = hostState.items?.[round]?.topic || "";
+    }
+
+    if (type === "who-am-i") {
+      hostState.guesserOrder = replaceRemovedInOrder(hostState.guesserOrder, targetUid, playerIds);
+      updates[`rooms/${key}/game/state/guesserId`] = hostState.guesserOrder?.[round] || playerIds[0] || null;
+    }
+
+    updates[`roomSecrets/${key}/hostState`] = hostState;
+    updates[`roomSecrets/${key}/roles`] = buildPrivateRolesForRound(
+      type,
+      round,
+      state,
+      hostState,
+      playerIds
+    );
+
+    await db.ref().update(updates);
+  }
+
+
   async function removeDisconnectedPlayer(code, targetUid) {
     const user = await ready();
     const key = normalizeCode(code);
@@ -618,6 +810,10 @@
     if (!transaction.committed) {
       if (outcome?.removed === false) return outcome;
       throw new Error(abortReason);
+    }
+
+    if (outcome?.removed) {
+      await repairPrivateGameAfterPlayerRemoval(key, targetUid);
     }
 
     return outcome || { removed: false, returnedToLobby: false };
@@ -754,7 +950,7 @@
   }
 
 
-  async function setGame(code, payload) {
+  async function setGame(code, payload, secrets = null) {
     const key = normalizeCode(code);
     const updates = {};
 
@@ -772,14 +968,16 @@
     }
 
     updates[`rooms/${key}/game`] = publicPayload;
-    updates[`roomSecrets/${key}`] = null;
+    updates[`roomSecrets/${key}/submissions`] = null;
+    updates[`roomSecrets/${key}/roles`] = secrets?.roles || null;
+    updates[`roomSecrets/${key}/hostState`] = secrets?.hostState || null;
     updates[`rooms/${key}/meta/status`] = payload ? "playing" : "lobby";
     updates[`rooms/${key}/meta/updatedAt`] = serverTimestamp();
 
     await db.ref().update(updates);
   }
 
-  async function updateGame(code, updates) {
+  async function updateGame(code, updates, secrets = null) {
     const key = normalizeCode(code);
     const prefixedUpdates = {};
     const collectionsToClear = Object.entries(updates || {})
@@ -804,6 +1002,14 @@
       if (["answers", "votes", "actions"].includes(path)) return;
       prefixedUpdates[`rooms/${key}/game/${path}`] = value;
     });
+
+    if (secrets && Object.prototype.hasOwnProperty.call(secrets, "roles")) {
+      prefixedUpdates[`roomSecrets/${key}/roles`] = cloneValue(secrets.roles);
+    }
+
+    if (secrets && Object.prototype.hasOwnProperty.call(secrets, "hostState")) {
+      prefixedUpdates[`roomSecrets/${key}/hostState`] = cloneValue(secrets.hostState);
+    }
 
     await db.ref().update(prefixedUpdates);
   }

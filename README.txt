@@ -1,4 +1,4 @@
-AK'Games V1.0 — Audit passe 3 : confidentialité
+AK'Games V1.0 — Audit passe 4 : rôles privés
 
 Fichiers à remplacer à la racine du projet :
 - firebase.js
@@ -6,8 +6,13 @@ Fichiers à remplacer à la racine du projet :
 - database.rules.json
 - service-worker.js
 
-Puis utiliser « Valider et envoyer (push) ».
-Le déploiement automatique publiera Hosting et les règles Realtime Database.
+Installation :
+1. Remplace les quatre fichiers.
+2. Dans VS Code, clique sur « Valider et envoyer (push) ».
+3. Attends la coche verte dans GitHub Actions.
+4. Ferme complètement la PWA sur les téléphones puis rouvre-la.
 
-Important : cette passe isole les réponses, votes et actions avant leur révélation.
-Le cloisonnement complet des rôles des jeux de déduction demande encore une refonte dédiée, détaillée dans le rapport.
+Cette passe protège les rôles et identités de :
+- L’Imposteur sait presque tout
+- Le Faux Expert
+- Qui suis-je ?

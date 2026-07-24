@@ -45,12 +45,14 @@
         "roles": {
           "$uid": {
             ".read": "auth != null && (auth.uid === $uid || root.child('rooms').child($roomCode).child('meta').child('hostUid').val() === auth.uid)",
-            ".write": "auth != null && root.child('rooms').child($roomCode).child('meta').child('hostUid').val() === auth.uid"
+            ".write": "auth != null && root.child('rooms').child($roomCode).child('meta').child('hostUid').val() === auth.uid",
+            ".validate": "!newData.exists() || (newData.hasChildren(['gameType', 'round', 'itemId']) && newData.child('gameType').isString() && newData.child('gameType').val().length <= 32 && newData.child('round').isNumber() && newData.child('round').val() >= 0 && newData.child('itemId').isString() && newData.child('itemId').val().length <= 80)"
           }
         },
         "hostState": {
           ".read": "auth != null && root.child('rooms').child($roomCode).child('meta').child('hostUid').val() === auth.uid",
-          ".write": "auth != null && root.child('rooms').child($roomCode).child('meta').child('hostUid').val() === auth.uid"
+          ".write": "auth != null && root.child('rooms').child($roomCode).child('meta').child('hostUid').val() === auth.uid",
+          ".validate": "!newData.exists() || (newData.hasChildren(['gameType', 'items']) && newData.child('gameType').isString() && newData.child('gameType').val().length <= 32 && newData.child('items').hasChildren())"
         }
       }
     }
