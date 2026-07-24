@@ -1,4 +1,4 @@
-const CACHE_VERSION = "akgames-v1.0-audit4";
+const CACHE_VERSION = "akgames-v1.0-audit5";
 const APP_SHELL = [
   "/",
   "/index.html",
@@ -65,7 +65,6 @@ self.addEventListener("install", event => {
       .then(cache => Promise.allSettled(
         APP_SHELL.map(asset => cache.add(asset))
       ))
-      .then(() => self.skipWaiting())
   );
 });
 

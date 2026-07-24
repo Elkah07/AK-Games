@@ -1007,9 +1007,10 @@
         throw new Error("Aucune question ne correspond aux catégories choisies.");
       }
 
-      const questions = shuffleArray(pool).slice(
-        0,
-        Math.min(game.questionCount, pool.length)
+      const questions = selectFreshItems(
+        pool,
+        Math.min(game.questionCount, pool.length),
+        "multi:who-us"
       );
 
       await AKFirebase.startWhoUsGame(state.roomCode, {
@@ -2328,7 +2329,7 @@
 
       if (!pool.length) throw new Error("Aucune situation disponible avec ces réglages.");
 
-      const prompts = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const prompts = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "multi:best-liar");
       const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
 
       await AKFirebase.setGame(state.roomCode, {
@@ -3001,7 +3002,7 @@
           usedJokeIds = [];
         }
 
-        const joke = available[Math.floor(Math.random() * available.length)];
+        const joke = chooseFreshItem(available, "multi:laugh-duel");
 
         await AKFirebase.updateGame(state.roomCode, {
           "state/phase": "joke",
@@ -3391,7 +3392,7 @@
       let pool = await loadJsonFile("data/action-verite.json", "Impossible de charger les cartes.");
       if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/action-verite-adulte.json", "Impossible de charger les cartes adultes."));
       if (game.mode !== "mix") pool = pool.filter(item => item.type === game.mode);
-      const prompts = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const prompts = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `multi:action-truth:${game.mode}`);
       const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
       await AKFirebase.setGame(state.roomCode, { state: {
         type: "action-truth", phase: "prompt", sessionGameId: createSessionGameId("action-truth"), prompts,
@@ -3431,7 +3432,7 @@
     try {
       let pool = await loadJsonFile(meta.classic, "Impossible de charger les questions.");
       if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile(meta.adult, "Impossible de charger les questions adultes."));
-      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `multi:${game.type === "never" ? "never-have-i-ever" : "would-you-rather"}`);
       const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
       const type = game.type === "never" ? "never-have-i-ever" : "would-you-rather";
       await AKFirebase.setGame(state.roomCode, { state: {
@@ -3617,7 +3618,7 @@
     try {
       let pool = await loadJsonFile("data/meme-cerveau.json", "Impossible de charger les questions de Même cerveau.");
       if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/meme-cerveau-adulte.json", "Impossible de charger les questions adultes."));
-      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "multi:same-brain");
       const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
       await AKFirebase.setGame(state.roomCode, {
         state: {
@@ -3661,7 +3662,7 @@
     try {
       let pool = await loadJsonFile("data/minorite.json", "Impossible de charger les questions de Minorité.");
       if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/minorite-adulte.json", "Impossible de charger les questions adultes."));
-      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "multi:minority");
       const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
       await AKFirebase.setGame(state.roomCode, {
         state: {
@@ -3712,7 +3713,7 @@
     try {
       let pool = await loadJsonFile("data/qui-a-repondu.json", "Impossible de charger les questions.");
       if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/qui-a-repondu-adulte.json", "Impossible de charger les questions adultes."));
-      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "multi:who-answered");
       const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
       const authorOrder = shuffleArray(state.players.map(player => player.id));
       await AKFirebase.setGame(state.roomCode, {
@@ -4161,7 +4162,7 @@
     try {
       let pool = await loadJsonFile("data/imposteur.json", "Impossible de charger les mots.");
       if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/imposteur-adulte.json", "Impossible de charger les cartes adultes."));
-      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "multi:almost-impostor");
       const playerIds = state.players.map(player => player.id);
       const impostorOrder = items.map(() => playerIds[Math.floor(Math.random() * playerIds.length)]);
       const scores = Object.fromEntries(playerIds.map(id => [id, 0]));
@@ -4204,7 +4205,7 @@
     try {
       let pool = await loadJsonFile("data/faux-expert.json", "Impossible de charger les sujets.");
       if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/faux-expert-adulte.json", "Impossible de charger les sujets adultes."));
-      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "multi:fake-expert");
       const playerIds = state.players.map(player => player.id);
       const speakerOrder = Array.from({ length: items.length }, (_, index) => playerIds[index % playerIds.length]);
       const shuffledSpeakers = shuffleArray(speakerOrder);
@@ -4253,7 +4254,7 @@
       if (game.categoryMode === "classic") pool = pool.filter(item => item.category !== "culture");
       if (game.categoryMode === "culture") pool = pool.filter(item => item.category === "culture");
       if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/qui-suis-je-adulte.json", "Impossible de charger les identités adultes."));
-      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "multi:who-am-i");
       const playerIds = state.players.map(player => player.id);
       const guesserOrder = Array.from({ length: items.length }, (_, index) => playerIds[index % playerIds.length]);
       const shuffledGuessers = shuffleArray(guesserOrder);
@@ -4818,7 +4819,7 @@
     screen.innerHTML = `<div class="notice">Synchronisation de ${escapeHtml(game.gameName)}…</div>`;
     try {
       const pool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
-      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `multi:mega:${game.gameName}`);
       const playerIds = state.players.map(player => player.id);
       const firstPlayerId = playerIds[0] || null;
       const type = megaMultiType(game.engine);
@@ -5336,34 +5337,82 @@
   };
 
 
-  const v014LegacyRandomMultiplayerGame = launchRandomMultiplayerGame;
-  launchRandomMultiplayerGame = async function () {
-    if (!state.isHost || state.players.length < 2) return;
+  const recentRandomGameKeys = [];
 
-    const megaChoices = Object.entries(V014_GAME_CONFIGS)
+  function randomHistoryKey(entry) {
+    if (!entry) return "";
+    const gameName = entry.gameName || entry.config?.gameName || "";
+    return String(entry.gameType || entry.type || "").startsWith("mega-")
+      ? `mega:${gameName}`
+      : String(entry.gameType || entry.type || "");
+  }
+
+  function buildRandomMultiplayerCandidates() {
+    const legacy = [
+      { key: "who-us", minPlayers: 2, descriptor: { type: "who-us", config: { questionCount: 10, categories: ["drole", "chaos", "dossiers", "amitie", "soiree", "relations"], includeAdult: false, alcoholIntensity: "normal" } } },
+      { key: "laugh-duel", minPlayers: 2, descriptor: { type: "laugh-duel", config: { mode: "sudden", categories: ["nulles", "absurdes", "devinettes", "observation"], includeAdult: false } } },
+      { key: "best-liar", minPlayers: 3, descriptor: { type: "best-liar", config: { roundCount: 5, categories: ["excuses", "improbable", "quotidien", "dossiers", "chaos"], includeAdult: false } } },
+      { key: "action-truth", minPlayers: 2, descriptor: { type: "action-truth", config: { roundCount: 12, mode: "mix", includeAdult: false } } },
+      { key: "never-have-i-ever", minPlayers: 2, descriptor: { type: "never-have-i-ever", config: { roundCount: 10, includeAdult: false } } },
+      { key: "would-you-rather", minPlayers: 2, descriptor: { type: "would-you-rather", config: { roundCount: 10, includeAdult: false } } },
+      { key: "same-brain", minPlayers: 2, descriptor: { type: "same-brain", config: { roundCount: 10, includeAdult: false } } },
+      { key: "minority", minPlayers: 2, descriptor: { type: "minority", config: { roundCount: 10, includeAdult: false } } },
+      { key: "who-answered", minPlayers: 3, descriptor: { type: "who-answered", config: { roundCount: Math.max(6, state.players.length), includeAdult: false } } },
+      { key: "almost-impostor", minPlayers: 3, descriptor: { type: "almost-impostor", config: { roundCount: 6, includeAdult: false, discussionSeconds: 60 } } },
+      { key: "fake-expert", minPlayers: 3, descriptor: { type: "fake-expert", config: { roundCount: Math.max(5, state.players.length), includeAdult: false, speechSeconds: 60 } } },
+      { key: "who-am-i", minPlayers: 2, descriptor: { type: "who-am-i", config: { roundCount: Math.max(6, state.players.length), includeAdult: false, categoryMode: "mix", durationSeconds: 60 } } }
+    ];
+
+    if (state.adult) {
+      legacy.push(
+        { key: "action-truth", minPlayers: 2, descriptor: { type: "action-truth", config: { roundCount: 12, mode: "mix", includeAdult: true } } },
+        { key: "never-have-i-ever", minPlayers: 2, descriptor: { type: "never-have-i-ever", config: { roundCount: 10, includeAdult: true } } },
+        { key: "would-you-rather", minPlayers: 2, descriptor: { type: "would-you-rather", config: { roundCount: 10, includeAdult: true } } }
+      );
+    }
+
+    const mega = Object.entries(V014_GAME_CONFIGS)
       .filter(([, config]) => !config.adultOnly || state.adult)
       .filter(([, config]) => !config.drinkingGame || state.alcohol)
       .map(([gameName, config]) => ({
-        type: megaMultiType(config.engine),
-        config: {
-          gameName,
-          roundCount: Number(config.defaultRounds || 10),
-          durationSeconds: Number(config.timer || 45)
+        key: `mega:${gameName}`,
+        minPlayers: Number(config.minPlayers || 2),
+        descriptor: {
+          type: megaMultiType(config.engine),
+          config: {
+            gameName,
+            roundCount: Number(config.defaultRounds || 10),
+            durationSeconds: Number(config.timer || 45)
+          }
         }
       }));
 
-    const lastType = state.roomData?.session?.lastGame?.type;
-    const lastName = state.roomData?.session?.lastGame?.gameName;
-    const filtered = megaChoices.filter(choice => choice.type !== lastType || choice.config.gameName !== lastName);
-    const choices = filtered.length ? filtered : megaChoices;
+    return [...legacy, ...mega].filter(candidate => state.players.length >= candidate.minPlayers);
+  }
 
-    // Un tirage sur trois conserve aussi les jeux historiques afin que toute la ludothèque circule.
-    if (!choices.length || Math.random() < .34) {
-      return v014LegacyRandomMultiplayerGame();
+  launchRandomMultiplayerGame = async function () {
+    if (!state.isHost || state.players.length < 2) return;
+
+    const candidates = buildRandomMultiplayerCandidates();
+    if (!candidates.length) return;
+
+    const history = Object.values(state.roomData?.session?.history || {})
+      .sort((a, b) => Number(b?.endedAt || 0) - Number(a?.endedAt || 0))
+      .map(randomHistoryKey)
+      .filter(Boolean);
+    const recent = [...new Set([...recentRandomGameKeys, ...history.slice(0, 3)])];
+    let choices = candidates.filter(candidate => !recent.includes(candidate.key));
+
+    if (!choices.length) {
+      const lastKey = recent[0] || randomHistoryKey(state.roomData?.session?.lastGame);
+      choices = candidates.filter(candidate => candidate.key !== lastKey);
     }
+    if (!choices.length) choices = candidates;
 
     const selected = choices[Math.floor(Math.random() * choices.length)];
-    await launchReplayDescriptor(selected);
+    recentRandomGameKeys.push(selected.key);
+    while (recentRandomGameKeys.length > 3) recentRandomGameKeys.shift();
+    await launchReplayDescriptor(selected.descriptor);
   };
 
 
@@ -5553,7 +5602,7 @@
         pool = pool.concat(await loadJsonFile("data/imposteur-adulte.json", "Impossible de charger les cartes adultes."));
       }
 
-      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "multi:almost-impostor");
       const playerIds = state.players.map(player => player.id);
       const impostorOrder = items.map(() => playerIds[Math.floor(Math.random() * playerIds.length)]);
       const scores = Object.fromEntries(playerIds.map(id => [id, 0]));
@@ -5605,7 +5654,7 @@
         pool = pool.concat(await loadJsonFile("data/faux-expert-adulte.json", "Impossible de charger les sujets adultes."));
       }
 
-      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "multi:fake-expert");
       const playerIds = state.players.map(player => player.id);
       const speakerOrder = shuffleArray(Array.from({ length: items.length }, (_, index) => playerIds[index % playerIds.length]));
       const roleOrder = items.map(() => Math.random() < 0.5 ? "real" : "fake");
@@ -5662,7 +5711,7 @@
         pool = pool.concat(await loadJsonFile("data/qui-suis-je-adulte.json", "Impossible de charger les identités adultes."));
       }
 
-      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "multi:who-am-i");
       const playerIds = state.players.map(player => player.id);
       const guesserOrder = shuffleArray(Array.from({ length: items.length }, (_, index) => playerIds[index % playerIds.length]));
       const scores = Object.fromEntries(playerIds.map(id => [id, 0]));

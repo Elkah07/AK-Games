@@ -1,18 +1,15 @@
-AK'Games V1.0 — Audit passe 4 : rôles privés
+AK'Games V1.0 — Audit passe 5 : régression générale
 
 Fichiers à remplacer à la racine du projet :
-- firebase.js
+- app.js
 - multiplayer.js
-- database.rules.json
+- pwa.js
 - service-worker.js
 
 Installation :
-1. Remplace les quatre fichiers.
-2. Dans VS Code, clique sur « Valider et envoyer (push) ».
+1. Remplace les quatre fichiers dans le Codespace.
+2. Clique sur « Valider et envoyer (push) ».
 3. Attends la coche verte dans GitHub Actions.
-4. Ferme complètement la PWA sur les téléphones puis rouvre-la.
+4. Ferme complètement AK'Games sur les téléphones, puis rouvre l'application.
 
-Cette passe protège les rôles et identités de :
-- L’Imposteur sait presque tout
-- Le Faux Expert
-- Qui suis-je ?
+Aucun fichier du dossier data et aucune règle Firebase ne sont modifiés dans cette passe.

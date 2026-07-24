@@ -9,6 +9,7 @@
   const backButton = document.querySelector("#backBtn");
 
   let deferredInstallPrompt = null;
+  let serviceWorkerRegistration = null;
   let lastExitBackAt = 0;
   let allowBrowserExit = false;
   let toastTimer = null;
@@ -75,13 +76,13 @@
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", async () => {
       try {
-        const registration = await navigator.serviceWorker.register(
+        serviceWorkerRegistration = await navigator.serviceWorker.register(
           "/service-worker.js",
           { scope: "/" }
         );
 
-        registration.addEventListener("updatefound", () => {
-          const worker = registration.installing;
+        serviceWorkerRegistration.addEventListener("updatefound", () => {
+          const worker = serviceWorkerRegistration.installing;
           if (!worker) return;
 
           worker.addEventListener("statechange", () => {
@@ -89,10 +90,18 @@
               worker.state === "installed"
               && navigator.serviceWorker.controller
             ) {
+              if (hasActiveSession()) {
+                localStorage.setItem("akgames_update_pending", "yes");
+                showBackToast("Mise à jour prête. Elle sera appliquée dès la fin de la partie.");
+                return;
+              }
+
               worker.postMessage({ type: "SKIP_WAITING" });
             }
           });
         });
+
+        activateWaitingWorkerWhenSafe();
       } catch (error) {
         console.error("Service worker non enregistré :", error);
       }
@@ -116,6 +125,27 @@
     });
   }
 
+  function activateWaitingWorkerWhenSafe() {
+    const waiting = serviceWorkerRegistration?.waiting;
+    if (!waiting || hasActiveSession()) return false;
+
+    localStorage.removeItem("akgames_update_pending");
+    waiting.postMessage({ type: "SKIP_WAITING" });
+    return true;
+  }
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+      activateWaitingWorkerWhenSafe();
+    }
+  });
+
+  window.setInterval(() => {
+    if (localStorage.getItem("akgames_update_pending") === "yes") {
+      activateWaitingWorkerWhenSafe();
+    }
+  }, 2000);
+
   // -------------------------------------------------------
   // Navigation Android / bouton Retour du téléphone
   // -------------------------------------------------------
@@ -138,8 +168,22 @@
 
   function hasActiveSession() {
     if (typeof state !== "object" || !state) return false;
+    if (state.roomCode) return true;
 
-    const roomActive = Boolean(state.roomCode);
+    const screenTitle = document.querySelector("#screenTitle")?.textContent?.trim() || "";
+    const isHomeScreen =
+      Array.isArray(state.history)
+      && state.history.length === 0
+      && !hasVisibleInternalBack()
+      && (
+        screenTitle === "La soirée commence ici"
+        || Boolean(document.querySelector("[data-home-action]"))
+      );
+
+    // L'accueil est la source de vérité : d'anciens objets de jeu ne doivent pas
+    // empêcher la fermeture de l'app après un retour normal au menu.
+    if (isHomeScreen) return false;
+
     const activeSoloKeys = [
       "quiDeNous",
       "laughDuel",
@@ -155,15 +199,13 @@
       "megaGame"
     ];
 
-    const soloGameActive = activeSoloKeys.some(key => {
+    return activeSoloKeys.some(key => {
       const game = state[key];
       if (!game || typeof game !== "object") return false;
 
       return ["questions", "jokePool", "prompts", "items", "cards"]
         .some(collection => Array.isArray(game[collection]) && game[collection].length > 0);
     });
-
-    return roomActive || soloGameActive;
   }
 
   function armBackGuard() {

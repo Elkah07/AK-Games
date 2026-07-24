@@ -132,6 +132,89 @@ function shuffleArray(array) {
   return copy;
 }
 
+const AK_RECENT_CONTENT_KEY = "akgames_recent_content_v1";
+
+function loadRecentContentMemory() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(AK_RECENT_CONTENT_KEY) || "{}");
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function saveRecentContentMemory(memory) {
+  try {
+    localStorage.setItem(AK_RECENT_CONTENT_KEY, JSON.stringify(memory));
+  } catch {
+    // Le jeu reste jouable même si le stockage local est indisponible.
+  }
+}
+
+function contentItemId(item, index = 0) {
+  if (item && typeof item === "object" && item.id) return String(item.id);
+  return `fallback_${index}_${JSON.stringify(item ?? null)}`;
+}
+
+function rememberContentItems(namespace, items, poolSize = 0) {
+  if (!namespace || !Array.isArray(items) || !items.length) return;
+
+  const memory = loadRecentContentMemory();
+  const previous = Array.isArray(memory[namespace]) ? memory[namespace] : [];
+  const selectedIds = items.map(contentItemId);
+  const cap = Math.max(24, Math.min(120, Number(poolSize || 0) || selectedIds.length * 6));
+
+  memory[namespace] = [
+    ...selectedIds,
+    ...previous.filter(id => !selectedIds.includes(id))
+  ].slice(0, cap);
+
+  saveRecentContentMemory(memory);
+}
+
+function selectFreshItems(pool, count, namespace) {
+  const safePool = Array.isArray(pool) ? pool.filter(Boolean) : [];
+  const limit = Math.min(Math.max(0, Number(count || 0)), safePool.length);
+  if (!limit) return [];
+
+  const memory = loadRecentContentMemory();
+  const recent = new Set(Array.isArray(memory[namespace]) ? memory[namespace] : []);
+  const fresh = safePool.filter((item, index) => !recent.has(contentItemId(item, index)));
+  const selected = shuffleArray(fresh).slice(0, limit);
+
+  if (selected.length < limit) {
+    const chosen = new Set(selected.map(contentItemId));
+    const fallback = safePool.filter((item, index) => !chosen.has(contentItemId(item, index)));
+    selected.push(...shuffleArray(fallback).slice(0, limit - selected.length));
+  }
+
+  rememberContentItems(namespace, selected, safePool.length);
+  return selected;
+}
+
+function chooseFreshItem(pool, namespace) {
+  return selectFreshItems(pool, 1, namespace)[0] || null;
+}
+
+function isSoloGameRunning() {
+  const activeCollections = [
+    state.quiDeNous?.questions,
+    state.laughDuel?.jokePool,
+    state.bestLiar?.prompts,
+    state.actionTruth?.prompts,
+    state.ambiancePoll?.items,
+    state.sameBrain?.items,
+    state.minorityGame?.items,
+    state.whoAnswered?.items,
+    state.almostImpostor?.items,
+    state.fakeExpert?.items,
+    state.whoAmI?.items,
+    state.megaGame?.items
+  ];
+
+  return activeCollections.some(collection => Array.isArray(collection) && collection.length > 0);
+}
+
 function renderHome() {
   state.history = [];
   title.textContent = "La soirée commence ici";
@@ -158,7 +241,7 @@ function renderHome() {
       </button>
     </section>
 
-    <div class="notice">V0.6 : salon persistant, score cumulé, historique et soirée continue.</div>
+    <div class="notice">33 jeux disponibles · salon persistant · score cumulé · historique · soirée continue.</div>
   `;
 
   document.querySelectorAll("[data-home-action]").forEach(btn => {
@@ -649,7 +732,7 @@ async function startWhoUsGame() {
 
     if (!pool.length) throw new Error("Aucune question ne correspond aux catégories choisies.");
 
-    game.questions = shuffleArray(pool).slice(0, Math.min(game.questionCount, pool.length));
+    game.questions = selectFreshItems(pool, Math.min(game.questionCount, pool.length), "solo:who-us");
     game.currentIndex = 0;
     game.currentVoterIndex = 0;
     game.currentVotes = {};
@@ -1638,7 +1721,7 @@ async function startBestLiarGame() {
 
     if (!pool.length) throw new Error("Aucune situation disponible avec ces réglages.");
 
-    game.prompts = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.prompts = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "solo:best-liar");
     game.roundCount = game.prompts.length;
     game.currentRound = 0;
     game.currentWriterIndex = 0;
@@ -2168,11 +2251,7 @@ backBtn.addEventListener("click", () => {
 });
 
 settingsBtn.addEventListener("click", () => {
-  const whoUsActive = state.quiDeNous && state.quiDeNous.questions.length;
-  const laughActive = state.laughDuel && state.laughDuel.jokePool.length;
-  const liarActive = state.bestLiar && state.bestLiar.prompts.length;
-
-  if (whoUsActive || laughActive || liarActive) return;
+  if (isSoloGameRunning()) return;
   renderSettings();
 });
 
@@ -2458,7 +2537,7 @@ async function startActionTruthGame() {
       pool = pool.concat(await loadJsonFile("data/action-verite-adulte.json", "Impossible de charger les cartes adultes."));
     }
     if (game.mode !== "mix") pool = pool.filter(item => item.type === game.mode);
-    game.prompts = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.prompts = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `solo:action-truth:${game.mode}`);
     game.currentIndex = 0;
     game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
     game.results = [];
@@ -2589,7 +2668,7 @@ async function startAmbiancePollGame() {
   try {
     let pool = await loadJsonFile(meta.classic, "Impossible de charger les questions.");
     if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile(meta.adult, "Impossible de charger les questions adultes."));
-    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `solo:${game.type === "never" ? "never-have-i-ever" : "would-you-rather"}`);
     game.currentIndex = 0;
     game.currentVoterIndex = 0;
     game.votes = {};
@@ -2708,13 +2787,6 @@ function renderAmbiancePollEnd() {
   document.querySelector("#replayPoll").addEventListener("click", () => { const { type, forceAdult } = game; resetAmbiancePollState(type, forceAdult); renderAmbiancePollSetup(); });
   document.querySelector("#otherPoll").addEventListener("click", () => { state.ambiancePoll = null; renderPlayChoice(); });
 }
-
-settingsBtn.addEventListener("click", event => {
-  const ambianceActive = Boolean(state.actionTruth?.prompts?.length || state.ambiancePoll?.items?.length);
-  if (!ambianceActive) return;
-  event.preventDefault();
-  event.stopImmediatePropagation();
-}, true);
 
 renderHome();
 
@@ -3022,7 +3094,7 @@ async function startSameBrainGame() {
   try {
     let pool = await loadJsonFile("data/meme-cerveau.json", "Impossible de charger les questions de Même cerveau.");
     if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/meme-cerveau-adulte.json", "Impossible de charger les questions adultes."));
-    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "solo:same-brain");
     game.currentIndex = 0;
     game.currentWriterIndex = 0;
     game.answers = {};
@@ -3189,7 +3261,7 @@ async function startMinorityGame() {
   try {
     let pool = await loadJsonFile("data/minorite.json", "Impossible de charger les questions de Minorité.");
     if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/minorite-adulte.json", "Impossible de charger les questions adultes."));
-    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "solo:minority");
     game.currentIndex = 0;
     game.currentVoterIndex = 0;
     game.votes = {};
@@ -3322,7 +3394,7 @@ async function startWhoAnsweredGame() {
   try {
     let pool = await loadJsonFile("data/qui-a-repondu.json", "Impossible de charger les questions.");
     if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/qui-a-repondu-adulte.json", "Impossible de charger les questions adultes."));
-    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "solo:who-answered");
     game.currentIndex = 0;
     game.currentWriterIndex = 0;
     game.currentVoterIndex = 0;
@@ -3471,17 +3543,6 @@ function renderWhoAnsweredEnd() {
     other: () => { state.whoAnswered = null; renderPlayChoice(); }
   });
 }
-
-settingsBtn.addEventListener("click", event => {
-  const v08Active = Boolean(
-    state.sameBrain?.items?.length
-    || state.minorityGame?.items?.length
-    || state.whoAnswered?.items?.length
-  );
-  if (!v08Active) return;
-  event.preventDefault();
-  event.stopImmediatePropagation();
-}, true);
 
 renderHome();
 
@@ -3763,7 +3824,7 @@ async function startAlmostImpostorGame() {
   try {
     let pool = await loadJsonFile("data/imposteur.json", "Impossible de charger les mots de l’imposteur.");
     if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/imposteur-adulte.json", "Impossible de charger les cartes adultes."));
-    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "solo:almost-impostor");
     game.currentIndex = 0;
     game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
     game.rounds = [];
@@ -3995,7 +4056,7 @@ async function startFakeExpertGame() {
   try {
     let pool = await loadJsonFile("data/faux-expert.json", "Impossible de charger les sujets.");
     if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/faux-expert-adulte.json", "Impossible de charger les sujets adultes."));
-    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "solo:fake-expert");
     game.currentIndex = 0;
     game.speakerOrder = shuffleArray(state.players.map(player => player.id));
     game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
@@ -4178,7 +4239,7 @@ async function startWhoAmIGame() {
     if (game.categoryMode === "classic") pool = pool.filter(item => item.category !== "culture");
     if (game.categoryMode === "culture") pool = pool.filter(item => item.category === "culture");
     if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/qui-suis-je-adulte.json", "Impossible de charger les identités adultes."));
-    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "solo:who-am-i");
     game.currentIndex = 0;
     game.guesserOrder = shuffleArray(state.players.map(player => player.id));
     game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
@@ -4267,13 +4328,6 @@ function renderWhoAmIEnd() {
     other: () => { state.whoAmI = null; renderPlayChoice(); }
   });
 }
-
-settingsBtn.addEventListener("click", event => {
-  const v09Active = Boolean(state.almostImpostor?.items?.length || state.fakeExpert?.items?.length || state.whoAmI?.items?.length);
-  if (!v09Active) return;
-  event.preventDefault();
-  event.stopImmediatePropagation();
-}, true);
 
 renderHome();
 
@@ -4433,7 +4487,7 @@ async function startMegaGame() {
   screen.innerHTML = `<div class="notice">Préparation de ${escapeHtml(game.gameName)}…</div>`;
   try {
     const pool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
-    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `solo:mega:${game.gameName}`);
     game.currentIndex = 0;
     game.currentPlayerIndex = 0;
     game.currentVoterIndex = 0;
@@ -4958,11 +5012,17 @@ renderGames = function () {
   }));
 };
 
+renderHome();
+
+
+/* =========================================================
+   AK'GAMES V1.0 — AUDIT PASSE 5
+   Navigation sûre pendant les parties
+   ========================================================= */
+
 settingsBtn.addEventListener("click", event => {
-  const megaActive = Boolean(state.megaGame?.items?.length);
-  if (!megaActive) return;
+  if (!isSoloGameRunning()) return;
   event.preventDefault();
   event.stopImmediatePropagation();
+  alert("Termine la manche ou utilise le bouton de sortie du jeu avant d’ouvrir les paramètres.");
 }, true);
-
-renderHome();
