@@ -1,0 +1,362 @@
+[
+  {
+    "id": "adulte_verite_001",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quel est ton plus gros turn-off chez quelqu’un ?"
+  },
+  {
+    "id": "adulte_verite_002",
+    "type": "truth",
+    "category": "adult",
+    "text": "As-tu déjà embrassé quelqu’un puis immédiatement regretté ?"
+  },
+  {
+    "id": "adulte_verite_003",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quel est le message de flirt le plus gênant que tu aies envoyé ?"
+  },
+  {
+    "id": "adulte_verite_004",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quelle personne célèbre accepterais-tu de rejoindre à un rendez-vous sans réfléchir ?"
+  },
+  {
+    "id": "adulte_verite_005",
+    "type": "truth",
+    "category": "adult",
+    "text": "As-tu déjà fait semblant de ne pas voir un message pour paraître moins intéressé(e) ?"
+  },
+  {
+    "id": "adulte_verite_006",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quel est ton plus gros red flag amoureux ?"
+  },
+  {
+    "id": "adulte_verite_007",
+    "type": "truth",
+    "category": "adult",
+    "text": "As-tu déjà eu un crush sur quelqu’un de totalement inaccessible ?"
+  },
+  {
+    "id": "adulte_verite_008",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quel est ton type de personne, même si tu prétends ne pas en avoir ?"
+  },
+  {
+    "id": "adulte_verite_009",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quelle est la chose la plus audacieuse que tu aies faite pour séduire quelqu’un ?"
+  },
+  {
+    "id": "adulte_verite_010",
+    "type": "truth",
+    "category": "adult",
+    "text": "As-tu déjà fouillé le profil d’un ex beaucoup trop loin ?"
+  },
+  {
+    "id": "adulte_verite_011",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quelle est la pire phrase de drague qu’on t’ait sortie ?"
+  },
+  {
+    "id": "adulte_verite_012",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quel détail physique remarques-tu en premier ?"
+  },
+  {
+    "id": "adulte_verite_013",
+    "type": "truth",
+    "category": "adult",
+    "text": "As-tu déjà entretenu deux discussions ambiguës en même temps ?"
+  },
+  {
+    "id": "adulte_verite_014",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quelle est la chose la plus jalouse que tu aies faite ?"
+  },
+  {
+    "id": "adulte_verite_015",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quel est ton plus gros regret sentimental ?"
+  },
+  {
+    "id": "adulte_verite_016",
+    "type": "truth",
+    "category": "adult",
+    "text": "Avec qui du groupe accepterais-tu le plus facilement un faux rendez-vous pour rendre quelqu’un jaloux ?"
+  },
+  {
+    "id": "adulte_verite_017",
+    "type": "truth",
+    "category": "adult",
+    "text": "As-tu déjà embrassé quelqu’un dont tu avais oublié le prénom ?"
+  },
+  {
+    "id": "adulte_verite_018",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quelle est ta pire habitude quand quelqu’un te plaît ?"
+  },
+  {
+    "id": "adulte_verite_019",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quel est le plus gros mensonge raconté pour impressionner un crush ?"
+  },
+  {
+    "id": "adulte_verite_020",
+    "type": "truth",
+    "category": "adult",
+    "text": "As-tu déjà repris contact avec quelqu’un uniquement parce que tu t’ennuyais ?"
+  },
+  {
+    "id": "adulte_verite_021",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quelle est ta limite non négociable dans une relation ?"
+  },
+  {
+    "id": "adulte_verite_022",
+    "type": "truth",
+    "category": "adult",
+    "text": "As-tu déjà envoyé un message risqué puis mis ton téléphone en mode avion ?"
+  },
+  {
+    "id": "adulte_verite_023",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quelle situation romantique te mettrait immédiatement mal à l’aise ?"
+  },
+  {
+    "id": "adulte_verite_024",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quel est ton avis le plus impopulaire sur les relations ?"
+  },
+  {
+    "id": "adulte_verite_025",
+    "type": "truth",
+    "category": "adult",
+    "text": "As-tu déjà fait semblant d’aimer quelque chose pour plaire à quelqu’un ?"
+  },
+  {
+    "id": "adulte_verite_026",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quelle personne du groupe donnerait les meilleurs conseils amoureux ?"
+  },
+  {
+    "id": "adulte_verite_027",
+    "type": "truth",
+    "category": "adult",
+    "text": "As-tu déjà regretté d’avoir dit “je t’aime” ?"
+  },
+  {
+    "id": "adulte_verite_028",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quel est ton plus grand fantasme de rendez-vous, sans entrer dans les détails ?"
+  },
+  {
+    "id": "adulte_verite_029",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quelle est la chose la plus gênante découverte sur une personne qui te plaisait ?"
+  },
+  {
+    "id": "adulte_verite_030",
+    "type": "truth",
+    "category": "adult",
+    "text": "As-tu déjà bloqué puis débloqué quelqu’un juste pour voir s’il revenait ?"
+  },
+  {
+    "id": "adulte_action_001",
+    "type": "action",
+    "category": "adult",
+    "text": "Fais une phrase de drague à la personne choisie par le groupe."
+  },
+  {
+    "id": "adulte_action_002",
+    "type": "action",
+    "category": "adult",
+    "text": "Laisse le groupe choisir un emoji que tu dois envoyer à ton dernier crush ou contact ambigu."
+  },
+  {
+    "id": "adulte_action_003",
+    "type": "action",
+    "category": "adult",
+    "text": "Fais un compliment de séduction très exagéré à la personne de ton choix."
+  },
+  {
+    "id": "adulte_action_004",
+    "type": "action",
+    "category": "adult",
+    "text": "Joue une scène de premier rendez-vous catastrophique avec un autre joueur."
+  },
+  {
+    "id": "adulte_action_005",
+    "type": "action",
+    "category": "adult",
+    "text": "Lis à voix haute le dernier message de flirt que tu peux montrer sans exposer quelqu’un."
+  },
+  {
+    "id": "adulte_action_006",
+    "type": "action",
+    "category": "adult",
+    "text": "Fais une démonstration de regard de séduction pendant dix secondes."
+  },
+  {
+    "id": "adulte_action_007",
+    "type": "action",
+    "category": "adult",
+    "text": "Décris ton date idéal comme une publicité de luxe."
+  },
+  {
+    "id": "adulte_action_008",
+    "type": "action",
+    "category": "adult",
+    "text": "Laisse le groupe écrire une bio d’application de rencontre fictive pour toi."
+  },
+  {
+    "id": "adulte_action_009",
+    "type": "action",
+    "category": "adult",
+    "text": "Imite ta réaction quand quelqu’un qui te plaît répond enfin."
+  },
+  {
+    "id": "adulte_action_010",
+    "type": "action",
+    "category": "adult",
+    "text": "Fais une déclaration romantique à la personne la moins adaptée du groupe."
+  },
+  {
+    "id": "adulte_action_011",
+    "type": "action",
+    "category": "adult",
+    "text": "Raconte ton pire rendez-vous en trente secondes chrono."
+  },
+  {
+    "id": "adulte_action_012",
+    "type": "action",
+    "category": "adult",
+    "text": "Fais semblant de refuser une demande en mariage de manière beaucoup trop dramatique."
+  },
+  {
+    "id": "adulte_action_013",
+    "type": "action",
+    "category": "adult",
+    "text": "Choisis deux personnes du groupe et invente le synopsis de leur comédie romantique."
+  },
+  {
+    "id": "adulte_action_014",
+    "type": "action",
+    "category": "adult",
+    "text": "Fais un toast à tes anciennes mauvaises décisions amoureuses."
+  },
+  {
+    "id": "adulte_action_015",
+    "type": "action",
+    "category": "adult",
+    "text": "Laisse une personne choisir une phrase de drague que tu dois lire avec sérieux."
+  },
+  {
+    "id": "adulte_action_016",
+    "type": "action",
+    "category": "adult",
+    "text": "Fais une imitation d’une personne trop jalouse."
+  },
+  {
+    "id": "adulte_action_017",
+    "type": "action",
+    "category": "adult",
+    "text": "Décris ton type idéal sans citer aucune caractéristique physique."
+  },
+  {
+    "id": "adulte_action_018",
+    "type": "action",
+    "category": "adult",
+    "text": "Fais un mini discours expliquant pourquoi tu serais un excellent date."
+  },
+  {
+    "id": "adulte_action_019",
+    "type": "action",
+    "category": "adult",
+    "text": "Rédige oralement le message parfait pour reprendre contact avec un ex imaginaire."
+  },
+  {
+    "id": "adulte_action_020",
+    "type": "action",
+    "category": "adult",
+    "text": "Joue une scène où tu découvres que ton date a menti sur sa taille."
+  },
+  {
+    "id": "adulte_action_021",
+    "type": "action",
+    "category": "adult",
+    "text": "Fais une minute de compliments à une personne choisie au hasard."
+  },
+  {
+    "id": "adulte_action_022",
+    "type": "action",
+    "category": "adult",
+    "text": "Choisis une chanson qui résumerait ta vie sentimentale et chante une ligne."
+  },
+  {
+    "id": "adulte_action_023",
+    "type": "action",
+    "category": "adult",
+    "text": "Imite la façon dont tu racontes à tes amis qu’un rendez-vous s’est très mal passé."
+  },
+  {
+    "id": "adulte_action_024",
+    "type": "action",
+    "category": "adult",
+    "text": "Fais une fausse annonce de célibat officielle devant le groupe."
+  },
+  {
+    "id": "adulte_action_025",
+    "type": "action",
+    "category": "adult",
+    "text": "Donne à chaque personne un titre de film correspondant à sa vie amoureuse imaginaire."
+  },
+  {
+    "id": "adulte_action_026",
+    "type": "action",
+    "category": "adult",
+    "text": "Fais semblant d’être coach en séduction et donne un conseil volontairement absurde."
+  },
+  {
+    "id": "adulte_action_027",
+    "type": "action",
+    "category": "adult",
+    "text": "Laisse le groupe choisir ton nom de profil de rencontre fictif."
+  },
+  {
+    "id": "adulte_action_028",
+    "type": "action",
+    "category": "adult",
+    "text": "Joue une scène de rupture avec la personne de ton choix en utilisant uniquement des titres de chansons."
+  },
+  {
+    "id": "adulte_action_029",
+    "type": "action",
+    "category": "adult",
+    "text": "Fais une pose de photo de profil que tu n’oserais jamais publier."
+  },
+  {
+    "id": "adulte_action_030",
+    "type": "action",
+    "category": "adult",
+    "text": "Invente une rumeur romantique sur toi que personne ne croirait."
+  }
+]

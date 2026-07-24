@@ -1,0 +1,497 @@
+[
+  {
+    "id": "jamais_001",
+    "text": "Je n’ai jamais menti pour éviter une sortie.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_002",
+    "text": "Je n’ai jamais envoyé un message à la mauvaise personne.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_003",
+    "text": "Je n’ai jamais fait semblant de connaître une chanson.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_004",
+    "text": "Je n’ai jamais espionné le profil de quelqu’un pendant plus d’une heure.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_005",
+    "text": "Je n’ai jamais regardé une série sans la personne avec qui je devais la regarder.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_006",
+    "text": "Je n’ai jamais inventé une excuse pour ne pas répondre au téléphone.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_007",
+    "text": "Je n’ai jamais ri dans un moment où il ne fallait vraiment pas.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_008",
+    "text": "Je n’ai jamais dormi pendant un cours ou une réunion.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_009",
+    "text": "Je n’ai jamais oublié l’anniversaire d’une personne importante.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_010",
+    "text": "Je n’ai jamais prétendu être malade pour rester chez moi.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_011",
+    "text": "Je n’ai jamais cassé quelque chose puis accusé quelqu’un d’autre.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_012",
+    "text": "Je n’ai jamais chanté devant un miroir comme si j’étais en concert.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_013",
+    "text": "Je n’ai jamais commandé à manger alors qu’il y avait déjà de quoi cuisiner.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_014",
+    "text": "Je n’ai jamais relu une conversation entière pour tout analyser.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_015",
+    "text": "Je n’ai jamais supprimé une publication parce qu’elle n’avait pas assez de likes.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_016",
+    "text": "Je n’ai jamais porté un vêtement plusieurs jours de suite sans l’avouer.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_017",
+    "text": "Je n’ai jamais fait une capture d’écran d’une conversation pour l’envoyer à quelqu’un.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_018",
+    "text": "Je n’ai jamais oublié pourquoi j’étais entré(e) dans une pièce.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_019",
+    "text": "Je n’ai jamais prétendu avoir compris une blague.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_020",
+    "text": "Je n’ai jamais mangé quelque chose tombé par terre.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_021",
+    "text": "Je n’ai jamais dansé seul(e) dans ma chambre.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_022",
+    "text": "Je n’ai jamais regretté une coupe de cheveux immédiatement.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_023",
+    "text": "Je n’ai jamais répondu “je suis en route” alors que je n’étais pas prêt(e).",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_024",
+    "text": "Je n’ai jamais inventé une histoire pour paraître plus intéressant(e).",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_025",
+    "text": "Je n’ai jamais regardé le téléphone de quelqu’un par-dessus son épaule.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_026",
+    "text": "Je n’ai jamais été bloqué(e) sur un réseau social.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_027",
+    "text": "Je n’ai jamais oublié où j’avais garé ma voiture.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_028",
+    "text": "Je n’ai jamais pleuré devant un dessin animé.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_029",
+    "text": "Je n’ai jamais fait semblant de dormir pour éviter une conversation.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_030",
+    "text": "Je n’ai jamais envoyé un vocal de plus de cinq minutes.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_031",
+    "text": "Je n’ai jamais raconté un secret qu’on m’avait confié.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_032",
+    "text": "Je n’ai jamais regretté une publication dès le lendemain.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_033",
+    "text": "Je n’ai jamais vérifié plusieurs fois si une porte était fermée.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_034",
+    "text": "Je n’ai jamais pris le dernier morceau sans demander.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_035",
+    "text": "Je n’ai jamais fait semblant de ne pas voir quelqu’un dans la rue.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_036",
+    "text": "Je n’ai jamais mis une alarme puis l’ai repoussée plus de cinq fois.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_037",
+    "text": "Je n’ai jamais menti sur mon âge.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_038",
+    "text": "Je n’ai jamais regardé la fin d’un film avant le début.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_039",
+    "text": "Je n’ai jamais parlé à un animal comme s’il pouvait répondre.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_040",
+    "text": "Je n’ai jamais perdu quelque chose que j’avais dans la main.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_041",
+    "text": "Je n’ai jamais fait semblant d’être occupé(e) pour éviter quelqu’un.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_042",
+    "text": "Je n’ai jamais mangé directement dans le réfrigérateur.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_043",
+    "text": "Je n’ai jamais commencé un régime un lundi et abandonné le mardi.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_044",
+    "text": "Je n’ai jamais cherché mon propre nom sur Internet.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_045",
+    "text": "Je n’ai jamais gardé un cadeau que je voulais offrir.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_046",
+    "text": "Je n’ai jamais été jaloux(se) d’un animal de compagnie.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_047",
+    "text": "Je n’ai jamais fait semblant d’aimer un plat par politesse.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_048",
+    "text": "Je n’ai jamais pris une photo juste pour prouver que j’étais quelque part.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_049",
+    "text": "Je n’ai jamais raconté deux versions différentes de la même histoire.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_050",
+    "text": "Je n’ai jamais oublié de couper mon micro en visioconférence.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_051",
+    "text": "Je n’ai jamais fait semblant de lire un livre que je n’avais pas ouvert.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_052",
+    "text": "Je n’ai jamais copié les réponses de quelqu’un.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_053",
+    "text": "Je n’ai jamais répondu à un message plusieurs jours plus tard comme si de rien n’était.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_054",
+    "text": "Je n’ai jamais eu peur après avoir regardé un film d’horreur.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_055",
+    "text": "Je n’ai jamais mangé un repas uniquement composé de snacks.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_056",
+    "text": "Je n’ai jamais prétendu que mon téléphone n’avait plus de batterie.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_057",
+    "text": "Je n’ai jamais fait une dépense impulsive que j’ai cachée.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_058",
+    "text": "Je n’ai jamais ri de ma propre blague avant de la terminer.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_059",
+    "text": "Je n’ai jamais appelé quelqu’un par le mauvais prénom.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_060",
+    "text": "Je n’ai jamais fait croire que j’avais déjà vu un film pour éviter les spoilers.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_061",
+    "text": "Je n’ai jamais oublié un mot de passe juste après l’avoir changé.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_062",
+    "text": "Je n’ai jamais regardé une notification sans répondre volontairement.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_063",
+    "text": "Je n’ai jamais volé de la nourriture dans l’assiette de quelqu’un.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_064",
+    "text": "Je n’ai jamais fait demi-tour parce que j’avais oublié quelque chose.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_065",
+    "text": "Je n’ai jamais menti sur l’heure à laquelle je m’étais couché(e).",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_066",
+    "text": "Je n’ai jamais créé un faux scénario dans ma tête avant une conversation.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_067",
+    "text": "Je n’ai jamais parlé tout seul à voix haute.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_068",
+    "text": "Je n’ai jamais fait une liste puis oublié de la regarder.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_069",
+    "text": "Je n’ai jamais jugé quelqu’un sur sa playlist.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_070",
+    "text": "Je n’ai jamais gardé l’emballage d’un objet “au cas où”.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_071",
+    "text": "Je n’ai jamais prétendu que je n’avais pas vu un appel manqué.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_072",
+    "text": "Je n’ai jamais remis un aliment périmé dans le frigo pour ne pas le jeter.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_073",
+    "text": "Je n’ai jamais passé plus de vingt minutes à choisir un film sans rien regarder.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_074",
+    "text": "Je n’ai jamais inventé un surnom secret pour quelqu’un.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_075",
+    "text": "Je n’ai jamais fait semblant d’être plus courageux(se) que je ne l’étais.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_076",
+    "text": "Je n’ai jamais envoyé un message puis attendu devant l’écran la réponse.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_077",
+    "text": "Je n’ai jamais appris une chorégraphie vue sur Internet.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_078",
+    "text": "Je n’ai jamais utilisé le compte de streaming de quelqu’un d’autre.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_079",
+    "text": "Je n’ai jamais accusé la connexion Internet pour une erreur de ma part.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_080",
+    "text": "Je n’ai jamais mangé le dessert avant le repas.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_081",
+    "text": "Je n’ai jamais promis “j’arrive dans cinq minutes” en sachant que c’était faux.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_082",
+    "text": "Je n’ai jamais fait semblant de chercher quelque chose pour éviter d’aider.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_083",
+    "text": "Je n’ai jamais eu une conversation entière avec quelqu’un sans retenir son prénom.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_084",
+    "text": "Je n’ai jamais regardé les avis avant de commander exactement la même chose qu’avant.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_085",
+    "text": "Je n’ai jamais répété une blague en prétendant qu’elle venait de moi.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_086",
+    "text": "Je n’ai jamais fait semblant de ne pas être fatigué(e) en soirée.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_087",
+    "text": "Je n’ai jamais perdu à un jeu puis contesté les règles.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_088",
+    "text": "Je n’ai jamais changé d’avis uniquement parce que tout le monde pensait l’inverse.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_089",
+    "text": "Je n’ai jamais laissé un message en “vu” pour faire durer le suspense.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_090",
+    "text": "Je n’ai jamais pris un raccourci qui m’a fait perdre du temps.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_091",
+    "text": "Je n’ai jamais regardé un tutoriel pour quelque chose de très simple.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_092",
+    "text": "Je n’ai jamais fait une sieste beaucoup plus longue que prévu.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_093",
+    "text": "Je n’ai jamais caché quelque chose dans mon panier de courses.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_094",
+    "text": "Je n’ai jamais raconté une anecdote en exagérant énormément.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_095",
+    "text": "Je n’ai jamais voulu quitter une soirée puis finalement été le dernier à partir.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_096",
+    "text": "Je n’ai jamais oublié un prénom juste après une présentation.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_097",
+    "text": "Je n’ai jamais eu un fou rire à cause d’un simple regard.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_098",
+    "text": "Je n’ai jamais enregistré un contact sous un faux nom.",
+    "category": "classic"
+  },
+  {
+    "id": "jamais_099",
+    "text": "Je n’ai jamais fait croire que j’aimais le sport pour impressionner quelqu’un.",
+    "category": "classic"
+  }
+]

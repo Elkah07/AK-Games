@@ -28,6 +28,10 @@
   const localStartWhoUsGame = startWhoUsGame;
   const localStartLaughDuel = startLaughDuel;
   const localStartBestLiarGame = startBestLiarGame;
+  const localRenderActionTruthSetup = renderActionTruthSetup;
+  const localStartActionTruthGame = startActionTruthGame;
+  const localRenderAmbiancePollSetup = renderAmbiancePollSetup;
+  const localStartAmbiancePollGame = startAmbiancePollGame;
 
   function isMultiplayer() {
     return state.mode === "multi-host" || state.mode === "multi-guest";
@@ -144,12 +148,19 @@
           return;
         }
 
+        if (["action-truth", "never-have-i-ever", "would-you-rather"].includes(gameState?.type)) {
+          state.multiView = "ambiance-game";
+          syncMultiAmbianceGame(room);
+          return;
+        }
+
         if (
           state.mode === "multi-guest"
           || state.multiView === "lobby"
           || state.multiView === "who-us-game"
           || state.multiView === "best-liar-game"
           || state.multiView === "laugh-duel-game"
+          || state.multiView === "ambiance-game"
         ) {
           clearMultiLobbyTimer();
           state.multiView = "lobby";
@@ -157,6 +168,8 @@
           state.quiDeNous = null;
           state.bestLiar = null;
           state.laughDuel = null;
+          state.actionTruth = null;
+          state.ambiancePoll = null;
           renderLobby();
         }
       },
@@ -542,7 +555,13 @@
     const localReadyGames = new Set([
       "Qui de nous ?",
       "Le premier qui rit a perdu",
-      "Qui ment le mieux ?"
+      "Qui ment le mieux ?",
+      "Action ou Vérité",
+      "Action ou Vérité +18",
+      "Je n’ai jamais",
+      "Je n’ai jamais +18",
+      "Tu préfères",
+      "Tu préfères +18"
     ]);
 
     screen.innerHTML = `
@@ -611,6 +630,30 @@
           pushScreen("games");
           resetBestLiarState();
           renderBestLiarSetup();
+          return;
+        }
+
+        if (game === "Action ou Vérité" || game === "Action ou Vérité +18") {
+          state.multiView = "action-truth-setup";
+          pushScreen("games");
+          resetActionTruthState(game.includes("+18"));
+          renderActionTruthSetup();
+          return;
+        }
+
+        if (game === "Je n’ai jamais" || game === "Je n’ai jamais +18") {
+          state.multiView = "ambiance-poll-setup";
+          pushScreen("games");
+          resetAmbiancePollState("never", game.includes("+18"));
+          renderAmbiancePollSetup();
+          return;
+        }
+
+        if (game === "Tu préfères" || game === "Tu préfères +18") {
+          state.multiView = "ambiance-poll-setup";
+          pushScreen("games");
+          resetAmbiancePollState("would", game.includes("+18"));
+          renderAmbiancePollSetup();
           return;
         }
 
@@ -1197,7 +1240,10 @@
     const presentations = {
       "who-us": { name: "Qui de nous ?", icon: "👥" },
       "best-liar": { name: "Qui ment le mieux ?", icon: "🤥" },
-      "laugh-duel": { name: "Le premier qui rit a perdu", icon: "😂" }
+      "laugh-duel": { name: "Le premier qui rit a perdu", icon: "😂" },
+      "action-truth": { name: "Action ou Vérité", icon: "🎭" },
+      "never-have-i-ever": { name: "Je n’ai jamais", icon: "🙋" },
+      "would-you-rather": { name: "Tu préfères", icon: "⚖️" }
     };
 
     return presentations[type] || { name: "Jeu AK'Games", icon: "🎮" };
@@ -1265,6 +1311,27 @@
           player2Id: gameState.player2Id,
           mode: gameState.mode || "sudden",
           categories: [...(gameState.settings?.categories || ["nulles", "absurdes", "devinettes", "observation"])],
+          includeAdult: Boolean(gameState.settings?.includeAdult)
+        }
+      };
+    }
+
+    if (gameState.type === "action-truth") {
+      return {
+        type: "action-truth",
+        config: {
+          roundCount: Number(gameState.settings?.roundCount || gameState.prompts?.length || 12),
+          mode: gameState.settings?.mode || "mix",
+          includeAdult: Boolean(gameState.settings?.includeAdult)
+        }
+      };
+    }
+
+    if (gameState.type === "never-have-i-ever" || gameState.type === "would-you-rather") {
+      return {
+        type: gameState.type,
+        config: {
+          roundCount: Number(gameState.settings?.roundCount || gameState.items?.length || 10),
           includeAdult: Boolean(gameState.settings?.includeAdult)
         }
       };
@@ -1357,6 +1424,8 @@
       result = buildBestLiarSessionSummary(gameState);
     } else if (gameState.type === "laugh-duel") {
       result = buildLaughSessionSummary(gameState);
+    } else if (["action-truth", "never-have-i-ever", "would-you-rather"].includes(gameState.type)) {
+      result = buildAmbianceSessionSummary(gameState);
     } else {
       return null;
     }
@@ -1548,6 +1617,41 @@
       return;
     }
 
+    if (descriptor.type === "action-truth") {
+      const config = descriptor.config || {};
+      state.actionTruth = {
+        roundCount: Number(config.roundCount || 12),
+        mode: config.mode || "mix",
+        includeAdult: Boolean(state.adult && config.includeAdult),
+        forceAdult: false,
+        prompts: [],
+        currentIndex: 0,
+        scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+        results: []
+      };
+      await startActionTruthGame();
+      return;
+    }
+
+    if (descriptor.type === "never-have-i-ever" || descriptor.type === "would-you-rather") {
+      const config = descriptor.config || {};
+      const type = descriptor.type === "never-have-i-ever" ? "never" : "would";
+      state.ambiancePoll = {
+        type,
+        roundCount: Number(config.roundCount || 10),
+        includeAdult: Boolean(state.adult && config.includeAdult),
+        forceAdult: false,
+        items: [],
+        currentIndex: 0,
+        currentVoterIndex: 0,
+        votes: {},
+        scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+        rounds: []
+      };
+      await startAmbiancePollGame();
+      return;
+    }
+
     if (descriptor.type === "laugh-duel") {
       const config = descriptor.config || {};
       const availableIds = state.players.map(player => player.id);
@@ -1579,7 +1683,7 @@
   async function launchRandomMultiplayerGame() {
     if (!state.isHost || state.players.length < 2) return;
 
-    const availableTypes = ["who-us", "laugh-duel"];
+    const availableTypes = ["who-us", "laugh-duel", "action-truth", "never-have-i-ever", "would-you-rather"];
     if (state.players.length >= 3) {
       availableTypes.push("best-liar");
     }
@@ -1612,6 +1716,21 @@
           includeAdult: false
         }
       });
+      return;
+    }
+
+    if (selectedType === "action-truth") {
+      await launchReplayDescriptor({ type: "action-truth", config: { roundCount: 12, mode: "mix", includeAdult: false } });
+      return;
+    }
+
+    if (selectedType === "never-have-i-ever") {
+      await launchReplayDescriptor({ type: "never-have-i-ever", config: { roundCount: 10, includeAdult: false } });
+      return;
+    }
+
+    if (selectedType === "would-you-rather") {
+      await launchReplayDescriptor({ type: "would-you-rather", config: { roundCount: 10, includeAdult: false } });
       return;
     }
 
@@ -2778,6 +2897,257 @@
       ${renderPostGameContinuation(gameState)}
     `;
 
+    ensureEveningResult(gameState);
+    bindPostGameContinuation(gameState);
+  }
+
+
+  /* =========================================================
+     AK'GAMES V0.7 — PACK AMBIANCE MULTIJOUEUR
+     ========================================================= */
+
+  function buildAmbianceSessionSummary(gameState) {
+    const rawScores = gameState.scores || {};
+    const values = [...new Set(
+      state.players.map(player => Number(rawScores[player.id] || 0)).filter(value => value > 0)
+    )].sort((a, b) => b - a);
+    const points = {};
+    [3, 2, 1].forEach((amount, index) => {
+      const score = values[index];
+      if (!score) return;
+      addEveningPoints(points, state.players.filter(player => Number(rawScores[player.id] || 0) === score).map(player => player.id), amount);
+    });
+    const top = values[0] || 0;
+    const winnerIds = top > 0 ? state.players.filter(player => Number(rawScores[player.id] || 0) === top).map(player => player.id) : [];
+    const names = winnerIds.map(id => playerById(id)?.name).filter(Boolean);
+    return {
+      points,
+      winnerIds,
+      detail: names.length ? `${names.join(" et ")} ${names.length > 1 ? "terminent en tête" : "termine en tête"}` : "Partie ambiance terminée"
+    };
+  }
+
+  renderActionTruthSetup = function () {
+    if (!isMultiplayer()) return localRenderActionTruthSetup();
+    if (!state.actionTruth) resetActionTruthState(false);
+    const game = state.actionTruth;
+    title.textContent = "Action ou Vérité";
+    setBackVisible(true);
+    screen.innerHTML = `
+      <section class="game-cover game-cover-action"><span class="game-cover-icon">🎭</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>Action ou Vérité</h2><p>Chaque défi apparaît sur tous les écrans. La personne désignée décide si elle relève le défi.</p></div></section>
+      <section class="card setup-card-v07">
+        <div class="form-group"><label for="multiActionRounds">Nombre de tours</label><select id="multiActionRounds" class="text-input">${[8,12,16,20].map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} tours</option>`).join("")}</select></div>
+        <div class="form-group top-gap"><label for="multiActionMode">Contenu</label><select id="multiActionMode" class="text-input"><option value="mix" ${game.mode === "mix" ? "selected" : ""}>Actions + Vérités</option><option value="action" ${game.mode === "action" ? "selected" : ""}>Actions uniquement</option><option value="truth" ${game.mode === "truth" ? "selected" : ""}>Vérités uniquement</option></select></div>
+      </section>
+      ${state.adult ? `<label class="option-card premium-toggle"><input id="multiActionAdult" type="checkbox" ${game.includeAdult ? "checked" : ""} ${game.forceAdult ? "disabled" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Plus osé, toujours jouable en groupe.</span></span></label>` : ""}
+      ${state.isHost ? `<button id="startMultiAction" class="primary-btn full">Lancer sur tous les téléphones</button>` : renderMultiWaiting("En attente de l’hôte", "L’hôte règle la partie puis la lancera.", "👑")}
+    `;
+    document.querySelector("#multiActionRounds")?.addEventListener("change", event => game.roundCount = Number(event.target.value));
+    document.querySelector("#multiActionMode")?.addEventListener("change", event => game.mode = event.target.value);
+    document.querySelector("#multiActionAdult")?.addEventListener("change", event => game.includeAdult = event.target.checked);
+    document.querySelector("#startMultiAction")?.addEventListener("click", startActionTruthGame);
+  };
+
+  startActionTruthGame = async function () {
+    if (!isMultiplayer()) return localStartActionTruthGame();
+    if (!state.isHost) return;
+    const game = state.actionTruth;
+    screen.innerHTML = `<div class="notice">Synchronisation des cartes…</div>`;
+    try {
+      let pool = await loadJsonFile("data/action-verite.json", "Impossible de charger les cartes.");
+      if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/action-verite-adulte.json", "Impossible de charger les cartes adultes."));
+      if (game.mode !== "mix") pool = pool.filter(item => item.type === game.mode);
+      const prompts = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+      await AKFirebase.setGame(state.roomCode, { state: {
+        type: "action-truth", phase: "prompt", sessionGameId: createSessionGameId("action-truth"), prompts,
+        currentIndex: 0, currentPlayerId: state.players[0]?.id, scores, results: {},
+        settings: { roundCount: prompts.length, mode: game.mode, includeAdult: Boolean(game.includeAdult) },
+        startedAt: Date.now(), updatedAt: Date.now()
+      }});
+      state.multiView = "ambiance-game";
+    } catch (error) {
+      console.error(error); alert(error.message || "Impossible de lancer la partie."); renderActionTruthSetup();
+    }
+  };
+
+  renderAmbiancePollSetup = function () {
+    if (!isMultiplayer()) return localRenderAmbiancePollSetup();
+    const game = state.ambiancePoll;
+    const meta = pollGameMeta(game.type);
+    title.textContent = meta.title;
+    setBackVisible(true);
+    screen.innerHTML = `
+      <section class="game-cover ${game.type === "never" ? "game-cover-never" : "game-cover-would"}"><span class="game-cover-icon">${meta.icon}</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>${meta.title}</h2><p>Tout le monde vote en même temps sur son téléphone, puis les réponses sont révélées.</p></div></section>
+      <section class="card setup-card-v07"><div class="form-group"><label for="multiPollRounds">Nombre de questions</label><select id="multiPollRounds" class="text-input">${[8,10,15,20].map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} questions</option>`).join("")}</select></div></section>
+      ${state.adult ? `<label class="option-card premium-toggle"><input id="multiPollAdult" type="checkbox" ${game.includeAdult ? "checked" : ""} ${game.forceAdult ? "disabled" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Des choix et révélations plus épicés.</span></span></label>` : ""}
+      ${state.isHost ? `<button id="startMultiPoll" class="primary-btn full">Lancer sur tous les téléphones</button>` : renderMultiWaiting("En attente de l’hôte", "La partie commencera automatiquement.", "👑")}
+    `;
+    document.querySelector("#multiPollRounds")?.addEventListener("change", event => game.roundCount = Number(event.target.value));
+    document.querySelector("#multiPollAdult")?.addEventListener("change", event => game.includeAdult = event.target.checked);
+    document.querySelector("#startMultiPoll")?.addEventListener("click", startAmbiancePollGame);
+  };
+
+  startAmbiancePollGame = async function () {
+    if (!isMultiplayer()) return localStartAmbiancePollGame();
+    if (!state.isHost) return;
+    const game = state.ambiancePoll;
+    const meta = pollGameMeta(game.type);
+    screen.innerHTML = `<div class="notice">Synchronisation des questions…</div>`;
+    try {
+      let pool = await loadJsonFile(meta.classic, "Impossible de charger les questions.");
+      if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile(meta.adult, "Impossible de charger les questions adultes."));
+      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+      const type = game.type === "never" ? "never-have-i-ever" : "would-you-rather";
+      await AKFirebase.setGame(state.roomCode, { state: {
+        type, phase: "voting", sessionGameId: createSessionGameId(type), items, currentIndex: 0,
+        scores, rounds: {}, currentResult: null,
+        settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult) },
+        startedAt: Date.now(), updatedAt: Date.now()
+      }, votes: {} });
+      state.multiView = "ambiance-game";
+    } catch (error) {
+      console.error(error); alert(error.message || "Impossible de lancer la partie."); renderAmbiancePollSetup();
+    }
+  };
+
+  function syncMultiAmbianceGame(room) {
+    const gameState = room.game?.state;
+    if (!gameState) return;
+    if (gameState.phase !== "final") clearMultiLobbyTimer();
+
+    if (gameState.type === "action-truth") {
+      processMultiActionTruth(room);
+      const action = room.game?.actions?.[gameState.currentPlayerId] || null;
+      const renderKey = [gameState.type, gameState.phase, gameState.currentIndex, gameState.currentPlayerId, action?.id || "", JSON.stringify(gameState.scores || {})].join("|");
+      if (state.multiRenderKey === renderKey) return;
+      state.multiRenderKey = renderKey;
+      if (gameState.phase === "final") renderMultiAmbianceFinal(gameState);
+      else renderMultiActionTruthRound(gameState, action);
+      return;
+    }
+
+    const votes = room.game?.votes || {};
+    processMultiPollVotes(gameState, votes);
+    const renderKey = [gameState.type, gameState.phase, gameState.currentIndex, Object.keys(votes).length, votes[state.currentUid] || "", JSON.stringify(gameState.currentResult || {}), JSON.stringify(gameState.scores || {})].join("|");
+    if (state.multiRenderKey === renderKey) return;
+    state.multiRenderKey = renderKey;
+    if (gameState.phase === "final") renderMultiAmbianceFinal(gameState);
+    else if (gameState.phase === "results") renderMultiPollResults(gameState);
+    else renderMultiPollVote(gameState, votes);
+  }
+
+  function processMultiActionTruth(room) {
+    if (!state.isHost) return;
+    const gameState = room.game?.state;
+    const action = room.game?.actions?.[gameState.currentPlayerId];
+    if (!action?.id || state.multiProcessingActionId === action.id) return;
+    state.multiProcessingActionId = action.id;
+    const completed = action.type === "ambiance-completed";
+    const scores = { ...(gameState.scores || {}) };
+    if (completed) scores[gameState.currentPlayerId] = Number(scores[gameState.currentPlayerId] || 0) + 1;
+    const nextIndex = Number(gameState.currentIndex || 0) + 1;
+    const finished = nextIndex >= (gameState.prompts || []).length;
+    const nextPlayer = state.players[nextIndex % state.players.length];
+    AKFirebase.updateGame(state.roomCode, {
+      "state/phase": finished ? "final" : "prompt",
+      "state/currentIndex": finished ? gameState.currentIndex : nextIndex,
+      "state/currentPlayerId": finished ? gameState.currentPlayerId : nextPlayer?.id,
+      "state/scores": scores,
+      [`state/results/${gameState.currentIndex}`]: { playerId: gameState.currentPlayerId, completed, promptId: gameState.prompts?.[gameState.currentIndex]?.id || "" },
+      "state/finishedAt": finished ? Date.now() : null,
+      "state/updatedAt": Date.now(), actions: null
+    }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
+  }
+
+  function renderMultiActionTruthRound(gameState, pendingAction) {
+    const player = playerById(gameState.currentPlayerId);
+    const prompt = gameState.prompts?.[gameState.currentIndex];
+    const isCurrent = state.currentUid === gameState.currentPlayerId;
+    const isAction = prompt?.type === "action";
+    title.textContent = isAction ? "Action" : "Vérité";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.prompts?.length || 1, "Tour")}
+      <section class="prompt-stage ${isAction ? "prompt-action" : "prompt-truth"}"><div class="prompt-player"><span>${avatarById(player?.avatarId).emoji}</span><div><small>C’EST AU TOUR DE</small><strong>${escapeHtml(player?.name || "Joueur")}</strong></div></div><span class="prompt-type-chip">${isAction ? "⚡ ACTION" : "◉ VÉRITÉ"}</span><h2>${escapeHtml(prompt?.text || "Prépare-toi…")}</h2></section>
+      ${isCurrent ? (pendingAction ? renderMultiWaiting("Réponse envoyée", "Le prochain tour se prépare…", "📡") : `<section class="decision-grid"><button class="primary-btn" data-ambiance-action="ambiance-completed">✓ C’est fait</button><button class="secondary-btn" data-ambiance-action="ambiance-skipped">Passer</button></section>`) : renderMultiWaiting(`C’est à ${player?.name || "la personne désignée"}`, "Regarde son courage en direct. La partie avancera automatiquement.", "👀")}
+      ${state.alcohol ? `<div class="alcohol-callout">🍻 Une carte passée = une petite gorgée.</div>` : ""}
+    `;
+    document.querySelectorAll("[data-ambiance-action]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-ambiance-action]").forEach(item => item.disabled = true);
+      try { await sendMultiAction(button.dataset.ambianceAction); } catch (error) { console.error(error); alert("Impossible d’envoyer la réponse."); }
+    }));
+  }
+
+  function processMultiPollVotes(gameState, votes) {
+    if (!state.isHost || gameState.phase !== "voting" || Object.keys(votes).length < state.players.length) return;
+    const processingId = `${gameState.type}_${gameState.currentIndex}_${Object.keys(votes).length}`;
+    if (state.multiProcessingActionId === processingId) return;
+    state.multiProcessingActionId = processingId;
+    const item = gameState.items?.[gameState.currentIndex];
+    const labels = gameState.type === "never-have-i-ever" ? ["never", "done"] : ["A", "B"];
+    const values = Object.values(votes);
+    const counts = Object.fromEntries(labels.map(label => [label, values.filter(value => value === label).length]));
+    const minority = counts[labels[0]] === counts[labels[1]] ? null : (counts[labels[0]] < counts[labels[1]] ? labels[0] : labels[1]);
+    const minorityIds = minority ? Object.entries(votes).filter(([, value]) => value === minority).map(([id]) => id) : [];
+    const scores = { ...(gameState.scores || {}) };
+    minorityIds.forEach(id => scores[id] = Number(scores[id] || 0) + 1);
+    AKFirebase.updateGame(state.roomCode, {
+      "state/phase": "results", "state/currentResult": { votes, counts, minority, minorityIds, itemId: item?.id || "" },
+      "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: { votes, counts, minorityIds }, "state/updatedAt": Date.now()
+    }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
+  }
+
+  function renderMultiPollVote(gameState, votes) {
+    const item = gameState.items?.[gameState.currentIndex];
+    const isNever = gameState.type === "never-have-i-ever";
+    const ownVote = votes[state.currentUid];
+    title.textContent = isNever ? "Je n’ai jamais" : "Tu préfères";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Question")}
+      ${ownVote ? renderMultiWaiting("Vote enregistré", `${Object.keys(votes).length}/${state.players.length} réponses reçues.`, "🔒") : isNever ? `<section class="poll-question-stage poll-never-stage"><span class="prompt-type-chip">🙋 JE N’AI JAMAIS</span><h2>${escapeHtml((item?.text || "").replace(/^Je n[’']ai jamais\s*/i, ""))}</h2><p>Ta réponse reste secrète jusqu’au résultat.</p></section><section class="poll-choice-grid"><button class="poll-choice poll-choice-a" data-multi-poll="never"><strong>Jamais</strong><span>Innocence totale.</span></button><button class="poll-choice poll-choice-b" data-multi-poll="done"><strong>Déjà</strong><span>J’assume presque.</span></button></section>` : `<section class="poll-question-stage poll-would-stage"><span class="prompt-type-chip">⚖️ TU PRÉFÈRES</span><h2>Choisis ton camp</h2><p>Impossible de répondre “ça dépend”.</p></section><section class="poll-choice-grid"><button class="poll-choice poll-choice-a" data-multi-poll="A"><small>OPTION A</small><strong>${escapeHtml(item?.optionA || "")}</strong></button><button class="poll-choice poll-choice-b" data-multi-poll="B"><small>OPTION B</small><strong>${escapeHtml(item?.optionB || "")}</strong></button></section>`}
+      ${renderPlayerSubmissionStatus(votes, "A voté", "Réfléchit…")}
+    `;
+    document.querySelectorAll("[data-multi-poll]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-multi-poll]").forEach(itemButton => itemButton.disabled = true);
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "votes", button.dataset.multiPoll); } catch (error) { console.error(error); alert("Le vote n’a pas pu être envoyé."); }
+    }));
+  }
+
+  function renderMultiPollResults(gameState) {
+    const item = gameState.items?.[gameState.currentIndex];
+    const result = gameState.currentResult || {};
+    const isNever = gameState.type === "never-have-i-ever";
+    const optionLabel = value => isNever ? (value === "never" ? "Jamais" : "Déjà") : (value === "A" ? item?.optionA : item?.optionB);
+    title.textContent = "Le groupe a parlé";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="reveal-stage reveal-v07"><span class="game-cover-icon">${isNever ? "🙋" : "⚖️"}</span><h2>${isNever ? escapeHtml(item?.text || "") : "Le verdict est tombé"}</h2>${!isNever ? `<div class="reveal-dilemma"><span>${escapeHtml(item?.optionA || "")}</span><b>VS</b><span>${escapeHtml(item?.optionB || "")}</span></div>` : ""}</section>
+      <section class="poll-results-grid">${state.players.map(player => `<article class="poll-result-person"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(optionLabel(result.votes?.[player.id]))}</small>${result.minorityIds?.includes(player.id) ? `<em>+1 pt minorité</em>` : ""}</article>`).join("")}</section>
+      ${state.alcohol && isNever ? `<div class="alcohol-callout">🍻 Les personnes qui ont répondu “Déjà” prennent une petite gorgée.</div>` : ""}
+      ${state.isHost ? `<button id="nextMultiPoll" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Question suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La suite apparaîtra automatiquement.", "👑")}
+    `;
+    document.querySelector("#nextMultiPoll")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      const next = Number(gameState.currentIndex || 0) + 1;
+      const finished = next >= (gameState.items || []).length;
+      try { await AKFirebase.updateGame(state.roomCode, { "state/phase": finished ? "final" : "voting", "state/currentIndex": finished ? gameState.currentIndex : next, "state/currentResult": null, "state/finishedAt": finished ? Date.now() : null, "state/updatedAt": Date.now(), votes: null }); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; alert("Impossible de passer à la suite."); }
+    });
+  }
+
+  function renderMultiAmbianceFinal(gameState) {
+    const ranking = [...state.players].sort((a, b) => Number(gameState.scores?.[b.id] || 0) - Number(gameState.scores?.[a.id] || 0));
+    const presentation = gamePresentation(gameState.type);
+    title.textContent = "Classement final";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="winner-stage winner-stage-v07"><div class="winner-crown">${presentation.icon}🏆</div><h2>La manche est terminée</h2><p>Le score rejoint maintenant le classement général de la soirée.</p></section>
+      <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(gameState.scores?.[player.id] || 0)} pts</span></div>`).join("")}</section>
+      ${renderPostGameContinuation(gameState)}
+    `;
     ensureEveningResult(gameState);
     bindPostGameContinuation(gameState);
   }

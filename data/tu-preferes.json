@@ -1,0 +1,614 @@
+[
+  {
+    "id": "prefere_001",
+    "optionA": "Ne plus jamais utiliser les réseaux sociaux",
+    "optionB": "Ne plus jamais regarder de séries",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_002",
+    "optionA": "Toujours arriver trente minutes en avance",
+    "optionB": "Toujours arriver dix minutes en retard",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_003",
+    "optionA": "Pouvoir lire dans les pensées",
+    "optionB": "Pouvoir devenir invisible",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_004",
+    "optionA": "Vivre sans musique",
+    "optionB": "Vivre sans films",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_005",
+    "optionA": "Avoir toujours trop chaud",
+    "optionB": "Avoir toujours trop froid",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_006",
+    "optionA": "Être célèbre mais détesté(e)",
+    "optionB": "Être inconnu(e) mais adoré(e) de tous tes proches",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_007",
+    "optionA": "Ne plus jamais manger sucré",
+    "optionB": "Ne plus jamais manger salé",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_008",
+    "optionA": "Voyager dans le passé",
+    "optionB": "Voyager dans le futur",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_009",
+    "optionA": "Gagner dix millions maintenant",
+    "optionB": "Recevoir mille euros chaque semaine à vie",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_010",
+    "optionA": "Vivre dans une grande ville",
+    "optionB": "Vivre en pleine nature",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_011",
+    "optionA": "Ne plus jamais mentir",
+    "optionB": "Entendre toujours la vérité",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_012",
+    "optionA": "Perdre ton téléphone",
+    "optionB": "Perdre toutes tes photos",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_013",
+    "optionA": "Avoir un bouton pause",
+    "optionB": "Avoir un bouton retour dans la vraie vie",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_014",
+    "optionA": "Pouvoir parler aux animaux",
+    "optionB": "Parler toutes les langues",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_015",
+    "optionA": "Manger le même repas à vie",
+    "optionB": "Ne jamais pouvoir manger deux fois le même repas",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_016",
+    "optionA": "Être toujours chanceux(se)",
+    "optionB": "Être extrêmement intelligent(e)",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_017",
+    "optionA": "Passer un an sans vacances",
+    "optionB": "Passer un an sans week-end",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_018",
+    "optionA": "Être coincé(e) dans un ascenseur",
+    "optionB": "Être coincé(e) dans les embouteillages pendant huit heures",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_019",
+    "optionA": "Toujours dire ce que tu penses",
+    "optionB": "Ne plus pouvoir donner ton avis",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_020",
+    "optionA": "Avoir une mémoire parfaite",
+    "optionB": "Pouvoir oublier n’importe quel souvenir",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_021",
+    "optionA": "Ne plus jamais utiliser de GPS",
+    "optionB": "Ne plus jamais commander en ligne",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_022",
+    "optionA": "Changer de métier chaque année",
+    "optionB": "Garder le même métier toute ta vie",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_023",
+    "optionA": "Être le plus drôle du groupe",
+    "optionB": "Être le plus rassurant du groupe",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_024",
+    "optionA": "Vivre dans ton film préféré",
+    "optionB": "Rencontrer ton personnage préféré",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_025",
+    "optionA": "Ne plus jamais dormir",
+    "optionB": "Dormir douze heures par jour",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_026",
+    "optionA": "Avoir toujours raison",
+    "optionB": "Toujours obtenir ce que tu veux",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_027",
+    "optionA": "Être poursuivi(e) par un canard géant",
+    "optionB": "Être suivi(e) par cent mini-canards",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_028",
+    "optionA": "Perdre le goût",
+    "optionB": "Perdre l’odorat",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_029",
+    "optionA": "Avoir une maison immense mais vide",
+    "optionB": "Un petit appartement toujours rempli d’amis",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_030",
+    "optionA": "Revire une journée parfaite",
+    "optionB": "Effacer une journée catastrophique",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_031",
+    "optionA": "Ne plus jamais prendre l’avion",
+    "optionB": "Ne plus jamais prendre la voiture",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_032",
+    "optionA": "Être excellent(e) en cuisine",
+    "optionB": "Être excellent(e) en bricolage",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_033",
+    "optionA": "Avoir une semaine de quatre jours",
+    "optionB": "Travailler seulement six mois par an",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_034",
+    "optionA": "Connaître la date de ta mort",
+    "optionB": "Connaître la cause de ta mort",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_035",
+    "optionA": "Vivre cent ans en bonne santé",
+    "optionB": "Vivre cinquante ans avec une vie extraordinaire",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_036",
+    "optionA": "Ne plus jamais avoir besoin de charger ton téléphone",
+    "optionB": "Avoir Internet partout gratuitement",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_037",
+    "optionA": "Échanger de corps avec ton meilleur ami pendant une semaine",
+    "optionB": "Échanger de vie avec une célébrité pendant un jour",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_038",
+    "optionA": "Être incapable de chuchoter",
+    "optionB": "Être incapable de crier",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_039",
+    "optionA": "Toujours avoir faim",
+    "optionB": "Toujours avoir sommeil",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_040",
+    "optionA": "Gagner tous les jeux mais être mauvais joueur",
+    "optionB": "Perdre tous les jeux mais faire rire tout le monde",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_041",
+    "optionA": "Avoir un rire très étrange",
+    "optionB": "Avoir une voix très étrange",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_042",
+    "optionA": "Ne plus jamais boire de café",
+    "optionB": "Ne plus jamais manger de chocolat",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_043",
+    "optionA": "Passer une nuit dans une maison hantée",
+    "optionB": "Passer une nuit seul(e) en forêt",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_044",
+    "optionA": "Voir dix minutes dans le futur",
+    "optionB": "Revenir dix minutes dans le passé",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_045",
+    "optionA": "Avoir une garde-robe illimitée",
+    "optionB": "Voyager gratuitement à vie",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_046",
+    "optionA": "Être très riche sans temps libre",
+    "optionB": "Avoir beaucoup de temps mais peu d’argent",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_047",
+    "optionA": "Faire tous les repas du groupe",
+    "optionB": "Faire toute la vaisselle du groupe",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_048",
+    "optionA": "Toujours entendre la même chanson",
+    "optionB": "Ne plus jamais écouter ta chanson préférée",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_049",
+    "optionA": "Être connu(e) pour une vidéo gênante",
+    "optionB": "Rester totalement anonyme en ligne",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_050",
+    "optionA": "Avoir un clone pour travailler",
+    "optionB": "Avoir un clone pour faire les tâches ménagères",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_051",
+    "optionA": "Ne pouvoir communiquer qu’en chantant",
+    "optionB": "Ne pouvoir communiquer qu’en mimant",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_052",
+    "optionA": "Changer de prénom",
+    "optionB": "Changer de visage",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_053",
+    "optionA": "Être coincé(e) dans une comédie romantique",
+    "optionB": "Être coincé(e) dans un film d’horreur",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_054",
+    "optionA": "Ne plus jamais utiliser d’emoji",
+    "optionB": "Ne plus jamais envoyer de vocal",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_055",
+    "optionA": "Avoir un majordome",
+    "optionB": "Avoir un chauffeur",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_056",
+    "optionA": "Pouvoir arrêter le temps",
+    "optionB": "Pouvoir accélérer le temps",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_057",
+    "optionA": "Toujours sentir mauvais sans le savoir",
+    "optionB": "Toujours entendre une musique que personne n’entend",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_058",
+    "optionA": "Passer un mois sans téléphone",
+    "optionB": "Passer un mois sans voir personne",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_059",
+    "optionA": "Gagner une compétition mondiale dans un domaine absurde",
+    "optionB": "Être très bon dans tous les domaines sans être le meilleur",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_060",
+    "optionA": "Dîner avec ton idole",
+    "optionB": "Recevoir un million d’euros",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_061",
+    "optionA": "Connaître tous les secrets de tes amis",
+    "optionB": "Que tes amis connaissent tous tes secrets",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_062",
+    "optionA": "Vivre sans chauffage",
+    "optionB": "Vivre sans climatisation",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_063",
+    "optionA": "Ne jamais pouvoir fermer une porte",
+    "optionB": "Ne jamais pouvoir ouvrir une fenêtre",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_064",
+    "optionA": "Avoir un animal qui parle",
+    "optionB": "Avoir une voiture volante",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_065",
+    "optionA": "Toujours porter des chaussures trop petites",
+    "optionB": "Toujours porter un pull trop chaud",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_066",
+    "optionA": "Passer une journée dans le corps d’un enfant",
+    "optionB": "Passer une journée dans le corps d’une personne âgée",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_067",
+    "optionA": "Ne plus jamais te regarder dans un miroir",
+    "optionB": "Ne plus jamais te prendre en photo",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_068",
+    "optionA": "Être extrêmement populaire",
+    "optionB": "Être extrêmement respecté(e)",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_069",
+    "optionA": "Vivre dans un monde sans publicité",
+    "optionB": "Vivre dans un monde sans notifications",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_070",
+    "optionA": "Avoir une cuisine qui se remplit toute seule",
+    "optionB": "Une maison qui se nettoie toute seule",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_071",
+    "optionA": "Pouvoir respirer sous l’eau",
+    "optionB": "Pouvoir voler",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_072",
+    "optionA": "Toujours connaître la bonne réponse",
+    "optionB": "Toujours poser la bonne question",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_073",
+    "optionA": "Renoncer aux vacances pendant cinq ans",
+    "optionB": "Renoncer aux restaurants pendant cinq ans",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_074",
+    "optionA": "Ne plus jamais pouvoir rire",
+    "optionB": "Ne plus jamais pouvoir pleurer",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_075",
+    "optionA": "Être coincé(e) avec ton pire ennemi",
+    "optionB": "Être seul(e) pendant un mois",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_076",
+    "optionA": "Savoir exactement ce que les gens pensent de toi",
+    "optionB": "Ne jamais connaître l’avis de personne",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_077",
+    "optionA": "Avoir dix animaux",
+    "optionB": "Avoir dix enfants",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_078",
+    "optionA": "Devoir tout partager",
+    "optionB": "Ne plus jamais rien emprunter",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_079",
+    "optionA": "Vivre une vie très calme",
+    "optionB": "Vivre une vie pleine de surprises",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_080",
+    "optionA": "Pouvoir supprimer une mauvaise habitude",
+    "optionB": "Pouvoir apprendre instantanément une compétence",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_081",
+    "optionA": "Ne plus jamais pouvoir commander ton plat préféré",
+    "optionB": "Ne manger que ton plat préféré pendant un an",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_082",
+    "optionA": "Être toujours filmé(e)",
+    "optionB": "Ne jamais pouvoir prendre de photo",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_083",
+    "optionA": "Changer de ville chaque mois",
+    "optionB": "Ne jamais quitter ta ville",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_084",
+    "optionA": "Avoir un rire contagieux",
+    "optionB": "Avoir une voix hypnotique",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_085",
+    "optionA": "Gagner à la loterie mais le cacher",
+    "optionB": "Devenir célèbre du jour au lendemain",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_086",
+    "optionA": "Vivre sans montre",
+    "optionB": "Vivre sans calendrier",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_087",
+    "optionA": "Toujours devoir raconter une blague avant de parler",
+    "optionB": "Toujours devoir danser avant de t’asseoir",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_088",
+    "optionA": "Avoir un petit dragon",
+    "optionB": "Avoir une licorne",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_089",
+    "optionA": "Être capable de réparer n’importe quoi",
+    "optionB": "Être capable de cuisiner n’importe quoi",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_090",
+    "optionA": "Ne plus jamais faire la queue",
+    "optionB": "Ne plus jamais être dans les embouteillages",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_091",
+    "optionA": "Perdre toutes tes anciennes photos",
+    "optionB": "Ne plus jamais pouvoir prendre de nouvelles photos",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_092",
+    "optionA": "Être très bon en sport",
+    "optionB": "Être très bon en musique",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_093",
+    "optionA": "Recevoir un cadeau surprise chaque semaine",
+    "optionB": "Choisir un gros cadeau par an",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_094",
+    "optionA": "Tout planifier",
+    "optionB": "Tout improviser",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_095",
+    "optionA": "Vivre près de la mer",
+    "optionB": "Vivre près des montagnes",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_096",
+    "optionA": "Toujours savoir quand on te ment",
+    "optionB": "Pouvoir mentir sans jamais être découvert(e)",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_097",
+    "optionA": "Passer une soirée avec tes amis d’enfance",
+    "optionB": "Passer une soirée avec tes futurs amis",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_098",
+    "optionA": "Avoir un bouton pour retrouver les objets perdus",
+    "optionB": "Un bouton pour se rendormir instantanément",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_099",
+    "optionA": "Ne plus jamais payer de loyer",
+    "optionB": "Ne plus jamais payer de nourriture",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_100",
+    "optionA": "Changer une seule décision passée",
+    "optionB": "Voir une seule décision future",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_101",
+    "optionA": "Être la personne la plus courageuse",
+    "optionB": "Être la personne la plus créative",
+    "category": "classic"
+  },
+  {
+    "id": "prefere_102",
+    "optionA": "Toujours avoir une batterie à 1 %",
+    "optionB": "Toujours avoir un réseau très lent",
+    "category": "classic"
+  }
+]

@@ -1,0 +1,962 @@
+[
+  {
+    "id": "verite_001",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est le mensonge le plus inutile que tu as déjà raconté ?"
+  },
+  {
+    "id": "verite_002",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle habitude bizarre fais-tu uniquement quand personne ne te regarde ?"
+  },
+  {
+    "id": "verite_003",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quel est ton dernier gros moment de honte ?"
+  },
+  {
+    "id": "verite_004",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle personne du groupe survivrait le moins longtemps sur une île déserte ?"
+  },
+  {
+    "id": "verite_005",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel message as-tu déjà écrit puis supprimé sans l’envoyer ?"
+  },
+  {
+    "id": "verite_006",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quelle est la pire excuse que tu as utilisée pour annuler un plan ?"
+  },
+  {
+    "id": "verite_007",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel talent totalement inutile maîtrises-tu ?"
+  },
+  {
+    "id": "verite_008",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle chanson connais-tu beaucoup trop bien mais n’assumes pas ?"
+  },
+  {
+    "id": "verite_009",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quelle est la chose la plus enfantine que tu fais encore ?"
+  },
+  {
+    "id": "verite_010",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel achat regrettes-tu le plus ?"
+  },
+  {
+    "id": "verite_011",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle application regardes-tu beaucoup trop souvent ?"
+  },
+  {
+    "id": "verite_012",
+    "type": "truth",
+    "category": "confessions",
+    "text": "À qui du groupe confierais-tu le moins un secret ?"
+  },
+  {
+    "id": "verite_013",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est ton plus gros défaut en soirée ?"
+  },
+  {
+    "id": "verite_014",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle est la dernière chose que tu as cherchée sur Internet ?"
+  },
+  {
+    "id": "verite_015",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quel surnom gênant as-tu déjà eu ?"
+  },
+  {
+    "id": "verite_016",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est le compliment le plus étrange qu’on t’ait fait ?"
+  },
+  {
+    "id": "verite_017",
+    "type": "truth",
+    "category": "fun",
+    "text": "Avec qui du groupe partirais-tu en road trip pendant un mois ?"
+  },
+  {
+    "id": "verite_018",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quelle règle sociale trouves-tu complètement absurde ?"
+  },
+  {
+    "id": "verite_019",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle célébrité t’agace sans vraie raison ?"
+  },
+  {
+    "id": "verite_020",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel plat pourrais-tu manger trois jours de suite ?"
+  },
+  {
+    "id": "verite_021",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quel est ton pire réflexe quand tu stresses ?"
+  },
+  {
+    "id": "verite_022",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel film ou série tout le monde adore mais que tu détestes ?"
+  },
+  {
+    "id": "verite_023",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est le plus gros dossier que tes parents pourraient raconter sur toi ?"
+  },
+  {
+    "id": "verite_024",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quelle personne du groupe appellerais-tu en premier à 3 h du matin ?"
+  },
+  {
+    "id": "verite_025",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle opinion impopulaire assumes-tu vraiment ?"
+  },
+  {
+    "id": "verite_026",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est le dernier cadeau que tu as fait semblant d’aimer ?"
+  },
+  {
+    "id": "verite_027",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quelle est la chose la plus ridicule qui t’a déjà fait pleurer ?"
+  },
+  {
+    "id": "verite_028",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est ton pire défaut quand tu es en couple ?"
+  },
+  {
+    "id": "verite_029",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle phrase dis-tu tout le temps sans t’en rendre compte ?"
+  },
+  {
+    "id": "verite_030",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quel est le rêve le plus bizarre dont tu te souviens ?"
+  },
+  {
+    "id": "verite_031",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est le plus gros malentendu que tu as créé ?"
+  },
+  {
+    "id": "verite_032",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel métier serais-tu incapable de faire ?"
+  },
+  {
+    "id": "verite_033",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quelle personne du groupe gagnerait une émission de télé-réalité ?"
+  },
+  {
+    "id": "verite_034",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel vêtement de ton placard devrait disparaître ?"
+  },
+  {
+    "id": "verite_035",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle est la chose la plus spontanée que tu aies faite ?"
+  },
+  {
+    "id": "verite_036",
+    "type": "truth",
+    "category": "confessions",
+    "text": "À quelle petite chose accordes-tu beaucoup trop d’importance ?"
+  },
+  {
+    "id": "verite_037",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est ton pire trait quand tu perds à un jeu ?"
+  },
+  {
+    "id": "verite_038",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est le dernier compte que tu as espionné sur les réseaux ?"
+  },
+  {
+    "id": "verite_039",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quelle promesse n’as-tu jamais tenue ?"
+  },
+  {
+    "id": "verite_040",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle personne du groupe te connaît le mieux ?"
+  },
+  {
+    "id": "verite_041",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est ton avis le plus controversé sur la nourriture ?"
+  },
+  {
+    "id": "verite_042",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quel est ton plus gros manque de patience ?"
+  },
+  {
+    "id": "verite_043",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle mode passée aimerais-tu voir revenir ?"
+  },
+  {
+    "id": "verite_044",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel souvenir d’école te fait encore rire ?"
+  },
+  {
+    "id": "verite_045",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quel est ton plus grand plaisir coupable ?"
+  },
+  {
+    "id": "verite_046",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle personne du groupe serait le meilleur colocataire ?"
+  },
+  {
+    "id": "verite_047",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est le dernier moment où tu as fait semblant de comprendre ?"
+  },
+  {
+    "id": "verite_048",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quelle chose banale te met immédiatement de mauvaise humeur ?"
+  },
+  {
+    "id": "verite_049",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle décision récente referais-tu autrement ?"
+  },
+  {
+    "id": "verite_050",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est le pire conseil que tu aies déjà donné ?"
+  },
+  {
+    "id": "verite_051",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quel est le message le plus gênant envoyé au mauvais destinataire ?"
+  },
+  {
+    "id": "verite_052",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle est ta peur la plus irrationnelle ?"
+  },
+  {
+    "id": "verite_053",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel défi n’oserais-tu jamais relever ?"
+  },
+  {
+    "id": "verite_054",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quelle personne du groupe serait la pire pour organiser des vacances ?"
+  },
+  {
+    "id": "verite_055",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle est la chose la plus étrange que tu gardes chez toi ?"
+  },
+  {
+    "id": "verite_056",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel mot prononces-tu souvent de travers ?"
+  },
+  {
+    "id": "verite_057",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quel est ton plus gros red flag personnel ?"
+  },
+  {
+    "id": "verite_058",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle qualité aimerais-tu voler à quelqu’un du groupe ?"
+  },
+  {
+    "id": "verite_059",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle est la pire coupe de cheveux que tu aies eue ?"
+  },
+  {
+    "id": "verite_060",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quel petit mensonge racontes-tu encore régulièrement ?"
+  },
+  {
+    "id": "verite_061",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est ton record le plus inutile ?"
+  },
+  {
+    "id": "verite_062",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle personne du groupe te ferait le plus rire dans une situation catastrophique ?"
+  },
+  {
+    "id": "verite_063",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quelle est ta plus grosse obsession du moment ?"
+  },
+  {
+    "id": "verite_064",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est le dernier événement que tu as complètement oublié ?"
+  },
+  {
+    "id": "verite_065",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle chose ne prêterais-tu jamais ?"
+  },
+  {
+    "id": "verite_066",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quel est le pire rendez-vous auquel tu as participé ?"
+  },
+  {
+    "id": "verite_067",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle est la dernière fois où tu as accusé quelqu’un à tort ?"
+  },
+  {
+    "id": "verite_068",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel personnage fictif te ressemble le plus ?"
+  },
+  {
+    "id": "verite_069",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quelle personne du groupe serait la meilleure pour mentir à la police ?"
+  },
+  {
+    "id": "verite_070",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est ton plus grand caprice récent ?"
+  },
+  {
+    "id": "verite_071",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle règle familiale étrange avais-tu enfant ?"
+  },
+  {
+    "id": "verite_072",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quel est le pire plat que tu as cuisiné ?"
+  },
+  {
+    "id": "verite_073",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel secret sans importance gardes-tu depuis trop longtemps ?"
+  },
+  {
+    "id": "verite_074",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est ton avis le plus sévère sur quelqu’un ici ?"
+  },
+  {
+    "id": "verite_075",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quelle chose as-tu apprise beaucoup trop tard ?"
+  },
+  {
+    "id": "verite_076",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est le plus gros risque que tu aies pris ?"
+  },
+  {
+    "id": "verite_077",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quelle personne du groupe serait la première à devenir célèbre ?"
+  },
+  {
+    "id": "verite_078",
+    "type": "truth",
+    "category": "confessions",
+    "text": "Quelle est la chose la plus inutile dans ton téléphone ?"
+  },
+  {
+    "id": "verite_079",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est ton pire automatisme en conversation ?"
+  },
+  {
+    "id": "verite_080",
+    "type": "truth",
+    "category": "fun",
+    "text": "Quel est le dernier moment où tu as eu vraiment tort mais refusé de l’admettre ?"
+  },
+  {
+    "id": "action_001",
+    "type": "action",
+    "category": "impro",
+    "text": "Imite une personne du groupe jusqu’à ce que quelqu’un la reconnaisse."
+  },
+  {
+    "id": "action_002",
+    "type": "action",
+    "category": "social",
+    "text": "Fais une déclaration dramatique à une bouteille ou à un coussin."
+  },
+  {
+    "id": "action_003",
+    "type": "action",
+    "category": "impro",
+    "text": "Parle avec un accent choisi par le groupe pendant deux tours."
+  },
+  {
+    "id": "action_004",
+    "type": "action",
+    "category": "social",
+    "text": "Envoie un emoji totalement hors contexte à la dernière personne de tes messages."
+  },
+  {
+    "id": "action_005",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais dix secondes de danse sans musique."
+  },
+  {
+    "id": "action_006",
+    "type": "action",
+    "category": "social",
+    "text": "Laisse le groupe choisir ta photo de profil pendant dix minutes."
+  },
+  {
+    "id": "action_007",
+    "type": "action",
+    "category": "impro",
+    "text": "Raconte ta journée comme la bande-annonce d’un film d’action."
+  },
+  {
+    "id": "action_008",
+    "type": "action",
+    "category": "social",
+    "text": "Fais un compliment extrêmement précis à chaque personne du groupe."
+  },
+  {
+    "id": "action_009",
+    "type": "action",
+    "category": "impro",
+    "text": "Lis la dernière note enregistrée dans ton téléphone."
+  },
+  {
+    "id": "action_010",
+    "type": "action",
+    "category": "social",
+    "text": "Fais semblant de présenter la météo avec les objets autour de toi."
+  },
+  {
+    "id": "action_011",
+    "type": "action",
+    "category": "impro",
+    "text": "Chante le refrain d’une chanson choisie par le groupe."
+  },
+  {
+    "id": "action_012",
+    "type": "action",
+    "category": "social",
+    "text": "Mime ton métier de rêve sans parler."
+  },
+  {
+    "id": "action_013",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais une publicité de trente secondes pour l’objet le plus proche."
+  },
+  {
+    "id": "action_014",
+    "type": "action",
+    "category": "social",
+    "text": "Appelle quelqu’un du groupe “Votre Majesté” pendant trois tours."
+  },
+  {
+    "id": "action_015",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais une imitation de ton propre rire."
+  },
+  {
+    "id": "action_016",
+    "type": "action",
+    "category": "social",
+    "text": "Prends une photo de groupe volontairement ratée."
+  },
+  {
+    "id": "action_017",
+    "type": "action",
+    "category": "impro",
+    "text": "Laisse une personne écrire une phrase absurde dans tes notes."
+  },
+  {
+    "id": "action_018",
+    "type": "action",
+    "category": "social",
+    "text": "Marche comme sur un podium pendant quinze secondes."
+  },
+  {
+    "id": "action_019",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais une scène de jalousie à une chaise."
+  },
+  {
+    "id": "action_020",
+    "type": "action",
+    "category": "social",
+    "text": "Parle uniquement en questions jusqu’à ton prochain tour."
+  },
+  {
+    "id": "action_021",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais le bruit de trois animaux choisis par le groupe."
+  },
+  {
+    "id": "action_022",
+    "type": "action",
+    "category": "social",
+    "text": "Décris chaque personne du groupe avec un titre de film."
+  },
+  {
+    "id": "action_023",
+    "type": "action",
+    "category": "impro",
+    "text": "Tiens une pose de super-héros pendant vingt secondes."
+  },
+  {
+    "id": "action_024",
+    "type": "action",
+    "category": "social",
+    "text": "Inventes un slogan officiel pour la soirée."
+  },
+  {
+    "id": "action_025",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais croire pendant une minute que tu es un guide touristique du salon."
+  },
+  {
+    "id": "action_026",
+    "type": "action",
+    "category": "social",
+    "text": "Donne un nouveau prénom à chaque joueur jusqu’à la fin du tour."
+  },
+  {
+    "id": "action_027",
+    "type": "action",
+    "category": "impro",
+    "text": "Récite l’alphabet comme si tu étais très en colère."
+  },
+  {
+    "id": "action_028",
+    "type": "action",
+    "category": "social",
+    "text": "Fais une chorégraphie avec uniquement tes bras."
+  },
+  {
+    "id": "action_029",
+    "type": "action",
+    "category": "impro",
+    "text": "Parle comme un robot pendant deux tours."
+  },
+  {
+    "id": "action_030",
+    "type": "action",
+    "category": "social",
+    "text": "Montre la dernière photo de ton téléphone qui ne contient personne."
+  },
+  {
+    "id": "action_031",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais une imitation d’une alarme de réveil insupportable."
+  },
+  {
+    "id": "action_032",
+    "type": "action",
+    "category": "social",
+    "text": "Tente de faire rire le groupe sans parler pendant trente secondes."
+  },
+  {
+    "id": "action_033",
+    "type": "action",
+    "category": "impro",
+    "text": "Décris ton voisin de gauche comme un produit de luxe."
+  },
+  {
+    "id": "action_034",
+    "type": "action",
+    "category": "social",
+    "text": "Fais un discours de victoire pour un prix totalement inventé."
+  },
+  {
+    "id": "action_035",
+    "type": "action",
+    "category": "impro",
+    "text": "Laisse le groupe te donner un surnom pour les trois prochains tours."
+  },
+  {
+    "id": "action_036",
+    "type": "action",
+    "category": "social",
+    "text": "Fais une mini scène de rupture avec ton verre."
+  },
+  {
+    "id": "action_037",
+    "type": "action",
+    "category": "impro",
+    "text": "Imite une émotion choisie par le groupe jusqu’à ce qu’elle soit reconnue."
+  },
+  {
+    "id": "action_038",
+    "type": "action",
+    "category": "social",
+    "text": "Fais vingt secondes de commentaire sportif sur ce qui se passe dans la pièce."
+  },
+  {
+    "id": "action_039",
+    "type": "action",
+    "category": "impro",
+    "text": "Envoie “j’ai une annonce importante” puis “finalement non” à un ami."
+  },
+  {
+    "id": "action_040",
+    "type": "action",
+    "category": "social",
+    "text": "Fais semblant d’être une star qui évite les paparazzis."
+  },
+  {
+    "id": "action_041",
+    "type": "action",
+    "category": "impro",
+    "text": "Invente une rumeur totalement fausse sur toi-même."
+  },
+  {
+    "id": "action_042",
+    "type": "action",
+    "category": "social",
+    "text": "Fais un tutoriel très sérieux pour utiliser une cuillère."
+  },
+  {
+    "id": "action_043",
+    "type": "action",
+    "category": "impro",
+    "text": "Laisse quelqu’un choisir un mot que tu dois placer dans chaque phrase pendant deux tours."
+  },
+  {
+    "id": "action_044",
+    "type": "action",
+    "category": "social",
+    "text": "Fais une entrée spectaculaire, sors de la pièce puis reviens."
+  },
+  {
+    "id": "action_045",
+    "type": "action",
+    "category": "impro",
+    "text": "Décris un objet banal comme s’il coûtait un million d’euros."
+  },
+  {
+    "id": "action_046",
+    "type": "action",
+    "category": "social",
+    "text": "Fais une minute de doublage sur une vidéo muette choisie par le groupe."
+  },
+  {
+    "id": "action_047",
+    "type": "action",
+    "category": "impro",
+    "text": "Imite ton expression quand tu reçois une facture inattendue."
+  },
+  {
+    "id": "action_048",
+    "type": "action",
+    "category": "social",
+    "text": "Fais un toast solennel à la pire décision de ta vie."
+  },
+  {
+    "id": "action_049",
+    "type": "action",
+    "category": "impro",
+    "text": "Prends la pose la plus gênante possible pour une photo."
+  },
+  {
+    "id": "action_050",
+    "type": "action",
+    "category": "social",
+    "text": "Raconte une histoire de dix secondes contenant les mots cactus, police et licorne."
+  },
+  {
+    "id": "action_051",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais un faux appel de service client avec une personne du groupe."
+  },
+  {
+    "id": "action_052",
+    "type": "action",
+    "category": "social",
+    "text": "Décris ton dernier repas comme un critique gastronomique snob."
+  },
+  {
+    "id": "action_053",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais une déclaration d’amour à ton téléphone."
+  },
+  {
+    "id": "action_054",
+    "type": "action",
+    "category": "social",
+    "text": "Laisse le groupe choisir ton fond d’écran pendant cinq minutes."
+  },
+  {
+    "id": "action_055",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais deviner un film uniquement avec des sons."
+  },
+  {
+    "id": "action_056",
+    "type": "action",
+    "category": "social",
+    "text": "Parle très lentement jusqu’à ton prochain tour."
+  },
+  {
+    "id": "action_057",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais une imitation d’un membre de ta famille sans donner son nom."
+  },
+  {
+    "id": "action_058",
+    "type": "action",
+    "category": "social",
+    "text": "Transforme une phrase banale en chanson d’opéra."
+  },
+  {
+    "id": "action_059",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais semblant d’être candidat à une élection absurde."
+  },
+  {
+    "id": "action_060",
+    "type": "action",
+    "category": "social",
+    "text": "Invente une danse officielle pour AK’Games."
+  },
+  {
+    "id": "action_061",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais le générique de fin de la soirée avec les noms des joueurs."
+  },
+  {
+    "id": "action_062",
+    "type": "action",
+    "category": "social",
+    "text": "Décris ton téléphone comme s’il était recherché par la police."
+  },
+  {
+    "id": "action_063",
+    "type": "action",
+    "category": "impro",
+    "text": "Donne une note sur dix à ton propre sens de l’humour et défends-la."
+  },
+  {
+    "id": "action_064",
+    "type": "action",
+    "category": "social",
+    "text": "Fais un compliment en rimes à la personne de ton choix."
+  },
+  {
+    "id": "action_065",
+    "type": "action",
+    "category": "impro",
+    "text": "Imite la réaction de quelqu’un qui gagne un million puis découvre que c’est faux."
+  },
+  {
+    "id": "action_066",
+    "type": "action",
+    "category": "social",
+    "text": "Fais une minute de silence dramatique avant de dire une banalité."
+  },
+  {
+    "id": "action_067",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais un selfie avec l’expression choisie par le groupe."
+  },
+  {
+    "id": "action_068",
+    "type": "action",
+    "category": "social",
+    "text": "Parle comme un présentateur de journal télévisé pendant un tour."
+  },
+  {
+    "id": "action_069",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais deviner ton application préférée sans la nommer."
+  },
+  {
+    "id": "action_070",
+    "type": "action",
+    "category": "social",
+    "text": "Invente une nouvelle règle sociale que tout le monde devrait suivre."
+  },
+  {
+    "id": "action_071",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais une démonstration de sport totalement imaginaire."
+  },
+  {
+    "id": "action_072",
+    "type": "action",
+    "category": "social",
+    "text": "Imite un GPS qui perd patience."
+  },
+  {
+    "id": "action_073",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais une critique très sévère de tes propres chaussures."
+  },
+  {
+    "id": "action_074",
+    "type": "action",
+    "category": "social",
+    "text": "Donne un nom de super-vilain à chaque personne du groupe."
+  },
+  {
+    "id": "action_075",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais une scène de film d’horreur avec l’objet le moins effrayant de la pièce."
+  },
+  {
+    "id": "action_076",
+    "type": "action",
+    "category": "social",
+    "text": "Raconte une anecdote vraie en la rendant volontairement beaucoup trop dramatique."
+  },
+  {
+    "id": "action_077",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais une révérence à chaque personne avant de t’asseoir."
+  },
+  {
+    "id": "action_078",
+    "type": "action",
+    "category": "social",
+    "text": "Essaie de vendre au groupe une idée complètement inutile."
+  },
+  {
+    "id": "action_079",
+    "type": "action",
+    "category": "impro",
+    "text": "Fais un mini rap avec les prénoms des joueurs."
+  },
+  {
+    "id": "action_080",
+    "type": "action",
+    "category": "social",
+    "text": "Tiens une conversation de trente secondes avec ton reflet ou la caméra frontale."
+  }
+]

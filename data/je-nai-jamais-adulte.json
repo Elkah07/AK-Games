@@ -1,0 +1,302 @@
+[
+  {
+    "id": "jamais_adulte_001",
+    "text": "Je n’ai jamais embrassé quelqu’un le soir même de notre rencontre.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_002",
+    "text": "Je n’ai jamais envoyé un message de flirt après minuit.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_003",
+    "text": "Je n’ai jamais regretté un baiser dès la seconde suivante.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_004",
+    "text": "Je n’ai jamais eu un crush sur l’ex d’un ami.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_005",
+    "text": "Je n’ai jamais menti sur mes sentiments pour éviter une discussion.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_006",
+    "text": "Je n’ai jamais repris contact avec un ex par ennui.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_007",
+    "text": "Je n’ai jamais eu deux crushs en même temps.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_008",
+    "text": "Je n’ai jamais fouillé très loin le profil d’une personne qui me plaisait.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_009",
+    "text": "Je n’ai jamais envoyé une photo puis regretté immédiatement.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_010",
+    "text": "Je n’ai jamais embrassé deux personnes pendant la même soirée.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_011",
+    "text": "Je n’ai jamais prétendu ne pas être jaloux(se) alors que je l’étais énormément.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_012",
+    "text": "Je n’ai jamais flirté pour obtenir quelque chose.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_013",
+    "text": "Je n’ai jamais fait semblant d’être célibataire.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_014",
+    "text": "Je n’ai jamais bloqué quelqu’un après une dispute amoureuse.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_015",
+    "text": "Je n’ai jamais eu un rendez-vous uniquement pour oublier quelqu’un d’autre.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_016",
+    "text": "Je n’ai jamais menti sur le nombre de mes relations passées.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_017",
+    "text": "Je n’ai jamais envoyé un message ambigu à la mauvaise personne.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_018",
+    "text": "Je n’ai jamais gardé un souvenir d’un ex en secret.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_019",
+    "text": "Je n’ai jamais eu un crush sur une personne déjà en couple.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_020",
+    "text": "Je n’ai jamais fait croire que je n’étais pas intéressé(e) pour me faire désirer.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_021",
+    "text": "Je n’ai jamais embrassé quelqu’un dont je connaissais à peine le prénom.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_022",
+    "text": "Je n’ai jamais regretté d’avoir répondu à un ancien flirt.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_023",
+    "text": "Je n’ai jamais lu une conversation privée qui ne m’était pas destinée.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_024",
+    "text": "Je n’ai jamais fait une scène de jalousie en public.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_025",
+    "text": "Je n’ai jamais eu un rendez-vous arrangé par des amis.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_026",
+    "text": "Je n’ai jamais comparé deux personnes avec qui je sortais.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_027",
+    "text": "Je n’ai jamais gardé une conversation ambiguë cachée.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_028",
+    "text": "Je n’ai jamais inventé une excuse pour partir d’un rendez-vous.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_029",
+    "text": "Je n’ai jamais envoyé “tu me manques” puis regretté.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_030",
+    "text": "Je n’ai jamais accepté un rendez-vous sans être vraiment intéressé(e).",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_031",
+    "text": "Je n’ai jamais attendu exprès avant de répondre à un message.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_032",
+    "text": "Je n’ai jamais embrassé quelqu’un pour rendre une autre personne jalouse.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_033",
+    "text": "Je n’ai jamais demandé à un ami de répondre à ma place à un message de flirt.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_034",
+    "text": "Je n’ai jamais revu quelqu’un en sachant que c’était une mauvaise idée.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_035",
+    "text": "Je n’ai jamais fait semblant de ne pas connaître quelqu’un après une histoire gênante.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_036",
+    "text": "Je n’ai jamais eu une relation secrète.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_037",
+    "text": "Je n’ai jamais menti sur l’endroit où j’étais à mon ou ma partenaire.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_038",
+    "text": "Je n’ai jamais supprimé des messages pour éviter des explications.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_039",
+    "text": "Je n’ai jamais été attiré(e) par quelqu’un ici.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_040",
+    "text": "Je n’ai jamais regretté une déclaration d’amour.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_041",
+    "text": "Je n’ai jamais eu un rendez-vous avec une personne rencontrée en ligne.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_042",
+    "text": "Je n’ai jamais appelé un ex après avoir bu.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_043",
+    "text": "Je n’ai jamais fait semblant d’aimer les amis de mon ou ma partenaire.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_044",
+    "text": "Je n’ai jamais eu un crush sur un collègue ou camarade.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_045",
+    "text": "Je n’ai jamais gardé quelqu’un comme option de secours.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_046",
+    "text": "Je n’ai jamais ghosté quelqu’un après un bon rendez-vous.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_047",
+    "text": "Je n’ai jamais été ghosté(e) sans comprendre pourquoi.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_048",
+    "text": "Je n’ai jamais embrassé quelqu’un lors d’un défi.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_049",
+    "text": "Je n’ai jamais dit “ce n’est pas toi, c’est moi”.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_050",
+    "text": "Je n’ai jamais regardé les stories d’un ex depuis un autre compte.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_051",
+    "text": "Je n’ai jamais envoyé un message que mes amis m’avaient déconseillé d’envoyer.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_052",
+    "text": "Je n’ai jamais eu un faible pour une personne beaucoup plus âgée.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_053",
+    "text": "Je n’ai jamais fait une promesse sentimentale que je ne pensais pas tenir.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_054",
+    "text": "Je n’ai jamais menti pour éviter de présenter quelqu’un à mes proches.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_055",
+    "text": "Je n’ai jamais donné une seconde chance que je regrettais déjà.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_056",
+    "text": "Je n’ai jamais regretté d’avoir refusé quelqu’un.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_057",
+    "text": "Je n’ai jamais confondu amour et habitude.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_058",
+    "text": "Je n’ai jamais relu de vieux messages sentimentaux.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_059",
+    "text": "Je n’ai jamais gardé le numéro d’une personne juste au cas où.",
+    "category": "adult"
+  },
+  {
+    "id": "jamais_adulte_060",
+    "text": "Je n’ai jamais caché un crush à tout mon entourage.",
+    "category": "adult"
+  }
+]

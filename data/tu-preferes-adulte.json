@@ -1,0 +1,362 @@
+[
+  {
+    "id": "prefere_adulte_001",
+    "optionA": "Retourner avec ton ex le plus compliqué",
+    "optionB": "Rester célibataire pendant cinq ans",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_002",
+    "optionA": "Montrer tous tes messages à ton partenaire",
+    "optionB": "Lui donner accès à toutes tes photos",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_003",
+    "optionA": "Un rendez-vous parfait avec zéro alchimie",
+    "optionB": "Un rendez-vous chaotique avec beaucoup d’alchimie",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_004",
+    "optionA": "Dire immédiatement quand quelqu’un te plaît",
+    "optionB": "Attendre que l’autre fasse toujours le premier pas",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_005",
+    "optionA": "Être très amoureux(se) mais vivre à distance",
+    "optionB": "Vivre ensemble sans grande passion",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_006",
+    "optionA": "Embrasser ton crush devant tout le monde",
+    "optionB": "Lui écrire une déclaration très longue",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_007",
+    "optionA": "Connaître tous les ex de ton partenaire",
+    "optionB": "Ne jamais rien savoir de son passé",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_008",
+    "optionA": "Sortir avec quelqu’un de très drôle",
+    "optionB": "Sortir avec quelqu’un de très romantique",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_009",
+    "optionA": "Avoir un partenaire très jaloux",
+    "optionB": "Un partenaire très détaché",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_010",
+    "optionA": "Recevoir cent messages par jour",
+    "optionB": "Recevoir un seul message très attentionné",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_011",
+    "optionA": "Une relation passionnelle mais courte",
+    "optionB": "Une relation calme mais très longue",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_012",
+    "optionA": "Que ton ex devienne célèbre",
+    "optionB": "Que ton crush devienne ton collègue",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_013",
+    "optionA": "Faire le premier pas",
+    "optionB": "Être toujours la personne abordée",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_014",
+    "optionA": "Un rendez-vous au restaurant très chic",
+    "optionB": "Un rendez-vous improvisé à la maison",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_015",
+    "optionA": "Dire toute la vérité sur ton passé",
+    "optionB": "Ne rien demander sur le passé de l’autre",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_016",
+    "optionA": "Être avec quelqu’un qui publie tout",
+    "optionB": "Quelqu’un qui ne publie jamais votre couple",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_017",
+    "optionA": "Revoir ton premier amour",
+    "optionB": "Rencontrer ton futur grand amour maintenant",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_018",
+    "optionA": "Une personne parfaite mais sans humour",
+    "optionB": "Une personne imparfaite qui te fait rire",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_019",
+    "optionA": "Avoir toujours le dernier mot",
+    "optionB": "Ne jamais avoir de dispute",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_020",
+    "optionA": "Être en couple avec ton meilleur ami",
+    "optionB": "Rester amis pour toujours",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_021",
+    "optionA": "Recevoir une déclaration publique",
+    "optionB": "Une déclaration privée très intime",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_022",
+    "optionA": "Une personne qui répond immédiatement",
+    "optionB": "Une personne qui écrit de très beaux messages mais lentement",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_023",
+    "optionA": "Partir un mois en voyage avec ton crush",
+    "optionB": "Vivre un an à côté sans pouvoir sortir ensemble",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_024",
+    "optionA": "Une relation très fusionnelle",
+    "optionB": "Une relation avec beaucoup d’indépendance",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_025",
+    "optionA": "Apprendre qu’on a eu un crush sur toi pendant des années",
+    "optionB": "Découvrir que ton crush actuel t’aime aussi",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_026",
+    "optionA": "Un partenaire qui cuisine toujours",
+    "optionB": "Un partenaire qui organise toujours les sorties",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_027",
+    "optionA": "Ne jamais connaître la jalousie",
+    "optionB": "Ne jamais connaître le chagrin amoureux",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_028",
+    "optionA": "Être quitté(e) par message",
+    "optionB": "Devoir quitter quelqu’un en face",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_029",
+    "optionA": "Un ex qui devient ton meilleur ami",
+    "optionB": "Ne plus jamais revoir aucun ex",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_030",
+    "optionA": "Partager tous vos mots de passe",
+    "optionB": "Garder chacun une vie numérique totalement privée",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_031",
+    "optionA": "Une rencontre très romantique",
+    "optionB": "Une rencontre très drôle et inattendue",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_032",
+    "optionA": "Sortir avec une célébrité discrètement",
+    "optionB": "Être avec une personne inconnue mais parfaite pour toi",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_033",
+    "optionA": "Avoir une histoire secrète",
+    "optionB": "Avoir une histoire que tout le monde commente",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_034",
+    "optionA": "Recevoir des fleurs chaque semaine",
+    "optionB": "Recevoir un voyage surprise chaque année",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_035",
+    "optionA": "Être aimé(e) plus que tu n’aimes",
+    "optionB": "Aimer plus que tu n’es aimé(e)",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_036",
+    "optionA": "Pardonner un gros mensonge",
+    "optionB": "Mettre fin à la relation immédiatement",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_037",
+    "optionA": "Rencontrer la bonne personne trop tôt",
+    "optionB": "La rencontrer très tard",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_038",
+    "optionA": "Un partenaire toujours franc",
+    "optionB": "Un partenaire toujours diplomate",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_039",
+    "optionA": "Connaître la date de ta prochaine relation",
+    "optionB": "Connaître sa durée",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_040",
+    "optionA": "Vivre une histoire comme dans un film",
+    "optionB": "Vivre une histoire simple mais solide",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_041",
+    "optionA": "Un partenaire très sociable",
+    "optionB": "Un partenaire très casanier",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_042",
+    "optionA": "Faire une pause dans une relation",
+    "optionB": "Se séparer définitivement",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_043",
+    "optionA": "Être la première personne à dire je t’aime",
+    "optionB": "Attendre de l’entendre d’abord",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_044",
+    "optionA": "Recevoir un long message d’excuse",
+    "optionB": "Recevoir une action concrète sans message",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_045",
+    "optionA": "Sortir avec quelqu’un qui te ressemble",
+    "optionB": "Quelqu’un totalement opposé",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_046",
+    "optionA": "Partager tous vos loisirs",
+    "optionB": "Avoir chacun vos univers séparés",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_047",
+    "optionA": "Un coup de foudre",
+    "optionB": "Une amitié qui devient lentement de l’amour",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_048",
+    "optionA": "Une relation sans disputes",
+    "optionB": "Une relation où tout peut être dit",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_049",
+    "optionA": "Habiter ensemble très vite",
+    "optionB": "Attendre plusieurs années",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_050",
+    "optionA": "Connaître les pensées de ton partenaire",
+    "optionB": "Pouvoir cacher les tiennes",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_051",
+    "optionA": "Être avec quelqu’un de très ambitieux",
+    "optionB": "Quelqu’un qui privilégie toujours le temps libre",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_052",
+    "optionA": "Une surprise romantique devant tes amis",
+    "optionB": "Une surprise romantique totalement privée",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_053",
+    "optionA": "Avoir un partenaire qui adore sortir",
+    "optionB": "Un partenaire qui préfère toujours rester à la maison",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_054",
+    "optionA": "Ne plus jamais parler de tes ex",
+    "optionB": "Tout raconter une fois puis ne plus y revenir",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_055",
+    "optionA": "Recevoir un bijou symbolique",
+    "optionB": "Recevoir une lettre très personnelle",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_056",
+    "optionA": "Une relation à distance avec beaucoup de confiance",
+    "optionB": "Une relation proche avec beaucoup de jalousie",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_057",
+    "optionA": "Être compris(e) sans parler",
+    "optionB": "Pouvoir tout expliquer sans être jugé(e)",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_058",
+    "optionA": "Faire un énorme compromis amoureux",
+    "optionB": "Refuser et risquer de perdre la relation",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_059",
+    "optionA": "Trouver ton âme sœur maintenant",
+    "optionB": "Réussir tous tes autres projets avant l’amour",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_060",
+    "optionA": "Une histoire très intense",
+    "optionB": "Une histoire très apaisante",
+    "category": "adult"
+  }
+]

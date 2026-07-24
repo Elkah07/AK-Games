@@ -2177,3 +2177,543 @@ settingsBtn.addEventListener("click", () => {
 });
 
 renderHome();
+
+/* =========================================================
+   AK'GAMES V0.7 — PACK AMBIANCE + REFONTE VISUELLE
+   ========================================================= */
+
+state.actionTruth = null;
+state.ambiancePoll = null;
+
+const V07_READY_GAMES = new Set([
+  "Qui de nous ?",
+  "Le premier qui rit a perdu",
+  "Qui ment le mieux ?",
+  "Action ou Vérité",
+  "Action ou Vérité +18",
+  "Je n’ai jamais",
+  "Je n’ai jamais +18",
+  "Tu préfères",
+  "Tu préfères +18"
+]);
+
+const V07_GAME_ICONS = {
+  "Action ou Vérité": "🎭",
+  "Action ou Vérité +18": "🌶️",
+  "Je n’ai jamais": "🙋",
+  "Je n’ai jamais +18": "🔥",
+  "Tu préfères": "⚖️",
+  "Tu préfères +18": "💋",
+  "Qui de nous ?": "👥",
+  "Le premier qui rit a perdu": "😂",
+  "Qui ment le mieux ?": "🤥"
+};
+
+renderHome = function () {
+  state.history = [];
+  title.textContent = "La soirée commence ici";
+  setBackVisible(false);
+
+  screen.innerHTML = `
+    <section class="home-hero-v07">
+      <div class="home-logo-shell">
+        <img src="icons/icon-192.png" alt="" class="home-logo-v07">
+      </div>
+      <div class="home-hero-copy">
+        <span class="home-kicker">LA BOÎTE À JEUX QUI TIENT DANS UNE POCHE</span>
+        <h2>Une soirée.<br><em>Zéro temps mort.</em></h2>
+        <p>Crée un salon, rassemble la bande et enchaîne les jeux sans jamais quitter la partie.</p>
+        <div class="home-stat-row">
+          <span>🎮 6 jeux complets</span>
+          <span>📲 1 ou plusieurs téléphones</span>
+          <span>⚡ lancement express</span>
+        </div>
+      </div>
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
+    </section>
+
+    <section class="home-action-stack">
+      <button class="home-action-card home-action-primary" data-home-action="create">
+        <span class="home-action-icon">✦</span>
+        <span class="home-action-copy">
+          <small>MODE SOIRÉE</small>
+          <strong>Créer une partie</strong>
+          <span>Ouvre un salon et joue chacun sur son téléphone.</span>
+        </span>
+        <span class="home-action-arrow">→</span>
+      </button>
+
+      <div class="home-action-grid">
+        <button class="home-action-card home-action-secondary" data-home-action="join">
+          <span class="home-action-icon">⌁</span>
+          <span class="home-action-copy">
+            <small>J’AI UN CODE</small>
+            <strong>Rejoindre</strong>
+            <span>Retrouve tes amis en quelques secondes.</span>
+          </span>
+          <span class="home-action-arrow">→</span>
+        </button>
+
+        <button class="home-action-card home-action-secondary home-action-phone" data-home-action="single">
+          <span class="home-action-icon">▣</span>
+          <span class="home-action-copy">
+            <small>PASS & PLAY</small>
+            <strong>Un téléphone</strong>
+            <span>Ajoutez les joueurs puis passez-vous l’écran.</span>
+          </span>
+          <span class="home-action-arrow">→</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="home-feature-strip">
+      <article><span>🎭</span><div><strong>Pack Ambiance</strong><small>Action ou Vérité, Je n’ai jamais, Tu préfères</small></div></article>
+      <article><span>🏆</span><div><strong>Soirée continue</strong><small>Score cumulé et historique conservés</small></div></article>
+      <article><span>🌙</span><div><strong>Mode nuit premium</strong><small>Une interface pensée pour le téléphone</small></div></article>
+    </section>
+  `;
+
+  document.querySelectorAll("[data-home-action]").forEach(button => {
+    button.addEventListener("click", () => {
+      const action = button.dataset.homeAction;
+      if (action === "single") {
+        state.mode = "single";
+        pushScreen("home");
+        renderSetup();
+      } else if (action === "create") {
+        state.mode = "multi-host";
+        pushScreen("home");
+        renderSetup();
+      } else {
+        pushScreen("home");
+        renderJoin();
+      }
+    });
+  });
+};
+
+renderGames = function () {
+  const category = categories.find(item => item.id === state.currentCategory);
+  title.textContent = category.name;
+  setBackVisible(true);
+
+  screen.innerHTML = `
+    <section class="catalog-intro">
+      <span>${category.emoji}</span>
+      <div>
+        <small>CATÉGORIE</small>
+        <strong>${escapeHtml(category.name)}</strong>
+        <p>${escapeHtml(category.description)}</p>
+      </div>
+    </section>
+
+    <section class="game-list game-list-v07">
+      ${category.games.map(game => {
+        const disabled = game === "Blind Test";
+        const ready = V07_READY_GAMES.has(game);
+        const icon = V07_GAME_ICONS[game] || "🎲";
+
+        return `
+          <button class="game-card game-card-v07 ${disabled ? "disabled" : ""}" ${disabled ? "disabled" : ""} data-game="${escapeHtml(game)}">
+            <span class="game-card-icon">${icon}</span>
+            <span class="game-card-copy">
+              <strong>${escapeHtml(game)}</strong>
+              <span class="helper">${disabled ? "Bientôt disponible" : ready ? "Prêt à lancer" : "À intégrer"}</span>
+              <span class="game-meta">
+                ${ready ? `<span class="badge green">✓ disponible</span>` : `<span class="badge">bientôt</span>`}
+                ${state.alcohol && ready ? `<span class="badge green">🍻 option alcool</span>` : ""}
+                ${game.includes("+18") ? `<span class="badge orange">🔞 adulte</span>` : ""}
+              </span>
+            </span>
+            <span class="game-card-chevron">›</span>
+          </button>
+        `;
+      }).join("")}
+    </section>
+  `;
+
+  document.querySelectorAll("[data-game]:not([disabled])").forEach(button => {
+    button.addEventListener("click", () => {
+      const game = button.dataset.game;
+
+      if (game === "Qui de nous ?") {
+        pushScreen("games");
+        resetWhoUsState();
+        renderWhoUsSetup();
+        return;
+      }
+      if (game === "Le premier qui rit a perdu") {
+        pushScreen("games");
+        resetLaughDuelState();
+        renderLaughDuelSetup();
+        return;
+      }
+      if (game === "Qui ment le mieux ?") {
+        if (state.players.length < 3) {
+          alert("« Qui ment le mieux ? » nécessite au moins 3 joueurs.");
+          return;
+        }
+        pushScreen("games");
+        resetBestLiarState();
+        renderBestLiarSetup();
+        return;
+      }
+      if (game === "Action ou Vérité" || game === "Action ou Vérité +18") {
+        pushScreen("games");
+        resetActionTruthState(game.includes("+18"));
+        renderActionTruthSetup();
+        return;
+      }
+      if (game === "Je n’ai jamais" || game === "Je n’ai jamais +18") {
+        pushScreen("games");
+        resetAmbiancePollState("never", game.includes("+18"));
+        renderAmbiancePollSetup();
+        return;
+      }
+      if (game === "Tu préfères" || game === "Tu préfères +18") {
+        pushScreen("games");
+        resetAmbiancePollState("would", game.includes("+18"));
+        renderAmbiancePollSetup();
+        return;
+      }
+
+      renderGamePlaceholder(game);
+    });
+  });
+};
+
+function resetActionTruthState(forceAdult = false) {
+  state.actionTruth = {
+    roundCount: 12,
+    mode: "mix",
+    includeAdult: Boolean(forceAdult),
+    forceAdult: Boolean(forceAdult),
+    prompts: [],
+    currentIndex: 0,
+    scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    results: []
+  };
+}
+
+function renderActionTruthSetup() {
+  if (!state.actionTruth) resetActionTruthState(false);
+  const game = state.actionTruth;
+
+  title.textContent = "Action ou Vérité";
+  setBackVisible(true);
+
+  screen.innerHTML = `
+    <section class="game-cover game-cover-action">
+      <span class="game-cover-icon">🎭</span>
+      <div><small>PACK AMBIANCE</small><h2>Action ou Vérité</h2><p>Des confessions, de l’impro et juste assez de pression sociale.</p></div>
+    </section>
+
+    <section class="card setup-card-v07">
+      <div class="form-group">
+        <label for="actionTruthRounds">Nombre de tours</label>
+        <select id="actionTruthRounds" class="text-input">
+          ${[8, 12, 16, 20].map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} tours</option>`).join("")}
+        </select>
+      </div>
+      <div class="form-group top-gap">
+        <label for="actionTruthMode">Contenu</label>
+        <select id="actionTruthMode" class="text-input">
+          <option value="mix" ${game.mode === "mix" ? "selected" : ""}>Actions + Vérités</option>
+          <option value="action" ${game.mode === "action" ? "selected" : ""}>Actions uniquement</option>
+          <option value="truth" ${game.mode === "truth" ? "selected" : ""}>Vérités uniquement</option>
+        </select>
+      </div>
+    </section>
+
+    ${state.adult ? `
+      <label class="option-card premium-toggle">
+        <input id="actionTruthAdult" type="checkbox" ${game.includeAdult ? "checked" : ""} ${game.forceAdult ? "disabled" : ""}>
+        <span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Plus osé, mais toujours fait pour jouer en groupe.</span></span>
+      </label>
+    ` : ""}
+
+    <button id="startActionTruth" class="primary-btn full">Lancer la partie</button>
+  `;
+
+  document.querySelector("#actionTruthRounds").addEventListener("change", event => game.roundCount = Number(event.target.value));
+  document.querySelector("#actionTruthMode").addEventListener("change", event => game.mode = event.target.value);
+  document.querySelector("#actionTruthAdult")?.addEventListener("change", event => game.includeAdult = event.target.checked);
+  document.querySelector("#startActionTruth").addEventListener("click", startActionTruthGame);
+}
+
+async function loadJsonFile(path, errorText) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(errorText);
+  return response.json();
+}
+
+async function startActionTruthGame() {
+  const game = state.actionTruth;
+  screen.innerHTML = `<div class="notice">Mélange des cartes…</div>`;
+
+  try {
+    let pool = await loadJsonFile("data/action-verite.json", "Impossible de charger les cartes.");
+    if (state.adult && game.includeAdult) {
+      pool = pool.concat(await loadJsonFile("data/action-verite-adulte.json", "Impossible de charger les cartes adultes."));
+    }
+    if (game.mode !== "mix") pool = pool.filter(item => item.type === game.mode);
+    game.prompts = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.currentIndex = 0;
+    game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.results = [];
+    renderActionTruthRound();
+  } catch (error) {
+    alert(error.message);
+    renderActionTruthSetup();
+  }
+}
+
+function renderActionTruthRound() {
+  const game = state.actionTruth;
+  if (game.currentIndex >= game.prompts.length) {
+    renderActionTruthEnd();
+    return;
+  }
+
+  const player = state.players[game.currentIndex % state.players.length];
+  const prompt = game.prompts[game.currentIndex];
+  const isAction = prompt.type === "action";
+  title.textContent = isAction ? "À toi de jouer" : "Moment de vérité";
+  setBackVisible(false);
+
+  screen.innerHTML = `
+    <section class="game-progress">
+      <span>Tour ${game.currentIndex + 1}/${game.prompts.length}</span>
+      <div class="progress-track"><div class="progress-fill" style="width:${((game.currentIndex + 1) / game.prompts.length) * 100}%"></div></div>
+    </section>
+
+    <section class="prompt-stage ${isAction ? "prompt-action" : "prompt-truth"}">
+      <div class="prompt-player">
+        <span>${avatarById(player.avatarId).emoji}</span>
+        <div><small>C’EST AU TOUR DE</small><strong>${escapeHtml(player.name)}</strong></div>
+      </div>
+      <span class="prompt-type-chip">${isAction ? "⚡ ACTION" : "◉ VÉRITÉ"}</span>
+      <h2>${escapeHtml(prompt.text)}</h2>
+    </section>
+
+    <section class="decision-grid">
+      <button id="actionTruthDone" class="primary-btn">✓ C’est fait</button>
+      <button id="actionTruthSkip" class="secondary-btn">Passer</button>
+    </section>
+    ${state.alcohol ? `<div class="alcohol-callout">🍻 Une carte passée = une petite gorgée. Doucement, la soirée est longue.</div>` : ""}
+  `;
+
+  document.querySelector("#actionTruthDone").addEventListener("click", () => finishActionTruthRound(true));
+  document.querySelector("#actionTruthSkip").addEventListener("click", () => finishActionTruthRound(false));
+}
+
+function finishActionTruthRound(completed) {
+  const game = state.actionTruth;
+  const player = state.players[game.currentIndex % state.players.length];
+  if (completed) game.scores[player.id] = Number(game.scores[player.id] || 0) + 1;
+  game.results.push({ playerId: player.id, completed, promptId: game.prompts[game.currentIndex].id });
+  game.currentIndex += 1;
+  renderActionTruthRound();
+}
+
+function renderActionTruthEnd() {
+  const game = state.actionTruth;
+  const ranking = [...state.players].sort((a, b) => Number(game.scores[b.id] || 0) - Number(game.scores[a.id] || 0));
+  title.textContent = "Fin de la partie";
+  setBackVisible(false);
+
+  screen.innerHTML = `
+    <section class="winner-stage winner-stage-v07">
+      <div class="winner-crown">🎭</div>
+      <h2>${game.results.filter(item => item.completed).length} défis relevés</h2>
+      <p>La dignité est peut-être partie, mais le groupe est encore là.</p>
+    </section>
+    <section class="final-ranking">
+      ${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}
+    </section>
+    <div class="toolbar"><button id="replayActionTruth" class="secondary-btn">Rejouer</button><button id="otherActionTruth" class="primary-btn">Autre jeu</button></div>
+  `;
+  document.querySelector("#replayActionTruth").addEventListener("click", () => { const adult = game.forceAdult; resetActionTruthState(adult); renderActionTruthSetup(); });
+  document.querySelector("#otherActionTruth").addEventListener("click", () => { state.actionTruth = null; renderPlayChoice(); });
+}
+
+function resetAmbiancePollState(type, forceAdult = false) {
+  state.ambiancePoll = {
+    type,
+    roundCount: 10,
+    includeAdult: Boolean(forceAdult),
+    forceAdult: Boolean(forceAdult),
+    items: [],
+    currentIndex: 0,
+    currentVoterIndex: 0,
+    votes: {},
+    scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    rounds: []
+  };
+}
+
+function pollGameMeta(type) {
+  return type === "never"
+    ? { title: "Je n’ai jamais", icon: "🙋", description: "Réponds en secret, puis découvre qui a déjà franchi la ligne.", classic: "data/je-nai-jamais.json", adult: "data/je-nai-jamais-adulte.json" }
+    : { title: "Tu préfères", icon: "⚖️", description: "Deux options impossibles. Aucun bouton pour fuir.", classic: "data/tu-preferes.json", adult: "data/tu-preferes-adulte.json" };
+}
+
+function renderAmbiancePollSetup() {
+  const game = state.ambiancePoll;
+  const meta = pollGameMeta(game.type);
+  title.textContent = meta.title;
+  setBackVisible(true);
+
+  screen.innerHTML = `
+    <section class="game-cover ${game.type === "never" ? "game-cover-never" : "game-cover-would"}">
+      <span class="game-cover-icon">${meta.icon}</span>
+      <div><small>PACK AMBIANCE</small><h2>${meta.title}</h2><p>${meta.description}</p></div>
+    </section>
+    <section class="card setup-card-v07">
+      <div class="form-group"><label for="pollRounds">Nombre de questions</label><select id="pollRounds" class="text-input">${[8, 10, 15, 20].map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} questions</option>`).join("")}</select></div>
+    </section>
+    ${state.adult ? `<label class="option-card premium-toggle"><input id="pollAdult" type="checkbox" ${game.includeAdult ? "checked" : ""} ${game.forceAdult ? "disabled" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Des choix et révélations plus épicés.</span></span></label>` : ""}
+    <button id="startPollGame" class="primary-btn full">Lancer la partie</button>
+  `;
+
+  document.querySelector("#pollRounds").addEventListener("change", event => game.roundCount = Number(event.target.value));
+  document.querySelector("#pollAdult")?.addEventListener("change", event => game.includeAdult = event.target.checked);
+  document.querySelector("#startPollGame").addEventListener("click", startAmbiancePollGame);
+}
+
+async function startAmbiancePollGame() {
+  const game = state.ambiancePoll;
+  const meta = pollGameMeta(game.type);
+  screen.innerHTML = `<div class="notice">Préparation des questions…</div>`;
+  try {
+    let pool = await loadJsonFile(meta.classic, "Impossible de charger les questions.");
+    if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile(meta.adult, "Impossible de charger les questions adultes."));
+    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.currentIndex = 0;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.rounds = [];
+    renderAmbiancePollGate();
+  } catch (error) {
+    alert(error.message);
+    renderAmbiancePollSetup();
+  }
+}
+
+function renderAmbiancePollGate() {
+  const game = state.ambiancePoll;
+  if (game.currentIndex >= game.items.length) {
+    renderAmbiancePollEnd();
+    return;
+  }
+  if (game.currentVoterIndex >= state.players.length) {
+    renderAmbiancePollReveal();
+    return;
+  }
+
+  const player = state.players[game.currentVoterIndex];
+  const meta = pollGameMeta(game.type);
+  title.textContent = `Vote secret · ${meta.title}`;
+  setBackVisible(false);
+
+  screen.innerHTML = `
+    <section class="game-progress"><span>Question ${game.currentIndex + 1}/${game.items.length}</span><div class="progress-track"><div class="progress-fill" style="width:${((game.currentIndex + 1) / game.items.length) * 100}%"></div></div></section>
+    <section class="handoff-stage handoff-v07">
+      <div class="giant-avatar">${avatarById(player.avatarId).emoji}</div>
+      <span class="category-chip">ÉCRAN PRIVÉ</span>
+      <h2>Passe le téléphone à ${escapeHtml(player.name)}</h2>
+      <p>Les autres ne regardent pas. Promis, juré, téléphone retourné.</p>
+      <button id="openPrivateVote" class="primary-btn">Je suis ${escapeHtml(player.name)}</button>
+    </section>
+  `;
+  document.querySelector("#openPrivateVote").addEventListener("click", renderAmbiancePollVote);
+}
+
+function renderAmbiancePollVote() {
+  const game = state.ambiancePoll;
+  const item = game.items[game.currentIndex];
+  const meta = pollGameMeta(game.type);
+  const player = state.players[game.currentVoterIndex];
+  title.textContent = meta.title;
+
+  screen.innerHTML = game.type === "never" ? `
+    <section class="poll-question-stage poll-never-stage"><span class="prompt-type-chip">🙋 JE N’AI JAMAIS</span><h2>${escapeHtml(item.text.replace(/^Je n[’']ai jamais\s*/i, ""))}</h2><p>Alors ${escapeHtml(player.name)}, jamais… ou déjà ?</p></section>
+    <section class="poll-choice-grid"><button class="poll-choice poll-choice-a" data-poll-vote="never"><strong>Jamais</strong><span>Pas moi. Innocence totale.</span></button><button class="poll-choice poll-choice-b" data-poll-vote="done"><strong>Déjà</strong><span>Oui, et j’assume presque.</span></button></section>
+  ` : `
+    <section class="poll-question-stage poll-would-stage"><span class="prompt-type-chip">⚖️ TU PRÉFÈRES</span><h2>Choisis ton camp</h2><p>${escapeHtml(player.name)}, impossible de répondre “ça dépend”.</p></section>
+    <section class="poll-choice-grid"><button class="poll-choice poll-choice-a" data-poll-vote="A"><small>OPTION A</small><strong>${escapeHtml(item.optionA)}</strong></button><button class="poll-choice poll-choice-b" data-poll-vote="B"><small>OPTION B</small><strong>${escapeHtml(item.optionB)}</strong></button></section>
+  `;
+
+  document.querySelectorAll("[data-poll-vote]").forEach(button => button.addEventListener("click", () => {
+    game.votes[player.id] = button.dataset.pollVote;
+    game.currentVoterIndex += 1;
+    renderAmbiancePollGate();
+  }));
+}
+
+function calculatePollResult(game) {
+  const values = Object.values(game.votes);
+  const labels = game.type === "never" ? ["never", "done"] : ["A", "B"];
+  const counts = Object.fromEntries(labels.map(label => [label, values.filter(value => value === label).length]));
+  const minority = counts[labels[0]] === counts[labels[1]] ? null : (counts[labels[0]] < counts[labels[1]] ? labels[0] : labels[1]);
+  const minorityIds = minority ? Object.entries(game.votes).filter(([, value]) => value === minority).map(([id]) => id) : [];
+  return { counts, minority, minorityIds };
+}
+
+function renderAmbiancePollReveal() {
+  const game = state.ambiancePoll;
+  const item = game.items[game.currentIndex];
+  const result = calculatePollResult(game);
+  const meta = pollGameMeta(game.type);
+  const optionLabel = value => game.type === "never" ? (value === "never" ? "Jamais" : "Déjà") : (value === "A" ? item.optionA : item.optionB);
+  result.minorityIds.forEach(id => game.scores[id] = Number(game.scores[id] || 0) + 1);
+  game.rounds.push({ itemId: item.id, votes: { ...game.votes }, minorityIds: result.minorityIds });
+
+  title.textContent = "Le groupe a parlé";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="reveal-stage reveal-v07">
+      <span class="game-cover-icon">${meta.icon}</span>
+      <h2>${game.type === "never" ? escapeHtml(item.text) : "Le verdict est tombé"}</h2>
+      ${game.type === "would" ? `<div class="reveal-dilemma"><span>${escapeHtml(item.optionA)}</span><b>VS</b><span>${escapeHtml(item.optionB)}</span></div>` : ""}
+    </section>
+    <section class="poll-results-grid">
+      ${state.players.map(player => `<article class="poll-result-person"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(optionLabel(game.votes[player.id]))}</small>${result.minorityIds.includes(player.id) ? `<em>+1 pt minorité</em>` : ""}</article>`).join("")}
+    </section>
+    ${state.alcohol && game.type === "never" ? `<div class="alcohol-callout">🍻 Les personnes qui ont répondu “Déjà” prennent une petite gorgée.</div>` : ""}
+    <button id="nextPollRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Question suivante"}</button>
+  `;
+
+  document.querySelector("#nextPollRound").addEventListener("click", () => {
+    game.currentIndex += 1;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    renderAmbiancePollGate();
+  });
+}
+
+function renderAmbiancePollEnd() {
+  const game = state.ambiancePoll;
+  const meta = pollGameMeta(game.type);
+  const ranking = [...state.players].sort((a, b) => Number(game.scores[b.id] || 0) - Number(game.scores[a.id] || 0));
+  title.textContent = "Classement final";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="winner-stage winner-stage-v07"><div class="winner-crown">${meta.icon}🏆</div><h2>Les esprits libres sont devant</h2><p>Un point était gagné à chaque réponse minoritaire.</p></section>
+    <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
+    <div class="toolbar"><button id="replayPoll" class="secondary-btn">Rejouer</button><button id="otherPoll" class="primary-btn">Autre jeu</button></div>
+  `;
+  document.querySelector("#replayPoll").addEventListener("click", () => { const { type, forceAdult } = game; resetAmbiancePollState(type, forceAdult); renderAmbiancePollSetup(); });
+  document.querySelector("#otherPoll").addEventListener("click", () => { state.ambiancePoll = null; renderPlayChoice(); });
+}
+
+settingsBtn.addEventListener("click", event => {
+  const ambianceActive = Boolean(state.actionTruth?.prompts?.length || state.ambiancePoll?.items?.length);
+  if (!ambianceActive) return;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+}, true);
+
+renderHome();
