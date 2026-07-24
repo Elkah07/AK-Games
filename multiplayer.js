@@ -2518,6 +2518,7 @@
           "state/answerOrder": shuffleArray(Object.keys(liveAnswers)),
           "state/currentResult": null,
           "state/updatedAt": AKFirebase.now(),
+          revealedAnswers: liveAnswers,
           votes: null
         });
       } catch (error) {
@@ -3913,7 +3914,7 @@
       AKFirebase.updateGame(state.roomCode, {
         "state/phase": "voting",
         "state/mysteryAuthorId": authorId,
-        "state/answerSnapshot": answers,
+        "state/answerSnapshot": { text: answers?.[authorId]?.text || "" },
         "state/updatedAt": AKFirebase.now(),
         votes: null
       }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
@@ -3933,7 +3934,7 @@
       const scores = { ...(gameState.scores || {}) };
       correctIds.forEach(id => scores[id] = Number(scores[id] || 0) + 1);
       scores[authorId] = Number(scores[authorId] || 0) + fooledIds.length;
-      const result = { authorId, correctIds, fooledIds, votes: validVotes, answers: gameState.answerSnapshot || answers, itemId: gameState.items?.[gameState.currentIndex]?.id || "" };
+      const result = { authorId, correctIds, fooledIds, votes: validVotes, answers, itemId: gameState.items?.[gameState.currentIndex]?.id || "" };
       AKFirebase.updateGame(state.roomCode, {
         "state/phase": "results",
         "state/currentResult": result,
@@ -3978,7 +3979,7 @@
     setBackVisible(false);
     screen.innerHTML = `
       ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Enquête")}
-      <section class="mystery-answer-card"><small>${escapeHtml(item?.prompt || "")}</small><blockquote>« ${escapeHtml(gameState.answerSnapshot?.[authorId]?.text || "") } »</blockquote><span>QUI A ÉCRIT ÇA ?</span></section>
+      <section class="mystery-answer-card"><small>${escapeHtml(item?.prompt || "")}</small><blockquote>« ${escapeHtml(gameState.answerSnapshot?.text || "") } »</blockquote><span>QUI A ÉCRIT ÇA ?</span></section>
       ${isAuthor ? renderMultiWaiting("Tu connais déjà la réponse", "Essaie de garder ton meilleur visage innocent.", avatarById(ownPlayer?.avatarId).emoji) : ownVote ? renderMultiWaiting("Soupçon enregistré", `${Object.keys(votes).length}/${Math.max(1, state.players.length - 1)} enquêteurs ont voté.`, "🔒") : `<section class="suspect-grid">${candidates.map(player => `<button class="suspect-card" data-multi-who-vote="${player.id}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong></button>`).join("")}</section>`}
       ${renderPlayerSubmissionStatus({ ...votes, [authorId]: "author" }, "Prêt", "Cherche…")}
     `;

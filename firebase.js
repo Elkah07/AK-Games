@@ -366,16 +366,86 @@
     return { code: displayCode(key), key, uid: user.uid, room };
   }
 
+  function mergePrivateSubmissions(room, privateSubmissions, ownUid) {
+    if (!room?.game) return room;
+
+    const merged = cloneValue(room);
+    const status = merged.game.submissionStatus || {};
+    const revealedAnswers = merged.game.revealedAnswers || {};
+    const collections = ["answers", "votes", "actions"];
+
+    collections.forEach(collection => {
+      const visible = {};
+      Object.keys(status[collection] || {}).forEach(uid => {
+        visible[uid] = true;
+      });
+
+      Object.entries(privateSubmissions || {}).forEach(([uid, entries]) => {
+        if (entries && Object.prototype.hasOwnProperty.call(entries, collection)) {
+          visible[uid] = entries[collection];
+        }
+      });
+
+      if (collection === "answers") {
+        Object.entries(revealedAnswers).forEach(([uid, answer]) => {
+          visible[uid] = answer;
+        });
+      }
+
+      merged.game[collection] = visible;
+    });
+
+    return merged;
+  }
+
   function listenRoom(code, callback, onError) {
     const key = normalizeCode(code);
-    const ref = db.ref(`rooms/${key}`);
+    const roomRef = db.ref(`rooms/${key}`);
+    let roomValue = null;
+    let privateValue = {};
+    let privateRef = null;
+    let privateHandler = null;
+    let currentPrivatePath = "";
 
-    const handler = snapshot => {
-      callback(snapshot.exists() ? snapshot.val() : null);
+    const emit = () => {
+      callback(roomValue ? mergePrivateSubmissions(roomValue, privateValue, currentUser?.uid) : null);
     };
 
-    ref.on("value", handler, onError || console.error);
-    return () => ref.off("value", handler);
+    const bindPrivate = room => {
+      if (!currentUser || !room?.meta) return;
+      const isHost = room.meta.hostUid === currentUser.uid;
+      const nextPath = isHost
+        ? `roomSecrets/${key}/submissions`
+        : `roomSecrets/${key}/submissions/${currentUser.uid}`;
+
+      if (nextPath === currentPrivatePath) return;
+      if (privateRef && privateHandler) privateRef.off("value", privateHandler);
+
+      currentPrivatePath = nextPath;
+      privateValue = {};
+      privateRef = db.ref(nextPath);
+      privateHandler = snapshot => {
+        if (isHost) {
+          privateValue = snapshot.val() || {};
+        } else {
+          privateValue = snapshot.exists() ? { [currentUser.uid]: snapshot.val() } : {};
+        }
+        emit();
+      };
+      privateRef.on("value", privateHandler, onError || console.error);
+    };
+
+    const roomHandler = snapshot => {
+      roomValue = snapshot.exists() ? snapshot.val() : null;
+      bindPrivate(roomValue);
+      emit();
+    };
+
+    roomRef.on("value", roomHandler, onError || console.error);
+    return () => {
+      roomRef.off("value", roomHandler);
+      if (privateRef && privateHandler) privateRef.off("value", privateHandler);
+    };
   }
 
   async function leaveRoom(code, isHost) {
@@ -383,9 +453,15 @@
     const key = normalizeCode(code);
 
     if (isHost) {
-      await db.ref(`rooms/${key}`).remove();
+      const updates = {};
+      updates[`rooms/${key}`] = null;
+      updates[`roomSecrets/${key}`] = null;
+      await db.ref().update(updates);
     } else {
-      await db.ref(`rooms/${key}/players/${user.uid}`).remove();
+      const updates = {};
+      updates[`rooms/${key}/players/${user.uid}`] = null;
+      updates[`roomSecrets/${key}/submissions/${user.uid}`] = null;
+      await db.ref().update(updates);
     }
   }
 
@@ -611,6 +687,7 @@
     const updates = {};
 
     updates[`rooms/${key}/game`] = null;
+    updates[`roomSecrets/${key}`] = null;
     updates[`rooms/${key}/meta/status`] = "lobby";
     updates[`rooms/${key}/meta/updatedAt`] = serverTimestamp();
 
@@ -685,7 +762,17 @@
       await assertRoomCanStart(key, payload.state.type);
     }
 
-    updates[`rooms/${key}/game`] = payload;
+    const publicPayload = payload ? cloneValue(payload) : null;
+    if (publicPayload) {
+      publicPayload.answers = null;
+      publicPayload.votes = null;
+      publicPayload.actions = null;
+      publicPayload.submissionStatus = { answers: {}, votes: {}, actions: {} };
+      publicPayload.revealedAnswers = null;
+    }
+
+    updates[`rooms/${key}/game`] = publicPayload;
+    updates[`roomSecrets/${key}`] = null;
     updates[`rooms/${key}/meta/status`] = payload ? "playing" : "lobby";
     updates[`rooms/${key}/meta/updatedAt`] = serverTimestamp();
 
@@ -695,8 +782,26 @@
   async function updateGame(code, updates) {
     const key = normalizeCode(code);
     const prefixedUpdates = {};
+    const collectionsToClear = Object.entries(updates || {})
+      .filter(([path, value]) => ["answers", "votes", "actions"].includes(path) && value === null)
+      .map(([path]) => path);
+
+    if (collectionsToClear.length) {
+      const playersSnapshot = await db.ref(`rooms/${key}/players`).once("value");
+      const playerIds = Object.keys(playersSnapshot.val() || {});
+      collectionsToClear.forEach(collection => {
+        playerIds.forEach(uid => {
+          prefixedUpdates[`roomSecrets/${key}/submissions/${uid}/${collection}`] = null;
+        });
+        prefixedUpdates[`rooms/${key}/game/submissionStatus/${collection}`] = null;
+        if (collection === "answers") {
+          prefixedUpdates[`rooms/${key}/game/revealedAnswers`] = null;
+        }
+      });
+    }
 
     Object.entries(updates || {}).forEach(([path, value]) => {
+      if (["answers", "votes", "actions"].includes(path)) return;
       prefixedUpdates[`rooms/${key}/game/${path}`] = value;
     });
 
@@ -712,7 +817,10 @@
 
     const user = await ready();
     const key = normalizeCode(code);
-    await db.ref(`rooms/${key}/game/${collection}/${user.uid}`).set(value);
+    const updates = {};
+    updates[`roomSecrets/${key}/submissions/${user.uid}/${collection}`] = value;
+    updates[`rooms/${key}/game/submissionStatus/${collection}/${user.uid}`] = true;
+    await db.ref().update(updates);
   }
 
   async function clearOwnGameEntry(code, collection) {
@@ -724,7 +832,10 @@
 
     const user = await ready();
     const key = normalizeCode(code);
-    await db.ref(`rooms/${key}/game/${collection}/${user.uid}`).remove();
+    const updates = {};
+    updates[`roomSecrets/${key}/submissions/${user.uid}/${collection}`] = null;
+    updates[`rooms/${key}/game/submissionStatus/${collection}/${user.uid}`] = null;
+    await db.ref().update(updates);
   }
 
   window.AKFirebase = {

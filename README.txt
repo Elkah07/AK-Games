@@ -1,21 +1,13 @@
-AK’Games V1.0 — Audit, corrections passe 2
+AK'Games V1.0 — Audit passe 3 : confidentialité
 
-À remplacer à la racine :
+Fichiers à remplacer à la racine du projet :
 - firebase.js
 - multiplayer.js
 - database.rules.json
-- styles.css
 - service-worker.js
 
-À remplacer dans data :
-- blagues.json
-- minorite-adulte.json
-- questions-osees.json
-- roulette-defis.json
+Puis utiliser « Valider et envoyer (push) ».
+Le déploiement automatique publiera Hosting et les règles Realtime Database.
 
-Après remplacement :
-1. Dans VS Code, choisir « Valider et envoyer (push) ».
-2. Attendre la coche verte dans GitHub Actions.
-3. Fermer complètement AK’Games sur les téléphones puis la rouvrir.
-
-Aucune commande de terminal n’est nécessaire.
+Important : cette passe isole les réponses, votes et actions avant leur révélation.
+Le cloisonnement complet des rôles des jeux de déduction demande encore une refonte dédiée, détaillée dans le rapport.
