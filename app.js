@@ -304,7 +304,7 @@ function renderPlayerForm() {
     <section class="card">
       <div class="form-group">
         <label for="playerName">Ton prénom</label>
-        <input id="playerName" class="text-input" maxlength="20" placeholder="Ex. Kathie" value="${escapeHtml(state.draftPlayer.name)}">
+        <input id="playerName" class="text-input" maxlength="20" autocomplete="nickname" autocapitalize="words" enterkeyhint="done" placeholder="Ex. Kathie" value="${escapeHtml(state.draftPlayer.name)}">
       </div>
     </section>
 
@@ -314,8 +314,8 @@ function renderPlayerForm() {
       <div class="spacer"></div>
       <div class="avatar-grid">
         ${avatars.map(a => `
-          <button class="avatar-card ${state.draftPlayer.avatarId === a.id ? "selected" : ""}" data-avatar="${a.id}">
-            <span class="avatar-emoji">${a.emoji}</span>
+          <button type="button" class="avatar-card ${state.draftPlayer.avatarId === a.id ? "selected" : ""}" data-avatar="${a.id}" aria-label="Choisir ${escapeHtml(a.name)}" aria-pressed="${state.draftPlayer.avatarId === a.id ? "true" : "false"}">
+            <span class="avatar-emoji" aria-hidden="true">${a.emoji}</span>
             <span class="avatar-name">${a.name}</span>
           </button>
         `).join("")}
@@ -325,7 +325,13 @@ function renderPlayerForm() {
     <button id="savePlayer" class="primary-btn full">Ajouter le joueur</button>
   `;
 
-  document.querySelector("#playerName").addEventListener("input", e => state.draftPlayer.name = e.target.value);
+  const playerNameInput = document.querySelector("#playerName");
+  playerNameInput.addEventListener("input", e => state.draftPlayer.name = e.target.value);
+  playerNameInput.addEventListener("keydown", event => {
+    if (event.key !== "Enter") return;
+    event.preventDefault();
+    document.querySelector("#savePlayer")?.click();
+  });
 
   document.querySelectorAll("[data-avatar]").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -339,6 +345,13 @@ function renderPlayerForm() {
 
     if (!name || !state.draftPlayer.avatarId) {
       alert("Entre un prénom et choisis un personnage.");
+      return;
+    }
+
+    const normalizedName = name.toLocaleLowerCase("fr-FR");
+    if (state.players.some(player => String(player.name || "").trim().toLocaleLowerCase("fr-FR") === normalizedName)) {
+      alert("Ce prénom est déjà utilisé dans la partie. Choisis-en un autre pour éviter les confusions.");
+      playerNameInput.focus();
       return;
     }
 
@@ -2209,10 +2222,22 @@ function renderSettings() {
     state.players = [];
     state.draftPlayer = { name: "", avatarId: null };
     state.currentCategory = null;
-    state.quiDeNous = null;
-    state.laughDuel = null;
-    state.bestLiar = null;
+    [
+      "quiDeNous",
+      "laughDuel",
+      "bestLiar",
+      "actionTruth",
+      "ambiancePoll",
+      "sameBrain",
+      "minorityGame",
+      "whoAnswered",
+      "almostImpostor",
+      "fakeExpert",
+      "whoAmI",
+      "megaGame"
+    ].forEach(key => { state[key] = null; });
 
+    state.history = [];
     renderHome();
   });
 }
@@ -5021,6 +5046,13 @@ renderHome();
    ========================================================= */
 
 settingsBtn.addEventListener("click", event => {
+  if (state.roomCode) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    alert("Quitte d’abord le salon depuis le bouton prévu avant de modifier ou réinitialiser la session.");
+    return;
+  }
+
   if (!isSoloGameRunning()) return;
   event.preventDefault();
   event.stopImmediatePropagation();

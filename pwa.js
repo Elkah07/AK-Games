@@ -249,6 +249,104 @@
   });
 
   // -------------------------------------------------------
+  // Accessibilité, focus et annonces des changements d’écran
+  // -------------------------------------------------------
+
+  const screenRegion = document.querySelector("#screen");
+  const screenTitle = document.querySelector("#screenTitle");
+  const screenAnnouncer = document.querySelector("#screenAnnouncer");
+  let lastAccessibleTitle = screenTitle?.textContent?.trim() || "";
+  let lastAnnouncement = "";
+  let accessibilityTimer = null;
+  let lastControlSelector = "";
+
+  function focusSelectorForControl(control) {
+    if (!control) return "";
+    if (control.id) return `#${CSS.escape(control.id)}`;
+
+    const stableAttributes = [
+      "data-avatar",
+      "data-qcount",
+      "data-category",
+      "data-game",
+      "data-choice",
+      "data-rounds",
+      "data-duration",
+      "data-lives"
+    ];
+
+    for (const attribute of stableAttributes) {
+      const value = control.getAttribute(attribute);
+      if (value !== null) return `[${attribute}="${CSS.escape(value)}"]`;
+    }
+
+    return "";
+  }
+
+  document.addEventListener("pointerdown", event => {
+    lastControlSelector = focusSelectorForControl(event.target.closest("button, a[href], input, select, textarea"));
+  }, true);
+
+  document.addEventListener("keydown", event => {
+    if (!["Enter", " "].includes(event.key)) return;
+    lastControlSelector = focusSelectorForControl(event.target.closest("button, a[href], input, select, textarea"));
+  }, true);
+
+  function syncPressedStates() {
+    document.querySelectorAll("button.avatar-card, button.choice-pill").forEach(button => {
+      button.setAttribute(
+        "aria-pressed",
+        button.classList.contains("selected") || button.classList.contains("active") ? "true" : "false"
+      );
+    });
+  }
+
+  function announceCurrentScreen() {
+    if (!screenRegion || !screenTitle) return;
+
+    syncPressedStates();
+
+    const nextTitle = screenTitle.textContent?.trim() || "AK'Games";
+    const firstHeading = screenRegion.querySelector("h2, h3")?.textContent?.trim() || "";
+    const announcement = firstHeading && firstHeading !== nextTitle
+      ? `${nextTitle}. ${firstHeading}`
+      : nextTitle;
+
+    const titleChanged = nextTitle !== lastAccessibleTitle;
+    lastAccessibleTitle = nextTitle;
+
+    if (screenAnnouncer && announcement !== lastAnnouncement) {
+      lastAnnouncement = announcement;
+      screenAnnouncer.textContent = "";
+      window.setTimeout(() => { screenAnnouncer.textContent = announcement; }, 20);
+    }
+
+    const activeElement = document.activeElement;
+    const isEditing = activeElement && ["INPUT", "TEXTAREA", "SELECT"].includes(activeElement.tagName);
+
+    if (titleChanged) {
+      if (!isEditing) screenTitle.focus({ preventScroll: true });
+      return;
+    }
+
+    if ((!activeElement || activeElement === document.body) && lastControlSelector) {
+      const replacement = document.querySelector(lastControlSelector);
+      if (replacement && !replacement.disabled) replacement.focus({ preventScroll: true });
+    }
+  }
+
+  if (screenRegion && screenTitle) {
+    const observer = new MutationObserver(() => {
+      window.clearTimeout(accessibilityTimer);
+      accessibilityTimer = window.setTimeout(announceCurrentScreen, 35);
+    });
+
+    observer.observe(screenRegion, { childList: true, subtree: true, characterData: true });
+    observer.observe(screenTitle, { childList: true, subtree: true, characterData: true });
+    window.setTimeout(announceCurrentScreen, 60);
+  }
+
+  // -------------------------------------------------------
   // Raccourcis du manifest
   // -------------------------------------------------------
 

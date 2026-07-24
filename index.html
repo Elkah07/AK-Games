@@ -38,13 +38,15 @@
 
       <div>
         <p class="eyebrow">AK'Games</p>
-        <h1 id="screenTitle">La soirée commence ici</h1>
+        <h1 id="screenTitle" tabindex="-1">La soirée commence ici</h1>
       </div>
 
       <button id="settingsBtn" class="icon-btn" aria-label="Paramètres">⚙️</button>
     </header>
 
-    <main id="screen" class="screen"></main>
+    <main id="screen" class="screen" role="region" aria-labelledby="screenTitle"></main>
+
+    <div id="screenAnnouncer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
   </div>
 
   <div id="installBar" class="ak-install-bar hidden" role="status">
@@ -62,7 +64,7 @@
     </div>
   </div>
 
-  <div id="backToast" class="ak-back-toast hidden" role="status">
+  <div id="backToast" class="ak-back-toast hidden" role="status" aria-live="polite" aria-atomic="true">
     Appuie encore une fois pour quitter AK'Games.
   </div>
 

@@ -470,7 +470,7 @@
       <section class="card">
         <div class="form-group">
           <label for="playerName">Ton prénom</label>
-          <input id="playerName" class="text-input" maxlength="20" placeholder="Ex. Kathie" value="${escapeHtml(state.draftPlayer.name)}">
+          <input id="playerName" class="text-input" maxlength="20" autocomplete="nickname" autocapitalize="words" enterkeyhint="done" placeholder="Ex. Kathie" value="${escapeHtml(state.draftPlayer.name)}">
         </div>
       </section>
 
@@ -481,8 +481,8 @@
 
         <div class="avatar-grid">
           ${avatars.map(avatar => `
-            <button class="avatar-card ${state.draftPlayer.avatarId === avatar.id ? "selected" : ""}" data-avatar="${avatar.id}">
-              <span class="avatar-emoji">${avatar.emoji}</span>
+            <button type="button" class="avatar-card ${state.draftPlayer.avatarId === avatar.id ? "selected" : ""}" data-avatar="${avatar.id}" aria-label="Choisir ${escapeHtml(avatar.name)}" aria-pressed="${state.draftPlayer.avatarId === avatar.id ? "true" : "false"}">
+              <span class="avatar-emoji" aria-hidden="true">${avatar.emoji}</span>
               <span class="avatar-name">${avatar.name}</span>
             </button>
           `).join("")}
@@ -494,8 +494,14 @@
       </button>
     `;
 
-    document.querySelector("#playerName").addEventListener("input", event => {
+    const playerNameInput = document.querySelector("#playerName");
+    playerNameInput.addEventListener("input", event => {
       state.draftPlayer.name = event.target.value;
+    });
+    playerNameInput.addEventListener("keydown", event => {
+      if (event.key !== "Enter") return;
+      event.preventDefault();
+      document.querySelector("#saveMultiplayerPlayer")?.click();
     });
 
     document.querySelectorAll("[data-avatar]").forEach(button => {
@@ -757,7 +763,8 @@
       <section class="card">
         <div class="form-group">
           <label for="roomCode">Code du salon</label>
-          <input id="roomCode" class="text-input room-code-input" maxlength="9" autocomplete="off" placeholder="AK-7F3K9Q">
+          <input id="roomCode" class="text-input room-code-input" maxlength="9" autocomplete="off" autocapitalize="characters" spellcheck="false" inputmode="text" enterkeyhint="go" aria-describedby="roomCodeHelp" placeholder="AK-7F3K9Q">
+          <small id="roomCodeHelp" class="helper">Six caractères après AK-. Les tirets sont ajoutés automatiquement.</small>
         </div>
       </section>
 
@@ -774,6 +781,12 @@
       }
 
       input.value = value.length ? `AK-${value.slice(0, 6)}` : "";
+    });
+
+    input.addEventListener("keydown", event => {
+      if (event.key !== "Enter") return;
+      event.preventDefault();
+      document.querySelector("#joinBtn")?.click();
     });
 
     document.querySelector("#joinBtn").addEventListener("click", async () => {

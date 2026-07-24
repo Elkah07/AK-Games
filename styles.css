@@ -4005,3 +4005,90 @@ body::before {
     width: 100%;
   }
 }
+
+
+/* =========================================================
+   AK'GAMES V1.0 — AUDIT PASSE 6
+   Accessibilité, clavier et très petits écrans
+   ========================================================= */
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.screen,
+.screen > *,
+.player-card,
+.player-main,
+.player-main > div:last-child {
+  min-width: 0;
+}
+
+.player-main {
+  flex: 1 1 auto;
+}
+
+.player-main strong,
+.player-main .helper,
+.evening-player-row strong,
+.connection-recovery-player strong {
+  overflow-wrap: anywhere;
+}
+
+button:focus-visible,
+a[href]:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #f4e8ff;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(139, 92, 246, .38);
+}
+
+#screenTitle:focus-visible {
+  border-radius: 8px;
+}
+
+@media (max-width: 430px) {
+  .app-header {
+    grid-template-columns: 46px minmax(0, 1fr) 46px;
+  }
+
+  .icon-btn {
+    width: 46px;
+    height: 46px;
+  }
+
+  .player-card {
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .player-card > .danger-btn {
+    width: 100%;
+  }
+
+  .toolbar > button {
+    flex: 1 1 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
