@@ -20,17 +20,21 @@ jobs:
 
     steps:
       - name: Récupérer le projet
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Installer Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: "22"
+          node-version: "24"
+
+      - name: S’authentifier auprès de Google
+        uses: google-github-actions/auth@v3
+        with:
+          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          project_id: ak-games-4a2cd
 
       - name: Installer Firebase CLI
         run: npm install --global firebase-tools@15.24.0
 
       - name: Déployer Hosting et Database
         run: firebase deploy --only hosting,database --project ak-games-4a2cd --non-interactive
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
