@@ -1,0 +1,402 @@
+[
+  {
+    "id": "boire_001",
+    "text": "Tout le monde qui a déjà envoyé un message au mauvais groupe prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_002",
+    "text": "La dernière personne à avoir vérifié son téléphone prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_003",
+    "text": "Choisis une personne : vous trinquez ensemble.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_004",
+    "text": "Les personnes arrivées en retard aujourd’hui prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_005",
+    "text": "La personne avec le moins de batterie distribue deux petites gorgées.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_006",
+    "text": "Tout le monde vote pour la personne la plus susceptible d’oublier ses clés. Elle prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_007",
+    "text": "Les personnes qui ont déjà dormi avec leurs vêtements prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_008",
+    "text": "Choisis un mot interdit jusqu’à ton prochain tour. La première personne qui le dit prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_009",
+    "text": "Les personnes qui préfèrent le salé au sucré prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_010",
+    "text": "Fais rire quelqu’un en quinze secondes. Si tu échoues, petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_011",
+    "text": "La personne qui a le plus de notifications distribue deux petites gorgées.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_012",
+    "text": "Tout le monde pointe la personne la plus organisée. Elle distribue une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_013",
+    "text": "Les personnes qui ont déjà raté un train ou un avion prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_014",
+    "text": "Choisis une catégorie. Chacun répond à tour de rôle ; la première personne bloquée prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_015",
+    "text": "Les personnes qui ont déjà menti sur leur heure d’arrivée prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_016",
+    "text": "La personne la plus grande trinque avec la plus petite.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_017",
+    "text": "Fais un compliment sincère à quelqu’un ou prends une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_018",
+    "text": "Les personnes qui ont déjà regardé une série en une nuit prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_019",
+    "text": "Choisis quelqu’un pour une bataille de regard. La première personne qui rit prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_020",
+    "text": "Tout le monde qui porte du noir distribue une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_021",
+    "text": "La personne qui a envoyé le dernier vocal prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_022",
+    "text": "Les personnes qui ont déjà supprimé puis réécrit un message prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_023",
+    "text": "Le groupe choisit une chanson. Si tu ne connais pas le refrain, petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_024",
+    "text": "Les personnes qui ont déjà oublié un anniversaire prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_025",
+    "text": "Choisis une personne et inventez une poignée de main. Si vous ratez, vous trinquez.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_026",
+    "text": "Tout le monde qui préfère rester chez soi plutôt que sortir prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_027",
+    "text": "La personne avec le prénom le plus court distribue deux petites gorgées.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_028",
+    "text": "Les personnes qui ont déjà stalké un profil très loin prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_029",
+    "text": "Fais deviner un film en trois mots. Échec : petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_030",
+    "text": "Tout le monde vote pour le meilleur menteur. Cette personne distribue deux petites gorgées.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_031",
+    "text": "Les personnes qui ont déjà prétendu être occupées pour éviter une sortie prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_032",
+    "text": "La personne qui a le plus de photos dans son téléphone prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_033",
+    "text": "Choisis une personne : vous devez répondre en même temps à « plage ou montagne ». Désaccord : vous trinquez.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_034",
+    "text": "Les personnes qui ont déjà chanté sous la douche prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_035",
+    "text": "Le groupe choisit une émotion. Imite-la ou prends une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_036",
+    "text": "Les personnes qui ont déjà commandé à manger très tard prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_037",
+    "text": "La personne qui a le plus voyagé distribue deux petites gorgées.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_038",
+    "text": "Tout le monde qui a déjà cassé son téléphone prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_039",
+    "text": "Choisis un joueur : il peut te poser une question. Réponds ou prends une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_040",
+    "text": "Les personnes qui ont déjà envoyé un vocal de plus de deux minutes prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_041",
+    "text": "La personne la plus matinale trinque avec la plus nocturne.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_042",
+    "text": "Tout le monde qui connaît le mot de passe Wi-Fi par cœur distribue une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_043",
+    "text": "Les personnes qui ont déjà fait semblant de connaître une chanson prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_044",
+    "text": "Fais une imitation. Si personne ne trouve en vingt secondes, petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_045",
+    "text": "Les personnes qui ont déjà oublié pourquoi elles étaient entrées dans une pièce prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_046",
+    "text": "La personne qui a le plus de réveils programmés prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_047",
+    "text": "Choisis deux personnes : elles font pierre-feuille-ciseaux. La perdante prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_048",
+    "text": "Tout le monde qui a déjà relu une ancienne conversation prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_049",
+    "text": "Les personnes qui ont déjà utilisé une excuse inventée pour être en retard prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_050",
+    "text": "La personne qui a le dernier chiffre de batterie le plus bas prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_051",
+    "text": "Tout le monde change de place. La dernière personne assise prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_052",
+    "text": "Les personnes qui ont déjà dormi pendant un film au cinéma prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_053",
+    "text": "Choisis une personne : échangez vos rôles pour le prochain défi.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_054",
+    "text": "Les personnes qui ont déjà appelé quelqu’un par le mauvais prénom prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_055",
+    "text": "La personne qui cuisine le moins distribue deux petites gorgées.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_056",
+    "text": "Tout le monde qui a déjà regretté une coupe de cheveux prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_057",
+    "text": "Fais un toast de dix secondes. Si le groupe n’applaudit pas, petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_058",
+    "text": "Les personnes qui ont déjà menti à « je suis en route » prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_059",
+    "text": "La personne qui possède le plus vieil objet sur elle distribue une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_060",
+    "text": "Tout le monde qui a déjà oublié son chargeur en voyage prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_061",
+    "text": "Choisis une chanson et fredonne-la. Personne ne trouve : petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_062",
+    "text": "Les personnes qui ont déjà fait une capture d’écran par accident prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_063",
+    "text": "La personne qui a le plus de contacts non enregistrés prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_064",
+    "text": "Tout le monde qui a déjà mangé directement dans la casserole prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_065",
+    "text": "Choisis un joueur : vous devez inventer une histoire mot par mot. Premier blocage : petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_066",
+    "text": "Les personnes qui ont déjà mis une alarme puis l’ont ignorée prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_067",
+    "text": "La personne qui rit le plus fort distribue deux petites gorgées.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_068",
+    "text": "Tout le monde qui a déjà oublié un sac quelque part prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_069",
+    "text": "Fais une pose de photo de groupe. Si quelqu’un refuse, cette personne prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_070",
+    "text": "Les personnes qui ont déjà dit « cinq minutes » en sachant que c’était faux prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_071",
+    "text": "La personne qui a le plus de conversations non lues prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_072",
+    "text": "Tout le monde qui préfère les vocaux aux appels prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_073",
+    "text": "Choisis une personne : dites le même mot à trois. Différents : vous trinquez.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_074",
+    "text": "Les personnes qui ont déjà acheté quelque chose inutilement en ligne prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_075",
+    "text": "La personne qui a pris la dernière photo distribue une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_076",
+    "text": "Tout le monde qui a déjà oublié le nom de quelqu’un juste après sa présentation prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_077",
+    "text": "Raconte une anecdote vraie en dix secondes ou prends une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_078",
+    "text": "Les personnes qui ont déjà relancé une série depuis le début prennent une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_079",
+    "text": "La personne qui a le plus de clés sur elle prend une petite gorgée.",
+    "category": "drink"
+  },
+  {
+    "id": "boire_080",
+    "text": "Tout le monde lève son verre : hydratation obligatoire entre les manches.",
+    "category": "drink"
+  }
+]

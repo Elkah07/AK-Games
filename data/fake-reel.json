@@ -1,0 +1,502 @@
+[
+  {
+    "id": "q_001_les_pieuvres_ont_trois_co",
+    "question": "Les pieuvres ont trois cœurs.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Deux cœurs alimentent les branchies et un le reste du corps."
+  },
+  {
+    "id": "q_002_la_grande_muraille_de_chi",
+    "question": "La Grande Muraille de Chine est visible à l’œil nu depuis la Lune.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Elle n’est pas visible à l’œil nu depuis la Lune."
+  },
+  {
+    "id": "q_003_les_bananes_sont_botaniqu",
+    "question": "Les bananes sont botaniquement des baies.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "En botanique, la banane répond à la définition d’une baie."
+  },
+  {
+    "id": "q_004_un_eclair_ne_frappe_jamai",
+    "question": "Un éclair ne frappe jamais deux fois au même endroit.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Un même point peut être frappé de nombreuses fois."
+  },
+  {
+    "id": "q_005_les_requins_existaient_av",
+    "question": "Les requins existaient avant les arbres.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les premiers requins sont plus anciens que les premiers arbres."
+  },
+  {
+    "id": "q_006_le_sang_humain_est_bleu_a",
+    "question": "Le sang humain est bleu avant d’être exposé à l’air.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Le sang est toujours rouge, plus ou moins sombre selon son oxygénation."
+  },
+  {
+    "id": "q_007_les_flamants_roses_naisse",
+    "question": "Les flamants roses naissent gris.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Leur couleur vient progressivement de leur alimentation."
+  },
+  {
+    "id": "q_008_le_mont_everest_grandit_e",
+    "question": "Le mont Everest grandit encore de quelques millimètres par an.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les mouvements tectoniques continuent de le faire évoluer."
+  },
+  {
+    "id": "q_009_les_autruches_cachent_ree",
+    "question": "Les autruches cachent réellement leur tête dans le sable quand elles ont peur.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est un mythe."
+  },
+  {
+    "id": "q_010_le_miel_peut_se_conserver",
+    "question": "Le miel peut se conserver pendant des milliers d’années dans de bonnes conditions.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Sa faible humidité et son acidité limitent fortement les microbes."
+  },
+  {
+    "id": "q_011_le_son_voyage_plus_vite_d",
+    "question": "Le son voyage plus vite dans l’eau que dans l’air.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les particules y transmettent plus rapidement les vibrations."
+  },
+  {
+    "id": "q_012_les_poissons_rouges_nont_",
+    "question": "Les poissons rouges n’ont que trois secondes de mémoire.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Ils peuvent mémoriser des informations bien plus longtemps."
+  },
+  {
+    "id": "q_013_la_tour_eiffel_peut_etre_",
+    "question": "La tour Eiffel peut être plus haute en été.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le métal se dilate avec la chaleur."
+  },
+  {
+    "id": "q_014_les_humains_partagent_plu",
+    "question": "Les humains partagent plus de 50 % de leur ADN avec les bananes.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "De nombreux gènes fondamentaux sont communs au vivant."
+  },
+  {
+    "id": "q_015_les_cameleons_changent_un",
+    "question": "Les caméléons changent uniquement de couleur pour se camoufler.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "La communication et la température jouent aussi un rôle."
+  },
+  {
+    "id": "q_016_le_coeur_dune_crevette_se",
+    "question": "Le cœur d’une crevette se situe dans sa tête.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Il se trouve dans la région céphalothoracique."
+  },
+  {
+    "id": "q_017_les_taureaux_detestent_la",
+    "question": "Les taureaux détestent la couleur rouge.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Ils réagissent surtout au mouvement de la cape."
+  },
+  {
+    "id": "q_018_une_journee_sur_venus_dur",
+    "question": "Une journée sur Vénus dure plus longtemps qu’une année sur Vénus.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Sa rotation est extrêmement lente."
+  },
+  {
+    "id": "q_019_les_chauves_souris_sont_a",
+    "question": "Les chauves-souris sont aveugles.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Elles voient et utilisent aussi l’écholocation."
+  },
+  {
+    "id": "q_020_la_langue_est_le_muscle_l",
+    "question": "La langue est le muscle le plus fort du corps humain.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "La comparaison dépend du critère et cette affirmation est trompeuse."
+  },
+  {
+    "id": "q_021_leau_chaude_peut_parfois_",
+    "question": "L’eau chaude peut parfois geler plus vite que l’eau froide.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "C’est l’effet Mpemba, observé dans certaines conditions."
+  },
+  {
+    "id": "q_022_les_crocodiles_ne_peuvent",
+    "question": "Les crocodiles ne peuvent pas tirer la langue.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Leur langue est maintenue par une membrane."
+  },
+  {
+    "id": "q_023_les_koalas_ont_des_emprei",
+    "question": "Les koalas ont des empreintes digitales proches de celles des humains.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Elles peuvent être très similaires."
+  },
+  {
+    "id": "q_024_il_y_a_plus_detoiles_dans",
+    "question": "Il y a plus d’étoiles dans l’univers observable que de grains de sable sur Terre.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les estimations astronomiques dépassent généralement celles des grains de sable."
+  },
+  {
+    "id": "q_025_le_cerveau_humain_ne_ress",
+    "question": "Le cerveau humain ne ressent pas directement la douleur.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le tissu cérébral lui-même ne possède pas de récepteurs de douleur."
+  },
+  {
+    "id": "q_026_les_vikings_portaient_des",
+    "question": "Les Vikings portaient des casques à cornes au combat.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Cette image est largement une invention artistique tardive."
+  },
+  {
+    "id": "q_027_un_nuage_peut_peser_plusi",
+    "question": "Un nuage peut peser plusieurs centaines de tonnes.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Il contient une grande quantité de minuscules gouttelettes."
+  },
+  {
+    "id": "q_028_les_manchots_vivent_uniqu",
+    "question": "Les manchots vivent uniquement au pôle Sud.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Ils vivent dans l’hémisphère Sud, mais pas tous en Antarctique."
+  },
+  {
+    "id": "q_029_les_humains_nutilisent_qu",
+    "question": "Les humains n’utilisent que 10 % de leur cerveau.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "La plupart des régions ont des fonctions et sont utilisées."
+  },
+  {
+    "id": "q_030_la_foudre_est_plus_chaude",
+    "question": "La foudre est plus chaude que la surface du Soleil.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le canal d’un éclair peut atteindre environ 30 000 °C."
+  },
+  {
+    "id": "q_031_les_escargots_peuvent_dor",
+    "question": "Les escargots peuvent dormir plusieurs années.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Certaines espèces peuvent entrer en dormance très longtemps."
+  },
+  {
+    "id": "q_032_le_verre_est_un_liquide_q",
+    "question": "Le verre est un liquide qui coule lentement.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "À température ambiante, le verre est un solide amorphe."
+  },
+  {
+    "id": "q_033_les_elephants_sont_incapa",
+    "question": "Les éléphants sont incapables de sauter.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Leur anatomie ne leur permet pas de décoller les quatre pieds du sol."
+  },
+  {
+    "id": "q_034_les_humains_brillent_lege",
+    "question": "Les humains brillent légèrement dans le noir.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le corps émet une lumière extrêmement faible, invisible à l’œil nu."
+  },
+  {
+    "id": "q_035_le_sahara_a_deja_ete_une_",
+    "question": "Le Sahara a déjà été une région verte et humide.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Il a connu des périodes beaucoup plus humides."
+  },
+  {
+    "id": "q_036_une_piece_de_monnaie_jete",
+    "question": "Une pièce de monnaie jetée d’un gratte-ciel peut tuer quelqu’un.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Sa vitesse terminale et sa forme rendent ce scénario très improbable."
+  },
+  {
+    "id": "q_037_les_araignees_sont_des_in",
+    "question": "Les araignées sont des insectes.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Ce sont des arachnides à huit pattes."
+  },
+  {
+    "id": "q_038_il_existe_des_lacs_nature",
+    "question": "Il existe des lacs naturellement roses.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Des micro-organismes et sels peuvent leur donner cette couleur."
+  },
+  {
+    "id": "q_039_les_arbres_peuvent_commun",
+    "question": "Les arbres peuvent communiquer grâce à des réseaux souterrains de champignons.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les mycorhizes permettent des échanges et signaux."
+  },
+  {
+    "id": "q_040_le_nez_et_les_oreilles_co",
+    "question": "Le nez et les oreilles continuent réellement de grandir toute la vie.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Ils changent surtout avec le vieillissement et la gravité."
+  },
+  {
+    "id": "q_041_les_ours_polaires_ont_la_",
+    "question": "Les ours polaires ont la peau noire.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Sous leur fourrure translucide, leur peau est sombre."
+  },
+  {
+    "id": "q_042_les_chats_ne_peuvent_pas_",
+    "question": "Les chats ne peuvent pas goûter le sucré.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Ils manquent d’un récepteur fonctionnel du goût sucré."
+  },
+  {
+    "id": "q_043_la_lune_seloigne_progress",
+    "question": "La Lune s’éloigne progressivement de la Terre.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Elle s’éloigne de quelques centimètres par an."
+  },
+  {
+    "id": "q_044_un_poulpe_peut_reconnaitr",
+    "question": "Un poulpe peut reconnaître des personnes humaines.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Des expériences montrent des distinctions entre individus."
+  },
+  {
+    "id": "q_045_les_diamants_peuvent_brul",
+    "question": "Les diamants peuvent brûler.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Composés de carbone, ils peuvent s’oxyder à haute température."
+  },
+  {
+    "id": "q_046_les_cheveux_et_les_ongles",
+    "question": "Les cheveux et les ongles continuent de pousser après la mort.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "La peau se rétracte, donnant cette impression."
+  },
+  {
+    "id": "q_047_les_girafes_nont_aucun_so",
+    "question": "Les girafes n’ont aucun son vocal.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Elles peuvent produire plusieurs sons, parfois très discrets."
+  },
+  {
+    "id": "q_048_les_papillons_goutent_ave",
+    "question": "Les papillons goûtent avec leurs pattes.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Leurs récepteurs gustatifs se trouvent notamment sur les pattes."
+  },
+  {
+    "id": "q_049_il_est_impossible_deternu",
+    "question": "Il est impossible d’éternuer les yeux ouverts.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est très difficile mais pas absolument impossible."
+  },
+  {
+    "id": "q_050_le_plus_petit_pays_du_mon",
+    "question": "Le plus petit pays du monde est le Vatican.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le Vatican est le plus petit État souverain."
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "id": "q_001_quel_personnage_de_ninten",
+    "question": "Quel personnage de Nintendo porte une casquette rouge avec un M ?",
+    "options": [
+      "Link",
+      "Mario",
+      "Kirby",
+      "Sonic"
+    ],
+    "answer": 1,
+    "explanation": "Mario porte la casquette rouge."
+  },
+  {
+    "id": "q_002_dans_minecraft_quel_monst",
+    "question": "Dans Minecraft, quel monstre vert explose près du joueur ?",
+    "options": [
+      "Zombie",
+      "Creeper",
+      "Slime",
+      "Enderman"
+    ],
+    "answer": 1,
+    "explanation": "Le Creeper explose lorsqu’il s’approche."
+  },
+  {
+    "id": "q_003_quel_herisson_bleu_court_",
+    "question": "Quel hérisson bleu court à grande vitesse ?",
+    "options": [
+      "Crash",
+      "Sonic",
+      "Spyro",
+      "Rayman"
+    ],
+    "answer": 1,
+    "explanation": "Sonic est le hérisson bleu de SEGA."
+  },
+  {
+    "id": "q_004_dans_the_legend_of_zelda_",
+    "question": "Dans The Legend of Zelda, comment s’appelle le héros jouable ?",
+    "options": [
+      "Zelda",
+      "Link",
+      "Ganondorf",
+      "Tingle"
+    ],
+    "answer": 1,
+    "explanation": "Le héros s’appelle Link."
+  },
+  {
+    "id": "q_005_quel_jeu_consiste_a_empil",
+    "question": "Quel jeu consiste à empiler des blocs qui tombent ?",
+    "options": [
+      "Tetris",
+      "Pong",
+      "Pac-Man",
+      "Snake"
+    ],
+    "answer": 0,
+    "explanation": "Tetris repose sur l’assemblage de tétriminos."
+  },
+  {
+    "id": "q_006_dans_pokemon_quel_type_es",
+    "question": "Dans Pokémon, quel type est Pikachu ?",
+    "options": [
+      "Feu",
+      "Électrik",
+      "Eau",
+      "Plante"
+    ],
+    "answer": 1,
+    "explanation": "Pikachu est de type Électrik."
+  },
+  {
+    "id": "q_007_quel_jeu_met_en_scene_une",
+    "question": "Quel jeu met en scène une battle royale sur une île avec construction ?",
+    "options": [
+      "Fortnite",
+      "Portal",
+      "The Sims",
+      "FIFA"
+    ],
+    "answer": 0,
+    "explanation": "Fortnite propose ce mode emblématique."
+  },
+  {
+    "id": "q_008_quel_personnage_mange_des",
+    "question": "Quel personnage mange des gommes dans un labyrinthe ?",
+    "options": [
+      "Kirby",
+      "Pac-Man",
+      "Mega Man",
+      "Bomberman"
+    ],
+    "answer": 1,
+    "explanation": "Pac-Man mange des pac-gommes."
+  },
+  {
+    "id": "q_009_quel_studio_a_cree_grand_",
+    "question": "Quel studio a créé Grand Theft Auto ?",
+    "options": [
+      "Rockstar Games",
+      "Ubisoft",
+      "Valve",
+      "Nintendo"
+    ],
+    "answer": 0,
+    "explanation": "La série est développée par Rockstar Games."
+  },
+  {
+    "id": "q_010_dans_among_us_quel_role_s",
+    "question": "Dans Among Us, quel rôle sabote le vaisseau ?",
+    "options": [
+      "Ingénieur",
+      "Imposteur",
+      "Médecin",
+      "Capitaine"
+    ],
+    "answer": 1,
+    "explanation": "L’Imposteur élimine et sabote."
+  },
+  {
+    "id": "q_011_quel_jeu_de_simulation_pe",
+    "question": "Quel jeu de simulation permet de créer une famille et une maison ?",
+    "options": [
+      "The Sims",
+      "Civilization",
+      "Animal Crossing",
+      "SimCity uniquement"
+    ],
+    "answer": 0,
+    "explanation": "The Sims simule la vie quotidienne."
+  },
+  {
+    "id": "q_012_dans_mario_kart_quel_obje",
+    "question": "Dans Mario Kart, quel objet bleu cible souvent le joueur en tête ?",
+    "options": [
+      "Carapace bleue",
+      "Banane",
+      "Champignon",
+      "Bob-omb"
+    ],
+    "answer": 0,
+    "explanation": "La carapace bleue vise généralement la première place."
+  },
+  {
+    "id": "q_013_quel_jeu_de_riot_games_op",
+    "question": "Quel jeu de Riot Games oppose deux équipes de cinq champions ?",
+    "options": [
+      "League of Legends",
+      "Overwatch",
+      "Apex Legends",
+      "Dota Underlords"
+    ],
+    "answer": 0,
+    "explanation": "League of Legends se joue principalement en 5 contre 5."
+  },
+  {
+    "id": "q_014_quelle_console_portable_p",
+    "question": "Quelle console portable possède deux écrans, dont un tactile ?",
+    "options": [
+      "PSP",
+      "Nintendo DS",
+      "Game Boy Advance",
+      "Switch Lite"
+    ],
+    "answer": 1,
+    "explanation": "La Nintendo DS a deux écrans."
+  },
+  {
+    "id": "q_015_dans_portal_quel_outil_cr",
+    "question": "Dans Portal, quel outil crée des passages entre deux surfaces ?",
+    "options": [
+      "Un grappin",
+      "Un portal gun",
+      "Un laser",
+      "Une clé"
+    ],
+    "answer": 1,
+    "explanation": "Le portal gun crée deux portails liés."
+  },
+  {
+    "id": "q_016_quel_personnage_est_le_he",
+    "question": "Quel personnage est le héros de God of War ?",
+    "options": [
+      "Kratos",
+      "Dante",
+      "Geralt",
+      "Nathan Drake"
+    ],
+    "answer": 0,
+    "explanation": "Kratos est le protagoniste principal."
+  },
+  {
+    "id": "q_017_quel_jeu_met_en_scene_des",
+    "question": "Quel jeu met en scène des voitures jouant au football ?",
+    "options": [
+      "Rocket League",
+      "Need for Speed",
+      "Gran Turismo",
+      "Trackmania"
+    ],
+    "answer": 0,
+    "explanation": "Rocket League mélange football et voitures."
+  },
+  {
+    "id": "q_018_dans_animal_crossing_quel",
+    "question": "Dans Animal Crossing, quel animal est Tom Nook ?",
+    "options": [
+      "Renard",
+      "Raton laveur / tanuki",
+      "Chien",
+      "Chat"
+    ],
+    "answer": 1,
+    "explanation": "Tom Nook est un tanuki dans la version japonaise."
+  },
+  {
+    "id": "q_019_quel_jeu_de_cartes_numeri",
+    "question": "Quel jeu de cartes numérique appartient à l’univers de Warcraft ?",
+    "options": [
+      "Hearthstone",
+      "Gwent",
+      "Legends of Runeterra",
+      "Magic Arena"
+    ],
+    "answer": 0,
+    "explanation": "Hearthstone est basé sur Warcraft."
+  },
+  {
+    "id": "q_020_dans_resident_evil_quel_t",
+    "question": "Dans Resident Evil, quel type de créatures affronte-t-on souvent ?",
+    "options": [
+      "Zombies",
+      "Dragons",
+      "Robots",
+      "Fantômes uniquement"
+    ],
+    "answer": 0,
+    "explanation": "Les zombies sont emblématiques de la série."
+  },
+  {
+    "id": "q_021_quel_jeu_suit_un_sorceleu",
+    "question": "Quel jeu suit un sorceleur nommé Geralt de Riv ?",
+    "options": [
+      "The Witcher",
+      "Skyrim",
+      "Dragon Age",
+      "Dark Souls"
+    ],
+    "answer": 0,
+    "explanation": "Geralt est le héros de The Witcher."
+  },
+  {
+    "id": "q_022_quel_jeu_independant_met_",
+    "question": "Quel jeu indépendant met en scène un chevalier insecte dans Hallownest ?",
+    "options": [
+      "Hollow Knight",
+      "Cuphead",
+      "Celeste",
+      "Dead Cells"
+    ],
+    "answer": 0,
+    "explanation": "Hollow Knight se déroule à Hallownest."
+  },
+  {
+    "id": "q_023_quel_jeu_de_football_est_",
+    "question": "Quel jeu de football est devenu EA Sports FC ?",
+    "options": [
+      "FIFA",
+      "PES",
+      "Football Manager",
+      "Sensible Soccer"
+    ],
+    "answer": 0,
+    "explanation": "La série FIFA d’EA a été renommée EA Sports FC."
+  },
+  {
+    "id": "q_024_dans_overwatch_quel_role_",
+    "question": "Dans Overwatch, quel rôle soigne généralement ses coéquipiers ?",
+    "options": [
+      "Tank",
+      "Support",
+      "Dégâts",
+      "Spectateur"
+    ],
+    "answer": 1,
+    "explanation": "Les héros Support soignent ou assistent."
+  },
+  {
+    "id": "q_025_quel_jeu_met_en_scene_lar",
+    "question": "Quel jeu met en scène Lara Croft ?",
+    "options": [
+      "Tomb Raider",
+      "Uncharted",
+      "Control",
+      "Mirror’s Edge"
+    ],
+    "answer": 0,
+    "explanation": "Lara Croft est l’héroïne de Tomb Raider."
+  },
+  {
+    "id": "q_026_quel_personnage_rose_peut",
+    "question": "Quel personnage rose peut aspirer ses ennemis ?",
+    "options": [
+      "Kirby",
+      "Jigglypuff",
+      "Toad",
+      "Yoshi"
+    ],
+    "answer": 0,
+    "explanation": "Kirby aspire ses adversaires."
+  },
+  {
+    "id": "q_027_quel_jeu_propose_des_port",
+    "question": "Quel jeu propose des portails du Nether ?",
+    "options": [
+      "Minecraft",
+      "Terraria",
+      "Roblox",
+      "Stardew Valley"
+    ],
+    "answer": 0,
+    "explanation": "Les portails du Nether se trouvent dans Minecraft."
+  },
+  {
+    "id": "q_028_dans_final_fantasy_vii_co",
+    "question": "Dans Final Fantasy VII, comment s’appelle le héros à l’épée géante ?",
+    "options": [
+      "Cloud",
+      "Squall",
+      "Tidus",
+      "Noctis"
+    ],
+    "answer": 0,
+    "explanation": "Cloud Strife est le protagoniste."
+  },
+  {
+    "id": "q_029_quel_jeu_se_deroule_dans_",
+    "question": "Quel jeu se déroule dans la ville sous-marine de Rapture ?",
+    "options": [
+      "BioShock",
+      "Dishonored",
+      "Prey",
+      "Fallout"
+    ],
+    "answer": 0,
+    "explanation": "Rapture est le décor de BioShock."
+  },
+  {
+    "id": "q_030_quel_jeu_de_rythme_utilis",
+    "question": "Quel jeu de rythme utilise souvent des blocs colorés en réalité virtuelle ?",
+    "options": [
+      "Beat Saber",
+      "Just Dance",
+      "Guitar Hero",
+      "Osu!"
+    ],
+    "answer": 0,
+    "explanation": "Beat Saber utilise des sabres pour couper des blocs."
+  }
+]

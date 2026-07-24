@@ -1,0 +1,762 @@
+[
+  {
+    "id": "alerte_001",
+    "title": "Le téléphone disparu",
+    "text": "Le téléphone du groupe a disparu cinq minutes avant le départ. Que faites-vous ?",
+    "options": [
+      {
+        "label": "Tout le monde vide ses poches",
+        "outcome": "Vous trouvez trois chargeurs mais aucun téléphone."
+      },
+      {
+        "label": "On retrace les déplacements",
+        "outcome": "La piste mène au canapé."
+      },
+      {
+        "label": "On le fait sonner discrètement",
+        "outcome": "Il vibre dans une veste oubliée."
+      }
+    ]
+  },
+  {
+    "id": "alerte_002",
+    "title": "La porte verrouillée",
+    "text": "Vous êtes enfermés dehors alors que la musique tourne à l’intérieur.",
+    "options": [
+      {
+        "label": "Appeler un voisin",
+        "outcome": "Le voisin arrive avec un trousseau énorme."
+      },
+      {
+        "label": "Tenter une fenêtre",
+        "outcome": "La fenêtre est entrouverte mais très haute."
+      },
+      {
+        "label": "Transformer le palier en fête",
+        "outcome": "Le palier devient étonnamment populaire."
+      }
+    ]
+  },
+  {
+    "id": "alerte_003",
+    "title": "Le message anonyme",
+    "text": "Un message apparaît : « Ne faites confiance à personne ».",
+    "options": [
+      {
+        "label": "Ignorer",
+        "outcome": "Le silence devient suspect."
+      },
+      {
+        "label": "Interroger tout le monde",
+        "outcome": "Chacun invente un alibi catastrophique."
+      },
+      {
+        "label": "Répondre au numéro",
+        "outcome": "Le numéro répond avec un emoji cactus."
+      }
+    ]
+  },
+  {
+    "id": "alerte_004",
+    "title": "La panne générale",
+    "text": "Toutes les lumières s’éteignent au milieu de la partie.",
+    "options": [
+      {
+        "label": "Allumer les téléphones",
+        "outcome": "Les visages deviennent des films d’horreur."
+      },
+      {
+        "label": "Chercher le tableau électrique",
+        "outcome": "Un disjoncteur avait sauté."
+      },
+      {
+        "label": "Continuer dans le noir",
+        "outcome": "La partie devient deux fois plus intense."
+      }
+    ]
+  },
+  {
+    "id": "alerte_005",
+    "title": "Le colis mystérieux",
+    "text": "Un colis sans nom arrive devant la porte.",
+    "options": [
+      {
+        "label": "L’ouvrir ensemble",
+        "outcome": "Il contient des accessoires de fête."
+      },
+      {
+        "label": "Le laisser dehors",
+        "outcome": "Le colis commence à faire du bruit."
+      },
+      {
+        "label": "Chercher l’expéditeur",
+        "outcome": "Le reçu indique l’adresse du voisin."
+      }
+    ]
+  },
+  {
+    "id": "alerte_006",
+    "title": "L’alarme incendie",
+    "text": "L’alarme se déclenche sans fumée visible.",
+    "options": [
+      {
+        "label": "Sortir immédiatement",
+        "outcome": "Tout le monde se retrouve dehors en chaussettes."
+      },
+      {
+        "label": "Chercher l’origine",
+        "outcome": "Une bougie est coupable."
+      },
+      {
+        "label": "Appeler le propriétaire",
+        "outcome": "Le propriétaire répond avec dix minutes de retard."
+      }
+    ]
+  },
+  {
+    "id": "alerte_007",
+    "title": "Le double parfait",
+    "text": "Une personne identique à l’un des joueurs frappe à la porte.",
+    "options": [
+      {
+        "label": "Laisser entrer",
+        "outcome": "Les deux affirment être l’original."
+      },
+      {
+        "label": "Poser des questions pièges",
+        "outcome": "Le double connaît presque tout."
+      },
+      {
+        "label": "Fermer les rideaux",
+        "outcome": "Le double attend patiemment dehors."
+      }
+    ]
+  },
+  {
+    "id": "alerte_008",
+    "title": "La vidéo compromettante",
+    "text": "Une vieille vidéo gênante apparaît sur la télévision.",
+    "options": [
+      {
+        "label": "La regarder jusqu’au bout",
+        "outcome": "Le groupe découvre un talent oublié."
+      },
+      {
+        "label": "Couper l’écran",
+        "outcome": "Le son continue malgré l’écran noir."
+      },
+      {
+        "label": "Trouver qui l’a lancée",
+        "outcome": "La télécommande était sous un coussin."
+      }
+    ]
+  },
+  {
+    "id": "alerte_009",
+    "title": "Le compte à rebours",
+    "text": "Un compte à rebours de cinq minutes apparaît sur tous les téléphones.",
+    "options": [
+      {
+        "label": "Éteindre les téléphones",
+        "outcome": "Ils se rallument immédiatement."
+      },
+      {
+        "label": "Chercher un indice",
+        "outcome": "Un QR code mène à une énigme."
+      },
+      {
+        "label": "Attendre ensemble",
+        "outcome": "À zéro, une playlist démarre."
+      }
+    ]
+  },
+  {
+    "id": "alerte_010",
+    "title": "La pièce interdite",
+    "text": "Une porte habituellement fermée est maintenant ouverte.",
+    "options": [
+      {
+        "label": "Entrer tous ensemble",
+        "outcome": "La pièce contient une décoration surprise."
+      },
+      {
+        "label": "Envoyer une personne",
+        "outcome": "La personne revient avec une couronne."
+      },
+      {
+        "label": "Refermer sans regarder",
+        "outcome": "Un bruit se fait entendre derrière."
+      }
+    ]
+  },
+  {
+    "id": "alerte_011",
+    "title": "Le voisin furieux",
+    "text": "Le voisin sonne et affirme que quelque chose traverse son plafond.",
+    "options": [
+      {
+        "label": "Baisser la musique",
+        "outcome": "Il repart légèrement apaisé."
+      },
+      {
+        "label": "L’inviter à vérifier",
+        "outcome": "Il reconnaît la chanson et reste."
+      },
+      {
+        "label": "Chercher l’objet perdu",
+        "outcome": "Une balle rebondissante est retrouvée."
+      }
+    ]
+  },
+  {
+    "id": "alerte_012",
+    "title": "Le joueur absent",
+    "text": "Un joueur disparaît pendant deux minutes sans répondre.",
+    "options": [
+      {
+        "label": "Former des équipes de recherche",
+        "outcome": "Il est retrouvé dans la cuisine."
+      },
+      {
+        "label": "L’appeler",
+        "outcome": "Son téléphone sonne sous la table."
+      },
+      {
+        "label": "Continuer la partie",
+        "outcome": "Il revient avec un gâteau."
+      }
+    ]
+  },
+  {
+    "id": "alerte_013",
+    "title": "La photo impossible",
+    "text": "Une photo de groupe montre une personne que personne ne reconnaît.",
+    "options": [
+      {
+        "label": "Zoomer",
+        "outcome": "La silhouette porte votre logo."
+      },
+      {
+        "label": "Refaire la photo",
+        "outcome": "La personne n’apparaît plus."
+      },
+      {
+        "label": "Supprimer l’image",
+        "outcome": "La photo revient dans la corbeille."
+      }
+    ]
+  },
+  {
+    "id": "alerte_014",
+    "title": "Le son dans le mur",
+    "text": "Des coups réguliers viennent du mur.",
+    "options": [
+      {
+        "label": "Répondre en rythme",
+        "outcome": "Le mur répond parfaitement."
+      },
+      {
+        "label": "Écouter en silence",
+        "outcome": "Le rythme forme un code."
+      },
+      {
+        "label": "Prévenir le voisin",
+        "outcome": "Le voisin entend la même chose."
+      }
+    ]
+  },
+  {
+    "id": "alerte_015",
+    "title": "L’invitation secrète",
+    "text": "Une invitation annonce une fête dans votre propre salon demain.",
+    "options": [
+      {
+        "label": "Annuler",
+        "outcome": "L’événement disparaît en ligne."
+      },
+      {
+        "label": "Préparer la fête",
+        "outcome": "Tout le monde propose un thème."
+      },
+      {
+        "label": "Découvrir l’organisateur",
+        "outcome": "L’organisateur utilise un faux nom."
+      }
+    ]
+  },
+  {
+    "id": "alerte_016",
+    "title": "La valise inconnue",
+    "text": "Une valise apparaît au milieu de la pièce.",
+    "options": [
+      {
+        "label": "L’ouvrir",
+        "outcome": "Elle contient des costumes."
+      },
+      {
+        "label": "La peser",
+        "outcome": "Elle est beaucoup trop légère."
+      },
+      {
+        "label": "Chercher une étiquette",
+        "outcome": "L’étiquette porte un prénom du groupe."
+      }
+    ]
+  },
+  {
+    "id": "alerte_017",
+    "title": "Le Wi-Fi fantôme",
+    "text": "Un nouveau réseau Wi-Fi porte le nom d’un secret du groupe.",
+    "options": [
+      {
+        "label": "Se connecter",
+        "outcome": "Une page affiche une énigme."
+      },
+      {
+        "label": "Changer votre mot de passe",
+        "outcome": "Le réseau change de nom."
+      },
+      {
+        "label": "Chercher le routeur",
+        "outcome": "Le routeur clignote dans le couloir."
+      }
+    ]
+  },
+  {
+    "id": "alerte_018",
+    "title": "Le miroir retardé",
+    "text": "Le reflet d’une personne bouge avec une seconde de retard.",
+    "options": [
+      {
+        "label": "Tester le miroir",
+        "outcome": "Le décalage augmente."
+      },
+      {
+        "label": "Le couvrir",
+        "outcome": "Le tissu bouge seul."
+      },
+      {
+        "label": "Filmer",
+        "outcome": "La vidéo paraît normale."
+      }
+    ]
+  },
+  {
+    "id": "alerte_019",
+    "title": "La carte sous la table",
+    "text": "Une carte indique un point précis de l’appartement.",
+    "options": [
+      {
+        "label": "Suivre la carte",
+        "outcome": "Elle mène à une boîte de bonbons."
+      },
+      {
+        "label": "La déchirer",
+        "outcome": "Les morceaux se recollent."
+      },
+      {
+        "label": "Comparer avec le plan",
+        "outcome": "Un passage semble manquer au plan."
+      }
+    ]
+  },
+  {
+    "id": "alerte_020",
+    "title": "La voix dans l’enceinte",
+    "text": "L’enceinte prononce les prénoms du groupe sans être connectée.",
+    "options": [
+      {
+        "label": "Lui poser une question",
+        "outcome": "Elle répond par des indices."
+      },
+      {
+        "label": "La débrancher",
+        "outcome": "Elle continue quelques secondes."
+      },
+      {
+        "label": "Enregistrer la voix",
+        "outcome": "L’enregistrement ne contient que du silence."
+      }
+    ]
+  },
+  {
+    "id": "alerte_021",
+    "title": "Le badge rouge",
+    "text": "Un badge rouge apparaît sur la veste d’un joueur sans que personne ne l’ait posé.",
+    "options": [
+      {
+        "label": "Examiner sans toucher",
+        "outcome": "Un détail minuscule apparaît."
+      },
+      {
+        "label": "Faire une photo",
+        "outcome": "La photo montre autre chose."
+      },
+      {
+        "label": "Demander qui est au courant",
+        "outcome": "Personne n’avoue, mais quelqu’un sourit."
+      }
+    ]
+  },
+  {
+    "id": "alerte_022",
+    "title": "La fenêtre ouverte",
+    "text": "Une fenêtre est grande ouverte alors que personne ne l’a touchée.",
+    "options": [
+      {
+        "label": "Agir tout de suite",
+        "outcome": "La situation change immédiatement."
+      },
+      {
+        "label": "Attendre une minute",
+        "outcome": "Un nouvel indice apparaît."
+      },
+      {
+        "label": "Choisir une personne responsable",
+        "outcome": "La personne choisie reçoit un message."
+      }
+    ]
+  },
+  {
+    "id": "alerte_023",
+    "title": "Le dossier secret",
+    "text": "Un dossier nommé « À ouvrir à minuit » apparaît sur l’ordinateur.",
+    "options": [
+      {
+        "label": "Examiner sans toucher",
+        "outcome": "Un détail minuscule apparaît."
+      },
+      {
+        "label": "Faire une photo",
+        "outcome": "La photo montre autre chose."
+      },
+      {
+        "label": "Demander qui est au courant",
+        "outcome": "Personne n’avoue, mais quelqu’un sourit."
+      }
+    ]
+  },
+  {
+    "id": "alerte_024",
+    "title": "La chanson inversée",
+    "text": "La musique se met à jouer à l’envers.",
+    "options": [
+      {
+        "label": "Agir tout de suite",
+        "outcome": "La situation change immédiatement."
+      },
+      {
+        "label": "Attendre une minute",
+        "outcome": "Un nouvel indice apparaît."
+      },
+      {
+        "label": "Choisir une personne responsable",
+        "outcome": "La personne choisie reçoit un message."
+      }
+    ]
+  },
+  {
+    "id": "alerte_025",
+    "title": "Le code sur le mur",
+    "text": "Quatre chiffres lumineux apparaissent sur un mur.",
+    "options": [
+      {
+        "label": "Examiner sans toucher",
+        "outcome": "Un détail minuscule apparaît."
+      },
+      {
+        "label": "Faire une photo",
+        "outcome": "La photo montre autre chose."
+      },
+      {
+        "label": "Demander qui est au courant",
+        "outcome": "Personne n’avoue, mais quelqu’un sourit."
+      }
+    ]
+  },
+  {
+    "id": "alerte_026",
+    "title": "Le siège vide",
+    "text": "Une chaise supplémentaire apparaît dans le cercle.",
+    "options": [
+      {
+        "label": "Agir tout de suite",
+        "outcome": "La situation change immédiatement."
+      },
+      {
+        "label": "Attendre une minute",
+        "outcome": "Un nouvel indice apparaît."
+      },
+      {
+        "label": "Choisir une personne responsable",
+        "outcome": "La personne choisie reçoit un message."
+      }
+    ]
+  },
+  {
+    "id": "alerte_027",
+    "title": "La montre arrêtée",
+    "text": "Toutes les montres s’arrêtent à la même heure.",
+    "options": [
+      {
+        "label": "Examiner sans toucher",
+        "outcome": "Un détail minuscule apparaît."
+      },
+      {
+        "label": "Faire une photo",
+        "outcome": "La photo montre autre chose."
+      },
+      {
+        "label": "Demander qui est au courant",
+        "outcome": "Personne n’avoue, mais quelqu’un sourit."
+      }
+    ]
+  },
+  {
+    "id": "alerte_028",
+    "title": "Le parfum inconnu",
+    "text": "Une odeur très précise envahit la pièce.",
+    "options": [
+      {
+        "label": "Agir tout de suite",
+        "outcome": "La situation change immédiatement."
+      },
+      {
+        "label": "Attendre une minute",
+        "outcome": "Un nouvel indice apparaît."
+      },
+      {
+        "label": "Choisir une personne responsable",
+        "outcome": "La personne choisie reçoit un message."
+      }
+    ]
+  },
+  {
+    "id": "alerte_029",
+    "title": "Le livre ouvert",
+    "text": "Un livre s’ouvre tout seul à une page marquée.",
+    "options": [
+      {
+        "label": "Examiner sans toucher",
+        "outcome": "Un détail minuscule apparaît."
+      },
+      {
+        "label": "Faire une photo",
+        "outcome": "La photo montre autre chose."
+      },
+      {
+        "label": "Demander qui est au courant",
+        "outcome": "Personne n’avoue, mais quelqu’un sourit."
+      }
+    ]
+  },
+  {
+    "id": "alerte_030",
+    "title": "La notification commune",
+    "text": "Tout le monde reçoit exactement la même notification.",
+    "options": [
+      {
+        "label": "Agir tout de suite",
+        "outcome": "La situation change immédiatement."
+      },
+      {
+        "label": "Attendre une minute",
+        "outcome": "Un nouvel indice apparaît."
+      },
+      {
+        "label": "Choisir une personne responsable",
+        "outcome": "La personne choisie reçoit un message."
+      }
+    ]
+  },
+  {
+    "id": "alerte_031",
+    "title": "La caméra active",
+    "text": "La caméra d’un ordinateur s’allume sans application ouverte.",
+    "options": [
+      {
+        "label": "Examiner sans toucher",
+        "outcome": "Un détail minuscule apparaît."
+      },
+      {
+        "label": "Faire une photo",
+        "outcome": "La photo montre autre chose."
+      },
+      {
+        "label": "Demander qui est au courant",
+        "outcome": "Personne n’avoue, mais quelqu’un sourit."
+      }
+    ]
+  },
+  {
+    "id": "alerte_032",
+    "title": "Le dessin récent",
+    "text": "Un dessin du groupe apparaît sur la table.",
+    "options": [
+      {
+        "label": "Agir tout de suite",
+        "outcome": "La situation change immédiatement."
+      },
+      {
+        "label": "Attendre une minute",
+        "outcome": "Un nouvel indice apparaît."
+      },
+      {
+        "label": "Choisir une personne responsable",
+        "outcome": "La personne choisie reçoit un message."
+      }
+    ]
+  },
+  {
+    "id": "alerte_033",
+    "title": "La clé dorée",
+    "text": "Une petite clé dorée est trouvée dans un verre vide.",
+    "options": [
+      {
+        "label": "Examiner sans toucher",
+        "outcome": "Un détail minuscule apparaît."
+      },
+      {
+        "label": "Faire une photo",
+        "outcome": "La photo montre autre chose."
+      },
+      {
+        "label": "Demander qui est au courant",
+        "outcome": "Personne n’avoue, mais quelqu’un sourit."
+      }
+    ]
+  },
+  {
+    "id": "alerte_034",
+    "title": "La température chute",
+    "text": "La pièce devient brusquement glaciale.",
+    "options": [
+      {
+        "label": "Agir tout de suite",
+        "outcome": "La situation change immédiatement."
+      },
+      {
+        "label": "Attendre une minute",
+        "outcome": "Un nouvel indice apparaît."
+      },
+      {
+        "label": "Choisir une personne responsable",
+        "outcome": "La personne choisie reçoit un message."
+      }
+    ]
+  },
+  {
+    "id": "alerte_035",
+    "title": "Le prénom barré",
+    "text": "La liste des joueurs affiche un prénom barré.",
+    "options": [
+      {
+        "label": "Examiner sans toucher",
+        "outcome": "Un détail minuscule apparaît."
+      },
+      {
+        "label": "Faire une photo",
+        "outcome": "La photo montre autre chose."
+      },
+      {
+        "label": "Demander qui est au courant",
+        "outcome": "Personne n’avoue, mais quelqu’un sourit."
+      }
+    ]
+  },
+  {
+    "id": "alerte_036",
+    "title": "La sonnette muette",
+    "text": "La sonnette s’allume mais aucun son ne retentit.",
+    "options": [
+      {
+        "label": "Agir tout de suite",
+        "outcome": "La situation change immédiatement."
+      },
+      {
+        "label": "Attendre une minute",
+        "outcome": "Un nouvel indice apparaît."
+      },
+      {
+        "label": "Choisir une personne responsable",
+        "outcome": "La personne choisie reçoit un message."
+      }
+    ]
+  },
+  {
+    "id": "alerte_037",
+    "title": "Le ticket de train",
+    "text": "Un ticket pour une destination inconnue porte la date de demain.",
+    "options": [
+      {
+        "label": "Examiner sans toucher",
+        "outcome": "Un détail minuscule apparaît."
+      },
+      {
+        "label": "Faire une photo",
+        "outcome": "La photo montre autre chose."
+      },
+      {
+        "label": "Demander qui est au courant",
+        "outcome": "Personne n’avoue, mais quelqu’un sourit."
+      }
+    ]
+  },
+  {
+    "id": "alerte_038",
+    "title": "Le message vocal",
+    "text": "Un ancien message vocal semble avoir été enregistré aujourd’hui.",
+    "options": [
+      {
+        "label": "Agir tout de suite",
+        "outcome": "La situation change immédiatement."
+      },
+      {
+        "label": "Attendre une minute",
+        "outcome": "Un nouvel indice apparaît."
+      },
+      {
+        "label": "Choisir une personne responsable",
+        "outcome": "La personne choisie reçoit un message."
+      }
+    ]
+  },
+  {
+    "id": "alerte_039",
+    "title": "La lumière violette",
+    "text": "Une lumière violette clignote derrière un meuble.",
+    "options": [
+      {
+        "label": "Examiner sans toucher",
+        "outcome": "Un détail minuscule apparaît."
+      },
+      {
+        "label": "Faire une photo",
+        "outcome": "La photo montre autre chose."
+      },
+      {
+        "label": "Demander qui est au courant",
+        "outcome": "Personne n’avoue, mais quelqu’un sourit."
+      }
+    ]
+  },
+  {
+    "id": "alerte_040",
+    "title": "Le cadeau daté",
+    "text": "Un cadeau porte une date d’ouverture déjà passée.",
+    "options": [
+      {
+        "label": "Agir tout de suite",
+        "outcome": "La situation change immédiatement."
+      },
+      {
+        "label": "Attendre une minute",
+        "outcome": "Un nouvel indice apparaît."
+      },
+      {
+        "label": "Choisir une personne responsable",
+        "outcome": "La personne choisie reçoit un message."
+      }
+    ]
+  }
+]

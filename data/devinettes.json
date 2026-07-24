@@ -1,0 +1,470 @@
+[
+  {
+    "id": "q_001_je_monte_et_je_descends_s",
+    "question": "Je monte et je descends sans jamais bouger. Qui suis-je ?",
+    "options": [
+      "Un escalier",
+      "Un ascenseur",
+      "La température",
+      "Une vague"
+    ],
+    "answer": 0,
+    "explanation": "Un escalier monte et descend, mais reste immobile."
+  },
+  {
+    "id": "q_002_plus_on_menleve_plus_je_d",
+    "question": "Plus on m’enlève, plus je deviens grand. Qui suis-je ?",
+    "options": [
+      "Un trou",
+      "Un secret",
+      "Un gâteau",
+      "Un âge"
+    ],
+    "answer": 0,
+    "explanation": "Un trou grandit quand on retire de la matière."
+  },
+  {
+    "id": "q_003_je_peux_faire_le_tour_du_",
+    "question": "Je peux faire le tour du monde en restant dans un coin. Qui suis-je ?",
+    "options": [
+      "Un timbre",
+      "Une boussole",
+      "Une ombre",
+      "Une valise"
+    ],
+    "answer": 0,
+    "explanation": "Un timbre reste dans le coin d’une enveloppe."
+  },
+  {
+    "id": "q_004_jai_des_dents_mais_je_ne_",
+    "question": "J’ai des dents mais je ne mords pas. Qui suis-je ?",
+    "options": [
+      "Un peigne",
+      "Un requin",
+      "Une fermeture éclair",
+      "Une scie"
+    ],
+    "answer": 0,
+    "explanation": "Un peigne possède des dents."
+  },
+  {
+    "id": "q_005_je_suis_plein_de_trous_ma",
+    "question": "Je suis plein de trous mais je retiens l’eau. Qui suis-je ?",
+    "options": [
+      "Une éponge",
+      "Un filet",
+      "Un panier",
+      "Un nuage"
+    ],
+    "answer": 0,
+    "explanation": "Une éponge absorbe l’eau malgré ses pores."
+  },
+  {
+    "id": "q_006_plus_je_seche_plus_je_dev",
+    "question": "Plus je sèche, plus je deviens mouillé. Qui suis-je ?",
+    "options": [
+      "Une serviette",
+      "Le soleil",
+      "Un savon",
+      "Un parapluie"
+    ],
+    "answer": 0,
+    "explanation": "La serviette se mouille en séchant quelqu’un."
+  },
+  {
+    "id": "q_007_je_nai_ni_bouche_ni_poumo",
+    "question": "Je n’ai ni bouche ni poumons, mais l’air me fait vivre. Qui suis-je ?",
+    "options": [
+      "Le feu",
+      "Un poisson",
+      "Une plante",
+      "Une cloche"
+    ],
+    "answer": 0,
+    "explanation": "Le feu a besoin d’oxygène."
+  },
+  {
+    "id": "q_008_je_commence_la_nuit_et_te",
+    "question": "Je commence la nuit et termine le matin. Qui suis-je ?",
+    "options": [
+      "La lettre N",
+      "Le soleil",
+      "La lune",
+      "Le sommeil"
+    ],
+    "answer": 0,
+    "explanation": "La lettre N commence « nuit » et termine « matin »."
+  },
+  {
+    "id": "q_009_je_suis_toujours_devant_t",
+    "question": "Je suis toujours devant toi mais tu ne peux jamais me voir. Qui suis-je ?",
+    "options": [
+      "Le futur",
+      "Ton nez",
+      "L’air",
+      "Ton ombre"
+    ],
+    "answer": 0,
+    "explanation": "Le futur est toujours à venir."
+  },
+  {
+    "id": "q_010_je_possede_une_cle_mais_a",
+    "question": "Je possède une clé mais aucune serrure. Qui suis-je ?",
+    "options": [
+      "Un piano",
+      "Une carte",
+      "Un cadenas",
+      "Une porte"
+    ],
+    "answer": 0,
+    "explanation": "Un piano possède des touches, parfois appelées clés."
+  },
+  {
+    "id": "q_011_je_tombe_sans_me_faire_ma",
+    "question": "Je tombe sans me faire mal. Qui suis-je ?",
+    "options": [
+      "La pluie",
+      "Un chat",
+      "Une feuille",
+      "La nuit"
+    ],
+    "answer": 0,
+    "explanation": "La pluie tombe sans ressentir de douleur."
+  },
+  {
+    "id": "q_012_je_peux_etre_casse_sans_e",
+    "question": "Je peux être cassé sans être touché. Qui suis-je ?",
+    "options": [
+      "Une promesse",
+      "Un verre",
+      "Un cœur",
+      "Un code"
+    ],
+    "answer": 0,
+    "explanation": "On peut casser une promesse par ses actes."
+  },
+  {
+    "id": "q_013_jai_une_tete_et_une_queue",
+    "question": "J’ai une tête et une queue mais pas de corps. Qui suis-je ?",
+    "options": [
+      "Une pièce",
+      "Un serpent",
+      "Une comète",
+      "Une souris"
+    ],
+    "answer": 0,
+    "explanation": "Une pièce a pile et face."
+  },
+  {
+    "id": "q_014_jai_un_cou_mais_pas_de_te",
+    "question": "J’ai un cou mais pas de tête. Qui suis-je ?",
+    "options": [
+      "Une bouteille",
+      "Une chemise",
+      "Une guitare",
+      "Toutes ces réponses"
+    ],
+    "answer": 3,
+    "explanation": "Une bouteille, une chemise et une guitare ont un cou."
+  },
+  {
+    "id": "q_015_on_me_prend_avant_de_me_d",
+    "question": "On me prend avant de me donner. Qui suis-je ?",
+    "options": [
+      "Une photo",
+      "Une décision",
+      "Une douche",
+      "Une parole"
+    ],
+    "answer": 0,
+    "explanation": "On prend une photo avant de la donner."
+  },
+  {
+    "id": "q_016_je_deviens_plus_courte_a_",
+    "question": "Je deviens plus courte à mesure que je vieillis. Qui suis-je ?",
+    "options": [
+      "Une bougie",
+      "Une personne",
+      "Une route",
+      "Une histoire"
+    ],
+    "answer": 0,
+    "explanation": "Une bougie raccourcit en brûlant."
+  },
+  {
+    "id": "q_017_je_suis_leger_comme_une_p",
+    "question": "Je suis léger comme une plume, mais personne ne peut me retenir longtemps. Qui suis-je ?",
+    "options": [
+      "Le souffle",
+      "Une bulle",
+      "Un secret",
+      "La fumée"
+    ],
+    "answer": 0,
+    "explanation": "On ne peut retenir son souffle indéfiniment."
+  },
+  {
+    "id": "q_018_quel_mois_possede_28_jour",
+    "question": "Quel mois possède 28 jours ?",
+    "options": [
+      "Février seulement",
+      "Tous les mois",
+      "Un mois sur deux",
+      "Aucun"
+    ],
+    "answer": 1,
+    "explanation": "Tous les mois ont au moins 28 jours."
+  },
+  {
+    "id": "q_019_quest_ce_qui_a_quatre_rou",
+    "question": "Qu’est-ce qui a quatre roues et des mouches ?",
+    "options": [
+      "Une poubelle",
+      "Une voiture",
+      "Un avion",
+      "Une trottinette"
+    ],
+    "answer": 0,
+    "explanation": "Une poubelle sur roues peut attirer les mouches."
+  },
+  {
+    "id": "q_020_je_peux_remplir_une_piece",
+    "question": "Je peux remplir une pièce sans prendre de place. Qui suis-je ?",
+    "options": [
+      "La lumière",
+      "L’air",
+      "Une odeur",
+      "Le silence"
+    ],
+    "answer": 0,
+    "explanation": "La lumière remplit la pièce sans volume matériel."
+  },
+  {
+    "id": "q_021_plus_tu_en_prends_plus_tu",
+    "question": "Plus tu en prends, plus tu en laisses derrière toi. Que sont-elles ?",
+    "options": [
+      "Des photos",
+      "Des traces de pas",
+      "Des décisions",
+      "Des miettes"
+    ],
+    "answer": 1,
+    "explanation": "Chaque pas laisse une trace."
+  },
+  {
+    "id": "q_022_je_parle_sans_bouche_et_j",
+    "question": "Je parle sans bouche et j’entends sans oreilles. Qui suis-je ?",
+    "options": [
+      "Un écho",
+      "Un téléphone",
+      "Une radio",
+      "Un rêve"
+    ],
+    "answer": 0,
+    "explanation": "Un écho répète les sons."
+  },
+  {
+    "id": "q_023_jai_des_villes_sans_maiso",
+    "question": "J’ai des villes sans maisons, des forêts sans arbres et des mers sans eau. Qui suis-je ?",
+    "options": [
+      "Une carte",
+      "Un rêve",
+      "Un livre",
+      "Un écran"
+    ],
+    "answer": 0,
+    "explanation": "Une carte représente ces éléments."
+  },
+  {
+    "id": "q_024_quest_ce_qui_monte_mais_n",
+    "question": "Qu’est-ce qui monte mais ne redescend jamais ?",
+    "options": [
+      "L’âge",
+      "La fumée",
+      "Un ballon",
+      "Le soleil"
+    ],
+    "answer": 0,
+    "explanation": "L’âge augmente avec le temps."
+  },
+  {
+    "id": "q_025_je_suis_a_toi_mais_les_au",
+    "question": "Je suis à toi, mais les autres m’utilisent plus que toi. Qui suis-je ?",
+    "options": [
+      "Ton prénom",
+      "Ton téléphone",
+      "Ta chaise",
+      "Ton argent"
+    ],
+    "answer": 0,
+    "explanation": "Les autres prononcent souvent ton prénom."
+  },
+  {
+    "id": "q_026_je_nai_quun_oeil_mais_je_",
+    "question": "Je n’ai qu’un œil mais je ne peux pas voir. Qui suis-je ?",
+    "options": [
+      "Une aiguille",
+      "Un cyclone",
+      "Une caméra",
+      "Une pomme de terre"
+    ],
+    "answer": 0,
+    "explanation": "Une aiguille a un chas appelé œil."
+  },
+  {
+    "id": "q_027_quest_ce_qui_a_des_mains_",
+    "question": "Qu’est-ce qui a des mains mais ne peut pas applaudir ?",
+    "options": [
+      "Une horloge",
+      "Un mannequin",
+      "Un robot",
+      "Une statue"
+    ],
+    "answer": 0,
+    "explanation": "Les aiguilles d’une horloge sont appelées mains."
+  },
+  {
+    "id": "q_028_je_suis_fait_pour_etre_ro",
+    "question": "Je suis fait pour être rompu. Qui suis-je ?",
+    "options": [
+      "Un record",
+      "Un contrat",
+      "Un silence",
+      "Toutes ces réponses"
+    ],
+    "answer": 3,
+    "explanation": "Les trois peuvent être rompus."
+  },
+  {
+    "id": "q_029_je_cours_autour_dun_jardi",
+    "question": "Je cours autour d’un jardin sans jamais bouger. Qui suis-je ?",
+    "options": [
+      "Une clôture",
+      "Un tuyau",
+      "Une ombre",
+      "Un chemin"
+    ],
+    "answer": 0,
+    "explanation": "La clôture entoure le jardin."
+  },
+  {
+    "id": "q_030_je_suis_noir_quand_je_sui",
+    "question": "Je suis noir quand je suis propre et blanc quand je suis sale. Qui suis-je ?",
+    "options": [
+      "Un tableau noir",
+      "Une chaussure",
+      "Un filtre",
+      "Un nuage"
+    ],
+    "answer": 0,
+    "explanation": "La craie blanchit le tableau noir."
+  },
+  {
+    "id": "q_031_quest_ce_qui_peut_travers",
+    "question": "Qu’est-ce qui peut traverser une vitre sans la casser ?",
+    "options": [
+      "La lumière",
+      "Une pierre",
+      "Le vent",
+      "Un son uniquement"
+    ],
+    "answer": 0,
+    "explanation": "La lumière traverse le verre."
+  },
+  {
+    "id": "q_032_je_possede_des_branches_m",
+    "question": "Je possède des branches mais ni feuilles ni tronc. Qui suis-je ?",
+    "options": [
+      "Une banque",
+      "Une rivière",
+      "Un magasin",
+      "Toutes ces réponses"
+    ],
+    "answer": 3,
+    "explanation": "Banques, rivières et magasins peuvent avoir des branches."
+  },
+  {
+    "id": "q_033_je_suis_au_milieu_de_pari",
+    "question": "Je suis au milieu de Paris. Qui suis-je ?",
+    "options": [
+      "La lettre R",
+      "La Seine",
+      "La tour Eiffel",
+      "Un pont"
+    ],
+    "answer": 0,
+    "explanation": "La lettre R se trouve au milieu du mot Paris."
+  },
+  {
+    "id": "q_034_deux_dans_une_semaine_un_",
+    "question": "Deux dans une semaine, un dans une année, aucun dans un jour. Qu’est-ce ?",
+    "options": [
+      "La lettre E",
+      "La lettre A",
+      "Le chiffre 2",
+      "Le dimanche"
+    ],
+    "answer": 0,
+    "explanation": "Le mot semaine contient deux e, année un, jour aucun."
+  },
+  {
+    "id": "q_035_quest_ce_qui_a_un_lit_mai",
+    "question": "Qu’est-ce qui a un lit mais ne dort jamais ?",
+    "options": [
+      "Une rivière",
+      "Un hôpital",
+      "Une chambre",
+      "Un chat"
+    ],
+    "answer": 0,
+    "explanation": "Une rivière coule dans son lit."
+  },
+  {
+    "id": "q_036_jai_beaucoup_de_pages_mai",
+    "question": "J’ai beaucoup de pages mais je ne suis pas un livre. Qui suis-je ?",
+    "options": [
+      "Un calendrier",
+      "Un site web",
+      "Un cahier",
+      "Toutes ces réponses"
+    ],
+    "answer": 3,
+    "explanation": "Les trois peuvent avoir des pages."
+  },
+  {
+    "id": "q_037_je_peux_etre_long_ou_cour",
+    "question": "Je peux être long ou court, raconté ou gardé. Qui suis-je ?",
+    "options": [
+      "Un secret",
+      "Un chemin",
+      "Un cheveu",
+      "Un film"
+    ],
+    "answer": 0,
+    "explanation": "Un secret peut être raconté ou gardé."
+  },
+  {
+    "id": "q_038_je_reste_derriere_toi_qua",
+    "question": "Je reste derrière toi quand tu avances. Qui suis-je ?",
+    "options": [
+      "Ton passé",
+      "Ton ombre",
+      "Une trace",
+      "Toutes ces réponses"
+    ],
+    "answer": 3,
+    "explanation": "Selon le sens, les trois restent derrière."
+  },
+  {
+    "id": "q_039_je_suis_une_maison_sans_p",
+    "question": "Je suis une maison sans porte ni fenêtre, avec une étoile à l’intérieur. Qui suis-je ?",
+    "options": [
+      "Une pomme",
+      "Un œuf",
+      "Une noix",
+      "Une tomate"
+    ],
+    "answer": 0,
+    "explanation": "Une pomme coupée révèle une forme d’étoile autour des pépins."
+  }
+]

@@ -1,0 +1,602 @@
+[
+  {
+    "id": "connais_001",
+    "question": "Quel serait mon choix pour un week-end parfait ?",
+    "options": [
+      "Rester au calme",
+      "Partir à l’aventure",
+      "Faire la fête",
+      "Improviser au dernier moment"
+    ]
+  },
+  {
+    "id": "connais_002",
+    "question": "Quel snack je choisirais en premier ?",
+    "options": [
+      "Sucré",
+      "Salé",
+      "Fruité",
+      "Épicé"
+    ]
+  },
+  {
+    "id": "connais_003",
+    "question": "Quand je suis stressé·e, qu’est-ce qui m’aide le plus ?",
+    "options": [
+      "Parler",
+      "Être seul·e",
+      "Bouger",
+      "Dormir"
+    ]
+  },
+  {
+    "id": "connais_004",
+    "question": "Quel type de film me ressemble le plus ?",
+    "options": [
+      "Comédie",
+      "Thriller",
+      "Romance",
+      "Science-fiction"
+    ]
+  },
+  {
+    "id": "connais_005",
+    "question": "Quel pouvoir inutile me ferait le plus plaisir ?",
+    "options": [
+      "Toujours trouver mes clés",
+      "Ne jamais rater un bus",
+      "Faire apparaître du café",
+      "Savoir plier un drap-housse"
+    ]
+  },
+  {
+    "id": "connais_006",
+    "question": "Dans un groupe, quel rôle je prends naturellement ?",
+    "options": [
+      "Organiser",
+      "Faire rire",
+      "Observer",
+      "Mettre l’ambiance"
+    ]
+  },
+  {
+    "id": "connais_007",
+    "question": "Quel cadeau me toucherait le plus ?",
+    "options": [
+      "Une expérience",
+      "Un objet choisi avec soin",
+      "Une lettre",
+      "Une surprise collective"
+    ]
+  },
+  {
+    "id": "connais_008",
+    "question": "Quelle météo me met le plus de bonne humeur ?",
+    "options": [
+      "Grand soleil",
+      "Pluie douce",
+      "Neige",
+      "Orage"
+    ]
+  },
+  {
+    "id": "connais_009",
+    "question": "Quelle qualité je valorise le plus chez quelqu’un ?",
+    "options": [
+      "L’humour",
+      "La loyauté",
+      "La curiosité",
+      "La douceur"
+    ]
+  },
+  {
+    "id": "connais_010",
+    "question": "Quel serait mon repas de secours ?",
+    "options": [
+      "Pâtes",
+      "Pizza",
+      "Sandwich",
+      "Petit-déjeuner"
+    ]
+  },
+  {
+    "id": "connais_011",
+    "question": "Quel endroit je choisirais pour vivre un an ?",
+    "options": [
+      "Grande ville",
+      "Bord de mer",
+      "Montagne",
+      "Campagne"
+    ]
+  },
+  {
+    "id": "connais_012",
+    "question": "Quelle habitude me trahit le plus ?",
+    "options": [
+      "Regarder mon téléphone",
+      "Parler vite",
+      "Tout remettre à demain",
+      "Tout vérifier deux fois"
+    ]
+  },
+  {
+    "id": "connais_013",
+    "question": "Quel animal me correspond le mieux ?",
+    "options": [
+      "Chat",
+      "Chien",
+      "Loutre",
+      "Corbeau"
+    ]
+  },
+  {
+    "id": "connais_014",
+    "question": "Quel est mon rapport aux surprises ?",
+    "options": [
+      "J’adore",
+      "J’aime si je contrôle un peu",
+      "Ça dépend de qui",
+      "Je préfère savoir"
+    ]
+  },
+  {
+    "id": "connais_015",
+    "question": "Quelle chanson me ferait forcément danser ?",
+    "options": [
+      "Un tube des années 2000",
+      "Un classique disco",
+      "Un hit actuel",
+      "Une chanson honteuse"
+    ]
+  },
+  {
+    "id": "connais_016",
+    "question": "Quel serait mon premier achat après un gros gain ?",
+    "options": [
+      "Un voyage",
+      "Un logement",
+      "Des cadeaux",
+      "Rien, je réfléchis"
+    ]
+  },
+  {
+    "id": "connais_017",
+    "question": "Quand je suis en retard, quelle est ma vraie raison la plus probable ?",
+    "options": [
+      "Je me suis préparé·e trop tard",
+      "J’ai sous-estimé le trajet",
+      "J’ai perdu quelque chose",
+      "J’ai changé de tenue"
+    ]
+  },
+  {
+    "id": "connais_018",
+    "question": "Quel type de vacances je préfère ?",
+    "options": [
+      "Repos total",
+      "Road trip",
+      "City trip",
+      "Festival"
+    ]
+  },
+  {
+    "id": "connais_019",
+    "question": "Quelle application j’ouvrirais en premier au réveil ?",
+    "options": [
+      "Messages",
+      "Réseaux sociaux",
+      "Météo",
+      "Musique"
+    ]
+  },
+  {
+    "id": "connais_020",
+    "question": "Quel compliment me ferait le plus plaisir ?",
+    "options": [
+      "Tu es drôle",
+      "Tu es fiable",
+      "Tu es inspirant·e",
+      "Tu es apaisant·e"
+    ]
+  },
+  {
+    "id": "connais_021",
+    "question": "Quel petit luxe je garderais toujours ?",
+    "options": [
+      "Un bon lit",
+      "Un bon repas",
+      "Un abonnement utile",
+      "Du temps libre"
+    ]
+  },
+  {
+    "id": "connais_022",
+    "question": "Quelle activité me ferait perdre la notion du temps ?",
+    "options": [
+      "Jouer",
+      "Regarder une série",
+      "Créer quelque chose",
+      "Parler avec quelqu’un"
+    ]
+  },
+  {
+    "id": "connais_023",
+    "question": "Quelle peur ridicule pourrait être la mienne ?",
+    "options": [
+      "Les insectes",
+      "Les bruits la nuit",
+      "Les appels inconnus",
+      "Les manèges"
+    ]
+  },
+  {
+    "id": "connais_024",
+    "question": "Quel serait mon métier dans un film de braquage ?",
+    "options": [
+      "Le cerveau",
+      "Le pilote",
+      "Le charme",
+      "La personne qui improvise"
+    ]
+  },
+  {
+    "id": "connais_025",
+    "question": "Quel objet j’oublie le plus facilement ?",
+    "options": [
+      "Mes clés",
+      "Mon chargeur",
+      "Une bouteille d’eau",
+      "Mes écouteurs"
+    ]
+  },
+  {
+    "id": "connais_026",
+    "question": "Dans un débat, comment je réagis ?",
+    "options": [
+      "Je défends jusqu’au bout",
+      "Je cherche un compromis",
+      "Je plaisante",
+      "Je change d’avis si on me convainc"
+    ]
+  },
+  {
+    "id": "connais_027",
+    "question": "Quelle serait ma soirée idéale ?",
+    "options": [
+      "Petit comité",
+      "Grande fête",
+      "Jeux et snacks",
+      "Sortie improvisée"
+    ]
+  },
+  {
+    "id": "connais_028",
+    "question": "Quel est mon niveau de patience ?",
+    "options": [
+      "Très élevé",
+      "Correct",
+      "Variable",
+      "Presque nul"
+    ]
+  },
+  {
+    "id": "connais_029",
+    "question": "Quelle couleur porterais-je le plus facilement ?",
+    "options": [
+      "Noir",
+      "Couleur vive",
+      "Neutre clair",
+      "Violet"
+    ]
+  },
+  {
+    "id": "connais_030",
+    "question": "Quel défi me ferait le plus hésiter ?",
+    "options": [
+      "Parler en public",
+      "Faire du sport",
+      "Dire un secret",
+      "Improviser"
+    ]
+  },
+  {
+    "id": "connais_031",
+    "question": "Quelle est ma réaction devant un imprévu ?",
+    "options": [
+      "Je panique",
+      "Je m’adapte",
+      "Je prends les commandes",
+      "Je ris"
+    ]
+  },
+  {
+    "id": "connais_032",
+    "question": "Quel est mon talent caché probable ?",
+    "options": [
+      "Imiter",
+      "Cuisiner",
+      "Mémoriser",
+      "Trouver des solutions"
+    ]
+  },
+  {
+    "id": "connais_033",
+    "question": "Quel type de message j’envoie le plus ?",
+    "options": [
+      "Court et direct",
+      "Long pavé",
+      "Vocal",
+      "Mème"
+    ]
+  },
+  {
+    "id": "connais_034",
+    "question": "Quel est mon rapport à la compétition ?",
+    "options": [
+      "Je veux gagner",
+      "Je joue pour rire",
+      "Je fais semblant de m’en moquer",
+      "Je deviens stratège"
+    ]
+  },
+  {
+    "id": "connais_035",
+    "question": "Quelle destination me tente le plus ?",
+    "options": [
+      "Japon",
+      "Islande",
+      "New York",
+      "Île tropicale"
+    ]
+  },
+  {
+    "id": "connais_036",
+    "question": "Quel défaut j’assume le mieux ?",
+    "options": [
+      "Être têtu·e",
+      "Être désordonné·e",
+      "Être impatient·e",
+      "Être trop curieux·se"
+    ]
+  },
+  {
+    "id": "connais_037",
+    "question": "Que choisirais-je pour me remonter le moral ?",
+    "options": [
+      "Manger",
+      "Dormir",
+      "Sortir",
+      "Parler"
+    ]
+  },
+  {
+    "id": "connais_038",
+    "question": "Quel souvenir garderais-je en priorité ?",
+    "options": [
+      "Une photo",
+      "Un objet",
+      "Une chanson",
+      "Une odeur"
+    ]
+  },
+  {
+    "id": "connais_039",
+    "question": "Quel personnage serais-je dans une série ?",
+    "options": [
+      "Le leader",
+      "Le comique",
+      "Le discret",
+      "Le chaos"
+    ]
+  },
+  {
+    "id": "connais_040",
+    "question": "Quel genre de cadeau je fais le plus ?",
+    "options": [
+      "Utile",
+      "Drôle",
+      "Sentimental",
+      "Dernière minute"
+    ]
+  },
+  {
+    "id": "connais_041",
+    "question": "Quelle règle de soirée me ressemble ?",
+    "options": [
+      "On improvise",
+      "On planifie",
+      "On vote",
+      "On suit la meilleure idée"
+    ]
+  },
+  {
+    "id": "connais_042",
+    "question": "Quel est mon niveau de rangement ?",
+    "options": [
+      "Maniaque",
+      "Organisé·e",
+      "Chaos contrôlé",
+      "Catastrophe"
+    ]
+  },
+  {
+    "id": "connais_043",
+    "question": "Quelle boisson me représente ?",
+    "options": [
+      "Café",
+      "Thé",
+      "Soda",
+      "Eau pétillante"
+    ]
+  },
+  {
+    "id": "connais_044",
+    "question": "Quel moment de la journée je préfère ?",
+    "options": [
+      "Matin",
+      "Après-midi",
+      "Soir",
+      "Nuit"
+    ]
+  },
+  {
+    "id": "connais_045",
+    "question": "Quel est mon rapport au téléphone ?",
+    "options": [
+      "Toujours sur moi",
+      "Souvent oublié",
+      "Toujours en silencieux",
+      "Toujours à court de batterie"
+    ]
+  },
+  {
+    "id": "connais_046",
+    "question": "Quel type d’humour me fait le plus rire ?",
+    "options": [
+      "Absurde",
+      "Sarcastique",
+      "Jeux de mots",
+      "Humour noir"
+    ]
+  },
+  {
+    "id": "connais_047",
+    "question": "Quelle décision je prends le plus vite ?",
+    "options": [
+      "Choisir un repas",
+      "Choisir un film",
+      "Choisir une tenue",
+      "Aucune"
+    ]
+  },
+  {
+    "id": "connais_048",
+    "question": "Quel serait mon animal de compagnie improbable ?",
+    "options": [
+      "Un canard",
+      "Un mini cochon",
+      "Un corbeau",
+      "Un axolotl"
+    ]
+  },
+  {
+    "id": "connais_049",
+    "question": "Quel serait mon slogan personnel ?",
+    "options": [
+      "On verra bien",
+      "J’avais raison",
+      "Pourquoi pas",
+      "Laisse-moi réfléchir"
+    ]
+  },
+  {
+    "id": "connais_050",
+    "question": "Quel serait mon pire cauchemar de voyage ?",
+    "options": [
+      "Rater le transport",
+      "Perdre la valise",
+      "Mauvais hôtel",
+      "Météo horrible"
+    ]
+  },
+  {
+    "id": "connais_051",
+    "question": "Que ferais-je avec une journée sans obligation ?",
+    "options": [
+      "Dormir",
+      "Sortir",
+      "Créer",
+      "Ne rien prévoir"
+    ]
+  },
+  {
+    "id": "connais_052",
+    "question": "Quel est mon rapport aux photos ?",
+    "options": [
+      "J’adore poser",
+      "Je prends les autres",
+      "Je fuis l’objectif",
+      "Je prends cinquante photos"
+    ]
+  },
+  {
+    "id": "connais_053",
+    "question": "Quelle odeur me plaît le plus ?",
+    "options": [
+      "Pain chaud",
+      "Pluie",
+      "Parfum",
+      "Café"
+    ]
+  },
+  {
+    "id": "connais_054",
+    "question": "Quel serait mon rôle dans une apocalypse ?",
+    "options": [
+      "Organiser",
+      "Protéger",
+      "Trouver à manger",
+      "Faire des blagues"
+    ]
+  },
+  {
+    "id": "connais_055",
+    "question": "Quelle erreur je pardonne le plus facilement ?",
+    "options": [
+      "Un retard",
+      "Un oubli",
+      "Une maladresse",
+      "Un message non répondu"
+    ]
+  },
+  {
+    "id": "connais_056",
+    "question": "Quel serait mon choix de karaoké ?",
+    "options": [
+      "Une ballade",
+      "Un tube pop",
+      "Un classique français",
+      "Une chanson impossible"
+    ]
+  },
+  {
+    "id": "connais_057",
+    "question": "Quel est mon niveau d’aventure culinaire ?",
+    "options": [
+      "Je teste tout",
+      "Je reste prudent·e",
+      "Seulement si on insiste",
+      "Toujours le même plat"
+    ]
+  },
+  {
+    "id": "connais_058",
+    "question": "Quelle est ma manière de montrer que j’apprécie quelqu’un ?",
+    "options": [
+      "Par les mots",
+      "Par les gestes",
+      "Par le temps donné",
+      "Par les cadeaux"
+    ]
+  },
+  {
+    "id": "connais_059",
+    "question": "Quel objet me représente le mieux ?",
+    "options": [
+      "Un carnet",
+      "Un casque audio",
+      "Une tasse",
+      "Une batterie externe"
+    ]
+  },
+  {
+    "id": "connais_060",
+    "question": "Quel serait mon mini-plaisir quotidien ?",
+    "options": [
+      "Un bon café",
+      "Une musique",
+      "Un message",
+      "Un dessert"
+    ]
+  }
+]

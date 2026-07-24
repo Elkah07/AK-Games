@@ -1,0 +1,452 @@
+[
+  {
+    "id": "roulette_001_fais_une_entree_de_star_dans_l",
+    "text": "Fais une entrée de star dans la pièce, puis salue ton public imaginaire.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_002_parle_avec_un_accent_invente_j",
+    "text": "Parle avec un accent inventé jusqu’à ton prochain tour.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_003_fais_deviner_un_metier_uniquem",
+    "text": "Fais deviner un métier uniquement avec des bruitages.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_004_danse_dix_secondes_comme_si_le",
+    "text": "Danse dix secondes comme si le sol était brûlant.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_005_raconte_ta_journee_comme_la_ba",
+    "text": "Raconte ta journée comme la bande-annonce d’un film catastrophe.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_006_imite_la_sonnerie_dun_telephon",
+    "text": "Imite la sonnerie d’un téléphone jusqu’à ce que quelqu’un devine.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_007_fais_un_compliment_tres_serieu",
+    "text": "Fais un compliment très sérieux à l’objet le plus proche.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_008_tiens_une_pose_de_mannequin_pe",
+    "text": "Tiens une pose de mannequin pendant quinze secondes.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_009_chante_le_refrain_dune_chanson",
+    "text": "Chante le refrain d’une chanson en remplaçant tous les mots par « la ».",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_010_fais_rire_la_personne_a_ta_gau",
+    "text": "Fais rire la personne à ta gauche sans la toucher.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_011_presente_la_personne_en_face_c",
+    "text": "Présente la personne en face comme une célébrité internationale.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_012_mime_un_animal_choisi_par_le_g",
+    "text": "Mime un animal choisi par le groupe.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_013_fais_une_publicite_de_trente_s",
+    "text": "Fais une publicité de trente secondes pour une chaussette.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_014_parle_au_ralenti_jusqua_la_fin",
+    "text": "Parle au ralenti jusqu’à la fin du tour.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_015_fais_trois_tours_sur_toi_meme_",
+    "text": "Fais trois tours sur toi-même puis marche en ligne droite.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_016_decris_ton_plat_prefere_comme_",
+    "text": "Décris ton plat préféré comme un commentateur sportif.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_017_invente_un_slogan_pour_akgames",
+    "text": "Invente un slogan pour AK’Games et déclame-le comme à la télévision.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_018_fais_une_choregraphie_avec_uni",
+    "text": "Fais une chorégraphie avec uniquement tes mains.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_019_reponds_a_la_prochaine_questio",
+    "text": "Réponds à la prochaine question en chantant.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_020_imite_un_reveil_difficile_un_l",
+    "text": "Imite un réveil difficile un lundi matin.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_021_fais_le_bruit_de_cinq_animaux_",
+    "text": "Fais le bruit de cinq animaux en dix secondes.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_022_raconte_une_blague_avec_un_vis",
+    "text": "Raconte une blague avec un visage totalement sérieux.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_023_declare_ta_flamme_a_une_boutei",
+    "text": "Déclare ta flamme à une bouteille d’eau.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_024_fais_une_scene_de_jalousie_a_u",
+    "text": "Fais une scène de jalousie à une chaise.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_025_marche_comme_un_robot_qui_deco",
+    "text": "Marche comme un robot qui découvre les escaliers.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_026_fais_semblant_de_gagner_un_pri",
+    "text": "Fais semblant de gagner un prix et prononce un discours.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_027_imite_quelquun_qui_essaie_de_n",
+    "text": "Imite quelqu’un qui essaie de ne pas éternuer.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_028_fais_un_defile_avec_laccessoir",
+    "text": "Fais un défilé avec l’accessoire choisi par le groupe.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_029_transforme_ton_prenom_en_cri_d",
+    "text": "Transforme ton prénom en cri de guerre.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_030_fais_une_meteo_dramatique_pour",
+    "text": "Fais une météo dramatique pour la pièce où vous êtes.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_031_danse_sans_bouger_les_pieds",
+    "text": "Danse sans bouger les pieds.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_032_fais_une_declaration_officiell",
+    "text": "Fais une déclaration officielle pour annoncer qu’il n’y a plus de chips.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_033_imite_un_gps_qui_perd_patience",
+    "text": "Imite un GPS qui perd patience.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_034_fais_semblant_detre_influenceu",
+    "text": "Fais semblant d’être influenceur et présente le premier objet visible.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_035_mime_une_scene_de_film_dhorreu",
+    "text": "Mime une scène de film d’horreur sans parler.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_036_parle_comme_un_personnage_de_d",
+    "text": "Parle comme un personnage de dessin animé pendant un tour.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_037_fais_une_imitation_de_quelquun",
+    "text": "Fais une imitation de quelqu’un qui marche sur un Lego.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_038_recite_lalphabet_avec_une_emot",
+    "text": "Récite l’alphabet avec une émotion choisie par le groupe.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_039_fais_une_minute_de_yoga_totale",
+    "text": "Fais une minute de yoga totalement inventé.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_040_invente_un_hymne_pour_votre_gr",
+    "text": "Invente un hymne pour votre groupe d’amis.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_041_fais_croire_pendant_vingt_seco",
+    "text": "Fais croire pendant vingt secondes que tu es un guide touristique.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_042_joue_une_rupture_amoureuse_ave",
+    "text": "Joue une rupture amoureuse avec ton téléphone.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_043_fais_une_bataille_de_regard_av",
+    "text": "Fais une bataille de regard avec la personne de ton choix.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_044_fais_un_rire_de_mechant_de_fil",
+    "text": "Fais un rire de méchant de film, puis un rire de bébé.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_045_mime_une_personne_qui_cherche_",
+    "text": "Mime une personne qui cherche ses clés alors qu’elles sont dans sa main.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_046_fais_une_interview_imaginaire_",
+    "text": "Fais une interview imaginaire de ton voisin de droite.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_047_transforme_une_phrase_banale_e",
+    "text": "Transforme une phrase banale en discours révolutionnaire.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_048_chante_joyeux_anniversaire_dan",
+    "text": "Chante « Joyeux anniversaire » dans un style choisi par le groupe.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_049_fais_semblant_detre_un_serveur",
+    "text": "Fais semblant d’être un serveur dans un restaurant très chic.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_050_imite_une_poule_qui_vient_dapp",
+    "text": "Imite une poule qui vient d’apprendre une mauvaise nouvelle.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_051_presente_une_ceremonie_de_remi",
+    "text": "Présente une cérémonie de remise de prix pour la meilleure boisson de la table.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_052_fais_un_tour_de_magie_sans_mag",
+    "text": "Fais un tour de magie sans magie et assume jusqu’au bout.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_053_parle_uniquement_par_questions",
+    "text": "Parle uniquement par questions jusqu’à ton prochain tour.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_054_mime_une_application_qui_plant",
+    "text": "Mime une application qui plante.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_055_fais_une_danse_de_victoire_apr",
+    "text": "Fais une danse de victoire après avoir réussi quelque chose de minuscule.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_056_fais_un_discours_de_motivation",
+    "text": "Fais un discours de motivation à une plante.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_057_joue_un_personnage_qui_vient_d",
+    "text": "Joue un personnage qui vient de voir son ex dans la rue.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_058_fais_le_bruit_dun_ordinateur_t",
+    "text": "Fais le bruit d’un ordinateur très fatigué.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_059_imite_une_personne_qui_goute_u",
+    "text": "Imite une personne qui goûte un citron pour la première fois.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_060_raconte_une_histoire_de_dix_se",
+    "text": "Raconte une histoire de dix secondes avec les mots « cactus », « taxi » et « diamant ».",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_061_fais_une_photo_de_groupe_imagi",
+    "text": "Fais une photo de groupe imaginaire et place tout le monde.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_062_mime_un_super_heros_dont_le_po",
+    "text": "Mime un super-héros dont le pouvoir est totalement inutile.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_063_fais_une_declaration_damour_av",
+    "text": "Fais une déclaration d’amour avec uniquement des titres de films inventés.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_064_joue_une_scene_de_tribunal_ou_",
+    "text": "Joue une scène de tribunal où tu défends le droit à la sieste.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_065_fais_une_danse_inspiree_par_le",
+    "text": "Fais une danse inspirée par le prénom de la personne à ta droite.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_066_imite_un_vendeur_qui_essaie_de",
+    "text": "Imite un vendeur qui essaie de vendre de l’air.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_067_fais_semblant_detre_au_telepho",
+    "text": "Fais semblant d’être au téléphone avec une célébrité.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_068_raconte_un_souvenir_banal_comm",
+    "text": "Raconte un souvenir banal comme s’il était top secret.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_069_fais_une_voix_off_dramatique_p",
+    "text": "Fais une voix off dramatique pendant que quelqu’un boit.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_070_mime_un_chat_qui_refuse_daller",
+    "text": "Mime un chat qui refuse d’aller chez le vétérinaire.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_071_fais_un_compliment_a_chaque_pe",
+    "text": "Fais un compliment à chaque personne avec un seul mot.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_072_joue_une_scene_ou_tu_decouvres",
+    "text": "Joue une scène où tu découvres que tu es dans un rêve.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_073_imite_une_personne_qui_essaie_",
+    "text": "Imite une personne qui essaie de comprendre une notice impossible.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_074_fais_une_bande_annonce_pour_vo",
+    "text": "Fais une bande-annonce pour votre soirée.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_075_fais_un_duel_de_danse_de_cinq_",
+    "text": "Fais un duel de danse de cinq secondes avec la personne de ton choix.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_076_parle_comme_un_presentateur_de",
+    "text": "Parle comme un présentateur de journal pour annoncer la prochaine manche.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_077_mime_un_pingouin_presse",
+    "text": "Mime un pingouin pressé.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_078_fais_semblant_detre_une_statue",
+    "text": "Fais semblant d’être une statue qui prend vie.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_079_invente_une_poignee_de_main_av",
+    "text": "Invente une poignée de main avec la personne à ta gauche.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_080_fais_une_scene_de_film_romanti",
+    "text": "Fais une scène de film romantique avec un coussin.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_081_imite_une_personne_qui_recoit_",
+    "text": "Imite une personne qui reçoit un cadeau qu’elle déteste.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_082_fais_un_rap_de_quinze_secondes",
+    "text": "Fais un rap de quinze secondes sur ce qu’il y a sur la table.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_083_fais_une_crise_de_diva_parce_q",
+    "text": "Fais une crise de diva parce que la lumière n’est pas parfaite.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_084_joue_un_personnage_qui_essaie_",
+    "text": "Joue un personnage qui essaie de cacher qu’il ne comprend rien.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_085_fais_un_bruitage_pour_chaque_m",
+    "text": "Fais un bruitage pour chaque mouvement de la personne en face pendant dix secondes.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_086_fais_une_minute_de_sport_imagi",
+    "text": "Fais une minute de sport imaginaire avec un coach invisible.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_087_mime_une_personne_qui_se_revei",
+    "text": "Mime une personne qui se réveille dans le mauvais pays.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_088_fais_une_danse_au_ralenti_comm",
+    "text": "Fais une danse au ralenti comme dans un clip.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_089_presente_ton_voisin_comme_le_b",
+    "text": "Présente ton voisin comme le boss final d’un jeu vidéo.",
+    "category": "fun"
+  },
+  {
+    "id": "roulette_090_fais_un_toast_extremement_sole",
+    "text": "Fais un toast extrêmement solennel pour une raison ridicule.",
+    "category": "fun"
+  }
+]

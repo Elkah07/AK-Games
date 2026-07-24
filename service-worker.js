@@ -1,4 +1,4 @@
-const CACHE_VERSION = "akgames-v0.9";
+const CACHE_VERSION = "akgames-v0.14";
 const APP_SHELL = [
   "/",
   "/index.html",
@@ -38,7 +38,25 @@ const APP_SHELL = [
   "/data/faux-expert.json",
   "/data/faux-expert-adulte.json",
   "/data/qui-suis-je.json",
-  "/data/qui-suis-je-adulte.json"
+  "/data/qui-suis-je-adulte.json",
+  "/data/roulette-defis.json",
+  "/data/mime.json",
+  "/data/imitation.json",
+  "/data/bombe.json",
+  "/data/quiz-culture.json",
+  "/data/quiz-cinema.json",
+  "/data/quiz-musique.json",
+  "/data/quiz-jeux-video.json",
+  "/data/quiz-logos.json",
+  "/data/plaide-cause.json",
+  "/data/fake-reel.json",
+  "/data/alerte-rouge.json",
+  "/data/tu-me-connais.json",
+  "/data/classement-secret.json",
+  "/data/devinettes.json",
+  "/data/questions-osees.json",
+  "/data/jeux-a-boire.json",
+  "/data/defis-adultes.json"
 ];
 
 self.addEventListener("install", event => {

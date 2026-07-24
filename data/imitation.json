@@ -1,0 +1,302 @@
+[
+  {
+    "id": "imitation_001",
+    "text": "Un GPS qui recalculerait l’itinéraire pour la dixième fois",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_002",
+    "text": "Une présentatrice météo pendant une tempête apocalyptique",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_003",
+    "text": "Un enfant qui négocie cinq minutes de plus avant de dormir",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_004",
+    "text": "Un vendeur de téléachat beaucoup trop enthousiaste",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_005",
+    "text": "Une célébrité qui remercie ses fans après avoir gagné un prix imaginaire",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_006",
+    "text": "Un professeur qui essaie de récupérer le silence",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_007",
+    "text": "Une personne qui laisse un message vocal interminable",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_008",
+    "text": "Un commentateur sportif pendant une partie de pierre-feuille-ciseaux",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_009",
+    "text": "Un serveur très chic qui décrit un kebab",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_010",
+    "text": "Une personne qui appelle le service client après trois heures d’attente",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_011",
+    "text": "Un influenceur qui présente une cuillère révolutionnaire",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_012",
+    "text": "Un politicien qui promet des goûters gratuits",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_013",
+    "text": "Un coach sportif qui motive quelqu’un à se lever du canapé",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_014",
+    "text": "Une voix de documentaire animalier sur votre groupe",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_015",
+    "text": "Un présentateur de journal qui annonce qu’il n’y a plus de glaçons",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_016",
+    "text": "Une personne qui raconte un potin en jurant que c’est confidentiel",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_017",
+    "text": "Un parent qui découvre une énorme bêtise",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_018",
+    "text": "Un agent de sécurité qui contrôle une soirée beaucoup trop calme",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_019",
+    "text": "Un artiste incompris qui explique son œuvre",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_020",
+    "text": "Un candidat de téléréalité qui vient d’être trahi",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_021",
+    "text": "Un chef cuisinier furieux devant des pâtes trop cuites",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_022",
+    "text": "Un pilote d’avion qui annonce une escale dans la cuisine",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_023",
+    "text": "Une personne qui commande au drive sans savoir quoi prendre",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_024",
+    "text": "Un streamer qui perd une partie à cause du lag",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_025",
+    "text": "Un enfant qui présente un exposé qu’il n’a pas préparé",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_026",
+    "text": "Un médecin qui annonce une allergie au lundi matin",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_027",
+    "text": "Un vendeur immobilier qui essaie de valoriser un placard",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_028",
+    "text": "Une personne qui fait semblant de connaître une chanson",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_029",
+    "text": "Un détective de série policière qui trouve un indice évident",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_030",
+    "text": "Un grand méchant qui révèle son plan beaucoup trop tôt",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_031",
+    "text": "Un guide de musée devant une œuvre incompréhensible",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_032",
+    "text": "Une personne qui répond à un appel en pleine catastrophe",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_033",
+    "text": "Un arbitre qui explique une règle inventée",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_034",
+    "text": "Un chanteur d’opéra qui commande une pizza",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_035",
+    "text": "Une personne âgée qui découvre une nouvelle application",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_036",
+    "text": "Un enfant qui veut absolument un animal à la maison",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_037",
+    "text": "Une voix d’annonce dans une gare où tous les trains sont annulés",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_038",
+    "text": "Un manager qui organise une réunion pour parler d’une autre réunion",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_039",
+    "text": "Un journaliste people devant une information totalement banale",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_040",
+    "text": "Un avocat qui défend quelqu’un accusé d’avoir fini les chips",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_041",
+    "text": "Une personne qui essaie de vendre un objet cassé",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_042",
+    "text": "Un présentateur de jeu télévisé qui annonce un lot ridicule",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_043",
+    "text": "Un coach de séduction qui n’a aucune idée de ce qu’il fait",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_044",
+    "text": "Un critique gastronomique face à des céréales",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_045",
+    "text": "Une personne qui raconte un rêve impossible à suivre",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_046",
+    "text": "Un patron de boîte de nuit qui refuse l’entrée à un fantôme",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_047",
+    "text": "Un concierge qui connaît tous les secrets de l’immeuble",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_048",
+    "text": "Une voix de bande-annonce pour une sortie au supermarché",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_049",
+    "text": "Un candidat politique qui veut interdire les réveils",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_050",
+    "text": "Un prof de yoga qui perd patience",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_051",
+    "text": "Un capitaine de bateau au milieu du salon",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_052",
+    "text": "Une personne qui fait un discours de mariage sans connaître les mariés",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_053",
+    "text": "Un vendeur de voiture qui présente un vélo",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_054",
+    "text": "Un expert paranormal qui analyse un bruit de frigo",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_055",
+    "text": "Un animateur radio à trois heures du matin",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_056",
+    "text": "Un parent qui tente de monter un meuble",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_057",
+    "text": "Un juge dans un concours de danse catastrophique",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_058",
+    "text": "Un touriste français qui demande son chemin en parlant plus fort",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_059",
+    "text": "Une personne qui vient de gagner un euro au loto",
+    "category": "imitation"
+  },
+  {
+    "id": "imitation_060",
+    "text": "Un personnage de dessin animé qui découvre les impôts",
+    "category": "imitation"
+  }
+]

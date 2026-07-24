@@ -1,0 +1,362 @@
+[
+  {
+    "id": "q_001_quel_logo_est_represente_",
+    "question": "Quel logo est représenté par une pomme croquée ?",
+    "options": [
+      "Apple",
+      "Pear",
+      "Microsoft",
+      "Samsung"
+    ],
+    "answer": 0,
+    "explanation": "La pomme croquée est le logo d’Apple."
+  },
+  {
+    "id": "q_002_quelle_marque_utilise_tro",
+    "question": "Quelle marque utilise trois bandes parallèles ?",
+    "options": [
+      "Nike",
+      "Adidas",
+      "Puma",
+      "Reebok"
+    ],
+    "answer": 1,
+    "explanation": "Les trois bandes sont associées à Adidas."
+  },
+  {
+    "id": "q_003_quel_service_de_streaming",
+    "question": "Quel service de streaming utilise un N rouge ?",
+    "options": [
+      "Netflix",
+      "Disney+",
+      "Prime Video",
+      "Hulu"
+    ],
+    "answer": 0,
+    "explanation": "Netflix utilise un N rouge."
+  },
+  {
+    "id": "q_004_quelle_marque_automobile_",
+    "question": "Quelle marque automobile utilise quatre anneaux entrelacés ?",
+    "options": [
+      "Audi",
+      "BMW",
+      "Mercedes",
+      "Volvo"
+    ],
+    "answer": 0,
+    "explanation": "Les quatre anneaux représentent Audi."
+  },
+  {
+    "id": "q_005_quel_reseau_social_est_as",
+    "question": "Quel réseau social est associé à une note de musique stylisée ?",
+    "options": [
+      "TikTok",
+      "Instagram",
+      "Snapchat",
+      "Pinterest"
+    ],
+    "answer": 0,
+    "explanation": "TikTok utilise une note de musique."
+  },
+  {
+    "id": "q_006_quelle_marque_de_sport_ut",
+    "question": "Quelle marque de sport utilise une virgule appelée Swoosh ?",
+    "options": [
+      "Nike",
+      "Adidas",
+      "Asics",
+      "Fila"
+    ],
+    "answer": 0,
+    "explanation": "Le Swoosh est le symbole de Nike."
+  },
+  {
+    "id": "q_007_quel_navigateur_utilise_u",
+    "question": "Quel navigateur utilise un cercle multicolore avec un centre bleu ?",
+    "options": [
+      "Chrome",
+      "Firefox",
+      "Safari",
+      "Edge"
+    ],
+    "answer": 0,
+    "explanation": "Google Chrome utilise ce logo."
+  },
+  {
+    "id": "q_008_quelle_chaine_de_restaura",
+    "question": "Quelle chaîne de restauration rapide utilise de grandes arches jaunes ?",
+    "options": [
+      "McDonald’s",
+      "Burger King",
+      "KFC",
+      "Subway"
+    ],
+    "answer": 0,
+    "explanation": "Les arches dorées sont celles de McDonald’s."
+  },
+  {
+    "id": "q_009_quelle_plateforme_video_u",
+    "question": "Quelle plateforme vidéo utilise un bouton lecture blanc dans un rectangle rouge ?",
+    "options": [
+      "YouTube",
+      "Vimeo",
+      "Twitch",
+      "Dailymotion"
+    ],
+    "answer": 0,
+    "explanation": "C’est le logo de YouTube."
+  },
+  {
+    "id": "q_010_quelle_marque_automobile_",
+    "question": "Quelle marque automobile utilise un cheval cabré ?",
+    "options": [
+      "Ferrari",
+      "Lamborghini",
+      "Porsche uniquement",
+      "Maserati"
+    ],
+    "answer": 0,
+    "explanation": "Le cheval cabré est emblématique de Ferrari."
+  },
+  {
+    "id": "q_011_quel_service_de_musique_u",
+    "question": "Quel service de musique utilise un cercle vert avec trois courbes noires ?",
+    "options": [
+      "Spotify",
+      "Deezer",
+      "Apple Music",
+      "SoundCloud"
+    ],
+    "answer": 0,
+    "explanation": "Spotify utilise ces trois ondes."
+  },
+  {
+    "id": "q_012_quelle_application_de_mes",
+    "question": "Quelle application de messagerie utilise un fantôme blanc ?",
+    "options": [
+      "Snapchat",
+      "WhatsApp",
+      "Telegram",
+      "Messenger"
+    ],
+    "answer": 0,
+    "explanation": "Le fantôme est celui de Snapchat."
+  },
+  {
+    "id": "q_013_quelle_entreprise_utilise",
+    "question": "Quelle entreprise utilise quatre carrés colorés formant une fenêtre ?",
+    "options": [
+      "Microsoft",
+      "Google",
+      "Meta",
+      "IBM"
+    ],
+    "answer": 0,
+    "explanation": "La fenêtre colorée est associée à Microsoft."
+  },
+  {
+    "id": "q_014_quelle_marque_de_cafe_uti",
+    "question": "Quelle marque de café utilise une sirène verte ?",
+    "options": [
+      "Starbucks",
+      "Costa",
+      "Nespresso",
+      "Lavazza"
+    ],
+    "answer": 0,
+    "explanation": "Starbucks utilise une sirène."
+  },
+  {
+    "id": "q_015_quel_constructeur_automob",
+    "question": "Quel constructeur automobile utilise une étoile à trois branches ?",
+    "options": [
+      "Mercedes-Benz",
+      "Audi",
+      "Peugeot",
+      "Renault"
+    ],
+    "answer": 0,
+    "explanation": "L’étoile à trois branches est celle de Mercedes."
+  },
+  {
+    "id": "q_016_quelle_encyclopedie_en_li",
+    "question": "Quelle encyclopédie en ligne utilise un globe composé de pièces de puzzle ?",
+    "options": [
+      "Wikipédia",
+      "Britannica",
+      "Larousse",
+      "Quora"
+    ],
+    "answer": 0,
+    "explanation": "Wikipédia utilise ce globe incomplet."
+  },
+  {
+    "id": "q_017_quel_service_de_livraison",
+    "question": "Quel service de livraison utilise une flèche de A à Z dans son logo ?",
+    "options": [
+      "Amazon",
+      "eBay",
+      "AliExpress",
+      "Etsy"
+    ],
+    "answer": 0,
+    "explanation": "La flèche d’Amazon relie A à Z."
+  },
+  {
+    "id": "q_018_quelle_marque_de_luxe_uti",
+    "question": "Quelle marque de luxe utilise deux C entrelacés ?",
+    "options": [
+      "Chanel",
+      "Dior",
+      "Gucci",
+      "Prada"
+    ],
+    "answer": 0,
+    "explanation": "Chanel utilise deux C opposés."
+  },
+  {
+    "id": "q_019_quel_reseau_social_profes",
+    "question": "Quel réseau social professionnel utilise les lettres « in » ?",
+    "options": [
+      "LinkedIn",
+      "Indeed",
+      "Xing",
+      "Slack"
+    ],
+    "answer": 0,
+    "explanation": "LinkedIn utilise le monogramme « in »."
+  },
+  {
+    "id": "q_020_quelle_marque_de_jeux_vid",
+    "question": "Quelle marque de jeux vidéo utilise souvent un N rouge sur fond blanc ?",
+    "options": [
+      "Nintendo",
+      "Naughty Dog",
+      "Namco",
+      "Nvidia"
+    ],
+    "answer": 0,
+    "explanation": "Nintendo utilise son nom dans un cartouche rouge."
+  },
+  {
+    "id": "q_021_quel_operateur_de_paiemen",
+    "question": "Quel opérateur de paiement utilise un P bleu composé de deux formes ?",
+    "options": [
+      "PayPal",
+      "Visa",
+      "Mastercard",
+      "Stripe"
+    ],
+    "answer": 0,
+    "explanation": "PayPal utilise un double P stylisé."
+  },
+  {
+    "id": "q_022_quelle_marque_automobile_",
+    "question": "Quelle marque automobile française utilise un lion ?",
+    "options": [
+      "Peugeot",
+      "Renault",
+      "Citroën",
+      "Alpine"
+    ],
+    "answer": 0,
+    "explanation": "Le lion est l’emblème de Peugeot."
+  },
+  {
+    "id": "q_023_quelle_marque_utilise_un_",
+    "question": "Quelle marque utilise un crocodile vert ?",
+    "options": [
+      "Lacoste",
+      "Puma",
+      "Le Coq Sportif",
+      "Timberland"
+    ],
+    "answer": 0,
+    "explanation": "Le crocodile est celui de Lacoste."
+  },
+  {
+    "id": "q_024_quelle_application_de_vis",
+    "question": "Quelle application de visioconférence utilise une caméra blanche sur fond bleu ?",
+    "options": [
+      "Zoom",
+      "Teams",
+      "Meet",
+      "Skype"
+    ],
+    "answer": 0,
+    "explanation": "Zoom est associé à cette caméra."
+  },
+  {
+    "id": "q_025_quel_service_de_stockage_",
+    "question": "Quel service de stockage utilise un cerf-volant triangulaire multicolore ?",
+    "options": [
+      "Google Drive",
+      "Dropbox",
+      "OneDrive",
+      "Box"
+    ],
+    "answer": 0,
+    "explanation": "Google Drive utilise un triangle tricolore."
+  },
+  {
+    "id": "q_026_quelle_marque_de_voiture_",
+    "question": "Quelle marque de voiture utilise un losange ?",
+    "options": [
+      "Renault",
+      "Citroën",
+      "Peugeot",
+      "Dacia"
+    ],
+    "answer": 0,
+    "explanation": "Le losange est le symbole de Renault."
+  },
+  {
+    "id": "q_027_quel_reseau_social_utilis",
+    "question": "Quel réseau social utilise un appareil photo dans un dégradé rose-orange-violet ?",
+    "options": [
+      "Instagram",
+      "Flickr",
+      "Pinterest",
+      "BeReal"
+    ],
+    "answer": 0,
+    "explanation": "Instagram utilise ce dégradé."
+  },
+  {
+    "id": "q_028_quelle_marque_de_restaura",
+    "question": "Quelle marque de restauration utilise un colonel barbu ?",
+    "options": [
+      "KFC",
+      "Quick",
+      "Domino’s",
+      "Five Guys"
+    ],
+    "answer": 0,
+    "explanation": "Le colonel Sanders représente KFC."
+  },
+  {
+    "id": "q_029_quel_constructeur_utilise",
+    "question": "Quel constructeur utilise un taureau doré ?",
+    "options": [
+      "Lamborghini",
+      "Ferrari",
+      "Maserati",
+      "Aston Martin"
+    ],
+    "answer": 0,
+    "explanation": "Lamborghini utilise un taureau."
+  },
+  {
+    "id": "q_030_quelle_marque_de_pneus_ut",
+    "question": "Quelle marque de pneus utilise un personnage blanc fait de pneus ?",
+    "options": [
+      "Michelin",
+      "Goodyear",
+      "Pirelli",
+      "Continental"
+    ],
+    "answer": 0,
+    "explanation": "Bibendum est la mascotte Michelin."
+  }
+]

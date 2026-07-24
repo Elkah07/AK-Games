@@ -1,0 +1,402 @@
+[
+  {
+    "id": "osee_001",
+    "text": "Quelle est la chose la plus attirante chez quelqu’un au premier regard ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_002",
+    "text": "Quel type de compliment te fait le plus d’effet ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_003",
+    "text": "Quelle est ta plus grosse faiblesse face à un crush ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_004",
+    "text": "Quelle situation romantique te ferait immédiatement craquer ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_005",
+    "text": "Quel détail physique remarques-tu en premier ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_006",
+    "text": "Quelle est la phrase de drague la moins mauvaise qu’on pourrait t’envoyer ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_007",
+    "text": "Quel est ton plus gros « green flag » chez une personne ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_008",
+    "text": "Quelle est ta limite absolue dans une relation ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_009",
+    "text": "Quel type de message te donne immédiatement envie de répondre ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_010",
+    "text": "Quelle célébrité serait ton crush totalement assumé ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_011",
+    "text": "Quel est ton souvenir de flirt le plus drôle ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_012",
+    "text": "Quelle chanson mettrait l’ambiance parfaite pour un rendez-vous ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_013",
+    "text": "Quel lieu serait idéal pour un premier baiser ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_014",
+    "text": "Quelle tenue te donne le plus confiance en toi ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_015",
+    "text": "Quel est le geste affectueux que tu préfères recevoir ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_016",
+    "text": "Quelle est la chose la plus audacieuse que tu pourrais faire par attirance ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_017",
+    "text": "Quel défaut peut devenir séduisant chez quelqu’un ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_018",
+    "text": "Quel genre de tension romantique préfères-tu dans les films ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_019",
+    "text": "Quelle est ta réaction quand quelqu’un te plaît vraiment ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_020",
+    "text": "Quel message pourrais-tu envoyer à ton crush après minuit ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_021",
+    "text": "Quelle qualité te fait oublier presque tous les défauts ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_022",
+    "text": "Quel est ton type de rendez-vous idéal ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_023",
+    "text": "Quelle est ta manière préférée de créer de la tension ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_024",
+    "text": "Quel est le compliment le plus mémorable qu’on t’ait fait ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_025",
+    "text": "Quelle est la chose la plus spontanée que tu aies faite par envie ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_026",
+    "text": "Quel serait ton scénario de rencontre parfait ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_027",
+    "text": "Quel genre de regard te déstabilise ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_028",
+    "text": "Quelle est la question intime que tu aimerais qu’on te pose plus souvent ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_029",
+    "text": "Quel est ton rapport à la jalousie ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_030",
+    "text": "Quelle est ta définition d’une alchimie immédiate ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_031",
+    "text": "Quel geste te paraît plus intime qu’un baiser ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_032",
+    "text": "Quelle est la plus grosse erreur qu’on puisse faire lors d’un premier rendez-vous ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_033",
+    "text": "Quel est ton niveau de romantisme sur dix ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_034",
+    "text": "Quel type de personne t’attire alors que tu sais que c’est une mauvaise idée ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_035",
+    "text": "Quelle est la chose la plus séduisante dans une conversation ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_036",
+    "text": "Quel est ton signal le plus évident quand tu flirtes ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_037",
+    "text": "Quelle est ta limite entre amitié et ambiguïté ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_038",
+    "text": "Quelle serait ta réaction si ton crush t’appelait maintenant ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_039",
+    "text": "Quel est le meilleur moyen de te faire rougir ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_040",
+    "text": "Quelle est la chose que tu n’oses jamais dire en premier ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_041",
+    "text": "Quel souvenir romantique aimerais-tu revivre ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_042",
+    "text": "Quel serait ton rendez-vous catastrophique mais drôle ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_043",
+    "text": "Quelle est la chose la plus importante pour te sentir désiré·e ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_044",
+    "text": "Quel rôle joue l’humour dans l’attirance pour toi ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_045",
+    "text": "Quelle est ta plus grande peur dans une nouvelle relation ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_046",
+    "text": "Quel est le détail qui peut casser toute attirance ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_047",
+    "text": "Quelle est ta définition d’un baiser parfait ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_048",
+    "text": "Quel est ton plus grand talent de séduction, selon toi ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_049",
+    "text": "Quelle est la chose la plus folle que tu pourrais accepter pour un rendez-vous ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_050",
+    "text": "Quel type de surprise romantique te plairait vraiment ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_051",
+    "text": "Quelle est la phrase que tu aimerais entendre plus souvent ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_052",
+    "text": "Quel serait ton emoji de flirt officiel ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_053",
+    "text": "Quelle est ta réaction à un message « tu me manques » ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_054",
+    "text": "Quel est ton rapport aux relations à distance ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_055",
+    "text": "Quelle est ta façon préférée de montrer ton intérêt ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_056",
+    "text": "Quel est ton plus grand « red flag » personnel assumé ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_057",
+    "text": "Quel serait le thème d’une soirée romantique parfaite ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_058",
+    "text": "Quelle est la chose que tu trouves attirante mais que tu n’avoues pas souvent ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_059",
+    "text": "Quel type de voix te plaît le plus ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_060",
+    "text": "Quelle est ta plus grande faiblesse émotionnelle ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_061",
+    "text": "Quel geste te fait sentir immédiatement en sécurité ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_062",
+    "text": "Quelle est la chose la plus importante après une dispute ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_063",
+    "text": "Quel souvenir de rencontre te fait encore sourire ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_064",
+    "text": "Quelle serait ta règle numéro un pour une relation heureuse ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_065",
+    "text": "Quel est ton rapport aux démonstrations publiques d’affection ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_066",
+    "text": "Quelle est la situation qui te ferait dire « là, je craque » ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_067",
+    "text": "Quel est ton style de flirt : direct, discret, drôle ou mystérieux ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_068",
+    "text": "Quelle est la chose que tu voudrais mieux comprendre chez tes partenaires ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_069",
+    "text": "Quel est le compliment que tu as du mal à accepter ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_070",
+    "text": "Quelle est ta façon préférée de recevoir de l’affection ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_071",
+    "text": "Quel serait ton mot de sécurité pour quitter un mauvais rendez-vous ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_072",
+    "text": "Quelle est la chose la plus gênante que tu aies faite devant un crush ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_073",
+    "text": "Quel est ton rapport aux ex ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_074",
+    "text": "Quelle est la qualité émotionnelle la plus attirante ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_075",
+    "text": "Quel est ton avis sur les messages toute la journée ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_076",
+    "text": "Quelle serait ta réaction à une déclaration publique ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_077",
+    "text": "Quelle est la chose qui te fait instantanément perdre tes moyens ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_078",
+    "text": "Quel est ton idéal entre passion et stabilité ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_079",
+    "text": "Quelle est la question que tu poserais à une personne avant de t’engager ?",
+    "category": "adult-question"
+  },
+  {
+    "id": "osee_080",
+    "text": "Quel est le meilleur souvenir que tu pourrais créer à deux ?",
+    "category": "adult-question"
+  }
+]

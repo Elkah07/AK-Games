@@ -1,0 +1,362 @@
+[
+  {
+    "id": "q_001_combien_de_cordes_possede",
+    "question": "Combien de cordes possède généralement une basse électrique ?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "8"
+    ],
+    "answer": 0,
+    "explanation": "La basse standard possède quatre cordes."
+  },
+  {
+    "id": "q_002_quel_instrument_utilise_d",
+    "question": "Quel instrument utilise des baguettes et des cymbales ?",
+    "options": [
+      "Batterie",
+      "Harpe",
+      "Flûte",
+      "Accordéon"
+    ],
+    "answer": 0,
+    "explanation": "La batterie combine fûts et cymbales."
+  },
+  {
+    "id": "q_003_quel_groupe_a_interprete_",
+    "question": "Quel groupe a interprété « Bohemian Rhapsody » ?",
+    "options": [
+      "ABBA",
+      "Queen",
+      "U2",
+      "The Beatles"
+    ],
+    "answer": 1,
+    "explanation": "Le titre est de Queen."
+  },
+  {
+    "id": "q_004_quel_artiste_est_surnomme",
+    "question": "Quel artiste est surnommé le King of Pop ?",
+    "options": [
+      "Prince",
+      "Michael Jackson",
+      "Elvis Presley",
+      "Bruno Mars"
+    ],
+    "answer": 1,
+    "explanation": "Michael Jackson est couramment surnommé ainsi."
+  },
+  {
+    "id": "q_005_quel_genre_musical_est_as",
+    "question": "Quel genre musical est associé à des artistes comme Mozart et Beethoven ?",
+    "options": [
+      "Reggae",
+      "Classique",
+      "Rap",
+      "Techno"
+    ],
+    "answer": 1,
+    "explanation": "Ils sont des figures majeures de la musique classique."
+  },
+  {
+    "id": "q_006_quel_instrument_possede_d",
+    "question": "Quel instrument possède des touches noires et blanches ?",
+    "options": [
+      "Piano",
+      "Violon",
+      "Trompette",
+      "Batterie"
+    ],
+    "answer": 0,
+    "explanation": "Le clavier du piano utilise ces touches."
+  },
+  {
+    "id": "q_007_quel_groupe_suedois_a_cha",
+    "question": "Quel groupe suédois a chanté « Dancing Queen » ?",
+    "options": [
+      "ABBA",
+      "Roxette",
+      "Ace of Base",
+      "Europe"
+    ],
+    "answer": 0,
+    "explanation": "Dancing Queen est un tube d’ABBA."
+  },
+  {
+    "id": "q_008_quelle_chanteuse_a_sorti_",
+    "question": "Quelle chanteuse a sorti l’album « 21 » ?",
+    "options": [
+      "Adele",
+      "Beyoncé",
+      "Rihanna",
+      "Pink"
+    ],
+    "answer": 0,
+    "explanation": "21 est un album d’Adele."
+  },
+  {
+    "id": "q_009_quel_instrument_a_vent_es",
+    "question": "Quel instrument à vent est souvent en métal et possède une coulisse ?",
+    "options": [
+      "Clarinette",
+      "Trombone",
+      "Flûte",
+      "Hautbois"
+    ],
+    "answer": 1,
+    "explanation": "Le trombone utilise une coulisse."
+  },
+  {
+    "id": "q_010_quel_terme_designe_la_vit",
+    "question": "Quel terme désigne la vitesse d’un morceau ?",
+    "options": [
+      "Tempo",
+      "Timbre",
+      "Accord",
+      "Octave"
+    ],
+    "answer": 0,
+    "explanation": "Le tempo indique la vitesse."
+  },
+  {
+    "id": "q_011_quel_duo_francais_est_con",
+    "question": "Quel duo français est connu pour porter des casques de robots ?",
+    "options": [
+      "Air",
+      "Daft Punk",
+      "Justice",
+      "Cassius"
+    ],
+    "answer": 1,
+    "explanation": "Daft Punk a popularisé cette identité visuelle."
+  },
+  {
+    "id": "q_012_quel_artiste_a_chante_sha",
+    "question": "Quel artiste a chanté « Shape of You » ?",
+    "options": [
+      "Ed Sheeran",
+      "Sam Smith",
+      "Harry Styles",
+      "Shawn Mendes"
+    ],
+    "answer": 0,
+    "explanation": "Le morceau est d’Ed Sheeran."
+  },
+  {
+    "id": "q_013_quel_instrument_est_assoc",
+    "question": "Quel instrument est associé à Louis Armstrong ?",
+    "options": [
+      "Saxophone",
+      "Trompette",
+      "Piano",
+      "Guitare"
+    ],
+    "answer": 1,
+    "explanation": "Louis Armstrong était trompettiste."
+  },
+  {
+    "id": "q_014_comment_appelle_t_on_un_g",
+    "question": "Comment appelle-t-on un groupe de trois musiciens ?",
+    "options": [
+      "Duo",
+      "Trio",
+      "Quatuor",
+      "Chœur"
+    ],
+    "answer": 1,
+    "explanation": "Trois musiciens forment un trio."
+  },
+  {
+    "id": "q_015_quel_style_musical_est_ne",
+    "question": "Quel style musical est né en Jamaïque ?",
+    "options": [
+      "Reggae",
+      "Flamenco",
+      "Country",
+      "K-pop"
+    ],
+    "answer": 0,
+    "explanation": "Le reggae est né en Jamaïque."
+  },
+  {
+    "id": "q_016_quelle_chanteuse_est_conn",
+    "question": "Quelle chanteuse est connue pour « Rolling in the Deep » ?",
+    "options": [
+      "Adele",
+      "Sia",
+      "Dua Lipa",
+      "Lorde"
+    ],
+    "answer": 0,
+    "explanation": "Le titre est interprété par Adele."
+  },
+  {
+    "id": "q_017_quel_groupe_a_interprete_",
+    "question": "Quel groupe a interprété « Smells Like Teen Spirit » ?",
+    "options": [
+      "Nirvana",
+      "Metallica",
+      "Oasis",
+      "Blur"
+    ],
+    "answer": 0,
+    "explanation": "C’est un titre emblématique de Nirvana."
+  },
+  {
+    "id": "q_018_quel_symbole_musical_indi",
+    "question": "Quel symbole musical indique un silence ?",
+    "options": [
+      "Une pause",
+      "Une clé",
+      "Une note liée",
+      "Un dièse"
+    ],
+    "answer": 0,
+    "explanation": "Les figures de silence indiquent une interruption sonore."
+  },
+  {
+    "id": "q_019_quel_instrument_possede_g",
+    "question": "Quel instrument possède généralement six cordes ?",
+    "options": [
+      "Guitare",
+      "Violoncelle",
+      "Ukulélé",
+      "Mandoline"
+    ],
+    "answer": 0,
+    "explanation": "La guitare standard possède six cordes."
+  },
+  {
+    "id": "q_020_quel_artiste_francais_est",
+    "question": "Quel artiste français est connu pour « Alors on danse » ?",
+    "options": [
+      "Stromae",
+      "Orelsan",
+      "Soprano",
+      "M"
+    ],
+    "answer": 0,
+    "explanation": "Le titre est de Stromae."
+  },
+  {
+    "id": "q_021_quel_type_de_voix_est_gen",
+    "question": "Quel type de voix est généralement la plus aiguë chez les femmes ?",
+    "options": [
+      "Alto",
+      "Soprano",
+      "Ténor",
+      "Baryton"
+    ],
+    "answer": 1,
+    "explanation": "La soprano est la tessiture la plus aiguë courante."
+  },
+  {
+    "id": "q_022_quelle_chanteuse_a_interp",
+    "question": "Quelle chanteuse a interprété « Bad Romance » ?",
+    "options": [
+      "Lady Gaga",
+      "Katy Perry",
+      "Britney Spears",
+      "Miley Cyrus"
+    ],
+    "answer": 0,
+    "explanation": "Bad Romance est un titre de Lady Gaga."
+  },
+  {
+    "id": "q_023_quel_artiste_est_associe_",
+    "question": "Quel artiste est associé à la chanson « Purple Rain » ?",
+    "options": [
+      "Prince",
+      "David Bowie",
+      "George Michael",
+      "Stevie Wonder"
+    ],
+    "answer": 0,
+    "explanation": "Purple Rain est une œuvre de Prince."
+  },
+  {
+    "id": "q_024_quel_groupe_britannique_a",
+    "question": "Quel groupe britannique a sorti « Wonderwall » ?",
+    "options": [
+      "Oasis",
+      "Coldplay",
+      "Muse",
+      "Radiohead"
+    ],
+    "answer": 0,
+    "explanation": "Wonderwall est un titre d’Oasis."
+  },
+  {
+    "id": "q_025_quel_instrument_est_le_pl",
+    "question": "Quel instrument est le plus grave dans un quatuor à cordes ?",
+    "options": [
+      "Violon",
+      "Alto",
+      "Violoncelle",
+      "Mandoline"
+    ],
+    "answer": 2,
+    "explanation": "Le violoncelle tient généralement le registre grave."
+  },
+  {
+    "id": "q_026_quel_mot_designe_une_suit",
+    "question": "Quel mot désigne une suite de notes jouées l’une après l’autre ?",
+    "options": [
+      "Mélodie",
+      "Rythme",
+      "Accord",
+      "Mesure"
+    ],
+    "answer": 0,
+    "explanation": "Une mélodie est une succession organisée de notes."
+  },
+  {
+    "id": "q_027_quel_artiste_a_chante_hap",
+    "question": "Quel artiste a chanté « Happy » ?",
+    "options": [
+      "Pharrell Williams",
+      "The Weeknd",
+      "Drake",
+      "Usher"
+    ],
+    "answer": 0,
+    "explanation": "Happy est interprété par Pharrell Williams."
+  },
+  {
+    "id": "q_028_quelle_chanteuse_est_liee",
+    "question": "Quelle chanteuse est liée à l’album « Lemonade » ?",
+    "options": [
+      "Beyoncé",
+      "Rihanna",
+      "Alicia Keys",
+      "Taylor Swift"
+    ],
+    "answer": 0,
+    "explanation": "Lemonade est un album de Beyoncé."
+  },
+  {
+    "id": "q_029_quel_genre_est_fortement_",
+    "question": "Quel genre est fortement associé aux platines et au scratching ?",
+    "options": [
+      "Hip-hop",
+      "Opéra",
+      "Folk",
+      "Blues"
+    ],
+    "answer": 0,
+    "explanation": "Le DJing et le scratching sont des éléments historiques du hip-hop."
+  },
+  {
+    "id": "q_030_comment_appelle_t_on_la_p",
+    "question": "Comment appelle-t-on la partie répétée d’une chanson ?",
+    "options": [
+      "Refrain",
+      "Pont",
+      "Intro",
+      "Coda"
+    ],
+    "answer": 0,
+    "explanation": "Le refrain revient plusieurs fois."
+  }
+]

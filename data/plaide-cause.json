@@ -1,0 +1,302 @@
+[
+  {
+    "id": "plaide_001",
+    "text": "Les céréales se mangent mieux le soir que le matin.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_002",
+    "text": "Les messages vocaux devraient être limités à trente secondes.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_003",
+    "text": "Les chaussettes dépareillées sont plus élégantes.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_004",
+    "text": "Arriver cinq minutes en retard devrait être considéré comme ponctuel.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_005",
+    "text": "Le lundi devrait commencer à midi.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_006",
+    "text": "Le ketchup mérite une place dans la haute gastronomie.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_007",
+    "text": "Les vacances à la montagne sont meilleures que la plage.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_008",
+    "text": "Regarder une série en accéléré est acceptable.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_009",
+    "text": "Le dessert devrait toujours être servi avant le plat.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_010",
+    "text": "Les plantes sont de meilleures colocataires que les humains.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_011",
+    "text": "Les appels surprises devraient être interdits.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_012",
+    "text": "Un pyjama peut être une tenue de sortie.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_013",
+    "text": "Les spoilers devraient être punis par la loi.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_014",
+    "text": "Les chiens comprennent mieux les humains que l’inverse.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_015",
+    "text": "Le dernier morceau appartient automatiquement à la personne qui demande.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_016",
+    "text": "Le Wi-Fi est un besoin fondamental.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_017",
+    "text": "Une sieste devrait être obligatoire au travail.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_018",
+    "text": "Les films de Noël peuvent se regarder toute l’année.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_019",
+    "text": "Les frites froides ont un charme particulier.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_020",
+    "text": "Un anniversaire devrait durer une semaine.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_021",
+    "text": "Le canapé est une destination de vacances.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_022",
+    "text": "Les jeux de société révèlent la vraie personnalité.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_023",
+    "text": "Une pizza à l’ananas mérite le respect.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_024",
+    "text": "Les gens qui mettent dix alarmes sont courageux.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_025",
+    "text": "Le brunch est juste un petit-déjeuner qui se prend au sérieux.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_026",
+    "text": "Les chaussures devraient être facultatives en soirée.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_027",
+    "text": "On devrait pouvoir noter les conversations comme les séries.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_028",
+    "text": "Le silence dans l’ascenseur est plus étrange que de parler.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_029",
+    "text": "Les animaux devraient avoir un jour férié.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_030",
+    "text": "Une playlist est une déclaration de personnalité.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_031",
+    "text": "Il faudrait un bouton « annuler » dans la vraie vie.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_032",
+    "text": "Les groupes de discussion devraient avoir un résumé automatique.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_033",
+    "text": "Les vêtements avec des poches méritent une récompense.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_034",
+    "text": "La meilleure place est toujours au fond.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_035",
+    "text": "Les petits-déjeuners salés sont supérieurs.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_036",
+    "text": "Les cadeaux faits main sont toujours meilleurs.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_037",
+    "text": "Le cinéma devrait autoriser les plaids.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_038",
+    "text": "Une bonne mauvaise blague vaut mieux qu’un silence gênant.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_039",
+    "text": "Les gens devraient annoncer quand ils veulent seulement se plaindre.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_040",
+    "text": "Le mot de passe Wi-Fi devrait être affiché à l’entrée de chaque maison.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_041",
+    "text": "Il faudrait pouvoir mettre une conversation en pause.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_042",
+    "text": "Les disputes se règlent mieux autour d’un goûter.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_043",
+    "text": "Un trajet compte comme une sortie.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_044",
+    "text": "Les personnes qui choisissent la musique contrôlent l’ambiance.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_045",
+    "text": "Un canapé-lit est une promesse rarement tenue.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_046",
+    "text": "La meilleure partie d’une fête est parfois le trajet du retour.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_047",
+    "text": "Les films trop longs devraient avoir un entracte.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_048",
+    "text": "Une photo floue peut être une bonne photo.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_049",
+    "text": "Les réunions sans nourriture devraient être interdites.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_050",
+    "text": "Le premier café ne compte pas comme une boisson.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_051",
+    "text": "Les gens devraient avoir un générique de fin après une journée difficile.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_052",
+    "text": "Les notes vocales à vitesse x2 restent une écoute sincère.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_053",
+    "text": "Le dimanche soir devrait être protégé par la Constitution.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_054",
+    "text": "Les menus trop longs cachent toujours quelque chose.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_055",
+    "text": "Les glaces en hiver sont meilleures.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_056",
+    "text": "Les vêtements confortables devraient gagner tous les concours de mode.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_057",
+    "text": "Il faudrait pouvoir louer un ami pour porter les sacs.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_058",
+    "text": "Les plantes en plastique ont droit au respect.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_059",
+    "text": "Le bouton « passer l’intro » a changé l’humanité.",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_060",
+    "text": "Un bon mème peut sauver une journée.",
+    "category": "debate"
+  }
+]

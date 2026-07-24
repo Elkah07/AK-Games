@@ -26,6 +26,9 @@
   state.fakeExpert = state.fakeExpert || null;
   state.whoAmI = state.whoAmI || null;
   state.v09MultiTimer = null;
+  state.megaGame = state.megaGame || null;
+  state.v014MultiTimer = null;
+  state.v014MultiTimerToken = 0;
 
   const SESSION_KEY = "akgames_multiplayer_session_v1";
 
@@ -185,6 +188,12 @@
           return;
         }
 
+        if (String(gameState?.type || "").startsWith("mega-")) {
+          state.multiView = "mega-game";
+          syncMultiMegaGame(room);
+          return;
+        }
+
         if (
           state.mode === "multi-guest"
           || state.multiView === "lobby"
@@ -194,6 +203,7 @@
           || state.multiView === "ambiance-game"
           || state.multiView === "v08-game"
           || state.multiView === "v09-game"
+          || state.multiView === "mega-game"
         ) {
           clearMultiLobbyTimer();
           state.multiView = "lobby";
@@ -209,7 +219,9 @@
           state.almostImpostor = null;
           state.fakeExpert = null;
           state.whoAmI = null;
+          state.megaGame = null;
           clearV09MultiTimer();
+          clearV014MultiTimer();
           renderLobby();
         }
       },
@@ -1436,6 +1448,17 @@
       return { type: gameState.type, config: { roundCount: Number(gameState.settings?.roundCount || gameState.items?.length || 8), includeAdult: Boolean(gameState.settings?.includeAdult), categoryMode: gameState.settings?.categoryMode || "mix", durationSeconds: Number(gameState.settings?.durationSeconds || 60) } };
     }
 
+    if (String(gameState.type || "").startsWith("mega-")) {
+      return {
+        type: gameState.type,
+        config: {
+          gameName: gameState.settings?.gameName,
+          roundCount: Number(gameState.settings?.roundCount || gameState.items?.length || 10),
+          durationSeconds: Number(gameState.settings?.durationSeconds || 45)
+        }
+      };
+    }
+
     return null;
   }
 
@@ -1513,7 +1536,9 @@
   function buildEveningSessionSummary(gameState) {
     if (!gameState) return null;
 
-    const presentation = gamePresentation(gameState.type);
+    const presentation = String(gameState.type || "").startsWith("mega-")
+      ? { name: gameState.settings?.gameName || "Mega Pack", icon: gameState.settings?.icon || "🎮" }
+      : gamePresentation(gameState.type);
     const resultId = gameState.sessionGameId || `${gameState.type}_${Number(gameState.startedAt || 0)}`;
     let result;
 
@@ -1523,7 +1548,7 @@
       result = buildBestLiarSessionSummary(gameState);
     } else if (gameState.type === "laugh-duel") {
       result = buildLaughSessionSummary(gameState);
-    } else if (["action-truth", "never-have-i-ever", "would-you-rather", "same-brain", "minority", "who-answered", "almost-impostor", "fake-expert", "who-am-i"].includes(gameState.type)) {
+    } else if (["action-truth", "never-have-i-ever", "would-you-rather", "same-brain", "minority", "who-answered", "almost-impostor", "fake-expert", "who-am-i"].includes(gameState.type) || String(gameState.type || "").startsWith("mega-")) {
       result = buildAmbianceSessionSummary(gameState);
     } else {
       return null;
@@ -1793,6 +1818,19 @@
       const config = descriptor.config || {};
       state.whoAmI = { roundCount: Number(config.roundCount || Math.max(6, state.players.length)), includeAdult: Boolean(state.adult && config.includeAdult), categoryMode: config.categoryMode || "mix", durationSeconds: Number(config.durationSeconds || 60), items: [], currentIndex: 0, guesserOrder: shuffleArray(state.players.map(player => player.id)), scores: Object.fromEntries(state.players.map(player => [player.id, 0])), rounds: [] };
       await startWhoAmIGame();
+      return;
+    }
+
+    if (String(descriptor.type || "").startsWith("mega-")) {
+      const config = descriptor.config || {};
+      if (!config.gameName || !V014_GAME_CONFIGS[config.gameName]) {
+        throw new Error("Jeu du Mega Pack introuvable.");
+      }
+      resetMegaGame(config.gameName, {
+        roundCount: Number(config.roundCount || V014_GAME_CONFIGS[config.gameName].defaultRounds || 10),
+        durationSeconds: Number(config.durationSeconds || V014_GAME_CONFIGS[config.gameName].timer || 45)
+      });
+      await startMegaGame();
       return;
     }
 
@@ -4475,4 +4513,636 @@
     .catch(error => {
       console.error("Firebase n'a pas pu démarrer :", error);
     });
+  /* =========================================================
+     AK'GAMES V0.14 — MEGA PACK MULTIJOUEUR
+     ========================================================= */
+
+  const localRenderMegaSetup = renderMegaSetup;
+  const localStartMegaGame = startMegaGame;
+
+  function clearV014MultiTimer() {
+    if (state.v014MultiTimer) window.clearInterval(state.v014MultiTimer);
+    state.v014MultiTimer = null;
+    state.v014MultiTimerToken = Number(state.v014MultiTimerToken || 0) + 1;
+  }
+
+  function startV014MultiTimer(endAt, totalSeconds, onDone) {
+    clearV014MultiTimer();
+    const token = state.v014MultiTimerToken;
+    const tick = () => {
+      if (token !== state.v014MultiTimerToken) return;
+      const left = Math.max(0, Math.ceil((Number(endAt || 0) - Date.now()) / 1000));
+      const node = document.querySelector("#v014MultiCountdown");
+      if (node) node.textContent = String(left);
+      const fill = document.querySelector("#v014MultiTimerFill");
+      if (fill) fill.style.width = `${Math.max(0, Math.min(100, (left / Math.max(1, Number(totalSeconds || 1))) * 100))}%`;
+      if (left <= 0) {
+        clearV014MultiTimer();
+        onDone?.();
+      }
+    };
+    tick();
+    state.v014MultiTimer = window.setInterval(tick, 250);
+  }
+
+  function megaMultiType(engine) {
+    return `mega-${engine}`;
+  }
+
+  function megaMultiCurrentItem(gameState) {
+    return gameState.items?.[Number(gameState.currentIndex || 0)] || null;
+  }
+
+  function megaMultiPlayer(id) {
+    return state.players.find(player => player.id === id) || null;
+  }
+
+  function megaMultiExpectedVotes(gameState) {
+    if (["mega-know", "mega-ranking"].includes(gameState.type)) return Math.max(0, state.players.length - 1);
+    return state.players.length;
+  }
+
+  function megaMultiSetupControls(game) {
+    const config = game.config;
+    return `
+      <section class="card setup-card-v07">
+        <div class="form-group"><label for="multiMegaRounds">Nombre de manches</label><select id="multiMegaRounds" class="text-input">${v014RoundOptions(game.roundCount)}</select></div>
+        ${config.engine === "bomb" ? `<div class="form-group top-gap"><label for="multiMegaDuration">Temps de la bombe</label><select id="multiMegaDuration" class="text-input">${[15,20,25,30,40].map(value => `<option value="${value}" ${game.durationSeconds === value ? "selected" : ""}>${value} secondes</option>`).join("")}</select></div>` : config.timer ? `<div class="form-group top-gap"><label for="multiMegaDuration">Chronomètre</label><select id="multiMegaDuration" class="text-input">${[30,45,60,90].map(value => `<option value="${value}" ${game.durationSeconds === value ? "selected" : ""}>${value} secondes</option>`).join("")}</select></div>` : ""}
+      </section>`;
+  }
+
+  renderMegaSetup = function () {
+    if (!isMultiplayer()) return localRenderMegaSetup();
+    const game = state.megaGame;
+    if (!game) return renderGames();
+    clearV014MultiTimer();
+    title.textContent = game.gameName;
+    setBackVisible(true);
+    screen.innerHTML = `
+      <section class="game-cover game-cover-mega engine-${game.engine}"><span class="game-cover-icon">${game.config.icon}</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>${escapeHtml(game.gameName)}</h2><p>${escapeHtml(game.config.description)}</p></div></section>
+      ${megaMultiSetupControls(game)}
+      ${game.config.drinkingGame ? `<div class="responsible-callout">💧 Petites gorgées seulement, alternatives sans alcool et droit de passer.</div>` : ""}
+      ${game.config.adultOnly ? `<div class="notice">🔞 Partie adulte : consentement et droit de passer sans justification.</div>` : ""}
+      ${state.isHost ? `<button id="startMultiMega" class="primary-btn full">Lancer sur tous les téléphones</button>` : renderMultiWaiting("En attente de l’hôte", "L’hôte règle la partie puis la lancera.", "👑")}`;
+    document.querySelector("#multiMegaRounds")?.addEventListener("change", event => game.roundCount = Number(event.target.value));
+    document.querySelector("#multiMegaDuration")?.addEventListener("change", event => game.durationSeconds = Number(event.target.value));
+    document.querySelector("#startMultiMega")?.addEventListener("click", startMegaGame);
+  };
+
+  startMegaGame = async function () {
+    if (!isMultiplayer()) return localStartMegaGame();
+    if (!state.isHost || !state.megaGame) return;
+    const game = state.megaGame;
+    screen.innerHTML = `<div class="notice">Synchronisation de ${escapeHtml(game.gameName)}…</div>`;
+    try {
+      const pool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
+      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const playerIds = state.players.map(player => player.id);
+      const firstPlayerId = playerIds[0] || null;
+      const type = megaMultiType(game.engine);
+      const baseState = {
+        type,
+        phase: game.engine === "know" || game.engine === "ranking" ? "target" : game.engine === "bomb" ? "playing" : game.engine === "quiz" || game.engine === "scenario" ? "voting" : "turn",
+        sessionGameId: createSessionGameId(type),
+        items,
+        currentIndex: 0,
+        currentPlayerId: game.engine === "bomb" ? playerIds[Math.floor(Math.random() * Math.max(1, playerIds.length))] : firstPlayerId,
+        targetId: firstPlayerId,
+        scores: Object.fromEntries(playerIds.map(id => [id, 0])),
+        rounds: {},
+        currentResult: null,
+        settings: {
+          gameName: game.gameName,
+          icon: game.config.icon,
+          engine: game.engine,
+          roundCount: items.length,
+          durationSeconds: game.durationSeconds,
+          privatePrompt: Boolean(game.config.privatePrompt),
+          questionMode: Boolean(game.config.questionMode),
+          drinkingGame: Boolean(game.config.drinkingGame)
+        },
+        bombEndsAt: game.engine === "bomb" ? Date.now() + Number(game.durationSeconds || 25) * 1000 : null,
+        turnEndsAt: game.engine === "turn" && game.config.timer ? Date.now() + Number(game.durationSeconds || 45) * 1000 : null,
+        startedAt: Date.now(),
+        updatedAt: Date.now()
+      };
+      await AKFirebase.setGame(state.roomCode, { state: baseState, votes: null, answers: null, actions: null });
+    } catch (error) {
+      console.error(error);
+      alert(error.message || "Impossible de lancer le jeu.");
+      renderMegaSetup();
+    }
+  };
+
+  function syncMultiMegaGame(room) {
+    const gameState = room.game?.state;
+    if (!gameState) return;
+    const actions = room.game?.actions || {};
+    const votes = room.game?.votes || {};
+    const answers = room.game?.answers || {};
+    clearV09MultiTimer();
+
+    if (gameState.phase === "final") {
+      renderMultiMegaFinal(gameState);
+      return;
+    }
+
+    if (gameState.type === "mega-turn") {
+      processMultiMegaTurn(gameState, actions);
+      renderMultiMegaTurn(gameState, actions);
+      return;
+    }
+    if (gameState.type === "mega-quiz") {
+      processMultiMegaQuiz(gameState, votes);
+      gameState.phase === "results" ? renderMultiMegaQuizResult(gameState) : renderMultiMegaQuizVote(gameState, votes);
+      return;
+    }
+    if (gameState.type === "mega-scenario") {
+      processMultiMegaScenario(gameState, votes);
+      gameState.phase === "results" ? renderMultiMegaScenarioResult(gameState) : renderMultiMegaScenarioVote(gameState, votes);
+      return;
+    }
+    if (gameState.type === "mega-bomb") {
+      processMultiMegaBomb(gameState, actions);
+      gameState.phase === "results" ? renderMultiMegaBombResult(gameState) : renderMultiMegaBomb(gameState, actions);
+      return;
+    }
+    if (gameState.type === "mega-know") {
+      processMultiMegaKnow(gameState, answers, votes);
+      if (gameState.phase === "target") renderMultiMegaKnowTarget(gameState, answers);
+      else if (gameState.phase === "guessing") renderMultiMegaKnowGuess(gameState, votes);
+      else renderMultiMegaKnowResult(gameState);
+      return;
+    }
+    if (gameState.type === "mega-ranking") {
+      processMultiMegaRanking(gameState, answers, votes);
+      if (gameState.phase === "target") renderMultiMegaRankingTarget(gameState, answers);
+      else if (gameState.phase === "guessing") renderMultiMegaRankingGuess(gameState, votes);
+      else renderMultiMegaRankingResult(gameState);
+    }
+  }
+
+  function multiMegaProgress(gameState, label = "Manche") {
+    const total = Math.max(1, gameState.items?.length || 1);
+    const current = Math.min(total, Number(gameState.currentIndex || 0) + 1);
+    return renderMultiProgress(current, total, label);
+  }
+
+  function processMultiMegaTurn(gameState, actions) {
+    if (!state.isHost || gameState.phase !== "turn") return;
+    const action = actions[gameState.currentPlayerId];
+    const expired = Number(gameState.turnEndsAt || 0) > 0 && Number(gameState.turnEndsAt) <= Date.now();
+    if (!action && !expired) return;
+    const actionId = action?.id || `timer_${gameState.currentIndex}`;
+    const lock = `mega_turn_${gameState.currentIndex}_${actionId}`;
+    if (state.multiProcessingActionId === lock) return;
+    state.multiProcessingActionId = lock;
+    const success = Boolean(action?.payload?.success) && !expired;
+    const scores = { ...(gameState.scores || {}) };
+    if (success) scores[gameState.currentPlayerId] = Number(scores[gameState.currentPlayerId] || 0) + 1;
+    const round = Number(gameState.currentIndex || 0);
+    const next = round + 1;
+    const finished = next >= (gameState.items || []).length;
+    const nextPlayer = state.players[next % Math.max(1, state.players.length)]?.id || gameState.currentPlayerId;
+    AKFirebase.updateGame(state.roomCode, {
+      "state/phase": finished ? "final" : "turn",
+      "state/currentIndex": finished ? round : next,
+      "state/currentPlayerId": nextPlayer,
+      "state/scores": scores,
+      [`state/rounds/${round}`]: { playerId: gameState.currentPlayerId, success, itemId: megaMultiCurrentItem(gameState)?.id || "" },
+      "state/turnEndsAt": finished ? null : gameState.settings?.durationSeconds && V014_GAME_CONFIGS[gameState.settings?.gameName]?.timer ? Date.now() + Number(gameState.settings.durationSeconds) * 1000 : null,
+      "state/finishedAt": finished ? Date.now() : null,
+      "state/updatedAt": Date.now(),
+      actions: null
+    }).finally(() => { state.multiProcessingActionId = null; });
+  }
+
+  function renderMultiMegaTurn(gameState, actions) {
+    const item = megaMultiCurrentItem(gameState);
+    const player = megaMultiPlayer(gameState.currentPlayerId);
+    const isCurrent = state.currentUid === gameState.currentPlayerId;
+    const privatePrompt = Boolean(gameState.settings?.privatePrompt);
+    const pending = actions[state.currentUid];
+    title.textContent = gameState.settings?.gameName || "Défi";
+    setBackVisible(false);
+    const prompt = item?.text || item?.question || item?.title || "Défi surprise";
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState)}
+      <section class="prompt-stage mega-prompt-stage">
+        <div class="prompt-player"><span>${avatarById(player?.avatarId).emoji}</span><div><small>C’EST AU TOUR DE</small><strong>${escapeHtml(player?.name || "Joueur")}</strong></div></div>
+        <span class="prompt-type-chip">${escapeHtml(gameState.settings?.icon || "🎯")} ${escapeHtml(gameState.settings?.gameName || "DÉFI").toUpperCase()}</span>
+        <h2>${privatePrompt && !isCurrent ? "Sujet privé sur le téléphone du joueur" : escapeHtml(prompt)}</h2>
+        ${gameState.turnEndsAt ? `<div class="mega-mini-timer"><strong id="v014MultiCountdown">${Math.max(0, Math.ceil((Number(gameState.turnEndsAt) - Date.now()) / 1000))}</strong><span>secondes</span><div class="progress-track"><div id="v014MultiTimerFill" class="progress-fill"></div></div></div>` : ""}
+      </section>
+      ${isCurrent ? pending ? renderMultiWaiting("Réponse envoyée", "Le tour suivant arrive automatiquement.", "✓") : `<section class="decision-grid"><button id="multiMegaSuccess" class="primary-btn">✓ Réussi</button><button id="multiMegaSkip" class="secondary-btn">Passer</button></section>` : renderMultiWaiting(`Tour de ${player?.name || "la personne"}`, privatePrompt ? "Le sujet reste privé jusqu’à la fin du tour." : "Encouragez, observez et décidez ensemble.", avatarById(player?.avatarId).emoji)}
+      ${state.alcohol && !gameState.settings?.drinkingGame ? `<div class="alcohol-callout">🍻 Une carte passée peut valoir une petite gorgée, sans pression.</div>` : ""}`;
+    document.querySelector("#multiMegaSuccess")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-turn", { success: true }).catch(() => event.currentTarget.disabled = false); });
+    document.querySelector("#multiMegaSkip")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-turn", { success: false }).catch(() => event.currentTarget.disabled = false); });
+    if (gameState.turnEndsAt) startV014MultiTimer(gameState.turnEndsAt, gameState.settings?.durationSeconds || 45, () => processMultiMegaTurn(gameState, actions));
+  }
+
+  function processMultiMegaQuiz(gameState, votes) {
+    if (!state.isHost || gameState.phase !== "voting" || Object.keys(votes).length < state.players.length) return;
+    const lock = `mega_quiz_${gameState.currentIndex}_${Object.keys(votes).length}`;
+    if (state.multiProcessingActionId === lock) return;
+    state.multiProcessingActionId = lock;
+    const item = megaMultiCurrentItem(gameState);
+    const correct = Number(item?.answer);
+    const scores = { ...(gameState.scores || {}) };
+    state.players.forEach(player => { if (Number(votes[player.id]) === correct) scores[player.id] = Number(scores[player.id] || 0) + 1; });
+    const result = { itemId: item?.id || "", correct, votes: { ...votes } };
+    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+  }
+
+  function renderMultiMegaQuizVote(gameState, votes) {
+    const item = megaMultiCurrentItem(gameState);
+    const ownVote = votes[state.currentUid];
+    title.textContent = gameState.settings?.gameName || "Quiz";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Question")}
+      <section class="quiz-question-card"><span class="category-chip">${escapeHtml(gameState.settings?.icon || "🧠")} QUESTION</span><h2>${escapeHtml(item?.question || "")}</h2></section>
+      ${ownVote !== undefined ? renderMultiWaiting("Réponse enregistrée", `${Object.keys(votes).length}/${state.players.length} réponses reçues.`, "🔒") : `<section class="mega-option-grid">${(item?.options || []).map((option, index) => `<button class="mega-option-btn" data-multi-mega-vote="${index}"><span>${String.fromCharCode(65 + index)}</span><strong>${escapeHtml(option)}</strong></button>`).join("")}</section>`}
+      ${renderPlayerSubmissionStatus(votes, "A voté", "Réfléchit…")}`;
+    document.querySelectorAll("[data-multi-mega-vote]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-multi-mega-vote]").forEach(node => node.disabled = true);
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "votes", Number(button.dataset.multiMegaVote)); }
+      catch (error) { console.error(error); document.querySelectorAll("[data-multi-mega-vote]").forEach(node => node.disabled = false); }
+    }));
+  }
+
+  function renderMultiMegaQuizResult(gameState) {
+    const item = megaMultiCurrentItem(gameState);
+    const result = gameState.currentResult || {};
+    const correct = Number(result.correct);
+    title.textContent = "Réponse";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Question")}
+      <section class="reveal-stage reveal-v07"><span class="game-cover-icon">✅</span><h2>${escapeHtml(item?.options?.[correct] || "Réponse")}</h2><p>${escapeHtml(item?.explanation || "Réponse révélée.")}</p></section>
+      <section class="answer-chip-wall">${state.players.map(player => `<span class="${Number(result.votes?.[player.id]) === correct ? "correct" : "wrong"}">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · ${escapeHtml(item?.options?.[result.votes?.[player.id]] || "-")}</span>`).join("")}</section>
+      ${state.isHost ? `<button id="nextMultiMegaQuiz" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Question suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La prochaine question apparaîtra automatiquement.", "👑")}`;
+    document.querySelector("#nextMultiMegaQuiz")?.addEventListener("click", event => advanceMultiMegaRound(event, gameState, "voting", ["votes", "answers", "actions"]));
+  }
+
+  function processMultiMegaScenario(gameState, votes) {
+    if (!state.isHost || gameState.phase !== "voting" || Object.keys(votes).length < state.players.length) return;
+    const lock = `mega_scenario_${gameState.currentIndex}_${Object.keys(votes).length}`;
+    if (state.multiProcessingActionId === lock) return;
+    state.multiProcessingActionId = lock;
+    const counts = {};
+    Object.values(votes).forEach(value => counts[value] = Number(counts[value] || 0) + 1);
+    const max = Math.max(...Object.values(counts), 0);
+    const winners = Object.keys(counts).map(Number).filter(index => counts[index] === max);
+    const chosen = winners[Math.floor(Math.random() * Math.max(1, winners.length))] ?? 0;
+    const scores = { ...(gameState.scores || {}) };
+    state.players.forEach(player => { if (Number(votes[player.id]) === chosen) scores[player.id] = Number(scores[player.id] || 0) + 1; });
+    const result = { itemId: megaMultiCurrentItem(gameState)?.id || "", chosen, counts, votes: { ...votes } };
+    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+  }
+
+  function renderMultiMegaScenarioVote(gameState, votes) {
+    const item = megaMultiCurrentItem(gameState);
+    const ownVote = votes[state.currentUid];
+    title.textContent = "Alerte Rouge";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Scénario")}
+      <section class="scenario-card"><span>🚨</span><small>${escapeHtml(item?.title || "ALERTE").toUpperCase()}</small><h2>${escapeHtml(item?.text || "")}</h2></section>
+      ${ownVote !== undefined ? renderMultiWaiting("Décision verrouillée", `${Object.keys(votes).length}/${state.players.length} décisions reçues.`, "🔒") : `<section class="mega-option-grid">${(item?.options || []).map((option, index) => `<button class="mega-option-btn scenario-option" data-multi-scenario="${index}"><span>${index + 1}</span><strong>${escapeHtml(option.label)}</strong></button>`).join("")}</section>`}
+      ${renderPlayerSubmissionStatus(votes, "A choisi", "Décide…")}`;
+    document.querySelectorAll("[data-multi-scenario]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-multi-scenario]").forEach(node => node.disabled = true);
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "votes", Number(button.dataset.multiScenario)); }
+      catch (error) { console.error(error); document.querySelectorAll("[data-multi-scenario]").forEach(node => node.disabled = false); }
+    }));
+  }
+
+  function renderMultiMegaScenarioResult(gameState) {
+    const item = megaMultiCurrentItem(gameState);
+    const result = gameState.currentResult || {};
+    title.textContent = "Conséquence";
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Scénario")}
+      <section class="reveal-stage reveal-v07 scenario-reveal"><span class="game-cover-icon">🚨</span><h2>${escapeHtml(item?.options?.[result.chosen]?.label || "Décision prise")}</h2><p>${escapeHtml(item?.options?.[result.chosen]?.outcome || "L’histoire continue.")}</p></section>
+      <section class="vote-distribution">${(item?.options || []).map((option, index) => `<div><strong>${escapeHtml(option.label)}</strong><span>${Number(result.counts?.[index] || 0)} vote${Number(result.counts?.[index] || 0) > 1 ? "s" : ""}</span></div>`).join("")}</section>
+      ${state.isHost ? `<button id="nextMultiScenario" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Scénario suivant"}</button>` : renderMultiWaiting("En attente de l’hôte", "La suite va apparaître.", "👑")}`;
+    document.querySelector("#nextMultiScenario")?.addEventListener("click", event => advanceMultiMegaRound(event, gameState, "voting", ["votes", "answers", "actions"]));
+  }
+
+  function processMultiMegaBomb(gameState, actions) {
+    if (!state.isHost || gameState.phase !== "playing") return;
+    const action = actions[gameState.currentPlayerId];
+    const expired = Number(gameState.bombEndsAt || 0) <= Date.now();
+    if (!action && !expired) return;
+    const lock = `mega_bomb_${gameState.currentIndex}_${action?.id || "timer"}`;
+    if (state.multiProcessingActionId === lock) return;
+    state.multiProcessingActionId = lock;
+    if (action?.payload?.pass && !expired) {
+      const index = state.players.findIndex(player => player.id === gameState.currentPlayerId);
+      const next = state.players[(index + 1) % Math.max(1, state.players.length)]?.id || gameState.currentPlayerId;
+      AKFirebase.updateGame(state.roomCode, { "state/currentPlayerId": next, "state/updatedAt": Date.now(), actions: null }).finally(() => { state.multiProcessingActionId = null; });
+      return;
+    }
+    const loserId = gameState.currentPlayerId;
+    const scores = { ...(gameState.scores || {}) };
+    state.players.filter(player => player.id !== loserId).forEach(player => scores[player.id] = Number(scores[player.id] || 0) + 1);
+    const result = { loserId, itemId: megaMultiCurrentItem(gameState)?.id || "" };
+    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/bombEndsAt": null, "state/updatedAt": Date.now(), actions: null }).finally(() => { state.multiProcessingActionId = null; });
+  }
+
+  function renderMultiMegaBomb(gameState, actions) {
+    const item = megaMultiCurrentItem(gameState);
+    const player = megaMultiPlayer(gameState.currentPlayerId);
+    const isCurrent = state.currentUid === gameState.currentPlayerId;
+    const pending = actions[state.currentUid];
+    title.textContent = "La Bombe";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Bombe")}
+      <section class="bomb-stage"><div class="bomb-icon">💣</div><div class="bomb-countdown"><strong id="v014MultiCountdown">${Math.max(0, Math.ceil((Number(gameState.bombEndsAt || 0) - Date.now()) / 1000))}</strong><span>secondes</span></div><span class="category-chip">${avatarById(player?.avatarId).emoji} ${escapeHtml(player?.name || "Joueur").toUpperCase()}</span><h2>${escapeHtml(item?.category || "Catégorie")}</h2><p>${isCurrent ? "Donne une réponse, puis passe la bombe." : `La bombe est chez ${escapeHtml(player?.name || "la personne")}.`}</p><div class="progress-track"><div id="v014MultiTimerFill" class="progress-fill"></div></div></section>
+      ${isCurrent ? pending ? renderMultiWaiting("Action envoyée", "La bombe change de téléphone…", "💣") : `<section class="decision-grid"><button id="multiPassBomb" class="primary-btn">Répondu, je passe →</button><button id="multiBoomBomb" class="danger-btn">💥 BOOM</button></section>` : renderMultiWaiting("Reste prêt·e", "Ton téléphone s’activera quand la bombe arrivera chez toi.", "⏳")}`;
+    document.querySelector("#multiPassBomb")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-bomb", { pass: true }).catch(() => event.currentTarget.disabled = false); });
+    document.querySelector("#multiBoomBomb")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-bomb", { explode: true }).catch(() => event.currentTarget.disabled = false); });
+    startV014MultiTimer(gameState.bombEndsAt, gameState.settings?.durationSeconds || 25, () => processMultiMegaBomb(gameState, actions));
+  }
+
+  function renderMultiMegaBombResult(gameState) {
+    clearV014MultiTimer();
+    const loser = megaMultiPlayer(gameState.currentResult?.loserId);
+    title.textContent = "BOOM !";
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Bombe")}
+      <section class="winner-stage bomb-result-stage"><div class="winner-crown">💥</div><div class="giant-avatar">${avatarById(loser?.avatarId).emoji}</div><h2>La bombe explose chez ${escapeHtml(loser?.name || "un joueur")}</h2><p>Toutes les autres personnes marquent un point.</p></section>
+      ${state.alcohol ? `<div class="alcohol-callout">🍻 Petite gorgée de consolation, ou une gorgée d’eau.</div>` : ""}
+      ${state.isHost ? `<button id="nextMultiBomb" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Nouvelle bombe"}</button>` : renderMultiWaiting("En attente de l’hôte", "Une nouvelle bombe va être lancée.", "👑")}`;
+    document.querySelector("#nextMultiBomb")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      const next = Number(gameState.currentIndex || 0) + 1;
+      const finished = next >= (gameState.items || []).length;
+      const ids = state.players.map(player => player.id);
+      try { await AKFirebase.updateGame(state.roomCode, {
+        "state/phase": finished ? "final" : "playing",
+        "state/currentIndex": finished ? gameState.currentIndex : next,
+        "state/currentResult": null,
+        "state/currentPlayerId": ids[Math.floor(Math.random() * Math.max(1, ids.length))] || null,
+        "state/bombEndsAt": finished ? null : Date.now() + Number(gameState.settings?.durationSeconds || 25) * 1000,
+        "state/finishedAt": finished ? Date.now() : null,
+        "state/updatedAt": Date.now(), actions: null, votes: null, answers: null
+      }); } catch (error) { console.error(error); event.currentTarget.disabled = false; }
+    });
+  }
+
+  function processMultiMegaKnow(gameState, answers, votes) {
+    if (!state.isHost) return;
+    const targetAnswer = answers[gameState.targetId];
+    if (gameState.phase === "target" && targetAnswer !== undefined) {
+      const lock = `mega_know_target_${gameState.currentIndex}`;
+      if (state.multiProcessingActionId === lock) return;
+      state.multiProcessingActionId = lock;
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "guessing", "state/secretAnswer": Number(targetAnswer), "state/updatedAt": Date.now(), votes: null }).finally(() => { state.multiProcessingActionId = null; });
+      return;
+    }
+    if (gameState.phase !== "guessing" || Object.keys(votes).length < megaMultiExpectedVotes(gameState)) return;
+    const lock = `mega_know_guess_${gameState.currentIndex}_${Object.keys(votes).length}`;
+    if (state.multiProcessingActionId === lock) return;
+    state.multiProcessingActionId = lock;
+    const secret = Number(gameState.secretAnswer);
+    const correctIds = Object.entries(votes).filter(([, value]) => Number(value) === secret).map(([id]) => id);
+    const scores = { ...(gameState.scores || {}) };
+    correctIds.forEach(id => scores[id] = Number(scores[id] || 0) + 1);
+    if (correctIds.length >= Math.ceil(Math.max(1, state.players.length - 1) / 2)) scores[gameState.targetId] = Number(scores[gameState.targetId] || 0) + 1;
+    const result = { targetId: gameState.targetId, secretAnswer: secret, correctIds, votes: { ...votes }, itemId: megaMultiCurrentItem(gameState)?.id || "" };
+    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+  }
+
+  function renderMultiMegaKnowTarget(gameState, answers) {
+    const item = megaMultiCurrentItem(gameState);
+    const target = megaMultiPlayer(gameState.targetId);
+    const isTarget = state.currentUid === gameState.targetId;
+    const answered = answers[state.currentUid] !== undefined;
+    title.textContent = "Tu me connais ou pas ?";
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Question")}
+      ${isTarget ? answered ? renderMultiWaiting("Réponse enregistrée", "Les autres vont maintenant essayer de te deviner.", "🔒") : `<section class="quiz-question-card"><span class="category-chip">💭 TA VRAIE RÉPONSE</span><h2>${escapeHtml(item?.question || "")}</h2></section><section class="mega-option-grid">${(item?.options || []).map((option, index) => `<button class="mega-option-btn" data-multi-know-target="${index}"><span>${index + 1}</span><strong>${escapeHtml(option)}</strong></button>`).join("")}</section>` : renderMultiWaiting(`${target?.name || "La personne"} répond en secret`, "Ton écran s’ouvrira dès que sa réponse sera verrouillée.", avatarById(target?.avatarId).emoji)}`;
+    document.querySelectorAll("[data-multi-know-target]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-multi-know-target]").forEach(node => node.disabled = true);
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", Number(button.dataset.multiKnowTarget)); }
+      catch (error) { console.error(error); document.querySelectorAll("[data-multi-know-target]").forEach(node => node.disabled = false); }
+    }));
+  }
+
+  function renderMultiMegaKnowGuess(gameState, votes) {
+    const item = megaMultiCurrentItem(gameState);
+    const target = megaMultiPlayer(gameState.targetId);
+    const isTarget = state.currentUid === gameState.targetId;
+    const voted = votes[state.currentUid] !== undefined;
+    title.textContent = "Tu me connais ou pas ?";
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Question")}
+      ${isTarget ? renderMultiWaiting("Ne donne aucun indice", `${Object.keys(votes).length}/${Math.max(1, state.players.length - 1)} pronostics reçus.`, avatarById(target?.avatarId).emoji) : voted ? renderMultiWaiting("Pronostic verrouillé", `${Object.keys(votes).length}/${Math.max(1, state.players.length - 1)} pronostics reçus.`, "🔒") : `<section class="quiz-question-card"><span class="category-chip">À PROPOS DE ${escapeHtml(target?.name || "LA PERSONNE").toUpperCase()}</span><h2>${escapeHtml(item?.question || "")}</h2></section><section class="mega-option-grid">${(item?.options || []).map((option, index) => `<button class="mega-option-btn" data-multi-know-guess="${index}"><span>${index + 1}</span><strong>${escapeHtml(option)}</strong></button>`).join("")}</section>`}`;
+    document.querySelectorAll("[data-multi-know-guess]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-multi-know-guess]").forEach(node => node.disabled = true);
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "votes", Number(button.dataset.multiKnowGuess)); }
+      catch (error) { console.error(error); document.querySelectorAll("[data-multi-know-guess]").forEach(node => node.disabled = false); }
+    }));
+  }
+
+  function renderMultiMegaKnowResult(gameState) {
+    const item = megaMultiCurrentItem(gameState);
+    const result = gameState.currentResult || {};
+    const target = megaMultiPlayer(result.targetId || gameState.targetId);
+    title.textContent = "Réponse révélée";
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Question")}
+      <section class="reveal-stage reveal-v07"><span class="game-cover-icon">💭</span><h2>${escapeHtml(target?.name || "La personne")} choisit : ${escapeHtml(item?.options?.[result.secretAnswer] || "")}</h2><p>${result.correctIds?.length || 0}/${Math.max(1, state.players.length - 1)} personne${(result.correctIds?.length || 0) > 1 ? "s" : ""} avait vu juste.</p></section>
+      <section class="answer-chip-wall">${state.players.filter(player => player.id !== target?.id).map(player => `<span class="${result.correctIds?.includes(player.id) ? "correct" : "wrong"}">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · ${escapeHtml(item?.options?.[result.votes?.[player.id]] || "-")}</span>`).join("")}</section>
+      ${state.isHost ? `<button id="nextMultiKnow" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Personne suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La prochaine personne va répondre.", "👑")}`;
+    document.querySelector("#nextMultiKnow")?.addEventListener("click", event => advanceMultiMegaRound(event, gameState, "target", ["votes", "answers", "actions"], { targetId: state.players[(Number(gameState.currentIndex || 0) + 1) % Math.max(1, state.players.length)]?.id || null, secretAnswer: null }));
+  }
+
+  function processMultiMegaRanking(gameState, answers, votes) {
+    if (!state.isHost) return;
+    const targetAnswer = answers[gameState.targetId];
+    if (gameState.phase === "target" && Array.isArray(targetAnswer?.ranking) && targetAnswer.ranking.length) {
+      const lock = `mega_rank_target_${gameState.currentIndex}`;
+      if (state.multiProcessingActionId === lock) return;
+      state.multiProcessingActionId = lock;
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "guessing", "state/secretRanking": targetAnswer.ranking, "state/updatedAt": Date.now(), votes: null }).finally(() => { state.multiProcessingActionId = null; });
+      return;
+    }
+    if (gameState.phase !== "guessing" || Object.keys(votes).length < megaMultiExpectedVotes(gameState)) return;
+    const lock = `mega_rank_guess_${gameState.currentIndex}_${Object.keys(votes).length}`;
+    if (state.multiProcessingActionId === lock) return;
+    state.multiProcessingActionId = lock;
+    const top = Number(gameState.secretRanking?.[0]);
+    const correctIds = Object.entries(votes).filter(([, value]) => Number(value) === top).map(([id]) => id);
+    const scores = { ...(gameState.scores || {}) };
+    correctIds.forEach(id => scores[id] = Number(scores[id] || 0) + 2);
+    if (correctIds.length) scores[gameState.targetId] = Number(scores[gameState.targetId] || 0) + 1;
+    const result = { targetId: gameState.targetId, ranking: gameState.secretRanking || [], correctIds, votes: { ...votes }, itemId: megaMultiCurrentItem(gameState)?.id || "" };
+    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+  }
+
+  function renderMultiMegaRankingTarget(gameState, answers) {
+    const item = megaMultiCurrentItem(gameState);
+    const target = megaMultiPlayer(gameState.targetId);
+    const isTarget = state.currentUid === gameState.targetId;
+    const answered = answers[state.currentUid]?.ranking;
+    title.textContent = "Le Classement secret";
+    if (!isTarget) {
+      screen.innerHTML = `${multiMegaProgress(gameState, "Classement")}${renderMultiWaiting(`${target?.name || "La personne"} crée son classement`, "Tu devras ensuite deviner son numéro un.", avatarById(target?.avatarId).emoji)}`;
+      return;
+    }
+    if (answered) {
+      screen.innerHTML = `${multiMegaProgress(gameState, "Classement")}${renderMultiWaiting("Classement verrouillé", "Les autres vont maintenant faire leur pronostic.", "🔒")}`;
+      return;
+    }
+    const draftKey = `v014_rank_${gameState.sessionGameId}_${gameState.currentIndex}`;
+    let draft = [];
+    try { draft = JSON.parse(sessionStorage.getItem(draftKey) || "[]"); } catch { draft = []; }
+    const available = (item?.items || []).map((_, index) => index).filter(index => !draft.includes(index));
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Classement")}
+      <section class="card"><h2 class="section-title">${escapeHtml(item?.title || "Classement")}</h2><p class="helper">Clique dans l’ordre, de ton numéro un au dernier.</p></section>
+      <section class="secret-ranking-builder"><div class="ranking-picked">${draft.map((index, position) => `<div><span>${position + 1}</span><strong>${escapeHtml(item?.items?.[index] || "")}</strong></div>`).join("") || `<div class="notice">Commence par ton numéro un.</div>`}</div><div class="ranking-available">${available.map(index => `<button class="secondary-btn" data-multi-rank-pick="${index}">${escapeHtml(item.items[index])}</button>`).join("")}</div></section>
+      <div class="toolbar"><button id="multiRankUndo" class="secondary-btn" ${draft.length ? "" : "disabled"}>↶ Annuler</button><button id="multiRankConfirm" class="primary-btn" ${draft.length === (item?.items || []).length ? "" : "disabled"}>Valider</button></div>`;
+    document.querySelectorAll("[data-multi-rank-pick]").forEach(button => button.addEventListener("click", () => { draft.push(Number(button.dataset.multiRankPick)); sessionStorage.setItem(draftKey, JSON.stringify(draft)); renderMultiMegaRankingTarget(gameState, answers); }));
+    document.querySelector("#multiRankUndo")?.addEventListener("click", () => { draft.pop(); sessionStorage.setItem(draftKey, JSON.stringify(draft)); renderMultiMegaRankingTarget(gameState, answers); });
+    document.querySelector("#multiRankConfirm")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { ranking: draft, submittedAt: Date.now() }); sessionStorage.removeItem(draftKey); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; }
+    });
+  }
+
+  function renderMultiMegaRankingGuess(gameState, votes) {
+    const item = megaMultiCurrentItem(gameState);
+    const target = megaMultiPlayer(gameState.targetId);
+    const isTarget = state.currentUid === gameState.targetId;
+    const voted = votes[state.currentUid] !== undefined;
+    title.textContent = "Devine le numéro un";
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Classement")}
+      ${isTarget ? renderMultiWaiting("Garde ton classement secret", `${Object.keys(votes).length}/${Math.max(1, state.players.length - 1)} pronostics reçus.`, "🤫") : voted ? renderMultiWaiting("Pronostic verrouillé", `${Object.keys(votes).length}/${Math.max(1, state.players.length - 1)} pronostics reçus.`, "🔒") : `<section class="card"><h2 class="section-title">${escapeHtml(item?.title || "Classement")}</h2><p class="helper">Quel est le numéro un de ${escapeHtml(target?.name || "la personne")} ?</p></section><section class="mega-option-grid">${(item?.items || []).map((option, index) => `<button class="mega-option-btn" data-multi-rank-guess="${index}"><span>${index + 1}</span><strong>${escapeHtml(option)}</strong></button>`).join("")}</section>`}`;
+    document.querySelectorAll("[data-multi-rank-guess]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-multi-rank-guess]").forEach(node => node.disabled = true);
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "votes", Number(button.dataset.multiRankGuess)); }
+      catch (error) { console.error(error); document.querySelectorAll("[data-multi-rank-guess]").forEach(node => node.disabled = false); }
+    }));
+  }
+
+  function renderMultiMegaRankingResult(gameState) {
+    const item = megaMultiCurrentItem(gameState);
+    const result = gameState.currentResult || {};
+    const target = megaMultiPlayer(result.targetId || gameState.targetId);
+    title.textContent = "Classement révélé";
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Classement")}
+      <section class="winner-stage winner-stage-v07"><div class="winner-crown">🏅</div><h2>Le classement de ${escapeHtml(target?.name || "la personne")}</h2><p>${result.correctIds?.length || 0} personne${(result.correctIds?.length || 0) > 1 ? "s" : ""} avait deviné le numéro un.</p></section>
+      <section class="revealed-ranking">${(result.ranking || []).map((index, position) => `<div class="ranking-row"><span class="ranking-position">${position + 1}</span><strong>${escapeHtml(item?.items?.[index] || "")}</strong>${position === 0 ? `<span class="badge green">favori</span>` : ""}</div>`).join("")}</section>
+      ${state.isHost ? `<button id="nextMultiRanking" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Classement suivant"}</button>` : renderMultiWaiting("En attente de l’hôte", "Le prochain classement va commencer.", "👑")}`;
+    document.querySelector("#nextMultiRanking")?.addEventListener("click", event => advanceMultiMegaRound(event, gameState, "target", ["votes", "answers", "actions"], { targetId: state.players[(Number(gameState.currentIndex || 0) + 1) % Math.max(1, state.players.length)]?.id || null, secretRanking: null }));
+  }
+
+  async function advanceMultiMegaRound(event, gameState, nextPhase, collections, extras = {}) {
+    event.currentTarget.disabled = true;
+    clearV014MultiTimer();
+    const next = Number(gameState.currentIndex || 0) + 1;
+    const finished = next >= (gameState.items || []).length;
+    const updates = {
+      "state/phase": finished ? "final" : nextPhase,
+      "state/currentIndex": finished ? gameState.currentIndex : next,
+      "state/currentResult": null,
+      "state/finishedAt": finished ? Date.now() : null,
+      "state/updatedAt": Date.now()
+    };
+    if (!finished) Object.entries(extras || {}).forEach(([key, value]) => updates[`state/${key}`] = value);
+    (collections || []).forEach(collection => updates[collection] = null);
+    try { await AKFirebase.updateGame(state.roomCode, updates); }
+    catch (error) { console.error(error); event.currentTarget.disabled = false; alert("Impossible de passer à la suite."); }
+  }
+
+  function renderMultiMegaFinal(gameState) {
+    clearV014MultiTimer();
+    const ranking = [...state.players].sort((a, b) => Number(gameState.scores?.[b.id] || 0) - Number(gameState.scores?.[a.id] || 0));
+    const best = Number(gameState.scores?.[ranking[0]?.id] || 0);
+    const winners = ranking.filter(player => Number(gameState.scores?.[player.id] || 0) === best && best > 0);
+    title.textContent = "Classement final";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="winner-stage winner-stage-v07 mega-final-stage"><div class="winner-crown">${escapeHtml(gameState.settings?.icon || "🎮")}🏆</div><h2>${winners.length ? winners.map(player => escapeHtml(player.name)).join(" et ") : "Partie terminée"}</h2><p>${winners.length ? `${winners.length > 1 ? "terminent" : "termine"} en tête de ${escapeHtml(gameState.settings?.gameName || "la partie")}.` : "Toutes les manches sont terminées."}</p></section>
+      <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(gameState.scores?.[player.id] || 0)} pts</span></div>`).join("")}</section>
+      ${renderPostGameContinuation(gameState)}`;
+    ensureEveningResult(gameState);
+    bindPostGameContinuation(gameState);
+  }
+
+  renderGames = function () {
+    if (!isMultiplayer()) return localRenderGames();
+    clearV09MultiTimer();
+    clearV014MultiTimer();
+    const category = categories.find(item => item.id === state.currentCategory);
+    title.textContent = category.name;
+    setBackVisible(true);
+    screen.innerHTML = `
+      <section class="catalog-intro catalog-intro-v014"><span>${category.emoji}</span><div><small>CATÉGORIE</small><strong>${escapeHtml(category.name)}</strong><p>${escapeHtml(category.description)}</p></div><b>${category.games.filter(game => V014_READY_GAMES.has(game)).length} jeux</b></section>
+      <section class="game-list game-list-v07">${category.games.map(game => {
+        const disabled = game === "Blind Test";
+        const ready = V014_READY_GAMES.has(game);
+        const isNew = V014_NEW_GAMES.has(game);
+        const icon = V014_GAME_ICONS[game] || "🎲";
+        return `<button class="game-card game-card-v07 ${disabled ? "disabled" : ""} ${isNew ? "game-card-new game-card-mega" : ""}" ${disabled ? "disabled" : ""} data-game="${escapeHtml(game)}"><span class="game-card-icon">${icon}</span><span class="game-card-copy"><strong>${escapeHtml(game)} ${isNew ? `<span class="new-ribbon">MEGA PACK</span>` : ""}</strong><span class="helper">${disabled ? "Audio à intégrer séparément" : ready ? "Jouable chacun sur son téléphone" : "À intégrer"}</span><span class="game-meta">${ready ? `<span class="badge green">📲 multijoueur</span>` : `<span class="badge">bientôt</span>`}${state.alcohol && ready ? `<span class="badge green">🍻 option alcool</span>` : ""}${V014_GAME_CONFIGS[game]?.adultOnly || game.includes("+18") ? `<span class="badge orange">🔞 adulte</span>` : ""}</span></span><span class="game-card-chevron">›</span></button>`;
+      }).join("")}</section>`;
+    document.querySelectorAll("[data-game]:not([disabled])").forEach(button => button.addEventListener("click", () => {
+      const game = button.dataset.game;
+      if (V014_GAME_CONFIGS[game]) { if (V014_GAME_CONFIGS[game].adultOnly && !state.adult) return alert("Active le contenu adulte pour ce jeu."); state.multiView = "mega-setup"; pushScreen("games"); resetMegaGame(game); renderMegaSetup(); return; }
+      if (game === "Qui de nous ?") { state.multiView = "who-us-setup"; pushScreen("games"); resetWhoUsState(); renderWhoUsSetup(); return; }
+      if (game === "Le premier qui rit a perdu") { state.multiView = "laugh-duel-setup"; pushScreen("games"); resetLaughDuelState(); renderLaughDuelSetup(); return; }
+      if (game === "Qui ment le mieux ?") { if (state.players.length < 3) return alert("Ce jeu nécessite au moins 3 joueurs."); state.multiView = "best-liar-setup"; pushScreen("games"); resetBestLiarState(); renderBestLiarSetup(); return; }
+      if (game === "Action ou Vérité" || game === "Action ou Vérité +18") { state.multiView = "action-truth-setup"; pushScreen("games"); resetActionTruthState(game.includes("+18")); renderActionTruthSetup(); return; }
+      if (game === "Je n’ai jamais" || game === "Je n’ai jamais +18") { state.multiView = "ambiance-poll-setup"; pushScreen("games"); resetAmbiancePollState("never", game.includes("+18")); renderAmbiancePollSetup(); return; }
+      if (game === "Tu préfères" || game === "Tu préfères +18") { state.multiView = "ambiance-poll-setup"; pushScreen("games"); resetAmbiancePollState("would", game.includes("+18")); renderAmbiancePollSetup(); return; }
+      if (game === "Même cerveau") { state.multiView = "same-brain-setup"; pushScreen("games"); resetSameBrainState(); renderSameBrainSetup(); return; }
+      if (game === "Minorité") { state.multiView = "minority-setup"; pushScreen("games"); resetMinorityState(); renderMinoritySetup(); return; }
+      if (game === "Qui a répondu ça ?") { if (state.players.length < 3) return alert("Ce jeu nécessite au moins 3 joueurs."); state.multiView = "who-answered-setup"; pushScreen("games"); resetWhoAnsweredState(); renderWhoAnsweredSetup(); return; }
+      if (game === "L’Imposteur sait presque tout") { if (state.players.length < 3) return alert("Ce jeu nécessite au moins 3 joueurs."); state.multiView = "almost-impostor-setup"; pushScreen("games"); resetAlmostImpostorState(); renderAlmostImpostorSetup(); return; }
+      if (game === "Le Faux Expert") { if (state.players.length < 3) return alert("Ce jeu nécessite au moins 3 joueurs."); state.multiView = "fake-expert-setup"; pushScreen("games"); resetFakeExpertState(); renderFakeExpertSetup(); return; }
+      if (game === "Qui suis-je ?") { state.multiView = "who-am-i-setup"; pushScreen("games"); resetWhoAmIState(); renderWhoAmISetup(); return; }
+      renderMultiNotReady(game);
+    }));
+  };
+
+
+  const v014LegacyRandomMultiplayerGame = launchRandomMultiplayerGame;
+  launchRandomMultiplayerGame = async function () {
+    if (!state.isHost || state.players.length < 2) return;
+
+    const megaChoices = Object.entries(V014_GAME_CONFIGS)
+      .filter(([, config]) => !config.adultOnly || state.adult)
+      .filter(([, config]) => !config.drinkingGame || state.alcohol)
+      .map(([gameName, config]) => ({
+        type: megaMultiType(config.engine),
+        config: {
+          gameName,
+          roundCount: Number(config.defaultRounds || 10),
+          durationSeconds: Number(config.timer || 45)
+        }
+      }));
+
+    const lastType = state.roomData?.session?.lastGame?.type;
+    const lastName = state.roomData?.session?.lastGame?.gameName;
+    const filtered = megaChoices.filter(choice => choice.type !== lastType || choice.config.gameName !== lastName);
+    const choices = filtered.length ? filtered : megaChoices;
+
+    // Un tirage sur trois conserve aussi les jeux historiques afin que toute la ludothèque circule.
+    if (!choices.length || Math.random() < .34) {
+      return v014LegacyRandomMultiplayerGame();
+    }
+
+    const selected = choices[Math.floor(Math.random() * choices.length)];
+    await launchReplayDescriptor(selected);
+  };
+
+
 })();

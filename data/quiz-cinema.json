@@ -1,0 +1,362 @@
+[
+  {
+    "id": "q_001_dans_quel_film_trouve_t_o",
+    "question": "Dans quel film trouve-t-on un parc peuplé de dinosaures clonés ?",
+    "options": [
+      "Avatar",
+      "Jurassic Park",
+      "King Kong",
+      "Jumanji"
+    ],
+    "answer": 1,
+    "explanation": "Jurassic Park met en scène des dinosaures clonés."
+  },
+  {
+    "id": "q_002_quel_objet_permet_de_voya",
+    "question": "Quel objet permet de voyager dans le temps dans Retour vers le futur ?",
+    "options": [
+      "Une moto",
+      "Une DeLorean",
+      "Un train rouge",
+      "Une cabine téléphonique"
+    ],
+    "answer": 1,
+    "explanation": "La DeLorean est la machine temporelle emblématique."
+  },
+  {
+    "id": "q_003_dans_le_roi_lion_comment_",
+    "question": "Dans Le Roi Lion, comment s’appelle le père de Simba ?",
+    "options": [
+      "Scar",
+      "Mufasa",
+      "Rafiki",
+      "Timon"
+    ],
+    "answer": 1,
+    "explanation": "Mufasa est le père de Simba."
+  },
+  {
+    "id": "q_004_quel_film_suit_un_ogre_ve",
+    "question": "Quel film suit un ogre vert vivant dans un marais ?",
+    "options": [
+      "Shrek",
+      "Hercule",
+      "Raiponce",
+      "Aladdin"
+    ],
+    "answer": 0,
+    "explanation": "Shrek est l’ogre vert du film éponyme."
+  },
+  {
+    "id": "q_005_dans_titanic_quel_est_le_",
+    "question": "Dans Titanic, quel est le prénom du personnage joué par Leonardo DiCaprio ?",
+    "options": [
+      "Jack",
+      "James",
+      "John",
+      "Jake"
+    ],
+    "answer": 0,
+    "explanation": "Il interprète Jack Dawson."
+  },
+  {
+    "id": "q_006_quel_super_heros_est_auss",
+    "question": "Quel super-héros est aussi Bruce Wayne ?",
+    "options": [
+      "Superman",
+      "Batman",
+      "Iron Man",
+      "Flash"
+    ],
+    "answer": 1,
+    "explanation": "Bruce Wayne est Batman."
+  },
+  {
+    "id": "q_007_dans_harry_potter_quelle_",
+    "question": "Dans Harry Potter, quelle maison a pour emblème un lion ?",
+    "options": [
+      "Serpentard",
+      "Poufsouffle",
+      "Serdaigle",
+      "Gryffondor"
+    ],
+    "answer": 3,
+    "explanation": "Gryffondor a pour symbole le lion."
+  },
+  {
+    "id": "q_008_quel_film_danimation_met_",
+    "question": "Quel film d’animation met en scène des émotions nommées Joie et Tristesse ?",
+    "options": [
+      "Coco",
+      "Vice-Versa",
+      "Là-haut",
+      "Soul"
+    ],
+    "answer": 1,
+    "explanation": "Vice-Versa personnifie les émotions."
+  },
+  {
+    "id": "q_009_dans_matrix_quelle_couleu",
+    "question": "Dans Matrix, quelle couleur de pilule Neo choisit-il ?",
+    "options": [
+      "Bleue",
+      "Rouge",
+      "Verte",
+      "Noire"
+    ],
+    "answer": 1,
+    "explanation": "Neo choisit la pilule rouge."
+  },
+  {
+    "id": "q_010_quel_realisateur_a_signe_",
+    "question": "Quel réalisateur a signé E.T. et Jurassic Park ?",
+    "options": [
+      "James Cameron",
+      "Steven Spielberg",
+      "Christopher Nolan",
+      "Ridley Scott"
+    ],
+    "answer": 1,
+    "explanation": "Steven Spielberg a réalisé ces deux films."
+  },
+  {
+    "id": "q_011_quel_personnage_dit_je_su",
+    "question": "Quel personnage dit « Je suis ton père » dans Star Wars ?",
+    "options": [
+      "Yoda",
+      "Dark Vador",
+      "Han Solo",
+      "Obi-Wan"
+    ],
+    "answer": 1,
+    "explanation": "La phrase est associée à Dark Vador."
+  },
+  {
+    "id": "q_012_dans_quel_film_un_poisson",
+    "question": "Dans quel film un poisson-clown traverse l’océan pour retrouver son fils ?",
+    "options": [
+      "Le Monde de Dory",
+      "Le Monde de Nemo",
+      "Gang de requins",
+      "Luca"
+    ],
+    "answer": 1,
+    "explanation": "Marin cherche Nemo."
+  },
+  {
+    "id": "q_013_quel_film_met_en_scene_un",
+    "question": "Quel film met en scène une famille dotée de super-pouvoirs ?",
+    "options": [
+      "Les Indestructibles",
+      "Encanto",
+      "Big Hero 6",
+      "Megamind"
+    ],
+    "answer": 0,
+    "explanation": "Les Indestructibles suivent une famille de super-héros."
+  },
+  {
+    "id": "q_014_quel_acteur_joue_le_capit",
+    "question": "Quel acteur joue le capitaine Jack Sparrow ?",
+    "options": [
+      "Orlando Bloom",
+      "Johnny Depp",
+      "Brad Pitt",
+      "Tom Cruise"
+    ],
+    "answer": 1,
+    "explanation": "Johnny Depp incarne Jack Sparrow."
+  },
+  {
+    "id": "q_015_quel_film_francais_suit_l",
+    "question": "Quel film français suit les aventures d’un homme riche tétraplégique et de son aide à domicile ?",
+    "options": [
+      "Bienvenue chez les Ch’tis",
+      "Intouchables",
+      "Le Dîner de cons",
+      "La Haine"
+    ],
+    "answer": 1,
+    "explanation": "Il s’agit d’Intouchables."
+  },
+  {
+    "id": "q_016_dans_frozen_comment_sappe",
+    "question": "Dans Frozen, comment s’appelle la sœur d’Elsa ?",
+    "options": [
+      "Anna",
+      "Ariel",
+      "Belle",
+      "Mérida"
+    ],
+    "answer": 0,
+    "explanation": "Anna est la sœur d’Elsa."
+  },
+  {
+    "id": "q_017_quel_film_se_deroule_prin",
+    "question": "Quel film se déroule principalement dans les rêves imbriqués ?",
+    "options": [
+      "Interstellar",
+      "Inception",
+      "Tenet",
+      "Memento"
+    ],
+    "answer": 1,
+    "explanation": "Inception explore des niveaux de rêves."
+  },
+  {
+    "id": "q_018_quel_monstre_geant_japona",
+    "question": "Quel monstre géant japonais ressemble à un dinosaure ?",
+    "options": [
+      "King Kong",
+      "Godzilla",
+      "Mothra",
+      "Gamera"
+    ],
+    "answer": 1,
+    "explanation": "Godzilla est le kaiju emblématique."
+  },
+  {
+    "id": "q_019_dans_le_seigneur_des_anne",
+    "question": "Dans Le Seigneur des anneaux, quel objet doit être détruit ?",
+    "options": [
+      "Une épée",
+      "Un anneau",
+      "Une couronne",
+      "Un cristal"
+    ],
+    "answer": 1,
+    "explanation": "L’Anneau unique doit être détruit."
+  },
+  {
+    "id": "q_020_quel_film_met_en_scene_un",
+    "question": "Quel film met en scène un robot nettoyeur nommé WALL-E ?",
+    "options": [
+      "Robots",
+      "WALL-E",
+      "Astro Boy",
+      "Les Nouveaux Héros"
+    ],
+    "answer": 1,
+    "explanation": "Le robot porte le nom du film."
+  },
+  {
+    "id": "q_021_quel_personnage_de_toy_st",
+    "question": "Quel personnage de Toy Story est un cow-boy ?",
+    "options": [
+      "Buzz",
+      "Woody",
+      "Rex",
+      "Zigzag"
+    ],
+    "answer": 1,
+    "explanation": "Woody est le cow-boy."
+  },
+  {
+    "id": "q_022_dans_quel_film_trouve_t_o",
+    "question": "Dans quel film trouve-t-on le personnage de Wednesday Addams ?",
+    "options": [
+      "La Famille Addams",
+      "Beetlejuice",
+      "Casper",
+      "Hocus Pocus"
+    ],
+    "answer": 0,
+    "explanation": "Wednesday appartient à la famille Addams."
+  },
+  {
+    "id": "q_023_quel_film_musical_met_en_",
+    "question": "Quel film musical met en scène une gouvernante nommée Maria ?",
+    "options": [
+      "Grease",
+      "La Mélodie du bonheur",
+      "Mamma Mia!",
+      "Chicago"
+    ],
+    "answer": 1,
+    "explanation": "Maria est l’héroïne de La Mélodie du bonheur."
+  },
+  {
+    "id": "q_024_quel_acteur_incarne_iron_",
+    "question": "Quel acteur incarne Iron Man dans le MCU ?",
+    "options": [
+      "Chris Evans",
+      "Robert Downey Jr.",
+      "Chris Hemsworth",
+      "Mark Ruffalo"
+    ],
+    "answer": 1,
+    "explanation": "Robert Downey Jr. incarne Tony Stark."
+  },
+  {
+    "id": "q_025_dans_ratatouille_quel_ani",
+    "question": "Dans Ratatouille, quel animal cuisine ?",
+    "options": [
+      "Un chat",
+      "Un rat",
+      "Une souris",
+      "Un lapin"
+    ],
+    "answer": 1,
+    "explanation": "Rémy est un rat passionné de cuisine."
+  },
+  {
+    "id": "q_026_quel_film_suit_une_poupee",
+    "question": "Quel film suit une poupée qui découvre le monde réel ?",
+    "options": [
+      "Barbie",
+      "Annabelle",
+      "Toy Story",
+      "Enchanted"
+    ],
+    "answer": 0,
+    "explanation": "Barbie quitte son univers pour le monde réel."
+  },
+  {
+    "id": "q_027_quel_realisateur_est_conn",
+    "question": "Quel réalisateur est connu pour Pulp Fiction ?",
+    "options": [
+      "Quentin Tarantino",
+      "David Fincher",
+      "Wes Anderson",
+      "Tim Burton"
+    ],
+    "answer": 0,
+    "explanation": "Quentin Tarantino a réalisé Pulp Fiction."
+  },
+  {
+    "id": "q_028_dans_quel_film_trouve_t_o",
+    "question": "Dans quel film trouve-t-on le personnage de Rocky Balboa ?",
+    "options": [
+      "Raging Bull",
+      "Rocky",
+      "Creed uniquement",
+      "Million Dollar Baby"
+    ],
+    "answer": 1,
+    "explanation": "Rocky Balboa est le héros de Rocky."
+  },
+  {
+    "id": "q_029_quel_film_danimation_se_d",
+    "question": "Quel film d’animation se déroule dans le monde des morts lors du Día de Muertos ?",
+    "options": [
+      "Coco",
+      "Soul",
+      "Encanto",
+      "La Légende de Manolo"
+    ],
+    "answer": 0,
+    "explanation": "Coco se déroule autour de cette fête."
+  },
+  {
+    "id": "q_030_quel_film_met_en_scene_un",
+    "question": "Quel film met en scène un requin qui terrorise une station balnéaire ?",
+    "options": [
+      "Les Dents de la mer",
+      "En eaux troubles",
+      "Open Water",
+      "Sharknado"
+    ],
+    "answer": 0,
+    "explanation": "Les Dents de la mer est le classique de Spielberg."
+  }
+]

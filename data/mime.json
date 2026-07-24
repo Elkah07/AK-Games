@@ -1,0 +1,377 @@
+[
+  {
+    "id": "mime_001",
+    "text": "Un pingouin qui glisse sur une flaque",
+    "category": "mime"
+  },
+  {
+    "id": "mime_002",
+    "text": "Quelqu’un qui rate son bus de deux secondes",
+    "category": "mime"
+  },
+  {
+    "id": "mime_003",
+    "text": "Un chat qui découvre un concombre",
+    "category": "mime"
+  },
+  {
+    "id": "mime_004",
+    "text": "Une personne qui monte une tente sans notice",
+    "category": "mime"
+  },
+  {
+    "id": "mime_005",
+    "text": "Un serveur avec un plateau trop lourd",
+    "category": "mime"
+  },
+  {
+    "id": "mime_006",
+    "text": "Quelqu’un qui marche sur du sable brûlant",
+    "category": "mime"
+  },
+  {
+    "id": "mime_007",
+    "text": "Un vampire qui se brosse les dents",
+    "category": "mime"
+  },
+  {
+    "id": "mime_008",
+    "text": "Un joueur de tennis contre un adversaire invisible",
+    "category": "mime"
+  },
+  {
+    "id": "mime_009",
+    "text": "Une personne qui ouvre un cadeau très décevant",
+    "category": "mime"
+  },
+  {
+    "id": "mime_010",
+    "text": "Un astronaute qui découvre la gravité",
+    "category": "mime"
+  },
+  {
+    "id": "mime_011",
+    "text": "Quelqu’un qui cherche ses lunettes alors qu’elles sont sur sa tête",
+    "category": "mime"
+  },
+  {
+    "id": "mime_012",
+    "text": "Un chien qui refuse de sortir sous la pluie",
+    "category": "mime"
+  },
+  {
+    "id": "mime_013",
+    "text": "Une personne qui essaie de fermer une valise trop pleine",
+    "category": "mime"
+  },
+  {
+    "id": "mime_014",
+    "text": "Un détective qui suit une piste ridicule",
+    "category": "mime"
+  },
+  {
+    "id": "mime_015",
+    "text": "Quelqu’un qui danse dans un ascenseur vide",
+    "category": "mime"
+  },
+  {
+    "id": "mime_016",
+    "text": "Un bébé qui goûte un citron",
+    "category": "mime"
+  },
+  {
+    "id": "mime_017",
+    "text": "Une personne qui prend une douche glacée",
+    "category": "mime"
+  },
+  {
+    "id": "mime_018",
+    "text": "Un magicien dont tous les tours ratent",
+    "category": "mime"
+  },
+  {
+    "id": "mime_019",
+    "text": "Quelqu’un qui cuisine avec une casserole en feu",
+    "category": "mime"
+  },
+  {
+    "id": "mime_020",
+    "text": "Un robot qui tombe amoureux",
+    "category": "mime"
+  },
+  {
+    "id": "mime_021",
+    "text": "Une personne qui tente de prendre un selfie parfait",
+    "category": "mime"
+  },
+  {
+    "id": "mime_022",
+    "text": "Un gardien de but qui arrête un ballon imaginaire",
+    "category": "mime"
+  },
+  {
+    "id": "mime_023",
+    "text": "Quelqu’un qui reçoit une facture énorme",
+    "category": "mime"
+  },
+  {
+    "id": "mime_024",
+    "text": "Un roi ou une reine qui perd sa couronne",
+    "category": "mime"
+  },
+  {
+    "id": "mime_025",
+    "text": "Une personne poursuivie par une abeille",
+    "category": "mime"
+  },
+  {
+    "id": "mime_026",
+    "text": "Un coiffeur qui coupe des cheveux interminables",
+    "category": "mime"
+  },
+  {
+    "id": "mime_027",
+    "text": "Quelqu’un qui se bat avec une housse de couette",
+    "category": "mime"
+  },
+  {
+    "id": "mime_028",
+    "text": "Un super-héros qui a le vertige",
+    "category": "mime"
+  },
+  {
+    "id": "mime_029",
+    "text": "Une personne qui découvre un fantôme gentil",
+    "category": "mime"
+  },
+  {
+    "id": "mime_030",
+    "text": "Un influenceur qui teste un produit absurde",
+    "category": "mime"
+  },
+  {
+    "id": "mime_031",
+    "text": "Quelqu’un qui essaie d’ouvrir un bocal impossible",
+    "category": "mime"
+  },
+  {
+    "id": "mime_032",
+    "text": "Un professeur face à une classe incontrôlable",
+    "category": "mime"
+  },
+  {
+    "id": "mime_033",
+    "text": "Une personne qui monte sur des montagnes russes",
+    "category": "mime"
+  },
+  {
+    "id": "mime_034",
+    "text": "Un poisson hors de l’eau",
+    "category": "mime"
+  },
+  {
+    "id": "mime_035",
+    "text": "Quelqu’un qui imite un miroir",
+    "category": "mime"
+  },
+  {
+    "id": "mime_036",
+    "text": "Un joueur de bowling qui fait un strike",
+    "category": "mime"
+  },
+  {
+    "id": "mime_037",
+    "text": "Une personne qui entend un bruit la nuit",
+    "category": "mime"
+  },
+  {
+    "id": "mime_038",
+    "text": "Un cuisinier qui goûte un plat beaucoup trop épicé",
+    "category": "mime"
+  },
+  {
+    "id": "mime_039",
+    "text": "Quelqu’un qui essaie de retenir un éternuement",
+    "category": "mime"
+  },
+  {
+    "id": "mime_040",
+    "text": "Un enfant dans un magasin de jouets",
+    "category": "mime"
+  },
+  {
+    "id": "mime_041",
+    "text": "Une personne qui fait du ski sans neige",
+    "category": "mime"
+  },
+  {
+    "id": "mime_042",
+    "text": "Un pompier qui éteint une bougie géante",
+    "category": "mime"
+  },
+  {
+    "id": "mime_043",
+    "text": "Quelqu’un qui découvre que son téléphone est à 1 %",
+    "category": "mime"
+  },
+  {
+    "id": "mime_044",
+    "text": "Un mannequin qui trébuche sur le podium",
+    "category": "mime"
+  },
+  {
+    "id": "mime_045",
+    "text": "Une personne qui parle à un distributeur en panne",
+    "category": "mime"
+  },
+  {
+    "id": "mime_046",
+    "text": "Un lapin qui se prend pour un lion",
+    "category": "mime"
+  },
+  {
+    "id": "mime_047",
+    "text": "Quelqu’un qui tente d’attraper une mouche",
+    "category": "mime"
+  },
+  {
+    "id": "mime_048",
+    "text": "Un DJ qui perd le rythme",
+    "category": "mime"
+  },
+  {
+    "id": "mime_049",
+    "text": "Une personne qui se coince dans un pull",
+    "category": "mime"
+  },
+  {
+    "id": "mime_050",
+    "text": "Un pirate qui cherche un trésor dans le salon",
+    "category": "mime"
+  },
+  {
+    "id": "mime_051",
+    "text": "Quelqu’un qui fait du karaoké sans connaître les paroles",
+    "category": "mime"
+  },
+  {
+    "id": "mime_052",
+    "text": "Un arbitre qui distribue des cartons à tout le monde",
+    "category": "mime"
+  },
+  {
+    "id": "mime_053",
+    "text": "Une personne qui découvre une araignée dans sa chaussure",
+    "category": "mime"
+  },
+  {
+    "id": "mime_054",
+    "text": "Un médecin qui ausculte un cactus",
+    "category": "mime"
+  },
+  {
+    "id": "mime_055",
+    "text": "Quelqu’un qui essaie de dormir avec un moustique",
+    "category": "mime"
+  },
+  {
+    "id": "mime_056",
+    "text": "Un chevalier qui affronte un grille-pain",
+    "category": "mime"
+  },
+  {
+    "id": "mime_057",
+    "text": "Une personne qui rate une marche invisible",
+    "category": "mime"
+  },
+  {
+    "id": "mime_058",
+    "text": "Un touriste qui ne comprend pas la carte",
+    "category": "mime"
+  },
+  {
+    "id": "mime_059",
+    "text": "Quelqu’un qui essaie de marcher discrètement avec des chaussures bruyantes",
+    "category": "mime"
+  },
+  {
+    "id": "mime_060",
+    "text": "Un danseur qui oublie la chorégraphie",
+    "category": "mime"
+  },
+  {
+    "id": "mime_061",
+    "text": "Une personne qui attend un message important",
+    "category": "mime"
+  },
+  {
+    "id": "mime_062",
+    "text": "Un explorateur dans une jungle de plantes d’intérieur",
+    "category": "mime"
+  },
+  {
+    "id": "mime_063",
+    "text": "Quelqu’un qui tente de souffler des bougies qui se rallument",
+    "category": "mime"
+  },
+  {
+    "id": "mime_064",
+    "text": "Un livreur qui cherche la bonne porte",
+    "category": "mime"
+  },
+  {
+    "id": "mime_065",
+    "text": "Une personne qui joue à un jeu vidéo très stressant",
+    "category": "mime"
+  },
+  {
+    "id": "mime_066",
+    "text": "Un chef d’orchestre face à des musiciens imaginaires",
+    "category": "mime"
+  },
+  {
+    "id": "mime_067",
+    "text": "Quelqu’un qui apprend à patiner",
+    "category": "mime"
+  },
+  {
+    "id": "mime_068",
+    "text": "Une grenouille qui participe à un concours de beauté",
+    "category": "mime"
+  },
+  {
+    "id": "mime_069",
+    "text": "Une personne qui découvre qu’elle a mis deux chaussures différentes",
+    "category": "mime"
+  },
+  {
+    "id": "mime_070",
+    "text": "Un agent secret qui essaie de rester incognito",
+    "category": "mime"
+  },
+  {
+    "id": "mime_071",
+    "text": "Quelqu’un qui fait une bataille de coussins",
+    "category": "mime"
+  },
+  {
+    "id": "mime_072",
+    "text": "Une personne qui tente de faire rentrer un canapé dans une petite porte",
+    "category": "mime"
+  },
+  {
+    "id": "mime_073",
+    "text": "Un chat qui veut attraper un laser",
+    "category": "mime"
+  },
+  {
+    "id": "mime_074",
+    "text": "Quelqu’un qui se prend une vague à la plage",
+    "category": "mime"
+  },
+  {
+    "id": "mime_075",
+    "text": "Une personne qui essaie de faire un créneau impossible",
+    "category": "mime"
+  }
+]

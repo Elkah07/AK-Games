@@ -4276,3 +4276,693 @@ settingsBtn.addEventListener("click", event => {
 }, true);
 
 renderHome();
+
+/* =========================================================
+   AK'GAMES V0.14 — MEGA PACK TOUS LES JEUX
+   Défis, quiz, bluff, scénarios, connaissance et pack adulte
+   ========================================================= */
+
+state.megaGame = state.megaGame || null;
+state.v014Timer = state.v014Timer || null;
+state.v014TimerToken = Number(state.v014TimerToken || 0);
+
+const V014_GAME_CONFIGS = {
+  "Roulette de défis": { engine: "turn", icon: "🎡", pack: "Défis & performance", data: "data/roulette-defis.json", description: "Une roulette de défis rapides, absurdes et parfaits pour réveiller la soirée.", defaultRounds: 12 },
+  "Mime": { engine: "turn", icon: "🎬", pack: "Défis & performance", data: "data/mime.json", description: "Découvre ton mime en privé et fais-le deviner sans parler.", defaultRounds: 10, privatePrompt: true, timer: 45 },
+  "Imitation": { engine: "turn", icon: "🎙️", pack: "Défis & performance", data: "data/imitation.json", description: "Voix, personnages et situations : le groupe doit reconnaître ton imitation.", defaultRounds: 10, privatePrompt: true, timer: 45 },
+  "La Bombe": { engine: "bomb", icon: "💣", pack: "Jeux rapides", data: "data/bombe.json", description: "Donne une réponse, passe la bombe et évite d’être la personne chez qui elle explose.", defaultRounds: 6, timer: 25 },
+  "Culture générale": { engine: "quiz", icon: "🌍", pack: "Quiz", data: "data/quiz-culture.json", description: "Des questions accessibles et variées pour tester toute la table.", defaultRounds: 12 },
+  "Cinéma": { engine: "quiz", icon: "🍿", pack: "Quiz", data: "data/quiz-cinema.json", description: "Films cultes, animation, personnages et grandes répliques.", defaultRounds: 12 },
+  "Musique": { engine: "quiz", icon: "🎵", pack: "Quiz", data: "data/quiz-musique.json", description: "Artistes, instruments, tubes et culture musicale.", defaultRounds: 12 },
+  "Jeux vidéo": { engine: "quiz", icon: "🕹️", pack: "Quiz", data: "data/quiz-jeux-video.json", description: "Nintendo, jeux cultes, personnages et univers incontournables.", defaultRounds: 12 },
+  "Devine le logo": { engine: "quiz", icon: "🔎", pack: "Quiz", data: "data/quiz-logos.json", description: "Reconnais les marques grâce aux indices visuels décrits à l’écran.", defaultRounds: 12 },
+  "Plaide ta cause": { engine: "turn", icon: "⚖️", pack: "Bluff & argumentation", data: "data/plaide-cause.json", description: "Défends une opinion impossible et convaincs le groupe en moins d’une minute.", defaultRounds: 10, timer: 45 },
+  "Fake ou Réel ?": { engine: "quiz", icon: "🧪", pack: "Bluff & argumentation", data: "data/fake-reel.json", description: "Une affirmation, deux camps : info réelle ou énorme intox ?", defaultRounds: 12 },
+  "Alerte Rouge": { engine: "scenario", icon: "🚨", pack: "Histoires & scénarios", data: "data/alerte-rouge.json", description: "Le groupe vote pour décider quoi faire face à une situation qui dérape.", defaultRounds: 8 },
+  "Tu me connais ou pas ?": { engine: "know", icon: "💭", pack: "Connaissance du groupe", data: "data/tu-me-connais.json", description: "Une personne répond en secret, les autres essaient de prévoir son choix.", defaultRounds: 10 },
+  "Le Classement secret": { engine: "ranking", icon: "🏅", pack: "Connaissance du groupe", data: "data/classement-secret.json", description: "Classe cinq options en privé, puis découvre qui connaît vraiment ton numéro un.", defaultRounds: 8 },
+  "Devinettes": { engine: "quiz", icon: "🧩", pack: "Jeux rapides", data: "data/devinettes.json", description: "Des énigmes courtes à résoudre avant les autres.", defaultRounds: 12 },
+  "Questions osées": { engine: "turn", icon: "🌶️", pack: "Pack adulte", data: "data/questions-osees.json", description: "Des questions intimes et audacieuses, sans obligation de répondre.", defaultRounds: 12, adultOnly: true, questionMode: true },
+  "Jeux à boire": { engine: "turn", icon: "🥂", pack: "Pack adulte", data: "data/jeux-a-boire.json", description: "Des règles collectives légères, avec hydratation et consommation responsable.", defaultRounds: 12, adultOnly: true, drinkingGame: true },
+  "Défis adultes": { engine: "turn", icon: "🔥", pack: "Pack adulte", data: "data/defis-adultes.json", description: "Défis de flirt, impro et confidences pour un groupe adulte consentant.", defaultRounds: 12, adultOnly: true }
+};
+
+const V014_NEW_GAMES = new Set(Object.keys(V014_GAME_CONFIGS));
+const V014_READY_GAMES = new Set([...V09_READY_GAMES, ...V014_NEW_GAMES]);
+const V014_GAME_ICONS = {
+  ...V09_GAME_ICONS,
+  ...Object.fromEntries(Object.entries(V014_GAME_CONFIGS).map(([name, config]) => [name, config.icon]))
+};
+
+function v014SetCategoryGames(id, games) {
+  const category = categories.find(item => item.id === id);
+  if (category) category.games = games;
+}
+
+v014SetCategoryGames("ambiance", [
+  "Action ou Vérité", "Qui de nous ?", "Je n’ai jamais", "Tu préfères", "Roulette de défis",
+  "Même cerveau", "Minorité", "Tu me connais ou pas ?", "Le Classement secret"
+]);
+v014SetCategoryGames("rire", ["Mime", "Imitation", "Le premier qui rit a perdu", "Plaide ta cause", "Le Faux Expert", "La Bombe"]);
+v014SetCategoryGames("quiz", ["Culture générale", "Cinéma", "Musique", "Jeux vidéo", "Devine le logo", "Fake ou Réel ?"]);
+v014SetCategoryGames("rapide", ["Devinettes", "Qui suis-je ?", "La Bombe", "Blind Test"]);
+v014SetCategoryGames("bluff", ["Qui ment le mieux ?", "L’Imposteur sait presque tout", "Qui a répondu ça ?", "Le Faux Expert", "Fake ou Réel ?"]);
+v014SetCategoryGames("scenario", ["Alerte Rouge"]);
+v014SetCategoryGames("adulte", ["Action ou Vérité +18", "Je n’ai jamais +18", "Tu préfères +18", "Questions osées", "Défis adultes", "Jeux à boire"]);
+
+function clearV014Timer() {
+  if (state.v014Timer) window.clearInterval(state.v014Timer);
+  state.v014Timer = null;
+  state.v014TimerToken += 1;
+}
+
+function startV014Timer(endAt, selector, onDone, totalSeconds = null) {
+  clearV014Timer();
+  const token = state.v014TimerToken;
+  const safeEndAt = Number(endAt || Date.now());
+  const total = Number(totalSeconds || Math.max(1, Math.ceil((safeEndAt - Date.now()) / 1000)));
+  const tick = () => {
+    if (token !== state.v014TimerToken) return;
+    const left = Math.max(0, Math.ceil((safeEndAt - Date.now()) / 1000));
+    const node = document.querySelector(selector);
+    if (node) node.textContent = String(left);
+    const fill = document.querySelector("#v014TimerFill");
+    if (fill) fill.style.width = `${Math.max(0, Math.min(100, (left / Math.max(1, total)) * 100))}%`;
+    if (left <= 0) {
+      clearV014Timer();
+      onDone?.();
+    }
+  };
+  tick();
+  state.v014Timer = window.setInterval(tick, 200);
+}
+
+function v014ScoreMap() {
+  return Object.fromEntries(state.players.map(player => [player.id, 0]));
+}
+
+function resetMegaGame(gameName, replayConfig = {}) {
+  const config = V014_GAME_CONFIGS[gameName];
+  if (!config) return;
+  state.megaGame = {
+    gameName,
+    engine: config.engine,
+    config,
+    roundCount: Number(replayConfig.roundCount || config.defaultRounds || 10),
+    durationSeconds: Number(replayConfig.durationSeconds || config.timer || 45),
+    items: [],
+    currentIndex: 0,
+    currentPlayerIndex: 0,
+    currentVoterIndex: 0,
+    phase: "setup",
+    votes: {},
+    scores: v014ScoreMap(),
+    rounds: [],
+    revealed: false,
+    targetAnswer: null,
+    targetRanking: [],
+    rankingDraft: [],
+    bombEndsAt: null,
+    bombPlayerIndex: 0,
+    currentResult: null
+  };
+}
+
+function v014RoundOptions(selected) {
+  return [6, 8, 10, 12, 15, 20]
+    .map(value => `<option value="${value}" ${Number(selected) === value ? "selected" : ""}>${value} manche${value > 1 ? "s" : ""}</option>`)
+    .join("");
+}
+
+function renderMegaSetup() {
+  const game = state.megaGame;
+  if (!game) return renderGames();
+  const config = game.config;
+  clearV014Timer();
+  title.textContent = game.gameName;
+  setBackVisible(true);
+
+  const timerControls = config.engine === "bomb"
+    ? `<div class="form-group top-gap"><label for="megaDuration">Temps de la bombe</label><select id="megaDuration" class="text-input">${[15, 20, 25, 30, 40].map(value => `<option value="${value}" ${game.durationSeconds === value ? "selected" : ""}>${value} secondes</option>`).join("")}</select></div>`
+    : config.timer
+      ? `<div class="form-group top-gap"><label for="megaDuration">Chronomètre indicatif</label><select id="megaDuration" class="text-input">${[30, 45, 60, 90].map(value => `<option value="${value}" ${game.durationSeconds === value ? "selected" : ""}>${value} secondes</option>`).join("")}</select></div>`
+      : "";
+
+  screen.innerHTML = `
+    <section class="game-cover game-cover-mega engine-${config.engine}">
+      <span class="game-cover-icon">${config.icon}</span>
+      <div><small>${escapeHtml(config.pack).toUpperCase()}</small><h2>${escapeHtml(game.gameName)}</h2><p>${escapeHtml(config.description)}</p></div>
+    </section>
+    <section class="card setup-card-v07">
+      <div class="form-group"><label for="megaRounds">Nombre de manches</label><select id="megaRounds" class="text-input">${v014RoundOptions(game.roundCount)}</select></div>
+      ${timerControls}
+    </section>
+    ${config.drinkingGame ? `<div class="responsible-callout">💧 Petites gorgées uniquement, boissons sans alcool possibles, et chacun peut passer sans justification.</div>` : ""}
+    ${config.adultOnly ? `<div class="notice">🔞 Jeu réservé à un groupe adulte. Le consentement et le droit de passer restent prioritaires.</div>` : ""}
+    <button id="startMegaGame" class="primary-btn full">Lancer ${escapeHtml(game.gameName)}</button>
+  `;
+
+  document.querySelector("#megaRounds").addEventListener("change", event => game.roundCount = Number(event.target.value));
+  document.querySelector("#megaDuration")?.addEventListener("change", event => game.durationSeconds = Number(event.target.value));
+  document.querySelector("#startMegaGame").addEventListener("click", startMegaGame);
+}
+
+async function startMegaGame() {
+  const game = state.megaGame;
+  if (!game) return;
+  screen.innerHTML = `<div class="notice">Préparation de ${escapeHtml(game.gameName)}…</div>`;
+  try {
+    const pool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
+    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.currentIndex = 0;
+    game.currentPlayerIndex = 0;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    game.scores = v014ScoreMap();
+    game.rounds = [];
+    game.revealed = false;
+    game.targetAnswer = null;
+    game.targetRanking = [];
+    game.rankingDraft = [];
+    game.bombEndsAt = null;
+    game.bombPlayerIndex = Math.floor(Math.random() * Math.max(1, state.players.length));
+    game.currentResult = null;
+    renderMegaCurrent();
+  } catch (error) {
+    console.error(error);
+    alert(error.message || "Impossible de lancer le jeu.");
+    renderMegaSetup();
+  }
+}
+
+function renderMegaCurrent() {
+  const game = state.megaGame;
+  if (!game) return renderGames();
+  if (game.currentIndex >= game.items.length) return renderMegaFinal();
+  if (game.engine === "turn") return renderMegaTurn();
+  if (game.engine === "quiz") return renderMegaQuizGate();
+  if (game.engine === "scenario") return renderMegaScenarioGate();
+  if (game.engine === "know") return renderMegaKnowTargetGate();
+  if (game.engine === "ranking") return renderMegaRankingTargetGate();
+  if (game.engine === "bomb") return renderMegaBombRound();
+}
+
+function v014Progress(game, label = "Manche") {
+  const total = Math.max(1, game.items.length || game.roundCount || 1);
+  const current = Math.min(total, Number(game.currentIndex || 0) + 1);
+  return `<div class="game-progress"><span>${escapeHtml(label)} ${current}/${total}</span><div class="progress-track"><div class="progress-fill" style="width:${Math.round((current / total) * 100)}%"></div></div></div>`;
+}
+
+function renderMegaTurn() {
+  const game = state.megaGame;
+  const item = game.items[game.currentIndex];
+  const player = state.players[game.currentIndex % state.players.length];
+  const config = game.config;
+  clearV014Timer();
+  title.textContent = game.gameName;
+  setBackVisible(false);
+
+  if (config.privatePrompt && !game.revealed) {
+    screen.innerHTML = `
+      ${v014Progress(game)}
+      <section class="handoff-stage handoff-v07">
+        <div class="giant-avatar">${avatarById(player.avatarId).emoji}</div>
+        <span class="category-chip">TOUR DE ${escapeHtml(player.name).toUpperCase()}</span>
+        <h2>Écran privé</h2>
+        <p>Donnez le téléphone à ${escapeHtml(player.name)}. Le groupe ne doit pas voir le sujet.</p>
+        <button id="revealMegaPrompt" class="primary-btn">Voir mon sujet</button>
+      </section>`;
+    document.querySelector("#revealMegaPrompt").addEventListener("click", () => { game.revealed = true; renderMegaTurn(); });
+    return;
+  }
+
+  const promptText = item.text || item.question || item.title || "Défi surprise";
+  const buttonDone = config.questionMode ? "J’ai répondu" : config.drinkingGame ? "Règle terminée" : "Réussi";
+  screen.innerHTML = `
+    ${v014Progress(game)}
+    <section class="prompt-stage mega-prompt-stage engine-${config.engine}">
+      <div class="prompt-player"><span>${avatarById(player.avatarId).emoji}</span><div><small>C’EST AU TOUR DE</small><strong>${escapeHtml(player.name)}</strong></div></div>
+      <span class="prompt-type-chip">${config.icon} ${escapeHtml(game.gameName).toUpperCase()}</span>
+      <h2>${escapeHtml(promptText)}</h2>
+      ${config.timer ? `<div class="mega-mini-timer"><strong id="v014Countdown">${game.durationSeconds}</strong><span>secondes</span><div class="progress-track"><div id="v014TimerFill" class="progress-fill" style="width:100%"></div></div></div>` : ""}
+    </section>
+    <section class="decision-grid"><button id="megaDone" class="primary-btn">✓ ${buttonDone}</button><button id="megaSkip" class="secondary-btn">Passer</button></section>
+    ${state.alcohol && !config.drinkingGame ? `<div class="alcohol-callout">🍻 Une carte passée peut valoir une petite gorgée, sans pression.</div>` : ""}
+  `;
+
+  document.querySelector("#megaDone").addEventListener("click", () => finishMegaTurn(true));
+  document.querySelector("#megaSkip").addEventListener("click", () => finishMegaTurn(false));
+  if (config.timer) startV014Timer(Date.now() + game.durationSeconds * 1000, "#v014Countdown", () => finishMegaTurn(false), game.durationSeconds);
+}
+
+function finishMegaTurn(success) {
+  const game = state.megaGame;
+  if (!game) return;
+  clearV014Timer();
+  const player = state.players[game.currentIndex % state.players.length];
+  if (success) game.scores[player.id] = Number(game.scores[player.id] || 0) + 1;
+  game.rounds.push({ itemId: game.items[game.currentIndex]?.id, playerId: player.id, success });
+  game.currentIndex += 1;
+  game.revealed = false;
+  renderMegaCurrent();
+}
+
+function renderMegaQuizGate() {
+  const game = state.megaGame;
+  if (game.currentVoterIndex >= state.players.length) return renderMegaQuizReveal();
+  const player = state.players[game.currentVoterIndex];
+  clearV014Timer();
+  title.textContent = `Réponse secrète · ${game.gameName}`;
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${v014Progress(game, "Question")}
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(player.avatarId).emoji}</div><span class="category-chip">${escapeHtml(player.name).toUpperCase()}</span><h2>À toi de répondre</h2><p>Le choix restera secret jusqu’à ce que tout le monde ait voté.</p><button id="openMegaQuiz" class="primary-btn">Afficher la question</button></section>`;
+  document.querySelector("#openMegaQuiz").addEventListener("click", renderMegaQuizVote);
+}
+
+function renderMegaQuizVote() {
+  const game = state.megaGame;
+  const item = game.items[game.currentIndex];
+  const player = state.players[game.currentVoterIndex];
+  title.textContent = game.gameName;
+  screen.innerHTML = `
+    ${v014Progress(game, "Question")}
+    <section class="quiz-question-card"><span class="category-chip">${game.config.icon} ${escapeHtml(player.name)}</span><h2>${escapeHtml(item.question)}</h2></section>
+    <section class="mega-option-grid">${(item.options || []).map((option, index) => `<button class="mega-option-btn" data-mega-answer="${index}"><span>${String.fromCharCode(65 + index)}</span><strong>${escapeHtml(option)}</strong></button>`).join("")}</section>`;
+  document.querySelectorAll("[data-mega-answer]").forEach(button => button.addEventListener("click", () => {
+    game.votes[player.id] = Number(button.dataset.megaAnswer);
+    game.currentVoterIndex += 1;
+    renderMegaQuizGate();
+  }));
+}
+
+function renderMegaQuizReveal() {
+  const game = state.megaGame;
+  const item = game.items[game.currentIndex];
+  const correct = Number(item.answer);
+  const correctPlayers = state.players.filter(player => Number(game.votes[player.id]) === correct);
+  correctPlayers.forEach(player => game.scores[player.id] = Number(game.scores[player.id] || 0) + 1);
+  game.rounds.push({ itemId: item.id, votes: { ...game.votes }, correct });
+  title.textContent = "Réponse";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${v014Progress(game, "Question")}
+    <section class="reveal-stage reveal-v07 mega-quiz-reveal"><span class="game-cover-icon">${correctPlayers.length ? "✅" : "🧠"}</span><h2>${escapeHtml(item.options?.[correct] || "Réponse")}</h2><p>${escapeHtml(item.explanation || "Réponse révélée.")}</p></section>
+    <section class="answer-chip-wall">${state.players.map(player => `<span class="${Number(game.votes[player.id]) === correct ? "correct" : "wrong"}">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · ${escapeHtml(item.options?.[game.votes[player.id]] || "-")}</span>`).join("")}</section>
+    <button id="nextMegaQuiz" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Question suivante"}</button>`;
+  document.querySelector("#nextMegaQuiz").addEventListener("click", () => {
+    game.currentIndex += 1;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    renderMegaCurrent();
+  });
+}
+
+function renderMegaScenarioGate() {
+  const game = state.megaGame;
+  if (game.currentVoterIndex >= state.players.length) return renderMegaScenarioReveal();
+  const player = state.players[game.currentVoterIndex];
+  const item = game.items[game.currentIndex];
+  title.textContent = "Alerte Rouge";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${v014Progress(game, "Scénario")}
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(player.avatarId).emoji}</div><span class="category-chip">VOTE DE ${escapeHtml(player.name).toUpperCase()}</span><h2>${escapeHtml(item.title)}</h2><p>Ta décision restera secrète.</p><button id="openScenarioVote" class="primary-btn">Choisir une option</button></section>`;
+  document.querySelector("#openScenarioVote").addEventListener("click", renderMegaScenarioVote);
+}
+
+function renderMegaScenarioVote() {
+  const game = state.megaGame;
+  const item = game.items[game.currentIndex];
+  screen.innerHTML = `
+    ${v014Progress(game, "Scénario")}
+    <section class="scenario-card"><span>🚨</span><small>${escapeHtml(item.title).toUpperCase()}</small><h2>${escapeHtml(item.text)}</h2></section>
+    <section class="mega-option-grid">${(item.options || []).map((option, index) => `<button class="mega-option-btn scenario-option" data-scenario-answer="${index}"><span>${index + 1}</span><strong>${escapeHtml(option.label)}</strong></button>`).join("")}</section>`;
+  document.querySelectorAll("[data-scenario-answer]").forEach(button => button.addEventListener("click", () => {
+    const player = state.players[game.currentVoterIndex];
+    game.votes[player.id] = Number(button.dataset.scenarioAnswer);
+    game.currentVoterIndex += 1;
+    renderMegaScenarioGate();
+  }));
+}
+
+function renderMegaScenarioReveal() {
+  const game = state.megaGame;
+  const item = game.items[game.currentIndex];
+  const counts = {};
+  Object.values(game.votes).forEach(value => counts[value] = Number(counts[value] || 0) + 1);
+  const max = Math.max(...Object.values(counts), 0);
+  const winning = Object.keys(counts).map(Number).filter(index => counts[index] === max);
+  const chosen = winning[Math.floor(Math.random() * Math.max(1, winning.length))] ?? 0;
+  state.players.filter(player => Number(game.votes[player.id]) === chosen).forEach(player => game.scores[player.id] = Number(game.scores[player.id] || 0) + 1);
+  game.rounds.push({ itemId: item.id, votes: { ...game.votes }, chosen });
+  title.textContent = "Conséquence";
+  screen.innerHTML = `
+    ${v014Progress(game, "Scénario")}
+    <section class="reveal-stage reveal-v07 scenario-reveal"><span class="game-cover-icon">🚨</span><h2>${escapeHtml(item.options?.[chosen]?.label || "Décision prise")}</h2><p>${escapeHtml(item.options?.[chosen]?.outcome || "L’histoire continue.")}</p></section>
+    <section class="vote-distribution">${(item.options || []).map((option, index) => `<div><strong>${escapeHtml(option.label)}</strong><span>${Number(counts[index] || 0)} vote${Number(counts[index] || 0) > 1 ? "s" : ""}</span></div>`).join("")}</section>
+    <button id="nextScenario" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Scénario suivant"}</button>`;
+  document.querySelector("#nextScenario").addEventListener("click", () => {
+    game.currentIndex += 1;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    renderMegaCurrent();
+  });
+}
+
+function v014CurrentTarget(game) {
+  return state.players[game.currentIndex % state.players.length];
+}
+
+function v014Guessers(game) {
+  const target = v014CurrentTarget(game);
+  return state.players.filter(player => player.id !== target.id);
+}
+
+function renderMegaKnowTargetGate() {
+  const game = state.megaGame;
+  if (game.targetAnswer !== null) return renderMegaKnowGuesserGate();
+  const target = v014CurrentTarget(game);
+  const item = game.items[game.currentIndex];
+  title.textContent = "Réponse personnelle";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${v014Progress(game, "Question")}
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(target.avatarId).emoji}</div><span class="category-chip">${escapeHtml(target.name).toUpperCase()}</span><h2>Réponds en secret</h2><p>${escapeHtml(item.question)}</p><button id="openKnowTarget" class="primary-btn">Afficher mes choix</button></section>`;
+  document.querySelector("#openKnowTarget").addEventListener("click", renderMegaKnowTargetChoice);
+}
+
+function renderMegaKnowTargetChoice() {
+  const game = state.megaGame;
+  const item = game.items[game.currentIndex];
+  screen.innerHTML = `
+    ${v014Progress(game, "Question")}
+    <section class="quiz-question-card"><span class="category-chip">💭 TA VRAIE RÉPONSE</span><h2>${escapeHtml(item.question)}</h2></section>
+    <section class="mega-option-grid">${item.options.map((option, index) => `<button class="mega-option-btn" data-know-target="${index}"><span>${index + 1}</span><strong>${escapeHtml(option)}</strong></button>`).join("")}</section>`;
+  document.querySelectorAll("[data-know-target]").forEach(button => button.addEventListener("click", () => {
+    game.targetAnswer = Number(button.dataset.knowTarget);
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    renderMegaKnowGuesserGate();
+  }));
+}
+
+function renderMegaKnowGuesserGate() {
+  const game = state.megaGame;
+  const guessers = v014Guessers(game);
+  if (game.currentVoterIndex >= guessers.length) return renderMegaKnowReveal();
+  const guesser = guessers[game.currentVoterIndex];
+  const target = v014CurrentTarget(game);
+  title.textContent = "Tu me connais ou pas ?";
+  screen.innerHTML = `
+    ${v014Progress(game, "Question")}
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(guesser.avatarId).emoji}</div><span class="category-chip">${escapeHtml(guesser.name).toUpperCase()}</span><h2>Que choisirait ${escapeHtml(target.name)} ?</h2><p>Fais ton pronostic sans demander d’indice.</p><button id="openKnowGuess" class="primary-btn">Faire mon choix</button></section>`;
+  document.querySelector("#openKnowGuess").addEventListener("click", renderMegaKnowGuess);
+}
+
+function renderMegaKnowGuess() {
+  const game = state.megaGame;
+  const item = game.items[game.currentIndex];
+  const target = v014CurrentTarget(game);
+  screen.innerHTML = `
+    ${v014Progress(game, "Question")}
+    <section class="quiz-question-card"><span class="category-chip">À PROPOS DE ${escapeHtml(target.name).toUpperCase()}</span><h2>${escapeHtml(item.question)}</h2></section>
+    <section class="mega-option-grid">${item.options.map((option, index) => `<button class="mega-option-btn" data-know-guess="${index}"><span>${index + 1}</span><strong>${escapeHtml(option)}</strong></button>`).join("")}</section>`;
+  document.querySelectorAll("[data-know-guess]").forEach(button => button.addEventListener("click", () => {
+    const guesser = v014Guessers(game)[game.currentVoterIndex];
+    game.votes[guesser.id] = Number(button.dataset.knowGuess);
+    game.currentVoterIndex += 1;
+    renderMegaKnowGuesserGate();
+  }));
+}
+
+function renderMegaKnowReveal() {
+  const game = state.megaGame;
+  const item = game.items[game.currentIndex];
+  const target = v014CurrentTarget(game);
+  const correctIds = Object.entries(game.votes).filter(([, value]) => Number(value) === Number(game.targetAnswer)).map(([id]) => id);
+  correctIds.forEach(id => game.scores[id] = Number(game.scores[id] || 0) + 1);
+  if (correctIds.length >= Math.ceil(v014Guessers(game).length / 2)) game.scores[target.id] = Number(game.scores[target.id] || 0) + 1;
+  game.rounds.push({ itemId: item.id, targetId: target.id, targetAnswer: game.targetAnswer, votes: { ...game.votes } });
+  title.textContent = "Réponse révélée";
+  screen.innerHTML = `
+    ${v014Progress(game, "Question")}
+    <section class="reveal-stage reveal-v07"><span class="game-cover-icon">💭</span><h2>${escapeHtml(target.name)} choisit : ${escapeHtml(item.options[game.targetAnswer])}</h2><p>${correctIds.length}/${v014Guessers(game).length} personne${correctIds.length > 1 ? "s" : ""} avait vu juste.</p></section>
+    <section class="answer-chip-wall">${v014Guessers(game).map(player => `<span class="${correctIds.includes(player.id) ? "correct" : "wrong"}">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · ${escapeHtml(item.options[game.votes[player.id]])}</span>`).join("")}</section>
+    <button id="nextKnow" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Personne suivante"}</button>`;
+  document.querySelector("#nextKnow").addEventListener("click", () => {
+    game.currentIndex += 1;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    game.targetAnswer = null;
+    renderMegaCurrent();
+  });
+}
+
+function renderMegaRankingTargetGate() {
+  const game = state.megaGame;
+  if (game.targetRanking.length) return renderMegaRankingGuesserGate();
+  const target = v014CurrentTarget(game);
+  const item = game.items[game.currentIndex];
+  title.textContent = "Classement secret";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${v014Progress(game, "Classement")}
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(target.avatarId).emoji}</div><span class="category-chip">${escapeHtml(target.name).toUpperCase()}</span><h2>${escapeHtml(item.title)}</h2><p>Classe les cinq propositions en privé, de ta préférée à la dernière.</p><button id="openRankingTarget" class="primary-btn">Créer mon classement</button></section>`;
+  document.querySelector("#openRankingTarget").addEventListener("click", renderMegaRankingBuilder);
+}
+
+function renderMegaRankingBuilder() {
+  const game = state.megaGame;
+  const item = game.items[game.currentIndex];
+  const selected = game.rankingDraft || [];
+  const available = item.items.map((_, index) => index).filter(index => !selected.includes(index));
+  title.textContent = "Ton classement privé";
+  screen.innerHTML = `
+    ${v014Progress(game, "Classement")}
+    <section class="card"><h2 class="section-title">${escapeHtml(item.title)}</h2><p class="helper">Clique dans l’ordre : numéro 1, puis 2, puis 3…</p></section>
+    <section class="secret-ranking-builder">
+      <div class="ranking-picked">${selected.map((index, position) => `<div><span>${position + 1}</span><strong>${escapeHtml(item.items[index])}</strong></div>`).join("") || `<div class="notice">Ton numéro 1 n’est pas encore choisi.</div>`}</div>
+      <div class="ranking-available">${available.map(index => `<button class="secondary-btn" data-rank-pick="${index}">${escapeHtml(item.items[index])}</button>`).join("")}</div>
+    </section>
+    <div class="toolbar"><button id="undoRanking" class="secondary-btn" ${selected.length ? "" : "disabled"}>↶ Annuler le dernier</button><button id="confirmRanking" class="primary-btn" ${selected.length === item.items.length ? "" : "disabled"}>Valider</button></div>`;
+  document.querySelectorAll("[data-rank-pick]").forEach(button => button.addEventListener("click", () => { game.rankingDraft.push(Number(button.dataset.rankPick)); renderMegaRankingBuilder(); }));
+  document.querySelector("#undoRanking").addEventListener("click", () => { game.rankingDraft.pop(); renderMegaRankingBuilder(); });
+  document.querySelector("#confirmRanking").addEventListener("click", () => {
+    game.targetRanking = [...game.rankingDraft];
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    renderMegaRankingGuesserGate();
+  });
+}
+
+function renderMegaRankingGuesserGate() {
+  const game = state.megaGame;
+  const guessers = v014Guessers(game);
+  if (game.currentVoterIndex >= guessers.length) return renderMegaRankingReveal();
+  const guesser = guessers[game.currentVoterIndex];
+  const target = v014CurrentTarget(game);
+  title.textContent = "Devine le numéro un";
+  screen.innerHTML = `
+    ${v014Progress(game, "Classement")}
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(guesser.avatarId).emoji}</div><span class="category-chip">${escapeHtml(guesser.name).toUpperCase()}</span><h2>Quel est le choix numéro 1 de ${escapeHtml(target.name)} ?</h2><p>Le reste du classement sera révélé ensuite.</p><button id="openRankingGuess" class="primary-btn">Faire mon pronostic</button></section>`;
+  document.querySelector("#openRankingGuess").addEventListener("click", renderMegaRankingGuess);
+}
+
+function renderMegaRankingGuess() {
+  const game = state.megaGame;
+  const item = game.items[game.currentIndex];
+  screen.innerHTML = `
+    ${v014Progress(game, "Classement")}
+    <section class="card"><h2 class="section-title">${escapeHtml(item.title)}</h2><p class="helper">Choisis ce que tu penses être son numéro 1.</p></section>
+    <section class="mega-option-grid">${item.items.map((option, index) => `<button class="mega-option-btn" data-ranking-guess="${index}"><span>${index + 1}</span><strong>${escapeHtml(option)}</strong></button>`).join("")}</section>`;
+  document.querySelectorAll("[data-ranking-guess]").forEach(button => button.addEventListener("click", () => {
+    const guesser = v014Guessers(game)[game.currentVoterIndex];
+    game.votes[guesser.id] = Number(button.dataset.rankingGuess);
+    game.currentVoterIndex += 1;
+    renderMegaRankingGuesserGate();
+  }));
+}
+
+function renderMegaRankingReveal() {
+  const game = state.megaGame;
+  const item = game.items[game.currentIndex];
+  const target = v014CurrentTarget(game);
+  const top = game.targetRanking[0];
+  const correctIds = Object.entries(game.votes).filter(([, value]) => Number(value) === Number(top)).map(([id]) => id);
+  correctIds.forEach(id => game.scores[id] = Number(game.scores[id] || 0) + 2);
+  if (correctIds.length) game.scores[target.id] = Number(game.scores[target.id] || 0) + 1;
+  game.rounds.push({ itemId: item.id, targetId: target.id, ranking: [...game.targetRanking], votes: { ...game.votes } });
+  title.textContent = "Classement révélé";
+  screen.innerHTML = `
+    ${v014Progress(game, "Classement")}
+    <section class="winner-stage winner-stage-v07"><div class="winner-crown">🏅</div><h2>Le classement de ${escapeHtml(target.name)}</h2><p>${correctIds.length} personne${correctIds.length > 1 ? "s" : ""} avait deviné le numéro un.</p></section>
+    <section class="revealed-ranking">${game.targetRanking.map((index, position) => `<div class="ranking-row"><span class="ranking-position">${position + 1}</span><strong>${escapeHtml(item.items[index])}</strong>${position === 0 ? `<span class="badge green">favori</span>` : ""}</div>`).join("")}</section>
+    <button id="nextRanking" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Classement suivant"}</button>`;
+  document.querySelector("#nextRanking").addEventListener("click", () => {
+    game.currentIndex += 1;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    game.targetRanking = [];
+    game.rankingDraft = [];
+    renderMegaCurrent();
+  });
+}
+
+function renderMegaBombRound() {
+  const game = state.megaGame;
+  if (!game.bombEndsAt) game.bombEndsAt = Date.now() + game.durationSeconds * 1000;
+  const item = game.items[game.currentIndex];
+  const player = state.players[game.bombPlayerIndex % state.players.length];
+  title.textContent = "La Bombe";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${v014Progress(game, "Bombe")}
+    <section class="bomb-stage">
+      <div class="bomb-icon">💣</div>
+      <div class="bomb-countdown"><strong id="v014BombCountdown">${Math.max(0, Math.ceil((game.bombEndsAt - Date.now()) / 1000))}</strong><span>secondes</span></div>
+      <span class="category-chip">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name).toUpperCase()}</span>
+      <h2>${escapeHtml(item.category)}</h2>
+      <p>Donne une réponse différente, puis passe immédiatement le téléphone.</p>
+      <div class="progress-track"><div id="v014TimerFill" class="progress-fill" style="width:100%"></div></div>
+    </section>
+    <section class="decision-grid"><button id="passBomb" class="primary-btn">Répondu, je passe →</button><button id="explodeBomb" class="danger-btn">💥 La bombe explose</button></section>`;
+  document.querySelector("#passBomb").addEventListener("click", () => {
+    game.bombPlayerIndex = (game.bombPlayerIndex + 1) % state.players.length;
+    renderMegaBombRound();
+  });
+  document.querySelector("#explodeBomb").addEventListener("click", () => finishMegaBomb(player.id));
+  startV014Timer(game.bombEndsAt, "#v014BombCountdown", () => finishMegaBomb(state.players[game.bombPlayerIndex % state.players.length].id), game.durationSeconds);
+}
+
+function finishMegaBomb(loserId) {
+  const game = state.megaGame;
+  if (!game || game.currentResult) return;
+  clearV014Timer();
+  const loser = state.players.find(player => player.id === loserId);
+  state.players.filter(player => player.id !== loserId).forEach(player => game.scores[player.id] = Number(game.scores[player.id] || 0) + 1);
+  game.currentResult = { loserId, itemId: game.items[game.currentIndex]?.id };
+  game.rounds.push(game.currentResult);
+  title.textContent = "BOOM !";
+  screen.innerHTML = `
+    ${v014Progress(game, "Bombe")}
+    <section class="winner-stage bomb-result-stage"><div class="winner-crown">💥</div><div class="giant-avatar">${avatarById(loser?.avatarId).emoji}</div><h2>La bombe explose chez ${escapeHtml(loser?.name || "un joueur")}</h2><p>Tout le monde sauf cette personne marque un point.</p></section>
+    ${state.alcohol ? `<div class="alcohol-callout">🍻 Petite gorgée de consolation, ou simplement une gorgée d’eau.</div>` : ""}
+    <button id="nextBomb" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Nouvelle bombe"}</button>`;
+  document.querySelector("#nextBomb").addEventListener("click", () => {
+    game.currentIndex += 1;
+    game.currentResult = null;
+    game.bombEndsAt = null;
+    game.bombPlayerIndex = Math.floor(Math.random() * Math.max(1, state.players.length));
+    renderMegaCurrent();
+  });
+}
+
+function renderMegaFinal() {
+  const game = state.megaGame;
+  clearV014Timer();
+  const ranking = [...state.players].sort((a, b) => Number(game.scores[b.id] || 0) - Number(game.scores[a.id] || 0));
+  const best = Number(game.scores[ranking[0]?.id] || 0);
+  const winners = ranking.filter(player => Number(game.scores[player.id] || 0) === best && best > 0);
+  title.textContent = "Classement final";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="winner-stage winner-stage-v07 mega-final-stage"><div class="winner-crown">${game.config.icon}🏆</div><h2>${winners.length ? winners.map(player => escapeHtml(player.name)).join(" et ") : "Partie terminée"}</h2><p>${winners.length ? `${winners.length > 1 ? "terminent" : "termine"} en tête de ${escapeHtml(game.gameName)}.` : "Le groupe a traversé toutes les manches."}</p></section>
+    <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
+    <div class="toolbar"><button id="replayMega" class="secondary-btn">Rejouer</button><button id="otherMega" class="primary-btn">Autre jeu</button></div>`;
+  document.querySelector("#replayMega").addEventListener("click", () => { const name = game.gameName; const replay = { roundCount: game.roundCount, durationSeconds: game.durationSeconds }; resetMegaGame(name, replay); renderMegaSetup(); });
+  document.querySelector("#otherMega").addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
+}
+
+function launchV014Game(gameName) {
+  if (!V014_GAME_CONFIGS[gameName]) return false;
+  if (V014_GAME_CONFIGS[gameName].adultOnly && !state.adult) {
+    alert("Active le contenu adulte dans les paramètres pour ouvrir ce jeu.");
+    return true;
+  }
+  pushScreen("games");
+  resetMegaGame(gameName);
+  renderMegaSetup();
+  return true;
+}
+
+renderHome = function () {
+  clearV09Timer();
+  clearV014Timer();
+  state.history = [];
+  title.textContent = "La soirée commence ici";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="home-hero-v07 home-hero-v08 home-hero-v09 home-hero-v014">
+      <div class="home-logo-shell"><img src="icons/icon-192.png" alt="" class="home-logo-v07"></div>
+      <div class="home-hero-copy">
+        <span class="home-kicker">30 JEUX. UNE SEULE ROOM. AUCUN TEMPS MORT.</span>
+        <h2>La soirée tient<br><em>dans ta poche.</em></h2>
+        <p>Défis, quiz, bluff, scénarios et jeux adultes : crée le salon et laisse AK’Games faire circuler le chaos.</p>
+        <div class="home-stat-row"><span>🎮 30 jeux complets</span><span>📲 solo ou multijoueur</span><span>🏆 score de soirée</span></div>
+      </div>
+      <div class="hero-orb hero-orb-one"></div><div class="hero-orb hero-orb-two"></div><div class="hero-grid-glow"></div>
+    </section>
+    <section class="home-action-stack">
+      <button class="home-action-card home-action-primary" data-home-action="create"><span class="home-action-icon">✦</span><span class="home-action-copy"><small>MODE SOIRÉE</small><strong>Créer une partie</strong><span>Ouvre une room et joue chacun sur son téléphone.</span></span><span class="home-action-arrow">→</span></button>
+      <div class="home-action-grid">
+        <button class="home-action-card home-action-secondary" data-home-action="join"><span class="home-action-icon">⌁</span><span class="home-action-copy"><small>J’AI UN CODE</small><strong>Rejoindre</strong><span>Retrouve la bande sans recréer de joueur.</span></span><span class="home-action-arrow">→</span></button>
+        <button class="home-action-card home-action-secondary home-action-phone" data-home-action="single"><span class="home-action-icon">▣</span><span class="home-action-copy"><small>PASS & PLAY</small><strong>Un téléphone</strong><span>Ajoutez les joueurs puis passez-vous l’écran.</span></span><span class="home-action-arrow">→</span></button>
+      </div>
+    </section>
+    <section class="home-feature-strip home-feature-v014">
+      <article><span>💣</span><div><strong>Défis & performance</strong><small>Mime, imitation, bombe et roulette</small></div></article>
+      <article><span>🧠</span><div><strong>Quiz & déduction</strong><small>Culture, cinéma, musique, logos et bluff</small></div></article>
+      <article><span>🌶️</span><div><strong>Pack adulte séparé</strong><small>Questions, défis et jeux à boire responsables</small></div></article>
+    </section>`;
+  document.querySelectorAll("[data-home-action]").forEach(button => button.addEventListener("click", () => {
+    const action = button.dataset.homeAction;
+    if (action === "single") { state.mode = "single"; pushScreen("home"); renderSetup(); }
+    else if (action === "create") { state.mode = "multi-host"; pushScreen("home"); renderSetup(); }
+    else { pushScreen("home"); renderJoin(); }
+  }));
+};
+
+renderGames = function () {
+  clearV09Timer();
+  clearV014Timer();
+  const category = categories.find(item => item.id === state.currentCategory);
+  title.textContent = category.name;
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="catalog-intro catalog-intro-v014"><span>${category.emoji}</span><div><small>CATÉGORIE</small><strong>${escapeHtml(category.name)}</strong><p>${escapeHtml(category.description)}</p></div><b>${category.games.filter(game => V014_READY_GAMES.has(game)).length} jeux</b></section>
+    <section class="game-list game-list-v07">${category.games.map(game => {
+      const disabled = game === "Blind Test";
+      const ready = V014_READY_GAMES.has(game);
+      const isNew = V014_NEW_GAMES.has(game);
+      const icon = V014_GAME_ICONS[game] || "🎲";
+      return `<button class="game-card game-card-v07 ${disabled ? "disabled" : ""} ${isNew ? "game-card-new game-card-mega" : ""}" ${disabled ? "disabled" : ""} data-game="${escapeHtml(game)}"><span class="game-card-icon">${icon}</span><span class="game-card-copy"><strong>${escapeHtml(game)} ${isNew ? `<span class="new-ribbon">MEGA PACK</span>` : ""}</strong><span class="helper">${disabled ? "Audio à intégrer séparément" : ready ? "Prêt à lancer" : "À intégrer"}</span><span class="game-meta">${ready ? `<span class="badge green">✓ disponible</span>` : `<span class="badge">bientôt</span>`}${state.alcohol && ready ? `<span class="badge green">🍻 option alcool</span>` : ""}${V014_GAME_CONFIGS[game]?.adultOnly || game.includes("+18") ? `<span class="badge orange">🔞 adulte</span>` : ""}</span></span><span class="game-card-chevron">›</span></button>`;
+    }).join("")}</section>`;
+
+  document.querySelectorAll("[data-game]:not([disabled])").forEach(button => button.addEventListener("click", () => {
+    const game = button.dataset.game;
+    if (launchV014Game(game)) return;
+    if (game === "Qui de nous ?") { pushScreen("games"); resetWhoUsState(); renderWhoUsSetup(); return; }
+    if (game === "Le premier qui rit a perdu") { pushScreen("games"); resetLaughDuelState(); renderLaughDuelSetup(); return; }
+    if (game === "Qui ment le mieux ?") { if (state.players.length < 3) return alert("« Qui ment le mieux ? » nécessite au moins 3 joueurs."); pushScreen("games"); resetBestLiarState(); renderBestLiarSetup(); return; }
+    if (game === "Action ou Vérité" || game === "Action ou Vérité +18") { pushScreen("games"); resetActionTruthState(game.includes("+18")); renderActionTruthSetup(); return; }
+    if (game === "Je n’ai jamais" || game === "Je n’ai jamais +18") { pushScreen("games"); resetAmbiancePollState("never", game.includes("+18")); renderAmbiancePollSetup(); return; }
+    if (game === "Tu préfères" || game === "Tu préfères +18") { pushScreen("games"); resetAmbiancePollState("would", game.includes("+18")); renderAmbiancePollSetup(); return; }
+    if (game === "Même cerveau") { pushScreen("games"); resetSameBrainState(); renderSameBrainSetup(); return; }
+    if (game === "Minorité") { pushScreen("games"); resetMinorityState(); renderMinoritySetup(); return; }
+    if (game === "Qui a répondu ça ?") { if (state.players.length < 3) return alert("« Qui a répondu ça ? » nécessite au moins 3 joueurs."); pushScreen("games"); resetWhoAnsweredState(); renderWhoAnsweredSetup(); return; }
+    if (game === "L’Imposteur sait presque tout") { if (state.players.length < 3) return alert("Ce jeu nécessite au moins 3 joueurs."); pushScreen("games"); resetAlmostImpostorState(); renderAlmostImpostorSetup(); return; }
+    if (game === "Le Faux Expert") { if (state.players.length < 3) return alert("Ce jeu nécessite au moins 3 joueurs."); pushScreen("games"); resetFakeExpertState(); renderFakeExpertSetup(); return; }
+    if (game === "Qui suis-je ?") { pushScreen("games"); resetWhoAmIState(); renderWhoAmISetup(); return; }
+    renderGamePlaceholder(game);
+  }));
+};
+
+settingsBtn.addEventListener("click", event => {
+  const megaActive = Boolean(state.megaGame?.items?.length);
+  if (!megaActive) return;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+}, true);
+
+renderHome();

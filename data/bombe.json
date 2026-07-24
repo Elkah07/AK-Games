@@ -1,0 +1,352 @@
+[
+  {
+    "id": "bombe_001",
+    "category": "Des choses qu’on trouve dans une cuisine",
+    "examples": []
+  },
+  {
+    "id": "bombe_002",
+    "category": "Des villes françaises",
+    "examples": []
+  },
+  {
+    "id": "bombe_003",
+    "category": "Des animaux qui vivent dans l’eau",
+    "examples": []
+  },
+  {
+    "id": "bombe_004",
+    "category": "Des films d’animation",
+    "examples": []
+  },
+  {
+    "id": "bombe_005",
+    "category": "Des marques de vêtements",
+    "examples": []
+  },
+  {
+    "id": "bombe_006",
+    "category": "Des aliments rouges",
+    "examples": []
+  },
+  {
+    "id": "bombe_007",
+    "category": "Des métiers commençant par une consonne",
+    "examples": []
+  },
+  {
+    "id": "bombe_008",
+    "category": "Des objets qu’on emporte en vacances",
+    "examples": []
+  },
+  {
+    "id": "bombe_009",
+    "category": "Des chansons connues de tout le monde",
+    "examples": []
+  },
+  {
+    "id": "bombe_010",
+    "category": "Des pays d’Europe",
+    "examples": []
+  },
+  {
+    "id": "bombe_011",
+    "category": "Des choses qui font du bruit",
+    "examples": []
+  },
+  {
+    "id": "bombe_012",
+    "category": "Des personnages de dessins animés",
+    "examples": []
+  },
+  {
+    "id": "bombe_013",
+    "category": "Des excuses pour être en retard",
+    "examples": []
+  },
+  {
+    "id": "bombe_014",
+    "category": "Des applications de téléphone",
+    "examples": []
+  },
+  {
+    "id": "bombe_015",
+    "category": "Des choses qu’on fait le matin",
+    "examples": []
+  },
+  {
+    "id": "bombe_016",
+    "category": "Des sports avec un ballon",
+    "examples": []
+  },
+  {
+    "id": "bombe_017",
+    "category": "Des prénoms de quatre lettres",
+    "examples": []
+  },
+  {
+    "id": "bombe_018",
+    "category": "Des objets qui peuvent se casser",
+    "examples": []
+  },
+  {
+    "id": "bombe_019",
+    "category": "Des mots liés à l’été",
+    "examples": []
+  },
+  {
+    "id": "bombe_020",
+    "category": "Des choses qu’on voit dans une gare",
+    "examples": []
+  },
+  {
+    "id": "bombe_021",
+    "category": "Des animaux à quatre pattes",
+    "examples": []
+  },
+  {
+    "id": "bombe_022",
+    "category": "Des plats italiens",
+    "examples": []
+  },
+  {
+    "id": "bombe_023",
+    "category": "Des couleurs autres que les couleurs primaires",
+    "examples": []
+  },
+  {
+    "id": "bombe_024",
+    "category": "Des métiers où l’on porte un uniforme",
+    "examples": []
+  },
+  {
+    "id": "bombe_025",
+    "category": "Des séries télévisées",
+    "examples": []
+  },
+  {
+    "id": "bombe_026",
+    "category": "Des choses qu’on ne veut pas oublier",
+    "examples": []
+  },
+  {
+    "id": "bombe_027",
+    "category": "Des objets dans une salle de bain",
+    "examples": []
+  },
+  {
+    "id": "bombe_028",
+    "category": "Des mots qui riment avec « chat »",
+    "examples": []
+  },
+  {
+    "id": "bombe_029",
+    "category": "Des cadeaux ratés",
+    "examples": []
+  },
+  {
+    "id": "bombe_030",
+    "category": "Des choses qu’on peut perdre",
+    "examples": []
+  },
+  {
+    "id": "bombe_031",
+    "category": "Des super-pouvoirs inutiles",
+    "examples": []
+  },
+  {
+    "id": "bombe_032",
+    "category": "Des raisons de ne pas répondre au téléphone",
+    "examples": []
+  },
+  {
+    "id": "bombe_033",
+    "category": "Des endroits où l’on peut faire la queue",
+    "examples": []
+  },
+  {
+    "id": "bombe_034",
+    "category": "Des choses qui sentent bon",
+    "examples": []
+  },
+  {
+    "id": "bombe_035",
+    "category": "Des choses qui collent",
+    "examples": []
+  },
+  {
+    "id": "bombe_036",
+    "category": "Des personnages de jeux vidéo",
+    "examples": []
+  },
+  {
+    "id": "bombe_037",
+    "category": "Des objets qui fonctionnent avec des piles",
+    "examples": []
+  },
+  {
+    "id": "bombe_038",
+    "category": "Des choses qu’on peut commander au restaurant",
+    "examples": []
+  },
+  {
+    "id": "bombe_039",
+    "category": "Des activités du dimanche",
+    "examples": []
+  },
+  {
+    "id": "bombe_040",
+    "category": "Des animaux qui volent",
+    "examples": []
+  },
+  {
+    "id": "bombe_041",
+    "category": "Des mots associés à la fête",
+    "examples": []
+  },
+  {
+    "id": "bombe_042",
+    "category": "Des choses qu’on trouve au bureau",
+    "examples": []
+  },
+  {
+    "id": "bombe_043",
+    "category": "Des desserts",
+    "examples": []
+  },
+  {
+    "id": "bombe_044",
+    "category": "Des capitales du monde",
+    "examples": []
+  },
+  {
+    "id": "bombe_045",
+    "category": "Des titres de films contenant un prénom",
+    "examples": []
+  },
+  {
+    "id": "bombe_046",
+    "category": "Des choses que l’on fait en secret",
+    "examples": []
+  },
+  {
+    "id": "bombe_047",
+    "category": "Des objets ronds",
+    "examples": []
+  },
+  {
+    "id": "bombe_048",
+    "category": "Des raisons de rire",
+    "examples": []
+  },
+  {
+    "id": "bombe_049",
+    "category": "Des aliments que l’on mange avec les mains",
+    "examples": []
+  },
+  {
+    "id": "bombe_050",
+    "category": "Des choses que l’on peut collectionner",
+    "examples": []
+  },
+  {
+    "id": "bombe_051",
+    "category": "Des lieux où il faut parler doucement",
+    "examples": []
+  },
+  {
+    "id": "bombe_052",
+    "category": "Des boissons sans alcool",
+    "examples": []
+  },
+  {
+    "id": "bombe_053",
+    "category": "Des choses que l’on peut faire à deux",
+    "examples": []
+  },
+  {
+    "id": "bombe_054",
+    "category": "Des objets qui tiennent dans une poche",
+    "examples": []
+  },
+  {
+    "id": "bombe_055",
+    "category": "Des mots commençant par « P »",
+    "examples": []
+  },
+  {
+    "id": "bombe_056",
+    "category": "Des marques de voiture",
+    "examples": []
+  },
+  {
+    "id": "bombe_057",
+    "category": "Des choses qu’on voit dans le ciel",
+    "examples": []
+  },
+  {
+    "id": "bombe_058",
+    "category": "Des animaux dangereux",
+    "examples": []
+  },
+  {
+    "id": "bombe_059",
+    "category": "Des choses qu’on oublie dans une chambre d’hôtel",
+    "examples": []
+  },
+  {
+    "id": "bombe_060",
+    "category": "Des chansons avec un prénom",
+    "examples": []
+  },
+  {
+    "id": "bombe_061",
+    "category": "Des activités qui font transpirer",
+    "examples": []
+  },
+  {
+    "id": "bombe_062",
+    "category": "Des choses liées à Noël",
+    "examples": []
+  },
+  {
+    "id": "bombe_063",
+    "category": "Des objets en verre",
+    "examples": []
+  },
+  {
+    "id": "bombe_064",
+    "category": "Des mots de trois syllabes",
+    "examples": []
+  },
+  {
+    "id": "bombe_065",
+    "category": "Des choses qu’on peut faire dans le noir",
+    "examples": []
+  },
+  {
+    "id": "bombe_066",
+    "category": "Des destinations de voyage",
+    "examples": []
+  },
+  {
+    "id": "bombe_067",
+    "category": "Des objets qui ont un écran",
+    "examples": []
+  },
+  {
+    "id": "bombe_068",
+    "category": "Des raisons de faire la fête",
+    "examples": []
+  },
+  {
+    "id": "bombe_069",
+    "category": "Des aliments salés",
+    "examples": []
+  },
+  {
+    "id": "bombe_070",
+    "category": "Des choses qui peuvent être froides",
+    "examples": []
+  }
+]

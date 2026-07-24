@@ -1,0 +1,482 @@
+[
+  {
+    "id": "q_001_quelle_planete_est_surnom",
+    "question": "Quelle planète est surnommée la planète rouge ?",
+    "options": [
+      "Vénus",
+      "Mars",
+      "Jupiter",
+      "Mercure"
+    ],
+    "answer": 1,
+    "explanation": "Mars doit sa couleur à l’oxyde de fer présent à sa surface."
+  },
+  {
+    "id": "q_002_combien_de_cotes_possede_",
+    "question": "Combien de côtés possède un hexagone ?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "Un hexagone possède six côtés."
+  },
+  {
+    "id": "q_003_quel_est_le_plus_grand_oc",
+    "question": "Quel est le plus grand océan de la planète ?",
+    "options": [
+      "Atlantique",
+      "Indien",
+      "Arctique",
+      "Pacifique"
+    ],
+    "answer": 3,
+    "explanation": "Le Pacifique est le plus vaste océan."
+  },
+  {
+    "id": "q_004_dans_quel_pays_se_trouve_",
+    "question": "Dans quel pays se trouve la ville de Kyoto ?",
+    "options": [
+      "Chine",
+      "Japon",
+      "Corée du Sud",
+      "Thaïlande"
+    ],
+    "answer": 1,
+    "explanation": "Kyoto se situe au Japon."
+  },
+  {
+    "id": "q_005_quel_gaz_les_plantes_abso",
+    "question": "Quel gaz les plantes absorbent-elles principalement ?",
+    "options": [
+      "Oxygène",
+      "Azote",
+      "Dioxyde de carbone",
+      "Hélium"
+    ],
+    "answer": 2,
+    "explanation": "Elles utilisent le dioxyde de carbone pour la photosynthèse."
+  },
+  {
+    "id": "q_006_qui_a_peint_la_joconde",
+    "question": "Qui a peint La Joconde ?",
+    "options": [
+      "Michel-Ange",
+      "Léonard de Vinci",
+      "Raphaël",
+      "Van Gogh"
+    ],
+    "answer": 1,
+    "explanation": "La Joconde est attribuée à Léonard de Vinci."
+  },
+  {
+    "id": "q_007_quelle_langue_est_princip",
+    "question": "Quelle langue est principalement parlée au Brésil ?",
+    "options": [
+      "Espagnol",
+      "Portugais",
+      "Français",
+      "Italien"
+    ],
+    "answer": 1,
+    "explanation": "Le portugais est la langue officielle du Brésil."
+  },
+  {
+    "id": "q_008_combien_de_minutes_dure_u",
+    "question": "Combien de minutes dure une heure et demie ?",
+    "options": [
+      "80",
+      "90",
+      "100",
+      "120"
+    ],
+    "answer": 1,
+    "explanation": "Une heure et demie correspond à 90 minutes."
+  },
+  {
+    "id": "q_009_quel_metal_a_pour_symbole",
+    "question": "Quel métal a pour symbole chimique Au ?",
+    "options": [
+      "Argent",
+      "Or",
+      "Aluminium",
+      "Cuivre"
+    ],
+    "answer": 1,
+    "explanation": "Au vient du latin aurum, l’or."
+  },
+  {
+    "id": "q_010_quel_animal_est_le_plus_g",
+    "question": "Quel animal est le plus grand mammifère vivant ?",
+    "options": [
+      "Éléphant d’Afrique",
+      "Baleine bleue",
+      "Requin-baleine",
+      "Girafe"
+    ],
+    "answer": 1,
+    "explanation": "La baleine bleue est le plus grand mammifère connu."
+  },
+  {
+    "id": "q_011_quelle_est_la_capitale_du",
+    "question": "Quelle est la capitale du Canada ?",
+    "options": [
+      "Toronto",
+      "Montréal",
+      "Ottawa",
+      "Vancouver"
+    ],
+    "answer": 2,
+    "explanation": "Ottawa est la capitale fédérale."
+  },
+  {
+    "id": "q_012_combien_de_joueurs_une_eq",
+    "question": "Combien de joueurs une équipe de football aligne-t-elle sur le terrain ?",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "answer": 2,
+    "explanation": "Une équipe compte onze joueurs sur le terrain."
+  },
+  {
+    "id": "q_013_quel_organe_pompe_le_sang",
+    "question": "Quel organe pompe le sang dans le corps ?",
+    "options": [
+      "Poumon",
+      "Foie",
+      "Cœur",
+      "Rein"
+    ],
+    "answer": 2,
+    "explanation": "Le cœur assure la circulation du sang."
+  },
+  {
+    "id": "q_014_dans_quelle_unite_mesure_",
+    "question": "Dans quelle unité mesure-t-on la température en France ?",
+    "options": [
+      "Kelvin uniquement",
+      "Fahrenheit",
+      "Celsius",
+      "Joule"
+    ],
+    "answer": 2,
+    "explanation": "Le degré Celsius est l’unité courante."
+  },
+  {
+    "id": "q_015_quel_continent_contient_l",
+    "question": "Quel continent contient le plus de pays ?",
+    "options": [
+      "Europe",
+      "Asie",
+      "Afrique",
+      "Amérique du Sud"
+    ],
+    "answer": 2,
+    "explanation": "L’Afrique compte le plus grand nombre d’États reconnus."
+  },
+  {
+    "id": "q_016_quel_est_le_resultat_de_1",
+    "question": "Quel est le résultat de 12 × 8 ?",
+    "options": [
+      "86",
+      "92",
+      "96",
+      "108"
+    ],
+    "answer": 2,
+    "explanation": "12 multiplié par 8 vaut 96."
+  },
+  {
+    "id": "q_017_quelle_mer_separe_princip",
+    "question": "Quelle mer sépare principalement l’Europe et l’Afrique ?",
+    "options": [
+      "Mer Noire",
+      "Mer Méditerranée",
+      "Mer Rouge",
+      "Mer Baltique"
+    ],
+    "answer": 1,
+    "explanation": "La Méditerranée se situe entre les deux continents."
+  },
+  {
+    "id": "q_018_quel_instrument_possede_g",
+    "question": "Quel instrument possède généralement 88 touches ?",
+    "options": [
+      "Accordéon",
+      "Piano",
+      "Orgue de barbarie",
+      "Xylophone"
+    ],
+    "answer": 1,
+    "explanation": "Le piano moderne standard possède 88 touches."
+  },
+  {
+    "id": "q_019_quel_pays_a_la_forme_dune",
+    "question": "Quel pays a la forme d’une botte sur la carte ?",
+    "options": [
+      "Portugal",
+      "Italie",
+      "Grèce",
+      "Croatie"
+    ],
+    "answer": 1,
+    "explanation": "L’Italie est souvent comparée à une botte."
+  },
+  {
+    "id": "q_020_quel_est_le_nombre_premie",
+    "question": "Quel est le nombre premier parmi ces choix ?",
+    "options": [
+      "21",
+      "27",
+      "29",
+      "33"
+    ],
+    "answer": 2,
+    "explanation": "29 n’est divisible que par 1 et lui-même."
+  },
+  {
+    "id": "q_021_quel_est_lelement_princip",
+    "question": "Quel est l’élément principal du soleil ?",
+    "options": [
+      "Oxygène",
+      "Hydrogène",
+      "Carbone",
+      "Fer"
+    ],
+    "answer": 1,
+    "explanation": "Le Soleil est principalement composé d’hydrogène."
+  },
+  {
+    "id": "q_022_combien_de_cordes_possede",
+    "question": "Combien de cordes possède une guitare classique ?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "Une guitare classique standard possède six cordes."
+  },
+  {
+    "id": "q_023_quelle_couleur_obtient_on",
+    "question": "Quelle couleur obtient-on en mélangeant du bleu et du jaune ?",
+    "options": [
+      "Orange",
+      "Vert",
+      "Violet",
+      "Marron"
+    ],
+    "answer": 1,
+    "explanation": "Le bleu et le jaune donnent du vert en synthèse picturale."
+  },
+  {
+    "id": "q_024_quel_pays_a_offert_la_sta",
+    "question": "Quel pays a offert la Statue de la Liberté aux États-Unis ?",
+    "options": [
+      "Royaume-Uni",
+      "France",
+      "Italie",
+      "Canada"
+    ],
+    "answer": 1,
+    "explanation": "La France a offert la statue."
+  },
+  {
+    "id": "q_025_quel_est_le_plus_petit_os",
+    "question": "Quel est le plus petit os du corps humain ?",
+    "options": [
+      "Étrier",
+      "Rotule",
+      "Cubitus",
+      "Phalange"
+    ],
+    "answer": 0,
+    "explanation": "L’étrier se trouve dans l’oreille moyenne."
+  },
+  {
+    "id": "q_026_quel_fleuve_traverse_pari",
+    "question": "Quel fleuve traverse Paris ?",
+    "options": [
+      "Loire",
+      "Rhône",
+      "Seine",
+      "Garonne"
+    ],
+    "answer": 2,
+    "explanation": "La Seine traverse Paris."
+  },
+  {
+    "id": "q_027_quel_animal_symbolise_sou",
+    "question": "Quel animal symbolise souvent la sagesse ?",
+    "options": [
+      "Hibou",
+      "Lapin",
+      "Dauphin",
+      "Cheval"
+    ],
+    "answer": 0,
+    "explanation": "Le hibou ou la chouette est traditionnellement associé à la sagesse."
+  },
+  {
+    "id": "q_028_combien_de_jours_compte_u",
+    "question": "Combien de jours compte une année bissextile ?",
+    "options": [
+      "364",
+      "365",
+      "366",
+      "367"
+    ],
+    "answer": 2,
+    "explanation": "Une année bissextile compte 366 jours."
+  },
+  {
+    "id": "q_029_quel_pays_utilise_le_yen",
+    "question": "Quel pays utilise le yen ?",
+    "options": [
+      "Chine",
+      "Japon",
+      "Vietnam",
+      "Inde"
+    ],
+    "answer": 1,
+    "explanation": "Le yen est la monnaie japonaise."
+  },
+  {
+    "id": "q_030_quel_est_le_contraire_de_",
+    "question": "Quel est le contraire de « nocturne » ?",
+    "options": [
+      "Sombre",
+      "Diurne",
+      "Lunaire",
+      "Crépusculaire"
+    ],
+    "answer": 1,
+    "explanation": "Diurne signifie qui se déroule le jour."
+  },
+  {
+    "id": "q_031_quelle_est_la_capitale_de",
+    "question": "Quelle est la capitale de l’Australie ?",
+    "options": [
+      "Sydney",
+      "Melbourne",
+      "Canberra",
+      "Perth"
+    ],
+    "answer": 2,
+    "explanation": "Canberra est la capitale australienne."
+  },
+  {
+    "id": "q_032_combien_de_couleurs_compo",
+    "question": "Combien de couleurs comporte traditionnellement un arc-en-ciel ?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "On distingue traditionnellement sept couleurs."
+  },
+  {
+    "id": "q_033_quel_est_le_satellite_nat",
+    "question": "Quel est le satellite naturel de la Terre ?",
+    "options": [
+      "Mars",
+      "La Lune",
+      "Titan",
+      "Europe"
+    ],
+    "answer": 1,
+    "explanation": "La Lune est le satellite naturel de la Terre."
+  },
+  {
+    "id": "q_034_quel_ecrivain_a_cree_sher",
+    "question": "Quel écrivain a créé Sherlock Holmes ?",
+    "options": [
+      "Agatha Christie",
+      "Arthur Conan Doyle",
+      "Jules Verne",
+      "Edgar Allan Poe"
+    ],
+    "answer": 1,
+    "explanation": "Sherlock Holmes a été créé par Arthur Conan Doyle."
+  },
+  {
+    "id": "q_035_quelle_est_la_capitale_de",
+    "question": "Quelle est la capitale de l’Espagne ?",
+    "options": [
+      "Barcelone",
+      "Séville",
+      "Madrid",
+      "Valence"
+    ],
+    "answer": 2,
+    "explanation": "Madrid est la capitale espagnole."
+  },
+  {
+    "id": "q_036_quel_est_le_plus_long_os_",
+    "question": "Quel est le plus long os du corps humain ?",
+    "options": [
+      "Tibia",
+      "Humérus",
+      "Fémur",
+      "Radius"
+    ],
+    "answer": 2,
+    "explanation": "Le fémur est le plus long os humain."
+  },
+  {
+    "id": "q_037_combien_de_zeros_contient",
+    "question": "Combien de zéros contient un million ?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "Un million s’écrit 1 000 000."
+  },
+  {
+    "id": "q_038_quel_animal_est_un_marsup",
+    "question": "Quel animal est un marsupial ?",
+    "options": [
+      "Koala",
+      "Panda",
+      "Lémurien",
+      "Paresseux"
+    ],
+    "answer": 0,
+    "explanation": "Le koala est un marsupial australien."
+  },
+  {
+    "id": "q_039_quel_est_le_symbole_chimi",
+    "question": "Quel est le symbole chimique de l’eau ?",
+    "options": [
+      "CO2",
+      "H2O",
+      "O2",
+      "NaCl"
+    ],
+    "answer": 1,
+    "explanation": "Une molécule d’eau contient deux hydrogènes et un oxygène."
+  },
+  {
+    "id": "q_040_quel_pays_est_traverse_pa",
+    "question": "Quel pays est traversé par le Nil ?",
+    "options": [
+      "Égypte",
+      "Mexique",
+      "Japon",
+      "Espagne"
+    ],
+    "answer": 0,
+    "explanation": "Le Nil traverse notamment l’Égypte."
+  }
+]
