@@ -22,6 +22,10 @@
   state.sameBrain = state.sameBrain || null;
   state.minorityGame = state.minorityGame || null;
   state.whoAnswered = state.whoAnswered || null;
+  state.almostImpostor = state.almostImpostor || null;
+  state.fakeExpert = state.fakeExpert || null;
+  state.whoAmI = state.whoAmI || null;
+  state.v09MultiTimer = null;
 
   const SESSION_KEY = "akgames_multiplayer_session_v1";
 
@@ -41,6 +45,12 @@
   const localStartMinorityGame = startMinorityGame;
   const localRenderWhoAnsweredSetup = renderWhoAnsweredSetup;
   const localStartWhoAnsweredGame = startWhoAnsweredGame;
+  const localRenderAlmostImpostorSetup = renderAlmostImpostorSetup;
+  const localStartAlmostImpostorGame = startAlmostImpostorGame;
+  const localRenderFakeExpertSetup = renderFakeExpertSetup;
+  const localStartFakeExpertGame = startFakeExpertGame;
+  const localRenderWhoAmISetup = renderWhoAmISetup;
+  const localStartWhoAmIGame = startWhoAmIGame;
 
   function isMultiplayer() {
     return state.mode === "multi-host" || state.mode === "multi-guest";
@@ -169,6 +179,12 @@
           return;
         }
 
+        if (["almost-impostor", "fake-expert", "who-am-i"].includes(gameState?.type)) {
+          state.multiView = "v09-game";
+          syncMultiV09Game(room);
+          return;
+        }
+
         if (
           state.mode === "multi-guest"
           || state.multiView === "lobby"
@@ -177,6 +193,7 @@
           || state.multiView === "laugh-duel-game"
           || state.multiView === "ambiance-game"
           || state.multiView === "v08-game"
+          || state.multiView === "v09-game"
         ) {
           clearMultiLobbyTimer();
           state.multiView = "lobby";
@@ -189,6 +206,10 @@
           state.sameBrain = null;
           state.minorityGame = null;
           state.whoAnswered = null;
+          state.almostImpostor = null;
+          state.fakeExpert = null;
+          state.whoAmI = null;
+          clearV09MultiTimer();
           renderLobby();
         }
       },
@@ -1296,7 +1317,10 @@
       "would-you-rather": { name: "Tu préfères", icon: "⚖️" },
       "same-brain": { name: "Même cerveau", icon: "🧠" },
       "minority": { name: "Minorité", icon: "🪩" },
-      "who-answered": { name: "Qui a répondu ça ?", icon: "🕵️" }
+      "who-answered": { name: "Qui a répondu ça ?", icon: "🕵️" },
+      "almost-impostor": { name: "L’Imposteur sait presque tout", icon: "🕶️" },
+      "fake-expert": { name: "Le Faux Expert", icon: "🎓" },
+      "who-am-i": { name: "Qui suis-je ?", icon: "❓" }
     };
 
     return presentations[type] || { name: "Jeu AK'Games", icon: "🎮" };
@@ -1400,6 +1424,18 @@
       };
     }
 
+    if (gameState.type === "almost-impostor") {
+      return { type: gameState.type, config: { roundCount: Number(gameState.settings?.roundCount || gameState.items?.length || 6), includeAdult: Boolean(gameState.settings?.includeAdult), discussionSeconds: Number(gameState.settings?.discussionSeconds || 60) } };
+    }
+
+    if (gameState.type === "fake-expert") {
+      return { type: gameState.type, config: { roundCount: Number(gameState.settings?.roundCount || gameState.items?.length || 6), includeAdult: Boolean(gameState.settings?.includeAdult), speechSeconds: Number(gameState.settings?.speechSeconds || 60) } };
+    }
+
+    if (gameState.type === "who-am-i") {
+      return { type: gameState.type, config: { roundCount: Number(gameState.settings?.roundCount || gameState.items?.length || 8), includeAdult: Boolean(gameState.settings?.includeAdult), categoryMode: gameState.settings?.categoryMode || "mix", durationSeconds: Number(gameState.settings?.durationSeconds || 60) } };
+    }
+
     return null;
   }
 
@@ -1487,7 +1523,7 @@
       result = buildBestLiarSessionSummary(gameState);
     } else if (gameState.type === "laugh-duel") {
       result = buildLaughSessionSummary(gameState);
-    } else if (["action-truth", "never-have-i-ever", "would-you-rather", "same-brain", "minority", "who-answered"].includes(gameState.type)) {
+    } else if (["action-truth", "never-have-i-ever", "would-you-rather", "same-brain", "minority", "who-answered", "almost-impostor", "fake-expert", "who-am-i"].includes(gameState.type)) {
       result = buildAmbianceSessionSummary(gameState);
     } else {
       return null;
@@ -1737,6 +1773,29 @@
       return;
     }
 
+    if (descriptor.type === "almost-impostor") {
+      if (state.players.length < 3) throw new Error("Ce jeu nécessite au moins 3 joueurs.");
+      const config = descriptor.config || {};
+      state.almostImpostor = { roundCount: Number(config.roundCount || 6), includeAdult: Boolean(state.adult && config.includeAdult), discussionSeconds: Number(config.discussionSeconds || 60), items: [], currentIndex: 0, roleOrder: [], roleViewIndex: 0, impostorId: null, votes: {}, currentVoterIndex: 0, scores: Object.fromEntries(state.players.map(player => [player.id, 0])), currentResult: null, rounds: [] };
+      await startAlmostImpostorGame();
+      return;
+    }
+
+    if (descriptor.type === "fake-expert") {
+      if (state.players.length < 3) throw new Error("Ce jeu nécessite au moins 3 joueurs.");
+      const config = descriptor.config || {};
+      state.fakeExpert = { roundCount: Number(config.roundCount || Math.max(5, state.players.length)), includeAdult: Boolean(state.adult && config.includeAdult), speechSeconds: Number(config.speechSeconds || 60), items: [], currentIndex: 0, speakerOrder: shuffleArray(state.players.map(player => player.id)), speakerId: null, role: null, votes: {}, currentVoterIndex: 0, scores: Object.fromEntries(state.players.map(player => [player.id, 0])), rounds: [] };
+      await startFakeExpertGame();
+      return;
+    }
+
+    if (descriptor.type === "who-am-i") {
+      const config = descriptor.config || {};
+      state.whoAmI = { roundCount: Number(config.roundCount || Math.max(6, state.players.length)), includeAdult: Boolean(state.adult && config.includeAdult), categoryMode: config.categoryMode || "mix", durationSeconds: Number(config.durationSeconds || 60), items: [], currentIndex: 0, guesserOrder: shuffleArray(state.players.map(player => player.id)), scores: Object.fromEntries(state.players.map(player => [player.id, 0])), rounds: [] };
+      await startWhoAmIGame();
+      return;
+    }
+
     if (descriptor.type === "laugh-duel") {
       const config = descriptor.config || {};
       const availableIds = state.players.map(player => player.id);
@@ -1768,9 +1827,9 @@
   async function launchRandomMultiplayerGame() {
     if (!state.isHost || state.players.length < 2) return;
 
-    const availableTypes = ["who-us", "laugh-duel", "action-truth", "never-have-i-ever", "would-you-rather", "same-brain", "minority"];
+    const availableTypes = ["who-us", "laugh-duel", "action-truth", "never-have-i-ever", "would-you-rather", "same-brain", "minority", "who-am-i"];
     if (state.players.length >= 3) {
-      availableTypes.push("best-liar", "who-answered");
+      availableTypes.push("best-liar", "who-answered", "almost-impostor", "fake-expert");
     }
 
     const lastType = state.roomData?.session?.lastGame?.type;
@@ -1831,6 +1890,21 @@
 
     if (selectedType === "who-answered") {
       await launchReplayDescriptor({ type: "who-answered", config: { roundCount: Math.max(6, state.players.length), includeAdult: false } });
+      return;
+    }
+
+    if (selectedType === "almost-impostor") {
+      await launchReplayDescriptor({ type: "almost-impostor", config: { roundCount: 6, includeAdult: false, discussionSeconds: 60 } });
+      return;
+    }
+
+    if (selectedType === "fake-expert") {
+      await launchReplayDescriptor({ type: "fake-expert", config: { roundCount: Math.max(5, state.players.length), includeAdult: false, speechSeconds: 60 } });
+      return;
+    }
+
+    if (selectedType === "who-am-i") {
+      await launchReplayDescriptor({ type: "who-am-i", config: { roundCount: Math.max(6, state.players.length), includeAdult: false, categoryMode: "mix", durationSeconds: 60 } });
       return;
     }
 
@@ -3707,6 +3781,647 @@
     `;
     ensureEveningResult(gameState);
     bindPostGameContinuation(gameState);
+  }
+
+  /* =========================================================
+     AK'GAMES V0.9 — IMPOSTEURS & DÉDUCTION MULTIJOUEUR
+     ========================================================= */
+
+  function clearV09MultiTimer() {
+    if (state.v09MultiTimer) window.clearInterval(state.v09MultiTimer);
+    state.v09MultiTimer = null;
+  }
+
+  function startV09MultiCountdown(endsAt, onExpire) {
+    clearV09MultiTimer();
+    const tick = () => {
+      const left = Math.max(0, Math.ceil((Number(endsAt || 0) - Date.now()) / 1000));
+      const node = document.querySelector("#v09MultiCountdown");
+      const ring = document.querySelector("#v09MultiTimerRing");
+      if (node) node.textContent = String(left);
+      if (ring) {
+        const total = Math.max(1, Number(ring.dataset.total || left || 1));
+        ring.style.setProperty("--timer-progress", `${Math.max(0, Math.min(1, left / total)) * 360}deg`);
+      }
+      if (left <= 0) {
+        clearV09MultiTimer();
+        onExpire?.();
+      }
+    };
+    tick();
+    state.v09MultiTimer = window.setInterval(tick, 250);
+  }
+
+  function renderMultiV09Timer({ endsAt, total, kicker, heading, text, icon = "⏱️" }) {
+    const left = Math.max(0, Math.ceil((Number(endsAt || 0) - Date.now()) / 1000));
+    return `
+      <section class="timer-stage v09-timer-stage">
+        <span class="category-chip">${escapeHtml(kicker)}</span>
+        <div id="v09MultiTimerRing" data-total="${Number(total || 60)}" class="v09-timer-ring"><strong id="v09MultiCountdown">${left}</strong><small>secondes</small></div>
+        <h2>${icon} ${escapeHtml(heading)}</h2>
+        <p>${escapeHtml(text)}</p>
+      </section>
+    `;
+  }
+
+  renderGames = function () {
+    if (!isMultiplayer()) return localRenderGames();
+    clearV09MultiTimer();
+    const category = categories.find(item => item.id === state.currentCategory);
+    title.textContent = category.name;
+    setBackVisible(true);
+
+    const multiReady = new Set([
+      "Qui de nous ?", "Le premier qui rit a perdu", "Qui ment le mieux ?",
+      "Action ou Vérité", "Action ou Vérité +18", "Je n’ai jamais", "Je n’ai jamais +18",
+      "Tu préfères", "Tu préfères +18", "Même cerveau", "Minorité", "Qui a répondu ça ?",
+      "L’Imposteur sait presque tout", "Le Faux Expert", "Qui suis-je ?"
+    ]);
+
+    screen.innerHTML = `
+      <section class="catalog-intro"><span>${category.emoji}</span><div><small>CATÉGORIE</small><strong>${escapeHtml(category.name)}</strong><p>${escapeHtml(category.description)}</p></div></section>
+      <section class="game-list game-list-v07">
+        ${category.games.map(game => {
+          const disabled = game === "Blind Test";
+          const ready = multiReady.has(game);
+          const isNew = V09_NEW_GAMES.has(game);
+          const icon = V09_GAME_ICONS[game] || "🎲";
+          return `
+            <button class="game-card game-card-v07 ${disabled ? "disabled" : ""} ${isNew ? "game-card-new" : ""}" ${disabled ? "disabled" : ""} data-game="${escapeHtml(game)}">
+              <span class="game-card-icon">${icon}</span>
+              <span class="game-card-copy"><strong>${escapeHtml(game)} ${isNew ? `<span class="new-ribbon">NOUVEAU</span>` : ""}</strong><span class="helper">${disabled ? "Bientôt disponible" : ready ? "Jouable chacun sur son téléphone" : "À intégrer"}</span><span class="game-meta">${ready ? `<span class="badge green">📲 multijoueur</span>` : `<span class="badge">bientôt</span>`}${state.alcohol && ready ? `<span class="badge green">🍻 option alcool</span>` : ""}</span></span>
+              <span class="game-card-chevron">›</span>
+            </button>
+          `;
+        }).join("")}
+      </section>
+    `;
+
+    document.querySelectorAll("[data-game]:not([disabled])").forEach(button => button.addEventListener("click", () => {
+      const game = button.dataset.game;
+      if (game === "Qui de nous ?") { state.multiView = "who-us-setup"; pushScreen("games"); resetWhoUsState(); renderWhoUsSetup(); return; }
+      if (game === "Le premier qui rit a perdu") { if (state.players.length < 2) return alert("Ce duel nécessite au moins 2 joueurs."); state.multiView = "laugh-duel-setup"; pushScreen("games"); resetLaughDuelState(); renderLaughDuelSetup(); return; }
+      if (game === "Qui ment le mieux ?") { if (state.players.length < 3) return alert("« Qui ment le mieux ? » nécessite au moins 3 joueurs."); state.multiView = "best-liar-setup"; pushScreen("games"); resetBestLiarState(); renderBestLiarSetup(); return; }
+      if (game === "Action ou Vérité" || game === "Action ou Vérité +18") { state.multiView = "action-truth-setup"; pushScreen("games"); resetActionTruthState(game.includes("+18")); renderActionTruthSetup(); return; }
+      if (game === "Je n’ai jamais" || game === "Je n’ai jamais +18") { state.multiView = "ambiance-poll-setup"; pushScreen("games"); resetAmbiancePollState("never", game.includes("+18")); renderAmbiancePollSetup(); return; }
+      if (game === "Tu préfères" || game === "Tu préfères +18") { state.multiView = "ambiance-poll-setup"; pushScreen("games"); resetAmbiancePollState("would", game.includes("+18")); renderAmbiancePollSetup(); return; }
+      if (game === "Même cerveau") { state.multiView = "same-brain-setup"; pushScreen("games"); resetSameBrainState(); renderSameBrainSetup(); return; }
+      if (game === "Minorité") { state.multiView = "minority-setup"; pushScreen("games"); resetMinorityState(); renderMinoritySetup(); return; }
+      if (game === "Qui a répondu ça ?") { if (state.players.length < 3) return alert("« Qui a répondu ça ? » nécessite au moins 3 joueurs."); state.multiView = "who-answered-setup"; pushScreen("games"); resetWhoAnsweredState(); renderWhoAnsweredSetup(); return; }
+      if (game === "L’Imposteur sait presque tout") { if (state.players.length < 3) return alert("Ce jeu nécessite au moins 3 joueurs."); state.multiView = "almost-impostor-setup"; pushScreen("games"); resetAlmostImpostorState(); renderAlmostImpostorSetup(); return; }
+      if (game === "Le Faux Expert") { if (state.players.length < 3) return alert("Ce jeu nécessite au moins 3 joueurs."); state.multiView = "fake-expert-setup"; pushScreen("games"); resetFakeExpertState(); renderFakeExpertSetup(); return; }
+      if (game === "Qui suis-je ?") { if (state.players.length < 2) return alert("Ce jeu nécessite au moins 2 joueurs."); state.multiView = "who-am-i-setup"; pushScreen("games"); resetWhoAmIState(); renderWhoAmISetup(); return; }
+      renderMultiNotReady(game);
+    }));
+  };
+
+  renderAlmostImpostorSetup = function () {
+    if (!isMultiplayer()) return localRenderAlmostImpostorSetup();
+    if (!state.almostImpostor) resetAlmostImpostorState();
+    const game = state.almostImpostor;
+    title.textContent = "L’Imposteur sait presque tout";
+    setBackVisible(true);
+    screen.innerHTML = `
+      <section class="game-cover game-cover-impostor"><span class="game-cover-icon">🕶️</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>L’Imposteur sait presque tout</h2><p>Chaque rôle apparaît en privé. L’imposteur ne reçoit qu’un indice.</p></div></section>
+      <section class="card setup-card-v07"><div class="form-group"><label for="multiImpostorRounds">Nombre de manches</label><select id="multiImpostorRounds" class="text-input">${[4,6,8,10].map(v => `<option value="${v}" ${game.roundCount === v ? "selected" : ""}>${v} manches</option>`).join("")}</select></div><div class="form-group top-gap"><label for="multiImpostorTimer">Discussion</label><select id="multiImpostorTimer" class="text-input">${[45,60,90].map(v => `<option value="${v}" ${game.discussionSeconds === v ? "selected" : ""}>${v} secondes</option>`).join("")}</select></div></section>
+      ${state.adult ? `<label class="option-card premium-toggle"><input id="multiImpostorAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Crushs, relations et dossiers.</span></span></label>` : ""}
+      ${state.isHost ? `<button id="startMultiImpostor" class="primary-btn full">Distribuer les rôles</button>` : renderMultiWaiting("En attente de l’hôte", "Les rôles vont apparaître sur chaque écran.", "👑")}
+    `;
+    document.querySelector("#multiImpostorRounds")?.addEventListener("change", e => game.roundCount = Number(e.target.value));
+    document.querySelector("#multiImpostorTimer")?.addEventListener("change", e => game.discussionSeconds = Number(e.target.value));
+    document.querySelector("#multiImpostorAdult")?.addEventListener("change", e => game.includeAdult = e.target.checked);
+    document.querySelector("#startMultiImpostor")?.addEventListener("click", startAlmostImpostorGame);
+  };
+
+  startAlmostImpostorGame = async function () {
+    if (!isMultiplayer()) return localStartAlmostImpostorGame();
+    if (!state.isHost) return;
+    const game = state.almostImpostor;
+    screen.innerHTML = `<div class="notice">Distribution des rôles secrets…</div>`;
+    try {
+      let pool = await loadJsonFile("data/imposteur.json", "Impossible de charger les mots.");
+      if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/imposteur-adulte.json", "Impossible de charger les cartes adultes."));
+      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const playerIds = state.players.map(player => player.id);
+      const impostorOrder = items.map(() => playerIds[Math.floor(Math.random() * playerIds.length)]);
+      const scores = Object.fromEntries(playerIds.map(id => [id, 0]));
+      await AKFirebase.setGame(state.roomCode, { state: {
+        type: "almost-impostor", phase: "roles", sessionGameId: createSessionGameId("almost-impostor"), items,
+        currentIndex: 0, impostorOrder, impostorId: impostorOrder[0], scores, rounds: {}, currentResult: null,
+        settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult), discussionSeconds: Number(game.discussionSeconds || 60) },
+        startedAt: Date.now(), updatedAt: Date.now()
+      }, answers: {}, votes: {}, actions: {} });
+      state.multiView = "v09-game";
+    } catch (error) {
+      console.error(error); alert(error.message || "Impossible de lancer la partie."); renderAlmostImpostorSetup();
+    }
+  };
+
+  renderFakeExpertSetup = function () {
+    if (!isMultiplayer()) return localRenderFakeExpertSetup();
+    if (!state.fakeExpert) resetFakeExpertState();
+    const game = state.fakeExpert;
+    title.textContent = "Le Faux Expert";
+    setBackVisible(true);
+    const minimum = Math.max(5, state.players.length);
+    screen.innerHTML = `
+      <section class="game-cover game-cover-expert"><span class="game-cover-icon">🎓</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>Le Faux Expert</h2><p>L’orateur reçoit un vrai dossier ou un brief de bluff sur son téléphone.</p></div></section>
+      <section class="card setup-card-v07"><div class="form-group"><label for="multiExpertRounds">Nombre de passages</label><select id="multiExpertRounds" class="text-input">${[minimum,8,10,12].filter((v,i,a)=>a.indexOf(v)===i).map(v => `<option value="${v}" ${game.roundCount === v ? "selected" : ""}>${v} passages</option>`).join("")}</select></div><div class="form-group top-gap"><label for="multiExpertTimer">Présentation</label><select id="multiExpertTimer" class="text-input">${[45,60,90].map(v => `<option value="${v}" ${game.speechSeconds === v ? "selected" : ""}>${v} secondes</option>`).join("")}</select></div></section>
+      ${state.adult ? `<label class="option-card premium-toggle"><input id="multiExpertAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les sujets adultes</strong><br><span class="helper">Relations, dates et séduction.</span></span></label>` : ""}
+      ${state.isHost ? `<button id="startMultiExpert" class="primary-btn full">Ouvrir la conférence</button>` : renderMultiWaiting("En attente de l’hôte", "Le premier orateur va recevoir son brief.", "👑")}
+    `;
+    document.querySelector("#multiExpertRounds")?.addEventListener("change", e => game.roundCount = Number(e.target.value));
+    document.querySelector("#multiExpertTimer")?.addEventListener("change", e => game.speechSeconds = Number(e.target.value));
+    document.querySelector("#multiExpertAdult")?.addEventListener("change", e => game.includeAdult = e.target.checked);
+    document.querySelector("#startMultiExpert")?.addEventListener("click", startFakeExpertGame);
+  };
+
+  startFakeExpertGame = async function () {
+    if (!isMultiplayer()) return localStartFakeExpertGame();
+    if (!state.isHost) return;
+    const game = state.fakeExpert;
+    screen.innerHTML = `<div class="notice">Préparation des diplômes douteux…</div>`;
+    try {
+      let pool = await loadJsonFile("data/faux-expert.json", "Impossible de charger les sujets.");
+      if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/faux-expert-adulte.json", "Impossible de charger les sujets adultes."));
+      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const playerIds = state.players.map(player => player.id);
+      const speakerOrder = Array.from({ length: items.length }, (_, index) => playerIds[index % playerIds.length]);
+      const shuffledSpeakers = shuffleArray(speakerOrder);
+      const roleOrder = items.map(() => Math.random() < 0.5 ? "real" : "fake");
+      const scores = Object.fromEntries(playerIds.map(id => [id, 0]));
+      await AKFirebase.setGame(state.roomCode, { state: {
+        type: "fake-expert", phase: "brief", sessionGameId: createSessionGameId("fake-expert"), items,
+        currentIndex: 0, speakerOrder: shuffledSpeakers, roleOrder, speakerId: shuffledSpeakers[0], role: roleOrder[0],
+        scores, rounds: {}, currentResult: null,
+        settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult), speechSeconds: Number(game.speechSeconds || 60) },
+        startedAt: Date.now(), updatedAt: Date.now()
+      }, answers: {}, votes: {}, actions: {} });
+      state.multiView = "v09-game";
+    } catch (error) {
+      console.error(error); alert(error.message || "Impossible de lancer la partie."); renderFakeExpertSetup();
+    }
+  };
+
+  renderWhoAmISetup = function () {
+    if (!isMultiplayer()) return localRenderWhoAmISetup();
+    if (!state.whoAmI) resetWhoAmIState();
+    const game = state.whoAmI;
+    title.textContent = "Qui suis-je ?";
+    setBackVisible(true);
+    const minimum = Math.max(6, state.players.length);
+    screen.innerHTML = `
+      <section class="game-cover game-cover-whoami"><span class="game-cover-icon">❓</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>Qui suis-je ?</h2><p>L’identité est visible sur tous les téléphones sauf celui de la personne qui devine.</p></div></section>
+      <section class="card setup-card-v07"><div class="form-group"><label for="multiWhoAmIRounds">Nombre de tours</label><select id="multiWhoAmIRounds" class="text-input">${[minimum,8,10,15].filter((v,i,a)=>a.indexOf(v)===i).map(v => `<option value="${v}" ${game.roundCount === v ? "selected" : ""}>${v} tours</option>`).join("")}</select></div><div class="form-group top-gap"><label for="multiWhoAmICategory">Catégories</label><select id="multiWhoAmICategory" class="text-input"><option value="mix" ${game.categoryMode === "mix" ? "selected" : ""}>Mélange complet</option><option value="classic" ${game.categoryMode === "classic" ? "selected" : ""}>Objets, animaux et métiers</option><option value="culture" ${game.categoryMode === "culture" ? "selected" : ""}>Culture pop</option></select></div><div class="form-group top-gap"><label for="multiWhoAmITimer">Chronomètre</label><select id="multiWhoAmITimer" class="text-input">${[45,60,90].map(v => `<option value="${v}" ${game.durationSeconds === v ? "selected" : ""}>${v} secondes</option>`).join("")}</select></div></section>
+      ${state.adult ? `<label class="option-card premium-toggle"><input id="multiWhoAmIAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les identités adultes</strong><br><span class="helper">Crushs, ex et situations de date.</span></span></label>` : ""}
+      ${state.isHost ? `<button id="startMultiWhoAmI" class="primary-btn full">Distribuer les identités</button>` : renderMultiWaiting("En attente de l’hôte", "Les identités vont être distribuées.", "👑")}
+    `;
+    document.querySelector("#multiWhoAmIRounds")?.addEventListener("change", e => game.roundCount = Number(e.target.value));
+    document.querySelector("#multiWhoAmICategory")?.addEventListener("change", e => game.categoryMode = e.target.value);
+    document.querySelector("#multiWhoAmITimer")?.addEventListener("change", e => game.durationSeconds = Number(e.target.value));
+    document.querySelector("#multiWhoAmIAdult")?.addEventListener("change", e => game.includeAdult = e.target.checked);
+    document.querySelector("#startMultiWhoAmI")?.addEventListener("click", startWhoAmIGame);
+  };
+
+  startWhoAmIGame = async function () {
+    if (!isMultiplayer()) return localStartWhoAmIGame();
+    if (!state.isHost) return;
+    const game = state.whoAmI;
+    screen.innerHTML = `<div class="notice">Préparation des identités secrètes…</div>`;
+    try {
+      let pool = await loadJsonFile("data/qui-suis-je.json", "Impossible de charger les identités.");
+      if (game.categoryMode === "classic") pool = pool.filter(item => item.category !== "culture");
+      if (game.categoryMode === "culture") pool = pool.filter(item => item.category === "culture");
+      if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/qui-suis-je-adulte.json", "Impossible de charger les identités adultes."));
+      const items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+      const playerIds = state.players.map(player => player.id);
+      const guesserOrder = Array.from({ length: items.length }, (_, index) => playerIds[index % playerIds.length]);
+      const shuffledGuessers = shuffleArray(guesserOrder);
+      const scores = Object.fromEntries(playerIds.map(id => [id, 0]));
+      await AKFirebase.setGame(state.roomCode, { state: {
+        type: "who-am-i", phase: "reveal", sessionGameId: createSessionGameId("who-am-i"), items,
+        currentIndex: 0, guesserOrder: shuffledGuessers, guesserId: shuffledGuessers[0], scores, rounds: {}, currentResult: null,
+        settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult), categoryMode: game.categoryMode, durationSeconds: Number(game.durationSeconds || 60) },
+        startedAt: Date.now(), updatedAt: Date.now()
+      }, answers: {}, votes: {}, actions: {} });
+      state.multiView = "v09-game";
+    } catch (error) {
+      console.error(error); alert(error.message || "Impossible de lancer la partie."); renderWhoAmISetup();
+    }
+  };
+
+  function syncMultiV09Game(room) {
+    const gameState = room.game?.state;
+    if (!gameState) return;
+    if (gameState.phase !== "final") clearMultiLobbyTimer();
+    const answers = room.game?.answers || {};
+    const votes = room.game?.votes || {};
+    const actions = room.game?.actions || {};
+
+    if (gameState.type === "almost-impostor") {
+      processMultiAlmostImpostor(gameState, answers, votes, actions);
+      const key = [gameState.type, gameState.phase, gameState.currentIndex, Object.keys(answers).length, Object.keys(votes).length, Object.keys(actions).length, answers[state.currentUid]?.seen || "", votes[state.currentUid] || "", actions[state.currentUid]?.id || "", gameState.discussionEndsAt || "", JSON.stringify(gameState.currentResult || {}), JSON.stringify(gameState.scores || {})].join("|");
+      if (state.multiRenderKey === key) return;
+      state.multiRenderKey = key;
+      if (gameState.phase === "final") renderMultiV08Final(gameState);
+      else if (gameState.phase === "roles") renderMultiAlmostImpostorRole(gameState, answers);
+      else if (gameState.phase === "discussion") renderMultiAlmostImpostorDiscussion(gameState);
+      else if (gameState.phase === "voting") renderMultiAlmostImpostorVote(gameState, votes);
+      else if (gameState.phase === "guessing") renderMultiAlmostImpostorGuess(gameState, actions);
+      else renderMultiAlmostImpostorResults(gameState);
+      return;
+    }
+
+    if (gameState.type === "fake-expert") {
+      processMultiFakeExpert(gameState, votes, actions);
+      const key = [gameState.type, gameState.phase, gameState.currentIndex, Object.keys(votes).length, Object.keys(actions).length, votes[state.currentUid] || "", actions[state.currentUid]?.id || "", gameState.speechEndsAt || "", JSON.stringify(gameState.currentResult || {}), JSON.stringify(gameState.scores || {})].join("|");
+      if (state.multiRenderKey === key) return;
+      state.multiRenderKey = key;
+      if (gameState.phase === "final") renderMultiV08Final(gameState);
+      else if (gameState.phase === "brief") renderMultiFakeExpertBrief(gameState, actions);
+      else if (gameState.phase === "speaking") renderMultiFakeExpertSpeaking(gameState);
+      else if (gameState.phase === "voting") renderMultiFakeExpertVote(gameState, votes);
+      else renderMultiFakeExpertResults(gameState);
+      return;
+    }
+
+    if (gameState.type === "who-am-i") {
+      processMultiWhoAmI(gameState, answers, actions);
+      const key = [gameState.type, gameState.phase, gameState.currentIndex, Object.keys(answers).length, Object.keys(actions).length, answers[state.currentUid]?.seen || "", actions[state.currentUid]?.id || "", gameState.roundEndsAt || "", JSON.stringify(gameState.currentResult || {}), JSON.stringify(gameState.scores || {})].join("|");
+      if (state.multiRenderKey === key) return;
+      state.multiRenderKey = key;
+      if (gameState.phase === "final") renderMultiV08Final(gameState);
+      else if (gameState.phase === "reveal") renderMultiWhoAmIReveal(gameState, answers);
+      else if (gameState.phase === "playing") renderMultiWhoAmIPlaying(gameState, actions);
+      else renderMultiWhoAmIResults(gameState);
+    }
+  }
+
+  function processMultiAlmostImpostor(gameState, answers, votes, actions) {
+    if (!state.isHost) return;
+    const round = Number(gameState.currentIndex || 0);
+    if (gameState.phase === "roles" && Object.keys(answers).length >= state.players.length) {
+      const id = `v09_imp_roles_${round}`;
+      if (state.multiProcessingActionId === id) return;
+      state.multiProcessingActionId = id;
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "discussion", "state/discussionEndsAt": Date.now() + Number(gameState.settings?.discussionSeconds || 60) * 1000, answers: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+      return;
+    }
+    if (gameState.phase === "discussion" && Number(gameState.discussionEndsAt || 0) <= Date.now()) {
+      const id = `v09_imp_timer_${round}`;
+      if (state.multiProcessingActionId === id) return;
+      state.multiProcessingActionId = id;
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "voting", votes: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+      return;
+    }
+    if (gameState.phase === "voting" && Object.keys(votes).length >= state.players.length) {
+      const id = `v09_imp_votes_${round}_${Object.keys(votes).length}`;
+      if (state.multiProcessingActionId === id) return;
+      state.multiProcessingActionId = id;
+      const counts = {};
+      Object.values(votes).forEach(target => counts[target] = Number(counts[target] || 0) + 1);
+      const max = Math.max(0, ...Object.values(counts));
+      const topIds = Object.keys(counts).filter(playerId => counts[playerId] === max);
+      const caught = topIds.length === 1 && topIds[0] === gameState.impostorId;
+      const correctIds = Object.entries(votes).filter(([, target]) => target === gameState.impostorId).map(([id]) => id);
+      const scores = { ...(gameState.scores || {}) };
+      correctIds.forEach(id2 => scores[id2] = Number(scores[id2] || 0) + 1);
+      if (!caught) scores[gameState.impostorId] = Number(scores[gameState.impostorId] || 0) + 2;
+      const result = { caught, topIds, counts, correctIds, votes, guess: null, guessCorrect: false, impostorId: gameState.impostorId, itemId: gameState.items?.[round]?.id || "" };
+      AKFirebase.updateGame(state.roomCode, { "state/phase": caught ? "guessing" : "results", "state/currentResult": result, "state/scores": scores, votes: null, actions: null, [`state/rounds/${round}`]: result, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+      return;
+    }
+    if (gameState.phase === "guessing") {
+      const action = actions[gameState.impostorId];
+      if (!action?.payload?.guess) return;
+      const id = `v09_imp_guess_${round}_${action.id}`;
+      if (state.multiProcessingActionId === id) return;
+      state.multiProcessingActionId = id;
+      const card = gameState.items?.[round];
+      const correct = action.payload.guess === card?.word;
+      const scores = { ...(gameState.scores || {}) };
+      if (correct) scores[gameState.impostorId] = Number(scores[gameState.impostorId] || 0) + 1;
+      const result = { ...(gameState.currentResult || {}), guess: action.payload.guess, guessCorrect: correct };
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${round}`]: result, actions: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+    }
+  }
+
+  function renderMultiAlmostImpostorRole(gameState, answers) {
+    clearV09MultiTimer();
+    const card = gameState.items?.[gameState.currentIndex];
+    const me = playerById(state.currentUid);
+    const seen = answers[state.currentUid]?.seen;
+    const isImpostor = state.currentUid === gameState.impostorId;
+    title.textContent = "Rôle secret";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Manche")}
+      ${seen ? renderMultiWaiting("Rôle mémorisé", `${Object.keys(answers).length}/${state.players.length} joueurs prêts.`, "🔒") : `
+        <section class="secret-role-card ${isImpostor ? "impostor" : "civil"}"><span>${isImpostor ? "🕶️" : "🔐"}</span><small>${isImpostor ? "IMPOSTEUR" : "ÉQUIPE INFORMÉE"}</small><h2>${isImpostor ? "Tu ne connais pas le mot" : escapeHtml(card?.word || "")}</h2><p><strong>Indice :</strong> ${escapeHtml(card?.hint || "")}</p><em>${isImpostor ? "Écoute les autres et reste crédible." : "Donne un indice utile sans révéler le mot."}</em></section>
+        <button id="seenMultiImpostorRole" class="primary-btn full">J’ai mémorisé</button>
+      `}
+      ${renderPlayerSubmissionStatus(answers, "Prêt", "Lit son rôle…")}
+    `;
+    document.querySelector("#seenMultiImpostorRole")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { seen: true, submittedAt: Date.now() }); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; }
+    });
+  }
+
+  function renderMultiAlmostImpostorDiscussion(gameState) {
+    const card = gameState.items?.[gameState.currentIndex];
+    title.textContent = "Discussion";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Manche")}
+      ${renderMultiV09Timer({ endsAt: gameState.discussionEndsAt, total: Number(gameState.settings?.discussionSeconds || 60), kicker: String(card?.category || "mystère").toUpperCase(), heading: "Donnez chacun un indice", text: "Interdiction de prononcer le mot. Observez les hésitations.", icon: "🕶️" })}
+      ${state.isHost ? `<button id="multiImpostorVoteNow" class="secondary-btn full">Passer aux votes</button>` : ""}
+    `;
+    const expire = async () => {
+      if (!state.isHost) return;
+      const id = `v09_imp_expire_${gameState.currentIndex}`;
+      if (state.multiProcessingActionId === id) return;
+      state.multiProcessingActionId = id;
+      try { await AKFirebase.updateGame(state.roomCode, { "state/phase": "voting", votes: null, "state/updatedAt": Date.now() }); }
+      finally { state.multiProcessingActionId = null; }
+    };
+    document.querySelector("#multiImpostorVoteNow")?.addEventListener("click", expire);
+    startV09MultiCountdown(gameState.discussionEndsAt, expire);
+  }
+
+  function renderMultiAlmostImpostorVote(gameState, votes) {
+    clearV09MultiTimer();
+    const own = votes[state.currentUid];
+    const candidates = state.players.filter(player => player.id !== state.currentUid);
+    title.textContent = "Qui est l’imposteur ?";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Manche")}
+      ${own ? renderMultiWaiting("Vote enregistré", `${Object.keys(votes).length}/${state.players.length} votes reçus.`, "🔒") : `<section class="suspect-grid">${candidates.map(player => `<button class="suspect-card" data-multi-impostor-vote="${player.id}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong></button>`).join("")}</section>`}
+      ${renderPlayerSubmissionStatus(votes, "A voté", "Réfléchit…")}
+    `;
+    document.querySelectorAll("[data-multi-impostor-vote]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-multi-impostor-vote]").forEach(item => item.disabled = true);
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "votes", button.dataset.multiImpostorVote); }
+      catch (error) { console.error(error); alert("Le vote n’a pas pu être envoyé."); }
+    }));
+  }
+
+  function renderMultiAlmostImpostorGuess(gameState, actions) {
+    clearV09MultiTimer();
+    const card = gameState.items?.[gameState.currentIndex];
+    const isImpostor = state.currentUid === gameState.impostorId;
+    const own = actions[state.currentUid];
+    title.textContent = "Dernière chance";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${isImpostor ? (own ? renderMultiWaiting("Réponse envoyée", "Le mot va être révélé.", "🔒") : `<section class="v09-question-card"><span>🕶️</span><small>IMPOSTEUR DÉMASQUÉ</small><h2>${escapeHtml(card?.hint || "")}</h2></section><section class="v09-option-grid">${shuffleArray([card?.word, ...(card?.decoys || [])]).map(option => `<button class="v09-choice-card" data-multi-impostor-guess="${escapeHtml(option)}">${escapeHtml(option)}</button>`).join("")}</section>`) : renderMultiWaiting("L’imposteur tente le mot", "Tout le groupe découvrira bientôt sa réponse.", "🕶️")}
+    `;
+    document.querySelectorAll("[data-multi-impostor-guess]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-multi-impostor-guess]").forEach(item => item.disabled = true);
+      try { await sendMultiAction("impostor-guess", { guess: button.dataset.multiImpostorGuess }); }
+      catch (error) { console.error(error); alert("La réponse n’a pas pu être envoyée."); }
+    }));
+  }
+
+  function renderMultiAlmostImpostorResults(gameState) {
+    clearV09MultiTimer();
+    const card = gameState.items?.[gameState.currentIndex];
+    const result = gameState.currentResult || {};
+    const impostor = playerById(result.impostorId || gameState.impostorId);
+    title.textContent = "Révélation";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="reveal-stage reveal-v07 impostor-reveal"><span class="game-cover-icon">${avatarById(impostor?.avatarId).emoji}</span><h2>${escapeHtml(impostor?.name || "Un joueur")} était l’imposteur</h2><p>Le mot était <strong>${escapeHtml(card?.word || "")}</strong>.</p></section>
+      <section class="vote-breakdown">${state.players.map(player => { const target = playerById(result.votes?.[player.id]); const correct = result.votes?.[player.id] === result.impostorId; return `<article class="who-vote-row ${correct ? "correct" : "fooled"}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>a voté ${escapeHtml(target?.name || "?")}</small><em>${correct ? "+1 pt" : "raté"}</em></article>`; }).join("")}</section>
+      <div class="special-event ${result.caught ? "" : "tie"}"><strong>${result.caught ? "🔍 Imposteur démasqué" : "🕶️ L’imposteur s’échappe"}</strong><p>${result.caught ? (result.guessCorrect ? "Le mot a été retrouvé : +1 point imposteur." : "Le groupe remporte l’enquête.") : "+2 points pour la couverture parfaite."}</p></div>
+      ${state.alcohol ? `<div class="alcohol-callout">🍻 ${result.caught ? "L’imposteur prend une petite gorgée." : "Les votes ratés prennent une petite gorgée."}</div>` : ""}
+      ${state.isHost ? `<button id="nextMultiImpostor" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Manche suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La prochaine manche apparaîtra automatiquement.", "👑")}
+    `;
+    document.querySelector("#nextMultiImpostor")?.addEventListener("click", event => advanceMultiV09Round(event, gameState, "roles", "answers,votes,actions", { impostorId: gameState.impostorOrder?.[Number(gameState.currentIndex || 0) + 1] || null }));
+  }
+
+  function processMultiFakeExpert(gameState, votes, actions) {
+    if (!state.isHost) return;
+    const round = Number(gameState.currentIndex || 0);
+    if (gameState.phase === "brief") {
+      const action = actions[gameState.speakerId];
+      if (!action || action.type !== "expert-ready") return;
+      const id = `v09_exp_ready_${round}_${action.id}`;
+      if (state.multiProcessingActionId === id) return;
+      state.multiProcessingActionId = id;
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "speaking", "state/speechEndsAt": Date.now() + Number(gameState.settings?.speechSeconds || 60) * 1000, actions: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+      return;
+    }
+    if (gameState.phase === "speaking" && Number(gameState.speechEndsAt || 0) <= Date.now()) {
+      const id = `v09_exp_timer_${round}`;
+      if (state.multiProcessingActionId === id) return;
+      state.multiProcessingActionId = id;
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "voting", votes: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+      return;
+    }
+    const expected = Math.max(0, state.players.length - 1);
+    if (gameState.phase === "voting" && Object.keys(votes).length >= expected) {
+      const id = `v09_exp_votes_${round}_${Object.keys(votes).length}`;
+      if (state.multiProcessingActionId === id) return;
+      state.multiProcessingActionId = id;
+      const correctIds = Object.entries(votes).filter(([, vote]) => vote === gameState.role).map(([id2]) => id2);
+      const fooledIds = Object.entries(votes).filter(([, vote]) => vote !== gameState.role).map(([id2]) => id2);
+      const scores = { ...(gameState.scores || {}) };
+      correctIds.forEach(id2 => scores[id2] = Number(scores[id2] || 0) + 1);
+      scores[gameState.speakerId] = Number(scores[gameState.speakerId] || 0) + Math.min(3, fooledIds.length);
+      const result = { speakerId: gameState.speakerId, role: gameState.role, votes, correctIds, fooledIds, itemId: gameState.items?.[round]?.id || "" };
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${round}`]: result, votes: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+    }
+  }
+
+  function renderMultiFakeExpertBrief(gameState, actions) {
+    clearV09MultiTimer();
+    const card = gameState.items?.[gameState.currentIndex];
+    const speaker = playerById(gameState.speakerId);
+    const isSpeaker = state.currentUid === gameState.speakerId;
+    const ready = actions[state.currentUid]?.type === "expert-ready";
+    const isReal = gameState.role === "real";
+    title.textContent = "Brief confidentiel";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Passage")}
+      ${isSpeaker ? (ready ? renderMultiWaiting("Brief mémorisé", "La conférence démarre dans un instant.", "🔒") : `<section class="secret-role-card expert-role ${isReal ? "civil" : "impostor"}"><span>${isReal ? "🎓" : "🎭"}</span><small>${isReal ? "VRAI EXPERT" : "FAUX EXPERT"}</small><h2>${escapeHtml(card?.topic || "")}</h2>${isReal ? `<ul class="expert-fact-list">${(card?.facts || []).map(fact => `<li>${escapeHtml(fact)}</li>`).join("")}</ul>` : `<p>${escapeHtml(card?.fakeTip || "")}</p><em>Improviser avec aplomb.</em>`}</section><button id="multiExpertReady" class="primary-btn full">Je suis prêt·e à parler</button>`) : renderMultiWaiting(`${escapeHtml(speaker?.name || "L’orateur")} prépare son exposé`, "Le sujet sera bientôt visible sur tous les écrans.", "🎓")}
+    `;
+    document.querySelector("#multiExpertReady")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      try { await sendMultiAction("expert-ready", {}); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; }
+    });
+  }
+
+  function renderMultiFakeExpertSpeaking(gameState) {
+    const card = gameState.items?.[gameState.currentIndex];
+    const speaker = playerById(gameState.speakerId);
+    title.textContent = "Conférence express";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Passage")}
+      ${renderMultiV09Timer({ endsAt: gameState.speechEndsAt, total: Number(gameState.settings?.speechSeconds || 60), kicker: `${avatarById(speaker?.avatarId).emoji} ${speaker?.name || "Orateur"}`, heading: card?.topic || "Sujet mystère", text: "Posez une ou deux questions. L’orateur doit rester convaincant.", icon: "🎓" })}
+      ${state.isHost ? `<button id="multiExpertVoteNow" class="secondary-btn full">Passer au verdict</button>` : ""}
+    `;
+    const expire = async () => {
+      if (!state.isHost) return;
+      const id = `v09_exp_expire_${gameState.currentIndex}`;
+      if (state.multiProcessingActionId === id) return;
+      state.multiProcessingActionId = id;
+      try { await AKFirebase.updateGame(state.roomCode, { "state/phase": "voting", votes: null, "state/updatedAt": Date.now() }); }
+      finally { state.multiProcessingActionId = null; }
+    };
+    document.querySelector("#multiExpertVoteNow")?.addEventListener("click", expire);
+    startV09MultiCountdown(gameState.speechEndsAt, expire);
+  }
+
+  function renderMultiFakeExpertVote(gameState, votes) {
+    clearV09MultiTimer();
+    const isSpeaker = state.currentUid === gameState.speakerId;
+    const own = votes[state.currentUid];
+    const speaker = playerById(gameState.speakerId);
+    title.textContent = "Vrai ou faux expert ?";
+    setBackVisible(false);
+    const status = { ...votes, [gameState.speakerId]: "speaker" };
+    screen.innerHTML = `
+      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Passage")}
+      <section class="v09-question-card"><span>${avatarById(speaker?.avatarId).emoji}</span><small>${escapeHtml(speaker?.name || "ORATEUR").toUpperCase()}</small><h2>${escapeHtml(gameState.items?.[gameState.currentIndex]?.topic || "")}</h2></section>
+      ${isSpeaker ? renderMultiWaiting("Tu connais ton rôle", "Observe le verdict du jury.", "🎭") : own ? renderMultiWaiting("Verdict enregistré", `${Object.keys(votes).length}/${Math.max(1, state.players.length - 1)} votes reçus.`, "🔒") : `<section class="v09-binary-grid"><button class="v09-choice-card credible" data-multi-expert-vote="real">🎓 Vrai expert</button><button class="v09-choice-card suspicious" data-multi-expert-vote="fake">🎭 Faux expert</button></section>`}
+      ${renderPlayerSubmissionStatus(status, "Prêt", "Juge…")}
+    `;
+    document.querySelectorAll("[data-multi-expert-vote]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-multi-expert-vote]").forEach(item => item.disabled = true);
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "votes", button.dataset.multiExpertVote); }
+      catch (error) { console.error(error); alert("Le verdict n’a pas pu être envoyé."); }
+    }));
+  }
+
+  function renderMultiFakeExpertResults(gameState) {
+    clearV09MultiTimer();
+    const card = gameState.items?.[gameState.currentIndex];
+    const result = gameState.currentResult || {};
+    const speaker = playerById(result.speakerId || gameState.speakerId);
+    title.textContent = "Diplôme révélé";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="reveal-stage reveal-v07 expert-reveal"><span class="game-cover-icon">${result.role === "real" ? "🎓" : "🎭"}</span><h2>${escapeHtml(speaker?.name || "L’orateur")} était ${result.role === "real" ? "un vrai expert" : "un faux expert"}</h2><p>${escapeHtml(card?.topic || "")}</p></section>
+      <section class="who-vote-results">${state.players.filter(player => player.id !== result.speakerId).map(voter => { const correct = result.correctIds?.includes(voter.id); return `<article class="who-vote-row ${correct ? "correct" : "fooled"}"><span>${avatarById(voter.avatarId).emoji}</span><strong>${escapeHtml(voter.name)}</strong><small>a voté ${result.votes?.[voter.id] === "real" ? "vrai expert" : "faux expert"}</small><em>${correct ? "+1 pt" : "trompé·e"}</em></article>`; }).join("")}</section>
+      <details class="answer-wall-details"><summary>Voir les vraies informations</summary><ul class="expert-fact-list">${(card?.facts || []).map(fact => `<li>${escapeHtml(fact)}</li>`).join("")}</ul></details>
+      <div class="special-event"><strong>🎤 ${result.fooledIds?.length || 0} personne${(result.fooledIds?.length || 0) > 1 ? "s" : ""} trompée${(result.fooledIds?.length || 0) > 1 ? "s" : ""}</strong><p>+${Math.min(3, result.fooledIds?.length || 0)} point${Math.min(3, result.fooledIds?.length || 0) > 1 ? "s" : ""} pour l’orateur.</p></div>
+      ${state.alcohol && result.fooledIds?.length ? `<div class="alcohol-callout">🍻 Les personnes trompées prennent une petite gorgée.</div>` : ""}
+      ${state.isHost ? `<button id="nextMultiExpert" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Orateur suivant"}</button>` : renderMultiWaiting("En attente de l’hôte", "Le prochain exposé apparaîtra automatiquement.", "👑")}
+    `;
+    const nextIndex = Number(gameState.currentIndex || 0) + 1;
+    document.querySelector("#nextMultiExpert")?.addEventListener("click", event => advanceMultiV09Round(event, gameState, "brief", "answers,votes,actions", { speakerId: gameState.speakerOrder?.[nextIndex] || null, role: gameState.roleOrder?.[nextIndex] || "fake" }));
+  }
+
+  function processMultiWhoAmI(gameState, answers, actions) {
+    if (!state.isHost) return;
+    const round = Number(gameState.currentIndex || 0);
+    const expected = Math.max(0, state.players.length - 1);
+    if (gameState.phase === "reveal" && Object.keys(answers).length >= expected) {
+      const id = `v09_who_ready_${round}_${Object.keys(answers).length}`;
+      if (state.multiProcessingActionId === id) return;
+      state.multiProcessingActionId = id;
+      AKFirebase.updateGame(state.roomCode, { "state/phase": "playing", "state/roundEndsAt": Date.now() + Number(gameState.settings?.durationSeconds || 60) * 1000, answers: null, actions: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+      return;
+    }
+    if (gameState.phase !== "playing") return;
+    const action = actions[gameState.guesserId];
+    const expired = Number(gameState.roundEndsAt || 0) <= Date.now();
+    if (!action?.payload?.found && !expired) return;
+    const id = `v09_who_finish_${round}_${action?.id || "timer"}`;
+    if (state.multiProcessingActionId === id) return;
+    state.multiProcessingActionId = id;
+    const found = Boolean(action?.payload?.found) && !expired;
+    const scores = { ...(gameState.scores || {}) };
+    if (found) {
+      scores[gameState.guesserId] = Number(scores[gameState.guesserId] || 0) + 2;
+      state.players.filter(player => player.id !== gameState.guesserId).forEach(player => scores[player.id] = Number(scores[player.id] || 0) + 1);
+    }
+    const result = { guesserId: gameState.guesserId, found, itemId: gameState.items?.[round]?.id || "" };
+    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${round}`]: result, actions: null, "state/updatedAt": Date.now() }).finally(() => { state.multiProcessingActionId = null; });
+  }
+
+  function renderMultiWhoAmIReveal(gameState, answers) {
+    clearV09MultiTimer();
+    const item = gameState.items?.[gameState.currentIndex];
+    const guesser = playerById(gameState.guesserId);
+    const isGuesser = state.currentUid === gameState.guesserId;
+    const seen = answers[state.currentUid]?.seen;
+    title.textContent = "Identité secrète";
+    setBackVisible(false);
+    const status = { ...answers, [gameState.guesserId]: "guesser" };
+    screen.innerHTML = `
+      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Tour")}
+      ${isGuesser ? renderMultiWaiting("Ne regarde pas les autres écrans", "Ton identité est visible par tout le groupe.", avatarById(guesser?.avatarId).emoji) : seen ? renderMultiWaiting("Identité mémorisée", `${Object.keys(answers).length}/${Math.max(1, state.players.length - 1)} aides prêtes.`, "🔒") : `<section class="whoami-secret-card"><small>${escapeHtml(item?.category || "mystère").toUpperCase()}</small><span>❓</span><h2>${escapeHtml(item?.label || "")}</h2><ul>${(item?.clues || []).map(clue => `<li>${escapeHtml(clue)}</li>`).join("")}</ul><p>Réponds uniquement par oui, non ou presque.</p></section><button id="multiWhoAmISeen" class="primary-btn full">J’ai mémorisé</button>`}
+      ${renderPlayerSubmissionStatus(status, "Prêt", "Découvre…")}
+    `;
+    document.querySelector("#multiWhoAmISeen")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { seen: true, submittedAt: Date.now() }); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; }
+    });
+  }
+
+  function renderMultiWhoAmIPlaying(gameState, actions) {
+    const item = gameState.items?.[gameState.currentIndex];
+    const guesser = playerById(gameState.guesserId);
+    const isGuesser = state.currentUid === gameState.guesserId;
+    title.textContent = "Qui suis-je ?";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Tour")}
+      ${renderMultiV09Timer({ endsAt: gameState.roundEndsAt, total: Number(gameState.settings?.durationSeconds || 60), kicker: `${avatarById(guesser?.avatarId).emoji} ${guesser?.name || "Joueur"}`, heading: isGuesser ? "Pose des questions" : item?.label || "Identité secrète", text: isGuesser ? "Le groupe répond oui, non ou presque." : (item?.clues || []).join(" • "), icon: "❓" })}
+      ${isGuesser ? `<button id="multiWhoAmIFound" class="primary-btn full">✅ J’ai trouvé !</button>` : `<div class="notice">Aide ${escapeHtml(guesser?.name || "la personne")} sans prononcer l’identité.</div>`}
+    `;
+    document.querySelector("#multiWhoAmIFound")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      try { await sendMultiAction("who-am-i-found", { found: true }); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; }
+    });
+    startV09MultiCountdown(gameState.roundEndsAt, () => processMultiWhoAmI(gameState, {}, actions));
+  }
+
+  function renderMultiWhoAmIResults(gameState) {
+    clearV09MultiTimer();
+    const item = gameState.items?.[gameState.currentIndex];
+    const result = gameState.currentResult || {};
+    const guesser = playerById(result.guesserId || gameState.guesserId);
+    title.textContent = result.found ? "Identité trouvée" : "Temps écoulé";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="reveal-stage reveal-v07 whoami-reveal"><span class="game-cover-icon">${result.found ? "🎉" : "⏱️"}</span><h2>${escapeHtml(guesser?.name || "Le joueur")} était ${escapeHtml(item?.label || "")}</h2><p>${result.found ? "+2 points pour la personne qui devine, +1 pour chaque aide." : "Cette identité n’a pas été trouvée à temps."}</p></section>
+      <section class="whoami-clue-wall">${(item?.clues || []).map(clue => `<span>${escapeHtml(clue)}</span>`).join("")}</section>
+      ${state.alcohol && !result.found ? `<div class="alcohol-callout">🍻 Petite gorgée de consolation pour ${escapeHtml(guesser?.name || "la personne")}.</div>` : ""}
+      ${state.isHost ? `<button id="nextMultiWhoAmI" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Identité suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La prochaine identité apparaîtra automatiquement.", "👑")}
+    `;
+    const nextIndex = Number(gameState.currentIndex || 0) + 1;
+    document.querySelector("#nextMultiWhoAmI")?.addEventListener("click", event => advanceMultiV09Round(event, gameState, "reveal", "answers,votes,actions", { guesserId: gameState.guesserOrder?.[nextIndex] || null }));
+  }
+
+  async function advanceMultiV09Round(event, gameState, nextPhase, collections, extra = {}) {
+    event.currentTarget.disabled = true;
+    clearV09MultiTimer();
+    const next = Number(gameState.currentIndex || 0) + 1;
+    const finished = next >= (gameState.items || []).length;
+    const updates = {
+      "state/phase": finished ? "final" : nextPhase,
+      "state/currentIndex": finished ? gameState.currentIndex : next,
+      "state/currentResult": null,
+      "state/discussionEndsAt": null,
+      "state/speechEndsAt": null,
+      "state/roundEndsAt": null,
+      "state/finishedAt": finished ? Date.now() : null,
+      "state/updatedAt": Date.now()
+    };
+    if (!finished) Object.entries(extra || {}).forEach(([key, value]) => updates[`state/${key}`] = value);
+    String(collections || "").split(",").filter(Boolean).forEach(collection => updates[collection] = null);
+    try { await AKFirebase.updateGame(state.roomCode, updates); }
+    catch (error) { console.error(error); event.currentTarget.disabled = false; alert("Impossible de passer à la suite."); }
   }
 
 

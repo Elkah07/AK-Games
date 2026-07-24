@@ -1,0 +1,717 @@
+[
+  {
+    "id": "exp_001",
+    "topic": "Pourquoi les flamants roses sont-ils roses ?",
+    "facts": [
+      "Leur alimentation contient des pigments appelés caroténoïdes.",
+      "Ces pigments viennent notamment des algues et crustacés.",
+      "Les jeunes flamants sont plutôt gris."
+    ],
+    "fakeTip": "Invente une histoire très sérieuse sur le soleil et leurs plumes.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_002",
+    "topic": "Comment les abeilles indiquent-elles une source de nourriture ?",
+    "facts": [
+      "Elles utilisent une danse codée.",
+      "L’angle donne la direction par rapport au soleil.",
+      "La durée aide à indiquer la distance."
+    ],
+    "fakeTip": "Explique que leurs antennes fonctionnent comme des GPS collectifs.",
+    "category": "science"
+  },
+  {
+    "id": "exp_003",
+    "topic": "Pourquoi le pop-corn éclate-t-il ?",
+    "facts": [
+      "Chaque grain contient un peu d’eau.",
+      "La vapeur augmente la pression dans l’enveloppe.",
+      "L’amidon se retourne brusquement quand la coque cède."
+    ],
+    "fakeTip": "Présente une théorie sur de minuscules bulles d’air emprisonnées.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_004",
+    "topic": "Comment un caméléon change-t-il de couleur ?",
+    "facts": [
+      "Il modifie l’organisation de nanocristaux dans sa peau.",
+      "La couleur sert aussi à communiquer et réguler la température.",
+      "Ce n’est pas seulement du camouflage."
+    ],
+    "fakeTip": "Affirme que ses cellules mélangent des pigments comme une imprimante.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_005",
+    "topic": "Pourquoi bâille-t-on ?",
+    "facts": [
+      "Le bâillement est lié à l’éveil et aux transitions d’état.",
+      "Il peut être contagieux socialement.",
+      "Sa fonction exacte reste encore débattue."
+    ],
+    "fakeTip": "Explique que le cerveau vide l’air usé par une grande ouverture.",
+    "category": "science"
+  },
+  {
+    "id": "exp_006",
+    "topic": "Comment fonctionne une boussole ?",
+    "facts": [
+      "Une aiguille aimantée s’aligne sur le champ magnétique terrestre.",
+      "Elle pointe approximativement vers le nord magnétique.",
+      "Le nord magnétique n’est pas exactement le nord géographique."
+    ],
+    "fakeTip": "Invente un système de micro-vibrations envoyées par le sol.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_007",
+    "topic": "Pourquoi la mer est-elle salée ?",
+    "facts": [
+      "Les rivières transportent des minéraux dissous vers l’océan.",
+      "L’eau s’évapore mais les sels restent.",
+      "Ce processus s’accumule sur de très longues périodes."
+    ],
+    "fakeTip": "Explique que le sel vient principalement des volcans sous-marins modernes.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_008",
+    "topic": "Comment les oiseaux migrateurs trouvent-ils leur route ?",
+    "facts": [
+      "Ils utilisent le soleil, les étoiles et des repères visuels.",
+      "Certaines espèces perçoivent le champ magnétique terrestre.",
+      "L’apprentissage et l’instinct jouent tous deux un rôle."
+    ],
+    "fakeTip": "Décris une carte mentale transmise dans les œufs.",
+    "category": "science"
+  },
+  {
+    "id": "exp_009",
+    "topic": "Pourquoi les chats ronronnent-ils ?",
+    "facts": [
+      "Le ronronnement implique des contractions rapides autour du larynx.",
+      "Il apparaît dans le bien-être mais aussi parfois dans le stress.",
+      "Il peut servir à communiquer et s’apaiser."
+    ],
+    "fakeTip": "Affirme qu’ils font vibrer leurs moustaches comme des cordes.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_010",
+    "topic": "Comment se forme un arc-en-ciel ?",
+    "facts": [
+      "La lumière est réfractée en entrant dans les gouttes.",
+      "Elle se réfléchit à l’intérieur puis ressort.",
+      "Les couleurs se séparent selon leur longueur d’onde."
+    ],
+    "fakeTip": "Explique que les nuages projettent des filtres colorés.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_011",
+    "topic": "Pourquoi les bulles de savon sont-elles colorées ?",
+    "facts": [
+      "La lumière se réfléchit sur les deux faces du film.",
+      "Les ondes lumineuses interfèrent entre elles.",
+      "L’épaisseur du film change les couleurs visibles."
+    ],
+    "fakeTip": "Dis que le savon contient naturellement tous les pigments de l’arc-en-ciel.",
+    "category": "science"
+  },
+  {
+    "id": "exp_012",
+    "topic": "Comment les pieuvres changent-elles d’apparence ?",
+    "facts": [
+      "Des cellules appelées chromatophores modifient rapidement les couleurs.",
+      "D’autres structures changent les reflets.",
+      "Les muscles de la peau peuvent aussi créer du relief."
+    ],
+    "fakeTip": "Invente des poches d’encre microscopiques réparties sous la peau.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_013",
+    "topic": "Pourquoi un avion peut-il voler ?",
+    "facts": [
+      "Les ailes créent une différence de pression et dévient l’air vers le bas.",
+      "La portance doit compenser le poids.",
+      "La poussée permet de maintenir la vitesse nécessaire."
+    ],
+    "fakeTip": "Explique que le fuselage devient temporairement plus léger en altitude.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_014",
+    "topic": "Comment fonctionne le velcro ?",
+    "facts": [
+      "Une face possède de petits crochets.",
+      "L’autre est composée de boucles.",
+      "Les crochets s’agrippent aux boucles sous la pression."
+    ],
+    "fakeTip": "Présente le velcro comme deux tissus chargés électriquement.",
+    "category": "science"
+  },
+  {
+    "id": "exp_015",
+    "topic": "Pourquoi les oignons font-ils pleurer ?",
+    "facts": [
+      "La coupe libère des enzymes et composés soufrés.",
+      "Un gaz irritant atteint les yeux.",
+      "Les larmes servent à diluer et évacuer l’irritant."
+    ],
+    "fakeTip": "Affirme que l’odeur déclenche un réflexe émotionnel ancien.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_016",
+    "topic": "Comment une fermeture éclair tient-elle fermée ?",
+    "facts": [
+      "Le curseur emboîte des dents ou éléments opposés.",
+      "Sa forme guide les deux rangées ensemble.",
+      "Dans l’autre sens, il les sépare."
+    ],
+    "fakeTip": "Explique que des mini-aimants se verrouillent les uns aux autres.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_017",
+    "topic": "Pourquoi les feuilles changent-elles de couleur en automne ?",
+    "facts": [
+      "La chlorophylle se dégrade quand les jours raccourcissent.",
+      "D’autres pigments deviennent alors visibles.",
+      "La météo influence l’intensité des couleurs."
+    ],
+    "fakeTip": "Dis que les arbres déplacent leur couleur verte vers les racines.",
+    "category": "science"
+  },
+  {
+    "id": "exp_018",
+    "topic": "Comment un thermos garde-t-il une boisson chaude ?",
+    "facts": [
+      "Une double paroi limite les échanges.",
+      "Le vide réduit conduction et convection.",
+      "Une surface réfléchissante limite le rayonnement."
+    ],
+    "fakeTip": "Invente une couche intérieure qui renvoie les molécules chaudes.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_019",
+    "topic": "Pourquoi le ciel est-il bleu ?",
+    "facts": [
+      "L’atmosphère diffuse davantage les courtes longueurs d’onde.",
+      "Le bleu est fortement dispersé dans toutes les directions.",
+      "Au coucher du soleil, le trajet plus long favorise les rouges."
+    ],
+    "fakeTip": "Explique que l’océan se reflète directement sur l’atmosphère.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_020",
+    "topic": "Comment les dauphins utilisent-ils l’écholocation ?",
+    "facts": [
+      "Ils émettent des clics.",
+      "Les sons rebondissent sur les objets.",
+      "Ils analysent l’écho pour estimer distance, taille et forme."
+    ],
+    "fakeTip": "Invente un sonar produit exclusivement par leurs nageoires.",
+    "category": "science"
+  },
+  {
+    "id": "exp_021",
+    "topic": "Pourquoi un boomerang revient-il ?",
+    "facts": [
+      "Sa forme et sa rotation créent une portance asymétrique.",
+      "La précession fait tourner progressivement sa trajectoire.",
+      "Le lancer doit avoir un angle adapté."
+    ],
+    "fakeTip": "Explique qu’il suit le champ magnétique du lanceur.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_022",
+    "topic": "Comment se forme la foudre ?",
+    "facts": [
+      "Des charges électriques se séparent dans les nuages.",
+      "Une différence de potentiel énorme se crée.",
+      "Une décharge ionise l’air et produit l’éclair."
+    ],
+    "fakeTip": "Affirme que les gouttes de pluie frottent entre elles comme des ballons.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_023",
+    "topic": "Pourquoi les pandas mangent-ils autant de bambou ?",
+    "facts": [
+      "Le bambou est peu énergétique.",
+      "Leur système digestif n’est pas très efficace pour le végétal.",
+      "Ils compensent en mangeant longtemps et en grande quantité."
+    ],
+    "fakeTip": "Explique que le bambou neutralise une toxine produite par leur fourrure.",
+    "category": "science"
+  },
+  {
+    "id": "exp_024",
+    "topic": "Comment un hologramme donne-t-il une impression de relief ?",
+    "facts": [
+      "Il enregistre des informations de phase et d’amplitude de la lumière.",
+      "Un laser crée des figures d’interférence.",
+      "L’image change selon l’angle de vue."
+    ],
+    "fakeTip": "Décris plusieurs écrans transparents empilés très vite.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_025",
+    "topic": "Pourquoi le pain gonfle-t-il ?",
+    "facts": [
+      "La levure produit du dioxyde de carbone.",
+      "Le réseau de gluten retient les bulles.",
+      "La chaleur fixe la structure pendant la cuisson."
+    ],
+    "fakeTip": "Affirme que la farine se dilate comme une éponge chauffée.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_026",
+    "topic": "Comment les plantes se tournent-elles vers la lumière ?",
+    "facts": [
+      "Une hormone appelée auxine se répartit de façon inégale.",
+      "Les cellules du côté ombragé s’allongent davantage.",
+      "La tige se courbe vers la source lumineuse."
+    ],
+    "fakeTip": "Invente de petits capteurs solaires dans chaque feuille.",
+    "category": "science"
+  },
+  {
+    "id": "exp_027",
+    "topic": "Pourquoi les étoiles scintillent-elles ?",
+    "facts": [
+      "La lumière traverse des couches d’air turbulentes.",
+      "L’indice de réfraction varie sans cesse.",
+      "L’image de l’étoile se déplace et change légèrement d’intensité."
+    ],
+    "fakeTip": "Explique que les étoiles clignotent pour économiser leur énergie.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_028",
+    "topic": "Comment fonctionne un micro-ondes ?",
+    "facts": [
+      "Il produit des ondes électromagnétiques.",
+      "Elles font notamment tourner les molécules d’eau.",
+      "Ces mouvements se transforment en chaleur dans l’aliment."
+    ],
+    "fakeTip": "Affirme que l’appareil chauffe d’abord l’assiette puis la nourriture.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_029",
+    "topic": "Pourquoi les empreintes digitales sont-elles uniques ?",
+    "facts": [
+      "Leur formation dépend de facteurs génétiques et du développement dans l’utérus.",
+      "De petites variations aléatoires modifient les crêtes.",
+      "Même des jumeaux identiques ont des motifs différents."
+    ],
+    "fakeTip": "Explique qu’elles se dessinent selon les objets touchés pendant l’enfance.",
+    "category": "science"
+  },
+  {
+    "id": "exp_030",
+    "topic": "Comment une montgolfière monte-t-elle ?",
+    "facts": [
+      "L’air chauffé devient moins dense que l’air extérieur.",
+      "La poussée d’Archimède soulève l’enveloppe.",
+      "Le pilote chauffe ou laisse refroidir pour changer d’altitude."
+    ],
+    "fakeTip": "Invente un tissu qui repousse naturellement la gravité quand il est chaud.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_031",
+    "topic": "Pourquoi le chocolat blanchit-il parfois ?",
+    "facts": [
+      "Le gras ou le sucre migre vers la surface.",
+      "Les variations de température favorisent ce phénomène.",
+      "Le chocolat reste souvent consommable malgré l’aspect."
+    ],
+    "fakeTip": "Dis que le cacao perd sa couleur au contact de l’oxygène.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_032",
+    "topic": "Comment un GPS calcule-t-il une position ?",
+    "facts": [
+      "Il reçoit des signaux horodatés de plusieurs satellites.",
+      "La distance est estimée grâce au temps de trajet.",
+      "Au moins quatre satellites permettent une position et une correction d’horloge."
+    ],
+    "fakeTip": "Explique que le téléphone suit les antennes relais les plus proches.",
+    "category": "science"
+  },
+  {
+    "id": "exp_033",
+    "topic": "Pourquoi le sel fait-il fondre la glace ?",
+    "facts": [
+      "Il abaisse le point de congélation de l’eau.",
+      "Une saumure se forme à une température inférieure à zéro.",
+      "L’efficacité diminue quand il fait extrêmement froid."
+    ],
+    "fakeTip": "Affirme que les grains de sel frottent la glace jusqu’à la réchauffer.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_034",
+    "topic": "Comment un sous-marin plonge-t-il ?",
+    "facts": [
+      "Il remplit des ballasts d’eau pour augmenter sa densité.",
+      "Il chasse l’eau avec de l’air pour remonter.",
+      "Des gouvernes contrôlent aussi l’orientation."
+    ],
+    "fakeTip": "Invente un mécanisme qui comprime entièrement la coque.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_035",
+    "topic": "Pourquoi la lune paraît-elle plus grande à l’horizon ?",
+    "facts": [
+      "C’est surtout une illusion perceptive.",
+      "Notre cerveau la compare aux bâtiments et au paysage.",
+      "Sa taille angulaire change très peu."
+    ],
+    "fakeTip": "Explique que l’atmosphère agit comme une loupe géante.",
+    "category": "science"
+  },
+  {
+    "id": "exp_036",
+    "topic": "Comment les fourmis retrouvent-elles leur chemin ?",
+    "facts": [
+      "Elles déposent des traces chimiques appelées phéromones.",
+      "D’autres fourmis suivent les pistes les plus marquées.",
+      "Elles utilisent aussi des repères visuels."
+    ],
+    "fakeTip": "Affirme qu’elles mémorisent chaque caillou grâce à leurs antennes.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_037",
+    "topic": "Pourquoi le fromage a-t-il des trous ?",
+    "facts": [
+      "Certaines bactéries produisent du dioxyde de carbone.",
+      "Le gaz forme des bulles pendant l’affinage.",
+      "Tous les fromages ne suivent pas ce processus."
+    ],
+    "fakeTip": "Explique que le sel dissout de petites poches dans la pâte.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_038",
+    "topic": "Comment un casque antibruit réduit-il le son ?",
+    "facts": [
+      "Il capte le bruit ambiant avec des microphones.",
+      "Il produit une onde opposée.",
+      "Les deux ondes s’annulent partiellement par interférence."
+    ],
+    "fakeTip": "Dis qu’il absorbe tout le bruit dans une mousse électronique.",
+    "category": "science"
+  },
+  {
+    "id": "exp_039",
+    "topic": "Pourquoi les poissons ne coulent-ils pas toujours ?",
+    "facts": [
+      "Beaucoup utilisent une vessie natatoire remplie de gaz.",
+      "Ils ajustent leur flottabilité.",
+      "Leur forme et leurs nageoires aident aussi à se maintenir."
+    ],
+    "fakeTip": "Invente de minuscules poches d’air cachées dans leurs écailles.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_040",
+    "topic": "Comment les cactus stockent-ils l’eau ?",
+    "facts": [
+      "Leur tige charnue sert de réserve.",
+      "Une couche cireuse limite l’évaporation.",
+      "Les épines remplacent les feuilles et réduisent les pertes."
+    ],
+    "fakeTip": "Explique que leurs épines aspirent directement l’humidité du sol.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_041",
+    "topic": "Pourquoi le chewing-gum est-il élastique ?",
+    "facts": [
+      "Il contient une base gommeuse non soluble.",
+      "Des plastifiants gardent cette base souple.",
+      "Le sucre et les arômes se dissolvent mais la gomme reste."
+    ],
+    "fakeTip": "Affirme que de l’air est enfermé dans des milliers de fibres.",
+    "category": "science"
+  },
+  {
+    "id": "exp_042",
+    "topic": "Comment un code-barres est-il lu ?",
+    "facts": [
+      "Un faisceau lumineux éclaire les barres.",
+      "Les zones claires et sombres réfléchissent différemment.",
+      "Le lecteur traduit la séquence en chiffres."
+    ],
+    "fakeTip": "Explique que chaque barre émet une fréquence radio différente.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_043",
+    "topic": "Pourquoi les manchots n’ont-ils pas froid aux pieds ?",
+    "facts": [
+      "Leur circulation utilise un échange de chaleur à contre-courant.",
+      "Le sang chaud réchauffe le sang qui revient.",
+      "Ils réduisent aussi le flux sanguin vers les extrémités."
+    ],
+    "fakeTip": "Invente une graisse chauffante située uniquement sous leurs pattes.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_044",
+    "topic": "Comment une araignée fabrique-t-elle sa toile ?",
+    "facts": [
+      "Des glandes produisent plusieurs types de soie.",
+      "La soie liquide se solidifie en sortant.",
+      "Chaque fil peut avoir une fonction différente."
+    ],
+    "fakeTip": "Affirme qu’elle tresse des poils arrachés à ses pattes.",
+    "category": "science"
+  },
+  {
+    "id": "exp_045",
+    "topic": "Pourquoi les avions laissent-ils des traînées blanches ?",
+    "facts": [
+      "La vapeur d’eau des moteurs se condense.",
+      "Elle gèle en petits cristaux dans l’air froid.",
+      "L’humidité détermine leur durée."
+    ],
+    "fakeTip": "Explique que les ailes découpent les nuages en lignes.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_046",
+    "topic": "Comment un poisson électrique produit-il une décharge ?",
+    "facts": [
+      "Des cellules spécialisées appelées électrocytes créent une tension.",
+      "Elles s’activent ensemble comme des piles en série.",
+      "La décharge sert à chasser, se défendre ou s’orienter."
+    ],
+    "fakeTip": "Invente un frottement rapide de ses écailles.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_047",
+    "topic": "Pourquoi la menthe donne-t-elle une sensation de froid ?",
+    "facts": [
+      "Le menthol active des récepteurs sensibles au froid.",
+      "La température réelle ne baisse pas forcément.",
+      "Le cerveau interprète ce signal comme du frais."
+    ],
+    "fakeTip": "Explique que la menthe absorbe instantanément la chaleur de la bouche.",
+    "category": "science"
+  },
+  {
+    "id": "exp_048",
+    "topic": "Comment un appareil photo fait-il la mise au point ?",
+    "facts": [
+      "Il déplace des lentilles pour former une image nette sur le capteur.",
+      "L’autofocus mesure le contraste ou la différence de phase.",
+      "La distance de mise au point change la position optimale."
+    ],
+    "fakeTip": "Affirme que le capteur zoome numériquement jusqu’à trouver les contours.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_049",
+    "topic": "Pourquoi une bouteille de soda mousse-t-elle quand on la secoue ?",
+    "facts": [
+      "Le gaz dissous forme de nombreuses petites bulles.",
+      "La secousse crée des sites de nucléation.",
+      "À l’ouverture, la pression chute et les bulles grossissent vite."
+    ],
+    "fakeTip": "Explique que le sucre se transforme brièvement en mousse.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_050",
+    "topic": "Comment un satellite reste-t-il en orbite ?",
+    "facts": [
+      "Il avance assez vite pour tomber autour de la Terre.",
+      "La gravité courbe continuellement sa trajectoire.",
+      "Sa vitesse et son altitude déterminent l’orbite."
+    ],
+    "fakeTip": "Dis qu’il est suspendu par le champ magnétique terrestre.",
+    "category": "science"
+  },
+  {
+    "id": "exp_051",
+    "topic": "Pourquoi un coquillage semble-t-il contenir le bruit de la mer ?",
+    "facts": [
+      "La cavité amplifie certaines fréquences du bruit ambiant.",
+      "Elle agit comme un résonateur.",
+      "Le même effet existe avec une tasse vide."
+    ],
+    "fakeTip": "Affirme qu’il conserve réellement des vibrations de l’océan.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_052",
+    "topic": "Comment une plante carnivore attrape-t-elle un insecte ?",
+    "facts": [
+      "Des poils sensibles détectent le contact.",
+      "Le piège peut se fermer rapidement.",
+      "La plante libère ensuite des enzymes digestives."
+    ],
+    "fakeTip": "Invente une odeur qui endort instantanément l’insecte.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_053",
+    "topic": "Pourquoi le miel se conserve-t-il longtemps ?",
+    "facts": [
+      "Il contient très peu d’eau disponible.",
+      "Il est acide et riche en sucre.",
+      "Ces conditions empêchent beaucoup de microbes de se développer."
+    ],
+    "fakeTip": "Explique que les abeilles y déposent un conservateur naturel éternel.",
+    "category": "science"
+  },
+  {
+    "id": "exp_054",
+    "topic": "Comment une imprimante 3D construit-elle un objet ?",
+    "facts": [
+      "Elle dépose ou solidifie la matière couche par couche.",
+      "Un modèle numérique guide chaque trajectoire.",
+      "La technique varie selon le matériau."
+    ],
+    "fakeTip": "Affirme qu’elle gonfle un objet creux depuis l’intérieur.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_055",
+    "topic": "Pourquoi les paons font-ils la roue ?",
+    "facts": [
+      "Le mâle expose ses plumes lors de la parade.",
+      "Les motifs et vibrations participent au choix du partenaire.",
+      "La roue sert aussi à impressionner des rivaux."
+    ],
+    "fakeTip": "Explique qu’ils refroidissent leur corps comme un éventail.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_056",
+    "topic": "Comment un détecteur de fumée repère-t-il un incendie ?",
+    "facts": [
+      "Certains détecteurs utilisent une chambre optique.",
+      "La fumée dévie la lumière vers un capteur.",
+      "D’autres technologies détectent des variations électriques."
+    ],
+    "fakeTip": "Affirme qu’il reconnaît l’odeur grâce à un capteur chimique miniature.",
+    "category": "science"
+  },
+  {
+    "id": "exp_057",
+    "topic": "Pourquoi les glaçons collent-ils parfois à la langue ?",
+    "facts": [
+      "La glace absorbe rapidement la chaleur de la langue.",
+      "L’humidité à la surface peut geler.",
+      "Le contact se soude brièvement."
+    ],
+    "fakeTip": "Explique que la glace crée une petite aspiration.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_058",
+    "topic": "Comment les chauves-souris évitent-elles les obstacles ?",
+    "facts": [
+      "Beaucoup utilisent des ultrasons.",
+      "Elles analysent le temps et la fréquence des échos.",
+      "Elles adaptent leurs cris en plein vol."
+    ],
+    "fakeTip": "Invente une vision infrarouge extrêmement précise.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_059",
+    "topic": "Pourquoi une cocotte-minute cuit-elle plus vite ?",
+    "facts": [
+      "La pression augmente dans le récipient fermé.",
+      "L’eau bout alors à une température plus élevée.",
+      "Les aliments cuisent plus rapidement."
+    ],
+    "fakeTip": "Affirme que le couvercle renvoie la chaleur comme un miroir.",
+    "category": "science"
+  },
+  {
+    "id": "exp_060",
+    "topic": "Comment les arbres font-ils monter l’eau jusqu’aux feuilles ?",
+    "facts": [
+      "L’évaporation crée une tension dans les vaisseaux.",
+      "La cohésion entre molécules maintient la colonne d’eau.",
+      "La capillarité et la pression racinaire aident aussi."
+    ],
+    "fakeTip": "Explique que chaque feuille aspire l’eau avec de petits muscles.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_061",
+    "topic": "Pourquoi les pneus ont-ils des rainures ?",
+    "facts": [
+      "Elles évacuent l’eau.",
+      "Elles réduisent le risque d’aquaplanage.",
+      "Le dessin influence adhérence, bruit et usure."
+    ],
+    "fakeTip": "Dis qu’elles servent principalement à refroidir le caoutchouc.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_062",
+    "topic": "Comment une horloge atomique mesure-t-elle le temps ?",
+    "facts": [
+      "Elle utilise une fréquence de transition atomique très stable.",
+      "Le césium est souvent utilisé.",
+      "Les oscillations servent de référence extrêmement précise."
+    ],
+    "fakeTip": "Affirme qu’elle compte la désintégration d’un petit morceau radioactif.",
+    "category": "science"
+  },
+  {
+    "id": "exp_063",
+    "topic": "Pourquoi la neige crisse-t-elle sous les pas ?",
+    "facts": [
+      "Les cristaux se cassent et se frottent.",
+      "Le son varie avec la température.",
+      "Par grand froid, la neige est plus rigide et crisse davantage."
+    ],
+    "fakeTip": "Explique que de l’air s’échappe de bulles emprisonnées.",
+    "category": "quotidien"
+  },
+  {
+    "id": "exp_064",
+    "topic": "Comment les méduses se déplacent-elles ?",
+    "facts": [
+      "Elles contractent leur ombrelle.",
+      "L’eau est expulsée vers l’arrière.",
+      "La réaction les propulse."
+    ],
+    "fakeTip": "Invente des cils invisibles qui tournent comme des hélices.",
+    "category": "culture"
+  },
+  {
+    "id": "exp_065",
+    "topic": "Pourquoi un miroir inverse-t-il gauche et droite ?",
+    "facts": [
+      "Il inverse surtout l’avant et l’arrière.",
+      "Notre cerveau imagine une rotation pour se placer dans le miroir.",
+      "C’est cette comparaison qui donne l’impression gauche-droite."
+    ],
+    "fakeTip": "Explique que le verre retourne automatiquement l’image horizontalement.",
+    "category": "science"
+  }
+]

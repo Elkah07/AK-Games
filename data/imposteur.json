@@ -1,0 +1,827 @@
+[
+  {
+    "id": "imp_001_croissant",
+    "word": "Croissant",
+    "hint": "On me trouve souvent au petit-déjeuner",
+    "decoys": [
+      "Baguette",
+      "Brioche",
+      "Pain au chocolat"
+    ],
+    "category": "quotidien"
+  },
+  {
+    "id": "imp_002_parapluie",
+    "word": "Parapluie",
+    "hint": "Je sors surtout quand le ciel se fâche",
+    "decoys": [
+      "Imperméable",
+      "Bonnet",
+      "Écharpe"
+    ],
+    "category": "objets"
+  },
+  {
+    "id": "imp_003_ascenseur",
+    "word": "Ascenseur",
+    "hint": "Je fais gagner des étages sans marcher",
+    "decoys": [
+      "Escalier",
+      "Escalator",
+      "Téléphérique"
+    ],
+    "category": "lieux"
+  },
+  {
+    "id": "imp_004_pop_corn",
+    "word": "Pop-corn",
+    "hint": "Je fais du bruit au cinéma",
+    "decoys": [
+      "Chips",
+      "Bonbons",
+      "Nachos"
+    ],
+    "category": "soiree"
+  },
+  {
+    "id": "imp_005_valise",
+    "word": "Valise",
+    "hint": "Je voyage sans choisir la destination",
+    "decoys": [
+      "Sac à dos",
+      "Carton",
+      "Panier"
+    ],
+    "category": "voyage"
+  },
+  {
+    "id": "imp_006_boussole",
+    "word": "Boussole",
+    "hint": "Je montre une direction sans parler",
+    "decoys": [
+      "Carte",
+      "GPS",
+      "Montre"
+    ],
+    "category": "objets"
+  },
+  {
+    "id": "imp_007_pizza",
+    "word": "Pizza",
+    "hint": "Je me partage souvent en parts",
+    "decoys": [
+      "Tarte",
+      "Quiche",
+      "Crêpe"
+    ],
+    "category": "nourriture"
+  },
+  {
+    "id": "imp_008_karaok",
+    "word": "Karaoké",
+    "hint": "On y chante même quand on chante faux",
+    "decoys": [
+      "Concert",
+      "Blind test",
+      "Radio"
+    ],
+    "category": "soiree"
+  },
+  {
+    "id": "imp_009_hamster",
+    "word": "Hamster",
+    "hint": "Je cours beaucoup sans aller loin",
+    "decoys": [
+      "Souris",
+      "Lapin",
+      "Écureuil"
+    ],
+    "category": "animaux"
+  },
+  {
+    "id": "imp_010_bibliothque",
+    "word": "Bibliothèque",
+    "hint": "On y parle généralement à voix basse",
+    "decoys": [
+      "Librairie",
+      "Musée",
+      "École"
+    ],
+    "category": "lieux"
+  },
+  {
+    "id": "imp_011_feu_de_camp",
+    "word": "Feu de camp",
+    "hint": "Je réchauffe les soirées dehors",
+    "decoys": [
+      "Cheminée",
+      "Barbecue",
+      "Bougie"
+    ],
+    "category": "soiree"
+  },
+  {
+    "id": "imp_012_tlcommande",
+    "word": "Télécommande",
+    "hint": "On me cherche souvent entre les coussins",
+    "decoys": [
+      "Manette",
+      "Téléphone",
+      "Clé"
+    ],
+    "category": "objets"
+  },
+  {
+    "id": "imp_013_pastque",
+    "word": "Pastèque",
+    "hint": "Je suis très lourde et pleine d’eau",
+    "decoys": [
+      "Melon",
+      "Ananas",
+      "Citrouille"
+    ],
+    "category": "nourriture"
+  },
+  {
+    "id": "imp_014_montgolfire",
+    "word": "Montgolfière",
+    "hint": "Je voyage grâce à de l’air très chaud",
+    "decoys": [
+      "Avion",
+      "Parapente",
+      "Ballon"
+    ],
+    "category": "voyage"
+  },
+  {
+    "id": "imp_015_aquarium",
+    "word": "Aquarium",
+    "hint": "Je garde un morceau d’océan derrière une vitre",
+    "decoys": [
+      "Piscine",
+      "Terrarium",
+      "Fontaine"
+    ],
+    "category": "lieux"
+  },
+  {
+    "id": "imp_016_dentifrice",
+    "word": "Dentifrice",
+    "hint": "Je travaille avant de sortir le matin",
+    "decoys": [
+      "Savon",
+      "Shampoing",
+      "Déodorant"
+    ],
+    "category": "quotidien"
+  },
+  {
+    "id": "imp_017_puzzle",
+    "word": "Puzzle",
+    "hint": "Je deviens plus clair quand on me casse en morceaux",
+    "decoys": [
+      "Lego",
+      "Mosaïque",
+      "Labyrinthe"
+    ],
+    "category": "jeux"
+  },
+  {
+    "id": "imp_018_phare",
+    "word": "Phare",
+    "hint": "Je guide sans bouger",
+    "decoys": [
+      "Lampadaire",
+      "Tour",
+      "Balise"
+    ],
+    "category": "lieux"
+  },
+  {
+    "id": "imp_019_glace",
+    "word": "Glace",
+    "hint": "Je disparais plus vite quand il fait chaud",
+    "decoys": [
+      "Sorbet",
+      "Yaourt",
+      "Crème"
+    ],
+    "category": "nourriture"
+  },
+  {
+    "id": "imp_020_moustique",
+    "word": "Moustique",
+    "hint": "Je peux ruiner une nuit avec un bruit minuscule",
+    "decoys": [
+      "Mouche",
+      "Guêpe",
+      "Papillon"
+    ],
+    "category": "animaux"
+  },
+  {
+    "id": "imp_021_trampoline",
+    "word": "Trampoline",
+    "hint": "Je transforme une chute en remontée",
+    "decoys": [
+      "Toboggan",
+      "Balançoire",
+      "Matelas"
+    ],
+    "category": "objets"
+  },
+  {
+    "id": "imp_022_mtro",
+    "word": "Métro",
+    "hint": "Je transporte beaucoup de monde sous une ville",
+    "decoys": [
+      "Train",
+      "Tramway",
+      "Bus"
+    ],
+    "category": "transport"
+  },
+  {
+    "id": "imp_023_batterie",
+    "word": "Batterie",
+    "hint": "Je donne de l’énergie ou du rythme",
+    "decoys": [
+      "Pile",
+      "Guitare",
+      "Chargeur"
+    ],
+    "category": "objets"
+  },
+  {
+    "id": "imp_024_cactus",
+    "word": "Cactus",
+    "hint": "Je demande peu d’eau mais beaucoup de prudence",
+    "decoys": [
+      "Bonsaï",
+      "Rose",
+      "Palmier"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "imp_025_arc_en_ciel",
+    "word": "Arc-en-ciel",
+    "hint": "J’arrive quand le soleil rencontre la pluie",
+    "decoys": [
+      "Aurore",
+      "Éclair",
+      "Nuage"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "imp_026_micro_ondes",
+    "word": "Micro-ondes",
+    "hint": "Je fais gagner du temps aux plats froids",
+    "decoys": [
+      "Four",
+      "Grille-pain",
+      "Bouilloire"
+    ],
+    "category": "quotidien"
+  },
+  {
+    "id": "imp_027_chteau_de_sable",
+    "word": "Château de sable",
+    "hint": "Je suis grand jusqu’à la prochaine vague",
+    "decoys": [
+      "Cabane",
+      "Statue",
+      "Forteresse"
+    ],
+    "category": "vacances"
+  },
+  {
+    "id": "imp_028_bulle_de_savon",
+    "word": "Bulle de savon",
+    "hint": "Je brille juste avant de disparaître",
+    "decoys": [
+      "Ballon",
+      "Goutte",
+      "Flocon"
+    ],
+    "category": "objets"
+  },
+  {
+    "id": "imp_029_sushi",
+    "word": "Sushi",
+    "hint": "Je suis souvent petit mais rarement seul",
+    "decoys": [
+      "Tacos",
+      "Ravioli",
+      "Sandwich"
+    ],
+    "category": "nourriture"
+  },
+  {
+    "id": "imp_030_grotte",
+    "word": "Grotte",
+    "hint": "Je cache la lumière sous la roche",
+    "decoys": [
+      "Tunnel",
+      "Cave",
+      "Mine"
+    ],
+    "category": "lieux"
+  },
+  {
+    "id": "imp_031_piano",
+    "word": "Piano",
+    "hint": "J’ai beaucoup de touches sans écran",
+    "decoys": [
+      "Clavier",
+      "Accordéon",
+      "Orgue"
+    ],
+    "category": "musique"
+  },
+  {
+    "id": "imp_032_brouillard",
+    "word": "Brouillard",
+    "hint": "Je cache le paysage sans fermer les yeux",
+    "decoys": [
+      "Pluie",
+      "Fumée",
+      "Nuage"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "imp_033_planche_roulettes",
+    "word": "Planche à roulettes",
+    "hint": "Je roule mieux quand on garde l’équilibre",
+    "decoys": [
+      "Trottinette",
+      "Vélo",
+      "Rollers"
+    ],
+    "category": "sport"
+  },
+  {
+    "id": "imp_034_dtective",
+    "word": "Détective",
+    "hint": "Je cherche ce que les autres cachent",
+    "decoys": [
+      "Journaliste",
+      "Espion",
+      "Policier"
+    ],
+    "category": "metiers"
+  },
+  {
+    "id": "imp_035_robot_aspirateur",
+    "word": "Robot aspirateur",
+    "hint": "Je nettoie en se perdant parfois sous les meubles",
+    "decoys": [
+      "Aspirateur",
+      "Drone",
+      "Tondeuse"
+    ],
+    "category": "quotidien"
+  },
+  {
+    "id": "imp_036_cinma",
+    "word": "Cinéma",
+    "hint": "On y partage le silence et le pop-corn",
+    "decoys": [
+      "Théâtre",
+      "Stade",
+      "Musée"
+    ],
+    "category": "lieux"
+  },
+  {
+    "id": "imp_037_licorne",
+    "word": "Licorne",
+    "hint": "Je suis célèbre sans avoir besoin d’exister",
+    "decoys": [
+      "Cheval",
+      "Dragon",
+      "Pégase"
+    ],
+    "category": "imaginaire"
+  },
+  {
+    "id": "imp_038_baguette_magique",
+    "word": "Baguette magique",
+    "hint": "Je règle les problèmes surtout dans les histoires",
+    "decoys": [
+      "Épée",
+      "Canne",
+      "Sceptre"
+    ],
+    "category": "imaginaire"
+  },
+  {
+    "id": "imp_039_volcan",
+    "word": "Volcan",
+    "hint": "Je garde le feu sous une montagne",
+    "decoys": [
+      "Geyser",
+      "Fournaise",
+      "Cratère"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "imp_040_casque_audio",
+    "word": "Casque audio",
+    "hint": "Je rapproche la musique et éloigne le monde",
+    "decoys": [
+      "Écouteurs",
+      "Micro",
+      "Enceinte"
+    ],
+    "category": "objets"
+  },
+  {
+    "id": "imp_041_girafe",
+    "word": "Girafe",
+    "hint": "Je vois les problèmes de haut",
+    "decoys": [
+      "Zèbre",
+      "Chameau",
+      "Autruche"
+    ],
+    "category": "animaux"
+  },
+  {
+    "id": "imp_042_cabane",
+    "word": "Cabane",
+    "hint": "Je fais une petite maison avec de grandes aventures",
+    "decoys": [
+      "Tente",
+      "Caravane",
+      "Chalet"
+    ],
+    "category": "lieux"
+  },
+  {
+    "id": "imp_043_machine_laver",
+    "word": "Machine à laver",
+    "hint": "Je tourne en rond pour faire disparaître les taches",
+    "decoys": [
+      "Sèche-linge",
+      "Lave-vaisselle",
+      "Essoreuse"
+    ],
+    "category": "quotidien"
+  },
+  {
+    "id": "imp_044_feu_dartifice",
+    "word": "Feu d’artifice",
+    "hint": "Je suis très bruyant pour quelque chose d’aussi bref",
+    "decoys": [
+      "Éclair",
+      "Confettis",
+      "Laser"
+    ],
+    "category": "soiree"
+  },
+  {
+    "id": "imp_045_toboggan",
+    "word": "Toboggan",
+    "hint": "Je descends mieux qu’un escalier",
+    "decoys": [
+      "Rampe",
+      "Trampoline",
+      "Balançoire"
+    ],
+    "category": "jeux"
+  },
+  {
+    "id": "imp_046_baleine",
+    "word": "Baleine",
+    "hint": "Je suis immense mais je dois remonter respirer",
+    "decoys": [
+      "Requin",
+      "Dauphin",
+      "Orque"
+    ],
+    "category": "animaux"
+  },
+  {
+    "id": "imp_047_gaufre",
+    "word": "Gaufre",
+    "hint": "J’ai des cases sans être un jeu",
+    "decoys": [
+      "Crêpe",
+      "Biscuit",
+      "Pancake"
+    ],
+    "category": "nourriture"
+  },
+  {
+    "id": "imp_048_passeport",
+    "word": "Passeport",
+    "hint": "Je prouve qui tu es loin de chez toi",
+    "decoys": [
+      "Carte bancaire",
+      "Billet",
+      "Permis"
+    ],
+    "category": "voyage"
+  },
+  {
+    "id": "imp_049_dragon",
+    "word": "Dragon",
+    "hint": "Je garde souvent quelque chose que personne ne veut partager",
+    "decoys": [
+      "Dinosaure",
+      "Serpent",
+      "Griffon"
+    ],
+    "category": "imaginaire"
+  },
+  {
+    "id": "imp_050_rveil",
+    "word": "Réveil",
+    "hint": "Je suis utile exactement quand on me déteste",
+    "decoys": [
+      "Horloge",
+      "Minuteur",
+      "Téléphone"
+    ],
+    "category": "quotidien"
+  },
+  {
+    "id": "imp_051_tour_eiffel",
+    "word": "Tour Eiffel",
+    "hint": "Je suis une grande dame de fer très photographiée",
+    "decoys": [
+      "Big Ben",
+      "Arc de Triomphe",
+      "Statue de la Liberté"
+    ],
+    "category": "culture"
+  },
+  {
+    "id": "imp_052_tetris",
+    "word": "Tetris",
+    "hint": "Je récompense les personnes qui rangent vite",
+    "decoys": [
+      "Sudoku",
+      "Minecraft",
+      "Pac-Man"
+    ],
+    "category": "jeux"
+  },
+  {
+    "id": "imp_053_super_hros",
+    "word": "Super-héros",
+    "hint": "Je mets parfois une cape pour résoudre des problèmes",
+    "decoys": [
+      "Magicien",
+      "Chevalier",
+      "Espion"
+    ],
+    "category": "culture"
+  },
+  {
+    "id": "imp_054_fantme",
+    "word": "Fantôme",
+    "hint": "Je traverse les murs mais pas toujours les histoires",
+    "decoys": [
+      "Zombie",
+      "Vampire",
+      "Squelette"
+    ],
+    "category": "imaginaire"
+  },
+  {
+    "id": "imp_055_machine_caf",
+    "word": "Machine à café",
+    "hint": "Je transforme une matinée en personne fréquentable",
+    "decoys": [
+      "Bouilloire",
+      "Grille-pain",
+      "Blender"
+    ],
+    "category": "quotidien"
+  },
+  {
+    "id": "imp_056_rivire",
+    "word": "Rivière",
+    "hint": "Je voyage sans valise vers la mer",
+    "decoys": [
+      "Canal",
+      "Cascade",
+      "Lac"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "imp_057_lastique",
+    "word": "Élastique",
+    "hint": "Je reviens souvent après qu’on m’a tiré",
+    "decoys": [
+      "Ressort",
+      "Corde",
+      "Ruban"
+    ],
+    "category": "objets"
+  },
+  {
+    "id": "imp_058_boule_facettes",
+    "word": "Boule à facettes",
+    "hint": "Je fais danser la lumière avant les gens",
+    "decoys": [
+      "Projecteur",
+      "Lustre",
+      "Néon"
+    ],
+    "category": "soiree"
+  },
+  {
+    "id": "imp_059_tente",
+    "word": "Tente",
+    "hint": "Je donne un toit qui tient dans un sac",
+    "decoys": [
+      "Cabane",
+      "Parasol",
+      "Hamac"
+    ],
+    "category": "voyage"
+  },
+  {
+    "id": "imp_060_ananas",
+    "word": "Ananas",
+    "hint": "Je porte une couronne sans être royal",
+    "decoys": [
+      "Mangue",
+      "Coco",
+      "Papaye"
+    ],
+    "category": "nourriture"
+  },
+  {
+    "id": "imp_061_escargot",
+    "word": "Escargot",
+    "hint": "Je voyage avec ma maison",
+    "decoys": [
+      "Tortue",
+      "Limace",
+      "Bernard-l’ermite"
+    ],
+    "category": "animaux"
+  },
+  {
+    "id": "imp_062_jeu_de_cartes",
+    "word": "Jeu de cartes",
+    "hint": "Je peux créer une guerre sans danger",
+    "decoys": [
+      "Échecs",
+      "Dominos",
+      "Dés"
+    ],
+    "category": "jeux"
+  },
+  {
+    "id": "imp_063_station_service",
+    "word": "Station-service",
+    "hint": "On y fait le plein avant de repartir",
+    "decoys": [
+      "Garage",
+      "Parking",
+      "Péage"
+    ],
+    "category": "transport"
+  },
+  {
+    "id": "imp_064_cerf_volant",
+    "word": "Cerf-volant",
+    "hint": "Je vole mieux quand on me retient",
+    "decoys": [
+      "Ballon",
+      "Drone",
+      "Avion en papier"
+    ],
+    "category": "vacances"
+  },
+  {
+    "id": "imp_065_boule_de_neige",
+    "word": "Boule de neige",
+    "hint": "Je grossis quand on la fait rouler",
+    "decoys": [
+      "Bonhomme de neige",
+      "Glaçon",
+      "Avalanche"
+    ],
+    "category": "hiver"
+  },
+  {
+    "id": "imp_066_clipse",
+    "word": "Éclipse",
+    "hint": "Je transforme brièvement le jour en presque nuit",
+    "decoys": [
+      "Orage",
+      "Crépuscule",
+      "Pleine lune"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "imp_067_magicien",
+    "word": "Magicien",
+    "hint": "Je détourne l’attention pour créer l’impossible",
+    "decoys": [
+      "Clown",
+      "Mentaliste",
+      "Illusionniste"
+    ],
+    "category": "metiers"
+  },
+  {
+    "id": "imp_068_bateau_pirate",
+    "word": "Bateau pirate",
+    "hint": "Je cherche des trésors avec un mauvais sens du rangement",
+    "decoys": [
+      "Voilier",
+      "Sous-marin",
+      "Galion"
+    ],
+    "category": "imaginaire"
+  },
+  {
+    "id": "imp_069_brique_lego",
+    "word": "Brique Lego",
+    "hint": "Je fais très mal uniquement quand je suis au sol",
+    "decoys": [
+      "Puzzle",
+      "Domino",
+      "Cube"
+    ],
+    "category": "jeux"
+  },
+  {
+    "id": "imp_070_chaussette_perdue",
+    "word": "Chaussette perdue",
+    "hint": "Je disparais mystérieusement pendant la lessive",
+    "decoys": [
+      "Gant",
+      "Écharpe",
+      "Serviette"
+    ],
+    "category": "quotidien"
+  },
+  {
+    "id": "imp_071_panda",
+    "word": "Panda",
+    "hint": "Je suis très célèbre parce que je mange assis",
+    "decoys": [
+      "Koala",
+      "Ours",
+      "Raton laveur"
+    ],
+    "category": "animaux"
+  },
+  {
+    "id": "imp_072_churros",
+    "word": "Churros",
+    "hint": "Je suis souvent couvert de sucre et dégusté debout",
+    "decoys": [
+      "Donut",
+      "Beignet",
+      "Gaufre"
+    ],
+    "category": "nourriture"
+  },
+  {
+    "id": "imp_073_escape_game",
+    "word": "Escape game",
+    "hint": "On paie pour être enfermé avec des indices",
+    "decoys": [
+      "Laser game",
+      "Quiz room",
+      "Labyrinthe"
+    ],
+    "category": "jeux"
+  },
+  {
+    "id": "imp_074_nuage",
+    "word": "Nuage",
+    "hint": "Je voyage sans route et change de forme",
+    "decoys": [
+      "Fumée",
+      "Brouillard",
+      "Vapeur"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "imp_075_cl_usb",
+    "word": "Clé USB",
+    "hint": "Je transporte beaucoup sans avoir de roues",
+    "decoys": [
+      "Disque dur",
+      "Carte mémoire",
+      "Chargeur"
+    ],
+    "category": "objets"
+  }
+]

@@ -1,0 +1,882 @@
+[
+  {
+    "id": "who_001",
+    "label": "Une pizza",
+    "category": "objets",
+    "clues": [
+      "On me partage souvent.",
+      "Je peux avoir beaucoup de garnitures.",
+      "Je disparais vite en soirée."
+    ]
+  },
+  {
+    "id": "who_002",
+    "label": "Un parapluie",
+    "category": "objets",
+    "clues": [
+      "Je m’ouvre quand le ciel se ferme.",
+      "Je peux me retourner avec le vent.",
+      "On m’oublie souvent quelque part."
+    ]
+  },
+  {
+    "id": "who_003",
+    "label": "Un cactus",
+    "category": "nature",
+    "clues": [
+      "Je stocke de l’eau.",
+      "Je pique sans courir.",
+      "Je vis bien là où il pleut peu."
+    ]
+  },
+  {
+    "id": "who_004",
+    "label": "Un réveil",
+    "category": "objets",
+    "clues": [
+      "On me déteste surtout le matin.",
+      "Je fais du bruit pour aider.",
+      "On me repousse parfois plusieurs fois."
+    ]
+  },
+  {
+    "id": "who_005",
+    "label": "Une licorne",
+    "category": "imaginaire",
+    "clues": [
+      "Je suis célèbre sans preuve solide.",
+      "J’ai souvent une corne.",
+      "Je vis mieux dans les histoires."
+    ]
+  },
+  {
+    "id": "who_006",
+    "label": "Un fantôme",
+    "category": "imaginaire",
+    "clues": [
+      "Je traverse parfois les murs.",
+      "Je suis rarement invité.",
+      "On me voit surtout dans les histoires de nuit."
+    ]
+  },
+  {
+    "id": "who_007",
+    "label": "Un dragon",
+    "category": "imaginaire",
+    "clues": [
+      "Je garde parfois un trésor.",
+      "Je peux avoir des ailes.",
+      "Mon souffle pose problème."
+    ]
+  },
+  {
+    "id": "who_008",
+    "label": "Un détective",
+    "category": "metiers",
+    "clues": [
+      "Je pose beaucoup de questions.",
+      "Je cherche des indices.",
+      "Je préfère les secrets mal cachés."
+    ]
+  },
+  {
+    "id": "who_009",
+    "label": "Un astronaute",
+    "category": "metiers",
+    "clues": [
+      "Je travaille loin du sol.",
+      "Je porte une combinaison.",
+      "Je vois la Terre autrement."
+    ]
+  },
+  {
+    "id": "who_010",
+    "label": "Un serveur de restaurant",
+    "category": "metiers",
+    "clues": [
+      "Je prends des commandes.",
+      "Je transporte des assiettes.",
+      "Je souris parfois malgré une table compliquée."
+    ]
+  },
+  {
+    "id": "who_011",
+    "label": "Un chat",
+    "category": "animaux",
+    "clues": [
+      "Je peux ronronner.",
+      "Je décide souvent quand commence le câlin.",
+      "Je déteste certaines portes fermées."
+    ]
+  },
+  {
+    "id": "who_012",
+    "label": "Un panda",
+    "category": "animaux",
+    "clues": [
+      "Je mange beaucoup assis.",
+      "Je suis noir et blanc.",
+      "Je rends le bambou très important."
+    ]
+  },
+  {
+    "id": "who_013",
+    "label": "Un dauphin",
+    "category": "animaux",
+    "clues": [
+      "Je suis très à l’aise dans l’eau.",
+      "Je communique avec des sons.",
+      "Je remonte respirer."
+    ]
+  },
+  {
+    "id": "who_014",
+    "label": "Une girafe",
+    "category": "animaux",
+    "clues": [
+      "Je vois de haut.",
+      "Mon cou attire l’attention.",
+      "Je mange dans les arbres."
+    ]
+  },
+  {
+    "id": "who_015",
+    "label": "Un pingouin",
+    "category": "animaux",
+    "clues": [
+      "Je porte naturellement un costume.",
+      "Je vis dans le froid.",
+      "Je nage mieux que je ne vole."
+    ]
+  },
+  {
+    "id": "who_016",
+    "label": "Un hamster",
+    "category": "animaux",
+    "clues": [
+      "Je peux courir sans avancer.",
+      "Je transporte parfois à manger dans mes joues.",
+      "Je vis dans un petit espace."
+    ]
+  },
+  {
+    "id": "who_017",
+    "label": "Un escargot",
+    "category": "animaux",
+    "clues": [
+      "Je porte ma maison.",
+      "Je ne gagne pas les courses.",
+      "Je laisse une trace brillante."
+    ]
+  },
+  {
+    "id": "who_018",
+    "label": "Une pieuvre",
+    "category": "animaux",
+    "clues": [
+      "J’ai beaucoup de bras.",
+      "Je peux changer d’apparence.",
+      "Je suis très intelligente."
+    ]
+  },
+  {
+    "id": "who_019",
+    "label": "Un requin",
+    "category": "animaux",
+    "clues": [
+      "Je suis souvent mal compris au cinéma.",
+      "Je nage beaucoup.",
+      "Mes dents attirent l’attention."
+    ]
+  },
+  {
+    "id": "who_020",
+    "label": "Un paon",
+    "category": "animaux",
+    "clues": [
+      "Je fais la roue.",
+      "Mes plumes sont très voyantes.",
+      "Je ne passe pas inaperçu."
+    ]
+  },
+  {
+    "id": "who_021",
+    "label": "Une montgolfière",
+    "category": "transport",
+    "clues": [
+      "Je monte grâce à l’air chaud.",
+      "Je voyage lentement.",
+      "Je porte un grand ballon."
+    ]
+  },
+  {
+    "id": "who_022",
+    "label": "Un sous-marin",
+    "category": "transport",
+    "clues": [
+      "Je voyage sous l’eau.",
+      "J’ai besoin de remonter un jour.",
+      "Je regarde dehors avec peu de fenêtres."
+    ]
+  },
+  {
+    "id": "who_023",
+    "label": "Un skateboard",
+    "category": "transport",
+    "clues": [
+      "Je roule sans moteur.",
+      "L’équilibre est important.",
+      "Je déteste les graviers."
+    ]
+  },
+  {
+    "id": "who_024",
+    "label": "Un métro",
+    "category": "transport",
+    "clues": [
+      "Je transporte beaucoup de monde.",
+      "Je passe souvent sous la ville.",
+      "Mes portes n’attendent pas longtemps."
+    ]
+  },
+  {
+    "id": "who_025",
+    "label": "Un bateau pirate",
+    "category": "transport",
+    "clues": [
+      "Je cherche parfois un trésor.",
+      "Mon drapeau inquiète.",
+      "Mon équipage parle fort."
+    ]
+  },
+  {
+    "id": "who_026",
+    "label": "Une bibliothèque",
+    "category": "lieux",
+    "clues": [
+      "On y chuchote.",
+      "Je contiens beaucoup d’histoires.",
+      "Je prête sans vendre."
+    ]
+  },
+  {
+    "id": "who_027",
+    "label": "Un cinéma",
+    "category": "lieux",
+    "clues": [
+      "On y regarde dans la même direction.",
+      "Le pop-corn y est fréquent.",
+      "La lumière s’éteint avant l’histoire."
+    ]
+  },
+  {
+    "id": "who_028",
+    "label": "Un parc d’attractions",
+    "category": "lieux",
+    "clues": [
+      "On y fait la queue pour avoir peur.",
+      "Je contiens beaucoup de musique.",
+      "On en ressort fatigué."
+    ]
+  },
+  {
+    "id": "who_029",
+    "label": "Une île déserte",
+    "category": "lieux",
+    "clues": [
+      "Je suis entourée d’eau.",
+      "Les bagages y manquent souvent.",
+      "On m’utilise dans beaucoup de questions “tu préfères”."
+    ]
+  },
+  {
+    "id": "who_030",
+    "label": "Un château",
+    "category": "lieux",
+    "clues": [
+      "J’ai souvent beaucoup de pièces.",
+      "Je raconte le passé.",
+      "Je peux avoir des tours."
+    ]
+  },
+  {
+    "id": "who_031",
+    "label": "Un volcan",
+    "category": "nature",
+    "clues": [
+      "Je garde quelque chose de très chaud.",
+      "Je peux dormir longtemps.",
+      "Mon réveil est spectaculaire."
+    ]
+  },
+  {
+    "id": "who_032",
+    "label": "Un arc-en-ciel",
+    "category": "nature",
+    "clues": [
+      "J’arrive avec de la lumière et de l’eau.",
+      "J’ai plusieurs couleurs.",
+      "On essaie parfois de trouver ma fin."
+    ]
+  },
+  {
+    "id": "who_033",
+    "label": "Une avalanche",
+    "category": "nature",
+    "clues": [
+      "Je descends sans frein.",
+      "Je suis faite de neige.",
+      "Je déteste les bruits au mauvais moment."
+    ]
+  },
+  {
+    "id": "who_034",
+    "label": "Un nuage",
+    "category": "nature",
+    "clues": [
+      "Je change de forme.",
+      "Je voyage sans route.",
+      "Je peux cacher le soleil."
+    ]
+  },
+  {
+    "id": "who_035",
+    "label": "Une étoile filante",
+    "category": "nature",
+    "clues": [
+      "Je ne suis pas vraiment une étoile.",
+      "On fait un vœu quand je passe.",
+      "Je reste peu de temps."
+    ]
+  },
+  {
+    "id": "who_036",
+    "label": "Un micro-ondes",
+    "category": "objets",
+    "clues": [
+      "Je fais gagner du temps.",
+      "Je tourne parfois en chauffant.",
+      "Je déteste le métal."
+    ]
+  },
+  {
+    "id": "who_037",
+    "label": "Une télécommande",
+    "category": "objets",
+    "clues": [
+      "On me perd dans le canapé.",
+      "J’ai beaucoup de boutons.",
+      "Je contrôle à distance."
+    ]
+  },
+  {
+    "id": "who_038",
+    "label": "Une chaussette perdue",
+    "category": "objets",
+    "clues": [
+      "Je disparais pendant la lessive.",
+      "Mon partenaire me cherche.",
+      "Je termine parfois seule dans un tiroir."
+    ]
+  },
+  {
+    "id": "who_039",
+    "label": "Un miroir",
+    "category": "objets",
+    "clues": [
+      "Je te montre sans te connaître.",
+      "Je n’oublie aucun geste.",
+      "Je vis souvent sur un mur."
+    ]
+  },
+  {
+    "id": "who_040",
+    "label": "Un ballon de baudruche",
+    "category": "objets",
+    "clues": [
+      "Je grossis avec de l’air.",
+      "Je flotte parfois.",
+      "Un petit bruit peut finir ma carrière."
+    ]
+  },
+  {
+    "id": "who_041",
+    "label": "Une baguette magique",
+    "category": "imaginaire",
+    "clues": [
+      "Je résous des problèmes dans les histoires.",
+      "Je me tient dans une main.",
+      "Je demande parfois une formule."
+    ]
+  },
+  {
+    "id": "who_042",
+    "label": "Un super-héros",
+    "category": "culture",
+    "clues": [
+      "Je porte parfois une cape.",
+      "Je sauve souvent le monde.",
+      "Mon identité peut être secrète."
+    ]
+  },
+  {
+    "id": "who_043",
+    "label": "Harry Potter",
+    "category": "culture",
+    "clues": [
+      "Je porte des lunettes.",
+      "J’ai appris la magie dans une école.",
+      "Une cicatrice me rend reconnaissable."
+    ]
+  },
+  {
+    "id": "who_044",
+    "label": "Shrek",
+    "category": "culture",
+    "clues": [
+      "Je vis dans un marais.",
+      "Je suis vert.",
+      "Je préfère qu’on respecte mon espace."
+    ]
+  },
+  {
+    "id": "who_045",
+    "label": "Mario",
+    "category": "culture",
+    "clues": [
+      "Je porte souvent une casquette rouge.",
+      "Je saute beaucoup.",
+      "Je connais bien les tuyaux."
+    ]
+  },
+  {
+    "id": "who_046",
+    "label": "Pikachu",
+    "category": "culture",
+    "clues": [
+      "Je suis jaune.",
+      "Je produis de l’électricité.",
+      "Je suis très reconnaissable à mes oreilles."
+    ]
+  },
+  {
+    "id": "who_047",
+    "label": "Wednesday Addams",
+    "category": "culture",
+    "clues": [
+      "Je préfère le noir.",
+      "Je sourit rarement.",
+      "Mon humour est très sombre."
+    ]
+  },
+  {
+    "id": "who_048",
+    "label": "Batman",
+    "category": "culture",
+    "clues": [
+      "Je travaille surtout la nuit.",
+      "Je n’ai pas de super-pouvoir classique.",
+      "Les chauves-souris font partie de mon image."
+    ]
+  },
+  {
+    "id": "who_049",
+    "label": "Spider-Man",
+    "category": "culture",
+    "clues": [
+      "Je me déplace entre les immeubles.",
+      "Je colle aux murs.",
+      "Une araignée a changé ma vie."
+    ]
+  },
+  {
+    "id": "who_050",
+    "label": "Elsa",
+    "category": "culture",
+    "clues": [
+      "Le froid ne me dérange pas.",
+      "Je suis liée à un royaume enneigé.",
+      "Je chante une chanson très connue."
+    ]
+  },
+  {
+    "id": "who_051",
+    "label": "Darth Vader",
+    "category": "culture",
+    "clues": [
+      "Ma respiration est célèbre.",
+      "Je porte du noir.",
+      "Je suis lié à la Force."
+    ]
+  },
+  {
+    "id": "who_052",
+    "label": "Groot",
+    "category": "culture",
+    "clues": [
+      "Je parle avec très peu de mots différents.",
+      "Je ressemble à un arbre.",
+      "Je voyage dans l’espace."
+    ]
+  },
+  {
+    "id": "who_053",
+    "label": "Le Père Noël",
+    "category": "culture",
+    "clues": [
+      "Je travaille surtout une nuit par an.",
+      "J’ai un traîneau.",
+      "Je connais beaucoup d’adresses."
+    ]
+  },
+  {
+    "id": "who_054",
+    "label": "Un zombie",
+    "category": "imaginaire",
+    "clues": [
+      "Je marche rarement vite.",
+      "Je n’ai pas bonne mine.",
+      "Les films me donnent souvent faim."
+    ]
+  },
+  {
+    "id": "who_055",
+    "label": "Un vampire",
+    "category": "imaginaire",
+    "clues": [
+      "Je préfère la nuit.",
+      "Le soleil peut poser problème.",
+      "Les histoires me donnent parfois des crocs."
+    ]
+  },
+  {
+    "id": "who_056",
+    "label": "Un génie de lampe",
+    "category": "imaginaire",
+    "clues": [
+      "Je peux accorder des souhaits.",
+      "Je vis dans un objet étroit.",
+      "Trois est souvent un nombre important."
+    ]
+  },
+  {
+    "id": "who_057",
+    "label": "Un robot",
+    "category": "imaginaire",
+    "clues": [
+      "Je suis programmé.",
+      "Je peux avoir des boulons.",
+      "On me demande souvent si je ressens des émotions."
+    ]
+  },
+  {
+    "id": "who_058",
+    "label": "Un alien",
+    "category": "imaginaire",
+    "clues": [
+      "Je viens d’ailleurs.",
+      "Mon vaisseau intéresse beaucoup les humains.",
+      "Mon apparence dépend des histoires."
+    ]
+  },
+  {
+    "id": "who_059",
+    "label": "Un clown",
+    "category": "metiers",
+    "clues": [
+      "Je porte parfois un nez rouge.",
+      "Je suis censé faire rire.",
+      "Je peux aussi faire peur à certaines personnes."
+    ]
+  },
+  {
+    "id": "who_060",
+    "label": "Un magicien",
+    "category": "metiers",
+    "clues": [
+      "Je cache ce que je fais.",
+      "J’aime les cartes et les chapeaux.",
+      "Je demande de regarder ailleurs au bon moment."
+    ]
+  },
+  {
+    "id": "who_061",
+    "label": "Un DJ",
+    "category": "metiers",
+    "clues": [
+      "Je contrôle la musique.",
+      "Je porte parfois un casque.",
+      "J’observe la piste de danse."
+    ]
+  },
+  {
+    "id": "who_062",
+    "label": "Un influenceur",
+    "category": "metiers",
+    "clues": [
+      "Je filme beaucoup.",
+      "Je parle parfois à une caméra seul.",
+      "Je connais bien les partenariats."
+    ]
+  },
+  {
+    "id": "who_063",
+    "label": "Un chef cuisinier",
+    "category": "metiers",
+    "clues": [
+      "Je travaille avec des couteaux.",
+      "Je goûte avant de servir.",
+      "Je porte souvent une veste claire."
+    ]
+  },
+  {
+    "id": "who_064",
+    "label": "Une baguette de pain",
+    "category": "nourriture",
+    "clues": [
+      "Je suis longue.",
+      "Je craque quand je suis fraîche.",
+      "Je accompagne beaucoup de repas."
+    ]
+  },
+  {
+    "id": "who_065",
+    "label": "Un sushi",
+    "category": "nourriture",
+    "clues": [
+      "Je suis petit.",
+      "Je viens rarement seul.",
+      "Le riz est important pour moi."
+    ]
+  },
+  {
+    "id": "who_066",
+    "label": "Une gaufre",
+    "category": "nourriture",
+    "clues": [
+      "J’ai des cases.",
+      "J’aime le sucre.",
+      "Je peux être croustillante."
+    ]
+  },
+  {
+    "id": "who_067",
+    "label": "Un ananas",
+    "category": "nourriture",
+    "clues": [
+      "Je porte une couronne.",
+      "Je pique un peu à l’extérieur.",
+      "Je divise parfois les amateurs de pizza."
+    ]
+  },
+  {
+    "id": "who_068",
+    "label": "Un donut",
+    "category": "nourriture",
+    "clues": [
+      "J’ai souvent un trou.",
+      "Je peux être glacé.",
+      "Je suis très photogénique."
+    ]
+  },
+  {
+    "id": "who_069",
+    "label": "Un tacos",
+    "category": "nourriture",
+    "clues": [
+      "Je peux être très rempli.",
+      "Je me mange souvent avec les mains.",
+      "Je provoque parfois des débats sur sa vraie définition."
+    ]
+  },
+  {
+    "id": "who_070",
+    "label": "Un café",
+    "category": "nourriture",
+    "clues": [
+      "Je réveille certaines personnes.",
+      "Je peux être court ou long.",
+      "Je sens très fort."
+    ]
+  },
+  {
+    "id": "who_071",
+    "label": "Un glaçon",
+    "category": "nourriture",
+    "clues": [
+      "Je fond en travaillant.",
+      "Je rafraîchis sans parler.",
+      "Je n’aime pas la chaleur."
+    ]
+  },
+  {
+    "id": "who_072",
+    "label": "Un feu d’artifice",
+    "category": "soiree",
+    "clues": [
+      "Je suis très bruyant.",
+      "Je dure peu de temps.",
+      "Je colore le ciel."
+    ]
+  },
+  {
+    "id": "who_073",
+    "label": "Une boule à facettes",
+    "category": "soiree",
+    "clues": [
+      "Je renvoie la lumière.",
+      "Je tourne souvent au-dessus d’une piste.",
+      "Je adore les soirées rétro."
+    ]
+  },
+  {
+    "id": "who_074",
+    "label": "Un karaoké",
+    "category": "soiree",
+    "clues": [
+      "Je révèle qui connaît vraiment les paroles.",
+      "Je récompense l’audace plus que le talent.",
+      "J’utilise un micro."
+    ]
+  },
+  {
+    "id": "who_075",
+    "label": "Un photomaton",
+    "category": "soiree",
+    "clues": [
+      "Je prends plusieurs photos rapidement.",
+      "On se serre souvent à l’intérieur.",
+      "Je produit des souvenirs en bande."
+    ]
+  },
+  {
+    "id": "who_076",
+    "label": "Un jeu de société",
+    "category": "jeux",
+    "clues": [
+      "Je crée des règles et parfois des disputes.",
+      "Je me joue autour d’une table.",
+      "Je contiens souvent des cartes ou des pions."
+    ]
+  },
+  {
+    "id": "who_077",
+    "label": "Un dé",
+    "category": "jeux",
+    "clues": [
+      "J’ai plusieurs faces.",
+      "Je décide parfois à la place des joueurs.",
+      "Je roule avant de donner un nombre."
+    ]
+  },
+  {
+    "id": "who_078",
+    "label": "Une manette",
+    "category": "jeux",
+    "clues": [
+      "J’ai beaucoup de boutons.",
+      "Je me tient à deux mains.",
+      "Je peux vibrer."
+    ]
+  },
+  {
+    "id": "who_079",
+    "label": "Un puzzle",
+    "category": "jeux",
+    "clues": [
+      "Je commence en morceaux.",
+      "Je devient plus clair avec le temps.",
+      "Une pièce manque toujours au pire moment."
+    ]
+  },
+  {
+    "id": "who_080",
+    "label": "Un escape game",
+    "category": "jeux",
+    "clues": [
+      "On paie pour être enfermé.",
+      "Les indices sont partout.",
+      "Le temps compte."
+    ]
+  },
+  {
+    "id": "who_081",
+    "label": "Un sablier",
+    "category": "objets",
+    "clues": [
+      "Je mesure le temps avec du sable.",
+      "Je me retourne.",
+      "Je ne fait aucun bruit électronique."
+    ]
+  },
+  {
+    "id": "who_082",
+    "label": "Une valise",
+    "category": "voyage",
+    "clues": [
+      "Je voyage en soute ou à côté de toi.",
+      "Je ferme difficilement quand on a trop prévu.",
+      "Je roule parfois."
+    ]
+  },
+  {
+    "id": "who_083",
+    "label": "Un passeport",
+    "category": "voyage",
+    "clues": [
+      "J’ouvre certaines frontières.",
+      "Je contiens une photo.",
+      "Je déteste être oublié."
+    ]
+  },
+  {
+    "id": "who_084",
+    "label": "Une tente",
+    "category": "voyage",
+    "clues": [
+      "Je donne un toit transportable.",
+      "Je demande parfois des sardines.",
+      "Je me monte mieux avant la pluie."
+    ]
+  },
+  {
+    "id": "who_085",
+    "label": "Un GPS",
+    "category": "voyage",
+    "clues": [
+      "Je donne des directions.",
+      "Je recalcule sans se vexer.",
+      "Je connais beaucoup de routes."
+    ]
+  },
+  {
+    "id": "who_086",
+    "label": "Une carte postale",
+    "category": "voyage",
+    "clues": [
+      "Je voyage après toi.",
+      "Je contiens peu de texte.",
+      "Je montre souvent un paysage plus beau que la réalité."
+    ]
+  },
+  {
+    "id": "who_087",
+    "label": "Un festival",
+    "category": "soiree",
+    "clues": [
+      "Je rassemble beaucoup de monde.",
+      "Je implique de la musique et parfois de la boue.",
+      "Je fatigue les jambes."
+    ]
+  },
+  {
+    "id": "who_088",
+    "label": "Un selfie",
+    "category": "culture",
+    "clues": [
+      "Je me prend soi-même.",
+      "Je demande souvent plusieurs essais.",
+      "Je finit parfois sur un réseau social."
+    ]
+  }
+]

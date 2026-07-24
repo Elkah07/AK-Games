@@ -1,0 +1,222 @@
+[
+  {
+    "id": "exp_a_001",
+    "topic": "Pourquoi un premier rendez-vous paraît-il parfois plus long que prévu ?",
+    "facts": [
+      "L’attention accrue rend chaque détail plus présent.",
+      "Le stress modifie la perception du temps.",
+      "Les silences sont souvent davantage remarqués."
+    ],
+    "fakeTip": "Invente une théorie sur la synchronisation des battements de cœur.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_002",
+    "topic": "Pourquoi reçoit-on parfois plus de messages juste après avoir décidé de passer à autre chose ?",
+    "facts": [
+      "Le phénomène vient surtout de l’attention sélective.",
+      "On remarque davantage ce qui confirme notre décision.",
+      "Les habitudes de communication peuvent aussi se croiser par hasard."
+    ],
+    "fakeTip": "Affirme qu’une application détecte les changements émotionnels.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_003",
+    "topic": "Pourquoi rougit-on face à un crush ?",
+    "facts": [
+      "Le système nerveux augmente le flux sanguin vers le visage.",
+      "L’émotion et l’adrénaline déclenchent la réaction.",
+      "Le contrôle volontaire est limité."
+    ],
+    "fakeTip": "Explique que le cerveau envoie une alerte de température sociale.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_004",
+    "topic": "Pourquoi une chanson peut-elle rappeler immédiatement un ex ?",
+    "facts": [
+      "La musique se lie fortement à la mémoire émotionnelle.",
+      "Le contexte d’écoute crée des associations durables.",
+      "Quelques notes peuvent réactiver tout un souvenir."
+    ],
+    "fakeTip": "Affirme que le rythme stocke une copie des conversations passées.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_005",
+    "topic": "Pourquoi un compliment paraît-il parfois suspect sur une application de rencontre ?",
+    "facts": [
+      "Le manque de contexte rend l’intention ambiguë.",
+      "Les formulations génériques semblent copiées-collées.",
+      "La confiance dépend aussi du profil et du moment."
+    ],
+    "fakeTip": "Invente un algorithme qui mesure la sincérité des mots.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_006",
+    "topic": "Pourquoi certaines personnes aiment-elles les films d’horreur en date ?",
+    "facts": [
+      "La peur augmente l’activation physiologique.",
+      "Cette excitation peut être associée à la personne présente.",
+      "Partager une émotion forte crée un souvenir commun."
+    ],
+    "fakeTip": "Explique que le cerveau confond volontairement peur et amour.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_007",
+    "topic": "Pourquoi le silence après un message osé semble-t-il interminable ?",
+    "facts": [
+      "L’incertitude augmente l’attention portée au temps.",
+      "On vérifie davantage le téléphone.",
+      "Le cerveau imagine plusieurs scénarios."
+    ],
+    "fakeTip": "Affirme que les notifications ralentissent réellement quand on attend.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_008",
+    "topic": "Pourquoi peut-on être attiré par une personne qui nous agace ?",
+    "facts": [
+      "L’intensité émotionnelle peut renforcer l’attention.",
+      "La proximité et la tension créent parfois une ambiguïté.",
+      "L’attirance ne suit pas toujours une logique consciente."
+    ],
+    "fakeTip": "Invente une règle chimique selon laquelle les contraires produisent des étincelles.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_009",
+    "topic": "Pourquoi un parfum peut-il devenir très attirant sur une personne précise ?",
+    "facts": [
+      "La peau modifie légèrement la diffusion des molécules.",
+      "La mémoire et l’association émotionnelle comptent beaucoup.",
+      "Les préférences olfactives sont individuelles."
+    ],
+    "fakeTip": "Explique que le parfum copie les phéromones de la personne.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_010",
+    "topic": "Pourquoi certains couples se disputent-ils juste avant un départ en vacances ?",
+    "facts": [
+      "La charge mentale et les préparatifs augmentent le stress.",
+      "Les attentes élevées rendent les détails plus sensibles.",
+      "La fatigue réduit la patience."
+    ],
+    "fakeTip": "Affirme que le cerveau teste la solidité du couple avant un voyage.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_011",
+    "topic": "Pourquoi un ex semble-t-il souvent plus attirant après une rupture ?",
+    "facts": [
+      "La mémoire sélectionne parfois les bons moments.",
+      "La rareté augmente la valeur perçue.",
+      "La solitude peut amplifier l’idéalisation."
+    ],
+    "fakeTip": "Explique que la distance améliore physiquement les traits du visage.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_012",
+    "topic": "Pourquoi les secrets rapprochent-ils parfois deux personnes ?",
+    "facts": [
+      "Partager une information intime crée de la confiance.",
+      "Le sentiment d’exclusivité renforce la complicité.",
+      "La vulnérabilité mutuelle peut accélérer le lien."
+    ],
+    "fakeTip": "Affirme que le cerveau crée un canal privé entre deux personnes.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_013",
+    "topic": "Pourquoi un baiser peut-il sembler plus intense après une dispute ?",
+    "facts": [
+      "La tension émotionnelle augmente l’activation physique.",
+      "Le soulagement amplifie le contraste.",
+      "La réconciliation concentre l’attention sur le moment."
+    ],
+    "fakeTip": "Invente une réserve d’adrénaline transformée directement en attirance.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_014",
+    "topic": "Pourquoi certaines personnes préfèrent-elles les relations à distance ?",
+    "facts": [
+      "Elles peuvent apprécier l’autonomie.",
+      "La communication devient souvent plus intentionnelle.",
+      "Le désir et l’anticipation prennent une grande place."
+    ],
+    "fakeTip": "Affirme que la distance synchronise mieux les émotions.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_015",
+    "topic": "Pourquoi est-il difficile de rester naturel devant quelqu’un qui nous plaît ?",
+    "facts": [
+      "L’auto-surveillance augmente.",
+      "On anticipe davantage le jugement.",
+      "Le stress perturbe les gestes habituels."
+    ],
+    "fakeTip": "Explique que le cerveau coupe temporairement les automatismes sociaux.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_016",
+    "topic": "Pourquoi un “vu” sans réponse peut-il provoquer autant de scénarios ?",
+    "facts": [
+      "L’absence d’explication laisse un vide.",
+      "Le cerveau cherche à réduire l’incertitude.",
+      "Les expériences passées influencent les interprétations."
+    ],
+    "fakeTip": "Affirme que l’icône “vu” active une zone spéciale de panique.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_017",
+    "topic": "Pourquoi les surnoms intimes renforcent-ils parfois le lien ?",
+    "facts": [
+      "Ils créent un langage privé.",
+      "Ils rappellent des souvenirs communs.",
+      "Ils signalent une proximité particulière."
+    ],
+    "fakeTip": "Invente une mémoire séparée réservée aux mots affectifs.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_018",
+    "topic": "Pourquoi une rencontre imprévue peut-elle sembler plus romantique ?",
+    "facts": [
+      "La surprise augmente l’attention.",
+      "L’absence de préparation rend le moment plus spontané.",
+      "Le cerveau valorise les événements rares."
+    ],
+    "fakeTip": "Affirme que le hasard libère une hormone romantique.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_019",
+    "topic": "Pourquoi les couples se racontent-ils souvent la même histoire de rencontre ?",
+    "facts": [
+      "Le récit construit une identité commune.",
+      "Le répéter renforce les détails importants.",
+      "Il sert aussi à partager le lien avec les autres."
+    ],
+    "fakeTip": "Explique que le cerveau fusionne progressivement les deux versions.",
+    "category": "adulte"
+  },
+  {
+    "id": "exp_a_020",
+    "topic": "Pourquoi un défi un peu osé peut-il détendre une soirée ?",
+    "facts": [
+      "Il crée une rupture avec la conversation habituelle.",
+      "Le rire réduit la gêne.",
+      "Les règles du jeu donnent un cadre partagé."
+    ],
+    "fakeTip": "Affirme qu’un défi neutralise temporairement le jugement social.",
+    "category": "adulte"
+  }
+]

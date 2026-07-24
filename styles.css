@@ -3046,3 +3046,316 @@ body::before {
     justify-self: start;
   }
 }
+
+/* =========================================================
+   AK'GAMES V0.9 — IMPOSTEURS & DÉDUCTION
+   ========================================================= */
+
+.home-hero-v09 {
+  background:
+    radial-gradient(circle at 14% 18%, rgba(168, 85, 247, .30), transparent 26%),
+    radial-gradient(circle at 88% 78%, rgba(14, 165, 233, .15), transparent 28%),
+    linear-gradient(145deg, rgba(18, 12, 38, .98), rgba(7, 10, 25, .98));
+}
+
+.home-hero-v09::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  pointer-events: none;
+  border: 1px solid rgba(196, 181, 253, .10);
+  border-radius: calc(var(--radius-xl) - 10px);
+}
+
+.game-cover-impostor,
+.game-cover-expert,
+.game-cover-whoami {
+  position: relative;
+  overflow: hidden;
+}
+
+.game-cover-impostor {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(168, 85, 247, .28), transparent 30%),
+    linear-gradient(135deg, rgba(28, 15, 52, .98), rgba(9, 12, 28, .98));
+}
+
+.game-cover-expert {
+  background:
+    radial-gradient(circle at 90% 10%, rgba(245, 158, 11, .20), transparent 34%),
+    linear-gradient(135deg, rgba(31, 19, 34, .98), rgba(9, 12, 28, .98));
+}
+
+.game-cover-whoami {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(14, 165, 233, .20), transparent 34%),
+    linear-gradient(135deg, rgba(11, 25, 43, .98), rgba(9, 12, 28, .98));
+}
+
+.secret-role-card,
+.whoami-secret-card,
+.v09-question-card {
+  min-height: 330px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 14px;
+  padding: 30px 24px;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at top, rgba(139, 92, 246, .18), transparent 48%),
+    rgba(19, 26, 46, .96);
+  box-shadow: var(--shadow);
+}
+
+.secret-role-card > span,
+.whoami-secret-card > span,
+.v09-question-card > span {
+  font-size: clamp(3.8rem, 14vw, 6rem);
+  filter: drop-shadow(0 16px 28px rgba(0, 0, 0, .28));
+}
+
+.secret-role-card small,
+.whoami-secret-card small,
+.v09-question-card small {
+  color: #c4b5fd;
+  font-weight: 950;
+  letter-spacing: .16em;
+}
+
+.secret-role-card h2,
+.whoami-secret-card h2,
+.v09-question-card h2 {
+  max-width: 820px;
+  margin: 0;
+  font-size: clamp(1.7rem, 5vw, 3.1rem);
+  line-height: 1.05;
+}
+
+.secret-role-card p,
+.secret-role-card em,
+.whoami-secret-card p,
+.v09-question-card p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.secret-role-card.impostor {
+  border-color: rgba(244, 63, 94, .28);
+  background:
+    radial-gradient(circle at top, rgba(244, 63, 94, .16), transparent 45%),
+    radial-gradient(circle at bottom left, rgba(139, 92, 246, .20), transparent 42%),
+    rgba(19, 15, 39, .97);
+}
+
+.secret-role-card.civil {
+  border-color: rgba(34, 197, 94, .25);
+  background:
+    radial-gradient(circle at top, rgba(34, 197, 94, .13), transparent 45%),
+    rgba(15, 29, 38, .97);
+}
+
+.v09-progress {
+  margin-bottom: 4px;
+}
+
+.v09-timer-stage {
+  min-height: 410px;
+  padding: 34px 24px;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(139, 92, 246, .20), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(14, 165, 233, .10), transparent 36%),
+    rgba(15, 20, 38, .96);
+}
+
+.v09-timer-ring {
+  --timer-progress: 360deg;
+  position: relative;
+  width: 158px;
+  height: 158px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, #10172d 58%, transparent 59%),
+    conic-gradient(#a78bfa var(--timer-progress), rgba(255, 255, 255, .08) 0);
+  box-shadow:
+    0 18px 55px rgba(0, 0, 0, .34),
+    inset 0 0 32px rgba(139, 92, 246, .10);
+}
+
+.v09-timer-ring strong {
+  font-size: 3.2rem;
+  line-height: .95;
+}
+
+.v09-timer-ring small {
+  margin-top: 5px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.v09-timer-stage h2 {
+  max-width: 820px;
+  margin: 0;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  text-align: center;
+}
+
+.v09-timer-stage p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+.v09-option-grid,
+.v09-binary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.v09-choice-card {
+  min-height: 88px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(19, 26, 46, .94);
+  color: var(--text);
+  font-size: 1.02rem;
+  font-weight: 900;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.v09-choice-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(196, 181, 253, .48);
+  background: rgba(139, 92, 246, .12);
+}
+
+.v09-choice-card.credible {
+  border-color: rgba(34, 197, 94, .26);
+  background: rgba(34, 197, 94, .08);
+}
+
+.v09-choice-card.suspicious {
+  border-color: rgba(244, 63, 94, .26);
+  background: rgba(244, 63, 94, .08);
+}
+
+.expert-fact-list {
+  width: min(680px, 100%);
+  display: grid;
+  gap: 10px;
+  margin: 4px auto 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.expert-fact-list li {
+  position: relative;
+  padding: 13px 15px 13px 42px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .035);
+  color: #eef2ff;
+  line-height: 1.45;
+}
+
+.expert-fact-list li::before {
+  content: "✓";
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  color: #86efac;
+  font-weight: 950;
+}
+
+.answer-wall-details .expert-fact-list {
+  margin-top: 14px;
+}
+
+.impostor-reveal,
+.expert-reveal,
+.whoami-reveal {
+  overflow: hidden;
+}
+
+.impostor-reveal {
+  background:
+    radial-gradient(circle at top, rgba(244, 63, 94, .16), transparent 48%),
+    rgba(19, 19, 39, .95);
+}
+
+.expert-reveal {
+  background:
+    radial-gradient(circle at top, rgba(245, 158, 11, .15), transparent 48%),
+    rgba(25, 22, 35, .95);
+}
+
+.whoami-reveal {
+  background:
+    radial-gradient(circle at top, rgba(14, 165, 233, .16), transparent 48%),
+    rgba(15, 24, 39, .95);
+}
+
+.vote-breakdown,
+.whoami-clue-wall {
+  display: grid;
+  gap: 10px;
+}
+
+.whoami-secret-card ul {
+  width: min(650px, 100%);
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.whoami-secret-card li,
+.whoami-clue-wall span {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .04);
+  color: #e0e7ff;
+  text-align: center;
+}
+
+.v09-final-stage {
+  background:
+    radial-gradient(circle at top, rgba(139, 92, 246, .22), transparent 45%),
+    radial-gradient(circle at bottom right, rgba(14, 165, 233, .11), transparent 36%),
+    rgba(15, 20, 38, .96);
+}
+
+@media (max-width: 650px) {
+  .secret-role-card,
+  .whoami-secret-card,
+  .v09-question-card {
+    min-height: 300px;
+    padding: 26px 18px;
+  }
+
+  .v09-timer-stage {
+    min-height: 380px;
+  }
+
+  .v09-option-grid,
+  .v09-binary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .v09-choice-card {
+    min-height: 72px;
+  }
+}

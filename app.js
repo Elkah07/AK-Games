@@ -3484,3 +3484,795 @@ settingsBtn.addEventListener("click", event => {
 }, true);
 
 renderHome();
+
+/* =========================================================
+   AK'GAMES V0.9 — IMPOSTEURS & DÉDUCTION
+   L’Imposteur sait presque tout · Le Faux Expert · Qui suis-je ?
+   ========================================================= */
+
+state.almostImpostor = null;
+state.fakeExpert = null;
+state.whoAmI = null;
+state.v09TimerHandle = null;
+state.v09TimerToken = 0;
+
+const V09_NEW_GAMES = new Set([
+  "L’Imposteur sait presque tout",
+  "Le Faux Expert",
+  "Qui suis-je ?"
+]);
+
+const V09_READY_GAMES = new Set([...V08_READY_GAMES, ...V09_NEW_GAMES]);
+const V09_GAME_ICONS = {
+  ...V08_GAME_ICONS,
+  "L’Imposteur sait presque tout": "🕶️",
+  "Le Faux Expert": "🎓",
+  "Qui suis-je ?": "❓"
+};
+
+function clearV09Timer() {
+  if (state.v09TimerHandle) window.clearInterval(state.v09TimerHandle);
+  state.v09TimerHandle = null;
+  state.v09TimerToken += 1;
+}
+
+function startV09Countdown(seconds, onDone) {
+  clearV09Timer();
+  const token = state.v09TimerToken;
+  const endAt = Date.now() + Math.max(1, Number(seconds || 1)) * 1000;
+
+  const tick = () => {
+    if (token !== state.v09TimerToken) return;
+    const left = Math.max(0, Math.ceil((endAt - Date.now()) / 1000));
+    const node = document.querySelector("#v09Countdown");
+    const ring = document.querySelector("#v09TimerRing");
+    if (node) node.textContent = String(left);
+    if (ring) {
+      const ratio = Math.max(0, Math.min(1, left / Math.max(1, Number(seconds || 1))));
+      ring.style.setProperty("--timer-progress", `${ratio * 360}deg`);
+    }
+    if (left <= 0) {
+      clearV09Timer();
+      onDone?.();
+    }
+  };
+
+  tick();
+  state.v09TimerHandle = window.setInterval(tick, 250);
+}
+
+function renderV09Progress(current, total, label) {
+  const safeTotal = Math.max(1, Number(total || 1));
+  const safeCurrent = Math.min(safeTotal, Math.max(1, Number(current || 1)));
+  return `
+    <div class="game-progress v09-progress">
+      <span>${escapeHtml(label)} ${safeCurrent}/${safeTotal}</span>
+      <div class="progress-track"><div class="progress-fill" style="width:${Math.round((safeCurrent / safeTotal) * 100)}%"></div></div>
+    </div>
+  `;
+}
+
+function renderV09Final({ icon, heading, text, scores, replay, other }) {
+  clearV09Timer();
+  const ranking = [...state.players].sort((a, b) => Number(scores[b.id] || 0) - Number(scores[a.id] || 0));
+  title.textContent = "Classement final";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="winner-stage winner-stage-v07 v09-final-stage">
+      <div class="winner-crown">${icon}🏆</div>
+      <h2>${escapeHtml(heading)}</h2>
+      <p>${escapeHtml(text)}</p>
+    </section>
+    <section class="final-ranking">
+      ${ranking.map((player, index) => `
+        <div class="ranking-row">
+          <span class="ranking-position">${index + 1}</span>
+          <span class="result-avatar">${avatarById(player.avatarId).emoji}</span>
+          <strong>${escapeHtml(player.name)}</strong>
+          <span>${Number(scores[player.id] || 0)} pts</span>
+        </div>
+      `).join("")}
+    </section>
+    <div class="toolbar">
+      <button id="v09Replay" class="secondary-btn">Rejouer</button>
+      <button id="v09Other" class="primary-btn">Autre jeu</button>
+    </div>
+  `;
+  document.querySelector("#v09Replay").addEventListener("click", replay);
+  document.querySelector("#v09Other").addEventListener("click", other);
+}
+
+renderHome = function () {
+  clearV09Timer();
+  state.history = [];
+  title.textContent = "La soirée commence ici";
+  setBackVisible(false);
+
+  screen.innerHTML = `
+    <section class="home-hero-v07 home-hero-v08 home-hero-v09">
+      <div class="home-logo-shell"><img src="icons/icon-192.png" alt="" class="home-logo-v07"></div>
+      <div class="home-hero-copy">
+        <span class="home-kicker">LA BOÎTE À JEUX QUI TIENT DANS UNE POCHE</span>
+        <h2>Une soirée.<br><em>Zéro temps mort.</em></h2>
+        <p>Crée un salon, rassemble la bande et enchaîne les jeux sans jamais quitter la partie.</p>
+        <div class="home-stat-row">
+          <span>🎮 12 jeux complets</span>
+          <span>📲 1 ou plusieurs téléphones</span>
+          <span>⚡ lancement express</span>
+        </div>
+      </div>
+      <div class="hero-orb hero-orb-one"></div><div class="hero-orb hero-orb-two"></div>
+    </section>
+
+    <section class="home-action-stack">
+      <button class="home-action-card home-action-primary" data-home-action="create">
+        <span class="home-action-icon">✦</span><span class="home-action-copy"><small>MODE SOIRÉE</small><strong>Créer une partie</strong><span>Ouvre un salon et joue chacun sur son téléphone.</span></span><span class="home-action-arrow">→</span>
+      </button>
+      <div class="home-action-grid">
+        <button class="home-action-card home-action-secondary" data-home-action="join">
+          <span class="home-action-icon">⌁</span><span class="home-action-copy"><small>J’AI UN CODE</small><strong>Rejoindre</strong><span>Retrouve tes amis en quelques secondes.</span></span><span class="home-action-arrow">→</span>
+        </button>
+        <button class="home-action-card home-action-secondary home-action-phone" data-home-action="single">
+          <span class="home-action-icon">▣</span><span class="home-action-copy"><small>PASS & PLAY</small><strong>Un téléphone</strong><span>Ajoutez les joueurs puis passez-vous l’écran.</span></span><span class="home-action-arrow">→</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="home-feature-strip">
+      <article><span>🕶️</span><div><strong>Imposteurs & Déduction</strong><small>Imposteur, Faux Expert et Qui suis-je ?</small></div></article>
+      <article><span>🏆</span><div><strong>Soirée continue</strong><small>Score cumulé et historique conservés</small></div></article>
+      <article><span>🌙</span><div><strong>12 jeux complets</strong><small>Ambiance, bluff, rire et révélations</small></div></article>
+    </section>
+  `;
+
+  document.querySelectorAll("[data-home-action]").forEach(button => {
+    button.addEventListener("click", () => {
+      const action = button.dataset.homeAction;
+      if (action === "single") {
+        state.mode = "single";
+        pushScreen("home");
+        renderSetup();
+      } else if (action === "create") {
+        state.mode = "multi-host";
+        pushScreen("home");
+        renderSetup();
+      } else {
+        pushScreen("home");
+        renderJoin();
+      }
+    });
+  });
+};
+
+renderGames = function () {
+  clearV09Timer();
+  const category = categories.find(item => item.id === state.currentCategory);
+  title.textContent = category.name;
+  setBackVisible(true);
+
+  screen.innerHTML = `
+    <section class="catalog-intro">
+      <span>${category.emoji}</span>
+      <div><small>CATÉGORIE</small><strong>${escapeHtml(category.name)}</strong><p>${escapeHtml(category.description)}</p></div>
+    </section>
+    <section class="game-list game-list-v07">
+      ${category.games.map(game => {
+        const disabled = game === "Blind Test";
+        const ready = V09_READY_GAMES.has(game);
+        const isNew = V09_NEW_GAMES.has(game);
+        const icon = V09_GAME_ICONS[game] || "🎲";
+        return `
+          <button class="game-card game-card-v07 ${disabled ? "disabled" : ""} ${isNew ? "game-card-new" : ""}" ${disabled ? "disabled" : ""} data-game="${escapeHtml(game)}">
+            <span class="game-card-icon">${icon}</span>
+            <span class="game-card-copy">
+              <strong>${escapeHtml(game)} ${isNew ? `<span class="new-ribbon">NOUVEAU</span>` : ""}</strong>
+              <span class="helper">${disabled ? "Bientôt disponible" : ready ? "Prêt à lancer" : "À intégrer"}</span>
+              <span class="game-meta">
+                ${ready ? `<span class="badge green">✓ disponible</span>` : `<span class="badge">bientôt</span>`}
+                ${state.alcohol && ready ? `<span class="badge green">🍻 option alcool</span>` : ""}
+                ${game.includes("+18") ? `<span class="badge orange">🔞 adulte</span>` : ""}
+              </span>
+            </span>
+            <span class="game-card-chevron">›</span>
+          </button>
+        `;
+      }).join("")}
+    </section>
+  `;
+
+  document.querySelectorAll("[data-game]:not([disabled])").forEach(button => {
+    button.addEventListener("click", () => {
+      const game = button.dataset.game;
+      if (game === "Qui de nous ?") { pushScreen("games"); resetWhoUsState(); renderWhoUsSetup(); return; }
+      if (game === "Le premier qui rit a perdu") { pushScreen("games"); resetLaughDuelState(); renderLaughDuelSetup(); return; }
+      if (game === "Qui ment le mieux ?") {
+        if (state.players.length < 3) return alert("« Qui ment le mieux ? » nécessite au moins 3 joueurs.");
+        pushScreen("games"); resetBestLiarState(); renderBestLiarSetup(); return;
+      }
+      if (game === "Action ou Vérité" || game === "Action ou Vérité +18") { pushScreen("games"); resetActionTruthState(game.includes("+18")); renderActionTruthSetup(); return; }
+      if (game === "Je n’ai jamais" || game === "Je n’ai jamais +18") { pushScreen("games"); resetAmbiancePollState("never", game.includes("+18")); renderAmbiancePollSetup(); return; }
+      if (game === "Tu préfères" || game === "Tu préfères +18") { pushScreen("games"); resetAmbiancePollState("would", game.includes("+18")); renderAmbiancePollSetup(); return; }
+      if (game === "Même cerveau") { pushScreen("games"); resetSameBrainState(); renderSameBrainSetup(); return; }
+      if (game === "Minorité") { pushScreen("games"); resetMinorityState(); renderMinoritySetup(); return; }
+      if (game === "Qui a répondu ça ?") {
+        if (state.players.length < 3) return alert("« Qui a répondu ça ? » nécessite au moins 3 joueurs.");
+        pushScreen("games"); resetWhoAnsweredState(); renderWhoAnsweredSetup(); return;
+      }
+      if (game === "L’Imposteur sait presque tout") {
+        if (state.players.length < 3) return alert("Ce jeu nécessite au moins 3 joueurs.");
+        pushScreen("games"); resetAlmostImpostorState(); renderAlmostImpostorSetup(); return;
+      }
+      if (game === "Le Faux Expert") {
+        if (state.players.length < 3) return alert("Ce jeu nécessite au moins 3 joueurs.");
+        pushScreen("games"); resetFakeExpertState(); renderFakeExpertSetup(); return;
+      }
+      if (game === "Qui suis-je ?") {
+        if (state.players.length < 2) return alert("Ce jeu nécessite au moins 2 joueurs.");
+        pushScreen("games"); resetWhoAmIState(); renderWhoAmISetup(); return;
+      }
+      renderGamePlaceholder(game);
+    });
+  });
+};
+
+/* ---------- L’IMPOSTEUR SAIT PRESQUE TOUT ---------- */
+
+function resetAlmostImpostorState() {
+  state.almostImpostor = {
+    roundCount: 6,
+    includeAdult: false,
+    discussionSeconds: 60,
+    items: [],
+    currentIndex: 0,
+    roleOrder: [],
+    roleViewIndex: 0,
+    impostorId: null,
+    votes: {},
+    currentVoterIndex: 0,
+    scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    currentResult: null,
+    rounds: []
+  };
+}
+
+function renderAlmostImpostorSetup() {
+  clearV09Timer();
+  if (!state.almostImpostor) resetAlmostImpostorState();
+  const game = state.almostImpostor;
+  title.textContent = "L’Imposteur sait presque tout";
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-impostor"><span class="game-cover-icon">🕶️</span><div><small>IMPOSTEURS & DÉDUCTION</small><h2>L’Imposteur sait presque tout</h2><p>Tout le monde connaît le mot. L’imposteur ne reçoit qu’un indice et doit survivre au vote.</p></div></section>
+    <section class="card setup-card-v07">
+      <div class="form-group"><label for="impostorRounds">Nombre de manches</label><select id="impostorRounds" class="text-input">${[4,6,8,10].map(v => `<option value="${v}" ${game.roundCount === v ? "selected" : ""}>${v} manches</option>`).join("")}</select></div>
+      <div class="form-group top-gap"><label for="impostorTimer">Temps de discussion</label><select id="impostorTimer" class="text-input">${[45,60,90].map(v => `<option value="${v}" ${game.discussionSeconds === v ? "selected" : ""}>${v} secondes</option>`).join("")}</select></div>
+    </section>
+    ${state.adult ? `<label class="option-card premium-toggle"><input id="impostorAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Crushs, relations et dossiers de soirée.</span></span></label>` : ""}
+    <div class="notice">Détective correct : +1 point. Imposteur non démasqué : +2 points. Mot deviné après capture : +1 point.</div>
+    <button id="startImpostor" class="primary-btn full">Distribuer les rôles</button>
+  `;
+  document.querySelector("#impostorRounds").addEventListener("change", e => game.roundCount = Number(e.target.value));
+  document.querySelector("#impostorTimer").addEventListener("change", e => game.discussionSeconds = Number(e.target.value));
+  document.querySelector("#impostorAdult")?.addEventListener("change", e => game.includeAdult = e.target.checked);
+  document.querySelector("#startImpostor").addEventListener("click", startAlmostImpostorGame);
+}
+
+async function startAlmostImpostorGame() {
+  const game = state.almostImpostor;
+  screen.innerHTML = `<div class="notice">Mélange des mots et distribution des lunettes noires…</div>`;
+  try {
+    let pool = await loadJsonFile("data/imposteur.json", "Impossible de charger les mots de l’imposteur.");
+    if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/imposteur-adulte.json", "Impossible de charger les cartes adultes."));
+    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.currentIndex = 0;
+    game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.rounds = [];
+    prepareAlmostImpostorRound();
+  } catch (error) {
+    alert(error.message);
+    renderAlmostImpostorSetup();
+  }
+}
+
+function prepareAlmostImpostorRound() {
+  const game = state.almostImpostor;
+  if (game.currentIndex >= game.items.length) return renderAlmostImpostorEnd();
+  game.roleOrder = shuffleArray(state.players.map(player => player.id));
+  game.roleViewIndex = 0;
+  game.impostorId = game.roleOrder[Math.floor(Math.random() * game.roleOrder.length)];
+  game.votes = {};
+  game.currentVoterIndex = 0;
+  game.currentResult = null;
+  renderAlmostImpostorRoleGate();
+}
+
+function renderAlmostImpostorRoleGate() {
+  const game = state.almostImpostor;
+  if (game.roleViewIndex >= game.roleOrder.length) return renderAlmostImpostorDiscussion();
+  const player = state.players.find(item => item.id === game.roleOrder[game.roleViewIndex]);
+  title.textContent = "Rôle secret";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${renderV09Progress(game.currentIndex + 1, game.items.length, "Manche")}
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(player.avatarId).emoji}</div><span class="category-chip">ÉCRAN PRIVÉ</span><h2>Passe le téléphone à ${escapeHtml(player.name)}</h2><p>Regarde ton rôle puis cache l’écran avant de continuer.</p><button id="openImpostorRole" class="primary-btn">Je suis ${escapeHtml(player.name)}</button></section>
+  `;
+  document.querySelector("#openImpostorRole").addEventListener("click", renderAlmostImpostorRole);
+}
+
+function renderAlmostImpostorRole() {
+  const game = state.almostImpostor;
+  const card = game.items[game.currentIndex];
+  const playerId = game.roleOrder[game.roleViewIndex];
+  const isImpostor = playerId === game.impostorId;
+  title.textContent = isImpostor ? "Tu es l’imposteur" : "Tu connais le mot";
+  screen.innerHTML = `
+    ${renderV09Progress(game.currentIndex + 1, game.items.length, "Manche")}
+    <section class="secret-role-card ${isImpostor ? "impostor" : "civil"}">
+      <span>${isImpostor ? "🕶️" : "🔐"}</span>
+      <small>${isImpostor ? "IMPOSTEUR" : "ÉQUIPE INFORMÉE"}</small>
+      <h2>${isImpostor ? "Tu ne connais pas le mot" : escapeHtml(card.word)}</h2>
+      <p><strong>Indice :</strong> ${escapeHtml(card.hint)}</p>
+      ${isImpostor ? `<em>Écoute les autres, donne un indice crédible et évite les soupçons.</em>` : `<em>Donne un indice utile, mais pas trop évident.</em>`}
+    </section>
+    <button id="hideImpostorRole" class="primary-btn full">J’ai mémorisé</button>
+  `;
+  document.querySelector("#hideImpostorRole").addEventListener("click", () => {
+    game.roleViewIndex += 1;
+    renderAlmostImpostorRoleGate();
+  });
+}
+
+function renderAlmostImpostorDiscussion() {
+  const game = state.almostImpostor;
+  const card = game.items[game.currentIndex];
+  title.textContent = "Discussion";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${renderV09Progress(game.currentIndex + 1, game.items.length, "Manche")}
+    <section class="timer-stage v09-timer-stage">
+      <span class="category-chip">${escapeHtml(card.category || "mystère").toUpperCase()}</span>
+      <div id="v09TimerRing" class="v09-timer-ring"><strong id="v09Countdown">${game.discussionSeconds}</strong><small>secondes</small></div>
+      <h2>Donnez chacun un indice</h2>
+      <p>Interdiction de prononcer le mot. Observez les hésitations, les détours et les regards suspects.</p>
+    </section>
+    <button id="impostorVoteNow" class="secondary-btn full">Passer aux votes</button>
+  `;
+  const vote = () => { clearV09Timer(); game.currentVoterIndex = 0; renderAlmostImpostorVoteGate(); };
+  document.querySelector("#impostorVoteNow").addEventListener("click", vote);
+  startV09Countdown(game.discussionSeconds, vote);
+}
+
+function renderAlmostImpostorVoteGate() {
+  const game = state.almostImpostor;
+  if (game.currentVoterIndex >= state.players.length) return resolveAlmostImpostorVotes();
+  const voter = state.players[game.currentVoterIndex];
+  title.textContent = "Vote secret";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${renderV09Progress(game.currentIndex + 1, game.items.length, "Manche")}
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(voter.avatarId).emoji}</div><span class="category-chip">VOTE SECRET</span><h2>Passe le téléphone à ${escapeHtml(voter.name)}</h2><p>Choisis la personne qui semble connaître un peu moins que les autres.</p><button id="openImpostorVote" class="primary-btn">Je suis ${escapeHtml(voter.name)}</button></section>
+  `;
+  document.querySelector("#openImpostorVote").addEventListener("click", renderAlmostImpostorVote);
+}
+
+function renderAlmostImpostorVote() {
+  const game = state.almostImpostor;
+  const voter = state.players[game.currentVoterIndex];
+  const candidates = state.players.filter(player => player.id !== voter.id);
+  title.textContent = "Qui est l’imposteur ?";
+  screen.innerHTML = `
+    ${renderV09Progress(game.currentIndex + 1, game.items.length, "Manche")}
+    <section class="suspect-grid">${candidates.map(player => `<button class="suspect-card" data-impostor-vote="${player.id}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong></button>`).join("")}</section>
+  `;
+  document.querySelectorAll("[data-impostor-vote]").forEach(button => button.addEventListener("click", () => {
+    game.votes[voter.id] = button.dataset.impostorVote;
+    game.currentVoterIndex += 1;
+    renderAlmostImpostorVoteGate();
+  }));
+}
+
+function resolveAlmostImpostorVotes() {
+  const game = state.almostImpostor;
+  const counts = {};
+  Object.values(game.votes).forEach(id => counts[id] = Number(counts[id] || 0) + 1);
+  const max = Math.max(0, ...Object.values(counts));
+  const topIds = Object.keys(counts).filter(id => counts[id] === max);
+  const caught = topIds.length === 1 && topIds[0] === game.impostorId;
+  const correctVoters = Object.entries(game.votes).filter(([, id]) => id === game.impostorId).map(([id]) => id);
+  correctVoters.forEach(id => game.scores[id] = Number(game.scores[id] || 0) + 1);
+  game.currentResult = { caught, topIds, counts, correctVoters, guess: null, guessCorrect: false };
+  if (!caught) {
+    game.scores[game.impostorId] = Number(game.scores[game.impostorId] || 0) + 2;
+    renderAlmostImpostorResult();
+    return;
+  }
+  renderAlmostImpostorGuessGate();
+}
+
+function renderAlmostImpostorGuessGate() {
+  const game = state.almostImpostor;
+  const impostor = state.players.find(player => player.id === game.impostorId);
+  title.textContent = "Dernière chance";
+  screen.innerHTML = `
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(impostor.avatarId).emoji}</div><span class="category-chip">IMPOSTEUR DÉMASQUÉ</span><h2>Passe le téléphone à ${escapeHtml(impostor.name)}</h2><p>Tu peux encore gagner un point en retrouvant le mot exact.</p><button id="openImpostorGuess" class="primary-btn">Tenter le mot</button></section>
+  `;
+  document.querySelector("#openImpostorGuess").addEventListener("click", renderAlmostImpostorGuess);
+}
+
+function renderAlmostImpostorGuess() {
+  const game = state.almostImpostor;
+  const card = game.items[game.currentIndex];
+  const options = shuffleArray([card.word, ...(card.decoys || [])]);
+  title.textContent = "Quel était le mot ?";
+  screen.innerHTML = `
+    <section class="v09-question-card"><span>🕶️</span><small>DERNIÈRE CHANCE</small><h2>${escapeHtml(card.hint)}</h2></section>
+    <section class="v09-option-grid">${options.map(option => `<button class="v09-choice-card" data-impostor-guess="${escapeHtml(option)}">${escapeHtml(option)}</button>`).join("")}</section>
+  `;
+  document.querySelectorAll("[data-impostor-guess]").forEach(button => button.addEventListener("click", () => {
+    const guess = button.dataset.impostorGuess;
+    game.currentResult.guess = guess;
+    game.currentResult.guessCorrect = guess === card.word;
+    if (game.currentResult.guessCorrect) game.scores[game.impostorId] = Number(game.scores[game.impostorId] || 0) + 1;
+    renderAlmostImpostorResult();
+  }));
+}
+
+function renderAlmostImpostorResult() {
+  const game = state.almostImpostor;
+  const card = game.items[game.currentIndex];
+  const result = game.currentResult;
+  const impostor = state.players.find(player => player.id === game.impostorId);
+  game.rounds.push({ itemId: card.id, impostorId: game.impostorId, votes: { ...game.votes }, ...result });
+  title.textContent = "Révélation";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="reveal-stage reveal-v07 impostor-reveal"><span class="game-cover-icon">${avatarById(impostor.avatarId).emoji}</span><h2>${escapeHtml(impostor.name)} était l’imposteur</h2><p>Le mot était <strong>${escapeHtml(card.word)}</strong>.</p></section>
+    <section class="vote-breakdown">${state.players.map(player => {
+      const target = state.players.find(item => item.id === game.votes[player.id]);
+      const correct = game.votes[player.id] === game.impostorId;
+      return `<article class="who-vote-row ${correct ? "correct" : "fooled"}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>a voté ${escapeHtml(target?.name || "?")}</small><em>${correct ? "+1 pt" : "raté"}</em></article>`;
+    }).join("")}</section>
+    <div class="special-event ${result.caught ? "" : "tie"}"><strong>${result.caught ? "🔍 Imposteur démasqué" : "🕶️ L’imposteur s’échappe"}</strong><p>${result.caught ? (result.guessCorrect ? "Le mot a tout de même été retrouvé : +1 point imposteur." : "Le groupe a gagné cette enquête.") : "+2 points pour la couverture parfaite."}</p></div>
+    ${state.alcohol ? `<div class="alcohol-callout">🍻 ${result.caught ? "L’imposteur prend une petite gorgée." : "Les joueurs ayant raté leur vote prennent une petite gorgée."}</div>` : ""}
+    <button id="nextImpostorRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Manche suivante"}</button>
+  `;
+  document.querySelector("#nextImpostorRound").addEventListener("click", () => { game.currentIndex += 1; prepareAlmostImpostorRound(); });
+}
+
+function renderAlmostImpostorEnd() {
+  const game = state.almostImpostor;
+  renderV09Final({
+    icon: "🕶️", heading: "Les masques sont tombés", text: "Détectives précis et imposteurs insaisissables se partagent le podium.", scores: game.scores,
+    replay: () => { resetAlmostImpostorState(); renderAlmostImpostorSetup(); },
+    other: () => { state.almostImpostor = null; renderPlayChoice(); }
+  });
+}
+
+/* ---------- LE FAUX EXPERT ---------- */
+
+function resetFakeExpertState() {
+  state.fakeExpert = {
+    roundCount: Math.max(5, state.players.length),
+    includeAdult: false,
+    speechSeconds: 60,
+    items: [],
+    currentIndex: 0,
+    speakerOrder: shuffleArray(state.players.map(player => player.id)),
+    speakerId: null,
+    role: null,
+    votes: {},
+    currentVoterIndex: 0,
+    scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    rounds: []
+  };
+}
+
+function renderFakeExpertSetup() {
+  clearV09Timer();
+  if (!state.fakeExpert) resetFakeExpertState();
+  const game = state.fakeExpert;
+  title.textContent = "Le Faux Expert";
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-expert"><span class="game-cover-icon">🎓</span><div><small>IMPOSTEURS & DÉDUCTION</small><h2>Le Faux Expert</h2><p>Une personne présente un sujet. Elle possède les vraies informations… ou improvise totalement.</p></div></section>
+    <section class="card setup-card-v07">
+      <div class="form-group"><label for="expertRounds">Nombre de passages</label><select id="expertRounds" class="text-input">${[Math.max(5, state.players.length),8,10,12].filter((v,i,a)=>a.indexOf(v)===i).map(v => `<option value="${v}" ${game.roundCount === v ? "selected" : ""}>${v} passages</option>`).join("")}</select></div>
+      <div class="form-group top-gap"><label for="expertTimer">Temps de présentation</label><select id="expertTimer" class="text-input">${[45,60,90].map(v => `<option value="${v}" ${game.speechSeconds === v ? "selected" : ""}>${v} secondes</option>`).join("")}</select></div>
+    </section>
+    ${state.adult ? `<label class="option-card premium-toggle"><input id="expertAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les sujets adultes</strong><br><span class="helper">Relations, séduction et situations de date.</span></span></label>` : ""}
+    <div class="notice">Bon verdict : +1 point. L’orateur gagne 1 point par personne trompée, avec un maximum de 3.</div>
+    <button id="startExpert" class="primary-btn full">Ouvrir la conférence</button>
+  `;
+  document.querySelector("#expertRounds").addEventListener("change", e => game.roundCount = Number(e.target.value));
+  document.querySelector("#expertTimer").addEventListener("change", e => game.speechSeconds = Number(e.target.value));
+  document.querySelector("#expertAdult")?.addEventListener("change", e => game.includeAdult = e.target.checked);
+  document.querySelector("#startExpert").addEventListener("click", startFakeExpertGame);
+}
+
+async function startFakeExpertGame() {
+  const game = state.fakeExpert;
+  screen.innerHTML = `<div class="notice">Préparation des diplômes douteux…</div>`;
+  try {
+    let pool = await loadJsonFile("data/faux-expert.json", "Impossible de charger les sujets.");
+    if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/faux-expert-adulte.json", "Impossible de charger les sujets adultes."));
+    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.currentIndex = 0;
+    game.speakerOrder = shuffleArray(state.players.map(player => player.id));
+    game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.rounds = [];
+    prepareFakeExpertRound();
+  } catch (error) {
+    alert(error.message);
+    renderFakeExpertSetup();
+  }
+}
+
+function prepareFakeExpertRound() {
+  const game = state.fakeExpert;
+  if (game.currentIndex >= game.items.length) return renderFakeExpertEnd();
+  game.speakerId = game.speakerOrder[game.currentIndex % game.speakerOrder.length];
+  game.role = Math.random() < 0.5 ? "real" : "fake";
+  game.votes = {};
+  game.currentVoterIndex = 0;
+  renderFakeExpertBriefGate();
+}
+
+function renderFakeExpertBriefGate() {
+  const game = state.fakeExpert;
+  const speaker = state.players.find(player => player.id === game.speakerId);
+  title.textContent = "Brief confidentiel";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${renderV09Progress(game.currentIndex + 1, game.items.length, "Passage")}
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(speaker.avatarId).emoji}</div><span class="category-chip">ORATEUR SECRET</span><h2>Passe le téléphone à ${escapeHtml(speaker.name)}</h2><p>Tu vas découvrir si ton diplôme est réel ou totalement imaginaire.</p><button id="openExpertBrief" class="primary-btn">Lire mon brief</button></section>
+  `;
+  document.querySelector("#openExpertBrief").addEventListener("click", renderFakeExpertBrief);
+}
+
+function renderFakeExpertBrief() {
+  const game = state.fakeExpert;
+  const card = game.items[game.currentIndex];
+  const isReal = game.role === "real";
+  title.textContent = isReal ? "Vrai expert" : "Faux expert";
+  screen.innerHTML = `
+    ${renderV09Progress(game.currentIndex + 1, game.items.length, "Passage")}
+    <section class="secret-role-card expert-role ${isReal ? "civil" : "impostor"}">
+      <span>${isReal ? "🎓" : "🎭"}</span><small>${isReal ? "VRAI EXPERT" : "FAUX EXPERT"}</small><h2>${escapeHtml(card.topic)}</h2>
+      ${isReal ? `<ul class="expert-fact-list">${(card.facts || []).map(fact => `<li>${escapeHtml(fact)}</li>`).join("")}</ul>` : `<p>${escapeHtml(card.fakeTip)}</p><em>Parle avec aplomb. Plus c’est précis, plus ça peut sembler vrai.</em>`}
+    </section>
+    <button id="startExpertSpeech" class="primary-btn full">Je suis prêt·e à parler</button>
+  `;
+  document.querySelector("#startExpertSpeech").addEventListener("click", renderFakeExpertSpeech);
+}
+
+function renderFakeExpertSpeech() {
+  const game = state.fakeExpert;
+  const card = game.items[game.currentIndex];
+  const speaker = state.players.find(player => player.id === game.speakerId);
+  title.textContent = "Conférence express";
+  screen.innerHTML = `
+    ${renderV09Progress(game.currentIndex + 1, game.items.length, "Passage")}
+    <section class="timer-stage v09-timer-stage expert-stage">
+      <span class="category-chip">${avatarById(speaker.avatarId).emoji} ${escapeHtml(speaker.name)}</span>
+      <div id="v09TimerRing" class="v09-timer-ring"><strong id="v09Countdown">${game.speechSeconds}</strong><small>secondes</small></div>
+      <h2>${escapeHtml(card.topic)}</h2><p>Les autres peuvent poser une ou deux questions. L’orateur doit rester convaincant.</p>
+    </section>
+    <button id="expertVoteNow" class="secondary-btn full">Passer au verdict</button>
+  `;
+  const vote = () => { clearV09Timer(); game.currentVoterIndex = 0; renderFakeExpertVoteGate(); };
+  document.querySelector("#expertVoteNow").addEventListener("click", vote);
+  startV09Countdown(game.speechSeconds, vote);
+}
+
+function fakeExpertVoters(game) {
+  return state.players.filter(player => player.id !== game.speakerId);
+}
+
+function renderFakeExpertVoteGate() {
+  const game = state.fakeExpert;
+  const voters = fakeExpertVoters(game);
+  if (game.currentVoterIndex >= voters.length) return renderFakeExpertResult();
+  const voter = voters[game.currentVoterIndex];
+  title.textContent = "Verdict secret";
+  screen.innerHTML = `
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(voter.avatarId).emoji}</div><span class="category-chip">VERDICT SECRET</span><h2>Passe le téléphone à ${escapeHtml(voter.name)}</h2><p>L’orateur connaissait-il vraiment son sujet ?</p><button id="openExpertVote" class="primary-btn">Donner mon verdict</button></section>
+  `;
+  document.querySelector("#openExpertVote").addEventListener("click", renderFakeExpertVote);
+}
+
+function renderFakeExpertVote() {
+  const game = state.fakeExpert;
+  const card = game.items[game.currentIndex];
+  const voter = fakeExpertVoters(game)[game.currentVoterIndex];
+  title.textContent = "Vrai ou faux expert ?";
+  screen.innerHTML = `
+    <section class="v09-question-card"><span>🎓</span><small>${escapeHtml(voter.name).toUpperCase()}</small><h2>${escapeHtml(card.topic)}</h2></section>
+    <section class="v09-binary-grid"><button class="v09-choice-card credible" data-expert-vote="real">🎓 Vrai expert</button><button class="v09-choice-card suspicious" data-expert-vote="fake">🎭 Faux expert</button></section>
+  `;
+  document.querySelectorAll("[data-expert-vote]").forEach(button => button.addEventListener("click", () => {
+    game.votes[voter.id] = button.dataset.expertVote;
+    game.currentVoterIndex += 1;
+    renderFakeExpertVoteGate();
+  }));
+}
+
+function renderFakeExpertResult() {
+  const game = state.fakeExpert;
+  const card = game.items[game.currentIndex];
+  const speaker = state.players.find(player => player.id === game.speakerId);
+  const correctIds = Object.entries(game.votes).filter(([, vote]) => vote === game.role).map(([id]) => id);
+  const fooledIds = Object.entries(game.votes).filter(([, vote]) => vote !== game.role).map(([id]) => id);
+  correctIds.forEach(id => game.scores[id] = Number(game.scores[id] || 0) + 1);
+  game.scores[game.speakerId] = Number(game.scores[game.speakerId] || 0) + Math.min(3, fooledIds.length);
+  game.rounds.push({ itemId: card.id, speakerId: game.speakerId, role: game.role, votes: { ...game.votes }, correctIds, fooledIds });
+  title.textContent = "Diplôme révélé";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="reveal-stage reveal-v07 expert-reveal"><span class="game-cover-icon">${game.role === "real" ? "🎓" : "🎭"}</span><h2>${escapeHtml(speaker.name)} était ${game.role === "real" ? "un vrai expert" : "un faux expert"}</h2><p>${escapeHtml(card.topic)}</p></section>
+    <section class="who-vote-results">${fakeExpertVoters(game).map(voter => {
+      const correct = correctIds.includes(voter.id);
+      return `<article class="who-vote-row ${correct ? "correct" : "fooled"}"><span>${avatarById(voter.avatarId).emoji}</span><strong>${escapeHtml(voter.name)}</strong><small>a voté ${game.votes[voter.id] === "real" ? "vrai expert" : "faux expert"}</small><em>${correct ? "+1 pt" : "trompé·e"}</em></article>`;
+    }).join("")}</section>
+    <details class="answer-wall-details"><summary>Voir les vraies informations</summary><ul class="expert-fact-list">${(card.facts || []).map(fact => `<li>${escapeHtml(fact)}</li>`).join("")}</ul></details>
+    <div class="special-event"><strong>🎤 ${fooledIds.length} personne${fooledIds.length > 1 ? "s" : ""} trompée${fooledIds.length > 1 ? "s" : ""}</strong><p>+${Math.min(3, fooledIds.length)} point${Math.min(3, fooledIds.length) > 1 ? "s" : ""} pour l’orateur.</p></div>
+    ${state.alcohol && fooledIds.length ? `<div class="alcohol-callout">🍻 Les personnes trompées prennent une petite gorgée.</div>` : ""}
+    <button id="nextExpertRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Orateur suivant"}</button>
+  `;
+  document.querySelector("#nextExpertRound").addEventListener("click", () => { game.currentIndex += 1; prepareFakeExpertRound(); });
+}
+
+function renderFakeExpertEnd() {
+  const game = state.fakeExpert;
+  renderV09Final({
+    icon: "🎓", heading: "La conférence est terminée", text: "Les meilleurs bluffeurs et les jurés les plus lucides montent sur scène.", scores: game.scores,
+    replay: () => { resetFakeExpertState(); renderFakeExpertSetup(); },
+    other: () => { state.fakeExpert = null; renderPlayChoice(); }
+  });
+}
+
+/* ---------- QUI SUIS-JE ? ---------- */
+
+function resetWhoAmIState() {
+  state.whoAmI = {
+    roundCount: Math.max(6, state.players.length),
+    includeAdult: false,
+    categoryMode: "mix",
+    durationSeconds: 60,
+    items: [],
+    currentIndex: 0,
+    guesserOrder: shuffleArray(state.players.map(player => player.id)),
+    scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    rounds: []
+  };
+}
+
+function renderWhoAmISetup() {
+  clearV09Timer();
+  if (!state.whoAmI) resetWhoAmIState();
+  const game = state.whoAmI;
+  title.textContent = "Qui suis-je ?";
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-whoami"><span class="game-cover-icon">❓</span><div><small>IMPOSTEURS & DÉDUCTION</small><h2>Qui suis-je ?</h2><p>Tout le monde connaît ton identité sauf toi. Pose des questions et retrouve-la avant la fin du chrono.</p></div></section>
+    <section class="card setup-card-v07">
+      <div class="form-group"><label for="whoAmIRounds">Nombre de tours</label><select id="whoAmIRounds" class="text-input">${[Math.max(6,state.players.length),8,10,15].filter((v,i,a)=>a.indexOf(v)===i).map(v => `<option value="${v}" ${game.roundCount === v ? "selected" : ""}>${v} tours</option>`).join("")}</select></div>
+      <div class="form-group top-gap"><label for="whoAmICategory">Catégories</label><select id="whoAmICategory" class="text-input"><option value="mix" ${game.categoryMode === "mix" ? "selected" : ""}>Mélange complet</option><option value="classic" ${game.categoryMode === "classic" ? "selected" : ""}>Objets, animaux et métiers</option><option value="culture" ${game.categoryMode === "culture" ? "selected" : ""}>Culture pop</option></select></div>
+      <div class="form-group top-gap"><label for="whoAmITimer">Chronomètre</label><select id="whoAmITimer" class="text-input">${[45,60,90].map(v => `<option value="${v}" ${game.durationSeconds === v ? "selected" : ""}>${v} secondes</option>`).join("")}</select></div>
+    </section>
+    ${state.adult ? `<label class="option-card premium-toggle"><input id="whoAmIAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les identités adultes</strong><br><span class="helper">Crushs, ex, dates et situations de couple.</span></span></label>` : ""}
+    <div class="notice">Identité trouvée : +2 points pour la personne qui devine et +1 pour chaque personne qui l’aide.</div>
+    <button id="startWhoAmI" class="primary-btn full">Distribuer les identités</button>
+  `;
+  document.querySelector("#whoAmIRounds").addEventListener("change", e => game.roundCount = Number(e.target.value));
+  document.querySelector("#whoAmICategory").addEventListener("change", e => game.categoryMode = e.target.value);
+  document.querySelector("#whoAmITimer").addEventListener("change", e => game.durationSeconds = Number(e.target.value));
+  document.querySelector("#whoAmIAdult")?.addEventListener("change", e => game.includeAdult = e.target.checked);
+  document.querySelector("#startWhoAmI").addEventListener("click", startWhoAmIGame);
+}
+
+async function startWhoAmIGame() {
+  const game = state.whoAmI;
+  screen.innerHTML = `<div class="notice">Préparation des identités secrètes…</div>`;
+  try {
+    let pool = await loadJsonFile("data/qui-suis-je.json", "Impossible de charger les identités.");
+    if (game.categoryMode === "classic") pool = pool.filter(item => item.category !== "culture");
+    if (game.categoryMode === "culture") pool = pool.filter(item => item.category === "culture");
+    if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/qui-suis-je-adulte.json", "Impossible de charger les identités adultes."));
+    game.items = shuffleArray(pool).slice(0, Math.min(game.roundCount, pool.length));
+    game.currentIndex = 0;
+    game.guesserOrder = shuffleArray(state.players.map(player => player.id));
+    game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.rounds = [];
+    renderWhoAmIRevealGate();
+  } catch (error) {
+    alert(error.message);
+    renderWhoAmISetup();
+  }
+}
+
+function currentWhoAmIGuesser(game) {
+  return state.players.find(player => player.id === game.guesserOrder[game.currentIndex % game.guesserOrder.length]);
+}
+
+function renderWhoAmIRevealGate() {
+  const game = state.whoAmI;
+  if (game.currentIndex >= game.items.length) return renderWhoAmIEnd();
+  const guesser = currentWhoAmIGuesser(game);
+  title.textContent = "Identité secrète";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${renderV09Progress(game.currentIndex + 1, game.items.length, "Tour")}
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(guesser.avatarId).emoji}</div><span class="category-chip">${escapeHtml(guesser.name).toUpperCase()} FERME LES YEUX</span><h2>Donne le téléphone au reste du groupe</h2><p>Tout le monde va voir l’identité secrète sauf ${escapeHtml(guesser.name)}.</p><button id="showWhoAmICard" class="primary-btn">Afficher l’identité</button></section>
+  `;
+  document.querySelector("#showWhoAmICard").addEventListener("click", renderWhoAmICard);
+}
+
+function renderWhoAmICard() {
+  const game = state.whoAmI;
+  const item = game.items[game.currentIndex];
+  const guesser = currentWhoAmIGuesser(game);
+  title.textContent = "À faire deviner";
+  screen.innerHTML = `
+    ${renderV09Progress(game.currentIndex + 1, game.items.length, "Tour")}
+    <section class="whoami-secret-card"><small>${escapeHtml(item.category || "mystère").toUpperCase()}</small><span>❓</span><h2>${escapeHtml(item.label)}</h2><ul>${(item.clues || []).map(clue => `<li>${escapeHtml(clue)}</li>`).join("")}</ul><p>Répondez uniquement par oui, non ou presque aux questions de ${escapeHtml(guesser.name)}.</p></section>
+    <button id="startWhoAmIRound" class="primary-btn full">Tout le monde a mémorisé</button>
+  `;
+  document.querySelector("#startWhoAmIRound").addEventListener("click", renderWhoAmIPlaying);
+}
+
+function renderWhoAmIPlaying() {
+  const game = state.whoAmI;
+  const guesser = currentWhoAmIGuesser(game);
+  title.textContent = "Qui suis-je ?";
+  screen.innerHTML = `
+    ${renderV09Progress(game.currentIndex + 1, game.items.length, "Tour")}
+    <section class="timer-stage v09-timer-stage whoami-stage">
+      <span class="category-chip">${avatarById(guesser.avatarId).emoji} ${escapeHtml(guesser.name)}</span>
+      <div id="v09TimerRing" class="v09-timer-ring"><strong id="v09Countdown">${game.durationSeconds}</strong><small>secondes</small></div>
+      <h2>Pose des questions</h2><p>Le groupe répond oui, non ou presque. Pas de mime ni de mot de la même famille.</p>
+    </section>
+    <div class="v09-binary-grid"><button id="whoAmIFound" class="primary-btn">✅ Trouvé !</button><button id="whoAmIFailed" class="secondary-btn">⏱️ Temps écoulé</button></div>
+  `;
+  const finish = found => { clearV09Timer(); renderWhoAmIResult(found); };
+  document.querySelector("#whoAmIFound").addEventListener("click", () => finish(true));
+  document.querySelector("#whoAmIFailed").addEventListener("click", () => finish(false));
+  startV09Countdown(game.durationSeconds, () => finish(false));
+}
+
+function renderWhoAmIResult(found) {
+  const game = state.whoAmI;
+  const item = game.items[game.currentIndex];
+  const guesser = currentWhoAmIGuesser(game);
+  if (found) {
+    game.scores[guesser.id] = Number(game.scores[guesser.id] || 0) + 2;
+    state.players.filter(player => player.id !== guesser.id).forEach(player => game.scores[player.id] = Number(game.scores[player.id] || 0) + 1);
+  }
+  game.rounds.push({ itemId: item.id, guesserId: guesser.id, found });
+  title.textContent = found ? "Identité trouvée" : "Temps écoulé";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="reveal-stage reveal-v07 whoami-reveal"><span class="game-cover-icon">${found ? "🎉" : "⏱️"}</span><h2>${escapeHtml(guesser.name)} était ${escapeHtml(item.label)}</h2><p>${found ? "+2 points pour la personne qui devine, +1 pour chaque aide." : "Cette identité reste dans la galerie des mystères."}</p></section>
+    <section class="whoami-clue-wall">${(item.clues || []).map(clue => `<span>${escapeHtml(clue)}</span>`).join("")}</section>
+    ${state.alcohol && !found ? `<div class="alcohol-callout">🍻 Petite gorgée de consolation pour ${escapeHtml(guesser.name)}.</div>` : ""}
+    <button id="nextWhoAmI" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Identité suivante"}</button>
+  `;
+  document.querySelector("#nextWhoAmI").addEventListener("click", () => { game.currentIndex += 1; renderWhoAmIRevealGate(); });
+}
+
+function renderWhoAmIEnd() {
+  const game = state.whoAmI;
+  renderV09Final({
+    icon: "❓", heading: "Toutes les identités sont révélées", text: "Les meilleurs enquêteurs et leurs équipes d’indices prennent la tête.", scores: game.scores,
+    replay: () => { resetWhoAmIState(); renderWhoAmISetup(); },
+    other: () => { state.whoAmI = null; renderPlayChoice(); }
+  });
+}
+
+settingsBtn.addEventListener("click", event => {
+  const v09Active = Boolean(state.almostImpostor?.items?.length || state.fakeExpert?.items?.length || state.whoAmI?.items?.length);
+  if (!v09Active) return;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+}, true);
+
+renderHome();

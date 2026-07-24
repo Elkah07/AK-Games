@@ -1,0 +1,277 @@
+[
+  {
+    "id": "imp_a_001_premier_baiser",
+    "word": "Premier baiser",
+    "hint": "Je peux durer deux secondes et être raconté pendant dix ans",
+    "decoys": [
+      "Premier rendez-vous",
+      "Câlin",
+      "Déclaration"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_002_application_de_rencontre",
+    "word": "Application de rencontre",
+    "hint": "On y glisse plus vite qu’on ne se présente",
+    "decoys": [
+      "Réseau social",
+      "Messagerie",
+      "Album photo"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_003_crush",
+    "word": "Crush",
+    "hint": "Je peux occuper beaucoup de pensées sans payer de loyer",
+    "decoys": [
+      "Ex",
+      "Ami proche",
+      "Collègue"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_004_date_catastrophique",
+    "word": "Date catastrophique",
+    "hint": "On en rit souvent davantage après qu’au moment même",
+    "decoys": [
+      "Rupture",
+      "Soirée ratée",
+      "Entretien"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_005_message_2_h_du_matin",
+    "word": "Message à 2 h du matin",
+    "hint": "Je peux être courageux, gênant ou les deux",
+    "decoys": [
+      "Appel manqué",
+      "Note vocale",
+      "Invitation"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_006_ex",
+    "word": "Ex",
+    "hint": "Je fais partie du passé mais parfois des conversations présentes",
+    "decoys": [
+      "Crush",
+      "Meilleur ami",
+      "Voisin"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_007_flirt",
+    "word": "Flirt",
+    "hint": "Je ressemble à une conversation qui joue avec le feu",
+    "decoys": [
+      "Débat",
+      "Compliment",
+      "Dispute"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_008_rencard_surprise",
+    "word": "Rencard surprise",
+    "hint": "Je mélange attente, tenue choisie et inconnue",
+    "decoys": [
+      "Anniversaire",
+      "Entretien",
+      "Voyage"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_009_photo_compromettante",
+    "word": "Photo compromettante",
+    "hint": "Je devient plus dangereuse quand quelqu’un dit “je la garde”",
+    "decoys": [
+      "Capture d’écran",
+      "Selfie",
+      "Photo de groupe"
+    ],
+    "category": "dossiers"
+  },
+  {
+    "id": "imp_a_010_secret_de_soire",
+    "word": "Secret de soirée",
+    "hint": "Je circule souvent plus vite que prévu",
+    "decoys": [
+      "Rumeur",
+      "Blague",
+      "Invitation"
+    ],
+    "category": "dossiers"
+  },
+  {
+    "id": "imp_a_011_jalousie",
+    "word": "Jalousie",
+    "hint": "Je peux apparaître avant même qu’il se passe quelque chose",
+    "decoys": [
+      "Colère",
+      "Admiration",
+      "Timidité"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_012_plan_cul",
+    "word": "Plan cul",
+    "hint": "Je demande souvent moins de promesses et plus de clarté",
+    "decoys": [
+      "Relation sérieuse",
+      "Amitié",
+      "Date"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_013_dclaration",
+    "word": "Déclaration",
+    "hint": "Je peux changer une amitié en silence gênant ou en histoire",
+    "decoys": [
+      "Compliment",
+      "Excuse",
+      "Toast"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_014_love_room",
+    "word": "Love room",
+    "hint": "Je transforme une chambre en scénario beaucoup trop assumé",
+    "decoys": [
+      "Hôtel",
+      "Spa",
+      "Suite"
+    ],
+    "category": "adulte"
+  },
+  {
+    "id": "imp_a_015_strip_tease",
+    "word": "Strip-tease",
+    "hint": "Je demande du rythme, de l’assurance et parfois beaucoup d’humour",
+    "decoys": [
+      "Karaoké",
+      "Danse lente",
+      "Défilé"
+    ],
+    "category": "adulte"
+  },
+  {
+    "id": "imp_a_016_sexto",
+    "word": "Sexto",
+    "hint": "Je me relit souvent avec plus de stress qu’un devoir",
+    "decoys": [
+      "SMS",
+      "Mail",
+      "Note vocale"
+    ],
+    "category": "adulte"
+  },
+  {
+    "id": "imp_a_017_coup_de_foudre",
+    "word": "Coup de foudre",
+    "hint": "J’arrive sans mode d’emploi et ignore le calendrier",
+    "decoys": [
+      "Crush",
+      "Amitié",
+      "Rupture"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_018_relation_secrte",
+    "word": "Relation secrète",
+    "hint": "Je demande beaucoup de discrétion et encore plus de coordination",
+    "decoys": [
+      "Surprise",
+      "Colocation",
+      "Projet"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_019_nuit_blanche_deux",
+    "word": "Nuit blanche à deux",
+    "hint": "Je peux contenir très peu de sommeil et beaucoup d’histoires",
+    "decoys": [
+      "Soirée pyjama",
+      "Voyage",
+      "Festival"
+    ],
+    "category": "adulte"
+  },
+  {
+    "id": "imp_a_020_tenue_trop_sexy",
+    "word": "Tenue trop sexy",
+    "hint": "Je peux lancer plus de regards que de conversations",
+    "decoys": [
+      "Déguisement",
+      "Pyjama",
+      "Uniforme"
+    ],
+    "category": "adulte"
+  },
+  {
+    "id": "imp_a_021_retour_chez_un_ex",
+    "word": "Retour chez un ex",
+    "hint": "Je ressemble rarement à une décision prise avec une calculatrice",
+    "decoys": [
+      "Reprendre un abonnement",
+      "Revoir un film",
+      "Revenir en voyage"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_022_ami_avec_bnfices",
+    "word": "Ami avec bénéfices",
+    "hint": "Je mélange une étiquette simple et des émotions parfois moins simples",
+    "decoys": [
+      "Couple libre",
+      "Plan cul",
+      "Meilleur ami"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_023_baiser_vol",
+    "word": "Baiser volé",
+    "hint": "J’arrive vite et déclenche parfois un très long débrief",
+    "decoys": [
+      "Câlin",
+      "Clin d’œil",
+      "Danse"
+    ],
+    "category": "relations"
+  },
+  {
+    "id": "imp_a_024_nude",
+    "word": "Nude",
+    "hint": "Je demande confiance, cadrage et beaucoup de prudence",
+    "decoys": [
+      "Selfie",
+      "Photo de profil",
+      "Capture d’écran"
+    ],
+    "category": "adulte"
+  },
+  {
+    "id": "imp_a_025_dsir_interdit",
+    "word": "Désir interdit",
+    "hint": "Je devient souvent plus intense précisément parce qu’il est compliqué",
+    "decoys": [
+      "Projet secret",
+      "Défi",
+      "Rêve"
+    ],
+    "category": "adulte"
+  }
+]
