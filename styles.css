@@ -1116,3 +1116,394 @@ select.text-input {
     min-height: 160px;
   }
 }
+
+/* =========================================================
+   AK'GAMES V0.4 — MULTIJOUEUR
+   À coller à la fin du styles.css de la V0.3
+   ========================================================= */
+
+.room-code-card {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  padding: 30px 22px;
+  text-align: center;
+  border: 1px solid rgba(196,181,253,.28);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at top, rgba(139,92,246,.24), transparent 55%),
+    rgba(19,26,46,.95);
+  box-shadow: var(--shadow);
+}
+
+.room-kicker {
+  color: #c4b5fd;
+  font-size: .76rem;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.room-code-card > strong {
+  font-size: clamp(2.7rem, 11vw, 5.5rem);
+  letter-spacing: .08em;
+  line-height: 1;
+}
+
+.room-code-card p {
+  margin: 0 0 5px;
+  color: var(--muted);
+}
+
+.room-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.online-count {
+  color: var(--muted);
+  font-size: .86rem;
+}
+
+.presence-dot {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  margin-right: 4px;
+  border-radius: 50%;
+}
+
+.presence-dot.online {
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34,197,94,.10);
+}
+
+.presence-dot.offline {
+  background: #64748b;
+}
+
+.you-label {
+  display: inline-flex;
+  margin-left: 5px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(139,92,246,.16);
+  color: #c4b5fd;
+  font-size: .68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.waiting-host-card,
+.multiplayer-wait-card {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 10px;
+  padding: 28px;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: rgba(19,26,46,.92);
+}
+
+.waiting-host-card h2,
+.multiplayer-wait-card h2 {
+  margin: 0;
+}
+
+.waiting-host-card p,
+.multiplayer-wait-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.waiting-pulse {
+  font-size: 3rem;
+  animation: akWaitingPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes akWaitingPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: .7;
+  }
+
+  50% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+}
+
+.room-code-input {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.multi-question-stage {
+  min-height: 300px;
+}
+
+.waiting-bar {
+  width: min(420px, 100%);
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255,255,255,.07);
+}
+
+.waiting-bar > div {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+  transition: width .2s ease;
+}
+
+.host-control-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid rgba(245,158,11,.25);
+  border-radius: var(--radius-lg);
+  background: rgba(245,158,11,.07);
+}
+
+.host-control-card > div {
+  display: grid;
+  gap: 3px;
+}
+
+.host-control-card span {
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .48;
+}
+
+@media (max-width: 650px) {
+  .host-control-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .host-control-card .primary-btn {
+    width: 100%;
+  }
+}
+/* =========================================================
+   AK'GAMES V0.4.1 — PWA / MOBILE
+   À coller à la fin de styles.css
+   ========================================================= */
+
+html {
+  min-height: 100%;
+  background: #080612;
+  overscroll-behavior: none;
+}
+
+body {
+  min-height: 100dvh;
+  padding:
+    env(safe-area-inset-top)
+    env(safe-area-inset-right)
+    env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+button,
+.avatar-card,
+.game-card,
+.category-card,
+.vote-player {
+  touch-action: manipulation;
+}
+
+.ak-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 14px;
+  padding: 24px;
+  background:
+    radial-gradient(circle at center, rgba(124,58,237,.22), transparent 42%),
+    #080612;
+  color: #ffffff;
+  transition: opacity .35s ease, visibility .35s ease;
+}
+
+.ak-splash img {
+  width: 124px;
+  height: 124px;
+  border-radius: 30px;
+  box-shadow:
+    0 22px 70px rgba(0,0,0,.45),
+    0 0 42px rgba(139,92,246,.30);
+  animation: akSplashFloat 1.4s ease-in-out infinite;
+}
+
+.ak-splash strong {
+  margin-top: 7px;
+  font-size: 1.55rem;
+  letter-spacing: .02em;
+}
+
+.ak-splash span {
+  color: #a8a1bd;
+  font-size: .92rem;
+}
+
+.ak-splash-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes akSplashFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-5px) scale(1.015);
+  }
+}
+
+.ak-install-bar {
+  position: fixed;
+  z-index: 5000;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 14px;
+  border: 1px solid rgba(167,139,250,.30);
+  border-radius: 20px;
+  background: rgba(15,10,30,.96);
+  box-shadow: 0 24px 80px rgba(0,0,0,.48);
+  backdrop-filter: blur(16px);
+}
+
+.ak-install-bar > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.ak-install-bar img {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  border-radius: 14px;
+}
+
+.ak-install-bar span {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.ak-install-bar strong {
+  color: #ffffff;
+}
+
+.ak-install-bar small {
+  overflow: hidden;
+  color: #aaa1bd;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ak-install-actions {
+  display: flex;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.ak-install-actions button {
+  min-height: 42px;
+}
+
+.ak-back-toast {
+  position: fixed;
+  z-index: 6000;
+  bottom: calc(22px + env(safe-area-inset-bottom));
+  left: 50%;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  padding: 12px 16px;
+  transform: translateX(-50%);
+  border: 1px solid rgba(167,139,250,.25);
+  border-radius: 999px;
+  background: rgba(8,6,18,.96);
+  color: #f8fafc;
+  box-shadow: 0 14px 45px rgba(0,0,0,.45);
+  font-size: .9rem;
+  font-weight: 750;
+  text-align: center;
+}
+
+@media (display-mode: standalone) {
+  body {
+    user-select: none;
+  }
+
+  input,
+  textarea {
+    user-select: text;
+  }
+
+  .app-header {
+    padding-top: 4px;
+  }
+}
+
+@media (max-width: 620px) {
+  #app {
+    min-height: 100dvh;
+    padding-right: 14px;
+    padding-bottom: calc(18px + env(safe-area-inset-bottom));
+    padding-left: 14px;
+  }
+
+  .ak-install-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ak-install-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ak-install-actions button {
+    width: 100%;
+  }
+
+  .primary-btn,
+  .secondary-btn,
+  .danger-btn {
+    min-height: 52px;
+  }
+}
