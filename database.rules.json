@@ -6,8 +6,8 @@
         ".write": "auth != null && data.child('meta').child('hostUid').val() === auth.uid",
         "meta": {
           ".read": "auth != null",
-          ".write": "auth != null && (!data.exists() || data.child('hostUid').val() === auth.uid || newData.child('hostUid').val() === auth.uid)",
-          ".validate": "newData.hasChildren(['hostUid', 'adult', 'alcohol', 'status']) && newData.child('hostUid').isString() && newData.child('adult').isBoolean() && newData.child('alcohol').isBoolean() && (newData.child('status').val() === 'lobby' || newData.child('status').val() === 'playing')"
+          ".write": "auth != null && ((!data.exists() && newData.child('hostUid').val() === auth.uid) || data.child('hostUid').val() === auth.uid || (root.child('rooms').child($roomCode).child('players').child(auth.uid).child('online').val() === true && newData.child('hostUid').val() === auth.uid && newData.child('adult').val() === data.child('adult').val() && newData.child('alcohol').val() === data.child('alcohol').val() && newData.child('status').val() === data.child('status').val() && (!root.child('rooms').child($roomCode).child('players').child(data.child('hostUid').val()).exists() || (root.child('rooms').child($roomCode).child('players').child(data.child('hostUid').val()).child('online').val() === false && root.child('rooms').child($roomCode).child('players').child(data.child('hostUid').val()).child('lastSeen').isNumber() && root.child('rooms').child($roomCode).child('players').child(data.child('hostUid').val()).child('lastSeen').val() <= now - 12000))))",
+          ".validate": "newData.hasChildren(['hostUid', 'adult', 'alcohol', 'status']) && newData.child('hostUid').isString() && newData.child('hostUid').val().length > 0 && newData.child('adult').isBoolean() && newData.child('alcohol').isBoolean() && (newData.child('status').val() === 'lobby' || newData.child('status').val() === 'playing')"
         },
         "players": {
           "$uid": {

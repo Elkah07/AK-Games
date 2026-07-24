@@ -29,6 +29,13 @@
   state.megaGame = state.megaGame || null;
   state.v014MultiTimer = null;
   state.v014MultiTimerToken = 0;
+  state.hostRecoveryTimer = null;
+  state.hostRecoveryTargetUid = null;
+  state.lastRoomRecoveryNoticeId = null;
+  state.roomRecoveryUiTimer = null;
+
+  const HOST_RECOVERY_GRACE_MS = 12000;
+  const PLAYER_REMOVAL_GRACE_MS = 8000;
 
   const SESSION_KEY = "akgames_multiplayer_session_v1";
 
@@ -70,7 +77,8 @@
         name: value.name || "Joueur",
         avatarId: value.avatarId || "frog",
         online: value.online !== false,
-        joinedAt: value.joinedAt || 0
+        joinedAt: value.joinedAt || 0,
+        lastSeen: value.lastSeen || 0
       }))
       .sort((a, b) => (a.joinedAt || 0) - (b.joinedAt || 0));
   }
@@ -102,7 +110,211 @@
       state.roomUnsubscribe();
     }
     state.roomUnsubscribe = null;
+    clearHostRecoveryTimer();
+    clearRoomRecoveryUiTimer();
+    document.querySelector("#roomRecoveryPanel")?.remove();
   }
+
+  function clearHostRecoveryTimer() {
+    if (state.hostRecoveryTimer) {
+      window.clearTimeout(state.hostRecoveryTimer);
+    }
+    state.hostRecoveryTimer = null;
+    state.hostRecoveryTargetUid = null;
+  }
+
+  function clearRoomRecoveryUiTimer() {
+    if (state.roomRecoveryUiTimer) {
+      window.clearTimeout(state.roomRecoveryUiTimer);
+    }
+    state.roomRecoveryUiTimer = null;
+  }
+
+  function showRoomRecoveryToast(message) {
+    if (!message) return;
+
+    document.querySelector("#akRoomRecoveryToast")?.remove();
+    const toast = document.createElement("div");
+    toast.id = "akRoomRecoveryToast";
+    toast.className = "room-recovery-toast";
+    toast.setAttribute("role", "status");
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    window.setTimeout(() => toast.classList.add("visible"), 20);
+    window.setTimeout(() => {
+      toast.classList.remove("visible");
+      window.setTimeout(() => toast.remove(), 260);
+    }, 3600);
+  }
+
+  function processRoomRecoveryNotice(room) {
+    const notice = room?.meta?.recoveryNotice || room?.game?.state?.recoveryNotice;
+    if (!notice?.id || notice.id === state.lastRoomRecoveryNoticeId) return;
+
+    state.lastRoomRecoveryNoticeId = notice.id;
+    showRoomRecoveryToast(notice.message || "La partie a été réparée après une déconnexion.");
+  }
+
+  function scheduleHostRecovery(room) {
+    const hostUid = room?.meta?.hostUid;
+    const hostPlayer = room?.players?.[hostUid] || null;
+
+    if (!hostUid || state.isHost || hostPlayer?.online !== false) {
+      clearHostRecoveryTimer();
+      return;
+    }
+
+    const candidates = roomPlayersFromObject(room.players)
+      .filter(player => player.online)
+      .sort((a, b) => Number(a.joinedAt || 0) - Number(b.joinedAt || 0));
+    const candidate = candidates[0] || null;
+
+    if (!candidate || candidate.id !== state.currentUid) {
+      clearHostRecoveryTimer();
+      return;
+    }
+
+    const elapsed = Math.max(0, AKFirebase.now() - Number(hostPlayer.lastSeen || 0));
+    const delay = Math.max(600, HOST_RECOVERY_GRACE_MS - elapsed + 250);
+
+    if (state.hostRecoveryTimer && state.hostRecoveryTargetUid === hostUid) return;
+
+    clearHostRecoveryTimer();
+    state.hostRecoveryTargetUid = hostUid;
+    state.hostRecoveryTimer = window.setTimeout(async () => {
+      state.hostRecoveryTimer = null;
+
+      try {
+        const claimed = await AKFirebase.claimHost(state.roomCode);
+        if (claimed) {
+          showRoomRecoveryToast("L’hôte est parti. Tu reprends automatiquement la soirée 👑");
+        } else if (state.roomData) {
+          window.setTimeout(() => scheduleHostRecovery(state.roomData), 1500);
+        }
+      } catch (error) {
+        console.error("Reprise du rôle d'hôte impossible :", error);
+        if (state.roomData) {
+          window.setTimeout(() => scheduleHostRecovery(state.roomData), 1800);
+        }
+      }
+    }, delay);
+  }
+
+  function mountRoomRecoveryControls(room) {
+    document.querySelector("#roomRecoveryPanel")?.remove();
+
+    if (!state.roomCode || !room || !screen?.isConnected) return;
+
+    const hostUid = room.meta?.hostUid;
+    const hostPlayer = room.players?.[hostUid] || null;
+    const offlinePlayers = roomPlayersFromObject(room.players)
+      .filter(player => player.online === false && player.id !== state.currentUid)
+      .map(player => ({
+        ...player,
+        offlineFor: Math.max(0, AKFirebase.now() - Number(player.lastSeen || 0))
+      }));
+
+    if (!state.isHost && hostPlayer?.online === false) {
+      const panel = document.createElement("section");
+      panel.id = "roomRecoveryPanel";
+      panel.className = "connection-recovery-panel waiting";
+      panel.innerHTML = `
+        <div class="connection-recovery-icon">📡</div>
+        <div>
+          <strong>L’hôte est déconnecté</strong>
+          <p>AK’Games attend quelques secondes. Le joueur connecté depuis le plus longtemps reprendra ensuite la couronne automatiquement.</p>
+        </div>
+      `;
+      screen.appendChild(panel);
+      return;
+    }
+
+    if (!state.isHost || !offlinePlayers.length) return;
+
+    const inGame = Boolean(room.game?.state);
+    const panel = document.createElement("section");
+    panel.id = "roomRecoveryPanel";
+    panel.className = "connection-recovery-panel host";
+    panel.innerHTML = `
+      <div class="connection-recovery-heading">
+        <div>
+          <span class="room-kicker">CONNEXION INSTABLE</span>
+          <h2>${offlinePlayers.length} joueur${offlinePlayers.length > 1 ? "s" : ""} hors ligne</h2>
+        </div>
+        <span class="connection-recovery-icon">📴</span>
+      </div>
+      <p class="helper">
+        ${inGame
+          ? "Tu peux continuer sans eux. La manche actuelle redémarrera proprement et leurs anciennes réponses seront supprimées."
+          : "Retire les anciens joueurs déconnectés avant de lancer la prochaine partie."}
+      </p>
+      <div class="connection-recovery-list">
+        ${offlinePlayers.map(player => {
+          const canRemove = player.offlineFor >= PLAYER_REMOVAL_GRACE_MS;
+          const secondsLeft = Math.max(1, Math.ceil((PLAYER_REMOVAL_GRACE_MS - player.offlineFor) / 1000));
+          return `
+            <div class="connection-recovery-player">
+              <span class="result-avatar">${avatarById(player.avatarId).emoji}</span>
+              <div>
+                <strong>${escapeHtml(player.name)}</strong>
+                <small>${canRemove ? "Déconnecté(e)" : `Reconnexion possible · ${secondsLeft}s`}</small>
+              </div>
+              <button class="danger-btn compact" data-remove-offline-player="${player.id}" ${canRemove ? "" : "disabled"}>
+                ${canRemove ? `Continuer sans ${escapeHtml(player.name)}` : "Attente…"}
+              </button>
+            </div>
+          `;
+        }).join("")}
+      </div>
+    `;
+    screen.appendChild(panel);
+
+    const waitingDelays = offlinePlayers
+      .map(player => PLAYER_REMOVAL_GRACE_MS - player.offlineFor)
+      .filter(delay => delay > 0);
+
+    if (waitingDelays.length) {
+      window.setTimeout(() => {
+        if (state.roomData === room) mountRoomRecoveryControls(room);
+      }, Math.min(...waitingDelays) + 120);
+    }
+
+    panel.querySelectorAll("[data-remove-offline-player]").forEach(button => {
+      button.addEventListener("click", async () => {
+        const targetUid = button.dataset.removeOfflinePlayer;
+        const player = offlinePlayers.find(item => item.id === targetUid);
+        const message = inGame
+          ? `Continuer sans ${player?.name || "ce joueur"} ? La manche actuelle sera relancée.`
+          : `Retirer ${player?.name || "ce joueur"} du salon ?`;
+
+        if (!confirm(message)) return;
+
+        button.disabled = true;
+        button.textContent = "Nettoyage…";
+
+        try {
+          const result = await AKFirebase.removeDisconnectedPlayer(state.roomCode, targetUid);
+          if (result?.notice?.message) showRoomRecoveryToast(result.notice.message);
+        } catch (error) {
+          console.error(error);
+          button.disabled = false;
+          button.textContent = `Continuer sans ${player?.name || "ce joueur"}`;
+          alert(error.message || "Impossible de retirer ce joueur.");
+        }
+      });
+    });
+  }
+
+  function scheduleRoomRecoveryUi(room) {
+    clearRoomRecoveryUiTimer();
+    state.roomRecoveryUiTimer = window.setTimeout(() => {
+      state.roomRecoveryUiTimer = null;
+      if (state.roomData !== room) return;
+      mountRoomRecoveryControls(room);
+    }, 0);
+  }
+
 
   function renderMultiplayerLoading(message) {
     title.textContent = "Connexion";
@@ -149,6 +361,9 @@
 
         state.players = roomPlayersFromObject(room.players);
         persistRoomSession();
+        processRoomRecoveryNotice(room);
+        scheduleHostRecovery(room);
+        scheduleRoomRecoveryUi(room);
 
         const gameState = room.game?.state || null;
 

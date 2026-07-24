@@ -379,9 +379,9 @@
   },
   {
     "id": "devinettes_005_qu_est_ce_qui_monte_mais_ne_redescend_jamais",
-    "setup": "Qu'est-ce qui monte mais ne redescend jamais ?",
-    "punchline": "Ton âge.",
-    "category": "devinettes",
+    "setup": "Pourquoi le calendrier a-t-il demandé des vacances ?",
+    "punchline": "Parce que ses jours étaient comptés.",
+    "category": "nulles",
     "adult": false
   },
   {
@@ -421,9 +421,9 @@
   },
   {
     "id": "devinettes_011_je_suis_plein_de_trous_mais_je_retiens_l_eau_qui_s",
-    "setup": "Je suis plein de trous mais je retiens l'eau. Qui suis-je ?",
-    "punchline": "Une éponge.",
-    "category": "devinettes",
+    "setup": "Pourquoi la lampe refuse-t-elle de raconter ses secrets ?",
+    "punchline": "Parce qu’elle ne veut pas les mettre en lumière.",
+    "category": "absurdes",
     "adult": false
   },
   {
