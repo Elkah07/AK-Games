@@ -1,0 +1,206 @@
+/* =========================================================
+   AK'GAMES V0.4.1 — PWA / MOBILE
+   À coller à la fin de styles.css
+   ========================================================= */
+
+html {
+  min-height: 100%;
+  background: #080612;
+  overscroll-behavior: none;
+}
+
+body {
+  min-height: 100dvh;
+  padding:
+    env(safe-area-inset-top)
+    env(safe-area-inset-right)
+    env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+button,
+.avatar-card,
+.game-card,
+.category-card,
+.vote-player {
+  touch-action: manipulation;
+}
+
+.ak-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 14px;
+  padding: 24px;
+  background:
+    radial-gradient(circle at center, rgba(124,58,237,.22), transparent 42%),
+    #080612;
+  color: #ffffff;
+  transition: opacity .35s ease, visibility .35s ease;
+}
+
+.ak-splash img {
+  width: 124px;
+  height: 124px;
+  border-radius: 30px;
+  box-shadow:
+    0 22px 70px rgba(0,0,0,.45),
+    0 0 42px rgba(139,92,246,.30);
+  animation: akSplashFloat 1.4s ease-in-out infinite;
+}
+
+.ak-splash strong {
+  margin-top: 7px;
+  font-size: 1.55rem;
+  letter-spacing: .02em;
+}
+
+.ak-splash span {
+  color: #a8a1bd;
+  font-size: .92rem;
+}
+
+.ak-splash-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes akSplashFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-5px) scale(1.015);
+  }
+}
+
+.ak-install-bar {
+  position: fixed;
+  z-index: 5000;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 14px;
+  border: 1px solid rgba(167,139,250,.30);
+  border-radius: 20px;
+  background: rgba(15,10,30,.96);
+  box-shadow: 0 24px 80px rgba(0,0,0,.48);
+  backdrop-filter: blur(16px);
+}
+
+.ak-install-bar > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.ak-install-bar img {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  border-radius: 14px;
+}
+
+.ak-install-bar span {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.ak-install-bar strong {
+  color: #ffffff;
+}
+
+.ak-install-bar small {
+  overflow: hidden;
+  color: #aaa1bd;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ak-install-actions {
+  display: flex;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.ak-install-actions button {
+  min-height: 42px;
+}
+
+.ak-back-toast {
+  position: fixed;
+  z-index: 6000;
+  bottom: calc(22px + env(safe-area-inset-bottom));
+  left: 50%;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  padding: 12px 16px;
+  transform: translateX(-50%);
+  border: 1px solid rgba(167,139,250,.25);
+  border-radius: 999px;
+  background: rgba(8,6,18,.96);
+  color: #f8fafc;
+  box-shadow: 0 14px 45px rgba(0,0,0,.45);
+  font-size: .9rem;
+  font-weight: 750;
+  text-align: center;
+}
+
+@media (display-mode: standalone) {
+  body {
+    user-select: none;
+  }
+
+  input,
+  textarea {
+    user-select: text;
+  }
+
+  .app-header {
+    padding-top: 4px;
+  }
+}
+
+@media (max-width: 620px) {
+  #app {
+    min-height: 100dvh;
+    padding-right: 14px;
+    padding-bottom: calc(18px + env(safe-area-inset-bottom));
+    padding-left: 14px;
+  }
+
+  .ak-install-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ak-install-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ak-install-actions button {
+    width: 100%;
+  }
+
+  .primary-btn,
+  .secondary-btn,
+  .danger-btn {
+    min-height: 52px;
+  }
+}
