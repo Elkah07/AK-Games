@@ -819,6 +819,7 @@
         state.adult = Boolean(meta.adult);
         state.alcohol = Boolean(meta.alcohol);
         state.draftPlayer = { name: "", avatarId: null };
+        pushScreen("join");
 
         renderPlayerForm();
       } catch (error) {
@@ -1646,7 +1647,8 @@
         config: {
           roundCount: Number(gameState.settings?.roundCount || gameState.prompts?.length || 12),
           mode: gameState.settings?.mode || "mix",
-          includeAdult: Boolean(gameState.settings?.includeAdult)
+          includeAdult: Boolean(gameState.settings?.includeAdult),
+          forceAdult: Boolean(gameState.settings?.forceAdult)
         }
       };
     }
@@ -1656,7 +1658,8 @@
         type: gameState.type,
         config: {
           roundCount: Number(gameState.settings?.roundCount || gameState.items?.length || 10),
-          includeAdult: Boolean(gameState.settings?.includeAdult)
+          includeAdult: Boolean(gameState.settings?.includeAdult),
+          forceAdult: Boolean(gameState.settings?.forceAdult)
         }
       };
     }
@@ -1981,8 +1984,8 @@
       state.actionTruth = {
         roundCount: Number(config.roundCount || 12),
         mode: config.mode || "mix",
-        includeAdult: Boolean(state.adult && config.includeAdult),
-        forceAdult: false,
+        includeAdult: Boolean(state.adult && (config.includeAdult || config.forceAdult)),
+        forceAdult: Boolean(state.adult && config.forceAdult),
         prompts: [],
         currentIndex: 0,
         scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
@@ -1998,8 +2001,8 @@
       state.ambiancePoll = {
         type,
         roundCount: Number(config.roundCount || 10),
-        includeAdult: Boolean(state.adult && config.includeAdult),
-        forceAdult: false,
+        includeAdult: Boolean(state.adult && (config.includeAdult || config.forceAdult)),
+        forceAdult: Boolean(state.adult && config.forceAdult),
         items: [],
         currentIndex: 0,
         currentVoterIndex: 0,
@@ -3410,7 +3413,7 @@
       await AKFirebase.setGame(state.roomCode, { state: {
         type: "action-truth", phase: "prompt", sessionGameId: createSessionGameId("action-truth"), prompts,
         currentIndex: 0, currentPlayerId: state.players[0]?.id, scores, results: {},
-        settings: { roundCount: prompts.length, mode: game.mode, includeAdult: Boolean(game.includeAdult) },
+        settings: { roundCount: prompts.length, mode: game.mode, includeAdult: Boolean(game.includeAdult), forceAdult: Boolean(game.forceAdult) },
         startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
       }});
       state.multiView = "ambiance-game";
@@ -3443,15 +3446,20 @@
     const meta = pollGameMeta(game.type);
     screen.innerHTML = `<div class="notice">Synchronisation des questions…</div>`;
     try {
-      let pool = await loadJsonFile(meta.classic, "Impossible de charger les questions.");
-      if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile(meta.adult, "Impossible de charger les questions adultes."));
-      const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `multi:${game.type === "never" ? "never-have-i-ever" : "would-you-rather"}`);
+      let pool;
+      if (game.forceAdult) {
+        pool = await loadJsonFile(meta.adult, "Impossible de charger les questions adultes.");
+      } else {
+        pool = await loadJsonFile(meta.classic, "Impossible de charger les questions.");
+        if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile(meta.adult, "Impossible de charger les questions adultes."));
+      }
+      const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `multi:${game.type === "never" ? "never-have-i-ever" : "would-you-rather"}${game.forceAdult ? ":adult" : ""}`);
       const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
       const type = game.type === "never" ? "never-have-i-ever" : "would-you-rather";
       await AKFirebase.setGame(state.roomCode, { state: {
         type, phase: "voting", sessionGameId: createSessionGameId(type), items, currentIndex: 0,
         scores, rounds: {}, currentResult: null,
-        settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult) },
+        settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult), forceAdult: Boolean(game.forceAdult) },
         startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
       }, votes: {} });
       state.multiView = "ambiance-game";
@@ -6497,15 +6505,20 @@
     const game = state.actionTruth;
     screen.innerHTML = `<div class="notice">Synchronisation équilibrée des cartes…</div>`;
     try {
-      let pool = await loadJsonFile("data/action-verite.json", "Impossible de charger les cartes.");
-      if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/action-verite-adulte.json", "Impossible de charger les cartes adultes."));
+      let pool;
+      if (game.forceAdult) {
+        pool = await loadJsonFile("data/action-verite-adulte.json", "Impossible de charger les cartes adultes.");
+      } else {
+        pool = await loadJsonFile("data/action-verite.json", "Impossible de charger les cartes.");
+        if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/action-verite-adulte.json", "Impossible de charger les cartes adultes."));
+      }
       if (game.mode !== "mix") pool = pool.filter(item => item.type === game.mode);
-      const prompts = akAudit8BalancedActionTruth(pool, Math.min(game.roundCount, pool.length), `multi:action-truth:${game.mode}`, game.mode);
+      const prompts = akAudit8BalancedActionTruth(pool, Math.min(game.roundCount, pool.length), `multi:action-truth:${game.mode}${game.forceAdult ? ":adult" : ""}`, game.mode);
       const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
       await AKFirebase.setGame(state.roomCode, { state: {
         type: "action-truth", phase: "prompt", sessionGameId: createSessionGameId("action-truth"), prompts,
         currentIndex: 0, currentPlayerId: state.players[0]?.id, scores, results: {},
-        settings: { roundCount: prompts.length, mode: game.mode, includeAdult: Boolean(game.includeAdult) },
+        settings: { roundCount: prompts.length, mode: game.mode, includeAdult: Boolean(game.includeAdult), forceAdult: Boolean(game.forceAdult) },
         startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
       }});
       state.multiView = "ambiance-game";
@@ -6648,5 +6661,9 @@
   renderFakeExpertSetup = akAudit8WrapMultiSetup(renderFakeExpertSetup, "Le Faux Expert");
   renderWhoAmISetup = akAudit8WrapMultiSetup(renderWhoAmISetup, "Qui suis-je ?");
   renderMegaSetup = akAudit8WrapMultiSetup(renderMegaSetup, () => state.megaGame?.gameName || "Jeu");
+
+  window.AKGamesMultiplayer = Object.freeze({
+    launchRandomGame: () => launchRandomMultiplayerGame()
+  });
 
 })();

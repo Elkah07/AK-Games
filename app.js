@@ -432,19 +432,22 @@ function renderPlayChoice() {
   title.textContent = "À quoi vous voulez jouer ?";
   setBackVisible(true);
 
+  const multiplayer = state.mode === "multi-host" || state.mode === "multi-guest";
+  const randomDisabled = multiplayer && !state.isHost;
+
   screen.innerHTML = `
     <section class="grid grid-2">
       <button id="chooseGame" class="card action-card">
         <strong>🎮 Choisir un jeu</strong>
         <span>Parcours les catégories et lance un jeu précis.</span>
       </button>
-      <button id="mixMode" class="card action-card">
-        <strong>🎲 Mode Mix</strong>
-        <span>Une playlist de plusieurs jeux pour toute la soirée.</span>
+      <button id="randomGame" class="card action-card" ${randomDisabled ? "disabled" : ""}>
+        <strong>🎲 Jeu aléatoire</strong>
+        <span>${randomDisabled ? "L’hôte choisit le prochain jeu." : "AK’Games choisit un jeu compatible avec votre groupe."}</span>
       </button>
     </section>
 
-    <div class="notice">Le mode Mix sera automatisé après l’intégration de plusieurs jeux.</div>
+    <div class="notice">Le tirage évite les jeux joués récemment et respecte le nombre de joueurs ainsi que les options de la soirée.</div>
   `;
 
   document.querySelector("#chooseGame").addEventListener("click", () => {
@@ -452,8 +455,22 @@ function renderPlayChoice() {
     renderCategories();
   });
 
-  document.querySelector("#mixMode").addEventListener("click", () => {
-    alert("Le mode Mix est réservé à une prochaine version.");
+  document.querySelector("#randomGame")?.addEventListener("click", async event => {
+    event.currentTarget.disabled = true;
+    try {
+      if (multiplayer) {
+        if (typeof window.AKGamesMultiplayer?.launchRandomGame !== "function") {
+          throw new Error("Le tirage multijoueur n’est pas encore prêt. Réessaie dans un instant.");
+        }
+        await window.AKGamesMultiplayer.launchRandomGame();
+        return;
+      }
+      launchRandomSoloGame();
+    } catch (error) {
+      console.error(error);
+      event.currentTarget.disabled = false;
+      alert(error.message || "Impossible de choisir un jeu aléatoire.");
+    }
   });
 }
 
@@ -589,12 +606,12 @@ function renderMultiNotReady(gameName) {
 }
 
 
-function resetWhoUsState() {
+function resetWhoUsState(config = {}) {
   state.quiDeNous = {
-    questionCount: 10,
-    categories: ["drole", "chaos", "dossiers", "amitie", "soiree", "relations"],
-    includeAdult: false,
-    alcoholIntensity: "normal",
+    questionCount: Number(config.questionCount || 10),
+    categories: [...(config.categories || ["drole", "chaos", "dossiers", "amitie", "soiree", "relations"])],
+    includeAdult: Boolean(config.includeAdult),
+    alcoholIntensity: config.alcoholIntensity || "normal",
     questions: [],
     currentIndex: 0,
     currentVoterIndex: 0,
@@ -1092,7 +1109,12 @@ function renderWhoUsEnd() {
   `;
 
   document.querySelector("#replayWhoUs").addEventListener("click", () => {
-    resetWhoUsState();
+    resetWhoUsState({
+      questionCount: game.questionCount,
+      categories: game.categories,
+      includeAdult: game.includeAdult,
+      alcoholIntensity: game.alcoholIntensity
+    });
     renderWhoUsSetup();
   });
 
@@ -1602,11 +1624,11 @@ function renderLaughDuelEnd(winner, loser) {
    QUI MENT LE MIEUX ?
    ========================================================= */
 
-function resetBestLiarState() {
+function resetBestLiarState(config = {}) {
   state.bestLiar = {
-    roundCount: 5,
-    categories: ["excuses", "improbable", "quotidien", "dossiers", "chaos"],
-    includeAdult: false,
+    roundCount: Number(config.roundCount || 5),
+    categories: [...(config.categories || ["excuses", "improbable", "quotidien", "dossiers", "chaos"])],
+    includeAdult: Boolean(config.includeAdult),
     prompts: [],
     currentRound: 0,
     currentWriterIndex: 0,
@@ -2153,7 +2175,7 @@ function renderBestLiarEnd() {
   `;
 
   document.querySelector("#replayBestLiar").addEventListener("click", () => {
-    resetBestLiarState();
+    resetBestLiarState({ roundCount: game.roundCount, categories: game.categories, includeAdult: game.includeAdult });
     renderBestLiarSetup();
   });
 
@@ -2248,6 +2270,9 @@ backBtn.addEventListener("click", () => {
   switch (previous) {
     case "home":
       renderHome();
+      break;
+    case "join":
+      renderJoin();
       break;
     case "setup":
       renderSetup();
@@ -2487,11 +2512,11 @@ renderGames = function () {
   });
 };
 
-function resetActionTruthState(forceAdult = false) {
+function resetActionTruthState(forceAdult = false, config = {}) {
   state.actionTruth = {
-    roundCount: 12,
-    mode: "mix",
-    includeAdult: Boolean(forceAdult),
+    roundCount: Number(config.roundCount || 12),
+    mode: config.mode || "mix",
+    includeAdult: Boolean(forceAdult || config.includeAdult),
     forceAdult: Boolean(forceAdult),
     prompts: [],
     currentIndex: 0,
@@ -2638,15 +2663,18 @@ function renderActionTruthEnd() {
     </section>
     <div class="toolbar"><button id="replayActionTruth" class="secondary-btn">Rejouer</button><button id="otherActionTruth" class="primary-btn">Autre jeu</button></div>
   `;
-  document.querySelector("#replayActionTruth").addEventListener("click", () => { const adult = game.forceAdult; resetActionTruthState(adult); renderActionTruthSetup(); });
+  document.querySelector("#replayActionTruth").addEventListener("click", () => {
+    resetActionTruthState(game.forceAdult, { roundCount: game.roundCount, mode: game.mode, includeAdult: game.includeAdult });
+    renderActionTruthSetup();
+  });
   document.querySelector("#otherActionTruth").addEventListener("click", () => { state.actionTruth = null; renderPlayChoice(); });
 }
 
-function resetAmbiancePollState(type, forceAdult = false) {
+function resetAmbiancePollState(type, forceAdult = false, config = {}) {
   state.ambiancePoll = {
     type,
-    roundCount: 10,
-    includeAdult: Boolean(forceAdult),
+    roundCount: Number(config.roundCount || 10),
+    includeAdult: Boolean(forceAdult || config.includeAdult),
     forceAdult: Boolean(forceAdult),
     items: [],
     currentIndex: 0,
@@ -2691,9 +2719,14 @@ async function startAmbiancePollGame() {
   const meta = pollGameMeta(game.type);
   screen.innerHTML = `<div class="notice">Préparation des questions…</div>`;
   try {
-    let pool = await loadJsonFile(meta.classic, "Impossible de charger les questions.");
-    if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile(meta.adult, "Impossible de charger les questions adultes."));
-    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `solo:${game.type === "never" ? "never-have-i-ever" : "would-you-rather"}`);
+    let pool;
+    if (game.forceAdult) {
+      pool = await loadJsonFile(meta.adult, "Impossible de charger les questions adultes.");
+    } else {
+      pool = await loadJsonFile(meta.classic, "Impossible de charger les questions.");
+      if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile(meta.adult, "Impossible de charger les questions adultes."));
+    }
+    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `solo:${game.type === "never" ? "never-have-i-ever" : "would-you-rather"}${game.forceAdult ? ":adult" : ""}`);
     game.currentIndex = 0;
     game.currentVoterIndex = 0;
     game.votes = {};
@@ -2809,7 +2842,10 @@ function renderAmbiancePollEnd() {
     <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
     <div class="toolbar"><button id="replayPoll" class="secondary-btn">Rejouer</button><button id="otherPoll" class="primary-btn">Autre jeu</button></div>
   `;
-  document.querySelector("#replayPoll").addEventListener("click", () => { const { type, forceAdult } = game; resetAmbiancePollState(type, forceAdult); renderAmbiancePollSetup(); });
+  document.querySelector("#replayPoll").addEventListener("click", () => {
+    resetAmbiancePollState(game.type, game.forceAdult, { roundCount: game.roundCount, includeAdult: game.includeAdult });
+    renderAmbiancePollSetup();
+  });
   document.querySelector("#otherPoll").addEventListener("click", () => { state.ambiancePoll = null; renderPlayChoice(); });
 }
 
@@ -3078,10 +3114,10 @@ function renderV08Final({ icon, titleText, description, scores, replayId, otherI
 
 /* ---------- MÊME CERVEAU ---------- */
 
-function resetSameBrainState() {
+function resetSameBrainState(config = {}) {
   state.sameBrain = {
-    roundCount: 10,
-    includeAdult: false,
+    roundCount: Number(config.roundCount || 10),
+    includeAdult: Boolean(config.includeAdult),
     items: [],
     currentIndex: 0,
     currentWriterIndex: 0,
@@ -3243,17 +3279,17 @@ function renderSameBrainEnd() {
     scores: game.scores,
     replayId: "replaySameBrain",
     otherId: "otherSameBrain",
-    replay: () => { resetSameBrainState(); renderSameBrainSetup(); },
+    replay: () => { resetSameBrainState({ roundCount: game.roundCount, includeAdult: game.includeAdult }); renderSameBrainSetup(); },
     other: () => { state.sameBrain = null; renderPlayChoice(); }
   });
 }
 
 /* ---------- MINORITÉ ---------- */
 
-function resetMinorityState() {
+function resetMinorityState(config = {}) {
   state.minorityGame = {
-    roundCount: 10,
-    includeAdult: false,
+    roundCount: Number(config.roundCount || 10),
+    includeAdult: Boolean(config.includeAdult),
     items: [],
     currentIndex: 0,
     currentVoterIndex: 0,
@@ -3373,17 +3409,17 @@ function renderMinorityEnd() {
     scores: game.scores,
     replayId: "replayMinority",
     otherId: "otherMinority",
-    replay: () => { resetMinorityState(); renderMinoritySetup(); },
+    replay: () => { resetMinorityState({ roundCount: game.roundCount, includeAdult: game.includeAdult }); renderMinoritySetup(); },
     other: () => { state.minorityGame = null; renderPlayChoice(); }
   });
 }
 
 /* ---------- QUI A RÉPONDU ÇA ? ---------- */
 
-function resetWhoAnsweredState() {
+function resetWhoAnsweredState(config = {}) {
   state.whoAnswered = {
-    roundCount: Math.max(6, state.players.length),
-    includeAdult: false,
+    roundCount: Number(config.roundCount || Math.max(6, state.players.length)),
+    includeAdult: Boolean(config.includeAdult),
     items: [],
     currentIndex: 0,
     currentWriterIndex: 0,
@@ -3564,7 +3600,7 @@ function renderWhoAnsweredEnd() {
     scores: game.scores,
     replayId: "replayWhoAnswered",
     otherId: "otherWhoAnswered",
-    replay: () => { resetWhoAnsweredState(); renderWhoAnsweredSetup(); },
+    replay: () => { resetWhoAnsweredState({ roundCount: game.roundCount, includeAdult: game.includeAdult }); renderWhoAnsweredSetup(); },
     other: () => { state.whoAnswered = null; renderPlayChoice(); }
   });
 }
@@ -3803,11 +3839,11 @@ renderGames = function () {
 
 /* ---------- L’IMPOSTEUR SAIT PRESQUE TOUT ---------- */
 
-function resetAlmostImpostorState() {
+function resetAlmostImpostorState(config = {}) {
   state.almostImpostor = {
-    roundCount: 6,
-    includeAdult: false,
-    discussionSeconds: 60,
+    roundCount: Number(config.roundCount || 6),
+    includeAdult: Boolean(config.includeAdult),
+    discussionSeconds: Number(config.discussionSeconds || 60),
     items: [],
     currentIndex: 0,
     roleOrder: [],
@@ -4029,18 +4065,18 @@ function renderAlmostImpostorEnd() {
   const game = state.almostImpostor;
   renderV09Final({
     icon: "🕶️", heading: "Les masques sont tombés", text: "Détectives précis et imposteurs insaisissables se partagent le podium.", scores: game.scores,
-    replay: () => { resetAlmostImpostorState(); renderAlmostImpostorSetup(); },
+    replay: () => { resetAlmostImpostorState({ roundCount: game.roundCount, includeAdult: game.includeAdult, discussionSeconds: game.discussionSeconds }); renderAlmostImpostorSetup(); },
     other: () => { state.almostImpostor = null; renderPlayChoice(); }
   });
 }
 
 /* ---------- LE FAUX EXPERT ---------- */
 
-function resetFakeExpertState() {
+function resetFakeExpertState(config = {}) {
   state.fakeExpert = {
-    roundCount: Math.max(5, state.players.length),
-    includeAdult: false,
-    speechSeconds: 60,
+    roundCount: Number(config.roundCount || Math.max(5, state.players.length)),
+    includeAdult: Boolean(config.includeAdult),
+    speechSeconds: Number(config.speechSeconds || 60),
     items: [],
     currentIndex: 0,
     speakerOrder: shuffleArray(state.players.map(player => player.id)),
@@ -4211,19 +4247,19 @@ function renderFakeExpertEnd() {
   const game = state.fakeExpert;
   renderV09Final({
     icon: "🎓", heading: "La conférence est terminée", text: "Les meilleurs bluffeurs et les jurés les plus lucides montent sur scène.", scores: game.scores,
-    replay: () => { resetFakeExpertState(); renderFakeExpertSetup(); },
+    replay: () => { resetFakeExpertState({ roundCount: game.roundCount, includeAdult: game.includeAdult, speechSeconds: game.speechSeconds }); renderFakeExpertSetup(); },
     other: () => { state.fakeExpert = null; renderPlayChoice(); }
   });
 }
 
 /* ---------- QUI SUIS-JE ? ---------- */
 
-function resetWhoAmIState() {
+function resetWhoAmIState(config = {}) {
   state.whoAmI = {
-    roundCount: Math.max(6, state.players.length),
-    includeAdult: false,
-    categoryMode: "mix",
-    durationSeconds: 60,
+    roundCount: Number(config.roundCount || Math.max(6, state.players.length)),
+    includeAdult: Boolean(config.includeAdult),
+    categoryMode: config.categoryMode || "mix",
+    durationSeconds: Number(config.durationSeconds || 60),
     items: [],
     currentIndex: 0,
     guesserOrder: shuffleArray(state.players.map(player => player.id)),
@@ -4349,7 +4385,7 @@ function renderWhoAmIEnd() {
   const game = state.whoAmI;
   renderV09Final({
     icon: "❓", heading: "Toutes les identités sont révélées", text: "Les meilleurs enquêteurs et leurs équipes d’indices prennent la tête.", scores: game.scores,
-    replay: () => { resetWhoAmIState(); renderWhoAmISetup(); },
+    replay: () => { resetWhoAmIState({ roundCount: game.roundCount, includeAdult: game.includeAdult, categoryMode: game.categoryMode, durationSeconds: game.durationSeconds }); renderWhoAmISetup(); },
     other: () => { state.whoAmI = null; renderPlayChoice(); }
   });
 }
@@ -5195,12 +5231,17 @@ startActionTruthGame = async function () {
   const game = state.actionTruth;
   screen.innerHTML = `<div class="notice">Mélange équilibré des actions et vérités…</div>`;
   try {
-    let pool = await loadJsonFile("data/action-verite.json", "Impossible de charger les cartes.");
-    if (state.adult && game.includeAdult) {
-      pool = pool.concat(await loadJsonFile("data/action-verite-adulte.json", "Impossible de charger les cartes adultes."));
+    let pool;
+    if (game.forceAdult) {
+      pool = await loadJsonFile("data/action-verite-adulte.json", "Impossible de charger les cartes adultes.");
+    } else {
+      pool = await loadJsonFile("data/action-verite.json", "Impossible de charger les cartes.");
+      if (state.adult && game.includeAdult) {
+        pool = pool.concat(await loadJsonFile("data/action-verite-adulte.json", "Impossible de charger les cartes adultes."));
+      }
     }
     if (game.mode !== "mix") pool = pool.filter(item => item.type === game.mode);
-    game.prompts = akAudit8BalancedActionTruth(pool, Math.min(game.roundCount, pool.length), `solo:action-truth:${game.mode}`, game.mode);
+    game.prompts = akAudit8BalancedActionTruth(pool, Math.min(game.roundCount, pool.length), `solo:action-truth:${game.mode}${game.forceAdult ? ":adult" : ""}`, game.mode);
     game.currentIndex = 0;
     game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
     game.results = [];
@@ -5353,6 +5394,104 @@ renderFakeExpertSetup = akAudit8WrapSetup(renderFakeExpertSetup, "Le Faux Expert
 renderWhoAmISetup = akAudit8WrapSetup(renderWhoAmISetup, "Qui suis-je ?");
 renderMegaSetup = akAudit8WrapSetup(renderMegaSetup, () => state.megaGame?.gameName || "Jeu");
 
+
+
+/* =========================================================
+   AK'GAMES V1.0 — AUDIT PASSE 10
+   Chemins morts, jeu aléatoire et navigation de fin de partie
+   ========================================================= */
+
+const AK_AUDIT10_RANDOM_SOLO_KEY = "akgames_recent_random_solo_v1";
+
+function akAudit10LoadRecentRandomSolo() {
+  try {
+    const value = JSON.parse(localStorage.getItem(AK_AUDIT10_RANDOM_SOLO_KEY) || "[]");
+    return Array.isArray(value) ? value.filter(Boolean).slice(0, 3) : [];
+  } catch {
+    return [];
+  }
+}
+
+function akAudit10RememberRandomSolo(gameName) {
+  const recent = akAudit10LoadRecentRandomSolo().filter(name => name !== gameName);
+  recent.unshift(gameName);
+  try {
+    localStorage.setItem(AK_AUDIT10_RANDOM_SOLO_KEY, JSON.stringify(recent.slice(0, 3)));
+  } catch {
+    // Le tirage reste utilisable sans stockage local.
+  }
+}
+
+function akAudit10CategoryForGame(gameName) {
+  return categories.find(category => category.games.includes(gameName)) || null;
+}
+
+function akAudit10LaunchSoloGameByName(gameName) {
+  const availability = akAudit8GameAvailability(gameName);
+  if (availability.locked) throw new Error(availability.reason || "Ce jeu n’est pas disponible avec ce groupe.");
+
+  const category = akAudit10CategoryForGame(gameName);
+  if (category) state.currentCategory = category.id;
+
+  if (launchV014Game(gameName)) return true;
+  if (gameName === "Qui de nous ?") { pushScreen("games"); resetWhoUsState(); renderWhoUsSetup(); return true; }
+  if (gameName === "Le premier qui rit a perdu") { pushScreen("games"); resetLaughDuelState(); renderLaughDuelSetup(); return true; }
+  if (gameName === "Qui ment le mieux ?") { pushScreen("games"); resetBestLiarState(); renderBestLiarSetup(); return true; }
+  if (gameName === "Action ou Vérité" || gameName === "Action ou Vérité +18") { pushScreen("games"); resetActionTruthState(gameName.includes("+18")); renderActionTruthSetup(); return true; }
+  if (gameName === "Je n’ai jamais" || gameName === "Je n’ai jamais +18") { pushScreen("games"); resetAmbiancePollState("never", gameName.includes("+18")); renderAmbiancePollSetup(); return true; }
+  if (gameName === "Tu préfères" || gameName === "Tu préfères +18") { pushScreen("games"); resetAmbiancePollState("would", gameName.includes("+18")); renderAmbiancePollSetup(); return true; }
+  if (gameName === "Même cerveau") { pushScreen("games"); resetSameBrainState(); renderSameBrainSetup(); return true; }
+  if (gameName === "Minorité") { pushScreen("games"); resetMinorityState(); renderMinoritySetup(); return true; }
+  if (gameName === "Qui a répondu ça ?") { pushScreen("games"); resetWhoAnsweredState(); renderWhoAnsweredSetup(); return true; }
+  if (gameName === "L’Imposteur sait presque tout") { pushScreen("games"); resetAlmostImpostorState(); renderAlmostImpostorSetup(); return true; }
+  if (gameName === "Le Faux Expert") { pushScreen("games"); resetFakeExpertState(); renderFakeExpertSetup(); return true; }
+  if (gameName === "Qui suis-je ?") { pushScreen("games"); resetWhoAmIState(); renderWhoAmISetup(); return true; }
+
+  return false;
+}
+
+function launchRandomSoloGame() {
+  if (state.players.length < 2) throw new Error("Ajoute au moins 2 joueurs avant le tirage.");
+
+  const candidates = [...V014_READY_GAMES]
+    .filter(gameName => !akAudit8GameAvailability(gameName).locked)
+    .filter(gameName => gameName !== "Blind Test")
+    .filter(gameName => !V014_GAME_CONFIGS[gameName]?.drinkingGame || state.alcohol);
+
+  if (!candidates.length) throw new Error("Aucun jeu compatible avec ce groupe.");
+
+  const recent = akAudit10LoadRecentRandomSolo();
+  let choices = candidates.filter(gameName => !recent.includes(gameName));
+  if (!choices.length) choices = candidates.filter(gameName => gameName !== recent[0]);
+  if (!choices.length) choices = candidates;
+
+  const selected = choices[Math.floor(Math.random() * choices.length)];
+  if (!akAudit10LaunchSoloGameByName(selected)) throw new Error("Le jeu tiré n’a pas pu être ouvert.");
+  akAudit10RememberRandomSolo(selected);
+  return selected;
+}
+
+const AK_AUDIT10_OTHER_GAME_IDS = new Set([
+  "backLobbyWhoUs",
+  "laughOtherGame",
+  "otherGameBestLiar",
+  "otherActionTruth",
+  "otherPoll",
+  "otherSameBrain",
+  "otherMinority",
+  "otherWhoAnswered",
+  "v09Other",
+  "otherMega"
+]);
+
+document.addEventListener("click", event => {
+  const button = event.target.closest?.("button");
+  if (!button || state.roomCode || !AK_AUDIT10_OTHER_GAME_IDS.has(button.id)) return;
+
+  // Après « Autre jeu », le bouton Retour doit revenir au lobby, pas rouvrir
+  // l’ancienne catégorie ou l’ancien écran de configuration.
+  state.history = ["lobby"];
+}, true);
 
 /* =========================================================
    AK'GAMES V1.0 — AUDIT PASSE 9

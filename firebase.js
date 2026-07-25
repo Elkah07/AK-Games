@@ -359,6 +359,14 @@
     return snapshot.exists() ? snapshot.val() : null;
   }
 
+  function normalizedPlayerName(value) {
+    return String(value || "")
+      .trim()
+      .replace(/\s+/g, " ")
+      .normalize("NFKC")
+      .toLocaleLowerCase("fr-FR");
+  }
+
   async function joinRoom(code, { name, avatarId }) {
     const user = await ready();
     const key = normalizeCode(code);
@@ -383,6 +391,15 @@
     const alreadyMember = Boolean(players[user.uid]);
     if (!alreadyMember && Object.keys(players).length >= MAX_ROOM_PLAYERS) {
       throw new Error(`Ce salon est complet (${MAX_ROOM_PLAYERS} joueurs maximum).`);
+    }
+
+    const wantedName = normalizedPlayerName(name);
+    const duplicateName = Object.entries(players).some(([uid, player]) => (
+      uid !== user.uid
+      && normalizedPlayerName(player?.name) === wantedName
+    ));
+    if (duplicateName) {
+      throw new Error("Ce prénom est déjà utilisé dans le salon. Choisis-en un autre pour éviter les confusions.");
     }
 
     const joinedAt = Number(players[user.uid]?.joinedAt || now());
