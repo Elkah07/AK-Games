@@ -58,6 +58,19 @@
   const now = () => Date.now() + serverTimeOffset;
 
   const HOST_TAKEOVER_GRACE_MS = 12000;
+  const MAX_ROOM_PLAYERS = 20;
+  const MAX_SESSION_HISTORY = 50;
+  const ROOM_TTL_MS = 24 * 60 * 60 * 1000;
+  const GAME_START_RECOVERY_MS = 15000;
+
+  function createSubmissionRoundId() {
+    const randomPart = Math.random().toString(36).slice(2, 10);
+    return `round_${now()}_${randomPart}`;
+  }
+
+  function roomExpiresAt() {
+    return now() + ROOM_TTL_MS;
+  }
 
   function cloneValue(value) {
     if (value === undefined || value === null) return value;
@@ -275,12 +288,39 @@
     return code;
   }
 
-  async function ensureUniqueRoomCode() {
+  async function reserveRoom({ user, name, avatarId, adult, alcohol }) {
     for (let attempt = 0; attempt < 20; attempt += 1) {
       const code = randomRoomCode();
-      const snapshot = await db.ref(`rooms/${code}/meta`).once("value");
-      if (!snapshot.exists()) return code;
+      const createdAt = now();
+      const roomRef = db.ref(`rooms/${code}`);
+      const transaction = await roomRef.transaction(currentRoom => {
+        if (currentRoom !== null) return;
+
+        return {
+          meta: {
+            hostUid: user.uid,
+            adult: Boolean(adult),
+            alcohol: Boolean(alcohol),
+            status: "lobby",
+            createdAt,
+            updatedAt: createdAt,
+            expiresAt: createdAt + ROOM_TTL_MS
+          },
+          players: {
+            [user.uid]: {
+              name,
+              avatarId,
+              online: true,
+              joinedAt: createdAt,
+              lastSeen: createdAt
+            }
+          }
+        };
+      }, undefined, false);
+
+      if (transaction.committed) return code;
     }
+
     throw new Error("Impossible de générer un code de salon unique.");
   }
 
@@ -304,28 +344,9 @@
 
   async function createRoom({ name, avatarId, adult, alcohol }) {
     const user = await ready();
-    const code = await ensureUniqueRoomCode();
+    const code = await reserveRoom({ user, name, avatarId, adult, alcohol });
 
-    const updates = {};
-    updates[`rooms/${code}/meta`] = {
-      hostUid: user.uid,
-      adult: Boolean(adult),
-      alcohol: Boolean(alcohol),
-      status: "lobby",
-      createdAt: serverTimestamp(),
-      updatedAt: serverTimestamp()
-    };
-    updates[`rooms/${code}/players/${user.uid}`] = {
-      name,
-      avatarId,
-      online: true,
-      joinedAt: serverTimestamp(),
-      lastSeen: serverTimestamp()
-    };
-
-    await db.ref().update(updates);
     attachPresence(code, user.uid);
-
     return { code: displayCode(code), key: code, uid: user.uid };
   }
 
@@ -341,26 +362,51 @@
   async function joinRoom(code, { name, avatarId }) {
     const user = await ready();
     const key = normalizeCode(code);
-    const meta = await getRoomMeta(key);
+    const [meta, playersSnapshot] = await Promise.all([
+      getRoomMeta(key),
+      db.ref(`rooms/${key}/players`).once("value")
+    ]);
 
     if (!meta) {
       throw new Error("Ce salon n'existe pas ou n'est plus disponible.");
+    }
+
+    if (Number(meta.expiresAt || 0) > 0 && Number(meta.expiresAt) <= now()) {
+      throw new Error("Ce salon a expiré. Demande à l'hôte d'en créer un nouveau.");
     }
 
     if (meta.status && meta.status !== "lobby") {
       throw new Error("Une partie est déjà en cours dans ce salon. Rejoins-le à la prochaine manche.");
     }
 
-    await db.ref(`rooms/${key}/players/${user.uid}`).set({
-      name,
-      avatarId,
-      online: true,
-      joinedAt: serverTimestamp(),
-      lastSeen: serverTimestamp()
-    });
+    const players = playersSnapshot.val() || {};
+    const alreadyMember = Boolean(players[user.uid]);
+    if (!alreadyMember && Object.keys(players).length >= MAX_ROOM_PLAYERS) {
+      throw new Error(`Ce salon est complet (${MAX_ROOM_PLAYERS} joueurs maximum).`);
+    }
+
+    const joinedAt = Number(players[user.uid]?.joinedAt || now());
+
+    try {
+      await db.ref(`rooms/${key}/players/${user.uid}`).set({
+        name,
+        avatarId,
+        online: true,
+        joinedAt,
+        lastSeen: now()
+      });
+    } catch (error) {
+      const latestMeta = await getRoomMeta(key).catch(() => null);
+      if (!latestMeta) {
+        throw new Error("Ce salon n'existe plus.");
+      }
+      if (latestMeta.status !== "lobby") {
+        throw new Error("La partie vient de commencer. Rejoins le salon à la prochaine manche.");
+      }
+      throw error;
+    }
 
     attachPresence(key, user.uid);
-
     return { code: displayCode(key), key, uid: user.uid, meta };
   }
 
@@ -372,31 +418,80 @@
     const snapshot = await db.ref(`rooms/${key}`).once("value");
     if (!snapshot.exists()) return null;
 
-    const room = snapshot.val();
+    let room = snapshot.val();
     if (!room.players || !room.players[user.uid]) return null;
+
+    const stalledStart = room.meta?.hostUid === user.uid
+      && room.meta?.status === "playing"
+      && !room.game
+      && Number(room.meta?.startingAt || 0) > 0
+      && Number(room.meta.startingAt) <= now() - GAME_START_RECOVERY_MS;
+
+    if (stalledStart) {
+      const repaired = await db.ref(`rooms/${key}`).transaction(currentRoom => {
+        if (!currentRoom || currentRoom.meta?.hostUid !== user.uid || currentRoom.game) return;
+        if (currentRoom.meta?.status !== "playing") return;
+        if (Number(currentRoom.meta?.startingAt || 0) > now() - GAME_START_RECOVERY_MS) return;
+
+        const nextRoom = cloneValue(currentRoom);
+        nextRoom.meta.status = "lobby";
+        nextRoom.meta.updatedAt = now();
+        delete nextRoom.meta.startToken;
+        delete nextRoom.meta.startingAt;
+        return nextRoom;
+      }, undefined, false).catch(() => null);
+
+      if (repaired?.committed) room = repaired.snapshot.val();
+    }
+
+    if (Number(room.meta?.expiresAt || 0) > 0 && Number(room.meta.expiresAt) <= now()) {
+      if (room.meta?.hostUid === user.uid) {
+        const updates = {};
+        updates[`rooms/${key}`] = null;
+        updates[`roomSecrets/${key}`] = null;
+        await db.ref().update(updates).catch(() => {});
+      }
+      return null;
+    }
 
     attachPresence(key, user.uid);
     return { code: displayCode(key), key, uid: user.uid, room };
   }
 
-  function mergePrivateSubmissions(room, privateSubmissions, privateRoles, privateHostState) {
+  function unwrapSubmission(entry, gameState) {
+    if (!entry || typeof entry !== "object" || entry.__akSubmission !== true) {
+      return entry;
+    }
+
+    if (entry.roundId !== gameState?.submissionRoundId || entry.phase !== gameState?.phase) {
+      return undefined;
+    }
+
+    return cloneValue(entry.payload);
+  }
+
+  function mergePrivateSubmissions(room, privateSubmissions, privateRoles, privateHostState, isHost) {
     if (!room?.game) return room;
 
     const merged = cloneValue(room);
     const status = merged.game.submissionStatus || {};
     const revealedAnswers = merged.game.revealedAnswers || {};
+    const gameState = merged.game.state || {};
     const collections = ["answers", "votes", "actions"];
 
     collections.forEach(collection => {
       const visible = {};
-      Object.keys(status[collection] || {}).forEach(uid => {
-        visible[uid] = true;
-      });
+
+      if (!isHost) {
+        Object.keys(status[collection] || {}).forEach(uid => {
+          visible[uid] = true;
+        });
+      }
 
       Object.entries(privateSubmissions || {}).forEach(([uid, entries]) => {
-        if (entries && Object.prototype.hasOwnProperty.call(entries, collection)) {
-          visible[uid] = entries[collection];
-        }
+        if (!entries || !Object.prototype.hasOwnProperty.call(entries, collection)) return;
+        const unwrapped = unwrapSubmission(entries[collection], gameState);
+        if (unwrapped !== undefined) visible[uid] = unwrapped;
       });
 
       if (collection === "answers") {
@@ -435,7 +530,13 @@
     const emit = () => {
       callback(
         roomValue
-          ? mergePrivateSubmissions(roomValue, privateSubmissions, privateRoles, privateHostState)
+          ? mergePrivateSubmissions(
+              roomValue,
+              privateSubmissions,
+              privateRoles,
+              privateHostState,
+              roomValue.meta?.hostUid === currentUser?.uid
+            )
           : null
       );
     };
@@ -531,6 +632,10 @@
       const updates = {};
       updates[`rooms/${key}/players/${user.uid}`] = null;
       updates[`roomSecrets/${key}/submissions/${user.uid}`] = null;
+      updates[`roomSecrets/${key}/roles/${user.uid}`] = null;
+      ["answers", "votes", "actions"].forEach(collection => {
+        updates[`rooms/${key}/game/submissionStatus/${collection}/${user.uid}`] = null;
+      });
       await db.ref().update(updates);
     }
   }
@@ -821,11 +926,7 @@
 
 
   async function startWhoUsGame(code, payload) {
-    const key = normalizeCode(code);
-    await assertRoomCanStart(key, "who-us");
-    const updates = {};
-
-    updates[`rooms/${key}/game`] = {
+    return setGame(code, {
       state: {
         type: "who-us",
         phase: "question",
@@ -835,48 +936,37 @@
         settings: payload.settings,
         rounds: {},
         currentResult: null,
-        startedAt: serverTimestamp(),
-        updatedAt: serverTimestamp()
+        startedAt: now(),
+        updatedAt: now()
       },
-      votes: {}
-    };
-    updates[`rooms/${key}/meta/status`] = "playing";
-    updates[`rooms/${key}/meta/updatedAt`] = serverTimestamp();
-
-    await db.ref().update(updates);
+      votes: null
+    });
   }
 
   async function castWhoUsVote(code, targetUid) {
-    const user = await ready();
-    const key = normalizeCode(code);
-    await db.ref(`rooms/${key}/game/votes/${user.uid}`).set(targetUid);
+    return writeOwnGameEntry(code, "votes", targetUid);
   }
 
   async function revealWhoUsResults(code, roundIndex, result) {
-    const key = normalizeCode(code);
-    const updates = {};
-
-    updates[`rooms/${key}/game/state/phase`] = "results";
-    updates[`rooms/${key}/game/state/currentResult`] = result;
-    updates[`rooms/${key}/game/state/rounds/${roundIndex}`] = result;
-    updates[`rooms/${key}/game/state/updatedAt`] = serverTimestamp();
-
-    await db.ref().update(updates);
+    return updateGame(code, {
+      "state/phase": "results",
+      "state/currentResult": result,
+      [`state/rounds/${roundIndex}`]: result,
+      "state/updatedAt": now()
+    });
   }
 
   async function nextWhoUsQuestion(code, nextIndex, isFinished) {
-    const key = normalizeCode(code);
-    const updates = {};
-
-    updates[`rooms/${key}/game/state/phase`] = isFinished ? "final" : "question";
-    updates[`rooms/${key}/game/state/currentIndex`] = nextIndex;
-    updates[`rooms/${key}/game/state/currentResult`] = null;
-    updates[`rooms/${key}/game/state/finishedAt`] = isFinished ? serverTimestamp() : null;
-    updates[`rooms/${key}/game/state/updatedAt`] = serverTimestamp();
-    updates[`rooms/${key}/game/votes`] = null;
-
-    await db.ref().update(updates);
+    return updateGame(code, {
+      "state/phase": isFinished ? "final" : "question",
+      "state/currentIndex": nextIndex,
+      "state/currentResult": null,
+      "state/finishedAt": isFinished ? now() : null,
+      "state/updatedAt": now(),
+      votes: null
+    });
   }
+
 
   async function returnToLobby(code) {
     const key = normalizeCode(code);
@@ -885,7 +975,8 @@
     updates[`rooms/${key}/game`] = null;
     updates[`roomSecrets/${key}`] = null;
     updates[`rooms/${key}/meta/status`] = "lobby";
-    updates[`rooms/${key}/meta/updatedAt`] = serverTimestamp();
+    updates[`rooms/${key}/meta/updatedAt`] = now();
+    updates[`rooms/${key}/meta/expiresAt`] = roomExpiresAt();
 
     await db.ref().update(updates);
   }
@@ -931,6 +1022,13 @@
         players: summary.players || {}
       };
 
+      Object.values(history)
+        .sort((a, b) => Number(b?.endedAt || 0) - Number(a?.endedAt || 0))
+        .slice(MAX_SESSION_HISTORY)
+        .forEach(entry => {
+          if (entry?.id) delete history[entry.id];
+        });
+
       return {
         ...session,
         scores,
@@ -952,29 +1050,66 @@
 
   async function setGame(code, payload, secrets = null) {
     const key = normalizeCode(code);
+    const gameType = payload?.state?.type || "";
+
+    if (!payload || !gameType) {
+      return returnToLobby(key);
+    }
+
+    await assertRoomCanStart(key, gameType);
+
+    const startToken = `start_${now()}_${Math.random().toString(36).slice(2, 10)}`;
+    const metaRef = db.ref(`rooms/${key}/meta`);
+    const lock = await metaRef.transaction(currentMeta => {
+      if (!currentMeta || currentMeta.status !== "lobby") return;
+      return {
+        ...currentMeta,
+        status: "playing",
+        startToken,
+        startingAt: now(),
+        updatedAt: now(),
+        expiresAt: roomExpiresAt()
+      };
+    }, undefined, false);
+
+    if (!lock.committed) {
+      throw new Error("Une autre partie vient déjà d’être lancée dans ce salon.");
+    }
+
+    const publicPayload = cloneValue(payload);
+    publicPayload.state = publicPayload.state || {};
+    publicPayload.state.submissionRoundId = createSubmissionRoundId();
+    publicPayload.answers = null;
+    publicPayload.votes = null;
+    publicPayload.actions = null;
+    publicPayload.submissionStatus = { answers: {}, votes: {}, actions: {} };
+    publicPayload.revealedAnswers = null;
+
     const updates = {};
-
-    if (payload?.state?.type) {
-      await assertRoomCanStart(key, payload.state.type);
-    }
-
-    const publicPayload = payload ? cloneValue(payload) : null;
-    if (publicPayload) {
-      publicPayload.answers = null;
-      publicPayload.votes = null;
-      publicPayload.actions = null;
-      publicPayload.submissionStatus = { answers: {}, votes: {}, actions: {} };
-      publicPayload.revealedAnswers = null;
-    }
-
     updates[`rooms/${key}/game`] = publicPayload;
     updates[`roomSecrets/${key}/submissions`] = null;
     updates[`roomSecrets/${key}/roles`] = secrets?.roles || null;
     updates[`roomSecrets/${key}/hostState`] = secrets?.hostState || null;
-    updates[`rooms/${key}/meta/status`] = payload ? "playing" : "lobby";
-    updates[`rooms/${key}/meta/updatedAt`] = serverTimestamp();
+    updates[`rooms/${key}/meta/startToken`] = null;
+    updates[`rooms/${key}/meta/startingAt`] = null;
+    updates[`rooms/${key}/meta/updatedAt`] = now();
+    updates[`rooms/${key}/meta/expiresAt`] = roomExpiresAt();
 
-    await db.ref().update(updates);
+    try {
+      await db.ref().update(updates);
+    } catch (error) {
+      const gameSnapshot = await db.ref(`rooms/${key}/game`).once("value").catch(() => null);
+      if (!gameSnapshot?.exists?.()) {
+        await metaRef.transaction(currentMeta => {
+          if (!currentMeta || currentMeta.startToken !== startToken) return;
+          const nextMeta = { ...currentMeta, status: "lobby", updatedAt: now() };
+          delete nextMeta.startToken;
+          delete nextMeta.startingAt;
+          return nextMeta;
+        }, undefined, false).catch(() => {});
+      }
+      throw error;
+    }
   }
 
   async function updateGame(code, updates, secrets = null) {
@@ -996,6 +1131,7 @@
           prefixedUpdates[`rooms/${key}/game/revealedAnswers`] = null;
         }
       });
+      prefixedUpdates[`rooms/${key}/game/state/submissionRoundId`] = createSubmissionRoundId();
     }
 
     Object.entries(updates || {}).forEach(([path, value]) => {
@@ -1011,6 +1147,8 @@
       prefixedUpdates[`roomSecrets/${key}/hostState`] = cloneValue(secrets.hostState);
     }
 
+    prefixedUpdates[`rooms/${key}/meta/updatedAt`] = now();
+    prefixedUpdates[`rooms/${key}/meta/expiresAt`] = roomExpiresAt();
     await db.ref().update(prefixedUpdates);
   }
 
@@ -1023,11 +1161,27 @@
 
     const user = await ready();
     const key = normalizeCode(code);
-    const updates = {};
-    updates[`roomSecrets/${key}/submissions/${user.uid}/${collection}`] = value;
-    updates[`rooms/${key}/game/submissionStatus/${collection}/${user.uid}`] = true;
-    await db.ref().update(updates);
+    const stateSnapshot = await db.ref(`rooms/${key}/game/state`).once("value");
+    const gameState = stateSnapshot.val() || null;
+
+    if (!gameState?.submissionRoundId || !gameState?.phase) {
+      throw new Error("Cette manche n’accepte plus de réponse. Attends l’écran suivant.");
+    }
+
+    const wrappedValue = {
+      __akSubmission: true,
+      roundId: gameState.submissionRoundId,
+      phase: gameState.phase,
+      payload: cloneValue(value),
+      submittedAt: now()
+    };
+
+    const prefixedUpdates = {};
+    prefixedUpdates[`roomSecrets/${key}/submissions/${user.uid}/${collection}`] = wrappedValue;
+    prefixedUpdates[`rooms/${key}/game/submissionStatus/${collection}/${user.uid}`] = true;
+    await db.ref().update(prefixedUpdates);
   }
+
 
   async function clearOwnGameEntry(code, collection) {
     const allowedCollections = new Set(["answers", "votes", "actions"]);
