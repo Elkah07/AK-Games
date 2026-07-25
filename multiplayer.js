@@ -1128,14 +1128,14 @@
       .filter(Boolean);
 
     if (names.length > 1) {
-      return `🍻 ${names.join(" et ")} trinquent et prennent une gorgée.`;
+      return `🍻 ${names.join(" et ")} peuvent trinquer avec la boisson de leur choix.`;
     }
 
     if (result.maxVotes === state.players.length) {
-      return `🍻 Unanimité ! ${names[0]} distribue 3 petites gorgées.`;
+      return `🍻 Unanimité ! ${names[0]} peut proposer un toast au groupe, sans obligation de boire.`;
     }
 
-    return `🍻 ${names[0]}, la personne la plus désignée, prend une gorgée.`;
+    return `🍻 ${names[0]}, la personne la plus désignée, peut proposer un toast au groupe.`;
   }
 
   function syncMultiWhoUs(room) {
@@ -1774,9 +1774,18 @@
   function buildEveningSessionSummary(gameState) {
     if (!gameState) return null;
 
-    const presentation = String(gameState.type || "").startsWith("mega-")
+    let presentation = String(gameState.type || "").startsWith("mega-")
       ? { name: gameState.settings?.gameName || "Mega Pack", icon: gameState.settings?.icon || "🎮" }
       : gamePresentation(gameState.type);
+
+    if (gameState.settings?.forceAdult) {
+      const adultPresentation = {
+        "action-truth": { name: "Action ou Vérité +18", icon: "🌶️" },
+        "never-have-i-ever": { name: "Je n’ai jamais +18", icon: "🔥" },
+        "would-you-rather": { name: "Tu préfères +18", icon: "💋" }
+      }[gameState.type];
+      if (adultPresentation) presentation = adultPresentation;
+    }
     const resultId = gameState.sessionGameId || `${gameState.type}_${Number(gameState.startedAt || 0)}`;
     let result;
 
@@ -2725,7 +2734,7 @@
       </section>
 
       ${state.alcohol && winnerNames.length ? `
-        <div class="alcohol-callout">🍻 ${escapeHtml(winnerNames.join(" et "))} ${winnerNames.length > 1 ? "distribuent" : "distribue"} 2 petites gorgées.</div>
+        <div class="alcohol-callout">🍻 ${escapeHtml(winnerNames.join(" et "))} ${winnerNames.length > 1 ? "peuvent proposer" : "peut proposer"} un toast au groupe, sans obligation de boire.</div>
       ` : ""}
 
       <section class="score-strip">
@@ -3303,7 +3312,7 @@
         <p>C’est maintenant à <strong>${escapeHtml(nextTeller?.name || "l'autre joueur")}</strong> de tenter sa chance.</p>
       </section>
 
-      ${state.alcohol && laughingPlayer ? `<div class="alcohol-callout">🍻 ${escapeHtml(laughingPlayer.name)} prend une petite gorgée pour ce rire.</div>` : ""}
+      ${state.alcohol && laughingPlayer ? `<div class="alcohol-callout">🍻 ${escapeHtml(laughingPlayer.name)} peut trinquer avec la boisson de son choix pour ce rire.</div>` : ""}
 
       ${state.isHost ? `
         <button id="nextMultiLaughTurn" class="primary-btn full">Tour suivant</button>
@@ -3343,7 +3352,7 @@
         <p>${escapeHtml(loser?.name || "L'autre joueur")} a été la première personne à craquer.</p>
       </section>
 
-      ${state.alcohol && loser ? `<div class="alcohol-callout">🍻 ${escapeHtml(loser.name)} prend une gorgée de défaite.</div>` : ""}
+      ${state.alcohol && loser ? `<div class="alcohol-callout">🍻 ${escapeHtml(loser.name)} peut faire un toast de défaite avec la boisson de son choix.</div>` : ""}
 
       ${renderPostGameContinuation(gameState)}
     `;
@@ -3528,7 +3537,7 @@
       ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.prompts?.length || 1, "Tour")}
       <section class="prompt-stage ${isAction ? "prompt-action" : "prompt-truth"}"><div class="prompt-player"><span>${avatarById(player?.avatarId).emoji}</span><div><small>C’EST AU TOUR DE</small><strong>${escapeHtml(player?.name || "Joueur")}</strong></div></div><span class="prompt-type-chip">${isAction ? "⚡ ACTION" : "◉ VÉRITÉ"}</span><h2>${escapeHtml(prompt?.text || "Prépare-toi…")}</h2></section>
       ${isCurrent ? (pendingAction ? renderMultiWaiting("Réponse envoyée", "Le prochain tour se prépare…", "📡") : `<section class="decision-grid"><button class="primary-btn" data-ambiance-action="ambiance-completed">✓ C’est fait</button><button class="secondary-btn" data-ambiance-action="ambiance-skipped">Passer</button></section>`) : renderMultiWaiting(`C’est à ${player?.name || "la personne désignée"}`, "Regarde son courage en direct. La partie avancera automatiquement.", "👀")}
-      ${state.alcohol ? `<div class="alcohol-callout">🍻 Une carte passée = une petite gorgée.</div>` : ""}
+      ${state.alcohol ? `<div class="alcohol-callout">🍻 Passer ne donne aucune pénalité. Si vous buvez, une petite gorgée reste facultative, eau comprise.</div>` : ""}
     `;
     document.querySelectorAll("[data-ambiance-action]").forEach(button => button.addEventListener("click", async () => {
       document.querySelectorAll("[data-ambiance-action]").forEach(item => item.disabled = true);
@@ -3582,7 +3591,7 @@
     screen.innerHTML = `
       <section class="reveal-stage reveal-v07"><span class="game-cover-icon">${isNever ? "🙋" : "⚖️"}</span><h2>${isNever ? escapeHtml(item?.text || "") : "Le verdict est tombé"}</h2>${!isNever ? `<div class="reveal-dilemma"><span>${escapeHtml(item?.optionA || "")}</span><b>VS</b><span>${escapeHtml(item?.optionB || "")}</span></div>` : ""}</section>
       <section class="poll-results-grid">${state.players.map(player => `<article class="poll-result-person"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(optionLabel(result.votes?.[player.id]))}</small>${result.minorityIds?.includes(player.id) ? `<em>+1 pt minorité</em>` : ""}</article>`).join("")}</section>
-      ${state.alcohol && isNever ? `<div class="alcohol-callout">🍻 Les personnes qui ont répondu “Déjà” prennent une petite gorgée.</div>` : ""}
+      ${state.alcohol && isNever ? `<div class="alcohol-callout">🍻 Les personnes qui ont répondu “Déjà” peuvent trinquer avec la boisson de leur choix, sans obligation.</div>` : ""}
       ${state.isHost ? `<button id="nextMultiPoll" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Question suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La suite apparaîtra automatiquement.", "👑")}
     `;
     document.querySelector("#nextMultiPoll")?.addEventListener("click", async event => {
@@ -3862,7 +3871,7 @@
         const points = Number(result.points?.[player.id] || 0);
         return `<article class="brain-answer-tile ${points ? "matched" : ""}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><p>${escapeHtml(result.answers?.[player.id]?.text || "")}</p>${points ? `<em>+${points} pt${points > 1 ? "s" : ""}</em>` : `<small>réponse unique</small>`}</article>`;
       }).join("")}</section>
-      ${state.alcohol && !matched ? `<div class="alcohol-callout">🍻 Aucun match : tout le monde prend une petite gorgée de désynchronisation.</div>` : ""}
+      ${state.alcohol && !matched ? `<div class="alcohol-callout">🍻 Aucun match : le groupe peut trinquer avec la boisson de son choix, sans obligation.</div>` : ""}
       ${state.isHost ? `<button id="nextMultiBrain" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Question suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La suite apparaîtra automatiquement.", "👑")}
     `;
     document.querySelector("#nextMultiBrain")?.addEventListener("click", event => advanceMultiV08Round(event, gameState, "answering", "answers"));
@@ -3920,7 +3929,7 @@
       <section class="reveal-stage reveal-v07 minority-reveal"><span class="game-cover-icon">🪩</span><h2>${result.winnerIds?.length ? "Les esprits rares prennent le point" : "Impossible de départager le groupe"}</h2><p>${escapeHtml(item?.question || "")}</p></section>
       <section class="minority-results">${(item?.options || []).map((option, index) => `<article class="minority-result ${result.minorityOptions?.includes(index) ? "winner" : ""}"><div><small>OPTION ${String.fromCharCode(65 + index)}</small><strong>${escapeHtml(option)}</strong></div><span>${Number(result.counts?.[index] || 0)} vote${Number(result.counts?.[index] || 0) > 1 ? "s" : ""}</span></article>`).join("")}</section>
       <section class="poll-results-grid">${state.players.map(player => `<article class="poll-result-person"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(item?.options?.[Number(result.votes?.[player.id])] || "")}</small>${result.winnerIds?.includes(player.id) ? `<em>+1 pt minorité</em>` : ""}</article>`).join("")}</section>
-      ${state.alcohol && result.winnerIds?.length ? `<div class="alcohol-callout">🍻 La majorité prend une petite gorgée. La minorité savoure.</div>` : ""}
+      ${state.alcohol && result.winnerIds?.length ? `<div class="alcohol-callout">🍻 La majorité peut trinquer si elle en a envie. La minorité savoure.</div>` : ""}
       ${state.isHost ? `<button id="nextMultiMinority" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Question suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La suite apparaîtra automatiquement.", "👑")}
     `;
     document.querySelector("#nextMultiMinority")?.addEventListener("click", event => advanceMultiV08Round(event, gameState, "voting", "votes"));
@@ -4027,7 +4036,7 @@
       }).join("")}</section>
       <details class="answer-wall-details"><summary>Voir toutes les réponses</summary><div class="anonymous-answer-list">${state.players.map(player => `<article class="anonymous-answer-card"><span class="answer-number">${avatarById(player.avatarId).emoji}</span><p><strong>${escapeHtml(player.name)}</strong><br>${escapeHtml(result.answers?.[player.id]?.text || "")}</p></article>`).join("")}</div></details>
       ${result.fooledIds?.length ? `<div class="special-event"><strong>🕵️ ${escapeHtml(author?.name || "L’auteur")} a trompé ${result.fooledIds.length} personne${result.fooledIds.length > 1 ? "s" : ""}</strong><p>+${result.fooledIds.length} point${result.fooledIds.length > 1 ? "s" : ""} de couverture parfaite.</p></div>` : `<div class="notice">Tout le monde a retrouvé l’auteur. Couverture grillée.</div>`}
-      ${state.alcohol && result.fooledIds?.length ? `<div class="alcohol-callout">🍻 Les enquêteurs trompés prennent une petite gorgée.</div>` : ""}
+      ${state.alcohol && result.fooledIds?.length ? `<div class="alcohol-callout">🍻 Les enquêteurs trompés peuvent trinquer avec la boisson de leur choix, sans obligation.</div>` : ""}
       ${state.isHost ? `<button id="nextMultiWho" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Enquête suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La prochaine enquête apparaîtra automatiquement.", "👑")}
     `;
     document.querySelector("#nextMultiWho")?.addEventListener("click", event => advanceMultiV08Round(event, gameState, "answering", "answers,votes"));
@@ -4478,7 +4487,7 @@
       <section class="reveal-stage reveal-v07 impostor-reveal"><span class="game-cover-icon">${avatarById(impostor?.avatarId).emoji}</span><h2>${escapeHtml(impostor?.name || "Un joueur")} était l’imposteur</h2><p>Le mot était <strong>${escapeHtml(card?.word || "")}</strong>.</p></section>
       <section class="vote-breakdown">${state.players.map(player => { const target = playerById(result.votes?.[player.id]); const correct = result.votes?.[player.id] === result.impostorId; return `<article class="who-vote-row ${correct ? "correct" : "fooled"}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>a voté ${escapeHtml(target?.name || "?")}</small><em>${correct ? "+1 pt" : "raté"}</em></article>`; }).join("")}</section>
       <div class="special-event ${result.caught ? "" : "tie"}"><strong>${result.caught ? "🔍 Imposteur démasqué" : "🕶️ L’imposteur s’échappe"}</strong><p>${result.caught ? (result.guessCorrect ? "Le mot a été retrouvé : +1 point imposteur." : "Le groupe remporte l’enquête.") : "+2 points pour la couverture parfaite."}</p></div>
-      ${state.alcohol ? `<div class="alcohol-callout">🍻 ${result.caught ? "L’imposteur prend une petite gorgée." : "Les votes ratés prennent une petite gorgée."}</div>` : ""}
+      ${state.alcohol ? `<div class="alcohol-callout">🍻 ${result.caught ? "L’imposteur peut trinquer s’il en a envie." : "Les joueurs ayant raté leur vote peuvent trinquer s’ils en ont envie."}</div>` : ""}
       ${state.isHost ? `<button id="nextMultiImpostor" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Manche suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La prochaine manche apparaîtra automatiquement.", "👑")}
     `;
     document.querySelector("#nextMultiImpostor")?.addEventListener("click", event => advanceMultiV09Round(event, gameState, "roles", "answers,votes,actions", { impostorId: gameState.impostorOrder?.[Number(gameState.currentIndex || 0) + 1] || null }));
@@ -4593,7 +4602,7 @@
       <section class="who-vote-results">${state.players.filter(player => player.id !== result.speakerId).map(voter => { const correct = result.correctIds?.includes(voter.id); return `<article class="who-vote-row ${correct ? "correct" : "fooled"}"><span>${avatarById(voter.avatarId).emoji}</span><strong>${escapeHtml(voter.name)}</strong><small>a voté ${result.votes?.[voter.id] === "real" ? "vrai expert" : "faux expert"}</small><em>${correct ? "+1 pt" : "trompé·e"}</em></article>`; }).join("")}</section>
       <details class="answer-wall-details"><summary>Voir les vraies informations</summary><ul class="expert-fact-list">${(card?.facts || []).map(fact => `<li>${escapeHtml(fact)}</li>`).join("")}</ul></details>
       <div class="special-event"><strong>🎤 ${result.fooledIds?.length || 0} personne${(result.fooledIds?.length || 0) > 1 ? "s" : ""} trompée${(result.fooledIds?.length || 0) > 1 ? "s" : ""}</strong><p>+${Math.min(3, result.fooledIds?.length || 0)} point${Math.min(3, result.fooledIds?.length || 0) > 1 ? "s" : ""} pour l’orateur.</p></div>
-      ${state.alcohol && result.fooledIds?.length ? `<div class="alcohol-callout">🍻 Les personnes trompées prennent une petite gorgée.</div>` : ""}
+      ${state.alcohol && result.fooledIds?.length ? `<div class="alcohol-callout">🍻 Les personnes trompées peuvent trinquer avec la boisson de leur choix, sans obligation.</div>` : ""}
       ${state.isHost ? `<button id="nextMultiExpert" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Orateur suivant"}</button>` : renderMultiWaiting("En attente de l’hôte", "Le prochain exposé apparaîtra automatiquement.", "👑")}
     `;
     const nextIndex = Number(gameState.currentIndex || 0) + 1;
@@ -4678,7 +4687,7 @@
     screen.innerHTML = `
       <section class="reveal-stage reveal-v07 whoami-reveal"><span class="game-cover-icon">${result.found ? "🎉" : "⏱️"}</span><h2>${escapeHtml(guesser?.name || "Le joueur")} était ${escapeHtml(item?.label || "")}</h2><p>${result.found ? "+2 points pour la personne qui devine, +1 pour chaque aide." : "Cette identité n’a pas été trouvée à temps."}</p></section>
       <section class="whoami-clue-wall">${(item?.clues || []).map(clue => `<span>${escapeHtml(clue)}</span>`).join("")}</section>
-      ${state.alcohol && !result.found ? `<div class="alcohol-callout">🍻 Petite gorgée de consolation pour ${escapeHtml(guesser?.name || "la personne")}.</div>` : ""}
+      ${state.alcohol && !result.found ? `<div class="alcohol-callout">🍻 ${escapeHtml(guesser?.name || "La personne")} peut trinquer avec la boisson de son choix, sans obligation.</div>` : ""}
       ${state.isHost ? `<button id="nextMultiWhoAmI" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Identité suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La prochaine identité apparaîtra automatiquement.", "👑")}
     `;
     const nextIndex = Number(gameState.currentIndex || 0) + 1;
@@ -4980,7 +4989,7 @@
         ${gameState.turnEndsAt ? `<div class="mega-mini-timer"><strong id="v014MultiCountdown">${Math.max(0, Math.ceil((Number(gameState.turnEndsAt) - AKFirebase.now()) / 1000))}</strong><span>secondes</span><div class="progress-track"><div id="v014MultiTimerFill" class="progress-fill"></div></div></div>` : ""}
       </section>
       ${isCurrent ? pending ? renderMultiWaiting("Réponse envoyée", "Le tour suivant arrive automatiquement.", "✓") : `<section class="decision-grid"><button id="multiMegaSuccess" class="primary-btn">✓ Réussi</button><button id="multiMegaSkip" class="secondary-btn">Passer</button></section>` : renderMultiWaiting(`Tour de ${player?.name || "la personne"}`, privatePrompt ? "Le sujet reste privé jusqu’à la fin du tour." : "Encouragez, observez et décidez ensemble.", avatarById(player?.avatarId).emoji)}
-      ${state.alcohol && !gameState.settings?.drinkingGame ? `<div class="alcohol-callout">🍻 Une carte passée peut valoir une petite gorgée, sans pression.</div>` : ""}`;
+      ${state.alcohol && !gameState.settings?.drinkingGame ? `<div class="alcohol-callout">🍻 Passer reste sans pénalité. Chacun choisit librement une petite gorgée ou de l’eau.</div>` : ""}`;
     document.querySelector("#multiMegaSuccess")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-turn", { success: true }).catch(() => event.currentTarget.disabled = false); });
     document.querySelector("#multiMegaSkip")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-turn", { success: false }).catch(() => event.currentTarget.disabled = false); });
     if (gameState.turnEndsAt) startV014MultiTimer(gameState.turnEndsAt, gameState.settings?.durationSeconds || 45, () => processMultiMegaTurn(gameState, actions));
@@ -5119,7 +5128,7 @@
     screen.innerHTML = `
       ${multiMegaProgress(gameState, "Bombe")}
       <section class="winner-stage bomb-result-stage"><div class="winner-crown">💥</div><div class="giant-avatar">${avatarById(loser?.avatarId).emoji}</div><h2>La bombe explose chez ${escapeHtml(loser?.name || "un joueur")}</h2><p>Toutes les autres personnes marquent un point.</p></section>
-      ${state.alcohol ? `<div class="alcohol-callout">🍻 Petite gorgée de consolation, ou une gorgée d’eau.</div>` : ""}
+      ${state.alcohol ? `<div class="alcohol-callout">🍻 Petit toast facultatif, avec la boisson de son choix, eau comprise.</div>` : ""}
       ${state.isHost ? `<button id="nextMultiBomb" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Nouvelle bombe"}</button>` : renderMultiWaiting("En attente de l’hôte", "Une nouvelle bombe va être lancée.", "👑")}`;
     document.querySelector("#nextMultiBomb")?.addEventListener("click", async event => {
       event.currentTarget.disabled = true;
@@ -5363,10 +5372,12 @@
 
   function randomHistoryKey(entry) {
     if (!entry) return "";
-    const gameName = entry.gameName || entry.config?.gameName || "";
-    return String(entry.gameType || entry.type || "").startsWith("mega-")
-      ? `mega:${gameName}`
-      : String(entry.gameType || entry.type || "");
+    const gameName = entry.gameName || entry.config?.gameName || entry.replay?.config?.gameName || "";
+    const type = String(entry.gameType || entry.type || entry.replay?.type || "");
+    const forceAdult = Boolean(entry.forceAdult || entry.config?.forceAdult || entry.replay?.config?.forceAdult);
+    if (type.startsWith("mega-")) return `mega:${gameName}`;
+    if (forceAdult && ["action-truth", "never-have-i-ever", "would-you-rather"].includes(type)) return `${type}:adult`;
+    return type;
   }
 
   function buildRandomMultiplayerCandidates() {
@@ -5387,9 +5398,9 @@
 
     if (state.adult) {
       legacy.push(
-        { key: "action-truth", minPlayers: 2, descriptor: { type: "action-truth", config: { roundCount: 12, mode: "mix", includeAdult: true } } },
-        { key: "never-have-i-ever", minPlayers: 2, descriptor: { type: "never-have-i-ever", config: { roundCount: 10, includeAdult: true } } },
-        { key: "would-you-rather", minPlayers: 2, descriptor: { type: "would-you-rather", config: { roundCount: 10, includeAdult: true } } }
+        { key: "action-truth:adult", minPlayers: 2, descriptor: { type: "action-truth", config: { roundCount: 12, mode: "mix", includeAdult: true, forceAdult: true } } },
+        { key: "never-have-i-ever:adult", minPlayers: 2, descriptor: { type: "never-have-i-ever", config: { roundCount: 10, includeAdult: true, forceAdult: true } } },
+        { key: "would-you-rather:adult", minPlayers: 2, descriptor: { type: "would-you-rather", config: { roundCount: 10, includeAdult: true, forceAdult: true } } }
       );
     }
 
@@ -6031,7 +6042,7 @@
         <strong>${result.caught ? "🔍 Imposteur démasqué" : "🕶️ L’imposteur s’échappe"}</strong>
         <p>${result.caught ? (result.guessCorrect ? "Le mot a été retrouvé : +1 point imposteur." : "Le groupe remporte l’enquête.") : "+2 points pour la couverture parfaite."}</p>
       </div>
-      ${state.alcohol ? `<div class="alcohol-callout">🍻 ${result.caught ? "L’imposteur prend une petite gorgée." : "Les votes ratés prennent une petite gorgée."}</div>` : ""}
+      ${state.alcohol ? `<div class="alcohol-callout">🍻 ${result.caught ? "L’imposteur peut trinquer s’il en a envie." : "Les joueurs ayant raté leur vote peuvent trinquer s’ils en ont envie."}</div>` : ""}
       ${state.isHost
         ? `<button id="nextMultiImpostor" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= secureV09ItemCount(gameState) ? "Voir le classement" : "Manche suivante"}</button>`
         : renderMultiWaiting("En attente de l’hôte", "La prochaine manche apparaîtra automatiquement.", "👑")}
@@ -6231,7 +6242,7 @@
       }).join("")}</section>
       <details class="answer-wall-details"><summary>Voir les vraies informations</summary><ul class="expert-fact-list">${(result.facts || []).map(fact => `<li>${escapeHtml(fact)}</li>`).join("")}</ul></details>
       <div class="special-event"><strong>🎤 ${result.fooledIds?.length || 0} personne${(result.fooledIds?.length || 0) > 1 ? "s" : ""} trompée${(result.fooledIds?.length || 0) > 1 ? "s" : ""}</strong><p>+${Math.min(3, result.fooledIds?.length || 0)} point${Math.min(3, result.fooledIds?.length || 0) > 1 ? "s" : ""} pour l’orateur.</p></div>
-      ${state.alcohol && result.fooledIds?.length ? `<div class="alcohol-callout">🍻 Les personnes trompées prennent une petite gorgée.</div>` : ""}
+      ${state.alcohol && result.fooledIds?.length ? `<div class="alcohol-callout">🍻 Les personnes trompées peuvent trinquer avec la boisson de leur choix, sans obligation.</div>` : ""}
       ${state.isHost
         ? `<button id="nextMultiExpert" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= secureV09ItemCount(gameState) ? "Voir le classement" : "Orateur suivant"}</button>`
         : renderMultiWaiting("En attente de l’hôte", "Le prochain exposé apparaîtra automatiquement.", "👑")}
@@ -6387,7 +6398,7 @@
     screen.innerHTML = `
       <section class="reveal-stage reveal-v07 whoami-reveal"><span class="game-cover-icon">${result.found ? "🎉" : "⏱️"}</span><h2>${escapeHtml(guesser?.name || "Le joueur")} était ${escapeHtml(result.label || "")}</h2><p>${result.found ? "+2 points pour la personne qui devine, +1 pour chaque aide." : "Cette identité n’a pas été trouvée à temps."}</p></section>
       <section class="whoami-clue-wall">${(result.clues || []).map(clue => `<span>${escapeHtml(clue)}</span>`).join("")}</section>
-      ${state.alcohol && !result.found ? `<div class="alcohol-callout">🍻 Petite gorgée de consolation pour ${escapeHtml(guesser?.name || "la personne")}.</div>` : ""}
+      ${state.alcohol && !result.found ? `<div class="alcohol-callout">🍻 ${escapeHtml(guesser?.name || "La personne")} peut trinquer avec la boisson de son choix, sans obligation.</div>` : ""}
       ${state.isHost
         ? `<button id="nextMultiWhoAmI" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= secureV09ItemCount(gameState) ? "Voir le classement" : "Identité suivante"}</button>`
         : renderMultiWaiting("En attente de l’hôte", "La prochaine identité apparaîtra automatiquement.", "👑")}
@@ -6667,3 +6678,6 @@
   });
 
 })();
+
+
+/* AK'GAMES V1.0 — AUDIT PASSE 11 : soirée longue, variantes +18 et consentement */

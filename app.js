@@ -281,7 +281,7 @@ function renderSetup() {
 
     <label class="option-card">
       <input id="alcoholToggle" type="checkbox" ${state.alcohol ? "checked" : ""}>
-      <span><strong>🍻 Mode alcool</strong><br><span class="helper">Ajoute les règles à boire dans les jeux compatibles.</span></span>
+      <span><strong>🍻 Mode alcool</strong><br><span class="helper">Ajoute des variantes de toast facultatives dans les jeux compatibles. Boissons sans alcool toujours possibles.</span></span>
     </label>
 
     <button id="continueSetup" class="primary-btn full">Continuer</button>
@@ -976,14 +976,14 @@ function getAlcoholRule(result) {
   if (roundNumber % frequency !== 0) return null;
 
   if (result.winners.length > 1) {
-    return `🍻 ${result.winners.map(player => player.name).join(" et ")} trinquent et prennent une gorgée.`;
+    return `🍻 ${result.winners.map(player => player.name).join(" et ")} peuvent trinquer avec la boisson de leur choix.`;
   }
 
   if (result.maxVotes === state.players.length) {
-    return `🍻 Unanimité ! ${result.winners[0].name} distribue ${Math.min(3, state.players.length - 1)} gorgée${Math.min(3, state.players.length - 1) > 1 ? "s" : ""}.`;
+    return `🍻 Unanimité ! ${result.winners[0].name} peut proposer un toast au groupe, sans obligation de boire.`;
   }
 
-  return `🍻 ${result.winners[0].name}, la personne la plus désignée, prend une gorgée.`;
+  return `🍻 ${result.winners[0].name}, la personne la plus désignée, peut proposer un toast au groupe.`;
 }
 
 function renderWhoUsResults() {
@@ -1563,7 +1563,7 @@ function renderLaughTurnTransition(previousTeller, nextTeller, laughingPlayer) {
   setBackVisible(false);
 
   const alcoholText = state.alcohol && laughingPlayer
-    ? `<div class="alcohol-callout">🍻 ${escapeHtml(laughingPlayer.name)} prend une petite gorgée pour ce rire.</div>`
+    ? `<div class="alcohol-callout">🍻 ${escapeHtml(laughingPlayer.name)} peut trinquer avec la boisson de son choix pour ce rire.</div>`
     : "";
 
   screen.innerHTML = `
@@ -1593,7 +1593,7 @@ function renderLaughDuelEnd(winner, loser) {
       <p>${escapeHtml(loser.name)} a été la première personne à craquer.</p>
     </section>
 
-    ${state.alcohol ? `<div class="alcohol-callout">🍻 ${escapeHtml(loser.name)} prend une gorgée de défaite.</div>` : ""}
+    ${state.alcohol ? `<div class="alcohol-callout">🍻 ${escapeHtml(loser.name)} peut faire un toast de défaite avec la boisson de son choix.</div>` : ""}
 
     <div class="toolbar">
       <button id="laughRematch" class="secondary-btn">Revanche</button>
@@ -2066,7 +2066,7 @@ function renderBestLiarResults() {
   title.textContent = "Les masques tombent";
 
   const alcoholText = state.alcohol && result.winners.length
-    ? `<div class="alcohol-callout">🍻 ${result.winners.map(row => escapeHtml(row.author.name)).join(" et ")} ${result.winners.length > 1 ? "distribuent" : "distribue"} 2 petites gorgées.</div>`
+    ? `<div class="alcohol-callout">🍻 ${result.winners.map(row => escapeHtml(row.author.name)).join(" et ")} ${result.winners.length > 1 ? "peuvent proposer" : "peut proposer"} un toast au groupe, sans obligation de boire.</div>`
     : "";
 
   screen.innerHTML = `
@@ -2630,7 +2630,7 @@ function renderActionTruthRound() {
       <button id="actionTruthDone" class="primary-btn">✓ C’est fait</button>
       <button id="actionTruthSkip" class="secondary-btn">Passer</button>
     </section>
-    ${state.alcohol ? `<div class="alcohol-callout">🍻 Une carte passée = une petite gorgée. Doucement, la soirée est longue.</div>` : ""}
+    ${state.alcohol ? `<div class="alcohol-callout">🍻 Passer ne donne aucune pénalité. Si vous avez activé le mode alcool, une gorgée reste toujours facultative, eau comprise.</div>` : ""}
   `;
 
   document.querySelector("#actionTruthDone").addEventListener("click", () => finishActionTruthRound(true));
@@ -2819,7 +2819,7 @@ function renderAmbiancePollReveal() {
     <section class="poll-results-grid">
       ${state.players.map(player => `<article class="poll-result-person"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(optionLabel(game.votes[player.id]))}</small>${result.minorityIds.includes(player.id) ? `<em>+1 pt minorité</em>` : ""}</article>`).join("")}
     </section>
-    ${state.alcohol && game.type === "never" ? `<div class="alcohol-callout">🍻 Les personnes qui ont répondu “Déjà” prennent une petite gorgée.</div>` : ""}
+    ${state.alcohol && game.type === "never" ? `<div class="alcohol-callout">🍻 Les personnes qui ont répondu “Déjà” peuvent trinquer avec la boisson de leur choix, sans obligation.</div>` : ""}
     <button id="nextPollRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Question suivante"}</button>
   `;
 
@@ -3259,7 +3259,7 @@ function renderSameBrainReveal() {
         return `<article class="brain-answer-tile ${points ? "matched" : ""}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><p>${escapeHtml(game.answers[player.id])}</p>${points ? `<em>+${points} pt${points > 1 ? "s" : ""}</em>` : `<small>réponse unique</small>`}</article>`;
       }).join("")}
     </section>
-    ${state.alcohol && !result.matchedIds.length ? `<div class="alcohol-callout">🍻 Aucun match : tout le monde prend une petite gorgée de désynchronisation.</div>` : ""}
+    ${state.alcohol && !result.matchedIds.length ? `<div class="alcohol-callout">🍻 Aucun match : le groupe peut trinquer avec la boisson de son choix, sans obligation.</div>` : ""}
     <button id="nextBrainRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Question suivante"}</button>
   `;
   document.querySelector("#nextBrainRound").addEventListener("click", () => {
@@ -3389,7 +3389,7 @@ function renderMinorityReveal() {
     <section class="reveal-stage reveal-v07 minority-reveal"><span class="game-cover-icon">🪩</span><h2>${result.winnerIds.length ? "Les esprits rares prennent le point" : "Impossible de départager le groupe"}</h2><p>${escapeHtml(item.question)}</p></section>
     <section class="minority-results">${item.options.map((option, index) => `<article class="minority-result ${result.minorityOptions.includes(index) ? "winner" : ""}"><div><small>OPTION ${String.fromCharCode(65 + index)}</small><strong>${escapeHtml(option)}</strong></div><span>${result.counts[index]} vote${result.counts[index] > 1 ? "s" : ""}</span></article>`).join("")}</section>
     <section class="poll-results-grid">${state.players.map(player => `<article class="poll-result-person"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(item.options[game.votes[player.id]])}</small>${result.winnerIds.includes(player.id) ? `<em>+1 pt minorité</em>` : ""}</article>`).join("")}</section>
-    ${state.alcohol && result.winnerIds.length ? `<div class="alcohol-callout">🍻 La majorité prend une petite gorgée. La minorité savoure sa victoire.</div>` : ""}
+    ${state.alcohol && result.winnerIds.length ? `<div class="alcohol-callout">🍻 La majorité peut trinquer si elle en a envie. La minorité savoure sa victoire.</div>` : ""}
     <button id="nextMinorityRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Question suivante"}</button>
   `;
   document.querySelector("#nextMinorityRound").addEventListener("click", () => {
@@ -3578,7 +3578,7 @@ function renderWhoAnsweredReveal() {
     }).join("")}</section>
     <details class="answer-wall-details"><summary>Voir toutes les réponses</summary><div class="anonymous-answer-list">${state.players.map(player => `<article class="anonymous-answer-card"><span class="answer-number">${avatarById(player.avatarId).emoji}</span><p><strong>${escapeHtml(player.name)}</strong><br>${escapeHtml(game.answers[player.id])}</p></article>`).join("")}</div></details>
     ${result.fooledIds.length ? `<div class="special-event"><strong>🕵️ ${escapeHtml(author.name)} a trompé ${result.fooledIds.length} personne${result.fooledIds.length > 1 ? "s" : ""}</strong><p>+${result.fooledIds.length} point${result.fooledIds.length > 1 ? "s" : ""} d’auteur mystérieux.</p></div>` : `<div class="notice">Tout le monde a retrouvé l’auteur. Couverture grillée.</div>`}
-    ${state.alcohol && result.fooledIds.length ? `<div class="alcohol-callout">🍻 Les enquêteurs trompés prennent une petite gorgée.</div>` : ""}
+    ${state.alcohol && result.fooledIds.length ? `<div class="alcohol-callout">🍻 Les enquêteurs trompés peuvent trinquer avec la boisson de leur choix, sans obligation.</div>` : ""}
     <button id="nextWhoAnswered" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Enquête suivante"}</button>
   `;
   document.querySelector("#nextWhoAnswered").addEventListener("click", () => {
@@ -4055,7 +4055,7 @@ function renderAlmostImpostorResult() {
       return `<article class="who-vote-row ${correct ? "correct" : "fooled"}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>a voté ${escapeHtml(target?.name || "?")}</small><em>${correct ? "+1 pt" : "raté"}</em></article>`;
     }).join("")}</section>
     <div class="special-event ${result.caught ? "" : "tie"}"><strong>${result.caught ? "🔍 Imposteur démasqué" : "🕶️ L’imposteur s’échappe"}</strong><p>${result.caught ? (result.guessCorrect ? "Le mot a tout de même été retrouvé : +1 point imposteur." : "Le groupe a gagné cette enquête.") : "+2 points pour la couverture parfaite."}</p></div>
-    ${state.alcohol ? `<div class="alcohol-callout">🍻 ${result.caught ? "L’imposteur prend une petite gorgée." : "Les joueurs ayant raté leur vote prennent une petite gorgée."}</div>` : ""}
+    ${state.alcohol ? `<div class="alcohol-callout">🍻 ${result.caught ? "L’imposteur peut trinquer s’il en a envie." : "Les joueurs ayant raté leur vote peuvent trinquer s’ils en ont envie."}</div>` : ""}
     <button id="nextImpostorRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Manche suivante"}</button>
   `;
   document.querySelector("#nextImpostorRound").addEventListener("click", () => { game.currentIndex += 1; prepareAlmostImpostorRound(); });
@@ -4237,7 +4237,7 @@ function renderFakeExpertResult() {
     }).join("")}</section>
     <details class="answer-wall-details"><summary>Voir les vraies informations</summary><ul class="expert-fact-list">${(card.facts || []).map(fact => `<li>${escapeHtml(fact)}</li>`).join("")}</ul></details>
     <div class="special-event"><strong>🎤 ${fooledIds.length} personne${fooledIds.length > 1 ? "s" : ""} trompée${fooledIds.length > 1 ? "s" : ""}</strong><p>+${Math.min(3, fooledIds.length)} point${Math.min(3, fooledIds.length) > 1 ? "s" : ""} pour l’orateur.</p></div>
-    ${state.alcohol && fooledIds.length ? `<div class="alcohol-callout">🍻 Les personnes trompées prennent une petite gorgée.</div>` : ""}
+    ${state.alcohol && fooledIds.length ? `<div class="alcohol-callout">🍻 Les personnes trompées peuvent trinquer avec la boisson de leur choix, sans obligation.</div>` : ""}
     <button id="nextExpertRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Orateur suivant"}</button>
   `;
   document.querySelector("#nextExpertRound").addEventListener("click", () => { game.currentIndex += 1; prepareFakeExpertRound(); });
@@ -4375,7 +4375,7 @@ function renderWhoAmIResult(found) {
   screen.innerHTML = `
     <section class="reveal-stage reveal-v07 whoami-reveal"><span class="game-cover-icon">${found ? "🎉" : "⏱️"}</span><h2>${escapeHtml(guesser.name)} était ${escapeHtml(item.label)}</h2><p>${found ? "+2 points pour la personne qui devine, +1 pour chaque aide." : "Cette identité reste dans la galerie des mystères."}</p></section>
     <section class="whoami-clue-wall">${(item.clues || []).map(clue => `<span>${escapeHtml(clue)}</span>`).join("")}</section>
-    ${state.alcohol && !found ? `<div class="alcohol-callout">🍻 Petite gorgée de consolation pour ${escapeHtml(guesser.name)}.</div>` : ""}
+    ${state.alcohol && !found ? `<div class="alcohol-callout">🍻 ${escapeHtml(guesser.name)} peut trinquer avec la boisson de son choix, sans obligation.</div>` : ""}
     <button id="nextWhoAmI" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Identité suivante"}</button>
   `;
   document.querySelector("#nextWhoAmI").addEventListener("click", () => { game.currentIndex += 1; renderWhoAmIRevealGate(); });
@@ -4622,7 +4622,7 @@ function renderMegaTurn() {
       ${config.timer ? `<div class="mega-mini-timer"><strong id="v014Countdown">${game.durationSeconds}</strong><span>secondes</span><div class="progress-track"><div id="v014TimerFill" class="progress-fill" style="width:100%"></div></div></div>` : ""}
     </section>
     <section class="decision-grid"><button id="megaDone" class="primary-btn">✓ ${buttonDone}</button><button id="megaSkip" class="secondary-btn">Passer</button></section>
-    ${state.alcohol && !config.drinkingGame ? `<div class="alcohol-callout">🍻 Une carte passée peut valoir une petite gorgée, sans pression.</div>` : ""}
+    ${state.alcohol && !config.drinkingGame ? `<div class="alcohol-callout">🍻 Passer reste sans pénalité. Si le groupe boit, chacun choisit librement une petite gorgée ou de l’eau.</div>` : ""}
   `;
 
   document.querySelector("#megaDone").addEventListener("click", () => finishMegaTurn(true));
@@ -4962,7 +4962,7 @@ function finishMegaBomb(loserId) {
   screen.innerHTML = `
     ${v014Progress(game, "Bombe")}
     <section class="winner-stage bomb-result-stage"><div class="winner-crown">💥</div><div class="giant-avatar">${avatarById(loser?.avatarId).emoji}</div><h2>La bombe explose chez ${escapeHtml(loser?.name || "un joueur")}</h2><p>Tout le monde sauf cette personne marque un point.</p></section>
-    ${state.alcohol ? `<div class="alcohol-callout">🍻 Petite gorgée de consolation, ou simplement une gorgée d’eau.</div>` : ""}
+    ${state.alcohol ? `<div class="alcohol-callout">🍻 Petit toast facultatif, avec la boisson de son choix, eau comprise.</div>` : ""}
     <button id="nextBomb" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Nouvelle bombe"}</button>`;
   document.querySelector("#nextBomb").addEventListener("click", () => {
     game.currentIndex += 1;
@@ -5520,4 +5520,81 @@ document.addEventListener("click", event => {
 
   event.preventDefault();
   event.stopImmediatePropagation();
+}, true);
+
+
+/* =========================================================
+   AK'GAMES V1.0 — AUDIT PASSE 11
+   Soirée longue : retour des paramètres et garde-fous de contexte
+   ========================================================= */
+
+const AK_AUDIT11_GAME_SETUP_SELECTORS = [
+  "#startWhoUs",
+  "#startLaughDuel",
+  "#startBestLiar",
+  "#startActionTruth",
+  "#startPollGame",
+  "#startSameBrain",
+  "#startMinority",
+  "#startWhoAnswered",
+  "#startImpostor",
+  "#startExpert",
+  "#startWhoAmI",
+  "#startMegaGame"
+];
+
+function akAudit11IsGameSetupVisible() {
+  return AK_AUDIT11_GAME_SETUP_SELECTORS.some(selector => Boolean(document.querySelector(selector)));
+}
+
+function akAudit11DetectSettingsOrigin() {
+  if (document.querySelector("#continueSetup")) return "setup";
+  if (document.querySelector("#savePlayer")) return "player-form";
+  if (document.querySelector("#openGames")) return "lobby";
+  if (document.querySelector("#chooseGame")) return "play-choice";
+  if (document.querySelector(".category-grid")) return "categories";
+  if (document.querySelector(".game-list")) return "games";
+  return "home";
+}
+
+function akAudit11ReturnFromSettings(origin) {
+  if (origin === "setup") return renderSetup();
+  if (origin === "player-form") return renderPlayerForm();
+  if (origin === "lobby") return renderLobby();
+  if (origin === "play-choice") return renderPlayChoice();
+  if (origin === "categories") return renderCategories();
+  if (origin === "games") {
+    const category = categories.find(item => item.id === state.currentCategory);
+    if (!category || (category.adultOnly && !state.adult)) return renderCategories();
+    return renderGames();
+  }
+  return renderHome();
+}
+
+settingsBtn.addEventListener("click", event => {
+  if (state.roomCode || isSoloGameRunning()) return;
+
+  if (akAudit11IsGameSetupVisible()) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    alert("Reviens d’abord à la liste des jeux avant de modifier les réglages de la soirée.");
+    return;
+  }
+
+  state.akAudit11SettingsOrigin = akAudit11DetectSettingsOrigin();
+}, true);
+
+backBtn.addEventListener("click", event => {
+  if (!document.querySelector("#resetApp") || title.textContent !== "Paramètres") return;
+
+  event.preventDefault();
+  event.stopImmediatePropagation();
+
+  if (state.history[state.history.length - 1] === "settings-origin") {
+    state.history.pop();
+  }
+
+  const origin = state.akAudit11SettingsOrigin || "home";
+  state.akAudit11SettingsOrigin = null;
+  akAudit11ReturnFromSettings(origin);
 }, true);
