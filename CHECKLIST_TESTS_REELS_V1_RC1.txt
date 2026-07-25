@@ -1,0 +1,77 @@
+AK'Games V1.0 RC1 — CHECKLIST TESTS RÉELS
+
+À faire après avoir installé le ZIP et obtenu la coche verte GitHub Actions.
+
+PRÉPARATION
+[ ] Fermer complètement AK'Games sur tous les téléphones.
+[ ] Rouvrir l'application.
+[ ] Vérifier que l'accueil s'affiche normalement.
+[ ] Tester au moins un Android.
+[ ] Tester aussi un iPhone si disponible.
+
+TEST 1 — MODE UN TÉLÉPHONE
+[ ] Créer 3 joueurs.
+[ ] Lancer un jeu classique.
+[ ] Terminer une manche.
+[ ] Utiliser « Rejouer ».
+[ ] Utiliser « Autre jeu ».
+[ ] Appuyer sur Retour Android pendant une partie.
+[ ] Vérifier que l'app ne se ferme pas brutalement.
+
+TEST 2 — SALON MULTIJOUEUR
+[ ] Téléphone A crée un salon.
+[ ] Téléphones B et C rejoignent avec le code.
+[ ] Vérifier que les 3 joueurs apparaissent.
+[ ] Lancer un jeu.
+[ ] Voter presque en même temps sur plusieurs téléphones.
+[ ] Vérifier qu'aucun joueur reste bloqué en attente.
+
+TEST 3 — DÉCONNEXION
+[ ] Couper le réseau du téléphone B pendant une manche.
+[ ] Continuer avec les autres téléphones.
+[ ] Rétablir le réseau du téléphone B.
+[ ] Vérifier qu'une ancienne réponse ne pollue pas la nouvelle manche.
+
+TEST 4 — HÔTE
+[ ] Fermer brutalement l'application du téléphone hôte.
+[ ] Attendre la reprise d'hôte.
+[ ] Vérifier qu'une seule personne récupère la couronne.
+[ ] Continuer la partie.
+
+TEST 5 — JEUX SECRETS
+[ ] Lancer « L'Imposteur sait presque tout ».
+[ ] Vérifier que l'imposteur ne voit pas le mot.
+[ ] Lancer « Le Faux Expert ».
+[ ] Vérifier que seul l'orateur voit son rôle/brief.
+[ ] Lancer « Qui suis-je ? ».
+[ ] Vérifier que la personne qui devine ne voit jamais son identité.
+
+TEST 6 — +18
+[ ] Activer le contenu adulte.
+[ ] Lancer Action ou Vérité +18.
+[ ] Vérifier que le contenu est bien adulte, pas un mélange classique.
+[ ] Faire la même vérification pour Je n'ai jamais +18 et Tu préfères +18.
+[ ] Vérifier qu'un refus/passage n'entraîne aucune pénalité.
+
+TEST 7 — JEU ALÉATOIRE
+[ ] Tirer plusieurs jeux d'affilée.
+[ ] Vérifier qu'il n'y a pas de répétition immédiate.
+[ ] Désactiver le contenu adulte et vérifier qu'aucun jeu +18 ne sort.
+[ ] Désactiver le mode alcool et vérifier que Jeux à boire ne sort pas.
+
+TEST 8 — PWA / MISE À JOUR
+[ ] Fermer puis rouvrir l'application installée.
+[ ] Vérifier que l'icône est correcte.
+[ ] Tester le mode un téléphone sans réseau.
+[ ] Vérifier que créer/rejoindre un salon indique clairement qu'Internet est nécessaire.
+[ ] Après une future mise à jour, vérifier qu'AK'Games ne se recharge pas en pleine manche.
+
+VALIDATION
+[ ] Aucun blocage.
+[ ] Aucun écran coupé.
+[ ] Aucun bouton sans effet.
+[ ] Aucun joueur fantôme.
+[ ] Aucun vote perdu ou compté deux fois.
+[ ] Aucun secret visible sur le mauvais téléphone.
+
+Si tout est coché, cette RC1 peut être considérée comme candidate V1.0 finale.
