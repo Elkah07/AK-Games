@@ -1,5 +1,7 @@
-const CACHE_VERSION = "akgames-v1.0-audit8";
-const APP_SHELL = [
+const CACHE_PREFIX = "akgames-";
+const CACHE_VERSION = "akgames-v1.0-audit9";
+
+const CORE_SHELL = [
   "/",
   "/index.html",
   "/styles.css",
@@ -14,7 +16,10 @@ const APP_SHELL = [
   "/icons/icon-maskable-512.png",
   "/icons/apple-touch-icon.png",
   "/icons/favicon-32.png",
-  "/icons/favicon-16.png",
+  "/icons/favicon-16.png"
+];
+
+const DATA_ASSETS = [
   "/data/qui-de-nous.json",
   "/data/qui-de-nous-adulte.json",
   "/data/blagues.json",
@@ -60,66 +65,83 @@ const APP_SHELL = [
 ];
 
 self.addEventListener("install", event => {
-  event.waitUntil(
-    caches.open(CACHE_VERSION)
-      .then(cache => Promise.allSettled(
-        APP_SHELL.map(asset => cache.add(asset))
-      ))
-  );
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE_VERSION);
+
+    // Le nouveau worker n'est considéré comme installable que si le cœur de
+    // l'application est réellement disponible hors ligne.
+    await cache.addAll(CORE_SHELL);
+
+    // Une carte optionnelle indisponible ne doit pas empêcher toute la mise à
+    // jour. Les fichiers réussis restent malgré tout mis en cache.
+    await Promise.allSettled(DATA_ASSETS.map(asset => cache.add(asset)));
+  })());
 });
 
 self.addEventListener("activate", event => {
-  event.waitUntil(
-    caches.keys()
-      .then(keys => Promise.all(
-        keys
-          .filter(key => key !== CACHE_VERSION)
-          .map(key => caches.delete(key))
-      ))
-      .then(() => self.clients.claim())
-  );
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(
+      keys
+        .filter(key => key.startsWith(CACHE_PREFIX) && key !== CACHE_VERSION)
+        .map(key => caches.delete(key))
+    );
+    await self.clients.claim();
+  })());
 });
 
 self.addEventListener("fetch", event => {
   const request = event.request;
-
   if (request.method !== "GET") return;
 
   const url = new URL(request.url);
 
-  // Firebase et les autres services externes restent gérés par le réseau.
+  // Firebase et les services externes restent gérés par le réseau.
   if (url.origin !== self.location.origin) return;
 
-  // Navigation : réseau d'abord, puis l'app locale en secours.
   if (request.mode === "navigate") {
-    event.respondWith(
-      fetch(request)
-        .then(response => {
-          const copy = response.clone();
-          caches.open(CACHE_VERSION).then(cache => cache.put("/index.html", copy));
-          return response;
-        })
-        .catch(() => caches.match("/index.html"))
-    );
+    event.respondWith((async () => {
+      try {
+        const response = await fetch(request);
+
+        // Une 404 ou une réponse non HTML ne doit jamais écraser la copie
+        // fonctionnelle d'index.html utilisée en secours hors ligne.
+        const contentType = response.headers.get("content-type") || "";
+        if (response.ok && contentType.includes("text/html")) {
+          const cache = await caches.open(CACHE_VERSION);
+          await cache.put("/index.html", response.clone());
+        }
+
+        return response;
+      } catch {
+        const cached = await caches.match("/index.html");
+        return cached || Response.error();
+      }
+    })());
     return;
   }
 
-  // Code, styles et données : retour rapide du cache, puis mise à jour silencieuse.
-  event.respondWith(
-    caches.match(request).then(cached => {
-      const network = fetch(request)
-        .then(response => {
-          if (response && response.ok) {
-            const copy = response.clone();
-            caches.open(CACHE_VERSION).then(cache => cache.put(request, copy));
-          }
-          return response;
-        })
-        .catch(() => cached);
+  // Stale-while-revalidate pour le code, les styles, les icônes et les cartes.
+  event.respondWith((async () => {
+    const cached = await caches.match(request);
 
-      return cached || network;
-    })
-  );
+    const networkPromise = fetch(request)
+      .then(async response => {
+        if (response?.ok) {
+          const cache = await caches.open(CACHE_VERSION);
+          await cache.put(request, response.clone());
+        }
+        return response;
+      })
+      .catch(() => null);
+
+    if (cached) {
+      event.waitUntil(networkPromise);
+      return cached;
+    }
+
+    return (await networkPromise) || Response.error();
+  })());
 });
 
 self.addEventListener("message", event => {

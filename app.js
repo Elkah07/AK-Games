@@ -5352,3 +5352,33 @@ renderAlmostImpostorSetup = akAudit8WrapSetup(renderAlmostImpostorSetup, "L’Im
 renderFakeExpertSetup = akAudit8WrapSetup(renderFakeExpertSetup, "Le Faux Expert");
 renderWhoAmISetup = akAudit8WrapSetup(renderWhoAmISetup, "Qui suis-je ?");
 renderMegaSetup = akAudit8WrapSetup(renderMegaSetup, () => state.megaGame?.gameName || "Jeu");
+
+
+/* =========================================================
+   AK'GAMES V1.0 — AUDIT PASSE 9
+   Démarrage hors ligne : le solo reste jouable, le multi ne
+   doit jamais tomber sur l'ancien faux salon de démonstration.
+   ========================================================= */
+
+function akAudit9MultiplayerReady() {
+  if (navigator.onLine === false) {
+    alert("Le mode plusieurs téléphones a besoin d’Internet. Le mode « Un téléphone » reste disponible hors ligne.");
+    return false;
+  }
+
+  if (!window.AKFirebase) {
+    alert("Le service multijoueur n’a pas pu démarrer. Vérifie ta connexion puis recharge AK’Games. Le mode « Un téléphone » reste disponible.");
+    return false;
+  }
+
+  return true;
+}
+
+document.addEventListener("click", event => {
+  const actionButton = event.target.closest?.('[data-home-action="create"], [data-home-action="join"]');
+  if (!actionButton) return;
+  if (akAudit9MultiplayerReady()) return;
+
+  event.preventDefault();
+  event.stopImmediatePropagation();
+}, true);

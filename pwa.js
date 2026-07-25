@@ -7,6 +7,7 @@
   const dismissButton = document.querySelector("#dismissInstall");
   const backToast = document.querySelector("#backToast");
   const backButton = document.querySelector("#backBtn");
+  const MULTIPLAYER_SESSION_KEY = "akgames_multiplayer_session_v1";
 
   let deferredInstallPrompt = null;
   let serviceWorkerRegistration = null;
@@ -347,22 +348,60 @@
   }
 
   // -------------------------------------------------------
+  // Réseau
+  // -------------------------------------------------------
+
+  window.addEventListener("offline", () => {
+    showBackToast("Mode hors ligne : les jeux sur un téléphone restent disponibles.");
+  });
+
+  window.addEventListener("online", () => {
+    if (!window.AKFirebase) {
+      showBackToast("Connexion retrouvée. Recharge AK’Games pour réactiver le multijoueur.");
+      return;
+    }
+    showBackToast("Connexion retrouvée.");
+  });
+
+  // -------------------------------------------------------
   // Raccourcis du manifest
   // -------------------------------------------------------
 
+  function consumeManifestAction() {
+    try {
+      const url = new URL(window.location.href);
+      if (!url.searchParams.has("action")) return;
+
+      url.searchParams.delete("action");
+      const nextUrl = `${url.pathname}${url.search}${url.hash}` || "/";
+      history.replaceState(history.state, "", nextUrl);
+    } catch {
+      // Le raccourci reste sans danger même si l'URL ne peut pas être nettoyée.
+    }
+  }
+
+  function runManifestAction(action, attempt = 0) {
+    if (!["create", "join"].includes(action)) return;
+
+    const savedSession = localStorage.getItem(MULTIPLAYER_SESSION_KEY);
+    const roomRestored = typeof state === "object" && Boolean(state?.roomCode);
+
+    // Une room enregistrée a priorité sur un raccourci d'écran d'accueil.
+    // On laisse quelques secondes à Firebase pour la restaurer avant de décider.
+    if (savedSession && !roomRestored && attempt < 24) {
+      window.setTimeout(() => runManifestAction(action, attempt + 1), 150);
+      return;
+    }
+
+    consumeManifestAction();
+    if (savedSession || roomRestored) return;
+
+    document.querySelector(`[data-home-action="${action}"]`)?.click();
+  }
+
   window.addEventListener("load", () => {
     const action = new URLSearchParams(window.location.search).get("action");
-
-    if (action === "create") {
-      window.setTimeout(() => {
-        document.querySelector('[data-home-action="create"]')?.click();
-      }, 250);
-    }
-
-    if (action === "join") {
-      window.setTimeout(() => {
-        document.querySelector('[data-home-action="join"]')?.click();
-      }, 250);
-    }
+    if (!["create", "join"].includes(action)) return;
+    window.setTimeout(() => runManifestAction(action), 250);
   });
 })();

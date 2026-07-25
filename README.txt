@@ -1,27 +1,15 @@
-AK'Games V1.0 — Audit passe 8 : contenu et expérience de jeu
+AK'Games V1.0 — Audit passe 9 : PWA, hors-ligne et démarrage
 
-Fichiers à remplacer à la racine :
+Fichiers à remplacer à la racine du projet :
 - app.js
-- multiplayer.js
-- styles.css
+- pwa.js
 - service-worker.js
-
-Fichiers à remplacer dans data :
-- action-verite-adulte.json
-- defis-adultes.json
-- devinettes.json
-- fake-reel.json
-- je-nai-jamais.json
-- jeux-a-boire.json
-- minorite.json
-- qui-ment-prompts.json
-- quiz-cinema.json
-- tu-preferes-adulte.json
+- firebase.json
 
 Installation :
-1. Remplace les fichiers correspondants dans le Codespace.
+1. Remplace ces quatre fichiers dans ton Codespace.
 2. Clique sur « Valider et envoyer (push) ».
 3. Attends la coche verte dans GitHub Actions.
-4. Ferme complètement AK'Games sur les téléphones, puis rouvre l'application.
+4. Ferme complètement AK'Games sur les téléphones puis rouvre l'application.
 
-Cette passe ne modifie pas les règles Firebase.
+Cette passe ne modifie ni les fichiers data ni les règles Firebase.
