@@ -1,25 +1,25 @@
-AK'Games V1.0 — Refonte de l'écran d'ouverture
+AK'Games V1.0 — Correction définitive du grand espace de l'accueil
 
-Fichiers à remplacer à la racine du projet :
-- app.js
+À remplacer à la racine :
+- index.html
 - styles.css
 - service-worker.js
 
-Ce que cette version change :
-- suppression du gros bloc promotionnel de l'accueil ;
-- suppression des catégories affichées avant le choix du mode ;
-- nouvel accueil compact avec 3 choix immédiats :
-  1. Un téléphone
-  2. Créer une room
-  3. Rejoindre
-- logo AK'Games visible dans l'en-tête de l'accueil ;
-- design noir/violet avec icônes néon ;
-- mise en page adaptée aux petits écrans ;
-- cache PWA mis à jour vers akgames-v1.0-rc2-home.
+Pourquoi la correction précédente ne se voyait pas :
+l'écran principal pouvait encore s'étirer sur toute la hauteur disponible.
+Sur les grands téléphones, le navigateur gardait donc le bloc des trois choix
+beaucoup trop bas. En plus, une ancienne feuille styles.css pouvait rester en cache.
+
+Cette version :
+- empêche l'écran d'accueil de s'étirer verticalement ;
+- place le texte et les trois cartes juste sous l'en-tête ;
+- ajoute un garde-fou directement dans index.html ;
+- force le chargement de styles.css?v=rc4-home ;
+- passe le cache PWA à akgames-v1.0-rc4-home.
 
 Installation :
-1. Remplace les 3 fichiers à la racine de ton projet.
-2. Clique sur « Valider et envoyer (push) ».
-3. Attends la coche verte GitHub Actions.
-4. Ferme complètement AK'Games sur ton téléphone.
-5. Rouvre l'application pour charger le nouvel accueil.
+1. Remplace les 3 fichiers.
+2. « Valider et envoyer (push) ».
+3. Attends la coche verte.
+4. Ferme complètement AK'Games.
+5. Rouvre l'application.

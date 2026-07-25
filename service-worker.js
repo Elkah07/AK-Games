@@ -1,10 +1,10 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v1.0-rc3-home-spacing";
+const CACHE_VERSION = "akgames-v1.0-rc4-home";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css",
+  "/styles.css?v=rc4-home",
   "/app.js",
   "/firebase.js",
   "/multiplayer.js",
