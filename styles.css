@@ -4217,11 +4217,11 @@ select:focus-visible,
 
 .home-launch {
   position: relative;
-  min-height: min(650px, calc(100dvh - 112px));
+  min-height: 0;
   display: grid;
-  align-content: center;
-  gap: clamp(18px, 3.2dvh, 30px);
-  padding: clamp(8px, 1.8dvh, 18px) 0 max(10px, env(safe-area-inset-bottom));
+  align-content: start;
+  gap: clamp(18px, 2.4dvh, 24px);
+  padding: clamp(24px, 4dvh, 38px) 0 max(18px, env(safe-area-inset-bottom));
 }
 
 .home-launch::before {
@@ -4395,10 +4395,10 @@ select:focus-visible,
   }
 
   .home-launch {
-    min-height: calc(100dvh - 94px - max(24px, env(safe-area-inset-top)) - max(18px, env(safe-area-inset-bottom)));
-    align-content: center;
-    gap: clamp(14px, 2.6dvh, 22px);
-    padding-top: 4px;
+    min-height: 0;
+    align-content: start;
+    gap: clamp(14px, 2dvh, 18px);
+    padding-top: clamp(20px, 3.2dvh, 28px);
   }
 
   .home-mode-list {
@@ -4439,6 +4439,7 @@ select:focus-visible,
   .home-launch {
     align-content: start;
     gap: 11px;
+    padding-top: 10px;
   }
 
   .home-launch-intro p {
