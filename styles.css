@@ -4157,3 +4157,305 @@ select:focus-visible,
     grid-column: auto;
   }
 }
+
+
+/* =========================================================
+   AK'GAMES V1.0 — ACCUEIL COMPACT
+   Entrée directe : 3 modes, zéro brochure, zéro scroll inutile
+   ========================================================= */
+
+.ak-home-screen #app {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ak-home-screen .app-header {
+  grid-template-columns: 52px minmax(0, 1fr) 52px;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.ak-home-screen #backBtn.hidden {
+  visibility: visible;
+  width: 52px;
+  height: 52px;
+  border: 0;
+  border-radius: 16px;
+  opacity: 1;
+  pointer-events: none;
+  background: url("icons/icon-192.png") center / cover no-repeat;
+  box-shadow: 0 10px 28px rgba(91, 33, 182, .25);
+}
+
+.ak-home-screen .app-header .eyebrow {
+  font-size: .74rem;
+  letter-spacing: .22em;
+}
+
+.ak-home-screen .app-header h1 {
+  margin-top: 3px;
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+
+.ak-home-screen #settingsBtn {
+  width: 52px;
+  height: 52px;
+  border-radius: 17px;
+  border-color: rgba(196, 181, 253, .18);
+  background: rgba(20, 18, 42, .78);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+.ak-home-screen .screen {
+  flex: 1;
+  min-height: 0;
+  gap: 0;
+}
+
+.home-launch {
+  position: relative;
+  min-height: min(650px, calc(100dvh - 112px));
+  display: grid;
+  align-content: center;
+  gap: clamp(18px, 3.2dvh, 30px);
+  padding: clamp(8px, 1.8dvh, 18px) 0 max(10px, env(safe-area-inset-bottom));
+}
+
+.home-launch::before {
+  content: "";
+  position: absolute;
+  inset: 5% -18% 3%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 78% 22%, rgba(139, 92, 246, .20), transparent 34%),
+    radial-gradient(circle at 20% 78%, rgba(80, 35, 160, .12), transparent 34%);
+  filter: blur(8px);
+}
+
+.home-launch-intro {
+  padding: 0 4px;
+}
+
+.home-launch-intro p {
+  margin: 0;
+  color: #aab3cb;
+  font-size: clamp(.93rem, 3.7vw, 1.05rem);
+  line-height: 1.45;
+}
+
+.home-launch-intro p span {
+  color: #bd8cff;
+  text-shadow: 0 0 18px rgba(168,85,247,.55);
+}
+
+.home-mode-list {
+  display: grid;
+  gap: clamp(11px, 1.8dvh, 16px);
+}
+
+.home-mode-card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: clamp(106px, 15dvh, 132px);
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr) 42px;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 18px;
+  border: 1px solid rgba(188, 160, 255, .17);
+  border-radius: 26px;
+  color: #f8fafc;
+  text-align: left;
+  background:
+    radial-gradient(circle at 86% 8%, rgba(126, 66, 239, .10), transparent 32%),
+    linear-gradient(145deg, rgba(19, 23, 48, .97), rgba(9, 14, 31, .97));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.045), 0 16px 38px rgba(0,0,0,.18);
+  transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+}
+
+.home-mode-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .55;
+  background: linear-gradient(110deg, rgba(166, 111, 255, .08), transparent 38%, transparent 68%, rgba(139,92,246,.06));
+}
+
+.home-mode-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(190, 153, 255, .42);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.07), 0 18px 46px rgba(35, 16, 78, .28);
+}
+
+.home-mode-card:active {
+  transform: scale(.988);
+}
+
+.home-mode-create {
+  border-color: rgba(168, 85, 247, .34);
+  background:
+    radial-gradient(circle at 8% 0%, rgba(255,255,255,.075), transparent 30%),
+    radial-gradient(circle at 92% 16%, rgba(168,85,247,.18), transparent 34%),
+    linear-gradient(145deg, rgba(28, 24, 63, .98), rgba(17, 15, 43, .98));
+}
+
+.home-mode-icon {
+  position: relative;
+  z-index: 1;
+  width: 68px;
+  height: 68px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(183, 132, 255, .32);
+  border-radius: 21px;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(170, 90, 255, .24), transparent 58%),
+    rgba(15, 10, 35, .72);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 0 26px rgba(124,58,237,.12);
+}
+
+.home-mode-icon svg {
+  width: 37px;
+  height: 37px;
+  fill: none;
+  stroke: #b66cff;
+  stroke-width: 2.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 7px rgba(168,85,247,.55));
+}
+
+.home-mode-icon svg .spark {
+  stroke: #d9b6ff;
+}
+
+.home-mode-copy {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.home-mode-copy strong {
+  font-size: clamp(1.18rem, 5vw, 1.48rem);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+}
+
+.home-mode-copy span {
+  color: #9da8c1;
+  font-size: clamp(.82rem, 3.35vw, .98rem);
+  line-height: 1.35;
+}
+
+.home-mode-arrow {
+  position: relative;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  justify-self: end;
+  border: 1px solid rgba(189, 156, 255, .18);
+  border-radius: 50%;
+  background: rgba(139, 92, 246, .10);
+  color: #e6dcff;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: .8;
+}
+
+@media (max-width: 430px) {
+  .ak-home-screen #app {
+    padding-top: max(14px, env(safe-area-inset-top));
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+  }
+
+  .ak-home-screen .app-header {
+    margin: 0 0 8px;
+    padding: 0;
+  }
+
+  .ak-home-screen #backBtn.hidden,
+  .ak-home-screen #settingsBtn {
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+  }
+
+  .ak-home-screen .app-header {
+    grid-template-columns: 48px minmax(0, 1fr) 48px;
+  }
+
+  .home-launch {
+    min-height: calc(100dvh - 94px - max(24px, env(safe-area-inset-top)) - max(18px, env(safe-area-inset-bottom)));
+    align-content: center;
+    gap: clamp(14px, 2.6dvh, 22px);
+    padding-top: 4px;
+  }
+
+  .home-mode-list {
+    gap: clamp(10px, 1.4dvh, 13px);
+  }
+
+  .home-mode-card {
+    min-height: clamp(98px, 14dvh, 118px);
+    grid-template-columns: 58px minmax(0, 1fr) 36px;
+    gap: 13px;
+    padding: 15px;
+    border-radius: 23px;
+  }
+
+  .home-mode-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+  }
+
+  .home-mode-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .home-mode-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-height: 680px) and (max-width: 500px) {
+  .ak-home-screen .app-header {
+    margin-bottom: 4px;
+  }
+
+  .home-launch {
+    align-content: start;
+    gap: 11px;
+  }
+
+  .home-launch-intro p {
+    font-size: .86rem;
+  }
+
+  .home-mode-list {
+    gap: 9px;
+  }
+
+  .home-mode-card {
+    min-height: 92px;
+    padding: 12px 14px;
+  }
+
+  .home-mode-icon {
+    width: 54px;
+    height: 54px;
+  }
+}

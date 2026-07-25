@@ -112,6 +112,14 @@ function pushScreen(name) {
 
 function setBackVisible(visible) {
   backBtn.classList.toggle("hidden", !visible);
+
+  if (visible) {
+    document.body.classList.remove("ak-home-screen");
+    backBtn.disabled = false;
+    backBtn.textContent = "←";
+    backBtn.removeAttribute("aria-hidden");
+    backBtn.setAttribute("aria-label", "Retour");
+  }
 }
 
 function escapeHtml(value) {
@@ -5005,31 +5013,72 @@ renderHome = function () {
   clearV09Timer();
   clearV014Timer();
   state.history = [];
-  title.textContent = "La soirée commence ici";
+  title.textContent = "On joue comment ?";
   setBackVisible(false);
+
+  document.body.classList.add("ak-home-screen");
+  backBtn.disabled = true;
+  backBtn.textContent = "";
+  backBtn.setAttribute("aria-hidden", "true");
+  backBtn.removeAttribute("aria-label");
+
   screen.innerHTML = `
-    <section class="home-hero-v07 home-hero-v08 home-hero-v09 home-hero-v014">
-      <div class="home-logo-shell"><img src="icons/icon-192.png" alt="" class="home-logo-v07"></div>
-      <div class="home-hero-copy">
-        <span class="home-kicker">${V014_READY_GAMES.size} JEUX. UNE SEULE ROOM. AUCUN TEMPS MORT.</span>
-        <h2>La soirée tient<br><em>dans ta poche.</em></h2>
-        <p>Défis, quiz, bluff, scénarios et jeux adultes : crée le salon et laisse AK’Games faire circuler le chaos.</p>
-        <div class="home-stat-row"><span>🎮 ${V014_READY_GAMES.size} jeux complets</span><span>📲 solo ou multijoueur</span><span>🏆 score de soirée</span></div>
+    <section class="home-launch" aria-label="Choisir un mode de jeu">
+      <div class="home-launch-intro">
+        <p>Choisis un mode et lance la soirée <span aria-hidden="true">✦</span></p>
       </div>
-      <div class="hero-orb hero-orb-one"></div><div class="hero-orb hero-orb-two"></div><div class="hero-grid-glow"></div>
-    </section>
-    <section class="home-action-stack">
-      <button class="home-action-card home-action-primary" data-home-action="create"><span class="home-action-icon">✦</span><span class="home-action-copy"><small>MODE SOIRÉE</small><strong>Créer une partie</strong><span>Ouvre une room et joue chacun sur son téléphone.</span></span><span class="home-action-arrow">→</span></button>
-      <div class="home-action-grid">
-        <button class="home-action-card home-action-secondary" data-home-action="join"><span class="home-action-icon">⌁</span><span class="home-action-copy"><small>J’AI UN CODE</small><strong>Rejoindre</strong><span>Retrouve la bande sans recréer de joueur.</span></span><span class="home-action-arrow">→</span></button>
-        <button class="home-action-card home-action-secondary home-action-phone" data-home-action="single"><span class="home-action-icon">▣</span><span class="home-action-copy"><small>PASS & PLAY</small><strong>Un téléphone</strong><span>Ajoutez les joueurs puis passez-vous l’écran.</span></span><span class="home-action-arrow">→</span></button>
+
+      <div class="home-mode-list">
+        <button class="home-mode-card home-mode-single" data-home-action="single">
+          <span class="home-mode-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false">
+              <rect x="14" y="6" width="20" height="36" rx="5"></rect>
+              <path d="M21 10h6"></path>
+              <path d="M22 37h4"></path>
+              <path class="spark" d="M35 9l4-4m-1 9h5m-7 3l3 3"></path>
+            </svg>
+          </span>
+          <span class="home-mode-copy">
+            <strong>Un téléphone</strong>
+            <span>Passez-vous le téléphone.</span>
+          </span>
+          <span class="home-mode-arrow" aria-hidden="true">›</span>
+        </button>
+
+        <button class="home-mode-card home-mode-create" data-home-action="create">
+          <span class="home-mode-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false">
+              <circle cx="24" cy="17" r="6"></circle>
+              <circle cx="12" cy="22" r="4"></circle>
+              <circle cx="36" cy="22" r="4"></circle>
+              <path d="M14 39c0-7 4-11 10-11s10 4 10 11"></path>
+              <path d="M4 39c0-5 3-9 8-9 2 0 4 .7 5 2"></path>
+              <path d="M44 39c0-5-3-9-8-9-2 0-4 .7-5 2"></path>
+            </svg>
+          </span>
+          <span class="home-mode-copy">
+            <strong>Créer une room</strong>
+            <span>Chacun joue sur son téléphone.</span>
+          </span>
+          <span class="home-mode-arrow" aria-hidden="true">›</span>
+        </button>
+
+        <button class="home-mode-card home-mode-join" data-home-action="join">
+          <span class="home-mode-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false">
+              <rect x="5" y="12" width="38" height="24" rx="7"></rect>
+              <path d="M13 20h5m4 0h5m4 0h4M13 28h4m5 0h5m4 0h4"></path>
+            </svg>
+          </span>
+          <span class="home-mode-copy">
+            <strong>Rejoindre</strong>
+            <span>J’ai déjà un code.</span>
+          </span>
+          <span class="home-mode-arrow" aria-hidden="true">›</span>
+        </button>
       </div>
-    </section>
-    <section class="home-feature-strip home-feature-v014">
-      <article><span>💣</span><div><strong>Défis & performance</strong><small>Mime, imitation, bombe et roulette</small></div></article>
-      <article><span>🧠</span><div><strong>Quiz & déduction</strong><small>Culture, cinéma, musique, logos et bluff</small></div></article>
-      <article><span>🌶️</span><div><strong>Pack adulte séparé</strong><small>Questions, défis et jeux à boire responsables</small></div></article>
     </section>`;
+
   document.querySelectorAll("[data-home-action]").forEach(button => button.addEventListener("click", () => {
     const action = button.dataset.homeAction;
     if (action === "single") { state.mode = "single"; pushScreen("home"); renderSetup(); }
