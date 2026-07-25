@@ -4374,15 +4374,15 @@ const V014_GAME_CONFIGS = {
   "Cinéma": { engine: "quiz", icon: "🍿", pack: "Quiz", data: "data/quiz-cinema.json", description: "Films cultes, animation, personnages et grandes répliques.", defaultRounds: 12 },
   "Musique": { engine: "quiz", icon: "🎵", pack: "Quiz", data: "data/quiz-musique.json", description: "Artistes, instruments, tubes et culture musicale.", defaultRounds: 12 },
   "Jeux vidéo": { engine: "quiz", icon: "🕹️", pack: "Quiz", data: "data/quiz-jeux-video.json", description: "Nintendo, jeux cultes, personnages et univers incontournables.", defaultRounds: 12 },
-  "Devine le logo": { engine: "quiz", icon: "🔎", pack: "Quiz", data: "data/quiz-logos.json", description: "Reconnais les marques grâce aux indices visuels décrits à l’écran.", defaultRounds: 12 },
+  "Devine le logo": { engine: "quiz", icon: "🔎", pack: "Quiz", data: "data/quiz-logos.json", description: "Reconnais la marque grâce à la description de son logo emblématique.", defaultRounds: 12 },
   "Plaide ta cause": { engine: "turn", icon: "⚖️", pack: "Bluff & argumentation", data: "data/plaide-cause.json", description: "Défends une opinion impossible et convaincs le groupe en moins d’une minute.", defaultRounds: 10, timer: 45 },
   "Fake ou Réel ?": { engine: "quiz", icon: "🧪", pack: "Bluff & argumentation", data: "data/fake-reel.json", description: "Une affirmation, deux camps : info réelle ou énorme intox ?", defaultRounds: 12 },
   "Alerte Rouge": { engine: "scenario", icon: "🚨", pack: "Histoires & scénarios", data: "data/alerte-rouge.json", description: "Le groupe vote pour décider quoi faire face à une situation qui dérape.", defaultRounds: 8 },
   "Tu me connais ou pas ?": { engine: "know", icon: "💭", pack: "Connaissance du groupe", data: "data/tu-me-connais.json", description: "Une personne répond en secret, les autres essaient de prévoir son choix.", defaultRounds: 10 },
   "Le Classement secret": { engine: "ranking", icon: "🏅", pack: "Connaissance du groupe", data: "data/classement-secret.json", description: "Classe cinq options en privé, puis découvre qui connaît vraiment ton numéro un.", defaultRounds: 8 },
   "Devinettes": { engine: "quiz", icon: "🧩", pack: "Jeux rapides", data: "data/devinettes.json", description: "Des énigmes courtes à résoudre avant les autres.", defaultRounds: 12 },
-  "Questions osées": { engine: "turn", icon: "🌶️", pack: "Pack adulte", data: "data/questions-osees.json", description: "Des questions intimes et audacieuses, sans obligation de répondre.", defaultRounds: 12, adultOnly: true, questionMode: true },
-  "Jeux à boire": { engine: "turn", icon: "🥂", pack: "Pack adulte", data: "data/jeux-a-boire.json", description: "Des règles collectives légères, avec hydratation et consommation responsable.", defaultRounds: 12, adultOnly: true, drinkingGame: true },
+  "Questions osées": { engine: "turn", icon: "🌶️", pack: "Pack adulte", data: "data/questions-osees.json", description: "Des questions intimes et audacieuses, sans obligation de répondre et sans classement.", defaultRounds: 12, adultOnly: true, questionMode: true, scoreless: true },
+  "Jeux à boire": { engine: "turn", icon: "🥂", pack: "Pack adulte", data: "data/jeux-a-boire.json", description: "Des règles collectives légères, avec boisson au choix, hydratation et aucun classement.", defaultRounds: 12, adultOnly: true, drinkingGame: true, scoreless: true },
   "Défis adultes": { engine: "turn", icon: "🔥", pack: "Pack adulte", data: "data/defis-adultes.json", description: "Défis de flirt, impro et confidences pour un groupe adulte consentant.", defaultRounds: 12, adultOnly: true }
 };
 
@@ -5058,3 +5058,297 @@ settingsBtn.addEventListener("click", event => {
   event.stopImmediatePropagation();
   alert("Termine la manche ou utilise le bouton de sortie du jeu avant d’ouvrir les paramètres.");
 }, true);
+
+
+/* =========================================================
+   AK'GAMES V1.0 — AUDIT PASSE 8
+   Contenu, règles, équilibrage et lisibilité du catalogue
+   ========================================================= */
+
+const AK_AUDIT8_GAME_META = {
+  "Qui de nous ?": { minPlayers: 2, time: "10–15 min", goal: "Votez pour la personne qui correspond le mieux à chaque situation." },
+  "Le premier qui rit a perdu": { minPlayers: 2, time: "5–10 min", goal: "Fais rire ton adversaire tout en gardant ton propre sérieux." },
+  "Qui ment le mieux ?": { minPlayers: 3, time: "15 min", goal: "Invente la réponse la plus crédible et récolte les votes du groupe." },
+  "Action ou Vérité": { minPlayers: 2, time: "10–20 min", goal: "À tour de rôle, relève une action ou réponds à une vérité. Passer reste toujours possible." },
+  "Je n’ai jamais": { minPlayers: 2, time: "10 min", goal: "Réponds en secret, puis découvrez les expériences communes du groupe." },
+  "Tu préfères": { minPlayers: 2, time: "10 min", goal: "Choisis entre deux options et compare ton camp à celui du groupe." },
+  "Même cerveau": { minPlayers: 2, time: "10 min", goal: "Écris la même réponse que les autres sans pouvoir vous concerter." },
+  "Minorité": { minPlayers: 3, time: "10 min", goal: "Choisis en secret. Le plus petit camp marque, sauf en cas d’égalité complète." },
+  "Qui a répondu ça ?": { minPlayers: 3, time: "15 min", goal: "Retrouve l’auteur de chaque réponse anonyme et brouille les pistes avec la tienne." },
+  "L’Imposteur sait presque tout": { minPlayers: 3, time: "15 min", goal: "Démasque la personne qui ne connaît que l’indice, avant qu’elle devine le mot." },
+  "Le Faux Expert": { minPlayers: 3, time: "15 min", goal: "Écoute la conférence, puis décide si l’orateur maîtrise le sujet ou improvise." },
+  "Qui suis-je ?": { minPlayers: 2, time: "10–15 min", goal: "Pose des questions fermées pour retrouver l’identité visible sur les autres écrans." },
+  "Roulette de défis": { minPlayers: 2, time: "10 min", goal: "Relève les défis tirés à tour de rôle, sans pénalité si tu préfères passer." },
+  "Mime": { minPlayers: 2, time: "10 min", goal: "Fais deviner le sujet sans parler avant la fin du chronomètre." },
+  "Imitation": { minPlayers: 2, time: "10 min", goal: "Imite la voix ou la situation afin que le groupe retrouve le sujet." },
+  "La Bombe": { minPlayers: 2, time: "5 min", goal: "Donne une réponse différente, puis passe vite le téléphone avant l’explosion." },
+  "Culture générale": { minPlayers: 2, time: "10 min", goal: "Réponds en secret et marque un point par bonne réponse." },
+  "Cinéma": { minPlayers: 2, time: "10 min", goal: "Réponds en secret aux questions sur les films et personnages." },
+  "Musique": { minPlayers: 2, time: "10 min", goal: "Réponds en secret aux questions de culture musicale." },
+  "Jeux vidéo": { minPlayers: 2, time: "10 min", goal: "Réponds en secret aux questions sur les jeux et leurs univers." },
+  "Devine le logo": { minPlayers: 2, time: "10 min", goal: "Identifie la marque à partir de la description de son logo." },
+  "Plaide ta cause": { minPlayers: 2, time: "10 min", goal: "Défends une opinion improbable avant la fin du chronomètre." },
+  "Fake ou Réel ?": { minPlayers: 2, time: "10 min", goal: "Décide si chaque affirmation est exacte ou trompeuse." },
+  "Alerte Rouge": { minPlayers: 2, time: "10 min", goal: "Votez pour la décision du groupe et découvrez les conséquences du scénario." },
+  "Tu me connais ou pas ?": { minPlayers: 2, time: "15 min", goal: "Prédis le choix secret de la personne désignée." },
+  "Le Classement secret": { minPlayers: 2, time: "15 min", goal: "Devine quelle option la personne ciblée a placée en tête." },
+  "Devinettes": { minPlayers: 2, time: "10 min", goal: "Résous les énigmes avant les autres et marque un point par bonne réponse." },
+  "Questions osées": { minPlayers: 2, time: "10 min", goal: "Réponds seulement si tu en as envie. Aucun point n’est attribué." },
+  "Jeux à boire": { minPlayers: 2, time: "15 min", goal: "Suivez des règles légères avec la boisson de votre choix. Aucun point n’est attribué." },
+  "Défis adultes": { minPlayers: 2, time: "10 min", goal: "Relève des défis de flirt et d’impro, avec droit de passer sans justification." }
+};
+
+function akAudit8BaseGameName(gameName) {
+  return String(gameName || "").replace(/ \+18$/, "");
+}
+
+function akAudit8GameMeta(gameName) {
+  return AK_AUDIT8_GAME_META[gameName] || AK_AUDIT8_GAME_META[akAudit8BaseGameName(gameName)] || {
+    minPlayers: 2,
+    time: "10 min",
+    goal: "Jouez les manches jusqu’à l’écran de résultat."
+  };
+}
+
+function akAudit8GameAvailability(gameName) {
+  if (gameName === "Blind Test") return { locked: true, reason: "Audio à intégrer séparément" };
+  const meta = akAudit8GameMeta(gameName);
+  if (state.players.length < Number(meta.minPlayers || 2)) {
+    return { locked: true, reason: `Nécessite ${meta.minPlayers} joueurs` };
+  }
+  if ((V014_GAME_CONFIGS[gameName]?.adultOnly || gameName.includes("+18")) && !state.adult) {
+    return { locked: true, reason: "Active le contenu adulte" };
+  }
+  return { locked: false, reason: "" };
+}
+
+function akAudit8CatalogBadges(gameName, multiplayer = false) {
+  const meta = akAudit8GameMeta(gameName);
+  const config = V014_GAME_CONFIGS[gameName];
+  return [
+    `<span class="badge">👥 ${meta.minPlayers}+</span>`,
+    `<span class="badge">⏱ ${escapeHtml(meta.time)}</span>`,
+    multiplayer ? `<span class="badge green">📲 synchronisé</span>` : `<span class="badge green">✓ disponible</span>`,
+    config?.drinkingGame ? `<span class="badge orange">🥤 boisson au choix</span>` : "",
+    config?.adultOnly || gameName.includes("+18") ? `<span class="badge orange">🔞 adulte</span>` : ""
+  ].join("");
+}
+
+function akAudit8AppendGameGuide(gameName) {
+  if (!screen || screen.querySelector(".audit8-game-guide")) return;
+  const setup = screen.querySelector(".setup-card-v07, .setup-card, .card");
+  if (!setup) return;
+  const meta = akAudit8GameMeta(gameName);
+  const guide = document.createElement("section");
+  guide.className = "audit8-game-guide";
+  guide.setAttribute("aria-label", "Règle rapide du jeu");
+  guide.innerHTML = `
+    <div><span>👥</span><strong>${meta.minPlayers}+ joueurs</strong></div>
+    <div><span>⏱</span><strong>${escapeHtml(meta.time)}</strong></div>
+    <p><span>🎯</span>${escapeHtml(meta.goal)}</p>`;
+  setup.insertAdjacentElement("afterend", guide);
+}
+
+function akAudit8PrepareQuizItem(item) {
+  if (!item || !Array.isArray(item.options) || !Number.isInteger(item.answer) || item.options.length < 3) {
+    return item ? { ...item } : item;
+  }
+  const pairs = item.options.map((option, originalIndex) => ({ option, originalIndex }));
+  const shuffled = shuffleArray(pairs);
+  return {
+    ...item,
+    options: shuffled.map(entry => entry.option),
+    answer: shuffled.findIndex(entry => entry.originalIndex === item.answer)
+  };
+}
+
+function akAudit8BalancedActionTruth(pool, count, memoryKey, mode = "mix") {
+  const safeCount = Math.max(0, Math.min(Number(count || 0), pool.length));
+  if (mode !== "mix") return selectFreshItems(pool, safeCount, memoryKey);
+  const actions = pool.filter(item => item.type === "action");
+  const truths = pool.filter(item => item.type === "truth");
+  const actionCount = Math.min(actions.length, Math.floor(safeCount / 2));
+  const truthCount = Math.min(truths.length, safeCount - actionCount);
+  const selectedActions = selectFreshItems(actions, actionCount, `${memoryKey}:action`);
+  const selectedTruths = selectFreshItems(truths, truthCount, `${memoryKey}:truth`);
+  const remaining = safeCount - selectedActions.length - selectedTruths.length;
+  const used = new Set([...selectedActions, ...selectedTruths].map(item => item.id));
+  const extras = remaining > 0
+    ? selectFreshItems(pool.filter(item => !used.has(item.id)), remaining, `${memoryKey}:extra`)
+    : [];
+  const firstAction = Math.random() < 0.5;
+  const result = [];
+  const left = [...selectedActions];
+  const right = [...selectedTruths];
+  while (left.length || right.length) {
+    const first = firstAction ? left : right;
+    const second = firstAction ? right : left;
+    if (first.length) result.push(first.shift());
+    if (second.length) result.push(second.shift());
+  }
+  return [...result, ...extras].slice(0, safeCount);
+}
+
+const akAudit8StartActionTruthGame = startActionTruthGame;
+startActionTruthGame = async function () {
+  if (state.mode !== "single") return akAudit8StartActionTruthGame();
+  const game = state.actionTruth;
+  screen.innerHTML = `<div class="notice">Mélange équilibré des actions et vérités…</div>`;
+  try {
+    let pool = await loadJsonFile("data/action-verite.json", "Impossible de charger les cartes.");
+    if (state.adult && game.includeAdult) {
+      pool = pool.concat(await loadJsonFile("data/action-verite-adulte.json", "Impossible de charger les cartes adultes."));
+    }
+    if (game.mode !== "mix") pool = pool.filter(item => item.type === game.mode);
+    game.prompts = akAudit8BalancedActionTruth(pool, Math.min(game.roundCount, pool.length), `solo:action-truth:${game.mode}`, game.mode);
+    game.currentIndex = 0;
+    game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.results = [];
+    renderActionTruthRound();
+  } catch (error) {
+    alert(error.message || "Impossible de lancer la partie.");
+    renderActionTruthSetup();
+  }
+};
+
+const akAudit8StartMegaGame = startMegaGame;
+startMegaGame = async function () {
+  if (state.mode !== "single") return akAudit8StartMegaGame();
+  const game = state.megaGame;
+  if (!game) return;
+  screen.innerHTML = `<div class="notice">Préparation de ${escapeHtml(game.gameName)}…</div>`;
+  try {
+    const pool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
+    let items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `solo:mega:${game.gameName}`);
+    if (game.engine === "quiz") items = items.map(akAudit8PrepareQuizItem);
+    game.items = items;
+    game.currentIndex = 0;
+    game.currentPlayerIndex = 0;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    game.scores = v014ScoreMap();
+    game.rounds = [];
+    game.revealed = false;
+    game.targetAnswer = null;
+    game.targetRanking = [];
+    game.rankingDraft = [];
+    game.bombEndsAt = null;
+    game.bombPlayerIndex = Math.floor(Math.random() * Math.max(1, state.players.length));
+    game.currentResult = null;
+    renderMegaCurrent();
+  } catch (error) {
+    console.error(error);
+    alert(error.message || "Impossible de lancer le jeu.");
+    renderMegaSetup();
+  }
+};
+
+finishMegaTurn = function (success) {
+  const game = state.megaGame;
+  if (!game) return;
+  clearV014Timer();
+  const player = state.players[game.currentIndex % state.players.length];
+  const scoreless = Boolean(game.config.scoreless || game.config.questionMode || game.config.drinkingGame);
+  if (success && !scoreless) game.scores[player.id] = Number(game.scores[player.id] || 0) + 1;
+  game.rounds.push({ itemId: game.items[game.currentIndex]?.id, playerId: player.id, success });
+  game.currentIndex += 1;
+  game.revealed = false;
+  renderMegaCurrent();
+};
+
+renderMegaFinal = function () {
+  const game = state.megaGame;
+  clearV014Timer();
+  const scoreless = Boolean(game.config.scoreless || game.config.questionMode || game.config.drinkingGame);
+  title.textContent = scoreless ? "Partie terminée" : "Classement final";
+  setBackVisible(false);
+
+  if (scoreless) {
+    const completed = game.rounds.length;
+    const participated = game.rounds.filter(round => round.success).length;
+    screen.innerHTML = `
+      <section class="winner-stage winner-stage-v07 mega-final-stage scoreless-final"><div class="winner-crown">${game.config.icon}✨</div><h2>Partie terminée</h2><p>${completed} carte${completed > 1 ? "s" : ""} parcourue${completed > 1 ? "s" : ""}, dont ${participated} validée${participated > 1 ? "s" : ""}. Ici, aucune réponse intime et aucune boisson ne rapporte de point.</p></section>
+      <div class="notice">Le droit de passer fait partie des règles. Le récapitulatif ne désigne aucun gagnant.</div>
+      <div class="toolbar"><button id="replayMega" class="secondary-btn">Rejouer</button><button id="otherMega" class="primary-btn">Autre jeu</button></div>`;
+  } else {
+    const ranking = [...state.players].sort((a, b) => Number(game.scores[b.id] || 0) - Number(game.scores[a.id] || 0));
+    const best = Number(game.scores[ranking[0]?.id] || 0);
+    const winners = ranking.filter(player => Number(game.scores[player.id] || 0) === best && best > 0);
+    screen.innerHTML = `
+      <section class="winner-stage winner-stage-v07 mega-final-stage"><div class="winner-crown">${game.config.icon}🏆</div><h2>${winners.length ? winners.map(player => escapeHtml(player.name)).join(" et ") : "Partie terminée"}</h2><p>${winners.length ? `${winners.length > 1 ? "terminent" : "termine"} en tête de ${escapeHtml(game.gameName)}.` : "Le groupe a traversé toutes les manches."}</p></section>
+      <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
+      <div class="toolbar"><button id="replayMega" class="secondary-btn">Rejouer</button><button id="otherMega" class="primary-btn">Autre jeu</button></div>`;
+  }
+
+  document.querySelector("#replayMega")?.addEventListener("click", () => {
+    const name = game.gameName;
+    const replay = { roundCount: game.roundCount, durationSeconds: game.durationSeconds };
+    resetMegaGame(name, replay);
+    renderMegaSetup();
+  });
+  document.querySelector("#otherMega")?.addEventListener("click", () => {
+    state.megaGame = null;
+    renderPlayChoice();
+  });
+};
+
+renderGames = function () {
+  clearV09Timer();
+  clearV014Timer();
+  const category = categories.find(item => item.id === state.currentCategory);
+  if (!category) return renderCategories();
+  title.textContent = category.name;
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="catalog-intro catalog-intro-v014"><span>${category.emoji}</span><div><small>CATÉGORIE</small><strong>${escapeHtml(category.name)}</strong><p>${escapeHtml(category.description)}</p></div><b>${category.games.filter(game => V014_READY_GAMES.has(game)).length} jeux</b></section>
+    <section class="game-list game-list-v07">${category.games.map(game => {
+      const ready = V014_READY_GAMES.has(game);
+      const isNew = V014_NEW_GAMES.has(game);
+      const icon = V014_GAME_ICONS[game] || "🎲";
+      const availability = ready ? akAudit8GameAvailability(game) : { locked: true, reason: "À intégrer" };
+      const disabled = availability.locked;
+      return `<button class="game-card game-card-v07 ${disabled ? "disabled" : ""} ${isNew ? "game-card-new game-card-mega" : ""}" ${disabled ? "disabled" : ""} data-game="${escapeHtml(game)}"><span class="game-card-icon">${icon}</span><span class="game-card-copy"><strong>${escapeHtml(game)}</strong><span class="helper">${escapeHtml(disabled ? availability.reason : akAudit8GameMeta(game).goal)}</span><span class="game-meta">${ready ? akAudit8CatalogBadges(game, false) : `<span class="badge">bientôt</span>`}</span></span><span class="game-card-chevron">›</span></button>`;
+    }).join("")}</section>`;
+
+  document.querySelectorAll("[data-game]:not([disabled])").forEach(button => button.addEventListener("click", () => {
+    const game = button.dataset.game;
+    const availability = akAudit8GameAvailability(game);
+    if (availability.locked) return alert(availability.reason);
+    if (launchV014Game(game)) return;
+    if (game === "Qui de nous ?") { pushScreen("games"); resetWhoUsState(); renderWhoUsSetup(); return; }
+    if (game === "Le premier qui rit a perdu") { pushScreen("games"); resetLaughDuelState(); renderLaughDuelSetup(); return; }
+    if (game === "Qui ment le mieux ?") { pushScreen("games"); resetBestLiarState(); renderBestLiarSetup(); return; }
+    if (game === "Action ou Vérité" || game === "Action ou Vérité +18") { pushScreen("games"); resetActionTruthState(game.includes("+18")); renderActionTruthSetup(); return; }
+    if (game === "Je n’ai jamais" || game === "Je n’ai jamais +18") { pushScreen("games"); resetAmbiancePollState("never", game.includes("+18")); renderAmbiancePollSetup(); return; }
+    if (game === "Tu préfères" || game === "Tu préfères +18") { pushScreen("games"); resetAmbiancePollState("would", game.includes("+18")); renderAmbiancePollSetup(); return; }
+    if (game === "Même cerveau") { pushScreen("games"); resetSameBrainState(); renderSameBrainSetup(); return; }
+    if (game === "Minorité") { pushScreen("games"); resetMinorityState(); renderMinoritySetup(); return; }
+    if (game === "Qui a répondu ça ?") { pushScreen("games"); resetWhoAnsweredState(); renderWhoAnsweredSetup(); return; }
+    if (game === "L’Imposteur sait presque tout") { pushScreen("games"); resetAlmostImpostorState(); renderAlmostImpostorSetup(); return; }
+    if (game === "Le Faux Expert") { pushScreen("games"); resetFakeExpertState(); renderFakeExpertSetup(); return; }
+    if (game === "Qui suis-je ?") { pushScreen("games"); resetWhoAmIState(); renderWhoAmISetup(); return; }
+    renderGamePlaceholder(game);
+  }));
+};
+
+function akAudit8WrapSetup(renderer, gameName) {
+  return function (...args) {
+    const result = renderer.apply(this, args);
+    const resolvedName = typeof gameName === "function" ? gameName() : gameName;
+    window.requestAnimationFrame(() => akAudit8AppendGameGuide(resolvedName));
+    return result;
+  };
+}
+
+renderWhoUsSetup = akAudit8WrapSetup(renderWhoUsSetup, "Qui de nous ?");
+renderLaughDuelSetup = akAudit8WrapSetup(renderLaughDuelSetup, "Le premier qui rit a perdu");
+renderBestLiarSetup = akAudit8WrapSetup(renderBestLiarSetup, "Qui ment le mieux ?");
+renderActionTruthSetup = akAudit8WrapSetup(renderActionTruthSetup, () => state.actionTruth?.forceAdult ? "Action ou Vérité +18" : "Action ou Vérité");
+renderAmbiancePollSetup = akAudit8WrapSetup(renderAmbiancePollSetup, () => state.ambiancePoll?.type === "never" ? (state.ambiancePoll?.forceAdult ? "Je n’ai jamais +18" : "Je n’ai jamais") : (state.ambiancePoll?.forceAdult ? "Tu préfères +18" : "Tu préfères"));
+renderSameBrainSetup = akAudit8WrapSetup(renderSameBrainSetup, "Même cerveau");
+renderMinoritySetup = akAudit8WrapSetup(renderMinoritySetup, "Minorité");
+renderWhoAnsweredSetup = akAudit8WrapSetup(renderWhoAnsweredSetup, "Qui a répondu ça ?");
+renderAlmostImpostorSetup = akAudit8WrapSetup(renderAlmostImpostorSetup, "L’Imposteur sait presque tout");
+renderFakeExpertSetup = akAudit8WrapSetup(renderFakeExpertSetup, "Le Faux Expert");
+renderWhoAmISetup = akAudit8WrapSetup(renderWhoAmISetup, "Qui suis-je ?");
+renderMegaSetup = akAudit8WrapSetup(renderMegaSetup, () => state.megaGame?.gameName || "Jeu");

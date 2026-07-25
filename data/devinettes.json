@@ -109,15 +109,15 @@
   },
   {
     "id": "q_010_je_possede_une_cle_mais_a",
-    "question": "Je possède une clé mais aucune serrure. Qui suis-je ?",
+    "question": "J’ai beaucoup de touches, mais je n’ouvre aucune porte. Qui suis-je ?",
     "options": [
       "Un piano",
-      "Une carte",
-      "Un cadenas",
-      "Une porte"
+      "Une télécommande",
+      "Un clavier",
+      "Une serrure"
     ],
     "answer": 0,
-    "explanation": "Un piano possède des touches, parfois appelées clés."
+    "explanation": "Un piano possède de nombreuses touches, mais aucune ne sert à ouvrir une porte."
   },
   {
     "id": "q_011_je_tombe_sans_me_faire_ma",
@@ -145,27 +145,27 @@
   },
   {
     "id": "q_013_jai_une_tete_et_une_queue",
-    "question": "J’ai une tête et une queue mais pas de corps. Qui suis-je ?",
+    "question": "J’ai pile et face, mais je n’ai pas de corps. Qui suis-je ?",
     "options": [
       "Une pièce",
-      "Un serpent",
-      "Une comète",
-      "Une souris"
+      "Une carte",
+      "Une médaille",
+      "Une horloge"
     ],
     "answer": 0,
-    "explanation": "Une pièce a pile et face."
+    "explanation": "Une pièce possède un côté pile et un côté face."
   },
   {
     "id": "q_014_jai_un_cou_mais_pas_de_te",
-    "question": "J’ai un cou mais pas de tête. Qui suis-je ?",
+    "question": "J’ai un goulot, mais je ne bois jamais. Qui suis-je ?",
     "options": [
       "Une bouteille",
+      "Une rivière",
       "Une chemise",
-      "Une guitare",
-      "Toutes ces réponses"
+      "Une guitare"
     ],
-    "answer": 3,
-    "explanation": "Une bouteille, une chemise et une guitare ont un cou."
+    "answer": 0,
+    "explanation": "Le haut étroit d’une bouteille s’appelle son goulot."
   },
   {
     "id": "q_015_on_me_prend_avant_de_me_d",
@@ -217,15 +217,15 @@
   },
   {
     "id": "q_019_quest_ce_qui_a_quatre_rou",
-    "question": "Qu’est-ce qui a quatre roues et des mouches ?",
+    "question": "Je possède quatre pieds, mais je ne marche jamais. Qui suis-je ?",
     "options": [
-      "Une poubelle",
-      "Une voiture",
-      "Un avion",
-      "Une trottinette"
+      "Une table",
+      "Un chien",
+      "Une chaise roulante",
+      "Un cheval"
     ],
     "answer": 0,
-    "explanation": "Une poubelle sur roues peut attirer les mouches."
+    "explanation": "Une table possède généralement quatre pieds, mais reste immobile."
   },
   {
     "id": "q_020_je_peux_remplir_une_piece",
@@ -313,15 +313,15 @@
   },
   {
     "id": "q_027_quest_ce_qui_a_des_mains_",
-    "question": "Qu’est-ce qui a des mains mais ne peut pas applaudir ?",
+    "question": "J’ai deux aiguilles, mais je ne couds jamais. Qui suis-je ?",
     "options": [
       "Une horloge",
-      "Un mannequin",
-      "Un robot",
-      "Une statue"
+      "Une boussole",
+      "Une machine à coudre",
+      "Une infirmière"
     ],
     "answer": 0,
-    "explanation": "Les aiguilles d’une horloge sont appelées mains."
+    "explanation": "Les deux aiguilles d’une horloge indiquent les heures et les minutes."
   },
   {
     "id": "q_028_je_suis_fait_pour_etre_ro",
@@ -373,15 +373,15 @@
   },
   {
     "id": "q_032_je_possede_des_branches_m",
-    "question": "Je possède des branches mais ni feuilles ni tronc. Qui suis-je ?",
+    "question": "J’ai des branches, mais ni tronc ni feuilles. Qui suis-je ?",
     "options": [
       "Une banque",
-      "Une rivière",
-      "Un magasin",
-      "Toutes ces réponses"
+      "Un arbre",
+      "Un bouquet",
+      "Une forêt"
     ],
-    "answer": 3,
-    "explanation": "Banques, rivières et magasins peuvent avoir des branches."
+    "answer": 0,
+    "explanation": "Une banque peut posséder plusieurs branches ou agences."
   },
   {
     "id": "q_033_je_suis_au_milieu_de_pari",
@@ -445,15 +445,15 @@
   },
   {
     "id": "q_038_je_reste_derriere_toi_qua",
-    "question": "Je reste derrière toi quand tu avances. Qui suis-je ?",
+    "question": "Plus tu avances, plus je reste derrière toi. Qui suis-je ?",
     "options": [
       "Ton passé",
-      "Ton ombre",
-      "Une trace",
-      "Toutes ces réponses"
+      "Ton avenir",
+      "Ton reflet",
+      "Ton prénom"
     ],
-    "answer": 3,
-    "explanation": "Selon le sens, les trois restent derrière."
+    "answer": 0,
+    "explanation": "Le passé reste derrière toi à mesure que tu avances."
   },
   {
     "id": "q_039_je_suis_une_maison_sans_p",
@@ -466,5 +466,17 @@
     ],
     "answer": 0,
     "explanation": "Une pomme coupée révèle une forme d’étoile autour des pépins."
+  },
+  {
+    "id": "q_040_sans_moi_paris_serait_pris",
+    "question": "Sans moi, Paris serait « pris ». Qui suis-je ?",
+    "options": [
+      "La lettre A",
+      "La lettre P",
+      "La Seine",
+      "La tour Eiffel"
+    ],
+    "answer": 0,
+    "explanation": "En retirant la lettre A de « Paris », il reste « Pris »."
   }
 ]

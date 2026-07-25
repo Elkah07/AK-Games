@@ -81,7 +81,7 @@
   },
   {
     "id": "boire_017",
-    "text": "Fais un compliment sincère à quelqu’un ou prends une petite gorgée.",
+    "text": "Fais un compliment sincère à quelqu’un. Cette personne choisit ensuite qui distribue une petite gorgée.",
     "category": "drink"
   },
   {
@@ -191,7 +191,7 @@
   },
   {
     "id": "boire_039",
-    "text": "Choisis un joueur : il peut te poser une question. Réponds ou prends une petite gorgée.",
+    "text": "Choisis un joueur : il peut te poser une question légère. Tu peux répondre ou utiliser un joker, sans aucune pénalité.",
     "category": "drink"
   },
   {
@@ -251,7 +251,7 @@
   },
   {
     "id": "boire_051",
-    "text": "Tout le monde change de place. La dernière personne assise prend une petite gorgée.",
+    "text": "Tout le monde choisit un surnom pour le prochain tour. La dernière personne prête prend une petite gorgée.",
     "category": "drink"
   },
   {
@@ -341,7 +341,7 @@
   },
   {
     "id": "boire_069",
-    "text": "Fais une pose de photo de groupe. Si quelqu’un refuse, cette personne prend une petite gorgée.",
+    "text": "Propose une pose de photo de groupe. Ceux qui veulent participent ; sinon, faites la pose sans prendre de photo.",
     "category": "drink"
   },
   {

@@ -189,7 +189,7 @@
     "id": "adulte_action_002",
     "type": "action",
     "category": "adult",
-    "text": "Laisse le groupe choisir un emoji que tu dois envoyer à ton dernier crush ou contact ambigu."
+    "text": "Laisse le groupe choisir un emoji, puis invente le message de flirt fictif qui irait avec."
   },
   {
     "id": "adulte_action_003",
@@ -207,7 +207,7 @@
     "id": "adulte_action_005",
     "type": "action",
     "category": "adult",
-    "text": "Lis à voix haute le dernier message de flirt que tu peux montrer sans exposer quelqu’un."
+    "text": "Lis à voix haute un message de flirt entièrement inventé et beaucoup trop dramatique."
   },
   {
     "id": "adulte_action_006",

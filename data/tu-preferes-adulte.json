@@ -7,8 +7,8 @@
   },
   {
     "id": "prefere_adulte_002",
-    "optionA": "Montrer tous tes messages à ton partenaire",
-    "optionB": "Lui donner accès à toutes tes photos",
+    "optionA": "Partager votre calendrier en détail",
+    "optionB": "Garder chacun un agenda totalement privé",
     "category": "adult"
   },
   {
@@ -175,8 +175,8 @@
   },
   {
     "id": "prefere_adulte_030",
-    "optionA": "Partager tous vos mots de passe",
-    "optionB": "Garder chacun une vie numérique totalement privée",
+    "optionA": "Partager votre localisation seulement lors des trajets",
+    "optionB": "Ne jamais utiliser de localisation partagée",
     "category": "adult"
   },
   {

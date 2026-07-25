@@ -643,9 +643,9 @@
     "id": "minorite_065",
     "question": "Tu ne peux plus utiliser qu’un emoji…",
     "options": [
-      "😂",
-      "❤️",
-      "😭"
+      "😂 Rire",
+      "❤️ Cœur",
+      "😭 Pleurer"
     ],
     "category": "classic"
   },

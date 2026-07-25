@@ -433,7 +433,7 @@
   },
   {
     "id": "dossiers_013_invente_une_raison_pour_laquelle_tu_connaitrais_le",
-    "prompt": "Invente une raison pour laquelle tu connaîtrais le mot de passe d'un ex.",
+    "prompt": "Invente une raison pour laquelle tu connaîtrais le code secret d’un ancien club très fermé.",
     "category": "dossiers",
     "adult": false
   },
@@ -535,7 +535,7 @@
   },
   {
     "id": "chaos_010_raconte_comment_tu_as_perdu_tous_tes_vetements_san",
-    "prompt": "Raconte comment tu as perdu tous tes vêtements sans te faire voler.",
+    "prompt": "Raconte comment toutes tes affaires ont disparu pendant un voyage sans qu’on te les ait volées.",
     "category": "chaos",
     "adult": false
   },

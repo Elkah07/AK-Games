@@ -4855,7 +4855,8 @@
           durationSeconds: game.durationSeconds,
           privatePrompt: Boolean(game.config.privatePrompt),
           questionMode: Boolean(game.config.questionMode),
-          drinkingGame: Boolean(game.config.drinkingGame)
+          drinkingGame: Boolean(game.config.drinkingGame),
+          scoreless: Boolean(game.config.scoreless || game.config.questionMode || game.config.drinkingGame)
         },
         bombEndsAt: game.engine === "bomb" ? AKFirebase.now() + Number(game.durationSeconds || 25) * 1000 : null,
         turnEndsAt: game.engine === "turn" && game.config.timer ? AKFirebase.now() + Number(game.durationSeconds || 45) * 1000 : null,
@@ -4935,7 +4936,7 @@
     state.multiProcessingActionId = lock;
     const success = Boolean(action?.payload?.success) && !expired;
     const scores = { ...(gameState.scores || {}) };
-    if (success) scores[gameState.currentPlayerId] = Number(scores[gameState.currentPlayerId] || 0) + 1;
+    if (success && !gameState.settings?.scoreless) scores[gameState.currentPlayerId] = Number(scores[gameState.currentPlayerId] || 0) + 1;
     const round = Number(gameState.currentIndex || 0);
     const next = round + 1;
     const finished = next >= (gameState.items || []).length;
@@ -5369,7 +5370,7 @@
       { key: "never-have-i-ever", minPlayers: 2, descriptor: { type: "never-have-i-ever", config: { roundCount: 10, includeAdult: false } } },
       { key: "would-you-rather", minPlayers: 2, descriptor: { type: "would-you-rather", config: { roundCount: 10, includeAdult: false } } },
       { key: "same-brain", minPlayers: 2, descriptor: { type: "same-brain", config: { roundCount: 10, includeAdult: false } } },
-      { key: "minority", minPlayers: 2, descriptor: { type: "minority", config: { roundCount: 10, includeAdult: false } } },
+      { key: "minority", minPlayers: 3, descriptor: { type: "minority", config: { roundCount: 10, includeAdult: false } } },
       { key: "who-answered", minPlayers: 3, descriptor: { type: "who-answered", config: { roundCount: Math.max(6, state.players.length), includeAdult: false } } },
       { key: "almost-impostor", minPlayers: 3, descriptor: { type: "almost-impostor", config: { roundCount: 6, includeAdult: false, discussionSeconds: 60 } } },
       { key: "fake-expert", minPlayers: 3, descriptor: { type: "fake-expert", config: { roundCount: Math.max(5, state.players.length), includeAdult: false, speechSeconds: 60 } } },
@@ -6482,5 +6483,170 @@
       else secureRenderWhoAmIResults(gameState);
     }
   };
+
+
+  /* =========================================================
+     AK'GAMES V1.0 — AUDIT PASSE 8
+     Équilibrage multijoueur et catalogue explicite
+     ========================================================= */
+
+  const akAudit8MultiStartActionTruthGame = startActionTruthGame;
+  startActionTruthGame = async function () {
+    if (!isMultiplayer()) return akAudit8MultiStartActionTruthGame();
+    if (!state.isHost) return;
+    const game = state.actionTruth;
+    screen.innerHTML = `<div class="notice">Synchronisation équilibrée des cartes…</div>`;
+    try {
+      let pool = await loadJsonFile("data/action-verite.json", "Impossible de charger les cartes.");
+      if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/action-verite-adulte.json", "Impossible de charger les cartes adultes."));
+      if (game.mode !== "mix") pool = pool.filter(item => item.type === game.mode);
+      const prompts = akAudit8BalancedActionTruth(pool, Math.min(game.roundCount, pool.length), `multi:action-truth:${game.mode}`, game.mode);
+      const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+      await AKFirebase.setGame(state.roomCode, { state: {
+        type: "action-truth", phase: "prompt", sessionGameId: createSessionGameId("action-truth"), prompts,
+        currentIndex: 0, currentPlayerId: state.players[0]?.id, scores, results: {},
+        settings: { roundCount: prompts.length, mode: game.mode, includeAdult: Boolean(game.includeAdult) },
+        startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
+      }});
+      state.multiView = "ambiance-game";
+    } catch (error) {
+      console.error(error);
+      alert(error.message || "Impossible de lancer la partie.");
+      renderActionTruthSetup();
+    }
+  };
+
+  const akAudit8MultiStartMegaGame = startMegaGame;
+  startMegaGame = async function () {
+    if (!isMultiplayer()) return akAudit8MultiStartMegaGame();
+    if (!state.isHost || !state.megaGame) return;
+    const game = state.megaGame;
+    screen.innerHTML = `<div class="notice">Synchronisation de ${escapeHtml(game.gameName)}…</div>`;
+    try {
+      const pool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
+      let items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `multi:mega:${game.gameName}`);
+      if (game.engine === "quiz") items = items.map(akAudit8PrepareQuizItem);
+      const playerIds = state.players.map(player => player.id);
+      const firstPlayerId = playerIds[0] || null;
+      const type = megaMultiType(game.engine);
+      const baseState = {
+        type,
+        phase: game.engine === "know" || game.engine === "ranking" ? "target" : game.engine === "bomb" ? "playing" : game.engine === "quiz" || game.engine === "scenario" ? "voting" : "turn",
+        sessionGameId: createSessionGameId(type),
+        items,
+        currentIndex: 0,
+        currentPlayerId: game.engine === "bomb" ? playerIds[Math.floor(Math.random() * Math.max(1, playerIds.length))] : firstPlayerId,
+        targetId: firstPlayerId,
+        scores: Object.fromEntries(playerIds.map(id => [id, 0])),
+        rounds: {},
+        currentResult: null,
+        settings: {
+          gameName: game.gameName,
+          icon: game.config.icon,
+          engine: game.engine,
+          roundCount: items.length,
+          durationSeconds: game.durationSeconds,
+          privatePrompt: Boolean(game.config.privatePrompt),
+          questionMode: Boolean(game.config.questionMode),
+          drinkingGame: Boolean(game.config.drinkingGame),
+          scoreless: Boolean(game.config.scoreless || game.config.questionMode || game.config.drinkingGame)
+        },
+        bombEndsAt: game.engine === "bomb" ? AKFirebase.now() + Number(game.durationSeconds || 25) * 1000 : null,
+        turnEndsAt: game.engine === "turn" && game.config.timer ? AKFirebase.now() + Number(game.durationSeconds || 45) * 1000 : null,
+        startedAt: AKFirebase.now(),
+        updatedAt: AKFirebase.now()
+      };
+      await AKFirebase.setGame(state.roomCode, { state: baseState, votes: null, answers: null, actions: null });
+    } catch (error) {
+      console.error(error);
+      alert(error.message || "Impossible de lancer le jeu.");
+      renderMegaSetup();
+    }
+  };
+
+  renderMultiMegaFinal = function (gameState) {
+    clearV014MultiTimer();
+    const scoreless = Boolean(gameState.settings?.scoreless || gameState.settings?.questionMode || gameState.settings?.drinkingGame);
+    title.textContent = scoreless ? "Partie terminée" : "Classement final";
+    setBackVisible(false);
+
+    if (scoreless) {
+      screen.innerHTML = `
+        <section class="winner-stage winner-stage-v07 mega-final-stage scoreless-final"><div class="winner-crown">${escapeHtml(gameState.settings?.icon || "🎮")}✨</div><h2>Partie terminée</h2><p>${escapeHtml(gameState.settings?.gameName || "Ce jeu")} se termine sans classement : répondre, boire ou passer ne rapporte volontairement aucun point.</p></section>
+        <div class="notice">Le consentement et le confort du groupe passent avant le score.</div>
+        ${renderPostGameContinuation(gameState)}`;
+    } else {
+      const ranking = [...state.players].sort((a, b) => Number(gameState.scores?.[b.id] || 0) - Number(gameState.scores?.[a.id] || 0));
+      const best = Number(gameState.scores?.[ranking[0]?.id] || 0);
+      const winners = ranking.filter(player => Number(gameState.scores?.[player.id] || 0) === best && best > 0);
+      screen.innerHTML = `
+        <section class="winner-stage winner-stage-v07 mega-final-stage"><div class="winner-crown">${escapeHtml(gameState.settings?.icon || "🎮")}🏆</div><h2>${winners.length ? winners.map(player => escapeHtml(player.name)).join(" et ") : "Partie terminée"}</h2><p>${winners.length ? `${winners.length > 1 ? "terminent" : "termine"} en tête de ${escapeHtml(gameState.settings?.gameName || "la partie")}.` : "Toutes les manches sont terminées."}</p></section>
+        <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(gameState.scores?.[player.id] || 0)} pts</span></div>`).join("")}</section>
+        ${renderPostGameContinuation(gameState)}`;
+    }
+    ensureEveningResult(gameState);
+    bindPostGameContinuation(gameState);
+  };
+
+  renderGames = function () {
+    if (!isMultiplayer()) return localRenderGames();
+    clearV09MultiTimer();
+    clearV014MultiTimer();
+    const category = categories.find(item => item.id === state.currentCategory);
+    if (!category) return renderCategories();
+    title.textContent = category.name;
+    setBackVisible(true);
+    screen.innerHTML = `
+      <section class="catalog-intro catalog-intro-v014"><span>${category.emoji}</span><div><small>CATÉGORIE</small><strong>${escapeHtml(category.name)}</strong><p>${escapeHtml(category.description)}</p></div><b>${category.games.filter(game => V014_READY_GAMES.has(game)).length} jeux</b></section>
+      <section class="game-list game-list-v07">${category.games.map(game => {
+        const ready = V014_READY_GAMES.has(game);
+        const isNew = V014_NEW_GAMES.has(game);
+        const icon = V014_GAME_ICONS[game] || "🎲";
+        const availability = ready ? akAudit8GameAvailability(game) : { locked: true, reason: "À intégrer" };
+        return `<button class="game-card game-card-v07 ${availability.locked ? "disabled" : ""} ${isNew ? "game-card-new game-card-mega" : ""}" ${availability.locked ? "disabled" : ""} data-game="${escapeHtml(game)}"><span class="game-card-icon">${icon}</span><span class="game-card-copy"><strong>${escapeHtml(game)}</strong><span class="helper">${escapeHtml(availability.locked ? availability.reason : akAudit8GameMeta(game).goal)}</span><span class="game-meta">${ready ? akAudit8CatalogBadges(game, true) : `<span class="badge">bientôt</span>`}</span></span><span class="game-card-chevron">›</span></button>`;
+      }).join("")}</section>`;
+
+    document.querySelectorAll("[data-game]:not([disabled])").forEach(button => button.addEventListener("click", () => {
+      const game = button.dataset.game;
+      const availability = akAudit8GameAvailability(game);
+      if (availability.locked) return alert(availability.reason);
+      if (V014_GAME_CONFIGS[game]) { state.multiView = "mega-setup"; pushScreen("games"); resetMegaGame(game); renderMegaSetup(); return; }
+      if (game === "Qui de nous ?") { state.multiView = "who-us-setup"; pushScreen("games"); resetWhoUsState(); renderWhoUsSetup(); return; }
+      if (game === "Le premier qui rit a perdu") { state.multiView = "laugh-duel-setup"; pushScreen("games"); resetLaughDuelState(); renderLaughDuelSetup(); return; }
+      if (game === "Qui ment le mieux ?") { state.multiView = "best-liar-setup"; pushScreen("games"); resetBestLiarState(); renderBestLiarSetup(); return; }
+      if (game === "Action ou Vérité" || game === "Action ou Vérité +18") { state.multiView = "action-truth-setup"; pushScreen("games"); resetActionTruthState(game.includes("+18")); renderActionTruthSetup(); return; }
+      if (game === "Je n’ai jamais" || game === "Je n’ai jamais +18") { state.multiView = "ambiance-poll-setup"; pushScreen("games"); resetAmbiancePollState("never", game.includes("+18")); renderAmbiancePollSetup(); return; }
+      if (game === "Tu préfères" || game === "Tu préfères +18") { state.multiView = "ambiance-poll-setup"; pushScreen("games"); resetAmbiancePollState("would", game.includes("+18")); renderAmbiancePollSetup(); return; }
+      if (game === "Même cerveau") { state.multiView = "same-brain-setup"; pushScreen("games"); resetSameBrainState(); renderSameBrainSetup(); return; }
+      if (game === "Minorité") { state.multiView = "minority-setup"; pushScreen("games"); resetMinorityState(); renderMinoritySetup(); return; }
+      if (game === "Qui a répondu ça ?") { state.multiView = "who-answered-setup"; pushScreen("games"); resetWhoAnsweredState(); renderWhoAnsweredSetup(); return; }
+      if (game === "L’Imposteur sait presque tout") { state.multiView = "almost-impostor-setup"; pushScreen("games"); resetAlmostImpostorState(); renderAlmostImpostorSetup(); return; }
+      if (game === "Le Faux Expert") { state.multiView = "fake-expert-setup"; pushScreen("games"); resetFakeExpertState(); renderFakeExpertSetup(); return; }
+      if (game === "Qui suis-je ?") { state.multiView = "who-am-i-setup"; pushScreen("games"); resetWhoAmIState(); renderWhoAmISetup(); return; }
+      renderMultiNotReady(game);
+    }));
+  };
+
+  function akAudit8WrapMultiSetup(renderer, gameName) {
+    return function (...args) {
+      const result = renderer.apply(this, args);
+      const resolvedName = typeof gameName === "function" ? gameName() : gameName;
+      window.requestAnimationFrame(() => akAudit8AppendGameGuide(resolvedName));
+      return result;
+    };
+  }
+
+  renderWhoUsSetup = akAudit8WrapMultiSetup(renderWhoUsSetup, "Qui de nous ?");
+  renderLaughDuelSetup = akAudit8WrapMultiSetup(renderLaughDuelSetup, "Le premier qui rit a perdu");
+  renderBestLiarSetup = akAudit8WrapMultiSetup(renderBestLiarSetup, "Qui ment le mieux ?");
+  renderActionTruthSetup = akAudit8WrapMultiSetup(renderActionTruthSetup, () => state.actionTruth?.forceAdult ? "Action ou Vérité +18" : "Action ou Vérité");
+  renderAmbiancePollSetup = akAudit8WrapMultiSetup(renderAmbiancePollSetup, () => state.ambiancePoll?.type === "never" ? (state.ambiancePoll?.forceAdult ? "Je n’ai jamais +18" : "Je n’ai jamais") : (state.ambiancePoll?.forceAdult ? "Tu préfères +18" : "Tu préfères"));
+  renderSameBrainSetup = akAudit8WrapMultiSetup(renderSameBrainSetup, "Même cerveau");
+  renderMinoritySetup = akAudit8WrapMultiSetup(renderMinoritySetup, "Minorité");
+  renderWhoAnsweredSetup = akAudit8WrapMultiSetup(renderWhoAnsweredSetup, "Qui a répondu ça ?");
+  renderAlmostImpostorSetup = akAudit8WrapMultiSetup(renderAlmostImpostorSetup, "L’Imposteur sait presque tout");
+  renderFakeExpertSetup = akAudit8WrapMultiSetup(renderFakeExpertSetup, "Le Faux Expert");
+  renderWhoAmISetup = akAudit8WrapMultiSetup(renderWhoAmISetup, "Qui suis-je ?");
+  renderMegaSetup = akAudit8WrapMultiSetup(renderMegaSetup, () => state.megaGame?.gameName || "Jeu");
 
 })();

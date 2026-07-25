@@ -121,7 +121,7 @@
   },
   {
     "id": "q_011_quel_personnage_dit_je_su",
-    "question": "Quel personnage dit « Je suis ton père » dans Star Wars ?",
+    "question": "Quel personnage prononce la célèbre réplique souvent résumée par « Je suis ton père » dans Star Wars ?",
     "options": [
       "Yoda",
       "Dark Vador",
@@ -129,7 +129,7 @@
       "Obi-Wan"
     ],
     "answer": 1,
-    "explanation": "La phrase est associée à Dark Vador."
+    "explanation": "Dark Vador révèle à Luke qu’il est son père."
   },
   {
     "id": "q_012_dans_quel_film_un_poisson",
@@ -181,7 +181,7 @@
   },
   {
     "id": "q_016_dans_frozen_comment_sappe",
-    "question": "Dans Frozen, comment s’appelle la sœur d’Elsa ?",
+    "question": "Dans La Reine des neiges, comment s’appelle la sœur d’Elsa ?",
     "options": [
       "Anna",
       "Ariel",
@@ -189,7 +189,7 @@
       "Mérida"
     ],
     "answer": 0,
-    "explanation": "Anna est la sœur d’Elsa."
+    "explanation": "Anna est la sœur d’Elsa dans La Reine des neiges."
   },
   {
     "id": "q_017_quel_film_se_deroule_prin",
@@ -253,15 +253,15 @@
   },
   {
     "id": "q_022_dans_quel_film_trouve_t_o",
-    "question": "Dans quel film trouve-t-on le personnage de Wednesday Addams ?",
+    "question": "À quelle famille fictive appartient Wednesday Addams ?",
     "options": [
       "La Famille Addams",
-      "Beetlejuice",
-      "Casper",
-      "Hocus Pocus"
+      "La famille Deetz",
+      "La famille Munster",
+      "La famille Sanderson"
     ],
     "answer": 0,
-    "explanation": "Wednesday appartient à la famille Addams."
+    "explanation": "Wednesday est l’un des membres de la Famille Addams."
   },
   {
     "id": "q_023_quel_film_musical_met_en_",

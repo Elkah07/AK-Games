@@ -1,12 +1,12 @@
 [
   {
     "id": "defiadulte_001",
-    "text": "Envoie un emoji mystérieux à la dernière personne avec qui tu as parlé, sans explication.",
+    "text": "Mime le message mystérieux que tu pourrais envoyer dans une comédie romantique. Le groupe doit deviner le contexte.",
     "category": "adult-challenge"
   },
   {
     "id": "defiadulte_002",
-    "text": "Lis à voix haute ton dernier message envoyé, sauf s’il est vraiment privé.",
+    "text": "Invente un dernier message très dramatique, puis lis-le comme dans une bande-annonce.",
     "category": "adult-challenge"
   },
   {
@@ -16,7 +16,7 @@
   },
   {
     "id": "defiadulte_004",
-    "text": "Montre la dernière photo non sensible de ta galerie.",
+    "text": "Prends une pose de photo volontairement théâtrale, sans obligation de sortir le téléphone.",
     "category": "adult-challenge"
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "id": "defiadulte_007",
-    "text": "Laisse le groupe choisir ta prochaine photo de profil parmi trois photos acceptables.",
+    "text": "Laisse le groupe inventer trois idées de photo de profil fictive, puis choisis la moins catastrophique.",
     "category": "adult-challenge"
   },
   {
@@ -66,7 +66,7 @@
   },
   {
     "id": "defiadulte_014",
-    "text": "Envoie « J’ai une question importante » à un ami, puis réponds immédiatement « Tu préfères les pâtes ou la pizza ? ».",
+    "text": "Joue la scène de quelqu’un qui annonce avoir « une question importante », avant de demander : pâtes ou pizza ?",
     "category": "adult-challenge"
   },
   {

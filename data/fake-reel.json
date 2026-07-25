@@ -131,13 +131,13 @@
   },
   {
     "id": "q_014_les_humains_partagent_plu",
-    "question": "Les humains partagent plus de 50 % de leur ADN avec les bananes.",
+    "question": "Dire que les humains partagent précisément plus de 50 % de leur ADN avec les bananes est scientifiquement exact.",
     "options": [
       "Fake",
       "Réel"
     ],
-    "answer": 1,
-    "explanation": "De nombreux gènes fondamentaux sont communs au vivant."
+    "answer": 0,
+    "explanation": "Ce chiffre populaire mélange plusieurs méthodes de comparaison. Nous partageons bien des gènes fondamentaux avec les plantes, mais pas « 50 % de tout notre ADN » au sens simple."
   },
   {
     "id": "q_015_les_cameleons_changent_un",
@@ -231,13 +231,13 @@
   },
   {
     "id": "q_024_il_y_a_plus_detoiles_dans",
-    "question": "Il y a plus d’étoiles dans l’univers observable que de grains de sable sur Terre.",
+    "question": "Les estimations suggèrent qu’il existe davantage d’étoiles dans l’univers observable que de grains de sable sur les plages terrestres.",
     "options": [
       "Fake",
       "Réel"
     ],
     "answer": 1,
-    "explanation": "Les estimations astronomiques dépassent généralement celles des grains de sable."
+    "explanation": "Les deux quantités sont estimées, mais les ordres de grandeur astronomiques sont généralement supérieurs."
   },
   {
     "id": "q_025_le_cerveau_humain_ne_ress",
@@ -301,13 +301,13 @@
   },
   {
     "id": "q_031_les_escargots_peuvent_dor",
-    "question": "Les escargots peuvent dormir plusieurs années.",
+    "question": "Certaines espèces d’escargots peuvent rester en dormance pendant plusieurs années.",
     "options": [
       "Fake",
       "Réel"
     ],
     "answer": 1,
-    "explanation": "Certaines espèces peuvent entrer en dormance très longtemps."
+    "explanation": "En cas de sécheresse ou de froid, certaines espèces entrent dans une longue période de dormance."
   },
   {
     "id": "q_032_le_verre_est_un_liquide_q",
@@ -381,13 +381,13 @@
   },
   {
     "id": "q_039_les_arbres_peuvent_commun",
-    "question": "Les arbres peuvent communiquer grâce à des réseaux souterrains de champignons.",
+    "question": "Des arbres peuvent échanger des substances et des signaux par l’intermédiaire de réseaux de champignons souterrains.",
     "options": [
       "Fake",
       "Réel"
     ],
     "answer": 1,
-    "explanation": "Les mycorhizes permettent des échanges et signaux."
+    "explanation": "Les réseaux mycorhiziens relient certaines racines et permettent des échanges, sans que cela signifie que les arbres « parlent » comme des humains."
   },
   {
     "id": "q_040_le_nez_et_les_oreilles_co",
