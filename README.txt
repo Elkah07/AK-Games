@@ -1,25 +1,24 @@
-AK'Games V1.0 — Correction définitive du grand espace de l'accueil
+AK'Games V1.0 — Correction création de room / permission_denied
 
 À remplacer à la racine :
-- index.html
-- styles.css
+- firebase.js
+- database.rules.json
 - service-worker.js
 
-Pourquoi la correction précédente ne se voyait pas :
-l'écran principal pouvait encore s'étirer sur toute la hauteur disponible.
-Sur les grands téléphones, le navigateur gardait donc le bloc des trois choix
-beaucoup trop bas. En plus, une ancienne feuille styles.css pouvait rester en cache.
+Cause du bug :
+La création utilise une transaction Firebase sur le futur salon.
+Or les règles interdisaient la lecture de ce chemin tant que l'utilisateur
+n'était pas déjà membre du salon, ce qui est impossible avant sa création.
 
-Cette version :
-- empêche l'écran d'accueil de s'étirer verticalement ;
-- place le texte et les trois cartes juste sous l'en-tête ;
-- ajoute un garde-fou directement dans index.html ;
-- force le chargement de styles.css?v=rc4-home ;
-- passe le cache PWA à akgames-v1.0-rc4-home.
+Correction :
+- lecture autorisée uniquement lorsque le chemin du salon n'existe pas encore ;
+- les salons existants restent privés ;
+- une éventuelle collision de code tente automatiquement un nouveau code ;
+- cache PWA passé à akgames-v1.0-rc5-room-fix.
 
 Installation :
-1. Remplace les 3 fichiers.
-2. « Valider et envoyer (push) ».
-3. Attends la coche verte.
+1. Remplace les trois fichiers.
+2. Clique sur « Valider et envoyer (push) ».
+3. Attends impérativement la coche verte GitHub Actions.
 4. Ferme complètement AK'Games.
-5. Rouvre l'application.
+5. Rouvre l'application et réessaie de créer une room.

@@ -293,35 +293,55 @@
       const code = randomRoomCode();
       const createdAt = now();
       const roomRef = db.ref(`rooms/${code}`);
-      const transaction = await roomRef.transaction(currentRoom => {
-        if (currentRoom !== null) return;
+      let transaction;
 
-        return {
-          meta: {
-            hostUid: user.uid,
-            adult: Boolean(adult),
-            alcohol: Boolean(alcohol),
-            status: "lobby",
-            createdAt,
-            updatedAt: createdAt,
-            expiresAt: createdAt + ROOM_TTL_MS
-          },
-          players: {
-            [user.uid]: {
-              name,
-              avatarId,
-              online: true,
-              joinedAt: createdAt,
-              lastSeen: createdAt
+      try {
+        transaction = await roomRef.transaction(currentRoom => {
+          if (currentRoom !== null) return;
+
+          return {
+            meta: {
+              hostUid: user.uid,
+              adult: Boolean(adult),
+              alcohol: Boolean(alcohol),
+              status: "lobby",
+              createdAt,
+              updatedAt: createdAt,
+              expiresAt: createdAt + ROOM_TTL_MS
+            },
+            players: {
+              [user.uid]: {
+                name,
+                avatarId,
+                online: true,
+                joinedAt: createdAt,
+                lastSeen: createdAt
+              }
             }
-          }
-        };
-      }, undefined, false);
+          };
+        }, undefined, false);
+      } catch (error) {
+        const errorCode = String(error?.code || "").toLowerCase();
+        const errorMessage = String(error?.message || "").toLowerCase();
+
+        // Si le code existe déjà, les règles protègent son contenu et la
+        // transaction peut recevoir permission_denied. On tire un autre code.
+        if (
+          errorCode.includes("permission-denied")
+          || errorCode.includes("permission_denied")
+          || errorMessage.includes("permission_denied")
+          || errorMessage.includes("permission denied")
+        ) {
+          continue;
+        }
+
+        throw error;
+      }
 
       if (transaction.committed) return code;
     }
 
-    throw new Error("Impossible de générer un code de salon unique.");
+    throw new Error("Impossible de créer la room pour le moment. Vérifie que le déploiement GitHub est terminé, puis réessaie.");
   }
 
   async function ready() {
