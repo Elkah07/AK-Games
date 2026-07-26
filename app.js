@@ -503,7 +503,7 @@ function renderPlayerForm() {
 
     <section class="card">
       <h2 class="section-title">Choisis ton personnage</h2>
-      <p class="helper">Les emojis sont temporaires, en attendant les personnages officiels.</p>
+      <p class="helper">Chaque mascotte a sa personnalité. Un personnage déjà choisi devient indisponible pour les autres joueurs.</p>
       <div class="spacer"></div>
       <div class="avatar-grid">
         ${avatars.map(a => `
@@ -545,6 +545,13 @@ function renderPlayerForm() {
     if (state.players.some(player => String(player.name || "").trim().toLocaleLowerCase("fr-FR") === normalizedName)) {
       alert("Ce prénom est déjà utilisé dans la partie. Choisis-en un autre pour éviter les confusions.");
       playerNameInput.focus();
+      return;
+    }
+
+    if (state.players.some(player => player.avatarId === state.draftPlayer.avatarId)) {
+      alert("Ce personnage est déjà utilisé dans la partie. Choisis-en un autre.");
+      state.draftPlayer.avatarId = null;
+      renderPlayerForm();
       return;
     }
 
@@ -1487,7 +1494,7 @@ function renderLaughDuelSetup() {
           <select id="laughPlayer1" class="text-input">
             ${state.players.map(player => `
               <option value="${player.id}" ${game.player1Id === player.id ? "selected" : ""}>
-                ${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)}
+                ${escapeHtml(avatarById(player.avatarId).name)} · ${escapeHtml(player.name)}
               </option>
             `).join("")}
           </select>
@@ -1500,7 +1507,7 @@ function renderLaughDuelSetup() {
           <select id="laughPlayer2" class="text-input">
             ${state.players.map(player => `
               <option value="${player.id}" ${game.player2Id === player.id ? "selected" : ""}>
-                ${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)}
+                ${escapeHtml(avatarById(player.avatarId).name)} · ${escapeHtml(player.name)}
               </option>
             `).join("")}
           </select>
@@ -2441,7 +2448,7 @@ function renderBestLiarResults() {
       ${[...state.players]
         .sort((a, b) => game.scores[b.id] - game.scores[a.id])
         .map(player => `
-          <span>${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} <strong>${game.scores[player.id]}</strong></span>
+          <span>${escapeHtml(avatarById(player.avatarId).name)} · ${escapeHtml(player.name)} <strong>${game.scores[player.id]}</strong></span>
         `).join("")}
     </section>
 
@@ -5445,7 +5452,7 @@ function renderMegaQuizReveal() {
   screen.innerHTML = `
     ${v014Progress(game, "Question")}
     <section class="reveal-stage reveal-v07 mega-quiz-reveal"><span class="game-cover-icon">${correctPlayers.length ? "✅" : "🧠"}</span><h2>${escapeHtml(item.options?.[correct] || "Réponse")}</h2><p>${escapeHtml(item.explanation || "Réponse révélée.")} Bonne réponse : +${points} point${points > 1 ? "s" : ""}.</p></section>
-    <section class="answer-chip-wall">${state.players.map(player => { const won = Number(game.votes[player.id]) === correct; return `<span class="${won ? "correct" : "wrong"}">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · ${escapeHtml(item.options?.[game.votes[player.id]] || "-")}${won ? ` · +${points}` : ""}</span>`; }).join("")}</section>
+    <section class="answer-chip-wall">${state.players.map(player => { const won = Number(game.votes[player.id]) === correct; return `<span class="${won ? "correct" : "wrong"}">${escapeHtml(avatarById(player.avatarId).name)} · ${escapeHtml(player.name)} · ${escapeHtml(item.options?.[game.votes[player.id]] || "-")}${won ? ` · +${points}` : ""}</span>`; }).join("")}</section>
     <button id="nextMegaQuiz" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Question suivante"}</button>`;
   document.querySelector("#nextMegaQuiz").addEventListener("click", () => {
     game.currentIndex += 1;
@@ -5636,7 +5643,7 @@ function renderMegaKnowReveal() {
       const vote = v014KnowVoteData(game.votes[player.id]);
       const confidence = V014_KNOW_CONFIDENCE[vote.confidence] || V014_KNOW_CONFIDENCE.try;
       const delta = Number(deltas[player.id] || 0);
-      return `<span class="${correctIds.includes(player.id) ? "correct" : "wrong"}">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · ${escapeHtml(item.options[vote.answer] || "-")} <b>${game.confidenceMode !== false ? confidence.icon : ""} ${v014KnowDeltaLabel(delta)}</b></span>`;
+      return `<span class="${correctIds.includes(player.id) ? "correct" : "wrong"}">${escapeHtml(avatarById(player.avatarId).name)} · ${escapeHtml(player.name)} · ${escapeHtml(item.options[vote.answer] || "-")} <b>${game.confidenceMode !== false ? confidence.icon : ""} ${v014KnowDeltaLabel(delta)}</b></span>`;
     }).join("")}</section>
     <button id="nextKnow" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Personne suivante"}</button>`;
   document.querySelector("#nextKnow").addEventListener("click", () => {

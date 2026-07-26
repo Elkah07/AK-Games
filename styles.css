@@ -7864,3 +7864,397 @@ details > summary {
   .drink-final-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .drink-active-rules article { align-items: flex-start; flex-direction: column; gap: 4px; }
 }
+
+/* =========================================================
+   AK'GAMES — MASCOTTES OFFICIELLES + AIDE DES JEUX
+   ========================================================= */
+
+.ak-avatar-image {
+  display: inline-block;
+  width: 1.65em;
+  height: 1.65em;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  vertical-align: middle;
+  border-radius: 35%;
+  background: radial-gradient(circle at 50% 30%, rgba(139,92,246,.18), rgba(5,3,12,.86));
+}
+
+.avatar-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.avatar-card {
+  position: relative;
+  min-height: 255px;
+  padding: 10px 10px 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 7px;
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.avatar-card .avatar-emoji {
+  width: 100%;
+  height: 188px;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(139,92,246,.16), transparent 58%),
+    rgba(5,3,12,.8);
+}
+
+.avatar-card .avatar-emoji .ak-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0;
+  background: transparent;
+}
+
+.avatar-card .avatar-name {
+  color: var(--text);
+  font-size: .95rem;
+  font-weight: 900;
+}
+
+.avatar-personality {
+  display: block;
+  min-height: 2.5em;
+  color: var(--muted);
+  font-size: .72rem;
+  line-height: 1.25;
+}
+
+.avatar-card.selected {
+  border-color: #c4b5fd;
+  box-shadow: 0 0 0 2px rgba(139,92,246,.22), 0 16px 34px rgba(0,0,0,.25);
+}
+
+.avatar-card.taken {
+  opacity: .42;
+  filter: grayscale(.6);
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.avatar-taken-label {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(10,7,20,.9);
+  border: 1px solid rgba(255,255,255,.18);
+  color: #f3f4f6;
+  font-size: .66rem;
+  font-weight: 900;
+  letter-spacing: .02em;
+}
+
+.character-picker-quote,
+.character-speech-bubble {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 11px 14px;
+  border: 1px solid rgba(196,181,253,.25);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(139,92,246,.15), rgba(12,8,26,.9));
+}
+
+.character-picker-quote > span,
+.character-speech-bubble > span {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(0,0,0,.28);
+}
+
+.character-picker-quote .ak-avatar-image,
+.character-speech-bubble .ak-avatar-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.character-picker-quote p,
+.character-speech-bubble p {
+  margin: 0;
+  color: #ede9fe;
+  line-height: 1.4;
+}
+
+.character-picker-quote strong,
+.character-speech-bubble strong {
+  color: #fff;
+}
+
+.character-speech-bubble {
+  margin: 14px 0;
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.character-speech-bubble.quiet {
+  opacity: .64;
+}
+
+.player-avatar,
+.result-avatar,
+.vote-avatar,
+.award-avatar,
+.game-cover-icon,
+.prompt-player > span,
+.daring-round-speaker > span,
+.plead-speaker > span,
+.poll-result-person > span,
+.brain-answer-tile > span,
+.suspect-card > span,
+.submission-player > span,
+.who-vote-row > span,
+.mime-guesser-grid button > span,
+.mime-actor-list article > span {
+  overflow: hidden;
+}
+
+.player-avatar .ak-avatar-image,
+.result-avatar .ak-avatar-image,
+.vote-avatar .ak-avatar-image,
+.award-avatar .ak-avatar-image,
+.game-cover-icon .ak-avatar-image,
+.prompt-player > span .ak-avatar-image,
+.daring-round-speaker > span .ak-avatar-image,
+.plead-speaker > span .ak-avatar-image,
+.poll-result-person > span .ak-avatar-image,
+.brain-answer-tile > span .ak-avatar-image,
+.suspect-card > span .ak-avatar-image,
+.submission-player > span .ak-avatar-image,
+.who-vote-row > span .ak-avatar-image,
+.mime-guesser-grid button > span .ak-avatar-image,
+.mime-actor-list article > span .ak-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: inherit;
+}
+
+.giant-avatar {
+  width: min(250px, 62vw);
+  height: min(330px, 78vw);
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+  font-size: 0;
+}
+
+.giant-avatar .ak-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0;
+  background: transparent;
+  filter: drop-shadow(0 18px 28px rgba(0,0,0,.36));
+}
+
+.game-card-with-help {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 48px;
+  gap: 9px;
+  align-items: stretch;
+}
+
+.game-card-with-help .game-card {
+  width: 100%;
+  min-width: 0;
+}
+
+.game-rules-button {
+  width: 48px;
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(196,181,253,.25);
+  border-radius: 18px;
+  background: rgba(139,92,246,.1);
+  color: #ddd6fe;
+  font: inherit;
+  cursor: pointer;
+  transition: .18s ease;
+}
+
+.game-rules-button span {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(139,92,246,.2);
+  font-weight: 950;
+  font-size: 1.05rem;
+}
+
+.game-rules-button:hover,
+.game-rules-button:focus-visible {
+  border-color: #c4b5fd;
+  background: rgba(139,92,246,.2);
+  transform: translateY(-1px);
+}
+
+body.game-rules-open {
+  overflow: hidden;
+}
+
+.game-rules-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  display: grid;
+  place-items: center;
+  padding: max(18px, env(safe-area-inset-top)) 16px max(18px, env(safe-area-inset-bottom));
+  background: rgba(2,1,8,.82);
+  backdrop-filter: blur(12px);
+}
+
+.game-rules-modal {
+  width: min(680px, 100%);
+  max-height: min(820px, 92dvh);
+  overflow-y: auto;
+  padding: 20px;
+  border: 1px solid rgba(196,181,253,.25);
+  border-radius: 26px;
+  background: linear-gradient(160deg, #171024, #0a0712 70%);
+  box-shadow: 0 28px 80px rgba(0,0,0,.55);
+}
+
+.game-rules-modal > header {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) 42px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.game-rules-modal header small {
+  color: #a78bfa;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+.game-rules-modal h2,
+.game-rules-modal h3,
+.game-rules-modal p {
+  margin-top: 0;
+}
+
+.game-rules-modal h2 {
+  margin-bottom: 0;
+  font-size: 1.35rem;
+}
+
+.game-rules-modal h3 {
+  margin-bottom: 7px;
+  color: #ede9fe;
+  font-size: 1rem;
+}
+
+.game-rules-modal section {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.035);
+}
+
+.game-rules-modal ol {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 7px;
+  color: #e5e7eb;
+}
+
+.game-rules-modal section p,
+.game-rules-intro {
+  color: #d1d5db;
+  line-height: 1.55;
+}
+
+.game-rules-comfort {
+  border: 1px solid rgba(52,211,153,.2);
+  background: rgba(16,185,129,.07) !important;
+}
+
+.game-rules-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(139,92,246,.16);
+  font-size: 1.7rem;
+}
+
+.game-rules-close {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.05);
+  color: #fff;
+  font-size: 1.55rem;
+  cursor: pointer;
+}
+
+.game-rules-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.game-rules-badges span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(139,92,246,.12);
+  color: #ddd6fe;
+  font-size: .82rem;
+  font-weight: 850;
+}
+
+.game-rules-understood {
+  margin-top: 18px;
+}
+
+@media (max-width: 760px) {
+  .avatar-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .avatar-card { min-height: 225px; }
+  .avatar-card .avatar-emoji { height: 158px; }
+}
+
+@media (max-width: 430px) {
+  .avatar-grid { gap: 10px; }
+  .avatar-card { min-height: 205px; padding: 8px 8px 11px; }
+  .avatar-card .avatar-emoji { height: 140px; }
+  .avatar-personality { font-size: .66rem; }
+  .game-card-with-help { grid-template-columns: minmax(0, 1fr) 43px; gap: 7px; }
+  .game-rules-button { width: 43px; border-radius: 16px; }
+  .game-rules-modal { padding: 16px; border-radius: 22px; }
+}

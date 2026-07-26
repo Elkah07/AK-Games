@@ -1,15 +1,17 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v3.1-drinking-700";
+const CACHE_VERSION = "akgames-v3.2-characters-guides";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=drink-v2",
+  "/styles.css?v=characters-v1",
   "/creator.css?v=creator-v1.3-access",
-  "/app.js?v=drink-v2",
+  "/app.js?v=characters-v1",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
-  "/multiplayer.js?v=drink-v2",
+  "/multiplayer.js?v=characters-v1",
+  "/characters.js?v=characters-v1",
+  "/game-help.js?v=characters-v1",
   "/pwa.js",
   "/manifest.webmanifest",
   "/icons/icon-192.png",
@@ -18,7 +20,24 @@ const CORE_SHELL = [
   "/icons/icon-maskable-512.png",
   "/icons/apple-touch-icon.png",
   "/icons/favicon-32.png",
-  "/icons/favicon-16.png"
+  "/icons/favicon-16.png",
+  "/assets/characters/croa.webp",
+  "/assets/characters/loki.webp",
+  "/assets/characters/kaia.webp",
+  "/assets/characters/bonnie.webp",
+  "/assets/characters/edgar.webp",
+  "/assets/characters/filou.webp",
+  "/assets/characters/nuggets.webp",
+  "/assets/characters/vapo.webp",
+  "/assets/characters/rrrrh.webp",
+  "/assets/characters/sir-moustache.webp",
+  "/assets/characters/snow.webp",
+  "/assets/characters/maurice.webp",
+  "/assets/characters/moon.webp",
+  "/assets/characters/spike.webp",
+  "/assets/characters/honey.webp",
+  "/assets/characters/flash.webp",
+  "/assets/characters/marcellius.webp"
 ];
 
 const DATA_ASSETS = [

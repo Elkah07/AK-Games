@@ -609,7 +609,7 @@
 
       <section class="card">
         <h2 class="section-title">Choisis ton personnage</h2>
-        <p class="helper">Les emojis restent temporaires jusqu'à la fin de la création des personnages officiels.</p>
+        <p class="helper">Chaque mascotte est unique dans le salon : dès qu’elle est choisie, elle devient indisponible.</p>
         <div class="spacer"></div>
 
         <div class="avatar-grid">
@@ -650,6 +650,13 @@
 
       if (!name || !avatarId) {
         alert("Entre un prénom et choisis un personnage.");
+        return;
+      }
+
+      if (state.players.some(player => player.avatarId === avatarId && player.id !== state.currentUid)) {
+        alert("Ce personnage est déjà utilisé dans le salon. Choisis-en un autre.");
+        state.draftPlayer.avatarId = null;
+        renderPlayerForm();
         return;
       }
 

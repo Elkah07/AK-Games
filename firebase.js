@@ -58,7 +58,7 @@
   const now = () => Date.now() + serverTimeOffset;
 
   const HOST_TAKEOVER_GRACE_MS = 12000;
-  const MAX_ROOM_PLAYERS = 20;
+  const MAX_ROOM_PLAYERS = 17;
   const MAX_SESSION_HISTORY = 50;
   const ROOM_TTL_MS = 24 * 60 * 60 * 1000;
   const GAME_START_RECOVERY_MS = 15000;
@@ -379,6 +379,14 @@
     return snapshot.exists() ? snapshot.val() : null;
   }
 
+  async function getRoomPlayers(code) {
+    await ready();
+    const key = normalizeCode(code);
+    if (!key) return {};
+    const snapshot = await db.ref(`rooms/${key}/players`).once("value");
+    return snapshot.val() || {};
+  }
+
   function normalizedPlayerName(value) {
     return String(value || "")
       .trim()
@@ -442,6 +450,13 @@
     ));
     if (duplicateName) {
       throw new Error("Ce prénom est déjà utilisé dans le salon. Choisis-en un autre pour éviter les confusions.");
+    }
+
+    const duplicateAvatar = Object.entries(players).some(([uid, player]) => (
+      uid !== user.uid && String(player?.avatarId || "") === String(avatarId || "")
+    ));
+    if (duplicateAvatar) {
+      throw new Error("Ce personnage vient d’être choisi par quelqu’un d’autre. Choisis une autre mascotte.");
     }
 
     const joinedAt = Number(players[user.uid]?.joinedAt || now());
@@ -1265,6 +1280,7 @@
     displayCode,
     createRoom,
     getRoomMeta,
+    getRoomPlayers,
     joinRoom,
     loadRoom,
     listenRoom,
