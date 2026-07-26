@@ -1,108 +1,36 @@
 window.AKGAME_CHARACTER_POSES = window.AKGAME_CHARACTER_POSES || {};
 Object.assign(window.AKGAME_CHARACTER_POSES, {
-  "kaia": {
-    "name": "Kaia",
-    "legacyAvatarId": "panda",
-    "legacyPath": "assets/characters/kaia.webp",
+  "filou": {
+    "name": "Filou",
+    "legacyAvatarId": "fox",
+    "legacyPath": "assets/characters/filou.webp",
     "idle": {
-      "full": "assets/characters/kaia/idle/full.webp",
-      "bust": "assets/characters/kaia/idle/bust.webp",
-      "avatar-circle": "assets/characters/kaia/idle/avatar-circle.webp",
-      "icon": "assets/characters/kaia/idle/icon.webp"
-    },
-    "talk": {
-      "full": "assets/characters/kaia/talk/full.webp",
-      "bust": "assets/characters/kaia/talk/bust.webp",
-      "avatar-circle": "assets/characters/kaia/talk/avatar-circle.webp",
-      "icon": "assets/characters/kaia/talk/icon.webp"
-    },
-    "hype": {
-      "full": "assets/characters/kaia/hype/full.webp",
-      "bust": "assets/characters/kaia/hype/bust.webp",
-      "avatar-circle": "assets/characters/kaia/hype/avatar-circle.webp",
-      "icon": "assets/characters/kaia/hype/icon.webp"
-    },
-    "win": {
-      "full": "assets/characters/kaia/win/full.webp",
-      "bust": "assets/characters/kaia/win/bust.webp",
-      "avatar-circle": "assets/characters/kaia/win/avatar-circle.webp",
-      "icon": "assets/characters/kaia/win/icon.webp"
-    },
-    "lose": {
-      "full": "assets/characters/kaia/lose/full.webp",
-      "bust": "assets/characters/kaia/lose/bust.webp",
-      "avatar-circle": "assets/characters/kaia/lose/avatar-circle.webp",
-      "icon": "assets/characters/kaia/lose/icon.webp"
+      "full": "assets/characters/filou/idle/full.webp",
+      "bust": "assets/characters/filou/idle/bust.webp",
+      "avatar-circle": "assets/characters/filou/idle/avatar-circle.webp",
+      "icon": "assets/characters/filou/idle/icon.webp"
     }
   },
-  "bonnie": {
-    "name": "Bonnie",
-    "legacyAvatarId": "dog",
-    "legacyPath": "assets/characters/bonnie.webp",
+  "nuggets": {
+    "name": "Nuggets",
+    "legacyAvatarId": "chick",
+    "legacyPath": "assets/characters/nuggets.webp",
     "idle": {
-      "full": "assets/characters/bonnie/idle/full.webp",
-      "bust": "assets/characters/bonnie/idle/bust.webp",
-      "avatar-circle": "assets/characters/bonnie/idle/avatar-circle.webp",
-      "icon": "assets/characters/bonnie/idle/icon.webp"
-    },
-    "talk": {
-      "full": "assets/characters/bonnie/talk/full.webp",
-      "bust": "assets/characters/bonnie/talk/bust.webp",
-      "avatar-circle": "assets/characters/bonnie/talk/avatar-circle.webp",
-      "icon": "assets/characters/bonnie/talk/icon.webp"
-    },
-    "hype": {
-      "full": "assets/characters/bonnie/hype/full.webp",
-      "bust": "assets/characters/bonnie/hype/bust.webp",
-      "avatar-circle": "assets/characters/bonnie/hype/avatar-circle.webp",
-      "icon": "assets/characters/bonnie/hype/icon.webp"
-    },
-    "win": {
-      "full": "assets/characters/bonnie/win/full.webp",
-      "bust": "assets/characters/bonnie/win/bust.webp",
-      "avatar-circle": "assets/characters/bonnie/win/avatar-circle.webp",
-      "icon": "assets/characters/bonnie/win/icon.webp"
-    },
-    "lose": {
-      "full": "assets/characters/bonnie/lose/full.webp",
-      "bust": "assets/characters/bonnie/lose/bust.webp",
-      "avatar-circle": "assets/characters/bonnie/lose/avatar-circle.webp",
-      "icon": "assets/characters/bonnie/lose/icon.webp"
+      "full": "assets/characters/nuggets/idle/full.webp",
+      "bust": "assets/characters/nuggets/idle/bust.webp",
+      "avatar-circle": "assets/characters/nuggets/idle/avatar-circle.webp",
+      "icon": "assets/characters/nuggets/idle/icon.webp"
     }
   },
-  "edgar": {
-    "name": "Edgar",
-    "legacyAvatarId": "crow",
-    "legacyPath": "assets/characters/edgar.webp",
+  "vapo": {
+    "name": "Vapo",
+    "legacyAvatarId": "ghost",
+    "legacyPath": "assets/characters/vapo.webp",
     "idle": {
-      "full": "assets/characters/edgar/idle/full.webp",
-      "bust": "assets/characters/edgar/idle/bust.webp",
-      "avatar-circle": "assets/characters/edgar/idle/avatar-circle.webp",
-      "icon": "assets/characters/edgar/idle/icon.webp"
-    },
-    "talk": {
-      "full": "assets/characters/edgar/talk/full.webp",
-      "bust": "assets/characters/edgar/talk/bust.webp",
-      "avatar-circle": "assets/characters/edgar/talk/avatar-circle.webp",
-      "icon": "assets/characters/edgar/talk/icon.webp"
-    },
-    "hype": {
-      "full": "assets/characters/edgar/hype/full.webp",
-      "bust": "assets/characters/edgar/hype/bust.webp",
-      "avatar-circle": "assets/characters/edgar/hype/avatar-circle.webp",
-      "icon": "assets/characters/edgar/hype/icon.webp"
-    },
-    "win": {
-      "full": "assets/characters/edgar/win/full.webp",
-      "bust": "assets/characters/edgar/win/bust.webp",
-      "avatar-circle": "assets/characters/edgar/win/avatar-circle.webp",
-      "icon": "assets/characters/edgar/win/icon.webp"
-    },
-    "lose": {
-      "full": "assets/characters/edgar/lose/full.webp",
-      "bust": "assets/characters/edgar/lose/bust.webp",
-      "avatar-circle": "assets/characters/edgar/lose/avatar-circle.webp",
-      "icon": "assets/characters/edgar/lose/icon.webp"
+      "full": "assets/characters/vapo/idle/full.webp",
+      "bust": "assets/characters/vapo/idle/bust.webp",
+      "avatar-circle": "assets/characters/vapo/idle/avatar-circle.webp",
+      "icon": "assets/characters/vapo/idle/icon.webp"
     }
   }
 });

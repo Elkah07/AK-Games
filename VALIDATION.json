@@ -1,39 +1,13 @@
 {
   "characters": [
-    "kaia",
-    "bonnie",
-    "edgar"
+    "filou",
+    "nuggets",
+    "vapo"
   ],
-  "posesAdded": {
-    "kaia": [
-      "talk",
-      "hype",
-      "win",
-      "lose"
-    ],
-    "bonnie": [
-      "talk",
-      "hype",
-      "win",
-      "lose"
-    ],
-    "edgar": [
-      "talk",
-      "hype",
-      "win",
-      "lose"
-    ]
-  },
-  "formats": [
-    "full",
-    "bust",
-    "avatar-circle",
-    "icon"
-  ],
-  "webpCount": 52,
-  "totalFiles": 56,
-  "transparentAlphaChecked": true,
+  "idleOnly": true,
+  "webpCount": 15,
+  "totalFiles": 18,
   "notes": [
-    "Bonnie idle full corrected included in this lot."
+    "Vapo idle corrected with transparent background."
   ]
 }
