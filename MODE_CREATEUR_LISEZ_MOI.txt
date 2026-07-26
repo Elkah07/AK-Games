@@ -1,0 +1,58 @@
+AK'GAMES — MODE CRÉATEUR V1
+===========================
+
+ACCÈS
+-----
+1. Ouvrir AK'Games.
+2. Aller dans les paramètres.
+3. Appuyer sur « Mode créateur ».
+4. Lors de la première ouverture, créer un code d'au moins 6 caractères.
+
+Le code est enregistré uniquement sur l'appareil, sous forme d'empreinte locale.
+Il protège l'interface mais ne constitue pas une authentification serveur.
+
+LABORATOIRE DE TEST
+-------------------
+Le tableau de bord permet de générer 2, 3, 4 ou 6 joueurs virtuels.
+Cela lance les jeux en mode « un téléphone » avec le contenu +18 déverrouillé.
+Ce laboratoire teste les règles, les cartes, les scores, les écrans et les fins de partie.
+Il ne remplace pas un dernier test de synchronisation sur plusieurs appareils réels.
+
+SIGNALEMENTS
+------------
+Une commande « Signaler cette carte » apparaît pendant les jeux.
+Le signalement contient automatiquement :
+- le jeu ;
+- l'identifiant de la carte ;
+- le texte affiché ;
+- le motif ;
+- la note facultative ;
+- la date et le mode de jeu.
+
+Chaque signalement est d'abord conservé localement. L'application essaie ensuite de
+l'envoyer dans Firebase sous /contentReports.
+
+ACTIVER LA BOÎTE FIREBASE GLOBALE
+---------------------------------
+Les règles Firebase autorisent tous les joueurs authentifiés anonymement à CRÉER un
+signalement, mais personne ne peut lire la boîte sans autorisation créatrice.
+
+Après le premier déploiement :
+1. Ouvrir le mode créateur puis « Signalements ».
+2. Copier l'UID Firebase affiché.
+3. Dans Firebase Console > Realtime Database > Données, créer :
+
+   creatorAccess
+     VOTRE_UID
+       true
+
+4. Revenir dans l'application et appuyer sur « Réessayer ».
+
+Une fois ce réglage fait, l'appareil peut lire, classer, résoudre, ignorer, supprimer
+et exporter tous les signalements envoyés depuis les autres téléphones.
+
+DÉPLOIEMENT
+-----------
+Le workflow GitHub du projet déploie déjà Hosting ET Database. Le fichier
+« database.rules.json » doit donc être conservé dans le dépôt pour activer les
+nouvelles règles.
