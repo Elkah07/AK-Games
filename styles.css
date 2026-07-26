@@ -4714,3 +4714,79 @@ select:focus-visible,
     transition-duration: .01ms !important;
   }
 }
+
+/* AK'GAMES — MODE RÉPONSE ÉCLAIR */
+.lightning-option {
+  margin-top: 18px;
+}
+
+.lightning-option input {
+  accent-color: #a855f7;
+}
+
+.lightning-timer {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  border: 1px solid rgba(192, 132, 252, .35);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(124, 58, 237, .16), rgba(255, 255, 255, .035)),
+    rgba(14, 10, 27, .82);
+  box-shadow: 0 10px 30px rgba(76, 29, 149, .16);
+}
+
+.lightning-timer > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.lightning-timer span {
+  color: rgba(245, 243, 255, .84);
+  font-size: .82rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.lightning-timer strong {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  color: #f5edff;
+  font-size: 1rem;
+}
+
+.lightning-timer strong b {
+  min-width: 2ch;
+  color: #d8b4fe;
+  font-size: 1.35rem;
+}
+
+.lightning-track {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .08);
+}
+
+.lightning-fill {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #7c3aed, #c084fc);
+  transition: width .15s linear;
+}
+
+.lightning-timer:has(.lightning-fill[style*="0%"]) {
+  border-color: rgba(251, 113, 133, .45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lightning-fill {
+    transition-duration: .01ms !important;
+  }
+}

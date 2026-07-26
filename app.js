@@ -2678,12 +2678,47 @@ function renderActionTruthEnd() {
   document.querySelector("#otherActionTruth").addEventListener("click", () => { state.actionTruth = null; renderPlayChoice(); });
 }
 
+function clearAmbiancePollTimer() {
+  if (state.ambiancePollTimer) {
+    window.clearInterval(state.ambiancePollTimer);
+    state.ambiancePollTimer = null;
+  }
+}
+
+function startAmbiancePollTimer(deadline, totalSeconds, onExpire) {
+  clearAmbiancePollTimer();
+
+  const tick = () => {
+    const remainingMs = Math.max(0, Number(deadline || 0) - Date.now());
+    const remainingSeconds = Math.max(0, Math.ceil(remainingMs / 1000));
+    const countdown = document.querySelector("#pollLightningCountdown");
+    const fill = document.querySelector("#pollLightningFill");
+
+    if (countdown) countdown.textContent = String(remainingSeconds);
+    if (fill) {
+      const ratio = Math.max(0, Math.min(1, remainingMs / (Math.max(1, Number(totalSeconds || 15)) * 1000)));
+      fill.style.width = `${ratio * 100}%`;
+    }
+
+    if (remainingMs <= 0) {
+      clearAmbiancePollTimer();
+      onExpire();
+    }
+  };
+
+  tick();
+  state.ambiancePollTimer = window.setInterval(tick, 150);
+}
+
 function resetAmbiancePollState(type, forceAdult = false, config = {}) {
+  clearAmbiancePollTimer();
   state.ambiancePoll = {
     type,
     roundCount: Number(config.roundCount || 10),
     includeAdult: Boolean(forceAdult || config.includeAdult),
     forceAdult: Boolean(forceAdult),
+    lightningEnabled: type === "would" && Boolean(config.lightningEnabled),
+    lightningSeconds: Number(config.lightningSeconds || 15),
     items: [],
     currentIndex: 0,
     currentVoterIndex: 0,
@@ -2712,6 +2747,18 @@ function renderAmbiancePollSetup() {
     </section>
     <section class="card setup-card-v07">
       <div class="form-group"><label for="pollRounds">Nombre de questions</label><select id="pollRounds" class="text-input">${[8, 10, 15, 20].map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} questions</option>`).join("")}</select></div>
+      ${game.type === "would" ? `
+        <label class="option-card lightning-option">
+          <input id="pollLightning" type="checkbox" ${game.lightningEnabled ? "checked" : ""}>
+          <span><strong>⚡ Réponse éclair</strong><br><span class="helper">Chaque personne doit choisir avant la fin du chrono.</span></span>
+        </label>
+        <div id="pollLightningDurationWrap" class="form-group top-gap" ${game.lightningEnabled ? "" : "hidden"}>
+          <label for="pollLightningSeconds">Temps par personne</label>
+          <select id="pollLightningSeconds" class="text-input">
+            ${[10, 15, 20].map(value => `<option value="${value}" ${game.lightningSeconds === value ? "selected" : ""}>${value} secondes</option>`).join("")}
+          </select>
+        </div>
+      ` : ""}
     </section>
     ${state.adult ? `<label class="option-card premium-toggle"><input id="pollAdult" type="checkbox" ${game.includeAdult ? "checked" : ""} ${game.forceAdult ? "disabled" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Des choix et révélations plus épicés.</span></span></label>` : ""}
     <button id="startPollGame" class="primary-btn full">Lancer la partie</button>
@@ -2719,6 +2766,14 @@ function renderAmbiancePollSetup() {
 
   document.querySelector("#pollRounds").addEventListener("change", event => game.roundCount = Number(event.target.value));
   document.querySelector("#pollAdult")?.addEventListener("change", event => game.includeAdult = event.target.checked);
+  document.querySelector("#pollLightning")?.addEventListener("change", event => {
+    game.lightningEnabled = event.target.checked;
+    const wrap = document.querySelector("#pollLightningDurationWrap");
+    if (wrap) wrap.hidden = !game.lightningEnabled;
+  });
+  document.querySelector("#pollLightningSeconds")?.addEventListener("change", event => {
+    game.lightningSeconds = Number(event.target.value);
+  });
   document.querySelector("#startPollGame").addEventListener("click", startAmbiancePollGame);
 }
 
@@ -2748,6 +2803,7 @@ async function startAmbiancePollGame() {
 }
 
 function renderAmbiancePollGate() {
+  clearAmbiancePollTimer();
   const game = state.ambiancePoll;
   if (game.currentIndex >= game.items.length) {
     renderAmbiancePollEnd();
@@ -2777,25 +2833,49 @@ function renderAmbiancePollGate() {
 }
 
 function renderAmbiancePollVote() {
+  clearAmbiancePollTimer();
   const game = state.ambiancePoll;
   const item = game.items[game.currentIndex];
   const meta = pollGameMeta(game.type);
   const player = state.players[game.currentVoterIndex];
+  const lightningActive = game.type === "would" && game.lightningEnabled;
+  const lightningSeconds = Math.max(5, Number(game.lightningSeconds || 15));
+  const lightningDeadline = Date.now() + lightningSeconds * 1000;
   title.textContent = meta.title;
+
+  const lightningMarkup = lightningActive ? `
+    <section class="lightning-timer" aria-live="polite">
+      <div><span>⚡ Réponse éclair</span><strong><b id="pollLightningCountdown">${lightningSeconds}</b> s</strong></div>
+      <div class="lightning-track"><div id="pollLightningFill" class="lightning-fill" style="width:100%"></div></div>
+    </section>
+  ` : "";
 
   screen.innerHTML = game.type === "never" ? `
     <section class="poll-question-stage poll-never-stage"><span class="prompt-type-chip">🙋 JE N’AI JAMAIS</span><h2>${escapeHtml(item.text.replace(/^Je n[’']ai jamais\s*/i, ""))}</h2><p>Alors ${escapeHtml(player.name)}, jamais… ou déjà ?</p></section>
     <section class="poll-choice-grid"><button class="poll-choice poll-choice-a" data-poll-vote="never"><strong>Jamais</strong><span>Pas moi. Innocence totale.</span></button><button class="poll-choice poll-choice-b" data-poll-vote="done"><strong>Déjà</strong><span>Oui, et j’assume presque.</span></button></section>
   ` : `
+    ${lightningMarkup}
     <section class="poll-question-stage poll-would-stage"><span class="prompt-type-chip">⚖️ TU PRÉFÈRES</span><h2>Choisis ton camp</h2><p>${escapeHtml(player.name)}, impossible de répondre “ça dépend”.</p></section>
     <section class="poll-choice-grid"><button class="poll-choice poll-choice-a" data-poll-vote="A"><small>OPTION A</small><strong>${escapeHtml(item.optionA)}</strong></button><button class="poll-choice poll-choice-b" data-poll-vote="B"><small>OPTION B</small><strong>${escapeHtml(item.optionB)}</strong></button></section>
   `;
 
-  document.querySelectorAll("[data-poll-vote]").forEach(button => button.addEventListener("click", () => {
-    game.votes[player.id] = button.dataset.pollVote;
+  let settled = false;
+  const submitVote = value => {
+    if (settled) return;
+    settled = true;
+    clearAmbiancePollTimer();
+    game.votes[player.id] = value;
     game.currentVoterIndex += 1;
     renderAmbiancePollGate();
-  }));
+  };
+
+  document.querySelectorAll("[data-poll-vote]").forEach(button => {
+    button.addEventListener("click", () => submitVote(button.dataset.pollVote));
+  });
+
+  if (lightningActive) {
+    startAmbiancePollTimer(lightningDeadline, lightningSeconds, () => submitVote("timeout"));
+  }
 }
 
 function calculatePollResult(game) {
@@ -2812,7 +2892,10 @@ function renderAmbiancePollReveal() {
   const item = game.items[game.currentIndex];
   const result = calculatePollResult(game);
   const meta = pollGameMeta(game.type);
-  const optionLabel = value => game.type === "never" ? (value === "never" ? "Jamais" : "Déjà") : (value === "A" ? item.optionA : item.optionB);
+  const optionLabel = value => {
+    if (value === "timeout" || value == null) return "Temps écoulé";
+    return game.type === "never" ? (value === "never" ? "Jamais" : "Déjà") : (value === "A" ? item.optionA : item.optionB);
+  };
   result.minorityIds.forEach(id => game.scores[id] = Number(game.scores[id] || 0) + 1);
   game.rounds.push({ itemId: item.id, votes: { ...game.votes }, minorityIds: result.minorityIds });
 
@@ -2851,7 +2934,12 @@ function renderAmbiancePollEnd() {
     <div class="toolbar"><button id="replayPoll" class="secondary-btn">Rejouer</button><button id="otherPoll" class="primary-btn">Autre jeu</button></div>
   `;
   document.querySelector("#replayPoll").addEventListener("click", () => {
-    resetAmbiancePollState(game.type, game.forceAdult, { roundCount: game.roundCount, includeAdult: game.includeAdult });
+    resetAmbiancePollState(game.type, game.forceAdult, {
+      roundCount: game.roundCount,
+      includeAdult: game.includeAdult,
+      lightningEnabled: game.lightningEnabled,
+      lightningSeconds: game.lightningSeconds
+    });
     renderAmbiancePollSetup();
   });
   document.querySelector("#otherPoll").addEventListener("click", () => { state.ambiancePoll = null; renderPlayChoice(); });

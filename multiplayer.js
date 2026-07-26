@@ -555,6 +555,7 @@
           state.megaGame = null;
           clearV09MultiTimer();
           clearV014MultiTimer();
+          clearMultiPollTimer();
           renderLobby();
         }
       },
@@ -1790,7 +1791,9 @@
         config: {
           roundCount: Number(gameState.settings?.roundCount || gameState.items?.length || 10),
           includeAdult: Boolean(gameState.settings?.includeAdult),
-          forceAdult: Boolean(gameState.settings?.forceAdult)
+          forceAdult: Boolean(gameState.settings?.forceAdult),
+          lightningEnabled: Boolean(gameState.settings?.lightningEnabled),
+          lightningSeconds: Number(gameState.settings?.lightningSeconds || 15)
         }
       };
     }
@@ -2143,6 +2146,8 @@
         roundCount: Number(config.roundCount || 10),
         includeAdult: Boolean(state.adult && (config.includeAdult || config.forceAdult)),
         forceAdult: Boolean(state.adult && config.forceAdult),
+        lightningEnabled: type === "would" && Boolean(config.lightningEnabled),
+        lightningSeconds: Number(config.lightningSeconds || 15),
         items: [],
         currentIndex: 0,
         currentVoterIndex: 0,
@@ -3570,12 +3575,34 @@
     setBackVisible(true);
     screen.innerHTML = `
       <section class="game-cover ${game.type === "never" ? "game-cover-never" : "game-cover-would"}"><span class="game-cover-icon">${meta.icon}</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>${meta.title}</h2><p>Tout le monde vote en même temps sur son téléphone, puis les réponses sont révélées.</p></div></section>
-      <section class="card setup-card-v07"><div class="form-group"><label for="multiPollRounds">Nombre de questions</label><select id="multiPollRounds" class="text-input">${[8,10,15,20].map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} questions</option>`).join("")}</select></div></section>
+      <section class="card setup-card-v07">
+        <div class="form-group"><label for="multiPollRounds">Nombre de questions</label><select id="multiPollRounds" class="text-input">${[8,10,15,20].map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} questions</option>`).join("")}</select></div>
+        ${game.type === "would" ? `
+          <label class="option-card lightning-option">
+            <input id="multiPollLightning" type="checkbox" ${game.lightningEnabled ? "checked" : ""}>
+            <span><strong>⚡ Réponse éclair</strong><br><span class="helper">Tous les téléphones partagent le même chrono.</span></span>
+          </label>
+          <div id="multiPollLightningDurationWrap" class="form-group top-gap" ${game.lightningEnabled ? "" : "hidden"}>
+            <label for="multiPollLightningSeconds">Temps pour répondre</label>
+            <select id="multiPollLightningSeconds" class="text-input">
+              ${[10,15,20].map(value => `<option value="${value}" ${game.lightningSeconds === value ? "selected" : ""}>${value} secondes</option>`).join("")}
+            </select>
+          </div>
+        ` : ""}
+      </section>
       ${state.adult ? `<label class="option-card premium-toggle"><input id="multiPollAdult" type="checkbox" ${game.includeAdult ? "checked" : ""} ${game.forceAdult ? "disabled" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Des choix et révélations plus épicés.</span></span></label>` : ""}
       ${state.isHost ? `<button id="startMultiPoll" class="primary-btn full">Lancer sur tous les téléphones</button>` : renderMultiWaiting("En attente de l’hôte", "La partie commencera automatiquement.", "👑")}
     `;
     document.querySelector("#multiPollRounds")?.addEventListener("change", event => game.roundCount = Number(event.target.value));
     document.querySelector("#multiPollAdult")?.addEventListener("change", event => game.includeAdult = event.target.checked);
+    document.querySelector("#multiPollLightning")?.addEventListener("change", event => {
+      game.lightningEnabled = event.target.checked;
+      const wrap = document.querySelector("#multiPollLightningDurationWrap");
+      if (wrap) wrap.hidden = !game.lightningEnabled;
+    });
+    document.querySelector("#multiPollLightningSeconds")?.addEventListener("change", event => {
+      game.lightningSeconds = Number(event.target.value);
+    });
     document.querySelector("#startMultiPoll")?.addEventListener("click", startAmbiancePollGame);
   };
 
@@ -3596,11 +3623,21 @@
       const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `multi:${game.type === "never" ? "never-have-i-ever" : "would-you-rather"}${game.forceAdult ? ":adult" : ""}`);
       const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
       const type = game.type === "never" ? "never-have-i-ever" : "would-you-rather";
+      const lightningEnabled = type === "would-you-rather" && Boolean(game.lightningEnabled);
+      const lightningSeconds = Math.max(5, Number(game.lightningSeconds || 15));
+      const startedAt = AKFirebase.now();
       await AKFirebase.setGame(state.roomCode, { state: {
         type, phase: "voting", sessionGameId: createSessionGameId(type), items, currentIndex: 0,
         scores, rounds: {}, currentResult: null,
-        settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult), forceAdult: Boolean(game.forceAdult) },
-        startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
+        voteEndsAt: lightningEnabled ? startedAt + lightningSeconds * 1000 : null,
+        settings: {
+          roundCount: items.length,
+          includeAdult: Boolean(game.includeAdult),
+          forceAdult: Boolean(game.forceAdult),
+          lightningEnabled,
+          lightningSeconds
+        },
+        startedAt, updatedAt: startedAt
       }, votes: {} });
       state.multiView = "ambiance-game";
     } catch (error) {
@@ -3625,6 +3662,7 @@
     }
 
     const votes = room.game?.votes || {};
+    if (gameState.phase !== "voting") clearMultiPollTimer();
     processMultiPollVotes(gameState, votes);
     const renderKey = [gameState.type, gameState.phase, gameState.currentIndex, Object.keys(votes).length, votes[state.currentUid] || "", JSON.stringify(gameState.currentResult || {}), JSON.stringify(gameState.scores || {})].join("|");
     if (state.multiRenderKey === renderKey) return;
@@ -3676,11 +3714,56 @@
     }));
   }
 
-  function processMultiPollVotes(gameState, votes) {
-    if (!state.isHost || gameState.phase !== "voting" || Object.keys(votes).length < state.players.length) return;
-    const processingId = `${gameState.type}_${gameState.currentIndex}_${Object.keys(votes).length}`;
+  function clearMultiPollTimer() {
+    if (state.multiPollTimer) {
+      window.clearInterval(state.multiPollTimer);
+      state.multiPollTimer = null;
+    }
+  }
+
+  function startMultiPollTimer(gameState, votes) {
+    clearMultiPollTimer();
+
+    const lightningEnabled = gameState.type === "would-you-rather" && Boolean(gameState.settings?.lightningEnabled);
+    const deadline = Number(gameState.voteEndsAt || 0);
+    const totalSeconds = Math.max(5, Number(gameState.settings?.lightningSeconds || 15));
+
+    if (!lightningEnabled || !deadline || gameState.phase !== "voting") return;
+
+    const tick = () => {
+      const remainingMs = Math.max(0, deadline - AKFirebase.now());
+      const remainingSeconds = Math.max(0, Math.ceil(remainingMs / 1000));
+      const countdown = document.querySelector("#multiPollLightningCountdown");
+      const fill = document.querySelector("#multiPollLightningFill");
+
+      if (countdown) countdown.textContent = String(remainingSeconds);
+      if (fill) {
+        const ratio = Math.max(0, Math.min(1, remainingMs / (totalSeconds * 1000)));
+        fill.style.width = `${ratio * 100}%`;
+      }
+
+      if (remainingMs <= 0) {
+        clearMultiPollTimer();
+        if (state.isHost) processMultiPollVotes(gameState, votes, true);
+      }
+    };
+
+    tick();
+    state.multiPollTimer = window.setInterval(tick, 150);
+  }
+
+  function processMultiPollVotes(gameState, votes, forceDeadline = false) {
+    const lightningEnabled = gameState.type === "would-you-rather" && Boolean(gameState.settings?.lightningEnabled);
+    const deadlineReached = lightningEnabled && Number(gameState.voteEndsAt || 0) > 0 && AKFirebase.now() >= Number(gameState.voteEndsAt);
+    const everyoneAnswered = Object.keys(votes).length >= state.players.length;
+
+    if (!state.isHost || gameState.phase !== "voting" || (!everyoneAnswered && !deadlineReached && !forceDeadline)) return;
+
+    const processingId = `${gameState.type}_${gameState.currentIndex}_${Object.keys(votes).length}_${deadlineReached ? "expired" : "complete"}`;
     if (state.multiProcessingActionId === processingId) return;
     state.multiProcessingActionId = processingId;
+    clearMultiPollTimer();
+
     const item = gameState.items?.[gameState.currentIndex];
     const labels = gameState.type === "never-have-i-ever" ? ["never", "done"] : ["A", "B"];
     const values = Object.values(votes);
@@ -3689,34 +3772,58 @@
     const minorityIds = minority ? Object.entries(votes).filter(([, value]) => value === minority).map(([id]) => id) : [];
     const scores = { ...(gameState.scores || {}) };
     minorityIds.forEach(id => scores[id] = Number(scores[id] || 0) + 1);
+
     AKFirebase.updateGame(state.roomCode, {
-      "state/phase": "results", "state/currentResult": { votes, counts, minority, minorityIds, itemId: item?.id || "" },
-      "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: { votes, counts, minorityIds }, "state/updatedAt": AKFirebase.now()
+      "state/phase": "results",
+      "state/currentResult": { votes, counts, minority, minorityIds, itemId: item?.id || "" },
+      "state/scores": scores,
+      "state/voteEndsAt": null,
+      [`state/rounds/${gameState.currentIndex}`]: { votes, counts, minorityIds },
+      "state/updatedAt": AKFirebase.now()
     }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
   }
 
   function renderMultiPollVote(gameState, votes) {
+    clearMultiPollTimer();
     const item = gameState.items?.[gameState.currentIndex];
     const isNever = gameState.type === "never-have-i-ever";
     const ownVote = votes[state.currentUid];
+    const lightningActive = !isNever && Boolean(gameState.settings?.lightningEnabled);
+    const lightningSeconds = Math.max(5, Number(gameState.settings?.lightningSeconds || 15));
+    const remainingSeconds = Math.max(0, Math.ceil((Number(gameState.voteEndsAt || 0) - AKFirebase.now()) / 1000));
     title.textContent = isNever ? "Je n’ai jamais" : "Tu préfères";
     setBackVisible(false);
+
+    const lightningMarkup = lightningActive ? `
+      <section class="lightning-timer" aria-live="polite">
+        <div><span>⚡ Réponse éclair</span><strong><b id="multiPollLightningCountdown">${remainingSeconds}</b> s</strong></div>
+        <div class="lightning-track"><div id="multiPollLightningFill" class="lightning-fill" style="width:${Math.max(0, Math.min(100, (remainingSeconds / lightningSeconds) * 100))}%"></div></div>
+      </section>
+    ` : "";
+
     screen.innerHTML = `
       ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Question")}
-      ${ownVote ? renderMultiWaiting("Vote enregistré", `${Object.keys(votes).length}/${state.players.length} réponses reçues.`, "🔒") : isNever ? `<section class="poll-question-stage poll-never-stage"><span class="prompt-type-chip">🙋 JE N’AI JAMAIS</span><h2>${escapeHtml((item?.text || "").replace(/^Je n[’']ai jamais\s*/i, ""))}</h2><p>Ta réponse reste secrète jusqu’au résultat.</p></section><section class="poll-choice-grid"><button class="poll-choice poll-choice-a" data-multi-poll="never"><strong>Jamais</strong><span>Innocence totale.</span></button><button class="poll-choice poll-choice-b" data-multi-poll="done"><strong>Déjà</strong><span>J’assume presque.</span></button></section>` : `<section class="poll-question-stage poll-would-stage"><span class="prompt-type-chip">⚖️ TU PRÉFÈRES</span><h2>Choisis ton camp</h2><p>Impossible de répondre “ça dépend”.</p></section><section class="poll-choice-grid"><button class="poll-choice poll-choice-a" data-multi-poll="A"><small>OPTION A</small><strong>${escapeHtml(item?.optionA || "")}</strong></button><button class="poll-choice poll-choice-b" data-multi-poll="B"><small>OPTION B</small><strong>${escapeHtml(item?.optionB || "")}</strong></button></section>`}
-      ${renderPlayerSubmissionStatus(votes, "A voté", "Réfléchit…")}
+      ${lightningMarkup}
+      ${ownVote ? renderMultiWaiting("Vote enregistré", `${Object.keys(votes).length}/${state.players.length} réponses reçues.`, "🔒") : isNever ? `<section class="poll-question-stage poll-never-stage"><span class="prompt-type-chip">🙋 JE N’AI JAMAIS</span><h2>${escapeHtml((item?.text || "").replace(/^Je n[’']ai jamais\s*/i, ""))}</h2><p>Ta réponse reste secrète jusqu’au résultat.</p></section><section class="poll-choice-grid"><button class="poll-choice poll-choice-a" data-multi-poll="never"><strong>Jamais</strong><span>Innocence totale.</span></button><button class="poll-choice poll-choice-b" data-multi-poll="done"><strong>Déjà</strong><span>J’assume presque.</span></button></section>` : `<section class="poll-question-stage poll-would-stage"><span class="prompt-type-chip">⚖️ TU PRÉFÈRES</span><h2>Choisis ton camp</h2><p>${lightningActive ? "Choisis avant la fin du chrono." : "Impossible de répondre “ça dépend”."}</p></section><section class="poll-choice-grid"><button class="poll-choice poll-choice-a" data-multi-poll="A"><small>OPTION A</small><strong>${escapeHtml(item?.optionA || "")}</strong></button><button class="poll-choice poll-choice-b" data-multi-poll="B"><small>OPTION B</small><strong>${escapeHtml(item?.optionB || "")}</strong></button></section>`}
+      ${renderPlayerSubmissionStatus(votes, "A voté", lightningActive ? "Le chrono tourne…" : "Réfléchit…")}
     `;
+
     document.querySelectorAll("[data-multi-poll]").forEach(button => button.addEventListener("click", async () => {
       document.querySelectorAll("[data-multi-poll]").forEach(itemButton => itemButton.disabled = true);
       try { await AKFirebase.writeOwnGameEntry(state.roomCode, "votes", button.dataset.multiPoll); } catch (error) { console.error(error); alert("Le vote n’a pas pu être envoyé."); }
     }));
+
+    if (lightningActive) startMultiPollTimer(gameState, votes);
   }
 
   function renderMultiPollResults(gameState) {
     const item = gameState.items?.[gameState.currentIndex];
     const result = gameState.currentResult || {};
     const isNever = gameState.type === "never-have-i-ever";
-    const optionLabel = value => isNever ? (value === "never" ? "Jamais" : "Déjà") : (value === "A" ? item?.optionA : item?.optionB);
+    const optionLabel = value => {
+      if (value == null) return "Pas répondu";
+      return isNever ? (value === "never" ? "Jamais" : "Déjà") : (value === "A" ? item?.optionA : item?.optionB);
+    };
     title.textContent = "Le groupe a parlé";
     setBackVisible(false);
     screen.innerHTML = `
@@ -3729,7 +3836,18 @@
       event.currentTarget.disabled = true;
       const next = Number(gameState.currentIndex || 0) + 1;
       const finished = next >= (gameState.items || []).length;
-      try { await AKFirebase.updateGame(state.roomCode, { "state/phase": finished ? "final" : "voting", "state/currentIndex": finished ? gameState.currentIndex : next, "state/currentResult": null, "state/finishedAt": finished ? AKFirebase.now() : null, "state/updatedAt": AKFirebase.now(), votes: null }); }
+      const lightningEnabled = gameState.type === "would-you-rather" && Boolean(gameState.settings?.lightningEnabled);
+      const lightningSeconds = Math.max(5, Number(gameState.settings?.lightningSeconds || 15));
+      const now = AKFirebase.now();
+      try { await AKFirebase.updateGame(state.roomCode, {
+        "state/phase": finished ? "final" : "voting",
+        "state/currentIndex": finished ? gameState.currentIndex : next,
+        "state/currentResult": null,
+        "state/voteEndsAt": finished ? null : (lightningEnabled ? now + lightningSeconds * 1000 : null),
+        "state/finishedAt": finished ? now : null,
+        "state/updatedAt": now,
+        votes: null
+      }); }
       catch (error) { console.error(error); event.currentTarget.disabled = false; alert("Impossible de passer à la suite."); }
     });
   }
@@ -5467,6 +5585,7 @@
     if (!isMultiplayer()) return localRenderGames();
     clearV09MultiTimer();
     clearV014MultiTimer();
+    clearMultiPollTimer();
     const category = categories.find(item => item.id === state.currentCategory);
     title.textContent = category.name;
     setBackVisible(true);

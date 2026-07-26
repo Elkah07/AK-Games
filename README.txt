@@ -1,23 +1,28 @@
-AK'Games V1.0 — Nouvelle modale de salon
+AK'Games V1.0 — Mode facultatif « Réponse éclair »
 
 À remplacer à la racine :
+- app.js
 - multiplayer.js
 - styles.css
 - service-worker.js
 
-Ce qui change :
-- suppression de l'alerte blanche native « Le salon a été fermé » ;
-- nouvelle fenêtre AK'Games sombre et violette ;
-- bouton « Retour à l'accueil » ;
-- nouvelle confirmation élégante quand l'hôte ferme la room ;
-- nouvelle confirmation élégante quand un invité quitte la room ;
-- touche Échap et clic hors fenêtre pour annuler une confirmation ;
-- accessibilité clavier et lecteur d'écran ;
-- cache PWA passé à akgames-v1.0-rc7-room-modal.
+Fonctionnement :
+- disponible pour Tu préfères et Tu préfères +18 ;
+- désactivé par défaut ;
+- choix de 10, 15 ou 20 secondes ;
+- 15 secondes proposées par défaut ;
+- en mode un téléphone, le chrono démarre seulement après « Je suis [prénom] » ;
+- si le temps expire, la réponse devient « Temps écoulé » et le téléphone passe à la personne suivante ;
+- en multijoueur, tout le monde partage le même chrono synchronisé ;
+- les personnes sans réponse apparaissent comme « Pas répondu » ;
+- aucune option n'est choisie au hasard et aucun point n'est attribué à une absence de réponse ;
+- la revanche conserve le réglage choisi.
 
 Installation :
-1. Remplace les trois fichiers.
+1. Remplace les quatre fichiers.
 2. Clique sur « Valider et envoyer (push) ».
 3. Attends la coche verte GitHub Actions.
 4. Ferme complètement AK'Games sur les téléphones.
 5. Rouvre l'application.
+
+Cache PWA : akgames-v1.0-rc9-lightning
