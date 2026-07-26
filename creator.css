@@ -963,3 +963,165 @@
     min-height: 88px;
   }
 }
+
+/* V1.3 · gestion privée des rôles */
+.ak-creator-access-tool {
+  border-color: rgba(97, 232, 255, .25);
+  background:
+    radial-gradient(circle at 0 0, rgba(97, 232, 255, .1), transparent 45%),
+    linear-gradient(145deg, rgba(24, 16, 48, .96), rgba(9, 8, 20, .96));
+}
+
+.ak-creator-access-list {
+  display: grid;
+  gap: 10px;
+}
+
+.ak-creator-access-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border: 1px solid rgba(173, 136, 255, .18);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .035);
+}
+
+.ak-creator-access-card.is-request {
+  border-color: rgba(97, 232, 255, .22);
+  background: linear-gradient(135deg, rgba(97, 232, 255, .055), rgba(154, 104, 255, .04));
+}
+
+.ak-creator-access-avatar {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(190, 158, 255, .25);
+  border-radius: 15px;
+  background: linear-gradient(145deg, rgba(154, 104, 255, .24), rgba(73, 42, 133, .28));
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 950;
+}
+
+.ak-creator-access-copy {
+  min-width: 0;
+}
+
+.ak-creator-access-copy strong,
+.ak-creator-access-copy small,
+.ak-creator-access-copy code {
+  display: block;
+}
+
+.ak-creator-access-copy strong {
+  margin-bottom: 4px;
+  font-size: .94rem;
+}
+
+.ak-creator-access-copy small {
+  color: rgba(255, 255, 255, .57);
+  font-size: .75rem;
+  line-height: 1.4;
+}
+
+.ak-creator-access-copy code {
+  margin-top: 6px;
+  color: rgba(191, 164, 255, .62);
+  font-size: .61rem;
+  overflow-wrap: anywhere;
+}
+
+.ak-creator-role {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 5px;
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .055);
+  color: #d9c8ff;
+  font-size: .64rem;
+  font-weight: 850;
+}
+
+.ak-creator-role.role-owner {
+  border-color: rgba(255, 213, 104, .22);
+  background: rgba(255, 213, 104, .08);
+  color: #ffe6a2;
+}
+
+.ak-creator-role.role-moderator {
+  border-color: rgba(97, 232, 255, .22);
+  background: rgba(97, 232, 255, .07);
+  color: #baf5ff;
+}
+
+.ak-creator-role.role-tester {
+  border-color: rgba(117, 239, 180, .2);
+  background: rgba(117, 239, 180, .07);
+  color: #bfffe0;
+}
+
+.ak-creator-access-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.ak-creator-access-actions button {
+  min-height: 40px;
+  padding: 9px 12px;
+  font-size: .72rem;
+}
+
+.ak-creator-owner-lock {
+  align-self: center;
+  color: rgba(255, 230, 162, .68);
+  font-size: .68rem;
+  font-weight: 800;
+}
+
+.ak-creator-access-help {
+  padding: 15px 16px;
+  margin: 12px 0 2px;
+  border: 1px dashed rgba(154, 104, 255, .25);
+  border-radius: 18px;
+  background: rgba(154, 104, 255, .045);
+}
+
+.ak-creator-access-help strong,
+.ak-creator-access-help p {
+  display: block;
+  margin: 0;
+}
+
+.ak-creator-access-help p {
+  margin-top: 5px;
+  color: rgba(255, 255, 255, .58);
+  font-size: .78rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 640px) {
+  .ak-creator-access-card {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .ak-creator-access-actions,
+  .ak-creator-owner-lock {
+    grid-column: 1 / -1;
+  }
+
+  .ak-creator-access-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ak-creator-access-actions button {
+    width: 100%;
+  }
+}

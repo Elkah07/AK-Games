@@ -1,13 +1,13 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v1.3-creator-visual-refresh";
+const CACHE_VERSION = "akgames-v1.4-creator-access-roles";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
   "/styles.css?v=rc4-home",
-  "/creator.css?v=creator-v1.2-visual",
+  "/creator.css?v=creator-v1.3-access",
   "/app.js",
-  "/creator.js?v=creator-v1.2-visual",
+  "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
   "/multiplayer.js",
   "/pwa.js",
