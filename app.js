@@ -2710,6 +2710,125 @@ function startAmbiancePollTimer(deadline, totalSeconds, onExpire) {
   state.ambiancePollTimer = window.setInterval(tick, 150);
 }
 
+
+const WOULD_SPECIAL_CARDS = {
+  double_peine: {
+    icon: "🪤",
+    label: "Double peine",
+    instruction: "Choisis une option, puis prépare-toi à expliquer pourquoi l’autre serait encore pire."
+  },
+  choix_collectif: {
+    icon: "🤝",
+    label: "Choix collectif",
+    instruction: "Le groupe gagne un point seulement si tout le monde choisit exactement la même option."
+  },
+  prediction_majorite: {
+    icon: "🔮",
+    label: "Prédiction",
+    instruction: "Avant de voter, prédis mentalement quelle option sera majoritaire."
+  },
+  changement_autorise: {
+    icon: "🔄",
+    label: "Changement autorisé",
+    instruction: "Après la révélation et le débat, chacun peut annoncer s’il change finalement d’avis."
+  },
+  qui_choisirait_quoi: {
+    icon: "🕵️",
+    label: "Qui choisirait quoi ?",
+    instruction: "Choisis mentalement une personne du groupe et essaie de deviner sa réponse avant de voter."
+  },
+  reponse_eclair_extreme: {
+    icon: "⚡",
+    label: "Éclair extrême",
+    instruction: "Seulement cinq secondes pour répondre, même si le mode Réponse éclair est désactivé."
+  }
+};
+
+function wouldYouRatherSpecialMeta(item) {
+  return item?.specialType ? WOULD_SPECIAL_CARDS[item.specialType] || null : null;
+}
+
+function renderWouldYouRatherSpecialCard(item) {
+  const meta = wouldYouRatherSpecialMeta(item);
+  if (!meta) return "";
+
+  return `
+    <aside class="would-special-card would-special-${escapeHtml(item.specialType)}">
+      <span class="would-special-icon" aria-hidden="true">${meta.icon}</span>
+      <div>
+        <strong>${escapeHtml(meta.label)}</strong>
+        <p>${escapeHtml(meta.instruction)}</p>
+      </div>
+    </aside>
+  `;
+}
+
+function renderWouldYouRatherSpecialResult(item, result = {}) {
+  const meta = wouldYouRatherSpecialMeta(item);
+  if (!meta) return "";
+
+  let message = meta.instruction;
+
+  if (item.specialType === "choix_collectif") {
+    message = result.collectiveSuccess
+      ? "Mission réussie : tout le monde a choisi la même option. Chaque joueur gagne 1 point."
+      : "Mission ratée : le groupe n’était pas unanime. Aucun point collectif n’est attribué.";
+  } else if (item.specialType === "prediction_majorite") {
+    const countA = Number(result.counts?.A || 0);
+    const countB = Number(result.counts?.B || 0);
+    message = countA === countB
+      ? "La prédiction était piégeuse : le groupe termine sur une égalité."
+      : `La majorité a choisi l’option ${countA > countB ? "A" : "B"}. Qui l’avait deviné ?`;
+  } else if (item.specialType === "double_peine") {
+    message = "Tour de table : explique pourquoi l’option que tu n’as pas choisie serait encore pire.";
+  } else if (item.specialType === "changement_autorise") {
+    message = "Débattez maintenant. Après les arguments, chacun peut annoncer s’il changerait finalement de camp.";
+  } else if (item.specialType === "qui_choisirait_quoi") {
+    message = "Révélez maintenant la personne que vous aviez choisie mentalement et vérifiez votre prédiction.";
+  } else if (item.specialType === "reponse_eclair_extreme") {
+    message = "Cinq secondes, aucune dissertation : vos premiers instincts viennent de parler.";
+  }
+
+  return `
+    <aside class="would-special-result">
+      <span aria-hidden="true">${meta.icon}</span>
+      <div><strong>${escapeHtml(meta.label)}</strong><p>${escapeHtml(message)}</p></div>
+    </aside>
+  `;
+}
+
+function selectWouldYouRatherRoundItems(pool, requestedCount, historyKey) {
+  const count = Math.max(0, Math.min(Number(requestedCount || 0), pool.length));
+  const specialPool = pool.filter(item => Boolean(item?.specialType));
+  const regularPool = pool.filter(item => !item?.specialType);
+
+  if (!specialPool.length || count < 2) {
+    return selectFreshItems(pool, count, historyKey);
+  }
+
+  const specialCount = Math.min(
+    specialPool.length,
+    count,
+    Math.max(1, Math.round(count / 8))
+  );
+  const regularCount = Math.max(0, count - specialCount);
+
+  const selectedRegular = selectFreshItems(regularPool, regularCount, `${historyKey}:regular`);
+  const selectedSpecial = selectFreshItems(specialPool, specialCount, `${historyKey}:special`);
+  const result = [...selectedRegular];
+
+  selectedSpecial.forEach((card, index) => {
+    const position = Math.min(
+      result.length,
+      Math.max(1, Math.round(((index + 1) * (result.length + 1)) / (selectedSpecial.length + 1)))
+    );
+    result.splice(position, 0, card);
+  });
+
+  return result.slice(0, count);
+}
+
+
 function resetAmbiancePollState(type, forceAdult = false, config = {}) {
   clearAmbiancePollTimer();
   state.ambiancePoll = {
@@ -2789,7 +2908,10 @@ async function startAmbiancePollGame() {
       pool = await loadJsonFile(meta.classic, "Impossible de charger les questions.");
       if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile(meta.adult, "Impossible de charger les questions adultes."));
     }
-    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `solo:${game.type === "never" ? "never-have-i-ever" : "would-you-rather"}${game.forceAdult ? ":adult" : ""}`);
+    const historyKey = `solo:${game.type === "never" ? "never-have-i-ever" : "would-you-rather"}${game.forceAdult ? ":adult" : ""}`;
+    game.items = game.type === "would"
+      ? selectWouldYouRatherRoundItems(pool, Math.min(game.roundCount, pool.length), historyKey)
+      : selectFreshItems(pool, Math.min(game.roundCount, pool.length), historyKey);
     game.currentIndex = 0;
     game.currentVoterIndex = 0;
     game.votes = {};
@@ -2838,8 +2960,9 @@ function renderAmbiancePollVote() {
   const item = game.items[game.currentIndex];
   const meta = pollGameMeta(game.type);
   const player = state.players[game.currentVoterIndex];
-  const lightningActive = game.type === "would" && game.lightningEnabled;
-  const lightningSeconds = Math.max(5, Number(game.lightningSeconds || 15));
+  const extremeLightning = game.type === "would" && item?.specialType === "reponse_eclair_extreme";
+  const lightningActive = game.type === "would" && (game.lightningEnabled || extremeLightning);
+  const lightningSeconds = extremeLightning ? 5 : Math.max(5, Number(game.lightningSeconds || 15));
   const lightningDeadline = Date.now() + lightningSeconds * 1000;
   title.textContent = meta.title;
 
@@ -2855,6 +2978,7 @@ function renderAmbiancePollVote() {
     <section class="poll-choice-grid"><button class="poll-choice poll-choice-a" data-poll-vote="never"><strong>Jamais</strong><span>Pas moi. Innocence totale.</span></button><button class="poll-choice poll-choice-b" data-poll-vote="done"><strong>Déjà</strong><span>Oui, et j’assume presque.</span></button></section>
   ` : `
     ${lightningMarkup}
+    ${renderWouldYouRatherSpecialCard(item)}
     <section class="poll-question-stage poll-would-stage"><span class="prompt-type-chip">⚖️ TU PRÉFÈRES</span><h2>Choisis ton camp</h2><p>${escapeHtml(player.name)}, impossible de répondre “ça dépend”.</p></section>
     <section class="poll-choice-grid"><button class="poll-choice poll-choice-a" data-poll-vote="A"><small>OPTION A</small><strong>${escapeHtml(item.optionA)}</strong></button><button class="poll-choice poll-choice-b" data-poll-vote="B"><small>OPTION B</small><strong>${escapeHtml(item.optionB)}</strong></button></section>
   `;
@@ -2879,12 +3003,22 @@ function renderAmbiancePollVote() {
 }
 
 function calculatePollResult(game) {
+  const item = game.items?.[game.currentIndex];
   const values = Object.values(game.votes);
   const labels = game.type === "never" ? ["never", "done"] : ["A", "B"];
   const counts = Object.fromEntries(labels.map(label => [label, values.filter(value => value === label).length]));
   const minority = counts[labels[0]] === counts[labels[1]] ? null : (counts[labels[0]] < counts[labels[1]] ? labels[0] : labels[1]);
   const minorityIds = minority ? Object.entries(game.votes).filter(([, value]) => value === minority).map(([id]) => id) : [];
-  return { counts, minority, minorityIds };
+  const validVoteIds = Object.entries(game.votes)
+    .filter(([, value]) => labels.includes(value))
+    .map(([id]) => id);
+  const collectiveSuccess = item?.specialType === "choix_collectif"
+    && validVoteIds.length === state.players.length
+    && new Set(validVoteIds.map(id => game.votes[id])).size === 1;
+  const awardedIds = item?.specialType === "choix_collectif"
+    ? (collectiveSuccess ? validVoteIds : [])
+    : minorityIds;
+  return { counts, minority, minorityIds, awardedIds, collectiveSuccess };
 }
 
 function renderAmbiancePollReveal() {
@@ -2896,8 +3030,14 @@ function renderAmbiancePollReveal() {
     if (value === "timeout" || value == null) return "Temps écoulé";
     return game.type === "never" ? (value === "never" ? "Jamais" : "Déjà") : (value === "A" ? item.optionA : item.optionB);
   };
-  result.minorityIds.forEach(id => game.scores[id] = Number(game.scores[id] || 0) + 1);
-  game.rounds.push({ itemId: item.id, votes: { ...game.votes }, minorityIds: result.minorityIds });
+  result.awardedIds.forEach(id => game.scores[id] = Number(game.scores[id] || 0) + 1);
+  game.rounds.push({
+    itemId: item.id,
+    votes: { ...game.votes },
+    minorityIds: result.minorityIds,
+    awardedIds: result.awardedIds,
+    collectiveSuccess: result.collectiveSuccess
+  });
 
   title.textContent = "Le groupe a parlé";
   setBackVisible(false);
@@ -2907,8 +3047,12 @@ function renderAmbiancePollReveal() {
       <h2>${game.type === "never" ? escapeHtml(item.text) : "Le verdict est tombé"}</h2>
       ${game.type === "would" ? `<div class="reveal-dilemma"><span>${escapeHtml(item.optionA)}</span><b>VS</b><span>${escapeHtml(item.optionB)}</span></div>` : ""}
     </section>
+    ${game.type === "would" ? renderWouldYouRatherSpecialResult(item, result) : ""}
     <section class="poll-results-grid">
-      ${state.players.map(player => `<article class="poll-result-person"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(optionLabel(game.votes[player.id]))}</small>${result.minorityIds.includes(player.id) ? `<em>+1 pt minorité</em>` : ""}</article>`).join("")}
+      ${state.players.map(player => {
+        const pointLabel = item?.specialType === "choix_collectif" ? "+1 pt collectif" : "+1 pt minorité";
+        return `<article class="poll-result-person"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(optionLabel(game.votes[player.id]))}</small>${result.awardedIds.includes(player.id) ? `<em>${pointLabel}</em>` : ""}</article>`;
+      }).join("")}
     </section>
     ${state.alcohol && game.type === "never" ? `<div class="alcohol-callout">🍻 Les personnes qui ont répondu “Déjà” peuvent trinquer avec la boisson de leur choix, sans obligation.</div>` : ""}
     <button id="nextPollRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Question suivante"}</button>
@@ -2929,7 +3073,7 @@ function renderAmbiancePollEnd() {
   title.textContent = "Classement final";
   setBackVisible(false);
   screen.innerHTML = `
-    <section class="winner-stage winner-stage-v07"><div class="winner-crown">${meta.icon}🏆</div><h2>Les esprits libres sont devant</h2><p>Un point était gagné à chaque réponse minoritaire.</p></section>
+    <section class="winner-stage winner-stage-v07"><div class="winner-crown">${meta.icon}🏆</div><h2>Les esprits libres sont devant</h2><p>Un point était gagné par la minorité, ou par tout le groupe sur une carte collective réussie.</p></section>
     <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
     <div class="toolbar"><button id="replayPoll" class="secondary-btn">Rejouer</button><button id="otherPoll" class="primary-btn">Autre jeu</button></div>
   `;

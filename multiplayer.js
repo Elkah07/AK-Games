@@ -3620,16 +3620,21 @@
         pool = await loadJsonFile(meta.classic, "Impossible de charger les questions.");
         if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile(meta.adult, "Impossible de charger les questions adultes."));
       }
-      const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `multi:${game.type === "never" ? "never-have-i-ever" : "would-you-rather"}${game.forceAdult ? ":adult" : ""}`);
+      const historyKey = `multi:${game.type === "never" ? "never-have-i-ever" : "would-you-rather"}${game.forceAdult ? ":adult" : ""}`;
+      const items = game.type === "would"
+        ? selectWouldYouRatherRoundItems(pool, Math.min(game.roundCount, pool.length), historyKey)
+        : selectFreshItems(pool, Math.min(game.roundCount, pool.length), historyKey);
       const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
       const type = game.type === "never" ? "never-have-i-ever" : "would-you-rather";
       const lightningEnabled = type === "would-you-rather" && Boolean(game.lightningEnabled);
       const lightningSeconds = Math.max(5, Number(game.lightningSeconds || 15));
+      const firstExtremeLightning = type === "would-you-rather" && items[0]?.specialType === "reponse_eclair_extreme";
+      const firstRoundSeconds = firstExtremeLightning ? 5 : lightningSeconds;
       const startedAt = AKFirebase.now();
       await AKFirebase.setGame(state.roomCode, { state: {
         type, phase: "voting", sessionGameId: createSessionGameId(type), items, currentIndex: 0,
         scores, rounds: {}, currentResult: null,
-        voteEndsAt: lightningEnabled ? startedAt + lightningSeconds * 1000 : null,
+        voteEndsAt: (lightningEnabled || firstExtremeLightning) ? startedAt + firstRoundSeconds * 1000 : null,
         settings: {
           roundCount: items.length,
           includeAdult: Boolean(game.includeAdult),
@@ -3724,9 +3729,12 @@
   function startMultiPollTimer(gameState, votes) {
     clearMultiPollTimer();
 
-    const lightningEnabled = gameState.type === "would-you-rather" && Boolean(gameState.settings?.lightningEnabled);
+    const item = gameState.items?.[gameState.currentIndex];
+    const extremeLightning = gameState.type === "would-you-rather" && item?.specialType === "reponse_eclair_extreme";
+    const lightningEnabled = gameState.type === "would-you-rather"
+      && (Boolean(gameState.settings?.lightningEnabled) || extremeLightning);
     const deadline = Number(gameState.voteEndsAt || 0);
-    const totalSeconds = Math.max(5, Number(gameState.settings?.lightningSeconds || 15));
+    const totalSeconds = extremeLightning ? 5 : Math.max(5, Number(gameState.settings?.lightningSeconds || 15));
 
     if (!lightningEnabled || !deadline || gameState.phase !== "voting") return;
 
@@ -3753,8 +3761,13 @@
   }
 
   function processMultiPollVotes(gameState, votes, forceDeadline = false) {
-    const lightningEnabled = gameState.type === "would-you-rather" && Boolean(gameState.settings?.lightningEnabled);
-    const deadlineReached = lightningEnabled && Number(gameState.voteEndsAt || 0) > 0 && AKFirebase.now() >= Number(gameState.voteEndsAt);
+    const item = gameState.items?.[gameState.currentIndex];
+    const extremeLightning = gameState.type === "would-you-rather" && item?.specialType === "reponse_eclair_extreme";
+    const lightningEnabled = gameState.type === "would-you-rather"
+      && (Boolean(gameState.settings?.lightningEnabled) || extremeLightning);
+    const deadlineReached = lightningEnabled
+      && Number(gameState.voteEndsAt || 0) > 0
+      && AKFirebase.now() >= Number(gameState.voteEndsAt);
     const everyoneAnswered = Object.keys(votes).length >= state.players.length;
 
     if (!state.isHost || gameState.phase !== "voting" || (!everyoneAnswered && !deadlineReached && !forceDeadline)) return;
@@ -3764,21 +3777,43 @@
     state.multiProcessingActionId = processingId;
     clearMultiPollTimer();
 
-    const item = gameState.items?.[gameState.currentIndex];
     const labels = gameState.type === "never-have-i-ever" ? ["never", "done"] : ["A", "B"];
     const values = Object.values(votes);
     const counts = Object.fromEntries(labels.map(label => [label, values.filter(value => value === label).length]));
     const minority = counts[labels[0]] === counts[labels[1]] ? null : (counts[labels[0]] < counts[labels[1]] ? labels[0] : labels[1]);
     const minorityIds = minority ? Object.entries(votes).filter(([, value]) => value === minority).map(([id]) => id) : [];
+    const validVoteIds = Object.entries(votes)
+      .filter(([, value]) => labels.includes(value))
+      .map(([id]) => id);
+    const collectiveSuccess = item?.specialType === "choix_collectif"
+      && validVoteIds.length === state.players.length
+      && new Set(validVoteIds.map(id => votes[id])).size === 1;
+    const awardedIds = item?.specialType === "choix_collectif"
+      ? (collectiveSuccess ? validVoteIds : [])
+      : minorityIds;
     const scores = { ...(gameState.scores || {}) };
-    minorityIds.forEach(id => scores[id] = Number(scores[id] || 0) + 1);
+    awardedIds.forEach(id => scores[id] = Number(scores[id] || 0) + 1);
 
     AKFirebase.updateGame(state.roomCode, {
       "state/phase": "results",
-      "state/currentResult": { votes, counts, minority, minorityIds, itemId: item?.id || "" },
+      "state/currentResult": {
+        votes,
+        counts,
+        minority,
+        minorityIds,
+        awardedIds,
+        collectiveSuccess,
+        itemId: item?.id || ""
+      },
       "state/scores": scores,
       "state/voteEndsAt": null,
-      [`state/rounds/${gameState.currentIndex}`]: { votes, counts, minorityIds },
+      [`state/rounds/${gameState.currentIndex}`]: {
+        votes,
+        counts,
+        minorityIds,
+        awardedIds,
+        collectiveSuccess
+      },
       "state/updatedAt": AKFirebase.now()
     }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
   }
@@ -3788,8 +3823,9 @@
     const item = gameState.items?.[gameState.currentIndex];
     const isNever = gameState.type === "never-have-i-ever";
     const ownVote = votes[state.currentUid];
-    const lightningActive = !isNever && Boolean(gameState.settings?.lightningEnabled);
-    const lightningSeconds = Math.max(5, Number(gameState.settings?.lightningSeconds || 15));
+    const extremeLightning = !isNever && item?.specialType === "reponse_eclair_extreme";
+    const lightningActive = !isNever && (Boolean(gameState.settings?.lightningEnabled) || extremeLightning);
+    const lightningSeconds = extremeLightning ? 5 : Math.max(5, Number(gameState.settings?.lightningSeconds || 15));
     const remainingSeconds = Math.max(0, Math.ceil((Number(gameState.voteEndsAt || 0) - AKFirebase.now()) / 1000));
     title.textContent = isNever ? "Je n’ai jamais" : "Tu préfères";
     setBackVisible(false);
@@ -3804,6 +3840,7 @@
     screen.innerHTML = `
       ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Question")}
       ${lightningMarkup}
+      ${!isNever ? renderWouldYouRatherSpecialCard(item) : ""}
       ${ownVote ? renderMultiWaiting("Vote enregistré", `${Object.keys(votes).length}/${state.players.length} réponses reçues.`, "🔒") : isNever ? `<section class="poll-question-stage poll-never-stage"><span class="prompt-type-chip">🙋 JE N’AI JAMAIS</span><h2>${escapeHtml((item?.text || "").replace(/^Je n[’']ai jamais\s*/i, ""))}</h2><p>Ta réponse reste secrète jusqu’au résultat.</p></section><section class="poll-choice-grid"><button class="poll-choice poll-choice-a" data-multi-poll="never"><strong>Jamais</strong><span>Innocence totale.</span></button><button class="poll-choice poll-choice-b" data-multi-poll="done"><strong>Déjà</strong><span>J’assume presque.</span></button></section>` : `<section class="poll-question-stage poll-would-stage"><span class="prompt-type-chip">⚖️ TU PRÉFÈRES</span><h2>Choisis ton camp</h2><p>${lightningActive ? "Choisis avant la fin du chrono." : "Impossible de répondre “ça dépend”."}</p></section><section class="poll-choice-grid"><button class="poll-choice poll-choice-a" data-multi-poll="A"><small>OPTION A</small><strong>${escapeHtml(item?.optionA || "")}</strong></button><button class="poll-choice poll-choice-b" data-multi-poll="B"><small>OPTION B</small><strong>${escapeHtml(item?.optionB || "")}</strong></button></section>`}
       ${renderPlayerSubmissionStatus(votes, "A voté", lightningActive ? "Le chrono tourne…" : "Réfléchit…")}
     `;
@@ -3828,7 +3865,11 @@
     setBackVisible(false);
     screen.innerHTML = `
       <section class="reveal-stage reveal-v07"><span class="game-cover-icon">${isNever ? "🙋" : "⚖️"}</span><h2>${isNever ? escapeHtml(item?.text || "") : "Le verdict est tombé"}</h2>${!isNever ? `<div class="reveal-dilemma"><span>${escapeHtml(item?.optionA || "")}</span><b>VS</b><span>${escapeHtml(item?.optionB || "")}</span></div>` : ""}</section>
-      <section class="poll-results-grid">${state.players.map(player => `<article class="poll-result-person"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(optionLabel(result.votes?.[player.id]))}</small>${result.minorityIds?.includes(player.id) ? `<em>+1 pt minorité</em>` : ""}</article>`).join("")}</section>
+      ${!isNever ? renderWouldYouRatherSpecialResult(item, result) : ""}
+      <section class="poll-results-grid">${state.players.map(player => {
+        const pointLabel = item?.specialType === "choix_collectif" ? "+1 pt collectif" : "+1 pt minorité";
+        return `<article class="poll-result-person"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(optionLabel(result.votes?.[player.id]))}</small>${result.awardedIds?.includes(player.id) ? `<em>${pointLabel}</em>` : ""}</article>`;
+      }).join("")}</section>
       ${state.alcohol && isNever ? `<div class="alcohol-callout">🍻 Les personnes qui ont répondu “Déjà” peuvent trinquer avec la boisson de leur choix, sans obligation.</div>` : ""}
       ${state.isHost ? `<button id="nextMultiPoll" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Question suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La suite apparaîtra automatiquement.", "👑")}
     `;
@@ -3838,12 +3879,15 @@
       const finished = next >= (gameState.items || []).length;
       const lightningEnabled = gameState.type === "would-you-rather" && Boolean(gameState.settings?.lightningEnabled);
       const lightningSeconds = Math.max(5, Number(gameState.settings?.lightningSeconds || 15));
+      const nextItem = gameState.items?.[next];
+      const nextExtremeLightning = gameState.type === "would-you-rather" && nextItem?.specialType === "reponse_eclair_extreme";
+      const nextRoundSeconds = nextExtremeLightning ? 5 : lightningSeconds;
       const now = AKFirebase.now();
       try { await AKFirebase.updateGame(state.roomCode, {
         "state/phase": finished ? "final" : "voting",
         "state/currentIndex": finished ? gameState.currentIndex : next,
         "state/currentResult": null,
-        "state/voteEndsAt": finished ? null : (lightningEnabled ? now + lightningSeconds * 1000 : null),
+        "state/voteEndsAt": finished ? null : ((lightningEnabled || nextExtremeLightning) ? now + nextRoundSeconds * 1000 : null),
         "state/finishedAt": finished ? now : null,
         "state/updatedAt": now,
         votes: null
@@ -3858,7 +3902,7 @@
     title.textContent = "Classement final";
     setBackVisible(false);
     screen.innerHTML = `
-      <section class="winner-stage winner-stage-v07"><div class="winner-crown">${presentation.icon}🏆</div><h2>La manche est terminée</h2><p>Le score rejoint maintenant le classement général de la soirée.</p></section>
+      <section class="winner-stage winner-stage-v07"><div class="winner-crown">${presentation.icon}🏆</div><h2>La manche est terminée</h2><p>La minorité marque des points, et les cartes collectives récompensent parfois tout le groupe.</p></section>
       <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(gameState.scores?.[player.id] || 0)} pts</span></div>`).join("")}</section>
       ${renderPostGameContinuation(gameState)}
     `;

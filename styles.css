@@ -4790,3 +4790,88 @@ select:focus-visible,
     transition-duration: .01ms !important;
   }
 }
+
+/* AK'GAMES — CARTES SPÉCIALES TU PRÉFÈRES */
+.would-special-card,
+.would-special-result {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin: 0 0 16px;
+  padding: 15px 16px;
+  border: 1px solid rgba(192, 132, 252, .36);
+  border-radius: 19px;
+  background:
+    linear-gradient(135deg, rgba(124, 58, 237, .16), rgba(255, 255, 255, .035)),
+    rgba(14, 10, 27, .86);
+  box-shadow: 0 12px 30px rgba(76, 29, 149, .14);
+}
+
+.would-special-icon,
+.would-special-result > span {
+  display: grid;
+  flex: 0 0 42px;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(216, 180, 254, .3);
+  border-radius: 14px;
+  background: rgba(168, 85, 247, .13);
+  font-size: 1.25rem;
+}
+
+.would-special-card strong,
+.would-special-result strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #f5edff;
+  font-size: .84rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.would-special-card p,
+.would-special-result p {
+  margin: 0;
+  color: rgba(237, 233, 254, .76);
+  font-size: .92rem;
+  line-height: 1.45;
+}
+
+.would-special-result {
+  border-color: rgba(74, 222, 128, .3);
+  background:
+    linear-gradient(135deg, rgba(34, 197, 94, .1), rgba(124, 58, 237, .1)),
+    rgba(14, 10, 27, .88);
+}
+
+.would-special-choix_collectif {
+  border-color: rgba(74, 222, 128, .34);
+}
+
+.would-special-reponse_eclair_extreme {
+  border-color: rgba(250, 204, 21, .42);
+  background:
+    linear-gradient(135deg, rgba(234, 179, 8, .13), rgba(124, 58, 237, .12)),
+    rgba(14, 10, 27, .88);
+}
+
+.would-special-double_peine {
+  border-color: rgba(251, 113, 133, .38);
+}
+
+@media (max-width: 390px) {
+  .would-special-card,
+  .would-special-result {
+    padding: 13px 14px;
+    gap: 11px;
+  }
+
+  .would-special-icon,
+  .would-special-result > span {
+    flex-basis: 38px;
+    width: 38px;
+    height: 38px;
+  }
+}
