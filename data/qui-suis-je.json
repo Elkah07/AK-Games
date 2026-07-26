@@ -465,7 +465,7 @@
     "category": "culture",
     "clues": [
       "Je préfère le noir.",
-      "Je sourit rarement.",
+      "Je souris rarement.",
       "Mon humour est très sombre."
     ]
   },
@@ -636,7 +636,7 @@
     "clues": [
       "Je suis longue.",
       "Je craque quand je suis fraîche.",
-      "Je accompagne beaucoup de repas."
+      "J’accompagne beaucoup de repas."
     ]
   },
   {
@@ -726,7 +726,7 @@
     "clues": [
       "Je renvoie la lumière.",
       "Je tourne souvent au-dessus d’une piste.",
-      "Je adore les soirées rétro."
+      "J’adore les soirées rétro."
     ]
   },
   {
@@ -746,7 +746,7 @@
     "clues": [
       "Je prends plusieurs photos rapidement.",
       "On se serre souvent à l’intérieur.",
-      "Je produit des souvenirs en bande."
+      "Je produis des souvenirs en bande."
     ]
   },
   {
@@ -785,7 +785,7 @@
     "category": "jeux",
     "clues": [
       "Je commence en morceaux.",
-      "Je devient plus clair avec le temps.",
+      "Je deviens plus clair avec le temps.",
       "Une pièce manque toujours au pire moment."
     ]
   },
@@ -865,7 +865,7 @@
     "category": "soiree",
     "clues": [
       "Je rassemble beaucoup de monde.",
-      "Je implique de la musique et parfois de la boue.",
+      "J’implique de la musique et parfois de la boue.",
       "Je fatigue les jambes."
     ]
   },
@@ -876,7 +876,3127 @@
     "clues": [
       "Je me prend soi-même.",
       "Je demande souvent plusieurs essais.",
-      "Je finit parfois sur un réseau social."
+      "Je finis parfois sur un réseau social."
     ]
+  },
+  {
+    "label": "Un axolotl",
+    "category": "animaux",
+    "clues": [
+      "Je vis dans l’eau douce.",
+      "Je garde des branchies visibles toute ma vie.",
+      "Je peux régénérer certaines parties de mon corps."
+    ],
+    "id": "who_089"
+  },
+  {
+    "label": "Un paresseux",
+    "category": "animaux",
+    "clues": [
+      "Je passe beaucoup de temps suspendu.",
+      "Je me déplace très lentement.",
+      "Mon nom résume assez bien mon rythme."
+    ],
+    "id": "who_090"
+  },
+  {
+    "label": "Un suricate",
+    "category": "animaux",
+    "clues": [
+      "Je vis en groupe dans des zones sèches.",
+      "Je me dresse souvent sur mes pattes arrière.",
+      "Je surveille pendant que les autres cherchent à manger."
+    ],
+    "id": "who_091"
+  },
+  {
+    "label": "Un ornithorynque",
+    "category": "animaux",
+    "clues": [
+      "Je suis un mammifère qui pond des œufs.",
+      "Mon bec rappelle celui d’un canard.",
+      "Je vis surtout en Australie."
+    ],
+    "id": "who_092"
+  },
+  {
+    "label": "Un narval",
+    "category": "animaux",
+    "clues": [
+      "Je vis dans les eaux froides.",
+      "Une longue défense sort de ma tête.",
+      "On me surnomme parfois la licorne des mers."
+    ],
+    "id": "who_093"
+  },
+  {
+    "label": "Un caméléon",
+    "category": "animaux",
+    "clues": [
+      "Mes yeux peuvent regarder dans deux directions.",
+      "Ma langue est très rapide.",
+      "Ma couleur peut changer selon mon état et mon environnement."
+    ],
+    "id": "who_094"
+  },
+  {
+    "label": "Un koala",
+    "category": "animaux",
+    "clues": [
+      "Je vis dans les arbres en Australie.",
+      "Je mange surtout des feuilles d’eucalyptus.",
+      "Je dors une grande partie de la journée."
+    ],
+    "id": "who_095"
+  },
+  {
+    "label": "Un kangourou",
+    "category": "animaux",
+    "clues": [
+      "Je me déplace en bondissant.",
+      "Je peux transporter mon petit dans une poche.",
+      "Je suis étroitement associé à l’Australie."
+    ],
+    "id": "who_096"
+  },
+  {
+    "label": "Un hérisson",
+    "category": "animaux",
+    "clues": [
+      "Je me roule en boule quand j’ai peur.",
+      "Mon dos est couvert de piquants.",
+      "On me rencontre parfois dans les jardins la nuit."
+    ],
+    "id": "who_097"
+  },
+  {
+    "label": "Un flamant rose",
+    "category": "animaux",
+    "clues": [
+      "Je vis souvent près des lagunes.",
+      "Je peux me tenir sur une seule patte.",
+      "Ma couleur vient en partie de mon alimentation."
+    ],
+    "id": "who_098"
+  },
+  {
+    "label": "Un hippocampe",
+    "category": "animaux",
+    "clues": [
+      "Je nage en position verticale.",
+      "Le mâle porte les petits.",
+      "Ma tête rappelle celle d’un cheval miniature."
+    ],
+    "id": "who_099"
+  },
+  {
+    "label": "Une raie manta",
+    "category": "animaux",
+    "clues": [
+      "Je me déplace comme si je volais sous l’eau.",
+      "Mon corps est très large et aplati.",
+      "Je suis un grand poisson sans aiguillon dangereux."
+    ],
+    "id": "who_100"
+  },
+  {
+    "label": "Un manchot empereur",
+    "category": "animaux",
+    "clues": [
+      "Je vis dans un froid extrême.",
+      "Le mâle garde l’œuf sur ses pattes.",
+      "Je suis le plus grand des manchots."
+    ],
+    "id": "who_101"
+  },
+  {
+    "label": "Un lama",
+    "category": "animaux",
+    "clues": [
+      "Je vis dans les Andes.",
+      "Je peux porter des charges.",
+      "Je suis connu pour cracher quand je suis contrarié."
+    ],
+    "id": "who_102"
+  },
+  {
+    "label": "Un raton laveur",
+    "category": "animaux",
+    "clues": [
+      "Je porte un masque naturel autour des yeux.",
+      "Mes pattes sont très habiles.",
+      "Je fouille volontiers les poubelles."
+    ],
+    "id": "who_103"
+  },
+  {
+    "label": "Une loutre",
+    "category": "animaux",
+    "clues": [
+      "Je joue et nage très bien.",
+      "Je peux utiliser une pierre comme outil.",
+      "Je flotte parfois sur le dos en me tenant les pattes."
+    ],
+    "id": "who_104"
+  },
+  {
+    "label": "Un corbeau",
+    "category": "animaux",
+    "clues": [
+      "Je suis un oiseau noir très intelligent.",
+      "Je peux reconnaître des visages humains.",
+      "Mon cri est plus rauque qu’un chant."
+    ],
+    "id": "who_105"
+  },
+  {
+    "label": "Un pélican",
+    "category": "animaux",
+    "clues": [
+      "Je suis un grand oiseau aquatique.",
+      "Mon bec possède une grande poche.",
+      "Je pêche en plongeant ou en ramassant des poissons."
+    ],
+    "id": "who_106"
+  },
+  {
+    "label": "Un sanglier",
+    "category": "animaux",
+    "clues": [
+      "Je ressemble à un cochon sauvage.",
+      "J’ai des défenses et un groin puissant.",
+      "Je retourne le sol en cherchant de la nourriture."
+    ],
+    "id": "who_107"
+  },
+  {
+    "label": "Un fennec",
+    "category": "animaux",
+    "clues": [
+      "Je suis un petit renard du désert.",
+      "Mes oreilles sont immenses.",
+      "Je supporte très bien la chaleur."
+    ],
+    "id": "who_108"
+  },
+  {
+    "label": "Un bison",
+    "category": "animaux",
+    "clues": [
+      "Je suis massif et couvert d’un pelage épais.",
+      "Une bosse se trouve au-dessus de mes épaules.",
+      "Je vivais autrefois en troupeaux gigantesques en Amérique du Nord."
+    ],
+    "id": "who_109"
+  },
+  {
+    "label": "Un lynx",
+    "category": "animaux",
+    "clues": [
+      "Je suis un félin discret.",
+      "Mes oreilles portent de petits pinceaux noirs.",
+      "Je chasse souvent dans les forêts froides."
+    ],
+    "id": "who_110"
+  },
+  {
+    "label": "Un toucan",
+    "category": "animaux",
+    "clues": [
+      "Je vis dans les forêts tropicales.",
+      "Mon bec est énorme et coloré.",
+      "Je mange surtout des fruits."
+    ],
+    "id": "who_111"
+  },
+  {
+    "label": "Une méduse",
+    "category": "animaux",
+    "clues": [
+      "Je n’ai ni os ni cerveau.",
+      "Mon corps est presque entièrement composé d’eau.",
+      "Mes tentacules peuvent piquer."
+    ],
+    "id": "who_112"
+  },
+  {
+    "label": "Un phoque",
+    "category": "animaux",
+    "clues": [
+      "Je vis près des côtes froides.",
+      "Je suis maladroit sur terre mais agile dans l’eau.",
+      "Je possède des nageoires et une épaisse couche de graisse."
+    ],
+    "id": "who_113"
+  },
+  {
+    "label": "Un crabe",
+    "category": "animaux",
+    "clues": [
+      "Je marche souvent de côté.",
+      "Je porte une carapace dure.",
+      "Deux pinces se trouvent à l’avant de mon corps."
+    ],
+    "id": "who_114"
+  },
+  {
+    "label": "Un gecko",
+    "category": "animaux",
+    "clues": [
+      "Je suis un petit lézard.",
+      "Je peux marcher sur des surfaces verticales.",
+      "Mes doigts adhèrent grâce à des structures microscopiques."
+    ],
+    "id": "who_115"
+  },
+  {
+    "label": "Un colibri",
+    "category": "animaux",
+    "clues": [
+      "Je suis un très petit oiseau.",
+      "Je peux rester immobile en vol.",
+      "Mes ailes battent extrêmement vite."
+    ],
+    "id": "who_116"
+  },
+  {
+    "label": "Un wombat",
+    "category": "animaux",
+    "clues": [
+      "Je suis un marsupial australien.",
+      "Je creuse de longs terriers.",
+      "Mes crottes ont une forme étonnamment cubique."
+    ],
+    "id": "who_117"
+  },
+  {
+    "label": "Un requin-marteau",
+    "category": "animaux",
+    "clues": [
+      "Je suis un grand poisson prédateur.",
+      "Mes yeux sont très éloignés l’un de l’autre.",
+      "Ma tête a une forme d’outil."
+    ],
+    "id": "who_118"
+  },
+  {
+    "label": "Une agrafeuse",
+    "category": "objets",
+    "clues": [
+      "Je réunis plusieurs feuilles.",
+      "Je fonctionne avec de petites pièces métalliques.",
+      "On me trouve souvent sur un bureau."
+    ],
+    "id": "who_119"
+  },
+  {
+    "label": "Un grille-pain",
+    "category": "objets",
+    "clues": [
+      "Je chauffe surtout le matin.",
+      "Je transforme des tranches molles en tranches croustillantes.",
+      "Mes contenus peuvent parfois sauter."
+    ],
+    "id": "who_120"
+  },
+  {
+    "label": "Un chargeur de téléphone",
+    "category": "objets",
+    "clues": [
+      "Je finis souvent emmêlé dans un sac.",
+      "Je deviens essentiel quand un pourcentage devient rouge.",
+      "Je relie un appareil à une prise."
+    ],
+    "id": "who_121"
+  },
+  {
+    "label": "Une bouilloire",
+    "category": "objets",
+    "clues": [
+      "Je chauffe de l’eau rapidement.",
+      "Je peux siffler ou s’arrêter toute seule.",
+      "Je prépare souvent du thé ou du café soluble."
+    ],
+    "id": "who_122"
+  },
+  {
+    "label": "Un sèche-cheveux",
+    "category": "objets",
+    "clues": [
+      "Je souffle de l’air chaud.",
+      "Je fais beaucoup de bruit dans une salle de bain.",
+      "J’aide à sécher et coiffer les cheveux."
+    ],
+    "id": "who_123"
+  },
+  {
+    "label": "Un fer à repasser",
+    "category": "objets",
+    "clues": [
+      "Je chauffe une surface plate.",
+      "Je combat les plis.",
+      "Je travaille souvent avec une planche spéciale."
+    ],
+    "id": "who_124"
+  },
+  {
+    "label": "Une passoire",
+    "category": "objets",
+    "clues": [
+      "Je suis pleine de trous.",
+      "Je laisse passer l’eau mais pas les pâtes.",
+      "On me place souvent dans un évier."
+    ],
+    "id": "who_125"
+  },
+  {
+    "label": "Un tire-bouchon",
+    "category": "objets",
+    "clues": [
+      "Je tourne avant de tirer.",
+      "Je possède souvent une spirale métallique.",
+      "J’ouvre surtout les bouteilles de vin."
+    ],
+    "id": "who_126"
+  },
+  {
+    "label": "Une gourde",
+    "category": "objets",
+    "clues": [
+      "Je voyage dans un sac.",
+      "Je peux être remplie encore et encore.",
+      "J’évite d’acheter trop de bouteilles jetables."
+    ],
+    "id": "who_127"
+  },
+  {
+    "label": "Un cadenas",
+    "category": "objets",
+    "clues": [
+      "Je protège avec un code ou une clé.",
+      "Je me fixe sur une boucle.",
+      "On me voit sur des casiers, vélos ou valises."
+    ],
+    "id": "who_128"
+  },
+  {
+    "label": "Une lampe torche",
+    "category": "objets",
+    "clues": [
+      "J’éclaire là où il n’y a pas de prise.",
+      "Je fonctionne souvent avec des piles.",
+      "Je deviens utile pendant une panne ou une exploration nocturne."
+    ],
+    "id": "who_129"
+  },
+  {
+    "label": "Un casque audio",
+    "category": "objets",
+    "clues": [
+      "Je couvre les oreilles.",
+      "Je permets d’écouter sans déranger les autres.",
+      "Je peux isoler du bruit extérieur."
+    ],
+    "id": "who_130"
+  },
+  {
+    "label": "Une clé USB",
+    "category": "objets",
+    "clues": [
+      "Je suis petite mais je transporte beaucoup de fichiers.",
+      "Je me branche sur un ordinateur.",
+      "On me perd facilement au fond d’une poche."
+    ],
+    "id": "who_131"
+  },
+  {
+    "label": "Un post-it",
+    "category": "objets",
+    "clues": [
+      "Je suis un petit papier autocollant.",
+      "Je porte des rappels très courts.",
+      "Je colore souvent les bureaux et les écrans."
+    ],
+    "id": "who_132"
+  },
+  {
+    "label": "Une calculatrice",
+    "category": "objets",
+    "clues": [
+      "Je donne des résultats sans poser les opérations à la main.",
+      "Je possède beaucoup de touches.",
+      "J’accompagne souvent les cours de mathématiques."
+    ],
+    "id": "who_133"
+  },
+  {
+    "label": "Un mètre ruban",
+    "category": "objets",
+    "clues": [
+      "Je me déroule puis je me rétracte.",
+      "Je mesure des longueurs.",
+      "On me trouve dans une boîte à outils ou un nécessaire de couture."
+    ],
+    "id": "who_134"
+  },
+  {
+    "label": "Un marteau",
+    "category": "objets",
+    "clues": [
+      "Je frappe plus qu’il ne coupe.",
+      "Je possède un manche et une tête lourde.",
+      "J’enfonce surtout des clous."
+    ],
+    "id": "who_135"
+  },
+  {
+    "label": "Un tournevis",
+    "category": "objets",
+    "clues": [
+      "Je tourne dans une empreinte.",
+      "Je peux être plat ou cruciforme.",
+      "Je serre et desserre des vis."
+    ],
+    "id": "who_136"
+  },
+  {
+    "label": "Une perceuse",
+    "category": "objets",
+    "clues": [
+      "Je tourne très vite.",
+      "Je peux faire des trous dans un mur.",
+      "Son bruit annonce souvent des travaux."
+    ],
+    "id": "who_137"
+  },
+  {
+    "label": "Un extincteur",
+    "category": "objets",
+    "clues": [
+      "Je reste immobile jusqu’à l’urgence.",
+      "Je contient un produit sous pression.",
+      "Je sert à combattre un début d’incendie."
+    ],
+    "id": "who_138"
+  },
+  {
+    "label": "Une boussole",
+    "category": "objets",
+    "clues": [
+      "J’indique une direction sans connexion internet.",
+      "Mon aiguille réagit au champ magnétique.",
+      "Je pointe vers le nord."
+    ],
+    "id": "who_139"
+  },
+  {
+    "label": "Des jumelles",
+    "category": "objets",
+    "clues": [
+      "Je rapproche visuellement ce qui est loin.",
+      "Je possède deux tubes côte à côte.",
+      "On m’utilise pour observer des animaux, des paysages ou un spectacle."
+    ],
+    "id": "who_140"
+  },
+  {
+    "label": "Un microscope",
+    "category": "objets",
+    "clues": [
+      "Je rends visible ce qui est minuscule.",
+      "J’utilise des lentilles.",
+      "Je me trouve souvent dans un laboratoire."
+    ],
+    "id": "who_141"
+  },
+  {
+    "label": "Un télescope",
+    "category": "objets",
+    "clues": [
+      "Je regarde très loin plutôt que très petit.",
+      "Je vise souvent le ciel nocturne.",
+      "Je permets d’observer des étoiles et des planètes."
+    ],
+    "id": "who_142"
+  },
+  {
+    "label": "Un ticket de caisse",
+    "category": "objets",
+    "clues": [
+      "Je sors après un paiement.",
+      "Je liste les articles et les prix.",
+      "On me garde surtout quand un retour est possible."
+    ],
+    "id": "who_143"
+  },
+  {
+    "label": "Une carte bancaire",
+    "category": "objets",
+    "clues": [
+      "Je paie sans transporter beaucoup de billets.",
+      "Je possède un code secret.",
+      "Je peux fonctionner sans contact."
+    ],
+    "id": "who_144"
+  },
+  {
+    "label": "Un distributeur automatique",
+    "category": "objets",
+    "clues": [
+      "Je reste dehors même quand la banque est fermée.",
+      "Je demande une carte et un code.",
+      "Je délivre de l’argent liquide."
+    ],
+    "id": "who_145"
+  },
+  {
+    "label": "Une sonnette",
+    "category": "objets",
+    "clues": [
+      "J’annonce quelqu’un derrière une porte.",
+      "Je produis un son après une pression.",
+      "Les livreurs m’utilisent souvent."
+    ],
+    "id": "who_146"
+  },
+  {
+    "label": "Un détecteur de fumée",
+    "category": "objets",
+    "clues": [
+      "Je reste fixé au plafond.",
+      "Je réagit à un danger invisible.",
+      "Je sonne très fort en cas de fumée."
+    ],
+    "id": "who_147"
+  },
+  {
+    "label": "Un thermomètre",
+    "category": "objets",
+    "clues": [
+      "Je donne une température.",
+      "Je peux servir pour le corps, l’air ou la cuisine.",
+      "J’affiche souvent des degrés."
+    ],
+    "id": "who_148"
+  },
+  {
+    "label": "Une balance",
+    "category": "objets",
+    "clues": [
+      "Je mesure un poids.",
+      "Je peux se trouver dans une salle de bain ou une cuisine.",
+      "On monte ou on pose quelque chose dessus."
+    ],
+    "id": "who_149"
+  },
+  {
+    "label": "Un réveil lumineux",
+    "category": "objets",
+    "clues": [
+      "J’imite progressivement le lever du soleil.",
+      "J’aide à sortir du sommeil.",
+      "Je remplace parfois une sonnerie brutale."
+    ],
+    "id": "who_150"
+  },
+  {
+    "label": "Une machine à café",
+    "category": "objets",
+    "clues": [
+      "Je transforme de l’eau et du café moulu ou une capsule.",
+      "Je travaille souvent tôt le matin.",
+      "Je remplis une tasse d’une boisson sombre et chaude."
+    ],
+    "id": "who_151"
+  },
+  {
+    "label": "Un aspirateur",
+    "category": "objets",
+    "clues": [
+      "J’avale poussière et miettes.",
+      "Je roule ou se porte dans la maison.",
+      "Son bruit dérange souvent les animaux."
+    ],
+    "id": "who_152"
+  },
+  {
+    "label": "Un lave-vaisselle",
+    "category": "objets",
+    "clues": [
+      "Je travaille derrière une porte fermée.",
+      "J’utilise de l’eau très chaude.",
+      "Je nettoie assiettes, verres et couverts."
+    ],
+    "id": "who_153"
+  },
+  {
+    "label": "Un congélateur",
+    "category": "objets",
+    "clues": [
+      "Je conserve bien en dessous de zéro.",
+      "Je fabrique parfois des glaçons.",
+      "On y oublie des aliments pendant des mois."
+    ],
+    "id": "who_154"
+  },
+  {
+    "label": "Une rallonge électrique",
+    "category": "objets",
+    "clues": [
+      "Je permets à une prise d’aller plus loin.",
+      "Je possède un câble et plusieurs branchements possibles.",
+      "Je deviens vite un nid de fils."
+    ],
+    "id": "who_155"
+  },
+  {
+    "label": "Un miroir de poche",
+    "category": "objets",
+    "clues": [
+      "Je reflète un visage en petit format.",
+      "Je me ferme parfois comme un boîtier.",
+      "J’accompagne les retouches loin de la salle de bain."
+    ],
+    "id": "who_156"
+  },
+  {
+    "label": "Un vétérinaire",
+    "category": "metiers",
+    "clues": [
+      "Je soigne des patients qui ne parlent pas.",
+      "Je travaille avec des animaux de toutes tailles.",
+      "J’utilise parfois une puce électronique pour identifier mes patients."
+    ],
+    "id": "who_157"
+  },
+  {
+    "label": "Un pompier",
+    "category": "metiers",
+    "clues": [
+      "Je porte un équipement lourd.",
+      "J’interviens lors d’incendies et d’accidents.",
+      "J’utilise des lances, des échelles et des véhicules rouges."
+    ],
+    "id": "who_158"
+  },
+  {
+    "label": "Un pilote de ligne",
+    "category": "metiers",
+    "clues": [
+      "Je travaille au-dessus des nuages.",
+      "Je commande un appareil rempli de passagers.",
+      "Je communique avec une tour de contrôle."
+    ],
+    "id": "who_159"
+  },
+  {
+    "label": "Un architecte",
+    "category": "metiers",
+    "clues": [
+      "Je dessine avant que les murs existent.",
+      "Je pense aux volumes, aux matériaux et aux règles.",
+      "Je conçoit des bâtiments."
+    ],
+    "id": "who_160"
+  },
+  {
+    "label": "Un journaliste",
+    "category": "metiers",
+    "clues": [
+      "Je cherche, vérifie puis raconte des informations.",
+      "Je pose beaucoup de questions.",
+      "Je peux travailler pour la presse, la radio, la télévision ou le web."
+    ],
+    "id": "who_161"
+  },
+  {
+    "label": "Un photographe",
+    "category": "metiers",
+    "clues": [
+      "Je capture un instant.",
+      "Je règle lumière, cadrage et mise au point.",
+      "Je travaille avec un appareil photo."
+    ],
+    "id": "who_162"
+  },
+  {
+    "label": "Un tatoueur",
+    "category": "metiers",
+    "clues": [
+      "Je dessine sur une surface vivante.",
+      "J’utilise des aiguilles et de l’encre.",
+      "Mon travail reste longtemps sur la peau."
+    ],
+    "id": "who_163"
+  },
+  {
+    "label": "Un coiffeur",
+    "category": "metiers",
+    "clues": [
+      "Je coupe sans cuisiner.",
+      "Je travaille avec ciseaux, peignes et sèche-cheveux.",
+      "Je change la forme ou la couleur des cheveux."
+    ],
+    "id": "who_164"
+  },
+  {
+    "label": "Un fleuriste",
+    "category": "metiers",
+    "clues": [
+      "Je travaille entouré de couleurs et de parfums.",
+      "Je compose des bouquets.",
+      "Je vend des fleurs pour des fêtes, des excuses ou des déclarations."
+    ],
+    "id": "who_165"
+  },
+  {
+    "label": "Un libraire",
+    "category": "metiers",
+    "clues": [
+      "Je conseille des histoires sans les écrire.",
+      "Je travaille parmi des rayonnages.",
+      "Je vend des livres."
+    ],
+    "id": "who_166"
+  },
+  {
+    "label": "Un bibliothécaire",
+    "category": "metiers",
+    "clues": [
+      "Je classe et prête des ouvrages.",
+      "J’aide à trouver une information.",
+      "Je travaille dans un lieu où l’on parle généralement moins fort."
+    ],
+    "id": "who_167"
+  },
+  {
+    "label": "Un kinésithérapeute",
+    "category": "metiers",
+    "clues": [
+      "J’aide le corps à retrouver du mouvement.",
+      "J’utilise exercices, mobilisations et massages.",
+      "J’accompagne souvent une rééducation."
+    ],
+    "id": "who_168"
+  },
+  {
+    "label": "Un dentiste",
+    "category": "metiers",
+    "clues": [
+      "Je travaille très près des dents.",
+      "J’utilise un fauteuil inclinable et de petits instruments.",
+      "Le bruit de ma fraise inquiète beaucoup de gens."
+    ],
+    "id": "who_169"
+  },
+  {
+    "label": "Un pharmacien",
+    "category": "metiers",
+    "clues": [
+      "Je conseille sur l’usage des médicaments.",
+      "Je travaille derrière un comptoir entouré de boîtes.",
+      "Je vérifie des ordonnances."
+    ],
+    "id": "who_170"
+  },
+  {
+    "label": "Un sage-femme",
+    "category": "metiers",
+    "clues": [
+      "J’accompagne les grossesses et les naissances.",
+      "Je surveille la santé du parent et du bébé.",
+      "Je travaille souvent dans une maternité."
+    ],
+    "id": "who_171"
+  },
+  {
+    "label": "Un développeur",
+    "category": "metiers",
+    "clues": [
+      "J’écris des instructions pour des machines.",
+      "Je cherche longtemps des erreurs parfois minuscules.",
+      "Je crée des sites, applications ou logiciels."
+    ],
+    "id": "who_172"
+  },
+  {
+    "label": "Un graphiste",
+    "category": "metiers",
+    "clues": [
+      "J’organise textes, formes et couleurs.",
+      "Je travaille souvent sur écran.",
+      "Je crée des affiches, logos ou identités visuelles."
+    ],
+    "id": "who_173"
+  },
+  {
+    "label": "Un avocat",
+    "category": "metiers",
+    "clues": [
+      "Je défend des intérêts avec le droit.",
+      "Je prépare des dossiers et des arguments.",
+      "Je peux plaider devant un tribunal."
+    ],
+    "id": "who_174"
+  },
+  {
+    "label": "Un juge",
+    "category": "metiers",
+    "clues": [
+      "J’écoute plusieurs versions d’une affaire.",
+      "J’applique le droit.",
+      "Je rends une décision de justice."
+    ],
+    "id": "who_175"
+  },
+  {
+    "label": "Un policier scientifique",
+    "category": "metiers",
+    "clues": [
+      "Je cherche des traces plutôt que des aveux.",
+      "J’analyse empreintes, fibres ou ADN.",
+      "J’interviens sur des scènes d’enquête."
+    ],
+    "id": "who_176"
+  },
+  {
+    "label": "Un météorologue",
+    "category": "metiers",
+    "clues": [
+      "J’étudie l’atmosphère.",
+      "J’observe cartes, satellites et modèles.",
+      "Je prévois le temps qu’il fera."
+    ],
+    "id": "who_177"
+  },
+  {
+    "label": "Un archéologue",
+    "category": "metiers",
+    "clues": [
+      "J’étudie des sociétés anciennes.",
+      "Je fouille le sol avec patience.",
+      "Je trouve des objets bien plus vieux que moi."
+    ],
+    "id": "who_178"
+  },
+  {
+    "label": "Un astronome",
+    "category": "metiers",
+    "clues": [
+      "J’observe l’univers sans nécessairement quitter la Terre.",
+      "J’analyse lumière et données.",
+      "J’étudie étoiles, planètes et galaxies."
+    ],
+    "id": "who_179"
+  },
+  {
+    "label": "Un électricien",
+    "category": "metiers",
+    "clues": [
+      "Je travaille avec des câbles et des circuits.",
+      "Je coupe souvent le courant avant d’intervenir.",
+      "J’installe ou répare des équipements électriques."
+    ],
+    "id": "who_180"
+  },
+  {
+    "label": "Un plombier",
+    "category": "metiers",
+    "clues": [
+      "J’interviens quand l’eau ne va pas au bon endroit.",
+      "Je travaille avec tuyaux et raccords.",
+      "Je répare fuites, robinets et canalisations."
+    ],
+    "id": "who_181"
+  },
+  {
+    "label": "Un conducteur de train",
+    "category": "metiers",
+    "clues": [
+      "Je suis des rails et des signaux.",
+      "Je transporte beaucoup de passagers à la fois.",
+      "Je conduis une locomotive ou une rame."
+    ],
+    "id": "who_182"
+  },
+  {
+    "label": "Un croissant",
+    "category": "nourriture",
+    "clues": [
+      "Je suis feuilleté et courbé.",
+      "J’accompagne souvent le petit-déjeuner.",
+      "Mon nom évoque aussi une forme de lune."
+    ],
+    "id": "who_183"
+  },
+  {
+    "label": "Une raclette",
+    "category": "nourriture",
+    "clues": [
+      "Je fond avant d’être versée.",
+      "Je me partage souvent en hiver.",
+      "J’accompagne pommes de terre, charcuterie et cornichons."
+    ],
+    "id": "who_184"
+  },
+  {
+    "label": "Un tiramisu",
+    "category": "nourriture",
+    "clues": [
+      "Je viens d’Italie.",
+      "J’associe café, mascarpone et biscuits.",
+      "Mon nom invite littéralement à remonter le moral."
+    ],
+    "id": "who_185"
+  },
+  {
+    "label": "Un macaron",
+    "category": "nourriture",
+    "clues": [
+      "Je suis petit, rond et souvent coloré.",
+      "Je possède une coque à base d’amande.",
+      "Une garniture se trouve entre mes deux moitiés."
+    ],
+    "id": "who_186"
+  },
+  {
+    "label": "Une crêpe",
+    "category": "nourriture",
+    "clues": [
+      "Je suis fine et ronde.",
+      "Je peux être sucrée ou salée.",
+      "On me fait sauter dans une poêle."
+    ],
+    "id": "who_187"
+  },
+  {
+    "label": "Un gratin dauphinois",
+    "category": "nourriture",
+    "clues": [
+      "Je cuit lentement au four.",
+      "Je contient des pommes de terre en fines tranches et de la crème.",
+      "Je ne demande traditionnellement pas de fromage."
+    ],
+    "id": "who_188"
+  },
+  {
+    "label": "Une quiche lorraine",
+    "category": "nourriture",
+    "clues": [
+      "Je viens de l’est de la France.",
+      "Je contient des œufs, de la crème et des lardons.",
+      "Je repose sur une pâte."
+    ],
+    "id": "who_189"
+  },
+  {
+    "label": "Un couscous",
+    "category": "nourriture",
+    "clues": [
+      "J’associe semoule, légumes et bouillon.",
+      "Je peux contenir plusieurs viandes.",
+      "Je suis un plat emblématique du Maghreb."
+    ],
+    "id": "who_190"
+  },
+  {
+    "label": "Un tajine",
+    "category": "nourriture",
+    "clues": [
+      "Je porte le nom de mon plat de cuisson.",
+      "Je mijote sous un couvercle conique.",
+      "Je mélange souvent épices, viande ou légumes et fruits secs."
+    ],
+    "id": "who_191"
+  },
+  {
+    "label": "Un falafel",
+    "category": "nourriture",
+    "clues": [
+      "Je suis rond et frit.",
+      "Je suis préparé avec des pois chiches ou des fèves.",
+      "Je me glisse souvent dans un pain pita."
+    ],
+    "id": "who_192"
+  },
+  {
+    "label": "Un ramen",
+    "category": "nourriture",
+    "clues": [
+      "Je me mange dans un grand bol.",
+      "J’associe nouilles, bouillon et garnitures.",
+      "Je viens du Japon."
+    ],
+    "id": "who_193"
+  },
+  {
+    "label": "Un pad thaï",
+    "category": "nourriture",
+    "clues": [
+      "Je suis sauté au wok.",
+      "Je contient des nouilles de riz.",
+      "Cacahuètes, citron vert et sauce sucrée-salée m’accompagnent souvent."
+    ],
+    "id": "who_194"
+  },
+  {
+    "label": "Un poke bowl",
+    "category": "nourriture",
+    "clues": [
+      "Je me présente dans un bol.",
+      "Je mélange riz, poisson ou protéines et légumes.",
+      "Je viens d’Hawaï mais a beaucoup voyagé."
+    ],
+    "id": "who_195"
+  },
+  {
+    "label": "Une paella",
+    "category": "nourriture",
+    "clues": [
+      "Je suis cuite dans une grande poêle.",
+      "Je contient du riz coloré au safran.",
+      "Je suis associée à l’Espagne."
+    ],
+    "id": "who_196"
+  },
+  {
+    "label": "Un risotto",
+    "category": "nourriture",
+    "clues": [
+      "Je demande de remuer et d’ajouter du bouillon progressivement.",
+      "J’utilise un riz riche en amidon.",
+      "Ma texture doit rester crémeuse."
+    ],
+    "id": "who_197"
+  },
+  {
+    "label": "Des sushis",
+    "category": "nourriture",
+    "clues": [
+      "J’associe souvent riz vinaigré et poisson.",
+      "Je me mange en petites bouchées.",
+      "Baguettes, sauce soja et wasabi ne sont jamais loin."
+    ],
+    "id": "who_198"
+  },
+  {
+    "label": "Un hot-dog",
+    "category": "nourriture",
+    "clues": [
+      "Je place une saucisse dans un pain allongé.",
+      "Je me mange facilement avec les mains.",
+      "Moutarde, ketchup ou oignons peuvent me recouvrir."
+    ],
+    "id": "who_199"
+  },
+  {
+    "label": "Un tacos français",
+    "category": "nourriture",
+    "clues": [
+      "Je ne ressemble pas beaucoup à mon cousin mexicain.",
+      "Je contient viande, frites et sauce fromagère.",
+      "Je suis plié puis grillé."
+    ],
+    "id": "who_200"
+  },
+  {
+    "label": "Un cheesecake",
+    "category": "nourriture",
+    "clues": [
+      "Je suis un gâteau dense et crémeux.",
+      "Je repose souvent sur une base de biscuits.",
+      "Le fromage frais est mon ingrédient principal."
+    ],
+    "id": "who_201"
+  },
+  {
+    "label": "Une tarte au citron meringuée",
+    "category": "nourriture",
+    "clues": [
+      "Je mélange acidité et douceur.",
+      "Je possède une crème jaune.",
+      "Une meringue blanche me recouvre."
+    ],
+    "id": "who_202"
+  },
+  {
+    "label": "Un brownie",
+    "category": "nourriture",
+    "clues": [
+      "Je suis carré, dense et chocolaté.",
+      "Je peux contenir des noix.",
+      "Je reste souvent fondant au centre."
+    ],
+    "id": "who_203"
+  },
+  {
+    "label": "Un kebab",
+    "category": "nourriture",
+    "clues": [
+      "Je suis rempli à la demande.",
+      "Ma viande tourne souvent sur une broche verticale.",
+      "Pain, crudités et sauce composent mon équipe."
+    ],
+    "id": "who_204"
+  },
+  {
+    "label": "Une soupe à l’oignon",
+    "category": "nourriture",
+    "clues": [
+      "Je suis servie très chaude.",
+      "Je contient beaucoup d’oignons revenus.",
+      "Du pain et du fromage gratiné peuvent flotter dessus."
+    ],
+    "id": "who_205"
+  },
+  {
+    "label": "Un œuf à la coque",
+    "category": "nourriture",
+    "clues": [
+      "Je cuit peu de temps.",
+      "On casse seulement le sommet de ma coquille.",
+      "Des mouillettes plongent dans mon jaune."
+    ],
+    "id": "who_206"
+  },
+  {
+    "label": "Une salade César",
+    "category": "nourriture",
+    "clues": [
+      "Je contient salade romaine, croûtons et parmesan.",
+      "Une sauce crémeuse me caractérise.",
+      "Le poulet peut me rejoindre sans être obligatoire à l’origine."
+    ],
+    "id": "who_207"
+  },
+  {
+    "label": "Un bubble tea",
+    "category": "nourriture",
+    "clues": [
+      "Je me boit avec une grosse paille.",
+      "Des perles reposent au fond.",
+      "Je mélange thé, lait ou fruits et textures à mâcher."
+    ],
+    "id": "who_208"
+  },
+  {
+    "label": "Un glacier",
+    "category": "nature",
+    "clues": [
+      "Je suis une grande masse de glace en mouvement lent.",
+      "Je façonne les vallées.",
+      "Je recule lorsque le climat se réchauffe."
+    ],
+    "id": "who_209"
+  },
+  {
+    "label": "Une aurore boréale",
+    "category": "nature",
+    "clues": [
+      "J’apparais dans le ciel des régions polaires.",
+      "Je forme des voiles lumineux colorés.",
+      "Je suis provoquée par des particules venues du Soleil."
+    ],
+    "id": "who_210"
+  },
+  {
+    "label": "Un geyser",
+    "category": "nature",
+    "clues": [
+      "Je cache de l’eau très chaude sous terre.",
+      "J’entre en éruption à intervalles.",
+      "Je projette un jet de vapeur et d’eau."
+    ],
+    "id": "who_211"
+  },
+  {
+    "label": "Une tornade",
+    "category": "nature",
+    "clues": [
+      "Je suis une colonne d’air en rotation.",
+      "Je relie parfois un nuage au sol.",
+      "Je peux laisser un couloir de dégâts très étroit."
+    ],
+    "id": "who_212"
+  },
+  {
+    "label": "Un récif corallien",
+    "category": "nature",
+    "clues": [
+      "Je vis sous l’eau.",
+      "J’abrite une énorme diversité d’espèces.",
+      "Je suis construit par de minuscules animaux."
+    ],
+    "id": "who_213"
+  },
+  {
+    "label": "Une mangrove",
+    "category": "nature",
+    "clues": [
+      "Je pousse entre terre et mer.",
+      "Mes racines semblent sortir de l’eau.",
+      "Je protège les côtes et sert de nurserie à de nombreux animaux."
+    ],
+    "id": "who_214"
+  },
+  {
+    "label": "Un désert de sel",
+    "category": "nature",
+    "clues": [
+      "Je forme une vaste surface blanche et plate.",
+      "Je viens d’un ancien lac évaporé.",
+      "Après la pluie, je peut devenir un miroir géant."
+    ],
+    "id": "who_215"
+  },
+  {
+    "label": "Une stalactite",
+    "category": "nature",
+    "clues": [
+      "Je grandis très lentement dans une grotte.",
+      "Je pend du plafond.",
+      "Je suis formée par des dépôts minéraux."
+    ],
+    "id": "who_216"
+  },
+  {
+    "label": "Une stalagmite",
+    "category": "nature",
+    "clues": [
+      "Je grandis très lentement dans une grotte.",
+      "Je monte depuis le sol.",
+      "Je peux finir par rejoindre ce qui pend au-dessus de moi."
+    ],
+    "id": "who_217"
+  },
+  {
+    "label": "Une dune",
+    "category": "nature",
+    "clues": [
+      "Je suis une colline mobile.",
+      "Je suis faite de sable poussé par le vent.",
+      "On me rencontre dans les déserts et sur certaines côtes."
+    ],
+    "id": "who_218"
+  },
+  {
+    "label": "Un iceberg",
+    "category": "nature",
+    "clues": [
+      "La plus grande partie de moi reste invisible.",
+      "Je flotte dans l’océan.",
+      "Je suis un morceau de glace détaché d’un glacier."
+    ],
+    "id": "who_219"
+  },
+  {
+    "label": "Une éclipse solaire",
+    "category": "nature",
+    "clues": [
+      "J’assombris le jour pendant quelques instants.",
+      "La Lune se place entre la Terre et le Soleil.",
+      "Il ne faut pas me regarder sans protection adaptée."
+    ],
+    "id": "who_220"
+  },
+  {
+    "label": "Une météorite",
+    "category": "nature",
+    "clues": [
+      "Je viens de l’espace.",
+      "Je survis à la traversée de l’atmosphère.",
+      "J’atteins le sol contrairement à une simple étoile filante."
+    ],
+    "id": "who_221"
+  },
+  {
+    "label": "Une forêt tropicale",
+    "category": "nature",
+    "clues": [
+      "Je reçois beaucoup de pluie.",
+      "Je possède plusieurs étages de végétation.",
+      "J’abrite une biodiversité immense."
+    ],
+    "id": "who_222"
+  },
+  {
+    "label": "Une oasis",
+    "category": "nature",
+    "clues": [
+      "J’apporte de l’eau et de la végétation dans une zone aride.",
+      "Des palmiers peuvent m’entourer.",
+      "J’offre une pause au milieu du désert."
+    ],
+    "id": "who_223"
+  },
+  {
+    "label": "Une marée",
+    "category": "nature",
+    "clues": [
+      "Je fais monter puis descendre la mer.",
+      "La Lune influence fortement mon rythme.",
+      "Je transforme régulièrement le bord des côtes."
+    ],
+    "id": "who_224"
+  },
+  {
+    "label": "Un tramway",
+    "category": "transport",
+    "clues": [
+      "Je circule en ville.",
+      "Je suis des rails souvent intégrés à la route.",
+      "Je m’arrête fréquemment et transporte beaucoup de passagers."
+    ],
+    "id": "who_225"
+  },
+  {
+    "label": "Un funiculaire",
+    "category": "transport",
+    "clues": [
+      "Je monte et descend une forte pente.",
+      "Je roule sur des rails.",
+      "Un câble aide à me déplacer."
+    ],
+    "id": "who_226"
+  },
+  {
+    "label": "Un téléphérique",
+    "category": "transport",
+    "clues": [
+      "Je voyage suspendu.",
+      "Je relie souvent une vallée à une montagne.",
+      "Mes cabines avancent grâce à des câbles."
+    ],
+    "id": "who_227"
+  },
+  {
+    "label": "Un ferry",
+    "category": "transport",
+    "clues": [
+      "Je transporte des passagers et parfois des voitures.",
+      "Je traverse une mer, un détroit ou un grand fleuve.",
+      "Je relie deux rives sans pont."
+    ],
+    "id": "who_228"
+  },
+  {
+    "label": "Un voilier",
+    "category": "transport",
+    "clues": [
+      "J’utilise le vent.",
+      "Je possède un ou plusieurs mâts.",
+      "Mes grandes surfaces de tissu me font avancer sur l’eau."
+    ],
+    "id": "who_229"
+  },
+  {
+    "label": "Un hélicoptère",
+    "category": "transport",
+    "clues": [
+      "Je peux décoller presque verticalement.",
+      "Un grand rotor tourne au-dessus de moi.",
+      "Je peux rester immobile dans les airs."
+    ],
+    "id": "who_230"
+  },
+  {
+    "label": "Un jet-ski",
+    "category": "transport",
+    "clues": [
+      "Je me conduit sur l’eau.",
+      "Je ressemble à une moto sans roues.",
+      "Je projette beaucoup d’éclaboussures."
+    ],
+    "id": "who_231"
+  },
+  {
+    "label": "Un quad",
+    "category": "transport",
+    "clues": [
+      "Je possède quatre roues mais ressemble à une moto.",
+      "Je roule souvent sur des chemins.",
+      "Je me conduit avec un guidon."
+    ],
+    "id": "who_232"
+  },
+  {
+    "label": "Une trottinette électrique",
+    "category": "transport",
+    "clues": [
+      "Je possède deux petites roues.",
+      "Je me recharge sur une prise.",
+      "Je suis devenue très visible dans les villes."
+    ],
+    "id": "who_233"
+  },
+  {
+    "label": "Des rollers",
+    "category": "transport",
+    "clues": [
+      "Je fixent des roues sous chaque pied.",
+      "Je demandent de l’équilibre.",
+      "Je peuvent être alignés ou disposés par paires."
+    ],
+    "id": "who_234"
+  },
+  {
+    "label": "Un traîneau",
+    "category": "transport",
+    "clues": [
+      "Je glisse plutôt qu’il ne roule.",
+      "Je m’utilise sur la neige.",
+      "Des chiens ou des rennes peuvent me tirer dans les histoires et certaines régions."
+    ],
+    "id": "who_235"
+  },
+  {
+    "label": "Une ambulance",
+    "category": "transport",
+    "clues": [
+      "Je transporte des personnes qui ont besoin de soins urgents.",
+      "J’utilise une sirène et des gyrophares.",
+      "Je contient du matériel médical."
+    ],
+    "id": "who_236"
+  },
+  {
+    "label": "Un camion de pompiers",
+    "category": "transport",
+    "clues": [
+      "Je suis grand, rouge et pressé.",
+      "Je transporte une équipe et beaucoup de matériel.",
+      "Échelles, tuyaux et sirène m’accompagnent."
+    ],
+    "id": "who_237"
+  },
+  {
+    "label": "Un camping-car",
+    "category": "transport",
+    "clues": [
+      "Je roule et sert aussi de logement.",
+      "Je contient souvent lit, cuisine et rangements.",
+      "Je permets de voyager avec sa petite maison."
+    ],
+    "id": "who_238"
+  },
+  {
+    "label": "Un van aménagé",
+    "category": "transport",
+    "clues": [
+      "Je ressemble à un utilitaire de l’extérieur.",
+      "Je cache un espace pour dormir.",
+      "Je suis associé aux voyages improvisés."
+    ],
+    "id": "who_239"
+  },
+  {
+    "label": "Un tuk-tuk",
+    "category": "transport",
+    "clues": [
+      "Je suis un petit véhicule à trois roues.",
+      "Je transporte quelques passagers.",
+      "Je suis très répandu dans plusieurs villes d’Asie."
+    ],
+    "id": "who_240"
+  },
+  {
+    "label": "Un pousse-pousse",
+    "category": "transport",
+    "clues": [
+      "Une personne me tire ou me pédale.",
+      "Je transporte un ou deux passagers.",
+      "Je suis léger et très présent dans certaines villes touristiques."
+    ],
+    "id": "who_241"
+  },
+  {
+    "label": "La Tour Eiffel",
+    "category": "lieux",
+    "clues": [
+      "Je domine une capitale européenne.",
+      "Je suis construite en métal.",
+      "Je suis devenue le symbole de Paris."
+    ],
+    "id": "who_242"
+  },
+  {
+    "label": "Le Colisée",
+    "category": "lieux",
+    "clues": [
+      "Je me trouve à Rome.",
+      "J’accueillais des spectacles dans l’Antiquité.",
+      "Je suis un immense amphithéâtre en ruines partielles."
+    ],
+    "id": "who_243"
+  },
+  {
+    "label": "La Grande Muraille de Chine",
+    "category": "lieux",
+    "clues": [
+      "Je traverse montagnes et campagnes.",
+      "Je suis composée de nombreuses sections construites à différentes époques.",
+      "Je servais notamment à défendre des frontières."
+    ],
+    "id": "who_244"
+  },
+  {
+    "label": "Le Machu Picchu",
+    "category": "lieux",
+    "clues": [
+      "Je me trouve haut dans les Andes.",
+      "Je suis une ancienne cité inca.",
+      "Je suis entouré de montagnes au Pérou."
+    ],
+    "id": "who_245"
+  },
+  {
+    "label": "Le Taj Mahal",
+    "category": "lieux",
+    "clues": [
+      "Je suis un mausolée blanc.",
+      "Je me trouve en Inde.",
+      "J’ai été construit par amour et deuil."
+    ],
+    "id": "who_246"
+  },
+  {
+    "label": "Les pyramides de Gizeh",
+    "category": "lieux",
+    "clues": [
+      "Nous sommes très anciennes.",
+      "Je me trouvent près du Caire.",
+      "Nous servions de tombeaux à des pharaons."
+    ],
+    "id": "who_247"
+  },
+  {
+    "label": "Le Mont-Saint-Michel",
+    "category": "lieux",
+    "clues": [
+      "Je deviens presque une île selon la marée.",
+      "Je possède une abbaye au sommet.",
+      "Je me trouve en Normandie."
+    ],
+    "id": "who_248"
+  },
+  {
+    "label": "Le Louvre",
+    "category": "lieux",
+    "clues": [
+      "Je fut autrefois un palais.",
+      "Une pyramide de verre marque mon entrée.",
+      "J’abrite la Joconde."
+    ],
+    "id": "who_249"
+  },
+  {
+    "label": "Times Square",
+    "category": "lieux",
+    "clues": [
+      "Je me trouve à New York.",
+      "Je brille grâce à d’immenses écrans publicitaires.",
+      "Une foule me rejoint pour le Nouvel An."
+    ],
+    "id": "who_250"
+  },
+  {
+    "label": "La Sagrada Família",
+    "category": "lieux",
+    "clues": [
+      "Je me trouve à Barcelone.",
+      "Je suis liée à l’architecte Antoni Gaudí.",
+      "Ma construction dure depuis plus d’un siècle."
+    ],
+    "id": "who_251"
+  },
+  {
+    "label": "Le Grand Canyon",
+    "category": "lieux",
+    "clues": [
+      "Je suis une immense gorge.",
+      "Un fleuve a creusé mes couches de roche.",
+      "Je me trouve en Arizona."
+    ],
+    "id": "who_252"
+  },
+  {
+    "label": "Le désert du Sahara",
+    "category": "lieux",
+    "clues": [
+      "Je couvre une grande partie du nord de l’Afrique.",
+      "Je suis l’un des plus grands déserts chauds.",
+      "Dunes, plateaux et oasis composent mes paysages."
+    ],
+    "id": "who_253"
+  },
+  {
+    "label": "La forêt amazonienne",
+    "category": "lieux",
+    "clues": [
+      "Je traverse plusieurs pays d’Amérique du Sud.",
+      "Un immense fleuve porte mon nom.",
+      "Je suis la plus vaste forêt tropicale de la planète."
+    ],
+    "id": "who_254"
+  },
+  {
+    "label": "La place Saint-Marc",
+    "category": "lieux",
+    "clues": [
+      "Je me trouve à Venise.",
+      "Des pigeons et des touristes me fréquentent.",
+      "Une basilique et un campanile me bordent."
+    ],
+    "id": "who_255"
+  },
+  {
+    "label": "Le château de Versailles",
+    "category": "lieux",
+    "clues": [
+      "Je fut une résidence royale.",
+      "Je possède une célèbre galerie des Glaces.",
+      "Mes jardins sont immenses et très ordonnés."
+    ],
+    "id": "who_256"
+  },
+  {
+    "label": "Le pont du Golden Gate",
+    "category": "lieux",
+    "clues": [
+      "Je traverse l’entrée d’une baie.",
+      "Je suis rouge orangé malgré son nom.",
+      "Je suis un symbole de San Francisco."
+    ],
+    "id": "who_257"
+  },
+  {
+    "label": "La statue de la Liberté",
+    "category": "lieux",
+    "clues": [
+      "Je tiens une torche.",
+      "J’accueille symboliquement les arrivants à New York.",
+      "Je fut offerte par la France aux États-Unis."
+    ],
+    "id": "who_258"
+  },
+  {
+    "label": "Le mont Fuji",
+    "category": "lieux",
+    "clues": [
+      "Je possède une forme presque symétrique.",
+      "Je suis un volcan.",
+      "Je suis un symbole majeur du Japon."
+    ],
+    "id": "who_259"
+  },
+  {
+    "label": "Le Burj Khalifa",
+    "category": "lieux",
+    "clues": [
+      "Je me trouve à Dubaï.",
+      "Je dépasse largement les autres gratte-ciel autour de moi.",
+      "Je suis le plus haut bâtiment du monde depuis mon ouverture."
+    ],
+    "id": "who_260"
+  },
+  {
+    "label": "Stonehenge",
+    "category": "lieux",
+    "clues": [
+      "Je suis composé de grandes pierres dressées.",
+      "Mon origine exacte alimente encore des débats.",
+      "Je me trouve en Angleterre."
+    ],
+    "id": "who_261"
+  },
+  {
+    "label": "Un phénix",
+    "category": "imaginaire",
+    "clues": [
+      "Je renais après ma disparition.",
+      "Je suis associé au feu.",
+      "Je suis un oiseau légendaire."
+    ],
+    "id": "who_262"
+  },
+  {
+    "label": "Une sirène",
+    "category": "imaginaire",
+    "clues": [
+      "Je possède une voix dangereusement séduisante.",
+      "Je vis dans la mer.",
+      "Mon corps est souvent moitié humain, moitié poisson."
+    ],
+    "id": "who_263"
+  },
+  {
+    "label": "Un centaure",
+    "category": "imaginaire",
+    "clues": [
+      "Je combine deux espèces.",
+      "Mon torse est humain.",
+      "Mon corps inférieur est celui d’un cheval."
+    ],
+    "id": "who_264"
+  },
+  {
+    "label": "Un minotaure",
+    "category": "imaginaire",
+    "clues": [
+      "Je vis dans un labyrinthe.",
+      "Je possède un corps humain et une tête de taureau.",
+      "Un héros grec vient m’affronter."
+    ],
+    "id": "who_265"
+  },
+  {
+    "label": "Un troll",
+    "category": "imaginaire",
+    "clues": [
+      "J’apparais dans de nombreuses légendes.",
+      "Je vis souvent sous un pont, dans une grotte ou une montagne.",
+      "Je suis rarement décrit comme délicat."
+    ],
+    "id": "who_266"
+  },
+  {
+    "label": "Un loup-garou",
+    "category": "imaginaire",
+    "clues": [
+      "Je change de forme.",
+      "La pleine lune est souvent liée à ma transformation.",
+      "Je deviens une créature proche du loup."
+    ],
+    "id": "who_267"
+  },
+  {
+    "label": "Une fée",
+    "category": "imaginaire",
+    "clues": [
+      "Je possède souvent de petites ailes.",
+      "J’utilise de la magie.",
+      "Une baguette et de la poussière brillante peuvent m’accompagner."
+    ],
+    "id": "who_268"
+  },
+  {
+    "label": "Un génie",
+    "category": "imaginaire",
+    "clues": [
+      "Je peux être enfermé dans une lampe.",
+      "J’accorde souvent trois souhaits.",
+      "Il vaut mieux choisir ses mots avec moi."
+    ],
+    "id": "who_269"
+  },
+  {
+    "label": "Un elfe",
+    "category": "imaginaire",
+    "clues": [
+      "Je possède souvent des oreilles pointues.",
+      "Je vis très longtemps dans de nombreux univers.",
+      "Je suis associé à la magie, aux forêts ou au tir à l’arc."
+    ],
+    "id": "who_270"
+  },
+  {
+    "label": "Un gobelin",
+    "category": "imaginaire",
+    "clues": [
+      "Je suis une petite créature rusée.",
+      "J’apparais dans des mines, banques ou donjons selon les histoires.",
+      "J’aime souvent l’or ou les objets volés."
+    ],
+    "id": "who_271"
+  },
+  {
+    "label": "Un ogre",
+    "category": "imaginaire",
+    "clues": [
+      "Je suis gigantesque.",
+      "Je suis réputé manger beaucoup, parfois des humains dans les contes.",
+      "Je vis volontiers loin des villages."
+    ],
+    "id": "who_272"
+  },
+  {
+    "label": "Une momie",
+    "category": "imaginaire",
+    "clues": [
+      "Je suis enveloppée de bandelettes.",
+      "Je viens d’un tombeau ancien.",
+      "Je marche dans les films malgré une très longue mort."
+    ],
+    "id": "who_273"
+  },
+  {
+    "label": "Un extraterrestre",
+    "category": "imaginaire",
+    "clues": [
+      "Je ne vient pas de la Terre.",
+      "Ma forme dépend entièrement de l’imagination humaine.",
+      "Une soucoupe volante peut me servir de transport."
+    ],
+    "id": "who_274"
+  },
+  {
+    "label": "Une sorcière",
+    "category": "imaginaire",
+    "clues": [
+      "J’utilise des potions ou des sortilèges.",
+      "Un balai peut me servir de transport.",
+      "Un chapeau pointu me représente souvent."
+    ],
+    "id": "who_275"
+  },
+  {
+    "label": "Un chevalier",
+    "category": "imaginaire",
+    "clues": [
+      "Je porte une armure.",
+      "Je combat avec une épée ou une lance.",
+      "Je sert souvent un royaume."
+    ],
+    "id": "who_276"
+  },
+  {
+    "label": "Un pirate",
+    "category": "imaginaire",
+    "clues": [
+      "Je navigue en quête de butin.",
+      "Je possède parfois un perroquet ou un cache-œil.",
+      "Une carte peut me conduire à un trésor."
+    ],
+    "id": "who_277"
+  },
+  {
+    "label": "Un voyageur du temps",
+    "category": "imaginaire",
+    "clues": [
+      "Je ne respecte pas l’ordre habituel des années.",
+      "Je risque de modifier le passé.",
+      "Une machine spéciale peut me transporter."
+    ],
+    "id": "who_278"
+  },
+  {
+    "label": "Hermione Granger",
+    "category": "culture",
+    "clues": [
+      "Je connais presque toujours la réponse.",
+      "Je suis une sorcière née de parents non-magiques.",
+      "Mes deux meilleurs amis sont Harry et Ron."
+    ],
+    "id": "who_279"
+  },
+  {
+    "label": "Voldemort",
+    "category": "culture",
+    "clues": [
+      "Je cherche l’immortalité.",
+      "Je suis lié à plusieurs objets contenant des fragments de mon âme.",
+      "Mon nom effraie le monde des sorciers."
+    ],
+    "id": "who_280"
+  },
+  {
+    "label": "Yoda",
+    "category": "culture",
+    "clues": [
+      "Je parle dans un ordre inhabituel.",
+      "Je suis petit, vert et très ancien.",
+      "Je forme des chevaliers Jedi."
+    ],
+    "id": "who_281"
+  },
+  {
+    "label": "Superman",
+    "category": "culture",
+    "clues": [
+      "Je viens d’une autre planète.",
+      "Une substance verte m’affaiblit.",
+      "Une cape rouge et un S me rendent reconnaissable."
+    ],
+    "id": "who_282"
+  },
+  {
+    "label": "Wonder Woman",
+    "category": "culture",
+    "clues": [
+      "Je viens d’une île d’Amazones.",
+      "Je possède un lasso qui force à dire la vérité.",
+      "Je combat avec bracelets, bouclier et force surhumaine."
+    ],
+    "id": "who_283"
+  },
+  {
+    "label": "Iron Man",
+    "category": "culture",
+    "clues": [
+      "Je construis sa propre armure.",
+      "Un réacteur brille sur ma poitrine.",
+      "Tony Stark est mon identité civile."
+    ],
+    "id": "who_284"
+  },
+  {
+    "label": "Hulk",
+    "category": "culture",
+    "clues": [
+      "Je deviens immense quand je me met en colère.",
+      "Ma peau est verte.",
+      "Je parsage mon corps avec Bruce Banner."
+    ],
+    "id": "who_285"
+  },
+  {
+    "label": "Captain America",
+    "category": "culture",
+    "clues": [
+      "Je porte un bouclier rond.",
+      "J’ai été transformé par un sérum.",
+      "Les couleurs américaines couvrent mon costume."
+    ],
+    "id": "who_286"
+  },
+  {
+    "label": "Deadpool",
+    "category": "culture",
+    "clues": [
+      "Je parle beaucoup au public.",
+      "Je guéris très vite.",
+      "Mon humour survit à presque tout."
+    ],
+    "id": "who_287"
+  },
+  {
+    "label": "Le Joker",
+    "category": "culture",
+    "clues": [
+      "Je souris même quand personne d’autre ne trouve ça drôle.",
+      "J’adore le chaos.",
+      "Je suis l’ennemi le plus célèbre de Batman."
+    ],
+    "id": "who_288"
+  },
+  {
+    "label": "Fiona",
+    "category": "culture",
+    "clues": [
+      "Je suis une princesse au secret nocturne.",
+      "Je sais se défendre toute seule.",
+      "Je tombe amoureuse d’un ogre."
+    ],
+    "id": "who_289"
+  },
+  {
+    "label": "Simba",
+    "category": "culture",
+    "clues": [
+      "Je suis destiné à devenir roi.",
+      "Je fuis après la mort de mon père.",
+      "Un lion et une chanson sur l’absence de souci définissent mon histoire."
+    ],
+    "id": "who_290"
+  },
+  {
+    "label": "Scar",
+    "category": "culture",
+    "clues": [
+      "Je convoite un trône.",
+      "Une cicatrice traverse mon visage.",
+      "Je trahis mon frère Mufasa."
+    ],
+    "id": "who_291"
+  },
+  {
+    "label": "Olaf",
+    "category": "culture",
+    "clues": [
+      "Je suis fait de neige.",
+      "Je rêve de découvrir l’été.",
+      "Une carotte me sert de nez."
+    ],
+    "id": "who_292"
+  },
+  {
+    "label": "Aladdin",
+    "category": "culture",
+    "clues": [
+      "Je vis d’abord dans la rue.",
+      "Une lampe change ma vie.",
+      "Je me fait passer pour un prince."
+    ],
+    "id": "who_293"
+  },
+  {
+    "label": "Jasmine",
+    "category": "culture",
+    "clues": [
+      "Je refuse qu’on choisisse sa vie à sa place.",
+      "Je possède un tigre.",
+      "Je suis la princesse d’Agrabah."
+    ],
+    "id": "who_294"
+  },
+  {
+    "label": "Peter Pan",
+    "category": "culture",
+    "clues": [
+      "Je refuse de grandir.",
+      "Je sais voler.",
+      "Je vis au Pays imaginaire."
+    ],
+    "id": "who_295"
+  },
+  {
+    "label": "La Fée Clochette",
+    "category": "culture",
+    "clues": [
+      "Je suis minuscule et jalouse.",
+      "Je produis une poussière qui aide à voler.",
+      "J’accompagne Peter Pan."
+    ],
+    "id": "who_296"
+  },
+  {
+    "label": "Barbie",
+    "category": "culture",
+    "clues": [
+      "J’ai exercé presque tous les métiers.",
+      "Ma couleur est souvent le rose.",
+      "Je vis dans un univers où le plastique assume tout."
+    ],
+    "id": "who_297"
+  },
+  {
+    "label": "Ken",
+    "category": "culture",
+    "clues": [
+      "Je suis souvent présenté comme le compagnon de Barbie.",
+      "La plage fait partie de mon identité récente.",
+      "Je cherche parfois à exister autrement qu’en accessoire."
+    ],
+    "id": "who_298"
+  },
+  {
+    "label": "Luigi",
+    "category": "culture",
+    "clues": [
+      "Je porte du vert.",
+      "Je suis le frère plus grand et plus anxieux de Mario.",
+      "Un manoir rempli de fantômes me donne du travail."
+    ],
+    "id": "who_299"
+  },
+  {
+    "label": "Princesse Peach",
+    "category": "culture",
+    "clues": [
+      "Je règne sur le Royaume Champignon.",
+      "Je porte souvent une robe rose.",
+      "Bowser m’enlève beaucoup trop souvent."
+    ],
+    "id": "who_300"
+  },
+  {
+    "label": "Sonic",
+    "category": "culture",
+    "clues": [
+      "Je suis bleu et extrêmement rapide.",
+      "Je collectionne des anneaux.",
+      "Un hérisson est mon espèce."
+    ],
+    "id": "who_301"
+  },
+  {
+    "label": "Link",
+    "category": "culture",
+    "clues": [
+      "Je porte souvent une tunique verte ou bleue.",
+      "Je manie l’épée légendaire.",
+      "Je sauve Hyrule et la princesse Zelda."
+    ],
+    "id": "who_302"
+  },
+  {
+    "label": "Lara Croft",
+    "category": "culture",
+    "clues": [
+      "J’explore des tombeaux.",
+      "Je résous des énigmes et évite des pièges.",
+      "Je suis une archéologue aventurière de jeu vidéo."
+    ],
+    "id": "who_303"
+  },
+  {
+    "label": "Indiana Jones",
+    "category": "culture",
+    "clues": [
+      "J’enseigne mais préfère les temples dangereux.",
+      "Je porte un fouet et un chapeau.",
+      "Je déteste les serpents."
+    ],
+    "id": "who_304"
+  },
+  {
+    "label": "James Bond",
+    "category": "culture",
+    "clues": [
+      "Je travaille pour les services secrets britanniques.",
+      "Mon numéro est 007.",
+      "J’aime gadgets, voitures et missions impossibles."
+    ],
+    "id": "who_305"
+  },
+  {
+    "label": "Sherlock Holmes",
+    "category": "culture",
+    "clues": [
+      "J’observe les détails que les autres ratent.",
+      "Je vis au 221B Baker Street.",
+      "Le docteur Watson raconte souvent mes enquêtes."
+    ],
+    "id": "who_306"
+  },
+  {
+    "label": "Dracula",
+    "category": "culture",
+    "clues": [
+      "Je suis un vampire de Transylvanie.",
+      "Je vis dans un château.",
+      "J’ai popularisé cape, canines et peur de la lumière."
+    ],
+    "id": "who_307"
+  },
+  {
+    "label": "Le monstre de Frankenstein",
+    "category": "culture",
+    "clues": [
+      "Je suis assemblé à partir de morceaux humains.",
+      "Un scientifique me donne vie.",
+      "On me confond souvent avec le nom de mon créateur."
+    ],
+    "id": "who_308"
+  },
+  {
+    "label": "Mr Bean",
+    "category": "culture",
+    "clues": [
+      "Je parle peu mais crée beaucoup de problèmes.",
+      "Je possède une petite voiture verte.",
+      "Un ours en peluche m’accompagne."
+    ],
+    "id": "who_309"
+  },
+  {
+    "label": "Homer Simpson",
+    "category": "culture",
+    "clues": [
+      "Je travaille dans une centrale nucléaire.",
+      "J’adore les donuts.",
+      "Je vis à Springfield avec une famille jaune."
+    ],
+    "id": "who_310"
+  },
+  {
+    "label": "Bob l’éponge",
+    "category": "culture",
+    "clues": [
+      "Je vis dans un ananas sous la mer.",
+      "Je travaille dans un restaurant de burgers.",
+      "Un escargot nommé Gary est mon animal."
+    ],
+    "id": "who_311"
+  },
+  {
+    "label": "Stitch",
+    "category": "culture",
+    "clues": [
+      "Je suis une expérience extraterrestre.",
+      "Je détruis beaucoup avant de comprendre la famille.",
+      "Je deviens le compagnon bleu de Lilo."
+    ],
+    "id": "who_312"
+  },
+  {
+    "label": "Buzz l’Éclair",
+    "category": "culture",
+    "clues": [
+      "Je crois d’abord être un vrai ranger de l’espace.",
+      "Je possède des ailes en plastique.",
+      "Je veux aller vers l’infini et au-delà."
+    ],
+    "id": "who_313"
+  },
+  {
+    "label": "Woody",
+    "category": "culture",
+    "clues": [
+      "Je suis un cowboy en tissu.",
+      "Une corde dans mon dos déclenche des phrases.",
+      "Je suis le jouet préféré d’Andy avant l’arrivée de Buzz."
+    ],
+    "id": "who_314"
+  },
+  {
+    "label": "Cruella",
+    "category": "culture",
+    "clues": [
+      "J’adore les manteaux très discutables.",
+      "Mes cheveux sont moitié noirs, moitié blancs.",
+      "Des dalmatiens deviennent mon obsession."
+    ],
+    "id": "who_315"
+  },
+  {
+    "label": "Neo",
+    "category": "culture",
+    "clues": [
+      "Je découvre que son monde est une simulation.",
+      "Je peux éviter des balles d’une manière impossible.",
+      "Une pilule rouge m’ouvre les yeux."
+    ],
+    "id": "who_316"
+  },
+  {
+    "label": "Le Monopoly",
+    "category": "jeux",
+    "clues": [
+      "Je transforme une soirée calme en conflit immobilier.",
+      "On achète rues, gares et maisons.",
+      "Une prison existe au milieu du plateau."
+    ],
+    "id": "who_317"
+  },
+  {
+    "label": "Le Scrabble",
+    "category": "jeux",
+    "clues": [
+      "J’utilise des lettres sur de petits jetons.",
+      "Chaque case peut multiplier un score.",
+      "Les mots rares deviennent très précieux."
+    ],
+    "id": "who_318"
+  },
+  {
+    "label": "Les échecs",
+    "category": "jeux",
+    "clues": [
+      "Je me joue sur 64 cases.",
+      "Chaque pièce se déplace différemment.",
+      "Le roi doit éviter l’échec et mat."
+    ],
+    "id": "who_319"
+  },
+  {
+    "label": "Le Uno",
+    "category": "jeux",
+    "clues": [
+      "Je demande de faire correspondre couleur ou chiffre.",
+      "Certaines cartes font piocher.",
+      "Oublier de prononcer mon nom coûte cher."
+    ],
+    "id": "who_320"
+  },
+  {
+    "label": "Le Twister",
+    "category": "jeux",
+    "clues": [
+      "Je transforme les joueurs en nœuds humains.",
+      "Une roue choisit une couleur et un membre.",
+      "Le sol est couvert de grands ronds colorés."
+    ],
+    "id": "who_321"
+  },
+  {
+    "label": "Le bowling",
+    "category": "jeux",
+    "clues": [
+      "Je lance une boule lourde.",
+      "Dix quilles m’attendent au bout d’une piste.",
+      "Trois trous accueillent souvent les doigts."
+    ],
+    "id": "who_322"
+  },
+  {
+    "label": "Le billard",
+    "category": "jeux",
+    "clues": [
+      "Je me joue sur une table recouverte de tissu.",
+      "Une queue frappe une bille blanche.",
+      "Les angles et les rebonds comptent beaucoup."
+    ],
+    "id": "who_323"
+  },
+  {
+    "label": "Le tennis",
+    "category": "jeux",
+    "clues": [
+      "Je me joue avec une raquette.",
+      "Un filet partage le terrain.",
+      "Le score passe étrangement de 15 à 30 puis 40."
+    ],
+    "id": "who_324"
+  },
+  {
+    "label": "Le badminton",
+    "category": "jeux",
+    "clues": [
+      "Je me joue avec un volant.",
+      "Une raquette très légère m’accompagne.",
+      "Le projectile ne doit pas toucher le sol."
+    ],
+    "id": "who_325"
+  },
+  {
+    "label": "Le rugby",
+    "category": "jeux",
+    "clues": [
+      "J’utilise un ballon ovale.",
+      "Les passes vers l’avant sont interdites dans le jeu courant.",
+      "Un essai se marque derrière une ligne."
+    ],
+    "id": "who_326"
+  },
+  {
+    "label": "Le handball",
+    "category": "jeux",
+    "clues": [
+      "Je me joue surtout avec les mains.",
+      "Un gardien protège un but.",
+      "Les joueurs ne peuvent garder le ballon sans dribbler trop longtemps."
+    ],
+    "id": "who_327"
+  },
+  {
+    "label": "Le volley-ball",
+    "category": "jeux",
+    "clues": [
+      "Je fais passer un ballon au-dessus d’un filet.",
+      "Chaque équipe touche généralement trois fois maximum.",
+      "Un smash peut conclure l’échange."
+    ],
+    "id": "who_328"
+  },
+  {
+    "label": "Le golf",
+    "category": "jeux",
+    "clues": [
+      "J’envoie une petite balle vers un trou lointain.",
+      "Le moins de coups gagne.",
+      "J’utilise plusieurs clubs différents."
+    ],
+    "id": "who_329"
+  },
+  {
+    "label": "Le surf",
+    "category": "jeux",
+    "clues": [
+      "Je glisse sur une vague.",
+      "Je me pratique debout sur une planche.",
+      "L’équilibre et l’océan décident beaucoup."
+    ],
+    "id": "who_330"
+  },
+  {
+    "label": "Le ski",
+    "category": "jeux",
+    "clues": [
+      "J’utilise deux longues planches sous les pieds.",
+      "Je descends des pentes enneigées.",
+      "Des remontées mécaniques me ramènent en haut."
+    ],
+    "id": "who_331"
+  },
+  {
+    "label": "L’escalade",
+    "category": "jeux",
+    "clues": [
+      "Je cherche des prises.",
+      "Une corde peut me sécuriser.",
+      "Je monte sur une paroi naturelle ou artificielle."
+    ],
+    "id": "who_332"
+  },
+  {
+    "label": "Le marathon",
+    "category": "jeux",
+    "clues": [
+      "Je suis une course très longue.",
+      "Ma distance officielle dépasse 42 kilomètres.",
+      "Mon nom vient d’une ville grecque."
+    ],
+    "id": "who_333"
+  },
+  {
+    "label": "Le jeu de cache-cache",
+    "category": "jeux",
+    "clues": [
+      "Une personne compte pendant que les autres disparaissent.",
+      "Le silence aide beaucoup.",
+      "Le but est de trouver tout le monde."
+    ],
+    "id": "who_334"
+  },
+  {
+    "label": "Le pierre-feuille-ciseaux",
+    "category": "jeux",
+    "clues": [
+      "Je ne demande aucun matériel.",
+      "Chaque geste bat un autre et perd contre le troisième.",
+      "Je tranche rapidement de petits désaccords."
+    ],
+    "id": "who_335"
+  },
+  {
+    "label": "Le blind test",
+    "category": "jeux",
+    "clues": [
+      "Je demande de reconnaître un morceau.",
+      "Quelques secondes peuvent suffire.",
+      "Le titre ou l’interprète rapportent des points."
+    ],
+    "id": "who_336"
+  },
+  {
+    "label": "Le karaoké",
+    "category": "jeux",
+    "clues": [
+      "J’affiche les paroles.",
+      "Je transforme un micro en test de confiance.",
+      "La justesse est parfois facultative."
+    ],
+    "id": "who_337"
+  },
+  {
+    "label": "Le escape game",
+    "category": "jeux",
+    "clues": [
+      "J’enferme volontairement un groupe.",
+      "Des énigmes permettent de progresser.",
+      "Un chronomètre met la pression."
+    ],
+    "id": "who_338"
+  },
+  {
+    "label": "Le jeu de piste",
+    "category": "jeux",
+    "clues": [
+      "Je fais suivre des indices d’un lieu à l’autre.",
+      "Une récompense peut attendre à la fin.",
+      "Observation et orientation sont utiles."
+    ],
+    "id": "who_339"
+  },
+  {
+    "label": "Le laser game",
+    "category": "jeux",
+    "clues": [
+      "Je me joue dans un labyrinthe sombre.",
+      "Un équipement lumineux compte les tirs.",
+      "Je vise des capteurs sans projectile réel."
+    ],
+    "id": "who_340"
+  },
+  {
+    "label": "Le paintball",
+    "category": "jeux",
+    "clues": [
+      "Je me joue en équipe sur un terrain.",
+      "Des billes de peinture marquent les touches.",
+      "Une protection du visage est indispensable."
+    ],
+    "id": "who_341"
+  },
+  {
+    "label": "Un photobooth",
+    "category": "soiree",
+    "clues": [
+      "Je prends plusieurs photos à la suite.",
+      "Je fournis souvent des accessoires ridicules.",
+      "Une bande imprimée devient un souvenir de soirée."
+    ],
+    "id": "who_342"
+  },
+  {
+    "label": "Un bracelet de festival",
+    "category": "soiree",
+    "clues": [
+      "Je reste au poignet plusieurs jours.",
+      "Je prouve qu’une entrée a été payée.",
+      "Certaines personnes refusent de me couper longtemps après l’événement."
+    ],
+    "id": "who_343"
+  },
+  {
+    "label": "Une playlist",
+    "category": "soiree",
+    "clues": [
+      "J’enchaîne des morceaux choisis.",
+      "Je peux sauver ou ruiner une ambiance.",
+      "Je me partage avant un trajet ou une soirée."
+    ],
+    "id": "who_344"
+  },
+  {
+    "label": "Un after",
+    "category": "soiree",
+    "clues": [
+      "Je commence quand la soirée était censée finir.",
+      "Je rassemble les plus résistants.",
+      "Le jour peut se lever avant mon départ."
+    ],
+    "id": "who_345"
+  },
+  {
+    "label": "Une entrée VIP",
+    "category": "soiree",
+    "clues": [
+      "J’évite parfois une file.",
+      "Je donne accès à une zone réservée.",
+      "Je suis souvent symbolisée par un bracelet ou un badge."
+    ],
+    "id": "who_346"
+  },
+  {
+    "label": "Un dress code",
+    "category": "soiree",
+    "clues": [
+      "J’impose ou suggère une tenue.",
+      "Je peux être chic, coloré ou complètement absurde.",
+      "J’apparais sur une invitation."
+    ],
+    "id": "who_347"
+  },
+  {
+    "label": "Un buffet",
+    "category": "soiree",
+    "clues": [
+      "Je laisse chacun composer son assiette.",
+      "J’aligne plusieurs plats sur une table.",
+      "Les derniers arrivés regardent les plateaux avec inquiétude."
+    ],
+    "id": "who_348"
+  },
+  {
+    "label": "Une pinata",
+    "category": "soiree",
+    "clues": [
+      "Je suis suspendue et remplie de surprises.",
+      "On me frappe les yeux bandés.",
+      "Je finis généralement en morceaux au milieu d’une fête."
+    ],
+    "id": "who_349"
+  },
+  {
+    "label": "Un confetti",
+    "category": "soiree",
+    "clues": [
+      "Je suis minuscule et coloré.",
+      "Je tombe du plafond ou sort d’un canon.",
+      "Je reste dans les vêtements et sous les meubles pendant des jours."
+    ],
+    "id": "who_350"
+  },
+  {
+    "label": "Un gobelet réutilisable",
+    "category": "soiree",
+    "clues": [
+      "Je porte souvent le logo d’un événement.",
+      "Une consigne peut m’être demandée.",
+      "Je remplace les verres jetables dans de nombreux festivals."
+    ],
+    "id": "who_351"
+  },
+  {
+    "label": "Un vestiaire",
+    "category": "soiree",
+    "clues": [
+      "Je garde manteaux et sacs pendant une soirée.",
+      "Un petit numéro permet de récupérer ses affaires.",
+      "La file devant moi grandit au moment de partir."
+    ],
+    "id": "who_352"
+  },
+  {
+    "label": "Une invitation",
+    "category": "soiree",
+    "clues": [
+      "J’annonce une date, un lieu et une raison de se réunir.",
+      "Je peux être papier ou numérique.",
+      "Sans moi, entrer peut devenir gênant."
+    ],
+    "id": "who_353"
+  },
+  {
+    "label": "Un slow",
+    "category": "soiree",
+    "clues": [
+      "Je ralentis brutalement la piste de danse.",
+      "Je me danse souvent à deux.",
+      "Il crée autant de souvenirs que de malaises."
+    ],
+    "id": "who_354"
+  },
+  {
+    "label": "Un jeu à boire",
+    "category": "soiree",
+    "clues": [
+      "Je mélange règles et boissons.",
+      "Je dois rester facultatif et adaptable sans alcool.",
+      "Une erreur ou une défaite déclenche souvent une gorgée."
+    ],
+    "id": "who_355"
+  },
+  {
+    "label": "Une auberge de jeunesse",
+    "category": "voyage",
+    "clues": [
+      "Je propose des lits moins chers.",
+      "Des chambres peuvent être partagées.",
+      "Je favorise les rencontres entre voyageurs."
+    ],
+    "id": "who_356"
+  },
+  {
+    "label": "Un hôtel cinq étoiles",
+    "category": "voyage",
+    "clues": [
+      "Je promets un service très haut de gamme.",
+      "Conciergerie, spa ou voiturier peuvent m’accompagner.",
+      "Mon nombre d’étoiles crée de grandes attentes."
+    ],
+    "id": "who_357"
+  },
+  {
+    "label": "Un billet aller simple",
+    "category": "voyage",
+    "clues": [
+      "J’organise un départ sans prévoir officiellement le retour.",
+      "Je peux symboliser une aventure ou une fuite.",
+      "Une seule date figure sur moi."
+    ],
+    "id": "who_358"
+  },
+  {
+    "label": "Une escale",
+    "category": "voyage",
+    "clues": [
+      "J’interromps un trajet avant la destination finale.",
+      "Je peux durer trente minutes ou toute une nuit.",
+      "Changer d’avion m’accompagne souvent."
+    ],
+    "id": "who_359"
+  },
+  {
+    "label": "Un décalage horaire",
+    "category": "voyage",
+    "clues": [
+      "Je dérègle sommeil et faim.",
+      "J’apparais après avoir traversé plusieurs fuseaux.",
+      "Le corps croit encore être dans le pays précédent."
+    ],
+    "id": "who_360"
+  },
+  {
+    "label": "Une carte d’embarquement",
+    "category": "voyage",
+    "clues": [
+      "J’indique porte, siège et heure.",
+      "Je suis vérifiée avant d’entrer dans l’avion.",
+      "J’existe souvent dans un téléphone."
+    ],
+    "id": "who_361"
+  },
+  {
+    "label": "Un contrôle de sécurité",
+    "category": "voyage",
+    "clues": [
+      "Je demande de vider ses poches.",
+      "Liquides et objets métalliques m’intéressent beaucoup.",
+      "Je me trouve avant les portes d’embarquement."
+    ],
+    "id": "who_362"
+  },
+  {
+    "label": "Une excursion",
+    "category": "voyage",
+    "clues": [
+      "Je dure généralement moins qu’un voyage complet.",
+      "Je fais découvrir un lieu précis.",
+      "Un guide ou un programme peut m’organiser."
+    ],
+    "id": "who_363"
+  },
+  {
+    "label": "Un road trip",
+    "category": "voyage",
+    "clues": [
+      "Je transforme la route en partie du voyage.",
+      "Plusieurs étapes me composent.",
+      "Une bonne playlist et des pauses régulières me rendent meilleur."
+    ],
+    "id": "who_364"
+  },
+  {
+    "label": "Un guide touristique",
+    "category": "voyage",
+    "clues": [
+      "J’explique histoire, lieux et anecdotes.",
+      "Je marche souvent devant un groupe.",
+      "Un parapluie levé peut me rendre visible."
+    ],
+    "id": "who_365"
+  },
+  {
+    "label": "Un souvenir de vacances",
+    "category": "voyage",
+    "clues": [
+      "Je rappelle un lieu longtemps après le retour.",
+      "Je peux être kitsch, utile ou complètement inutile.",
+      "Une boutique touristique me vend souvent."
+    ],
+    "id": "who_366"
+  },
+  {
+    "label": "Une randonnée",
+    "category": "voyage",
+    "clues": [
+      "Je me fait principalement à pied.",
+      "Je suis un sentier.",
+      "De bonnes chaussures et de l’eau sont importantes."
+    ],
+    "id": "who_367"
+  },
+  {
+    "label": "Une nuit à la belle étoile",
+    "category": "voyage",
+    "clues": [
+      "Je me déroule sans vrai toit.",
+      "Le ciel devient le plafond.",
+      "Le froid, les moustiques et les étoiles partagent l’expérience."
+    ],
+    "id": "who_368"
+  },
+  {
+    "label": "Une croisière",
+    "category": "voyage",
+    "clues": [
+      "Je combine transport, hôtel et loisirs.",
+      "Je s’arrête dans plusieurs ports.",
+      "Un très grand navire me sert de maison temporaire."
+    ],
+    "id": "who_369"
+  },
+  {
+    "label": "Un safari",
+    "category": "voyage",
+    "clues": [
+      "Je cherche à observer des animaux sauvages.",
+      "Je me déroule souvent dans un véhicule ouvert ou protégé.",
+      "Des jumelles et beaucoup de patience sont utiles."
+    ],
+    "id": "who_370"
+  },
+  {
+    "label": "Un city break",
+    "category": "voyage",
+    "clues": [
+      "Je suis un court séjour en ville.",
+      "Je remplis quelques jours de visites, restaurants et marche.",
+      "Un week-end suffit souvent."
+    ],
+    "id": "who_371"
+  },
+  {
+    "label": "Un camping",
+    "category": "voyage",
+    "clues": [
+      "Je remplace une chambre par une tente ou un mobil-home.",
+      "Je rapproche de la nature et des sanitaires partagés.",
+      "Une lampe torche devient vite essentielle."
+    ],
+    "id": "who_372"
+  },
+  {
+    "label": "Un échange de maison",
+    "category": "voyage",
+    "clues": [
+      "Je permets de loger chez quelqu’un pendant qu’il loge chez soi.",
+      "Je demande beaucoup de confiance.",
+      "Il réduit fortement le coût de l’hébergement."
+    ],
+    "id": "who_373"
+  },
+  {
+    "label": "Une valise cabine",
+    "category": "voyage",
+    "clues": [
+      "Je dois respecter des dimensions précises.",
+      "Je voyage au-dessus des sièges.",
+      "J’évite parfois l’attente au tapis à bagages."
+    ],
+    "id": "who_374"
+  },
+  {
+    "label": "Un carnet de voyage",
+    "category": "voyage",
+    "clues": [
+      "Je conserve notes, tickets et souvenirs.",
+      "Je me remplit au fil des étapes.",
+      "Je permets de revivre un voyage sans écran."
+    ],
+    "id": "who_375"
+  },
+  {
+    "label": "Gandalf",
+    "category": "culture",
+    "clues": [
+      "Je porte une longue barbe et un bâton.",
+      "Je guide une communauté vers une montagne dangereuse.",
+      "J’affirme qu’un ennemi ne passera pas."
+    ],
+    "id": "who_376"
+  },
+  {
+    "label": "Frodon Sacquet",
+    "category": "culture",
+    "clues": [
+      "Je suis petit et viens de la Comté.",
+      "Je porte un anneau très convoité.",
+      "Mon voyage mène jusqu’au Mordor."
+    ],
+    "id": "who_377"
+  },
+  {
+    "label": "Gollum",
+    "category": "culture",
+    "clues": [
+      "Je parle parfois de moi à la troisième personne.",
+      "J’ai vécu longtemps dans l’obscurité.",
+      "Un anneau est mon précieux."
+    ],
+    "id": "who_378"
+  },
+  {
+    "label": "Katniss Everdeen",
+    "category": "culture",
+    "clues": [
+      "Je manie très bien l’arc.",
+      "Je deviens malgré moi le symbole d’une rébellion.",
+      "Je parsicipe aux Hunger Games."
+    ],
+    "id": "who_379"
+  },
+  {
+    "label": "Jack Sparrow",
+    "category": "culture",
+    "clues": [
+      "Je suis un pirate à la démarche très particulière.",
+      "Je tiens énormément à mon navire, le Black Pearl.",
+      "Un compas inhabituel me guide."
+    ],
+    "id": "who_380"
+  },
+  {
+    "label": "Mulan",
+    "category": "culture",
+    "clues": [
+      "Je me fais passer pour un soldat.",
+      "Je pars à la guerre à la place de mon père.",
+      "Un petit dragon bavard m’accompagne."
+    ],
+    "id": "who_381"
+  },
+  {
+    "label": "Gru",
+    "category": "culture",
+    "clues": [
+      "Je rêve d’abord de voler la Lune.",
+      "J’élève trois filles.",
+      "De petites créatures jaunes travaillent pour moi."
+    ],
+    "id": "who_382"
+  },
+  {
+    "label": "Un Minion",
+    "category": "culture",
+    "clues": [
+      "Je suis petit, jaune et porte souvent une salopette.",
+      "Je parle une langue très personnelle.",
+      "Je travaille volontiers pour les méchants."
+    ],
+    "id": "who_383"
+  },
+  {
+    "label": "Maui",
+    "category": "culture",
+    "clues": [
+      "Je suis un demi-dieu très sûr de lui.",
+      "Un hameçon magique me donne plusieurs formes.",
+      "J’accompagne Vaiana sur l’océan."
+    ],
+    "id": "who_384"
+  },
+  {
+    "label": "Une friteuse à air",
+    "category": "objets",
+    "clues": [
+      "Je cuisine avec beaucoup d’air chaud.",
+      "Je promets du croustillant avec moins d’huile.",
+      "Je ressemble à un petit four doté d’un tiroir."
+    ],
+    "id": "who_385"
+  },
+  {
+    "label": "Une batterie externe",
+    "category": "objets",
+    "clues": [
+      "Je stocke de l’énergie pour la route.",
+      "Je recharge un téléphone sans prise murale.",
+      "Je finis souvent oubliée au fond d’un sac, moi aussi déchargée."
+    ],
+    "id": "who_386"
+  },
+  {
+    "label": "Un lecteur de code-barres",
+    "category": "objets",
+    "clues": [
+      "Je produis souvent un bip.",
+      "Je transforme des lignes noires en information.",
+      "Je travaille surtout aux caisses et dans les entrepôts."
+    ],
+    "id": "who_387"
+  },
+  {
+    "label": "Un maître-nageur",
+    "category": "metiers",
+    "clues": [
+      "Je surveille les baigneurs.",
+      "Je connais les gestes de sauvetage.",
+      "Je travaille près d’une piscine ou d’une plage."
+    ],
+    "id": "who_388"
+  },
+  {
+    "label": "Un mochi",
+    "category": "nourriture",
+    "clues": [
+      "Je suis une petite douceur japonaise.",
+      "Ma pâte de riz est souple et collante.",
+      "Je peux cacher une pâte sucrée ou de la glace."
+    ],
+    "id": "who_389"
+  },
+  {
+    "label": "Un tsunami",
+    "category": "nature",
+    "clues": [
+      "Je commence souvent après un mouvement sous-marin.",
+      "Je traverse l’océan sous forme de longues vagues.",
+      "Je peux inonder brutalement les côtes."
+    ],
+    "id": "who_390"
+  },
+  {
+    "label": "Un canyon",
+    "category": "nature",
+    "clues": [
+      "Je suis une vallée très profonde aux parois abruptes.",
+      "Une rivière peut me creuser pendant des millions d’années.",
+      "Mes couches de roche racontent le temps."
+    ],
+    "id": "who_391"
+  },
+  {
+    "label": "Une banquise",
+    "category": "nature",
+    "clues": [
+      "Je flotte sur la mer dans les régions polaires.",
+      "Je me forme lorsque l’eau de mer gèle.",
+      "Ours polaires et phoques m’utilisent comme habitat ou plateforme."
+    ],
+    "id": "who_392"
+  },
+  {
+    "label": "Un kayak",
+    "category": "transport",
+    "clues": [
+      "J’avance avec une pagaie à deux pales.",
+      "Je suis étroit et proche de la surface de l’eau.",
+      "Une ou deux personnes peuvent me piloter."
+    ],
+    "id": "who_393"
+  },
+  {
+    "label": "Un monorail",
+    "category": "transport",
+    "clues": [
+      "Je circule sur un seul rail ou une seule poutre.",
+      "Je suis souvent surélevé.",
+      "J’apparais dans certaines villes et certains parcs d’attractions."
+    ],
+    "id": "who_394"
+  },
+  {
+    "label": "Un vélo cargo",
+    "category": "transport",
+    "clues": [
+      "Je possède un grand espace pour transporter des charges.",
+      "Je remplace parfois une voiture en ville.",
+      "Enfants, courses ou colis peuvent monter avec moi."
+    ],
+    "id": "who_395"
+  },
+  {
+    "label": "Big Ben",
+    "category": "lieux",
+    "clues": [
+      "Je donne l’heure à Londres.",
+      "Mon nom désigne d’abord une grande cloche.",
+      "Je me trouve dans la tour du palais de Westminster."
+    ],
+    "id": "who_396"
+  },
+  {
+    "label": "L’opéra de Sydney",
+    "category": "lieux",
+    "clues": [
+      "Je me trouve au bord de l’eau en Australie.",
+      "Mon toit ressemble à des voiles ou des coquillages.",
+      "J’accueille concerts et spectacles."
+    ],
+    "id": "who_397"
+  },
+  {
+    "label": "Un leprechaun",
+    "category": "imaginaire",
+    "clues": [
+      "Je viens du folklore irlandais.",
+      "Je suis souvent vêtu de vert.",
+      "Un chaudron d’or pourrait m’attendre au bout d’un arc-en-ciel."
+    ],
+    "id": "who_398"
+  },
+  {
+    "label": "Une machine à fumée",
+    "category": "soiree",
+    "clues": [
+      "Je cache brièvement la piste.",
+      "Je produis un nuage artificiel.",
+      "Lumières et lasers deviennent plus visibles grâce à moi."
+    ],
+    "id": "who_399"
+  },
+  {
+    "label": "Un livre d’or",
+    "category": "soiree",
+    "clues": [
+      "Je recueille des mots laissés par les invités.",
+      "Je reste après la fête comme souvenir.",
+      "Mariages et anniversaires m’ouvrent souvent à une page blanche."
+    ],
+    "id": "who_400"
   }
 ]

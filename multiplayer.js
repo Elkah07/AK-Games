@@ -5987,7 +5987,7 @@
           guesserId,
           label: isGuesser ? null : (card.label || ""),
           category: isGuesser ? null : (card.category || "mystère"),
-          clues: isGuesser ? null : (card.clues || [])
+          clues: isGuesser ? (card.clues || []) : null
         };
       });
     }
@@ -6716,10 +6716,17 @@
     state.multiProcessingActionId = id;
 
     const found = Boolean(action?.payload?.found) && !expired;
+    const cluesUsed = Math.min(
+      Number(action?.payload?.cluesUsed || 0),
+      Array.isArray(card.clues) ? card.clues.length : 0
+    );
+    const earned = found
+      ? (typeof whoAmIPointsForClues === "function" ? whoAmIPointsForClues(cluesUsed) : (cluesUsed === 0 ? 3 : cluesUsed === 1 ? 2 : 1))
+      : 0;
     const scores = { ...(gameState.scores || {}) };
 
     if (found) {
-      scores[guesserId] = Number(scores[guesserId] || 0) + 2;
+      scores[guesserId] = Number(scores[guesserId] || 0) + earned;
       state.players
         .filter(player => player.id !== guesserId)
         .forEach(player => scores[player.id] = Number(scores[player.id] || 0) + 1);
@@ -6728,6 +6735,8 @@
     const result = {
       guesserId,
       found,
+      cluesUsed,
+      points: earned,
       itemId: card.id || "",
       label: card.label || "",
       category: card.category || "",
@@ -6762,10 +6771,10 @@
     screen.innerHTML = `
       ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, secureV09ItemCount(gameState), "Tour")}
       ${isGuesser
-        ? renderMultiWaiting("Ne regarde pas les autres écrans", "Ton identité n’est pas stockée sur ton téléphone.", avatarById(guesser?.avatarId).emoji)
+        ? renderMultiWaiting("Ne regarde pas les autres écrans", "Ton identité est cachée. Les trois indices apparaîtront uniquement sur ton téléphone quand tu les demanderas.", avatarById(guesser?.avatarId).emoji)
         : seen
           ? renderMultiWaiting("Identité mémorisée", `${Object.keys(answers).length}/${Math.max(1, state.players.length - 1)} aides prêtes.`, "🔒")
-          : `<section class="whoami-secret-card"><small>${escapeHtml(role.category || "mystère").toUpperCase()}</small><span>❓</span><h2>${escapeHtml(role.label || "")}</h2><ul>${(role.clues || []).map(clue => `<li>${escapeHtml(clue)}</li>`).join("")}</ul><p>Réponds uniquement par oui, non ou presque.</p></section><button id="multiWhoAmISeen" class="primary-btn full">J’ai mémorisé</button>`}
+          : `<section class="whoami-secret-card whoami-helper-card"><small>${escapeHtml(role.category || "mystère").toUpperCase()}</small><span>❓</span><h2>${escapeHtml(role.label || "")}</h2><div class="whoami-helper-note"><strong>Les indices sont réservés à la personne qui devine.</strong><p>Réponds uniquement par oui, non ou presque.</p></div></section><button id="multiWhoAmISeen" class="primary-btn full">J’ai mémorisé</button>`}
       ${renderPlayerSubmissionStatus(status, "Prêt", "Découvre…")}
     `;
 
@@ -6787,6 +6796,13 @@
     const role = secureV09CurrentRole(gameState);
     const guesser = playerById(gameState.guesserId);
     const isGuesser = state.currentUid === gameState.guesserId;
+    const currentAction = actions[gameState.guesserId];
+    const availableClues = isGuesser && Array.isArray(role?.clues) ? role.clues : [];
+    const cluesUsed = Math.min(Number(currentAction?.payload?.cluesUsed || 0), availableClues.length);
+    const visibleClues = availableClues.slice(0, cluesUsed);
+    const currentPoints = typeof whoAmIPointsForClues === "function"
+      ? whoAmIPointsForClues(cluesUsed)
+      : (cluesUsed === 0 ? 3 : cluesUsed === 1 ? 2 : 1);
     title.textContent = "Qui suis-je ?";
     setBackVisible(false);
 
@@ -6797,16 +6813,37 @@
         total: Number(gameState.settings?.durationSeconds || 60),
         kicker: `${avatarById(guesser?.avatarId).emoji} ${guesser?.name || "Joueur"}`,
         heading: isGuesser ? "Pose des questions" : (role?.label || "Identité secrète"),
-        text: isGuesser ? "Le groupe répond oui, non ou presque." : (role?.clues || []).join(" • "),
+        text: isGuesser ? "Le groupe répond oui, non ou presque. Débloque un indice seulement si tu bloques." : `Aide ${guesser?.name || "la personne"} sans prononcer l’identité.`,
         icon: "❓"
       })}
-      ${isGuesser ? `<button id="multiWhoAmIFound" class="primary-btn full">✅ J’ai trouvé !</button>` : `<div class="notice">Aide ${escapeHtml(guesser?.name || "la personne")} sans prononcer l’identité.</div>`}
+      ${isGuesser ? `
+        <section class="whoami-guesser-tools">
+          <div class="whoami-clue-header"><div><small>AIDE PROGRESSIVE</small><strong>Mes indices</strong></div><span>${cluesUsed}/${availableClues.length}</span></div>
+          <div class="whoami-clue-stack">${visibleClues.length
+            ? visibleClues.map((clue, index) => `<article class="whoami-clue-item"><span>${index + 1}</span><p>${escapeHtml(clue)}</p></article>`).join("")
+            : `<p class="whoami-no-clue">Commence sans indice pour tenter de gagner 3 points.</p>`}</div>
+          <button id="multiWhoAmIClue" class="secondary-btn full" ${cluesUsed >= availableClues.length ? "disabled" : ""}>${cluesUsed >= availableClues.length ? "Tous les indices sont révélés" : `🔎 Débloquer l’indice ${cluesUsed + 1}`}</button>
+          <small class="whoami-clue-value">Récompense actuelle : ${currentPoints} point${currentPoints > 1 ? "s" : ""}</small>
+        </section>
+        <button id="multiWhoAmIFound" class="primary-btn full">✅ J’ai trouvé !</button>
+      ` : `<div class="notice">Aide ${escapeHtml(guesser?.name || "la personne")} sans prononcer l’identité. Les indices ne sont plus affichés sur ton écran.</div>`}
     `;
+
+    document.querySelector("#multiWhoAmIClue")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      const next = Math.min(availableClues.length, cluesUsed + 1);
+      try {
+        await sendMultiAction("who-am-i-clue", { found: false, cluesUsed: next });
+      } catch (error) {
+        console.error(error);
+        event.currentTarget.disabled = false;
+      }
+    });
 
     document.querySelector("#multiWhoAmIFound")?.addEventListener("click", async event => {
       event.currentTarget.disabled = true;
       try {
-        await sendMultiAction("who-am-i-found", { found: true });
+        await sendMultiAction("who-am-i-found", { found: true, cluesUsed });
       } catch (error) {
         console.error(error);
         event.currentTarget.disabled = false;
@@ -6820,12 +6857,14 @@
     clearV09MultiTimer();
     const result = gameState.currentResult || {};
     const guesser = playerById(result.guesserId || gameState.guesserId);
+    const cluesUsed = Math.max(0, Number(result.cluesUsed || 0));
+    const earned = Math.max(0, Number(result.points || 0));
     title.textContent = result.found ? "Identité trouvée" : "Temps écoulé";
     setBackVisible(false);
 
     screen.innerHTML = `
-      <section class="reveal-stage reveal-v07 whoami-reveal"><span class="game-cover-icon">${result.found ? "🎉" : "⏱️"}</span><h2>${escapeHtml(guesser?.name || "Le joueur")} était ${escapeHtml(result.label || "")}</h2><p>${result.found ? "+2 points pour la personne qui devine, +1 pour chaque aide." : "Cette identité n’a pas été trouvée à temps."}</p></section>
-      <section class="whoami-clue-wall">${(result.clues || []).map(clue => `<span>${escapeHtml(clue)}</span>`).join("")}</section>
+      <section class="reveal-stage reveal-v07 whoami-reveal"><span class="game-cover-icon">${result.found ? "🎉" : "⏱️"}</span><h2>${escapeHtml(guesser?.name || "Le joueur")} était ${escapeHtml(result.label || "")}</h2><p>${result.found ? `+${earned} point${earned > 1 ? "s" : ""} avec ${cluesUsed} indice${cluesUsed > 1 ? "s" : ""}, et +1 pour chaque aide.` : `Cette identité n’a pas été trouvée après ${cluesUsed} indice${cluesUsed > 1 ? "s" : ""}.`}</p></section>
+      <section class="whoami-clue-wall">${(result.clues || []).map((clue, index) => `<span><strong>${index + 1}</strong>${escapeHtml(clue)}</span>`).join("")}</section>
       ${state.alcohol && !result.found ? `<div class="alcohol-callout">🍻 ${escapeHtml(guesser?.name || "La personne")} peut trinquer avec la boisson de son choix, sans obligation.</div>` : ""}
       ${state.isHost
         ? `<button id="nextMultiWhoAmI" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= secureV09ItemCount(gameState) ? "Voir le classement" : "Identité suivante"}</button>`

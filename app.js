@@ -4494,6 +4494,13 @@ function renderFakeExpertEnd() {
 
 /* ---------- QUI SUIS-JE ? ---------- */
 
+function whoAmIPointsForClues(cluesUsed) {
+  const used = Math.max(0, Number(cluesUsed || 0));
+  if (used === 0) return 3;
+  if (used === 1) return 2;
+  return 1;
+}
+
 function resetWhoAmIState(config = {}) {
   state.whoAmI = {
     roundCount: Number(config.roundCount || Math.max(6, state.players.length)),
@@ -4502,6 +4509,7 @@ function resetWhoAmIState(config = {}) {
     durationSeconds: Number(config.durationSeconds || 60),
     items: [],
     currentIndex: 0,
+    cluesUsed: 0,
     guesserOrder: shuffleArray(state.players.map(player => player.id)),
     scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
     rounds: []
@@ -4512,23 +4520,26 @@ function renderWhoAmISetup() {
   clearV09Timer();
   if (!state.whoAmI) resetWhoAmIState();
   const game = state.whoAmI;
+  const minimum = Math.max(6, state.players.length);
+  const roundOptions = [minimum, game.roundCount, 10, 15, 20, 30, 50, 100]
+    .filter((value, index, values) => value >= minimum && values.indexOf(value) === index);
   title.textContent = "Qui suis-je ?";
   setBackVisible(true);
   screen.innerHTML = `
-    <section class="game-cover game-cover-whoami"><span class="game-cover-icon">❓</span><div><small>IMPOSTEURS & DÉDUCTION</small><h2>Qui suis-je ?</h2><p>Tout le monde connaît ton identité sauf toi. Pose des questions et retrouve-la avant la fin du chrono.</p></div></section>
+    <section class="game-cover game-cover-whoami"><span class="game-cover-icon">❓</span><div><small>IMPOSTEURS & DÉDUCTION</small><h2>Qui suis-je ?</h2><p>Tout le monde connaît ton identité sauf toi. Pose des questions, puis débloque des indices seulement si tu bloques.</p></div></section>
     <section class="card setup-card-v07">
-      <div class="form-group"><label for="whoAmIRounds">Nombre de tours</label><select id="whoAmIRounds" class="text-input">${[Math.max(6,state.players.length),8,10,15].filter((v,i,a)=>a.indexOf(v)===i).map(v => `<option value="${v}" ${game.roundCount === v ? "selected" : ""}>${v} tours</option>`).join("")}</select></div>
-      <div class="form-group top-gap"><label for="whoAmICategory">Catégories</label><select id="whoAmICategory" class="text-input"><option value="mix" ${game.categoryMode === "mix" ? "selected" : ""}>Mélange complet</option><option value="classic" ${game.categoryMode === "classic" ? "selected" : ""}>Objets, animaux et métiers</option><option value="culture" ${game.categoryMode === "culture" ? "selected" : ""}>Culture pop</option></select></div>
-      <div class="form-group top-gap"><label for="whoAmITimer">Chronomètre</label><select id="whoAmITimer" class="text-input">${[45,60,90].map(v => `<option value="${v}" ${game.durationSeconds === v ? "selected" : ""}>${v} secondes</option>`).join("")}</select></div>
+      <div class="form-group"><label for="whoAmIRounds">Nombre de tours</label><select id="whoAmIRounds" class="text-input">${roundOptions.map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} tours</option>`).join("")}</select></div>
+      <div class="form-group top-gap"><label for="whoAmICategory">Catégories</label><select id="whoAmICategory" class="text-input"><option value="mix" ${game.categoryMode === "mix" ? "selected" : ""}>Mélange complet</option><option value="classic" ${game.categoryMode === "classic" ? "selected" : ""}>Quotidien, animaux, lieux et métiers</option><option value="culture" ${game.categoryMode === "culture" ? "selected" : ""}>Culture pop</option></select></div>
+      <div class="form-group top-gap"><label for="whoAmITimer">Chronomètre</label><select id="whoAmITimer" class="text-input">${[45,60,90,120].map(value => `<option value="${value}" ${game.durationSeconds === value ? "selected" : ""}>${value} secondes</option>`).join("")}</select></div>
     </section>
-    ${state.adult ? `<label class="option-card premium-toggle"><input id="whoAmIAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les identités adultes</strong><br><span class="helper">Crushs, ex, dates et situations de couple.</span></span></label>` : ""}
-    <div class="notice">Identité trouvée : +2 points pour la personne qui devine et +1 pour chaque personne qui l’aide.</div>
+    ${state.adult ? `<label class="option-card premium-toggle"><input id="whoAmIAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les identités adultes</strong><br><span class="helper">Relations, rendez-vous, dossiers et situations intimes.</span></span></label>` : ""}
+    <div class="notice whoami-score-notice"><strong>Les indices sont maintenant pour la personne qui devine.</strong><br>Sans indice : 3 points · 1 indice : 2 points · 2 ou 3 indices : 1 point. Chaque aide gagne 1 point si l’identité est trouvée.</div>
     <button id="startWhoAmI" class="primary-btn full">Distribuer les identités</button>
   `;
-  document.querySelector("#whoAmIRounds").addEventListener("change", e => game.roundCount = Number(e.target.value));
-  document.querySelector("#whoAmICategory").addEventListener("change", e => game.categoryMode = e.target.value);
-  document.querySelector("#whoAmITimer").addEventListener("change", e => game.durationSeconds = Number(e.target.value));
-  document.querySelector("#whoAmIAdult")?.addEventListener("change", e => game.includeAdult = e.target.checked);
+  document.querySelector("#whoAmIRounds").addEventListener("change", event => game.roundCount = Number(event.target.value));
+  document.querySelector("#whoAmICategory").addEventListener("change", event => game.categoryMode = event.target.value);
+  document.querySelector("#whoAmITimer").addEventListener("change", event => game.durationSeconds = Number(event.target.value));
+  document.querySelector("#whoAmIAdult")?.addEventListener("change", event => game.includeAdult = event.target.checked);
   document.querySelector("#startWhoAmI").addEventListener("click", startWhoAmIGame);
 }
 
@@ -4542,6 +4553,7 @@ async function startWhoAmIGame() {
     if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/qui-suis-je-adulte.json", "Impossible de charger les identités adultes."));
     game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "solo:who-am-i");
     game.currentIndex = 0;
+    game.cluesUsed = 0;
     game.guesserOrder = shuffleArray(state.players.map(player => player.id));
     game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
     game.rounds = [];
@@ -4559,12 +4571,13 @@ function currentWhoAmIGuesser(game) {
 function renderWhoAmIRevealGate() {
   const game = state.whoAmI;
   if (game.currentIndex >= game.items.length) return renderWhoAmIEnd();
+  game.cluesUsed = 0;
   const guesser = currentWhoAmIGuesser(game);
   title.textContent = "Identité secrète";
   setBackVisible(false);
   screen.innerHTML = `
     ${renderV09Progress(game.currentIndex + 1, game.items.length, "Tour")}
-    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(guesser.avatarId).emoji}</div><span class="category-chip">${escapeHtml(guesser.name).toUpperCase()} FERME LES YEUX</span><h2>Donne le téléphone au reste du groupe</h2><p>Tout le monde va voir l’identité secrète sauf ${escapeHtml(guesser.name)}.</p><button id="showWhoAmICard" class="primary-btn">Afficher l’identité</button></section>
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(guesser.avatarId).emoji}</div><span class="category-chip">${escapeHtml(guesser.name).toUpperCase()} FERME LES YEUX</span><h2>Donne le téléphone au reste du groupe</h2><p>Tout le monde va voir l’identité secrète sauf ${escapeHtml(guesser.name)}. Les indices resteront cachés pour être débloqués ensuite par la personne qui devine.</p><button id="showWhoAmICard" class="primary-btn">Afficher l’identité</button></section>
   `;
   document.querySelector("#showWhoAmICard").addEventListener("click", renderWhoAmICard);
 }
@@ -4576,7 +4589,7 @@ function renderWhoAmICard() {
   title.textContent = "À faire deviner";
   screen.innerHTML = `
     ${renderV09Progress(game.currentIndex + 1, game.items.length, "Tour")}
-    <section class="whoami-secret-card"><small>${escapeHtml(item.category || "mystère").toUpperCase()}</small><span>❓</span><h2>${escapeHtml(item.label)}</h2><ul>${(item.clues || []).map(clue => `<li>${escapeHtml(clue)}</li>`).join("")}</ul><p>Répondez uniquement par oui, non ou presque aux questions de ${escapeHtml(guesser.name)}.</p></section>
+    <section class="whoami-secret-card whoami-helper-card"><small>${escapeHtml(item.category || "mystère").toUpperCase()}</small><span>❓</span><h2>${escapeHtml(item.label)}</h2><div class="whoami-helper-note"><strong>Ne lisez aucun indice.</strong><p>Répondez seulement par oui, non ou presque aux questions de ${escapeHtml(guesser.name)}.</p></div></section>
     <button id="startWhoAmIRound" class="primary-btn full">Tout le monde a mémorisé</button>
   `;
   document.querySelector("#startWhoAmIRound").addEventListener("click", renderWhoAmIPlaying);
@@ -4584,7 +4597,9 @@ function renderWhoAmICard() {
 
 function renderWhoAmIPlaying() {
   const game = state.whoAmI;
+  const item = game.items[game.currentIndex];
   const guesser = currentWhoAmIGuesser(game);
+  const clues = Array.isArray(item.clues) ? item.clues : [];
   title.textContent = "Qui suis-je ?";
   screen.innerHTML = `
     ${renderV09Progress(game.currentIndex + 1, game.items.length, "Tour")}
@@ -4593,8 +4608,41 @@ function renderWhoAmIPlaying() {
       <div id="v09TimerRing" class="v09-timer-ring"><strong id="v09Countdown">${game.durationSeconds}</strong><small>secondes</small></div>
       <h2>Pose des questions</h2><p>Le groupe répond oui, non ou presque. Pas de mime ni de mot de la même famille.</p>
     </section>
+    <section class="whoami-guesser-tools">
+      <div class="whoami-clue-header"><div><small>AIDE PROGRESSIVE</small><strong>Indices pour ${escapeHtml(guesser.name)}</strong></div><span id="whoAmIClueCounter">0/${clues.length}</span></div>
+      <div id="whoAmIClueStack" class="whoami-clue-stack"><p class="whoami-no-clue">Commence sans indice pour tenter de gagner 3 points.</p></div>
+      <button id="whoAmIClueButton" class="secondary-btn full" ${clues.length ? "" : "disabled"}>🔎 Débloquer l’indice 1</button>
+      <small id="whoAmIClueValue" class="whoami-clue-value">Récompense actuelle : 3 points</small>
+    </section>
     <div class="v09-binary-grid"><button id="whoAmIFound" class="primary-btn">✅ Trouvé !</button><button id="whoAmIFailed" class="secondary-btn">⏱️ Temps écoulé</button></div>
   `;
+
+  const clueStack = document.querySelector("#whoAmIClueStack");
+  const clueCounter = document.querySelector("#whoAmIClueCounter");
+  const clueButton = document.querySelector("#whoAmIClueButton");
+  const clueValue = document.querySelector("#whoAmIClueValue");
+  const updateClues = () => {
+    const visible = clues.slice(0, game.cluesUsed);
+    clueStack.innerHTML = visible.length
+      ? visible.map((clue, index) => `<article class="whoami-clue-item"><span>${index + 1}</span><p>${escapeHtml(clue)}</p></article>`).join("")
+      : `<p class="whoami-no-clue">Commence sans indice pour tenter de gagner 3 points.</p>`;
+    clueCounter.textContent = `${game.cluesUsed}/${clues.length}`;
+    const points = whoAmIPointsForClues(game.cluesUsed);
+    clueValue.textContent = `Récompense actuelle : ${points} point${points > 1 ? "s" : ""}`;
+    if (game.cluesUsed >= clues.length) {
+      clueButton.disabled = true;
+      clueButton.textContent = "Tous les indices sont révélés";
+    } else {
+      clueButton.disabled = false;
+      clueButton.textContent = `🔎 Débloquer l’indice ${game.cluesUsed + 1}`;
+    }
+  };
+  clueButton?.addEventListener("click", () => {
+    game.cluesUsed = Math.min(clues.length, Number(game.cluesUsed || 0) + 1);
+    updateClues();
+  });
+  updateClues();
+
   const finish = found => { clearV09Timer(); renderWhoAmIResult(found); };
   document.querySelector("#whoAmIFound").addEventListener("click", () => finish(true));
   document.querySelector("#whoAmIFailed").addEventListener("click", () => finish(false));
@@ -4605,26 +4653,28 @@ function renderWhoAmIResult(found) {
   const game = state.whoAmI;
   const item = game.items[game.currentIndex];
   const guesser = currentWhoAmIGuesser(game);
+  const cluesUsed = Math.max(0, Number(game.cluesUsed || 0));
+  const earned = found ? whoAmIPointsForClues(cluesUsed) : 0;
   if (found) {
-    game.scores[guesser.id] = Number(game.scores[guesser.id] || 0) + 2;
+    game.scores[guesser.id] = Number(game.scores[guesser.id] || 0) + earned;
     state.players.filter(player => player.id !== guesser.id).forEach(player => game.scores[player.id] = Number(game.scores[player.id] || 0) + 1);
   }
-  game.rounds.push({ itemId: item.id, guesserId: guesser.id, found });
+  game.rounds.push({ itemId: item.id, guesserId: guesser.id, found, cluesUsed, points: earned });
   title.textContent = found ? "Identité trouvée" : "Temps écoulé";
   setBackVisible(false);
   screen.innerHTML = `
-    <section class="reveal-stage reveal-v07 whoami-reveal"><span class="game-cover-icon">${found ? "🎉" : "⏱️"}</span><h2>${escapeHtml(guesser.name)} était ${escapeHtml(item.label)}</h2><p>${found ? "+2 points pour la personne qui devine, +1 pour chaque aide." : "Cette identité reste dans la galerie des mystères."}</p></section>
-    <section class="whoami-clue-wall">${(item.clues || []).map(clue => `<span>${escapeHtml(clue)}</span>`).join("")}</section>
+    <section class="reveal-stage reveal-v07 whoami-reveal"><span class="game-cover-icon">${found ? "🎉" : "⏱️"}</span><h2>${escapeHtml(guesser.name)} était ${escapeHtml(item.label)}</h2><p>${found ? `+${earned} point${earned > 1 ? "s" : ""} pour ${escapeHtml(guesser.name)} avec ${cluesUsed} indice${cluesUsed > 1 ? "s" : ""}, et +1 pour chaque aide.` : `Cette identité n’a pas été trouvée après ${cluesUsed} indice${cluesUsed > 1 ? "s" : ""}.`}</p></section>
+    <section class="whoami-clue-wall">${(item.clues || []).map((clue, index) => `<span><strong>${index + 1}</strong>${escapeHtml(clue)}</span>`).join("")}</section>
     ${state.alcohol && !found ? `<div class="alcohol-callout">🍻 ${escapeHtml(guesser.name)} peut trinquer avec la boisson de son choix, sans obligation.</div>` : ""}
     <button id="nextWhoAmI" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Identité suivante"}</button>
   `;
-  document.querySelector("#nextWhoAmI").addEventListener("click", () => { game.currentIndex += 1; renderWhoAmIRevealGate(); });
+  document.querySelector("#nextWhoAmI").addEventListener("click", () => { game.currentIndex += 1; game.cluesUsed = 0; renderWhoAmIRevealGate(); });
 }
 
 function renderWhoAmIEnd() {
   const game = state.whoAmI;
   renderV09Final({
-    icon: "❓", heading: "Toutes les identités sont révélées", text: "Les meilleurs enquêteurs et leurs équipes d’indices prennent la tête.", scores: game.scores,
+    icon: "❓", heading: "Toutes les identités sont révélées", text: "Les meilleurs enquêteurs sont ceux qui trouvent avant d’ouvrir toute la boîte à indices.", scores: game.scores,
     replay: () => { resetWhoAmIState({ roundCount: game.roundCount, includeAdult: game.includeAdult, categoryMode: game.categoryMode, durationSeconds: game.durationSeconds }); renderWhoAmISetup(); },
     other: () => { state.whoAmI = null; renderPlayChoice(); }
   });
