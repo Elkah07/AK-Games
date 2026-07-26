@@ -6432,3 +6432,440 @@ const akSoloSkipObserver = new MutationObserver(() => {
 });
 akSoloSkipObserver.observe(screen, { childList: true, subtree: true });
 window.requestAnimationFrame(akMountSoloSkipControl);
+
+/* =========================================================
+   AK'GAMES — ROULETTE DÉFIS V2
+   Packs, défis personnalisés et défis multi-joueurs
+   ========================================================= */
+
+const AK_ROULETTE_CUSTOM_KEY = "akgames_roulette_custom_challenges_v1";
+const AK_ROULETTE_PREFS_KEY = "akgames_roulette_preferences_v1";
+
+const AK_ROULETTE_THEMES = [
+  { id: "absurde", icon: "🤪", label: "Absurde" },
+  { id: "impro", icon: "🎭", label: "Impro" },
+  { id: "mime", icon: "🫥", label: "Mime" },
+  { id: "musique", icon: "🎵", label: "Musique & danse" },
+  { id: "rapidite", icon: "⚡", label: "Rapidité" },
+  { id: "duel", icon: "⚔️", label: "Duels" },
+  { id: "duo", icon: "🤝", label: "En duo" },
+  { id: "equipe", icon: "👥", label: "En équipe" },
+  { id: "confidences", icon: "💬", label: "Confidences légères" },
+  { id: "creatif", icon: "🎨", label: "Créativité" }
+];
+
+const AK_ROULETTE_FORMATS = [
+  { id: "solo", icon: "🧍", label: "Solo", participants: 1 },
+  { id: "duo", icon: "🧑‍🤝‍🧑", label: "Duo", participants: 2 },
+  { id: "trio", icon: "👪", label: "Trio", participants: 3 },
+  { id: "group", icon: "🫂", label: "Tout le groupe", participants: "all" }
+];
+
+function akRouletteIsGame(game = state.megaGame) {
+  return Boolean(game && game.gameName === "Roulette de défis");
+}
+
+function akRouletteReadJsonStorage(key, fallback) {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(key) || "null");
+    return parsed ?? fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function akRouletteLoadCustomChallenges() {
+  const rows = akRouletteReadJsonStorage(AK_ROULETTE_CUSTOM_KEY, []);
+  return Array.isArray(rows)
+    ? rows.filter(item => item && typeof item.text === "string" && item.text.trim())
+    : [];
+}
+
+function akRouletteSaveCustomChallenges(rows) {
+  localStorage.setItem(AK_ROULETTE_CUSTOM_KEY, JSON.stringify(rows));
+}
+
+function akRouletteLoadPreferences() {
+  const prefs = akRouletteReadJsonStorage(AK_ROULETTE_PREFS_KEY, {});
+  return prefs && typeof prefs === "object" ? prefs : {};
+}
+
+function akRouletteSavePreferences(game) {
+  if (!akRouletteIsGame(game)) return;
+  localStorage.setItem(AK_ROULETTE_PREFS_KEY, JSON.stringify({
+    themes: game.rouletteThemes,
+    formats: game.rouletteFormats,
+    source: game.rouletteSource,
+    roundCount: game.roundCount
+  }));
+}
+
+function akRouletteNormalizeSelections(game) {
+  if (!akRouletteIsGame(game)) return game;
+  const prefs = akRouletteLoadPreferences();
+  const validThemes = new Set(AK_ROULETTE_THEMES.map(item => item.id));
+  const playerCount = Math.max(1, state.players?.length || 1);
+  const availableFormatIds = AK_ROULETTE_FORMATS
+    .filter(format => format.participants === "all" ? playerCount >= 2 : Number(format.participants) <= playerCount)
+    .map(format => format.id);
+  const validFormats = new Set(availableFormatIds);
+  const customCount = akRouletteLoadCustomChallenges().length;
+
+  const themes = Array.isArray(game.rouletteThemes) ? game.rouletteThemes.filter(id => validThemes.has(id)) : [];
+  const formats = Array.isArray(game.rouletteFormats) ? game.rouletteFormats.filter(id => validFormats.has(id)) : [];
+  const prefThemes = Array.isArray(prefs.themes) ? prefs.themes.filter(id => validThemes.has(id)) : [];
+  const prefFormats = Array.isArray(prefs.formats) ? prefs.formats.filter(id => validFormats.has(id)) : [];
+
+  game.rouletteThemes = themes.length ? themes : prefThemes.length ? prefThemes : AK_ROULETTE_THEMES.map(item => item.id);
+  game.rouletteFormats = formats.length ? formats : prefFormats.length ? prefFormats : availableFormatIds;
+  game.rouletteSource = ["official", "both", "custom"].includes(game.rouletteSource)
+    ? game.rouletteSource
+    : ["official", "both", "custom"].includes(prefs.source)
+      ? prefs.source
+      : customCount ? "both" : "official";
+  game.rouletteManagerOpen = Boolean(game.rouletteManagerOpen);
+  return game;
+}
+
+function akRouletteThemeMeta(id) {
+  return AK_ROULETTE_THEMES.find(item => item.id === id) || { id, icon: "🎯", label: "Défi" };
+}
+
+function akRouletteParticipantMode(item) {
+  if (item?.participants === "all") return "group";
+  const count = Number(item?.participants || 1);
+  if (count >= 3) return "trio";
+  if (count === 2) return "duo";
+  return "solo";
+}
+
+function akRouletteParticipantLabel(item) {
+  const mode = akRouletteParticipantMode(item);
+  return AK_ROULETTE_FORMATS.find(format => format.id === mode) || AK_ROULETTE_FORMATS[0];
+}
+
+function akRouletteCanUseItem(item, playerCount) {
+  if (item?.participants === "all") return playerCount >= 2;
+  return Number(item?.participants || 1) <= playerCount;
+}
+
+function akRouletteToggleSelection(current, id, allIds) {
+  const values = new Set(Array.isArray(current) ? current : []);
+  if (values.has(id)) values.delete(id);
+  else values.add(id);
+  return values.size ? [...values] : [...allIds];
+}
+
+function akRouletteSetupMarkup(game, options = {}) {
+  if (!akRouletteIsGame(game)) return "";
+  akRouletteNormalizeSelections(game);
+  const readOnly = Boolean(options.readOnly);
+  const custom = akRouletteLoadCustomChallenges();
+  const playerCount = Math.max(1, state.players?.length || 1);
+  const selectedThemes = new Set(game.rouletteThemes);
+  const selectedFormats = new Set(game.rouletteFormats);
+  const disabled = readOnly ? "disabled" : "";
+
+  const customList = custom.length
+    ? custom.map(item => {
+        const theme = akRouletteThemeMeta(item.category);
+        const format = akRouletteParticipantLabel(item);
+        return `<div class="roulette-custom-row"><div><span>${theme.icon} ${escapeHtml(theme.label)} · ${format.icon} ${escapeHtml(format.label)}</span><strong>${escapeHtml(item.text)}</strong></div>${readOnly ? "" : `<button type="button" class="roulette-delete-btn" data-roulette-delete="${escapeHtml(item.id)}" aria-label="Supprimer ce défi">×</button>`}</div>`;
+      }).join("")
+    : `<div class="roulette-empty-custom">Aucun défi personnalisé pour le moment.</div>`;
+
+  return `
+    <section class="card roulette-settings-card">
+      <div class="roulette-section-heading"><div><small>ROULETTE SUR MESURE</small><h3>Choisis l’ambiance</h3></div><span>${custom.length} perso${custom.length > 1 ? "s" : ""}</span></div>
+      <p class="helper">Tu peux mélanger plusieurs thèmes. Les défis impossibles avec le nombre actuel de joueurs seront retirés automatiquement.</p>
+
+      <div class="roulette-control-block">
+        <strong>Thèmes</strong>
+        <div class="roulette-chip-grid">
+          ${AK_ROULETTE_THEMES.map(theme => `<button type="button" class="roulette-filter-chip ${selectedThemes.has(theme.id) ? "is-active" : ""}" data-roulette-theme="${theme.id}" ${disabled}><span>${theme.icon}</span>${escapeHtml(theme.label)}</button>`).join("")}
+        </div>
+      </div>
+
+      <div class="roulette-control-block">
+        <strong>Formats de défis</strong>
+        <div class="roulette-chip-grid roulette-format-grid">
+          ${AK_ROULETTE_FORMATS.map(format => {
+            const unavailable = format.participants === "all" ? playerCount < 2 : Number(format.participants) > playerCount;
+            return `<button type="button" class="roulette-filter-chip ${selectedFormats.has(format.id) ? "is-active" : ""} ${unavailable ? "is-unavailable" : ""}" data-roulette-format="${format.id}" ${disabled || unavailable ? "disabled" : ""}><span>${format.icon}</span>${escapeHtml(format.label)}</button>`;
+          }).join("")}
+        </div>
+      </div>
+
+      <div class="form-group roulette-source-select">
+        <label for="rouletteSource">Défis utilisés</label>
+        <select id="rouletteSource" class="text-input" ${disabled}>
+          <option value="official" ${game.rouletteSource === "official" ? "selected" : ""}>Défis AK’Games uniquement</option>
+          <option value="both" ${game.rouletteSource === "both" ? "selected" : ""}>Défis AK’Games + mes défis</option>
+          <option value="custom" ${game.rouletteSource === "custom" ? "selected" : ""} ${custom.length ? "" : "disabled"}>Mes défis uniquement</option>
+        </select>
+      </div>
+
+      ${readOnly ? `<div class="notice compact-notice">Seul l’hôte choisit les packs et ajoute les défis personnalisés.</div>` : `<button type="button" id="toggleRouletteManager" class="secondary-btn full roulette-manager-toggle">${game.rouletteManagerOpen ? "Fermer mes défis" : `＋ Ajouter ou gérer mes défis (${custom.length})`}</button>`}
+
+      ${!readOnly && game.rouletteManagerOpen ? `
+        <section class="roulette-custom-manager">
+          <div class="roulette-custom-form">
+            <div class="form-group"><label for="rouletteCustomText">Ton défi</label><textarea id="rouletteCustomText" class="text-input roulette-textarea" maxlength="220" placeholder="Ex. Inventez une publicité pour l’objet le plus proche."></textarea></div>
+            <div class="roulette-custom-fields">
+              <div class="form-group"><label for="rouletteCustomTheme">Thème</label><select id="rouletteCustomTheme" class="text-input">${AK_ROULETTE_THEMES.map(theme => `<option value="${theme.id}">${theme.icon} ${escapeHtml(theme.label)}</option>`).join("")}</select></div>
+              <div class="form-group"><label for="rouletteCustomParticipants">Participants</label><select id="rouletteCustomParticipants" class="text-input">${AK_ROULETTE_FORMATS.filter(format => format.participants === "all" || Number(format.participants) <= playerCount).map(format => `<option value="${format.participants}">${format.icon} ${escapeHtml(format.label)}</option>`).join("")}</select></div>
+            </div>
+            <button type="button" id="saveRouletteCustom" class="primary-btn full">Enregistrer ce défi</button>
+            <p class="helper roulette-storage-note">Tes défis restent sur cet appareil. En multijoueur, ceux de l’hôte sont envoyés automatiquement à toute la partie.</p>
+          </div>
+          <div class="roulette-custom-list">${customList}</div>
+        </section>` : ""}
+    </section>`;
+}
+
+function akRouletteBindSetup(game, options = {}) {
+  if (!akRouletteIsGame(game)) return;
+  const readOnly = Boolean(options.readOnly);
+  if (readOnly) return;
+
+  document.querySelectorAll("[data-roulette-theme]").forEach(button => button.addEventListener("click", () => {
+    game.rouletteThemes = akRouletteToggleSelection(game.rouletteThemes, button.dataset.rouletteTheme, AK_ROULETTE_THEMES.map(item => item.id));
+    akRouletteSavePreferences(game);
+    renderMegaSetup();
+  }));
+
+  document.querySelectorAll("[data-roulette-format]").forEach(button => button.addEventListener("click", () => {
+    game.rouletteFormats = akRouletteToggleSelection(game.rouletteFormats, button.dataset.rouletteFormat, AK_ROULETTE_FORMATS.map(item => item.id));
+    akRouletteSavePreferences(game);
+    renderMegaSetup();
+  }));
+
+  document.querySelector("#rouletteSource")?.addEventListener("change", event => {
+    game.rouletteSource = event.target.value;
+    akRouletteSavePreferences(game);
+  });
+
+  document.querySelector("#toggleRouletteManager")?.addEventListener("click", () => {
+    game.rouletteManagerOpen = !game.rouletteManagerOpen;
+    renderMegaSetup();
+  });
+
+  document.querySelector("#saveRouletteCustom")?.addEventListener("click", () => {
+    const text = document.querySelector("#rouletteCustomText")?.value?.trim() || "";
+    const category = document.querySelector("#rouletteCustomTheme")?.value || "absurde";
+    const rawParticipants = document.querySelector("#rouletteCustomParticipants")?.value || "1";
+    if (text.length < 5) return alert("Écris un défi un peu plus précis avant de l’enregistrer.");
+    const participants = rawParticipants === "all" ? "all" : Number(rawParticipants);
+    const custom = akRouletteLoadCustomChallenges();
+    custom.unshift({
+      id: `roulette_custom_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+      text,
+      category,
+      participants,
+      custom: true
+    });
+    akRouletteSaveCustomChallenges(custom);
+    game.rouletteSource = game.rouletteSource === "official" ? "both" : game.rouletteSource;
+    akRouletteSavePreferences(game);
+    renderMegaSetup();
+  });
+
+  document.querySelectorAll("[data-roulette-delete]").forEach(button => button.addEventListener("click", () => {
+    const id = button.dataset.rouletteDelete;
+    const next = akRouletteLoadCustomChallenges().filter(item => item.id !== id);
+    akRouletteSaveCustomChallenges(next);
+    if (!next.length && game.rouletteSource === "custom") game.rouletteSource = "official";
+    akRouletteSavePreferences(game);
+    renderMegaSetup();
+  }));
+}
+
+function akRouletteBuildPool(officialRows, game, players = state.players) {
+  akRouletteNormalizeSelections(game);
+  const customRows = akRouletteLoadCustomChallenges().map(item => ({ ...item, custom: true }));
+  let pool = game.rouletteSource === "custom"
+    ? customRows
+    : game.rouletteSource === "both"
+      ? [...officialRows, ...customRows]
+      : officialRows;
+
+  const selectedThemes = new Set(game.rouletteThemes);
+  const selectedFormats = new Set(game.rouletteFormats);
+  const playerCount = Math.max(1, players?.length || 1);
+  pool = pool.filter(item => selectedThemes.has(item.category));
+  pool = pool.filter(item => selectedFormats.has(akRouletteParticipantMode(item)));
+  pool = pool.filter(item => akRouletteCanUseItem(item, playerCount));
+  return pool;
+}
+
+function akRouletteSelectBalanced(pool, count, memoryKey) {
+  const byTheme = new Map();
+  pool.forEach(item => {
+    if (!byTheme.has(item.category)) byTheme.set(item.category, []);
+    byTheme.get(item.category).push(item);
+  });
+  const queues = [...byTheme.entries()].map(([theme, rows]) => ({
+    theme,
+    rows: selectFreshItems(rows, rows.length, `${memoryKey}:${theme}`)
+  }));
+  const selected = [];
+  while (selected.length < count && queues.some(queue => queue.rows.length)) {
+    shuffleArray(queues).forEach(queue => {
+      if (selected.length < count && queue.rows.length) selected.push(queue.rows.shift());
+    });
+  }
+  return selected;
+}
+
+function akRoulettePrepareItems(items, players = state.players) {
+  const safePlayers = Array.isArray(players) ? players.filter(Boolean) : [];
+  if (!safePlayers.length) return items;
+  return items.map((item, index) => {
+    const lead = safePlayers[index % safePlayers.length];
+    const desired = item.participants === "all"
+      ? safePlayers.length
+      : Math.max(1, Math.min(Number(item.participants || 1), safePlayers.length));
+    const others = shuffleArray(safePlayers.filter(player => player.id !== lead.id));
+    const assigned = desired >= safePlayers.length ? [...safePlayers] : [lead, ...others.slice(0, desired - 1)];
+    return {
+      ...item,
+      leadPlayerId: lead.id,
+      assignedPlayerIds: assigned.map(player => player.id),
+      assignedPlayerNames: assigned.map(player => player.name),
+      participantMode: item.participants === "all" ? "group" : akRouletteParticipantMode(item)
+    };
+  });
+}
+
+function akRouletteAssignedPlayers(item, players = state.players) {
+  const ids = Array.isArray(item?.assignedPlayerIds) ? item.assignedPlayerIds : [];
+  return ids.map(id => players.find(player => player.id === id)).filter(Boolean);
+}
+
+function akRouletteLeadPlayer(item, players = state.players) {
+  return players.find(player => player.id === item?.leadPlayerId) || akRouletteAssignedPlayers(item, players)[0] || players[0];
+}
+
+function akRouletteHeadline(item, players = state.players) {
+  const assigned = akRouletteAssignedPlayers(item, players);
+  if (!assigned.length) return "Défi surprise";
+  if (item.participantMode === "group" || assigned.length === players.length) return "Tout le groupe relève le défi";
+  if (assigned.length === 1) return `C’est au tour de ${assigned[0].name}`;
+  if (assigned.length === 2) return `${assigned[0].name} embarque ${assigned[1].name}`;
+  const last = assigned[assigned.length - 1].name;
+  return `${assigned[0].name} embarque ${assigned.slice(1, -1).map(player => player.name).join(", ")} et ${last}`;
+}
+
+function akRouletteParticipantCards(item, players = state.players) {
+  return akRouletteAssignedPlayers(item, players).map(player => `<div class="roulette-player-pill"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong></div>`).join("");
+}
+
+const akRouletteBaseResetMegaGame = resetMegaGame;
+resetMegaGame = function (gameName, replayConfig = {}) {
+  akRouletteBaseResetMegaGame(gameName, replayConfig);
+  const game = state.megaGame;
+  if (!akRouletteIsGame(game)) return;
+  const prefs = akRouletteLoadPreferences();
+  game.rouletteThemes = replayConfig.rouletteThemes || prefs.themes || AK_ROULETTE_THEMES.map(item => item.id);
+  game.rouletteFormats = replayConfig.rouletteFormats || prefs.formats || AK_ROULETTE_FORMATS.map(item => item.id);
+  game.rouletteSource = replayConfig.rouletteSource || prefs.source || (akRouletteLoadCustomChallenges().length ? "both" : "official");
+  game.roundCount = Number(replayConfig.roundCount || prefs.roundCount || 12);
+  game.rouletteManagerOpen = false;
+  akRouletteNormalizeSelections(game);
+};
+
+const akRouletteBaseRenderMegaSetup = renderMegaSetup;
+renderMegaSetup = function () {
+  akRouletteBaseRenderMegaSetup();
+  const game = state.megaGame;
+  if (!akRouletteIsGame(game) || state.mode !== "single") return;
+  const roundsSelect = document.querySelector("#megaRounds");
+  if (roundsSelect) {
+    roundsSelect.innerHTML = [8, 12, 16, 20, 25, 30].map(value => `<option value="${value}" ${Number(game.roundCount) === value ? "selected" : ""}>${value} défis</option>`).join("");
+    roundsSelect.addEventListener("change", event => {
+      game.roundCount = Number(event.target.value);
+      akRouletteSavePreferences(game);
+    });
+  }
+  const startButton = document.querySelector("#startMegaGame");
+  if (startButton && !document.querySelector(".roulette-settings-card")) {
+    startButton.insertAdjacentHTML("beforebegin", akRouletteSetupMarkup(game));
+    akRouletteBindSetup(game);
+  }
+};
+
+const akRouletteBaseStartMegaGame = startMegaGame;
+startMegaGame = async function () {
+  const game = state.megaGame;
+  if (!akRouletteIsGame(game) || state.mode !== "single") return akRouletteBaseStartMegaGame();
+  screen.innerHTML = `<div class="notice">La roulette prépare les défis et compose les équipes…</div>`;
+  try {
+    const official = await loadJsonFile(game.config.data, "Impossible de charger les défis.");
+    const pool = akRouletteBuildPool(official, game, state.players);
+    if (!pool.length) throw new Error("Aucun défi ne correspond à ces thèmes, formats et nombre de joueurs.");
+    const count = Math.min(game.roundCount, pool.length);
+    const selected = akRouletteSelectBalanced(pool, count, `solo:roulette:${game.rouletteThemes.join("-")}:${game.rouletteFormats.join("-")}`);
+    game.items = akRoulettePrepareItems(selected, state.players);
+    game.currentIndex = 0;
+    game.currentPlayerIndex = 0;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    game.scores = v014ScoreMap();
+    game.rounds = [];
+    game.revealed = false;
+    game.currentResult = null;
+    akRouletteSavePreferences(game);
+    renderMegaCurrent();
+  } catch (error) {
+    console.error(error);
+    alert(error.message || "Impossible de lancer la roulette.");
+    renderMegaSetup();
+  }
+};
+
+const akRouletteBaseRenderMegaTurn = renderMegaTurn;
+renderMegaTurn = function () {
+  const game = state.megaGame;
+  if (!akRouletteIsGame(game)) return akRouletteBaseRenderMegaTurn();
+  const item = game.items[game.currentIndex];
+  const lead = akRouletteLeadPlayer(item, state.players);
+  const theme = akRouletteThemeMeta(item?.category);
+  const format = akRouletteParticipantLabel(item);
+  clearV014Timer();
+  title.textContent = "Roulette de défis";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${v014Progress(game, "Défi")}
+    <section class="roulette-round-card">
+      <div class="roulette-round-topline"><span>${theme.icon} ${escapeHtml(theme.label)}</span><span>${format.icon} ${escapeHtml(format.label)}</span>${item?.custom ? `<span>✍️ Personnalisé</span>` : ""}</div>
+      <div class="roulette-wheel-badge">🎡</div>
+      <p class="roulette-assignment">${escapeHtml(akRouletteHeadline(item, state.players))}</p>
+      <div class="roulette-participant-row">${akRouletteParticipantCards(item, state.players)}</div>
+      <h2>${escapeHtml(item?.text || "Défi surprise")}</h2>
+      <small>${escapeHtml(lead?.name || "La personne désignée")} mène le défi et valide le résultat.</small>
+    </section>
+    <section class="decision-grid"><button id="megaDone" class="primary-btn">✓ Défi réussi</button><button id="megaSkip" class="secondary-btn">Passer</button></section>
+    ${state.alcohol ? `<div class="alcohol-callout">🍻 Passer reste sans pénalité. Une boisson sans alcool convient tout autant.</div>` : ""}
+  `;
+  document.querySelector("#megaDone")?.addEventListener("click", () => finishMegaTurn(true));
+  document.querySelector("#megaSkip")?.addEventListener("click", () => finishMegaTurn(false));
+};
+
+const akRouletteBaseFinishMegaTurn = finishMegaTurn;
+finishMegaTurn = function (success) {
+  const game = state.megaGame;
+  if (!akRouletteIsGame(game)) return akRouletteBaseFinishMegaTurn(success);
+  clearV014Timer();
+  const item = game.items[game.currentIndex];
+  const assignedIds = Array.isArray(item?.assignedPlayerIds) ? item.assignedPlayerIds : [item?.leadPlayerId].filter(Boolean);
+  if (success) assignedIds.forEach(id => game.scores[id] = Number(game.scores[id] || 0) + 1);
+  game.rounds.push({
+    itemId: item?.id,
+    playerId: item?.leadPlayerId,
+    participantIds: assignedIds,
+    success
+  });
+  game.currentIndex += 1;
+  game.revealed = false;
+  renderMegaCurrent();
+};

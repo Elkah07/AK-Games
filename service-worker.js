@@ -1,10 +1,10 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v1.7-tu-me-connais-packs";
+const CACHE_VERSION = "akgames-v1.8-roulette-defis-v2";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=rc4-home",
+  "/styles.css?v=roulette-defis-v2",
   "/creator.css?v=creator-v1.3-access",
   "/app.js",
   "/creator.js?v=creator-v1.3-access",

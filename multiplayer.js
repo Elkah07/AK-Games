@@ -5114,12 +5114,16 @@
 
   function megaMultiSetupControls(game) {
     const config = game.config;
+    const roundOptions = akRouletteIsGame(game)
+      ? [8, 12, 16, 20, 25, 30].map(value => `<option value="${value}" ${Number(game.roundCount) === value ? "selected" : ""}>${value} défis</option>`).join("")
+      : v014RoundOptions(game.roundCount);
     return `
       <section class="card setup-card-v07">
-        <div class="form-group"><label for="multiMegaRounds">Nombre de manches</label><select id="multiMegaRounds" class="text-input">${v014RoundOptions(game.roundCount)}</select></div>
+        <div class="form-group"><label for="multiMegaRounds">Nombre de manches</label><select id="multiMegaRounds" class="text-input">${roundOptions}</select></div>
         ${config.engine === "bomb" ? `<div class="form-group top-gap"><label for="multiMegaDuration">Temps de la bombe</label><select id="multiMegaDuration" class="text-input">${[15,20,25,30,40].map(value => `<option value="${value}" ${game.durationSeconds === value ? "selected" : ""}>${value} secondes</option>`).join("")}</select></div>` : config.timer ? `<div class="form-group top-gap"><label for="multiMegaDuration">Chronomètre</label><select id="multiMegaDuration" class="text-input">${[30,45,60,90].map(value => `<option value="${value}" ${game.durationSeconds === value ? "selected" : ""}>${value} secondes</option>`).join("")}</select></div>` : ""}
       </section>
-      ${v014KnowSetupControls(game)}`;
+      ${v014KnowSetupControls(game)}
+      ${akRouletteIsGame(game) ? akRouletteSetupMarkup(game, { readOnly: !state.isHost }) : ""}`;
   }
 
   renderMegaSetup = function () {
@@ -5135,9 +5139,13 @@
       ${game.config.drinkingGame ? `<div class="responsible-callout">💧 Petites gorgées seulement, alternatives sans alcool et droit de passer.</div>` : ""}
       ${game.config.adultOnly ? `<div class="notice">🔞 Partie adulte : consentement et droit de passer sans justification.</div>` : ""}
       ${state.isHost ? `<button id="startMultiMega" class="primary-btn full">Lancer sur tous les téléphones</button>` : renderMultiWaiting("En attente de l’hôte", "L’hôte règle la partie puis la lancera.", "👑")}`;
-    document.querySelector("#multiMegaRounds")?.addEventListener("change", event => game.roundCount = Number(event.target.value));
+    document.querySelector("#multiMegaRounds")?.addEventListener("change", event => {
+      game.roundCount = Number(event.target.value);
+      if (akRouletteIsGame(game)) akRouletteSavePreferences(game);
+    });
     document.querySelector("#multiMegaDuration")?.addEventListener("change", event => game.durationSeconds = Number(event.target.value));
     bindV014KnowSetupControls(game);
+    if (akRouletteIsGame(game)) akRouletteBindSetup(game, { readOnly: !state.isHost });
     document.querySelector("#startMultiMega")?.addEventListener("click", startMegaGame);
   };
 
@@ -5148,10 +5156,19 @@
     screen.innerHTML = `<div class="notice">Synchronisation de ${escapeHtml(game.gameName)}…</div>`;
     try {
       const rawPool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
-      const pool = v014FilterKnowPool(rawPool, game);
-      const items = v014SelectKnowItems(pool, Math.min(game.roundCount, pool.length), `multi:mega:${game.gameName}:${v014NormalizeKnowPacks(game.selectedPacks).join("-")}`, game);
+      let pool = v014FilterKnowPool(rawPool, game);
+      let items;
+      if (akRouletteIsGame(game)) {
+        pool = akRouletteBuildPool(rawPool, game, state.players);
+        if (!pool.length) throw new Error("Aucun défi ne correspond à ces thèmes, formats et nombre de joueurs.");
+        const selected = akRouletteSelectBalanced(pool, Math.min(game.roundCount, pool.length), `multi:roulette:${game.rouletteThemes.join("-")}:${game.rouletteFormats.join("-")}`);
+        items = akRoulettePrepareItems(selected, state.players);
+        akRouletteSavePreferences(game);
+      } else {
+        items = v014SelectKnowItems(pool, Math.min(game.roundCount, pool.length), `multi:mega:${game.gameName}:${v014NormalizeKnowPacks(game.selectedPacks).join("-")}`, game);
+      }
       const playerIds = state.players.map(player => player.id);
-      const firstPlayerId = playerIds[0] || null;
+      const firstPlayerId = items[0]?.leadPlayerId || playerIds[0] || null;
       const type = megaMultiType(game.engine);
       const baseState = {
         type,
@@ -5175,7 +5192,11 @@
           drinkingGame: Boolean(game.config.drinkingGame),
           scoreless: Boolean(game.config.scoreless || game.config.questionMode || game.config.drinkingGame),
           selectedPacks: v014NormalizeKnowPacks(game.selectedPacks),
-          confidenceMode: game.confidenceMode !== false
+          confidenceMode: game.confidenceMode !== false,
+          rouletteMode: akRouletteIsGame(game),
+          rouletteThemes: akRouletteIsGame(game) ? [...game.rouletteThemes] : null,
+          rouletteFormats: akRouletteIsGame(game) ? [...game.rouletteFormats] : null,
+          rouletteSource: akRouletteIsGame(game) ? game.rouletteSource : null
         },
         bombEndsAt: game.engine === "bomb" ? AKFirebase.now() + Number(game.durationSeconds || 25) * 1000 : null,
         turnEndsAt: game.engine === "turn" && game.config.timer ? AKFirebase.now() + Number(game.durationSeconds || 45) * 1000 : null,
@@ -5255,17 +5276,24 @@
     state.multiProcessingActionId = lock;
     const success = Boolean(action?.payload?.success) && !expired;
     const scores = { ...(gameState.scores || {}) };
-    if (success && !gameState.settings?.scoreless) scores[gameState.currentPlayerId] = Number(scores[gameState.currentPlayerId] || 0) + 1;
+    const currentItem = megaMultiCurrentItem(gameState);
+    const participantIds = gameState.settings?.rouletteMode && Array.isArray(currentItem?.assignedPlayerIds)
+      ? currentItem.assignedPlayerIds
+      : [gameState.currentPlayerId];
+    if (success && !gameState.settings?.scoreless) {
+      participantIds.forEach(id => scores[id] = Number(scores[id] || 0) + 1);
+    }
     const round = Number(gameState.currentIndex || 0);
     const next = round + 1;
     const finished = next >= (gameState.items || []).length;
-    const nextPlayer = state.players[next % Math.max(1, state.players.length)]?.id || gameState.currentPlayerId;
+    const nextItem = gameState.items?.[next];
+    const nextPlayer = nextItem?.leadPlayerId || state.players[next % Math.max(1, state.players.length)]?.id || gameState.currentPlayerId;
     AKFirebase.updateGame(state.roomCode, {
       "state/phase": finished ? "final" : "turn",
       "state/currentIndex": finished ? round : next,
       "state/currentPlayerId": nextPlayer,
       "state/scores": scores,
-      [`state/rounds/${round}`]: { playerId: gameState.currentPlayerId, success, itemId: megaMultiCurrentItem(gameState)?.id || "" },
+      [`state/rounds/${round}`]: { playerId: gameState.currentPlayerId, participantIds, success, itemId: currentItem?.id || "" },
       "state/turnEndsAt": finished ? null : gameState.settings?.durationSeconds && V014_GAME_CONFIGS[gameState.settings?.gameName]?.timer ? AKFirebase.now() + Number(gameState.settings.durationSeconds) * 1000 : null,
       "state/finishedAt": finished ? AKFirebase.now() : null,
       "state/updatedAt": AKFirebase.now(),
@@ -5279,9 +5307,39 @@
     const isCurrent = state.currentUid === gameState.currentPlayerId;
     const privatePrompt = Boolean(gameState.settings?.privatePrompt);
     const pending = actions[state.currentUid];
+    const rouletteMode = Boolean(gameState.settings?.rouletteMode);
     title.textContent = gameState.settings?.gameName || "Défi";
     setBackVisible(false);
     const prompt = item?.text || item?.question || item?.title || "Défi surprise";
+
+    if (rouletteMode) {
+      const theme = akRouletteThemeMeta(item?.category);
+      const format = akRouletteParticipantLabel(item);
+      const assignedIds = Array.isArray(item?.assignedPlayerIds) ? item.assignedPlayerIds : [gameState.currentPlayerId];
+      const isParticipant = assignedIds.includes(state.currentUid);
+      screen.innerHTML = `
+        ${multiMegaProgress(gameState, "Défi")}
+        <section class="roulette-round-card roulette-round-multi">
+          <div class="roulette-round-topline"><span>${theme.icon} ${escapeHtml(theme.label)}</span><span>${format.icon} ${escapeHtml(format.label)}</span>${item?.custom ? `<span>✍️ Personnalisé</span>` : ""}</div>
+          <div class="roulette-wheel-badge">🎡</div>
+          <p class="roulette-assignment">${escapeHtml(akRouletteHeadline(item, state.players))}</p>
+          <div class="roulette-participant-row">${akRouletteParticipantCards(item, state.players)}</div>
+          <h2>${escapeHtml(prompt)}</h2>
+          <small>${escapeHtml(player?.name || "La personne désignée")} mène le défi et valide le résultat.</small>
+        </section>
+        ${isCurrent
+          ? pending
+            ? renderMultiWaiting("Résultat envoyé", "La roulette prépare le défi suivant.", "✓")
+            : `<section class="decision-grid"><button id="multiMegaSuccess" class="primary-btn">✓ Défi réussi</button><button id="multiMegaSkip" class="secondary-btn">Passer</button></section>`
+          : isParticipant
+            ? renderMultiWaiting("Tu participes à ce défi", `${player?.name || "La personne désignée"} validera le résultat pour votre équipe.`, avatarById(state.players.find(p => p.id === state.currentUid)?.avatarId).emoji)
+            : renderMultiWaiting(`Défi de ${player?.name || "l’équipe"}`, "Observe, encourage et prépare-toi pour le prochain tirage.", "🎡")}
+        ${state.alcohol ? `<div class="alcohol-callout">🍻 Passer reste sans pénalité. Une boisson sans alcool convient tout autant.</div>` : ""}`;
+      document.querySelector("#multiMegaSuccess")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-turn", { success: true }).catch(() => event.currentTarget.disabled = false); });
+      document.querySelector("#multiMegaSkip")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-turn", { success: false }).catch(() => event.currentTarget.disabled = false); });
+      return;
+    }
+
     screen.innerHTML = `
       ${multiMegaProgress(gameState)}
       <section class="prompt-stage mega-prompt-stage">

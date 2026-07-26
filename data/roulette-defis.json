@@ -1,452 +1,1802 @@
 [
   {
-    "id": "roulette_001_fais_une_entree_de_star_dans_l",
-    "text": "Fais une entrée de star dans la pièce, puis salue ton public imaginaire.",
-    "category": "fun"
+    "id": "roulette_001_fais_une_entree_de_star_dans_la_piece_puis",
+    "text": "Fais une entrée de star dans la pièce, puis remercie un public imaginaire.",
+    "category": "absurde",
+    "participants": 1
   },
   {
-    "id": "roulette_002_parle_avec_un_accent_invente_j",
-    "text": "Parle avec un accent inventé jusqu’à ton prochain tour.",
-    "category": "fun"
+    "id": "roulette_002_presente_une_chaise_comme_si_cetait_une_in",
+    "text": "Présente une chaise comme si c’était une invention qui allait changer le monde.",
+    "category": "absurde",
+    "participants": 1
   },
   {
-    "id": "roulette_003_fais_deviner_un_metier_uniquem",
-    "text": "Fais deviner un métier uniquement avec des bruitages.",
-    "category": "fun"
+    "id": "roulette_003_explique_tres_serieusement_pourquoi_les_ch",
+    "text": "Explique très sérieusement pourquoi les chaussettes complotent contre l’humanité.",
+    "category": "absurde",
+    "participants": 1
   },
   {
-    "id": "roulette_004_danse_dix_secondes_comme_si_le",
-    "text": "Danse dix secondes comme si le sol était brûlant.",
-    "category": "fun"
+    "id": "roulette_004_marche_jusquau_mur_comme_si_tu_affrontais_",
+    "text": "Marche jusqu’au mur comme si tu affrontais une tempête invisible.",
+    "category": "absurde",
+    "participants": 1
   },
   {
-    "id": "roulette_005_raconte_ta_journee_comme_la_ba",
+    "id": "roulette_005_fais_la_meteo_de_la_soiree_en_utilisant_un",
+    "text": "Fais la météo de la soirée en utilisant uniquement des émotions.",
+    "category": "absurde",
+    "participants": 1
+  },
+  {
+    "id": "roulette_006_imite_quelquun_qui_decouvre_pour_la_premie",
+    "text": "Imite quelqu’un qui découvre pour la première fois qu’il a des coudes.",
+    "category": "absurde",
+    "participants": 1
+  },
+  {
+    "id": "roulette_007_prononce_une_declaration_solennelle_a_un_o",
+    "text": "Prononce une déclaration solennelle à un objet choisi par le groupe.",
+    "category": "absurde",
+    "participants": 1
+  },
+  {
+    "id": "roulette_008_fais_semblant_detre_un_robot_qui_essaie_di",
+    "text": "Fais semblant d’être un robot qui essaie discrètement de devenir humain.",
+    "category": "absurde",
+    "participants": 1
+  },
+  {
+    "id": "roulette_009_raconte_ta_journee_comme_la_bande_annonce_",
     "text": "Raconte ta journée comme la bande-annonce d’un film catastrophe.",
-    "category": "fun"
+    "category": "absurde",
+    "participants": 1
   },
   {
-    "id": "roulette_006_imite_la_sonnerie_dun_telephon",
-    "text": "Imite la sonnerie d’un téléphone jusqu’à ce que quelqu’un devine.",
-    "category": "fun"
+    "id": "roulette_010_invente_une_regle_absurde_que_tout_le_mond",
+    "text": "Invente une règle absurde que tout le monde devrait respecter demain.",
+    "category": "absurde",
+    "participants": 1
   },
   {
-    "id": "roulette_007_fais_un_compliment_tres_serieu",
-    "text": "Fais un compliment très sérieux à l’objet le plus proche.",
-    "category": "fun"
+    "id": "roulette_011_joue_une_personne_extremement_fiere_davoir",
+    "text": "Joue une personne extrêmement fière d’avoir réussi à ouvrir une bouteille.",
+    "category": "absurde",
+    "participants": 1
   },
   {
-    "id": "roulette_008_tiens_une_pose_de_mannequin_pe",
-    "text": "Tiens une pose de mannequin pendant quinze secondes.",
-    "category": "fun"
+    "id": "roulette_012_decris_un_grille_pain_comme_sil_sagissait_",
+    "text": "Décris un grille-pain comme s’il s’agissait d’un animal sauvage dangereux.",
+    "category": "absurde",
+    "participants": 1
   },
   {
-    "id": "roulette_009_chante_le_refrain_dune_chanson",
-    "text": "Chante le refrain d’une chanson en remplaçant tous les mots par « la ».",
-    "category": "fun"
+    "id": "roulette_013_fais_un_discours_de_victoire_pour_avoir_ac",
+    "text": "Fais un discours de victoire pour avoir accompli une tâche parfaitement banale.",
+    "category": "absurde",
+    "participants": 1
   },
   {
-    "id": "roulette_010_fais_rire_la_personne_a_ta_gau",
-    "text": "Fais rire la personne à ta gauche sans la toucher.",
-    "category": "fun"
+    "id": "roulette_014_reponds_aux_trois_prochaines_phrases_comme",
+    "text": "Réponds aux trois prochaines phrases comme un oracle mystérieux.",
+    "category": "absurde",
+    "participants": 1
   },
   {
-    "id": "roulette_011_presente_la_personne_en_face_c",
-    "text": "Présente la personne en face comme une célébrité internationale.",
-    "category": "fun"
+    "id": "roulette_015_transforme_le_prenom_dun_joueur_en_nom_de_",
+    "text": "Transforme le prénom d’un joueur en nom de parfum de luxe et présente-le.",
+    "category": "absurde",
+    "participants": 1
   },
   {
-    "id": "roulette_012_mime_un_animal_choisi_par_le_g",
-    "text": "Mime un animal choisi par le groupe.",
-    "category": "fun"
+    "id": "roulette_016_fais_croire_pendant_trente_secondes_que_le",
+    "text": "Fais croire pendant trente secondes que le sol est légèrement vivant.",
+    "category": "absurde",
+    "participants": 1
   },
   {
-    "id": "roulette_013_fais_une_publicite_de_trente_s",
-    "text": "Fais une publicité de trente secondes pour une chaussette.",
-    "category": "fun"
+    "id": "roulette_017_invente_le_cri_officiel_du_groupe_et_fais_",
+    "text": "Invente le cri officiel du groupe et fais-le tester à tout le monde.",
+    "category": "absurde",
+    "participants": "all"
   },
   {
-    "id": "roulette_014_parle_au_ralenti_jusqua_la_fin",
-    "text": "Parle au ralenti jusqu’à la fin du tour.",
-    "category": "fun"
+    "id": "roulette_018_organisez_une_ceremonie_tres_serieuse_pour",
+    "text": "Organisez une cérémonie très sérieuse pour élire le meilleur objet de la pièce.",
+    "category": "absurde",
+    "participants": "all"
   },
   {
-    "id": "roulette_015_fais_trois_tours_sur_toi_meme_",
-    "text": "Fais trois tours sur toi-même puis marche en ligne droite.",
-    "category": "fun"
+    "id": "roulette_019_creez_ensemble_une_poignee_de_main_beaucou",
+    "text": "Créez ensemble une poignée de main beaucoup trop compliquée.",
+    "category": "absurde",
+    "participants": 2
   },
   {
-    "id": "roulette_016_decris_ton_plat_prefere_comme_",
-    "text": "Décris ton plat préféré comme un commentateur sportif.",
-    "category": "fun"
+    "id": "roulette_020_inventez_une_langue_avec_trois_mots_et_ten",
+    "text": "Inventez une langue avec trois mots et tenez une courte conversation.",
+    "category": "absurde",
+    "participants": 2
   },
   {
-    "id": "roulette_017_invente_un_slogan_pour_akgames",
-    "text": "Invente un slogan pour AK’Games et déclame-le comme à la télévision.",
-    "category": "fun"
+    "id": "roulette_021_faites_une_dispute_dramatique_sur_la_meill",
+    "text": "Faites une dispute dramatique sur la meilleure façon de plier une serviette.",
+    "category": "absurde",
+    "participants": 2
   },
   {
-    "id": "roulette_018_fais_une_choregraphie_avec_uni",
-    "text": "Fais une chorégraphie avec uniquement tes mains.",
-    "category": "fun"
+    "id": "roulette_022_jouez_deux_voisins_qui_decouvrent_quils_on",
+    "text": "Jouez deux voisins qui découvrent qu’ils ont exactement le même animal imaginaire.",
+    "category": "absurde",
+    "participants": 2
   },
   {
-    "id": "roulette_019_reponds_a_la_prochaine_questio",
-    "text": "Réponds à la prochaine question en chantant.",
-    "category": "fun"
+    "id": "roulette_023_formez_une_statue_collective_representant_",
+    "text": "Formez une statue collective représentant le lundi matin.",
+    "category": "absurde",
+    "participants": "all"
   },
   {
-    "id": "roulette_020_imite_un_reveil_difficile_un_l",
-    "text": "Imite un réveil difficile un lundi matin.",
-    "category": "fun"
+    "id": "roulette_024_faites_passer_un_baillement_theatral_autou",
+    "text": "Faites passer un bâillement théâtral autour du groupe sans rire.",
+    "category": "absurde",
+    "participants": "all"
   },
   {
-    "id": "roulette_021_fais_le_bruit_de_cinq_animaux_",
-    "text": "Fais le bruit de cinq animaux en dix secondes.",
-    "category": "fun"
+    "id": "roulette_025_inventez_une_fete_nationale_et_son_rituel_",
+    "text": "Inventez une fête nationale et son rituel officiel.",
+    "category": "absurde",
+    "participants": 3
   },
   {
-    "id": "roulette_022_raconte_une_blague_avec_un_vis",
-    "text": "Raconte une blague avec un visage totalement sérieux.",
-    "category": "fun"
+    "id": "roulette_026_jouez_un_conseil_municipal_qui_doit_interd",
+    "text": "Jouez un conseil municipal qui doit interdire un aliment ridicule.",
+    "category": "absurde",
+    "participants": 3
   },
   {
-    "id": "roulette_023_declare_ta_flamme_a_une_boutei",
-    "text": "Déclare ta flamme à une bouteille d’eau.",
-    "category": "fun"
+    "id": "roulette_027_creez_une_publicite_pour_de_lair_premium_v",
+    "text": "Créez une publicité pour de l’air premium vendu en bouteille.",
+    "category": "absurde",
+    "participants": 2
   },
   {
-    "id": "roulette_024_fais_une_scene_de_jalousie_a_u",
-    "text": "Joue une dispute dramatique avec une chaise qui t’a trahi.",
-    "category": "fun"
+    "id": "roulette_028_faites_un_debat_passionne_pour_decider_si_",
+    "text": "Faites un débat passionné pour décider si les céréales sont une soupe.",
+    "category": "absurde",
+    "participants": 2
   },
   {
-    "id": "roulette_025_marche_comme_un_robot_qui_deco",
-    "text": "Marche comme un robot qui découvre les escaliers.",
-    "category": "fun"
+    "id": "roulette_029_imaginez_que_vous_etes_les_derniers_surviv",
+    "text": "Imaginez que vous êtes les derniers survivants d’une invasion de canards et racontez votre plan.",
+    "category": "absurde",
+    "participants": 3
   },
   {
-    "id": "roulette_026_fais_semblant_de_gagner_un_pri",
-    "text": "Fais semblant de gagner un prix et prononce un discours.",
-    "category": "fun"
+    "id": "roulette_030_tout_le_groupe_doit_prendre_une_pose_de_ph",
+    "text": "Tout le groupe doit prendre une pose de photo de classe complètement ratée.",
+    "category": "absurde",
+    "participants": "all"
   },
   {
-    "id": "roulette_027_imite_quelquun_qui_essaie_de_n",
-    "text": "Imite quelqu’un qui essaie de ne pas éternuer.",
-    "category": "fun"
+    "id": "roulette_031_improviser_une_scene_ou_tu_arrives_en_reta",
+    "text": "Improviser une scène où tu arrives en retard à ton propre mariage avec une excuse impossible.",
+    "category": "impro",
+    "participants": 1
   },
   {
-    "id": "roulette_028_fais_un_defile_avec_laccessoir",
-    "text": "Fais un défilé avec l’accessoire choisi par le groupe.",
-    "category": "fun"
+    "id": "roulette_032_joue_un_vendeur_qui_tente_de_faire_acheter",
+    "text": "Joue un vendeur qui tente de faire acheter un produit dont personne n’a besoin.",
+    "category": "impro",
+    "participants": 1
   },
   {
-    "id": "roulette_029_transforme_ton_prenom_en_cri_d",
-    "text": "Transforme ton prénom en cri de guerre.",
-    "category": "fun"
+    "id": "roulette_033_fais_une_conference_de_presse_apres_une_po",
+    "text": "Fais une conférence de presse après une polémique totalement ridicule.",
+    "category": "impro",
+    "participants": 1
   },
   {
-    "id": "roulette_030_fais_une_meteo_dramatique_pour",
-    "text": "Fais une météo dramatique pour la pièce où vous êtes.",
-    "category": "fun"
+    "id": "roulette_034_joue_quelquun_qui_ment_tres_mal_a_propos_d",
+    "text": "Joue quelqu’un qui ment très mal à propos d’un vase cassé.",
+    "category": "impro",
+    "participants": 1
   },
   {
-    "id": "roulette_031_danse_sans_bouger_les_pieds",
-    "text": "Danse sans bouger les pieds.",
-    "category": "fun"
+    "id": "roulette_035_interprete_un_guide_touristique_qui_ne_con",
+    "text": "Interprète un guide touristique qui ne connaît absolument pas la ville.",
+    "category": "impro",
+    "participants": 1
   },
   {
-    "id": "roulette_032_fais_une_declaration_officiell",
-    "text": "Fais une déclaration officielle pour annoncer qu’il n’y a plus de chips.",
-    "category": "fun"
+    "id": "roulette_036_joue_une_celebrite_qui_essaie_dacheter_du_",
+    "text": "Joue une célébrité qui essaie d’acheter du pain sans être reconnue.",
+    "category": "impro",
+    "participants": 1
   },
   {
-    "id": "roulette_033_imite_un_gps_qui_perd_patience",
-    "text": "Imite un GPS vexé qui refuse soudainement de donner la route.",
-    "category": "fun"
+    "id": "roulette_037_improviser_laudition_la_plus_etrange_pour_",
+    "text": "Improviser l’audition la plus étrange pour devenir mascotte d’un supermarché.",
+    "category": "impro",
+    "participants": 1
   },
   {
-    "id": "roulette_034_fais_semblant_detre_influenceu",
-    "text": "Fais semblant d’être influenceur et présente le premier objet visible.",
-    "category": "fun"
+    "id": "roulette_038_joue_un_professeur_qui_decouvre_le_sujet_d",
+    "text": "Joue un professeur qui découvre le sujet de son cours en même temps que ses élèves.",
+    "category": "impro",
+    "participants": 1
   },
   {
-    "id": "roulette_035_mime_une_scene_de_film_dhorreu",
-    "text": "Mime une scène de film d’horreur sans parler.",
-    "category": "fun"
+    "id": "roulette_039_interprete_une_personne_qui_recoit_un_cade",
+    "text": "Interprète une personne qui reçoit un cadeau affreux et veut paraître ravie.",
+    "category": "impro",
+    "participants": 1
   },
   {
-    "id": "roulette_036_parle_comme_un_personnage_de_d",
-    "text": "Parle comme un personnage de dessin animé pendant un tour.",
-    "category": "fun"
+    "id": "roulette_040_fais_une_interview_de_toi_meme_dix_ans_dan",
+    "text": "Fais une interview de toi-même dix ans dans le futur.",
+    "category": "impro",
+    "participants": 1
   },
   {
-    "id": "roulette_037_fais_une_imitation_de_quelquun",
-    "text": "Fais une imitation de quelqu’un qui marche sur un Lego.",
-    "category": "fun"
+    "id": "roulette_041_jouez_un_serveur_beaucoup_trop_enthousiast",
+    "text": "Jouez un serveur beaucoup trop enthousiaste et un client impossible à satisfaire.",
+    "category": "impro",
+    "participants": 2
   },
   {
-    "id": "roulette_038_recite_lalphabet_avec_une_emot",
-    "text": "Récite l’alphabet avec une émotion choisie par le groupe.",
-    "category": "fun"
+    "id": "roulette_042_jouez_deux_espions_qui_se_reconnaissent_gr",
+    "text": "Jouez deux espions qui se reconnaissent grâce à un mot de passe complètement nul.",
+    "category": "impro",
+    "participants": 2
   },
   {
-    "id": "roulette_039_fais_une_minute_de_yoga_totale",
-    "text": "Fais une minute de yoga totalement inventé.",
-    "category": "fun"
+    "id": "roulette_043_jouez_un_parent_et_un_enfant_qui_inversent",
+    "text": "Jouez un parent et un enfant qui inversent soudainement leurs rôles.",
+    "category": "impro",
+    "participants": 2
   },
   {
-    "id": "roulette_040_invente_un_hymne_pour_votre_gr",
-    "text": "Invente un hymne pour votre groupe d’amis.",
-    "category": "fun"
+    "id": "roulette_044_jouez_deux_personnes_coincees_dans_un_asce",
+    "text": "Jouez deux personnes coincées dans un ascenseur avec un secret très gênant.",
+    "category": "impro",
+    "participants": 2
   },
   {
-    "id": "roulette_041_fais_croire_pendant_vingt_seco",
-    "text": "Fais croire pendant vingt secondes que tu es un guide touristique.",
-    "category": "fun"
+    "id": "roulette_045_improviser_un_rendez_vous_ou_chacun_preten",
+    "text": "Improviser un rendez-vous où chacun prétend être expert d’un sujet qu’il ne connaît pas.",
+    "category": "impro",
+    "participants": 2
   },
   {
-    "id": "roulette_042_joue_une_rupture_amoureuse_ave",
-    "text": "Joue une rupture amoureuse avec ton téléphone.",
-    "category": "fun"
+    "id": "roulette_046_jouez_un_medecin_et_un_patient_atteint_dun",
+    "text": "Jouez un médecin et un patient atteint d’une maladie inventée par le groupe.",
+    "category": "impro",
+    "participants": 2
   },
   {
-    "id": "roulette_043_fais_une_bataille_de_regard_av",
-    "text": "Fais une bataille de regard avec la personne de ton choix.",
-    "category": "fun"
+    "id": "roulette_047_jouez_un_entretien_dembauche_pour_le_poste",
+    "text": "Jouez un entretien d’embauche pour le poste de gardien d’un dragon.",
+    "category": "impro",
+    "participants": 2
   },
   {
-    "id": "roulette_044_fais_un_rire_de_mechant_de_fil",
-    "text": "Fais un rire de méchant de film, puis un rire de bébé.",
-    "category": "fun"
+    "id": "roulette_048_jouez_deux_colocataires_qui_decouvrent_un_",
+    "text": "Jouez deux colocataires qui découvrent un pingouin dans leur baignoire.",
+    "category": "impro",
+    "participants": 2
   },
   {
-    "id": "roulette_045_mime_une_personne_qui_cherche_",
-    "text": "Mime une personne qui cherche ses clés alors qu’elles sont dans sa main.",
-    "category": "fun"
+    "id": "roulette_049_improviser_une_rupture_parce_que_lun_de_vo",
+    "text": "Improviser une rupture parce que l’un de vous mâche trop fort.",
+    "category": "impro",
+    "participants": 2
   },
   {
-    "id": "roulette_046_fais_une_interview_imaginaire_",
-    "text": "Fais une interview imaginaire de ton voisin de droite.",
-    "category": "fun"
+    "id": "roulette_050_jouez_un_policier_et_un_suspect_interroge_",
+    "text": "Jouez un policier et un suspect interrogé pour le vol d’un dessert.",
+    "category": "impro",
+    "participants": 2
   },
   {
-    "id": "roulette_047_transforme_une_phrase_banale_e",
-    "text": "Transforme une phrase banale en discours révolutionnaire.",
-    "category": "fun"
+    "id": "roulette_051_improviser_une_emission_tele_ou_un_objet_b",
+    "text": "Improviser une émission télé où un objet banal est présenté comme un trésor historique.",
+    "category": "impro",
+    "participants": 3
   },
   {
-    "id": "roulette_048_chante_joyeux_anniversaire_dan",
-    "text": "Chante « Joyeux anniversaire » dans un style choisi par le groupe.",
-    "category": "fun"
+    "id": "roulette_052_jouez_un_jury_qui_doit_elire_la_pire_excus",
+    "text": "Jouez un jury qui doit élire la pire excuse de retard de l’année.",
+    "category": "impro",
+    "participants": 3
   },
   {
-    "id": "roulette_049_fais_semblant_detre_un_serveur",
-    "text": "Fais semblant d’être un serveur dans un restaurant très chic.",
-    "category": "fun"
+    "id": "roulette_053_improviser_une_reunion_de_crise_parce_que_",
+    "text": "Improviser une réunion de crise parce que quelqu’un a fini le paquet de chips.",
+    "category": "impro",
+    "participants": 3
   },
   {
-    "id": "roulette_050_imite_une_poule_qui_vient_dapp",
-    "text": "Imite une poule qui vient d’apprendre une mauvaise nouvelle.",
-    "category": "fun"
+    "id": "roulette_054_jouez_les_membres_dun_groupe_de_musique_qu",
+    "text": "Jouez les membres d’un groupe de musique qui se sépare avant son premier concert.",
+    "category": "impro",
+    "participants": 3
   },
   {
-    "id": "roulette_051_presente_une_ceremonie_de_remi",
-    "text": "Présente une cérémonie de remise de prix pour la meilleure boisson de la table.",
-    "category": "fun"
+    "id": "roulette_055_improviser_un_proces_ou_le_telephone_dun_j",
+    "text": "Improviser un procès où le téléphone d’un joueur est accusé de sabotage.",
+    "category": "impro",
+    "participants": 3
   },
   {
-    "id": "roulette_052_fais_un_tour_de_magie_sans_mag",
-    "text": "Fais un tour de magie sans magie et assume jusqu’au bout.",
-    "category": "fun"
+    "id": "roulette_056_jouez_une_famille_royale_qui_apprend_quell",
+    "text": "Jouez une famille royale qui apprend qu’elle doit vivre dans un studio.",
+    "category": "impro",
+    "participants": 3
   },
   {
-    "id": "roulette_053_parle_uniquement_par_questions",
-    "text": "Parle uniquement par questions jusqu’à ton prochain tour.",
-    "category": "fun"
+    "id": "roulette_057_tout_le_groupe_improvise_une_scene_de_film",
+    "text": "Tout le groupe improvise une scène de film, mais chacun reçoit une émotion différente.",
+    "category": "impro",
+    "participants": "all"
   },
   {
-    "id": "roulette_054_mime_une_application_qui_plant",
-    "text": "Mime une application qui plante.",
-    "category": "fun"
+    "id": "roulette_058_creez_une_mini_serie_en_trois_scenes_renco",
+    "text": "Créez une mini-série en trois scènes : rencontre, catastrophe, fin heureuse.",
+    "category": "impro",
+    "participants": "all"
   },
   {
-    "id": "roulette_055_fais_une_danse_de_victoire_apr",
-    "text": "Fais une danse de victoire après avoir réussi quelque chose de minuscule.",
-    "category": "fun"
+    "id": "roulette_059_improviser_un_journal_televise_ou_chaque_p",
+    "text": "Improviser un journal télévisé où chaque personne annonce une information de plus en plus absurde.",
+    "category": "impro",
+    "participants": "all"
   },
   {
-    "id": "roulette_056_fais_un_discours_de_motivation",
-    "text": "Fais un discours de motivation à une plante.",
-    "category": "fun"
+    "id": "roulette_060_jouez_une_reunion_secrete_de_super_heros_d",
+    "text": "Jouez une réunion secrète de super-héros dont les pouvoirs sont totalement inutiles.",
+    "category": "impro",
+    "participants": "all"
   },
   {
-    "id": "roulette_057_joue_un_personnage_qui_vient_d",
-    "text": "Joue un personnage qui vient de voir son ex dans la rue.",
-    "category": "fun"
+    "id": "roulette_061_mime_une_personne_qui_essaie_douvrir_un_pa",
+    "text": "Mime une personne qui essaie d’ouvrir un parapluie sous un vent violent.",
+    "category": "mime",
+    "participants": 1
   },
   {
-    "id": "roulette_058_fais_le_bruit_dun_ordinateur_t",
-    "text": "Fais le bruit d’un ordinateur très fatigué.",
-    "category": "fun"
+    "id": "roulette_062_mime_quelquun_qui_marche_pieds_nus_sur_des",
+    "text": "Mime quelqu’un qui marche pieds nus sur des briques de construction.",
+    "category": "mime",
+    "participants": 1
   },
   {
-    "id": "roulette_059_imite_une_personne_qui_goute_u",
-    "text": "Imite une personne qui goûte un citron pour la première fois.",
-    "category": "fun"
+    "id": "roulette_063_mime_une_personne_qui_decouvre_un_insecte_",
+    "text": "Mime une personne qui découvre un insecte dans sa manche.",
+    "category": "mime",
+    "participants": 1
   },
   {
-    "id": "roulette_060_raconte_une_histoire_de_dix_se",
-    "text": "Raconte une histoire de dix secondes avec les mots « cactus », « taxi » et « diamant ».",
-    "category": "fun"
+    "id": "roulette_064_mime_un_cuisinier_dont_toutes_les_casserol",
+    "text": "Mime un cuisinier dont toutes les casseroles débordent en même temps.",
+    "category": "mime",
+    "participants": 1
   },
   {
-    "id": "roulette_061_fais_une_photo_de_groupe_imagi",
-    "text": "Fais une photo de groupe imaginaire et place tout le monde.",
-    "category": "fun"
+    "id": "roulette_065_mime_quelquun_qui_tente_discretement_de_so",
+    "text": "Mime quelqu’un qui tente discrètement de sortir d’une pièce sans être vu.",
+    "category": "mime",
+    "participants": 1
   },
   {
-    "id": "roulette_062_mime_un_super_heros_dont_le_po",
-    "text": "Mime un super-héros dont le pouvoir est totalement inutile.",
-    "category": "fun"
+    "id": "roulette_066_mime_un_touriste_perdu_qui_refuse_davouer_",
+    "text": "Mime un touriste perdu qui refuse d’avouer qu’il est perdu.",
+    "category": "mime",
+    "participants": 1
   },
   {
-    "id": "roulette_063_fais_une_declaration_damour_av",
-    "text": "Fais une déclaration d’amour avec uniquement des titres de films inventés.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_064_joue_une_scene_de_tribunal_ou_",
-    "text": "Joue une scène de tribunal où tu défends le droit à la sieste.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_065_fais_une_danse_inspiree_par_le",
-    "text": "Fais une danse inspirée par le prénom de la personne à ta droite.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_066_imite_un_vendeur_qui_essaie_de",
-    "text": "Imite un vendeur qui essaie de vendre de l’air.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_067_fais_semblant_detre_au_telepho",
-    "text": "Fais semblant d’être au téléphone avec une célébrité.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_068_raconte_un_souvenir_banal_comm",
-    "text": "Raconte un souvenir banal comme s’il était top secret.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_069_fais_une_voix_off_dramatique_p",
-    "text": "Fais une voix off dramatique pendant que quelqu’un boit.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_070_mime_un_chat_qui_refuse_daller",
-    "text": "Mime un chat qui refuse d’aller chez le vétérinaire.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_071_fais_un_compliment_a_chaque_pe",
-    "text": "Fais un compliment à chaque personne avec un seul mot.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_072_joue_une_scene_ou_tu_decouvres",
-    "text": "Joue une scène où tu découvres que tu es dans un rêve.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_073_imite_une_personne_qui_essaie_",
-    "text": "Imite une personne qui essaie de comprendre une notice impossible.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_074_fais_une_bande_annonce_pour_vo",
-    "text": "Fais une bande-annonce pour votre soirée.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_075_fais_un_duel_de_danse_de_cinq_",
-    "text": "Fais un duel de danse de cinq secondes avec la personne de ton choix.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_076_parle_comme_un_presentateur_de",
-    "text": "Parle comme un présentateur de journal pour annoncer la prochaine manche.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_077_mime_un_pingouin_presse",
-    "text": "Mime un pingouin pressé.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_078_fais_semblant_detre_une_statue",
-    "text": "Fais semblant d’être une statue qui prend vie.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_079_invente_une_poignee_de_main_av",
-    "text": "Invente une poignée de main avec la personne à ta gauche.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_080_fais_une_scene_de_film_romanti",
-    "text": "Fais une scène de film romantique avec un coussin.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_081_imite_une_personne_qui_recoit_",
-    "text": "Imite une personne qui reçoit un cadeau qu’elle déteste.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_082_fais_un_rap_de_quinze_secondes",
-    "text": "Fais un rap de quinze secondes sur ce qu’il y a sur la table.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_083_fais_une_crise_de_diva_parce_q",
-    "text": "Fais une crise de diva parce que la lumière n’est pas parfaite.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_084_joue_un_personnage_qui_essaie_",
-    "text": "Joue un personnage qui essaie de cacher qu’il ne comprend rien.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_085_fais_un_bruitage_pour_chaque_m",
-    "text": "Fais un bruitage pour chaque mouvement de la personne en face pendant dix secondes.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_086_fais_une_minute_de_sport_imagi",
-    "text": "Fais une minute de sport imaginaire avec un coach invisible.",
-    "category": "fun"
-  },
-  {
-    "id": "roulette_087_mime_une_personne_qui_se_revei",
+    "id": "roulette_067_mime_une_personne_qui_se_reveille_dans_le_",
     "text": "Mime une personne qui se réveille dans le mauvais pays.",
-    "category": "fun"
+    "category": "mime",
+    "participants": 1
   },
   {
-    "id": "roulette_088_fais_une_danse_au_ralenti_comm",
-    "text": "Fais une danse au ralenti comme dans un clip.",
-    "category": "fun"
+    "id": "roulette_068_mime_un_chat_qui_essaie_de_rester_digne_ap",
+    "text": "Mime un chat qui essaie de rester digne après une chute.",
+    "category": "mime",
+    "participants": 1
   },
   {
-    "id": "roulette_089_presente_ton_voisin_comme_le_b",
-    "text": "Présente ton voisin comme le boss final d’un jeu vidéo.",
-    "category": "fun"
+    "id": "roulette_069_mime_quelquun_qui_porte_un_carton_beaucoup",
+    "text": "Mime quelqu’un qui porte un carton beaucoup trop lourd.",
+    "category": "mime",
+    "participants": 1
   },
   {
-    "id": "roulette_090_fais_un_toast_extremement_sole",
-    "text": "Fais un toast extrêmement solennel pour une raison ridicule.",
-    "category": "fun"
+    "id": "roulette_070_mime_une_personne_qui_essaie_une_tenue_dev",
+    "text": "Mime une personne qui essaie une tenue devant un miroir imaginaire.",
+    "category": "mime",
+    "participants": 1
+  },
+  {
+    "id": "roulette_071_mime_un_sportif_qui_celebre_beaucoup_trop_",
+    "text": "Mime un sportif qui célèbre beaucoup trop tôt sa victoire.",
+    "category": "mime",
+    "participants": 1
+  },
+  {
+    "id": "roulette_072_mime_une_personne_qui_cherche_ses_lunettes",
+    "text": "Mime une personne qui cherche ses lunettes alors qu’elles sont sur sa tête.",
+    "category": "mime",
+    "participants": 1
+  },
+  {
+    "id": "roulette_073_mime_un_serveur_qui_transporte_une_pile_da",
+    "text": "Mime un serveur qui transporte une pile d’assiettes instable.",
+    "category": "mime",
+    "participants": 1
+  },
+  {
+    "id": "roulette_074_mime_quelquun_qui_marche_sur_la_lune_pour_",
+    "text": "Mime quelqu’un qui marche sur la Lune pour la première fois.",
+    "category": "mime",
+    "participants": 1
+  },
+  {
+    "id": "roulette_075_mime_une_personne_qui_tente_de_tuer_un_mou",
+    "text": "Mime une personne qui tente de tuer un moustique sans faire de bruit.",
+    "category": "mime",
+    "participants": 1
+  },
+  {
+    "id": "roulette_076_mime_un_animal_choisi_secretement_par_ton_",
+    "text": "Mime un animal choisi secrètement par ton partenaire de défi.",
+    "category": "mime",
+    "participants": 2
+  },
+  {
+    "id": "roulette_077_lun_mime_un_metier_lautre_doit_ajouter_un_",
+    "text": "L’un mime un métier, l’autre doit ajouter un obstacle sans parler.",
+    "category": "mime",
+    "participants": 2
+  },
+  {
+    "id": "roulette_078_mimez_une_scene_de_dispute_sans_utiliser_v",
+    "text": "Mimez une scène de dispute sans utiliser vos mains.",
+    "category": "mime",
+    "participants": 2
+  },
+  {
+    "id": "roulette_079_mimez_deux_personnes_qui_essaient_de_porte",
+    "text": "Mimez deux personnes qui essaient de porter un canapé dans un escalier.",
+    "category": "mime",
+    "participants": 2
+  },
+  {
+    "id": "roulette_080_mimez_une_scene_de_film_daction_au_ralenti",
+    "text": "Mimez une scène de film d’action au ralenti.",
+    "category": "mime",
+    "participants": 2
+  },
+  {
+    "id": "roulette_081_mimez_deux_animaux_qui_se_rencontrent_pour",
+    "text": "Mimez deux animaux qui se rencontrent pour la première fois.",
+    "category": "mime",
+    "participants": 2
+  },
+  {
+    "id": "roulette_082_mimez_un_duo_de_danseurs_qui_na_jamais_rep",
+    "text": "Mimez un duo de danseurs qui n’a jamais répété ensemble.",
+    "category": "mime",
+    "participants": 2
+  },
+  {
+    "id": "roulette_083_mimez_une_course_poursuite_dans_un_espace_",
+    "text": "Mimez une course-poursuite dans un espace minuscule.",
+    "category": "mime",
+    "participants": 2
+  },
+  {
+    "id": "roulette_084_mimez_deux_personnes_qui_parlent_a_travers",
+    "text": "Mimez deux personnes qui parlent à travers une vitre invisible.",
+    "category": "mime",
+    "participants": 2
+  },
+  {
+    "id": "roulette_085_mimez_une_partie_de_tennis_avec_une_balle_",
+    "text": "Mimez une partie de tennis avec une balle de plus en plus lourde.",
+    "category": "mime",
+    "participants": 2
+  },
+  {
+    "id": "roulette_086_a_trois_mimez_une_machine_dont_chacun_repr",
+    "text": "À trois, mimez une machine dont chacun représente une pièce.",
+    "category": "mime",
+    "participants": 3
+  },
+  {
+    "id": "roulette_087_a_trois_mimez_une_photo_de_vacances_qui_to",
+    "text": "À trois, mimez une photo de vacances qui tourne mal.",
+    "category": "mime",
+    "participants": 3
+  },
+  {
+    "id": "roulette_088_le_groupe_forme_un_decor_vivant_pendant_qu",
+    "text": "Le groupe forme un décor vivant pendant qu’une personne mime une scène.",
+    "category": "mime",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_089_tout_le_groupe_mime_le_meme_mot_mais_chacu",
+    "text": "Tout le groupe mime le même mot, mais chacun dans un style différent.",
+    "category": "mime",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_090_formez_une_chaine_de_mimes_chacun_reprodui",
+    "text": "Formez une chaîne de mimes : chacun reproduit puis transforme le geste précédent.",
+    "category": "mime",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_091_danse_quinze_secondes_comme_si_le_sol_etai",
+    "text": "Danse quinze secondes comme si le sol était brûlant.",
+    "category": "musique",
+    "participants": 1
+  },
+  {
+    "id": "roulette_092_chante_une_chanson_connue_avec_les_paroles",
+    "text": "Chante une chanson connue avec les paroles remplacées par des noms d’aliments.",
+    "category": "musique",
+    "participants": 1
+  },
+  {
+    "id": "roulette_093_fais_un_solo_de_guitare_imaginaire_beaucou",
+    "text": "Fais un solo de guitare imaginaire beaucoup trop intense.",
+    "category": "musique",
+    "participants": 1
+  },
+  {
+    "id": "roulette_094_danse_au_ralenti_comme_dans_un_clip_dramat",
+    "text": "Danse au ralenti comme dans un clip dramatique.",
+    "category": "musique",
+    "participants": 1
+  },
+  {
+    "id": "roulette_095_transforme_une_comptine_en_chanson_de_rock",
+    "text": "Transforme une comptine en chanson de rock.",
+    "category": "musique",
+    "participants": 1
+  },
+  {
+    "id": "roulette_096_fais_le_generique_musical_de_ta_propre_vie",
+    "text": "Fais le générique musical de ta propre vie uniquement avec ta voix.",
+    "category": "musique",
+    "participants": 1
+  },
+  {
+    "id": "roulette_097_chante_une_phrase_choisie_par_le_groupe_co",
+    "text": "Chante une phrase choisie par le groupe comme si tu étais à l’opéra.",
+    "category": "musique",
+    "participants": 1
+  },
+  {
+    "id": "roulette_098_invente_une_choregraphie_de_huit_secondes_",
+    "text": "Invente une chorégraphie de huit secondes et enseigne-la au groupe.",
+    "category": "musique",
+    "participants": 1
+  },
+  {
+    "id": "roulette_099_fais_une_danse_qui_represente_ton_humeur_a",
+    "text": "Fais une danse qui représente ton humeur actuelle.",
+    "category": "musique",
+    "participants": 1
+  },
+  {
+    "id": "roulette_100_interprete_un_tube_imaginaire_intitule_jai",
+    "text": "Interprète un tube imaginaire intitulé « J’ai encore perdu mon chargeur ».",
+    "category": "musique",
+    "participants": 1
+  },
+  {
+    "id": "roulette_101_faites_un_battle_de_danse_avec_seulement_l",
+    "text": "Faites un battle de danse avec seulement les épaules.",
+    "category": "musique",
+    "participants": 2
+  },
+  {
+    "id": "roulette_102_inventez_un_duo_musical_ou_lun_fait_le_ryt",
+    "text": "Inventez un duo musical où l’un fait le rythme et l’autre la mélodie.",
+    "category": "musique",
+    "participants": 2
+  },
+  {
+    "id": "roulette_103_dansez_ensemble_comme_si_vous_etiez_dans_u",
+    "text": "Dansez ensemble comme si vous étiez dans un vieux clip romantique.",
+    "category": "musique",
+    "participants": 2
+  },
+  {
+    "id": "roulette_104_creez_une_choregraphie_parfaitement_synchr",
+    "text": "Créez une chorégraphie parfaitement synchronisée de trois mouvements.",
+    "category": "musique",
+    "participants": 2
+  },
+  {
+    "id": "roulette_105_chantez_une_conversation_banale_au_lieu_de",
+    "text": "Chantez une conversation banale au lieu de la parler.",
+    "category": "musique",
+    "participants": 2
+  },
+  {
+    "id": "roulette_106_faites_une_reprise_dramatique_du_bruit_dun",
+    "text": "Faites une reprise dramatique du bruit d’une notification.",
+    "category": "musique",
+    "participants": 2
+  },
+  {
+    "id": "roulette_107_lun_danse_lautre_doit_commenter_la_perform",
+    "text": "L’un danse, l’autre doit commenter la performance comme une compétition sportive.",
+    "category": "musique",
+    "participants": 2
+  },
+  {
+    "id": "roulette_108_inventez_le_refrain_officiel_du_groupe",
+    "text": "Inventez le refrain officiel du groupe.",
+    "category": "musique",
+    "participants": 2
+  },
+  {
+    "id": "roulette_109_faites_un_duel_de_playback_sur_une_chanson",
+    "text": "Faites un duel de playback sur une chanson choisie par le groupe.",
+    "category": "musique",
+    "participants": 2
+  },
+  {
+    "id": "roulette_110_creez_un_jingle_publicitaire_pour_la_perso",
+    "text": "Créez un jingle publicitaire pour la personne assise à votre droite.",
+    "category": "musique",
+    "participants": 2
+  },
+  {
+    "id": "roulette_111_a_trois_formez_un_groupe_musical_avec_uniq",
+    "text": "À trois, formez un groupe musical avec uniquement des sons de bouche.",
+    "category": "musique",
+    "participants": 3
+  },
+  {
+    "id": "roulette_112_a_trois_inventez_un_mini_concert_avec_un_c",
+    "text": "À trois, inventez un mini-concert avec un chanteur et deux musiciens imaginaires.",
+    "category": "musique",
+    "participants": 3
+  },
+  {
+    "id": "roulette_113_tout_le_groupe_reproduit_un_rythme_lance_p",
+    "text": "Tout le groupe reproduit un rythme lancé par la personne désignée.",
+    "category": "musique",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_114_creez_une_ola_musicale_ou_chacun_ajoute_un",
+    "text": "Créez une ola musicale où chacun ajoute un son.",
+    "category": "musique",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_115_dansez_tous_comme_si_la_musique_changeait_",
+    "text": "Dansez tous comme si la musique changeait de style toutes les cinq secondes.",
+    "category": "musique",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_116_inventez_lhymne_de_la_soiree_en_une_seule_",
+    "text": "Inventez l’hymne de la soirée en une seule phrase chantée.",
+    "category": "musique",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_117_faites_un_orchestre_humain_dirige_par_la_p",
+    "text": "Faites un orchestre humain dirigé par la personne qui mène le défi.",
+    "category": "musique",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_118_chacun_invente_un_pas_de_danse_puis_le_gro",
+    "text": "Chacun invente un pas de danse, puis le groupe les enchaîne tous.",
+    "category": "musique",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_119_faites_un_karaoke_sans_musique_le_groupe_d",
+    "text": "Faites un karaoké sans musique : le groupe doit reconnaître la chanson.",
+    "category": "musique",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_120_terminez_ensemble_une_chanson_improvisee_o",
+    "text": "Terminez ensemble une chanson improvisée où chaque personne ajoute une ligne.",
+    "category": "musique",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_121_cite_cinq_choses_rouges_en_moins_de_dix_se",
+    "text": "Cite cinq choses rouges en moins de dix secondes.",
+    "category": "rapidite",
+    "participants": 1
+  },
+  {
+    "id": "roulette_122_trouve_trois_objets_dont_le_nom_commence_p",
+    "text": "Trouve trois objets dont le nom commence par la même lettre que ton prénom.",
+    "category": "rapidite",
+    "participants": 1
+  },
+  {
+    "id": "roulette_123_empile_trois_objets_sans_les_faire_tomber_",
+    "text": "Empile trois objets sans les faire tomber en quinze secondes.",
+    "category": "rapidite",
+    "participants": 1
+  },
+  {
+    "id": "roulette_124_fais_dix_expressions_faciales_differentes_",
+    "text": "Fais dix expressions faciales différentes en dix secondes.",
+    "category": "rapidite",
+    "participants": 1
+  },
+  {
+    "id": "roulette_125_nomme_six_films_ou_series_avant_la_fin_du_",
+    "text": "Nomme six films ou séries avant la fin du compte à rebours.",
+    "category": "rapidite",
+    "participants": 1
+  },
+  {
+    "id": "roulette_126_touche_quatre_objets_de_matieres_different",
+    "text": "Touche quatre objets de matières différentes le plus vite possible.",
+    "category": "rapidite",
+    "participants": 1
+  },
+  {
+    "id": "roulette_127_recite_les_mois_de_lannee_a_lenvers_aussi_",
+    "text": "Récite les mois de l’année à l’envers aussi loin que possible.",
+    "category": "rapidite",
+    "participants": 1
+  },
+  {
+    "id": "roulette_128_trouve_cinq_mots_qui_riment_avec_un_mot_ch",
+    "text": "Trouve cinq mots qui riment avec un mot choisi par le groupe.",
+    "category": "rapidite",
+    "participants": 1
+  },
+  {
+    "id": "roulette_129_fais_tenir_un_objet_leger_en_equilibre_pen",
+    "text": "Fais tenir un objet léger en équilibre pendant dix secondes.",
+    "category": "rapidite",
+    "participants": 1
+  },
+  {
+    "id": "roulette_130_cite_quatre_excuses_de_retard_sans_utilise",
+    "text": "Cite quatre excuses de retard sans utiliser le mot « problème ».",
+    "category": "rapidite",
+    "participants": 1
+  },
+  {
+    "id": "roulette_131_faites_un_duel_de_pierre_feuille_ciseaux_e",
+    "text": "Faites un duel de pierre-feuille-ciseaux en trois manches gagnantes.",
+    "category": "rapidite",
+    "participants": 2
+  },
+  {
+    "id": "roulette_132_le_premier_qui_cite_cinq_animaux_sans_repe",
+    "text": "Le premier qui cite cinq animaux sans répéter une lettre initiale gagne.",
+    "category": "rapidite",
+    "participants": 2
+  },
+  {
+    "id": "roulette_133_faites_passer_un_objet_dune_main_a_lautre_",
+    "text": "Faites passer un objet d’une main à l’autre dix fois sans le faire tomber.",
+    "category": "rapidite",
+    "participants": 2
+  },
+  {
+    "id": "roulette_134_tenez_vous_en_equilibre_sur_un_pied_la_der",
+    "text": "Tenez-vous en équilibre sur un pied : la dernière personne stable gagne.",
+    "category": "rapidite",
+    "participants": 2
+  },
+  {
+    "id": "roulette_135_dites_chacun_votre_tour_un_mot_dune_meme_c",
+    "text": "Dites chacun votre tour un mot d’une même catégorie sans hésiter.",
+    "category": "rapidite",
+    "participants": 2
+  },
+  {
+    "id": "roulette_136_faites_une_bataille_de_regards_pendant_vin",
+    "text": "Faites une bataille de regards pendant vingt secondes.",
+    "category": "rapidite",
+    "participants": 2
+  },
+  {
+    "id": "roulette_137_le_premier_qui_trouve_un_objet_contenant_d",
+    "text": "Le premier qui trouve un objet contenant deux voyelles différentes gagne.",
+    "category": "rapidite",
+    "participants": 2
+  },
+  {
+    "id": "roulette_138_faites_un_concours_de_la_tour_la_plus_haut",
+    "text": "Faites un concours de la tour la plus haute avec trois objets chacun.",
+    "category": "rapidite",
+    "participants": 2
+  },
+  {
+    "id": "roulette_139_repetez_une_suite_de_gestes_qui_sallonge_a",
+    "text": "Répétez une suite de gestes qui s’allonge à chaque tour.",
+    "category": "rapidite",
+    "participants": 2
+  },
+  {
+    "id": "roulette_140_comptez_ensemble_jusqua_vingt_en_alternant",
+    "text": "Comptez ensemble jusqu’à vingt en alternant, mais remplacez les multiples de trois par un clap.",
+    "category": "rapidite",
+    "participants": 2
+  },
+  {
+    "id": "roulette_141_a_trois_citez_tour_a_tour_des_villes_sans_",
+    "text": "À trois, citez tour à tour des villes sans hésiter plus de deux secondes.",
+    "category": "rapidite",
+    "participants": 3
+  },
+  {
+    "id": "roulette_142_a_trois_faites_circuler_un_objet_sans_util",
+    "text": "À trois, faites circuler un objet sans utiliser vos mains.",
+    "category": "rapidite",
+    "participants": 3
+  },
+  {
+    "id": "roulette_143_a_trois_rangez_vous_du_plus_jeune_au_plus_",
+    "text": "À trois, rangez-vous du plus jeune au plus âgé sans parler.",
+    "category": "rapidite",
+    "participants": 3
+  },
+  {
+    "id": "roulette_144_a_trois_formez_le_plus_vite_possible_une_l",
+    "text": "À trois, formez le plus vite possible une lettre choisie par le groupe avec vos corps.",
+    "category": "rapidite",
+    "participants": 3
+  },
+  {
+    "id": "roulette_145_tout_le_groupe_doit_se_classer_par_taille_",
+    "text": "Tout le groupe doit se classer par taille sans prononcer un mot.",
+    "category": "rapidite",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_146_le_groupe_doit_compter_jusqua_quinze_une_s",
+    "text": "Le groupe doit compter jusqu’à quinze, une seule personne parlant à la fois, sans ordre défini.",
+    "category": "rapidite",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_147_faites_circuler_un_clap_autour_du_cercle_d",
+    "text": "Faites circuler un clap autour du cercle de plus en plus vite.",
+    "category": "rapidite",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_148_le_premier_qui_rit_pendant_trente_secondes",
+    "text": "Le premier qui rit pendant trente secondes d’immobilité collective perd.",
+    "category": "rapidite",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_149_tout_le_monde_pointe_en_meme_temps_vers_lo",
+    "text": "Tout le monde pointe en même temps vers l’objet le plus inutile de la pièce.",
+    "category": "rapidite",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_150_le_groupe_a_vingt_secondes_pour_former_une",
+    "text": "Le groupe a vingt secondes pour former une ligne selon l’ordre alphabétique des prénoms.",
+    "category": "rapidite",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_151_faites_un_duel_de_compliments_le_premier_q",
+    "text": "Faites un duel de compliments : le premier qui hésite plus de trois secondes perd.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_152_faites_une_bataille_de_regards_mais_chacun",
+    "text": "Faites une bataille de regards, mais chacun doit garder une expression ridicule.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_153_inventez_chacun_un_slogan_pour_le_meme_obj",
+    "text": "Inventez chacun un slogan pour le même objet. Le groupe choisit le meilleur.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_154_imitez_chacun_lautre_pendant_quinze_second",
+    "text": "Imitez chacun l’autre pendant quinze secondes.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_155_faites_un_duel_de_bruitages_danimaux_le_gr",
+    "text": "Faites un duel de bruitages d’animaux. Le groupe vote pour le plus convaincant.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_156_racontez_chacun_une_mini_histoire_en_dix_s",
+    "text": "Racontez chacun une mini-histoire en dix secondes avec les mêmes trois mots.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_157_faites_un_duel_de_poses_de_super_heros",
+    "text": "Faites un duel de poses de super-héros.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_158_essayez_chacun_de_faire_rire_lautre_sans_l",
+    "text": "Essayez chacun de faire rire l’autre sans le toucher.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_159_defendez_chacun_un_aliment_que_vous_naimez",
+    "text": "Défendez chacun un aliment que vous n’aimez pas comme s’il était exceptionnel.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_160_faites_un_duel_de_danse_sans_bouger_les_pi",
+    "text": "Faites un duel de danse sans bouger les pieds.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_161_le_premier_qui_trouve_trois_utilisations_a",
+    "text": "Le premier qui trouve trois utilisations absurdes pour une cuillère gagne.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_162_faites_un_duel_dimitations_de_sonnerie_de_",
+    "text": "Faites un duel d’imitations de sonnerie de téléphone.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_163_chacun_invente_une_excuse_impossible_pour_",
+    "text": "Chacun invente une excuse impossible pour arriver en retard. Le groupe tranche.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_164_faites_un_concours_du_rire_le_plus_etrange",
+    "text": "Faites un concours du rire le plus étrange.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_165_dites_lalphabet_en_alternant_une_lettre_ch",
+    "text": "Dites l’alphabet en alternant une lettre chacun sans vous tromper.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_166_faites_un_duel_de_presentateurs_meteo_en_a",
+    "text": "Faites un duel de présentateurs météo en annonçant une catastrophe ridicule.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_167_chacun_doit_vendre_lautre_comme_candidat_i",
+    "text": "Chacun doit vendre l’autre comme candidat idéal à une émission inventée.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_168_faites_un_duel_de_marche_au_ralenti_jusqua",
+    "text": "Faites un duel de marche au ralenti jusqu’à une ligne imaginaire.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_169_le_premier_qui_repete_un_mot_ou_hesite_dan",
+    "text": "Le premier qui répète un mot ou hésite dans une catégorie choisie perd.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_170_faites_chacun_une_declaration_damour_drama",
+    "text": "Faites chacun une déclaration d’amour dramatique au même objet.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_171_inventez_chacun_un_nouveau_mot_et_convainq",
+    "text": "Inventez chacun un nouveau mot et convainquez le groupe qu’il existe vraiment.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_172_faites_un_duel_de_voix_de_dessin_anime",
+    "text": "Faites un duel de voix de dessin animé.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_173_chacun_mime_un_film_different_le_premier_f",
+    "text": "Chacun mime un film différent. Le premier film reconnu gagne.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_174_faites_un_concours_de_la_meilleure_photo_d",
+    "text": "Faites un concours de la meilleure photo de profil imaginaire sans téléphone.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_175_realisez_chacun_un_discours_politique_de_d",
+    "text": "Réalisez chacun un discours politique de dix secondes pour devenir chef de la soirée.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_176_faites_un_duel_de_danse_de_victoire_apres_",
+    "text": "Faites un duel de danse de victoire après une réussite minuscule.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_177_chacun_cree_une_poignee_de_main_avec_une_p",
+    "text": "Chacun crée une poignée de main avec une personne du groupe. La plus fluide gagne.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_178_faites_une_battle_de_rimes_a_partir_dun_mo",
+    "text": "Faites une battle de rimes à partir d’un mot choisi par le groupe.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_179_chacun_doit_decrire_lautre_comme_un_person",
+    "text": "Chacun doit décrire l’autre comme un personnage de jeu vidéo.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_180_faites_un_duel_de_statues_le_groupe_tente_",
+    "text": "Faites un duel de statues : le groupe tente de vous faire bouger ou rire.",
+    "category": "duel",
+    "participants": 2
+  },
+  {
+    "id": "roulette_181_inventez_une_poignee_de_main_secrete_en_qu",
+    "text": "Inventez une poignée de main secrète en quatre mouvements.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_182_creez_une_publicite_de_vingt_secondes_pour",
+    "text": "Créez une publicité de vingt secondes pour un objet choisi par le groupe.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_183_racontez_une_histoire_en_alternant_un_mot_",
+    "text": "Racontez une histoire en alternant un mot chacun.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_184_faites_une_danse_synchronisee_sans_vous_co",
+    "text": "Faites une danse synchronisée sans vous concerter plus de dix secondes.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_185_dessinez_ensemble_une_forme_dans_lair_chac",
+    "text": "Dessinez ensemble une forme dans l’air, chacun avec une main.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_186_jouez_une_scene_de_retrouvailles_apres_vin",
+    "text": "Jouez une scène de retrouvailles après vingt ans de séparation.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_187_inventez_un_nom_de_duo_un_logo_avec_vos_ma",
+    "text": "Inventez un nom de duo, un logo avec vos mains et une devise.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_188_faites_deviner_une_emotion_en_la_jouant_ex",
+    "text": "Faites deviner une émotion en la jouant exactement de la même manière.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_189_creez_un_mini_tutoriel_pour_accomplir_une_",
+    "text": "Créez un mini-tutoriel pour accomplir une tâche inutile.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_190_faites_le_portrait_lun_de_lautre_comme_deu",
+    "text": "Faites le portrait l’un de l’autre comme deux commentateurs sportifs.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_191_construisez_une_statue_a_deux_representant",
+    "text": "Construisez une statue à deux représentant les vacances parfaites.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_192_inventez_une_chanson_de_deux_lignes_sur_vo",
+    "text": "Inventez une chanson de deux lignes sur votre duo.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_193_jouez_deux_detectives_qui_viennent_de_reso",
+    "text": "Jouez deux détectives qui viennent de résoudre une affaire ridicule.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_194_faites_une_interview_croisee_ou_chacun_rep",
+    "text": "Faites une interview croisée où chacun répond à la place de l’autre.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_195_inventez_un_produit_qui_combine_vos_deux_p",
+    "text": "Inventez un produit qui combine vos deux personnalités.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_196_jouez_une_scene_sans_parler_ou_vous_essaye",
+    "text": "Jouez une scène sans parler où vous essayez de vous mettre d’accord sur un restaurant.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_197_creez_un_cri_de_victoire_et_executez_le_pa",
+    "text": "Créez un cri de victoire et exécutez-le parfaitement ensemble.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_198_faites_une_demonstration_de_sport_imaginai",
+    "text": "Faites une démonstration de sport imaginaire en duo.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_199_inventez_une_fausse_anecdote_commune_credi",
+    "text": "Inventez une fausse anecdote commune crédible en trente secondes.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_200_presentez_vous_comme_les_animateurs_dune_e",
+    "text": "Présentez-vous comme les animateurs d’une émission matinale catastrophique.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_201_jouez_une_scene_ou_lun_comprend_toujours_t",
+    "text": "Jouez une scène où l’un comprend toujours tout de travers.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_202_faites_un_doublage_improvise_lun_bouge_les",
+    "text": "Faites un doublage improvisé : l’un bouge les lèvres, l’autre parle.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_203_inventez_une_choregraphie_pour_repondre_au",
+    "text": "Inventez une chorégraphie pour répondre au téléphone.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_204_creez_la_bande_annonce_dun_film_dont_vous_",
+    "text": "Créez la bande-annonce d’un film dont vous êtes les héros.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_205_faites_un_portrait_robot_oral_dun_personna",
+    "text": "Faites un portrait-robot oral d’un personnage inventé, chacun ajoutant un détail.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_206_jouez_deux_chefs_cuisiniers_qui_defendent_",
+    "text": "Jouez deux chefs cuisiniers qui défendent une recette immangeable.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_207_creez_une_devise_de_duo_et_expliquez_son_o",
+    "text": "Créez une devise de duo et expliquez son origine légendaire.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_208_faites_une_scene_ou_vous_echangez_vos_pers",
+    "text": "Faites une scène où vous échangez vos personnalités.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_209_inventez_un_salut_officiel_a_utiliser_jusq",
+    "text": "Inventez un salut officiel à utiliser jusqu’à la fin de la partie.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_210_realisez_une_photo_imaginaire_de_couvertur",
+    "text": "Réalisez une photo imaginaire de couverture d’album et annoncez son titre.",
+    "category": "duo",
+    "participants": 2
+  },
+  {
+    "id": "roulette_211_inventez_une_machine_humaine_chacun_doit_p",
+    "text": "Inventez une machine humaine : chacun doit produire un mouvement et un son.",
+    "category": "equipe",
+    "participants": 3
+  },
+  {
+    "id": "roulette_212_creez_une_publicite_collective_pour_un_obj",
+    "text": "Créez une publicité collective pour un objet complètement banal.",
+    "category": "equipe",
+    "participants": 3
+  },
+  {
+    "id": "roulette_213_jouez_une_equipe_de_secours_appelee_pour_u",
+    "text": "Jouez une équipe de secours appelée pour une urgence ridicule.",
+    "category": "equipe",
+    "participants": 3
+  },
+  {
+    "id": "roulette_214_formez_une_statue_representant_une_emotion",
+    "text": "Formez une statue représentant une émotion choisie par le groupe.",
+    "category": "equipe",
+    "participants": 3
+  },
+  {
+    "id": "roulette_215_inventez_un_conte_ou_chacun_ajoute_une_phr",
+    "text": "Inventez un conte où chacun ajoute une phrase, sans casser la logique.",
+    "category": "equipe",
+    "participants": 3
+  },
+  {
+    "id": "roulette_216_creez_un_nouveau_sport_et_montrez_ses_regl",
+    "text": "Créez un nouveau sport et montrez ses règles principales.",
+    "category": "equipe",
+    "participants": 3
+  },
+  {
+    "id": "roulette_217_jouez_une_equipe_de_scientifiques_qui_anno",
+    "text": "Jouez une équipe de scientifiques qui annonce une découverte inutile.",
+    "category": "equipe",
+    "participants": 3
+  },
+  {
+    "id": "roulette_218_preparez_un_mini_numero_de_cirque_avec_un_",
+    "text": "Préparez un mini-numéro de cirque avec un présentateur et deux artistes.",
+    "category": "equipe",
+    "participants": 3
+  },
+  {
+    "id": "roulette_219_inventez_un_restaurant_son_nom_son_plat_ve",
+    "text": "Inventez un restaurant, son nom, son plat vedette et sa publicité.",
+    "category": "equipe",
+    "participants": 3
+  },
+  {
+    "id": "roulette_220_creez_une_scene_de_braquage_ou_personne_ne",
+    "text": "Créez une scène de braquage où personne ne sait vraiment ce qu’il fait.",
+    "category": "equipe",
+    "participants": 3
+  },
+  {
+    "id": "roulette_221_jouez_un_groupe_damis_qui_tente_de_cacher_",
+    "text": "Jouez un groupe d’amis qui tente de cacher une énorme bêtise.",
+    "category": "equipe",
+    "participants": 3
+  },
+  {
+    "id": "roulette_222_inventez_un_super_heros_collectif_dont_cha",
+    "text": "Inventez un super-héros collectif dont chacun représente un pouvoir.",
+    "category": "equipe",
+    "participants": 3
+  },
+  {
+    "id": "roulette_223_creez_une_emission_de_tele_realite_et_joue",
+    "text": "Créez une émission de télé-réalité et jouez son premier conflit.",
+    "category": "equipe",
+    "participants": 3
+  },
+  {
+    "id": "roulette_224_faites_un_tableau_vivant_representant_une_",
+    "text": "Faites un tableau vivant représentant une soirée qui dérape.",
+    "category": "equipe",
+    "participants": 3
+  },
+  {
+    "id": "roulette_225_jouez_un_groupe_de_touristes_qui_a_perdu_s",
+    "text": "Jouez un groupe de touristes qui a perdu son guide.",
+    "category": "equipe",
+    "participants": 3
+  },
+  {
+    "id": "roulette_226_tout_le_groupe_cree_une_histoire_en_ajouta",
+    "text": "Tout le groupe crée une histoire en ajoutant exactement trois mots chacun.",
+    "category": "equipe",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_227_formez_un_groupe_de_musique_imaginaire_et_",
+    "text": "Formez un groupe de musique imaginaire et présentez chacun votre rôle.",
+    "category": "equipe",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_228_inventez_une_choregraphie_collective_de_qu",
+    "text": "Inventez une chorégraphie collective de quatre mouvements.",
+    "category": "equipe",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_229_creez_une_photo_de_famille_imaginaire_avec",
+    "text": "Créez une photo de famille imaginaire avec une histoire secrète derrière chaque pose.",
+    "category": "equipe",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_230_jouez_une_reunion_ou_le_groupe_doit_choisi",
+    "text": "Jouez une réunion où le groupe doit choisir une mascotte officielle.",
+    "category": "equipe",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_231_inventez_une_tradition_que_le_groupe_devra",
+    "text": "Inventez une tradition que le groupe devra respecter à chaque soirée.",
+    "category": "equipe",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_232_creez_le_generique_dune_serie_mettant_en_s",
+    "text": "Créez le générique d’une série mettant en scène tout le groupe.",
+    "category": "equipe",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_233_faites_une_vague_demotions_chacun_reprend_",
+    "text": "Faites une vague d’émotions : chacun reprend l’émotion précédente en l’exagérant.",
+    "category": "equipe",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_234_construisez_une_scene_figee_de_film_dactio",
+    "text": "Construisez une scène figée de film d’action avec tout le groupe.",
+    "category": "equipe",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_235_inventez_le_nom_le_slogan_et_le_signe_de_r",
+    "text": "Inventez le nom, le slogan et le signe de reconnaissance de votre équipe.",
+    "category": "equipe",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_236_le_groupe_doit_reproduire_exactement_une_p",
+    "text": "Le groupe doit reproduire exactement une pose lancée par la personne qui mène.",
+    "category": "equipe",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_237_creez_un_orchestre_humain_ou_chaque_person",
+    "text": "Créez un orchestre humain où chaque personne garde son propre son.",
+    "category": "equipe",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_238_jouez_un_conseil_de_crise_pour_decider_qui",
+    "text": "Jouez un conseil de crise pour décider qui a mangé la dernière part.",
+    "category": "equipe",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_239_faites_une_ceremonie_de_remise_de_prix_ou_",
+    "text": "Faites une cérémonie de remise de prix où chacun reçoit un trophée inventé.",
+    "category": "equipe",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_240_tout_le_groupe_doit_improviser_une_fin_spe",
+    "text": "Tout le groupe doit improviser une fin spectaculaire à la soirée en dix secondes.",
+    "category": "equipe",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_241_raconte_la_derniere_chose_tres_banale_qui_",
+    "text": "Raconte la dernière chose très banale qui t’a rendu vraiment heureux ou heureuse.",
+    "category": "confidences",
+    "participants": 1
+  },
+  {
+    "id": "roulette_242_avoue_une_habitude_etrange_que_tu_assumes_",
+    "text": "Avoue une habitude étrange que tu assumes complètement.",
+    "category": "confidences",
+    "participants": 1
+  },
+  {
+    "id": "roulette_243_donne_le_titre_que_porterait_le_chapitre_a",
+    "text": "Donne le titre que porterait le chapitre actuel de ta vie.",
+    "category": "confidences",
+    "participants": 1
+  },
+  {
+    "id": "roulette_244_raconte_une_petite_honte_qui_te_fait_rire_",
+    "text": "Raconte une petite honte qui te fait rire aujourd’hui.",
+    "category": "confidences",
+    "participants": 1
+  },
+  {
+    "id": "roulette_245_cite_une_competence_inutile_dont_tu_es_sec",
+    "text": "Cite une compétence inutile dont tu es secrètement fier ou fière.",
+    "category": "confidences",
+    "participants": 1
+  },
+  {
+    "id": "roulette_246_dis_quel_compliment_te_touche_toujours_mem",
+    "text": "Dis quel compliment te touche toujours, même si tu le montres peu.",
+    "category": "confidences",
+    "participants": 1
+  },
+  {
+    "id": "roulette_247_partage_une_opinion_legere_sur_laquelle_tu",
+    "text": "Partage une opinion légère sur laquelle tu pourrais débattre pendant une heure.",
+    "category": "confidences",
+    "participants": 1
+  },
+  {
+    "id": "roulette_248_raconte_la_pire_excuse_que_tu_aies_deja_ut",
+    "text": "Raconte la pire excuse que tu aies déjà utilisée pour annuler quelque chose.",
+    "category": "confidences",
+    "participants": 1
+  },
+  {
+    "id": "roulette_249_dis_quel_personnage_fictif_serait_un_coloc",
+    "text": "Dis quel personnage fictif serait un colocataire catastrophique pour toi.",
+    "category": "confidences",
+    "participants": 1
+  },
+  {
+    "id": "roulette_250_avoue_une_chanson_que_tu_connais_presque_e",
+    "text": "Avoue une chanson que tu connais presque entièrement sans le vouloir.",
+    "category": "confidences",
+    "participants": 1
+  },
+  {
+    "id": "roulette_251_dis_quelle_petite_depense_te_fait_toujours",
+    "text": "Dis quelle petite dépense te fait toujours plaisir.",
+    "category": "confidences",
+    "participants": 1
+  },
+  {
+    "id": "roulette_252_raconte_un_moment_ou_tu_as_essaye_davoir_l",
+    "text": "Raconte un moment où tu as essayé d’avoir l’air sûr de toi sans rien comprendre.",
+    "category": "confidences",
+    "participants": 1
+  },
+  {
+    "id": "roulette_253_dis_quel_talent_tu_aimerais_telecharger_in",
+    "text": "Dis quel talent tu aimerais télécharger instantanément dans ton cerveau.",
+    "category": "confidences",
+    "participants": 1
+  },
+  {
+    "id": "roulette_254_partage_une_peur_ridicule_mais_bien_reelle",
+    "text": "Partage une peur ridicule mais bien réelle.",
+    "category": "confidences",
+    "participants": 1
+  },
+  {
+    "id": "roulette_255_dis_quelle_regle_sociale_tu_supprimerais_v",
+    "text": "Dis quelle règle sociale tu supprimerais volontiers.",
+    "category": "confidences",
+    "participants": 1
+  },
+  {
+    "id": "roulette_256_dites_chacun_une_premiere_impression_que_v",
+    "text": "Dites chacun une première impression que vous aviez de l’autre, avec bienveillance.",
+    "category": "confidences",
+    "participants": 2
+  },
+  {
+    "id": "roulette_257_trouvez_un_point_commun_surprenant_que_le_",
+    "text": "Trouvez un point commun surprenant que le groupe ne connaît peut-être pas.",
+    "category": "confidences",
+    "participants": 2
+  },
+  {
+    "id": "roulette_258_dites_chacun_une_qualite_sincere_que_vous_",
+    "text": "Dites chacun une qualité sincère que vous reconnaissez à l’autre.",
+    "category": "confidences",
+    "participants": 2
+  },
+  {
+    "id": "roulette_259_racontez_chacun_un_souvenir_ou_vous_avez_e",
+    "text": "Racontez chacun un souvenir où vous avez eu beaucoup trop confiance.",
+    "category": "confidences",
+    "participants": 2
+  },
+  {
+    "id": "roulette_260_choisissez_chacun_un_film_qui_resume_lener",
+    "text": "Choisissez chacun un film qui résume l’énergie de l’autre et expliquez.",
+    "category": "confidences",
+    "participants": 2
+  },
+  {
+    "id": "roulette_261_dites_chacun_quelle_aventure_vous_accepter",
+    "text": "Dites chacun quelle aventure vous accepteriez de vivre avec l’autre.",
+    "category": "confidences",
+    "participants": 2
+  },
+  {
+    "id": "roulette_262_avouez_chacun_une_mode_ou_une_phase_passee",
+    "text": "Avouez chacun une mode ou une phase passée que vous préférez oublier.",
+    "category": "confidences",
+    "participants": 2
+  },
+  {
+    "id": "roulette_263_donnez_chacun_un_conseil_que_vous_devriez_",
+    "text": "Donnez chacun un conseil que vous devriez probablement appliquer vous-même.",
+    "category": "confidences",
+    "participants": 2
+  },
+  {
+    "id": "roulette_264_racontez_chacun_votre_pire_moment_de_solit",
+    "text": "Racontez chacun votre pire moment de solitude en version courte.",
+    "category": "confidences",
+    "participants": 2
+  },
+  {
+    "id": "roulette_265_tout_le_groupe_partage_une_petite_victoire",
+    "text": "Tout le groupe partage une petite victoire récente.",
+    "category": "confidences",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_266_chacun_donne_un_mot_pour_decrire_lambiance",
+    "text": "Chacun donne un mot pour décrire l’ambiance du groupe ce soir.",
+    "category": "confidences",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_267_tout_le_monde_revele_un_plaisir_simple_qui",
+    "text": "Tout le monde révèle un plaisir simple qui améliore immédiatement sa journée.",
+    "category": "confidences",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_268_chacun_cite_une_chose_quil_aimerait_essaye",
+    "text": "Chacun cite une chose qu’il aimerait essayer au moins une fois.",
+    "category": "confidences",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_269_le_groupe_partage_ses_meilleures_excuses_d",
+    "text": "Le groupe partage ses meilleures excuses de retard et élit la plus créative.",
+    "category": "confidences",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_270_chacun_dit_quel_role_il_pense_avoir_nature",
+    "text": "Chacun dit quel rôle il pense avoir naturellement dans le groupe.",
+    "category": "confidences",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_271_invente_un_nouveau_mot_sa_definition_et_un",
+    "text": "Invente un nouveau mot, sa définition et un exemple d’utilisation.",
+    "category": "creatif",
+    "participants": 1
+  },
+  {
+    "id": "roulette_272_cree_le_slogan_publicitaire_de_ta_personna",
+    "text": "Crée le slogan publicitaire de ta personnalité.",
+    "category": "creatif",
+    "participants": 1
+  },
+  {
+    "id": "roulette_273_imagine_un_objet_du_futur_completement_inu",
+    "text": "Imagine un objet du futur complètement inutile et présente-le.",
+    "category": "creatif",
+    "participants": 1
+  },
+  {
+    "id": "roulette_274_donne_un_titre_de_film_a_la_soiree_et_raco",
+    "text": "Donne un titre de film à la soirée et raconte son résumé.",
+    "category": "creatif",
+    "participants": 1
+  },
+  {
+    "id": "roulette_275_invente_une_fete_nationale_dediee_a_une_ha",
+    "text": "Invente une fête nationale dédiée à une habitude banale.",
+    "category": "creatif",
+    "participants": 1
+  },
+  {
+    "id": "roulette_276_cree_un_super_pouvoir_avec_un_effet_second",
+    "text": "Crée un super-pouvoir avec un effet secondaire très contraignant.",
+    "category": "creatif",
+    "participants": 1
+  },
+  {
+    "id": "roulette_277_imagine_une_application_mobile_qui_ne_devr",
+    "text": "Imagine une application mobile qui ne devrait surtout pas exister.",
+    "category": "creatif",
+    "participants": 1
+  },
+  {
+    "id": "roulette_278_invente_un_plat_a_partir_de_trois_ingredie",
+    "text": "Invente un plat à partir de trois ingrédients proposés par le groupe.",
+    "category": "creatif",
+    "participants": 1
+  },
+  {
+    "id": "roulette_279_cree_une_devise_personnelle_dramatiquement",
+    "text": "Crée une devise personnelle dramatiquement exagérée.",
+    "category": "creatif",
+    "participants": 1
+  },
+  {
+    "id": "roulette_280_imagine_le_musee_le_plus_etrange_du_monde_",
+    "text": "Imagine le musée le plus étrange du monde et sa pièce principale.",
+    "category": "creatif",
+    "participants": 1
+  },
+  {
+    "id": "roulette_281_inventez_ensemble_un_animal_son_nom_son_cr",
+    "text": "Inventez ensemble un animal, son nom, son cri et son habitat.",
+    "category": "creatif",
+    "participants": 2
+  },
+  {
+    "id": "roulette_282_creez_la_couverture_et_le_resume_dun_livre",
+    "text": "Créez la couverture et le résumé d’un livre imaginaire.",
+    "category": "creatif",
+    "participants": 2
+  },
+  {
+    "id": "roulette_283_inventez_une_invention_qui_resout_un_probl",
+    "text": "Inventez une invention qui résout un problème minuscule.",
+    "category": "creatif",
+    "participants": 2
+  },
+  {
+    "id": "roulette_284_creez_un_menu_complet_pour_un_restaurant_a",
+    "text": "Créez un menu complet pour un restaurant à thème absurde.",
+    "category": "creatif",
+    "participants": 2
+  },
+  {
+    "id": "roulette_285_imaginez_une_nouvelle_emission_et_jouez_sa",
+    "text": "Imaginez une nouvelle émission et jouez sa bande-annonce.",
+    "category": "creatif",
+    "participants": 2
+  },
+  {
+    "id": "roulette_286_inventez_un_personnage_avec_un_metier_un_s",
+    "text": "Inventez un personnage avec un métier, un secret et une peur.",
+    "category": "creatif",
+    "participants": 2
+  },
+  {
+    "id": "roulette_287_creez_une_fausse_marque_de_luxe_et_present",
+    "text": "Créez une fausse marque de luxe et présentez son produit vedette.",
+    "category": "creatif",
+    "participants": 2
+  },
+  {
+    "id": "roulette_288_imaginez_une_planete_et_la_regle_la_plus_e",
+    "text": "Imaginez une planète et la règle la plus étrange de ses habitants.",
+    "category": "creatif",
+    "participants": 2
+  },
+  {
+    "id": "roulette_289_inventez_une_histoire_qui_doit_contenir_le",
+    "text": "Inventez une histoire qui doit contenir les mots « cactus », « ascenseur » et « couronne ».",
+    "category": "creatif",
+    "participants": 2
+  },
+  {
+    "id": "roulette_290_creez_un_nouveau_reseau_social_et_explique",
+    "text": "Créez un nouveau réseau social et expliquez pourquoi il deviendrait vite chaotique.",
+    "category": "creatif",
+    "participants": 2
+  },
+  {
+    "id": "roulette_291_a_trois_inventez_un_film_titre_heros_mecha",
+    "text": "À trois, inventez un film : titre, héros, méchant et fin surprise.",
+    "category": "creatif",
+    "participants": 3
+  },
+  {
+    "id": "roulette_292_a_trois_concevez_un_parc_dattractions_et_s",
+    "text": "À trois, concevez un parc d’attractions et son attraction la plus risquée.",
+    "category": "creatif",
+    "participants": 3
+  },
+  {
+    "id": "roulette_293_a_trois_creez_une_entreprise_absurde_avec_",
+    "text": "À trois, créez une entreprise absurde avec un patron, un employé et un client.",
+    "category": "creatif",
+    "participants": 3
+  },
+  {
+    "id": "roulette_294_a_trois_inventez_une_legende_urbaine_sur_u",
+    "text": "À trois, inventez une légende urbaine sur un objet de la pièce.",
+    "category": "creatif",
+    "participants": 3
+  },
+  {
+    "id": "roulette_295_tout_le_groupe_cree_une_mascotte_officiell",
+    "text": "Tout le groupe crée une mascotte officielle avec un nom, un caractère et un cri.",
+    "category": "creatif",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_296_inventez_collectivement_une_histoire_ou_ch",
+    "text": "Inventez collectivement une histoire où chaque phrase doit commencer par la dernière lettre de la précédente.",
+    "category": "creatif",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_297_creez_une_affiche_de_film_vivante_avec_un_",
+    "text": "Créez une affiche de film vivante avec un titre annoncé à voix haute.",
+    "category": "creatif",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_298_imaginez_une_ville_dirigee_par_le_groupe_e",
+    "text": "Imaginez une ville dirigée par le groupe et attribuez un ministère à chacun.",
+    "category": "creatif",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_299_inventez_une_nouvelle_ceremonie_de_recompe",
+    "text": "Inventez une nouvelle cérémonie de récompenses et distribuez trois prix.",
+    "category": "creatif",
+    "participants": "all"
+  },
+  {
+    "id": "roulette_300_creez_ensemble_une_regle_de_jeu_totalement",
+    "text": "Créez ensemble une règle de jeu totalement nouvelle en moins d’une minute.",
+    "category": "creatif",
+    "participants": "all"
   }
 ]
