@@ -7587,6 +7587,170 @@
     end: endMultiplayerGameFromControls
   });
 
+
+  /* =========================================================
+     AK'GAMES V2.4 — QUESTIONS OSÉES MULTIJOUEUR
+     Packs synchronisés, réponse collective ou tour par tour
+     ========================================================= */
+
+  const akDaringMultiBaseRenderMegaSetup = renderMegaSetup;
+  renderMegaSetup = function () {
+    akDaringMultiBaseRenderMegaSetup();
+    const game = state.megaGame;
+    if (!isMultiplayer() || !akDaringIsGame(game)) return;
+
+    const rounds = akDaringRoundChoices();
+    if (!rounds.includes(Number(game.roundCount))) game.roundCount = 20;
+    const roundsSelect = document.querySelector("#multiMegaRounds");
+    if (roundsSelect) {
+      roundsSelect.innerHTML = rounds.map(value => `<option value="${value}" ${Number(game.roundCount) === value ? "selected" : ""}>${value} question${value > 1 ? "s" : ""}</option>`).join("");
+      roundsSelect.disabled = !state.isHost;
+      roundsSelect.onchange = event => { game.roundCount = Number(event.target.value); };
+    }
+
+    if (!document.querySelector(".daring-settings-card")) {
+      const html = akDaringSetupMarkup(game, { readOnly: !state.isHost });
+      const anchor = document.querySelector("#startMultiMega") || document.querySelector(".multiplayer-wait-card");
+      anchor?.insertAdjacentHTML("beforebegin", html);
+      akDaringBindSetup(game, { readOnly: !state.isHost });
+    }
+  };
+
+  const akDaringMultiBaseStartMegaGame = startMegaGame;
+  startMegaGame = async function () {
+    const game = state.megaGame;
+    if (!isMultiplayer() || !akDaringIsGame(game)) return akDaringMultiBaseStartMegaGame();
+    if (!state.isHost) return;
+
+    screen.innerHTML = `<div class="notice">Synchronisation des thèmes et des intensités…</div>`;
+    try {
+      const rawPool = await loadJsonFile(game.config.data, "Impossible de charger les questions osées.");
+      const pool = akDaringBuildPool(rawPool, game);
+      if (!pool.length) throw new Error("Aucune question ne correspond aux thèmes et intensités choisis.");
+      const memoryKey = `multi:daring:${akDaringNormalizeThemes(game.daringThemes).join("-")}:${akDaringNormalizeIntensities(game.daringIntensities).join("-")}:${game.daringIncludeCustom}`;
+      const items = akDaringSelectBalanced(pool, Math.min(game.roundCount, pool.length), memoryKey);
+      const playerIds = state.players.map(player => player.id);
+      const allMode = game.daringAnswerMode === "all";
+      const controllerId = allMode ? state.currentUid : playerIds[0] || state.currentUid;
+
+      await AKFirebase.setGame(state.roomCode, {
+        state: {
+          type: "mega-turn",
+          phase: "turn",
+          sessionGameId: createSessionGameId("mega-turn"),
+          items,
+          currentIndex: 0,
+          currentPlayerId: controllerId,
+          scores: Object.fromEntries(playerIds.map(id => [id, 0])),
+          rounds: {},
+          currentResult: null,
+          settings: {
+            gameName: game.gameName,
+            icon: game.config.icon,
+            engine: game.engine,
+            roundCount: items.length,
+            durationSeconds: null,
+            privatePrompt: false,
+            questionMode: true,
+            drinkingGame: false,
+            scoreless: true,
+            daringQuestions: true,
+            daringThemes: akDaringNormalizeThemes(game.daringThemes),
+            daringIntensities: akDaringNormalizeIntensities(game.daringIntensities),
+            daringAnswerMode: allMode ? "all" : "turn",
+            daringIncludeCustom: Boolean(game.daringIncludeCustom)
+          },
+          turnEndsAt: null,
+          startedAt: AKFirebase.now(),
+          updatedAt: AKFirebase.now()
+        },
+        votes: null,
+        answers: null,
+        actions: null
+      });
+    } catch (error) {
+      console.error(error);
+      alert(error.message || "Impossible de lancer Questions osées.");
+      renderMegaSetup();
+    }
+  };
+
+  const akDaringMultiBaseProcessMegaTurn = processMultiMegaTurn;
+  processMultiMegaTurn = function (gameState, actions) {
+    if (!gameState.settings?.daringQuestions) return akDaringMultiBaseProcessMegaTurn(gameState, actions);
+    if (!state.isHost || gameState.phase !== "turn") return;
+
+    const action = actions[gameState.currentPlayerId];
+    if (!action) return;
+    const actionId = action.id || `daring_${gameState.currentIndex}`;
+    const lock = `daring_turn_${gameState.currentIndex}_${actionId}`;
+    if (state.multiProcessingActionId === lock) return;
+    state.multiProcessingActionId = lock;
+
+    const current = Number(gameState.currentIndex || 0);
+    const next = current + 1;
+    const finished = next >= (gameState.items || []).length;
+    const allMode = gameState.settings?.daringAnswerMode === "all";
+    const nextPlayerId = allMode
+      ? gameState.currentPlayerId
+      : state.players[next % Math.max(1, state.players.length)]?.id || gameState.currentPlayerId;
+    const participantIds = allMode ? state.players.map(player => player.id) : [gameState.currentPlayerId];
+
+    AKFirebase.updateGame(state.roomCode, {
+      "state/phase": finished ? "final" : "turn",
+      "state/currentIndex": finished ? current : next,
+      "state/currentPlayerId": nextPlayerId,
+      [`state/rounds/${current}`]: {
+        itemId: megaMultiCurrentItem(gameState)?.id || "",
+        playerId: allMode ? null : gameState.currentPlayerId,
+        participantIds,
+        success: Boolean(action.payload?.success),
+        answerMode: allMode ? "all" : "turn"
+      },
+      "state/finishedAt": finished ? AKFirebase.now() : null,
+      "state/updatedAt": AKFirebase.now(),
+      actions: null
+    }).finally(() => { state.multiProcessingActionId = null; });
+  };
+
+  const akDaringMultiBaseRenderMegaTurn = renderMultiMegaTurn;
+  renderMultiMegaTurn = function (gameState, actions) {
+    if (!gameState.settings?.daringQuestions) return akDaringMultiBaseRenderMegaTurn(gameState, actions);
+
+    const item = megaMultiCurrentItem(gameState);
+    const allMode = gameState.settings?.daringAnswerMode === "all";
+    const player = megaMultiPlayer(gameState.currentPlayerId);
+    const isController = state.currentUid === gameState.currentPlayerId;
+    const pending = actions[state.currentUid];
+    title.textContent = "Questions osées";
+    setBackVisible(false);
+
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Question")}
+      <section class="daring-round-card daring-round-multi ${allMode ? "daring-all-mode" : ""}">
+        ${akDaringQuestionBadges(item)}
+        <div class="daring-round-speaker"><span>${allMode ? "👥" : avatarById(player?.avatarId).emoji}</span><div><small>${allMode ? "QUESTION OUVERTE AU GROUPE" : "C’EST AU TOUR DE"}</small><strong>${allMode ? "Tout le monde peut répondre" : escapeHtml(player?.name || "Joueur")}</strong></div></div>
+        <h2>${escapeHtml(item?.text || "Question surprise")}</h2>
+        <p>${allMode ? "Répondez librement, chacun à votre tour. Personne n’est obligé de prendre la parole." : `${escapeHtml(player?.name || "La personne")} peut répondre, développer… ou passer sans aucune justification.`}</p>
+      </section>
+      ${isController
+        ? pending
+          ? renderMultiWaiting("Choix envoyé", "La question suivante arrive automatiquement.", "✓")
+          : `<section class="decision-grid"><button id="multiMegaSuccess" class="primary-btn">${allMode ? "Question suivante" : "✓ J’ai répondu"}</button><button id="multiMegaSkip" class="secondary-btn">Passer</button></section>`
+        : renderMultiWaiting(allMode ? "L’hôte mène la discussion" : `Tour de ${player?.name || "la personne"}`, allMode ? "Réponds si tu le souhaites. L’hôte affichera ensuite la question suivante." : "Écoutez sans forcer la personne à préciser ou à se justifier.", allMode ? "👥" : avatarById(player?.avatarId).emoji)}
+      <div class="responsible-callout">🛡️ Le droit de passer est absolu. Ne demandez pas pourquoi et ne poussez jamais quelqu’un à préciser sa réponse.</div>
+    `;
+
+    document.querySelector("#multiMegaSuccess")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      await sendMultiAction("mega-turn", { success: true }).catch(() => event.currentTarget.disabled = false);
+    });
+    document.querySelector("#multiMegaSkip")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      await sendMultiAction("mega-turn", { success: false }).catch(() => event.currentTarget.disabled = false);
+    });
+  };
+
   window.AKGamesMultiplayer = Object.freeze({
     launchRandomGame: () => launchRandomMultiplayerGame()
   });

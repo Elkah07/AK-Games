@@ -5801,7 +5801,7 @@ function renderMegaFinal() {
     <section class="winner-stage winner-stage-v07 mega-final-stage"><div class="winner-crown">${game.config.icon}🏆</div><h2>${winners.length ? winners.map(player => escapeHtml(player.name)).join(" et ") : "Partie terminée"}</h2><p>${winners.length ? `${winners.length > 1 ? "terminent" : "termine"} en tête de ${escapeHtml(game.gameName)}.` : "Le groupe a traversé toutes les manches."}</p></section>
     <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
     <div class="toolbar"><button id="replayMega" class="secondary-btn">Rejouer</button><button id="otherMega" class="primary-btn">Autre jeu</button></div>`;
-  document.querySelector("#replayMega").addEventListener("click", () => { const name = game.gameName; const replay = { roundCount: game.roundCount, durationSeconds: game.durationSeconds, selectedPacks: game.selectedPacks, selectedDifficulties: game.selectedDifficulties, confidenceMode: game.confidenceMode }; resetMegaGame(name, replay); renderMegaSetup(); });
+  document.querySelector("#replayMega").addEventListener("click", () => { const name = game.gameName; const replay = { roundCount: game.roundCount, durationSeconds: game.durationSeconds, selectedPacks: game.selectedPacks, selectedDifficulties: game.selectedDifficulties, confidenceMode: game.confidenceMode, daringThemes: game.daringThemes, daringIntensities: game.daringIntensities, daringAnswerMode: game.daringAnswerMode, daringIncludeCustom: game.daringIncludeCustom }; resetMegaGame(name, replay); renderMegaSetup(); });
   document.querySelector("#otherMega").addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
 }
 
@@ -8144,4 +8144,371 @@ renderWhoAnsweredEnd = function () {
   screen.innerHTML = `<section class="winner-stage winner-stage-v07 v08-final-stage"><div class="winner-crown">🕵️🏆</div><h2>L’enquête est classée</h2><p>Chaque réponse écrite a enfin eu une chance de devenir suspecte.</p></section><section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section><section class="who-answered-awards">${detective ? `<article><span>🔎</span><div><small>MEILLEUR ENQUÊTEUR</small><strong>${escapeHtml(detective.player.name)}</strong><p>${detective.value} auteur${detective.value > 1 ? "s" : ""} retrouvé${detective.value > 1 ? "s" : ""}</p></div></article>` : ""}${ghost ? `<article><span>👻</span><div><small>PLUS DIFFICILE À RECONNAÎTRE</small><strong>${escapeHtml(ghost.player.name)}</strong><p>${ghost.value} enquêteur${ghost.value > 1 ? "s" : ""} trompé${ghost.value > 1 ? "s" : ""}</p></div></article>` : ""}${bestAnswer && bestAnswer.fooledIds.length ? `<article><span>🕶️</span><div><small>RÉPONSE LA PLUS TROMPEUSE</small><strong>${escapeHtml(bestAnswerAuthor?.name || "Mystère")}</strong><p>« ${escapeHtml(bestAnswer.answerText)} » · ${bestAnswer.fooledIds.length} trompé${bestAnswer.fooledIds.length > 1 ? "s" : ""}</p></div></article>` : ""}</section><div class="toolbar"><button id="replayWhoAnswered" class="secondary-btn">Rejouer</button><button id="otherWhoAnswered" class="primary-btn">Autre jeu</button></div>`;
   document.querySelector("#replayWhoAnswered").addEventListener("click", () => { resetWhoAnsweredState({ roundCount: game.roundCount, categories: game.categories, includeAdult: game.includeAdult, includeCustom: game.includeCustom, mysteryMode: game.mysteryMode }); renderWhoAnsweredSetup(); });
   document.querySelector("#otherWhoAnswered").addEventListener("click", () => { state.whoAnswered = null; renderPlayChoice(); });
+};
+
+/* =========================================================
+   AK'GAMES V2.4 — QUESTIONS OSÉES EN PACKS
+   500 questions, thèmes, intensités et questions personnalisées
+   ========================================================= */
+
+const AK_DARING_CUSTOM_KEY = "akgames_daring_custom_questions_v1";
+const AK_DARING_THEMES = [
+  { id: "attraction", icon: "🧲", label: "Attirance et séduction", description: "Crushs, charme, tension et premiers pas." },
+  { id: "fantasies", icon: "💭", label: "Fantasmes et envies", description: "Curiosités, scénarios imaginés et désirs." },
+  { id: "experiences", icon: "🕰️", label: "Expériences et souvenirs", description: "Premières fois, anecdotes et moments marquants." },
+  { id: "confessions", icon: "🤐", label: "Dossiers et confessions", description: "Mensonges, secrets et vérités difficiles à avouer." },
+  { id: "exes", icon: "🧳", label: "Ex et anciennes relations", description: "Retours, regrets, souvenirs et comparaisons." },
+  { id: "couple", icon: "💞", label: "Couple et fidélité", description: "Jalousie, engagement, exclusivité et confiance." },
+  { id: "preferences", icon: "🌙", label: "Préférences intimes", description: "Ambiances, initiatives, rythme et complicité." },
+  { id: "boundaries", icon: "🛡️", label: "Limites et consentement", description: "Respect, sécurité, communication et droit de dire non." },
+  { id: "digital", icon: "📱", label: "Sextos et vie numérique", description: "Messages, photos, applications et dossiers numériques." },
+  { id: "casual", icon: "🪩", label: "Rencontres sans engagement", description: "Plans spontanés, lendemain et attentes claires." },
+  { id: "hypotheticals", icon: "🎲", label: "Situations hypothétiques", description: "Choix impossibles et scénarios sans conséquence." },
+  { id: "group", icon: "👀", label: "Entre joueurs", description: "Questions adaptées aux personnes présentes." }
+];
+
+const AK_DARING_INTENSITIES = [
+  { id: "soft", icon: "🌶️", label: "Piment doux", description: "Flirt, attirance et confidences accessibles." },
+  { id: "hot", icon: "🔥", label: "Très osé", description: "Expériences, fantasmes et vraies zones sensibles." },
+  { id: "nofilter", icon: "☢️", label: "Sans filtre", description: "Questions intimes, embarrassantes ou difficiles à assumer." }
+];
+
+function akDaringIsGame(game = state.megaGame) {
+  return Boolean(game?.gameName === "Questions osées");
+}
+
+function akDaringLoadCustomQuestions() {
+  try {
+    const rows = JSON.parse(localStorage.getItem(AK_DARING_CUSTOM_KEY) || "[]");
+    if (!Array.isArray(rows)) return [];
+    return rows.filter(item => item && item.id && item.text).map(item => ({
+      id: String(item.id),
+      text: String(item.text).trim(),
+      theme: AK_DARING_THEMES.some(theme => theme.id === item.theme) ? item.theme : "confessions",
+      intensity: AK_DARING_INTENSITIES.some(level => level.id === item.intensity) ? item.intensity : "hot",
+      category: "adult-question",
+      custom: true
+    }));
+  } catch {
+    return [];
+  }
+}
+
+function akDaringSaveCustomQuestions(items) {
+  try {
+    localStorage.setItem(AK_DARING_CUSTOM_KEY, JSON.stringify(items));
+  } catch {
+    // Le jeu reste utilisable même si le stockage local est indisponible.
+  }
+}
+
+function akDaringNormalizeThemes(values) {
+  const valid = new Set(AK_DARING_THEMES.map(item => item.id));
+  const selected = Array.isArray(values) ? [...new Set(values.filter(value => valid.has(value)))] : [];
+  return selected.length ? selected : AK_DARING_THEMES.map(item => item.id);
+}
+
+function akDaringNormalizeIntensities(values) {
+  const valid = new Set(AK_DARING_INTENSITIES.map(item => item.id));
+  const selected = Array.isArray(values) ? [...new Set(values.filter(value => valid.has(value)))] : [];
+  return selected.length ? selected : AK_DARING_INTENSITIES.map(item => item.id);
+}
+
+function akDaringThemeMeta(id) {
+  return AK_DARING_THEMES.find(item => item.id === id) || AK_DARING_THEMES[0];
+}
+
+function akDaringIntensityMeta(id) {
+  return AK_DARING_INTENSITIES.find(item => item.id === id) || AK_DARING_INTENSITIES[0];
+}
+
+function akDaringRoundChoices() {
+  return [10, 15, 20, 30, 40, 50, 75, 100];
+}
+
+function akDaringCreateCustomQuestion(text, theme, intensity) {
+  const value = String(text || "").trim();
+  if (!value) return null;
+  return {
+    id: `osee_custom_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 7)}`,
+    text: value,
+    theme: AK_DARING_THEMES.some(item => item.id === theme) ? theme : "confessions",
+    intensity: AK_DARING_INTENSITIES.some(item => item.id === intensity) ? intensity : "hot",
+    category: "adult-question",
+    custom: true
+  };
+}
+
+function akDaringSetupMarkup(game, { readOnly = false } = {}) {
+  const selectedThemes = akDaringNormalizeThemes(game.daringThemes);
+  const selectedIntensities = akDaringNormalizeIntensities(game.daringIntensities);
+  const customQuestions = Array.isArray(game.daringCustomQuestions) ? game.daringCustomQuestions : [];
+  const customCount = customQuestions.length;
+  const disabled = readOnly ? "disabled" : "";
+  const themeOptions = AK_DARING_THEMES.map(theme => `<option value="${theme.id}">${theme.icon} ${escapeHtml(theme.label)}</option>`).join("");
+  const intensityOptions = AK_DARING_INTENSITIES.map(level => `<option value="${level.id}">${level.icon} ${escapeHtml(level.label)}</option>`).join("");
+
+  return `
+    <section class="card daring-settings-card">
+      <div class="daring-section-heading">
+        <div><small>THÈMES DE LA PARTIE</small><h3>Choisis ce que vous êtes prêts à aborder</h3></div>
+        <span>${selectedThemes.length}/${AK_DARING_THEMES.length}</span>
+      </div>
+      <div class="daring-quick-actions">
+        <button type="button" class="secondary-btn" data-daring-themes-all ${disabled}>Tout sélectionner</button>
+        <button type="button" class="secondary-btn" data-daring-themes-light ${disabled}>Sélection légère</button>
+      </div>
+      <div class="daring-theme-grid">
+        ${AK_DARING_THEMES.map(theme => {
+          const active = selectedThemes.includes(theme.id);
+          return `<button type="button" class="daring-theme-card ${active ? "active" : ""}" data-daring-theme="${theme.id}" aria-pressed="${active}" ${disabled}><span>${theme.icon}</span><strong>${escapeHtml(theme.label)}</strong><small>${escapeHtml(theme.description)}</small><b>${active ? "✓" : "+"}</b></button>`;
+        }).join("")}
+      </div>
+    </section>
+
+    <section class="card daring-settings-card">
+      <div class="daring-section-heading">
+        <div><small>INTENSITÉ</small><h3>Une ou plusieurs températures</h3></div>
+        <span>${selectedIntensities.length}/3</span>
+      </div>
+      <div class="daring-intensity-grid">
+        ${AK_DARING_INTENSITIES.map(level => {
+          const active = selectedIntensities.includes(level.id);
+          return `<button type="button" class="daring-intensity-card intensity-${level.id} ${active ? "active" : ""}" data-daring-intensity="${level.id}" aria-pressed="${active}" ${disabled}><span>${level.icon}</span><strong>${escapeHtml(level.label)}</strong><small>${escapeHtml(level.description)}</small><b>${active ? "✓" : "+"}</b></button>`;
+        }).join("")}
+      </div>
+      <p class="helper">Les thèmes et intensités sélectionnés sont répartis équitablement pendant la partie.</p>
+    </section>
+
+    <section class="card daring-settings-card">
+      <div class="daring-section-heading"><div><small>FAÇON DE RÉPONDRE</small><h3>Choisis le rythme de la partie</h3></div></div>
+      <div class="daring-mode-grid">
+        <label class="daring-mode-card ${game.daringAnswerMode !== "all" ? "active" : ""}"><input type="radio" name="daringAnswerMode" value="turn" ${game.daringAnswerMode !== "all" ? "checked" : ""} ${disabled}><span>🎤</span><strong>Tour par tour</strong><small>Une personne répond, puis la parole passe à la suivante.</small></label>
+        <label class="daring-mode-card ${game.daringAnswerMode === "all" ? "active" : ""}"><input type="radio" name="daringAnswerMode" value="all" ${game.daringAnswerMode === "all" ? "checked" : ""} ${disabled}><span>👥</span><strong>Tout le monde répond</strong><small>La même question est ouverte à tout le groupe.</small></label>
+      </div>
+    </section>
+
+    ${readOnly ? `<div class="notice">👑 L’hôte choisit les thèmes, l’intensité, le rythme et les questions personnalisées.</div>` : `
+      <section class="card daring-settings-card daring-custom-card">
+        <div class="daring-section-heading"><div><small>VOS PROPRES QUESTIONS</small><h3>Ajoute vos dossiers maison</h3></div><span>${customCount}</span></div>
+        <div class="form-group"><label for="daringCustomText">Nouvelle question</label><textarea id="daringCustomText" class="text-input text-area" maxlength="260" placeholder="Quelle vérité sur ta vie sentimentale surprendrait le plus le groupe ?"></textarea></div>
+        <div class="daring-custom-fields">
+          <div class="form-group"><label for="daringCustomTheme">Thème</label><select id="daringCustomTheme" class="text-input">${themeOptions}</select></div>
+          <div class="form-group"><label for="daringCustomIntensity">Intensité</label><select id="daringCustomIntensity" class="text-input">${intensityOptions}</select></div>
+        </div>
+        <button type="button" id="addDaringCustom" class="secondary-btn full">+ Ajouter cette question</button>
+        <label class="option-card top-gap ${customCount ? "" : "disabled-option"}"><input id="includeDaringCustom" type="checkbox" ${game.daringIncludeCustom && customCount ? "checked" : ""} ${customCount ? "" : "disabled"}><span><strong>Inclure mes questions (${customCount})</strong><br><span class="helper">Elles suivent leur thème et leur intensité pendant le mélange.</span></span></label>
+        ${customCount ? `<details class="top-gap"><summary>Gérer mes ${customCount} question${customCount > 1 ? "s" : ""}</summary><div class="daring-custom-list">${customQuestions.map(item => {
+          const theme = akDaringThemeMeta(item.theme);
+          const intensity = akDaringIntensityMeta(item.intensity);
+          return `<article><div><span>${theme.icon} ${escapeHtml(theme.label)} · ${intensity.icon} ${escapeHtml(intensity.label)}</span><p>${escapeHtml(item.text)}</p></div><button type="button" class="danger-btn" data-remove-daring-custom="${item.id}">Supprimer</button></article>`;
+        }).join("")}</div></details>` : ""}
+      </section>`}
+
+    <div class="responsible-callout">🛡️ Chacun peut passer une question sans se justifier. Une réponse hésitante ou un silence ne vaut jamais consentement.</div>
+  `;
+}
+
+function akDaringBindSetup(game, { readOnly = false } = {}) {
+  if (readOnly || !akDaringIsGame(game)) return;
+
+  document.querySelectorAll("[data-daring-theme]").forEach(button => button.addEventListener("click", () => {
+    const id = button.dataset.daringTheme;
+    const selected = akDaringNormalizeThemes(game.daringThemes);
+    const next = selected.includes(id) ? selected.filter(value => value !== id) : [...selected, id];
+    if (!next.length) return alert("Garde au moins un thème sélectionné.");
+    game.daringThemes = akDaringNormalizeThemes(next);
+    renderMegaSetup();
+  }));
+
+  document.querySelector("[data-daring-themes-all]")?.addEventListener("click", () => {
+    game.daringThemes = AK_DARING_THEMES.map(item => item.id);
+    renderMegaSetup();
+  });
+  document.querySelector("[data-daring-themes-light]")?.addEventListener("click", () => {
+    game.daringThemes = ["attraction", "experiences", "preferences", "boundaries", "group"];
+    renderMegaSetup();
+  });
+
+  document.querySelectorAll("[data-daring-intensity]").forEach(button => button.addEventListener("click", () => {
+    const id = button.dataset.daringIntensity;
+    const selected = akDaringNormalizeIntensities(game.daringIntensities);
+    const next = selected.includes(id) ? selected.filter(value => value !== id) : [...selected, id];
+    if (!next.length) return alert("Garde au moins une intensité sélectionnée.");
+    game.daringIntensities = akDaringNormalizeIntensities(next);
+    renderMegaSetup();
+  }));
+
+  document.querySelectorAll('input[name="daringAnswerMode"]').forEach(input => input.addEventListener("change", event => {
+    game.daringAnswerMode = event.target.value === "all" ? "all" : "turn";
+    renderMegaSetup();
+  }));
+
+  document.querySelector("#includeDaringCustom")?.addEventListener("change", event => {
+    game.daringIncludeCustom = Boolean(event.target.checked);
+  });
+
+  document.querySelector("#addDaringCustom")?.addEventListener("click", () => {
+    const text = document.querySelector("#daringCustomText")?.value || "";
+    const theme = document.querySelector("#daringCustomTheme")?.value || "confessions";
+    const intensity = document.querySelector("#daringCustomIntensity")?.value || "hot";
+    const item = akDaringCreateCustomQuestion(text, theme, intensity);
+    if (!item) return alert("Écris une question avant de l’ajouter.");
+    if (game.daringCustomQuestions.some(existing => existing.text.trim().toLocaleLowerCase("fr") === item.text.trim().toLocaleLowerCase("fr"))) {
+      return alert("Cette question existe déjà dans tes questions personnalisées.");
+    }
+    game.daringCustomQuestions.push(item);
+    game.daringIncludeCustom = true;
+    akDaringSaveCustomQuestions(game.daringCustomQuestions);
+    renderMegaSetup();
+  });
+
+  document.querySelectorAll("[data-remove-daring-custom]").forEach(button => button.addEventListener("click", () => {
+    game.daringCustomQuestions = game.daringCustomQuestions.filter(item => item.id !== button.dataset.removeDaringCustom);
+    if (!game.daringCustomQuestions.length) game.daringIncludeCustom = false;
+    akDaringSaveCustomQuestions(game.daringCustomQuestions);
+    renderMegaSetup();
+  }));
+}
+
+function akDaringBuildPool(rawPool, game) {
+  const themes = new Set(akDaringNormalizeThemes(game.daringThemes));
+  const intensities = new Set(akDaringNormalizeIntensities(game.daringIntensities));
+  const official = (Array.isArray(rawPool) ? rawPool : []).filter(item => themes.has(item.theme) && intensities.has(item.intensity));
+  const custom = game.daringIncludeCustom
+    ? (game.daringCustomQuestions || []).filter(item => themes.has(item.theme) && intensities.has(item.intensity))
+    : [];
+  return [...official, ...custom];
+}
+
+function akDaringSelectBalanced(pool, count, historyKey) {
+  const safeCount = Math.min(Math.max(0, Number(count || 0)), pool.length);
+  if (!safeCount) return [];
+  const groups = pool.reduce((result, item) => {
+    const key = `${item.theme || "attraction"}:${item.intensity || "soft"}`;
+    (result[key] ||= []).push(item);
+    return result;
+  }, {});
+  const keys = shuffleArray(Object.keys(groups));
+  const base = Math.floor(safeCount / Math.max(1, keys.length));
+  const extra = safeCount % Math.max(1, keys.length);
+  let selected = [];
+  keys.forEach((key, index) => {
+    const quota = Math.min(groups[key].length, base + (index < extra ? 1 : 0));
+    if (quota) selected.push(...selectFreshItems(groups[key], quota, `${historyKey}:${key}`));
+  });
+  if (selected.length < safeCount) {
+    const used = new Set(selected.map(item => item.id));
+    const remaining = pool.filter(item => !used.has(item.id));
+    selected.push(...selectFreshItems(remaining, Math.min(safeCount - selected.length, remaining.length), `${historyKey}:extra`));
+  }
+  return shuffleArray(selected).slice(0, safeCount);
+}
+
+function akDaringQuestionBadges(item) {
+  const theme = akDaringThemeMeta(item?.theme);
+  const intensity = akDaringIntensityMeta(item?.intensity);
+  return `<div class="daring-question-badges"><span>${theme.icon} ${escapeHtml(theme.label)}</span><span class="intensity-${intensity.id}">${intensity.icon} ${escapeHtml(intensity.label)}</span>${item?.custom ? `<span>✍️ Personnalisée</span>` : ""}</div>`;
+}
+
+const akDaringBaseResetMegaGame = resetMegaGame;
+resetMegaGame = function (gameName, replayConfig = {}) {
+  akDaringBaseResetMegaGame(gameName, replayConfig);
+  const game = state.megaGame;
+  if (!akDaringIsGame(game)) return;
+  game.daringThemes = akDaringNormalizeThemes(replayConfig.daringThemes);
+  game.daringIntensities = akDaringNormalizeIntensities(replayConfig.daringIntensities);
+  game.daringAnswerMode = replayConfig.daringAnswerMode === "all" ? "all" : "turn";
+  game.daringCustomQuestions = akDaringLoadCustomQuestions();
+  game.daringIncludeCustom = replayConfig.daringIncludeCustom !== false && game.daringCustomQuestions.length > 0;
+  game.roundCount = Number(replayConfig.roundCount || 20);
+};
+
+const akDaringBaseRenderMegaSetup = renderMegaSetup;
+renderMegaSetup = function () {
+  akDaringBaseRenderMegaSetup();
+  const game = state.megaGame;
+  if (!akDaringIsGame(game) || state.mode !== "single") return;
+  const rounds = akDaringRoundChoices();
+  if (!rounds.includes(Number(game.roundCount))) game.roundCount = 20;
+  const roundsSelect = document.querySelector("#megaRounds");
+  if (roundsSelect) {
+    roundsSelect.innerHTML = rounds.map(value => `<option value="${value}" ${Number(game.roundCount) === value ? "selected" : ""}>${value} question${value > 1 ? "s" : ""}</option>`).join("");
+    roundsSelect.onchange = event => { game.roundCount = Number(event.target.value); };
+  }
+  const startButton = document.querySelector("#startMegaGame");
+  if (startButton && !document.querySelector(".daring-settings-card")) {
+    startButton.insertAdjacentHTML("beforebegin", akDaringSetupMarkup(game));
+    akDaringBindSetup(game);
+  }
+};
+
+const akDaringBaseStartMegaGame = startMegaGame;
+startMegaGame = async function () {
+  const game = state.megaGame;
+  if (!akDaringIsGame(game) || state.mode !== "single") return akDaringBaseStartMegaGame();
+  screen.innerHTML = `<div class="notice">Préparation d’un mélange équilibré des thèmes et des intensités…</div>`;
+  try {
+    const rawPool = await loadJsonFile(game.config.data, "Impossible de charger les questions osées.");
+    const pool = akDaringBuildPool(rawPool, game);
+    if (!pool.length) throw new Error("Aucune question ne correspond aux thèmes et intensités choisis.");
+    const memoryKey = `solo:daring:${akDaringNormalizeThemes(game.daringThemes).join("-")}:${akDaringNormalizeIntensities(game.daringIntensities).join("-")}:${game.daringIncludeCustom}`;
+    game.items = akDaringSelectBalanced(pool, Math.min(game.roundCount, pool.length), memoryKey);
+    game.currentIndex = 0;
+    game.currentPlayerIndex = 0;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    game.scores = v014ScoreMap();
+    game.rounds = [];
+    game.revealed = false;
+    game.currentResult = null;
+    renderMegaCurrent();
+  } catch (error) {
+    console.error(error);
+    alert(error.message || "Impossible de lancer Questions osées.");
+    renderMegaSetup();
+  }
+};
+
+const akDaringBaseRenderMegaTurn = renderMegaTurn;
+renderMegaTurn = function () {
+  const game = state.megaGame;
+  if (!akDaringIsGame(game)) return akDaringBaseRenderMegaTurn();
+  const item = game.items[game.currentIndex];
+  const allMode = game.daringAnswerMode === "all";
+  const player = state.players[game.currentIndex % Math.max(1, state.players.length)];
+  clearV014Timer();
+  title.textContent = "Questions osées";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${v014Progress(game, "Question")}
+    <section class="daring-round-card ${allMode ? "daring-all-mode" : ""}">
+      ${akDaringQuestionBadges(item)}
+      <div class="daring-round-speaker"><span>${allMode ? "👥" : avatarById(player?.avatarId).emoji}</span><div><small>${allMode ? "QUESTION OUVERTE AU GROUPE" : "C’EST AU TOUR DE"}</small><strong>${allMode ? "Tout le monde peut répondre" : escapeHtml(player?.name || "Joueur")}</strong></div></div>
+      <h2>${escapeHtml(item?.text || "Question surprise")}</h2>
+      <p>${allMode ? "Répondez à tour de rôle si vous le souhaitez. Personne n’est obligé de prendre la parole." : `${escapeHtml(player?.name || "La personne")} peut répondre, développer… ou passer sans aucune justification.`}</p>
+    </section>
+    <section class="decision-grid"><button id="megaDone" class="primary-btn">${allMode ? "Question suivante" : "✓ J’ai répondu"}</button><button id="megaSkip" class="secondary-btn">Passer</button></section>
+    <div class="responsible-callout">🛡️ Le droit de passer est absolu. Ne demandez pas pourquoi et ne poussez jamais quelqu’un à préciser sa réponse.</div>
+  `;
+  document.querySelector("#megaDone")?.addEventListener("click", () => finishMegaTurn(true));
+  document.querySelector("#megaSkip")?.addEventListener("click", () => finishMegaTurn(false));
+};
+
+const akDaringBaseFinishMegaTurn = finishMegaTurn;
+finishMegaTurn = function (success) {
+  const game = state.megaGame;
+  if (!akDaringIsGame(game)) return akDaringBaseFinishMegaTurn(success);
+  const allMode = game.daringAnswerMode === "all";
+  const player = state.players[game.currentIndex % Math.max(1, state.players.length)];
+  game.rounds.push({
+    itemId: game.items[game.currentIndex]?.id,
+    playerId: allMode ? null : player?.id || null,
+    participantIds: allMode ? state.players.map(item => item.id) : [player?.id].filter(Boolean),
+    success,
+    answerMode: game.daringAnswerMode
+  });
+  game.currentIndex += 1;
+  game.revealed = false;
+  renderMegaCurrent();
 };
