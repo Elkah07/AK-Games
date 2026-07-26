@@ -1,15 +1,15 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v2.1-whoami-progressive";
+const CACHE_VERSION = "akgames-v2.2-global-game-controls";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=whoami-v2",
+  "/styles.css?v=game-controls-v2.2",
   "/creator.css?v=creator-v1.3-access",
-  "/app.js?v=whoami-v2",
+  "/app.js?v=game-controls-v2.2",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
-  "/multiplayer.js?v=whoami-v2",
+  "/multiplayer.js?v=game-controls-v2.2",
   "/pwa.js",
   "/manifest.webmanifest",
   "/icons/icon-192.png",

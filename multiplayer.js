@@ -485,6 +485,20 @@
 
         const gameState = room.game?.state || null;
 
+        if (gameState?.control?.paused) {
+          state.multiView = "paused-game";
+          clearV09MultiTimer();
+          clearV014MultiTimer();
+          clearMultiPollTimer();
+          window.AKGameControls?.showMultiplayerPause?.({
+            canControl: state.isHost,
+            pausedByName: gameState.control.pausedByName || "L’hôte"
+          });
+          return;
+        }
+
+        window.AKGameControls?.hidePause?.();
+
         if (gameState?.type === "who-us") {
           state.multiView = "who-us-game";
           syncMultiWhoUs(room);
@@ -7462,6 +7476,93 @@
   window.requestAnimationFrame(mountMultiSkipControls);
   state.multiSkipRefreshTimer = window.setInterval(mountMultiSkipControls, 650);
 
+
+
+  const AK_GAME_CONTROL_DEADLINES = [
+    "voteEndsAt",
+    "discussionEndsAt",
+    "speechEndsAt",
+    "roundEndsAt",
+    "turnEndsAt",
+    "bombEndsAt"
+  ];
+
+  function multiplayerGameIsActive() {
+    return isMultiplayer() && Boolean(state.roomData?.game?.state);
+  }
+
+  function multiplayerGameIsPaused() {
+    return Boolean(state.roomData?.game?.state?.control?.paused);
+  }
+
+  async function pauseMultiplayerGame() {
+    if (!state.isHost || !state.roomCode || !multiplayerGameIsActive() || multiplayerGameIsPaused()) return;
+
+    const gameState = state.roomData.game.state;
+    const now = AKFirebase.now();
+    const remaining = {};
+    const updates = {
+      "state/control": {
+        paused: true,
+        pausedAt: now,
+        pausedBy: state.currentUid,
+        pausedByName: currentPlayer()?.name || "L’hôte",
+        remaining
+      },
+      "state/updatedAt": now
+    };
+
+    AK_GAME_CONTROL_DEADLINES.forEach(key => {
+      const value = Number(gameState[key] || 0);
+      if (value > 0) {
+        remaining[key] = Math.max(0, value - now);
+        updates[`state/${key}`] = null;
+      }
+    });
+
+    clearV09MultiTimer();
+    clearV014MultiTimer();
+    clearMultiPollTimer();
+    await AKFirebase.updateGame(state.roomCode, updates);
+  }
+
+  async function resumeMultiplayerGame() {
+    if (!state.isHost || !state.roomCode || !multiplayerGameIsPaused()) return;
+
+    const control = state.roomData?.game?.state?.control || {};
+    const remaining = control.remaining || {};
+    const now = AKFirebase.now();
+    const updates = {
+      "state/control": null,
+      "state/updatedAt": now
+    };
+
+    AK_GAME_CONTROL_DEADLINES.forEach(key => {
+      const value = Number(remaining[key] || 0);
+      if (value > 0) updates[`state/${key}`] = now + value;
+    });
+
+    await AKFirebase.updateGame(state.roomCode, updates);
+  }
+
+  async function endMultiplayerGameFromControls() {
+    if (!state.isHost || !state.roomCode || !multiplayerGameIsActive()) return;
+
+    clearV09MultiTimer();
+    clearV014MultiTimer();
+    clearMultiPollTimer();
+    window.AKGameControls?.hidePause?.();
+    await AKFirebase.setGame(state.roomCode, null);
+  }
+
+  window.AKGameControls?.registerMultiplayerAdapter?.({
+    isActive: multiplayerGameIsActive,
+    isPaused: multiplayerGameIsPaused,
+    canControl: () => Boolean(state.isHost),
+    pause: pauseMultiplayerGame,
+    resume: resumeMultiplayerGame,
+    end: endMultiplayerGameFromControls
+  });
 
   window.AKGamesMultiplayer = Object.freeze({
     launchRandomGame: () => launchRandomMultiplayerGame()

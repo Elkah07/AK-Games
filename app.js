@@ -7108,3 +7108,369 @@ renderMegaQuizReveal = function () {
   const heading = stage?.querySelector("h2");
   if (heading && !stage.querySelector(".quiz-difficulty-badge")) heading.insertAdjacentHTML("beforebegin", akQuizDifficultyBadge(game.items?.[game.currentIndex]));
 };
+
+/* =========================================================
+   AK'GAMES V2.2 — CONTRÔLES DE PARTIE GLOBAUX
+   Pause réelle, reprise et fin anticipée de la mini-partie
+   ========================================================= */
+
+state.akGamePaused = false;
+state.akGamePauseStartedAt = null;
+state.akGameControlTimers = {
+  v09: null,
+  v014: null,
+  ambiance: null
+};
+
+const akGameControlBaseStartV09Countdown = startV09Countdown;
+const akGameControlBaseClearV09Timer = clearV09Timer;
+const akGameControlBaseStartV014Timer = startV014Timer;
+const akGameControlBaseClearV014Timer = clearV014Timer;
+const akGameControlBaseStartAmbiancePollTimer = startAmbiancePollTimer;
+const akGameControlBaseClearAmbiancePollTimer = clearAmbiancePollTimer;
+
+let akGameControlInternalTimerStop = false;
+
+startV09Countdown = function (seconds, onDone) {
+  const totalSeconds = Math.max(1, Number(seconds || 1));
+  state.akGameControlTimers.v09 = {
+    totalSeconds,
+    endAt: Date.now() + totalSeconds * 1000,
+    remainingMs: totalSeconds * 1000,
+    onDone
+  };
+  return akGameControlBaseStartV09Countdown(totalSeconds, onDone);
+};
+
+clearV09Timer = function () {
+  akGameControlBaseClearV09Timer();
+  if (!akGameControlInternalTimerStop) state.akGameControlTimers.v09 = null;
+};
+
+startV014Timer = function (endAt, selector, onDone, totalSeconds = null) {
+  const safeEndAt = Number(endAt || Date.now());
+  state.akGameControlTimers.v014 = {
+    endAt: safeEndAt,
+    remainingMs: Math.max(0, safeEndAt - Date.now()),
+    selector,
+    onDone,
+    totalSeconds: Number(totalSeconds || Math.max(1, Math.ceil((safeEndAt - Date.now()) / 1000)))
+  };
+  return akGameControlBaseStartV014Timer(safeEndAt, selector, onDone, totalSeconds);
+};
+
+clearV014Timer = function () {
+  akGameControlBaseClearV014Timer();
+  if (!akGameControlInternalTimerStop) state.akGameControlTimers.v014 = null;
+};
+
+startAmbiancePollTimer = function (deadline, totalSeconds, onExpire) {
+  const safeDeadline = Number(deadline || Date.now());
+  state.akGameControlTimers.ambiance = {
+    endAt: safeDeadline,
+    remainingMs: Math.max(0, safeDeadline - Date.now()),
+    totalSeconds: Math.max(1, Number(totalSeconds || 15)),
+    onDone: onExpire
+  };
+  return akGameControlBaseStartAmbiancePollTimer(safeDeadline, totalSeconds, onExpire);
+};
+
+clearAmbiancePollTimer = function () {
+  akGameControlBaseClearAmbiancePollTimer();
+  if (!akGameControlInternalTimerStop) state.akGameControlTimers.ambiance = null;
+};
+
+function akGameControlPauseSingleTimers() {
+  const now = Date.now();
+  const timers = state.akGameControlTimers;
+
+  if (timers.v09) {
+    timers.v09.remainingMs = Math.max(0, Number(timers.v09.endAt || now) - now);
+  }
+  if (timers.v014) {
+    timers.v014.remainingMs = Math.max(0, Number(timers.v014.endAt || now) - now);
+  }
+  if (timers.ambiance) {
+    timers.ambiance.remainingMs = Math.max(0, Number(timers.ambiance.endAt || now) - now);
+  }
+
+  akGameControlInternalTimerStop = true;
+  akGameControlBaseClearV09Timer();
+  akGameControlBaseClearV014Timer();
+  akGameControlBaseClearAmbiancePollTimer();
+  akGameControlInternalTimerStop = false;
+}
+
+function akGameControlResumeSingleTimers() {
+  const timers = state.akGameControlTimers;
+
+  if (timers.v09 && timers.v09.remainingMs > 0) {
+    const remainingSeconds = Math.max(1, Math.ceil(timers.v09.remainingMs / 1000));
+    startV09Countdown(remainingSeconds, timers.v09.onDone);
+  }
+
+  if (timers.v014 && timers.v014.remainingMs > 0) {
+    const nextEndAt = Date.now() + timers.v014.remainingMs;
+    if (String(timers.v014.selector || "").includes("Bomb") && state.megaGame) {
+      state.megaGame.bombEndsAt = nextEndAt;
+    }
+    startV014Timer(nextEndAt, timers.v014.selector, timers.v014.onDone, timers.v014.totalSeconds);
+  }
+
+  if (timers.ambiance && timers.ambiance.remainingMs > 0) {
+    const nextDeadline = Date.now() + timers.ambiance.remainingMs;
+    startAmbiancePollTimer(nextDeadline, timers.ambiance.totalSeconds, timers.ambiance.onDone);
+  }
+}
+
+function akGameControlClearSingleGame() {
+  clearV09Timer();
+  clearV014Timer();
+  clearAmbiancePollTimer();
+
+  state.quiDeNous = null;
+  state.laughDuel = null;
+  state.bestLiar = null;
+  state.actionTruth = null;
+  state.ambiancePoll = null;
+  state.sameBrain = null;
+  state.minorityGame = null;
+  state.whoAnswered = null;
+  state.almostImpostor = null;
+  state.fakeExpert = null;
+  state.whoAmI = null;
+  state.megaGame = null;
+  state.akGamePaused = false;
+  state.akGamePauseStartedAt = null;
+  state.akGameControlTimers = { v09: null, v014: null, ambiance: null };
+}
+
+function akGameControlSetAppInert(inert) {
+  const app = document.querySelector("#app");
+  if (!app) return;
+  try {
+    app.inert = Boolean(inert);
+  } catch {
+    app.setAttribute("aria-hidden", inert ? "true" : "false");
+  }
+}
+
+function akGameControlRemoveDialog() {
+  document.querySelector("#akGameControlDialog")?.remove();
+}
+
+function akGameControlConfirm({ titleText, message, confirmLabel = "Confirmer", danger = false }) {
+  akGameControlRemoveDialog();
+  return new Promise(resolve => {
+    const dialog = document.createElement("div");
+    dialog.id = "akGameControlDialog";
+    dialog.className = "ak-game-control-dialog-backdrop";
+    dialog.innerHTML = `
+      <section class="ak-game-control-dialog" role="dialog" aria-modal="true" aria-labelledby="akGameControlDialogTitle">
+        <span class="ak-game-control-dialog-icon">${danger ? "🛑" : "⏸️"}</span>
+        <h2 id="akGameControlDialogTitle">${escapeHtml(titleText)}</h2>
+        <p>${escapeHtml(message)}</p>
+        <div class="ak-game-control-dialog-actions">
+          <button type="button" class="secondary-btn" data-ak-control-cancel>Annuler</button>
+          <button type="button" class="${danger ? "danger-btn" : "primary-btn"}" data-ak-control-confirm>${escapeHtml(confirmLabel)}</button>
+        </div>
+      </section>
+    `;
+
+    const finish = value => {
+      dialog.remove();
+      resolve(value);
+    };
+
+    dialog.querySelector("[data-ak-control-cancel]")?.addEventListener("click", () => finish(false));
+    dialog.querySelector("[data-ak-control-confirm]")?.addEventListener("click", () => finish(true));
+    dialog.addEventListener("click", event => {
+      if (event.target === dialog) finish(false);
+    });
+    document.body.appendChild(dialog);
+    window.requestAnimationFrame(() => dialog.classList.add("is-visible"));
+  });
+}
+
+function akGameControlCloseMenu() {
+  document.querySelector("#akGameControlMenu")?.remove();
+}
+
+function akGameControlShowMenu() {
+  akGameControlCloseMenu();
+  const multiplayerAdapter = window.AKGameControls?.multiplayerAdapter;
+  const isMulti = Boolean(multiplayerAdapter?.isActive?.());
+  const menu = document.createElement("div");
+  menu.id = "akGameControlMenu";
+  menu.className = "ak-game-control-menu-backdrop";
+  menu.innerHTML = `
+    <section class="ak-game-control-menu" role="dialog" aria-modal="true" aria-labelledby="akGameControlMenuTitle">
+      <div class="ak-game-control-menu-heading">
+        <div><small>CONTRÔLES DE PARTIE</small><h2 id="akGameControlMenuTitle">Que voulez-vous faire ?</h2></div>
+        <button type="button" class="icon-btn" data-ak-control-close aria-label="Fermer">×</button>
+      </div>
+      <button type="button" class="ak-game-control-action pause" data-ak-control-pause>
+        <span>⏸️</span><div><strong>Mettre en pause</strong><small>${isMulti ? "La pause apparaîtra sur tous les téléphones." : "Le jeu et les chronos s’arrêteront."}</small></div>
+      </button>
+      <button type="button" class="ak-game-control-action end" data-ak-control-end>
+        <span>⏹️</span><div><strong>Mettre fin à la partie</strong><small>Retourner au choix des jeux sans supprimer les joueurs.</small></div>
+      </button>
+      <button type="button" class="secondary-btn full" data-ak-control-close>Continuer à jouer</button>
+    </section>
+  `;
+  menu.querySelectorAll("[data-ak-control-close]").forEach(button => button.addEventListener("click", akGameControlCloseMenu));
+  menu.addEventListener("click", event => {
+    if (event.target === menu) akGameControlCloseMenu();
+  });
+  menu.querySelector("[data-ak-control-pause]")?.addEventListener("click", async () => {
+    akGameControlCloseMenu();
+    if (isMulti) await multiplayerAdapter.pause?.();
+    else window.AKGameControls.pauseSingle();
+  });
+  menu.querySelector("[data-ak-control-end]")?.addEventListener("click", async () => {
+    akGameControlCloseMenu();
+    await window.AKGameControls.endCurrentGame();
+  });
+  document.body.appendChild(menu);
+  window.requestAnimationFrame(() => menu.classList.add("is-visible"));
+}
+
+function akGameControlHidePauseOverlay() {
+  document.querySelector("#akGamePauseOverlay")?.remove();
+  document.body.classList.remove("ak-game-is-paused");
+  akGameControlSetAppInert(false);
+}
+
+function akGameControlShowPauseOverlay({ multiplayer = false, canControl = true, pausedByName = "" } = {}) {
+  akGameControlCloseMenu();
+  document.querySelector("#akGameControlButton")?.remove();
+  akGameControlHidePauseOverlay();
+
+  const overlay = document.createElement("div");
+  overlay.id = "akGamePauseOverlay";
+  overlay.className = "ak-game-pause-overlay";
+  overlay.innerHTML = `
+    <section class="ak-game-pause-card" role="status" aria-live="polite">
+      <div class="ak-game-pause-icon">⏸️</div>
+      <small>PARTIE EN PAUSE</small>
+      <h2>Petite respiration</h2>
+      <p>${multiplayer
+        ? canControl
+          ? "Tous les téléphones sont en pause. La partie reprendra exactement au même endroit."
+          : `${escapeHtml(pausedByName || "L’hôte")} a mis la partie en pause. Elle reprendra automatiquement dès que l’hôte la relancera.`
+        : "Le jeu et les chronos sont arrêtés. Rien ne bougera tant que vous ne reprendrez pas."}</p>
+      ${canControl ? `
+        <div class="ak-game-pause-actions">
+          <button type="button" class="primary-btn full" data-ak-control-resume>▶ Reprendre la partie</button>
+          <button type="button" class="danger-btn full" data-ak-control-end-paused>Mettre fin à la partie</button>
+        </div>
+      ` : `<div class="ak-game-pause-waiting"><span></span><strong>En attente de l’hôte…</strong></div>`}
+    </section>
+  `;
+  document.body.appendChild(overlay);
+  document.body.classList.add("ak-game-is-paused");
+  akGameControlSetAppInert(true);
+
+  overlay.querySelector("[data-ak-control-resume]")?.addEventListener("click", async () => {
+    if (multiplayer) await window.AKGameControls.multiplayerAdapter?.resume?.();
+    else window.AKGameControls.resumeSingle();
+  });
+  overlay.querySelector("[data-ak-control-end-paused]")?.addEventListener("click", async () => {
+    await window.AKGameControls.endCurrentGame();
+  });
+}
+
+function akGameControlIsSingleActive() {
+  return state.mode === "single" && isSoloGameRunning();
+}
+
+function akGameControlMountButton() {
+  const multiplayerAdapter = window.AKGameControls?.multiplayerAdapter;
+  const multiActive = Boolean(multiplayerAdapter?.isActive?.());
+  const canControlMulti = Boolean(multiplayerAdapter?.canControl?.());
+  const singleActive = akGameControlIsSingleActive();
+  const paused = state.akGamePaused || Boolean(multiplayerAdapter?.isPaused?.());
+  const shouldShow = !paused && (singleActive || (multiActive && canControlMulti));
+  const current = document.querySelector("#akGameControlButton");
+
+  if (!shouldShow) {
+    current?.remove();
+    return;
+  }
+
+  if (current) return;
+  const button = document.createElement("button");
+  button.id = "akGameControlButton";
+  button.className = "ak-game-control-button";
+  button.type = "button";
+  button.innerHTML = `<span>⏸️</span><strong>Partie</strong>`;
+  button.setAttribute("aria-label", "Ouvrir les contrôles de la partie");
+  button.addEventListener("click", akGameControlShowMenu);
+  document.body.appendChild(button);
+}
+
+window.AKGameControls = {
+  multiplayerAdapter: null,
+  registerMultiplayerAdapter(adapter) {
+    this.multiplayerAdapter = adapter || null;
+    akGameControlMountButton();
+  },
+  pauseSingle() {
+    if (!akGameControlIsSingleActive() || state.akGamePaused) return;
+    state.akGamePaused = true;
+    state.akGamePauseStartedAt = Date.now();
+    akGameControlPauseSingleTimers();
+    akGameControlShowPauseOverlay({ multiplayer: false, canControl: true });
+  },
+  resumeSingle() {
+    if (!state.akGamePaused) return;
+    state.akGamePaused = false;
+    state.akGamePauseStartedAt = null;
+    akGameControlHidePauseOverlay();
+    akGameControlResumeSingleTimers();
+    akGameControlMountButton();
+  },
+  showMultiplayerPause(options = {}) {
+    akGameControlShowPauseOverlay({ multiplayer: true, ...options });
+  },
+  hidePause() {
+    akGameControlHidePauseOverlay();
+    akGameControlMountButton();
+  },
+  async endCurrentGame() {
+    const multiplayerAdapter = this.multiplayerAdapter;
+    const isMulti = Boolean(multiplayerAdapter?.isActive?.());
+    const confirmed = await akGameControlConfirm({
+      titleText: "Mettre fin à cette partie ?",
+      message: "Cette mini-partie sera arrêtée. Les joueurs et la soirée restent en place pour choisir un autre jeu.",
+      confirmLabel: "Mettre fin à la partie",
+      danger: true
+    });
+    if (!confirmed) return;
+
+    if (isMulti) {
+      await multiplayerAdapter.end?.();
+      return;
+    }
+
+    akGameControlHidePauseOverlay();
+    akGameControlClearSingleGame();
+    akGameControlCloseMenu();
+    renderPlayChoice();
+    akGameControlMountButton();
+  },
+  mount: akGameControlMountButton
+};
+
+let akGameControlMountQueued = false;
+const akGameControlObserver = new MutationObserver(() => {
+  if (akGameControlMountQueued) return;
+  akGameControlMountQueued = true;
+  window.requestAnimationFrame(() => {
+    akGameControlMountQueued = false;
+    akGameControlMountButton();
+  });
+});
+akGameControlObserver.observe(screen, { childList: true, subtree: true });
+window.setInterval(akGameControlMountButton, 700);
+window.requestAnimationFrame(akGameControlMountButton);
