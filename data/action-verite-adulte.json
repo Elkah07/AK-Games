@@ -3,360 +3,480 @@
     "id": "adulte_verite_001",
     "type": "truth",
     "category": "adult",
-    "text": "Quel est ton plus gros turn-off chez quelqu’un ?"
+    "text": "Quel est le fantasme que tu n’as jamais osé avouer à quelqu’un ?"
   },
   {
     "id": "adulte_verite_002",
     "type": "truth",
     "category": "adult",
-    "text": "As-tu déjà embrassé quelqu’un puis immédiatement regretté ?"
+    "text": "Quelle est la chose la plus audacieuse que tu aies déjà faite pour séduire quelqu’un ?"
   },
   {
     "id": "adulte_verite_003",
     "type": "truth",
     "category": "adult",
-    "text": "Quel est le message de flirt le plus gênant que tu aies envoyé ?"
+    "text": "As-tu déjà envoyé un nude avec ton visage visible ?"
   },
   {
     "id": "adulte_verite_004",
     "type": "truth",
     "category": "adult",
-    "text": "Quelle personne célèbre accepterais-tu de rejoindre à un rendez-vous sans réfléchir ?"
+    "text": "Quel est le lieu le plus improbable où tu aimerais faire l’amour ?"
   },
   {
     "id": "adulte_verite_005",
     "type": "truth",
     "category": "adult",
-    "text": "As-tu déjà fait semblant de ne pas voir un message pour paraître moins intéressé(e) ?"
+    "text": "As-tu déjà embrassé deux personnes différentes dans la même soirée ?"
   },
   {
     "id": "adulte_verite_006",
     "type": "truth",
     "category": "adult",
-    "text": "Quel est ton plus gros red flag amoureux ?"
+    "text": "Quelle partie de ton corps préfères-tu qu’on embrasse ?"
   },
   {
     "id": "adulte_verite_007",
     "type": "truth",
     "category": "adult",
-    "text": "As-tu déjà eu un crush sur quelqu’un de totalement inaccessible ?"
+    "text": "Quel détail physique te fait craquer presque immédiatement ?"
   },
   {
     "id": "adulte_verite_008",
     "type": "truth",
     "category": "adult",
-    "text": "Quel est ton type de personne, même si tu prétends ne pas en avoir ?"
+    "text": "As-tu déjà fait semblant de ne pas être attiré(e) par quelqu’un alors que c’était évident ?"
   },
   {
     "id": "adulte_verite_009",
     "type": "truth",
     "category": "adult",
-    "text": "Quelle est la chose la plus audacieuse que tu aies faite pour séduire quelqu’un ?"
+    "text": "Quel est ton plus gros turn-on chez quelqu’un ?"
   },
   {
     "id": "adulte_verite_010",
     "type": "truth",
     "category": "adult",
-    "text": "As-tu déjà fouillé le profil d’un ex beaucoup trop loin ?"
+    "text": "Quel est ton plus gros turn-off au lit ?"
   },
   {
     "id": "adulte_verite_011",
     "type": "truth",
     "category": "adult",
-    "text": "Quelle est la pire phrase de drague qu’on t’ait sortie ?"
+    "text": "As-tu déjà envoyé un sexto puis regretté immédiatement ?"
   },
   {
     "id": "adulte_verite_012",
     "type": "truth",
     "category": "adult",
-    "text": "Quel détail physique remarques-tu en premier ?"
+    "text": "Quelle personne présente te paraît la plus difficile à séduire ?"
   },
   {
     "id": "adulte_verite_013",
     "type": "truth",
     "category": "adult",
-    "text": "As-tu déjà entretenu deux discussions ambiguës en même temps ?"
+    "text": "Quelle personne présente te paraît la plus susceptible d’avoir une double vie très chaude ?"
   },
   {
     "id": "adulte_verite_014",
     "type": "truth",
     "category": "adult",
-    "text": "Quelle est la chose la plus jalouse que tu aies faite ?"
+    "text": "Quel est le compliment le plus sexy qu’on puisse te faire ?"
   },
   {
     "id": "adulte_verite_015",
     "type": "truth",
     "category": "adult",
-    "text": "Quel est ton plus gros regret sentimental ?"
+    "text": "As-tu déjà eu un crush sur la personne en couple avec un(e) ami(e) ?"
   },
   {
     "id": "adulte_verite_016",
     "type": "truth",
     "category": "adult",
-    "text": "Avec qui du groupe accepterais-tu le plus facilement un faux rendez-vous pour rendre quelqu’un jaloux ?"
+    "text": "Quel est ton type de baiser préféré ?"
   },
   {
     "id": "adulte_verite_017",
     "type": "truth",
     "category": "adult",
-    "text": "As-tu déjà embrassé quelqu’un dont tu avais oublié le prénom ?"
+    "text": "Préfères-tu dominer, être guidé(e), ou alterner selon la personne ?"
   },
   {
     "id": "adulte_verite_018",
     "type": "truth",
     "category": "adult",
-    "text": "Quelle est ta pire habitude quand quelqu’un te plaît ?"
+    "text": "Quelle tenue te fait te sentir le plus irrésistible ?"
   },
   {
     "id": "adulte_verite_019",
     "type": "truth",
     "category": "adult",
-    "text": "Quel est le plus gros mensonge raconté pour impressionner un crush ?"
+    "text": "As-tu déjà couché avec quelqu’un dont tu ne connaissais presque rien ?"
   },
   {
     "id": "adulte_verite_020",
     "type": "truth",
     "category": "adult",
-    "text": "As-tu déjà repris contact avec quelqu’un uniquement parce que tu t’ennuyais ?"
+    "text": "Quelle est la chose la plus gênante qui t’est arrivée pendant un moment intime ?"
   },
   {
     "id": "adulte_verite_021",
     "type": "truth",
     "category": "adult",
-    "text": "Quelle est ta limite non négociable dans une relation ?"
+    "text": "As-tu déjà fantasmé sur quelqu’un qui se trouve dans cette pièce ?"
   },
   {
     "id": "adulte_verite_022",
     "type": "truth",
     "category": "adult",
-    "text": "As-tu déjà envoyé un message risqué puis mis ton téléphone en mode avion ?"
+    "text": "Quelle est la durée idéale d’un moment intime pour toi ?"
   },
   {
     "id": "adulte_verite_023",
     "type": "truth",
     "category": "adult",
-    "text": "Quelle situation romantique te mettrait immédiatement mal à l’aise ?"
+    "text": "As-tu déjà menti sur ton nombre de partenaires ?"
   },
   {
     "id": "adulte_verite_024",
     "type": "truth",
     "category": "adult",
-    "text": "Quel est ton avis le plus impopulaire sur les relations ?"
+    "text": "Quel est le message le plus explicite que tu aies déjà reçu ?"
   },
   {
     "id": "adulte_verite_025",
     "type": "truth",
     "category": "adult",
-    "text": "As-tu déjà fait semblant d’aimer quelque chose pour plaire à quelqu’un ?"
+    "text": "Quelle est la chose que tu aimerais essayer mais seulement avec une personne de confiance ?"
   },
   {
     "id": "adulte_verite_026",
     "type": "truth",
     "category": "adult",
-    "text": "Quelle personne du groupe donnerait les meilleurs conseils amoureux ?"
+    "text": "As-tu déjà été attiré(e) par quelqu’un uniquement à cause de sa voix ?"
   },
   {
     "id": "adulte_verite_027",
     "type": "truth",
     "category": "adult",
-    "text": "As-tu déjà regretté d’avoir dit “je t’aime” ?"
+    "text": "Quel est ton endroit préféré pour recevoir un baiser, hors de la bouche ?"
   },
   {
     "id": "adulte_verite_028",
     "type": "truth",
     "category": "adult",
-    "text": "Quel est ton plus grand fantasme de rendez-vous, sans entrer dans les détails ?"
+    "text": "As-tu déjà simulé du plaisir pour écourter un moment ?"
   },
   {
     "id": "adulte_verite_029",
     "type": "truth",
     "category": "adult",
-    "text": "Quelle est la chose la plus gênante découverte sur une personne qui te plaisait ?"
+    "text": "Quelle est la pire phrase qu’on puisse dire juste après un baiser ?"
   },
   {
     "id": "adulte_verite_030",
     "type": "truth",
     "category": "adult",
-    "text": "As-tu déjà bloqué puis débloqué quelqu’un juste pour voir s’il revenait ?"
+    "text": "Quel est le plus grand écart d’âge que tu accepterais avec un partenaire ?"
+  },
+  {
+    "id": "adulte_verite_031",
+    "type": "truth",
+    "category": "adult",
+    "text": "As-tu déjà eu une aventure que personne dans ton entourage ne connaît ?"
+  },
+  {
+    "id": "adulte_verite_032",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quel est ton niveau de jalousie lorsqu’une personne te plaît vraiment ?"
+  },
+  {
+    "id": "adulte_verite_033",
+    "type": "truth",
+    "category": "adult",
+    "text": "As-tu déjà fouillé le téléphone d’une personne avec qui tu étais en couple ?"
+  },
+  {
+    "id": "adulte_verite_034",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quel est ton avis honnête sur les relations ouvertes ?"
+  },
+  {
+    "id": "adulte_verite_035",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quelle célébrité te ferait oublier toutes tes bonnes résolutions ?"
+  },
+  {
+    "id": "adulte_verite_036",
+    "type": "truth",
+    "category": "adult",
+    "text": "As-tu déjà gardé une photo intime d’un ex après la rupture ?"
+  },
+  {
+    "id": "adulte_verite_037",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quel est le scénario romantique ou sexuel le plus cliché qui pourrait quand même fonctionner sur toi ?"
+  },
+  {
+    "id": "adulte_verite_038",
+    "type": "truth",
+    "category": "adult",
+    "text": "As-tu déjà confondu désir et sentiments ?"
+  },
+  {
+    "id": "adulte_verite_039",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quelle est la chose la plus osée que tu pourrais proposer lors d’un premier rendez-vous ?"
+  },
+  {
+    "id": "adulte_verite_040",
+    "type": "truth",
+    "category": "adult",
+    "text": "Quelle limite intime est absolument non négociable pour toi ?"
   },
   {
     "id": "adulte_action_001",
     "type": "action",
     "category": "adult",
-    "text": "Fais une phrase de drague à la personne choisie par le groupe."
+    "text": "Regarde la personne choisie par le groupe dans les yeux pendant quinze secondes, sans rire."
   },
   {
     "id": "adulte_action_002",
     "type": "action",
     "category": "adult",
-    "text": "Laisse le groupe choisir un emoji, puis invente le message de flirt fictif qui irait avec."
+    "text": "Murmure à la personne de ton choix une phrase de drague inventée sur le moment."
   },
   {
     "id": "adulte_action_003",
     "type": "action",
     "category": "adult",
-    "text": "Fais un compliment de séduction très exagéré à la personne de ton choix."
+    "text": "Fais un compliment très séduisant à la personne de ton choix."
   },
   {
     "id": "adulte_action_004",
     "type": "action",
     "category": "adult",
-    "text": "Joue une scène de premier rendez-vous catastrophique avec un autre joueur."
+    "text": "Mime ton type de baiser préféré sans toucher personne."
   },
   {
     "id": "adulte_action_005",
     "type": "action",
     "category": "adult",
-    "text": "Lis à voix haute un message de flirt entièrement inventé et beaucoup trop dramatique."
+    "text": "Choisis la personne avec qui tu partagerais le plus volontiers un lit, sans expliquer ton choix."
   },
   {
     "id": "adulte_action_006",
     "type": "action",
     "category": "adult",
-    "text": "Fais une démonstration de regard de séduction pendant dix secondes."
+    "text": "Décris ton rendez-vous idéal en rendant chaque détail volontairement très sensuel."
   },
   {
     "id": "adulte_action_007",
     "type": "action",
     "category": "adult",
-    "text": "Décris ton date idéal comme une publicité de luxe."
+    "text": "Fais une déclaration de désir dramatique à un objet de la pièce."
   },
   {
     "id": "adulte_action_008",
     "type": "action",
     "category": "adult",
-    "text": "Laisse le groupe écrire une bio d’application de rencontre fictive pour toi."
+    "text": "Laisse le groupe te donner un surnom séduisant pour les trois prochains tours."
   },
   {
     "id": "adulte_action_009",
     "type": "action",
     "category": "adult",
-    "text": "Imite ta réaction quand quelqu’un qui te plaît répond enfin."
+    "text": "Improvise une publicité de vingt secondes pour ton pouvoir de séduction."
   },
   {
     "id": "adulte_action_010",
     "type": "action",
     "category": "adult",
-    "text": "Fais une déclaration romantique à la personne la moins adaptée du groupe."
+    "text": "Avec son accord, prends la main de la personne de ton choix pendant le prochain tour."
   },
   {
     "id": "adulte_action_011",
     "type": "action",
     "category": "adult",
-    "text": "Raconte ton pire rendez-vous en trente secondes chrono."
+    "text": "Lis à voix haute un faux sexto que tu inventes maintenant."
   },
   {
     "id": "adulte_action_012",
     "type": "action",
     "category": "adult",
-    "text": "Fais semblant de refuser une demande en mariage de manière beaucoup trop dramatique."
+    "text": "Fais ton meilleur regard de séduction à chaque personne du groupe."
   },
   {
     "id": "adulte_action_013",
     "type": "action",
     "category": "adult",
-    "text": "Choisis deux personnes du groupe et invente le synopsis de leur comédie romantique."
+    "text": "Choisis deux personnes et invente le titre de leur faux film romantique interdit aux moins de 18 ans."
   },
   {
     "id": "adulte_action_014",
     "type": "action",
     "category": "adult",
-    "text": "Fais un toast à tes anciennes mauvaises décisions amoureuses."
+    "text": "Décris la tenue idéale pour te séduire, comme si tu commentais un défilé."
   },
   {
     "id": "adulte_action_015",
     "type": "action",
     "category": "adult",
-    "text": "Laisse une personne choisir une phrase de drague que tu dois lire avec sérieux."
+    "text": "Avec son accord, chuchote un compliment à l’oreille de la personne de ton choix."
   },
   {
     "id": "adulte_action_016",
     "type": "action",
     "category": "adult",
-    "text": "Fais une imitation d’une personne trop jalouse."
+    "text": "Fais une scène de jalousie totalement exagérée à la personne choisie par le groupe."
   },
   {
     "id": "adulte_action_017",
     "type": "action",
     "category": "adult",
-    "text": "Décris ton type idéal sans citer aucune caractéristique physique."
+    "text": "Rejoue la façon dont tu réagirais si ton crush t’envoyait « Tu dors ? » à deux heures du matin."
   },
   {
     "id": "adulte_action_018",
     "type": "action",
     "category": "adult",
-    "text": "Fais un mini discours expliquant pourquoi tu serais un excellent date."
+    "text": "Choisis une personne et explique en trois mots pourquoi elle pourrait être dangereusement attirante."
   },
   {
     "id": "adulte_action_019",
     "type": "action",
     "category": "adult",
-    "text": "Rédige oralement le message parfait pour reprendre contact avec un ex imaginaire."
+    "text": "Fais semblant de présenter ton profil sur une application de rencontre très adulte."
   },
   {
     "id": "adulte_action_020",
     "type": "action",
     "category": "adult",
-    "text": "Joue une scène où tu découvres que ton date a menti sur sa taille."
+    "text": "Laisse le groupe choisir une chanson et danse dessus de façon séduisante pendant vingt secondes."
   },
   {
     "id": "adulte_action_021",
     "type": "action",
     "category": "adult",
-    "text": "Fais une minute de compliments à une personne choisie au hasard."
+    "text": "Donne une note de séduction de 1 à 10 à ton propre regard, puis fais une démonstration."
   },
   {
     "id": "adulte_action_022",
     "type": "action",
     "category": "adult",
-    "text": "Choisis une chanson qui résumerait ta vie sentimentale et chante une ligne."
+    "text": "Fais une imitation de quelqu’un qui tente de cacher qu’il ou elle est très attiré(e)."
   },
   {
     "id": "adulte_action_023",
     "type": "action",
     "category": "adult",
-    "text": "Imite la façon dont tu racontes à tes amis qu’un rendez-vous s’est très mal passé."
+    "text": "Choisis une personne et invente votre faux premier rendez-vous scandaleux."
   },
   {
     "id": "adulte_action_024",
     "type": "action",
     "category": "adult",
-    "text": "Fais une fausse annonce de célibat officielle devant le groupe."
+    "text": "Avec son accord, dépose un baiser sur la joue ou la main de la personne de ton choix."
   },
   {
     "id": "adulte_action_025",
     "type": "action",
     "category": "adult",
-    "text": "Donne à chaque personne un titre de film correspondant à sa vie amoureuse imaginaire."
+    "text": "Raconte une anecdote de séduction vraie en remplaçant les noms par des surnoms absurdes."
   },
   {
     "id": "adulte_action_026",
     "type": "action",
     "category": "adult",
-    "text": "Fais semblant d’être coach en séduction et donne un conseil volontairement absurde."
+    "text": "Laisse la personne à ta droite te poser une question intime. Tu peux passer sans pénalité."
   },
   {
     "id": "adulte_action_027",
     "type": "action",
     "category": "adult",
-    "text": "Laisse le groupe choisir ton nom de profil de rencontre fictif."
+    "text": "Fais une bande-annonce dramatique de ta dernière histoire de flirt."
   },
   {
     "id": "adulte_action_028",
     "type": "action",
     "category": "adult",
-    "text": "Joue une scène de rupture avec la personne de ton choix en utilisant uniquement des titres de chansons."
+    "text": "Décris ton fantasme le plus cinématographique sans nommer les personnes impliquées."
   },
   {
     "id": "adulte_action_029",
     "type": "action",
     "category": "adult",
-    "text": "Fais une pose de photo de profil que tu n’oserais jamais publier."
+    "text": "Choisis une personne et dis-lui ce qui serait le plus difficile à ignorer chez elle pendant un rendez-vous."
   },
   {
     "id": "adulte_action_030",
     "type": "action",
     "category": "adult",
-    "text": "Invente une rumeur romantique sur toi que personne ne croirait."
+    "text": "Improvise un message vocal de dix secondes à un crush imaginaire."
+  },
+  {
+    "id": "adulte_action_031",
+    "type": "action",
+    "category": "adult",
+    "text": "Fais ton meilleur sourire après-baiser au groupe."
+  },
+  {
+    "id": "adulte_action_032",
+    "type": "action",
+    "category": "adult",
+    "text": "Explique comment tu séduirais la personne la plus timide du groupe, sans la toucher."
+  },
+  {
+    "id": "adulte_action_033",
+    "type": "action",
+    "category": "adult",
+    "text": "Avec son accord, reste assis(e) très près de la personne de ton choix jusqu’au prochain tour."
+  },
+  {
+    "id": "adulte_action_034",
+    "type": "action",
+    "category": "adult",
+    "text": "Donne à chaque personne un nom de parfum inspiré de son énergie de séduction."
+  },
+  {
+    "id": "adulte_action_035",
+    "type": "action",
+    "category": "adult",
+    "text": "Mime une rencontre très gênante après une nuit passée ensemble."
+  },
+  {
+    "id": "adulte_action_036",
+    "type": "action",
+    "category": "adult",
+    "text": "Choisis une personne et invente la phrase qui pourrait la faire rougir immédiatement."
+  },
+  {
+    "id": "adulte_action_037",
+    "type": "action",
+    "category": "adult",
+    "text": "Décris le scénario d’un premier baiser parfait en trente secondes."
+  },
+  {
+    "id": "adulte_action_038",
+    "type": "action",
+    "category": "adult",
+    "text": "Fais un toast à la personne que tu trouves la plus magnétique ce soir."
+  },
+  {
+    "id": "adulte_action_039",
+    "type": "action",
+    "category": "adult",
+    "text": "Laisse le groupe choisir entre « regard », « voix » ou « attitude », puis fais ta meilleure démonstration."
+  },
+  {
+    "id": "adulte_action_040",
+    "type": "action",
+    "category": "adult",
+    "text": "Avec son accord, fais un slow de quinze secondes avec la personne de ton choix."
   }
 ]

@@ -1,402 +1,402 @@
 [
   {
     "id": "boire_001",
-    "text": "Tout le monde qui a déjà envoyé un message au mauvais groupe prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà envoyé un sexto choisissent librement une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_002",
-    "text": "La dernière personne à avoir vérifié son téléphone prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà embrassé quelqu’un le soir de leur rencontre choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_003",
-    "text": "Choisis une personne : vous trinquez ensemble.",
+    "text": "La dernière personne à avoir eu un crush secret choisit une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_004",
-    "text": "Les personnes arrivées en retard aujourd’hui prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà stalké un ex après minuit choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_005",
-    "text": "La personne avec le moins de batterie distribue deux petites gorgées.",
+    "text": "Choisis quelqu’un avec qui trinquer, avec la boisson de votre choix.",
     "category": "drink"
   },
   {
     "id": "boire_006",
-    "text": "Tout le monde vote pour la personne la plus susceptible d’oublier ses clés. Elle prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà menti sur leur nombre de partenaires choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_007",
-    "text": "Les personnes qui ont déjà dormi avec leurs vêtements prennent une petite gorgée.",
+    "text": "La personne qui rougit le plus facilement désigne quelqu’un pour un toast facultatif.",
     "category": "drink"
   },
   {
     "id": "boire_008",
-    "text": "Choisis un mot interdit jusqu’à ton prochain tour. La première personne qui le dit prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà envoyé « Tu dors ? » avec une intention claire choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_009",
-    "text": "Les personnes qui préfèrent le salé au sucré prennent une petite gorgée.",
+    "text": "La personne qui a eu le rendez-vous le plus catastrophique raconte l’histoire ou passe sans pénalité.",
     "category": "drink"
   },
   {
     "id": "boire_010",
-    "text": "Fais rire quelqu’un en quinze secondes. Si tu échoues, petite gorgée.",
+    "text": "Les personnes qui ont déjà embrassé deux personnes dans la même soirée choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_011",
-    "text": "La personne qui a le plus de notifications distribue deux petites gorgées.",
+    "text": "Tout le monde pointe la personne qui semble la plus susceptible d’avoir une aventure secrète. La personne peut raconter ou passer.",
     "category": "drink"
   },
   {
     "id": "boire_012",
-    "text": "Tout le monde pointe la personne la plus organisée. Elle distribue une petite gorgée.",
+    "text": "Les personnes qui ont déjà eu un plan d’un soir choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_013",
-    "text": "Les personnes qui ont déjà raté un train ou un avion prennent une petite gorgée.",
+    "text": "La personne dont le dernier baiser est le plus récent choisit quelqu’un pour trinquer.",
     "category": "drink"
   },
   {
     "id": "boire_014",
-    "text": "Choisis une catégorie. Chacun répond à tour de rôle ; la première personne bloquée prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà eu envie de retourner avec un ex choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_015",
-    "text": "Les personnes qui ont déjà menti sur leur heure d’arrivée prennent une petite gorgée.",
+    "text": "Tout le monde donne un mot à la personne de gauche pour décrire son énergie de séduction.",
     "category": "drink"
   },
   {
     "id": "boire_016",
-    "text": "La personne la plus grande trinque avec la plus petite.",
+    "text": "Les personnes qui ont déjà envoyé une photo suggestive choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_017",
-    "text": "Fais un compliment sincère à quelqu’un. Cette personne choisit ensuite qui distribue une petite gorgée.",
+    "text": "La personne la plus jalouse selon le groupe choisit quelqu’un pour un toast facultatif.",
     "category": "drink"
   },
   {
     "id": "boire_018",
-    "text": "Les personnes qui ont déjà regardé une série en une nuit prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà eu un crush sur un(e) collègue choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_019",
-    "text": "Choisis quelqu’un pour une bataille de regard. La première personne qui rit prend une petite gorgée.",
+    "text": "Tout le monde vote pour le meilleur regard de séduction. La personne gagnante distribue un toast.",
     "category": "drink"
   },
   {
     "id": "boire_020",
-    "text": "Tout le monde qui porte du noir distribue une petite gorgée.",
+    "text": "Les personnes qui ont déjà couché avec un ex après la rupture choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_021",
-    "text": "La personne qui a envoyé le dernier vocal prend une petite gorgée.",
+    "text": "La personne qui a le plus d’applications de rencontre installées choisit une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_022",
-    "text": "Les personnes qui ont déjà supprimé puis réécrit un message prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà supprimé une conversation compromettante choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_023",
-    "text": "Le groupe choisit une chanson. Si tu ne connais pas le refrain, petite gorgée.",
+    "text": "Tout le monde révèle son plus gros turn-off en un mot. Passer est toujours possible.",
     "category": "drink"
   },
   {
     "id": "boire_024",
-    "text": "Les personnes qui ont déjà oublié un anniversaire prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà eu une relation purement physique choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_025",
-    "text": "Choisis une personne et inventez une poignée de main. Si vous ratez, vous trinquez.",
+    "text": "La personne qui a envoyé le dernier message de flirt choisit quelqu’un pour trinquer.",
     "category": "drink"
   },
   {
     "id": "boire_026",
-    "text": "Tout le monde qui préfère rester chez soi plutôt que sortir prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà eu un crush sur la mauvaise personne choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_027",
-    "text": "La personne avec le prénom le plus court distribue deux petites gorgées.",
+    "text": "Tout le monde désigne la personne qui ferait le meilleur premier rendez-vous.",
     "category": "drink"
   },
   {
     "id": "boire_028",
-    "text": "Les personnes qui ont déjà stalké un profil très loin prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà regretté un baiser choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_029",
-    "text": "Fais deviner un film en trois mots. Échec : petite gorgée.",
+    "text": "La personne dont le prénom commence le plus tôt dans l’alphabet choisit une question osée pour quelqu’un.",
     "category": "drink"
   },
   {
     "id": "boire_030",
-    "text": "Tout le monde vote pour le meilleur menteur. Cette personne distribue deux petites gorgées.",
+    "text": "Les personnes qui ont déjà été surprises pendant un moment intime choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_031",
-    "text": "Les personnes qui ont déjà prétendu être occupées pour éviter une sortie prennent une petite gorgée.",
+    "text": "Tout le monde trinque à son pire choix sentimental, avec ou sans alcool.",
     "category": "drink"
   },
   {
     "id": "boire_032",
-    "text": "La personne qui a le plus de photos dans son téléphone prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà menti pour rejoindre quelqu’un choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_033",
-    "text": "Choisis une personne : vous devez répondre en même temps à « plage ou montagne ». Désaccord : vous trinquez.",
+    "text": "La personne qui pense avoir le meilleur talent de séduction fait une démonstration ou passe.",
     "category": "drink"
   },
   {
     "id": "boire_034",
-    "text": "Les personnes qui ont déjà chanté sous la douche prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà embrassé quelqu’un pour rendre une autre personne jalouse choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_035",
-    "text": "Le groupe choisit une émotion. Imite-la ou prends une petite gorgée.",
+    "text": "Tout le monde pointe la personne la plus susceptible de tomber amoureuse après un plan d’un soir.",
     "category": "drink"
   },
   {
     "id": "boire_036",
-    "text": "Les personnes qui ont déjà commandé à manger très tard prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà reçu un nude inattendu choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_037",
-    "text": "La personne qui a le plus voyagé distribue deux petites gorgées.",
+    "text": "La personne la plus récente dans le groupe choisit quelqu’un pour un toast.",
     "category": "drink"
   },
   {
     "id": "boire_038",
-    "text": "Tout le monde qui a déjà cassé son téléphone prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà fantasmé sur une personne présente choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_039",
-    "text": "Choisis un joueur : il peut te poser une question légère. Tu peux répondre ou utiliser un joker, sans aucune pénalité.",
+    "text": "Tout le monde donne un compliment séduisant à la personne de droite.",
     "category": "drink"
   },
   {
     "id": "boire_040",
-    "text": "Les personnes qui ont déjà envoyé un vocal de plus de deux minutes prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà simulé du plaisir choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_041",
-    "text": "La personne la plus matinale trinque avec la plus nocturne.",
+    "text": "La personne qui a eu le plus de rendez-vous cette année choisit une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_042",
-    "text": "Tout le monde qui connaît le mot de passe Wi-Fi par cœur distribue une petite gorgée.",
+    "text": "Les personnes qui ont déjà gardé une photo intime d’un ex choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_043",
-    "text": "Les personnes qui ont déjà fait semblant de connaître une chanson prennent une petite gorgée.",
+    "text": "Tout le monde vote pour la personne la plus difficile à séduire.",
     "category": "drink"
   },
   {
     "id": "boire_044",
-    "text": "Fais une imitation. Si personne ne trouve en vingt secondes, petite gorgée.",
+    "text": "Les personnes qui ont déjà envoyé un message explicite à la mauvaise personne choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_045",
-    "text": "Les personnes qui ont déjà oublié pourquoi elles étaient entrées dans une pièce prennent une petite gorgée.",
+    "text": "La personne qui se considère la plus romantique choisit quelqu’un pour trinquer.",
     "category": "drink"
   },
   {
     "id": "boire_046",
-    "text": "La personne qui a le plus de réveils programmés prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà eu une aventure en vacances choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_047",
-    "text": "Choisis deux personnes : elles font pierre-feuille-ciseaux. La perdante prend une petite gorgée.",
+    "text": "Tout le monde répond en un mot : « désir » ou « sentiments ». Passer est autorisé.",
     "category": "drink"
   },
   {
     "id": "boire_048",
-    "text": "Tout le monde qui a déjà relu une ancienne conversation prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà eu deux crushs en même temps choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_049",
-    "text": "Les personnes qui ont déjà utilisé une excuse inventée pour être en retard prennent une petite gorgée.",
+    "text": "La personne qui possède le plus de photos d’elle-même choisit quelqu’un pour un toast.",
     "category": "drink"
   },
   {
     "id": "boire_050",
-    "text": "La personne qui a le dernier chiffre de batterie le plus bas prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà embrassé quelqu’un dans une voiture choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_051",
-    "text": "Tout le monde choisit un surnom pour le prochain tour. La dernière personne prête prend une petite gorgée.",
+    "text": "Tout le monde pointe la personne qui serait la plus dangereuse sur une application de rencontre.",
     "category": "drink"
   },
   {
     "id": "boire_052",
-    "text": "Les personnes qui ont déjà dormi pendant un film au cinéma prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà envoyé un message après minuit qu’elles n’auraient jamais envoyé le jour choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_053",
-    "text": "Choisis une personne : échangez vos rôles pour le prochain défi.",
+    "text": "La personne qui a le plus beau sourire selon le groupe choisit quelqu’un pour trinquer.",
     "category": "drink"
   },
   {
     "id": "boire_054",
-    "text": "Les personnes qui ont déjà appelé quelqu’un par le mauvais prénom prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà eu une relation secrète choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_055",
-    "text": "La personne qui cuisine le moins distribue deux petites gorgées.",
+    "text": "Tout le monde raconte son pire turn-off ou passe sans pénalité.",
     "category": "drink"
   },
   {
     "id": "boire_056",
-    "text": "Tout le monde qui a déjà regretté une coupe de cheveux prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà eu envie d’embrasser quelqu’un pendant une dispute choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_057",
-    "text": "Fais un toast de dix secondes. Si le groupe n’applaudit pas, petite gorgée.",
+    "text": "La personne qui reçoit le plus de votes « meilleur flirt » choisit un toast collectif facultatif.",
     "category": "drink"
   },
   {
     "id": "boire_058",
-    "text": "Les personnes qui ont déjà menti à « je suis en route » prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà menti en disant « je ne cherche rien de sérieux » choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_059",
-    "text": "La personne qui possède le plus vieil objet sur elle distribue une petite gorgée.",
+    "text": "Tout le monde vote pour la personne qui paraît la plus susceptible d’envoyer un nude.",
     "category": "drink"
   },
   {
     "id": "boire_060",
-    "text": "Tout le monde qui a déjà oublié son chargeur en voyage prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà eu une conversation très explicite sans rencontrer la personne choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_061",
-    "text": "Choisis une chanson et fredonne-la. Personne ne trouve : petite gorgée.",
+    "text": "La personne la plus mystérieuse choisit quelqu’un pour trinquer.",
     "category": "drink"
   },
   {
     "id": "boire_062",
-    "text": "Les personnes qui ont déjà fait une capture d’écran par accident prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà été attirées par quelqu’un uniquement à cause de sa voix choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_063",
-    "text": "La personne qui a le plus de contacts non enregistrés prend une petite gorgée.",
+    "text": "Tout le monde dit quel détail attire son regard en premier, ou passe.",
     "category": "drink"
   },
   {
     "id": "boire_064",
-    "text": "Tout le monde qui a déjà mangé directement dans la casserole prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà eu des sentiments après avoir promis que ce serait seulement physique choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_065",
-    "text": "Choisis un joueur : vous devez inventer une histoire mot par mot. Premier blocage : petite gorgée.",
+    "text": "La personne qui pense avoir le meilleur goût en matière de crush choisit quelqu’un pour trinquer.",
     "category": "drink"
   },
   {
     "id": "boire_066",
-    "text": "Les personnes qui ont déjà mis une alarme puis l’ont ignorée prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà regretté de ne pas avoir tenté leur chance choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_067",
-    "text": "La personne qui rit le plus fort distribue deux petites gorgées.",
+    "text": "Tout le monde désigne la personne qui pourrait le mieux cacher une aventure.",
     "category": "drink"
   },
   {
     "id": "boire_068",
-    "text": "Tout le monde qui a déjà oublié un sac quelque part prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà utilisé un faux prétexte pour dormir chez quelqu’un choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_069",
-    "text": "Propose une pose de photo de groupe. Ceux qui veulent participent ; sinon, faites la pose sans prendre de photo.",
+    "text": "La personne au dernier rendez-vous le plus récent choisit une question osée pour elle-même ou passe.",
     "category": "drink"
   },
   {
     "id": "boire_070",
-    "text": "Les personnes qui ont déjà dit « cinq minutes » en sachant que c’était faux prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà été jalouses d’une personne avec qui elles n’étaient pas en couple choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_071",
-    "text": "La personne qui a le plus de conversations non lues prend une petite gorgée.",
+    "text": "Tout le monde choisit quelqu’un et trinque à son meilleur trait de caractère.",
     "category": "drink"
   },
   {
     "id": "boire_072",
-    "text": "Tout le monde qui préfère les vocaux aux appels prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà eu une aventure avec quelqu’un de beaucoup plus âgé choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_073",
-    "text": "Choisis une personne : dites le même mot à trois. Différents : vous trinquez.",
+    "text": "La personne qui a le dernier message le plus mystérieux choisit une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_074",
-    "text": "Les personnes qui ont déjà acheté quelque chose inutilement en ligne prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà eu envie d’une relation ouverte choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_075",
-    "text": "La personne qui a pris la dernière photo distribue une petite gorgée.",
+    "text": "Tout le monde vote pour la personne la plus susceptible de faire le premier pas.",
     "category": "drink"
   },
   {
     "id": "boire_076",
-    "text": "Tout le monde qui a déjà oublié le nom de quelqu’un juste après sa présentation prend une petite gorgée.",
+    "text": "Les personnes qui ont déjà fait l’amour dans un lieu risqué choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_077",
-    "text": "Raconte une anecdote vraie en dix secondes ou prends une petite gorgée.",
+    "text": "La personne qui rougit en premier après cette carte choisit quelqu’un pour trinquer.",
     "category": "drink"
   },
   {
     "id": "boire_078",
-    "text": "Les personnes qui ont déjà relancé une série depuis le début prennent une petite gorgée.",
+    "text": "Les personnes qui ont déjà été attirées par quelqu’un qu’elles ne supportaient pas choisissent une petite gorgée ou un point.",
     "category": "drink"
   },
   {
     "id": "boire_079",
-    "text": "La personne qui a le plus de clés sur elle prend une petite gorgée.",
+    "text": "Tout le monde donne un conseil de séduction à la personne de gauche.",
     "category": "drink"
   },
   {
     "id": "boire_080",
-    "text": "Tout le monde lève son verre : hydratation obligatoire entre les manches.",
+    "text": "Les personnes qui ont déjà caché une aventure à tous leurs proches choisissent une petite gorgée ou un point.",
     "category": "drink"
   }
 ]
