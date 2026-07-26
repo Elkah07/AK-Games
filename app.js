@@ -8512,3 +8512,499 @@ finishMegaTurn = function (success) {
   game.revealed = false;
   renderMegaCurrent();
 };
+
+/* =========================================================
+   AK'GAMES V2.7 — PLAIDE TA CAUSE
+   500 causes, thèmes, niveaux, votes secrets et causes perso
+   ========================================================= */
+
+const AK_PLEAD_STORAGE_KEY = "akgames:plaide-cause:custom:v1";
+const AK_PLEAD_THEMES = [
+  { id: "food", icon: "🍕", label: "Nourriture" },
+  { id: "digital", icon: "📱", label: "Téléphone & réseaux" },
+  { id: "daily", icon: "🏠", label: "Quotidien" },
+  { id: "friends", icon: "🫂", label: "Amitié & groupe" },
+  { id: "relationships", icon: "💘", label: "Couple & relations" },
+  { id: "work", icon: "💼", label: "Travail & études" },
+  { id: "party_travel", icon: "🎉", label: "Soirées & vacances" },
+  { id: "popculture", icon: "🎬", label: "Culture populaire" },
+  { id: "laws", icon: "🏛️", label: "Lois absurdes" },
+  { id: "unpopular", icon: "😈", label: "Opinions impopulaires" },
+  { id: "world", icon: "🌍", label: "Changer le monde" },
+  { id: "impossible", icon: "🌀", label: "Complètement indéfendable" }
+];
+const AK_PLEAD_DIFFICULTIES = [
+  { id: "defendable", icon: "🌱", label: "Défendable", helper: "Une opinion contestable mais raisonnable." },
+  { id: "spicy", icon: "🔥", label: "Corsé", helper: "Une position franchement impopulaire." },
+  { id: "impossible", icon: "☠️", label: "Mission impossible", helper: "Une absurdité à rendre presque logique." }
+];
+
+if (typeof V014_GAME_CONFIGS !== "undefined" && V014_GAME_CONFIGS["Plaide ta cause"]) {
+  Object.assign(V014_GAME_CONFIGS["Plaide ta cause"], {
+    description: "Défends une opinion imposée, puis laisse le groupe noter secrètement ta plaidoirie.",
+    defaultRounds: 10,
+    timer: 60
+  });
+}
+
+function akPleadIsGame(game = state.megaGame) {
+  return Boolean(game && game.gameName === "Plaide ta cause");
+}
+
+function akPleadThemeMeta(id) {
+  return AK_PLEAD_THEMES.find(item => item.id === id) || AK_PLEAD_THEMES[0];
+}
+
+function akPleadDifficultyMeta(id) {
+  return AK_PLEAD_DIFFICULTIES.find(item => item.id === id) || AK_PLEAD_DIFFICULTIES[0];
+}
+
+function akPleadNormalizeThemes(values) {
+  const allowed = new Set(AK_PLEAD_THEMES.map(item => item.id));
+  const source = Array.isArray(values) ? values : [];
+  const result = source.filter(value => allowed.has(value));
+  return result.length ? [...new Set(result)] : AK_PLEAD_THEMES.map(item => item.id);
+}
+
+function akPleadNormalizeDifficulties(values) {
+  const allowed = new Set(AK_PLEAD_DIFFICULTIES.map(item => item.id));
+  const source = Array.isArray(values) ? values : [];
+  const result = source.filter(value => allowed.has(value));
+  return result.length ? [...new Set(result)] : AK_PLEAD_DIFFICULTIES.map(item => item.id);
+}
+
+function akPleadRoundChoices() {
+  return [5, 10, 20, 40, 60, 100];
+}
+
+function akPleadLoadCustomCauses() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(AK_PLEAD_STORAGE_KEY) || "[]");
+    if (!Array.isArray(parsed)) return [];
+    return parsed
+      .filter(item => item && typeof item.text === "string" && item.text.trim())
+      .map(item => ({
+        id: String(item.id || `plaide_custom_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`),
+        text: item.text.trim().slice(0, 240),
+        theme: akPleadThemeMeta(item.theme).id,
+        difficulty: akPleadDifficultyMeta(item.difficulty).id,
+        category: "debate",
+        custom: true
+      }));
+  } catch {
+    return [];
+  }
+}
+
+function akPleadSaveCustomCauses(items) {
+  try {
+    localStorage.setItem(AK_PLEAD_STORAGE_KEY, JSON.stringify((items || []).slice(0, 250)));
+  } catch (error) {
+    console.warn("Impossible d’enregistrer les causes personnalisées.", error);
+  }
+}
+
+function akPleadCreateCustomCause(text, theme, difficulty) {
+  const clean = String(text || "").trim().replace(/\s+/g, " ").slice(0, 240);
+  if (!clean) return null;
+  return {
+    id: `plaide_custom_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+    text: /[.!?…]$/.test(clean) ? clean : `${clean}.`,
+    theme: akPleadThemeMeta(theme).id,
+    difficulty: akPleadDifficultyMeta(difficulty).id,
+    category: "debate",
+    custom: true
+  };
+}
+
+function akPleadSetupMarkup(game, { readOnly = false } = {}) {
+  const selectedThemes = akPleadNormalizeThemes(game.pleadThemes);
+  const selectedDifficulties = akPleadNormalizeDifficulties(game.pleadDifficulties);
+  const customCount = game.pleadCustomCauses?.length || 0;
+  const disabled = readOnly ? "disabled" : "";
+  return `
+    <section class="card plead-settings-card">
+      <h2 class="section-title">Choisir les thèmes</h2>
+      <p class="helper">Un seul, plusieurs ou tous. Le tirage reste équilibré entre les thèmes sélectionnés.</p>
+      <div class="plead-chip-grid top-gap">
+        ${AK_PLEAD_THEMES.map(theme => `<button type="button" class="plead-select-chip ${selectedThemes.includes(theme.id) ? "active" : ""}" data-plead-theme="${theme.id}" ${disabled}><span>${theme.icon}</span><strong>${escapeHtml(theme.label)}</strong></button>`).join("")}
+      </div>
+      <div class="toolbar top-gap">
+        <button type="button" class="secondary-btn" data-plead-themes-all ${disabled}>Tout sélectionner</button>
+        <button type="button" class="secondary-btn" data-plead-themes-random ${disabled}>Mélange surprise</button>
+      </div>
+    </section>
+
+    <section class="card plead-settings-card">
+      <h2 class="section-title">Niveau des causes</h2>
+      <p class="helper">Tu peux en choisir un, deux ou les trois.</p>
+      <div class="plead-level-grid top-gap">
+        ${AK_PLEAD_DIFFICULTIES.map(level => `<button type="button" class="plead-level-card level-${level.id} ${selectedDifficulties.includes(level.id) ? "active" : ""}" data-plead-difficulty="${level.id}" ${disabled}><span>${level.icon}</span><div><strong>${escapeHtml(level.label)}</strong><small>${escapeHtml(level.helper)}</small></div></button>`).join("")}
+      </div>
+    </section>
+
+    <section class="card plead-settings-card">
+      <h2 class="section-title">✍️ Ajouter vos propres causes</h2>
+      <p class="helper">Elles restent sur cet appareil. En multijoueur, les causes de l’hôte sont envoyées à toute la room pour la partie.</p>
+      <div class="form-group top-gap"><label for="pleadCustomText">Opinion à défendre</label><textarea id="pleadCustomText" class="text-input" rows="3" maxlength="240" placeholder="Les vacances devraient toujours commencer un mercredi." ${disabled}></textarea></div>
+      <div class="plead-custom-fields top-gap">
+        <div class="form-group"><label for="pleadCustomTheme">Thème</label><select id="pleadCustomTheme" class="text-input" ${disabled}>${AK_PLEAD_THEMES.map(theme => `<option value="${theme.id}">${theme.icon} ${escapeHtml(theme.label)}</option>`).join("")}</select></div>
+        <div class="form-group"><label for="pleadCustomDifficulty">Niveau</label><select id="pleadCustomDifficulty" class="text-input" ${disabled}>${AK_PLEAD_DIFFICULTIES.map(level => `<option value="${level.id}">${level.icon} ${escapeHtml(level.label)}</option>`).join("")}</select></div>
+      </div>
+      <button id="addPleadCustom" type="button" class="secondary-btn full top-gap" ${disabled}>Ajouter la cause</button>
+      <label class="option-card top-gap ${customCount ? "" : "disabled-option"}"><input id="includePleadCustom" type="checkbox" ${game.pleadIncludeCustom && customCount ? "checked" : ""} ${customCount && !readOnly ? "" : "disabled"}><span><strong>Inclure mes causes (${customCount})</strong><br><span class="helper">Elles seront mélangées aux causes officielles.</span></span></label>
+      ${customCount ? `<details class="top-gap"><summary>Gérer mes ${customCount} cause${customCount > 1 ? "s" : ""}</summary><div class="plead-custom-list top-gap">${game.pleadCustomCauses.map(item => { const theme = akPleadThemeMeta(item.theme); const level = akPleadDifficultyMeta(item.difficulty); return `<article class="plead-custom-row"><div><span>${theme.icon} ${escapeHtml(theme.label)} · ${level.icon} ${escapeHtml(level.label)}</span><p>${escapeHtml(item.text)}</p></div>${readOnly ? "" : `<button type="button" class="secondary-btn" data-remove-plead-custom="${escapeHtml(item.id)}">Supprimer</button>`}</article>`; }).join("")}</div></details>` : ""}
+    </section>`;
+}
+
+function akPleadBindSetup(game, { readOnly = false } = {}) {
+  if (readOnly) return;
+  document.querySelectorAll("[data-plead-theme]").forEach(button => button.addEventListener("click", () => {
+    const id = button.dataset.pleadTheme;
+    const selected = akPleadNormalizeThemes(game.pleadThemes);
+    const next = selected.includes(id) ? selected.filter(value => value !== id) : [...selected, id];
+    if (!next.length) return alert("Garde au moins un thème sélectionné.");
+    game.pleadThemes = akPleadNormalizeThemes(next);
+    renderMegaSetup();
+  }));
+  document.querySelector("[data-plead-themes-all]")?.addEventListener("click", () => {
+    game.pleadThemes = AK_PLEAD_THEMES.map(item => item.id);
+    renderMegaSetup();
+  });
+  document.querySelector("[data-plead-themes-random]")?.addEventListener("click", () => {
+    game.pleadThemes = shuffleArray(AK_PLEAD_THEMES.map(item => item.id)).slice(0, 4);
+    renderMegaSetup();
+  });
+  document.querySelectorAll("[data-plead-difficulty]").forEach(button => button.addEventListener("click", () => {
+    const id = button.dataset.pleadDifficulty;
+    const selected = akPleadNormalizeDifficulties(game.pleadDifficulties);
+    const next = selected.includes(id) ? selected.filter(value => value !== id) : [...selected, id];
+    if (!next.length) return alert("Garde au moins un niveau sélectionné.");
+    game.pleadDifficulties = akPleadNormalizeDifficulties(next);
+    renderMegaSetup();
+  }));
+  document.querySelector("#includePleadCustom")?.addEventListener("change", event => {
+    game.pleadIncludeCustom = Boolean(event.target.checked);
+  });
+  document.querySelector("#addPleadCustom")?.addEventListener("click", () => {
+    const item = akPleadCreateCustomCause(
+      document.querySelector("#pleadCustomText")?.value,
+      document.querySelector("#pleadCustomTheme")?.value,
+      document.querySelector("#pleadCustomDifficulty")?.value
+    );
+    if (!item) return alert("Écris une cause avant de l’ajouter.");
+    const duplicate = game.pleadCustomCauses.some(existing => existing.text.trim().toLocaleLowerCase("fr") === item.text.trim().toLocaleLowerCase("fr"));
+    if (duplicate) return alert("Cette cause existe déjà dans tes causes personnalisées.");
+    game.pleadCustomCauses.push(item);
+    game.pleadIncludeCustom = true;
+    akPleadSaveCustomCauses(game.pleadCustomCauses);
+    renderMegaSetup();
+  });
+  document.querySelectorAll("[data-remove-plead-custom]").forEach(button => button.addEventListener("click", () => {
+    game.pleadCustomCauses = game.pleadCustomCauses.filter(item => item.id !== button.dataset.removePleadCustom);
+    if (!game.pleadCustomCauses.length) game.pleadIncludeCustom = false;
+    akPleadSaveCustomCauses(game.pleadCustomCauses);
+    renderMegaSetup();
+  }));
+}
+
+function akPleadBuildPool(rawPool, game) {
+  const themes = new Set(akPleadNormalizeThemes(game.pleadThemes));
+  const difficulties = new Set(akPleadNormalizeDifficulties(game.pleadDifficulties));
+  const official = (Array.isArray(rawPool) ? rawPool : []).filter(item => themes.has(item.theme) && difficulties.has(item.difficulty));
+  const custom = game.pleadIncludeCustom
+    ? (game.pleadCustomCauses || []).filter(item => themes.has(item.theme) && difficulties.has(item.difficulty))
+    : [];
+  return [...official, ...custom];
+}
+
+function akPleadSelectBalanced(pool, count, historyKey) {
+  const safeCount = Math.min(Math.max(0, Number(count || 0)), pool.length);
+  if (!safeCount) return [];
+  const groups = pool.reduce((result, item) => {
+    const key = `${item.theme || "daily"}:${item.difficulty || "defendable"}`;
+    (result[key] ||= []).push(item);
+    return result;
+  }, {});
+  const keys = shuffleArray(Object.keys(groups));
+  const base = Math.floor(safeCount / Math.max(1, keys.length));
+  const extra = safeCount % Math.max(1, keys.length);
+  let selected = [];
+  keys.forEach((key, index) => {
+    const quota = Math.min(groups[key].length, base + (index < extra ? 1 : 0));
+    if (quota) selected.push(...selectFreshItems(groups[key], quota, `${historyKey}:${key}`));
+  });
+  if (selected.length < safeCount) {
+    const used = new Set(selected.map(item => item.id));
+    const remaining = pool.filter(item => !used.has(item.id));
+    selected.push(...selectFreshItems(remaining, Math.min(safeCount - selected.length, remaining.length), `${historyKey}:extra`));
+  }
+  return shuffleArray(selected).slice(0, safeCount);
+}
+
+function akPleadBadges(item) {
+  const theme = akPleadThemeMeta(item?.theme);
+  const level = akPleadDifficultyMeta(item?.difficulty);
+  return `<div class="plead-question-badges"><span>${theme.icon} ${escapeHtml(theme.label)}</span><span class="plead-level-badge level-${level.id}">${level.icon} ${escapeHtml(level.label)}</span>${item?.custom ? `<span>✍️ Personnalisée</span>` : ""}</div>`;
+}
+
+const akPleadBaseResetMegaGame = resetMegaGame;
+resetMegaGame = function (gameName, replayConfig = {}) {
+  akPleadBaseResetMegaGame(gameName, replayConfig);
+  const game = state.megaGame;
+  if (!akPleadIsGame(game)) return;
+  game.pleadThemes = akPleadNormalizeThemes(replayConfig.pleadThemes);
+  game.pleadDifficulties = akPleadNormalizeDifficulties(replayConfig.pleadDifficulties);
+  game.pleadCustomCauses = akPleadLoadCustomCauses();
+  game.pleadIncludeCustom = replayConfig.pleadIncludeCustom !== false && game.pleadCustomCauses.length > 0;
+  game.roundCount = Number(replayConfig.roundCount || 10);
+  game.durationSeconds = Number(replayConfig.durationSeconds || 60);
+  game.pleadPhase = "speech";
+  game.pleadVoters = [];
+  game.pleadCurrentVoterIndex = 0;
+  game.pleadVotes = {};
+};
+
+const akPleadBaseRenderMegaSetup = renderMegaSetup;
+renderMegaSetup = function () {
+  const game = state.megaGame;
+  if (!akPleadIsGame(game) || state.mode !== "single") return akPleadBaseRenderMegaSetup();
+  clearV014Timer();
+  title.textContent = "Plaide ta cause";
+  setBackVisible(true);
+  const roundChoices = akPleadRoundChoices();
+  if (!roundChoices.includes(Number(game.roundCount))) game.roundCount = 10;
+  screen.innerHTML = `
+    <section class="game-cover game-cover-mega engine-turn plead-cover"><span class="game-cover-icon">⚖️</span><div><small>BLUFF & ARGUMENTATION</small><h2>Plaide ta cause</h2><p>Défends une opinion imposée, même si tu n’y crois pas. Le groupe note ensuite ta plaidoirie en secret.</p></div></section>
+    <section class="card setup-card-v07">
+      <div class="form-group"><label for="megaRounds">Nombre de plaidoiries</label><select id="megaRounds" class="text-input">${roundChoices.map(value => `<option value="${value}" ${Number(game.roundCount) === value ? "selected" : ""}>${value} cause${value > 1 ? "s" : ""}</option>`).join("")}</select></div>
+      <div class="form-group top-gap"><label for="megaDuration">Temps de parole</label><select id="megaDuration" class="text-input">${[30,45,60,90].map(value => `<option value="${value}" ${Number(game.durationSeconds) === value ? "selected" : ""}>${value} secondes</option>`).join("")}</select></div>
+    </section>
+    ${akPleadSetupMarkup(game)}
+    <div class="notice"><strong>Vote secret après chaque plaidoirie :</strong><br>Rejetée = 0 point · Presque convaincu = 1 point · Plaidoirie brillante = 2 points par juré.</div>
+    <button id="startMegaGame" class="primary-btn full">Ouvrir le tribunal</button>`;
+  document.querySelector("#megaRounds")?.addEventListener("change", event => game.roundCount = Number(event.target.value));
+  document.querySelector("#megaDuration")?.addEventListener("change", event => game.durationSeconds = Number(event.target.value));
+  akPleadBindSetup(game);
+  document.querySelector("#startMegaGame")?.addEventListener("click", startMegaGame);
+};
+
+const akPleadBaseStartMegaGame = startMegaGame;
+startMegaGame = async function () {
+  const game = state.megaGame;
+  if (!akPleadIsGame(game) || state.mode !== "single") return akPleadBaseStartMegaGame();
+  screen.innerHTML = `<div class="notice">Préparation du dossier et tirage des causes…</div>`;
+  try {
+    const rawPool = await loadJsonFile(game.config.data, "Impossible de charger les causes.");
+    const pool = akPleadBuildPool(rawPool, game);
+    if (!pool.length) throw new Error("Aucune cause ne correspond aux thèmes et niveaux choisis.");
+    const key = `solo:plead:${akPleadNormalizeThemes(game.pleadThemes).join("-")}:${akPleadNormalizeDifficulties(game.pleadDifficulties).join("-")}:${game.pleadIncludeCustom}`;
+    game.items = akPleadSelectBalanced(pool, Math.min(game.roundCount, pool.length), key);
+    game.currentIndex = 0;
+    game.scores = v014ScoreMap();
+    game.rounds = [];
+    game.pleadPhase = "speech";
+    game.pleadVoters = [];
+    game.pleadCurrentVoterIndex = 0;
+    game.pleadVotes = {};
+    game.currentResult = null;
+    renderMegaCurrent();
+  } catch (error) {
+    console.error(error);
+    alert(error.message || "Impossible de lancer Plaide ta cause.");
+    renderMegaSetup();
+  }
+};
+
+function akPleadCurrentSpeaker(game) {
+  return state.players[game.currentIndex % Math.max(1, state.players.length)] || null;
+}
+
+function akPleadStartVoting({ skipped = false, timedOut = false } = {}) {
+  const game = state.megaGame;
+  if (!akPleadIsGame(game)) return;
+  clearV014Timer();
+  const speaker = akPleadCurrentSpeaker(game);
+  const item = game.items[game.currentIndex];
+  if (skipped) {
+    game.currentResult = { itemId: item?.id || "", playerId: speaker?.id || null, skipped: true, timedOut: false, points: 0, votes: {}, counts: { 0: 0, 1: 0, 2: 0 }, average: 0 };
+    game.rounds.push(game.currentResult);
+    game.pleadPhase = "result";
+    renderMegaTurn();
+    return;
+  }
+  game.pleadVoters = state.players.filter(player => player.id !== speaker?.id).map(player => player.id);
+  game.pleadCurrentVoterIndex = 0;
+  game.pleadVotes = {};
+  game.pleadTimedOut = Boolean(timedOut);
+  game.pleadPhase = "vote-gate";
+  renderMegaTurn();
+}
+
+function akPleadRecordVote(value) {
+  const game = state.megaGame;
+  if (!akPleadIsGame(game)) return;
+  const voterId = game.pleadVoters[game.pleadCurrentVoterIndex];
+  if (!voterId) return akPleadCompleteVoting();
+  game.pleadVotes[voterId] = Math.max(0, Math.min(2, Number(value || 0)));
+  game.pleadCurrentVoterIndex += 1;
+  game.pleadPhase = game.pleadCurrentVoterIndex >= game.pleadVoters.length ? "result" : "vote-gate";
+  if (game.pleadPhase === "result") akPleadCompleteVoting();
+  else renderMegaTurn();
+}
+
+function akPleadCompleteVoting() {
+  const game = state.megaGame;
+  if (!akPleadIsGame(game)) return;
+  const speaker = akPleadCurrentSpeaker(game);
+  const item = game.items[game.currentIndex];
+  const votes = { ...(game.pleadVotes || {}) };
+  const values = Object.values(votes).map(Number);
+  const points = values.reduce((sum, value) => sum + value, 0);
+  const counts = { 0: 0, 1: 0, 2: 0 };
+  values.forEach(value => counts[value] = Number(counts[value] || 0) + 1);
+  const average = values.length ? points / values.length : 0;
+  if (speaker?.id) game.scores[speaker.id] = Number(game.scores[speaker.id] || 0) + points;
+  game.currentResult = {
+    itemId: item?.id || "",
+    playerId: speaker?.id || null,
+    skipped: false,
+    timedOut: Boolean(game.pleadTimedOut),
+    points,
+    votes,
+    counts,
+    average
+  };
+  game.rounds.push(game.currentResult);
+  game.pleadPhase = "result";
+  renderMegaTurn();
+}
+
+function akPleadRenderSpeech(game, item, speaker) {
+  game.pleadPhase = "speech";
+  screen.innerHTML = `
+    ${v014Progress(game, "Cause")}
+    <section class="plead-round-card">
+      ${akPleadBadges(item)}
+      <div class="plead-speaker"><span>${avatarById(speaker?.avatarId).emoji}</span><div><small>LA PAROLE EST À</small><strong>${escapeHtml(speaker?.name || "Joueur")}</strong></div></div>
+      <div class="plead-gavel">⚖️</div>
+      <h2>${escapeHtml(item?.text || "Cause surprise")}</h2>
+      <p>Tu dois défendre cette opinion, même si elle te semble indéfendable. Arguments, exemples et mauvaise foi élégante sont autorisés.</p>
+      <div class="mega-mini-timer plead-timer"><strong id="v014Countdown">${game.durationSeconds}</strong><span>secondes</span><div class="progress-track"><div id="v014TimerFill" class="progress-fill" style="width:100%"></div></div></div>
+    </section>
+    <section class="decision-grid"><button id="pleadSpeechDone" class="primary-btn">🎤 Plaidoirie terminée</button><button id="pleadSkipCause" class="secondary-btn">Passer cette cause</button></section>`;
+  document.querySelector("#pleadSpeechDone")?.addEventListener("click", () => akPleadStartVoting());
+  document.querySelector("#pleadSkipCause")?.addEventListener("click", () => akPleadStartVoting({ skipped: true }));
+  startV014Timer(Date.now() + game.durationSeconds * 1000, "#v014Countdown", () => akPleadStartVoting({ timedOut: true }), game.durationSeconds);
+}
+
+function akPleadRenderVoteGate(game, item, speaker) {
+  const voterId = game.pleadVoters[game.pleadCurrentVoterIndex];
+  const voter = state.players.find(player => player.id === voterId);
+  screen.innerHTML = `
+    ${v014Progress(game, "Cause")}
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(voter?.avatarId).emoji}</div><span class="category-chip">JURÉ ${game.pleadCurrentVoterIndex + 1}/${game.pleadVoters.length}</span><h2>${escapeHtml(voter?.name || "Juré")}, à toi de voter</h2><p>Prends le téléphone seul·e. Ton vote sur la plaidoirie de ${escapeHtml(speaker?.name || "la personne")} restera secret.</p><button id="openPleadVote" class="primary-btn">Ouvrir mon bulletin</button></section>`;
+  document.querySelector("#openPleadVote")?.addEventListener("click", () => {
+    game.pleadPhase = "vote";
+    renderMegaTurn();
+  });
+}
+
+function akPleadRenderVote(game, item, speaker) {
+  const voterId = game.pleadVoters[game.pleadCurrentVoterIndex];
+  const voter = state.players.find(player => player.id === voterId);
+  screen.innerHTML = `
+    ${v014Progress(game, "Cause")}
+    <section class="plead-vote-card">
+      <span class="category-chip">🔒 VOTE SECRET DE ${escapeHtml(voter?.name || "JURÉ").toUpperCase()}</span>
+      <small>${escapeHtml(speaker?.name || "La personne")} défendait :</small>
+      <h2>${escapeHtml(item?.text || "Cause surprise")}</h2>
+      <p>Note uniquement la qualité de la plaidoirie, pas ton opinion personnelle sur la cause.</p>
+    </section>
+    <section class="plead-vote-grid">
+      <button type="button" data-plead-vote="0" class="plead-vote-btn vote-rejected"><span>🚫</span><strong>Rejetée</strong><small>0 point</small></button>
+      <button type="button" data-plead-vote="1" class="plead-vote-btn vote-almost"><span>🤔</span><strong>Presque convaincu</strong><small>1 point</small></button>
+      <button type="button" data-plead-vote="2" class="plead-vote-btn vote-brilliant"><span>✨</span><strong>Plaidoirie brillante</strong><small>2 points</small></button>
+    </section>`;
+  document.querySelectorAll("[data-plead-vote]").forEach(button => button.addEventListener("click", () => akPleadRecordVote(Number(button.dataset.pleadVote))));
+}
+
+function akPleadRenderResult(game, item, speaker) {
+  const result = game.currentResult || {};
+  if (result.skipped) {
+    screen.innerHTML = `
+      ${v014Progress(game, "Cause")}
+      <section class="reveal-stage reveal-v07 plead-result-card"><span class="game-cover-icon">🧑‍⚖️</span>${akPleadBadges(item)}<h2>Cause passée</h2><p>${escapeHtml(speaker?.name || "La personne")} ne marque aucun point sur cette manche.</p></section>
+      <button id="nextPleadRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le verdict final" : "Cause suivante"}</button>`;
+  } else {
+    const jurors = Object.keys(result.votes || {}).length;
+    screen.innerHTML = `
+      ${v014Progress(game, "Cause")}
+      <section class="winner-stage winner-stage-v07 plead-result-card"><div class="winner-crown">⚖️✨</div>${akPleadBadges(item)}<h2>${Number(result.points || 0)} point${Number(result.points || 0) > 1 ? "s" : ""} pour ${escapeHtml(speaker?.name || "la défense")}</h2><p>Moyenne du jury : <strong>${Number(result.average || 0).toFixed(1)}/2</strong>${result.timedOut ? " · Le temps était écoulé." : ""}</p></section>
+      <section class="plead-vote-distribution">
+        <article><span>🚫</span><strong>${Number(result.counts?.[0] || 0)}</strong><small>Rejetée${Number(result.counts?.[0] || 0) > 1 ? "s" : ""}</small></article>
+        <article><span>🤔</span><strong>${Number(result.counts?.[1] || 0)}</strong><small>Presque convaincu${Number(result.counts?.[1] || 0) > 1 ? "s" : ""}</small></article>
+        <article><span>✨</span><strong>${Number(result.counts?.[2] || 0)}</strong><small>Brillante${Number(result.counts?.[2] || 0) > 1 ? "s" : ""}</small></article>
+      </section>
+      <div class="notice">${jurors} juré${jurors > 1 ? "s ont" : " a"} voté en secret. Les votes individuels ne sont pas révélés.</div>
+      <button id="nextPleadRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le verdict final" : "Cause suivante"}</button>`;
+  }
+  document.querySelector("#nextPleadRound")?.addEventListener("click", () => {
+    game.currentIndex += 1;
+    game.pleadPhase = "speech";
+    game.pleadVoters = [];
+    game.pleadCurrentVoterIndex = 0;
+    game.pleadVotes = {};
+    game.currentResult = null;
+    renderMegaCurrent();
+  });
+}
+
+const akPleadBaseRenderMegaTurn = renderMegaTurn;
+renderMegaTurn = function () {
+  const game = state.megaGame;
+  if (!akPleadIsGame(game)) return akPleadBaseRenderMegaTurn();
+  clearV014Timer();
+  const item = game.items[game.currentIndex];
+  const speaker = akPleadCurrentSpeaker(game);
+  title.textContent = "Plaide ta cause";
+  setBackVisible(false);
+  if (game.pleadPhase === "vote-gate") return akPleadRenderVoteGate(game, item, speaker);
+  if (game.pleadPhase === "vote") return akPleadRenderVote(game, item, speaker);
+  if (game.pleadPhase === "result") return akPleadRenderResult(game, item, speaker);
+  return akPleadRenderSpeech(game, item, speaker);
+};
+
+const akPleadBaseRenderMegaFinal = renderMegaFinal;
+renderMegaFinal = function () {
+  const game = state.megaGame;
+  if (!akPleadIsGame(game)) return akPleadBaseRenderMegaFinal();
+  clearV014Timer();
+  const ranking = [...state.players].sort((a, b) => Number(game.scores[b.id] || 0) - Number(game.scores[a.id] || 0));
+  const best = Math.max(0, ...ranking.map(player => Number(game.scores[player.id] || 0)));
+  const winners = ranking.filter(player => Number(game.scores[player.id] || 0) === best && game.rounds.length);
+  const brilliantByPlayer = Object.fromEntries(state.players.map(player => [player.id, 0]));
+  game.rounds.forEach(round => {
+    if (round?.playerId) brilliantByPlayer[round.playerId] = Number(brilliantByPlayer[round.playerId] || 0) + Number(round.counts?.[2] || 0);
+  });
+  const mostBrilliant = [...state.players].sort((a, b) => Number(brilliantByPlayer[b.id] || 0) - Number(brilliantByPlayer[a.id] || 0))[0];
+  title.textContent = "Verdict final";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="winner-stage winner-stage-v07 mega-final-stage"><div class="winner-crown">⚖️🏆</div><h2>${winners.length ? winners.map(player => escapeHtml(player.name)).join(" et ") : "Le tribunal est levé"}</h2><p>${winners.length ? `${winners.length > 1 ? "remportent" : "remporte"} le titre de meilleure défense.` : "Toutes les causes ont été plaidées."}</p></section>
+    <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
+    ${mostBrilliant && Number(brilliantByPlayer[mostBrilliant.id] || 0) > 0 ? `<div class="notice">✨ <strong>${escapeHtml(mostBrilliant.name)}</strong> a reçu le plus de votes « Plaidoirie brillante » : ${Number(brilliantByPlayer[mostBrilliant.id] || 0)}.</div>` : ""}
+    <div class="toolbar"><button id="replayMega" class="secondary-btn">Rejouer</button><button id="otherMega" class="primary-btn">Autre jeu</button></div>`;
+  document.querySelector("#replayMega")?.addEventListener("click", () => {
+    const replay = {
+      roundCount: game.roundCount,
+      durationSeconds: game.durationSeconds,
+      pleadThemes: game.pleadThemes,
+      pleadDifficulties: game.pleadDifficulties,
+      pleadIncludeCustom: game.pleadIncludeCustom
+    };
+    resetMegaGame("Plaide ta cause", replay);
+    renderMegaSetup();
+  });
+  document.querySelector("#otherMega")?.addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
+};

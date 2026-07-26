@@ -1,302 +1,3502 @@
 [
   {
     "id": "plaide_001",
-    "text": "Les céréales se mangent mieux le soir que le matin.",
+    "text": "Le petit-déjeuner salé est supérieur au petit-déjeuner sucré.",
+    "theme": "food",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_002",
-    "text": "Les messages vocaux devraient être limités à trente secondes.",
+    "text": "Le brunch mérite d’être considéré comme un vrai repas.",
+    "theme": "food",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_003",
-    "text": "Les chaussettes dépareillées sont plus élégantes.",
+    "text": "Partager un dessert est presque toujours une mauvaise idée.",
+    "theme": "food",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_004",
-    "text": "Arriver cinq minutes en retard devrait être considéré comme ponctuel.",
+    "text": "Le fromage peut parfaitement remplacer un dessert.",
+    "theme": "food",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_005",
-    "text": "Le lundi devrait commencer à midi.",
+    "text": "Les restes du lendemain sont parfois meilleurs que le plat d’origine.",
+    "theme": "food",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_006",
-    "text": "Le ketchup mérite une place dans la haute gastronomie.",
+    "text": "Un repas sans pain donne l’impression qu’il manque quelque chose.",
+    "theme": "food",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_007",
-    "text": "Les vacances à la montagne sont meilleures que la plage.",
+    "text": "Le menu enfant devrait être accessible à tous les âges.",
+    "theme": "food",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_008",
-    "text": "Regarder une série en accéléré est acceptable.",
+    "text": "Les frites sont meilleures quand elles sont légèrement molles.",
+    "theme": "food",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_009",
-    "text": "Le dessert devrait toujours être servi avant le plat.",
+    "text": "Un bon sandwich peut être meilleur qu’un repas gastronomique.",
+    "theme": "food",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_010",
-    "text": "Les plantes sont de meilleures colocataires que les humains.",
+    "text": "Le petit-déjeuner devrait pouvoir être servi toute la journée.",
+    "theme": "food",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_011",
-    "text": "Les appels surprises devraient être interdits.",
+    "text": "Commander toujours le même plat au restaurant est une preuve de sagesse.",
+    "theme": "food",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_012",
-    "text": "Un pyjama peut être une tenue de sortie.",
+    "text": "La sauce compte davantage que l’accompagnement.",
+    "theme": "food",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_013",
-    "text": "Les spoilers devraient être punis par la loi.",
+    "text": "Le dernier morceau devrait revenir à la personne qui a cuisiné.",
+    "theme": "food",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_014",
-    "text": "Les chiens comprennent mieux les humains que l’inverse.",
+    "text": "Le dessert est la meilleure raison d’aller au restaurant.",
+    "theme": "food",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_015",
-    "text": "Le dernier morceau appartient automatiquement à la personne qui demande.",
+    "text": "La pizza à l’ananas est l’une des meilleures inventions culinaires.",
+    "theme": "food",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_016",
-    "text": "Le Wi-Fi est un besoin fondamental.",
+    "text": "Le ketchup peut sauver presque n’importe quel plat.",
+    "theme": "food",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_017",
-    "text": "Une sieste devrait être obligatoire au travail.",
+    "text": "Les pâtes trop cuites ont davantage de charme que les pâtes al dente.",
+    "theme": "food",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_018",
-    "text": "Les films de Noël peuvent se regarder toute l’année.",
+    "text": "Le chocolat blanc est le meilleur chocolat.",
+    "theme": "food",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_019",
-    "text": "Les frites froides ont un charme particulier.",
+    "text": "Les sushis devraient se manger avec une fourchette si on en a envie.",
+    "theme": "food",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_020",
-    "text": "Un anniversaire devrait durer une semaine.",
+    "text": "Le fromage fondu améliore absolument tout.",
+    "theme": "food",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_021",
-    "text": "Le canapé est une destination de vacances.",
+    "text": "Une raclette en plein été est une excellente idée.",
+    "theme": "food",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_022",
-    "text": "Les jeux de société révèlent la vraie personnalité.",
+    "text": "Le café décaféiné est plus intéressant que le café classique.",
+    "theme": "food",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_023",
-    "text": "Une pizza à l’ananas mérite le respect.",
+    "text": "Les boissons tièdes sont plus agréables que les boissons glacées.",
+    "theme": "food",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_024",
-    "text": "Les gens qui mettent dix alarmes sont courageux.",
+    "text": "Les céréales avec de l’eau sont une option parfaitement respectable.",
+    "theme": "food",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_025",
-    "text": "Le brunch est juste un petit-déjeuner qui se prend au sérieux.",
+    "text": "La mayonnaise mérite sa place dans davantage de desserts salés.",
+    "theme": "food",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_026",
-    "text": "Les chaussures devraient être facultatives en soirée.",
+    "text": "Les raisins secs améliorent les plats dans lesquels on les cache.",
+    "theme": "food",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_027",
-    "text": "On devrait pouvoir noter les conversations comme les séries.",
+    "text": "Le plat principal devrait toujours être choisi après le dessert.",
+    "theme": "food",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_028",
-    "text": "Le silence dans l’ascenseur est plus étrange que de parler.",
+    "text": "Les chips peuvent remplacer un vrai dîner de temps en temps.",
+    "theme": "food",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_029",
-    "text": "Les animaux devraient avoir un jour férié.",
+    "text": "Chaque logement devrait posséder une pièce réservée aux goûters.",
+    "theme": "food",
+    "difficulty": "impossible",
     "category": "debate"
   },
   {
     "id": "plaide_030",
-    "text": "Une playlist est une déclaration de personnalité.",
+    "text": "Les restaurants devraient servir le dessert avant de montrer la carte des plats.",
+    "theme": "food",
+    "difficulty": "impossible",
     "category": "debate"
   },
   {
     "id": "plaide_031",
-    "text": "Il faudrait un bouton « annuler » dans la vraie vie.",
+    "text": "Toute personne qui dit ne pas avoir faim devrait perdre le droit de goûter dans l’assiette des autres.",
+    "theme": "food",
+    "difficulty": "impossible",
     "category": "debate"
   },
   {
     "id": "plaide_032",
-    "text": "Les groupes de discussion devraient avoir un résumé automatique.",
+    "text": "Le fromage devrait être distribué gratuitement dans les transports en commun.",
+    "theme": "food",
+    "difficulty": "impossible",
     "category": "debate"
   },
   {
     "id": "plaide_033",
-    "text": "Les vêtements avec des poches méritent une récompense.",
+    "text": "Les anniversaires devraient obligatoirement comporter trois desserts différents.",
+    "theme": "food",
+    "difficulty": "impossible",
     "category": "debate"
   },
   {
     "id": "plaide_034",
-    "text": "La meilleure place est toujours au fond.",
+    "text": "Les menus devraient indiquer le niveau de regret probable après chaque plat.",
+    "theme": "food",
+    "difficulty": "impossible",
     "category": "debate"
   },
   {
     "id": "plaide_035",
-    "text": "Les petits-déjeuners salés sont supérieurs.",
+    "text": "Les légumes seraient plus populaires s’ils portaient des noms de super-héros.",
+    "theme": "food",
+    "difficulty": "impossible",
     "category": "debate"
   },
   {
     "id": "plaide_036",
-    "text": "Les cadeaux faits main sont toujours meilleurs.",
+    "text": "Les aliments ronds devraient légalement être découpés en carrés.",
+    "theme": "food",
+    "difficulty": "impossible",
     "category": "debate"
   },
   {
     "id": "plaide_037",
-    "text": "Le cinéma devrait autoriser les plaids.",
+    "text": "Chaque repas devrait commencer par une minute de silence pour les plats ratés.",
+    "theme": "food",
+    "difficulty": "impossible",
     "category": "debate"
   },
   {
     "id": "plaide_038",
-    "text": "Une bonne mauvaise blague vaut mieux qu’un silence gênant.",
+    "text": "Les personnes qui finissent les frites des autres devraient payer une taxe spéciale.",
+    "theme": "food",
+    "difficulty": "impossible",
     "category": "debate"
   },
   {
     "id": "plaide_039",
-    "text": "Les gens devraient annoncer quand ils veulent seulement se plaindre.",
+    "text": "La pizza devrait devenir une unité officielle de mesure.",
+    "theme": "food",
+    "difficulty": "impossible",
     "category": "debate"
   },
   {
     "id": "plaide_040",
-    "text": "Le mot de passe Wi-Fi devrait être affiché à l’entrée de chaque maison.",
+    "text": "Les restaurants devraient offrir un deuxième dîner aux clients encore indécis.",
+    "theme": "food",
+    "difficulty": "impossible",
     "category": "debate"
   },
   {
     "id": "plaide_041",
-    "text": "Il faudrait pouvoir mettre une conversation en pause.",
+    "text": "Les sauces devraient être servies dans des verres à pied.",
+    "theme": "food",
+    "difficulty": "impossible",
     "category": "debate"
   },
   {
     "id": "plaide_042",
-    "text": "Les disputes se règlent mieux autour d’un goûter.",
+    "text": "Toute réunion importante devrait être remplacée par un buffet.",
+    "theme": "food",
+    "difficulty": "impossible",
     "category": "debate"
   },
   {
     "id": "plaide_043",
-    "text": "Un trajet compte comme une sortie.",
+    "text": "Les messages vocaux devraient être limités à une minute.",
+    "theme": "digital",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_044",
-    "text": "Les personnes qui choisissent la musique contrôlent l’ambiance.",
+    "text": "Ne pas répondre immédiatement ne signifie pas qu’on ignore quelqu’un.",
+    "theme": "digital",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_045",
-    "text": "Un canapé-lit est une promesse rarement tenue.",
+    "text": "Les notifications devraient être désactivées par défaut.",
+    "theme": "digital",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_046",
-    "text": "La meilleure partie d’une fête est parfois le trajet du retour.",
+    "text": "Un appel surprise est plus stressant qu’un message inquiétant.",
+    "theme": "digital",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_047",
-    "text": "Les films trop longs devraient avoir un entracte.",
+    "text": "Il est acceptable de supprimer une publication qui ne reçoit pas assez de réactions.",
+    "theme": "digital",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_048",
-    "text": "Une photo floue peut être une bonne photo.",
+    "text": "Les groupes de discussion devraient avoir un résumé automatique chaque matin.",
+    "theme": "digital",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_049",
-    "text": "Les réunions sans nourriture devraient être interdites.",
+    "text": "Les vidéos courtes rendent les trajets plus supportables.",
+    "theme": "digital",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_050",
-    "text": "Le premier café ne compte pas comme une boisson.",
+    "text": "On devrait pouvoir mettre certaines conversations en pause sans vexer personne.",
+    "theme": "digital",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_051",
-    "text": "Les gens devraient avoir un générique de fin après une journée difficile.",
+    "text": "Le mode silencieux devrait être considéré comme une frontière sacrée.",
+    "theme": "digital",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_052",
-    "text": "Les notes vocales à vitesse x2 restent une écoute sincère.",
+    "text": "Les photos ratées sont souvent plus précieuses que les photos parfaites.",
+    "theme": "digital",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_053",
-    "text": "Le dimanche soir devrait être protégé par la Constitution.",
+    "text": "Un message avec seulement un point peut sembler agressif.",
+    "theme": "digital",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_054",
-    "text": "Les menus trop longs cachent toujours quelque chose.",
+    "text": "Les réseaux sociaux sont meilleurs quand on suit peu de comptes.",
+    "theme": "digital",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_055",
-    "text": "Les glaces en hiver sont meilleures.",
+    "text": "Les captures d’écran sont une forme moderne de mémoire collective.",
+    "theme": "digital",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_056",
-    "text": "Les vêtements confortables devraient gagner tous les concours de mode.",
+    "text": "Les applications devraient expliquer clairement pourquoi elles envoient chaque notification.",
+    "theme": "digital",
+    "difficulty": "defendable",
     "category": "debate"
   },
   {
     "id": "plaide_057",
-    "text": "Il faudrait pouvoir louer un ami pour porter les sacs.",
+    "text": "Lire un message sans répondre devrait compter comme une réponse.",
+    "theme": "digital",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_058",
-    "text": "Les plantes en plastique ont droit au respect.",
+    "text": "Les doubles messages ne devraient jamais être considérés comme gênants.",
+    "theme": "digital",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_059",
-    "text": "Le bouton « passer l’intro » a changé l’humanité.",
+    "text": "Les personnes qui appellent sans prévenir devraient laisser un message d’excuse.",
+    "theme": "digital",
+    "difficulty": "spicy",
     "category": "debate"
   },
   {
     "id": "plaide_060",
-    "text": "Un bon mème peut sauver une journée.",
+    "text": "Les influenceurs devraient afficher le temps réel passé à préparer chaque photo.",
+    "theme": "digital",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_061",
+    "text": "Les anciennes publications embarrassantes devraient rester accessibles à tous.",
+    "theme": "digital",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_062",
+    "text": "Le téléphone devrait automatiquement bloquer les messages envoyés après deux heures du matin.",
+    "theme": "digital",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_063",
+    "text": "Les personnes qui écrivent seulement « salut ça va » devraient annoncer directement ce qu’elles veulent.",
+    "theme": "digital",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_064",
+    "text": "Les stories de vacances devraient être limitées à cinq par jour.",
+    "theme": "digital",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_065",
+    "text": "Les messages vocaux écoutés en accéléré sont une preuve de respect du temps des autres.",
+    "theme": "digital",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_066",
+    "text": "Les applications de rencontre devraient afficher un taux de réponse réel.",
+    "theme": "digital",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_067",
+    "text": "Les photos de repas devraient être interdites tant que tout le monde n’est pas servi.",
+    "theme": "digital",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_068",
+    "text": "Les groupes familiaux devraient fermer automatiquement pendant les vacances.",
+    "theme": "digital",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_069",
+    "text": "Le dernier message d’une dispute devrait être choisi par tirage au sort.",
+    "theme": "digital",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_070",
+    "text": "Les personnes qui envoient « ? » après dix minutes devraient perdre leur clavier pendant une heure.",
+    "theme": "digital",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_071",
+    "text": "Chaque téléphone devrait applaudir lorsque son propriétaire le pose enfin.",
+    "theme": "digital",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_072",
+    "text": "Les réseaux sociaux devraient fermer tous les dimanches pour maintenance émotionnelle.",
+    "theme": "digital",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_073",
+    "text": "Les messages supprimés devraient être remplacés par une devinette.",
+    "theme": "digital",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_074",
+    "text": "Toute personne dépassant trois heures d’écran devrait recevoir un appel de sa grand-mère.",
+    "theme": "digital",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_075",
+    "text": "Les applications devraient afficher une alerte avant chaque décision regrettable.",
+    "theme": "digital",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_076",
+    "text": "Les téléphones devraient refuser les selfies lorsqu’ils détectent trop de tentatives.",
+    "theme": "digital",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_077",
+    "text": "Les mots de passe devraient être remplacés par une chorégraphie personnelle.",
+    "theme": "digital",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_078",
+    "text": "Chaque conversation de groupe devrait élire un ministre du contexte.",
+    "theme": "digital",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_079",
+    "text": "Les commentaires agressifs devraient être lus à voix haute par leur auteur devant sa famille.",
+    "theme": "digital",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_080",
+    "text": "Les téléphones devraient demander l’autorisation du groupe avant d’envoyer un message risqué.",
+    "theme": "digital",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_081",
+    "text": "Les filtres devraient ajouter automatiquement la mention « réalité légèrement négociée ».",
+    "theme": "digital",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_082",
+    "text": "Les applications devraient offrir un bouton « annuler ma journée numérique ».",
+    "theme": "digital",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_083",
+    "text": "Toute personne qui laisse 99 onglets ouverts devrait obtenir un diplôme d’archiviste.",
+    "theme": "digital",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_084",
+    "text": "Les réunions vidéo devraient se terminer dès que quelqu’un dit « vous m’entendez ? ».",
+    "theme": "digital",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_085",
+    "text": "Faire une sieste devrait être considéré comme une activité productive.",
+    "theme": "daily",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_086",
+    "text": "Le lit ne devrait jamais être fait les jours de repos.",
+    "theme": "daily",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_087",
+    "text": "Arriver cinq minutes en retard devrait rester acceptable.",
+    "theme": "daily",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_088",
+    "text": "Les courses alimentaires sont une vraie sortie.",
+    "theme": "daily",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_089",
+    "text": "Le pyjama peut être une tenue valable pour recevoir des proches.",
+    "theme": "daily",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_090",
+    "text": "Le ménage est plus efficace quand on danse en même temps.",
+    "theme": "daily",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_091",
+    "text": "Une journée sans programme est souvent mieux réussie.",
+    "theme": "daily",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_092",
+    "text": "Les plantes sont de meilleures colocataires que certaines personnes.",
+    "theme": "daily",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_093",
+    "text": "Il est raisonnable de remettre une petite tâche au lendemain.",
+    "theme": "daily",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_094",
+    "text": "Les dimanches devraient commencer après dix heures.",
+    "theme": "daily",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_095",
+    "text": "Une promenade sans destination est une activité complète.",
+    "theme": "daily",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_096",
+    "text": "Les listes donnent parfois davantage de satisfaction que les tâches terminées.",
+    "theme": "daily",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_097",
+    "text": "On devrait pouvoir annuler un plan simplement parce qu’on est fatigué.",
+    "theme": "daily",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_098",
+    "text": "Le canapé est parfois un meilleur bureau que le bureau.",
+    "theme": "daily",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_099",
+    "text": "Faire son lit est une perte de temps puisque l’on va le défaire.",
+    "theme": "daily",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_100",
+    "text": "Les voisins devraient prévenir avant de passer l’aspirateur tôt le matin.",
+    "theme": "daily",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_101",
+    "text": "Le linge propre peut rester plusieurs jours dans son panier sans problème.",
+    "theme": "daily",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_102",
+    "text": "Les personnes très matinales devraient parler moins fort avant neuf heures.",
+    "theme": "daily",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_103",
+    "text": "Un repas devant une série est supérieur à un repas à table.",
+    "theme": "daily",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_104",
+    "text": "Les chaussures devraient être interdites à l’intérieur de tous les logements.",
+    "theme": "daily",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_105",
+    "text": "Le rangement parfait rend une maison moins vivante.",
+    "theme": "daily",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_106",
+    "text": "Les petites tâches administratives méritent une récompense officielle.",
+    "theme": "daily",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_107",
+    "text": "On devrait pouvoir réserver une journée entière pour ne rien faire.",
+    "theme": "daily",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_108",
+    "text": "Les réveils devraient être légalement interdits le week-end.",
+    "theme": "daily",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_109",
+    "text": "Les personnes qui replient les sacs cadeaux sont les véritables génies de la société.",
+    "theme": "daily",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_110",
+    "text": "Un vêtement porté deux heures n’a pas besoin d’être lavé.",
+    "theme": "daily",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_111",
+    "text": "Les rendez-vous avant dix heures devraient coûter moins cher.",
+    "theme": "daily",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_112",
+    "text": "Les escaliers roulants devraient toujours proposer une voie pour les personnes immobiles.",
+    "theme": "daily",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_113",
+    "text": "Chaque immeuble devrait avoir un étage réservé aux siestes.",
+    "theme": "daily",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_114",
+    "text": "Les réveils devraient négocier poliment avant de sonner.",
+    "theme": "daily",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_115",
+    "text": "Les chaussettes perdues devraient être remboursées par les fabricants de machines à laver.",
+    "theme": "daily",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_116",
+    "text": "Toute tâche ménagère devrait rapporter des points échangeables contre des vacances.",
+    "theme": "daily",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_117",
+    "text": "Les voisins bruyants devraient devoir organiser un concert gratuit pour se faire pardonner.",
+    "theme": "daily",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_118",
+    "text": "Les canapés devraient être reconnus comme lieux officiels de télétravail.",
+    "theme": "daily",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_119",
+    "text": "Les portes devraient complimenter les personnes qui rentrent chez elles.",
+    "theme": "daily",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_120",
+    "text": "Chaque appartement devrait contenir un bouton pour suspendre le lundi.",
+    "theme": "daily",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_121",
+    "text": "Les plantes devraient pouvoir envoyer des notifications quand elles ont soif.",
+    "theme": "daily",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_122",
+    "text": "Le linge devrait se plier automatiquement par respect pour notre temps.",
+    "theme": "daily",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_123",
+    "text": "Les jours de pluie devraient être automatiquement fériés.",
+    "theme": "daily",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_124",
+    "text": "Toute personne qui retrouve un objet perdu devrait gagner une prime nationale.",
+    "theme": "daily",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_125",
+    "text": "Les ascenseurs devraient diffuser une musique choisie par le passager le plus fatigué.",
+    "theme": "daily",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_126",
+    "text": "Chaque foyer devrait élire chaque semaine un ministre officiel du canapé.",
+    "theme": "daily",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_127",
+    "text": "Dans un groupe, une seule personne devrait organiser les sorties.",
+    "theme": "friends",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_128",
+    "text": "Un bon ami peut annuler au dernier moment sans perdre son statut.",
+    "theme": "friends",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_129",
+    "text": "Les amis proches devraient pouvoir entrer sans frapper.",
+    "theme": "friends",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_130",
+    "text": "Une amitié peut survivre à plusieurs mois sans nouvelles.",
+    "theme": "friends",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_131",
+    "text": "Les vacances entre amis devraient toujours inclure du temps séparé.",
+    "theme": "friends",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_132",
+    "text": "Dire franchement qu’une idée est mauvaise est une preuve d’amitié.",
+    "theme": "friends",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_133",
+    "text": "Les groupes d’amis ont besoin d’une personne qui décide à la fin.",
+    "theme": "friends",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_134",
+    "text": "Il est acceptable de ne pas aimer tous les partenaires de ses amis.",
+    "theme": "friends",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_135",
+    "text": "Les traditions de groupe sont plus importantes que leur logique.",
+    "theme": "friends",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_136",
+    "text": "Prêter de l’argent à un ami peut compliquer inutilement une relation.",
+    "theme": "friends",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_137",
+    "text": "Un ami n’est pas obligé de prendre parti dans chaque dispute.",
+    "theme": "friends",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_138",
+    "text": "Les anniversaires entre amis devraient rester simples.",
+    "theme": "friends",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_139",
+    "text": "On peut être très proche sans partager tous ses secrets.",
+    "theme": "friends",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_140",
+    "text": "Les meilleurs voyages sont ceux où personne ne suit exactement le programme.",
+    "theme": "friends",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_141",
+    "text": "Les amis qui arrivent toujours en retard devraient donner l’heure de départ une heure plus tôt.",
+    "theme": "friends",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_142",
+    "text": "Un groupe devrait pouvoir voter pour exclure temporairement la personne qui ne répond jamais.",
+    "theme": "friends",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_143",
+    "text": "Les secrets trop lourds ne devraient pas être imposés aux amis.",
+    "theme": "friends",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_144",
+    "text": "Il est parfois normal de choisir son couple plutôt que ses amis.",
+    "theme": "friends",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_145",
+    "text": "Les additions entre amis devraient être divisées selon ce que chacun a réellement consommé.",
+    "theme": "friends",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_146",
+    "text": "Un ami qui ne rend jamais les objets prêtés devrait payer une caution.",
+    "theme": "friends",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_147",
+    "text": "Les vacances de groupe révèlent mieux les personnalités que plusieurs années d’amitié.",
+    "theme": "friends",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_148",
+    "text": "Les personnes qui disent toujours « comme vous voulez » devraient perdre leur droit de se plaindre.",
+    "theme": "friends",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_149",
+    "text": "Un ami devrait dire quand une tenue est vraiment ratée.",
+    "theme": "friends",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_150",
+    "text": "Le groupe devrait pouvoir interdire une chanson après trop d’écoutes.",
+    "theme": "friends",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_151",
+    "text": "Les retards répétés devraient être compensés par des snacks.",
+    "theme": "friends",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_152",
+    "text": "Les photos de groupe devraient être choisies démocratiquement avant publication.",
+    "theme": "friends",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_153",
+    "text": "Une personne qui quitte une soirée sans dire au revoir ne devrait pas être jugée.",
+    "theme": "friends",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_154",
+    "text": "Les amis devraient avoir le droit de refuser d’écouter la même histoire une quatrième fois.",
+    "theme": "friends",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_155",
+    "text": "Chaque groupe d’amis devrait posséder une constitution officielle.",
+    "theme": "friends",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_156",
+    "text": "Les retards devraient être payés en parts de pizza.",
+    "theme": "friends",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_157",
+    "text": "Toute dispute de groupe devrait être arbitrée par la personne la moins concernée.",
+    "theme": "friends",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_158",
+    "text": "Les groupes de discussion devraient distribuer des médailles aux personnes qui lisent tout.",
+    "theme": "friends",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_159",
+    "text": "Chaque bande d’amis devrait disposer d’un budget public pour ses vacances.",
+    "theme": "friends",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_160",
+    "text": "Les secrets oubliés devraient être automatiquement effacés de la mémoire collective.",
+    "theme": "friends",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_161",
+    "text": "Les amis qui annulent devraient envoyer un remplaçant de qualité équivalente.",
+    "theme": "friends",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_162",
+    "text": "Les surnoms devraient devenir légalement valables après cinq ans d’utilisation.",
+    "theme": "friends",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_163",
+    "text": "Chaque groupe devrait élire un historien chargé de conserver les dossiers.",
+    "theme": "friends",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_164",
+    "text": "Les personnes qui proposent « on se capte bientôt » devraient fournir une date dans les vingt-quatre heures.",
+    "theme": "friends",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_165",
+    "text": "Les photos compromettantes devraient être placées sous contrôle d’un conseil d’amitié.",
+    "theme": "friends",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_166",
+    "text": "Les vacances de groupe devraient commencer par un sommet diplomatique.",
+    "theme": "friends",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_167",
+    "text": "Tout ami qui commande à manger sans prévenir devrait partager automatiquement.",
+    "theme": "friends",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_168",
+    "text": "Les amitiés de plus de dix ans devraient donner droit à des réductions fiscales.",
+    "theme": "friends",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_169",
+    "text": "Un couple n’a pas besoin de tout faire ensemble.",
+    "theme": "relationships",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_170",
+    "text": "Dormir séparément peut parfois améliorer une relation.",
+    "theme": "relationships",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_171",
+    "text": "Il est possible de rester ami avec un ex.",
+    "theme": "relationships",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_172",
+    "text": "Les anniversaires de couple n’ont pas besoin d’être grandioses.",
+    "theme": "relationships",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_173",
+    "text": "Partager ses mots de passe n’est pas une preuve d’amour.",
+    "theme": "relationships",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_174",
+    "text": "Une dispute par message est presque toujours une mauvaise idée.",
+    "theme": "relationships",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_175",
+    "text": "Les couples devraient conserver des vacances séparées de temps en temps.",
+    "theme": "relationships",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_176",
+    "text": "On peut aimer quelqu’un sans apprécier tous ses amis.",
+    "theme": "relationships",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_177",
+    "text": "Les cadeaux spontanés comptent davantage que les cadeaux obligatoires.",
+    "theme": "relationships",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_178",
+    "text": "Le silence confortable est un signe de relation solide.",
+    "theme": "relationships",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_179",
+    "text": "Il est raisonnable de demander du temps seul après une dispute.",
+    "theme": "relationships",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_180",
+    "text": "Les goûts différents renforcent parfois un couple.",
+    "theme": "relationships",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_181",
+    "text": "Un rendez-vous simple peut être plus romantique qu’une soirée coûteuse.",
+    "theme": "relationships",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_182",
+    "text": "Il vaut mieux dire une vérité gênante qu’entretenir un petit mensonge.",
+    "theme": "relationships",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_183",
+    "text": "Un couple devrait pouvoir noter honnêtement les idées de rendez-vous de l’autre.",
+    "theme": "relationships",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_184",
+    "text": "La jalousie légère peut parfois être rassurante.",
+    "theme": "relationships",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_185",
+    "text": "Les ex ne devraient jamais être invités aux grands événements familiaux.",
+    "theme": "relationships",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_186",
+    "text": "Les dépenses communes devraient être discutées même quand chacun garde son compte.",
+    "theme": "relationships",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_187",
+    "text": "Le téléphone de son partenaire devrait rester totalement privé.",
+    "theme": "relationships",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_188",
+    "text": "Il est acceptable de partir seul en voyage sans son partenaire.",
+    "theme": "relationships",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_189",
+    "text": "Une personne peut aimer son partenaire et ne pas vouloir vivre avec lui.",
+    "theme": "relationships",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_190",
+    "text": "Les couples devraient planifier leurs disputes importantes à un moment calme.",
+    "theme": "relationships",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_191",
+    "text": "Dire « je t’aime » trop souvent peut réduire la force de la phrase.",
+    "theme": "relationships",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_192",
+    "text": "Une relation peut fonctionner sans projet de mariage ni de vie commune.",
+    "theme": "relationships",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_193",
+    "text": "Il est préférable de dormir fâché que de forcer une réconciliation épuisée.",
+    "theme": "relationships",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_194",
+    "text": "Les amis devraient pouvoir prévenir quelqu’un si sa relation lui fait du mal.",
+    "theme": "relationships",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_195",
+    "text": "Un couple devrait définir clairement ce qu’il considère comme de la tromperie.",
+    "theme": "relationships",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_196",
+    "text": "Les cadeaux très chers peuvent mettre une pression inutile sur la relation.",
+    "theme": "relationships",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_197",
+    "text": "Chaque couple devrait signer un traité annuel sur la télécommande.",
+    "theme": "relationships",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_198",
+    "text": "Les disputes devraient commencer par un générique et se terminer par un vote du public.",
+    "theme": "relationships",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_199",
+    "text": "Les ex devraient recevoir un certificat officiel de fin de mandat.",
+    "theme": "relationships",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_200",
+    "text": "Chaque déclaration d’amour devrait être accompagnée d’une notice d’entretien.",
+    "theme": "relationships",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_201",
+    "text": "Les couples devraient avoir un bouton pause utilisable une fois par mois.",
+    "theme": "relationships",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_202",
+    "text": "Les anniversaires oubliés devraient pouvoir être déplacés dans le calendrier.",
+    "theme": "relationships",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_203",
+    "text": "Toute personne disant « fais comme tu veux » devrait fournir une traduction certifiée.",
+    "theme": "relationships",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_204",
+    "text": "Les applications de rencontre devraient proposer un service après-vente émotionnel.",
+    "theme": "relationships",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_205",
+    "text": "Les disputes sur la température de la chambre devraient être réglées par un tribunal climatique.",
+    "theme": "relationships",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_206",
+    "text": "Chaque couple devrait élire un ministre des câlins et un ministre des courses.",
+    "theme": "relationships",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_207",
+    "text": "Les belles-familles devraient passer un examen d’entrée avant les vacances communes.",
+    "theme": "relationships",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_208",
+    "text": "Les messages ambigus devraient comporter une note explicative obligatoire.",
+    "theme": "relationships",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_209",
+    "text": "Les rendez-vous ratés devraient être remboursés en desserts.",
+    "theme": "relationships",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_210",
+    "text": "Toute rupture devrait inclure un générique de fin et une scène post-crédits.",
+    "theme": "relationships",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_211",
+    "text": "La semaine de quatre jours devrait devenir la norme.",
+    "theme": "work",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_212",
+    "text": "Les réunions de plus de trente minutes sont rarement nécessaires.",
+    "theme": "work",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_213",
+    "text": "Les devoirs à la maison devraient être limités.",
+    "theme": "work",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_214",
+    "text": "Le télétravail améliore la concentration de certaines personnes.",
+    "theme": "work",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_215",
+    "text": "Une pause café peut être réellement productive.",
+    "theme": "work",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_216",
+    "text": "Les notes ne mesurent pas toutes les formes d’intelligence.",
+    "theme": "work",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_217",
+    "text": "Les horaires flexibles valent parfois plus qu’une augmentation.",
+    "theme": "work",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_218",
+    "text": "Les réunions devraient toujours avoir un ordre du jour.",
+    "theme": "work",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_219",
+    "text": "Les employés devraient pouvoir refuser les messages professionnels le soir.",
+    "theme": "work",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_220",
+    "text": "Une bonne ambiance peut compenser un travail moins passionnant.",
+    "theme": "work",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_221",
+    "text": "Les étudiants devraient pouvoir choisir davantage de matières pratiques.",
+    "theme": "work",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_222",
+    "text": "Un entretien d’embauche ne révèle pas toujours les meilleurs candidats.",
+    "theme": "work",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_223",
+    "text": "Les pauses courtes et fréquentes améliorent le travail.",
+    "theme": "work",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_224",
+    "text": "Les managers devraient être évalués par leur équipe.",
+    "theme": "work",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_225",
+    "text": "Les réunions sans décision devraient être décomptées du temps de travail.",
+    "theme": "work",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_226",
+    "text": "Les personnes qui répondent à tous les courriels avec tout le monde en copie devraient suivre une formation.",
+    "theme": "work",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_227",
+    "text": "Les devoirs de groupe sont souvent une punition déguisée.",
+    "theme": "work",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_228",
+    "text": "Les bureaux ouverts réduisent parfois davantage la productivité qu’ils ne favorisent la collaboration.",
+    "theme": "work",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_229",
+    "text": "Les diplômes comptent trop dans certaines embauches.",
+    "theme": "work",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_230",
+    "text": "Les collègues ne sont pas obligés de devenir amis.",
+    "theme": "work",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_231",
+    "text": "Les caméras devraient rester facultatives pendant les réunions à distance.",
+    "theme": "work",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_232",
+    "text": "Une entreprise devrait annoncer le salaire avant le premier entretien.",
+    "theme": "work",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_233",
+    "text": "Les stages non rémunérés devraient disparaître.",
+    "theme": "work",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_234",
+    "text": "Les retards raisonnables sont moins graves que les départs tardifs imposés.",
+    "theme": "work",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_235",
+    "text": "Les présentations PowerPoint devraient être limitées à dix diapositives.",
+    "theme": "work",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_236",
+    "text": "Le travail accompli devrait compter davantage que l’heure d’arrivée.",
+    "theme": "work",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_237",
+    "text": "Les examens avec documents autorisés évaluent mieux la compréhension.",
+    "theme": "work",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_238",
+    "text": "Les personnes efficaces devraient pouvoir terminer leur journée plus tôt.",
+    "theme": "work",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_239",
+    "text": "Chaque réunion devrait contenir un bouton permettant de voter sa fin immédiate.",
+    "theme": "work",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_240",
+    "text": "Les imprimantes devraient présenter des excuses personnalisées lorsqu’elles tombent en panne.",
+    "theme": "work",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_241",
+    "text": "Tout courriel envoyé après dix-huit heures devrait rapporter une prime au destinataire.",
+    "theme": "work",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_242",
+    "text": "Les examens devraient comporter une question bonus sur le sommeil de l’étudiant.",
+    "theme": "work",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_243",
+    "text": "Les bureaux devraient disposer d’un toboggan pour signaler la fin de journée.",
+    "theme": "work",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_244",
+    "text": "Toute réunion qui aurait pu être un message devrait financer le prochain déjeuner de l’équipe.",
+    "theme": "work",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_245",
+    "text": "Les managers devraient porter un chapeau différent selon leur humeur.",
+    "theme": "work",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_246",
+    "text": "Les devoirs oubliés devraient pouvoir être remplacés par une bonne histoire.",
+    "theme": "work",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_247",
+    "text": "Chaque entreprise devrait nommer un responsable officiel des siestes.",
+    "theme": "work",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_248",
+    "text": "Les photocopieuses devraient recevoir un jour de repos hebdomadaire.",
+    "theme": "work",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_249",
+    "text": "Les entretiens d’embauche devraient commencer par une partie de jeu de société.",
+    "theme": "work",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_250",
+    "text": "Les personnes qui disent « petit point rapide » devraient chronométrer publiquement leur intervention.",
+    "theme": "work",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_251",
+    "text": "Toute présentation ennuyeuse devrait déclencher automatiquement une pause goûter.",
+    "theme": "work",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_252",
+    "text": "Les lundis matin devraient être réservés aux tâches qui ne demandent aucune décision.",
+    "theme": "work",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_253",
+    "text": "Une soirée réussie n’a pas besoin de finir tard.",
+    "theme": "party_travel",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_254",
+    "text": "Les vacances sans programme précis sont souvent les meilleures.",
+    "theme": "party_travel",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_255",
+    "text": "Il faut prévoir du temps seul pendant un voyage de groupe.",
+    "theme": "party_travel",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_256",
+    "text": "Une petite fête peut être plus mémorable qu’un grand événement.",
+    "theme": "party_travel",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_257",
+    "text": "Les souvenirs de voyage valent parfois plus que les photos.",
+    "theme": "party_travel",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_258",
+    "text": "Il est acceptable de quitter une soirée sans dire au revoir à tout le monde.",
+    "theme": "party_travel",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_259",
+    "text": "Les voyages en train sont plus agréables que les voyages en avion.",
+    "theme": "party_travel",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_260",
+    "text": "Un jour de repos devrait être prévu après chaque grand voyage.",
+    "theme": "party_travel",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_261",
+    "text": "Les meilleures soirées commencent souvent sans plan compliqué.",
+    "theme": "party_travel",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_262",
+    "text": "Un logement bien placé vaut mieux qu’un hôtel luxueux éloigné.",
+    "theme": "party_travel",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_263",
+    "text": "Les vacances devraient contenir au moins une journée sans activité.",
+    "theme": "party_travel",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_264",
+    "text": "On ne devrait pas obliger tout le groupe à participer à chaque sortie.",
+    "theme": "party_travel",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_265",
+    "text": "Les festivals sont meilleurs quand on accepte de rater certains concerts.",
+    "theme": "party_travel",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_266",
+    "text": "Un voyage peut être réussi même si la météo est mauvaise.",
+    "theme": "party_travel",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_267",
+    "text": "Les personnes qui monopolisent la playlist devraient perdre le contrôle de la musique.",
+    "theme": "party_travel",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_268",
+    "text": "Les voyages de groupe devraient prévoir un budget individuel séparé.",
+    "theme": "party_travel",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_269",
+    "text": "Il est préférable de réserver trop tôt que de chercher le meilleur prix jusqu’au dernier moment.",
+    "theme": "party_travel",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_270",
+    "text": "Les photos de vacances ne devraient pas interrompre chaque activité.",
+    "theme": "party_travel",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_271",
+    "text": "Les invités qui ne préviennent pas qu’ils viennent accompagnés devraient apporter le dessert.",
+    "theme": "party_travel",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_272",
+    "text": "Les soirées à thème sont meilleures quand le thème est vraiment respecté.",
+    "theme": "party_travel",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_273",
+    "text": "Les personnes qui veulent tout visiter rendent parfois les vacances moins agréables.",
+    "theme": "party_travel",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_274",
+    "text": "Dormir tard en vacances est une activité légitime.",
+    "theme": "party_travel",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_275",
+    "text": "Une personne qui choisit le restaurant devrait accepter les critiques.",
+    "theme": "party_travel",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_276",
+    "text": "Les playlists de soirée devraient être préparées démocratiquement.",
+    "theme": "party_travel",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_277",
+    "text": "Les vacances en famille devraient avoir une durée maximale.",
+    "theme": "party_travel",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_278",
+    "text": "Les souvenirs achetés sont souvent moins intéressants que les objets trouvés sur place.",
+    "theme": "party_travel",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_279",
+    "text": "Les aéroports devraient offrir une compensation dès qu’une file dépasse trente minutes.",
+    "theme": "party_travel",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_280",
+    "text": "Il est raisonnable de refuser une excursion simplement parce qu’elle commence trop tôt.",
+    "theme": "party_travel",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_281",
+    "text": "Chaque soirée devrait nommer un ministre officiel de la playlist.",
+    "theme": "party_travel",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_282",
+    "text": "Les valises devraient payer un loyer lorsqu’elles restent ouvertes dans une chambre.",
+    "theme": "party_travel",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_283",
+    "text": "Toute personne qui propose une randonnée à sept heures devrait porter les sacs du groupe.",
+    "theme": "party_travel",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_284",
+    "text": "Les aéroports devraient fournir des lits aux personnes qui arrivent trop tôt.",
+    "theme": "party_travel",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_285",
+    "text": "Chaque vacances devrait inclure une journée où personne ne sait dans quelle ville il se trouve.",
+    "theme": "party_travel",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_286",
+    "text": "Les festivals devraient distribuer des médailles aux personnes qui retrouvent leurs amis.",
+    "theme": "party_travel",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_287",
+    "text": "Les hôtels devraient offrir un petit-déjeuner jusqu’à l’heure du dîner.",
+    "theme": "party_travel",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_288",
+    "text": "Les retards de train devraient être compensés en snacks illimités.",
+    "theme": "party_travel",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_289",
+    "text": "Toute soirée devrait posséder un bouton permettant de revenir une heure en arrière.",
+    "theme": "party_travel",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_290",
+    "text": "Les photos de groupe ratées devraient être exposées dans un musée local.",
+    "theme": "party_travel",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_291",
+    "text": "Les voisins d’une fête devraient recevoir un droit de veto musical toutes les heures.",
+    "theme": "party_travel",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_292",
+    "text": "Les valises perdues devraient être remplacées par une valise mystère plus luxueuse.",
+    "theme": "party_travel",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_293",
+    "text": "Chaque voyage de groupe devrait commencer par une cérémonie diplomatique.",
+    "theme": "party_travel",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_294",
+    "text": "Les personnes qui disent « on improvisera » devraient être légalement responsables du programme.",
+    "theme": "party_travel",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_295",
+    "text": "Une série courte est souvent meilleure qu’une série interminable.",
+    "theme": "popculture",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_296",
+    "text": "Les adaptations n’ont pas besoin d’être fidèles pour être réussies.",
+    "theme": "popculture",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_297",
+    "text": "Revoir un film préféré est parfois mieux que découvrir une nouveauté.",
+    "theme": "popculture",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_298",
+    "text": "Les chansons tristes sont agréables même quand on va bien.",
+    "theme": "popculture",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_299",
+    "text": "Un mauvais film peut devenir excellent entre amis.",
+    "theme": "popculture",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_300",
+    "text": "Les génériques devraient rarement être ignorés.",
+    "theme": "popculture",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_301",
+    "text": "Les jeux vidéo peuvent raconter des histoires aussi fortes que les films.",
+    "theme": "popculture",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_302",
+    "text": "Une célébrité n’est pas obligée de partager toute sa vie privée.",
+    "theme": "popculture",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_303",
+    "text": "Les spoilers ont une date de péremption.",
+    "theme": "popculture",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_304",
+    "text": "Les albums devraient être écoutés dans l’ordre au moins une fois.",
+    "theme": "popculture",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_305",
+    "text": "Les remakes peuvent faire découvrir une œuvre à une nouvelle génération.",
+    "theme": "popculture",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_306",
+    "text": "Les émissions de téléréalité peuvent être un vrai divertissement.",
+    "theme": "popculture",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_307",
+    "text": "Un personnage imparfait est souvent plus intéressant qu’un héros parfait.",
+    "theme": "popculture",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_308",
+    "text": "Les comédies méritent autant de reconnaissance que les drames.",
+    "theme": "popculture",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_309",
+    "text": "Les suites devraient être interdites quand l’histoire originale se termine parfaitement.",
+    "theme": "popculture",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_310",
+    "text": "Certaines œuvres cultes sont surtout protégées par la nostalgie.",
+    "theme": "popculture",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_311",
+    "text": "Les bandes-annonces révèlent beaucoup trop d’éléments.",
+    "theme": "popculture",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_312",
+    "text": "Les concerts filmés au téléphone perdent une partie de leur intérêt.",
+    "theme": "popculture",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_313",
+    "text": "Les plateformes devraient supprimer les séries annulées sans conclusion.",
+    "theme": "popculture",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_314",
+    "text": "Les fans ne devraient pas décider de la vie privée des artistes.",
+    "theme": "popculture",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_315",
+    "text": "Les films de plus de deux heures devraient prévoir une pause.",
+    "theme": "popculture",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_316",
+    "text": "Les classements musicaux récompensent davantage la visibilité que la qualité.",
+    "theme": "popculture",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_317",
+    "text": "Les adaptations devraient parfois changer complètement la fin.",
+    "theme": "popculture",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_318",
+    "text": "Les œuvres très populaires ne sont pas forcément surestimées.",
+    "theme": "popculture",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_319",
+    "text": "Les épisodes spéciaux de Noël sont rarement indispensables.",
+    "theme": "popculture",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_320",
+    "text": "Les prix artistiques devraient récompenser davantage les œuvres populaires.",
+    "theme": "popculture",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_321",
+    "text": "Les célébrités devraient pouvoir disparaître plusieurs années sans explication.",
+    "theme": "popculture",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_322",
+    "text": "Les fandoms rendent parfois une œuvre moins agréable.",
+    "theme": "popculture",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_323",
+    "text": "Chaque film devrait proposer une fin heureuse et une fin catastrophique au choix.",
+    "theme": "popculture",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_324",
+    "text": "Les spoilers devraient être jugés par un tribunal spécialisé.",
+    "theme": "popculture",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_325",
+    "text": "Toute série annulée devrait être terminée par ses fans dans un épisode officiel.",
+    "theme": "popculture",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_326",
+    "text": "Les chansons trop accrocheuses devraient porter un avertissement sanitaire.",
+    "theme": "popculture",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_327",
+    "text": "Les personnages de fiction devraient pouvoir poursuivre leurs auteurs pour mauvais traitement.",
+    "theme": "popculture",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_328",
+    "text": "Chaque concert devrait réserver une chanson au public qui chante faux.",
+    "theme": "popculture",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_329",
+    "text": "Les plateformes devraient rembourser le temps perdu devant une mauvaise série.",
+    "theme": "popculture",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_330",
+    "text": "Les remakes devraient comporter un bouton pour réactiver les acteurs originaux.",
+    "theme": "popculture",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_331",
+    "text": "Les cérémonies de prix devraient être remplacées par des duels de playback.",
+    "theme": "popculture",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_332",
+    "text": "Toute œuvre triste devrait être accompagnée d’un coupon pour un dessert.",
+    "theme": "popculture",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_333",
+    "text": "Les génériques devraient distribuer des points aux spectateurs qui restent jusqu’au bout.",
+    "theme": "popculture",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_334",
+    "text": "Les personnages secondaires devraient élire leur propre héros.",
+    "theme": "popculture",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_335",
+    "text": "Chaque album devrait contenir une chanson écrite par tirage au sort.",
+    "theme": "popculture",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_336",
+    "text": "Les mauvaises adaptations devraient être classées dans la catégorie science-fiction.",
+    "theme": "popculture",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_337",
+    "text": "Les transports publics devraient être gratuits les jours de forte pollution.",
+    "theme": "laws",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_338",
+    "text": "Les restaurants devraient fournir de l’eau gratuitement sans qu’on la demande.",
+    "theme": "laws",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_339",
+    "text": "Les employeurs devraient annoncer les salaires dans les offres.",
+    "theme": "laws",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_340",
+    "text": "Les logements devraient garantir un minimum d’isolation sonore.",
+    "theme": "laws",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_341",
+    "text": "Les démarches administratives devraient pouvoir être réalisées sur un seul site.",
+    "theme": "laws",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_342",
+    "text": "Les produits devraient afficher une durée de vie estimée.",
+    "theme": "laws",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_343",
+    "text": "Les files d’attente devraient proposer une priorité aux personnes très pressées contre compensation.",
+    "theme": "laws",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_344",
+    "text": "Les villes devraient créer davantage d’espaces sans publicité.",
+    "theme": "laws",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_345",
+    "text": "Les abonnements devraient pouvoir être résiliés aussi facilement qu’ils sont souscrits.",
+    "theme": "laws",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_346",
+    "text": "Les restaurants devraient indiquer clairement les portions très petites.",
+    "theme": "laws",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_347",
+    "text": "Les plateformes devraient prévenir avant de retirer un film ou une série.",
+    "theme": "laws",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_348",
+    "text": "Les entreprises devraient offrir un jour libre pour un déménagement.",
+    "theme": "laws",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_349",
+    "text": "Les billets de transport devraient être remboursés automatiquement en cas de gros retard.",
+    "theme": "laws",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_350",
+    "text": "Les appareils devraient être réparables pendant plusieurs années.",
+    "theme": "laws",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_351",
+    "text": "Les personnes qui marchent lentement au milieu du trottoir devraient suivre une voie dédiée.",
+    "theme": "laws",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_352",
+    "text": "Les publicités sonores devraient être interdites dans les lieux publics.",
+    "theme": "laws",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_353",
+    "text": "Les réunions professionnelles devraient avoir une durée légale maximale.",
+    "theme": "laws",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_354",
+    "text": "Les propriétaires devraient accepter les animaux sauf raison sérieuse.",
+    "theme": "laws",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_355",
+    "text": "Les produits avec un emballage impossible à ouvrir devraient être taxés.",
+    "theme": "laws",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_356",
+    "text": "Les entreprises qui font attendre au téléphone devraient rappeler gratuitement.",
+    "theme": "laws",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_357",
+    "text": "Les influenceurs devraient afficher le prix réel de tous les cadeaux reçus.",
+    "theme": "laws",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_358",
+    "text": "Les magasins devraient reprendre gratuitement les objets trop difficiles à réparer.",
+    "theme": "laws",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_359",
+    "text": "Les personnes qui bloquent une porte de métro devraient recevoir une amende symbolique.",
+    "theme": "laws",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_360",
+    "text": "Les restaurants devraient proposer une petite portion de chaque dessert.",
+    "theme": "laws",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_361",
+    "text": "Les plateformes devraient rembourser les abonnés lors des longues pannes.",
+    "theme": "laws",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_362",
+    "text": "Les voisins qui percent le dimanche matin devraient prévenir tout l’immeuble.",
+    "theme": "laws",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_363",
+    "text": "Les administrations devraient payer une pénalité quand elles perdent un dossier.",
+    "theme": "laws",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_364",
+    "text": "Les billets non utilisés devraient pouvoir être transmis facilement à quelqu’un d’autre.",
+    "theme": "laws",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_365",
+    "text": "Il devrait être interdit de prendre une décision importante avant le premier café.",
+    "theme": "laws",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_366",
+    "text": "Toute personne qui double dans une file devrait raconter une blague au public.",
+    "theme": "laws",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_367",
+    "text": "Les chaussettes devraient être vendues par trois pour anticiper les disparitions.",
+    "theme": "laws",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_368",
+    "text": "Les parapluies oubliés devraient devenir propriété collective après vingt-quatre heures.",
+    "theme": "laws",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_369",
+    "text": "Les lundis devraient nécessiter une autorisation préfectorale.",
+    "theme": "laws",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_370",
+    "text": "Les personnes qui mettent leur haut-parleur dans les transports devraient animer toute la rame.",
+    "theme": "laws",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_371",
+    "text": "Les ascenseurs devraient refuser les trajets d’un seul étage sauf urgence.",
+    "theme": "laws",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_372",
+    "text": "Tout retard supérieur à dix minutes devrait être compensé en viennoiseries.",
+    "theme": "laws",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_373",
+    "text": "Les imprimantes devraient être tenues légalement responsables de leurs bourrages papier.",
+    "theme": "laws",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_374",
+    "text": "Les messages « urgent » devraient expirer s’ils ne sont pas réellement urgents.",
+    "theme": "laws",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_375",
+    "text": "Les réunions de famille devraient être limitées par un permis renouvelable.",
+    "theme": "laws",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_376",
+    "text": "Les personnes qui disent « je te raconte après » devraient fournir un délai précis.",
+    "theme": "laws",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_377",
+    "text": "Chaque ville devrait avoir un jour officiel du pyjama.",
+    "theme": "laws",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_378",
+    "text": "Les décisions administratives devraient être expliquées par une chanson de moins de deux minutes.",
+    "theme": "laws",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_379",
+    "text": "Le silence n’est pas gênant entre personnes proches.",
+    "theme": "unpopular",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_380",
+    "text": "Les grandes villes ne conviennent pas à tout le monde.",
+    "theme": "unpopular",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_381",
+    "text": "Les cadeaux pratiques peuvent être très touchants.",
+    "theme": "unpopular",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_382",
+    "text": "Un week-end à la maison peut être meilleur qu’un voyage.",
+    "theme": "unpopular",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_383",
+    "text": "Il n’est pas nécessaire d’avoir une passion spectaculaire.",
+    "theme": "unpopular",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_384",
+    "text": "Les fêtes d’anniversaire peuvent être stressantes pour la personne célébrée.",
+    "theme": "unpopular",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_385",
+    "text": "La spontanéité est parfois surestimée.",
+    "theme": "unpopular",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_386",
+    "text": "Une petite routine peut rendre la vie plus agréable.",
+    "theme": "unpopular",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_387",
+    "text": "Les souvenirs n’ont pas besoin d’être photographiés.",
+    "theme": "unpopular",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_388",
+    "text": "Dire non sans longue explication est parfois suffisant.",
+    "theme": "unpopular",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_389",
+    "text": "Le luxe le plus important est d’avoir du temps libre.",
+    "theme": "unpopular",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_390",
+    "text": "Les personnes calmes ne sont pas forcément timides.",
+    "theme": "unpopular",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_391",
+    "text": "Changer d’avis est une preuve d’intelligence.",
+    "theme": "unpopular",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_392",
+    "text": "Toutes les amitiés ne sont pas faites pour durer toute une vie.",
+    "theme": "unpopular",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_393",
+    "text": "Les vacances sont parfois plus fatigantes que le quotidien.",
+    "theme": "unpopular",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_394",
+    "text": "Être très occupé n’est pas toujours un signe de réussite.",
+    "theme": "unpopular",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_395",
+    "text": "Les grandes déclarations sont moins importantes que les petites habitudes.",
+    "theme": "unpopular",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_396",
+    "text": "Certaines traditions méritent simplement de disparaître.",
+    "theme": "unpopular",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_397",
+    "text": "La franchise n’est pas une excuse pour manquer de tact.",
+    "theme": "unpopular",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_398",
+    "text": "Les personnes très sociables ont aussi besoin de longues périodes seules.",
+    "theme": "unpopular",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_399",
+    "text": "Avoir beaucoup d’amis ne signifie pas être moins seul.",
+    "theme": "unpopular",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_400",
+    "text": "Les objectifs de nouvelle année sont souvent inutiles.",
+    "theme": "unpopular",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_401",
+    "text": "La nostalgie embellit parfois des périodes qui n’étaient pas heureuses.",
+    "theme": "unpopular",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_402",
+    "text": "Le développement personnel peut devenir une nouvelle source de pression.",
+    "theme": "unpopular",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_403",
+    "text": "Les surprises ne sont pas toujours agréables.",
+    "theme": "unpopular",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_404",
+    "text": "Certaines excuses arrivent trop tard pour être utiles.",
+    "theme": "unpopular",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_405",
+    "text": "La compatibilité compte parfois davantage que les sentiments.",
+    "theme": "unpopular",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_406",
+    "text": "Le mérite individuel est souvent surestimé par rapport aux circonstances.",
+    "theme": "unpopular",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_407",
+    "text": "Les gens devraient recevoir une note de participation pour chaque conversation difficile.",
+    "theme": "unpopular",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_408",
+    "text": "Toute opinion impopulaire devrait être accompagnée d’un dessert de consolation.",
+    "theme": "unpopular",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_409",
+    "text": "Les mauvaises journées devraient pouvoir être échangées contre des jours fériés.",
+    "theme": "unpopular",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_410",
+    "text": "Chaque adulte devrait avoir droit à une semaine annuelle sans aucune décision.",
+    "theme": "unpopular",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_411",
+    "text": "Les personnes trop positives devraient fournir une preuve de leur optimisme.",
+    "theme": "unpopular",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_412",
+    "text": "Les conseils non demandés devraient être facturés à celui qui les donne.",
+    "theme": "unpopular",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_413",
+    "text": "Toute phrase commençant par « à ta place » devrait nécessiter une autorisation.",
+    "theme": "unpopular",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_414",
+    "text": "Les regrets devraient pouvoir être retournés sous trente jours.",
+    "theme": "unpopular",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_415",
+    "text": "Les personnes qui disent « profite de chaque instant » devraient organiser l’instant suivant.",
+    "theme": "unpopular",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_416",
+    "text": "Les souvenirs gênants devraient disparaître après trois ans de bonne conduite.",
+    "theme": "unpopular",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_417",
+    "text": "Chaque conflit devrait comporter un entracte obligatoire avec snacks.",
+    "theme": "unpopular",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_418",
+    "text": "Les mauvaises nouvelles devraient être livrées avec une musique d’ambiance adaptée.",
+    "theme": "unpopular",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_419",
+    "text": "Les gens devraient pouvoir mettre leur personnalité en mode avion.",
+    "theme": "unpopular",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_420",
+    "text": "Toute décision regrettée devrait donner droit à un essai gratuit différent.",
+    "theme": "unpopular",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_421",
+    "text": "Les villes devraient consacrer davantage d’espace aux piétons.",
+    "theme": "world",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_422",
+    "text": "L’école devrait enseigner davantage de compétences pratiques.",
+    "theme": "world",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_423",
+    "text": "La réparation devrait coûter moins cher que le remplacement.",
+    "theme": "world",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_424",
+    "text": "Les bibliothèques devraient rester ouvertes plus tard.",
+    "theme": "world",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_425",
+    "text": "Les transports publics devraient être plus fréquents la nuit.",
+    "theme": "world",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_426",
+    "text": "Les entreprises devraient publier clairement leur impact environnemental.",
+    "theme": "world",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_427",
+    "text": "Les repas végétariens devraient être plus accessibles partout.",
+    "theme": "world",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_428",
+    "text": "Les espaces verts devraient être considérés comme essentiels en ville.",
+    "theme": "world",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_429",
+    "text": "Les citoyens devraient pouvoir proposer plus facilement des projets locaux.",
+    "theme": "world",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_430",
+    "text": "La santé mentale devrait être enseignée dès l’école.",
+    "theme": "world",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_431",
+    "text": "Les logements vacants devraient être davantage utilisés.",
+    "theme": "world",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_432",
+    "text": "Les objets du quotidien devraient être conçus pour durer.",
+    "theme": "world",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_433",
+    "text": "Le bénévolat devrait être mieux reconnu dans les parcours professionnels.",
+    "theme": "world",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_434",
+    "text": "Les vols très courts devraient être remplacés par le train quand c’est possible.",
+    "theme": "world",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_435",
+    "text": "Les entreprises devraient réduire leurs publicités avant de demander aux citoyens de consommer moins.",
+    "theme": "world",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_436",
+    "text": "Les villes devraient limiter fortement les voitures dans leur centre.",
+    "theme": "world",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_437",
+    "text": "Les vêtements très peu chers cachent souvent un coût payé ailleurs.",
+    "theme": "world",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_438",
+    "text": "Les écoles devraient supprimer certaines notes au profit de retours détaillés.",
+    "theme": "world",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_439",
+    "text": "Les milliardaires devraient financer davantage de services publics.",
+    "theme": "world",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_440",
+    "text": "Les produits jetables devraient devenir nettement plus chers.",
+    "theme": "world",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_441",
+    "text": "Le temps de trajet devrait être partiellement compté comme temps de travail.",
+    "theme": "world",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_442",
+    "text": "Les entreprises devraient réparer gratuitement les produits conçus pour durer peu.",
+    "theme": "world",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_443",
+    "text": "Les cantines devraient proposer moins de viande mais de meilleure qualité.",
+    "theme": "world",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_444",
+    "text": "Les élus devraient publier un bilan simple de leurs promesses.",
+    "theme": "world",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_445",
+    "text": "Les plateformes numériques sont devenues trop puissantes pour rester opaques.",
+    "theme": "world",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_446",
+    "text": "Les villes devraient privilégier les logements aux bureaux vides.",
+    "theme": "world",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_447",
+    "text": "Le progrès technologique n’est pas toujours un progrès humain.",
+    "theme": "world",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_448",
+    "text": "Chaque pays devrait élire un ministre officiel des bonnes nouvelles.",
+    "theme": "world",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_449",
+    "text": "Les frontières devraient fermer une journée par an pour organiser un immense pique-nique commun.",
+    "theme": "world",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_450",
+    "text": "Les entreprises polluantes devraient nettoyer une plage avant chaque campagne publicitaire.",
+    "theme": "world",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_451",
+    "text": "Les débats politiques devraient être arbitrés par des enfants de dix ans.",
+    "theme": "world",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_452",
+    "text": "Chaque ville devrait planter un arbre pour chaque plainte reçue.",
+    "theme": "world",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_453",
+    "text": "Les dirigeants devraient utiliser les transports publics une semaine par mois.",
+    "theme": "world",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_454",
+    "text": "Les lois incompréhensibles devraient être réécrites sous forme de bande dessinée.",
+    "theme": "world",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_455",
+    "text": "Chaque sommet international devrait commencer par un jeu coopératif.",
+    "theme": "world",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_456",
+    "text": "Les pays en conflit devraient d’abord régler un escape game ensemble.",
+    "theme": "world",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_457",
+    "text": "Les budgets publics devraient réserver une ligne obligatoire aux idées joyeuses.",
+    "theme": "world",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_458",
+    "text": "Les grandes décisions devraient être testées dans une ville miniature avant application.",
+    "theme": "world",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_459",
+    "text": "Les discours politiques devraient comporter un détecteur sonore de promesses vagues.",
+    "theme": "world",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_460",
+    "text": "Toute nouvelle technologie devrait passer un examen d’utilité sociale.",
+    "theme": "world",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_461",
+    "text": "Les fantômes devraient payer un loyer lorsqu’ils hantent une maison.",
+    "theme": "impossible",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_462",
+    "text": "Les extraterrestres devraient prévenir avant leur première visite.",
+    "theme": "impossible",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_463",
+    "text": "Les dragons seraient de meilleurs transports publics que les bus.",
+    "theme": "impossible",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_464",
+    "text": "Les rêves devraient pouvoir être sauvegardés au réveil.",
+    "theme": "impossible",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_465",
+    "text": "Les animaux domestiques devraient avoir un jour de vote consultatif.",
+    "theme": "impossible",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_466",
+    "text": "Les machines à voyager dans le temps devraient être réservées aux petites erreurs.",
+    "theme": "impossible",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_467",
+    "text": "Les super-héros devraient publier leurs frais professionnels.",
+    "theme": "impossible",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_468",
+    "text": "Les maisons devraient choisir elles-mêmes leur couleur.",
+    "theme": "impossible",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_469",
+    "text": "Les nuages devraient annoncer leur programme de pluie.",
+    "theme": "impossible",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_470",
+    "text": "Les robots devraient avoir droit à des vacances.",
+    "theme": "impossible",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_471",
+    "text": "Les statues devraient pouvoir changer de pose une fois par an.",
+    "theme": "impossible",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_472",
+    "text": "Les miroirs devraient proposer un mode bienveillant le lundi matin.",
+    "theme": "impossible",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_473",
+    "text": "Les objets perdus devraient envoyer leur position après une semaine.",
+    "theme": "impossible",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_474",
+    "text": "Les animaux devraient pouvoir laisser des avis sur leurs humains.",
+    "theme": "impossible",
+    "difficulty": "defendable",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_475",
+    "text": "Les zombies pourraient améliorer la ponctualité générale.",
+    "theme": "impossible",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_476",
+    "text": "Une invasion extraterrestre serait une bonne façon de rapprocher l’humanité.",
+    "theme": "impossible",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_477",
+    "text": "Les fantômes devraient remplacer les alarmes dans les musées.",
+    "theme": "impossible",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_478",
+    "text": "Les licornes seraient plus utiles que les chevaux dans les villes modernes.",
+    "theme": "impossible",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_479",
+    "text": "Les vampires devraient travailler uniquement dans les services de nuit.",
+    "theme": "impossible",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_480",
+    "text": "Les sorciers devraient gérer les problèmes administratifs complexes.",
+    "theme": "impossible",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_481",
+    "text": "Les dinosaures pourraient résoudre une partie des problèmes de circulation.",
+    "theme": "impossible",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_482",
+    "text": "Les robots devraient choisir eux-mêmes les tâches humaines à automatiser.",
+    "theme": "impossible",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_483",
+    "text": "Les rêves devraient être diffusés au cinéma avec l’accord du rêveur.",
+    "theme": "impossible",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_484",
+    "text": "Les extraterrestres devraient participer à un jeu télévisé avant toute négociation.",
+    "theme": "impossible",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_485",
+    "text": "Les fantômes sont probablement de meilleurs colocataires que les humains.",
+    "theme": "impossible",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_486",
+    "text": "Les super-vilains devraient recevoir un budget s’ils promettent une destruction limitée.",
+    "theme": "impossible",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_487",
+    "text": "Les sirènes devraient contrôler la sécurité des plages.",
+    "theme": "impossible",
+    "difficulty": "spicy",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_488",
+    "text": "La Lune devrait être déplacée pour améliorer les photos de vacances.",
+    "theme": "impossible",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_489",
+    "text": "Les pigeons devraient gérer les livraisons urgentes du gouvernement.",
+    "theme": "impossible",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_490",
+    "text": "Chaque famille devrait adopter un petit dragon avant d’acheter une voiture.",
+    "theme": "impossible",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_491",
+    "text": "Les volcans devraient prévenir leurs voisins par message vocal.",
+    "theme": "impossible",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_492",
+    "text": "Les extraterrestres devraient payer une taxe touristique à leur arrivée.",
+    "theme": "impossible",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_493",
+    "text": "Les ombres devraient pouvoir demander une journée de repos.",
+    "theme": "impossible",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_494",
+    "text": "Les rêves ennuyeux devraient être remboursés par le service du sommeil.",
+    "theme": "impossible",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_495",
+    "text": "Les zombies devraient obtenir une carte de transport à tarif réduit.",
+    "theme": "impossible",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_496",
+    "text": "Les licornes devraient être responsables du contrôle technique des véhicules.",
+    "theme": "impossible",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_497",
+    "text": "Les fantômes devraient porter un badge lorsqu’ils traversent les murs.",
+    "theme": "impossible",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_498",
+    "text": "Les voyages dans le temps devraient être autorisés uniquement pour corriger les coiffures ratées.",
+    "theme": "impossible",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_499",
+    "text": "Les dragons devraient souffler les bougies de tous les anniversaires nationaux.",
+    "theme": "impossible",
+    "difficulty": "impossible",
+    "category": "debate"
+  },
+  {
+    "id": "plaide_500",
+    "text": "Les extraterrestres devraient choisir la chanson officielle de la Terre.",
+    "theme": "impossible",
+    "difficulty": "impossible",
     "category": "debate"
   }
 ]

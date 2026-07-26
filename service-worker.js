@@ -1,15 +1,15 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v2.6-questions-osees-500";
+const CACHE_VERSION = "akgames-v2.7-plaide-cause-500";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=questions-osees-v2",
+  "/styles.css?v=plaide-cause-v2",
   "/creator.css?v=creator-v1.3-access",
-  "/app.js?v=questions-osees-v2",
+  "/app.js?v=plaide-cause-v2",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
-  "/multiplayer.js?v=questions-osees-v2",
+  "/multiplayer.js?v=plaide-cause-v2",
   "/pwa.js",
   "/manifest.webmanifest",
   "/icons/icon-192.png",

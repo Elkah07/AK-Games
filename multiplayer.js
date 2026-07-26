@@ -7751,6 +7751,337 @@
     });
   };
 
+
+  /* =========================================================
+     AK'GAMES V2.7 — PLAIDE TA CAUSE MULTIJOUEUR
+     Causes synchronisées, chrono et jury secret
+     ========================================================= */
+
+  const akPleadMultiBaseRenderMegaSetup = renderMegaSetup;
+  renderMegaSetup = function () {
+    akPleadMultiBaseRenderMegaSetup();
+    const game = state.megaGame;
+    if (!isMultiplayer() || !akPleadIsGame(game)) return;
+
+    const rounds = akPleadRoundChoices();
+    if (!rounds.includes(Number(game.roundCount))) game.roundCount = 10;
+    const roundsSelect = document.querySelector("#multiMegaRounds");
+    if (roundsSelect) {
+      roundsSelect.innerHTML = rounds.map(value => `<option value="${value}" ${Number(game.roundCount) === value ? "selected" : ""}>${value} cause${value > 1 ? "s" : ""}</option>`).join("");
+      roundsSelect.disabled = !state.isHost;
+      roundsSelect.onchange = event => { game.roundCount = Number(event.target.value); };
+    }
+
+    const durationSelect = document.querySelector("#multiMegaDuration");
+    if (durationSelect) {
+      durationSelect.innerHTML = [30,45,60,90].map(value => `<option value="${value}" ${Number(game.durationSeconds) === value ? "selected" : ""}>${value} secondes</option>`).join("");
+      durationSelect.disabled = !state.isHost;
+      durationSelect.onchange = event => { game.durationSeconds = Number(event.target.value); };
+    }
+
+    if (!document.querySelector(".plead-settings-card")) {
+      const anchor = document.querySelector("#startMultiMega") || document.querySelector(".multiplayer-wait-card");
+      anchor?.insertAdjacentHTML("beforebegin", akPleadSetupMarkup(game, { readOnly: !state.isHost }));
+      akPleadBindSetup(game, { readOnly: !state.isHost });
+    }
+
+    const startButton = document.querySelector("#startMultiMega");
+    if (startButton) startButton.textContent = "Ouvrir le tribunal sur tous les téléphones";
+    if (!document.querySelector(".plead-multi-rules")) {
+      const anchor = startButton || document.querySelector(".multiplayer-wait-card");
+      anchor?.insertAdjacentHTML("beforebegin", `<div class="notice plead-multi-rules"><strong>Vote secret :</strong> Rejetée = 0 · Presque convaincu = 1 · Plaidoirie brillante = 2 points par juré. La personne qui plaide ne vote pas.</div>`);
+    }
+  };
+
+  const akPleadMultiBaseStartMegaGame = startMegaGame;
+  startMegaGame = async function () {
+    const game = state.megaGame;
+    if (!isMultiplayer() || !akPleadIsGame(game)) return akPleadMultiBaseStartMegaGame();
+    if (!state.isHost) return;
+
+    screen.innerHTML = `<div class="notice">Préparation et synchronisation du dossier…</div>`;
+    try {
+      const rawPool = await loadJsonFile(game.config.data, "Impossible de charger les causes.");
+      const pool = akPleadBuildPool(rawPool, game);
+      if (!pool.length) throw new Error("Aucune cause ne correspond aux thèmes et niveaux choisis.");
+      const memoryKey = `multi:plead:${akPleadNormalizeThemes(game.pleadThemes).join("-")}:${akPleadNormalizeDifficulties(game.pleadDifficulties).join("-")}:${game.pleadIncludeCustom}`;
+      const items = akPleadSelectBalanced(pool, Math.min(game.roundCount, pool.length), memoryKey);
+      const playerIds = state.players.map(player => player.id);
+      const firstPlayerId = playerIds[0] || state.currentUid;
+      const now = AKFirebase.now();
+
+      await AKFirebase.setGame(state.roomCode, {
+        state: {
+          type: "mega-turn",
+          phase: "turn",
+          sessionGameId: createSessionGameId("mega-turn"),
+          items,
+          currentIndex: 0,
+          currentPlayerId: firstPlayerId,
+          scores: Object.fromEntries(playerIds.map(id => [id, 0])),
+          rounds: {},
+          currentResult: null,
+          settings: {
+            gameName: "Plaide ta cause",
+            icon: "⚖️",
+            engine: "turn",
+            roundCount: items.length,
+            durationSeconds: Number(game.durationSeconds || 60),
+            privatePrompt: false,
+            questionMode: false,
+            drinkingGame: false,
+            scoreless: false,
+            pleadCause: true,
+            pleadThemes: akPleadNormalizeThemes(game.pleadThemes),
+            pleadDifficulties: akPleadNormalizeDifficulties(game.pleadDifficulties),
+            pleadIncludeCustom: Boolean(game.pleadIncludeCustom)
+          },
+          turnEndsAt: now + Number(game.durationSeconds || 60) * 1000,
+          speechTimedOut: false,
+          startedAt: now,
+          updatedAt: now
+        },
+        votes: null,
+        answers: null,
+        actions: null
+      });
+    } catch (error) {
+      console.error(error);
+      alert(error.message || "Impossible de lancer Plaide ta cause.");
+      renderMegaSetup();
+    }
+  };
+
+  function akPleadMultiVotes() {
+    return state.roomData?.game?.votes || {};
+  }
+
+  function akPleadMultiExpectedVoters(gameState) {
+    return state.players.filter(player => player.id !== gameState.currentPlayerId);
+  }
+
+  function akPleadMultiVoteStatus(gameState, votes) {
+    const voters = akPleadMultiExpectedVoters(gameState);
+    return `<section class="submission-status">${voters.map(player => `<div class="submission-player ${votes[player.id] !== undefined ? "done" : ""}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>${votes[player.id] !== undefined ? "A voté 🔒" : "Réfléchit…"}</small></div>`).join("")}</section>`;
+  }
+
+  const akPleadMultiBaseProcessMegaTurn = processMultiMegaTurn;
+  processMultiMegaTurn = function (gameState, actions) {
+    if (!gameState.settings?.pleadCause) return akPleadMultiBaseProcessMegaTurn(gameState, actions);
+    if (!state.isHost) return;
+
+    const round = Number(gameState.currentIndex || 0);
+    const item = gameState.items?.[round];
+    const speakerId = gameState.currentPlayerId;
+
+    if (gameState.phase === "turn") {
+      const action = actions[speakerId];
+      const expired = Number(gameState.turnEndsAt || 0) > 0 && Number(gameState.turnEndsAt) <= AKFirebase.now();
+      if (!action && !expired) return;
+      const actionId = action?.id || `plead_timer_${round}`;
+      const lock = `plead_speech_${round}_${actionId}`;
+      if (state.multiProcessingActionId === lock) return;
+      state.multiProcessingActionId = lock;
+      const skipped = Boolean(action?.payload?.skip);
+      const now = AKFirebase.now();
+
+      if (skipped) {
+        const result = { itemId: item?.id || "", playerId: speakerId, skipped: true, timedOut: false, points: 0, votes: {}, counts: { 0: 0, 1: 0, 2: 0 }, average: 0 };
+        AKFirebase.updateGame(state.roomCode, {
+          "state/phase": "plead-results",
+          "state/currentResult": result,
+          [`state/rounds/${round}`]: result,
+          "state/turnEndsAt": null,
+          "state/speechTimedOut": false,
+          "state/updatedAt": now,
+          actions: null,
+          votes: null
+        }).finally(() => { state.multiProcessingActionId = null; });
+        return;
+      }
+
+      AKFirebase.updateGame(state.roomCode, {
+        "state/phase": "plead-voting",
+        "state/turnEndsAt": null,
+        "state/speechTimedOut": Boolean(expired),
+        "state/updatedAt": now,
+        actions: null,
+        votes: null
+      }).finally(() => { state.multiProcessingActionId = null; });
+      return;
+    }
+
+    if (gameState.phase === "plead-voting") {
+      const votes = akPleadMultiVotes();
+      const voters = akPleadMultiExpectedVoters(gameState);
+      const complete = voters.length > 0 && voters.every(player => votes[player.id] !== undefined);
+      if (!complete) return;
+      const lock = `plead_votes_${round}_${Object.keys(votes).length}`;
+      if (state.multiProcessingActionId === lock) return;
+      state.multiProcessingActionId = lock;
+
+      const safeVotes = {};
+      const counts = { 0: 0, 1: 0, 2: 0 };
+      voters.forEach(player => {
+        const value = Math.max(0, Math.min(2, Number(votes[player.id] || 0)));
+        safeVotes[player.id] = value;
+        counts[value] = Number(counts[value] || 0) + 1;
+      });
+      const points = Object.values(safeVotes).reduce((sum, value) => sum + Number(value), 0);
+      const average = voters.length ? points / voters.length : 0;
+      const scores = { ...(gameState.scores || {}) };
+      scores[speakerId] = Number(scores[speakerId] || 0) + points;
+      const result = {
+        itemId: item?.id || "",
+        playerId: speakerId,
+        skipped: false,
+        timedOut: Boolean(gameState.speechTimedOut),
+        points,
+        votes: safeVotes,
+        counts,
+        average
+      };
+      AKFirebase.updateGame(state.roomCode, {
+        "state/phase": "plead-results",
+        "state/currentResult": result,
+        "state/scores": scores,
+        [`state/rounds/${round}`]: result,
+        "state/updatedAt": AKFirebase.now()
+      }).finally(() => { state.multiProcessingActionId = null; });
+    }
+  };
+
+  async function akPleadAdvanceMultiRound(gameState, button) {
+    if (!state.isHost) return;
+    if (button) button.disabled = true;
+    const current = Number(gameState.currentIndex || 0);
+    const next = current + 1;
+    const finished = next >= (gameState.items || []).length;
+    const nextPlayerId = state.players[next % Math.max(1, state.players.length)]?.id || gameState.currentPlayerId;
+    const now = AKFirebase.now();
+    try {
+      await AKFirebase.updateGame(state.roomCode, {
+        "state/phase": finished ? "final" : "turn",
+        "state/currentIndex": finished ? current : next,
+        "state/currentPlayerId": nextPlayerId,
+        "state/currentResult": null,
+        "state/speechTimedOut": false,
+        "state/turnEndsAt": finished ? null : now + Number(gameState.settings?.durationSeconds || 60) * 1000,
+        "state/finishedAt": finished ? now : null,
+        "state/updatedAt": now,
+        votes: null,
+        actions: null,
+        answers: null
+      });
+    } catch (error) {
+      console.error(error);
+      if (button) button.disabled = false;
+    }
+  }
+
+  function akPleadRenderMultiSpeech(gameState, actions) {
+    const item = gameState.items?.[Number(gameState.currentIndex || 0)];
+    const speaker = state.players.find(player => player.id === gameState.currentPlayerId);
+    const isSpeaker = state.currentUid === gameState.currentPlayerId;
+    const pending = actions[state.currentUid];
+    title.textContent = "Plaide ta cause";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Cause")}
+      <section class="plead-round-card plead-round-multi">
+        ${akPleadBadges(item)}
+        <div class="plead-speaker"><span>${avatarById(speaker?.avatarId).emoji}</span><div><small>LA PAROLE EST À</small><strong>${escapeHtml(speaker?.name || "Joueur")}</strong></div></div>
+        <div class="plead-gavel">⚖️</div>
+        <h2>${escapeHtml(item?.text || "Cause surprise")}</h2>
+        <p>${isSpeaker ? "Défends cette opinion avec tes meilleurs arguments, même si tu n’y crois pas." : "Écoute la défense. Tu voteras secrètement juste après la plaidoirie."}</p>
+        ${gameState.turnEndsAt ? `<div class="mega-mini-timer plead-timer"><strong id="v014MultiCountdown">${Math.max(0, Math.ceil((Number(gameState.turnEndsAt) - AKFirebase.now()) / 1000))}</strong><span>secondes</span><div class="progress-track"><div id="v014MultiTimerFill" class="progress-fill"></div></div></div>` : ""}
+      </section>
+      ${isSpeaker
+        ? pending
+          ? renderMultiWaiting("Plaidoirie envoyée", "Le jury va maintenant recevoir son bulletin secret.", "⚖️")
+          : `<section class="decision-grid"><button id="multiPleadDone" class="primary-btn">🎤 Plaidoirie terminée</button><button id="multiPleadSkip" class="secondary-btn">Passer cette cause</button></section>`
+        : renderMultiWaiting(`Plaidoirie de ${speaker?.name || "la personne"}`, "Tu pourras voter dès que la défense sera terminée.", "🧑‍⚖️")}`;
+    document.querySelector("#multiPleadDone")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      await sendMultiAction("mega-turn", { endSpeech: true }).catch(() => event.currentTarget.disabled = false);
+    });
+    document.querySelector("#multiPleadSkip")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      await sendMultiAction("mega-turn", { skip: true }).catch(() => event.currentTarget.disabled = false);
+    });
+    if (gameState.turnEndsAt) startV014MultiTimer(gameState.turnEndsAt, gameState.settings?.durationSeconds || 60, () => processMultiMegaTurn(gameState, actions));
+  }
+
+  function akPleadRenderMultiVoting(gameState) {
+    clearV014MultiTimer();
+    const item = gameState.items?.[Number(gameState.currentIndex || 0)];
+    const speaker = state.players.find(player => player.id === gameState.currentPlayerId);
+    const votes = akPleadMultiVotes();
+    const isSpeaker = state.currentUid === gameState.currentPlayerId;
+    const ownVote = votes[state.currentUid];
+    const voters = akPleadMultiExpectedVoters(gameState);
+    title.textContent = "Vote du jury";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Cause")}
+      <section class="plead-vote-card">
+        <span class="category-chip">🔒 JURY SECRET</span>
+        <small>${escapeHtml(speaker?.name || "La personne")} défendait :</small>
+        <h2>${escapeHtml(item?.text || "Cause surprise")}</h2>
+        <p>Note la qualité de la défense, pas ton accord avec l’opinion.</p>
+      </section>
+      ${isSpeaker
+        ? renderMultiWaiting("Le jury délibère", `${Object.keys(votes).length}/${voters.length} vote${voters.length > 1 ? "s" : ""} reçu${Object.keys(votes).length > 1 ? "s" : ""}.`, "⚖️")
+        : ownVote !== undefined
+          ? renderMultiWaiting("Vote enregistré", `${Object.keys(votes).length}/${voters.length} juré${voters.length > 1 ? "s" : ""} ont voté. Ton choix reste secret.`, "🔒")
+          : `<section class="plead-vote-grid">
+              <button type="button" data-multi-plead-vote="0" class="plead-vote-btn vote-rejected"><span>🚫</span><strong>Rejetée</strong><small>0 point</small></button>
+              <button type="button" data-multi-plead-vote="1" class="plead-vote-btn vote-almost"><span>🤔</span><strong>Presque convaincu</strong><small>1 point</small></button>
+              <button type="button" data-multi-plead-vote="2" class="plead-vote-btn vote-brilliant"><span>✨</span><strong>Plaidoirie brillante</strong><small>2 points</small></button>
+            </section>`}
+      ${akPleadMultiVoteStatus(gameState, votes)}`;
+    document.querySelectorAll("[data-multi-plead-vote]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-multi-plead-vote]").forEach(node => node.disabled = true);
+      try {
+        await AKFirebase.writeOwnGameEntry(state.roomCode, "votes", Number(button.dataset.multiPleadVote));
+      } catch (error) {
+        console.error(error);
+        document.querySelectorAll("[data-multi-plead-vote]").forEach(node => node.disabled = false);
+      }
+    }));
+  }
+
+  function akPleadRenderMultiResult(gameState) {
+    clearV014MultiTimer();
+    const item = gameState.items?.[Number(gameState.currentIndex || 0)];
+    const speaker = state.players.find(player => player.id === gameState.currentPlayerId);
+    const result = gameState.currentResult || {};
+    title.textContent = "Verdict du jury";
+    setBackVisible(false);
+    screen.innerHTML = result.skipped ? `
+      ${multiMegaProgress(gameState, "Cause")}
+      <section class="reveal-stage reveal-v07 plead-result-card"><span class="game-cover-icon">🧑‍⚖️</span>${akPleadBadges(item)}<h2>Cause passée</h2><p>${escapeHtml(speaker?.name || "La personne")} ne marque aucun point sur cette manche.</p></section>
+      ${state.isHost ? `<button id="nextMultiPlead" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le verdict final" : "Cause suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La prochaine cause va être appelée.", "👑")}` : `
+      ${multiMegaProgress(gameState, "Cause")}
+      <section class="winner-stage winner-stage-v07 plead-result-card"><div class="winner-crown">⚖️✨</div>${akPleadBadges(item)}<h2>${Number(result.points || 0)} point${Number(result.points || 0) > 1 ? "s" : ""} pour ${escapeHtml(speaker?.name || "la défense")}</h2><p>Moyenne du jury : <strong>${Number(result.average || 0).toFixed(1)}/2</strong>${result.timedOut ? " · Le temps était écoulé." : ""}</p></section>
+      <section class="plead-vote-distribution">
+        <article><span>🚫</span><strong>${Number(result.counts?.[0] || 0)}</strong><small>Rejetée${Number(result.counts?.[0] || 0) > 1 ? "s" : ""}</small></article>
+        <article><span>🤔</span><strong>${Number(result.counts?.[1] || 0)}</strong><small>Presque convaincu${Number(result.counts?.[1] || 0) > 1 ? "s" : ""}</small></article>
+        <article><span>✨</span><strong>${Number(result.counts?.[2] || 0)}</strong><small>Brillante${Number(result.counts?.[2] || 0) > 1 ? "s" : ""}</small></article>
+      </section>
+      <div class="notice">Les votes individuels restent secrets.</div>
+      ${state.isHost ? `<button id="nextMultiPlead" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le verdict final" : "Cause suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La prochaine cause va être appelée.", "👑")}`;
+    document.querySelector("#nextMultiPlead")?.addEventListener("click", event => akPleadAdvanceMultiRound(gameState, event.currentTarget));
+  }
+
+  const akPleadMultiBaseRenderMegaTurn = renderMultiMegaTurn;
+  renderMultiMegaTurn = function (gameState, actions) {
+    if (!gameState.settings?.pleadCause) return akPleadMultiBaseRenderMegaTurn(gameState, actions);
+    if (gameState.phase === "plead-voting") return akPleadRenderMultiVoting(gameState);
+    if (gameState.phase === "plead-results") return akPleadRenderMultiResult(gameState);
+    return akPleadRenderMultiSpeech(gameState, actions);
+  };
+
   window.AKGamesMultiplayer = Object.freeze({
     launchRandomGame: () => launchRandomMultiplayerGame()
   });
