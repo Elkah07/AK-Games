@@ -70,6 +70,27 @@ const categories = [
   }
 ];
 
+const whoUsClassicCategories = [
+  "drole",
+  "chaos",
+  "dossiers",
+  "amitie",
+  "soiree",
+  "relations",
+  "quotidien",
+  "telephone_reseaux",
+  "argent",
+  "voyages",
+  "travail_etudes",
+  "nourriture",
+  "personnalite_emotions",
+  "crise",
+  "survie",
+  "futur",
+  "valeurs",
+  "role_groupe"
+];
+
 const whoUsCategoryLabels = {
   drole: "😂 Drôle",
   chaos: "💥 Chaos",
@@ -77,8 +98,107 @@ const whoUsCategoryLabels = {
   amitie: "🫶 Amitié",
   soiree: "🎉 Soirée",
   relations: "💘 Relations & crush",
+  quotidien: "🏠 Quotidien",
+  telephone_reseaux: "📱 Téléphone & réseaux",
+  argent: "💸 Argent & dépenses",
+  voyages: "✈️ Voyages",
+  travail_etudes: "💼 Travail & études",
+  nourriture: "🍟 Nourriture",
+  personnalite_emotions: "🧠 Personnalité & émotions",
+  crise: "🚨 Situations de crise",
+  survie: "🧟 Survie & absurde",
+  futur: "🔮 Futur & ambitions",
+  valeurs: "⚖️ Valeurs & décisions",
+  role_groupe: "👑 Rôle dans le groupe",
+  personnalise: "✍️ Vos questions",
   adulte: "🔞 Osé"
 };
+
+const AK_WHO_US_CUSTOM_KEY = "akgames_who_us_custom_questions_v1";
+
+function loadWhoUsCustomQuestions() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(AK_WHO_US_CUSTOM_KEY) || "[]");
+    if (!Array.isArray(parsed)) return [];
+
+    return parsed
+      .filter(item => item && typeof item.question === "string" && item.question.trim())
+      .map((item, index) => ({
+        id: String(item.id || `qdn_custom_${index}_${Date.now()}`),
+        question: item.question.trim(),
+        category: "personnalise",
+        adult: false,
+        custom: true
+      }));
+  } catch {
+    return [];
+  }
+}
+
+function saveWhoUsCustomQuestions(items) {
+  try {
+    localStorage.setItem(AK_WHO_US_CUSTOM_KEY, JSON.stringify(items));
+  } catch {
+    alert("Les questions personnalisées n'ont pas pu être enregistrées sur cet appareil.");
+  }
+}
+
+function createWhoUsCustomQuestion(value) {
+  let question = String(value || "").trim().replace(/\s+/g, " ");
+  if (!question) return null;
+  if (!/[?!.…]$/.test(question)) question += " ?";
+
+  return {
+    id: `qdn_custom_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+    question,
+    category: "personnalise",
+    adult: false,
+    custom: true
+  };
+}
+
+function selectBalancedWhoUsItems(pool, count, namespace) {
+  const safePool = Array.isArray(pool) ? pool.filter(Boolean) : [];
+  const limit = Math.min(Math.max(0, Number(count || 0)), safePool.length);
+  if (!limit) return [];
+
+  const memory = loadRecentContentMemory();
+  const recent = new Set(Array.isArray(memory[namespace]) ? memory[namespace] : []);
+  const groups = new Map();
+
+  safePool.forEach((item, index) => {
+    const category = item.category || "autre";
+    if (!groups.has(category)) groups.set(category, []);
+    groups.get(category).push({ item, id: contentItemId(item, index) });
+  });
+
+  groups.forEach((rows, category) => {
+    const fresh = shuffleArray(rows.filter(row => !recent.has(row.id)));
+    const alreadySeen = shuffleArray(rows.filter(row => recent.has(row.id)));
+    groups.set(category, [...fresh, ...alreadySeen]);
+  });
+
+  const selected = [];
+  let categoryOrder = shuffleArray([...groups.keys()]);
+
+  while (selected.length < limit) {
+    let added = false;
+
+    categoryOrder.forEach(category => {
+      if (selected.length >= limit) return;
+      const rows = groups.get(category);
+      if (!rows?.length) return;
+      selected.push(rows.shift().item);
+      added = true;
+    });
+
+    if (!added) break;
+    categoryOrder = shuffleArray(categoryOrder.filter(category => groups.get(category)?.length));
+  }
+
+  rememberContentItems(namespace, selected, safePool.length);
+  return selected;
+}
 
 const laughCategoryLabels = {
   nulles: "🥴 Blagues nulles",
@@ -680,10 +800,14 @@ function renderMultiNotReady(gameName) {
 
 
 function resetWhoUsState(config = {}) {
+  const savedCustomQuestions = loadWhoUsCustomQuestions();
+
   state.quiDeNous = {
     questionCount: Number(config.questionCount || 10),
-    categories: [...(config.categories || ["drole", "chaos", "dossiers", "amitie", "soiree", "relations"])],
+    categories: [...(config.categories || whoUsClassicCategories)],
     includeAdult: Boolean(config.includeAdult),
+    includeCustom: config.includeCustom !== false,
+    customQuestions: savedCustomQuestions,
     alcoholIntensity: config.alcoholIntensity || "normal",
     questions: [],
     currentIndex: 0,
@@ -696,6 +820,7 @@ function resetWhoUsState(config = {}) {
 function renderWhoUsSetup() {
   if (!state.quiDeNous) resetWhoUsState();
   const game = state.quiDeNous;
+  const customCount = game.customQuestions.length;
 
   title.textContent = "Qui de nous ?";
   setBackVisible(true);
@@ -709,21 +834,23 @@ function renderWhoUsSetup() {
     <section class="card">
       <h2 class="section-title">Nombre de questions</h2>
       <div class="choice-row">
-        ${[5, 10, 20].map(n => `
+        ${[5, 10, 20, 40, 60, 100].map(n => `
           <button class="choice-pill ${game.questionCount === n ? "active" : ""}" data-qcount="${n}">${n}</button>
         `).join("")}
       </div>
 
       <div class="form-group top-gap">
-        <label for="customCount">Personnalisé</label>
-        <input id="customCount" class="text-input" type="number" min="1" max="100" value="${game.questionCount}">
+        <label for="customCount">Personnalisé, de 3 à 100 questions</label>
+        <input id="customCount" class="text-input" type="number" min="3" max="100" value="${game.questionCount}">
       </div>
     </section>
 
     <section class="card">
-      <h2 class="section-title">Catégories</h2>
-      <div class="check-grid">
-        ${["drole", "chaos", "dossiers", "amitie", "soiree", "relations"].map(cat => `
+      <h2 class="section-title">Choisir les thèmes</h2>
+      <p class="helper">Tu peux en sélectionner un seul, plusieurs ou tous. Le mélange sera réparti équitablement.</p>
+
+      <div class="check-grid top-gap">
+        ${whoUsClassicCategories.map(cat => `
           <label class="option-card mini-option">
             <input type="checkbox" data-who-cat="${cat}" ${game.categories.includes(cat) ? "checked" : ""}>
             <span><strong>${whoUsCategoryLabels[cat]}</strong></span>
@@ -731,7 +858,49 @@ function renderWhoUsSetup() {
         `).join("")}
       </div>
 
-      <button id="selectAllCats" class="secondary-btn full top-gap">Tout sélectionner</button>
+      <div class="toolbar top-gap">
+        <button id="selectAllCats" class="secondary-btn">Tout sélectionner</button>
+        <button id="clearAllCats" class="secondary-btn">Tout désélectionner</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">✍️ Ajouter vos propres questions</h2>
+      <p class="helper">Elles restent enregistrées sur cet appareil. En multijoueur, les questions de l'hôte sont envoyées à toute la room pour cette partie.</p>
+
+      <div class="form-group top-gap">
+        <label for="customWhoUsQuestion">Nouvelle question</label>
+        <input
+          id="customWhoUsQuestion"
+          class="text-input"
+          type="text"
+          maxlength="220"
+          placeholder="Qui de nous pourrait disparaître trois jours pour regarder une série ?"
+        >
+      </div>
+      <button id="addWhoUsCustom" class="secondary-btn full">Ajouter la question</button>
+
+      <label class="option-card top-gap ${customCount ? "" : "disabled-option"}">
+        <input id="includeCustomWhoToggle" type="checkbox" ${game.includeCustom && customCount ? "checked" : ""} ${customCount ? "" : "disabled"}>
+        <span>
+          <strong>Inclure mes questions (${customCount})</strong><br>
+          <span class="helper">Elles seront mélangées aux thèmes choisis sans remplacer toute la base.</span>
+        </span>
+      </label>
+
+      ${customCount ? `
+        <details class="top-gap">
+          <summary>Gérer mes ${customCount} question${customCount > 1 ? "s" : ""}</summary>
+          <div class="stacked-choice top-gap">
+            ${game.customQuestions.map(item => `
+              <div class="option-card mini-option who-us-custom-row">
+                <span>${escapeHtml(item.question)}</span>
+                <button class="secondary-btn" data-remove-who-custom="${item.id}">Supprimer</button>
+              </div>
+            `).join("")}
+          </div>
+        </details>
+      ` : ""}
     </section>
 
     ${state.adult ? `
@@ -740,7 +909,7 @@ function renderWhoUsSetup() {
           <input id="adultWhoToggle" type="checkbox" ${game.includeAdult ? "checked" : ""}>
           <span>
             <strong>🔞 Ajouter les questions osées</strong><br>
-            <span class="helper">Mélange les questions +18 avec les autres catégories choisies.</span>
+            <span class="helper">Ajoute 150 questions adultes aux thèmes classiques sélectionnés.</span>
           </span>
         </label>
       </section>
@@ -777,7 +946,7 @@ function renderWhoUsSetup() {
   });
 
   document.querySelector("#customCount").addEventListener("input", e => {
-    game.questionCount = Math.max(1, Math.min(100, Number(e.target.value) || 1));
+    game.questionCount = Math.max(3, Math.min(100, Number(e.target.value) || 3));
   });
 
   document.querySelectorAll("[data-who-cat]").forEach(input => {
@@ -789,9 +958,62 @@ function renderWhoUsSetup() {
   });
 
   document.querySelector("#selectAllCats").addEventListener("click", () => {
-    game.categories = ["drole", "chaos", "dossiers", "amitie", "soiree", "relations"];
+    game.categories = [...whoUsClassicCategories];
     renderWhoUsSetup();
   });
+
+  document.querySelector("#clearAllCats").addEventListener("click", () => {
+    game.categories = [];
+    renderWhoUsSetup();
+  });
+
+  document.querySelector("#addWhoUsCustom").addEventListener("click", () => {
+    const input = document.querySelector("#customWhoUsQuestion");
+    const customQuestion = createWhoUsCustomQuestion(input.value);
+
+    if (!customQuestion) {
+      alert("Écris d'abord une question.");
+      input.focus();
+      return;
+    }
+
+    const duplicate = game.customQuestions.some(item =>
+      item.question.trim().toLocaleLowerCase("fr") === customQuestion.question.trim().toLocaleLowerCase("fr")
+    );
+
+    if (duplicate) {
+      alert("Cette question personnalisée existe déjà.");
+      return;
+    }
+
+    game.customQuestions.push(customQuestion);
+    game.includeCustom = true;
+    saveWhoUsCustomQuestions(game.customQuestions);
+    renderWhoUsSetup();
+  });
+
+  document.querySelector("#customWhoUsQuestion").addEventListener("keydown", event => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      document.querySelector("#addWhoUsCustom").click();
+    }
+  });
+
+  document.querySelectorAll("[data-remove-who-custom]").forEach(button => {
+    button.addEventListener("click", () => {
+      game.customQuestions = game.customQuestions.filter(item => item.id !== button.dataset.removeWhoCustom);
+      if (!game.customQuestions.length) game.includeCustom = false;
+      saveWhoUsCustomQuestions(game.customQuestions);
+      renderWhoUsSetup();
+    });
+  });
+
+  const customToggle = document.querySelector("#includeCustomWhoToggle");
+  if (customToggle) {
+    customToggle.addEventListener("change", event => {
+      game.includeCustom = event.target.checked;
+    });
+  }
 
   const adultToggle = document.querySelector("#adultWhoToggle");
   if (adultToggle) {
@@ -811,9 +1033,10 @@ function renderWhoUsSetup() {
 
 async function startWhoUsGame() {
   const game = state.quiDeNous;
+  const hasCustomQuestions = game.includeCustom && game.customQuestions.length > 0;
 
-  if (!game.categories.length && !game.includeAdult) {
-    alert("Choisis au moins une catégorie.");
+  if (!game.categories.length && !game.includeAdult && !hasCustomQuestions) {
+    alert("Choisis au moins un thème, active les questions adultes ou ajoute une question personnalisée.");
     return;
   }
 
@@ -833,9 +1056,17 @@ async function startWhoUsGame() {
       pool = pool.concat(adultQuestions);
     }
 
-    if (!pool.length) throw new Error("Aucune question ne correspond aux catégories choisies.");
+    if (hasCustomQuestions) {
+      pool = pool.concat(game.customQuestions);
+    }
 
-    game.questions = selectFreshItems(pool, Math.min(game.questionCount, pool.length), "solo:who-us");
+    if (!pool.length) throw new Error("Aucune question ne correspond aux thèmes choisis.");
+
+    game.questions = selectBalancedWhoUsItems(
+      pool,
+      Math.min(game.questionCount, pool.length),
+      "solo:who-us"
+    );
     game.currentIndex = 0;
     game.currentVoterIndex = 0;
     game.currentVotes = {};
@@ -1186,6 +1417,7 @@ function renderWhoUsEnd() {
       questionCount: game.questionCount,
       categories: game.categories,
       includeAdult: game.includeAdult,
+      includeCustom: game.includeCustom,
       alcoholIntensity: game.alcoholIntensity
     });
     renderWhoUsSetup();

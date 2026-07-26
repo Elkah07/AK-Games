@@ -1134,9 +1134,10 @@
     if (!state.isHost) return;
 
     const game = state.quiDeNous;
+    const hasCustomQuestions = game.includeCustom && game.customQuestions?.length > 0;
 
-    if (!game.categories.length && !game.includeAdult) {
-      alert("Choisis au moins une catégorie.");
+    if (!game.categories.length && !game.includeAdult && !hasCustomQuestions) {
+      alert("Choisis au moins un thème, active les questions adultes ou ajoute une question personnalisée.");
       return;
     }
 
@@ -1163,11 +1164,15 @@
         pool = pool.concat(adultQuestions);
       }
 
-      if (!pool.length) {
-        throw new Error("Aucune question ne correspond aux catégories choisies.");
+      if (hasCustomQuestions) {
+        pool = pool.concat(game.customQuestions);
       }
 
-      const questions = selectFreshItems(
+      if (!pool.length) {
+        throw new Error("Aucune question ne correspond aux thèmes choisis.");
+      }
+
+      const questions = selectBalancedWhoUsItems(
         pool,
         Math.min(game.questionCount, pool.length),
         "multi:who-us"
@@ -1180,7 +1185,8 @@
           categories: [...game.categories],
           questionCount: Number(game.questionCount || questions.length),
           alcoholIntensity: game.alcoholIntensity,
-          includeAdult: Boolean(game.includeAdult)
+          includeAdult: Boolean(game.includeAdult),
+          includeCustom: Boolean(hasCustomQuestions)
         }
       });
 

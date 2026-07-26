@@ -598,5 +598,305 @@
     "question": "Qui de nous serait le/la plus susceptible de dire oui à une proposition complètement imprévue lors d'une soirée ?",
     "category": "adulte",
     "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_001_qui_de_nous_pourrait_avoir_un_crush_secret_sur_quelqu_un",
+    "question": "Qui de nous pourrait avoir un crush secret sur quelqu'un de totalement inattendu ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_002_qui_de_nous_serait_le_plus_susceptible_de_retourner_parl",
+    "question": "Qui de nous serait le plus susceptible de retourner parler à un ex par ennui ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_003_qui_de_nous_pourrait_envoyer_un_message_tres_ose_puis_me",
+    "question": "Qui de nous pourrait envoyer un message très osé puis mettre son téléphone en mode avion ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_004_qui_de_nous_serait_capable_de_seduire_quelqu_un_uniqueme",
+    "question": "Qui de nous serait capable de séduire quelqu'un uniquement avec son humour ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_005_qui_de_nous_pourrait_embrasser_quelqu_un_des_le_premier_",
+    "question": "Qui de nous pourrait embrasser quelqu'un dès le premier rendez-vous ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_006_qui_de_nous_serait_le_plus_susceptible_de_mentir_sur_le_",
+    "question": "Qui de nous serait le plus susceptible de mentir sur le nombre de ses partenaires ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_007_qui_de_nous_pourrait_avoir_deja_fouille_discretement_le_",
+    "question": "Qui de nous pourrait avoir déjà fouillé discrètement le téléphone d'une personne avec qui il ou elle sortait ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_008_qui_de_nous_serait_capable_de_garder_une_relation_secret",
+    "question": "Qui de nous serait capable de garder une relation secrète pendant plusieurs mois ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_009_qui_de_nous_pourrait_accepter_un_rendez_vous_uniquement_",
+    "question": "Qui de nous pourrait accepter un rendez-vous uniquement parce que la personne est très attirante ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_010_qui_de_nous_serait_le_plus_susceptible_de_reprendre_cont",
+    "question": "Qui de nous serait le plus susceptible de reprendre contact après avoir ghosté quelqu'un ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_011_qui_de_nous_pourrait_envoyer_une_photo_intime_a_la_mauva",
+    "question": "Qui de nous pourrait envoyer une photo intime à la mauvaise personne ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_012_qui_de_nous_serait_capable_de_coucher_avec_quelqu_un_san",
+    "question": "Qui de nous serait capable de coucher avec quelqu'un sans vouloir le ou la revoir ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_013_qui_de_nous_pourrait_craquer_le_plus_facilement_pour_un_",
+    "question": "Qui de nous pourrait craquer le plus facilement pour un ami ou une amie proche ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_014_qui_de_nous_serait_le_plus_susceptible_d_avoir_une_liste",
+    "question": "Qui de nous serait le plus susceptible d'avoir une liste mentale de ses meilleurs baisers ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_015_qui_de_nous_pourrait_pardonner_une_infidelite_mais_ne_ja",
+    "question": "Qui de nous pourrait pardonner une infidélité mais ne jamais vraiment passer à autre chose ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_016_qui_de_nous_serait_capable_de_flirter_pour_obtenir_un_av",
+    "question": "Qui de nous serait capable de flirter pour obtenir un avantage ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_017_qui_de_nous_pourrait_avoir_deja_fait_semblant_de_ne_pas_",
+    "question": "Qui de nous pourrait avoir déjà fait semblant de ne pas être jaloux ou jalouse ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_018_qui_de_nous_serait_le_plus_susceptible_de_revoir_quelqu_",
+    "question": "Qui de nous serait le plus susceptible de revoir quelqu'un malgré un énorme red flag ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_019_qui_de_nous_pourrait_preferer_une_relation_libre_a_une_r",
+    "question": "Qui de nous pourrait préférer une relation libre à une relation très fusionnelle ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_020_qui_de_nous_serait_capable_de_proposer_directement_de_re",
+    "question": "Qui de nous serait capable de proposer directement de rentrer ensemble après une soirée ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_021_qui_de_nous_pourrait_avoir_le_plus_de_conversations_ambi",
+    "question": "Qui de nous pourrait avoir le plus de conversations ambiguës en même temps ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_022_qui_de_nous_serait_le_plus_susceptible_de_bloquer_puis_d",
+    "question": "Qui de nous serait le plus susceptible de bloquer puis débloquer un ex plusieurs fois ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_023_qui_de_nous_pourrait_tomber_amoureux_ou_amoureuse_apres_",
+    "question": "Qui de nous pourrait tomber amoureux ou amoureuse après une seule nuit très intense ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_024_qui_de_nous_serait_capable_de_mentir_sur_l_endroit_ou_il",
+    "question": "Qui de nous serait capable de mentir sur l'endroit où il ou elle a passé la nuit ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_025_qui_de_nous_pourrait_etre_attire_e_par_une_personne_que_",
+    "question": "Qui de nous pourrait être attiré(e) par une personne que tout le groupe déteste ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_026_qui_de_nous_serait_le_plus_susceptible_de_faire_le_premi",
+    "question": "Qui de nous serait le plus susceptible de faire le premier pas dans un lieu totalement inapproprié ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_027_qui_de_nous_pourrait_avoir_deja_embrasse_deux_personnes_",
+    "question": "Qui de nous pourrait avoir déjà embrassé deux personnes du même groupe d'amis ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_028_qui_de_nous_serait_capable_de_rester_ami_e_avec_presque_",
+    "question": "Qui de nous serait capable de rester ami(e) avec presque tous ses ex ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_029_qui_de_nous_pourrait_garder_une_photo_compromettante_bea",
+    "question": "Qui de nous pourrait garder une photo compromettante beaucoup trop longtemps ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_030_qui_de_nous_serait_le_plus_susceptible_de_seduire_quelqu",
+    "question": "Qui de nous serait le plus susceptible de séduire quelqu'un sans s'en rendre compte ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_031_qui_de_nous_pourrait_accepter_un_plan_a_trois_par_curios",
+    "question": "Qui de nous pourrait accepter un plan à trois par curiosité ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_032_qui_de_nous_serait_capable_de_quitter_un_rendez_vous_par",
+    "question": "Qui de nous serait capable de quitter un rendez-vous parce que l'alchimie physique n'est pas là ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_033_qui_de_nous_pourrait_avoir_deja_menti_sur_ses_sentiments",
+    "question": "Qui de nous pourrait avoir déjà menti sur ses sentiments pour éviter une discussion ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_034_qui_de_nous_serait_le_plus_susceptible_de_craquer_pour_u",
+    "question": "Qui de nous serait le plus susceptible de craquer pour une personne déjà en couple ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_035_qui_de_nous_pourrait_envoyer_un_message_a_son_ex_apres_a",
+    "question": "Qui de nous pourrait envoyer un message à son ex après avoir bu ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_036_qui_de_nous_serait_capable_de_faire_semblant_de_ne_pas_r",
+    "question": "Qui de nous serait capable de faire semblant de ne pas reconnaître un ancien plan cul ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_037_qui_de_nous_pourrait_etre_le_plus_a_l_aise_pour_parler_o",
+    "question": "Qui de nous pourrait être le plus à l'aise pour parler ouvertement de sexualité ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_038_qui_de_nous_serait_le_plus_susceptible_de_juger_secretem",
+    "question": "Qui de nous serait le plus susceptible de juger secrètement les talents amoureux de quelqu'un ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_039_qui_de_nous_pourrait_avoir_deja_invente_une_excuse_pour_",
+    "question": "Qui de nous pourrait avoir déjà inventé une excuse pour éviter de dormir chez quelqu'un ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_040_qui_de_nous_serait_capable_d_embrasser_quelqu_un_juste_p",
+    "question": "Qui de nous serait capable d'embrasser quelqu'un juste pour rendre une autre personne jalouse ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_041_qui_de_nous_pourrait_pardonner_le_plus_facilement_un_fli",
+    "question": "Qui de nous pourrait pardonner le plus facilement un flirt caché ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_042_qui_de_nous_serait_le_plus_susceptible_de_tomber_sur_un_",
+    "question": "Qui de nous serait le plus susceptible de tomber sur un proche en utilisant une application de rencontres ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_043_qui_de_nous_pourrait_avoir_deja_regrette_un_message_envo",
+    "question": "Qui de nous pourrait avoir déjà regretté un message envoyé après minuit ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_044_qui_de_nous_serait_capable_de_continuer_a_voir_quelqu_un",
+    "question": "Qui de nous serait capable de continuer à voir quelqu'un en sachant que la relation n'ira nulle part ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_045_qui_de_nous_pourrait_etre_le_plus_tente_e_par_une_aventu",
+    "question": "Qui de nous pourrait être le plus tenté(e) par une aventure avec une célébrité en couple ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_046_qui_de_nous_serait_le_plus_susceptible_de_mentir_pour_ca",
+    "question": "Qui de nous serait le plus susceptible de mentir pour cacher un rendez-vous gênant ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_047_qui_de_nous_pourrait_avoir_deja_donne_un_faux_prenom_pen",
+    "question": "Qui de nous pourrait avoir déjà donné un faux prénom pendant une soirée ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_048_qui_de_nous_serait_capable_de_rompre_par_message_pour_ev",
+    "question": "Qui de nous serait capable de rompre par message pour éviter la confrontation ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_049_qui_de_nous_pourrait_accepter_de_revoir_quelqu_un_unique",
+    "question": "Qui de nous pourrait accepter de revoir quelqu'un uniquement parce que le sexe était très bon ?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "qdn_adulte_nouveau_050_qui_de_nous_serait_le_plus_susceptible_de_garder_un_secr",
+    "question": "Qui de nous serait le plus susceptible de garder un secret intime confié par un ex ?",
+    "category": "adulte",
+    "adult": true
   }
 ]

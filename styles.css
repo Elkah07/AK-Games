@@ -6146,3 +6146,42 @@ select:focus-visible,
     border-radius: 25px;
   }
 }
+
+/* QUI DE NOUS V2 — QUESTIONS PERSONNALISÉES */
+.who-us-custom-row {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.who-us-custom-row > span {
+  flex: 1;
+  min-width: 0;
+}
+
+.who-us-custom-row .secondary-btn {
+  width: auto;
+  min-height: 38px;
+  padding: 0 12px;
+  flex: 0 0 auto;
+}
+
+.disabled-option {
+  opacity: .55;
+}
+
+details > summary {
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 800;
+}
+
+@media (max-width: 520px) {
+  .who-us-custom-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .who-us-custom-row .secondary-btn {
+    width: 100%;
+  }
+}

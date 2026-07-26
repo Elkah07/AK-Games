@@ -1198,5 +1198,1805 @@
     "question": "Qui de nous pourrait vivre la plus grande histoire d'amour complètement inattendue ?",
     "category": "relations",
     "adult": false
+  },
+  {
+    "id": "qdn_quotidien_001_qui_de_nous_pourrait_chercher_ses_lunettes_alors_qu_elle",
+    "question": "Qui de nous pourrait chercher ses lunettes alors qu'elles sont sur sa tête ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_002_qui_de_nous_remettrait_une_tache_de_cinq_minutes_au_lend",
+    "question": "Qui de nous remettrait une tâche de cinq minutes au lendemain pendant une semaine ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_003_qui_de_nous_aurait_le_plus_de_chances_de_sortir_sans_ses",
+    "question": "Qui de nous aurait le plus de chances de sortir sans ses clés ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_004_qui_de_nous_pourrait_manger_exactement_le_meme_petit_dej",
+    "question": "Qui de nous pourrait manger exactement le même petit-déjeuner tous les jours sans se lasser ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_005_qui_de_nous_laisserait_trainer_une_tasse_vide_beaucoup_t",
+    "question": "Qui de nous laisserait traîner une tasse vide beaucoup trop longtemps ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_006_qui_de_nous_pourrait_lancer_une_machine_puis_oublier_com",
+    "question": "Qui de nous pourrait lancer une machine puis oublier complètement le linge dedans ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_007_qui_de_nous_mettrait_trois_reveils_et_reussirait_quand_m",
+    "question": "Qui de nous mettrait trois réveils et réussirait quand même à se rendormir ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_008_qui_de_nous_repondrait_j_arrive_alors_qu_il_ou_elle_n_es",
+    "question": "Qui de nous répondrait « j'arrive » alors qu'il ou elle n'est même pas encore habillé(e) ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_009_qui_de_nous_pourrait_acheter_un_objet_qu_il_ou_elle_poss",
+    "question": "Qui de nous pourrait acheter un objet qu'il ou elle possédait déjà ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_010_qui_de_nous_serait_le_plus_susceptible_de_parler_tout_se",
+    "question": "Qui de nous serait le plus susceptible de parler tout seul chez lui ou chez elle ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_011_qui_de_nous_pourrait_garder_un_carton_vide_au_cas_ou_pen",
+    "question": "Qui de nous pourrait garder un carton vide au cas où pendant plusieurs années ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_012_qui_de_nous_ferait_une_liste_pour_organiser_une_autre_li",
+    "question": "Qui de nous ferait une liste pour organiser une autre liste ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_013_qui_de_nous_pourrait_oublier_pourquoi_il_ou_elle_est_ent",
+    "question": "Qui de nous pourrait oublier pourquoi il ou elle est entré(e) dans une pièce ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_014_qui_de_nous_serait_capable_de_faire_le_menage_pour_evite",
+    "question": "Qui de nous serait capable de faire le ménage pour éviter une tâche plus importante ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_015_qui_de_nous_aurait_le_frigo_le_plus_mysterieux_a_ouvrir_",
+    "question": "Qui de nous aurait le frigo le plus mystérieux à ouvrir après minuit ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_016_qui_de_nous_pourrait_porter_sa_tenue_preferee_trois_jour",
+    "question": "Qui de nous pourrait porter sa tenue préférée trois jours de suite sans honte ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_017_qui_de_nous_serait_le_plus_susceptible_de_manger_directe",
+    "question": "Qui de nous serait le plus susceptible de manger directement dans la casserole ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_018_qui_de_nous_pourrait_ranger_quelque_chose_dans_un_endroi",
+    "question": "Qui de nous pourrait ranger quelque chose dans un endroit tellement logique qu'il ou elle ne le retrouverait jamais ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_019_qui_de_nous_aurait_le_plus_de_notifications_non_lues_a_l",
+    "question": "Qui de nous aurait le plus de notifications non lues à la fin de la journée ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_020_qui_de_nous_pourrait_partir_faire_une_course_et_revenir_",
+    "question": "Qui de nous pourrait partir faire une course et revenir avec tout sauf ce qu'il fallait ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_021_qui_de_nous_serait_le_plus_susceptible_de_commencer_une_",
+    "question": "Qui de nous serait le plus susceptible de commencer une nouvelle série à deux heures du matin ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_022_qui_de_nous_pourrait_faire_semblant_de_ne_pas_entendre_l",
+    "question": "Qui de nous pourrait faire semblant de ne pas entendre la sonnette ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_023_qui_de_nous_aurait_le_plus_de_mal_a_jeter_un_objet_encor",
+    "question": "Qui de nous aurait le plus de mal à jeter un objet « encore utilisable » ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_024_qui_de_nous_pourrait_passer_vingt_minutes_a_choisir_quoi",
+    "question": "Qui de nous pourrait passer vingt minutes à choisir quoi regarder puis ne plus avoir envie de regarder quoi que ce soit ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_quotidien_025_qui_de_nous_serait_le_plus_susceptible_de_prendre_une_do",
+    "question": "Qui de nous serait le plus susceptible de prendre une douche beaucoup trop longue ?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_001_qui_de_nous_pourrait_supprimer_une_publication_parce_qu_",
+    "question": "Qui de nous pourrait supprimer une publication parce qu'elle n'a pas assez de likes ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_002_qui_de_nous_repondrait_a_un_message_dans_sa_tete_sans_ja",
+    "question": "Qui de nous répondrait à un message dans sa tête sans jamais l'envoyer ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_003_qui_de_nous_aurait_le_plus_de_captures_d_ecran_incompreh",
+    "question": "Qui de nous aurait le plus de captures d'écran incompréhensibles dans sa galerie ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_004_qui_de_nous_pourrait_regarder_le_profil_d_un_inconnu_jus",
+    "question": "Qui de nous pourrait regarder le profil d'un inconnu jusqu'à remonter dix ans en arrière ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_005_qui_de_nous_laisserait_son_telephone_a_2_pendant_une_heu",
+    "question": "Qui de nous laisserait son téléphone à 2 % pendant une heure sans paniquer ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_006_qui_de_nous_serait_le_plus_susceptible_d_envoyer_un_voca",
+    "question": "Qui de nous serait le plus susceptible d'envoyer un vocal de plus de cinq minutes ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_007_qui_de_nous_pourrait_passer_une_soiree_entiere_a_montrer",
+    "question": "Qui de nous pourrait passer une soirée entière à montrer des vidéos aux autres ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_008_qui_de_nous_aurait_le_plus_de_conversations_archivees_po",
+    "question": "Qui de nous aurait le plus de conversations archivées pour éviter d'y penser ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_009_qui_de_nous_pourrait_liker_accidentellement_une_tres_vie",
+    "question": "Qui de nous pourrait liker accidentellement une très vieille photo en espionnant un profil ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_010_qui_de_nous_serait_le_plus_susceptible_de_changer_sa_pho",
+    "question": "Qui de nous serait le plus susceptible de changer sa photo de profil après une rupture ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_011_qui_de_nous_pourrait_oublier_son_mot_de_passe_juste_apre",
+    "question": "Qui de nous pourrait oublier son mot de passe juste après l'avoir modifié ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_012_qui_de_nous_aurait_le_temps_d_ecran_le_plus_difficile_a_",
+    "question": "Qui de nous aurait le temps d'écran le plus difficile à assumer ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_013_qui_de_nous_pourrait_bloquer_quelqu_un_puis_verifier_qua",
+    "question": "Qui de nous pourrait bloquer quelqu'un puis vérifier quand même son profil ailleurs ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_014_qui_de_nous_repondrait_le_plus_vite_a_un_meme_qu_a_une_q",
+    "question": "Qui de nous répondrait le plus vite à un mème qu'à une question sérieuse ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_015_qui_de_nous_serait_capable_de_faire_une_story_cryptique_",
+    "question": "Qui de nous serait capable de faire une story cryptique pour viser une seule personne ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_016_qui_de_nous_pourrait_garder_97_onglets_ouverts_sur_son_t",
+    "question": "Qui de nous pourrait garder 97 onglets ouverts sur son téléphone ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_017_qui_de_nous_serait_le_plus_susceptible_de_lire_un_messag",
+    "question": "Qui de nous serait le plus susceptible de lire un message depuis la notification pour ne pas apparaître en vu ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_018_qui_de_nous_pourrait_filmer_tout_un_concert_au_lieu_de_l",
+    "question": "Qui de nous pourrait filmer tout un concert au lieu de le regarder ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_019_qui_de_nous_aurait_le_plus_de_brouillons_jamais_publies",
+    "question": "Qui de nous aurait le plus de brouillons jamais publiés ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_020_qui_de_nous_pourrait_faire_une_enquete_complete_a_partir",
+    "question": "Qui de nous pourrait faire une enquête complète à partir d'un simple prénom ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_021_qui_de_nous_serait_le_plus_susceptible_d_oublier_de_repo",
+    "question": "Qui de nous serait le plus susceptible d'oublier de répondre pendant trois jours puis de revenir comme si de rien n'était ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_022_qui_de_nous_pourrait_paniquer_le_plus_en_envoyant_un_mes",
+    "question": "Qui de nous pourrait paniquer le plus en envoyant un message au mauvais groupe ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_023_qui_de_nous_aurait_le_plus_de_photos_identiques_prises_p",
+    "question": "Qui de nous aurait le plus de photos identiques prises pour obtenir la bonne ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_024_qui_de_nous_pourrait_installer_une_application_puis_l_ab",
+    "question": "Qui de nous pourrait installer une application puis l'abandonner le jour même ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_telephone_reseaux_025_qui_de_nous_serait_le_plus_susceptible_d_avoir_un_compte",
+    "question": "Qui de nous serait le plus susceptible d'avoir un compte secret que personne ici ne connaît ?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_001_qui_de_nous_pourrait_depenser_300_sur_un_coup_de_tete_pu",
+    "question": "Qui de nous pourrait dépenser 300 € sur un coup de tête puis regretter immédiatement ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_002_qui_de_nous_serait_le_plus_susceptible_de_negocier_pour_",
+    "question": "Qui de nous serait le plus susceptible de négocier pour cinquante centimes ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_003_qui_de_nous_pourrait_oublier_qu_un_abonnement_est_encore",
+    "question": "Qui de nous pourrait oublier qu'un abonnement est encore prélevé chaque mois ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_004_qui_de_nous_serait_capable_de_mettre_beaucoup_d_argent_d",
+    "question": "Qui de nous serait capable de mettre beaucoup d'argent dans un objet totalement inutile mais magnifique ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_005_qui_de_nous_pourrait_gagner_au_loto_et_continuer_a_compa",
+    "question": "Qui de nous pourrait gagner au loto et continuer à comparer le prix des pâtes ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_006_qui_de_nous_serait_le_plus_susceptible_de_preter_de_l_ar",
+    "question": "Qui de nous serait le plus susceptible de prêter de l'argent sans oser le réclamer ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_007_qui_de_nous_pourrait_acheter_quelque_chose_uniquement_pa",
+    "question": "Qui de nous pourrait acheter quelque chose uniquement parce qu'il y a écrit « édition limitée » ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_008_qui_de_nous_aurait_le_plus_de_chances_de_perdre_un_bille",
+    "question": "Qui de nous aurait le plus de chances de perdre un billet dans une poche ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_009_qui_de_nous_pourrait_faire_un_tableau_pour_suivre_toutes",
+    "question": "Qui de nous pourrait faire un tableau pour suivre toutes ses dépenses ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_010_qui_de_nous_serait_le_plus_susceptible_de_commander_un_p",
+    "question": "Qui de nous serait le plus susceptible de commander un plat trop cher juste pour le tester ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_011_qui_de_nous_pourrait_depenser_davantage_pour_eviter_de_m",
+    "question": "Qui de nous pourrait dépenser davantage pour éviter de marcher dix minutes ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_012_qui_de_nous_serait_capable_de_garder_un_bon_de_reduction",
+    "question": "Qui de nous serait capable de garder un bon de réduction périmé depuis deux ans ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_013_qui_de_nous_pourrait_cacher_le_vrai_prix_d_un_achat_au_g",
+    "question": "Qui de nous pourrait cacher le vrai prix d'un achat au groupe ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_014_qui_de_nous_serait_le_plus_susceptible_de_payer_une_tour",
+    "question": "Qui de nous serait le plus susceptible de payer une tournée entière sur un élan d'enthousiasme ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_015_qui_de_nous_pourrait_economiser_pendant_des_mois_pour_un",
+    "question": "Qui de nous pourrait économiser pendant des mois pour un projet puis tout dépenser ailleurs ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_016_qui_de_nous_aurait_le_plus_de_mal_a_partager_une_additio",
+    "question": "Qui de nous aurait le plus de mal à partager une addition au centime près ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_017_qui_de_nous_pourrait_acheter_un_cadeau_beaucoup_trop_che",
+    "question": "Qui de nous pourrait acheter un cadeau beaucoup trop cher pour quelqu'un ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_018_qui_de_nous_serait_le_plus_susceptible_de_revendre_immed",
+    "question": "Qui de nous serait le plus susceptible de revendre immédiatement un cadeau qui ne lui plaît pas ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_019_qui_de_nous_pourrait_se_laisser_convaincre_par_un_vendeu",
+    "question": "Qui de nous pourrait se laisser convaincre par un vendeur très charismatique ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_020_qui_de_nous_serait_capable_d_investir_dans_une_idee_dout",
+    "question": "Qui de nous serait capable d'investir dans une idée douteuse présentée avec un joli logo ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_021_qui_de_nous_pourrait_oublier_son_portefeuille_au_moment_",
+    "question": "Qui de nous pourrait oublier son portefeuille au moment de payer ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_022_qui_de_nous_serait_le_plus_susceptible_de_faire_une_depe",
+    "question": "Qui de nous serait le plus susceptible de faire une dépense importante sans en parler à personne ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_023_qui_de_nous_pourrait_vivre_une_semaine_entiere_avec_pres",
+    "question": "Qui de nous pourrait vivre une semaine entière avec presque rien juste pour relever le défi ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_024_qui_de_nous_serait_capable_de_payer_plus_cher_pour_ne_pa",
+    "question": "Qui de nous serait capable de payer plus cher pour ne pas attendre ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_argent_025_qui_de_nous_pourrait_devenir_riche_et_quand_meme_voler_l",
+    "question": "Qui de nous pourrait devenir riche et quand même voler les petits shampoings de l'hôtel ?",
+    "category": "argent",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_001_qui_de_nous_serait_le_plus_susceptible_de_rater_son_avio",
+    "question": "Qui de nous serait le plus susceptible de rater son avion alors qu'il ou elle était arrivé(e) en avance ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_002_qui_de_nous_pourrait_partir_en_voyage_avec_une_valise_be",
+    "question": "Qui de nous pourrait partir en voyage avec une valise beaucoup trop lourde ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_003_qui_de_nous_serait_capable_de_reserver_un_billet_pour_la",
+    "question": "Qui de nous serait capable de réserver un billet pour la mauvaise date ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_004_qui_de_nous_pourrait_se_perdre_dans_un_hotel",
+    "question": "Qui de nous pourrait se perdre dans un hôtel ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_005_qui_de_nous_serait_le_plus_susceptible_de_sympathiser_av",
+    "question": "Qui de nous serait le plus susceptible de sympathiser avec des inconnus pendant tout le trajet ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_006_qui_de_nous_pourrait_vouloir_tout_planifier_a_la_minute_",
+    "question": "Qui de nous pourrait vouloir tout planifier à la minute près ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_007_qui_de_nous_serait_capable_de_partir_avec_seulement_un_s",
+    "question": "Qui de nous serait capable de partir avec seulement un sac à dos et aucune réservation ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_008_qui_de_nous_pourrait_oublier_un_objet_essentiel_avant_de",
+    "question": "Qui de nous pourrait oublier un objet essentiel avant de partir ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_009_qui_de_nous_serait_le_plus_susceptible_de_gouter_le_plat",
+    "question": "Qui de nous serait le plus susceptible de goûter le plat le plus étrange du menu ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_010_qui_de_nous_pourrait_prendre_cent_photos_du_meme_coucher",
+    "question": "Qui de nous pourrait prendre cent photos du même coucher de soleil ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_011_qui_de_nous_serait_capable_de_dormir_n_importe_ou_pendan",
+    "question": "Qui de nous serait capable de dormir n'importe où pendant un trajet ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_012_qui_de_nous_pourrait_se_disputer_avec_un_gps_dans_un_pay",
+    "question": "Qui de nous pourrait se disputer avec un GPS dans un pays étranger ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_013_qui_de_nous_serait_le_plus_susceptible_de_revenir_avec_b",
+    "question": "Qui de nous serait le plus susceptible de revenir avec beaucoup trop de souvenirs ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_014_qui_de_nous_pourrait_prolonger_ses_vacances_sur_un_coup_",
+    "question": "Qui de nous pourrait prolonger ses vacances sur un coup de tête ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_015_qui_de_nous_serait_capable_de_choisir_une_destination_un",
+    "question": "Qui de nous serait capable de choisir une destination uniquement pour la nourriture ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_016_qui_de_nous_pourrait_oublier_ou_il_ou_elle_a_gare_la_voi",
+    "question": "Qui de nous pourrait oublier où il ou elle a garé la voiture de location ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_017_qui_de_nous_serait_le_plus_susceptible_de_perdre_son_pas",
+    "question": "Qui de nous serait le plus susceptible de perdre son passeport ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_018_qui_de_nous_pourrait_apprendre_dix_phrases_dans_la_langu",
+    "question": "Qui de nous pourrait apprendre dix phrases dans la langue locale puis les utiliser partout ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_019_qui_de_nous_serait_capable_de_partir_vivre_a_l_etranger_",
+    "question": "Qui de nous serait capable de partir vivre à l'étranger après un seul voyage réussi ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_020_qui_de_nous_pourrait_se_plaindre_du_trajet_puis_etre_tri",
+    "question": "Qui de nous pourrait se plaindre du trajet puis être triste de rentrer ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_021_qui_de_nous_serait_le_plus_susceptible_de_devenir_ami_e_",
+    "question": "Qui de nous serait le plus susceptible de devenir ami(e) avec le personnel de l'hôtel ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_022_qui_de_nous_pourrait_reserver_une_activite_extreme_sans_",
+    "question": "Qui de nous pourrait réserver une activité extrême sans lire les détails ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_023_qui_de_nous_serait_capable_de_visiter_un_musee_entier_ju",
+    "question": "Qui de nous serait capable de visiter un musée entier juste pour voir une seule œuvre ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_024_qui_de_nous_pourrait_oublier_de_prevenir_qu_il_ou_elle_e",
+    "question": "Qui de nous pourrait oublier de prévenir qu'il ou elle est bien arrivé(e) ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_voyages_025_qui_de_nous_serait_le_plus_susceptible_de_transformer_un",
+    "question": "Qui de nous serait le plus susceptible de transformer un week-end tranquille en expédition chaotique ?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_001_qui_de_nous_pourrait_improviser_une_presentation_entiere",
+    "question": "Qui de nous pourrait improviser une présentation entière sans l'avoir préparée ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_002_qui_de_nous_serait_le_plus_susceptible_de_devenir_ami_e_",
+    "question": "Qui de nous serait le plus susceptible de devenir ami(e) avec son ou sa responsable ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_003_qui_de_nous_pourrait_faire_semblant_d_etre_occupe_e_quan",
+    "question": "Qui de nous pourrait faire semblant d'être occupé(e) quand quelqu'un passe derrière son écran ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_004_qui_de_nous_serait_capable_de_rendre_un_travail_a_la_der",
+    "question": "Qui de nous serait capable de rendre un travail à la dernière minute et d'obtenir quand même une bonne note ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_005_qui_de_nous_pourrait_oublier_le_prenom_d_un_collegue_apr",
+    "question": "Qui de nous pourrait oublier le prénom d'un collègue après plusieurs mois ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_006_qui_de_nous_serait_le_plus_susceptible_de_corriger_discr",
+    "question": "Qui de nous serait le plus susceptible de corriger discrètement les fautes des autres ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_007_qui_de_nous_pourrait_quitter_son_travail_sur_un_coup_de_",
+    "question": "Qui de nous pourrait quitter son travail sur un coup de tête après une réunion de trop ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_008_qui_de_nous_serait_capable_de_lancer_sa_propre_entrepris",
+    "question": "Qui de nous serait capable de lancer sa propre entreprise ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_009_qui_de_nous_pourrait_etre_elu_e_delegue_e_sans_l_avoir_d",
+    "question": "Qui de nous pourrait être élu(e) délégué(e) sans l'avoir demandé ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_010_qui_de_nous_serait_le_plus_susceptible_de_dormir_pendant",
+    "question": "Qui de nous serait le plus susceptible de dormir pendant un cours ou une formation ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_011_qui_de_nous_pourrait_inventer_une_excuse_tres_detaillee_",
+    "question": "Qui de nous pourrait inventer une excuse très détaillée pour justifier un retard ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_012_qui_de_nous_serait_capable_de_travailler_toute_une_nuit_",
+    "question": "Qui de nous serait capable de travailler toute une nuit pour finir un projet ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_013_qui_de_nous_pourrait_avoir_le_bureau_le_plus_chaotique_m",
+    "question": "Qui de nous pourrait avoir le bureau le plus chaotique mais savoir exactement où tout se trouve ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_014_qui_de_nous_serait_le_plus_susceptible_de_changer_comple",
+    "question": "Qui de nous serait le plus susceptible de changer complètement de métier plusieurs fois ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_015_qui_de_nous_pourrait_envoyer_un_message_prive_dans_le_gr",
+    "question": "Qui de nous pourrait envoyer un message privé dans le groupe professionnel par erreur ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_016_qui_de_nous_serait_capable_de_negocier_une_augmentation_",
+    "question": "Qui de nous serait capable de négocier une augmentation avec aplomb ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_017_qui_de_nous_pourrait_apprendre_une_competence_entiere_su",
+    "question": "Qui de nous pourrait apprendre une compétence entière sur Internet pour éviter de demander de l'aide ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_018_qui_de_nous_serait_le_plus_susceptible_de_devenir_la_per",
+    "question": "Qui de nous serait le plus susceptible de devenir la personne qui organise tous les pots de départ ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_019_qui_de_nous_pourrait_contester_une_note_pendant_vingt_mi",
+    "question": "Qui de nous pourrait contester une note pendant vingt minutes ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_020_qui_de_nous_serait_capable_de_faire_rire_toute_une_salle",
+    "question": "Qui de nous serait capable de faire rire toute une salle pendant une présentation sérieuse ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_021_qui_de_nous_pourrait_oublier_qu_il_ou_elle_est_en_visioc",
+    "question": "Qui de nous pourrait oublier qu'il ou elle est en visioconférence avec le micro allumé ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_022_qui_de_nous_serait_le_plus_susceptible_de_connaitre_tous",
+    "question": "Qui de nous serait le plus susceptible de connaître tous les ragots du bureau ou de la classe ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_023_qui_de_nous_pourrait_accepter_une_mission_sans_comprendr",
+    "question": "Qui de nous pourrait accepter une mission sans comprendre exactement ce qu'on attend ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_024_qui_de_nous_serait_capable_de_reprendre_des_etudes_a_qua",
+    "question": "Qui de nous serait capable de reprendre des études à quarante ans ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_travail_etudes_025_qui_de_nous_pourrait_etre_promu_e_grace_a_son_culot_plus",
+    "question": "Qui de nous pourrait être promu(e) grâce à son culot plus qu'à son organisation ?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_001_qui_de_nous_pourrait_commander_toujours_la_meme_chose_da",
+    "question": "Qui de nous pourrait commander toujours la même chose dans son restaurant préféré ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_002_qui_de_nous_serait_le_plus_susceptible_de_manger_le_dess",
+    "question": "Qui de nous serait le plus susceptible de manger le dessert avant le plat ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_003_qui_de_nous_pourrait_finir_l_assiette_de_tout_le_monde",
+    "question": "Qui de nous pourrait finir l'assiette de tout le monde ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_004_qui_de_nous_serait_capable_de_faire_cinquante_kilometres",
+    "question": "Qui de nous serait capable de faire cinquante kilomètres pour tester un restaurant ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_005_qui_de_nous_pourrait_mettre_une_sauce_sur_absolument_tou",
+    "question": "Qui de nous pourrait mettre une sauce sur absolument tout ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_006_qui_de_nous_serait_le_plus_susceptible_de_cacher_ses_sna",
+    "question": "Qui de nous serait le plus susceptible de cacher ses snacks préférés ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_007_qui_de_nous_pourrait_rater_des_pates_pourtant_tres_simpl",
+    "question": "Qui de nous pourrait rater des pâtes pourtant très simples ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_008_qui_de_nous_serait_capable_de_reconnaitre_une_marque_de_",
+    "question": "Qui de nous serait capable de reconnaître une marque de soda les yeux fermés ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_009_qui_de_nous_pourrait_manger_quelque_chose_tombe_par_terr",
+    "question": "Qui de nous pourrait manger quelque chose tombé par terre après avoir hésité deux secondes ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_010_qui_de_nous_serait_le_plus_susceptible_de_lire_tout_le_m",
+    "question": "Qui de nous serait le plus susceptible de lire tout le menu avant de choisir son plat habituel ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_011_qui_de_nous_pourrait_refuser_de_partager_ses_frites",
+    "question": "Qui de nous pourrait refuser de partager ses frites ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_012_qui_de_nous_serait_capable_d_improviser_un_excellent_rep",
+    "question": "Qui de nous serait capable d'improviser un excellent repas avec presque rien ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_013_qui_de_nous_pourrait_devenir_insupportable_quand_il_ou_e",
+    "question": "Qui de nous pourrait devenir insupportable quand il ou elle a faim ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_014_qui_de_nous_serait_le_plus_susceptible_de_gouter_dans_l_",
+    "question": "Qui de nous serait le plus susceptible de goûter dans l'assiette des autres sans demander ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_015_qui_de_nous_pourrait_manger_la_meme_chose_plusieurs_jour",
+    "question": "Qui de nous pourrait manger la même chose plusieurs jours de suite ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_016_qui_de_nous_serait_capable_de_se_lever_la_nuit_uniquemen",
+    "question": "Qui de nous serait capable de se lever la nuit uniquement pour grignoter ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_017_qui_de_nous_pourrait_avoir_une_opinion_tres_serieuse_sur",
+    "question": "Qui de nous pourrait avoir une opinion très sérieuse sur la cuisson des pâtes ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_018_qui_de_nous_serait_le_plus_susceptible_de_commander_trop",
+    "question": "Qui de nous serait le plus susceptible de commander trop de nourriture par peur de manquer ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_019_qui_de_nous_pourrait_transformer_une_simple_raclette_en_",
+    "question": "Qui de nous pourrait transformer une simple raclette en compétition ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_020_qui_de_nous_serait_capable_de_suivre_une_recette_en_modi",
+    "question": "Qui de nous serait capable de suivre une recette en modifiant toutes les étapes ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_021_qui_de_nous_pourrait_juger_un_lieu_uniquement_sur_son_ca",
+    "question": "Qui de nous pourrait juger un lieu uniquement sur son café ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_022_qui_de_nous_serait_le_plus_susceptible_de_manger_quelque",
+    "question": "Qui de nous serait le plus susceptible de manger quelque chose de beaucoup trop épicé pour impressionner les autres ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_023_qui_de_nous_pourrait_oublier_son_repas_au_four_jusqu_a_s",
+    "question": "Qui de nous pourrait oublier son repas au four jusqu'à sentir le brûlé ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_024_qui_de_nous_serait_capable_de_passer_plus_de_temps_a_pho",
+    "question": "Qui de nous serait capable de passer plus de temps à photographier son plat qu'à le manger ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_nourriture_025_qui_de_nous_pourrait_se_facher_pour_la_derniere_part_de_",
+    "question": "Qui de nous pourrait se fâcher pour la dernière part de pizza ?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_001_qui_de_nous_cache_le_mieux_qu_il_ou_elle_est_vexe_e",
+    "question": "Qui de nous cache le mieux qu'il ou elle est vexé(e) ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_002_qui_de_nous_pourrait_pleurer_devant_une_publicite",
+    "question": "Qui de nous pourrait pleurer devant une publicité ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_003_qui_de_nous_serait_le_plus_susceptible_de_ruminer_une_pe",
+    "question": "Qui de nous serait le plus susceptible de ruminer une petite remarque pendant plusieurs jours ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_004_qui_de_nous_pourrait_pardonner_rapidement_mais_ne_jamais",
+    "question": "Qui de nous pourrait pardonner rapidement mais ne jamais oublier ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_005_qui_de_nous_serait_capable_de_rester_calme_pendant_que_t",
+    "question": "Qui de nous serait capable de rester calme pendant que tout le monde panique ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_006_qui_de_nous_pourrait_rire_nerveusement_dans_une_situatio",
+    "question": "Qui de nous pourrait rire nerveusement dans une situation très sérieuse ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_007_qui_de_nous_serait_le_plus_susceptible_de_s_attacher_tre",
+    "question": "Qui de nous serait le plus susceptible de s'attacher très vite à quelqu'un ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_008_qui_de_nous_pourrait_avoir_besoin_de_s_isoler_apres_une_",
+    "question": "Qui de nous pourrait avoir besoin de s'isoler après une journée sociale ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_009_qui_de_nous_serait_capable_de_dire_exactement_ce_qu_il_o",
+    "question": "Qui de nous serait capable de dire exactement ce qu'il ou elle pense, même si ça dérange ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_010_qui_de_nous_pourrait_changer_d_avis_apres_une_seule_conv",
+    "question": "Qui de nous pourrait changer d'avis après une seule conversation convaincante ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_011_qui_de_nous_serait_le_plus_susceptible_de_prendre_les_cr",
+    "question": "Qui de nous serait le plus susceptible de prendre les critiques personnellement ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_012_qui_de_nous_pourrait_sentir_immediatement_quand_l_ambian",
+    "question": "Qui de nous pourrait sentir immédiatement quand l'ambiance devient étrange ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_013_qui_de_nous_serait_capable_de_faire_semblant_d_aller_bie",
+    "question": "Qui de nous serait capable de faire semblant d'aller bien pour ne pas inquiéter les autres ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_014_qui_de_nous_pourrait_s_enerver_tres_vite_puis_oublier_po",
+    "question": "Qui de nous pourrait s'énerver très vite puis oublier pourquoi cinq minutes après ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_015_qui_de_nous_serait_le_plus_susceptible_de_donner_de_bons",
+    "question": "Qui de nous serait le plus susceptible de donner de bons conseils qu'il ou elle ne suit jamais ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_016_qui_de_nous_pourrait_etre_profondement_touche_e_par_un_p",
+    "question": "Qui de nous pourrait être profondément touché(e) par un petit geste ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_017_qui_de_nous_serait_capable_de_reconnaitre_facilement_ses",
+    "question": "Qui de nous serait capable de reconnaître facilement ses torts ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_018_qui_de_nous_pourrait_avoir_le_plus_besoin_d_etre_rassure",
+    "question": "Qui de nous pourrait avoir le plus besoin d'être rassuré(e) sans l'avouer ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_019_qui_de_nous_serait_le_plus_susceptible_de_defendre_quelq",
+    "question": "Qui de nous serait le plus susceptible de défendre quelqu'un absent de la conversation ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_020_qui_de_nous_pourrait_transformer_une_contrariete_minuscu",
+    "question": "Qui de nous pourrait transformer une contrariété minuscule en drame intérieur ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_021_qui_de_nous_serait_capable_de_garder_son_sang_froid_pend",
+    "question": "Qui de nous serait capable de garder son sang-froid pendant une dispute ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_022_qui_de_nous_pourrait_avoir_du_mal_a_accepter_un_complime",
+    "question": "Qui de nous pourrait avoir du mal à accepter un compliment ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_023_qui_de_nous_serait_le_plus_susceptible_de_faire_confianc",
+    "question": "Qui de nous serait le plus susceptible de faire confiance à son intuition ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_024_qui_de_nous_pourrait_se_remettre_le_plus_vite_d_un_echec",
+    "question": "Qui de nous pourrait se remettre le plus vite d'un échec ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_personnalite_emotions_025_qui_de_nous_serait_capable_de_dire_non_sans_culpabiliser",
+    "question": "Qui de nous serait capable de dire non sans culpabiliser ?",
+    "category": "personnalite_emotions",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_001_qui_de_nous_appellerait_les_secours_le_plus_efficacement",
+    "question": "Qui de nous appellerait les secours le plus efficacement en cas d'urgence ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_002_qui_de_nous_pourrait_paniquer_devant_une_araignee_mais_g",
+    "question": "Qui de nous pourrait paniquer devant une araignée mais gérer une vraie crise sans problème ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_003_qui_de_nous_serait_le_plus_susceptible_de_perdre_ses_moy",
+    "question": "Qui de nous serait le plus susceptible de perdre ses moyens si la voiture tombe en panne ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_004_qui_de_nous_pourrait_improviser_un_plan_b_quand_tout_est",
+    "question": "Qui de nous pourrait improviser un plan B quand tout est annulé ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_005_qui_de_nous_serait_capable_de_calmer_une_dispute_entre_d",
+    "question": "Qui de nous serait capable de calmer une dispute entre deux inconnus ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_006_qui_de_nous_pourrait_oublier_l_essentiel_en_preparant_un",
+    "question": "Qui de nous pourrait oublier l'essentiel en préparant un sac d'urgence ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_007_qui_de_nous_serait_le_plus_susceptible_de_verifier_cinq_",
+    "question": "Qui de nous serait le plus susceptible de vérifier cinq fois que la porte est fermée après une alerte ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_008_qui_de_nous_pourrait_prendre_les_commandes_si_tout_le_gr",
+    "question": "Qui de nous pourrait prendre les commandes si tout le groupe était perdu ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_009_qui_de_nous_serait_capable_de_mentir_avec_aplomb_pour_so",
+    "question": "Qui de nous serait capable de mentir avec aplomb pour sortir le groupe d'un problème ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_010_qui_de_nous_pourrait_rire_au_pire_moment_sous_l_effet_du",
+    "question": "Qui de nous pourrait rire au pire moment sous l'effet du stress ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_011_qui_de_nous_serait_le_plus_susceptible_de_penser_d_abord",
+    "question": "Qui de nous serait le plus susceptible de penser d'abord à sauver son téléphone ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_012_qui_de_nous_pourrait_trouver_une_solution_pratique_avec_",
+    "question": "Qui de nous pourrait trouver une solution pratique avec trois objets inutiles ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_013_qui_de_nous_serait_capable_de_negocier_avec_une_personne",
+    "question": "Qui de nous serait capable de négocier avec une personne très énervée ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_014_qui_de_nous_pourrait_oublier_le_numero_des_urgences_au_m",
+    "question": "Qui de nous pourrait oublier le numéro des urgences au moment critique ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_015_qui_de_nous_serait_le_plus_susceptible_de_preparer_un_pl",
+    "question": "Qui de nous serait le plus susceptible de préparer un plan d'évacuation pour tout le monde ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_016_qui_de_nous_pourrait_rester_bloque_e_dans_un_ascenseur_s",
+    "question": "Qui de nous pourrait rester bloqué(e) dans un ascenseur sans paniquer ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_017_qui_de_nous_serait_capable_de_conduire_plusieurs_heures_",
+    "question": "Qui de nous serait capable de conduire plusieurs heures si tout le monde est épuisé ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_018_qui_de_nous_pourrait_aggraver_une_petite_panne_en_essaya",
+    "question": "Qui de nous pourrait aggraver une petite panne en essayant de la réparer ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_019_qui_de_nous_serait_le_plus_susceptible_de_conserver_des_",
+    "question": "Qui de nous serait le plus susceptible de conserver des provisions « au cas où » ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_020_qui_de_nous_pourrait_reperer_en_premier_qu_une_situation",
+    "question": "Qui de nous pourrait repérer en premier qu'une situation devient dangereuse ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_021_qui_de_nous_serait_capable_de_prendre_une_decision_impop",
+    "question": "Qui de nous serait capable de prendre une décision impopulaire mais nécessaire ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_022_qui_de_nous_pourrait_avoir_une_trousse_de_secours_comple",
+    "question": "Qui de nous pourrait avoir une trousse de secours complète dans son sac ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_023_qui_de_nous_serait_le_plus_susceptible_de_filmer_la_cata",
+    "question": "Qui de nous serait le plus susceptible de filmer la catastrophe avant d'aider ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_024_qui_de_nous_pourrait_rassurer_tout_le_monde_tout_en_pani",
+    "question": "Qui de nous pourrait rassurer tout le monde tout en paniquant intérieurement ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_crise_025_qui_de_nous_serait_capable_de_transformer_une_galere_tot",
+    "question": "Qui de nous serait capable de transformer une galère totale en bonne anecdote ?",
+    "category": "crise",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_001_qui_de_nous_survivrait_le_plus_longtemps_sur_une_ile_des",
+    "question": "Qui de nous survivrait le plus longtemps sur une île déserte ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_002_qui_de_nous_se_ferait_eliminer_en_premier_dans_un_film_d",
+    "question": "Qui de nous se ferait éliminer en premier dans un film d'horreur ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_003_qui_de_nous_pourrait_devenir_chef_du_groupe_pendant_une_",
+    "question": "Qui de nous pourrait devenir chef du groupe pendant une apocalypse zombie ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_004_qui_de_nous_serait_le_plus_susceptible_de_faire_confianc",
+    "question": "Qui de nous serait le plus susceptible de faire confiance au personnage clairement suspect ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_005_qui_de_nous_pourrait_apprivoiser_un_animal_sauvage_par_a",
+    "question": "Qui de nous pourrait apprivoiser un animal sauvage par accident ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_006_qui_de_nous_serait_capable_de_vivre_une_semaine_sans_ele",
+    "question": "Qui de nous serait capable de vivre une semaine sans électricité ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_007_qui_de_nous_pourrait_construire_l_abri_le_plus_solide",
+    "question": "Qui de nous pourrait construire l'abri le plus solide ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_008_qui_de_nous_serait_le_plus_susceptible_de_manger_les_res",
+    "question": "Qui de nous serait le plus susceptible de manger les réserves dès le premier jour ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_009_qui_de_nous_pourrait_negocier_avec_des_extraterrestres",
+    "question": "Qui de nous pourrait négocier avec des extraterrestres ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_010_qui_de_nous_serait_capable_de_se_cacher_au_meme_endroit_",
+    "question": "Qui de nous serait capable de se cacher au même endroit pendant des heures ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_011_qui_de_nous_pourrait_oublier_de_prendre_de_l_eau_dans_un",
+    "question": "Qui de nous pourrait oublier de prendre de l'eau dans un scénario de survie ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_012_qui_de_nous_serait_le_plus_susceptible_de_declencher_l_a",
+    "question": "Qui de nous serait le plus susceptible de déclencher l'alarme dans une mission secrète ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_013_qui_de_nous_pourrait_devenir_le_mechant_ou_la_mechante_d",
+    "question": "Qui de nous pourrait devenir le méchant ou la méchante d'un monde post-apocalyptique ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_014_qui_de_nous_serait_capable_de_reconnaitre_les_plantes_co",
+    "question": "Qui de nous serait capable de reconnaître les plantes comestibles sans aucune connaissance ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_015_qui_de_nous_pourrait_se_sacrifier_pour_sauver_le_groupe",
+    "question": "Qui de nous pourrait se sacrifier pour sauver le groupe ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_016_qui_de_nous_serait_le_plus_susceptible_de_rejoindre_une_",
+    "question": "Qui de nous serait le plus susceptible de rejoindre une communauté étrange pour avoir un lit ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_017_qui_de_nous_pourrait_inventer_une_monnaie_dans_un_bunker",
+    "question": "Qui de nous pourrait inventer une monnaie dans un bunker ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_018_qui_de_nous_serait_capable_de_garder_un_secret_face_a_de",
+    "question": "Qui de nous serait capable de garder un secret face à des agents secrets ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_019_qui_de_nous_pourrait_survivre_en_se_faisant_passer_pour_",
+    "question": "Qui de nous pourrait survivre en se faisant passer pour quelqu'un d'important ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_020_qui_de_nous_serait_le_plus_susceptible_de_vouloir_explor",
+    "question": "Qui de nous serait le plus susceptible de vouloir explorer la pièce interdite ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_021_qui_de_nous_pourrait_gagner_un_jeu_televise_de_survie_gr",
+    "question": "Qui de nous pourrait gagner un jeu télévisé de survie grâce à son sens social ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_022_qui_de_nous_serait_capable_de_traverser_une_foret_sans_c",
+    "question": "Qui de nous serait capable de traverser une forêt sans chemin ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_023_qui_de_nous_pourrait_adopter_un_zombie_domestique_en_pen",
+    "question": "Qui de nous pourrait adopter un zombie domestique en pensant pouvoir le sauver ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_024_qui_de_nous_serait_le_plus_susceptible_de_provoquer_une_",
+    "question": "Qui de nous serait le plus susceptible de provoquer une révolte dans un bunker ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_survie_025_qui_de_nous_pourrait_reconstruire_une_civilisation_en_co",
+    "question": "Qui de nous pourrait reconstruire une civilisation en commençant par organiser une fête ?",
+    "category": "survie",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_001_qui_de_nous_pourrait_devenir_celebre_sans_l_avoir_cherch",
+    "question": "Qui de nous pourrait devenir célèbre sans l'avoir cherché ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_002_qui_de_nous_serait_le_plus_susceptible_de_changer_comple",
+    "question": "Qui de nous serait le plus susceptible de changer complètement de vie dans cinq ans ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_003_qui_de_nous_pourrait_vivre_dans_un_autre_pays_sur_un_cou",
+    "question": "Qui de nous pourrait vivre dans un autre pays sur un coup de tête ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_004_qui_de_nous_serait_capable_d_ecrire_un_livre_un_jour",
+    "question": "Qui de nous serait capable d'écrire un livre un jour ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_005_qui_de_nous_pourrait_prendre_sa_retraite_le_plus_tot",
+    "question": "Qui de nous pourrait prendre sa retraite le plus tôt ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_006_qui_de_nous_serait_le_plus_susceptible_de_lancer_un_proj",
+    "question": "Qui de nous serait le plus susceptible de lancer un projet complètement inattendu ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_007_qui_de_nous_pourrait_devenir_maire_de_sa_ville",
+    "question": "Qui de nous pourrait devenir maire de sa ville ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_008_qui_de_nous_serait_capable_de_vivre_dans_une_maison_minu",
+    "question": "Qui de nous serait capable de vivre dans une maison minuscule pour voyager davantage ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_009_qui_de_nous_pourrait_avoir_le_metier_le_plus_improbable_",
+    "question": "Qui de nous pourrait avoir le métier le plus improbable dans dix ans ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_010_qui_de_nous_serait_le_plus_susceptible_de_tout_quitter_p",
+    "question": "Qui de nous serait le plus susceptible de tout quitter pour ouvrir un commerce ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_011_qui_de_nous_pourrait_adopter_plusieurs_animaux_avec_le_t",
+    "question": "Qui de nous pourrait adopter plusieurs animaux avec le temps ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_012_qui_de_nous_serait_capable_de_retourner_vivre_pres_de_so",
+    "question": "Qui de nous serait capable de retourner vivre près de son enfance ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_013_qui_de_nous_pourrait_devenir_riche_grace_a_une_idee_tres",
+    "question": "Qui de nous pourrait devenir riche grâce à une idée très simple ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_014_qui_de_nous_serait_le_plus_susceptible_de_ne_jamais_suiv",
+    "question": "Qui de nous serait le plus susceptible de ne jamais suivre le plan prévu ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_015_qui_de_nous_pourrait_creer_une_famille_tres_differente_d",
+    "question": "Qui de nous pourrait créer une famille très différente de celle qu'il ou elle imaginait ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_016_qui_de_nous_serait_capable_de_passer_une_annee_entiere_a",
+    "question": "Qui de nous serait capable de passer une année entière à voyager ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_017_qui_de_nous_pourrait_devenir_une_reference_dans_son_doma",
+    "question": "Qui de nous pourrait devenir une référence dans son domaine ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_018_qui_de_nous_serait_le_plus_susceptible_de_realiser_un_vi",
+    "question": "Qui de nous serait le plus susceptible de réaliser un vieux rêve oublié ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_019_qui_de_nous_pourrait_vivre_sans_reseaux_sociaux_dans_que",
+    "question": "Qui de nous pourrait vivre sans réseaux sociaux dans quelques années ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_020_qui_de_nous_serait_capable_de_recommencer_a_zero_apres_q",
+    "question": "Qui de nous serait capable de recommencer à zéro après quarante ans ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_021_qui_de_nous_pourrait_acheter_une_maison_dans_un_endroit_",
+    "question": "Qui de nous pourrait acheter une maison dans un endroit où personne ne l'attend ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_022_qui_de_nous_serait_le_plus_susceptible_d_avoir_une_inven",
+    "question": "Qui de nous serait le plus susceptible d'avoir une invention à son nom ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_023_qui_de_nous_pourrait_encore_organiser_des_soirees_a_soix",
+    "question": "Qui de nous pourrait encore organiser des soirées à soixante ans ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_024_qui_de_nous_serait_capable_de_changer_le_plus_positiveme",
+    "question": "Qui de nous serait capable de changer le plus positivement avec le temps ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_futur_025_qui_de_nous_pourrait_surprendre_tout_le_groupe_par_son_f",
+    "question": "Qui de nous pourrait surprendre tout le groupe par son futur choix de vie ?",
+    "category": "futur",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_001_qui_de_nous_refuserait_le_plus_facilement_beaucoup_d_arg",
+    "question": "Qui de nous refuserait le plus facilement beaucoup d'argent pour rester fidèle à ses principes ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_002_qui_de_nous_serait_capable_de_denoncer_un_proche_ayant_f",
+    "question": "Qui de nous serait capable de dénoncer un proche ayant fait quelque chose de grave ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_003_qui_de_nous_pourrait_pardonner_le_plus_difficilement_une",
+    "question": "Qui de nous pourrait pardonner le plus difficilement une trahison ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_004_qui_de_nous_serait_le_plus_susceptible_de_defendre_une_o",
+    "question": "Qui de nous serait le plus susceptible de défendre une opinion impopulaire ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_005_qui_de_nous_pourrait_rendre_un_portefeuille_rempli_d_arg",
+    "question": "Qui de nous pourrait rendre un portefeuille rempli d'argent sans hésiter ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_006_qui_de_nous_serait_capable_de_quitter_un_groupe_qui_trai",
+    "question": "Qui de nous serait capable de quitter un groupe qui traite mal quelqu'un ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_007_qui_de_nous_pourrait_garder_un_secret_meme_sous_une_fort",
+    "question": "Qui de nous pourrait garder un secret même sous une forte pression ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_008_qui_de_nous_serait_le_plus_susceptible_de_donner_une_sec",
+    "question": "Qui de nous serait le plus susceptible de donner une seconde chance ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_009_qui_de_nous_pourrait_renoncer_a_une_opportunite_avantage",
+    "question": "Qui de nous pourrait renoncer à une opportunité avantageuse si elle nuit à quelqu'un ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_010_qui_de_nous_serait_capable_de_dire_la_verite_meme_si_ell",
+    "question": "Qui de nous serait capable de dire la vérité même si elle lui coûte cher ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_011_qui_de_nous_pourrait_couper_les_ponts_definitivement_apr",
+    "question": "Qui de nous pourrait couper les ponts définitivement après une limite dépassée ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_012_qui_de_nous_serait_le_plus_susceptible_d_aider_un_inconn",
+    "question": "Qui de nous serait le plus susceptible d'aider un inconnu sans rien attendre ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_013_qui_de_nous_pourrait_privilegier_la_loyaute_a_la_reussit",
+    "question": "Qui de nous pourrait privilégier la loyauté à la réussite ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_014_qui_de_nous_serait_capable_de_reconnaitre_qu_une_personn",
+    "question": "Qui de nous serait capable de reconnaître qu'une personne qu'il ou elle n'aime pas a raison ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_015_qui_de_nous_pourrait_refuser_de_participer_a_une_blague_",
+    "question": "Qui de nous pourrait refuser de participer à une blague humiliante ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_016_qui_de_nous_serait_le_plus_susceptible_de_changer_d_avis",
+    "question": "Qui de nous serait le plus susceptible de changer d'avis après avoir appris de nouveaux faits ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_017_qui_de_nous_pourrait_garder_un_objet_trouve_en_se_disant",
+    "question": "Qui de nous pourrait garder un objet trouvé en se disant que personne ne le réclamera ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_018_qui_de_nous_serait_capable_de_prendre_la_defense_d_un_am",
+    "question": "Qui de nous serait capable de prendre la défense d'un ami tout en lui disant ensuite qu'il avait tort ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_019_qui_de_nous_pourrait_sacrifier_son_confort_pour_une_caus",
+    "question": "Qui de nous pourrait sacrifier son confort pour une cause importante ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_020_qui_de_nous_serait_le_plus_susceptible_de_respecter_une_",
+    "question": "Qui de nous serait le plus susceptible de respecter une promesse devenue très contraignante ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_021_qui_de_nous_pourrait_pardonner_mais_refuser_de_refaire_c",
+    "question": "Qui de nous pourrait pardonner mais refuser de refaire confiance ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_022_qui_de_nous_serait_capable_de_partager_un_gain_inattendu",
+    "question": "Qui de nous serait capable de partager un gain inattendu avec le groupe ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_023_qui_de_nous_pourrait_mentir_pour_proteger_quelqu_un_qu_i",
+    "question": "Qui de nous pourrait mentir pour protéger quelqu'un qu'il ou elle aime ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_024_qui_de_nous_serait_le_plus_susceptible_de_refuser_un_pri",
+    "question": "Qui de nous serait le plus susceptible de refuser un privilège injuste ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_valeurs_025_qui_de_nous_pourrait_choisir_la_solution_la_plus_juste_m",
+    "question": "Qui de nous pourrait choisir la solution la plus juste même si elle le ou la désavantage ?",
+    "category": "valeurs",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_001_qui_de_nous_organise_naturellement_les_sorties_du_groupe",
+    "question": "Qui de nous organise naturellement les sorties du groupe ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_002_qui_de_nous_serait_appele_e_en_premier_pour_cacher_un_co",
+    "question": "Qui de nous serait appelé(e) en premier pour cacher un corps dans une fiction ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_003_qui_de_nous_joue_le_plus_souvent_le_role_de_mediateur_ou",
+    "question": "Qui de nous joue le plus souvent le rôle de médiateur ou médiatrice ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_004_qui_de_nous_pourrait_disparaitre_du_groupe_pendant_des_s",
+    "question": "Qui de nous pourrait disparaître du groupe pendant des semaines puis revenir avec un mème ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_005_qui_de_nous_connait_le_plus_de_secrets_sur_tout_le_monde",
+    "question": "Qui de nous connaît le plus de secrets sur tout le monde ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_006_qui_de_nous_serait_le_plus_susceptible_d_adopter_le_nouv",
+    "question": "Qui de nous serait le plus susceptible d'adopter le nouveau venu immédiatement ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_007_qui_de_nous_pourrait_transformer_une_discussion_banale_e",
+    "question": "Qui de nous pourrait transformer une discussion banale en débat de deux heures ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_008_qui_de_nous_serait_capable_de_reunir_tout_le_monde_apres",
+    "question": "Qui de nous serait capable de réunir tout le monde après une dispute ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_009_qui_de_nous_est_le_plus_souvent_en_retard_aux_rendez_vou",
+    "question": "Qui de nous est le plus souvent en retard aux rendez-vous du groupe ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_010_qui_de_nous_pourrait_devenir_le_parent_responsable_penda",
+    "question": "Qui de nous pourrait devenir le parent responsable pendant un voyage ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_011_qui_de_nous_serait_le_plus_susceptible_de_proposer_l_ide",
+    "question": "Qui de nous serait le plus susceptible de proposer l'idée la plus risquée ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_012_qui_de_nous_pourrait_quitter_une_soiree_sans_dire_au_rev",
+    "question": "Qui de nous pourrait quitter une soirée sans dire au revoir ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_013_qui_de_nous_serait_capable_de_faire_rire_le_groupe_quand",
+    "question": "Qui de nous serait capable de faire rire le groupe quand l'ambiance est mauvaise ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_014_qui_de_nous_repond_le_moins_souvent_dans_la_conversation",
+    "question": "Qui de nous répond le moins souvent dans la conversation de groupe ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_015_qui_de_nous_pourrait_garder_les_affaires_de_tout_le_mond",
+    "question": "Qui de nous pourrait garder les affaires de tout le monde pendant une sortie ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_016_qui_de_nous_serait_le_plus_susceptible_de_lancer_un_nouv",
+    "question": "Qui de nous serait le plus susceptible de lancer un nouveau surnom qui reste pendant des années ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_017_qui_de_nous_pourrait_etre_designe_e_pour_parler_au_serve",
+    "question": "Qui de nous pourrait être désigné(e) pour parler au serveur ou à la serveuse ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_018_qui_de_nous_serait_capable_d_organiser_une_surprise_sans",
+    "question": "Qui de nous serait capable d'organiser une surprise sans vendre la mèche ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_019_qui_de_nous_pourrait_arriver_avec_une_personne_inconnue_",
+    "question": "Qui de nous pourrait arriver avec une personne inconnue sans prévenir ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_020_qui_de_nous_serait_le_plus_susceptible_de_prendre_toutes",
+    "question": "Qui de nous serait le plus susceptible de prendre toutes les photos du groupe ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_021_qui_de_nous_pourrait_calmer_quelqu_un_apres_une_mauvaise",
+    "question": "Qui de nous pourrait calmer quelqu'un après une mauvaise nouvelle ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_022_qui_de_nous_serait_capable_de_convaincre_tout_le_monde_d",
+    "question": "Qui de nous serait capable de convaincre tout le monde de changer de programme ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_023_qui_de_nous_pourrait_etre_oublie_e_sur_une_aire_d_autoro",
+    "question": "Qui de nous pourrait être oublié(e) sur une aire d'autoroute parce qu'il ou elle n'a rien dit ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_024_qui_de_nous_serait_le_plus_susceptible_de_defendre_le_gr",
+    "question": "Qui de nous serait le plus susceptible de défendre le groupe face à des inconnus ?",
+    "category": "role_groupe",
+    "adult": false
+  },
+  {
+    "id": "qdn_role_groupe_025_qui_de_nous_pourrait_devenir_le_personnage_principal_de_",
+    "question": "Qui de nous pourrait devenir le personnage principal de toutes les anecdotes de la soirée ?",
+    "category": "role_groupe",
+    "adult": false
   }
 ]
