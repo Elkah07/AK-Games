@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v1.0-rc5-room-fix";
+const CACHE_VERSION = "akgames-v1.0-rc6-join-room-fix";
 
 const CORE_SHELL = [
   "/",

@@ -390,10 +390,32 @@
   async function joinRoom(code, { name, avatarId }) {
     const user = await ready();
     const key = normalizeCode(code);
-    const [meta, playersSnapshot] = await Promise.all([
-      getRoomMeta(key),
-      db.ref(`rooms/${key}/players`).once("value")
-    ]);
+    let meta;
+    let playersSnapshot;
+
+    try {
+      [meta, playersSnapshot] = await Promise.all([
+        getRoomMeta(key),
+        db.ref(`rooms/${key}/players`).once("value")
+      ]);
+    } catch (error) {
+      const code = String(error?.code || "").toLowerCase();
+      const message = String(error?.message || "").toLowerCase();
+
+      if (
+        code.includes("permission-denied")
+        || code.includes("permission_denied")
+        || message.includes("permission_denied")
+        || message.includes("permission denied")
+      ) {
+        throw new Error(
+          "Le salon existe, mais ses règles d’accès ne sont pas encore à jour. "
+          + "Attends la coche verte du déploiement puis réessaie."
+        );
+      }
+
+      throw error;
+    }
 
     if (!meta) {
       throw new Error("Ce salon n'existe pas ou n'est plus disponible.");
