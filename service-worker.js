@@ -1,15 +1,15 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v3.0-same-brain-650";
+const CACHE_VERSION = "akgames-v3.1-drinking-700";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=brain-v2",
+  "/styles.css?v=drink-v2",
   "/creator.css?v=creator-v1.3-access",
-  "/app.js?v=brain-v2",
+  "/app.js?v=drink-v2",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
-  "/multiplayer.js?v=brain-v2",
+  "/multiplayer.js?v=drink-v2",
   "/pwa.js",
   "/manifest.webmanifest",
   "/icons/icon-192.png",

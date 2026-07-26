@@ -8759,6 +8759,172 @@
   };
 
 
+
+  /* =========================================================
+     AK'GAMES V3.1 - JEUX À BOIRE MULTIJOUEUR
+     ========================================================= */
+
+  const akDrinkMultiBaseRenderSetup = renderMegaSetup;
+  renderMegaSetup = function () {
+    const game = state.megaGame;
+    if (!isMultiplayer() || !akDrinkIsGame(game)) return akDrinkMultiBaseRenderSetup();
+    akDrinkEnsure(game);
+    clearV014MultiTimer();
+    title.textContent = "Jeux à boire";
+    setBackVisible(true);
+    if (!state.isHost) {
+      screen.innerHTML = `
+        <section class="game-cover game-cover-mega drink-cover"><span class="game-cover-icon">🥂</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>Jeux à boire</h2><p>L’hôte choisit les thèmes, l’ambiance et les cartes personnalisées.</p></div></section>
+        ${renderMultiWaiting("L’hôte prépare la soirée", "Les réglages et le lancement apparaîtront automatiquement.", "👑")}
+        <div class="responsible-callout">💧 Eau, boissons sans alcool et droit de passer sont toujours valables.</div>`;
+      return;
+    }
+    screen.innerHTML = `
+      <section class="game-cover game-cover-mega drink-cover"><span class="game-cover-icon">🥂</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>Jeux à boire</h2><p>700 cartes, sans score et sans obligation de boire.</p></div></section>
+      ${akDrinkSetupMarkup(game, "multi")}
+      <div class="responsible-callout">💧 Petites gorgées seulement. Eau et boissons sans alcool comptent tout autant.</div>
+      <button id="startMultiDrink" class="primary-btn full">Lancer sur tous les téléphones</button>`;
+    akDrinkBindSetup(game, "multi", renderMegaSetup);
+    document.querySelector("#startMultiDrink")?.addEventListener("click", startMegaGame);
+  };
+
+  const akDrinkMultiBaseStart = startMegaGame;
+  startMegaGame = async function () {
+    const game = state.megaGame;
+    if (!isMultiplayer() || !akDrinkIsGame(game)) return akDrinkMultiBaseStart();
+    if (!state.isHost) return;
+    akDrinkEnsure(game);
+    const hasClassic = game.drinkThemes.length > 0;
+    const hasAdult = game.drinkIncludeAdult;
+    const hasCustom = game.drinkIncludeCustom && game.drinkCustomCards.length > 0;
+    if (!hasClassic && !hasAdult && !hasCustom) return alert("Choisis au moins un thème ou active une carte personnalisée.");
+    screen.innerHTML = `<div class="notice">Synchronisation des cartes…</div>`;
+    try {
+      const raw = await loadJsonFile("data/jeux-a-boire.json", "Impossible de charger Jeux à boire.");
+      const pool = akDrinkBuildPool(raw, game);
+      if (!pool.length) throw new Error("Aucune carte ne correspond aux filtres choisis.");
+      const selected = akDrinkBalancedSelect(pool, Math.min(game.roundCount, pool.length));
+      const items = akDrinkPrepareItems(selected, state.players, game.drinkHydration);
+      const ids = state.players.map(player => player.id);
+      const zeros = Object.fromEntries(ids.map(id => [id, 0]));
+      await AKFirebase.setGame(state.roomCode, {
+        state: {
+          type: "mega-turn",
+          phase: "turn",
+          sessionGameId: createSessionGameId("drinking-v2"),
+          items,
+          currentIndex: 0,
+          currentPlayerId: items[0]?.leadPlayerId || ids[0] || null,
+          scores: zeros,
+          rounds: {},
+          activeRules: [],
+          currentResult: null,
+          settings: {
+            gameName: "Jeux à boire", icon: "🥂", engine: "turn",
+            roundCount: items.length, durationSeconds: 0,
+            drinkingGame: true, scoreless: true, drinkV2: true,
+            drinkThemes: [...game.drinkThemes], drinkMoods: [...game.drinkMoods],
+            drinkIncludeAdult: Boolean(game.drinkIncludeAdult),
+            drinkIncludeCustom: Boolean(game.drinkIncludeCustom),
+            drinkHydration: Boolean(game.drinkHydration)
+          },
+          turnEndsAt: null,
+          startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
+        },
+        actions: null, votes: null, answers: null
+      });
+    } catch (error) {
+      console.error(error); alert(error.message || "Impossible de lancer la partie."); renderMegaSetup();
+    }
+  };
+
+  const akDrinkMultiBaseProcessTurn = processMultiMegaTurn;
+  processMultiMegaTurn = function (gameState, actions) {
+    if (!gameState?.settings?.drinkV2) return akDrinkMultiBaseProcessTurn(gameState, actions);
+    if (!state.isHost || gameState.phase !== "turn") return;
+    const action = actions?.[gameState.currentPlayerId];
+    if (!action) return;
+    const lock = `drink_v2_${gameState.currentIndex}_${action.id || "action"}`;
+    if (state.multiProcessingActionId === lock) return;
+    state.multiProcessingActionId = lock;
+    const item = gameState.items?.[Number(gameState.currentIndex || 0)];
+    const success = Boolean(action.payload?.success);
+    const activeRules = akDrinkNextRules(gameState.activeRules || [], item, success);
+    const round = Number(gameState.currentIndex || 0);
+    const next = round + 1;
+    const finished = next >= (gameState.items || []).length;
+    const nextItem = gameState.items?.[next];
+    AKFirebase.updateGame(state.roomCode, {
+      "state/phase": finished ? "final" : "turn",
+      "state/currentIndex": finished ? round : next,
+      "state/currentPlayerId": nextItem?.leadPlayerId || gameState.currentPlayerId,
+      "state/activeRules": activeRules,
+      [`state/rounds/${round}`]: { itemId: item?.id || "", success, format: item?.format || "solo", hydration: Boolean(item?.hydration) },
+      "state/finishedAt": finished ? AKFirebase.now() : null,
+      "state/updatedAt": AKFirebase.now(),
+      actions: null
+    }).finally(() => { state.multiProcessingActionId = null; });
+  };
+
+  const akDrinkMultiBaseRenderTurn = renderMultiMegaTurn;
+  renderMultiMegaTurn = function (gameState, actions) {
+    if (!gameState?.settings?.drinkV2) return akDrinkMultiBaseRenderTurn(gameState, actions);
+    const item = gameState.items?.[Number(gameState.currentIndex || 0)];
+    const lead = state.players.find(player => player.id === gameState.currentPlayerId);
+    const isLead = state.currentUid === gameState.currentPlayerId;
+    const pending = actions?.[state.currentUid];
+    const participantIds = item?.assignedPlayerIds || [];
+    const participates = participantIds.includes(state.currentUid);
+    title.textContent = "Jeux à boire";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Carte")}
+      ${akDrinkActiveRulesMarkup(gameState.activeRules || [])}
+      <section class="drink-round-card drink-round-multi ${item?.hydration ? "hydration-card" : ""}">
+        ${akDrinkBadges(item)}
+        <div class="drink-round-icon">${item?.hydration ? "💧" : akDrinkTheme(item?.theme).icon}</div>
+        <p class="drink-assignment">${escapeHtml(akDrinkHeadline(item, state.players))}</p>
+        <div class="drink-participant-row">${akDrinkParticipantCards(item, state.players)}</div>
+        <h2>${escapeHtml(item?.text || "Carte surprise")}</h2>
+        ${item?.format === "rule" ? `<small>La règle restera active pendant ${Number(item.ruleTurns || 3)} cartes si elle est validée.</small>` : `<small>Une réponse, de l’eau, une boisson sans alcool ou un passage sont toujours possibles.</small>`}
+      </section>
+      ${isLead
+        ? pending
+          ? renderMultiWaiting("Carte validée", "La suivante arrive automatiquement.", "✓")
+          : `<section class="decision-grid"><button id="multiDrinkDone" class="primary-btn">✓ Carte terminée</button><button id="multiDrinkSkip" class="secondary-btn">Passer</button></section>`
+        : participates
+          ? renderMultiWaiting("Tu participes à cette carte", `${lead?.name || "La personne désignée"} fera avancer la partie.`, "🥂")
+          : renderMultiWaiting(`Carte menée par ${lead?.name || "le groupe"}`, "Observe, participe si tu le souhaites et prépare-toi pour la suite.", "🥂")}
+      <div class="responsible-callout">💧 Personne n’a à boire pour jouer. Le passage reste sans justification.</div>`;
+    document.querySelector("#multiDrinkDone")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      await sendMultiAction("mega-turn", { success: true }).catch(() => event.currentTarget.disabled = false);
+    });
+    document.querySelector("#multiDrinkSkip")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      await sendMultiAction("mega-turn", { success: false }).catch(() => event.currentTarget.disabled = false);
+    });
+  };
+
+  const akDrinkMultiBaseFinal = renderMultiMegaFinal;
+  renderMultiMegaFinal = function (gameState) {
+    if (!gameState?.settings?.drinkV2) return akDrinkMultiBaseFinal(gameState);
+    const rounds = Object.values(gameState.rounds || {});
+    const passed = rounds.filter(round => !round.success).length;
+    const water = rounds.filter(round => round.hydration).length;
+    const rules = rounds.filter(round => round.success && round.format === "rule").length;
+    title.textContent = "Soirée terminée";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="winner-stage winner-stage-v07 mega-final-stage scoreless-final"><div class="winner-crown">🥂💧</div><h2>La partie est terminée</h2><p>Aucun classement : répondre, boire de l’eau ou passer ne rapporte volontairement aucun point.</p></section>
+      <section class="drink-final-stats"><article><span>🎴</span><strong>${rounds.length}</strong><small>cartes jouées</small></article><article><span>💧</span><strong>${water}</strong><small>pauses eau</small></article><article><span>📜</span><strong>${rules}</strong><small>règles activées</small></article><article><span>⏭️</span><strong>${passed}</strong><small>passages libres</small></article></section>
+      <div class="responsible-callout">💧 Eau, encas et vérification que tout le monde va bien avant la suite.</div>
+      ${renderPostGameContinuation(gameState)}`;
+    ensureEveningResult(gameState);
+    bindPostGameContinuation(gameState);
+  };
+
+
   window.AKGamesMultiplayer = Object.freeze({
     launchRandomGame: () => launchRandomMultiplayerGame()
   });

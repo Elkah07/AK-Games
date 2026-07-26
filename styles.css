@@ -7799,3 +7799,68 @@ details > summary {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================================================
+   AK'GAMES V3.1 - Jeux à boire
+   ========================================================= */
+.drink-cover {
+  background:
+    radial-gradient(circle at 88% 15%, rgba(169, 92, 255, .22), transparent 34%),
+    linear-gradient(145deg, rgba(12, 10, 18, .98), rgba(37, 17, 58, .96));
+}
+.drink-settings-card { display: grid; gap: 14px; }
+.drink-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.drink-heading p { margin: 4px 0 0; color: var(--muted); }
+.drink-round-presets { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; }
+.drink-theme-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.drink-theme-option {
+  min-height: 82px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 7px; padding: 12px 8px; border: 1px solid var(--line); border-radius: 18px;
+  background: rgba(255,255,255,.025); text-align: center; cursor: pointer;
+}
+.drink-theme-option input { position: absolute; opacity: 0; pointer-events: none; }
+.drink-theme-option span { font-size: 1.5rem; }
+.drink-theme-option strong { font-size: .82rem; line-height: 1.15; }
+.drink-theme-option.active { border-color: rgba(168, 89, 255, .75); background: rgba(139, 65, 225, .15); box-shadow: inset 0 0 0 1px rgba(174, 100, 255, .2); }
+.drink-mood-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.drink-mood-option {
+  display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 3px 10px; min-height: 94px;
+  padding: 14px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.025);
+  color: inherit; text-align: left;
+}
+.drink-mood-option > span { grid-row: 1 / 3; font-size: 1.6rem; }
+.drink-mood-option small { color: var(--muted); line-height: 1.25; }
+.drink-mood-option.active { border-color: rgba(168, 89, 255, .75); background: rgba(139, 65, 225, .15); }
+.drink-custom-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.drink-custom-list { display: grid; gap: 10px; margin-top: 12px; }
+.drink-custom-list article { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; padding: 12px; border: 1px solid var(--line); border-radius: 16px; }
+.drink-custom-list p { margin: 8px 0 0; }
+.drink-card-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; }
+.drink-card-badges span { padding: 6px 9px; border: 1px solid rgba(178, 120, 255, .25); border-radius: 999px; background: rgba(139, 65, 225, .12); font-size: .74rem; font-weight: 800; }
+.drink-active-rules { display: grid; gap: 8px; margin-bottom: 12px; padding: 13px; border: 1px solid rgba(246, 195, 68, .3); border-radius: 18px; background: rgba(246, 195, 68, .07); }
+.drink-active-rules > div { display: flex; align-items: center; gap: 8px; }
+.drink-active-rules article { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 9px 10px; border-radius: 12px; background: rgba(0,0,0,.18); }
+.drink-active-rules p { margin: 0; font-size: .84rem; }
+.drink-active-rules small { white-space: nowrap; color: var(--muted); }
+.drink-round-card { display: grid; justify-items: center; gap: 14px; padding: 22px 18px; border: 1px solid rgba(173, 104, 255, .35); border-radius: 26px; background: radial-gradient(circle at 50% 0, rgba(147, 70, 232, .16), transparent 45%), rgba(18, 14, 26, .94); text-align: center; }
+.drink-round-card.hydration-card { border-color: rgba(90, 190, 255, .48); background: radial-gradient(circle at 50% 0, rgba(65, 173, 239, .18), transparent 48%), rgba(13, 23, 31, .96); }
+.drink-round-icon { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 22px; background: rgba(255,255,255,.06); font-size: 2rem; }
+.drink-assignment { margin: 0; color: #d6b6ff; font-weight: 900; letter-spacing: .02em; }
+.drink-round-card h2 { margin: 0; max-width: 760px; font-size: clamp(1.25rem, 4.8vw, 2rem); line-height: 1.2; }
+.drink-round-card > small { color: var(--muted); max-width: 680px; }
+.drink-participant-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.drink-participant-row article { display: flex; align-items: center; gap: 7px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.035); }
+.drink-participant-row span { font-size: 1.2rem; }
+.drink-final-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 14px 0; }
+.drink-final-stats article { display: grid; justify-items: center; gap: 4px; padding: 14px 8px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.025); text-align: center; }
+.drink-final-stats article > span { font-size: 1.4rem; }
+.drink-final-stats strong { font-size: 1.45rem; }
+.drink-final-stats small { color: var(--muted); }
+@media (max-width: 700px) {
+  .drink-round-presets { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .drink-theme-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .drink-mood-grid, .drink-custom-grid { grid-template-columns: 1fr; }
+  .drink-heading { display: grid; }
+  .drink-final-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .drink-active-rules article { align-items: flex-start; flex-direction: column; gap: 4px; }
+}

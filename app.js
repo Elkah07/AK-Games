@@ -10402,3 +10402,358 @@ renderSameBrainEnd = function () {
   });
   document.querySelector("#otherSameBrain")?.addEventListener("click", () => { state.sameBrain = null; renderPlayChoice(); });
 };
+
+/* =========================================================
+   AK'GAMES V3.1 - JEUX À BOIRE
+   700 cartes, thèmes, ambiances, règles et hydratation
+   ========================================================= */
+
+const AK_DRINK_CUSTOM_KEY = "akgames_drinking_custom_cards_v2";
+const AK_DRINK_RECENT_KEY = "akgames_drinking_recent_v2";
+const AK_DRINK_THEMES = [
+  { id: "who_drinks", icon: "🥤", label: "Qui choisit ?" },
+  { id: "vote", icon: "🗳️", label: "Votes du groupe" },
+  { id: "confession", icon: "💬", label: "Confessions" },
+  { id: "reflex", icon: "⚡", label: "Réflexes" },
+  { id: "mini_challenge", icon: "🎯", label: "Mini-défis" },
+  { id: "duo", icon: "🤝", label: "Duos" },
+  { id: "group", icon: "👥", label: "Tout le groupe" },
+  { id: "temporary_rule", icon: "📜", label: "Règles temporaires" },
+  { id: "files", icon: "🗂️", label: "Dossiers" },
+  { id: "friendship", icon: "🫂", label: "Amitié" },
+  { id: "chaos", icon: "🌀", label: "Chaos" }
+];
+const AK_DRINK_MOODS = [
+  { id: "calm", icon: "🥤", label: "Tranquille", description: "Léger, social et peu personnel" },
+  { id: "party", icon: "🎉", label: "Soirée", description: "Votes, défis et dossiers" },
+  { id: "unfiltered", icon: "🌶️", label: "Sans filtre", description: "Plus franc, toujours facultatif" }
+];
+const AK_DRINK_FORMATS = [
+  { id: "solo", icon: "🧍", label: "Une personne" },
+  { id: "duo", icon: "🤝", label: "Deux personnes" },
+  { id: "group", icon: "👥", label: "Tout le groupe" },
+  { id: "rule", icon: "📜", label: "Règle temporaire" }
+];
+
+if (typeof V014_GAME_CONFIGS !== "undefined" && V014_GAME_CONFIGS["Jeux à boire"]) {
+  Object.assign(V014_GAME_CONFIGS["Jeux à boire"], {
+    description: "Un jeu de soirée varié : votes, confessions, défis, duos et règles temporaires. Toujours sans score et sans obligation de boire.",
+    defaultRounds: 20
+  });
+}
+
+function akDrinkIsGame(game = state.megaGame) {
+  return Boolean(game?.gameName === "Jeux à boire");
+}
+function akDrinkTheme(id) {
+  if (id === "adult") return { id: "adult", icon: "🔞", label: "Adulte" };
+  return AK_DRINK_THEMES.find(item => item.id === id) || AK_DRINK_THEMES[0];
+}
+function akDrinkMood(id) { return AK_DRINK_MOODS.find(item => item.id === id) || AK_DRINK_MOODS[0]; }
+function akDrinkFormat(id) { return AK_DRINK_FORMATS.find(item => item.id === id) || AK_DRINK_FORMATS[0]; }
+function akDrinkReadCustom() {
+  try {
+    const rows = JSON.parse(localStorage.getItem(AK_DRINK_CUSTOM_KEY) || "[]");
+    return Array.isArray(rows) ? rows.filter(item => item?.text).slice(-150) : [];
+  } catch (error) { return []; }
+}
+function akDrinkSaveCustom(rows) { localStorage.setItem(AK_DRINK_CUSTOM_KEY, JSON.stringify(rows || [])); }
+function akDrinkReadRecent() {
+  try {
+    const rows = JSON.parse(localStorage.getItem(AK_DRINK_RECENT_KEY) || "[]");
+    return Array.isArray(rows) ? rows.slice(-220) : [];
+  } catch (error) { return []; }
+}
+function akDrinkEnsure(game, config = {}) {
+  if (!game) return game;
+  const themeIds = AK_DRINK_THEMES.map(item => item.id);
+  const moodIds = AK_DRINK_MOODS.map(item => item.id);
+  const valid = (rows, allowed, fallback) => Array.isArray(rows) ? [...new Set(rows.filter(value => allowed.includes(value)))] : [...fallback];
+  game.roundCount = Math.max(10, Math.min(100, Number(config.roundCount ?? game.roundCount ?? 20) || 20));
+  game.drinkThemes = valid(config.drinkThemes ?? game.drinkThemes, themeIds, themeIds);
+  game.drinkMoods = valid(config.drinkMoods ?? game.drinkMoods, moodIds, moodIds);
+  game.drinkIncludeAdult = Boolean(config.drinkIncludeAdult ?? game.drinkIncludeAdult);
+  game.drinkCustomCards = Array.isArray(game.drinkCustomCards) ? game.drinkCustomCards : akDrinkReadCustom();
+  game.drinkIncludeCustom = Boolean((config.drinkIncludeCustom ?? game.drinkIncludeCustom ?? true) && game.drinkCustomCards.length);
+  game.drinkHydration = config.drinkHydration ?? game.drinkHydration ?? true;
+  game.activeRules = Array.isArray(game.activeRules) ? game.activeRules : [];
+  return game;
+}
+function akDrinkCreateCustom(text, theme, mood, format) {
+  const clean = String(text || "").trim().replace(/\s+/g, " ").slice(0, 240);
+  if (!clean) return null;
+  const adult = theme === "adult";
+  return {
+    id: `drink_custom_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+    text: clean,
+    theme: adult ? "adult" : (AK_DRINK_THEMES.some(item => item.id === theme) ? theme : "mini_challenge"),
+    mood: AK_DRINK_MOODS.some(item => item.id === mood) ? mood : "party",
+    format: AK_DRINK_FORMATS.some(item => item.id === format) ? format : "solo",
+    ruleTurns: format === "rule" ? 3 : undefined,
+    adult,
+    custom: true
+  };
+}
+function akDrinkBadges(item) {
+  const theme = akDrinkTheme(item?.theme);
+  const mood = akDrinkMood(item?.mood);
+  const format = akDrinkFormat(item?.format);
+  return `<div class="drink-card-badges"><span>${theme.icon} ${escapeHtml(theme.label)}</span><span>${mood.icon} ${escapeHtml(mood.label)}</span><span>${format.icon} ${escapeHtml(format.label)}</span>${item?.custom ? `<span>✍️ Perso</span>` : ""}</div>`;
+}
+function akDrinkActiveRulesMarkup(rules) {
+  if (!Array.isArray(rules) || !rules.length) return "";
+  return `<section class="drink-active-rules"><div><span>📜</span><strong>Règles actives</strong></div>${rules.map(rule => `<article><p>${escapeHtml(rule.text)}</p><small>${Number(rule.remaining || 0)} carte${Number(rule.remaining || 0) > 1 ? "s" : ""} restante${Number(rule.remaining || 0) > 1 ? "s" : ""}</small></article>`).join("")}</section>`;
+}
+function akDrinkSetupMarkup(game, prefix = "drink", readOnly = false) {
+  akDrinkEnsure(game);
+  const disabled = readOnly ? "disabled" : "";
+  const customs = game.drinkCustomCards || [];
+  const themeOptions = [...AK_DRINK_THEMES, { id: "adult", icon: "🔞", label: "Adulte" }]
+    .map(item => `<option value="${item.id}">${item.icon} ${escapeHtml(item.label)}</option>`).join("");
+  return `
+    <section class="card drink-settings-card">
+      <h2 class="section-title">Durée de la partie</h2>
+      <div class="drink-round-presets">${[10,20,40,60,80,100].map(value => `<button type="button" class="choice-pill ${game.roundCount === value ? "active" : ""}" data-drink-round="${value}" ${disabled}>${value}</button>`).join("")}</div>
+      <div class="form-group top-gap"><label for="${prefix}DrinkRounds">Nombre personnalisé</label><input id="${prefix}DrinkRounds" type="number" min="10" max="100" value="${game.roundCount}" class="text-input" ${disabled}></div>
+    </section>
+    <section class="card drink-settings-card">
+      <div class="drink-heading"><div><h2 class="section-title">Thèmes</h2><p>Un, plusieurs ou tous. Le mélange reste équilibré.</p></div>${readOnly ? "" : `<div class="toolbar"><button type="button" class="secondary-btn" id="${prefix}DrinkAllThemes">Tous</button><button type="button" class="secondary-btn" id="${prefix}DrinkNoThemes">Aucun</button></div>`}</div>
+      <div class="drink-theme-grid">${AK_DRINK_THEMES.map(theme => `<label class="drink-theme-option ${game.drinkThemes.includes(theme.id) ? "active" : ""}"><input type="checkbox" data-drink-theme="${theme.id}" ${game.drinkThemes.includes(theme.id) ? "checked" : ""} ${disabled}><span>${theme.icon}</span><strong>${escapeHtml(theme.label)}</strong></label>`).join("")}</div>
+    </section>
+    <section class="card drink-settings-card"><h2 class="section-title">Ambiance</h2><div class="drink-mood-grid">${AK_DRINK_MOODS.map(mood => `<button type="button" class="drink-mood-option mood-${mood.id} ${game.drinkMoods.includes(mood.id) ? "active" : ""}" data-drink-mood="${mood.id}" ${disabled}><span>${mood.icon}</span><strong>${escapeHtml(mood.label)}</strong><small>${escapeHtml(mood.description)}</small></button>`).join("")}</div></section>
+    <label class="option-card premium-toggle"><input id="${prefix}DrinkAdult" type="checkbox" ${game.drinkIncludeAdult ? "checked" : ""} ${disabled}><span><strong>🔞 Ajouter les 200 cartes adultes</strong><br><span class="helper">Séduction, ex, rendez-vous et confessions plus intimes.</span></span></label>
+    <label class="option-card"><input id="${prefix}DrinkHydration" type="checkbox" ${game.drinkHydration ? "checked" : ""} ${disabled}><span><strong>💧 Rappels d’eau automatiques</strong><br><span class="helper">Une pause hydratation remplace environ une carte sur dix.</span></span></label>
+    ${readOnly ? "" : `<section class="card drink-settings-card"><h2 class="section-title">Mes cartes</h2><p class="helper">Ajoute une carte qui restera sur cet appareil.</p><div class="form-group top-gap"><label for="${prefix}DrinkCustomText">Texte</label><textarea id="${prefix}DrinkCustomText" class="text-input" maxlength="240" rows="3" placeholder="Ex. À deux, racontez chacun votre pire achat impulsif."></textarea></div><div class="drink-custom-grid"><div class="form-group"><label for="${prefix}DrinkCustomTheme">Thème</label><select id="${prefix}DrinkCustomTheme" class="text-input">${themeOptions}</select></div><div class="form-group"><label for="${prefix}DrinkCustomMood">Ambiance</label><select id="${prefix}DrinkCustomMood" class="text-input">${AK_DRINK_MOODS.map(item => `<option value="${item.id}">${item.icon} ${escapeHtml(item.label)}</option>`).join("")}</select></div><div class="form-group"><label for="${prefix}DrinkCustomFormat">Format</label><select id="${prefix}DrinkCustomFormat" class="text-input">${AK_DRINK_FORMATS.map(item => `<option value="${item.id}">${item.icon} ${escapeHtml(item.label)}</option>`).join("")}</select></div></div><button type="button" id="${prefix}DrinkAddCustom" class="secondary-btn full">Ajouter la carte</button>${customs.length ? `<label class="option-card mini-option top-gap"><input id="${prefix}DrinkIncludeCustom" type="checkbox" ${game.drinkIncludeCustom ? "checked" : ""}><span><strong>Inclure mes ${customs.length} carte${customs.length > 1 ? "s" : ""}</strong></span></label><details class="top-gap"><summary>Gérer mes cartes</summary><div class="drink-custom-list">${customs.map(item => `<article><div>${akDrinkBadges(item)}<p>${escapeHtml(item.text)}</p></div><button type="button" class="danger-btn" data-remove-drink-custom="${item.id}">Supprimer</button></article>`).join("")}</div></details>` : ""}</section>`}
+  `;
+}
+function akDrinkBindSetup(game, prefix, rerender, readOnly = false) {
+  if (readOnly) return;
+  document.querySelectorAll("[data-drink-round]").forEach(button => button.addEventListener("click", () => { game.roundCount = Number(button.dataset.drinkRound); rerender(); }));
+  document.querySelector(`#${prefix}DrinkRounds`)?.addEventListener("change", event => {
+    game.roundCount = Math.max(10, Math.min(100, Number(event.target.value) || 20));
+    event.target.value = game.roundCount;
+  });
+  document.querySelectorAll("[data-drink-theme]").forEach(input => input.addEventListener("change", () => {
+    const theme = input.dataset.drinkTheme;
+    game.drinkThemes = input.checked ? [...new Set([...game.drinkThemes, theme])] : game.drinkThemes.filter(value => value !== theme);
+    input.closest(".drink-theme-option")?.classList.toggle("active", input.checked);
+  }));
+  document.querySelectorAll("[data-drink-mood]").forEach(button => button.addEventListener("click", () => {
+    const mood = button.dataset.drinkMood;
+    const next = game.drinkMoods.includes(mood) ? game.drinkMoods.filter(value => value !== mood) : [...game.drinkMoods, mood];
+    if (!next.length) return alert("Garde au moins une ambiance.");
+    game.drinkMoods = next;
+    rerender();
+  }));
+  document.querySelector(`#${prefix}DrinkAllThemes`)?.addEventListener("click", () => { game.drinkThemes = AK_DRINK_THEMES.map(item => item.id); rerender(); });
+  document.querySelector(`#${prefix}DrinkNoThemes`)?.addEventListener("click", () => { game.drinkThemes = []; rerender(); });
+  document.querySelector(`#${prefix}DrinkAdult`)?.addEventListener("change", event => { game.drinkIncludeAdult = event.target.checked; });
+  document.querySelector(`#${prefix}DrinkHydration`)?.addEventListener("change", event => { game.drinkHydration = event.target.checked; });
+  document.querySelector(`#${prefix}DrinkIncludeCustom`)?.addEventListener("change", event => { game.drinkIncludeCustom = event.target.checked; });
+  document.querySelector(`#${prefix}DrinkAddCustom`)?.addEventListener("click", () => {
+    const text = document.querySelector(`#${prefix}DrinkCustomText`)?.value || "";
+    const theme = document.querySelector(`#${prefix}DrinkCustomTheme`)?.value || "mini_challenge";
+    const mood = document.querySelector(`#${prefix}DrinkCustomMood`)?.value || "party";
+    const format = document.querySelector(`#${prefix}DrinkCustomFormat`)?.value || "solo";
+    const item = akDrinkCreateCustom(text, theme, mood, format);
+    if (!item) return alert("Écris d’abord le texte de la carte.");
+    if (game.drinkCustomCards.some(row => row.text.toLocaleLowerCase("fr") === item.text.toLocaleLowerCase("fr"))) return alert("Cette carte existe déjà.");
+    game.drinkCustomCards = [...game.drinkCustomCards, item].slice(-150);
+    game.drinkIncludeCustom = true;
+    akDrinkSaveCustom(game.drinkCustomCards);
+    rerender();
+  });
+  document.querySelectorAll("[data-remove-drink-custom]").forEach(button => button.addEventListener("click", () => {
+    game.drinkCustomCards = game.drinkCustomCards.filter(item => item.id !== button.dataset.removeDrinkCustom);
+    game.drinkIncludeCustom = game.drinkIncludeCustom && game.drinkCustomCards.length > 0;
+    akDrinkSaveCustom(game.drinkCustomCards);
+    rerender();
+  }));
+}
+function akDrinkBuildPool(raw, game) {
+  const themes = new Set(game.drinkThemes || []);
+  const moods = new Set(game.drinkMoods || []);
+  let pool = (Array.isArray(raw) ? raw : []).filter(item => moods.has(item.mood) && (item.adult ? game.drinkIncludeAdult : themes.has(item.theme)));
+  if (game.drinkIncludeCustom) {
+    pool = pool.concat((game.drinkCustomCards || []).filter(item => moods.has(item.mood) && (item.adult ? game.drinkIncludeAdult : themes.has(item.theme))));
+  }
+  return pool;
+}
+function akDrinkBalancedSelect(pool, count) {
+  const recent = new Set(akDrinkReadRecent());
+  const buckets = new Map();
+  (pool || []).forEach(item => {
+    const key = `${item.theme || "other"}:${item.mood || "party"}:${item.format || "solo"}`;
+    if (!buckets.has(key)) buckets.set(key, []);
+    buckets.get(key).push(item);
+  });
+  const keys = shuffleArray([...buckets.keys()]);
+  keys.forEach(key => {
+    const rows = buckets.get(key);
+    buckets.set(key, [...shuffleArray(rows.filter(item => !recent.has(item.id))), ...shuffleArray(rows.filter(item => recent.has(item.id)))]);
+  });
+  const selected = [];
+  while (selected.length < count) {
+    let added = false;
+    for (const key of keys) {
+      const row = buckets.get(key)?.shift();
+      if (!row) continue;
+      selected.push(row); added = true;
+      if (selected.length >= count) break;
+    }
+    if (!added) break;
+  }
+  localStorage.setItem(AK_DRINK_RECENT_KEY, JSON.stringify([...akDrinkReadRecent(), ...selected.map(item => item.id)].slice(-220)));
+  return selected;
+}
+function akDrinkHydrationCard(index) {
+  const texts = [
+    "Pause eau générale. Prenez quelques gorgées d’eau et vérifiez que tout le monde va bien.",
+    "Hydratation express : eau, boisson sans alcool ou pause tranquille pour tout le groupe.",
+    "La carte sage prend le contrôle : posez les verres alcoolisés et faites une vraie pause eau.",
+    "Point météo du groupe : eau, respiration et vérification que chacun souhaite continuer."
+  ];
+  return { id: `drink_water_${index}`, text: texts[index % texts.length], theme: "group", mood: "calm", format: "group", hydration: true, adult: false };
+}
+function akDrinkPrepareItems(items, players, hydration = true) {
+  const safePlayers = players || [];
+  const result = items.map((item, index) => {
+    const lead = safePlayers[index % Math.max(1, safePlayers.length)];
+    let ids = lead ? [lead.id] : [];
+    if (item.format === "duo" && safePlayers.length > 1) {
+      const partner = safePlayers[(index + 1 + Math.floor(index / safePlayers.length)) % safePlayers.length];
+      ids = [lead.id, partner.id].filter((id, pos, arr) => id && arr.indexOf(id) === pos);
+    } else if (["group", "rule"].includes(item.format)) {
+      ids = safePlayers.map(player => player.id);
+    }
+    return { ...item, leadPlayerId: lead?.id || ids[0] || null, assignedPlayerIds: ids };
+  });
+  if (hydration && result.length >= 10) {
+    for (let index = 9; index < result.length; index += 10) {
+      const water = akDrinkHydrationCard(index);
+      result[index] = { ...water, leadPlayerId: safePlayers[index % safePlayers.length]?.id || null, assignedPlayerIds: safePlayers.map(player => player.id) };
+    }
+  }
+  return result;
+}
+function akDrinkParticipants(item, players = state.players) {
+  return (item?.assignedPlayerIds || []).map(id => players.find(player => player.id === id)).filter(Boolean);
+}
+function akDrinkHeadline(item, players = state.players) {
+  if (item?.hydration) return "Tout le groupe fait une pause";
+  const names = akDrinkParticipants(item, players).map(player => player.name);
+  if (item?.format === "duo" && names.length >= 2) return `${names[0]} embarque ${names[1]}`;
+  if (["group", "rule"].includes(item?.format)) return "Tout le groupe participe";
+  return names[0] ? `C’est au tour de ${names[0]}` : "Carte collective";
+}
+function akDrinkParticipantCards(item, players = state.players) {
+  return akDrinkParticipants(item, players).map(player => `<article><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong></article>`).join("");
+}
+function akDrinkNextRules(rules, item, success) {
+  const next = (rules || []).map(rule => ({ ...rule, remaining: Number(rule.remaining || 0) - 1 })).filter(rule => rule.remaining > 0);
+  if (success && item?.format === "rule") next.push({ id: item.id, text: item.text, remaining: Number(item.ruleTurns || 3) });
+  return next;
+}
+
+const akDrinkBaseResetMega = resetMegaGame;
+resetMegaGame = function (gameName, replayConfig = {}) {
+  akDrinkBaseResetMega(gameName, replayConfig);
+  if (gameName === "Jeux à boire") akDrinkEnsure(state.megaGame, replayConfig);
+};
+
+const akDrinkBaseRenderSetup = renderMegaSetup;
+renderMegaSetup = function () {
+  const game = state.megaGame;
+  if (!akDrinkIsGame(game) || (typeof isMultiplayer === "function" && isMultiplayer())) return akDrinkBaseRenderSetup();
+  akDrinkEnsure(game);
+  clearV014Timer();
+  title.textContent = "Jeux à boire";
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-mega drink-cover"><span class="game-cover-icon">🥂</span><div><small>SOIRÉE RESPONSABLE</small><h2>Jeux à boire</h2><p>700 cartes variées, sans score, sans shot et sans obligation de boire.</p></div></section>
+    ${akDrinkSetupMarkup(game, "solo")}
+    <div class="responsible-callout">💧 Petites gorgées seulement. Eau et boissons sans alcool sont toujours valables. Chacun peut passer sans justification.</div>
+    <button id="startDrinkGame" class="primary-btn full">Lancer la soirée</button>`;
+  akDrinkBindSetup(game, "solo", renderMegaSetup);
+  document.querySelector("#startDrinkGame")?.addEventListener("click", startMegaGame);
+};
+
+const akDrinkBaseStartMega = startMegaGame;
+startMegaGame = async function () {
+  const game = state.megaGame;
+  if (!akDrinkIsGame(game) || (typeof isMultiplayer === "function" && isMultiplayer())) return akDrinkBaseStartMega();
+  akDrinkEnsure(game);
+  const hasClassic = game.drinkThemes.length > 0;
+  const hasAdult = game.drinkIncludeAdult;
+  const hasCustom = game.drinkIncludeCustom && game.drinkCustomCards.length > 0;
+  if (!hasClassic && !hasAdult && !hasCustom) return alert("Choisis au moins un thème ou active une carte personnalisée.");
+  screen.innerHTML = `<div class="notice">Mélange des 700 cartes…</div>`;
+  try {
+    const raw = await loadJsonFile("data/jeux-a-boire.json", "Impossible de charger Jeux à boire.");
+    const pool = akDrinkBuildPool(raw, game);
+    if (!pool.length) throw new Error("Aucune carte ne correspond aux filtres choisis.");
+    game.items = akDrinkPrepareItems(akDrinkBalancedSelect(pool, Math.min(game.roundCount, pool.length)), state.players, game.drinkHydration);
+    game.currentIndex = 0; game.rounds = []; game.activeRules = []; game.revealed = true;
+    game.scores = v014ScoreMap();
+    renderMegaCurrent();
+  } catch (error) {
+    console.error(error); alert(error.message || "Impossible de lancer la partie."); renderMegaSetup();
+  }
+};
+
+const akDrinkBaseRenderTurn = renderMegaTurn;
+renderMegaTurn = function () {
+  const game = state.megaGame;
+  if (!akDrinkIsGame(game)) return akDrinkBaseRenderTurn();
+  const item = game.items[game.currentIndex];
+  if (!item) return renderMegaFinal();
+  title.textContent = "Jeux à boire";
+  setBackVisible(false);
+  const participants = akDrinkParticipants(item);
+  screen.innerHTML = `
+    ${v014Progress(game, "Carte")}
+    ${akDrinkActiveRulesMarkup(game.activeRules)}
+    <section class="drink-round-card ${item.hydration ? "hydration-card" : ""}">
+      ${akDrinkBadges(item)}
+      <div class="drink-round-icon">${item.hydration ? "💧" : akDrinkTheme(item.theme).icon}</div>
+      <p class="drink-assignment">${escapeHtml(akDrinkHeadline(item))}</p>
+      ${participants.length ? `<div class="drink-participant-row">${akDrinkParticipantCards(item)}</div>` : ""}
+      <h2>${escapeHtml(item.text)}</h2>
+      ${item.format === "rule" ? `<small>Cette règle restera active pendant ${Number(item.ruleTurns || 3)} cartes si vous la validez.</small>` : `<small>Boire n’est jamais obligatoire. Une réponse, de l’eau ou un passage conviennent aussi.</small>`}
+    </section>
+    <section class="decision-grid"><button id="drinkDone" class="primary-btn">✓ Carte terminée</button><button id="drinkSkip" class="secondary-btn">Passer</button></section>`;
+  document.querySelector("#drinkDone")?.addEventListener("click", () => finishMegaTurn(true));
+  document.querySelector("#drinkSkip")?.addEventListener("click", () => finishMegaTurn(false));
+};
+
+const akDrinkBaseFinishTurn = finishMegaTurn;
+finishMegaTurn = function (success) {
+  const game = state.megaGame;
+  if (!akDrinkIsGame(game)) return akDrinkBaseFinishTurn(success);
+  const item = game.items[game.currentIndex];
+  game.activeRules = akDrinkNextRules(game.activeRules, item, success);
+  game.rounds.push({ itemId: item?.id || "", success: Boolean(success), format: item?.format || "solo", hydration: Boolean(item?.hydration) });
+  game.currentIndex += 1;
+  renderMegaCurrent();
+};
+
+const akDrinkBaseMegaFinal = renderMegaFinal;
+renderMegaFinal = function () {
+  const game = state.megaGame;
+  if (!akDrinkIsGame(game)) return akDrinkBaseMegaFinal();
+  const passed = (game.rounds || []).filter(round => !round.success).length;
+  const water = (game.rounds || []).filter(round => round.hydration).length;
+  const rules = (game.rounds || []).filter(round => round.success && round.format === "rule").length;
+  title.textContent = "Soirée terminée";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="winner-stage winner-stage-v07 mega-final-stage scoreless-final"><div class="winner-crown">🥂💧</div><h2>La partie est terminée</h2><p>Aucun classement : le but était de jouer ensemble, pas de compter les verres.</p></section>
+    <section class="drink-final-stats"><article><span>🎴</span><strong>${game.rounds.length}</strong><small>cartes jouées</small></article><article><span>💧</span><strong>${water}</strong><small>pauses eau</small></article><article><span>📜</span><strong>${rules}</strong><small>règles activées</small></article><article><span>⏭️</span><strong>${passed}</strong><small>passages libres</small></article></section>
+    <div class="responsible-callout">💧 Avant de changer de jeu : eau, encas et vérification que tout le monde va bien.</div>
+    <div class="toolbar"><button id="replayDrink" class="secondary-btn">Rejouer</button><button id="otherDrink" class="primary-btn">Autre jeu</button></div>`;
+  document.querySelector("#replayDrink")?.addEventListener("click", () => {
+    const replay = { roundCount: game.roundCount, drinkThemes: game.drinkThemes, drinkMoods: game.drinkMoods, drinkIncludeAdult: game.drinkIncludeAdult, drinkIncludeCustom: game.drinkIncludeCustom, drinkHydration: game.drinkHydration };
+    resetMegaGame("Jeux à boire", replay); renderMegaSetup();
+  });
+  document.querySelector("#otherDrink")?.addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
+};
