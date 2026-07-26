@@ -3,6 +3,7 @@
 
   const BASE_PATH = "assets/characters";
   const POSES = new Set(["idle", "talk", "hype", "win", "lose"]);
+  const FORMATS = new Set(["full", "bust", "avatar-circle", "icon"]);
   const SLUG_BY_AVATAR_ID = Object.freeze({
     frog: "croa", otter: "loki", panda: "kaia", dog: "bonnie",
     crow: "edgar", fox: "filou", duck: "nuggets", ghost: "vapo",
@@ -12,11 +13,8 @@
   });
 
   const AVAILABLE_POSES = Object.freeze({
-    croa: ["idle"], loki: ["idle"], kaia: ["idle"], bonnie: ["idle"],
-    edgar: ["idle"], filou: ["idle"], nuggets: ["idle"], vapo: ["idle"],
-    rrrrh: ["idle"], "sir-moustache": ["idle"], snow: ["idle"],
-    maurice: ["idle"], moon: ["idle"], spike: ["idle"], honey: ["idle"],
-    flash: ["idle"], marcellius: ["idle"]
+    croa: new Set(["idle", "talk", "hype", "win", "lose"]),
+    loki: new Set(["idle", "talk", "hype", "win", "lose"])
   });
 
   function normalizeCharacterId(id) {
@@ -29,76 +27,88 @@
   }
 
   function normalizeFormat(format) {
-    if (["full", "bust", "avatar-circle", "icon"].includes(format)) return format;
-    return "full";
+    return FORMATS.has(format) ? format : "full";
   }
 
   function hasPose(characterId, pose) {
     const slug = normalizeCharacterId(characterId);
-    return (AVAILABLE_POSES[slug] || ["idle"]).includes(normalizePose(pose));
+    const normalizedPose = normalizePose(pose);
+    return normalizedPose === "idle" || AVAILABLE_POSES[slug]?.has(normalizedPose) === true;
+  }
+
+  function resolvedPose(characterId, pose) {
+    const normalizedPose = normalizePose(pose);
+    return hasPose(characterId, normalizedPose) ? normalizedPose : "idle";
   }
 
   function assetPath(characterId, options = {}) {
     const slug = normalizeCharacterId(characterId);
-    const requestedPose = normalizePose(options.pose || "idle");
-    const pose = hasPose(slug, requestedPose) ? requestedPose : "idle";
     const format = normalizeFormat(options.format || "full");
-    const extension = options.extension === "png" ? "png" : "webp";
-    return `${BASE_PATH}/${slug}/${pose}/${format}.${extension}`;
+    const pose = resolvedPose(slug, options.pose || "idle");
+    return `${BASE_PATH}/${slug}/${pose}/${format}.webp`;
   }
 
-  function applyImageFallback(img, characterId, options = {}) {
+  function legacyPath(characterId) {
+    return `${BASE_PATH}/${normalizeCharacterId(characterId)}.webp`;
+  }
+
+  function applyImageFallback(img, characterId) {
     if (!(img instanceof HTMLImageElement)) return img;
-    const pngFallback = assetPath(characterId, {...options, extension: "png"});
-    const idleFallback = assetPath(characterId, {pose: "idle", format: options.format, extension: "png"});
     let stage = 0;
     img.addEventListener("error", () => {
-      stage += 1;
-      if (stage === 1 && img.src !== pngFallback) img.src = pngFallback;
-      else if (stage === 2 && img.src !== idleFallback) img.src = idleFallback;
+      if (stage === 0) {
+        stage = 1;
+        const formatClass = [...img.classList].find((c) =>
+          c.startsWith("ak-character--") && FORMATS.has(c.slice(14))
+        );
+        const format = formatClass ? formatClass.slice(14) : "full";
+        img.src = `${BASE_PATH}/${normalizeCharacterId(characterId)}/idle/${format}.webp`;
+      } else if (stage === 1) {
+        stage = 2;
+        img.src = legacyPath(characterId);
+      }
     });
     return img;
   }
 
   function createImage(characterId, options = {}) {
-    const img = document.createElement("img");
-    const pose = normalizePose(options.pose || "idle");
+    const requestedPose = normalizePose(options.pose || "idle");
     const format = normalizeFormat(options.format || "full");
-    img.className = `ak-character ak-character--${pose} ak-character--${format}`;
+    const img = document.createElement("img");
+    img.className = `ak-character ak-character--${requestedPose} ak-character--${format}`;
     img.dataset.character = normalizeCharacterId(characterId);
-    img.dataset.pose = pose;
+    img.dataset.pose = requestedPose;
     img.alt = options.alt || normalizeCharacterId(characterId);
     img.loading = options.loading || "lazy";
     img.decoding = "async";
-    img.src = assetPath(characterId, {pose, format, extension: options.extension});
-    return applyImageFallback(img, characterId, {pose, format});
+    img.src = assetPath(characterId, { pose: requestedPose, format });
+    return applyImageFallback(img, characterId);
   }
 
   function setPose(img, pose, options = {}) {
     if (!(img instanceof HTMLImageElement)) return;
     const characterId = options.characterId || img.dataset.character;
-    const format = options.format || [...img.classList]
-      .find(c => c.startsWith("ak-character--") && ["full","bust","avatar-circle","icon"].includes(c.slice(14)))
-      ?.slice(14) || "full";
+    const formatClass = [...img.classList].find((c) =>
+      c.startsWith("ak-character--") && FORMATS.has(c.slice(14))
+    );
+    const format = options.format || (formatClass ? formatClass.slice(14) : "full");
     const nextPose = normalizePose(pose);
     for (const p of POSES) img.classList.remove(`ak-character--${p}`);
     img.classList.add(`ak-character--${nextPose}`);
     img.dataset.pose = nextPose;
-    img.src = assetPath(characterId, {pose: nextPose, format});
-    applyImageFallback(img, characterId, {pose: nextPose, format});
+    img.src = assetPath(characterId, { pose: nextPose, format });
+    applyImageFallback(img, characterId);
   }
 
   function pictureMarkup(characterId, options = {}) {
     const pose = normalizePose(options.pose || "idle");
     const format = normalizeFormat(options.format || "full");
     const slug = normalizeCharacterId(characterId);
-    const webp = assetPath(slug, {pose, format, extension: "webp"});
-    const png = assetPath(slug, {pose, format, extension: "png"});
-    const alt = String(options.alt || slug).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
-    return `<picture class="ak-character-picture ak-character-picture--${pose}">
-      <source type="image/webp" srcset="${webp}">
-      <img class="ak-character ak-character--${pose} ak-character--${format}" data-character="${slug}" data-pose="${pose}" src="${png}" alt="${alt}" loading="lazy" decoding="async">
-    </picture>`;
+    const src = assetPath(slug, { pose, format });
+    const alt = String(options.alt || slug)
+      .replace(/&/g, "&amp;")
+      .replace(/"/g, "&quot;");
+    return `<img class="ak-character ak-character--${pose} ak-character--${format}" data-character="${slug}" data-pose="${pose}" src="${src}" alt="${alt}" loading="lazy" decoding="async">`;
   }
 
   window.AKCharacterPoses = Object.freeze({

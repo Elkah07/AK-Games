@@ -1,0 +1,29 @@
+{
+  "characters": [
+    "croa",
+    "loki"
+  ],
+  "posesAdded": {
+    "croa": [
+      "talk",
+      "hype",
+      "win",
+      "lose"
+    ],
+    "loki": [
+      "talk",
+      "hype",
+      "win",
+      "lose"
+    ]
+  },
+  "formats": [
+    "full",
+    "bust",
+    "avatar-circle",
+    "icon"
+  ],
+  "webpCount": 32,
+  "totalFiles": 35,
+  "transparentAlphaChecked": true
+}
