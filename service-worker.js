@@ -1,15 +1,15 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v1.8-roulette-defis-v2";
+const CACHE_VERSION = "akgames-v2.0-quiz-marathon";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=roulette-defis-v2",
+  "/styles.css?v=quiz-difficulties-v1",
   "/creator.css?v=creator-v1.3-access",
-  "/app.js",
+  "/app.js?v=quiz-marathon-v2",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
-  "/multiplayer.js",
+  "/multiplayer.js?v=quiz-marathon-v2",
   "/pwa.js",
   "/manifest.webmanifest",
   "/icons/icon-192.png",

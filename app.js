@@ -5066,15 +5066,16 @@ function renderMegaQuizReveal() {
   const game = state.megaGame;
   const item = game.items[game.currentIndex];
   const correct = Number(item.answer);
+  const points = akQuizPointsForItem(item);
   const correctPlayers = state.players.filter(player => Number(game.votes[player.id]) === correct);
-  correctPlayers.forEach(player => game.scores[player.id] = Number(game.scores[player.id] || 0) + 1);
-  game.rounds.push({ itemId: item.id, votes: { ...game.votes }, correct });
+  correctPlayers.forEach(player => game.scores[player.id] = Number(game.scores[player.id] || 0) + points);
+  game.rounds.push({ itemId: item.id, votes: { ...game.votes }, correct, points });
   title.textContent = "Réponse";
   setBackVisible(false);
   screen.innerHTML = `
     ${v014Progress(game, "Question")}
-    <section class="reveal-stage reveal-v07 mega-quiz-reveal"><span class="game-cover-icon">${correctPlayers.length ? "✅" : "🧠"}</span><h2>${escapeHtml(item.options?.[correct] || "Réponse")}</h2><p>${escapeHtml(item.explanation || "Réponse révélée.")}</p></section>
-    <section class="answer-chip-wall">${state.players.map(player => `<span class="${Number(game.votes[player.id]) === correct ? "correct" : "wrong"}">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · ${escapeHtml(item.options?.[game.votes[player.id]] || "-")}</span>`).join("")}</section>
+    <section class="reveal-stage reveal-v07 mega-quiz-reveal"><span class="game-cover-icon">${correctPlayers.length ? "✅" : "🧠"}</span><h2>${escapeHtml(item.options?.[correct] || "Réponse")}</h2><p>${escapeHtml(item.explanation || "Réponse révélée.")} Bonne réponse : +${points} point${points > 1 ? "s" : ""}.</p></section>
+    <section class="answer-chip-wall">${state.players.map(player => { const won = Number(game.votes[player.id]) === correct; return `<span class="${won ? "correct" : "wrong"}">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · ${escapeHtml(item.options?.[game.votes[player.id]] || "-")}${won ? ` · +${points}` : ""}</span>`; }).join("")}</section>
     <button id="nextMegaQuiz" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Question suivante"}</button>`;
   document.querySelector("#nextMegaQuiz").addEventListener("click", () => {
     game.currentIndex += 1;
@@ -5430,7 +5431,7 @@ function renderMegaFinal() {
     <section class="winner-stage winner-stage-v07 mega-final-stage"><div class="winner-crown">${game.config.icon}🏆</div><h2>${winners.length ? winners.map(player => escapeHtml(player.name)).join(" et ") : "Partie terminée"}</h2><p>${winners.length ? `${winners.length > 1 ? "terminent" : "termine"} en tête de ${escapeHtml(game.gameName)}.` : "Le groupe a traversé toutes les manches."}</p></section>
     <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
     <div class="toolbar"><button id="replayMega" class="secondary-btn">Rejouer</button><button id="otherMega" class="primary-btn">Autre jeu</button></div>`;
-  document.querySelector("#replayMega").addEventListener("click", () => { const name = game.gameName; const replay = { roundCount: game.roundCount, durationSeconds: game.durationSeconds, selectedPacks: game.selectedPacks, confidenceMode: game.confidenceMode }; resetMegaGame(name, replay); renderMegaSetup(); });
+  document.querySelector("#replayMega").addEventListener("click", () => { const name = game.gameName; const replay = { roundCount: game.roundCount, durationSeconds: game.durationSeconds, selectedPacks: game.selectedPacks, selectedDifficulties: game.selectedDifficulties, confidenceMode: game.confidenceMode }; resetMegaGame(name, replay); renderMegaSetup(); });
   document.querySelector("#otherMega").addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
 }
 
@@ -5812,7 +5813,7 @@ renderMegaFinal = function () {
 
   document.querySelector("#replayMega")?.addEventListener("click", () => {
     const name = game.gameName;
-    const replay = { roundCount: game.roundCount, durationSeconds: game.durationSeconds, selectedPacks: game.selectedPacks, confidenceMode: game.confidenceMode };
+    const replay = { roundCount: game.roundCount, durationSeconds: game.durationSeconds, selectedPacks: game.selectedPacks, selectedDifficulties: game.selectedDifficulties, confidenceMode: game.confidenceMode };
     resetMegaGame(name, replay);
     renderMegaSetup();
   });
@@ -6868,4 +6869,192 @@ finishMegaTurn = function (success) {
   game.currentIndex += 1;
   game.revealed = false;
   renderMegaCurrent();
+};
+
+
+/* =========================================================
+   AK'GAMES V2.0 — QUIZ MARATHON
+   Facile, moyen et difficile, sélection combinable et équilibrée
+   ========================================================= */
+
+const AK_QUIZ_DIFFICULTIES = [
+  { id: "easy", icon: "🌱", label: "Facile", points: 1, description: "Accessible à toute la table · 1 point." },
+  { id: "medium", icon: "⚡", label: "Moyen", points: 2, description: "Il faut quelques références · 2 points." },
+  { id: "hard", icon: "🔥", label: "Difficile", points: 3, description: "Pour les spécialistes · 3 points." }
+];
+
+function akQuizUsesDifficulty(game) {
+  return Boolean(game?.engine === "quiz" && game?.config?.pack === "Quiz");
+}
+
+function akQuizNormalizeDifficulties(values) {
+  const valid = new Set(AK_QUIZ_DIFFICULTIES.map(item => item.id));
+  const selected = Array.isArray(values) ? [...new Set(values.filter(value => valid.has(value)))] : [];
+  return selected.length ? selected : AK_QUIZ_DIFFICULTIES.map(item => item.id);
+}
+
+function akQuizDifficultyMeta(id) {
+  return AK_QUIZ_DIFFICULTIES.find(item => item.id === id) || AK_QUIZ_DIFFICULTIES[0];
+}
+
+function akQuizPointsForItem(item) {
+  return Number(akQuizDifficultyMeta(item?.difficulty || "easy").points || 1);
+}
+
+function akQuizDifficultyBadge(item) {
+  if (!item?.difficulty) return "";
+  const meta = akQuizDifficultyMeta(item.difficulty);
+  return `<span class="quiz-difficulty-badge difficulty-${meta.id}">${meta.icon} ${escapeHtml(meta.label)} · ${meta.points} pt${meta.points > 1 ? "s" : ""}</span>`;
+}
+
+function akQuizDifficultySetupMarkup(game) {
+  const selected = akQuizNormalizeDifficulties(game.selectedDifficulties);
+  return `
+    <section class="card quiz-difficulty-section">
+      <div class="quiz-difficulty-heading">
+        <div><small>NIVEAU DES QUESTIONS</small><h3>Choisis un, deux ou trois niveaux</h3></div>
+        <span>${selected.length === 3 ? "Mix complet" : `${selected.length} niveau${selected.length > 1 ? "x" : ""}`}</span>
+      </div>
+      <div class="quiz-difficulty-grid">
+        ${AK_QUIZ_DIFFICULTIES.map(level => {
+          const active = selected.includes(level.id);
+          return `<button type="button" class="quiz-difficulty-card difficulty-${level.id} ${active ? "active" : ""}" data-quiz-difficulty="${level.id}" aria-pressed="${active}"><span>${level.icon}</span><strong>${escapeHtml(level.label)}</strong><small>${escapeHtml(level.description)}</small><b>${active ? "✓" : "+"}</b></button>`;
+        }).join("")}
+      </div>
+      <p class="helper">Les niveaux choisis sont mélangés équitablement. Facile = 1 point, moyen = 2 points, difficile = 3 points.</p>
+    </section>`;
+}
+
+function akQuizRoundChoices(game) {
+  const count = akQuizNormalizeDifficulties(game.selectedDifficulties).length;
+  if (count === 1) return [10, 15, 20, 25, 30, 40, 50];
+  if (count === 2) return [10, 15, 20, 25, 30, 40, 50, 75, 100];
+  return [10, 15, 20, 25, 30, 40, 50, 75, 100, 150];
+}
+
+function akQuizFilterPool(pool, game) {
+  if (!akQuizUsesDifficulty(game)) return pool;
+  const selected = new Set(akQuizNormalizeDifficulties(game.selectedDifficulties));
+  const filtered = pool.filter(item => selected.has(item.difficulty || "easy"));
+  return filtered.length ? filtered : pool;
+}
+
+function akQuizSelectItems(pool, count, historyKey, game) {
+  if (!akQuizUsesDifficulty(game)) return v014SelectKnowItems(pool, count, historyKey, game);
+  const safeCount = Math.min(Math.max(0, Number(count || 0)), pool.length);
+  const selectedLevels = akQuizNormalizeDifficulties(game.selectedDifficulties)
+    .filter(level => pool.some(item => (item.difficulty || "easy") === level));
+  if (!selectedLevels.length) return [];
+
+  const groups = Object.fromEntries(selectedLevels.map(level => [level, pool.filter(item => (item.difficulty || "easy") === level)]));
+  const levelOrder = shuffleArray([...selectedLevels]);
+  const baseQuota = Math.floor(safeCount / levelOrder.length);
+  const extra = safeCount % levelOrder.length;
+  let selected = [];
+
+  levelOrder.forEach((level, index) => {
+    const quota = Math.min(groups[level].length, baseQuota + (index < extra ? 1 : 0));
+    selected.push(...selectFreshItems(groups[level], quota, `${historyKey}:${level}`));
+  });
+
+  if (selected.length < safeCount) {
+    const used = new Set(selected.map(item => item.id));
+    const remaining = pool.filter(item => !used.has(item.id));
+    selected.push(...selectFreshItems(remaining, Math.min(safeCount - selected.length, remaining.length), `${historyKey}:extra`));
+  }
+  return shuffleArray(selected).slice(0, safeCount);
+}
+
+const akQuizBaseResetMegaGame = resetMegaGame;
+resetMegaGame = function (gameName, replayConfig = {}) {
+  akQuizBaseResetMegaGame(gameName, replayConfig);
+  const game = state.megaGame;
+  if (!akQuizUsesDifficulty(game)) return;
+  game.selectedDifficulties = akQuizNormalizeDifficulties(replayConfig.selectedDifficulties);
+};
+
+const akQuizBaseRenderMegaSetup = renderMegaSetup;
+renderMegaSetup = function () {
+  akQuizBaseRenderMegaSetup();
+  const game = state.megaGame;
+  if (!akQuizUsesDifficulty(game)) return;
+
+  game.selectedDifficulties = akQuizNormalizeDifficulties(game.selectedDifficulties);
+  const rounds = akQuizRoundChoices(game);
+  if (!rounds.includes(Number(game.roundCount))) {
+    game.roundCount = rounds.reduce((best, value) => value <= Number(game.roundCount || 12) ? value : best, rounds[0]);
+  }
+  const roundsSelect = document.querySelector("#megaRounds");
+  if (roundsSelect) {
+    roundsSelect.innerHTML = rounds.map(value => `<option value="${value}" ${Number(game.roundCount) === value ? "selected" : ""}>${value} question${value > 1 ? "s" : ""}</option>`).join("");
+    roundsSelect.onchange = event => { game.roundCount = Number(event.target.value); };
+  }
+
+  const startButton = document.querySelector("#startMegaGame");
+  if (startButton && !document.querySelector(".quiz-difficulty-section")) {
+    startButton.insertAdjacentHTML("beforebegin", akQuizDifficultySetupMarkup(game));
+  }
+  document.querySelectorAll("[data-quiz-difficulty]").forEach(button => button.addEventListener("click", () => {
+    const level = button.dataset.quizDifficulty;
+    const current = akQuizNormalizeDifficulties(game.selectedDifficulties);
+    const next = current.includes(level) ? current.filter(value => value !== level) : [...current, level];
+    if (!next.length) {
+      alert("Garde au moins un niveau de difficulté sélectionné.");
+      return;
+    }
+    game.selectedDifficulties = akQuizNormalizeDifficulties(next);
+    renderMegaSetup();
+  }));
+};
+
+const akQuizBaseStartMegaGame = startMegaGame;
+startMegaGame = async function () {
+  const game = state.megaGame;
+  if (!akQuizUsesDifficulty(game) || state.mode !== "single") return akQuizBaseStartMegaGame();
+  screen.innerHTML = `<div class="notice">Préparation d’un mélange équilibré des niveaux…</div>`;
+  try {
+    const rawPool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
+    const pool = akQuizFilterPool(rawPool, game);
+    const memoryKey = `solo:quiz:${game.gameName}:${akQuizNormalizeDifficulties(game.selectedDifficulties).join("-")}`;
+    game.items = akQuizSelectItems(pool, Math.min(game.roundCount, pool.length), memoryKey, game).map(akAudit8PrepareQuizItem);
+    game.currentIndex = 0;
+    game.currentPlayerIndex = 0;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    game.scores = v014ScoreMap();
+    game.rounds = [];
+    game.revealed = false;
+    game.targetAnswer = null;
+    game.targetRanking = [];
+    game.rankingDraft = [];
+    game.bombEndsAt = null;
+    game.bombPlayerIndex = Math.floor(Math.random() * Math.max(1, state.players.length));
+    game.currentResult = null;
+    game.pendingKnowGuess = null;
+    renderMegaCurrent();
+  } catch (error) {
+    console.error(error);
+    alert(error.message || "Impossible de lancer le quiz.");
+    renderMegaSetup();
+  }
+};
+
+const akQuizBaseRenderMegaQuizVote = renderMegaQuizVote;
+renderMegaQuizVote = function () {
+  akQuizBaseRenderMegaQuizVote();
+  const game = state.megaGame;
+  if (!akQuizUsesDifficulty(game)) return;
+  const card = document.querySelector(".quiz-question-card");
+  const titleNode = card?.querySelector("h2");
+  if (titleNode && !card.querySelector(".quiz-difficulty-badge")) titleNode.insertAdjacentHTML("beforebegin", akQuizDifficultyBadge(game.items?.[game.currentIndex]));
+};
+
+const akQuizBaseRenderMegaQuizReveal = renderMegaQuizReveal;
+renderMegaQuizReveal = function () {
+  akQuizBaseRenderMegaQuizReveal();
+  const game = state.megaGame;
+  if (!akQuizUsesDifficulty(game)) return;
+  const stage = document.querySelector(".mega-quiz-reveal");
+  const heading = stage?.querySelector("h2");
+  if (heading && !stage.querySelector(".quiz-difficulty-badge")) heading.insertAdjacentHTML("beforebegin", akQuizDifficultyBadge(game.items?.[game.currentIndex]));
 };

@@ -1828,6 +1828,7 @@
           roundCount: Number(gameState.settings?.roundCount || gameState.items?.length || 10),
           durationSeconds: Number(gameState.settings?.durationSeconds || 45),
           selectedPacks: gameState.settings?.selectedPacks || ["mix"],
+          selectedDifficulties: gameState.settings?.selectedDifficulties || ["easy", "medium", "hard"],
           confidenceMode: gameState.settings?.confidenceMode !== false
         }
       };
@@ -2215,6 +2216,7 @@
         roundCount: Number(config.roundCount || V014_GAME_CONFIGS[config.gameName].defaultRounds || 10),
         durationSeconds: Number(config.durationSeconds || V014_GAME_CONFIGS[config.gameName].timer || 45),
         selectedPacks: config.selectedPacks || ["mix"],
+        selectedDifficulties: config.selectedDifficulties || ["easy", "medium", "hard"],
         confidenceMode: config.confidenceMode !== false
       });
       await startMegaGame();
@@ -5116,13 +5118,16 @@
     const config = game.config;
     const roundOptions = akRouletteIsGame(game)
       ? [8, 12, 16, 20, 25, 30].map(value => `<option value="${value}" ${Number(game.roundCount) === value ? "selected" : ""}>${value} défis</option>`).join("")
-      : v014RoundOptions(game.roundCount);
+      : akQuizUsesDifficulty(game)
+        ? akQuizRoundChoices(game).map(value => `<option value="${value}" ${Number(game.roundCount) === value ? "selected" : ""}>${value} question${value > 1 ? "s" : ""}</option>`).join("")
+        : v014RoundOptions(game.roundCount);
     return `
       <section class="card setup-card-v07">
         <div class="form-group"><label for="multiMegaRounds">Nombre de manches</label><select id="multiMegaRounds" class="text-input">${roundOptions}</select></div>
         ${config.engine === "bomb" ? `<div class="form-group top-gap"><label for="multiMegaDuration">Temps de la bombe</label><select id="multiMegaDuration" class="text-input">${[15,20,25,30,40].map(value => `<option value="${value}" ${game.durationSeconds === value ? "selected" : ""}>${value} secondes</option>`).join("")}</select></div>` : config.timer ? `<div class="form-group top-gap"><label for="multiMegaDuration">Chronomètre</label><select id="multiMegaDuration" class="text-input">${[30,45,60,90].map(value => `<option value="${value}" ${game.durationSeconds === value ? "selected" : ""}>${value} secondes</option>`).join("")}</select></div>` : ""}
       </section>
       ${v014KnowSetupControls(game)}
+      ${akQuizUsesDifficulty(game) ? akQuizDifficultySetupMarkup(game) : ""}
       ${akRouletteIsGame(game) ? akRouletteSetupMarkup(game, { readOnly: !state.isHost }) : ""}`;
   }
 
@@ -5145,6 +5150,22 @@
     });
     document.querySelector("#multiMegaDuration")?.addEventListener("change", event => game.durationSeconds = Number(event.target.value));
     bindV014KnowSetupControls(game);
+    if (akQuizUsesDifficulty(game)) {
+      document.querySelectorAll("[data-quiz-difficulty]").forEach(button => {
+        button.disabled = !state.isHost;
+        if (!state.isHost) return;
+        button.addEventListener("click", () => {
+          const level = button.dataset.quizDifficulty;
+          const current = akQuizNormalizeDifficulties(game.selectedDifficulties);
+          const next = current.includes(level) ? current.filter(value => value !== level) : [...current, level];
+          if (!next.length) return alert("Garde au moins un niveau de difficulté sélectionné.");
+          game.selectedDifficulties = akQuizNormalizeDifficulties(next);
+          const allowedRounds = akQuizRoundChoices(game);
+          if (!allowedRounds.includes(Number(game.roundCount))) game.roundCount = allowedRounds[allowedRounds.length - 1];
+          renderMegaSetup();
+        });
+      });
+    }
     if (akRouletteIsGame(game)) akRouletteBindSetup(game, { readOnly: !state.isHost });
     document.querySelector("#startMultiMega")?.addEventListener("click", startMegaGame);
   };
@@ -5192,6 +5213,7 @@
           drinkingGame: Boolean(game.config.drinkingGame),
           scoreless: Boolean(game.config.scoreless || game.config.questionMode || game.config.drinkingGame),
           selectedPacks: v014NormalizeKnowPacks(game.selectedPacks),
+          selectedDifficulties: akQuizNormalizeDifficulties(game.selectedDifficulties),
           confidenceMode: game.confidenceMode !== false,
           rouletteMode: akRouletteIsGame(game),
           rouletteThemes: akRouletteIsGame(game) ? [...game.rouletteThemes] : null,
@@ -5362,9 +5384,10 @@
     state.multiProcessingActionId = lock;
     const item = megaMultiCurrentItem(gameState);
     const correct = Number(item?.answer);
+    const points = akQuizPointsForItem(item);
     const scores = { ...(gameState.scores || {}) };
-    state.players.forEach(player => { if (Number(votes[player.id]) === correct) scores[player.id] = Number(scores[player.id] || 0) + 1; });
-    const result = { itemId: item?.id || "", correct, votes: { ...votes } };
+    state.players.forEach(player => { if (Number(votes[player.id]) === correct) scores[player.id] = Number(scores[player.id] || 0) + points; });
+    const result = { itemId: item?.id || "", correct, points, votes: { ...votes } };
     AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/updatedAt": AKFirebase.now() }).finally(() => { state.multiProcessingActionId = null; });
   }
 
@@ -5375,7 +5398,7 @@
     setBackVisible(false);
     screen.innerHTML = `
       ${multiMegaProgress(gameState, "Question")}
-      <section class="quiz-question-card"><span class="category-chip">${escapeHtml(gameState.settings?.icon || "🧠")} QUESTION</span><h2>${escapeHtml(item?.question || "")}</h2></section>
+      <section class="quiz-question-card"><span class="category-chip">${escapeHtml(gameState.settings?.icon || "🧠")} QUESTION</span>${akQuizDifficultyBadge(item)}<h2>${escapeHtml(item?.question || "")}</h2></section>
       ${ownVote !== undefined ? renderMultiWaiting("Réponse enregistrée", `${Object.keys(votes).length}/${state.players.length} réponses reçues.`, "🔒") : `<section class="mega-option-grid">${(item?.options || []).map((option, index) => `<button class="mega-option-btn" data-multi-mega-vote="${index}"><span>${String.fromCharCode(65 + index)}</span><strong>${escapeHtml(option)}</strong></button>`).join("")}</section>`}
       ${renderPlayerSubmissionStatus(votes, "A voté", "Réfléchit…")}`;
     document.querySelectorAll("[data-multi-mega-vote]").forEach(button => button.addEventListener("click", async () => {
@@ -5389,12 +5412,13 @@
     const item = megaMultiCurrentItem(gameState);
     const result = gameState.currentResult || {};
     const correct = Number(result.correct);
+    const points = Number(result.points || akQuizPointsForItem(item));
     title.textContent = "Réponse";
     setBackVisible(false);
     screen.innerHTML = `
       ${multiMegaProgress(gameState, "Question")}
-      <section class="reveal-stage reveal-v07"><span class="game-cover-icon">✅</span><h2>${escapeHtml(item?.options?.[correct] || "Réponse")}</h2><p>${escapeHtml(item?.explanation || "Réponse révélée.")}</p></section>
-      <section class="answer-chip-wall">${state.players.map(player => `<span class="${Number(result.votes?.[player.id]) === correct ? "correct" : "wrong"}">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · ${escapeHtml(item?.options?.[result.votes?.[player.id]] || "-")}</span>`).join("")}</section>
+      <section class="reveal-stage reveal-v07"><span class="game-cover-icon">✅</span>${akQuizDifficultyBadge(item)}<h2>${escapeHtml(item?.options?.[correct] || "Réponse")}</h2><p>${escapeHtml(item?.explanation || "Réponse révélée.")} Bonne réponse : +${points} point${points > 1 ? "s" : ""}.</p></section>
+      <section class="answer-chip-wall">${state.players.map(player => { const won = Number(result.votes?.[player.id]) === correct; return `<span class="${won ? "correct" : "wrong"}">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · ${escapeHtml(item?.options?.[result.votes?.[player.id]] || "-")}${won ? ` · +${points}` : ""}</span>`; }).join("")}</section>
       ${state.isHost ? `<button id="nextMultiMegaQuiz" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Question suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La prochaine question apparaîtra automatiquement.", "👑")}`;
     document.querySelector("#nextMultiMegaQuiz")?.addEventListener("click", event => advanceMultiMegaRound(event, gameState, "voting", ["votes", "answers", "actions"]));
   }
@@ -6952,8 +6976,9 @@
     screen.innerHTML = `<div class="notice">Synchronisation de ${escapeHtml(game.gameName)}…</div>`;
     try {
       const rawPool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
-      const pool = v014FilterKnowPool(rawPool, game);
-      let items = v014SelectKnowItems(pool, Math.min(game.roundCount, pool.length), `multi:mega:${game.gameName}:${v014NormalizeKnowPacks(game.selectedPacks).join("-")}`, game);
+      const basePool = v014FilterKnowPool(rawPool, game);
+      const pool = akQuizFilterPool(basePool, game);
+      let items = akQuizSelectItems(pool, Math.min(game.roundCount, pool.length), `multi:mega:${game.gameName}:${v014NormalizeKnowPacks(game.selectedPacks).join("-")}:${akQuizNormalizeDifficulties(game.selectedDifficulties).join("-")}`, game);
       if (game.engine === "quiz") items = items.map(akAudit8PrepareQuizItem);
       const playerIds = state.players.map(player => player.id);
       const firstPlayerId = playerIds[0] || null;
@@ -6980,6 +7005,7 @@
           drinkingGame: Boolean(game.config.drinkingGame),
           scoreless: Boolean(game.config.scoreless || game.config.questionMode || game.config.drinkingGame),
           selectedPacks: v014NormalizeKnowPacks(game.selectedPacks),
+          selectedDifficulties: akQuizNormalizeDifficulties(game.selectedDifficulties),
           confidenceMode: game.confidenceMode !== false
         },
         bombEndsAt: game.engine === "bomb" ? AKFirebase.now() + Number(game.durationSeconds || 25) * 1000 : null,
