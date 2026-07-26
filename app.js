@@ -4654,7 +4654,7 @@ const V014_GAME_CONFIGS = {
   "Plaide ta cause": { engine: "turn", icon: "⚖️", pack: "Bluff & argumentation", data: "data/plaide-cause.json", description: "Défends une opinion impossible et convaincs le groupe en moins d’une minute.", defaultRounds: 10, timer: 45 },
   "Fake ou Réel ?": { engine: "quiz", icon: "🧪", pack: "Bluff & argumentation", data: "data/fake-reel.json", description: "Une affirmation, deux camps : info réelle ou énorme intox ?", defaultRounds: 12 },
   "Alerte Rouge": { engine: "scenario", icon: "🚨", pack: "Histoires & scénarios", data: "data/alerte-rouge.json", description: "Le groupe vote pour décider quoi faire face à une situation qui dérape.", defaultRounds: 8 },
-  "Tu me connais ou pas ?": { engine: "know", icon: "💭", pack: "Connaissance du groupe", data: "data/tu-me-connais.json", description: "Une personne répond en secret, les autres essaient de prévoir son choix.", defaultRounds: 10 },
+  "Tu me connais ou pas ?": { engine: "know", icon: "💭", pack: "Connaissance du groupe", data: "data/tu-me-connais.json", description: "Choisis une ambiance, réponds en secret et découvre qui ose miser sur le fait de vraiment te connaître.", defaultRounds: 10 },
   "Le Classement secret": { engine: "ranking", icon: "🏅", pack: "Connaissance du groupe", data: "data/classement-secret.json", description: "Classe cinq options en privé, puis découvre qui connaît vraiment ton numéro un.", defaultRounds: 8 },
   "Devinettes": { engine: "quiz", icon: "🧩", pack: "Jeux rapides", data: "data/devinettes.json", description: "Des énigmes courtes à résoudre avant les autres.", defaultRounds: 12 },
   "Questions osées": { engine: "turn", icon: "🌶️", pack: "Pack adulte", data: "data/questions-osees.json", description: "Des questions intimes et audacieuses, sans obligation de répondre et sans classement.", defaultRounds: 12, adultOnly: true, questionMode: true, scoreless: true },
@@ -4668,6 +4668,150 @@ const V014_GAME_ICONS = {
   ...V09_GAME_ICONS,
   ...Object.fromEntries(Object.entries(V014_GAME_CONFIGS).map(([name, config]) => [name, config.icon]))
 };
+
+
+const V014_KNOW_PACKS = [
+  { id: "details", icon: "🔎", label: "Détails minuscules", description: "Manies, réflexes et petits détails du quotidien." },
+  { id: "past", icon: "🧸", label: "Mon passé", description: "Souvenirs, nostalgie, école et anciens dossiers." },
+  { id: "food", icon: "🍟", label: "Nourriture", description: "Commandes, habitudes et comportements à table." },
+  { id: "digital", icon: "📱", label: "Vie numérique", description: "Messages, téléphone, réseaux et algorithmes." },
+  { id: "contradictions", icon: "🎭", label: "Mes contradictions", description: "Réactions imprévisibles et petites incohérences." },
+  { id: "extreme", icon: "🚨", label: "Situations extrêmes", description: "Imprévus, pression et scénarios complètement absurdes." },
+  { id: "intimate", icon: "🤐", label: "Ce que je montre peu", description: "Confiance, limites, émotions et perception de soi." },
+  { id: "group", icon: "🫂", label: "Ma place dans le groupe", description: "Amitié, soirées, organisation et vie collective." },
+  { id: "ideal", icon: "✨", label: "Ma vie idéale", description: "Voyages, projets, rêves et futur." },
+  { id: "dossiers", icon: "🗂️", label: "Dossiers entre proches", description: "Moments gênants, excuses et anecdotes compromettantes." },
+  { id: "adult", icon: "🌶️", label: "Dossiers +18", description: "Crushs, séduction, ex, jalousie et intimité.", adult: true }
+];
+
+const V014_KNOW_CONFIDENCE = {
+  try: { id: "try", icon: "🎲", label: "Je tente", reward: 1, penalty: 0, helper: "+1 si juste · 0 sinon" },
+  know: { id: "know", icon: "🧠", label: "Je pense te connaître", reward: 2, penalty: -1, helper: "+2 si juste · −1 sinon" },
+  certain: { id: "certain", icon: "🔥", label: "J’en suis certain·e", reward: 3, penalty: -2, helper: "+3 si juste · −2 sinon" }
+};
+
+function v014KnowPackMeta(packId) {
+  return V014_KNOW_PACKS.find(pack => pack.id === packId) || V014_KNOW_PACKS[0];
+}
+
+function v014NormalizeKnowPacks(selectedPacks) {
+  let selected = Array.isArray(selectedPacks) ? [...new Set(selectedPacks.filter(Boolean))] : ["mix"];
+  if (!state.adult) selected = selected.filter(id => id !== "adult");
+  if (!selected.length) selected = ["mix"];
+  if (selected.includes("mix")) return ["mix"];
+  const valid = selected.filter(id => V014_KNOW_PACKS.some(pack => pack.id === id));
+  return valid.length ? valid : ["mix"];
+}
+
+function v014ToggleKnowPack(game, packId) {
+  if (!game || game.engine !== "know") return;
+  if (packId === "mix") {
+    game.selectedPacks = ["mix"];
+    return;
+  }
+  let selected = v014NormalizeKnowPacks(game.selectedPacks).filter(id => id !== "mix");
+  selected = selected.includes(packId) ? selected.filter(id => id !== packId) : [...selected, packId];
+  game.selectedPacks = selected.length ? selected : ["mix"];
+}
+
+function v014KnowSetupControls(game) {
+  if (!game || game.engine !== "know") return "";
+  game.selectedPacks = v014NormalizeKnowPacks(game.selectedPacks);
+  const selected = game.selectedPacks;
+  const packCards = [
+    { id: "mix", icon: "🎲", label: "Mix équilibré", description: "Un mélange de tous les packs classiques." },
+    ...V014_KNOW_PACKS.filter(pack => !pack.adult || state.adult)
+  ];
+  return `
+    <section class="card know-pack-section">
+      <div class="know-pack-heading"><div><small>AMBIANCE DE LA PARTIE</small><h3>Choisis un ou plusieurs packs</h3></div><span>${selected.includes("mix") ? "Mélange" : `${selected.length} sélectionné${selected.length > 1 ? "s" : ""}`}</span></div>
+      <div class="know-pack-grid">${packCards.map(pack => {
+        const active = selected.includes(pack.id);
+        return `<button type="button" class="know-pack-card ${active ? "active" : ""} ${pack.adult ? "adult" : ""}" data-know-pack="${pack.id}" aria-pressed="${active}"><span>${pack.icon}</span><strong>${escapeHtml(pack.label)}</strong><small>${escapeHtml(pack.description)}</small><b>${active ? "✓" : "+"}</b></button>`;
+      }).join("")}</div>
+      ${!state.adult ? `<p class="helper know-adult-helper">🌶️ Le pack +18 apparaît lorsque le contenu adulte est activé dans les paramètres.</p>` : ""}
+    </section>
+    <section class="card know-confidence-toggle">
+      <div><span>🎯</span><div><strong>Miser sur sa réponse</strong><small>Plus tu es sûr·e, plus tu peux gagner… ou perdre.</small></div></div>
+      <label class="know-switch"><input id="knowConfidenceMode" type="checkbox" ${game.confidenceMode !== false ? "checked" : ""}><span></span></label>
+    </section>`;
+}
+
+function bindV014KnowSetupControls(game) {
+  if (!game || game.engine !== "know") return;
+  document.querySelectorAll("[data-know-pack]").forEach(button => button.addEventListener("click", () => {
+    v014ToggleKnowPack(game, button.dataset.knowPack);
+    renderMegaSetup();
+  }));
+  document.querySelector("#knowConfidenceMode")?.addEventListener("change", event => {
+    game.confidenceMode = Boolean(event.target.checked);
+  });
+}
+
+function v014FilterKnowPool(pool, game) {
+  if (!game || game.engine !== "know") return pool;
+  const selected = v014NormalizeKnowPacks(game.selectedPacks);
+  const filtered = pool.filter(item => {
+    const packId = item.pack || "details";
+    if (packId === "adult" && !state.adult) return false;
+    if (selected.includes("mix")) return packId !== "adult";
+    return selected.includes(packId);
+  });
+  return filtered.length ? filtered : pool.filter(item => (item.pack || "details") !== "adult");
+}
+
+function v014SelectKnowItems(pool, count, historyKey, game) {
+  const safeCount = Math.min(Math.max(0, Number(count || 0)), pool.length);
+  if (!game || game.engine !== "know") return selectFreshItems(pool, safeCount, historyKey);
+
+  const grouped = Object.groupBy
+    ? Object.groupBy(pool, item => item.pack || "details")
+    : pool.reduce((result, item) => {
+        const packId = item.pack || "details";
+        (result[packId] ||= []).push(item);
+        return result;
+      }, {});
+  const packIds = shuffleArray(Object.keys(grouped).filter(packId => grouped[packId]?.length));
+  if (!packIds.length) return [];
+
+  const baseQuota = Math.floor(safeCount / packIds.length);
+  const extra = safeCount % packIds.length;
+  let selected = [];
+  packIds.forEach((packId, index) => {
+    const quota = baseQuota + (index < extra ? 1 : 0);
+    if (!quota) return;
+    selected.push(...selectFreshItems(grouped[packId], Math.min(quota, grouped[packId].length), `${historyKey}:${packId}`));
+  });
+
+  if (selected.length < safeCount) {
+    const selectedIds = new Set(selected.map(item => item.id));
+    const remaining = pool.filter(item => !selectedIds.has(item.id));
+    selected.push(...selectFreshItems(remaining, Math.min(safeCount - selected.length, remaining.length), `${historyKey}:extra`));
+  }
+  return shuffleArray(selected).slice(0, safeCount);
+}
+
+function v014KnowVoteData(rawVote) {
+  if (rawVote && typeof rawVote === "object") {
+    return {
+      answer: Number(rawVote.answer),
+      confidence: V014_KNOW_CONFIDENCE[rawVote.confidence] ? rawVote.confidence : "try"
+    };
+  }
+  return { answer: Number(rawVote), confidence: "try" };
+}
+
+function v014KnowScoreDelta(rawVote, isCorrect, confidenceMode = true) {
+  const vote = v014KnowVoteData(rawVote);
+  if (!confidenceMode) return isCorrect ? 1 : 0;
+  const confidence = V014_KNOW_CONFIDENCE[vote.confidence] || V014_KNOW_CONFIDENCE.try;
+  return isCorrect ? confidence.reward : confidence.penalty;
+}
+
+function v014KnowDeltaLabel(delta) {
+  const value = Number(delta || 0);
+  return value > 0 ? `+${value}` : String(value).replace("-", "−");
+}
 
 function v014SetCategoryGames(id, games) {
   const category = categories.find(item => item.id === id);
@@ -4739,7 +4883,10 @@ function resetMegaGame(gameName, replayConfig = {}) {
     rankingDraft: [],
     bombEndsAt: null,
     bombPlayerIndex: 0,
-    currentResult: null
+    currentResult: null,
+    selectedPacks: v014NormalizeKnowPacks(replayConfig.selectedPacks || ["mix"]),
+    confidenceMode: replayConfig.confidenceMode !== false,
+    pendingKnowGuess: null
   };
 }
 
@@ -4772,6 +4919,7 @@ function renderMegaSetup() {
       <div class="form-group"><label for="megaRounds">Nombre de manches</label><select id="megaRounds" class="text-input">${v014RoundOptions(game.roundCount)}</select></div>
       ${timerControls}
     </section>
+    ${v014KnowSetupControls(game)}
     ${config.drinkingGame ? `<div class="responsible-callout">💧 Petites gorgées uniquement, boissons sans alcool possibles, et chacun peut passer sans justification.</div>` : ""}
     ${config.adultOnly ? `<div class="notice">🔞 Jeu réservé à un groupe adulte. Le consentement et le droit de passer restent prioritaires.</div>` : ""}
     <button id="startMegaGame" class="primary-btn full">Lancer ${escapeHtml(game.gameName)}</button>
@@ -4779,6 +4927,7 @@ function renderMegaSetup() {
 
   document.querySelector("#megaRounds").addEventListener("change", event => game.roundCount = Number(event.target.value));
   document.querySelector("#megaDuration")?.addEventListener("change", event => game.durationSeconds = Number(event.target.value));
+  bindV014KnowSetupControls(game);
   document.querySelector("#startMegaGame").addEventListener("click", startMegaGame);
 }
 
@@ -4787,8 +4936,9 @@ async function startMegaGame() {
   if (!game) return;
   screen.innerHTML = `<div class="notice">Préparation de ${escapeHtml(game.gameName)}…</div>`;
   try {
-    const pool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
-    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `solo:mega:${game.gameName}`);
+    const rawPool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
+    const pool = v014FilterKnowPool(rawPool, game);
+    game.items = v014SelectKnowItems(pool, Math.min(game.roundCount, pool.length), `solo:mega:${game.gameName}:${v014NormalizeKnowPacks(game.selectedPacks).join("-")}`, game);
     game.currentIndex = 0;
     game.currentPlayerIndex = 0;
     game.currentVoterIndex = 0;
@@ -4802,6 +4952,7 @@ async function startMegaGame() {
     game.bombEndsAt = null;
     game.bombPlayerIndex = Math.floor(Math.random() * Math.max(1, state.players.length));
     game.currentResult = null;
+    game.pendingKnowGuess = null;
     renderMegaCurrent();
   } catch (error) {
     console.error(error);
@@ -4999,25 +5150,28 @@ function renderMegaKnowTargetGate() {
   if (game.targetAnswer !== null) return renderMegaKnowGuesserGate();
   const target = v014CurrentTarget(game);
   const item = game.items[game.currentIndex];
+  const pack = v014KnowPackMeta(item.pack);
   title.textContent = "Réponse personnelle";
   setBackVisible(false);
   screen.innerHTML = `
     ${v014Progress(game, "Question")}
-    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(target.avatarId).emoji}</div><span class="category-chip">${escapeHtml(target.name).toUpperCase()}</span><h2>Réponds en secret</h2><p>${escapeHtml(item.question)}</p><button id="openKnowTarget" class="primary-btn">Afficher mes choix</button></section>`;
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(target.avatarId).emoji}</div><span class="category-chip">${pack.icon} ${escapeHtml(pack.label).toUpperCase()}</span><h2>${escapeHtml(target.name)}, réponds en secret</h2><p>${escapeHtml(item.question)}</p><button id="openKnowTarget" class="primary-btn">Afficher mes choix</button></section>`;
   document.querySelector("#openKnowTarget").addEventListener("click", renderMegaKnowTargetChoice);
 }
 
 function renderMegaKnowTargetChoice() {
   const game = state.megaGame;
   const item = game.items[game.currentIndex];
+  const pack = v014KnowPackMeta(item.pack);
   screen.innerHTML = `
     ${v014Progress(game, "Question")}
-    <section class="quiz-question-card"><span class="category-chip">💭 TA VRAIE RÉPONSE</span><h2>${escapeHtml(item.question)}</h2></section>
+    <section class="quiz-question-card"><span class="category-chip">${pack.icon} ${escapeHtml(pack.label).toUpperCase()}</span><h2>${escapeHtml(item.question)}</h2><p>Choisis ta vraie réponse. Elle restera cachée jusqu’au verdict.</p></section>
     <section class="mega-option-grid">${item.options.map((option, index) => `<button class="mega-option-btn" data-know-target="${index}"><span>${index + 1}</span><strong>${escapeHtml(option)}</strong></button>`).join("")}</section>`;
   document.querySelectorAll("[data-know-target]").forEach(button => button.addEventListener("click", () => {
     game.targetAnswer = Number(button.dataset.knowTarget);
     game.currentVoterIndex = 0;
     game.votes = {};
+    game.pendingKnowGuess = null;
     renderMegaKnowGuesserGate();
   }));
 }
@@ -5028,10 +5182,12 @@ function renderMegaKnowGuesserGate() {
   if (game.currentVoterIndex >= guessers.length) return renderMegaKnowReveal();
   const guesser = guessers[game.currentVoterIndex];
   const target = v014CurrentTarget(game);
+  const item = game.items[game.currentIndex];
+  const pack = v014KnowPackMeta(item.pack);
   title.textContent = "Tu me connais ou pas ?";
   screen.innerHTML = `
     ${v014Progress(game, "Question")}
-    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(guesser.avatarId).emoji}</div><span class="category-chip">${escapeHtml(guesser.name).toUpperCase()}</span><h2>Que choisirait ${escapeHtml(target.name)} ?</h2><p>Fais ton pronostic sans demander d’indice.</p><button id="openKnowGuess" class="primary-btn">Faire mon choix</button></section>`;
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(guesser.avatarId).emoji}</div><span class="category-chip">${pack.icon} ${escapeHtml(pack.label).toUpperCase()}</span><h2>Que choisirait ${escapeHtml(target.name)} ?</h2><p>${game.confidenceMode !== false ? "Choisis sa réponse, puis décide combien tu oses miser." : "Fais ton pronostic sans demander d’indice."}</p><button id="openKnowGuess" class="primary-btn">Faire mon choix</button></section>`;
   document.querySelector("#openKnowGuess").addEventListener("click", renderMegaKnowGuess);
 }
 
@@ -5039,37 +5195,85 @@ function renderMegaKnowGuess() {
   const game = state.megaGame;
   const item = game.items[game.currentIndex];
   const target = v014CurrentTarget(game);
+  const pack = v014KnowPackMeta(item.pack);
   screen.innerHTML = `
     ${v014Progress(game, "Question")}
-    <section class="quiz-question-card"><span class="category-chip">À PROPOS DE ${escapeHtml(target.name).toUpperCase()}</span><h2>${escapeHtml(item.question)}</h2></section>
+    <section class="quiz-question-card"><span class="category-chip">${pack.icon} À PROPOS DE ${escapeHtml(target.name).toUpperCase()}</span><h2>${escapeHtml(item.question)}</h2></section>
     <section class="mega-option-grid">${item.options.map((option, index) => `<button class="mega-option-btn" data-know-guess="${index}"><span>${index + 1}</span><strong>${escapeHtml(option)}</strong></button>`).join("")}</section>`;
   document.querySelectorAll("[data-know-guess]").forEach(button => button.addEventListener("click", () => {
     const guesser = v014Guessers(game)[game.currentVoterIndex];
-    game.votes[guesser.id] = Number(button.dataset.knowGuess);
+    const answer = Number(button.dataset.knowGuess);
+    if (game.confidenceMode === false) {
+      game.votes[guesser.id] = { answer, confidence: "try" };
+      game.currentVoterIndex += 1;
+      renderMegaKnowGuesserGate();
+      return;
+    }
+    game.pendingKnowGuess = { playerId: guesser.id, answer };
+    renderMegaKnowConfidence();
+  }));
+}
+
+function renderMegaKnowConfidence() {
+  const game = state.megaGame;
+  const pending = game.pendingKnowGuess;
+  if (!pending) return renderMegaKnowGuess();
+  const item = game.items[game.currentIndex];
+  const target = v014CurrentTarget(game);
+  const selectedOption = item.options[pending.answer];
+  title.textContent = "Combien tu mises ?";
+  screen.innerHTML = `
+    ${v014Progress(game, "Question")}
+    <section class="know-bet-stage"><span>🎯</span><small>TON PRONOSTIC POUR ${escapeHtml(target.name).toUpperCase()}</small><h2>${escapeHtml(selectedOption)}</h2><p>La réponse ne change plus. Choisis maintenant ton niveau de certitude.</p></section>
+    <section class="know-confidence-grid">${Object.values(V014_KNOW_CONFIDENCE).map(level => `<button class="know-confidence-card ${level.id}" data-know-confidence="${level.id}"><span>${level.icon}</span><strong>${escapeHtml(level.label)}</strong><small>${escapeHtml(level.helper)}</small></button>`).join("")}</section>
+    <button id="changeKnowGuess" class="secondary-btn full">Changer ma réponse</button>`;
+  document.querySelectorAll("[data-know-confidence]").forEach(button => button.addEventListener("click", () => {
+    game.votes[pending.playerId] = { answer: pending.answer, confidence: button.dataset.knowConfidence };
+    game.pendingKnowGuess = null;
     game.currentVoterIndex += 1;
     renderMegaKnowGuesserGate();
   }));
+  document.querySelector("#changeKnowGuess").addEventListener("click", () => {
+    game.pendingKnowGuess = null;
+    renderMegaKnowGuess();
+  });
 }
 
 function renderMegaKnowReveal() {
   const game = state.megaGame;
   const item = game.items[game.currentIndex];
   const target = v014CurrentTarget(game);
-  const correctIds = Object.entries(game.votes).filter(([, value]) => Number(value) === Number(game.targetAnswer)).map(([id]) => id);
-  correctIds.forEach(id => game.scores[id] = Number(game.scores[id] || 0) + 1);
-  if (correctIds.length >= Math.ceil(v014Guessers(game).length / 2)) game.scores[target.id] = Number(game.scores[target.id] || 0) + 1;
-  game.rounds.push({ itemId: item.id, targetId: target.id, targetAnswer: game.targetAnswer, votes: { ...game.votes } });
+  const guessers = v014Guessers(game);
+  const correctIds = [];
+  const deltas = {};
+  guessers.forEach(player => {
+    const vote = v014KnowVoteData(game.votes[player.id]);
+    const correct = vote.answer === Number(game.targetAnswer);
+    if (correct) correctIds.push(player.id);
+    const delta = v014KnowScoreDelta(vote, correct, game.confidenceMode !== false);
+    deltas[player.id] = delta;
+    game.scores[player.id] = Number(game.scores[player.id] || 0) + delta;
+  });
+  const targetBonus = correctIds.length >= Math.ceil(guessers.length / 2) ? 1 : 0;
+  if (targetBonus) game.scores[target.id] = Number(game.scores[target.id] || 0) + 1;
+  game.rounds.push({ itemId: item.id, pack: item.pack || "details", targetId: target.id, targetAnswer: game.targetAnswer, votes: { ...game.votes }, deltas, targetBonus });
   title.textContent = "Réponse révélée";
   screen.innerHTML = `
     ${v014Progress(game, "Question")}
-    <section class="reveal-stage reveal-v07"><span class="game-cover-icon">💭</span><h2>${escapeHtml(target.name)} choisit : ${escapeHtml(item.options[game.targetAnswer])}</h2><p>${correctIds.length}/${v014Guessers(game).length} personne${correctIds.length > 1 ? "s" : ""} avait vu juste.</p></section>
-    <section class="answer-chip-wall">${v014Guessers(game).map(player => `<span class="${correctIds.includes(player.id) ? "correct" : "wrong"}">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · ${escapeHtml(item.options[game.votes[player.id]])}</span>`).join("")}</section>
+    <section class="reveal-stage reveal-v07"><span class="game-cover-icon">💭</span><h2>${escapeHtml(target.name)} choisit : ${escapeHtml(item.options[game.targetAnswer])}</h2><p>${correctIds.length}/${guessers.length} personne${correctIds.length > 1 ? "s" : ""} avait vu juste.${targetBonus ? ` ${escapeHtml(target.name)} gagne aussi +1.` : ""}</p></section>
+    <section class="answer-chip-wall know-answer-wall">${guessers.map(player => {
+      const vote = v014KnowVoteData(game.votes[player.id]);
+      const confidence = V014_KNOW_CONFIDENCE[vote.confidence] || V014_KNOW_CONFIDENCE.try;
+      const delta = Number(deltas[player.id] || 0);
+      return `<span class="${correctIds.includes(player.id) ? "correct" : "wrong"}">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · ${escapeHtml(item.options[vote.answer] || "-")} <b>${game.confidenceMode !== false ? confidence.icon : ""} ${v014KnowDeltaLabel(delta)}</b></span>`;
+    }).join("")}</section>
     <button id="nextKnow" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Personne suivante"}</button>`;
   document.querySelector("#nextKnow").addEventListener("click", () => {
     game.currentIndex += 1;
     game.currentVoterIndex = 0;
     game.votes = {};
     game.targetAnswer = null;
+    game.pendingKnowGuess = null;
     renderMegaCurrent();
   });
 }
@@ -5218,14 +5422,15 @@ function renderMegaFinal() {
   clearV014Timer();
   const ranking = [...state.players].sort((a, b) => Number(game.scores[b.id] || 0) - Number(game.scores[a.id] || 0));
   const best = Number(game.scores[ranking[0]?.id] || 0);
-  const winners = ranking.filter(player => Number(game.scores[player.id] || 0) === best && best > 0);
+  const hasWinner = game.engine === "know" ? ranking.length > 0 : best > 0;
+  const winners = ranking.filter(player => Number(game.scores[player.id] || 0) === best && hasWinner);
   title.textContent = "Classement final";
   setBackVisible(false);
   screen.innerHTML = `
     <section class="winner-stage winner-stage-v07 mega-final-stage"><div class="winner-crown">${game.config.icon}🏆</div><h2>${winners.length ? winners.map(player => escapeHtml(player.name)).join(" et ") : "Partie terminée"}</h2><p>${winners.length ? `${winners.length > 1 ? "terminent" : "termine"} en tête de ${escapeHtml(game.gameName)}.` : "Le groupe a traversé toutes les manches."}</p></section>
     <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
     <div class="toolbar"><button id="replayMega" class="secondary-btn">Rejouer</button><button id="otherMega" class="primary-btn">Autre jeu</button></div>`;
-  document.querySelector("#replayMega").addEventListener("click", () => { const name = game.gameName; const replay = { roundCount: game.roundCount, durationSeconds: game.durationSeconds }; resetMegaGame(name, replay); renderMegaSetup(); });
+  document.querySelector("#replayMega").addEventListener("click", () => { const name = game.gameName; const replay = { roundCount: game.roundCount, durationSeconds: game.durationSeconds, selectedPacks: game.selectedPacks, confidenceMode: game.confidenceMode }; resetMegaGame(name, replay); renderMegaSetup(); });
   document.querySelector("#otherMega").addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
 }
 
@@ -5407,7 +5612,7 @@ const AK_AUDIT8_GAME_META = {
   "Plaide ta cause": { minPlayers: 2, time: "10 min", goal: "Défends une opinion improbable avant la fin du chronomètre." },
   "Fake ou Réel ?": { minPlayers: 2, time: "10 min", goal: "Décide si chaque affirmation est exacte ou trompeuse." },
   "Alerte Rouge": { minPlayers: 2, time: "10 min", goal: "Votez pour la décision du groupe et découvrez les conséquences du scénario." },
-  "Tu me connais ou pas ?": { minPlayers: 2, time: "15 min", goal: "Prédis le choix secret de la personne désignée." },
+  "Tu me connais ou pas ?": { minPlayers: 2, time: "15 min", goal: "Choisis un pack, prédis la réponse et mise sur ton niveau de certitude." },
   "Le Classement secret": { minPlayers: 2, time: "15 min", goal: "Devine quelle option la personne ciblée a placée en tête." },
   "Devinettes": { minPlayers: 2, time: "10 min", goal: "Résous les énigmes avant les autres et marque un point par bonne réponse." },
   "Questions osées": { minPlayers: 2, time: "10 min", goal: "Réponds seulement si tu en as envie. Aucun point n’est attribué." },
@@ -5540,8 +5745,9 @@ startMegaGame = async function () {
   if (!game) return;
   screen.innerHTML = `<div class="notice">Préparation de ${escapeHtml(game.gameName)}…</div>`;
   try {
-    const pool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
-    let items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `solo:mega:${game.gameName}`);
+    const rawPool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
+    const pool = v014FilterKnowPool(rawPool, game);
+    let items = v014SelectKnowItems(pool, Math.min(game.roundCount, pool.length), `solo:mega:${game.gameName}:${v014NormalizeKnowPacks(game.selectedPacks).join("-")}`, game);
     if (game.engine === "quiz") items = items.map(akAudit8PrepareQuizItem);
     game.items = items;
     game.currentIndex = 0;
@@ -5557,6 +5763,7 @@ startMegaGame = async function () {
     game.bombEndsAt = null;
     game.bombPlayerIndex = Math.floor(Math.random() * Math.max(1, state.players.length));
     game.currentResult = null;
+    game.pendingKnowGuess = null;
     renderMegaCurrent();
   } catch (error) {
     console.error(error);
@@ -5595,7 +5802,8 @@ renderMegaFinal = function () {
   } else {
     const ranking = [...state.players].sort((a, b) => Number(game.scores[b.id] || 0) - Number(game.scores[a.id] || 0));
     const best = Number(game.scores[ranking[0]?.id] || 0);
-    const winners = ranking.filter(player => Number(game.scores[player.id] || 0) === best && best > 0);
+    const hasWinner = game.engine === "know" ? ranking.length > 0 : best > 0;
+    const winners = ranking.filter(player => Number(game.scores[player.id] || 0) === best && hasWinner);
     screen.innerHTML = `
       <section class="winner-stage winner-stage-v07 mega-final-stage"><div class="winner-crown">${game.config.icon}🏆</div><h2>${winners.length ? winners.map(player => escapeHtml(player.name)).join(" et ") : "Partie terminée"}</h2><p>${winners.length ? `${winners.length > 1 ? "terminent" : "termine"} en tête de ${escapeHtml(game.gameName)}.` : "Le groupe a traversé toutes les manches."}</p></section>
       <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
@@ -5604,7 +5812,7 @@ renderMegaFinal = function () {
 
   document.querySelector("#replayMega")?.addEventListener("click", () => {
     const name = game.gameName;
-    const replay = { roundCount: game.roundCount, durationSeconds: game.durationSeconds };
+    const replay = { roundCount: game.roundCount, durationSeconds: game.durationSeconds, selectedPacks: game.selectedPacks, confidenceMode: game.confidenceMode };
     resetMegaGame(name, replay);
     renderMegaSetup();
   });

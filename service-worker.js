@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v1.4-creator-access-roles";
+const CACHE_VERSION = "akgames-v1.7-tu-me-connais-packs";
 
 const CORE_SHELL = [
   "/",
