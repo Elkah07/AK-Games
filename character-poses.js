@@ -1,124 +1,108 @@
-(function () {
-  "use strict";
-
-  const BASE_PATH = "assets/characters";
-  const POSES = new Set(["idle", "talk", "hype", "win", "lose"]);
-  const FORMATS = new Set(["full", "bust", "avatar-circle", "icon"]);
-  const SLUG_BY_AVATAR_ID = Object.freeze({
-    frog: "croa", otter: "loki", panda: "kaia", dog: "bonnie",
-    crow: "edgar", fox: "filou", duck: "nuggets", ghost: "vapo",
-    dino: "rrrrh", cat: "sir-moustache", penguin: "snow",
-    fish: "maurice", elephant: "moon", cactus: "spike",
-    bear: "honey", rabbit: "flash", octopus: "marcellius"
-  });
-
-  const AVAILABLE_POSES = Object.freeze({
-    croa: new Set(["idle", "talk", "hype", "win", "lose"]),
-    loki: new Set(["idle", "talk", "hype", "win", "lose"])
-  });
-
-  function normalizeCharacterId(id) {
-    if (!id || typeof id !== "string") return "croa";
-    return SLUG_BY_AVATAR_ID[id] || id;
+window.AKGAME_CHARACTER_POSES = window.AKGAME_CHARACTER_POSES || {};
+Object.assign(window.AKGAME_CHARACTER_POSES, {
+  "kaia": {
+    "name": "Kaia",
+    "legacyAvatarId": "panda",
+    "legacyPath": "assets/characters/kaia.webp",
+    "idle": {
+      "full": "assets/characters/kaia/idle/full.webp",
+      "bust": "assets/characters/kaia/idle/bust.webp",
+      "avatar-circle": "assets/characters/kaia/idle/avatar-circle.webp",
+      "icon": "assets/characters/kaia/idle/icon.webp"
+    },
+    "talk": {
+      "full": "assets/characters/kaia/talk/full.webp",
+      "bust": "assets/characters/kaia/talk/bust.webp",
+      "avatar-circle": "assets/characters/kaia/talk/avatar-circle.webp",
+      "icon": "assets/characters/kaia/talk/icon.webp"
+    },
+    "hype": {
+      "full": "assets/characters/kaia/hype/full.webp",
+      "bust": "assets/characters/kaia/hype/bust.webp",
+      "avatar-circle": "assets/characters/kaia/hype/avatar-circle.webp",
+      "icon": "assets/characters/kaia/hype/icon.webp"
+    },
+    "win": {
+      "full": "assets/characters/kaia/win/full.webp",
+      "bust": "assets/characters/kaia/win/bust.webp",
+      "avatar-circle": "assets/characters/kaia/win/avatar-circle.webp",
+      "icon": "assets/characters/kaia/win/icon.webp"
+    },
+    "lose": {
+      "full": "assets/characters/kaia/lose/full.webp",
+      "bust": "assets/characters/kaia/lose/bust.webp",
+      "avatar-circle": "assets/characters/kaia/lose/avatar-circle.webp",
+      "icon": "assets/characters/kaia/lose/icon.webp"
+    }
+  },
+  "bonnie": {
+    "name": "Bonnie",
+    "legacyAvatarId": "dog",
+    "legacyPath": "assets/characters/bonnie.webp",
+    "idle": {
+      "full": "assets/characters/bonnie/idle/full.webp",
+      "bust": "assets/characters/bonnie/idle/bust.webp",
+      "avatar-circle": "assets/characters/bonnie/idle/avatar-circle.webp",
+      "icon": "assets/characters/bonnie/idle/icon.webp"
+    },
+    "talk": {
+      "full": "assets/characters/bonnie/talk/full.webp",
+      "bust": "assets/characters/bonnie/talk/bust.webp",
+      "avatar-circle": "assets/characters/bonnie/talk/avatar-circle.webp",
+      "icon": "assets/characters/bonnie/talk/icon.webp"
+    },
+    "hype": {
+      "full": "assets/characters/bonnie/hype/full.webp",
+      "bust": "assets/characters/bonnie/hype/bust.webp",
+      "avatar-circle": "assets/characters/bonnie/hype/avatar-circle.webp",
+      "icon": "assets/characters/bonnie/hype/icon.webp"
+    },
+    "win": {
+      "full": "assets/characters/bonnie/win/full.webp",
+      "bust": "assets/characters/bonnie/win/bust.webp",
+      "avatar-circle": "assets/characters/bonnie/win/avatar-circle.webp",
+      "icon": "assets/characters/bonnie/win/icon.webp"
+    },
+    "lose": {
+      "full": "assets/characters/bonnie/lose/full.webp",
+      "bust": "assets/characters/bonnie/lose/bust.webp",
+      "avatar-circle": "assets/characters/bonnie/lose/avatar-circle.webp",
+      "icon": "assets/characters/bonnie/lose/icon.webp"
+    }
+  },
+  "edgar": {
+    "name": "Edgar",
+    "legacyAvatarId": "crow",
+    "legacyPath": "assets/characters/edgar.webp",
+    "idle": {
+      "full": "assets/characters/edgar/idle/full.webp",
+      "bust": "assets/characters/edgar/idle/bust.webp",
+      "avatar-circle": "assets/characters/edgar/idle/avatar-circle.webp",
+      "icon": "assets/characters/edgar/idle/icon.webp"
+    },
+    "talk": {
+      "full": "assets/characters/edgar/talk/full.webp",
+      "bust": "assets/characters/edgar/talk/bust.webp",
+      "avatar-circle": "assets/characters/edgar/talk/avatar-circle.webp",
+      "icon": "assets/characters/edgar/talk/icon.webp"
+    },
+    "hype": {
+      "full": "assets/characters/edgar/hype/full.webp",
+      "bust": "assets/characters/edgar/hype/bust.webp",
+      "avatar-circle": "assets/characters/edgar/hype/avatar-circle.webp",
+      "icon": "assets/characters/edgar/hype/icon.webp"
+    },
+    "win": {
+      "full": "assets/characters/edgar/win/full.webp",
+      "bust": "assets/characters/edgar/win/bust.webp",
+      "avatar-circle": "assets/characters/edgar/win/avatar-circle.webp",
+      "icon": "assets/characters/edgar/win/icon.webp"
+    },
+    "lose": {
+      "full": "assets/characters/edgar/lose/full.webp",
+      "bust": "assets/characters/edgar/lose/bust.webp",
+      "avatar-circle": "assets/characters/edgar/lose/avatar-circle.webp",
+      "icon": "assets/characters/edgar/lose/icon.webp"
+    }
   }
-
-  function normalizePose(pose) {
-    return POSES.has(pose) ? pose : "idle";
-  }
-
-  function normalizeFormat(format) {
-    return FORMATS.has(format) ? format : "full";
-  }
-
-  function hasPose(characterId, pose) {
-    const slug = normalizeCharacterId(characterId);
-    const normalizedPose = normalizePose(pose);
-    return normalizedPose === "idle" || AVAILABLE_POSES[slug]?.has(normalizedPose) === true;
-  }
-
-  function resolvedPose(characterId, pose) {
-    const normalizedPose = normalizePose(pose);
-    return hasPose(characterId, normalizedPose) ? normalizedPose : "idle";
-  }
-
-  function assetPath(characterId, options = {}) {
-    const slug = normalizeCharacterId(characterId);
-    const format = normalizeFormat(options.format || "full");
-    const pose = resolvedPose(slug, options.pose || "idle");
-    return `${BASE_PATH}/${slug}/${pose}/${format}.webp`;
-  }
-
-  function legacyPath(characterId) {
-    return `${BASE_PATH}/${normalizeCharacterId(characterId)}.webp`;
-  }
-
-  function applyImageFallback(img, characterId) {
-    if (!(img instanceof HTMLImageElement)) return img;
-    let stage = 0;
-    img.addEventListener("error", () => {
-      if (stage === 0) {
-        stage = 1;
-        const formatClass = [...img.classList].find((c) =>
-          c.startsWith("ak-character--") && FORMATS.has(c.slice(14))
-        );
-        const format = formatClass ? formatClass.slice(14) : "full";
-        img.src = `${BASE_PATH}/${normalizeCharacterId(characterId)}/idle/${format}.webp`;
-      } else if (stage === 1) {
-        stage = 2;
-        img.src = legacyPath(characterId);
-      }
-    });
-    return img;
-  }
-
-  function createImage(characterId, options = {}) {
-    const requestedPose = normalizePose(options.pose || "idle");
-    const format = normalizeFormat(options.format || "full");
-    const img = document.createElement("img");
-    img.className = `ak-character ak-character--${requestedPose} ak-character--${format}`;
-    img.dataset.character = normalizeCharacterId(characterId);
-    img.dataset.pose = requestedPose;
-    img.alt = options.alt || normalizeCharacterId(characterId);
-    img.loading = options.loading || "lazy";
-    img.decoding = "async";
-    img.src = assetPath(characterId, { pose: requestedPose, format });
-    return applyImageFallback(img, characterId);
-  }
-
-  function setPose(img, pose, options = {}) {
-    if (!(img instanceof HTMLImageElement)) return;
-    const characterId = options.characterId || img.dataset.character;
-    const formatClass = [...img.classList].find((c) =>
-      c.startsWith("ak-character--") && FORMATS.has(c.slice(14))
-    );
-    const format = options.format || (formatClass ? formatClass.slice(14) : "full");
-    const nextPose = normalizePose(pose);
-    for (const p of POSES) img.classList.remove(`ak-character--${p}`);
-    img.classList.add(`ak-character--${nextPose}`);
-    img.dataset.pose = nextPose;
-    img.src = assetPath(characterId, { pose: nextPose, format });
-    applyImageFallback(img, characterId);
-  }
-
-  function pictureMarkup(characterId, options = {}) {
-    const pose = normalizePose(options.pose || "idle");
-    const format = normalizeFormat(options.format || "full");
-    const slug = normalizeCharacterId(characterId);
-    const src = assetPath(slug, { pose, format });
-    const alt = String(options.alt || slug)
-      .replace(/&/g, "&amp;")
-      .replace(/"/g, "&quot;");
-    return `<img class="ak-character ak-character--${pose} ak-character--${format}" data-character="${slug}" data-pose="${pose}" src="${src}" alt="${alt}" loading="lazy" decoding="async">`;
-  }
-
-  window.AKCharacterPoses = Object.freeze({
-    poses: [...POSES],
-    avatarIdToSlug: SLUG_BY_AVATAR_ID,
-    normalizeCharacterId,
-    hasPose,
-    assetPath,
-    createImage,
-    setPose,
-    pictureMarkup
-  });
-})();
+});

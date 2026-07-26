@@ -1,16 +1,23 @@
 {
   "characters": [
-    "croa",
-    "loki"
+    "kaia",
+    "bonnie",
+    "edgar"
   ],
   "posesAdded": {
-    "croa": [
+    "kaia": [
       "talk",
       "hype",
       "win",
       "lose"
     ],
-    "loki": [
+    "bonnie": [
+      "talk",
+      "hype",
+      "win",
+      "lose"
+    ],
+    "edgar": [
       "talk",
       "hype",
       "win",
@@ -23,7 +30,10 @@
     "avatar-circle",
     "icon"
   ],
-  "webpCount": 32,
-  "totalFiles": 35,
-  "transparentAlphaChecked": true
+  "webpCount": 52,
+  "totalFiles": 56,
+  "transparentAlphaChecked": true,
+  "notes": [
+    "Bonnie idle full corrected included in this lot."
+  ]
 }
