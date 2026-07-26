@@ -1,15 +1,15 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v2.2-global-game-controls";
+const CACHE_VERSION = "akgames-v2.3-best-liar-400";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
   "/styles.css?v=game-controls-v2.2",
   "/creator.css?v=creator-v1.3-access",
-  "/app.js?v=game-controls-v2.2",
+  "/app.js?v=best-liar-v2",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
-  "/multiplayer.js?v=game-controls-v2.2",
+  "/multiplayer.js?v=best-liar-v2",
   "/pwa.js",
   "/manifest.webmanifest",
   "/icons/icon-192.png",

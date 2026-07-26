@@ -88,12 +88,38 @@ const laughCategoryLabels = {
   adulte: "🔞 Adulte"
 };
 
+const liarClassicCategories = [
+  "excuses",
+  "quotidien",
+  "dossiers",
+  "improbable",
+  "chaos",
+  "celebrites",
+  "exploits",
+  "travail_ecole",
+  "voyages",
+  "soirees",
+  "argent_luxe",
+  "enfance_famille",
+  "reseaux_tech",
+  "relations_crush"
+];
+
 const liarCategoryLabels = {
   excuses: "🧾 Excuses",
-  improbable: "🛸 Improbable",
   quotidien: "🏠 Quotidien",
   dossiers: "👀 Dossiers",
+  improbable: "🛸 Improbable",
   chaos: "💥 Chaos",
+  celebrites: "🌟 Célébrités",
+  exploits: "🏆 Exploits & talents",
+  travail_ecole: "💼 Travail & école",
+  voyages: "✈️ Voyages",
+  soirees: "🎉 Soirées",
+  argent_luxe: "💸 Argent & luxe",
+  enfance_famille: "🧸 Enfance & famille",
+  reseaux_tech: "📱 Réseaux & technologie",
+  relations_crush: "💘 Relations & crushs",
   adulte: "🔞 Adulte"
 };
 
@@ -198,6 +224,45 @@ function selectFreshItems(pool, count, namespace) {
 
   rememberContentItems(namespace, selected, safePool.length);
   return selected;
+}
+
+function selectBalancedLiarPrompts(pool, count, namespace) {
+  const safePool = Array.isArray(pool) ? pool.filter(Boolean) : [];
+  const safeCount = Math.min(Math.max(0, Number(count || 0)), safePool.length);
+  if (!safeCount) return [];
+
+  const grouped = safePool.reduce((acc, item) => {
+    const category = item?.category || "autres";
+    (acc[category] ||= []).push(item);
+    return acc;
+  }, {});
+
+  const categoryIds = shuffleArray(Object.keys(grouped));
+  const baseQuota = Math.floor(safeCount / categoryIds.length);
+  let remainder = safeCount % categoryIds.length;
+  const selected = [];
+
+  categoryIds.forEach(category => {
+    const quota = baseQuota + (remainder > 0 ? 1 : 0);
+    if (remainder > 0) remainder -= 1;
+    selected.push(...selectFreshItems(
+      grouped[category],
+      Math.min(quota, grouped[category].length),
+      `${namespace}:${category}`
+    ));
+  });
+
+  if (selected.length < safeCount) {
+    const selectedIds = new Set(selected.map(contentItemId));
+    const remaining = safePool.filter((item, index) => !selectedIds.has(contentItemId(item, index)));
+    selected.push(...selectFreshItems(
+      remaining,
+      Math.min(safeCount - selected.length, remaining.length),
+      `${namespace}:extra`
+    ));
+  }
+
+  return shuffleArray(selected).slice(0, safeCount);
 }
 
 function chooseFreshItem(pool, namespace) {
@@ -1635,7 +1700,7 @@ function renderLaughDuelEnd(winner, loser) {
 function resetBestLiarState(config = {}) {
   state.bestLiar = {
     roundCount: Number(config.roundCount || 5),
-    categories: [...(config.categories || ["excuses", "improbable", "quotidien", "dossiers", "chaos"])],
+    categories: [...(config.categories || liarClassicCategories)],
     includeAdult: Boolean(config.includeAdult),
     prompts: [],
     currentRound: 0,
@@ -1664,27 +1729,40 @@ function renderBestLiarSetup() {
     <section class="card">
       <h2 class="section-title">Nombre de manches</h2>
       <div class="choice-row">
-        ${[3, 5, 10].map(n => `
+        ${[3, 5, 10, 20, 30].map(n => `
           <button class="choice-pill ${game.roundCount === n ? "active" : ""}" data-liar-rounds="${n}">${n}</button>
         `).join("")}
       </div>
 
       <div class="form-group top-gap">
         <label for="customLiarRounds">Personnalisé</label>
-        <input id="customLiarRounds" class="text-input" type="number" min="1" max="30" value="${game.roundCount}">
+        <input id="customLiarRounds" class="text-input" type="number" min="1" max="100" value="${game.roundCount}">
       </div>
     </section>
 
     <section class="card">
-      <h2 class="section-title">Types de situations</h2>
-      <div class="check-grid">
-        ${["excuses", "improbable", "quotidien", "dossiers", "chaos"].map(cat => `
+      <div class="section-heading-row">
+        <div>
+          <h2 class="section-title">Thèmes de mensonges</h2>
+          <p class="helper">Choisis un thème, plusieurs ou les 14. Les cartes seront réparties équitablement entre les thèmes cochés.</p>
+        </div>
+      </div>
+
+      <div class="toolbar compact-toolbar">
+        <button id="selectAllLiarCats" class="secondary-btn">Tout sélectionner</button>
+        <button id="clearAllLiarCats" class="secondary-btn">Tout enlever</button>
+      </div>
+
+      <div class="check-grid top-gap">
+        ${liarClassicCategories.map(cat => `
           <label class="option-card mini-option">
             <input type="checkbox" data-liar-cat="${cat}" ${game.categories.includes(cat) ? "checked" : ""}>
             <span><strong>${liarCategoryLabels[cat]}</strong></span>
           </label>
         `).join("")}
       </div>
+
+      <p class="helper top-gap">350 situations classiques disponibles.</p>
     </section>
 
     ${state.adult ? `
@@ -1693,7 +1771,7 @@ function renderBestLiarSetup() {
           <input id="liarAdultToggle" type="checkbox" ${game.includeAdult ? "checked" : ""}>
           <span>
             <strong>🔞 Ajouter les situations adultes</strong><br>
-            <span class="helper">Ajoute des scénarios de crush, ex et rendez-vous plus osés.</span>
+            <span class="helper">Ajoute 50 situations de crush, ex, messages et rendez-vous plus osés.</span>
           </span>
         </label>
       </section>
@@ -1714,7 +1792,7 @@ function renderBestLiarSetup() {
   });
 
   document.querySelector("#customLiarRounds").addEventListener("input", e => {
-    game.roundCount = Math.max(1, Math.min(30, Number(e.target.value) || 1));
+    game.roundCount = Math.max(1, Math.min(100, Number(e.target.value) || 1));
   });
 
   document.querySelectorAll("[data-liar-cat]").forEach(input => {
@@ -1723,6 +1801,16 @@ function renderBestLiarSetup() {
       if (input.checked && !game.categories.includes(cat)) game.categories.push(cat);
       if (!input.checked) game.categories = game.categories.filter(c => c !== cat);
     });
+  });
+
+  document.querySelector("#selectAllLiarCats").addEventListener("click", () => {
+    game.categories = [...liarClassicCategories];
+    renderBestLiarSetup();
+  });
+
+  document.querySelector("#clearAllLiarCats").addEventListener("click", () => {
+    game.categories = [];
+    renderBestLiarSetup();
   });
 
   const adultToggle = document.querySelector("#liarAdultToggle");
@@ -1764,7 +1852,7 @@ async function startBestLiarGame() {
 
     if (!pool.length) throw new Error("Aucune situation disponible avec ces réglages.");
 
-    game.prompts = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "solo:best-liar");
+    game.prompts = selectBalancedLiarPrompts(pool, Math.min(game.roundCount, pool.length), "solo:best-liar-v2");
     game.roundCount = game.prompts.length;
     game.currentRound = 0;
     game.currentWriterIndex = 0;

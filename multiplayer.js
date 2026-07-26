@@ -2510,7 +2510,7 @@
 
       if (!pool.length) throw new Error("Aucune situation disponible avec ces réglages.");
 
-      const prompts = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "multi:best-liar");
+      const prompts = selectBalancedLiarPrompts(pool, Math.min(game.roundCount, pool.length), "multi:best-liar-v2");
       const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
 
       await AKFirebase.setGame(state.roomCode, {
