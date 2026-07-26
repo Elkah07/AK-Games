@@ -1818,7 +1818,17 @@
       };
     }
 
-    if (["same-brain", "minority", "who-answered"].includes(gameState.type)) {
+    if (gameState.type === "who-answered") {
+      return { type: gameState.type, config: {
+        roundCount: Number(gameState.settings?.roundCount || gameState.items?.length || 10),
+        includeAdult: Boolean(gameState.settings?.includeAdult),
+        categories: gameState.settings?.categories || whoAnsweredClassicCategories,
+        includeCustom: Boolean(gameState.settings?.includeCustom),
+        mysteryMode: gameState.settings?.mysteryMode || "two"
+      } };
+    }
+
+    if (["same-brain", "minority"].includes(gameState.type)) {
       return {
         type: gameState.type,
         config: {
@@ -2199,7 +2209,11 @@
     if (descriptor.type === "who-answered") {
       if (state.players.length < 3) throw new Error("« Qui a répondu ça ? » nécessite au moins 3 joueurs.");
       const config = descriptor.config || {};
-      state.whoAnswered = { roundCount: Number(config.roundCount || Math.max(6, state.players.length)), includeAdult: Boolean(state.adult && config.includeAdult), items: [], currentIndex: 0, currentWriterIndex: 0, currentVoterIndex: 0, answers: {}, votes: {}, authorOrder: shuffleArray(state.players.map(player => player.id)), scores: Object.fromEntries(state.players.map(player => [player.id, 0])), rounds: [] };
+      resetWhoAnsweredState({
+        roundCount: Number(config.roundCount || 10), includeAdult: Boolean(state.adult && config.includeAdult),
+        categories: config.categories || whoAnsweredClassicCategories,
+        includeCustom: Boolean(config.includeCustom), mysteryMode: config.mysteryMode || "two"
+      });
       await startWhoAnsweredGame();
       return;
     }
@@ -4034,52 +4048,59 @@
     if (!isMultiplayer()) return localRenderWhoAnsweredSetup();
     if (!state.whoAnswered) resetWhoAnsweredState();
     const game = state.whoAnswered;
-    title.textContent = "Qui a répondu ça ?";
-    setBackVisible(true);
-    const minimum = Math.max(6, state.players.length);
-    const choices = [minimum, 8, 10, 15].filter((value, index, array) => array.indexOf(value) === index);
+    const customCount = game.customQuestions.length;
+    const investigations = game.roundCount * whoAnsweredMysteryCount(game.mysteryMode, state.players.length);
+    title.textContent = "Qui a répondu ça ?"; setBackVisible(true);
     screen.innerHTML = `
-      <section class="game-cover game-cover-who"><span class="game-cover-icon">🕵️</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>Qui a répondu ça ?</h2><p>Tout le monde écrit sur son téléphone. Une réponse devient mystérieuse et le groupe enquête.</p></div></section>
-      <section class="card setup-card-v07"><div class="form-group"><label for="multiWhoRounds">Nombre de manches</label><select id="multiWhoRounds" class="text-input">${choices.map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} manches</option>`).join("")}</select></div></section>
-      ${state.adult ? `<label class="option-card premium-toggle"><input id="multiWhoAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Crushs, relations et réponses plus révélatrices.</span></span></label>` : ""}
+      <section class="game-cover game-cover-who"><span class="game-cover-icon">🕵️</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>Qui a répondu ça ?</h2><p>Tout le monde écrit une fois sur son téléphone. Plusieurs réponses peuvent ensuite passer au détecteur.</p></div></section>
+      <section class="card"><h2 class="section-title">Nombre de questions</h2><div class="choice-row">${[5, 10, 20, 40, 60, 100].map(value => `<button class="choice-pill ${game.roundCount === value ? "active" : ""}" data-multi-who-count="${value}">${value}</button>`).join("")}</div><div class="form-group top-gap"><label for="multiWhoCustomCount">Personnalisé, de 3 à 100</label><input id="multiWhoCustomCount" class="text-input" type="number" min="3" max="100" value="${game.roundCount}"></div></section>
+      <section class="card"><h2 class="section-title">Réponses enquêtées par question</h2><div class="stacked-choice"><label class="option-card mini-option"><input type="radio" name="multiWhoMysteryMode" value="one" ${game.mysteryMode === "one" ? "checked" : ""}><span><strong>⚡ Une réponse</strong><br><span class="helper">Rapide</span></span></label><label class="option-card mini-option"><input type="radio" name="multiWhoMysteryMode" value="two" ${game.mysteryMode === "two" ? "checked" : ""}><span><strong>🕵️ Deux réponses</strong><br><span class="helper">Équilibré</span></span></label><label class="option-card mini-option"><input type="radio" name="multiWhoMysteryMode" value="all" ${game.mysteryMode === "all" ? "checked" : ""}><span><strong>🔍 Toutes les réponses</strong><br><span class="helper">Grande enquête</span></span></label></div><div class="notice top-gap">Environ <strong>${investigations} enquêtes</strong> au total.</div></section>
+      <section class="card"><h2 class="section-title">Choisir les thèmes</h2><div class="check-grid top-gap">${whoAnsweredClassicCategories.map(category => `<label class="option-card mini-option"><input type="checkbox" data-multi-who-category="${category}" ${game.categories.includes(category) ? "checked" : ""}><span><strong>${whoAnsweredCategoryLabels[category]}</strong></span></label>`).join("")}</div><div class="toolbar top-gap"><button id="selectAllMultiWhoCats" class="secondary-btn">Tout sélectionner</button><button id="clearAllMultiWhoCats" class="secondary-btn">Tout désélectionner</button></div></section>
+      <section class="card"><h2 class="section-title">✍️ Questions de l’hôte</h2><p class="helper">Elles seront envoyées à toute la room pour cette partie.</p><div class="form-group top-gap"><label for="multiCustomWhoQuestion">Nouvelle question</label><input id="multiCustomWhoQuestion" class="text-input" maxlength="220" placeholder="Quel détail de ta vie numérique te trahirait ?"></div><button id="addMultiWhoCustom" class="secondary-btn full">Ajouter la question</button><label class="option-card top-gap ${customCount ? "" : "disabled-option"}"><input id="includeMultiWhoCustom" type="checkbox" ${game.includeCustom && customCount ? "checked" : ""} ${customCount ? "" : "disabled"}><span><strong>Inclure mes questions (${customCount})</strong></span></label>${customCount ? `<details class="top-gap"><summary>Gérer mes questions</summary><div class="stacked-choice top-gap">${game.customQuestions.map(item => `<div class="option-card mini-option who-answered-custom-row"><span>${escapeHtml(item.prompt)}</span><button class="secondary-btn" data-remove-multi-who-custom="${item.id}">Supprimer</button></div>`).join("")}</div></details>` : ""}</section>
+      ${state.adult ? `<label class="option-card premium-toggle"><input id="multiWhoAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les 150 questions adultes</strong><br><span class="helper">Séduction, ex, intimité et dossiers compromettants.</span></span></label>` : ""}
       <div class="notice">Les bons détectives gagnent 1 point. L’auteur gagne 1 point par personne trompée.</div>
       ${state.isHost ? `<button id="startMultiWho" class="primary-btn full">Ouvrir l’enquête</button>` : renderMultiWaiting("En attente de l’hôte", "Les carnets secrets vont bientôt s’ouvrir.", "👑")}
     `;
-    document.querySelector("#multiWhoRounds")?.addEventListener("change", event => game.roundCount = Number(event.target.value));
+    document.querySelectorAll("[data-multi-who-count]").forEach(button => button.addEventListener("click", () => { game.roundCount = Number(button.dataset.multiWhoCount); renderWhoAnsweredSetup(); }));
+    document.querySelector("#multiWhoCustomCount")?.addEventListener("input", event => { game.roundCount = Math.max(3, Math.min(100, Number(event.target.value) || 3)); });
+    document.querySelectorAll('input[name="multiWhoMysteryMode"]').forEach(input => input.addEventListener("change", event => { game.mysteryMode = event.target.value; renderWhoAnsweredSetup(); }));
+    document.querySelectorAll("[data-multi-who-category]").forEach(input => input.addEventListener("change", () => { const category = input.dataset.multiWhoCategory; if (input.checked && !game.categories.includes(category)) game.categories.push(category); if (!input.checked) game.categories = game.categories.filter(value => value !== category); }));
+    document.querySelector("#selectAllMultiWhoCats")?.addEventListener("click", () => { game.categories = [...whoAnsweredClassicCategories]; renderWhoAnsweredSetup(); });
+    document.querySelector("#clearAllMultiWhoCats")?.addEventListener("click", () => { game.categories = []; renderWhoAnsweredSetup(); });
     document.querySelector("#multiWhoAdult")?.addEventListener("change", event => game.includeAdult = event.target.checked);
+    document.querySelector("#includeMultiWhoCustom")?.addEventListener("change", event => game.includeCustom = event.target.checked);
+    document.querySelector("#addMultiWhoCustom")?.addEventListener("click", () => { const input = document.querySelector("#multiCustomWhoQuestion"); const item = createWhoAnsweredCustomQuestion(input.value); if (!item) return alert("Écris d’abord une question."); if (game.customQuestions.some(existing => existing.prompt.trim().toLocaleLowerCase("fr") === item.prompt.trim().toLocaleLowerCase("fr"))) return alert("Cette question existe déjà."); game.customQuestions.push(item); game.includeCustom = true; saveWhoAnsweredCustomQuestions(game.customQuestions); renderWhoAnsweredSetup(); });
+    document.querySelector("#multiCustomWhoQuestion")?.addEventListener("keydown", event => { if (event.key === "Enter") { event.preventDefault(); document.querySelector("#addMultiWhoCustom")?.click(); } });
+    document.querySelectorAll("[data-remove-multi-who-custom]").forEach(button => button.addEventListener("click", () => { game.customQuestions = game.customQuestions.filter(item => item.id !== button.dataset.removeMultiWhoCustom); if (!game.customQuestions.length) game.includeCustom = false; saveWhoAnsweredCustomQuestions(game.customQuestions); renderWhoAnsweredSetup(); }));
     document.querySelector("#startMultiWho")?.addEventListener("click", startWhoAnsweredGame);
   };
 
   startWhoAnsweredGame = async function () {
     if (!isMultiplayer()) return localStartWhoAnsweredGame();
     if (!state.isHost) return;
-    if (state.players.length < 3) {
-      alert("« Qui a répondu ça ? » nécessite au moins 3 joueurs.");
-      return;
-    }
-    const game = state.whoAnswered;
+    if (state.players.length < 3) return alert("« Qui a répondu ça ? » nécessite au moins 3 joueurs.");
+    const game = state.whoAnswered; const hasCustom = game.includeCustom && game.customQuestions.length > 0;
+    if (!game.categories.length && !game.includeAdult && !hasCustom) return alert("Choisis au moins un thème, active le pack adulte ou ajoute une question personnalisée.");
     screen.innerHTML = `<div class="notice">Distribution des carnets secrets…</div>`;
     try {
-      let pool = await loadJsonFile("data/qui-a-repondu.json", "Impossible de charger les questions.");
+      const classicPool = await loadJsonFile("data/qui-a-repondu.json", "Impossible de charger les questions.");
+      let pool = classicPool.filter(item => game.categories.includes(item.category));
       if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/qui-a-repondu-adulte.json", "Impossible de charger les questions adultes."));
-      const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "multi:who-answered");
+      if (hasCustom) pool = pool.concat(game.customQuestions);
+      if (!pool.length) throw new Error("Aucune question ne correspond aux thèmes choisis.");
+      const items = selectBalancedWhoAnsweredItems(pool, Math.min(game.roundCount, pool.length), `multi:who-answered-v2:${game.categories.join("-")}:${game.includeAdult}`);
       const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
-      const authorOrder = shuffleArray(state.players.map(player => player.id));
-      await AKFirebase.setGame(state.roomCode, {
-        state: {
-          type: "who-answered", phase: "answering", sessionGameId: createSessionGameId("who-answered"),
-          items, currentIndex: 0, authorOrder, scores, rounds: {}, currentResult: null,
-          settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult) },
-          startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
-        },
-        answers: {}, votes: {}
-      });
+      const detectiveCorrect = Object.fromEntries(state.players.map(player => [player.id, 0]));
+      const fooledByAuthor = Object.fromEntries(state.players.map(player => [player.id, 0]));
+      await AKFirebase.setGame(state.roomCode, { state: {
+        type: "who-answered", phase: "answering", sessionGameId: createSessionGameId("who-answered"),
+        items, currentIndex: 0, mysteryQueue: [], mysteryIndex: 0, authorDeck: shuffleArray(state.players.map(player => player.id)), scores, detectiveCorrect, fooledByAuthor,
+        rounds: {}, currentResult: null,
+        settings: { roundCount: items.length, includeAdult: Boolean(game.includeAdult), categories: [...game.categories], includeCustom: Boolean(hasCustom), mysteryMode: game.mysteryMode },
+        startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
+      }, answers: {}, votes: {} });
       state.multiView = "v08-game";
-    } catch (error) {
-      console.error(error);
-      alert(error.message || "Impossible de lancer la partie.");
-      renderWhoAnsweredSetup();
-    }
+    } catch (error) { console.error(error); alert(error.message || "Impossible de lancer la partie."); renderWhoAnsweredSetup(); }
   };
 
   function syncMultiV08Game(room) {
@@ -4115,7 +4136,7 @@
       const answers = room.game?.answers || {};
       const votes = room.game?.votes || {};
       processMultiWhoAnswered(gameState, answers, votes);
-      const renderKey = [gameState.type, gameState.phase, gameState.currentIndex, Object.keys(answers).length, Object.keys(votes).length, answers[state.currentUid]?.text || "", votes[state.currentUid] || "", gameState.mysteryAuthorId || "", JSON.stringify(gameState.currentResult || {}), JSON.stringify(gameState.scores || {})].join("|");
+      const renderKey = [gameState.type, gameState.phase, gameState.currentIndex, gameState.mysteryIndex || 0, Object.keys(answers).length, Object.keys(votes).length, answers[state.currentUid]?.text || "", votes[state.currentUid] || "", gameState.mysteryAuthorId || "", JSON.stringify(gameState.currentResult || {}), JSON.stringify(gameState.scores || {})].join("|");
       if (state.multiRenderKey === renderKey) return;
       state.multiRenderKey = renderKey;
       if (gameState.phase === "final") renderMultiV08Final(gameState);
@@ -4260,21 +4281,31 @@
       const processingId = `who-answering_${gameState.currentIndex}_${Object.keys(answers).length}`;
       if (state.multiProcessingActionId === processingId) return;
       state.multiProcessingActionId = processingId;
-      const authorId = gameState.authorOrder?.[Number(gameState.currentIndex || 0) % (gameState.authorOrder?.length || 1)];
+      const count = whoAnsweredMysteryCount(gameState.settings?.mysteryMode || "two", state.players.length);
+      const playerIds = state.players.map(player => player.id);
+      let authorDeck = Array.isArray(gameState.authorDeck) ? [...gameState.authorDeck] : [];
+      const mysteryQueue = [];
+      while (mysteryQueue.length < Math.min(count, playerIds.length)) {
+        if (!authorDeck.length) {
+          authorDeck = shuffleArray(playerIds);
+          const previous = mysteryQueue[mysteryQueue.length - 1];
+          if (previous && authorDeck.length > 1 && authorDeck[0] === previous) authorDeck.push(authorDeck.shift());
+        }
+        const next = authorDeck.shift();
+        if (!mysteryQueue.includes(next)) mysteryQueue.push(next);
+      }
+      const authorId = mysteryQueue[0];
       AKFirebase.updateGame(state.roomCode, {
-        "state/phase": "voting",
-        "state/mysteryAuthorId": authorId,
-        "state/answerSnapshot": { text: answers?.[authorId]?.text || "" },
-        "state/updatedAt": AKFirebase.now(),
-        votes: null
+        "state/phase": "voting", "state/mysteryQueue": mysteryQueue, "state/mysteryIndex": 0, "state/authorDeck": authorDeck,
+        "state/mysteryAuthorId": authorId, "state/answerSnapshot": { text: answers?.[authorId]?.text || "" },
+        "state/updatedAt": AKFirebase.now(), votes: null
       }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
       return;
     }
-
     if (gameState.phase === "voting") {
       const needed = Math.max(0, state.players.length - 1);
       if (Object.keys(votes).length < needed) return;
-      const processingId = `who-voting_${gameState.currentIndex}_${Object.keys(votes).length}`;
+      const processingId = `who-voting_${gameState.currentIndex}_${gameState.mysteryIndex || 0}_${Object.keys(votes).length}`;
       if (state.multiProcessingActionId === processingId) return;
       state.multiProcessingActionId = processingId;
       const authorId = gameState.mysteryAuthorId;
@@ -4282,83 +4313,62 @@
       const correctIds = Object.entries(validVotes).filter(([, guess]) => guess === authorId).map(([id]) => id);
       const fooledIds = Object.entries(validVotes).filter(([, guess]) => guess !== authorId).map(([id]) => id);
       const scores = { ...(gameState.scores || {}) };
-      correctIds.forEach(id => scores[id] = Number(scores[id] || 0) + 1);
+      const detectiveCorrect = { ...(gameState.detectiveCorrect || {}) };
+      const fooledByAuthor = { ...(gameState.fooledByAuthor || {}) };
+      correctIds.forEach(id => { scores[id] = Number(scores[id] || 0) + 1; detectiveCorrect[id] = Number(detectiveCorrect[id] || 0) + 1; });
       scores[authorId] = Number(scores[authorId] || 0) + fooledIds.length;
-      const result = { authorId, correctIds, fooledIds, votes: validVotes, answers, itemId: gameState.items?.[gameState.currentIndex]?.id || "" };
+      fooledByAuthor[authorId] = Number(fooledByAuthor[authorId] || 0) + fooledIds.length;
+      const item = gameState.items?.[gameState.currentIndex] || {};
+      const result = { authorId, correctIds, fooledIds, votes: validVotes, answers, itemId: item.id || "", prompt: item.prompt || "", answerText: answers?.[authorId]?.text || "", questionIndex: Number(gameState.currentIndex || 0), mysteryIndex: Number(gameState.mysteryIndex || 0) };
       AKFirebase.updateGame(state.roomCode, {
-        "state/phase": "results",
-        "state/currentResult": result,
-        "state/scores": scores,
-        [`state/rounds/${gameState.currentIndex}`]: result,
+        "state/phase": "results", "state/currentResult": result, "state/scores": scores,
+        "state/detectiveCorrect": detectiveCorrect, "state/fooledByAuthor": fooledByAuthor,
+        [`state/rounds/${gameState.currentIndex}_${gameState.mysteryIndex || 0}`]: result,
         "state/updatedAt": AKFirebase.now()
       }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
     }
   }
 
   function renderMultiWhoAnsweredAnswer(gameState, answers) {
-    const item = gameState.items?.[gameState.currentIndex];
-    const own = answers[state.currentUid];
-    title.textContent = "Qui a répondu ça ?";
-    setBackVisible(false);
-    screen.innerHTML = `
-      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Enquête")}
-      ${own ? renderMultiWaiting("Réponse déposée", `${Object.keys(answers).length}/${state.players.length} carnets remplis.`, "🔒") : `
-        <section class="v08-question-card who-question-card"><span>🕵️</span><small>RÉPONSE ANONYME</small><h2>${escapeHtml(item?.prompt || "")}</h2></section>
-        <section class="card"><div class="form-group"><label for="multiWhoAnswer">Ta réponse</label><textarea id="multiWhoAnswer" class="text-input text-area multi-answer-textarea" maxlength="180" placeholder="Écris une réponse courte et reconnaissable…"></textarea></div></section>
-        <button id="sendMultiWhoAnswer" class="primary-btn full">Déposer anonymement</button>
-      `}
-      ${renderPlayerSubmissionStatus(answers, "A répondu", "Écrit…")}
-    `;
-    document.querySelector("#sendMultiWhoAnswer")?.addEventListener("click", async event => {
-      const text = document.querySelector("#multiWhoAnswer")?.value.trim();
-      if (!text) return alert("Écris une réponse avant de continuer.");
-      event.currentTarget.disabled = true;
-      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { text, submittedAt: AKFirebase.now() }); }
-      catch (error) { console.error(error); event.currentTarget.disabled = false; alert("La réponse n’a pas pu être envoyée."); }
-    });
+    const item = gameState.items?.[gameState.currentIndex]; const own = answers[state.currentUid];
+    title.textContent = "Qui a répondu ça ?"; setBackVisible(false);
+    screen.innerHTML = `${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Question")}${own ? renderMultiWaiting("Réponse déposée", `${Object.keys(answers).length}/${state.players.length} carnets remplis.`, "🔒") : `<section class="v08-question-card who-question-card"><span>🕵️</span><small>${escapeHtml(whoAnsweredCategoryLabels[item?.category] || "RÉPONSE ANONYME")}</small><h2>${escapeHtml(item?.prompt || "")}</h2></section><section class="card"><div class="form-group"><label for="multiWhoAnswer">Ta réponse</label><textarea id="multiWhoAnswer" class="text-input text-area multi-answer-textarea" maxlength="220" placeholder="Écris une réponse personnelle, courte et reconnaissable…"></textarea></div></section><button id="sendMultiWhoAnswer" class="primary-btn full">Déposer anonymement</button>`}${renderPlayerSubmissionStatus(answers, "A répondu", "Écrit…")}`;
+    document.querySelector("#sendMultiWhoAnswer")?.addEventListener("click", async event => { const text = document.querySelector("#multiWhoAnswer")?.value.trim(); if (!text) return alert("Écris une réponse avant de continuer."); event.currentTarget.disabled = true; try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { text, submittedAt: AKFirebase.now() }); } catch (error) { console.error(error); event.currentTarget.disabled = false; alert("La réponse n’a pas pu être envoyée."); } });
   }
 
   function renderMultiWhoAnsweredVote(gameState, votes) {
-    const item = gameState.items?.[gameState.currentIndex];
-    const authorId = gameState.mysteryAuthorId;
-    const isAuthor = state.currentUid === authorId;
-    const ownVote = votes[state.currentUid];
-    const ownPlayer = playerById(state.currentUid);
+    const item = gameState.items?.[gameState.currentIndex]; const authorId = gameState.mysteryAuthorId;
+    const isAuthor = state.currentUid === authorId; const ownVote = votes[state.currentUid]; const ownPlayer = playerById(state.currentUid);
     const candidates = state.players.filter(player => player.id !== state.currentUid);
-    title.textContent = "Qui a répondu ça ?";
-    setBackVisible(false);
-    screen.innerHTML = `
-      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Enquête")}
-      <section class="mystery-answer-card"><small>${escapeHtml(item?.prompt || "")}</small><blockquote>« ${escapeHtml(gameState.answerSnapshot?.text || "") } »</blockquote><span>QUI A ÉCRIT ÇA ?</span></section>
-      ${isAuthor ? renderMultiWaiting("Tu connais déjà la réponse", "Essaie de garder ton meilleur visage innocent.", avatarById(ownPlayer?.avatarId).emoji) : ownVote ? renderMultiWaiting("Soupçon enregistré", `${Object.keys(votes).length}/${Math.max(1, state.players.length - 1)} enquêteurs ont voté.`, "🔒") : `<section class="suspect-grid">${candidates.map(player => `<button class="suspect-card" data-multi-who-vote="${player.id}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong></button>`).join("")}</section>`}
-      ${renderPlayerSubmissionStatus({ ...votes, [authorId]: "author" }, "Prêt", "Cherche…")}
-    `;
-    document.querySelectorAll("[data-multi-who-vote]").forEach(button => button.addEventListener("click", async () => {
-      document.querySelectorAll("[data-multi-who-vote]").forEach(itemButton => itemButton.disabled = true);
-      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "votes", button.dataset.multiWhoVote); }
-      catch (error) { console.error(error); alert("Le soupçon n’a pas pu être envoyé."); }
-    }));
+    const mysteryTotal = gameState.mysteryQueue?.length || 1; const mysteryIndex = Number(gameState.mysteryIndex || 0);
+    title.textContent = "Qui a répondu ça ?"; setBackVisible(false);
+    screen.innerHTML = `${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, `Enquête ${mysteryIndex + 1}/${mysteryTotal}`)}<section class="mystery-answer-card"><small>${escapeHtml(item?.prompt || "")}</small><blockquote>« ${escapeHtml(gameState.answerSnapshot?.text || "") } »</blockquote><span>QUI A ÉCRIT ÇA ?</span></section>${isAuthor ? renderMultiWaiting("Tu connais déjà la réponse", `Réponse mystère ${mysteryIndex + 1}/${mysteryTotal}. Garde ton meilleur visage innocent.`, avatarById(ownPlayer?.avatarId).emoji) : ownVote ? renderMultiWaiting("Soupçon enregistré", `${Object.keys(votes).length}/${Math.max(1, state.players.length - 1)} enquêteurs ont voté.`, "🔒") : `<section class="suspect-grid">${candidates.map(player => `<button class="suspect-card" data-multi-who-vote="${player.id}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong></button>`).join("")}</section>`}${renderPlayerSubmissionStatus({ ...votes, [authorId]: "author" }, "Prêt", "Cherche…")}`;
+    document.querySelectorAll("[data-multi-who-vote]").forEach(button => button.addEventListener("click", async () => { document.querySelectorAll("[data-multi-who-vote]").forEach(itemButton => itemButton.disabled = true); try { await AKFirebase.writeOwnGameEntry(state.roomCode, "votes", button.dataset.multiWhoVote); } catch (error) { console.error(error); alert("Le soupçon n’a pas pu être envoyé."); } }));
   }
 
   function renderMultiWhoAnsweredResults(gameState) {
-    const item = gameState.items?.[gameState.currentIndex];
-    const result = gameState.currentResult || {};
-    const author = playerById(result.authorId);
-    title.textContent = "Identité révélée";
-    setBackVisible(false);
-    screen.innerHTML = `
-      <section class="reveal-stage reveal-v07 who-reveal"><span class="game-cover-icon">${avatarById(author?.avatarId).emoji}</span><h2>C’était ${escapeHtml(author?.name || "un joueur")} !</h2><p>« ${escapeHtml(result.answers?.[result.authorId]?.text || "") } »</p></section>
-      <section class="who-vote-results">${state.players.filter(player => player.id !== result.authorId).map(voter => {
-        const guessed = playerById(result.votes?.[voter.id]);
-        const correct = result.correctIds?.includes(voter.id);
-        return `<article class="who-vote-row ${correct ? "correct" : "fooled"}"><span>${avatarById(voter.avatarId).emoji}</span><strong>${escapeHtml(voter.name)}</strong><small>a choisi ${escapeHtml(guessed?.name || "?")}</small><em>${correct ? "+1 pt" : "trompé·e"}</em></article>`;
-      }).join("")}</section>
-      <details class="answer-wall-details"><summary>Voir toutes les réponses</summary><div class="anonymous-answer-list">${state.players.map(player => `<article class="anonymous-answer-card"><span class="answer-number">${avatarById(player.avatarId).emoji}</span><p><strong>${escapeHtml(player.name)}</strong><br>${escapeHtml(result.answers?.[player.id]?.text || "")}</p></article>`).join("")}</div></details>
-      ${result.fooledIds?.length ? `<div class="special-event"><strong>🕵️ ${escapeHtml(author?.name || "L’auteur")} a trompé ${result.fooledIds.length} personne${result.fooledIds.length > 1 ? "s" : ""}</strong><p>+${result.fooledIds.length} point${result.fooledIds.length > 1 ? "s" : ""} de couverture parfaite.</p></div>` : `<div class="notice">Tout le monde a retrouvé l’auteur. Couverture grillée.</div>`}
-      ${state.alcohol && result.fooledIds?.length ? `<div class="alcohol-callout">🍻 Les enquêteurs trompés peuvent trinquer avec la boisson de leur choix, sans obligation.</div>` : ""}
-      ${state.isHost ? `<button id="nextMultiWho" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Enquête suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La prochaine enquête apparaîtra automatiquement.", "👑")}
-    `;
-    document.querySelector("#nextMultiWho")?.addEventListener("click", event => advanceMultiV08Round(event, gameState, "answering", "answers,votes"));
+    const result = gameState.currentResult || {}; const author = playerById(result.authorId);
+    const mysteryTotal = gameState.mysteryQueue?.length || 1; const mysteryIndex = Number(gameState.mysteryIndex || 0);
+    const hasNextMystery = mysteryIndex + 1 < mysteryTotal; const hasNextQuestion = Number(gameState.currentIndex || 0) + 1 < (gameState.items || []).length;
+    title.textContent = "Identité révélée"; setBackVisible(false);
+    screen.innerHTML = `<section class="reveal-stage reveal-v07 who-reveal"><span class="game-cover-icon">${avatarById(author?.avatarId).emoji}</span><h2>C’était ${escapeHtml(author?.name || "un joueur")} !</h2><p>« ${escapeHtml(result.answerText || result.answers?.[result.authorId]?.text || "") } »</p><small>Réponse ${mysteryIndex + 1}/${mysteryTotal} de cette question</small></section><section class="who-vote-results">${state.players.filter(player => player.id !== result.authorId).map(voter => { const guessed = playerById(result.votes?.[voter.id]); const correct = result.correctIds?.includes(voter.id); return `<article class="who-vote-row ${correct ? "correct" : "fooled"}"><span>${avatarById(voter.avatarId).emoji}</span><strong>${escapeHtml(voter.name)}</strong><small>a choisi ${escapeHtml(guessed?.name || "?")}</small><em>${correct ? "+1 pt" : "trompé·e"}</em></article>`; }).join("")}</section>${result.fooledIds?.length ? `<div class="special-event"><strong>🕵️ ${escapeHtml(author?.name || "L’auteur")} a trompé ${result.fooledIds.length} personne${result.fooledIds.length > 1 ? "s" : ""}</strong><p>+${result.fooledIds.length} point${result.fooledIds.length > 1 ? "s" : ""} de couverture parfaite.</p></div>` : `<div class="notice">Tout le monde a retrouvé l’auteur. Couverture grillée.</div>`}${state.isHost ? `<button id="nextMultiWho" class="primary-btn full">${hasNextMystery ? "Réponse mystère suivante" : hasNextQuestion ? "Question suivante" : "Voir le classement"}</button>` : renderMultiWaiting("En attente de l’hôte", "La suite apparaîtra automatiquement.", "👑")}`;
+    document.querySelector("#nextMultiWho")?.addEventListener("click", event => advanceMultiWhoAnswered(event, gameState));
+  }
+
+  async function advanceMultiWhoAnswered(event, gameState) {
+    event.currentTarget.disabled = true;
+    const mysteryIndex = Number(gameState.mysteryIndex || 0); const mysteryQueue = gameState.mysteryQueue || [];
+    const nextMysteryIndex = mysteryIndex + 1;
+    if (nextMysteryIndex < mysteryQueue.length) {
+      const nextAuthorId = mysteryQueue[nextMysteryIndex];
+      const answers = gameState.currentResult?.answers || {};
+      try { await AKFirebase.updateGame(state.roomCode, { "state/phase": "voting", "state/mysteryIndex": nextMysteryIndex, "state/mysteryAuthorId": nextAuthorId, "state/answerSnapshot": { text: answers?.[nextAuthorId]?.text || "" }, "state/currentResult": null, "state/updatedAt": AKFirebase.now(), votes: null }); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; alert("Impossible d’ouvrir la réponse suivante."); }
+      return;
+    }
+    const nextQuestion = Number(gameState.currentIndex || 0) + 1; const finished = nextQuestion >= (gameState.items || []).length;
+    try { await AKFirebase.updateGame(state.roomCode, { "state/phase": finished ? "final" : "answering", "state/currentIndex": finished ? gameState.currentIndex : nextQuestion, "state/mysteryQueue": null, "state/mysteryIndex": 0, "state/mysteryAuthorId": null, "state/answerSnapshot": null, "state/currentResult": null, "state/finishedAt": finished ? AKFirebase.now() : null, "state/updatedAt": AKFirebase.now(), answers: null, votes: null }); }
+    catch (error) { console.error(error); event.currentTarget.disabled = false; alert("Impossible de passer à la suite."); }
   }
 
   async function advanceMultiV08Round(event, gameState, nextPhase, collections) {
@@ -4384,9 +4394,16 @@
     const presentation = gamePresentation(gameState.type);
     title.textContent = "Classement final";
     setBackVisible(false);
+    const whoAnsweredAwards = gameState.type === "who-answered" ? (() => {
+      const topFrom = stats => state.players.map(player => ({ player, value: Number(stats?.[player.id] || 0) })).sort((a, b) => b.value - a.value)[0];
+      const detective = topFrom(gameState.detectiveCorrect); const ghost = topFrom(gameState.fooledByAuthor);
+      const rounds = Object.values(gameState.rounds || {}); const bestAnswer = rounds.sort((a, b) => (b.fooledIds?.length || 0) - (a.fooledIds?.length || 0))[0]; const bestAuthor = playerById(bestAnswer?.authorId);
+      return `<section class="who-answered-awards">${detective?.value ? `<article><span>🔎</span><div><small>MEILLEUR ENQUÊTEUR</small><strong>${escapeHtml(detective.player.name)}</strong><p>${detective.value} auteur${detective.value > 1 ? "s" : ""} retrouvé${detective.value > 1 ? "s" : ""}</p></div></article>` : ""}${ghost?.value ? `<article><span>👻</span><div><small>PLUS DIFFICILE À RECONNAÎTRE</small><strong>${escapeHtml(ghost.player.name)}</strong><p>${ghost.value} enquêteur${ghost.value > 1 ? "s" : ""} trompé${ghost.value > 1 ? "s" : ""}</p></div></article>` : ""}${bestAnswer?.fooledIds?.length ? `<article><span>🕶️</span><div><small>RÉPONSE LA PLUS TROMPEUSE</small><strong>${escapeHtml(bestAuthor?.name || "Mystère")}</strong><p>« ${escapeHtml(bestAnswer.answerText || "") } » · ${bestAnswer.fooledIds.length} trompé${bestAnswer.fooledIds.length > 1 ? "s" : ""}</p></div></article>` : ""}</section>`;
+    })() : "";
     screen.innerHTML = `
       <section class="winner-stage winner-stage-v07 v08-final-stage"><div class="winner-crown">${presentation.icon}🏆</div><h2>La manche est terminée</h2><p>Les points rejoignent maintenant le classement général de la soirée.</p></section>
       <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(gameState.scores?.[player.id] || 0)} pts</span></div>`).join("")}</section>
+      ${whoAnsweredAwards}
       ${renderPostGameContinuation(gameState)}
     `;
     ensureEveningResult(gameState);

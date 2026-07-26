@@ -1,15 +1,15 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v2.4-who-us-650";
+const CACHE_VERSION = "akgames-v2.5-who-answered-650";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=who-us-v2",
+  "/styles.css?v=who-answered-v2",
   "/creator.css?v=creator-v1.3-access",
-  "/app.js?v=who-us-v2",
+  "/app.js?v=who-answered-v2",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
-  "/multiplayer.js?v=who-us-v2",
+  "/multiplayer.js?v=who-answered-v2",
   "/pwa.js",
   "/manifest.webmanifest",
   "/icons/icon-192.png",

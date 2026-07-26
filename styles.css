@@ -6185,3 +6185,83 @@ details > summary {
     width: 100%;
   }
 }
+
+
+/* =========================================================
+   QUI A RÉPONDU ÇA ? V2
+   ========================================================= */
+.who-answered-custom-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.who-answered-custom-row > span {
+  min-width: 0;
+  line-height: 1.45;
+}
+
+.who-answered-awards {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.who-answered-awards article {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 13px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid rgba(196, 181, 253, .2);
+  border-radius: 18px;
+  background: rgba(17, 21, 40, .9);
+}
+
+.who-answered-awards article > span {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: rgba(139, 92, 246, .15);
+  font-size: 1.45rem;
+}
+
+.who-answered-awards article div {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.who-answered-awards small {
+  color: #c4b5fd;
+  font-size: .68rem;
+  font-weight: 950;
+  letter-spacing: .12em;
+}
+
+.who-answered-awards strong {
+  font-size: 1rem;
+}
+
+.who-answered-awards p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .84rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.who-reveal > small {
+  color: #c4b5fd;
+  font-size: .76rem;
+  font-weight: 850;
+}
+
+@media (max-width: 460px) {
+  .who-answered-custom-row {
+    grid-template-columns: 1fr;
+  }
+}
