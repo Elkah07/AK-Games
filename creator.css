@@ -686,3 +686,280 @@
     flex-direction: column;
   }
 }
+
+
+/* ===== V1.2 · Refonte visuelle du tableau de bord créateur ===== */
+.ak-creator-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+  padding: 20px;
+  margin-bottom: 14px;
+  border-color: rgba(164, 123, 255, .27);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(122, 78, 255, .19), transparent 38%),
+    linear-gradient(145deg, rgba(24, 16, 48, .98), rgba(8, 7, 18, .98));
+  box-shadow: 0 18px 46px rgba(0, 0, 0, .28);
+}
+
+.ak-creator-hero::after {
+  opacity: .55;
+  background-size: 26px 26px;
+}
+
+.ak-creator-hero-top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.ak-creator-hero-copy {
+  min-width: 0;
+}
+
+.ak-creator-hero-copy small {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.ak-creator-hero-mark {
+  flex: 0 0 auto;
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  font-size: 1.05rem;
+  background: linear-gradient(145deg, #a66cff, #5c29c5);
+  box-shadow: 0 12px 28px rgba(92, 41, 197, .34), inset 0 1px rgba(255,255,255,.2);
+}
+
+.ak-creator-hero h2 {
+  margin: 0;
+  font-size: clamp(1.45rem, 5vw, 1.95rem);
+  line-height: 1.06;
+  letter-spacing: -.035em;
+}
+
+.ak-creator-hero > p {
+  position: relative;
+  z-index: 1;
+  max-width: 610px;
+  margin: 0;
+  color: rgba(255, 255, 255, .66);
+  font-size: .94rem;
+  line-height: 1.5;
+}
+
+.ak-creator-status {
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  border-color: rgba(106, 240, 184, .19);
+  background: rgba(33, 105, 76, .15);
+  color: #bfffe4;
+  font-size: .72rem;
+  font-weight: 750;
+  white-space: normal;
+}
+
+.ak-creator-status b {
+  display: grid;
+  place-items: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: rgba(105, 240, 184, .18);
+  font-size: .66rem;
+}
+
+.ak-creator-section {
+  padding: 18px;
+  margin-bottom: 14px;
+  border-radius: 22px;
+  background:
+    linear-gradient(145deg, rgba(22, 14, 44, .98), rgba(10, 8, 21, .98));
+  box-shadow: 0 15px 38px rgba(0, 0, 0, .22);
+}
+
+.ak-creator-section-title {
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ak-creator-section-title > div {
+  min-width: 0;
+}
+
+.ak-creator-section-title small {
+  display: block;
+  margin-bottom: 4px;
+  color: #b993ff;
+  font-size: .66rem;
+}
+
+.ak-creator-section-title h3 {
+  font-size: clamp(1.15rem, 4.8vw, 1.45rem);
+  line-height: 1.12;
+  letter-spacing: -.025em;
+}
+
+.ak-creator-section-title > span {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(177, 140, 255, .18);
+  border-radius: 15px;
+  background: rgba(154, 104, 255, .1);
+  font-size: 20px;
+}
+
+.ak-creator-test-section > .helper {
+  margin: 0;
+  max-width: 680px;
+  color: rgba(255, 255, 255, .58);
+  font-size: .86rem;
+  line-height: 1.48;
+}
+
+.ak-creator-player-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 15px;
+}
+
+.ak-creator-player-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+  min-height: 74px;
+  padding: 12px 13px;
+  overflow: hidden;
+  border-color: rgba(173, 136, 255, .19);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, .035);
+  color: #fff;
+  text-align: left;
+  transition: transform .16s ease, border-color .16s ease, background .16s ease;
+}
+
+.ak-creator-player-card::after {
+  content: "›";
+  position: absolute;
+  right: 11px;
+  color: rgba(214, 193, 255, .42);
+  font-size: 1.25rem;
+}
+
+.ak-creator-player-card:active {
+  transform: scale(.98);
+  background: rgba(154, 104, 255, .1);
+}
+
+.ak-creator-player-card strong {
+  margin: 0;
+  color: #d2baff;
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.ak-creator-player-card span {
+  margin: 0;
+  padding-right: 14px;
+  color: rgba(255, 255, 255, .63);
+  font-size: .73rem;
+  font-weight: 700;
+}
+
+.ak-creator-dashboard-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.ak-creator-tool-card {
+  grid-template-columns: 38px 1fr;
+  gap: 4px 10px;
+  min-height: 106px;
+  padding: 14px;
+  border-radius: 19px;
+  background: linear-gradient(145deg, rgba(24, 16, 48, .96), rgba(9, 8, 20, .96));
+  box-shadow: 0 12px 30px rgba(0,0,0,.18);
+}
+
+.ak-creator-tool-card > span {
+  display: grid;
+  grid-row: span 2;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 13px;
+  background: rgba(154, 104, 255, .11);
+  font-size: 19px;
+}
+
+.ak-creator-tool-card strong {
+  font-size: .91rem;
+  line-height: 1.2;
+}
+
+.ak-creator-tool-card small {
+  font-size: .7rem;
+  line-height: 1.35;
+}
+
+.ak-creator-cloud-card,
+.ak-creator-cloud-warning {
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 18px;
+}
+
+@media (hover: hover) {
+  .ak-creator-player-card:hover,
+  .ak-creator-tool-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(190, 158, 255, .38);
+    background-color: rgba(154, 104, 255, .08);
+  }
+}
+
+@media (max-width: 640px) {
+  .ak-creator-hero {
+    grid-template-columns: none;
+    padding: 18px;
+  }
+
+  .ak-creator-hero > .ak-creator-status {
+    grid-column: auto;
+  }
+
+  .ak-creator-player-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ak-creator-dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 380px) {
+  .ak-creator-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ak-creator-tool-card {
+    min-height: 88px;
+  }
+}

@@ -922,16 +922,19 @@
     const counts = akCreatorReportCounts(localReports);
     screen.innerHTML = `
       <section class="ak-creator-hero">
-        <div class="ak-creator-hero-mark">AK</div>
-        <div><small>LABORATOIRE PRIVÉ</small><h2>Mode créateur</h2><p>Teste, inspecte et nettoie les jeux sans convoquer toute une équipe de cobayes.</p></div>
-        <span class="ak-creator-status">🔐 compte autorisé</span>
+        <div class="ak-creator-hero-top">
+          <div class="ak-creator-hero-mark">AK</div>
+          <div class="ak-creator-hero-copy"><small>ESPACE PRIVÉ</small><h2>Le labo AK’Games</h2></div>
+        </div>
+        <p>Teste les jeux, inspecte les cartes et traque les bugs depuis un seul téléphone.</p>
+        <span class="ak-creator-status"><b>✓</b> Compte créateur vérifié</span>
       </section>
 
-      <section class="ak-creator-section">
-        <div class="ak-creator-section-title"><div><small>TEST EXPRESS</small><h3>Lancer une fausse soirée</h3></div><span>🧪</span></div>
-        <p class="helper">Les joueurs virtuels utilisent le mode « un téléphone ». Cela teste toutes les mécaniques sans créer plusieurs comptes ni plusieurs appareils.</p>
+      <section class="ak-creator-section ak-creator-test-section">
+        <div class="ak-creator-section-title"><div><small>SIMULATION RAPIDE</small><h3>Combien de joueurs ?</h3></div><span aria-hidden="true">🧪</span></div>
+        <p class="helper">L’application crée une fausse soirée en mode « un téléphone » pour tester immédiatement chaque mécanique.</p>
         <div class="ak-creator-player-grid">
-          ${[2, 3, 4, 6].map(count => `<button type="button" class="ak-creator-player-card" data-ak-test-players="${count}"><strong>${count}</strong><span>joueurs virtuels</span></button>`).join("")}
+          ${[2, 3, 4, 6].map(count => `<button type="button" class="ak-creator-player-card" data-ak-test-players="${count}"><strong>${count}</strong><span>joueurs</span></button>`).join("")}
         </div>
       </section>
 

@@ -1,0 +1,16 @@
+AK'Games — Mode créateur V1.2 (refonte visuelle)
+
+Remplace les fichiers du même nom à la racine du projet :
+- creator.css
+- creator.js
+- index.html
+- service-worker.js
+
+Cette version conserve toutes les fonctions et l'accès privé Firebase.
+Modifications principales :
+- bannière mobile compacte et lisible ;
+- description qui ne déborde plus ;
+- boutons de joueurs plus petits ;
+- outils créateur en cartes compactes ;
+- palette noir/violet plus sobre ;
+- nouvelle version du cache PWA.
