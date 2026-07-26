@@ -3861,7 +3861,7 @@ function resetMinorityState(config = {}) {
 
 function renderMinoritySetup() {
   if (!state.minorityGame) resetMinorityState();
-  const game = state.minorityGame;
+  const game = ensureMinorityGameConfig(state.minorityGame);
   title.textContent = "Minorité";
   setBackVisible(true);
   screen.innerHTML = `
@@ -9007,4 +9007,422 @@ renderMegaFinal = function () {
     renderMegaSetup();
   });
   document.querySelector("#otherMega")?.addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
+};
+
+/* =========================================================
+   AK'GAMES V2.8 - MINORITE CLASSIQUE & ADULTE
+   750 cartes, themes, intensites, cartes perso et statistiques
+   ========================================================= */
+
+const minorityClassicThemes = [
+  "nourriture", "quotidien", "soirees_groupe", "voyages", "argent",
+  "telephone_reseaux", "culture_loisirs", "personnalite", "travail_etudes",
+  "futur", "opinions", "absurde", "crise", "amitie"
+];
+
+const minorityClassicThemeLabels = {
+  nourriture: "🍟 Nourriture & habitudes",
+  quotidien: "🏠 Quotidien & petites manies",
+  soirees_groupe: "🎉 Soirées & groupe",
+  voyages: "✈️ Voyages & vacances",
+  argent: "💸 Argent & achats",
+  telephone_reseaux: "📱 Téléphone & réseaux",
+  culture_loisirs: "🎬 Culture & loisirs",
+  personnalite: "🧠 Personnalité & réactions",
+  travail_etudes: "💼 Travail & études",
+  futur: "🔮 Futur & rêves",
+  opinions: "🗯️ Opinions impopulaires",
+  absurde: "🌀 Choix absurdes",
+  crise: "🚨 Situations de crise",
+  amitie: "🫂 Amitié & relations",
+  personnalise: "✍️ Vos questions"
+};
+
+const minorityAdultThemes = [
+  "attirance", "premiers_rendezvous", "crushs", "ex", "jalousie_fidelite",
+  "preferences_intimes", "fantasmes_curiosites", "sextos_numerique",
+  "sans_engagement", "limites_consentement", "compromettant", "communication_couple"
+];
+
+const minorityAdultThemeLabels = {
+  attirance: "💘 Attirance & séduction",
+  premiers_rendezvous: "🍸 Premiers rendez-vous",
+  crushs: "😍 Crushs",
+  ex: "🕰️ Ex & anciennes relations",
+  jalousie_fidelite: "🫣 Jalousie & fidélité",
+  preferences_intimes: "🛏️ Préférences intimes",
+  fantasmes_curiosites: "💭 Fantasmes & curiosités",
+  sextos_numerique: "📱 Sextos & vie numérique",
+  sans_engagement: "🌙 Sans engagement",
+  limites_consentement: "🛡️ Limites & consentement",
+  compromettant: "😳 Situations compromettantes",
+  communication_couple: "🗣️ Couple & communication"
+};
+
+const minorityIntensityLabels = {
+  light: { icon: "🌶️", label: "Léger" },
+  bold: { icon: "🔥", label: "Osé" },
+  no_filter: { icon: "☢️", label: "Sans filtre" }
+};
+
+const AK_MINORITY_CUSTOM_KEY = "akgames_minority_custom_questions_v2";
+
+function minorityNormalizeSelection(values, allowed) {
+  if (!Array.isArray(values)) return [...allowed];
+  return [...new Set(values.filter(value => allowed.includes(value)))];
+}
+
+function loadMinorityCustomQuestions() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(AK_MINORITY_CUSTOM_KEY) || "[]");
+    if (!Array.isArray(parsed)) return [];
+    return parsed.filter(item => item && item.question && Array.isArray(item.options) && item.options.length === 3).map((item, index) => ({
+      id: String(item.id || `minority_custom_${index}_${Date.now()}`),
+      question: String(item.question).trim(),
+      options: item.options.map(option => String(option || "").trim()).slice(0, 3),
+      theme: "personnalise",
+      category: item.adult ? "adult" : "classic",
+      adult: Boolean(item.adult),
+      intensity: item.adult && minorityIntensityLabels[item.intensity] ? item.intensity : "light",
+      custom: true
+    })).filter(item => item.question && item.options.every(Boolean));
+  } catch {
+    return [];
+  }
+}
+
+function saveMinorityCustomQuestions(items) {
+  try {
+    localStorage.setItem(AK_MINORITY_CUSTOM_KEY, JSON.stringify(items || []));
+  } catch {
+    alert("Les questions personnalisées n’ont pas pu être enregistrées sur cet appareil.");
+  }
+}
+
+function createMinorityCustomQuestion({ question, options, adult = false, intensity = "light" } = {}) {
+  const cleanQuestion = String(question || "").trim().replace(/\s+/g, " ");
+  const cleanOptions = (Array.isArray(options) ? options : []).map(value => String(value || "").trim().replace(/\s+/g, " "));
+  if (!cleanQuestion || cleanOptions.length !== 3 || cleanOptions.some(value => !value)) return null;
+  if (new Set(cleanOptions.map(value => value.toLocaleLowerCase("fr"))).size !== 3) return null;
+  return {
+    id: `minority_custom_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+    question: /[?!.…]$/.test(cleanQuestion) ? cleanQuestion : `${cleanQuestion}…`,
+    options: cleanOptions,
+    theme: "personnalise",
+    category: adult ? "adult" : "classic",
+    adult: Boolean(adult),
+    intensity: adult && minorityIntensityLabels[intensity] ? intensity : "light",
+    custom: true
+  };
+}
+
+function selectBalancedMinorityItems(pool, count, namespace) {
+  const safePool = Array.isArray(pool) ? pool.filter(Boolean) : [];
+  const limit = Math.min(Math.max(0, Number(count || 0)), safePool.length);
+  if (!limit) return [];
+  const groups = safePool.reduce((result, item) => {
+    const key = item.custom
+      ? `custom:${item.adult ? item.intensity : "classic"}`
+      : item.adult
+        ? `adult:${item.theme || "autre"}:${item.intensity || "light"}`
+        : `classic:${item.theme || "autre"}`;
+    (result[key] ||= []).push(item);
+    return result;
+  }, {});
+  const keys = shuffleArray(Object.keys(groups));
+  const base = Math.floor(limit / Math.max(1, keys.length));
+  const extra = limit % Math.max(1, keys.length);
+  let selected = [];
+  keys.forEach((key, index) => {
+    const quota = Math.min(groups[key].length, base + (index < extra ? 1 : 0));
+    if (quota > 0) selected.push(...selectFreshItems(groups[key], quota, `${namespace}:${key}`));
+  });
+  if (selected.length < limit) {
+    const used = new Set(selected.map(item => item.id));
+    const remaining = safePool.filter(item => !used.has(item.id));
+    selected.push(...selectFreshItems(remaining, Math.min(limit - selected.length, remaining.length), `${namespace}:extra`));
+  }
+  return shuffleArray(selected).slice(0, limit);
+}
+
+function minorityThemeLabel(item) {
+  if (item?.custom) return minorityClassicThemeLabels.personnalise;
+  return item?.adult
+    ? (minorityAdultThemeLabels[item.theme] || "🔞 Adulte")
+    : (minorityClassicThemeLabels[item?.theme] || "🪩 Minorité");
+}
+
+function minorityBadges(item) {
+  const intensity = item?.adult ? minorityIntensityLabels[item.intensity] : null;
+  return `<div class="minority-question-badges"><span>${escapeHtml(minorityThemeLabel(item))}</span>${intensity ? `<span class="minority-intensity minority-intensity-${item.intensity}">${intensity.icon} ${escapeHtml(intensity.label)}</span>` : ""}${item?.custom ? `<span>✍️ Personnalisée</span>` : ""}</div>`;
+}
+
+function minorityTopPlayers(stats) {
+  const values = state.players.map(player => ({ player, value: Number(stats?.[player.id] || 0) }));
+  const max = Math.max(0, ...values.map(row => row.value));
+  return { max, players: max > 0 ? values.filter(row => row.value === max).map(row => row.player) : [] };
+}
+
+function minorityAwardMarkup(icon, label, top, suffix) {
+  if (!top?.players?.length || !top.max) return "";
+  return `<article><span>${icon}</span><div><small>${escapeHtml(label)}</small><strong>${top.players.map(player => escapeHtml(player.name)).join(" · ")}</strong><p>${top.max} ${escapeHtml(suffix)}</p></div></article>`;
+}
+
+resetMinorityState = function (config = {}) {
+  const customQuestions = loadMinorityCustomQuestions();
+  state.minorityGame = {
+    roundCount: Math.max(3, Math.min(100, Number(config.roundCount || 10))),
+    includeAdult: Boolean(config.includeAdult),
+    classicThemes: minorityNormalizeSelection(config.classicThemes, minorityClassicThemes),
+    adultThemes: minorityNormalizeSelection(config.adultThemes, minorityAdultThemes),
+    adultIntensities: minorityNormalizeSelection(config.adultIntensities, Object.keys(minorityIntensityLabels)),
+    customQuestions,
+    includeCustom: config.includeCustom !== false && customQuestions.length > 0,
+    items: [],
+    currentIndex: 0,
+    currentVoterIndex: 0,
+    votes: {},
+    scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    stats: {
+      minority: Object.fromEntries(state.players.map(player => [player.id, 0])),
+      solo: Object.fromEntries(state.players.map(player => [player.id, 0])),
+      majority: Object.fromEntries(state.players.map(player => [player.id, 0]))
+    },
+    rounds: []
+  };
+};
+
+function minoritySetupCustomMarkup(game, { readOnly = false, prefix = "" } = {}) {
+  const customCount = game.customQuestions.length;
+  const id = value => `${prefix}${value}`;
+  return `<section class="card minority-custom-card"><h2 class="section-title">✍️ Vos propres questions</h2><p class="helper">Écris une question et trois options. Elles restent enregistrées sur cet appareil.</p>
+    <div class="form-group top-gap"><label for="${id("MinorityCustomQuestion")}">Question</label><input id="${id("MinorityCustomQuestion")}" class="text-input" maxlength="220" placeholder="Pour une soirée parfaite, tu choisis…" ${readOnly ? "disabled" : ""}></div>
+    <div class="minority-custom-options top-gap"><input id="${id("MinorityCustomA")}" class="text-input" maxlength="80" placeholder="Option A" ${readOnly ? "disabled" : ""}><input id="${id("MinorityCustomB")}" class="text-input" maxlength="80" placeholder="Option B" ${readOnly ? "disabled" : ""}><input id="${id("MinorityCustomC")}" class="text-input" maxlength="80" placeholder="Option C" ${readOnly ? "disabled" : ""}></div>
+    ${state.adult ? `<div class="minority-custom-meta top-gap"><label class="form-group"><span>Type</span><select id="${id("MinorityCustomType")}" class="text-input" ${readOnly ? "disabled" : ""}><option value="classic">Classique</option><option value="adult">Adulte</option></select></label><label class="form-group"><span>Intensité adulte</span><select id="${id("MinorityCustomIntensity")}" class="text-input" ${readOnly ? "disabled" : ""}>${Object.entries(minorityIntensityLabels).map(([key, meta]) => `<option value="${key}">${meta.icon} ${meta.label}</option>`).join("")}</select></label></div>` : ""}
+    ${readOnly ? "" : `<button id="${id("AddMinorityCustom")}" class="secondary-btn full top-gap">Ajouter cette question</button>`}
+    <label class="option-card top-gap ${customCount ? "" : "disabled-option"}"><input id="${id("IncludeMinorityCustom")}" type="checkbox" ${game.includeCustom && customCount ? "checked" : ""} ${customCount && !readOnly ? "" : "disabled"}><span><strong>Inclure mes questions (${customCount})</strong><br><span class="helper">Mélangées aux cartes officielles.</span></span></label>
+    ${customCount ? `<details class="top-gap"><summary>Gérer mes questions</summary><div class="stacked-choice top-gap">${game.customQuestions.map(item => `<div class="option-card mini-option minority-custom-row"><span><strong>${item.adult ? "🔞" : "🪩"} ${escapeHtml(item.question)}</strong><small>${item.options.map(escapeHtml).join(" · ")}</small></span>${readOnly ? "" : `<button class="secondary-btn" data-remove-minority-custom="${item.id}">Supprimer</button>`}</div>`).join("")}</div></details>` : ""}
+  </section>`;
+}
+
+function bindMinorityCustomControls(game, { prefix = "", rerender = renderMinoritySetup } = {}) {
+  const id = value => `#${prefix}${value}`;
+  document.querySelector(id("IncludeMinorityCustom"))?.addEventListener("change", event => { game.includeCustom = event.target.checked; });
+  document.querySelector(id("AddMinorityCustom"))?.addEventListener("click", () => {
+    const adult = document.querySelector(id("MinorityCustomType"))?.value === "adult";
+    const item = createMinorityCustomQuestion({
+      question: document.querySelector(id("MinorityCustomQuestion"))?.value,
+      options: [
+        document.querySelector(id("MinorityCustomA"))?.value,
+        document.querySelector(id("MinorityCustomB"))?.value,
+        document.querySelector(id("MinorityCustomC"))?.value
+      ],
+      adult,
+      intensity: document.querySelector(id("MinorityCustomIntensity"))?.value || "light"
+    });
+    if (!item) return alert("Ajoute une question et trois options différentes.");
+    const duplicate = game.customQuestions.some(existing => existing.question.toLocaleLowerCase("fr") === item.question.toLocaleLowerCase("fr"));
+    if (duplicate) return alert("Cette question existe déjà dans tes cartes personnalisées.");
+    game.customQuestions.push(item);
+    game.includeCustom = true;
+    saveMinorityCustomQuestions(game.customQuestions);
+    rerender();
+  });
+  document.querySelectorAll("[data-remove-minority-custom]").forEach(button => button.addEventListener("click", () => {
+    game.customQuestions = game.customQuestions.filter(item => item.id !== button.dataset.removeMinorityCustom);
+    if (!game.customQuestions.length) game.includeCustom = false;
+    saveMinorityCustomQuestions(game.customQuestions);
+    rerender();
+  }));
+}
+
+function ensureMinorityGameConfig(game) {
+  if (!game) return null;
+  game.roundCount = Math.max(3, Math.min(100, Number(game.roundCount || 10)));
+  game.includeAdult = Boolean(game.includeAdult);
+  game.classicThemes = minorityNormalizeSelection(game.classicThemes, minorityClassicThemes);
+  game.adultThemes = minorityNormalizeSelection(game.adultThemes, minorityAdultThemes);
+  game.adultIntensities = minorityNormalizeSelection(game.adultIntensities, Object.keys(minorityIntensityLabels));
+  game.customQuestions = Array.isArray(game.customQuestions) ? game.customQuestions : loadMinorityCustomQuestions();
+  game.includeCustom = game.includeCustom !== false && game.customQuestions.length > 0;
+  return game;
+}
+
+renderMinoritySetup = function () {
+  if (!state.minorityGame) resetMinorityState();
+  const game = state.minorityGame?.classicThemes ? state.minorityGame : ensureMinorityGameConfig(state.minorityGame);
+  title.textContent = "Minorité";
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-minority"><span class="game-cover-icon">🪩</span><div><small>CONNEXION & SECRETS</small><h2>Minorité</h2><p>Trois choix secrets. Le plus petit camp marque, et l’électron vraiment solitaire marque double.</p></div></section>
+    <section class="card"><h2 class="section-title">Nombre de questions</h2><div class="choice-row">${[5,10,20,40,60,100].map(value => `<button class="choice-pill ${game.roundCount === value ? "active" : ""}" data-minority-count="${value}">${value}</button>`).join("")}</div><div class="form-group top-gap"><label for="minorityCustomCount">Personnalisé, de 3 à 100</label><input id="minorityCustomCount" class="text-input" type="number" min="3" max="100" value="${game.roundCount}"></div></section>
+    <section class="card"><h2 class="section-title">Thèmes classiques</h2><div class="check-grid top-gap">${minorityClassicThemes.map(theme => `<label class="option-card mini-option"><input type="checkbox" data-minority-classic-theme="${theme}" ${game.classicThemes.includes(theme) ? "checked" : ""}><span><strong>${minorityClassicThemeLabels[theme]}</strong></span></label>`).join("")}</div><div class="toolbar top-gap"><button id="selectAllMinorityClassic" class="secondary-btn">Tout sélectionner</button><button id="clearAllMinorityClassic" class="secondary-btn">Tout désélectionner</button></div></section>
+    ${state.adult ? `<label class="option-card premium-toggle"><input id="minorityAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🔞 Ajouter Minorité adulte</strong><br><span class="helper">250 cartes, avec thèmes et intensités séparés.</span></span></label>` : ""}
+    ${state.adult && game.includeAdult ? `<section class="card minority-adult-settings"><h2 class="section-title">Thèmes adultes</h2><div class="check-grid top-gap">${minorityAdultThemes.map(theme => `<label class="option-card mini-option"><input type="checkbox" data-minority-adult-theme="${theme}" ${game.adultThemes.includes(theme) ? "checked" : ""}><span><strong>${minorityAdultThemeLabels[theme]}</strong></span></label>`).join("")}</div><div class="toolbar top-gap"><button id="selectAllMinorityAdult" class="secondary-btn">Tout sélectionner</button><button id="clearAllMinorityAdult" class="secondary-btn">Tout désélectionner</button></div><h3 class="section-title top-gap">Intensités</h3><div class="choice-row">${Object.entries(minorityIntensityLabels).map(([key, meta]) => `<button class="choice-pill ${game.adultIntensities.includes(key) ? "active" : ""}" data-minority-intensity="${key}">${meta.icon} ${meta.label}</button>`).join("")}</div></section>` : ""}
+    ${minoritySetupCustomMarkup(game)}
+    <div class="notice"><strong>Barème :</strong> seul sur une option minoritaire = 2 points · plusieurs sur le plus petit camp = 1 point chacun · égalité parfaite = 0.</div>
+    <button id="startMinority" class="primary-btn full">Entrer dans la minorité</button>`;
+
+  document.querySelectorAll("[data-minority-count]").forEach(button => button.addEventListener("click", () => { game.roundCount = Number(button.dataset.minorityCount); renderMinoritySetup(); }));
+  document.querySelector("#minorityCustomCount")?.addEventListener("input", event => { game.roundCount = Math.max(3, Math.min(100, Number(event.target.value) || 3)); });
+  document.querySelectorAll("[data-minority-classic-theme]").forEach(input => input.addEventListener("change", () => {
+    const theme = input.dataset.minorityClassicTheme;
+    game.classicThemes = input.checked ? [...new Set([...game.classicThemes, theme])] : game.classicThemes.filter(value => value !== theme);
+  }));
+  document.querySelector("#selectAllMinorityClassic")?.addEventListener("click", () => { game.classicThemes = [...minorityClassicThemes]; renderMinoritySetup(); });
+  document.querySelector("#clearAllMinorityClassic")?.addEventListener("click", () => { game.classicThemes = []; renderMinoritySetup(); });
+  document.querySelector("#minorityAdult")?.addEventListener("change", event => { game.includeAdult = event.target.checked; renderMinoritySetup(); });
+  document.querySelectorAll("[data-minority-adult-theme]").forEach(input => input.addEventListener("change", () => {
+    const theme = input.dataset.minorityAdultTheme;
+    game.adultThemes = input.checked ? [...new Set([...game.adultThemes, theme])] : game.adultThemes.filter(value => value !== theme);
+  }));
+  document.querySelector("#selectAllMinorityAdult")?.addEventListener("click", () => { game.adultThemes = [...minorityAdultThemes]; renderMinoritySetup(); });
+  document.querySelector("#clearAllMinorityAdult")?.addEventListener("click", () => { game.adultThemes = []; renderMinoritySetup(); });
+  document.querySelectorAll("[data-minority-intensity]").forEach(button => button.addEventListener("click", () => {
+    const intensity = button.dataset.minorityIntensity;
+    const next = game.adultIntensities.includes(intensity) ? game.adultIntensities.filter(value => value !== intensity) : [...game.adultIntensities, intensity];
+    if (!next.length) return alert("Garde au moins une intensité adulte.");
+    game.adultIntensities = next;
+    renderMinoritySetup();
+  }));
+  bindMinorityCustomControls(game);
+  document.querySelector("#startMinority")?.addEventListener("click", startMinorityGame);
+};
+
+function buildMinorityPool(classic, adult, game) {
+  const classicThemes = new Set(game.classicThemes || []);
+  const adultThemes = new Set(game.adultThemes || []);
+  const intensities = new Set(game.adultIntensities || []);
+  const officialClassic = (Array.isArray(classic) ? classic : []).filter(item => classicThemes.has(item.theme));
+  const officialAdult = game.includeAdult
+    ? (Array.isArray(adult) ? adult : []).filter(item => adultThemes.has(item.theme) && intensities.has(item.intensity))
+    : [];
+  const custom = game.includeCustom
+    ? (game.customQuestions || []).filter(item => !item.adult || (game.includeAdult && intensities.has(item.intensity)))
+    : [];
+  return [...officialClassic, ...officialAdult, ...custom];
+}
+
+startMinorityGame = async function () {
+  const game = ensureMinorityGameConfig(state.minorityGame);
+  if (!game.classicThemes.length && !(game.includeAdult && game.adultThemes.length) && !(game.includeCustom && game.customQuestions.length)) return alert("Choisis au moins un thème ou active une question personnalisée.");
+  screen.innerHTML = `<div class="notice">Préparation du scrutin et mélange des thèmes…</div>`;
+  try {
+    const classic = await loadJsonFile("data/minorite.json", "Impossible de charger les questions de Minorité.");
+    const adult = state.adult && game.includeAdult ? await loadJsonFile("data/minorite-adulte.json", "Impossible de charger les questions adultes.") : [];
+    const pool = buildMinorityPool(classic, adult, game);
+    if (!pool.length) throw new Error("Aucune question ne correspond aux thèmes et intensités choisis.");
+    const memoryKey = `solo:minority-v2:${game.classicThemes.join("-")}:${game.includeAdult}:${game.adultThemes.join("-")}:${game.adultIntensities.join("-")}:${game.includeCustom}`;
+    game.items = selectBalancedMinorityItems(pool, Math.min(game.roundCount, pool.length), memoryKey);
+    game.currentIndex = 0;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    game.rounds = [];
+    game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.stats = {
+      minority: Object.fromEntries(state.players.map(player => [player.id, 0])),
+      solo: Object.fromEntries(state.players.map(player => [player.id, 0])),
+      majority: Object.fromEntries(state.players.map(player => [player.id, 0]))
+    };
+    renderMinorityGate();
+  } catch (error) {
+    console.error(error);
+    alert(error.message || "Impossible de lancer Minorité.");
+    renderMinoritySetup();
+  }
+};
+
+renderMinorityVote = function () {
+  const game = state.minorityGame;
+  const item = game.items[game.currentIndex];
+  title.textContent = item.adult ? "Minorité adulte" : "Minorité";
+  screen.innerHTML = `
+    ${renderV08Progress(game.currentIndex + 1, game.items.length, "Question")}
+    <section class="v08-question-card minority-question-card">${minorityBadges(item)}<span>🪩</span><small>CHOISIS TA VOIE</small><h2>${escapeHtml(item.question)}</h2></section>
+    <section class="minority-choice-grid">${item.options.map((option, index) => `<button class="minority-choice" data-minority-vote="${index}"><small>OPTION ${String.fromCharCode(65 + index)}</small><strong>${escapeHtml(option)}</strong></button>`).join("")}</section>`;
+  document.querySelectorAll("[data-minority-vote]").forEach(button => button.addEventListener("click", () => {
+    const player = state.players[game.currentVoterIndex];
+    game.votes[player.id] = Number(button.dataset.minorityVote);
+    game.currentVoterIndex += 1;
+    renderMinorityGate();
+  }));
+};
+
+calculateMinorityRound = function (game) {
+  const item = game.items[game.currentIndex];
+  const counts = item.options.map((_, index) => Object.values(game.votes).filter(value => Number(value) === index).length);
+  const positive = counts.filter(value => value > 0);
+  const equalAmongChosen = positive.length <= 1 || new Set(positive).size === 1;
+  const minPositive = positive.length ? Math.min(...positive) : 0;
+  const maxPositive = positive.length ? Math.max(...positive) : 0;
+  const minorityOptions = equalAmongChosen ? [] : counts.map((count, index) => count === minPositive && count > 0 ? index : null).filter(index => index !== null);
+  const majorityOptions = equalAmongChosen ? [] : counts.map((count, index) => count === maxPositive && count > minPositive ? index : null).filter(index => index !== null);
+  const winnerIds = [];
+  const pointsByPlayer = {};
+  Object.entries(game.votes).forEach(([id, rawChoice]) => {
+    const choice = Number(rawChoice);
+    if (minorityOptions.includes(choice)) {
+      const points = counts[choice] === 1 ? 2 : 1;
+      winnerIds.push(id);
+      pointsByPlayer[id] = points;
+      game.scores[id] = Number(game.scores[id] || 0) + points;
+      game.stats.minority[id] = Number(game.stats.minority[id] || 0) + 1;
+      if (points === 2) game.stats.solo[id] = Number(game.stats.solo[id] || 0) + 1;
+    } else pointsByPlayer[id] = 0;
+    if (majorityOptions.includes(choice)) game.stats.majority[id] = Number(game.stats.majority[id] || 0) + 1;
+  });
+  return { counts, minorityOptions, majorityOptions, winnerIds, pointsByPlayer };
+};
+
+renderMinorityReveal = function () {
+  const game = state.minorityGame;
+  const item = game.items[game.currentIndex];
+  const result = calculateMinorityRound(game);
+  game.rounds.push({ itemId: item.id, votes: { ...game.votes }, ...result });
+  const soloWinners = result.winnerIds.filter(id => Number(result.pointsByPlayer[id] || 0) === 2);
+  title.textContent = result.winnerIds.length ? "La minorité gagne" : "Aucun petit camp";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="reveal-stage reveal-v07 minority-reveal">${minorityBadges(item)}<span class="game-cover-icon">🪩</span><h2>${soloWinners.length ? "Un électron libre marque double" : result.winnerIds.length ? "Le plus petit camp prend le point" : "Aucun camp minoritaire cette fois"}</h2><p>${escapeHtml(item.question)}</p></section>
+    <section class="minority-results">${item.options.map((option, index) => `<article class="minority-result ${result.minorityOptions.includes(index) ? "winner" : result.majorityOptions.includes(index) ? "majority" : ""}"><div><small>OPTION ${String.fromCharCode(65 + index)}</small><strong>${escapeHtml(option)}</strong></div><span>${result.counts[index]} vote${result.counts[index] > 1 ? "s" : ""}</span></article>`).join("")}</section>
+    <section class="poll-results-grid">${state.players.map(player => { const points = Number(result.pointsByPlayer[player.id] || 0); return `<article class="poll-result-person ${points === 2 ? "minority-solo-player" : ""}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(item.options[game.votes[player.id]])}</small>${points ? `<em>+${points} pt${points > 1 ? "s" : ""} ${points === 2 ? "solo" : "minorité"}</em>` : result.majorityOptions.includes(Number(game.votes[player.id])) ? `<small>dans la majorité</small>` : ""}</article>`; }).join("")}</section>
+    ${state.alcohol && result.winnerIds.length ? `<div class="alcohol-callout">🍻 La majorité peut trinquer si elle en a envie. La minorité savoure sa victoire.</div>` : ""}
+    <button id="nextMinorityRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Question suivante"}</button>`;
+  document.querySelector("#nextMinorityRound")?.addEventListener("click", () => {
+    game.currentIndex += 1;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    renderMinorityGate();
+  });
+};
+
+renderMinorityEnd = function () {
+  const game = state.minorityGame;
+  const ranking = scoreRanking(game.scores);
+  const minorityTop = minorityTopPlayers(game.stats.minority);
+  const soloTop = minorityTopPlayers(game.stats.solo);
+  const majorityTop = minorityTopPlayers(game.stats.majority);
+  title.textContent = "Classement final";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="winner-stage winner-stage-v07 v08-final-stage"><div class="winner-crown">🪩🏆</div><h2>Les électrons libres ont parlé</h2><p>Un point pour le plus petit camp, deux pour la personne seule sur son option.</p></section>
+    <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
+    <section class="minority-final-awards">
+      ${minorityAwardMarkup("🪩", "LE PLUS SOUVENT DANS LA MINORITÉ", minorityTop, `manche${minorityTop.max > 1 ? "s" : ""}`)}
+      ${minorityAwardMarkup("🧍", "ÉLECTRON VRAIMENT LIBRE", soloTop, `victoire${soloTop.max > 1 ? "s" : ""} en solo`)}
+      ${minorityAwardMarkup("👥", "AIMANT À MAJORITÉ", majorityTop, `manche${majorityTop.max > 1 ? "s" : ""}`)}
+    </section>
+    <div class="toolbar"><button id="replayMinority" class="secondary-btn">Rejouer</button><button id="otherMinority" class="primary-btn">Autre jeu</button></div>`;
+  document.querySelector("#replayMinority")?.addEventListener("click", () => {
+    resetMinorityState({
+      roundCount: game.roundCount,
+      includeAdult: game.includeAdult,
+      classicThemes: game.classicThemes,
+      adultThemes: game.adultThemes,
+      adultIntensities: game.adultIntensities,
+      includeCustom: game.includeCustom
+    });
+    renderMinoritySetup();
+  });
+  document.querySelector("#otherMinority")?.addEventListener("click", () => { state.minorityGame = null; renderPlayChoice(); });
 };
