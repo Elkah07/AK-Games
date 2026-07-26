@@ -8595,6 +8595,170 @@
   };
 
 
+
+  /* =========================================================
+     AK'GAMES — MÊME CERVEAU V2 MULTIJOUEUR
+     ========================================================= */
+
+  renderSameBrainSetup = function () {
+    if (!isMultiplayer()) return localRenderSameBrainSetup();
+    if (!state.sameBrain) resetSameBrainState();
+    const game = akBrainEnsureConfigV2(state.sameBrain);
+    const readOnly = !state.isHost;
+    title.textContent = "Même cerveau";
+    setBackVisible(true);
+    screen.innerHTML = `
+      <section class="game-cover game-cover-brain brain-cover-v2"><span class="game-cover-icon">🧠</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>Même cerveau</h2><p>Tout le monde répond en même temps. L’hôte peut réunir les synonymes après la révélation.</p></div></section>
+      ${akBrainSetupMarkupV2(game, "multiBrain", readOnly)}
+      <div class="notice">Barème : 2 cerveaux = 1 point, 3 = 2 points, 4 ou plus = 3 points.</div>
+      ${state.isHost ? `<button id="startMultiBrain" class="primary-btn full">Connecter tous les cerveaux</button>` : renderMultiWaiting("En attente de l’hôte", "L’hôte choisit les thèmes et lancera la partie.", "👑")}`;
+    akBrainBindSetupV2(game, "multiBrain", renderSameBrainSetup, readOnly);
+    document.querySelector("#startMultiBrain")?.addEventListener("click", startSameBrainGame);
+  };
+
+  startSameBrainGame = async function () {
+    if (!isMultiplayer()) return localStartSameBrainGame();
+    if (!state.isHost) return;
+    const game = akBrainEnsureConfigV2(state.sameBrain);
+    const hasClassic = game.classicThemes.length > 0;
+    const hasAdult = state.adult && game.includeAdult && game.adultThemes.length > 0 && game.adultIntensities.length > 0;
+    const hasCustom = game.includeCustom && game.customQuestions.length > 0;
+    if (!hasClassic && !hasAdult && !hasCustom) return alert("Choisis au moins un thème ou active une question personnalisée.");
+    screen.innerHTML = `<div class="notice">Connexion des neurones…</div>`;
+    try {
+      const classic = await loadJsonFile("data/meme-cerveau.json", "Impossible de charger les questions de Même cerveau.");
+      const adult = state.adult && game.includeAdult ? await loadJsonFile("data/meme-cerveau-adulte.json", "Impossible de charger les questions adultes.") : [];
+      const pool = akBrainBuildPoolV2(classic, adult, game);
+      if (!pool.length) throw new Error("Aucune question ne correspond aux filtres choisis.");
+      const items = akBrainBalancedSelectV2(pool, Math.min(game.roundCount, pool.length), `multi:brain-v2:${game.classicThemes.join("-")}:${game.adultThemes.join("-")}`);
+      const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+      await AKFirebase.setGame(state.roomCode, {
+        state: {
+          type: "same-brain", phase: "answering", sessionGameId: createSessionGameId("same-brain"),
+          items, currentIndex: 0, scores, rounds: {}, currentResult: null,
+          settings: {
+            roundCount: items.length,
+            includeAdult: Boolean(game.includeAdult),
+            classicThemes: [...game.classicThemes],
+            adultThemes: [...game.adultThemes],
+            adultIntensities: [...game.adultIntensities],
+            includeCustom: Boolean(hasCustom),
+            sameBrainV2: true
+          },
+          startedAt: AKFirebase.now(), updatedAt: AKFirebase.now()
+        },
+        answers: {}
+      });
+      state.multiView = "v08-game";
+    } catch (error) {
+      console.error(error);
+      alert(error.message || "Impossible de lancer la partie.");
+      renderSameBrainSetup();
+    }
+  };
+
+  processMultiSameBrain = function (gameState, answers) {
+    if (!state.isHost || gameState.phase !== "answering" || Object.keys(answers).length < state.players.length) return;
+    const processingId = `same-brain-v2_${gameState.currentIndex}_${Object.keys(answers).length}`;
+    if (state.multiProcessingActionId === processingId) return;
+    state.multiProcessingActionId = processingId;
+    const baseScores = { ...(gameState.scores || {}) };
+    const rawGroups = akBrainRawGroupsV2(answers);
+    const result = akBrainComputeResultV2(answers, rawGroups, baseScores);
+    const item = gameState.items?.[gameState.currentIndex];
+    const round = { itemId: item?.id || "", itemPrompt: item?.prompt || "", answers, points: result.points, groups: result.groups };
+    AKFirebase.updateGame(state.roomCode, {
+      "state/phase": "results",
+      "state/currentResult": result,
+      "state/scores": result.scores,
+      [`state/rounds/${gameState.currentIndex}`]: round,
+      "state/updatedAt": AKFirebase.now()
+    }).catch(console.error).finally(() => { state.multiProcessingActionId = null; });
+  };
+
+  renderMultiSameBrainAnswer = function (gameState, answers) {
+    const item = gameState.items?.[gameState.currentIndex];
+    const own = answers[state.currentUid];
+    title.textContent = "Même cerveau";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${renderMultiProgress(Number(gameState.currentIndex || 0) + 1, gameState.items?.length || 1, "Question")}
+      ${own ? renderMultiWaiting("Réponse verrouillée", `${Object.keys(answers).length}/${state.players.length} cerveaux connectés.`, "🔒") : `
+        <section class="v08-question-card brain-question-card">${akBrainQuestionBadgesV2(item)}<span>🧠</span><small>RÉPONDS DU PREMIER COUP</small><h2>${escapeHtml(item?.prompt || "")}</h2></section>
+        <section class="card"><div class="form-group"><label for="multiBrainAnswer">Ta réponse</label><input id="multiBrainAnswer" class="text-input v08-answer-input" maxlength="60" autocomplete="off" placeholder="Un mot ou une courte expression"></div></section>
+        <button id="sendMultiBrain" class="primary-btn full">Verrouiller ma réponse</button>`}
+      ${renderPlayerSubmissionStatus(answers, "A répondu", "Réfléchit…")}`;
+    const send = async event => {
+      const input = document.querySelector("#multiBrainAnswer");
+      const text = input?.value.trim();
+      if (!text) return alert("Écris une réponse avant de continuer.");
+      event.currentTarget.disabled = true;
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "answers", { text, submittedAt: AKFirebase.now() }); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; alert("La réponse n’a pas pu être envoyée."); }
+    };
+    document.querySelector("#sendMultiBrain")?.addEventListener("click", send);
+    document.querySelector("#multiBrainAnswer")?.addEventListener("keydown", event => {
+      if (event.key === "Enter") document.querySelector("#sendMultiBrain")?.click();
+    });
+  };
+
+  renderMultiSameBrainResults = function (gameState) {
+    const item = gameState.items?.[gameState.currentIndex];
+    const result = gameState.currentResult || {};
+    const matched = Object.values(result.points || {}).some(value => Number(value) > 0);
+    title.textContent = matched ? "Connexion détectée" : "Cerveaux indépendants";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="reveal-stage reveal-v07 brain-reveal">${akBrainQuestionBadgesV2(item)}<span class="game-cover-icon">${matched ? "⚡" : "🧠"}</span><h2>${matched ? "Des cerveaux se sont connectés !" : "Aucun match automatique"}</h2><p>${escapeHtml(item?.prompt || "")}</p></section>
+      <section class="brain-answer-wall">${state.players.map(player => { const points = Number(result.points?.[player.id] || 0); return `<article class="brain-answer-tile ${points ? "matched" : ""}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><p>${escapeHtml(result.answers?.[player.id]?.text || "")}</p>${points ? `<em>+${points} pt${points > 1 ? "s" : ""}</em>` : `<small>réponse unique</small>`}</article>`; }).join("")}</section>
+      ${akBrainMergePanelV2(result, "multi", state.isHost)}
+      ${state.alcohol && !matched ? `<div class="alcohol-callout">🍻 Aucun match automatique : le groupe peut trinquer avec la boisson de son choix, sans obligation.</div>` : ""}
+      ${state.isHost ? `<button id="nextMultiBrain" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Question suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "L’hôte peut fusionner des réponses équivalentes avant de continuer.", "👑")}`;
+
+    const applyResult = async next => {
+      const round = { itemId: item?.id || "", itemPrompt: item?.prompt || "", answers: next.answers, points: next.points, groups: next.groups };
+      try {
+        await AKFirebase.updateGame(state.roomCode, {
+          "state/currentResult": next,
+          "state/scores": next.scores,
+          [`state/rounds/${gameState.currentIndex}`]: round,
+          "state/updatedAt": AKFirebase.now()
+        });
+      } catch (error) {
+        console.error(error);
+        alert("Impossible de recalculer les scores.");
+      }
+    };
+
+    document.querySelector("#multiBrainMerge")?.addEventListener("click", async () => {
+      const ids = [...document.querySelectorAll("[data-brain-merge-group]:checked")].map(input => input.dataset.brainMergeGroup);
+      if (ids.length < 2) return alert("Sélectionne au moins deux groupes à fusionner.");
+      const next = akBrainMergeGroupsV2(result, ids);
+      if (next) await applyResult(next);
+    });
+    document.querySelector("#multiBrainResetMerge")?.addEventListener("click", async () => {
+      const next = akBrainComputeResultV2(result.answers, result.rawGroups, result.baseScores);
+      await applyResult(next);
+    });
+    document.querySelector("#nextMultiBrain")?.addEventListener("click", event => advanceMultiV08Round(event, gameState, "answering", "answers"));
+  };
+
+  const akBrainBaseRenderMultiV08FinalV2 = renderMultiV08Final;
+  renderMultiV08Final = function (gameState) {
+    if (gameState?.type !== "same-brain") return akBrainBaseRenderMultiV08FinalV2(gameState);
+    const ranking = [...state.players].sort((a, b) => Number(gameState.scores?.[b.id] || 0) - Number(gameState.scores?.[a.id] || 0));
+    title.textContent = "Classement final";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="winner-stage winner-stage-v07 v08-final-stage"><div class="winner-crown">🧠🏆</div><h2>Vos cerveaux ont rendu leur verdict</h2><p>Les réponses équivalentes ont pu être fusionnées par l’hôte.</p></section>
+      <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(gameState.scores?.[player.id] || 0)} pts</span></div>`).join("")}</section>
+      ${akBrainFinalStatsMarkupV2(gameState.rounds)}
+      ${renderPostGameContinuation(gameState)}`;
+    ensureEveningResult(gameState);
+    bindPostGameContinuation(gameState);
+  };
+
+
   window.AKGamesMultiplayer = Object.freeze({
     launchRandomGame: () => launchRandomMultiplayerGame()
   });

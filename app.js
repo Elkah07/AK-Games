@@ -9896,3 +9896,509 @@ renderMegaFinal = function () {
   });
   document.querySelector("#otherMega")?.addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
 };
+
+/* =========================================================
+   AK'GAMES — MÊME CERVEAU V2
+   650 cartes, thèmes, questions personnalisées et fusion manuelle
+   ========================================================= */
+
+const AK_BRAIN_CUSTOM_KEY_V2 = "akgames_same_brain_custom_questions_v2";
+const AK_BRAIN_RECENT_KEY_V2 = "akgames_same_brain_recent_v2";
+
+const AK_BRAIN_CLASSIC_THEMES_V2 = [
+  { id: "food", icon: "🍕", label: "Nourriture" },
+  { id: "animals", icon: "🐾", label: "Animaux" },
+  { id: "daily", icon: "🏠", label: "Quotidien" },
+  { id: "parties", icon: "🎉", label: "Soirées" },
+  { id: "travel", icon: "✈️", label: "Voyages" },
+  { id: "digital", icon: "📱", label: "Téléphone & réseaux" },
+  { id: "culture", icon: "🎬", label: "Films, séries & musique" },
+  { id: "games", icon: "🎮", label: "Jeux & loisirs" },
+  { id: "work", icon: "💼", label: "Travail & école" },
+  { id: "friendship", icon: "🫂", label: "Amitié & groupe" },
+  { id: "general", icon: "🌍", label: "Culture accessible" },
+  { id: "association", icon: "💭", label: "Associations d’idées" },
+  { id: "reflexes", icon: "🚨", label: "Réflexes" },
+  { id: "absurd", icon: "🌀", label: "Absurde" }
+];
+
+const AK_BRAIN_ADULT_THEMES_V2 = [
+  { id: "attraction", icon: "🧲", label: "Attirance" },
+  { id: "dates", icon: "🥂", label: "Rendez-vous" },
+  { id: "exes", icon: "📦", label: "Ex" },
+  { id: "jealousy", icon: "👀", label: "Jalousie & fidélité" },
+  { id: "digital", icon: "📲", label: "Sextos & réseaux" },
+  { id: "intimacy", icon: "🫦", label: "Préférences intimes" },
+  { id: "fantasies", icon: "💭", label: "Fantasmes" },
+  { id: "awkward", icon: "😳", label: "Situations gênantes" },
+  { id: "couple", icon: "💞", label: "Couple" },
+  { id: "casual", icon: "🌙", label: "Rencontres légères" }
+];
+
+const AK_BRAIN_INTENSITIES_V2 = [
+  { id: "soft", icon: "🌶️", label: "Léger" },
+  { id: "hot", icon: "🔥", label: "Osé" },
+  { id: "unfiltered", icon: "☢️", label: "Sans filtre" }
+];
+
+function akBrainReadCustomV2() {
+  try {
+    const rows = JSON.parse(localStorage.getItem(AK_BRAIN_CUSTOM_KEY_V2) || "[]");
+    if (!Array.isArray(rows)) return [];
+    return rows.filter(item => item && typeof item.prompt === "string").map((item, index) => {
+      const adult = item.category === "adult";
+      const themes = adult ? AK_BRAIN_ADULT_THEMES_V2 : AK_BRAIN_CLASSIC_THEMES_V2;
+      const fallbackTheme = themes[0].id;
+      return {
+        id: String(item.id || `brain_custom_${Date.now()}_${index}`),
+        prompt: item.prompt.trim().slice(0, 180),
+        category: adult ? "adult" : "classic",
+        theme: themes.some(theme => theme.id === item.theme) ? item.theme : fallbackTheme,
+        intensity: adult && AK_BRAIN_INTENSITIES_V2.some(level => level.id === item.intensity) ? item.intensity : "soft",
+        custom: true
+      };
+    }).filter(item => item.prompt);
+  } catch (error) {
+    console.warn("Questions Même cerveau personnalisées illisibles", error);
+    return [];
+  }
+}
+
+function akBrainSaveCustomV2(items) {
+  localStorage.setItem(AK_BRAIN_CUSTOM_KEY_V2, JSON.stringify(items || []));
+}
+
+function akBrainThemeV2(item) {
+  const list = item?.category === "adult" ? AK_BRAIN_ADULT_THEMES_V2 : AK_BRAIN_CLASSIC_THEMES_V2;
+  return list.find(theme => theme.id === item?.theme) || list[0];
+}
+
+function akBrainIntensityV2(item) {
+  return AK_BRAIN_INTENSITIES_V2.find(level => level.id === item?.intensity) || AK_BRAIN_INTENSITIES_V2[0];
+}
+
+function akBrainQuestionBadgesV2(item) {
+  const theme = akBrainThemeV2(item);
+  const intensity = item?.category === "adult" ? akBrainIntensityV2(item) : null;
+  return `<div class="brain-question-badges"><span>${theme.icon} ${escapeHtml(theme.label)}</span>${intensity ? `<span class="brain-intensity-${intensity.id}">${intensity.icon} ${escapeHtml(intensity.label)}</span>` : ""}${item?.custom ? `<span>✍️ Personnalisée</span>` : ""}</div>`;
+}
+
+function akBrainEnsureConfigV2(game, config = {}) {
+  const classicIds = AK_BRAIN_CLASSIC_THEMES_V2.map(theme => theme.id);
+  const adultIds = AK_BRAIN_ADULT_THEMES_V2.map(theme => theme.id);
+  const intensityIds = AK_BRAIN_INTENSITIES_V2.map(level => level.id);
+  const valid = (values, allowed, fallback) => {
+    if (!Array.isArray(values)) return [...fallback];
+    return [...new Set(values.filter(value => allowed.includes(value)))];
+  };
+  game.roundCount = Math.max(3, Math.min(100, Number(config.roundCount ?? game.roundCount ?? 10) || 10));
+  game.includeAdult = Boolean(config.includeAdult ?? game.includeAdult);
+  game.classicThemes = valid(config.classicThemes ?? game.classicThemes, classicIds, classicIds);
+  game.adultThemes = valid(config.adultThemes ?? game.adultThemes, adultIds, adultIds);
+  game.adultIntensities = valid(config.adultIntensities ?? game.adultIntensities, intensityIds, intensityIds);
+  game.customQuestions = Array.isArray(game.customQuestions) ? game.customQuestions : akBrainReadCustomV2();
+  game.includeCustom = Boolean((config.includeCustom ?? game.includeCustom ?? true) && game.customQuestions.length);
+  game.currentResult = game.currentResult || null;
+  return game;
+}
+
+function akBrainCreateCustomV2(prompt, category, theme, intensity) {
+  const adult = category === "adult";
+  const themes = adult ? AK_BRAIN_ADULT_THEMES_V2 : AK_BRAIN_CLASSIC_THEMES_V2;
+  const clean = String(prompt || "").trim().replace(/\s+/g, " ").slice(0, 180);
+  if (!clean) return null;
+  return {
+    id: `brain_custom_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+    prompt: clean,
+    category: adult ? "adult" : "classic",
+    theme: themes.some(item => item.id === theme) ? theme : themes[0].id,
+    intensity: adult && AK_BRAIN_INTENSITIES_V2.some(item => item.id === intensity) ? intensity : "soft",
+    custom: true
+  };
+}
+
+function akBrainReadRecentV2() {
+  try {
+    const rows = JSON.parse(localStorage.getItem(AK_BRAIN_RECENT_KEY_V2) || "[]");
+    return Array.isArray(rows) ? rows.filter(Boolean).slice(-180) : [];
+  } catch (error) {
+    return [];
+  }
+}
+
+function akBrainBalancedSelectV2(pool, count, namespace = "brain") {
+  const recent = new Set(akBrainReadRecentV2());
+  const buckets = new Map();
+  (pool || []).forEach(item => {
+    const key = item.category === "adult"
+      ? `adult:${item.theme || "other"}:${item.intensity || "soft"}`
+      : `${item.custom ? "custom" : "classic"}:${item.theme || "other"}`;
+    if (!buckets.has(key)) buckets.set(key, []);
+    buckets.get(key).push(item);
+  });
+  const keys = shuffleArray([...buckets.keys()]);
+  keys.forEach(key => {
+    const rows = buckets.get(key);
+    const fresh = shuffleArray(rows.filter(item => !recent.has(item.id)));
+    const old = shuffleArray(rows.filter(item => recent.has(item.id)));
+    buckets.set(key, [...fresh, ...old]);
+  });
+  const selected = [];
+  while (selected.length < count) {
+    let added = false;
+    for (const key of keys) {
+      const row = buckets.get(key)?.shift();
+      if (!row) continue;
+      selected.push(row);
+      added = true;
+      if (selected.length >= count) break;
+    }
+    if (!added) break;
+  }
+  const nextRecent = [...akBrainReadRecentV2(), ...selected.map(item => item.id)].slice(-180);
+  localStorage.setItem(AK_BRAIN_RECENT_KEY_V2, JSON.stringify(nextRecent));
+  return selected;
+}
+
+function akBrainSetupMarkupV2(game, prefix = "brain", readOnly = false) {
+  akBrainEnsureConfigV2(game);
+  const disabled = readOnly ? "disabled" : "";
+  const classicOptions = AK_BRAIN_CLASSIC_THEMES_V2.map(theme => `
+    <label class="brain-theme-option ${game.classicThemes.includes(theme.id) ? "active" : ""}">
+      <input type="checkbox" data-brain-classic-theme="${theme.id}" ${game.classicThemes.includes(theme.id) ? "checked" : ""} ${disabled}>
+      <span>${theme.icon}</span><strong>${escapeHtml(theme.label)}</strong>
+    </label>`).join("");
+  const adultOptions = AK_BRAIN_ADULT_THEMES_V2.map(theme => `
+    <label class="brain-theme-option ${game.adultThemes.includes(theme.id) ? "active" : ""}">
+      <input type="checkbox" data-brain-adult-theme="${theme.id}" ${game.adultThemes.includes(theme.id) ? "checked" : ""} ${disabled}>
+      <span>${theme.icon}</span><strong>${escapeHtml(theme.label)}</strong>
+    </label>`).join("");
+  const custom = game.customQuestions || [];
+  const themeOptions = [
+    `<optgroup label="Classique">${AK_BRAIN_CLASSIC_THEMES_V2.map(theme => `<option value="classic:${theme.id}">${theme.icon} ${escapeHtml(theme.label)}</option>`).join("")}</optgroup>`,
+    state.adult ? `<optgroup label="Adulte">${AK_BRAIN_ADULT_THEMES_V2.map(theme => `<option value="adult:${theme.id}">${theme.icon} ${escapeHtml(theme.label)}</option>`).join("")}</optgroup>` : ""
+  ].join("");
+  return `
+    <section class="card brain-settings-card">
+      <h2 class="section-title">Durée de la partie</h2>
+      <div class="brain-round-presets">${[5,10,20,40,60,100].map(value => `<button type="button" class="choice-pill ${game.roundCount === value ? "active" : ""}" data-brain-round="${value}" ${disabled}>${value}</button>`).join("")}</div>
+      <div class="form-group top-gap"><label for="${prefix}RoundCount">Nombre personnalisé</label><input id="${prefix}RoundCount" type="number" min="3" max="100" value="${game.roundCount}" class="text-input" ${disabled}></div>
+    </section>
+    <section class="card brain-settings-card">
+      <div class="brain-section-heading"><div><h2 class="section-title">Thèmes classiques</h2><p>Choisis-en un, plusieurs ou tous.</p></div>${readOnly ? "" : `<div class="toolbar"><button type="button" class="secondary-btn" id="${prefix}BrainAllClassic">Tous</button><button type="button" class="secondary-btn" id="${prefix}BrainNoClassic">Aucun</button></div>`}</div>
+      <div class="brain-theme-grid">${classicOptions}</div>
+    </section>
+    ${state.adult ? `
+      <label class="option-card premium-toggle brain-adult-toggle"><input id="${prefix}BrainAdult" type="checkbox" ${game.includeAdult ? "checked" : ""} ${disabled}><span><strong>🔞 Ajouter le pack adulte</strong><br><span class="helper">150 questions avec thèmes et intensités séparés.</span></span></label>
+      ${game.includeAdult ? `<section class="card brain-settings-card"><div class="brain-section-heading"><div><h2 class="section-title">Thèmes adultes</h2><p>Sélection indépendante du pack classique.</p></div>${readOnly ? "" : `<div class="toolbar"><button type="button" class="secondary-btn" id="${prefix}BrainAllAdult">Tous</button><button type="button" class="secondary-btn" id="${prefix}BrainNoAdult">Aucun</button></div>`}</div><div class="brain-theme-grid">${adultOptions}</div><h3 class="section-title top-gap">Intensités</h3><div class="brain-intensity-grid">${AK_BRAIN_INTENSITIES_V2.map(level => `<button type="button" class="brain-intensity-option brain-intensity-${level.id} ${game.adultIntensities.includes(level.id) ? "active" : ""}" data-brain-intensity="${level.id}" ${disabled}><span>${level.icon}</span><strong>${escapeHtml(level.label)}</strong></button>`).join("")}</div></section>` : ""}
+    ` : ""}
+    ${readOnly ? "" : `<section class="card brain-settings-card"><h2 class="section-title">Mes questions</h2><p class="helper">Ajoute une question que ton groupe pourra retrouver dans le mélange.</p><div class="form-group top-gap"><label for="${prefix}BrainCustomPrompt">Question</label><input id="${prefix}BrainCustomPrompt" class="text-input" maxlength="180" placeholder="Ex. Cite une excuse que tout le monde a déjà utilisée."></div><div class="brain-custom-grid"><div class="form-group"><label for="${prefix}BrainCustomTheme">Thème</label><select id="${prefix}BrainCustomTheme" class="text-input">${themeOptions}</select></div><div class="form-group"><label for="${prefix}BrainCustomIntensity">Intensité si adulte</label><select id="${prefix}BrainCustomIntensity" class="text-input">${AK_BRAIN_INTENSITIES_V2.map(level => `<option value="${level.id}">${level.icon} ${escapeHtml(level.label)}</option>`).join("")}</select></div></div><button type="button" id="${prefix}BrainAddCustom" class="secondary-btn full">Ajouter la question</button>${custom.length ? `<label class="option-card mini-option top-gap"><input id="${prefix}BrainIncludeCustom" type="checkbox" ${game.includeCustom ? "checked" : ""}><span><strong>Utiliser mes ${custom.length} question${custom.length > 1 ? "s" : ""}</strong></span></label><details class="top-gap"><summary>Gérer mes questions</summary><div class="brain-custom-list">${custom.map(item => `<article><div>${akBrainQuestionBadgesV2(item)}<p>${escapeHtml(item.prompt)}</p></div><button type="button" class="danger-btn" data-remove-brain-custom="${item.id}">Supprimer</button></article>`).join("")}</div></details>` : ""}</section>`}
+  `;
+}
+
+function akBrainBindSetupV2(game, prefix, rerender, readOnly = false) {
+  if (readOnly) return;
+  document.querySelectorAll("[data-brain-round]").forEach(button => button.addEventListener("click", () => {
+    game.roundCount = Number(button.dataset.brainRound);
+    rerender();
+  }));
+  document.querySelector(`#${prefix}RoundCount`)?.addEventListener("change", event => {
+    game.roundCount = Math.max(3, Math.min(100, Number(event.target.value) || 10));
+    event.target.value = game.roundCount;
+  });
+  document.querySelectorAll("[data-brain-classic-theme]").forEach(input => input.addEventListener("change", () => {
+    const theme = input.dataset.brainClassicTheme;
+    game.classicThemes = input.checked ? [...new Set([...game.classicThemes, theme])] : game.classicThemes.filter(value => value !== theme);
+    input.closest(".brain-theme-option")?.classList.toggle("active", input.checked);
+  }));
+  document.querySelectorAll("[data-brain-adult-theme]").forEach(input => input.addEventListener("change", () => {
+    const theme = input.dataset.brainAdultTheme;
+    game.adultThemes = input.checked ? [...new Set([...game.adultThemes, theme])] : game.adultThemes.filter(value => value !== theme);
+    input.closest(".brain-theme-option")?.classList.toggle("active", input.checked);
+  }));
+  document.querySelector(`#${prefix}BrainAllClassic`)?.addEventListener("click", () => { game.classicThemes = AK_BRAIN_CLASSIC_THEMES_V2.map(item => item.id); rerender(); });
+  document.querySelector(`#${prefix}BrainNoClassic`)?.addEventListener("click", () => { game.classicThemes = []; rerender(); });
+  document.querySelector(`#${prefix}BrainAllAdult`)?.addEventListener("click", () => { game.adultThemes = AK_BRAIN_ADULT_THEMES_V2.map(item => item.id); rerender(); });
+  document.querySelector(`#${prefix}BrainNoAdult`)?.addEventListener("click", () => { game.adultThemes = []; rerender(); });
+  document.querySelector(`#${prefix}BrainAdult`)?.addEventListener("change", event => { game.includeAdult = event.target.checked; rerender(); });
+  document.querySelectorAll("[data-brain-intensity]").forEach(button => button.addEventListener("click", () => {
+    const value = button.dataset.brainIntensity;
+    game.adultIntensities = game.adultIntensities.includes(value) ? game.adultIntensities.filter(item => item !== value) : [...game.adultIntensities, value];
+    rerender();
+  }));
+  document.querySelector(`#${prefix}BrainIncludeCustom`)?.addEventListener("change", event => { game.includeCustom = event.target.checked; });
+  document.querySelector(`#${prefix}BrainAddCustom`)?.addEventListener("click", () => {
+    const prompt = document.querySelector(`#${prefix}BrainCustomPrompt`)?.value || "";
+    const [category, theme] = String(document.querySelector(`#${prefix}BrainCustomTheme`)?.value || "classic:food").split(":");
+    const intensity = document.querySelector(`#${prefix}BrainCustomIntensity`)?.value || "soft";
+    const item = akBrainCreateCustomV2(prompt, category, theme, intensity);
+    if (!item) return alert("Écris d’abord une question.");
+    if (game.customQuestions.some(existing => normalizeBrainAnswer(existing.prompt) === normalizeBrainAnswer(item.prompt))) return alert("Cette question existe déjà.");
+    game.customQuestions.push(item);
+    game.includeCustom = true;
+    akBrainSaveCustomV2(game.customQuestions);
+    rerender();
+  });
+  document.querySelectorAll("[data-remove-brain-custom]").forEach(button => button.addEventListener("click", () => {
+    game.customQuestions = game.customQuestions.filter(item => item.id !== button.dataset.removeBrainCustom);
+    if (!game.customQuestions.length) game.includeCustom = false;
+    akBrainSaveCustomV2(game.customQuestions);
+    rerender();
+  }));
+}
+
+function akBrainBuildPoolV2(classic, adult, game) {
+  const classicThemes = new Set(game.classicThemes || []);
+  const adultThemes = new Set(game.adultThemes || []);
+  const intensities = new Set(game.adultIntensities || []);
+  let pool = (classic || []).filter(item => classicThemes.has(item.theme));
+  if (state.adult && game.includeAdult) {
+    pool = pool.concat((adult || []).filter(item => adultThemes.has(item.theme) && intensities.has(item.intensity)));
+  }
+  if (game.includeCustom) {
+    pool = pool.concat((game.customQuestions || []).filter(item => {
+      if (item.category === "adult") return state.adult && game.includeAdult;
+      return true;
+    }));
+  }
+  return pool;
+}
+
+function akBrainRawGroupsV2(answers) {
+  const map = new Map();
+  Object.entries(answers || {}).forEach(([id, entry]) => {
+    const text = typeof entry === "string" ? entry : String(entry?.text || "");
+    const key = normalizeBrainAnswer(text) || `unique_${id}`;
+    if (!map.has(key)) map.set(key, { id: `brain_group_${map.size}`, sourceIds: [], memberIds: [], labels: [] });
+    const group = map.get(key);
+    group.sourceIds.push(key);
+    group.memberIds.push(id);
+    if (!group.labels.includes(text)) group.labels.push(text);
+  });
+  return [...map.values()];
+}
+
+function akBrainComputeResultV2(answers, groups, baseScores) {
+  const points = {};
+  const scores = { ...(baseScores || {}) };
+  const cleanGroups = (groups || []).map((group, index) => ({
+    id: group.id || `brain_group_${index}`,
+    sourceIds: [...new Set(group.sourceIds || [])],
+    memberIds: [...new Set(group.memberIds || [])],
+    labels: [...new Set((group.labels || []).filter(Boolean))]
+  }));
+  cleanGroups.forEach(group => {
+    const amount = group.memberIds.length >= 2 ? Math.min(3, group.memberIds.length - 1) : 0;
+    group.points = amount;
+    group.memberIds.forEach(id => {
+      points[id] = amount;
+      scores[id] = Number(scores[id] || 0) + amount;
+    });
+  });
+  return {
+    answers,
+    groups: cleanGroups,
+    rawGroups: akBrainRawGroupsV2(answers),
+    points,
+    scores,
+    baseScores: { ...(baseScores || {}) },
+    matchedIds: Object.entries(points).filter(([, value]) => Number(value) > 0).map(([id]) => id),
+    mergeRevision: Date.now()
+  };
+}
+
+function akBrainMergeGroupsV2(result, selectedIds) {
+  const selected = new Set(selectedIds || []);
+  const groups = result.groups || [];
+  const merging = groups.filter(group => selected.has(group.id));
+  if (merging.length < 2) return null;
+  const untouched = groups.filter(group => !selected.has(group.id));
+  const merged = {
+    id: `brain_merged_${Date.now()}`,
+    sourceIds: merging.flatMap(group => group.sourceIds || []),
+    memberIds: merging.flatMap(group => group.memberIds || []),
+    labels: merging.flatMap(group => group.labels || [])
+  };
+  return akBrainComputeResultV2(result.answers, [...untouched, merged], result.baseScores);
+}
+
+function akBrainMergePanelV2(result, prefix, canEdit = true) {
+  if (!canEdit || (result.groups || []).length < 2) return "";
+  return `<section class="card brain-merge-card"><div class="brain-section-heading"><div><h2 class="section-title">Réponses équivalentes ?</h2><p>Sélectionne au moins deux groupes, puis fusionne-les. Les scores seront recalculés.</p></div><span>🧠🔧</span></div><div class="brain-merge-list">${result.groups.map(group => `<label class="brain-merge-row"><input type="checkbox" data-brain-merge-group="${group.id}"><span><strong>${group.labels.map(escapeHtml).join(" / ")}</strong><small>${group.memberIds.length} joueur${group.memberIds.length > 1 ? "s" : ""}</small></span></label>`).join("")}</div><div class="toolbar top-gap"><button type="button" id="${prefix}BrainMerge" class="primary-btn">Fusionner la sélection</button><button type="button" id="${prefix}BrainResetMerge" class="secondary-btn">Annuler les fusions</button></div></section>`;
+}
+
+function akBrainBuildStatsV2(rounds) {
+  const rows = Array.isArray(rounds) ? rounds : Object.values(rounds || {});
+  const pairCounts = {};
+  const uniqueCounts = Object.fromEntries(state.players.map(player => [player.id, 0]));
+  const answerCounts = {};
+  let biggest = null;
+  rows.forEach(round => {
+    const answers = round?.answers || {};
+    Object.entries(answers).forEach(([id, entry]) => {
+      const text = typeof entry === "string" ? entry : String(entry?.text || "");
+      const key = normalizeBrainAnswer(text);
+      if (!key) return;
+      answerCounts[key] = answerCounts[key] || { label: text, count: 0 };
+      answerCounts[key].count += 1;
+      if (!Number(round?.points?.[id] || 0)) uniqueCounts[id] = Number(uniqueCounts[id] || 0) + 1;
+    });
+    (round?.groups || []).forEach(group => {
+      const members = group.memberIds || [];
+      if (!biggest || members.length > biggest.memberIds.length) biggest = { ...group, itemPrompt: round.itemPrompt || "" };
+      if (members.length < 2) return;
+      for (let i = 0; i < members.length; i += 1) {
+        for (let j = i + 1; j < members.length; j += 1) {
+          const key = [members[i], members[j]].sort().join("|");
+          pairCounts[key] = Number(pairCounts[key] || 0) + 1;
+        }
+      }
+    });
+  });
+  const topPairEntry = Object.entries(pairCounts).sort((a, b) => b[1] - a[1])[0];
+  const topPair = topPairEntry ? { ids: topPairEntry[0].split("|"), count: topPairEntry[1] } : null;
+  const popular = Object.values(answerCounts).sort((a, b) => b.count - a.count)[0] || null;
+  const maxUnique = Math.max(0, ...Object.values(uniqueCounts));
+  const uniquePlayers = maxUnique ? state.players.filter(player => Number(uniqueCounts[player.id] || 0) === maxUnique) : [];
+  return { biggest, topPair, popular, maxUnique, uniquePlayers };
+}
+
+function akBrainFinalStatsMarkupV2(rounds) {
+  const stats = akBrainBuildStatsV2(rounds);
+  const playerName = id => state.players.find(player => player.id === id)?.name || "Joueur";
+  const biggestNames = stats.biggest?.memberIds?.map(id => escapeHtml(playerName(id))).join(", ") || "Aucune connexion";
+  const pairNames = stats.topPair ? stats.topPair.ids.map(id => escapeHtml(playerName(id))).join(" + ") : "Aucun duo régulier";
+  const uniqueNames = stats.uniquePlayers.length ? stats.uniquePlayers.map(player => escapeHtml(player.name)).join(" et ") : "Tout le monde s’est connecté";
+  return `<section class="brain-final-awards"><article><span>⚡</span><small>PLUS GROS RACCORD</small><strong>${stats.biggest?.memberIds?.length >= 2 ? `${stats.biggest.memberIds.length} cerveaux` : "Aucun match"}</strong><p>${stats.biggest?.memberIds?.length >= 2 ? `${stats.biggest.labels.map(escapeHtml).join(" / ")} · ${biggestNames}` : "La prochaine partie créera peut-être l’étincelle."}</p></article><article><span>🔗</span><small>DUO LE PLUS CONNECTÉ</small><strong>${pairNames}</strong><p>${stats.topPair ? `${stats.topPair.count} connexion${stats.topPair.count > 1 ? "s" : ""} commune${stats.topPair.count > 1 ? "s" : ""}` : "Aucune paire n’a matché deux fois."}</p></article><article><span>💬</span><small>RÉPONSE LA PLUS DONNÉE</small><strong>${stats.popular ? escapeHtml(stats.popular.label) : "Aucune"}</strong><p>${stats.popular ? `${stats.popular.count} apparition${stats.popular.count > 1 ? "s" : ""} dans la partie` : "Les réponses étaient toutes différentes."}</p></article><article><span>🪐</span><small>ESPRIT LE PLUS UNIQUE</small><strong>${uniqueNames}</strong><p>${stats.maxUnique ? `${stats.maxUnique} réponse${stats.maxUnique > 1 ? "s" : ""} sans raccord` : "Connexion générale réussie."}</p></article></section>`;
+}
+
+const akBrainBaseResetV2 = resetSameBrainState;
+resetSameBrainState = function (config = {}) {
+  state.sameBrain = {
+    roundCount: Number(config.roundCount || 10),
+    includeAdult: Boolean(config.includeAdult),
+    classicThemes: config.classicThemes,
+    adultThemes: config.adultThemes,
+    adultIntensities: config.adultIntensities,
+    includeCustom: config.includeCustom,
+    customQuestions: akBrainReadCustomV2(),
+    items: [], currentIndex: 0, currentWriterIndex: 0, answers: {},
+    scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    rounds: [], currentResult: null
+  };
+  akBrainEnsureConfigV2(state.sameBrain, config);
+};
+
+renderSameBrainSetup = function () {
+  if (!state.sameBrain) resetSameBrainState();
+  const game = akBrainEnsureConfigV2(state.sameBrain);
+  title.textContent = "Même cerveau";
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-brain brain-cover-v2"><span class="game-cover-icon">🧠</span><div><small>CONNEXION & SECRETS</small><h2>Même cerveau</h2><p>Répondez sans vous concerter. Les réponses identiques ou fusionnées connectent les cerveaux.</p></div></section>
+    ${akBrainSetupMarkupV2(game, "soloBrain")}
+    <div class="notice">Barème : 2 cerveaux = 1 point, 3 = 2 points, 4 ou plus = 3 points. Les synonymes peuvent être fusionnés après la révélation.</div>
+    <button id="startSameBrain" class="primary-btn full">Synchroniser les cerveaux</button>`;
+  akBrainBindSetupV2(game, "soloBrain", renderSameBrainSetup);
+  document.querySelector("#startSameBrain")?.addEventListener("click", startSameBrainGame);
+};
+
+startSameBrainGame = async function () {
+  const game = akBrainEnsureConfigV2(state.sameBrain);
+  const hasClassic = game.classicThemes.length > 0;
+  const hasAdult = state.adult && game.includeAdult && game.adultThemes.length > 0 && game.adultIntensities.length > 0;
+  const hasCustom = game.includeCustom && game.customQuestions.length > 0;
+  if (!hasClassic && !hasAdult && !hasCustom) return alert("Choisis au moins un thème ou active une question personnalisée.");
+  screen.innerHTML = `<div class="notice">Connexion des neurones…</div>`;
+  try {
+    const classic = await loadJsonFile("data/meme-cerveau.json", "Impossible de charger les questions de Même cerveau.");
+    const adult = state.adult && game.includeAdult ? await loadJsonFile("data/meme-cerveau-adulte.json", "Impossible de charger les questions adultes.") : [];
+    const pool = akBrainBuildPoolV2(classic, adult, game);
+    if (!pool.length) throw new Error("Aucune question ne correspond aux filtres choisis.");
+    game.items = akBrainBalancedSelectV2(pool, Math.min(game.roundCount, pool.length), `solo:brain-v2:${game.classicThemes.join("-")}:${game.adultThemes.join("-")}`);
+    game.currentIndex = 0; game.currentWriterIndex = 0; game.answers = {}; game.rounds = []; game.currentResult = null;
+    game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    renderSameBrainGate();
+  } catch (error) {
+    console.error(error);
+    alert(error.message || "Impossible de lancer Même cerveau.");
+    renderSameBrainSetup();
+  }
+};
+
+renderSameBrainAnswer = function () {
+  const game = state.sameBrain;
+  const item = game.items[game.currentIndex];
+  const player = state.players[game.currentWriterIndex];
+  title.textContent = "Même cerveau";
+  screen.innerHTML = `
+    ${renderV08Progress(game.currentIndex + 1, game.items.length, "Question")}
+    <section class="v08-question-card brain-question-card">${akBrainQuestionBadgesV2(item)}<span>🧠</span><small>RÉPONDS DU PREMIER COUP</small><h2>${escapeHtml(item.prompt)}</h2></section>
+    <section class="card"><div class="form-group"><label for="brainAnswer">Ta réponse, ${escapeHtml(player.name)}</label><input id="brainAnswer" class="text-input v08-answer-input" maxlength="60" autocomplete="off" placeholder="Un mot ou une courte expression"></div></section>
+    <button id="saveBrainAnswer" class="primary-btn full">Verrouiller ma réponse</button>`;
+  const input = document.querySelector("#brainAnswer");
+  input?.focus();
+  const save = () => {
+    const value = input?.value.trim();
+    if (!value) return alert("Écris une réponse avant de continuer.");
+    game.answers[player.id] = value;
+    game.currentWriterIndex += 1;
+    renderSameBrainGate();
+  };
+  document.querySelector("#saveBrainAnswer")?.addEventListener("click", save);
+  input?.addEventListener("keydown", event => { if (event.key === "Enter") save(); });
+};
+
+renderSameBrainReveal = function () {
+  const game = state.sameBrain;
+  const item = game.items[game.currentIndex];
+  if (!game.currentResult) {
+    const rawGroups = akBrainRawGroupsV2(game.answers);
+    game.currentResult = akBrainComputeResultV2({ ...game.answers }, rawGroups, { ...game.scores });
+    game.scores = { ...game.currentResult.scores };
+  }
+  const result = game.currentResult;
+  title.textContent = result.matchedIds.length ? "Connexion détectée" : "Cerveaux indépendants";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="reveal-stage reveal-v07 brain-reveal">${akBrainQuestionBadgesV2(item)}<span class="game-cover-icon">${result.matchedIds.length ? "⚡" : "🧠"}</span><h2>${result.matchedIds.length ? "Des cerveaux se sont connectés !" : "Aucun match automatique"}</h2><p>${escapeHtml(item.prompt)}</p></section>
+    <section class="brain-answer-wall">${state.players.map(player => { const points = Number(result.points?.[player.id] || 0); return `<article class="brain-answer-tile ${points ? "matched" : ""}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><p>${escapeHtml(game.answers[player.id] || "")}</p>${points ? `<em>+${points} pt${points > 1 ? "s" : ""}</em>` : `<small>réponse unique</small>`}</article>`; }).join("")}</section>
+    ${akBrainMergePanelV2(result, "solo", true)}
+    ${state.alcohol && !result.matchedIds.length ? `<div class="alcohol-callout">🍻 Aucun match automatique : le groupe peut trinquer avec la boisson de son choix, sans obligation.</div>` : ""}
+    <button id="nextBrainRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Question suivante"}</button>`;
+  document.querySelector("#soloBrainMerge")?.addEventListener("click", () => {
+    const ids = [...document.querySelectorAll("[data-brain-merge-group]:checked")].map(input => input.dataset.brainMergeGroup);
+    if (ids.length < 2) return alert("Sélectionne au moins deux groupes à fusionner.");
+    const next = akBrainMergeGroupsV2(result, ids);
+    if (!next) return;
+    game.currentResult = next; game.scores = { ...next.scores };
+    renderSameBrainReveal();
+  });
+  document.querySelector("#soloBrainResetMerge")?.addEventListener("click", () => {
+    game.currentResult = akBrainComputeResultV2(result.answers, result.rawGroups, result.baseScores);
+    game.scores = { ...game.currentResult.scores };
+    renderSameBrainReveal();
+  });
+  document.querySelector("#nextBrainRound")?.addEventListener("click", () => {
+    game.rounds.push({ itemId: item.id, itemPrompt: item.prompt, answers: { ...result.answers }, points: { ...result.points }, groups: result.groups.map(group => ({ ...group })) });
+    game.currentIndex += 1; game.currentWriterIndex = 0; game.answers = {}; game.currentResult = null;
+    renderSameBrainGate();
+  });
+};
+
+renderSameBrainEnd = function () {
+  const game = state.sameBrain;
+  const ranking = scoreRanking(game.scores);
+  title.textContent = "Classement final";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="winner-stage winner-stage-v07 v08-final-stage"><div class="winner-crown">🧠🏆</div><h2>Vos cerveaux ont rendu leur verdict</h2><p>Les réponses équivalentes ont pu être regroupées avant le calcul final.</p></section>
+    <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
+    ${akBrainFinalStatsMarkupV2(game.rounds)}
+    <div class="toolbar"><button id="replaySameBrain" class="secondary-btn">Rejouer</button><button id="otherSameBrain" class="primary-btn">Autre jeu</button></div>`;
+  document.querySelector("#replaySameBrain")?.addEventListener("click", () => {
+    resetSameBrainState({ roundCount: game.roundCount, includeAdult: game.includeAdult, classicThemes: game.classicThemes, adultThemes: game.adultThemes, adultIntensities: game.adultIntensities, includeCustom: game.includeCustom });
+    renderSameBrainSetup();
+  });
+  document.querySelector("#otherSameBrain")?.addEventListener("click", () => { state.sameBrain = null; renderPlayChoice(); });
+};
