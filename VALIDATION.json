@@ -4,10 +4,39 @@
     "nuggets",
     "vapo"
   ],
-  "idleOnly": true,
-  "webpCount": 15,
-  "totalFiles": 18,
+  "posesAdded": {
+    "filou": [
+      "idle",
+      "talk",
+      "hype",
+      "win",
+      "lose"
+    ],
+    "nuggets": [
+      "idle",
+      "talk",
+      "hype",
+      "win",
+      "lose"
+    ],
+    "vapo": [
+      "idle",
+      "talk",
+      "hype",
+      "win",
+      "lose"
+    ]
+  },
+  "formats": [
+    "full",
+    "bust",
+    "avatar-circle",
+    "icon"
+  ],
+  "webpCount": 63,
+  "totalFiles": 66,
   "notes": [
-    "Vapo idle corrected with transparent background."
+    "Includes corrected transparent idle for Vapo.",
+    "Filou, Nuggets, and Vapo now have idle + talk + hype + win + lose."
   ]
 }
