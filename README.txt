@@ -1,49 +1,64 @@
-AK'Games V1.0 — Extension Tu préfères + cartes spéciales
+AK'Games V1.0 — Passer une question sur tous les jeux
 
-À remplacer à la racine :
+Fichiers à remplacer à la racine :
 - app.js
 - multiplayer.js
+- firebase.js
 - styles.css
 - service-worker.js
 
-À remplacer dans data :
-- tu-preferes.json
+Fonctionnement en mode un téléphone :
+- bouton « Déjà vue ? Changer de carte » sur tous les jeux utilisant une question, une carte, un sujet, une identité, une blague ou une catégorie ;
+- confirmation avant le changement ;
+- les réponses déjà saisies pour cette manche sont effacées ;
+- aucun point et aucune pénalité ;
+- les chronomètres sont arrêtés puis réinitialisés sur la carte suivante.
 
-Contenu :
-- 322 questions précédentes conservées ;
-- 100 nouvelles questions ajoutées ;
-- 422 questions au total ;
-- 50 cartes spéciales intégrées ;
-- environ une carte spéciale toutes les 8 questions lors d'une partie.
+Fonctionnement en multijoueur :
+- chaque joueur peut appuyer sur « Déjà vue ? Signaler à l'hôte » ;
+- l'hôte voit immédiatement le ou les prénoms des personnes ayant signalé la carte ;
+- seul l'hôte peut confirmer le changement ;
+- la nouvelle carte apparaît sur tous les téléphones ;
+- les réponses, votes et actions de la manche passée sont supprimés ;
+- aucun score n'est modifié ;
+- les signalements sont privés et liés uniquement à la manche en cours.
 
-Nouveaux styles de questions :
-- choix avec durée ou probabilité ;
-- conséquences cachées ;
-- choix faits pour quelqu'un d'autre ;
-- technologie et futur ;
-- catastrophe et survie ;
-- petits choix atrocement pénibles.
-
-Cartes spéciales :
-- Double peine
-- Choix collectif
-- Prédiction de la majorité
-- Changement autorisé
-- Qui choisirait quoi ?
-- Réponse éclair extrême
-
-Fonctionnement :
-- Choix collectif : tout le groupe gagne 1 point seulement en cas d'unanimité ;
-- Réponse éclair extrême : 5 secondes même si le mode éclair est désactivé ;
-- les autres cartes spéciales ajoutent une consigne de discussion ou de prédiction ;
-- le système sélectionne automatiquement environ 1 carte spéciale sur 8.
+Jeux couverts :
+- Qui de nous ?
+- Le premier qui rit a perdu
+- Qui ment le mieux ?
+- Action ou Vérité
+- Je n'ai jamais
+- Tu préfères
+- Même cerveau
+- Minorité
+- Qui a répondu ça ?
+- L'Imposteur sait presque tout
+- Le Faux Expert
+- Qui suis-je ?
+- Roulette de défis
+- Mime
+- Imitation
+- La Bombe
+- tous les quiz
+- Plaide ta cause
+- Fake ou Réel ?
+- Alerte Rouge
+- Tu me connais ou pas ?
+- Le Classement secret
+- Devinettes
+- Questions osées
+- Défis adultes
+- Jeux à boire
 
 Installation :
-1. Remplace les 4 fichiers à la racine.
-2. Remplace tu-preferes.json dans data.
-3. Clique sur « Valider et envoyer (push) ».
-4. Attends la coche verte GitHub Actions.
-5. Ferme complètement AK'Games puis rouvre l'application.
+1. Remplace les cinq fichiers à la racine du dépôt.
+2. Clique sur « Valider et envoyer (push) ».
+3. Attends la coche verte GitHub Actions.
+4. Ferme complètement AK'Games sur tous les téléphones.
+5. Rouvre l'application.
+
+Aucune modification de database.rules.json n'est nécessaire.
 
 Cache PWA :
-akgames-v1.0-rc12-special-dilemmas
+akgames-v1.0-rc13-skip-all-games

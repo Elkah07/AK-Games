@@ -536,7 +536,7 @@
     const status = merged.game.submissionStatus || {};
     const revealedAnswers = merged.game.revealedAnswers || {};
     const gameState = merged.game.state || {};
-    const collections = ["answers", "votes", "actions"];
+    const collections = ["answers", "votes", "actions", "skipRequests"];
 
     collections.forEach(collection => {
       const visible = {};
@@ -1175,7 +1175,7 @@
     const key = normalizeCode(code);
     const prefixedUpdates = {};
     const collectionsToClear = Object.entries(updates || {})
-      .filter(([path, value]) => ["answers", "votes", "actions"].includes(path) && value === null)
+      .filter(([path, value]) => ["answers", "votes", "actions", "skipRequests"].includes(path) && value === null)
       .map(([path]) => path);
 
     if (collectionsToClear.length) {
@@ -1194,7 +1194,7 @@
     }
 
     Object.entries(updates || {}).forEach(([path, value]) => {
-      if (["answers", "votes", "actions"].includes(path)) return;
+      if (["answers", "votes", "actions", "skipRequests"].includes(path)) return;
       prefixedUpdates[`rooms/${key}/game/${path}`] = value;
     });
 
@@ -1212,7 +1212,7 @@
   }
 
   async function writeOwnGameEntry(code, collection, value) {
-    const allowedCollections = new Set(["answers", "votes", "actions"]);
+    const allowedCollections = new Set(["answers", "votes", "actions", "skipRequests"]);
 
     if (!allowedCollections.has(collection)) {
       throw new Error("Collection de jeu non autorisée.");
@@ -1243,7 +1243,7 @@
 
 
   async function clearOwnGameEntry(code, collection) {
-    const allowedCollections = new Set(["answers", "votes", "actions"]);
+    const allowedCollections = new Set(["answers", "votes", "actions", "skipRequests"]);
 
     if (!allowedCollections.has(collection)) {
       throw new Error("Collection de jeu non autorisée.");

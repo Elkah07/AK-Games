@@ -6967,6 +6967,323 @@
   renderWhoAmISetup = akAudit8WrapMultiSetup(renderWhoAmISetup, "Qui suis-je ?");
   renderMegaSetup = akAudit8WrapMultiSetup(renderMegaSetup, () => state.megaGame?.gameName || "Jeu");
 
+
+  /* =========================================================
+     AK'GAMES V1.0 — PASSER UNE QUESTION / CARTE DÉJÀ VUE
+     Multijoueur synchronisé
+     ========================================================= */
+
+  state.multiSkipBusy = false;
+
+  function multiSkipPhaseAllowed(gameState) {
+    if (!gameState || ["final", "results", "transition"].includes(gameState.phase)) return false;
+
+    const allowed = {
+      "who-us": ["voting"],
+      "best-liar": ["answering", "voting"],
+      "laugh-duel": ["joke"],
+      "action-truth": ["prompt"],
+      "never-have-i-ever": ["voting"],
+      "would-you-rather": ["voting"],
+      "same-brain": ["answering"],
+      "minority": ["voting"],
+      "who-answered": ["answering", "voting"],
+      "almost-impostor": ["roles", "discussion", "voting", "guessing"],
+      "fake-expert": ["brief", "speaking", "voting"],
+      "who-am-i": ["reveal", "playing"],
+      "mega-turn": ["turn"],
+      "mega-quiz": ["voting"],
+      "mega-scenario": ["voting"],
+      "mega-bomb": ["playing"],
+      "mega-know": ["target", "guessing"],
+      "mega-ranking": ["target", "guessing"]
+    };
+
+    return Boolean(allowed[gameState.type]?.includes(gameState.phase));
+  }
+
+  function multiSkipRoundNumber(gameState) {
+    if (gameState.type === "best-liar") return Number(gameState.currentRound || 0);
+    return Number(gameState.currentIndex || 0);
+  }
+
+  function multiSkipTotal(gameState) {
+    if (gameState.type === "best-liar") return (gameState.prompts || []).length;
+    if (gameState.type === "laugh-duel") return 0;
+    if (gameState.type === "who-us") return (gameState.questions || []).length;
+    if (gameState.type === "action-truth") return (gameState.prompts || []).length;
+    return (gameState.items || []).length;
+  }
+
+  function multiSkipCardId(gameState) {
+    const index = multiSkipRoundNumber(gameState);
+    const collection = gameState.type === "best-liar"
+      ? gameState.prompts
+      : gameState.type === "who-us"
+        ? gameState.questions
+        : gameState.type === "action-truth"
+          ? gameState.prompts
+          : gameState.items;
+
+    const item = collection?.[index];
+    if (item?.id) return String(item.id);
+    if (gameState.type === "laugh-duel") return String(gameState.currentJoke?.id || gameState.currentJokeId || "joke");
+    return `${gameState.type}_${index}`;
+  }
+
+  function multiSkipRequestNames(gameState, requests) {
+    const cardId = multiSkipCardId(gameState);
+    return Object.entries(requests || {})
+      .filter(([, request]) => !request?.cardId || request.cardId === cardId)
+      .map(([uid]) => state.players.find(player => player.id === uid)?.name || "Un joueur");
+  }
+
+  async function clearMultiSkipRequests() {
+    if (!state.isHost || !state.roomCode) return;
+    await AKFirebase.updateGame(state.roomCode, { skipRequests: null });
+  }
+
+  async function performMultiSkip(gameState) {
+    if (!state.isHost || !state.roomCode || !gameState || state.multiSkipBusy) return;
+    state.multiSkipBusy = true;
+    clearV09MultiTimer();
+    clearV014MultiTimer();
+    clearMultiPollTimer();
+
+    try {
+      const now = AKFirebase.now();
+      const current = multiSkipRoundNumber(gameState);
+      const total = multiSkipTotal(gameState);
+      const next = current + 1;
+      const finished = total > 0 && next >= total;
+      const updates = {
+        "state/currentResult": null,
+        "state/updatedAt": now,
+        "state/discussionEndsAt": null,
+        "state/speechEndsAt": null,
+        "state/roundEndsAt": null,
+        "state/voteEndsAt": null,
+        "state/turnEndsAt": null,
+        "state/bombEndsAt": null,
+        answers: null,
+        votes: null,
+        actions: null,
+        skipRequests: null
+      };
+
+      if (gameState.type === "laugh-duel") {
+        updates["state/phase"] = "turn-choice";
+        updates["state/currentJoke"] = null;
+        updates["state/currentJokeId"] = null;
+        updates["state/punchlineVisible"] = false;
+        await AKFirebase.updateGame(state.roomCode, updates);
+        return;
+      }
+
+      if (gameState.type === "best-liar") {
+        updates["state/phase"] = finished ? "final" : "answering";
+        updates["state/currentRound"] = finished ? current : next;
+        updates["state/finishedAt"] = finished ? now : null;
+        await AKFirebase.updateGame(state.roomCode, updates);
+        return;
+      }
+
+      updates["state/currentIndex"] = finished ? current : next;
+      updates["state/finishedAt"] = finished ? now : null;
+
+      if (gameState.type === "who-us") {
+        updates["state/phase"] = finished ? "final" : "voting";
+      } else if (gameState.type === "action-truth") {
+        updates["state/phase"] = finished ? "final" : "prompt";
+      } else if (gameState.type === "never-have-i-ever" || gameState.type === "would-you-rather") {
+        updates["state/phase"] = finished ? "final" : "voting";
+        const lightning = gameState.type === "would-you-rather" && Boolean(gameState.settings?.lightningEnabled);
+        if (!finished && lightning) {
+          updates["state/voteEndsAt"] = now + Math.max(5, Number(gameState.settings?.lightningSeconds || 15)) * 1000;
+        }
+      } else if (gameState.type === "same-brain") {
+        updates["state/phase"] = finished ? "final" : "answering";
+      } else if (gameState.type === "minority") {
+        updates["state/phase"] = finished ? "final" : "voting";
+      } else if (gameState.type === "who-answered") {
+        updates["state/phase"] = finished ? "final" : "answering";
+      } else if (gameState.type === "almost-impostor") {
+        updates["state/phase"] = finished ? "final" : "roles";
+        if (!finished) updates["state/impostorId"] = gameState.impostorOrder?.[next] || null;
+      } else if (gameState.type === "fake-expert") {
+        updates["state/phase"] = finished ? "final" : "brief";
+        if (!finished) {
+          updates["state/speakerId"] = gameState.speakerOrder?.[next] || null;
+          updates["state/role"] = gameState.roleOrder?.[next] || "fake";
+        }
+      } else if (gameState.type === "who-am-i") {
+        updates["state/phase"] = finished ? "final" : "reveal";
+        if (!finished) updates["state/guesserId"] = gameState.guesserOrder?.[next] || null;
+      } else if (gameState.type === "mega-turn") {
+        updates["state/phase"] = finished ? "final" : "turn";
+        if (!finished && Number(gameState.settings?.durationSeconds || 0) > 0) {
+          updates["state/turnEndsAt"] = now + Number(gameState.settings.durationSeconds) * 1000;
+        }
+      } else if (gameState.type === "mega-quiz" || gameState.type === "mega-scenario") {
+        updates["state/phase"] = finished ? "final" : "voting";
+      } else if (gameState.type === "mega-bomb") {
+        updates["state/phase"] = finished ? "final" : "playing";
+        if (!finished) {
+          updates["state/bombEndsAt"] = now + Math.max(10, Number(gameState.settings?.durationSeconds || 25)) * 1000;
+          updates["state/bombHolderId"] = state.players[Math.floor(Math.random() * Math.max(1, state.players.length))]?.id || null;
+        }
+      } else if (gameState.type === "mega-know" || gameState.type === "mega-ranking") {
+        updates["state/phase"] = finished ? "final" : "target";
+        updates["state/secretAnswer"] = null;
+        updates["state/secretRanking"] = null;
+      } else {
+        return;
+      }
+
+      await AKFirebase.updateGame(state.roomCode, updates);
+    } catch (error) {
+      console.error("Impossible de passer la carte :", error);
+      alert("La carte n’a pas pu être changée. Réessaie dans un instant.");
+    } finally {
+      state.multiSkipBusy = false;
+    }
+  }
+
+  async function confirmAndPerformMultiSkip(gameState, requestNames = []) {
+    const detail = requestNames.length
+      ? `${requestNames.join(", ")} ${requestNames.length > 1 ? "ont signalé" : "a signalé"} cette carte. Les réponses déjà envoyées seront effacées.`
+      : "Les réponses déjà envoyées seront effacées. Aucun point ni pénalité ne sera attribué.";
+
+    const confirmed = await showRoomDialog({
+      eyebrow: "CARTE DÉJÀ VUE",
+      title: "Passer cette question ?",
+      message: detail,
+      confirmLabel: "Changer de carte",
+      cancelLabel: "La garder",
+      icon: "door"
+    });
+
+    if (confirmed) await performMultiSkip(gameState);
+  }
+
+  async function requestMultiSkip(gameState, button) {
+    if (!state.roomCode || !gameState || state.isHost) return;
+
+    button.disabled = true;
+    try {
+      await AKFirebase.writeOwnGameEntry(state.roomCode, "skipRequests", {
+        cardId: multiSkipCardId(gameState),
+        gameType: gameState.type,
+        requestedAt: AKFirebase.now()
+      });
+      button.textContent = "✓ Signalé à l’hôte";
+    } catch (error) {
+      console.error("Signalement impossible :", error);
+      button.disabled = false;
+      button.textContent = "🙋 Déjà vue ? Signaler à l’hôte";
+    }
+  }
+
+  function mountMultiSkipControls() {
+    const room = state.roomData;
+    const gameState = room?.game?.state;
+    const existingControl = document.querySelector("#akMultiSkipControl");
+    const existingPanel = document.querySelector("#akMultiSkipRequestPanel");
+
+    if (!isMultiplayer() || !multiSkipPhaseAllowed(gameState)) {
+      existingControl?.remove();
+      existingPanel?.remove();
+      return;
+    }
+
+    const requests = room?.game?.skipRequests || {};
+    const requestNames = multiSkipRequestNames(gameState, requests);
+    const ownRequested = Boolean(requests[state.currentUid]);
+    const signature = [
+      gameState.type,
+      gameState.phase,
+      multiSkipRoundNumber(gameState),
+      state.isHost ? "host" : "guest",
+      ownRequested ? "requested" : "idle",
+      requestNames.join("|")
+    ].join("::");
+
+    if (existingControl?.dataset.akSkipSignature === signature) return;
+
+    existingControl?.remove();
+    existingPanel?.remove();
+
+    const control = document.createElement("section");
+    control.dataset.akSkipSignature = signature;
+    control.id = "akMultiSkipControl";
+    control.className = "ak-skip-control";
+    control.innerHTML = state.isHost
+      ? `
+        <button type="button" class="secondary-btn ak-skip-card-btn" data-ak-host-skip>
+          ↻ Déjà vue ? Changer de carte
+        </button>
+        <small>Seul l’hôte valide le changement. Les réponses de la manche seront annulées.</small>
+      `
+      : `
+        <button type="button" class="secondary-btn ak-skip-card-btn" data-ak-request-skip ${ownRequested ? "disabled" : ""}>
+          ${ownRequested ? "✓ Signalé à l’hôte" : "🙋 Déjà vue ? Signaler à l’hôte"}
+        </button>
+        <small>L’hôte recevra le signalement et décidera de changer la carte.</small>
+      `;
+
+    control.querySelector("[data-ak-host-skip]")?.addEventListener("click", () => {
+      confirmAndPerformMultiSkip(gameState, requestNames);
+    });
+    control.querySelector("[data-ak-request-skip]")?.addEventListener("click", event => {
+      requestMultiSkip(gameState, event.currentTarget);
+    });
+    screen.appendChild(control);
+
+    if (state.isHost && requestNames.length) {
+      const panel = document.createElement("section");
+      panel.id = "akMultiSkipRequestPanel";
+      panel.className = "ak-skip-request-panel";
+      panel.innerHTML = `
+        <div>
+          <span>🙋</span>
+          <p><strong>${escapeHtml(requestNames.join(", "))}</strong> ${requestNames.length > 1 ? "ont déjà vu" : "a déjà vu"} cette carte.</p>
+        </div>
+        <div class="ak-skip-request-actions">
+          <button type="button" class="secondary-btn" data-ak-ignore-skip>Ignorer</button>
+          <button type="button" class="primary-btn" data-ak-accept-skip>Changer</button>
+        </div>
+      `;
+
+      panel.querySelector("[data-ak-accept-skip]")?.addEventListener("click", () => {
+        confirmAndPerformMultiSkip(gameState, requestNames);
+      });
+      panel.querySelector("[data-ak-ignore-skip]")?.addEventListener("click", async event => {
+        event.currentTarget.disabled = true;
+        try {
+          await clearMultiSkipRequests();
+        } catch (error) {
+          console.error(error);
+          event.currentTarget.disabled = false;
+        }
+      });
+      screen.appendChild(panel);
+    }
+  }
+
+  let multiSkipMountQueued = false;
+  const multiSkipObserver = new MutationObserver(() => {
+    if (multiSkipMountQueued) return;
+    multiSkipMountQueued = true;
+    window.requestAnimationFrame(() => {
+      multiSkipMountQueued = false;
+      mountMultiSkipControls();
+    });
+  });
+  multiSkipObserver.observe(screen, { childList: true, subtree: true });
+  window.requestAnimationFrame(mountMultiSkipControls);
+  state.multiSkipRefreshTimer = window.setInterval(mountMultiSkipControls, 650);
+
+
   window.AKGamesMultiplayer = Object.freeze({
     launchRandomGame: () => launchRandomMultiplayerGame()
   });

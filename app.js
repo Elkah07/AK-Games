@@ -5879,3 +5879,348 @@ backBtn.addEventListener("click", event => {
   state.akAudit11SettingsOrigin = null;
   akAudit11ReturnFromSettings(origin);
 }, true);
+
+/* =========================================================
+   AK'GAMES V1.0 — PASSER UNE QUESTION / CARTE DÉJÀ VUE
+   Mode un téléphone
+   ========================================================= */
+
+state.akSkipBusy = false;
+
+function akSkipDialog({ titleText = "Changer cette carte ?", message = "La manche en cours sera ignorée, sans point ni pénalité." } = {}) {
+  document.querySelector(".ak-skip-dialog-backdrop")?.remove();
+
+  return new Promise(resolve => {
+    const backdrop = document.createElement("div");
+    backdrop.className = "ak-room-dialog-backdrop ak-skip-dialog-backdrop";
+    backdrop.innerHTML = `
+      <section class="ak-room-dialog" role="dialog" aria-modal="true" aria-labelledby="akSkipDialogTitle" aria-describedby="akSkipDialogMessage">
+        <div class="ak-room-dialog-glow" aria-hidden="true"></div>
+        <div class="ak-room-dialog-icon ak-skip-dialog-icon" aria-hidden="true">↻</div>
+        <p class="ak-room-dialog-eyebrow">CARTE DÉJÀ VUE</p>
+        <h2 id="akSkipDialogTitle">${escapeHtml(titleText)}</h2>
+        <div class="ak-room-dialog-divider" aria-hidden="true"><span></span><b>✦</b><span></span></div>
+        <p id="akSkipDialogMessage" class="ak-room-dialog-message">${escapeHtml(message)}</p>
+        <div class="ak-room-dialog-actions">
+          <button type="button" class="ak-room-dialog-btn ak-room-dialog-btn-secondary" data-ak-skip-cancel>Garder la carte</button>
+          <button type="button" class="ak-room-dialog-btn ak-room-dialog-btn-primary" data-ak-skip-confirm>Passer</button>
+        </div>
+      </section>
+    `;
+
+    const finish = value => {
+      document.removeEventListener("keydown", onKeydown);
+      backdrop.classList.add("is-closing");
+      window.setTimeout(() => {
+        backdrop.remove();
+        resolve(value);
+      }, 140);
+    };
+
+    const onKeydown = event => {
+      if (event.key === "Escape") finish(false);
+    };
+
+    backdrop.querySelector("[data-ak-skip-confirm]")?.addEventListener("click", () => finish(true));
+    backdrop.querySelector("[data-ak-skip-cancel]")?.addEventListener("click", () => finish(false));
+    backdrop.addEventListener("click", event => {
+      if (event.target === backdrop) finish(false);
+    });
+
+    document.body.appendChild(backdrop);
+    document.addEventListener("keydown", onKeydown);
+    window.requestAnimationFrame(() => {
+      backdrop.classList.add("is-visible");
+      backdrop.querySelector("[data-ak-skip-confirm]")?.focus();
+    });
+  });
+}
+
+function akSoloSkipSelectorsMatch(selectors) {
+  return selectors.some(selector => Boolean(document.querySelector(selector)));
+}
+
+function akGetSoloSkipContext() {
+  if (state.mode !== "single" || state.akSkipBusy) return null;
+
+  if (
+    state.quiDeNous?.questions?.length &&
+    state.quiDeNous.currentIndex < state.quiDeNous.questions.length &&
+    akSoloSkipSelectorsMatch(["#beginVotes", "#readyToVote", "[data-vote-target]", "#nextVoter", "#revealWhoUs"])
+  ) {
+    return {
+      label: "question",
+      skip() {
+        const game = state.quiDeNous;
+        game.currentIndex += 1;
+        game.currentVoterIndex = 0;
+        game.currentVotes = {};
+        if (game.currentIndex >= game.questions.length) renderWhoUsEnd();
+        else renderWhoUsQuestion();
+      }
+    };
+  }
+
+  if (
+    state.laughDuel?.currentJoke &&
+    akSoloSkipSelectorsMatch(["#revealPunchline", ".joke-card .punchline", ".joke-card + .laugh-outcomes"])
+  ) {
+    return {
+      label: "blague",
+      message: "Une autre blague sera tirée pour la même personne.",
+      skip() {
+        drawLaughJoke();
+      }
+    };
+  }
+
+  if (
+    state.bestLiar?.prompts?.length &&
+    state.bestLiar.currentRound < state.bestLiar.prompts.length &&
+    akSoloSkipSelectorsMatch([
+      "#startWritingLies", "#readyToLie", "#submitLie", "#nextLieWriter",
+      "#startLieVotes", "#readyToVoteLie", "[data-lie-vote]", "#nextLieVoter"
+    ])
+  ) {
+    return {
+      label: "situation",
+      skip() {
+        const game = state.bestLiar;
+        game.currentRound += 1;
+        game.currentWriterIndex = 0;
+        game.currentVoterIndex = 0;
+        game.currentAnswers = [];
+        game.currentVotes = {};
+        if (game.currentRound >= game.prompts.length) renderBestLiarEnd();
+        else renderBestLiarRoundIntro();
+      }
+    };
+  }
+
+  if (
+    state.actionTruth?.prompts?.length &&
+    state.actionTruth.currentIndex < state.actionTruth.prompts.length &&
+    akSoloSkipSelectorsMatch(["#actionTruthDone", "#actionTruthSkip"])
+  ) {
+    return {
+      label: "carte",
+      skip() {
+        state.actionTruth.currentIndex += 1;
+        renderActionTruthRound();
+      }
+    };
+  }
+
+  if (
+    state.ambiancePoll?.items?.length &&
+    state.ambiancePoll.currentIndex < state.ambiancePoll.items.length &&
+    akSoloSkipSelectorsMatch(["#openPrivateVote", "[data-poll-vote]"])
+  ) {
+    return {
+      label: "question",
+      skip() {
+        const game = state.ambiancePoll;
+        clearAmbiancePollTimer();
+        game.currentIndex += 1;
+        game.currentVoterIndex = 0;
+        game.votes = {};
+        renderAmbiancePollGate();
+      }
+    };
+  }
+
+  if (
+    state.sameBrain?.items?.length &&
+    state.sameBrain.currentIndex < state.sameBrain.items.length &&
+    akSoloSkipSelectorsMatch(["#openBrainAnswer", "#saveBrainAnswer"])
+  ) {
+    return {
+      label: "question",
+      skip() {
+        const game = state.sameBrain;
+        game.currentIndex += 1;
+        game.currentWriterIndex = 0;
+        game.answers = {};
+        renderSameBrainGate();
+      }
+    };
+  }
+
+  if (
+    state.minorityGame?.items?.length &&
+    state.minorityGame.currentIndex < state.minorityGame.items.length &&
+    akSoloSkipSelectorsMatch(["#openMinorityVote", "[data-minority-vote]"])
+  ) {
+    return {
+      label: "question",
+      skip() {
+        const game = state.minorityGame;
+        game.currentIndex += 1;
+        game.currentVoterIndex = 0;
+        game.votes = {};
+        renderMinorityGate();
+      }
+    };
+  }
+
+  if (
+    state.whoAnswered?.items?.length &&
+    state.whoAnswered.currentIndex < state.whoAnswered.items.length &&
+    akSoloSkipSelectorsMatch(["#openWhoAnswer", "#saveWhoAnswer", "#openWhoVote", "[data-who-vote]"])
+  ) {
+    return {
+      label: "question",
+      skip() {
+        const game = state.whoAnswered;
+        game.currentIndex += 1;
+        game.currentWriterIndex = 0;
+        game.currentVoterIndex = 0;
+        game.answers = {};
+        game.votes = {};
+        if (game.currentIndex >= game.items.length) renderWhoAnsweredEnd();
+        else renderWhoAnsweredWriteGate();
+      }
+    };
+  }
+
+  if (
+    state.almostImpostor?.items?.length &&
+    state.almostImpostor.currentIndex < state.almostImpostor.items.length &&
+    akSoloSkipSelectorsMatch([
+      "#openImpostorRole", "#hideImpostorRole", "#impostorVoteNow",
+      "#openImpostorVote", "[data-impostor-vote]", "[data-impostor-guess]"
+    ])
+  ) {
+    return {
+      label: "mot",
+      skip() {
+        clearV09Timer();
+        state.almostImpostor.currentIndex += 1;
+        prepareAlmostImpostorRound();
+      }
+    };
+  }
+
+  if (
+    state.fakeExpert?.items?.length &&
+    state.fakeExpert.currentIndex < state.fakeExpert.items.length &&
+    akSoloSkipSelectorsMatch([
+      "#openExpertBrief", "#startExpertSpeech", "#expertVoteNow",
+      "#openExpertVote", "[data-expert-vote]"
+    ])
+  ) {
+    return {
+      label: "sujet",
+      skip() {
+        clearV09Timer();
+        state.fakeExpert.currentIndex += 1;
+        prepareFakeExpertRound();
+      }
+    };
+  }
+
+  if (
+    state.whoAmI?.items?.length &&
+    state.whoAmI.currentIndex < state.whoAmI.items.length &&
+    akSoloSkipSelectorsMatch(["#showWhoAmICard", "#startWhoAmIRound", "#whoAmIFound", "#whoAmIFailed"])
+  ) {
+    return {
+      label: "identité",
+      skip() {
+        clearV09Timer();
+        state.whoAmI.currentIndex += 1;
+        renderWhoAmIRevealGate();
+      }
+    };
+  }
+
+  if (
+    state.megaGame?.items?.length &&
+    state.megaGame.currentIndex < state.megaGame.items.length &&
+    akSoloSkipSelectorsMatch([
+      "#revealMegaPrompt", "#megaDone", "#megaSkip",
+      "#openMegaQuiz", "[data-mega-answer]",
+      "#openScenarioVote", "[data-scenario-vote]",
+      "#openKnowTarget", "[data-know-target]", "#openKnowGuess", "[data-know-guess]",
+      "#openRankingTarget", "[data-rank-pick]", "#openRankingGuess", "[data-ranking-guess]",
+      "#passBomb", "#explodeBomb"
+    ])
+  ) {
+    return {
+      label: state.megaGame.engine === "bomb" ? "catégorie" : "carte",
+      skip() {
+        const game = state.megaGame;
+        clearV014Timer();
+        game.currentIndex += 1;
+        game.currentPlayerIndex = 0;
+        game.currentVoterIndex = 0;
+        game.votes = {};
+        game.revealed = false;
+        game.targetAnswer = null;
+        game.targetRanking = [];
+        game.rankingDraft = [];
+        game.bombEndsAt = null;
+        game.currentResult = null;
+        renderMegaCurrent();
+      }
+    };
+  }
+
+  return null;
+}
+
+async function akSkipSoloCurrentCard() {
+  const context = akGetSoloSkipContext();
+  if (!context) return;
+
+  const confirmed = await akSkipDialog({
+    titleText: `Passer cette ${context.label} ?`,
+    message: context.message || "Les réponses déjà données seront effacées. Aucun point ni pénalité ne sera attribué."
+  });
+
+  if (!confirmed) return;
+
+  state.akSkipBusy = true;
+  try {
+    context.skip();
+  } finally {
+    state.akSkipBusy = false;
+  }
+}
+
+function akMountSoloSkipControl() {
+  const context = akGetSoloSkipContext();
+  const existing = document.querySelector("#akSoloSkipControl");
+
+  if (!context) {
+    existing?.remove();
+    return;
+  }
+
+  if (existing) return;
+
+  const control = document.createElement("section");
+  control.id = "akSoloSkipControl";
+  control.className = "ak-skip-control";
+  control.innerHTML = `
+    <button type="button" class="secondary-btn ak-skip-card-btn" data-ak-solo-skip>
+      ↻ Déjà vue ? Changer de carte
+    </button>
+    <small>Aucun point, aucune pénalité et toutes les réponses de cette manche sont annulées.</small>
+  `;
+
+  control.querySelector("[data-ak-solo-skip]")?.addEventListener("click", akSkipSoloCurrentCard);
+  screen.appendChild(control);
+}
+
+let akSoloSkipMountQueued = false;
+const akSoloSkipObserver = new MutationObserver(() => {
+  if (akSoloSkipMountQueued) return;
+  akSoloSkipMountQueued = true;
+  window.requestAnimationFrame(() => {
+    akSoloSkipMountQueued = false;
+    akMountSoloSkipControl();
+  });
+});
+akSoloSkipObserver.observe(screen, { childList: true, subtree: true });
+window.requestAnimationFrame(akMountSoloSkipControl);

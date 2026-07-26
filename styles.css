@@ -4875,3 +4875,92 @@ select:focus-visible,
     height: 38px;
   }
 }
+
+/* =========================================================
+   AK'GAMES — PASSER UNE QUESTION / CARTE DÉJÀ VUE
+   ========================================================= */
+
+.ak-skip-control {
+  display: grid;
+  gap: 7px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  text-align: center;
+}
+
+.ak-skip-control small {
+  color: rgba(232, 226, 244, .62);
+  font-size: .76rem;
+  line-height: 1.45;
+}
+
+.ak-skip-card-btn {
+  width: 100%;
+  border-style: dashed;
+  border-color: rgba(192, 132, 252, .4);
+  background: rgba(126, 34, 206, .08);
+}
+
+.ak-skip-card-btn:hover:not(:disabled),
+.ak-skip-card-btn:focus-visible:not(:disabled) {
+  border-color: rgba(216, 180, 254, .75);
+  background: rgba(126, 34, 206, .15);
+}
+
+.ak-skip-card-btn:disabled {
+  opacity: .72;
+}
+
+.ak-skip-request-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid rgba(216, 180, 254, .34);
+  border-radius: 18px;
+  background: rgba(88, 28, 135, .14);
+}
+
+.ak-skip-request-panel > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ak-skip-request-panel > div:first-child > span {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  border-radius: 13px;
+  background: rgba(192, 132, 252, .14);
+  font-size: 1.15rem;
+}
+
+.ak-skip-request-panel p {
+  margin: 0;
+  color: rgba(245, 243, 255, .82);
+  line-height: 1.45;
+}
+
+.ak-skip-request-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.ak-skip-dialog-icon {
+  display: grid;
+  place-items: center;
+  color: #e9d5ff;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+@media (max-width: 460px) {
+  .ak-skip-request-actions {
+    grid-template-columns: 1fr;
+  }
+}
