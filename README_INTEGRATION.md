@@ -1,51 +1,74 @@
-# AK'Games — personnages et répliques V2
+# AK’Games — Pack d’intégration mascottes et poses V3
 
-## Contenu
+## Ce que contient réellement ce ZIP
 
-- **17 personnages**
-- **12 moments de prise de parole**
-- **8 phrases par moment et par personnage**
-- **96 phrases par personnage**
-- **1632 phrases au total**
+- Les **17 visuels validés** dans la pose `idle`.
+- Pour chaque pose `idle`, les formats `full`, `bust`, `avatar-circle` et `icon` en PNG et WEBP.
+- Les **1 632 phrases** et leur moteur anti-répétition.
+- Le moteur `character-poses.js`, prêt à choisir la bonne image selon le personnage, la pose et le cadrage.
+- Des animations de secours différentes pour `talk`, `hype`, `win` et `lose`.
+- La Bible officielle des poses.
 
-## Événements
+## Transparence importante
 
-- `selected` : Juste après que le joueur confirme son personnage.
-- `lobby_ready` : Dans le lobby lorsque le joueur est prêt ou lorsque tous les joueurs sont réunis.
-- `game_start` : Au lancement effectif d'un mini-jeu, avant la première manche.
-- `turn_start` : Quand ce joueur devient la personne active de la manche.
-- `phone_pass` : Sur l'écran demandant de passer le téléphone à ce joueur ou au joueur suivant.
-- `waiting_others` : Après validation d'une réponse, pendant l'attente des autres joueurs en multijoueur.
-- `round_win` : Quand le joueur gagne la manche, marque des points ou réussit son défi.
-- `round_miss` : Quand le joueur rate, passe, ne marque pas ou manque le temps, uniquement si le jeu accepte ce ton.
-- `pause` : Au moment où l'hôte met la partie en pause.
-- `resume` : Au moment où l'hôte reprend la partie.
-- `final_win` : À l'écran final si le joueur termine premier ou premier ex æquo.
-- `final_lose` : À l'écran final si le joueur ne termine pas premier.
+Les 68 nouvelles illustrations `talk`, `hype`, `win` et `lose` ne sont pas encore dessinées et validées. Elles ne sont pas remplacées par de faux visuels dans ce pack. Tant qu’un fichier manque, le moteur affiche automatiquement la pose `idle` avec une animation adaptée.
 
-## Éviter les répétitions
+## Installation
 
-Ne choisissez pas une phrase avec `Math.random()` à chaque affichage. Utilisez `character-voice-engine.js` : il mélange les 8 phrases d’un événement, les distribue une par une, puis remélange seulement lorsque le sac est vide. Une phrase ne peut donc pas revenir immédiatement.
+Copier à la racine du projet :
 
-```js
-import characterData from './akgames-characters.json' with {{ type: 'json' }};
-import {{ CharacterVoiceEngine }} from './character-voice-engine.js';
+- `assets/`
+- `data/`
+- `character-poses.js`
+- `character-poses.css`
+- `character-voice-engine.js`
 
-const voices = new CharacterVoiceEngine(characterData);
-const line = voices.getLine('spike', 'turn_start');
+Puis charger les fichiers :
+
+```html
+<link rel="stylesheet" href="character-poses.css">
+<script src="character-poses.js" defer></script>
+<script src="character-voice-engine.js" defer></script>
 ```
 
-## Recadrages d’images prévus
+## Exemples
 
-Chaque personnage possède les clés suivantes dans le JSON :
+```js
+const winner = AKCharacterPoses.createImage("frog", {
+  pose: "win",
+  format: "full",
+  alt: "Croâ célèbre la victoire"
+});
+container.append(winner);
+```
 
-- `full` : personnage entier, victoire et classement ;
-- `bust` : tête et épaules, dialogues et lobby ;
-- `avatar-circle` : recadrage circulaire pour le choix du personnage ;
-- `icon` : mini-format pour scores et listes.
+```js
+avatarContainer.innerHTML = AKCharacterPoses.pictureMarkup("bonnie", {
+  pose: "idle",
+  format: "avatar-circle",
+  alt: "Bonnie"
+});
+```
 
-Les chemins sont déjà normalisés dans le JSON. Les fichiers visuels correspondants devront être générés et placés dans `assets/characters/<id>/` lors de l’intégration.
+```js
+AKCharacterPoses.setPose(existingImage, "talk");
+```
 
-## Fréquence d’affichage recommandée
+## Quand les nouvelles poses seront validées
 
-Le JSON contient `recommendedDisplayRate` pour éviter que les mascottes parlent à chaque micro-action. Les moments importants (`selected`, `game_start`, `pause`, `resume`, fins de partie) sont à 100 %, tandis que les moments très fréquents (`waiting_others`, `phone_pass`) sont plus espacés.
+Déposer simplement les fichiers dans :
+
+```text
+assets/characters/<personnage>/<pose>/
+  master.png
+  full.png
+  full.webp
+  bust.png
+  bust.webp
+  avatar-circle.png
+  avatar-circle.webp
+  icon.png
+  icon.webp
+```
+
+Puis passer `available` à `true` dans `data/characters-poses.json` et ajouter la pose au tableau `AVAILABLE_POSES` de `character-poses.js`.

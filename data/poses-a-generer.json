@@ -1,0 +1,345 @@
+{
+  "count": 68,
+  "items": [
+    {
+      "character": "croa",
+      "name": "Croâ",
+      "pose": "talk"
+    },
+    {
+      "character": "croa",
+      "name": "Croâ",
+      "pose": "hype"
+    },
+    {
+      "character": "croa",
+      "name": "Croâ",
+      "pose": "win"
+    },
+    {
+      "character": "croa",
+      "name": "Croâ",
+      "pose": "lose"
+    },
+    {
+      "character": "loki",
+      "name": "Loki",
+      "pose": "talk"
+    },
+    {
+      "character": "loki",
+      "name": "Loki",
+      "pose": "hype"
+    },
+    {
+      "character": "loki",
+      "name": "Loki",
+      "pose": "win"
+    },
+    {
+      "character": "loki",
+      "name": "Loki",
+      "pose": "lose"
+    },
+    {
+      "character": "kaia",
+      "name": "Kaia",
+      "pose": "talk"
+    },
+    {
+      "character": "kaia",
+      "name": "Kaia",
+      "pose": "hype"
+    },
+    {
+      "character": "kaia",
+      "name": "Kaia",
+      "pose": "win"
+    },
+    {
+      "character": "kaia",
+      "name": "Kaia",
+      "pose": "lose"
+    },
+    {
+      "character": "bonnie",
+      "name": "Bonnie",
+      "pose": "talk"
+    },
+    {
+      "character": "bonnie",
+      "name": "Bonnie",
+      "pose": "hype"
+    },
+    {
+      "character": "bonnie",
+      "name": "Bonnie",
+      "pose": "win"
+    },
+    {
+      "character": "bonnie",
+      "name": "Bonnie",
+      "pose": "lose"
+    },
+    {
+      "character": "edgar",
+      "name": "Edgar",
+      "pose": "talk"
+    },
+    {
+      "character": "edgar",
+      "name": "Edgar",
+      "pose": "hype"
+    },
+    {
+      "character": "edgar",
+      "name": "Edgar",
+      "pose": "win"
+    },
+    {
+      "character": "edgar",
+      "name": "Edgar",
+      "pose": "lose"
+    },
+    {
+      "character": "filou",
+      "name": "Filou",
+      "pose": "talk"
+    },
+    {
+      "character": "filou",
+      "name": "Filou",
+      "pose": "hype"
+    },
+    {
+      "character": "filou",
+      "name": "Filou",
+      "pose": "win"
+    },
+    {
+      "character": "filou",
+      "name": "Filou",
+      "pose": "lose"
+    },
+    {
+      "character": "nuggets",
+      "name": "Nuggets",
+      "pose": "talk"
+    },
+    {
+      "character": "nuggets",
+      "name": "Nuggets",
+      "pose": "hype"
+    },
+    {
+      "character": "nuggets",
+      "name": "Nuggets",
+      "pose": "win"
+    },
+    {
+      "character": "nuggets",
+      "name": "Nuggets",
+      "pose": "lose"
+    },
+    {
+      "character": "vapo",
+      "name": "Vapo",
+      "pose": "talk"
+    },
+    {
+      "character": "vapo",
+      "name": "Vapo",
+      "pose": "hype"
+    },
+    {
+      "character": "vapo",
+      "name": "Vapo",
+      "pose": "win"
+    },
+    {
+      "character": "vapo",
+      "name": "Vapo",
+      "pose": "lose"
+    },
+    {
+      "character": "rrrrh",
+      "name": "Rrrrh",
+      "pose": "talk"
+    },
+    {
+      "character": "rrrrh",
+      "name": "Rrrrh",
+      "pose": "hype"
+    },
+    {
+      "character": "rrrrh",
+      "name": "Rrrrh",
+      "pose": "win"
+    },
+    {
+      "character": "rrrrh",
+      "name": "Rrrrh",
+      "pose": "lose"
+    },
+    {
+      "character": "sir-moustache",
+      "name": "Sir Moustache",
+      "pose": "talk"
+    },
+    {
+      "character": "sir-moustache",
+      "name": "Sir Moustache",
+      "pose": "hype"
+    },
+    {
+      "character": "sir-moustache",
+      "name": "Sir Moustache",
+      "pose": "win"
+    },
+    {
+      "character": "sir-moustache",
+      "name": "Sir Moustache",
+      "pose": "lose"
+    },
+    {
+      "character": "snow",
+      "name": "Snow",
+      "pose": "talk"
+    },
+    {
+      "character": "snow",
+      "name": "Snow",
+      "pose": "hype"
+    },
+    {
+      "character": "snow",
+      "name": "Snow",
+      "pose": "win"
+    },
+    {
+      "character": "snow",
+      "name": "Snow",
+      "pose": "lose"
+    },
+    {
+      "character": "maurice",
+      "name": "Maurice",
+      "pose": "talk"
+    },
+    {
+      "character": "maurice",
+      "name": "Maurice",
+      "pose": "hype"
+    },
+    {
+      "character": "maurice",
+      "name": "Maurice",
+      "pose": "win"
+    },
+    {
+      "character": "maurice",
+      "name": "Maurice",
+      "pose": "lose"
+    },
+    {
+      "character": "moon",
+      "name": "Moon",
+      "pose": "talk"
+    },
+    {
+      "character": "moon",
+      "name": "Moon",
+      "pose": "hype"
+    },
+    {
+      "character": "moon",
+      "name": "Moon",
+      "pose": "win"
+    },
+    {
+      "character": "moon",
+      "name": "Moon",
+      "pose": "lose"
+    },
+    {
+      "character": "spike",
+      "name": "Spike",
+      "pose": "talk"
+    },
+    {
+      "character": "spike",
+      "name": "Spike",
+      "pose": "hype"
+    },
+    {
+      "character": "spike",
+      "name": "Spike",
+      "pose": "win"
+    },
+    {
+      "character": "spike",
+      "name": "Spike",
+      "pose": "lose"
+    },
+    {
+      "character": "honey",
+      "name": "Honey",
+      "pose": "talk"
+    },
+    {
+      "character": "honey",
+      "name": "Honey",
+      "pose": "hype"
+    },
+    {
+      "character": "honey",
+      "name": "Honey",
+      "pose": "win"
+    },
+    {
+      "character": "honey",
+      "name": "Honey",
+      "pose": "lose"
+    },
+    {
+      "character": "flash",
+      "name": "Flash",
+      "pose": "talk"
+    },
+    {
+      "character": "flash",
+      "name": "Flash",
+      "pose": "hype"
+    },
+    {
+      "character": "flash",
+      "name": "Flash",
+      "pose": "win"
+    },
+    {
+      "character": "flash",
+      "name": "Flash",
+      "pose": "lose"
+    },
+    {
+      "character": "marcellius",
+      "name": "Marcellius",
+      "pose": "talk"
+    },
+    {
+      "character": "marcellius",
+      "name": "Marcellius",
+      "pose": "hype"
+    },
+    {
+      "character": "marcellius",
+      "name": "Marcellius",
+      "pose": "win"
+    },
+    {
+      "character": "marcellius",
+      "name": "Marcellius",
+      "pose": "lose"
+    }
+  ]
+}

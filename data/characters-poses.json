@@ -1,0 +1,1343 @@
+{
+  "version": 3,
+  "basePath": "assets/characters",
+  "poses": [
+    "idle",
+    "talk",
+    "hype",
+    "win",
+    "lose"
+  ],
+  "formats": {
+    "master": {
+      "extension": "png",
+      "purpose": "source HD"
+    },
+    "full": {
+      "size": 1024,
+      "extensions": [
+        "webp",
+        "png"
+      ]
+    },
+    "bust": {
+      "size": 768,
+      "extensions": [
+        "webp",
+        "png"
+      ]
+    },
+    "avatarCircle": {
+      "size": 512,
+      "extensions": [
+        "webp",
+        "png"
+      ]
+    },
+    "icon": {
+      "size": 256,
+      "extensions": [
+        "webp",
+        "png"
+      ]
+    }
+  },
+  "fallback": {
+    "missingPose": "idle",
+    "missingWebp": "png"
+  },
+  "characters": {
+    "croa": {
+      "name": "Croâ",
+      "legacyAvatarId": "frog",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/croa/idle/master.png",
+            "fullPng": "assets/characters/croa/idle/full.png",
+            "fullWebp": "assets/characters/croa/idle/full.webp",
+            "bustPng": "assets/characters/croa/idle/bust.png",
+            "bustWebp": "assets/characters/croa/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/croa/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/croa/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/croa/idle/icon.png",
+            "iconWebp": "assets/characters/croa/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/croa/talk/master.png",
+            "fullPng": "assets/characters/croa/talk/full.png",
+            "fullWebp": "assets/characters/croa/talk/full.webp",
+            "bustPng": "assets/characters/croa/talk/bust.png",
+            "bustWebp": "assets/characters/croa/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/croa/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/croa/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/croa/talk/icon.png",
+            "iconWebp": "assets/characters/croa/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/croa/hype/master.png",
+            "fullPng": "assets/characters/croa/hype/full.png",
+            "fullWebp": "assets/characters/croa/hype/full.webp",
+            "bustPng": "assets/characters/croa/hype/bust.png",
+            "bustWebp": "assets/characters/croa/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/croa/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/croa/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/croa/hype/icon.png",
+            "iconWebp": "assets/characters/croa/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/croa/win/master.png",
+            "fullPng": "assets/characters/croa/win/full.png",
+            "fullWebp": "assets/characters/croa/win/full.webp",
+            "bustPng": "assets/characters/croa/win/bust.png",
+            "bustWebp": "assets/characters/croa/win/bust.webp",
+            "avatarCirclePng": "assets/characters/croa/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/croa/win/avatar-circle.webp",
+            "iconPng": "assets/characters/croa/win/icon.png",
+            "iconWebp": "assets/characters/croa/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/croa/lose/master.png",
+            "fullPng": "assets/characters/croa/lose/full.png",
+            "fullWebp": "assets/characters/croa/lose/full.webp",
+            "bustPng": "assets/characters/croa/lose/bust.png",
+            "bustWebp": "assets/characters/croa/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/croa/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/croa/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/croa/lose/icon.png",
+            "iconWebp": "assets/characters/croa/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "loki": {
+      "name": "Loki",
+      "legacyAvatarId": "otter",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/loki/idle/master.png",
+            "fullPng": "assets/characters/loki/idle/full.png",
+            "fullWebp": "assets/characters/loki/idle/full.webp",
+            "bustPng": "assets/characters/loki/idle/bust.png",
+            "bustWebp": "assets/characters/loki/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/loki/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/loki/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/loki/idle/icon.png",
+            "iconWebp": "assets/characters/loki/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/loki/talk/master.png",
+            "fullPng": "assets/characters/loki/talk/full.png",
+            "fullWebp": "assets/characters/loki/talk/full.webp",
+            "bustPng": "assets/characters/loki/talk/bust.png",
+            "bustWebp": "assets/characters/loki/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/loki/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/loki/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/loki/talk/icon.png",
+            "iconWebp": "assets/characters/loki/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/loki/hype/master.png",
+            "fullPng": "assets/characters/loki/hype/full.png",
+            "fullWebp": "assets/characters/loki/hype/full.webp",
+            "bustPng": "assets/characters/loki/hype/bust.png",
+            "bustWebp": "assets/characters/loki/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/loki/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/loki/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/loki/hype/icon.png",
+            "iconWebp": "assets/characters/loki/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/loki/win/master.png",
+            "fullPng": "assets/characters/loki/win/full.png",
+            "fullWebp": "assets/characters/loki/win/full.webp",
+            "bustPng": "assets/characters/loki/win/bust.png",
+            "bustWebp": "assets/characters/loki/win/bust.webp",
+            "avatarCirclePng": "assets/characters/loki/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/loki/win/avatar-circle.webp",
+            "iconPng": "assets/characters/loki/win/icon.png",
+            "iconWebp": "assets/characters/loki/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/loki/lose/master.png",
+            "fullPng": "assets/characters/loki/lose/full.png",
+            "fullWebp": "assets/characters/loki/lose/full.webp",
+            "bustPng": "assets/characters/loki/lose/bust.png",
+            "bustWebp": "assets/characters/loki/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/loki/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/loki/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/loki/lose/icon.png",
+            "iconWebp": "assets/characters/loki/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "kaia": {
+      "name": "Kaia",
+      "legacyAvatarId": "panda",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/kaia/idle/master.png",
+            "fullPng": "assets/characters/kaia/idle/full.png",
+            "fullWebp": "assets/characters/kaia/idle/full.webp",
+            "bustPng": "assets/characters/kaia/idle/bust.png",
+            "bustWebp": "assets/characters/kaia/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/kaia/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/kaia/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/kaia/idle/icon.png",
+            "iconWebp": "assets/characters/kaia/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/kaia/talk/master.png",
+            "fullPng": "assets/characters/kaia/talk/full.png",
+            "fullWebp": "assets/characters/kaia/talk/full.webp",
+            "bustPng": "assets/characters/kaia/talk/bust.png",
+            "bustWebp": "assets/characters/kaia/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/kaia/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/kaia/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/kaia/talk/icon.png",
+            "iconWebp": "assets/characters/kaia/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/kaia/hype/master.png",
+            "fullPng": "assets/characters/kaia/hype/full.png",
+            "fullWebp": "assets/characters/kaia/hype/full.webp",
+            "bustPng": "assets/characters/kaia/hype/bust.png",
+            "bustWebp": "assets/characters/kaia/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/kaia/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/kaia/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/kaia/hype/icon.png",
+            "iconWebp": "assets/characters/kaia/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/kaia/win/master.png",
+            "fullPng": "assets/characters/kaia/win/full.png",
+            "fullWebp": "assets/characters/kaia/win/full.webp",
+            "bustPng": "assets/characters/kaia/win/bust.png",
+            "bustWebp": "assets/characters/kaia/win/bust.webp",
+            "avatarCirclePng": "assets/characters/kaia/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/kaia/win/avatar-circle.webp",
+            "iconPng": "assets/characters/kaia/win/icon.png",
+            "iconWebp": "assets/characters/kaia/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/kaia/lose/master.png",
+            "fullPng": "assets/characters/kaia/lose/full.png",
+            "fullWebp": "assets/characters/kaia/lose/full.webp",
+            "bustPng": "assets/characters/kaia/lose/bust.png",
+            "bustWebp": "assets/characters/kaia/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/kaia/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/kaia/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/kaia/lose/icon.png",
+            "iconWebp": "assets/characters/kaia/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "bonnie": {
+      "name": "Bonnie",
+      "legacyAvatarId": "dog",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/bonnie/idle/master.png",
+            "fullPng": "assets/characters/bonnie/idle/full.png",
+            "fullWebp": "assets/characters/bonnie/idle/full.webp",
+            "bustPng": "assets/characters/bonnie/idle/bust.png",
+            "bustWebp": "assets/characters/bonnie/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/bonnie/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/bonnie/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/bonnie/idle/icon.png",
+            "iconWebp": "assets/characters/bonnie/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/bonnie/talk/master.png",
+            "fullPng": "assets/characters/bonnie/talk/full.png",
+            "fullWebp": "assets/characters/bonnie/talk/full.webp",
+            "bustPng": "assets/characters/bonnie/talk/bust.png",
+            "bustWebp": "assets/characters/bonnie/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/bonnie/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/bonnie/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/bonnie/talk/icon.png",
+            "iconWebp": "assets/characters/bonnie/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/bonnie/hype/master.png",
+            "fullPng": "assets/characters/bonnie/hype/full.png",
+            "fullWebp": "assets/characters/bonnie/hype/full.webp",
+            "bustPng": "assets/characters/bonnie/hype/bust.png",
+            "bustWebp": "assets/characters/bonnie/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/bonnie/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/bonnie/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/bonnie/hype/icon.png",
+            "iconWebp": "assets/characters/bonnie/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/bonnie/win/master.png",
+            "fullPng": "assets/characters/bonnie/win/full.png",
+            "fullWebp": "assets/characters/bonnie/win/full.webp",
+            "bustPng": "assets/characters/bonnie/win/bust.png",
+            "bustWebp": "assets/characters/bonnie/win/bust.webp",
+            "avatarCirclePng": "assets/characters/bonnie/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/bonnie/win/avatar-circle.webp",
+            "iconPng": "assets/characters/bonnie/win/icon.png",
+            "iconWebp": "assets/characters/bonnie/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/bonnie/lose/master.png",
+            "fullPng": "assets/characters/bonnie/lose/full.png",
+            "fullWebp": "assets/characters/bonnie/lose/full.webp",
+            "bustPng": "assets/characters/bonnie/lose/bust.png",
+            "bustWebp": "assets/characters/bonnie/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/bonnie/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/bonnie/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/bonnie/lose/icon.png",
+            "iconWebp": "assets/characters/bonnie/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "edgar": {
+      "name": "Edgar",
+      "legacyAvatarId": "crow",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/edgar/idle/master.png",
+            "fullPng": "assets/characters/edgar/idle/full.png",
+            "fullWebp": "assets/characters/edgar/idle/full.webp",
+            "bustPng": "assets/characters/edgar/idle/bust.png",
+            "bustWebp": "assets/characters/edgar/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/edgar/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/edgar/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/edgar/idle/icon.png",
+            "iconWebp": "assets/characters/edgar/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/edgar/talk/master.png",
+            "fullPng": "assets/characters/edgar/talk/full.png",
+            "fullWebp": "assets/characters/edgar/talk/full.webp",
+            "bustPng": "assets/characters/edgar/talk/bust.png",
+            "bustWebp": "assets/characters/edgar/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/edgar/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/edgar/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/edgar/talk/icon.png",
+            "iconWebp": "assets/characters/edgar/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/edgar/hype/master.png",
+            "fullPng": "assets/characters/edgar/hype/full.png",
+            "fullWebp": "assets/characters/edgar/hype/full.webp",
+            "bustPng": "assets/characters/edgar/hype/bust.png",
+            "bustWebp": "assets/characters/edgar/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/edgar/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/edgar/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/edgar/hype/icon.png",
+            "iconWebp": "assets/characters/edgar/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/edgar/win/master.png",
+            "fullPng": "assets/characters/edgar/win/full.png",
+            "fullWebp": "assets/characters/edgar/win/full.webp",
+            "bustPng": "assets/characters/edgar/win/bust.png",
+            "bustWebp": "assets/characters/edgar/win/bust.webp",
+            "avatarCirclePng": "assets/characters/edgar/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/edgar/win/avatar-circle.webp",
+            "iconPng": "assets/characters/edgar/win/icon.png",
+            "iconWebp": "assets/characters/edgar/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/edgar/lose/master.png",
+            "fullPng": "assets/characters/edgar/lose/full.png",
+            "fullWebp": "assets/characters/edgar/lose/full.webp",
+            "bustPng": "assets/characters/edgar/lose/bust.png",
+            "bustWebp": "assets/characters/edgar/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/edgar/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/edgar/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/edgar/lose/icon.png",
+            "iconWebp": "assets/characters/edgar/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "filou": {
+      "name": "Filou",
+      "legacyAvatarId": "fox",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/filou/idle/master.png",
+            "fullPng": "assets/characters/filou/idle/full.png",
+            "fullWebp": "assets/characters/filou/idle/full.webp",
+            "bustPng": "assets/characters/filou/idle/bust.png",
+            "bustWebp": "assets/characters/filou/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/filou/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/filou/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/filou/idle/icon.png",
+            "iconWebp": "assets/characters/filou/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/filou/talk/master.png",
+            "fullPng": "assets/characters/filou/talk/full.png",
+            "fullWebp": "assets/characters/filou/talk/full.webp",
+            "bustPng": "assets/characters/filou/talk/bust.png",
+            "bustWebp": "assets/characters/filou/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/filou/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/filou/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/filou/talk/icon.png",
+            "iconWebp": "assets/characters/filou/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/filou/hype/master.png",
+            "fullPng": "assets/characters/filou/hype/full.png",
+            "fullWebp": "assets/characters/filou/hype/full.webp",
+            "bustPng": "assets/characters/filou/hype/bust.png",
+            "bustWebp": "assets/characters/filou/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/filou/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/filou/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/filou/hype/icon.png",
+            "iconWebp": "assets/characters/filou/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/filou/win/master.png",
+            "fullPng": "assets/characters/filou/win/full.png",
+            "fullWebp": "assets/characters/filou/win/full.webp",
+            "bustPng": "assets/characters/filou/win/bust.png",
+            "bustWebp": "assets/characters/filou/win/bust.webp",
+            "avatarCirclePng": "assets/characters/filou/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/filou/win/avatar-circle.webp",
+            "iconPng": "assets/characters/filou/win/icon.png",
+            "iconWebp": "assets/characters/filou/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/filou/lose/master.png",
+            "fullPng": "assets/characters/filou/lose/full.png",
+            "fullWebp": "assets/characters/filou/lose/full.webp",
+            "bustPng": "assets/characters/filou/lose/bust.png",
+            "bustWebp": "assets/characters/filou/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/filou/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/filou/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/filou/lose/icon.png",
+            "iconWebp": "assets/characters/filou/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "nuggets": {
+      "name": "Nuggets",
+      "legacyAvatarId": "duck",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/nuggets/idle/master.png",
+            "fullPng": "assets/characters/nuggets/idle/full.png",
+            "fullWebp": "assets/characters/nuggets/idle/full.webp",
+            "bustPng": "assets/characters/nuggets/idle/bust.png",
+            "bustWebp": "assets/characters/nuggets/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/nuggets/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/nuggets/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/nuggets/idle/icon.png",
+            "iconWebp": "assets/characters/nuggets/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/nuggets/talk/master.png",
+            "fullPng": "assets/characters/nuggets/talk/full.png",
+            "fullWebp": "assets/characters/nuggets/talk/full.webp",
+            "bustPng": "assets/characters/nuggets/talk/bust.png",
+            "bustWebp": "assets/characters/nuggets/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/nuggets/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/nuggets/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/nuggets/talk/icon.png",
+            "iconWebp": "assets/characters/nuggets/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/nuggets/hype/master.png",
+            "fullPng": "assets/characters/nuggets/hype/full.png",
+            "fullWebp": "assets/characters/nuggets/hype/full.webp",
+            "bustPng": "assets/characters/nuggets/hype/bust.png",
+            "bustWebp": "assets/characters/nuggets/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/nuggets/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/nuggets/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/nuggets/hype/icon.png",
+            "iconWebp": "assets/characters/nuggets/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/nuggets/win/master.png",
+            "fullPng": "assets/characters/nuggets/win/full.png",
+            "fullWebp": "assets/characters/nuggets/win/full.webp",
+            "bustPng": "assets/characters/nuggets/win/bust.png",
+            "bustWebp": "assets/characters/nuggets/win/bust.webp",
+            "avatarCirclePng": "assets/characters/nuggets/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/nuggets/win/avatar-circle.webp",
+            "iconPng": "assets/characters/nuggets/win/icon.png",
+            "iconWebp": "assets/characters/nuggets/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/nuggets/lose/master.png",
+            "fullPng": "assets/characters/nuggets/lose/full.png",
+            "fullWebp": "assets/characters/nuggets/lose/full.webp",
+            "bustPng": "assets/characters/nuggets/lose/bust.png",
+            "bustWebp": "assets/characters/nuggets/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/nuggets/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/nuggets/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/nuggets/lose/icon.png",
+            "iconWebp": "assets/characters/nuggets/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "vapo": {
+      "name": "Vapo",
+      "legacyAvatarId": "ghost",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/vapo/idle/master.png",
+            "fullPng": "assets/characters/vapo/idle/full.png",
+            "fullWebp": "assets/characters/vapo/idle/full.webp",
+            "bustPng": "assets/characters/vapo/idle/bust.png",
+            "bustWebp": "assets/characters/vapo/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/vapo/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/vapo/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/vapo/idle/icon.png",
+            "iconWebp": "assets/characters/vapo/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/vapo/talk/master.png",
+            "fullPng": "assets/characters/vapo/talk/full.png",
+            "fullWebp": "assets/characters/vapo/talk/full.webp",
+            "bustPng": "assets/characters/vapo/talk/bust.png",
+            "bustWebp": "assets/characters/vapo/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/vapo/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/vapo/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/vapo/talk/icon.png",
+            "iconWebp": "assets/characters/vapo/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/vapo/hype/master.png",
+            "fullPng": "assets/characters/vapo/hype/full.png",
+            "fullWebp": "assets/characters/vapo/hype/full.webp",
+            "bustPng": "assets/characters/vapo/hype/bust.png",
+            "bustWebp": "assets/characters/vapo/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/vapo/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/vapo/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/vapo/hype/icon.png",
+            "iconWebp": "assets/characters/vapo/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/vapo/win/master.png",
+            "fullPng": "assets/characters/vapo/win/full.png",
+            "fullWebp": "assets/characters/vapo/win/full.webp",
+            "bustPng": "assets/characters/vapo/win/bust.png",
+            "bustWebp": "assets/characters/vapo/win/bust.webp",
+            "avatarCirclePng": "assets/characters/vapo/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/vapo/win/avatar-circle.webp",
+            "iconPng": "assets/characters/vapo/win/icon.png",
+            "iconWebp": "assets/characters/vapo/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/vapo/lose/master.png",
+            "fullPng": "assets/characters/vapo/lose/full.png",
+            "fullWebp": "assets/characters/vapo/lose/full.webp",
+            "bustPng": "assets/characters/vapo/lose/bust.png",
+            "bustWebp": "assets/characters/vapo/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/vapo/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/vapo/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/vapo/lose/icon.png",
+            "iconWebp": "assets/characters/vapo/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "rrrrh": {
+      "name": "Rrrrh",
+      "legacyAvatarId": "dino",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/rrrrh/idle/master.png",
+            "fullPng": "assets/characters/rrrrh/idle/full.png",
+            "fullWebp": "assets/characters/rrrrh/idle/full.webp",
+            "bustPng": "assets/characters/rrrrh/idle/bust.png",
+            "bustWebp": "assets/characters/rrrrh/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/rrrrh/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/rrrrh/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/rrrrh/idle/icon.png",
+            "iconWebp": "assets/characters/rrrrh/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/rrrrh/talk/master.png",
+            "fullPng": "assets/characters/rrrrh/talk/full.png",
+            "fullWebp": "assets/characters/rrrrh/talk/full.webp",
+            "bustPng": "assets/characters/rrrrh/talk/bust.png",
+            "bustWebp": "assets/characters/rrrrh/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/rrrrh/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/rrrrh/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/rrrrh/talk/icon.png",
+            "iconWebp": "assets/characters/rrrrh/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/rrrrh/hype/master.png",
+            "fullPng": "assets/characters/rrrrh/hype/full.png",
+            "fullWebp": "assets/characters/rrrrh/hype/full.webp",
+            "bustPng": "assets/characters/rrrrh/hype/bust.png",
+            "bustWebp": "assets/characters/rrrrh/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/rrrrh/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/rrrrh/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/rrrrh/hype/icon.png",
+            "iconWebp": "assets/characters/rrrrh/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/rrrrh/win/master.png",
+            "fullPng": "assets/characters/rrrrh/win/full.png",
+            "fullWebp": "assets/characters/rrrrh/win/full.webp",
+            "bustPng": "assets/characters/rrrrh/win/bust.png",
+            "bustWebp": "assets/characters/rrrrh/win/bust.webp",
+            "avatarCirclePng": "assets/characters/rrrrh/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/rrrrh/win/avatar-circle.webp",
+            "iconPng": "assets/characters/rrrrh/win/icon.png",
+            "iconWebp": "assets/characters/rrrrh/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/rrrrh/lose/master.png",
+            "fullPng": "assets/characters/rrrrh/lose/full.png",
+            "fullWebp": "assets/characters/rrrrh/lose/full.webp",
+            "bustPng": "assets/characters/rrrrh/lose/bust.png",
+            "bustWebp": "assets/characters/rrrrh/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/rrrrh/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/rrrrh/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/rrrrh/lose/icon.png",
+            "iconWebp": "assets/characters/rrrrh/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "sir-moustache": {
+      "name": "Sir Moustache",
+      "legacyAvatarId": "cat",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/sir-moustache/idle/master.png",
+            "fullPng": "assets/characters/sir-moustache/idle/full.png",
+            "fullWebp": "assets/characters/sir-moustache/idle/full.webp",
+            "bustPng": "assets/characters/sir-moustache/idle/bust.png",
+            "bustWebp": "assets/characters/sir-moustache/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/sir-moustache/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/sir-moustache/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/sir-moustache/idle/icon.png",
+            "iconWebp": "assets/characters/sir-moustache/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/sir-moustache/talk/master.png",
+            "fullPng": "assets/characters/sir-moustache/talk/full.png",
+            "fullWebp": "assets/characters/sir-moustache/talk/full.webp",
+            "bustPng": "assets/characters/sir-moustache/talk/bust.png",
+            "bustWebp": "assets/characters/sir-moustache/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/sir-moustache/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/sir-moustache/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/sir-moustache/talk/icon.png",
+            "iconWebp": "assets/characters/sir-moustache/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/sir-moustache/hype/master.png",
+            "fullPng": "assets/characters/sir-moustache/hype/full.png",
+            "fullWebp": "assets/characters/sir-moustache/hype/full.webp",
+            "bustPng": "assets/characters/sir-moustache/hype/bust.png",
+            "bustWebp": "assets/characters/sir-moustache/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/sir-moustache/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/sir-moustache/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/sir-moustache/hype/icon.png",
+            "iconWebp": "assets/characters/sir-moustache/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/sir-moustache/win/master.png",
+            "fullPng": "assets/characters/sir-moustache/win/full.png",
+            "fullWebp": "assets/characters/sir-moustache/win/full.webp",
+            "bustPng": "assets/characters/sir-moustache/win/bust.png",
+            "bustWebp": "assets/characters/sir-moustache/win/bust.webp",
+            "avatarCirclePng": "assets/characters/sir-moustache/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/sir-moustache/win/avatar-circle.webp",
+            "iconPng": "assets/characters/sir-moustache/win/icon.png",
+            "iconWebp": "assets/characters/sir-moustache/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/sir-moustache/lose/master.png",
+            "fullPng": "assets/characters/sir-moustache/lose/full.png",
+            "fullWebp": "assets/characters/sir-moustache/lose/full.webp",
+            "bustPng": "assets/characters/sir-moustache/lose/bust.png",
+            "bustWebp": "assets/characters/sir-moustache/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/sir-moustache/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/sir-moustache/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/sir-moustache/lose/icon.png",
+            "iconWebp": "assets/characters/sir-moustache/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "snow": {
+      "name": "Snow",
+      "legacyAvatarId": "penguin",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/snow/idle/master.png",
+            "fullPng": "assets/characters/snow/idle/full.png",
+            "fullWebp": "assets/characters/snow/idle/full.webp",
+            "bustPng": "assets/characters/snow/idle/bust.png",
+            "bustWebp": "assets/characters/snow/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/snow/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/snow/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/snow/idle/icon.png",
+            "iconWebp": "assets/characters/snow/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/snow/talk/master.png",
+            "fullPng": "assets/characters/snow/talk/full.png",
+            "fullWebp": "assets/characters/snow/talk/full.webp",
+            "bustPng": "assets/characters/snow/talk/bust.png",
+            "bustWebp": "assets/characters/snow/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/snow/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/snow/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/snow/talk/icon.png",
+            "iconWebp": "assets/characters/snow/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/snow/hype/master.png",
+            "fullPng": "assets/characters/snow/hype/full.png",
+            "fullWebp": "assets/characters/snow/hype/full.webp",
+            "bustPng": "assets/characters/snow/hype/bust.png",
+            "bustWebp": "assets/characters/snow/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/snow/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/snow/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/snow/hype/icon.png",
+            "iconWebp": "assets/characters/snow/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/snow/win/master.png",
+            "fullPng": "assets/characters/snow/win/full.png",
+            "fullWebp": "assets/characters/snow/win/full.webp",
+            "bustPng": "assets/characters/snow/win/bust.png",
+            "bustWebp": "assets/characters/snow/win/bust.webp",
+            "avatarCirclePng": "assets/characters/snow/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/snow/win/avatar-circle.webp",
+            "iconPng": "assets/characters/snow/win/icon.png",
+            "iconWebp": "assets/characters/snow/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/snow/lose/master.png",
+            "fullPng": "assets/characters/snow/lose/full.png",
+            "fullWebp": "assets/characters/snow/lose/full.webp",
+            "bustPng": "assets/characters/snow/lose/bust.png",
+            "bustWebp": "assets/characters/snow/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/snow/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/snow/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/snow/lose/icon.png",
+            "iconWebp": "assets/characters/snow/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "maurice": {
+      "name": "Maurice",
+      "legacyAvatarId": "fish",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/maurice/idle/master.png",
+            "fullPng": "assets/characters/maurice/idle/full.png",
+            "fullWebp": "assets/characters/maurice/idle/full.webp",
+            "bustPng": "assets/characters/maurice/idle/bust.png",
+            "bustWebp": "assets/characters/maurice/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/maurice/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/maurice/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/maurice/idle/icon.png",
+            "iconWebp": "assets/characters/maurice/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/maurice/talk/master.png",
+            "fullPng": "assets/characters/maurice/talk/full.png",
+            "fullWebp": "assets/characters/maurice/talk/full.webp",
+            "bustPng": "assets/characters/maurice/talk/bust.png",
+            "bustWebp": "assets/characters/maurice/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/maurice/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/maurice/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/maurice/talk/icon.png",
+            "iconWebp": "assets/characters/maurice/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/maurice/hype/master.png",
+            "fullPng": "assets/characters/maurice/hype/full.png",
+            "fullWebp": "assets/characters/maurice/hype/full.webp",
+            "bustPng": "assets/characters/maurice/hype/bust.png",
+            "bustWebp": "assets/characters/maurice/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/maurice/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/maurice/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/maurice/hype/icon.png",
+            "iconWebp": "assets/characters/maurice/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/maurice/win/master.png",
+            "fullPng": "assets/characters/maurice/win/full.png",
+            "fullWebp": "assets/characters/maurice/win/full.webp",
+            "bustPng": "assets/characters/maurice/win/bust.png",
+            "bustWebp": "assets/characters/maurice/win/bust.webp",
+            "avatarCirclePng": "assets/characters/maurice/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/maurice/win/avatar-circle.webp",
+            "iconPng": "assets/characters/maurice/win/icon.png",
+            "iconWebp": "assets/characters/maurice/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/maurice/lose/master.png",
+            "fullPng": "assets/characters/maurice/lose/full.png",
+            "fullWebp": "assets/characters/maurice/lose/full.webp",
+            "bustPng": "assets/characters/maurice/lose/bust.png",
+            "bustWebp": "assets/characters/maurice/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/maurice/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/maurice/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/maurice/lose/icon.png",
+            "iconWebp": "assets/characters/maurice/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "moon": {
+      "name": "Moon",
+      "legacyAvatarId": "elephant",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/moon/idle/master.png",
+            "fullPng": "assets/characters/moon/idle/full.png",
+            "fullWebp": "assets/characters/moon/idle/full.webp",
+            "bustPng": "assets/characters/moon/idle/bust.png",
+            "bustWebp": "assets/characters/moon/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/moon/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/moon/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/moon/idle/icon.png",
+            "iconWebp": "assets/characters/moon/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/moon/talk/master.png",
+            "fullPng": "assets/characters/moon/talk/full.png",
+            "fullWebp": "assets/characters/moon/talk/full.webp",
+            "bustPng": "assets/characters/moon/talk/bust.png",
+            "bustWebp": "assets/characters/moon/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/moon/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/moon/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/moon/talk/icon.png",
+            "iconWebp": "assets/characters/moon/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/moon/hype/master.png",
+            "fullPng": "assets/characters/moon/hype/full.png",
+            "fullWebp": "assets/characters/moon/hype/full.webp",
+            "bustPng": "assets/characters/moon/hype/bust.png",
+            "bustWebp": "assets/characters/moon/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/moon/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/moon/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/moon/hype/icon.png",
+            "iconWebp": "assets/characters/moon/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/moon/win/master.png",
+            "fullPng": "assets/characters/moon/win/full.png",
+            "fullWebp": "assets/characters/moon/win/full.webp",
+            "bustPng": "assets/characters/moon/win/bust.png",
+            "bustWebp": "assets/characters/moon/win/bust.webp",
+            "avatarCirclePng": "assets/characters/moon/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/moon/win/avatar-circle.webp",
+            "iconPng": "assets/characters/moon/win/icon.png",
+            "iconWebp": "assets/characters/moon/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/moon/lose/master.png",
+            "fullPng": "assets/characters/moon/lose/full.png",
+            "fullWebp": "assets/characters/moon/lose/full.webp",
+            "bustPng": "assets/characters/moon/lose/bust.png",
+            "bustWebp": "assets/characters/moon/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/moon/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/moon/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/moon/lose/icon.png",
+            "iconWebp": "assets/characters/moon/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "spike": {
+      "name": "Spike",
+      "legacyAvatarId": "cactus",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/spike/idle/master.png",
+            "fullPng": "assets/characters/spike/idle/full.png",
+            "fullWebp": "assets/characters/spike/idle/full.webp",
+            "bustPng": "assets/characters/spike/idle/bust.png",
+            "bustWebp": "assets/characters/spike/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/spike/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/spike/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/spike/idle/icon.png",
+            "iconWebp": "assets/characters/spike/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/spike/talk/master.png",
+            "fullPng": "assets/characters/spike/talk/full.png",
+            "fullWebp": "assets/characters/spike/talk/full.webp",
+            "bustPng": "assets/characters/spike/talk/bust.png",
+            "bustWebp": "assets/characters/spike/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/spike/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/spike/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/spike/talk/icon.png",
+            "iconWebp": "assets/characters/spike/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/spike/hype/master.png",
+            "fullPng": "assets/characters/spike/hype/full.png",
+            "fullWebp": "assets/characters/spike/hype/full.webp",
+            "bustPng": "assets/characters/spike/hype/bust.png",
+            "bustWebp": "assets/characters/spike/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/spike/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/spike/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/spike/hype/icon.png",
+            "iconWebp": "assets/characters/spike/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/spike/win/master.png",
+            "fullPng": "assets/characters/spike/win/full.png",
+            "fullWebp": "assets/characters/spike/win/full.webp",
+            "bustPng": "assets/characters/spike/win/bust.png",
+            "bustWebp": "assets/characters/spike/win/bust.webp",
+            "avatarCirclePng": "assets/characters/spike/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/spike/win/avatar-circle.webp",
+            "iconPng": "assets/characters/spike/win/icon.png",
+            "iconWebp": "assets/characters/spike/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/spike/lose/master.png",
+            "fullPng": "assets/characters/spike/lose/full.png",
+            "fullWebp": "assets/characters/spike/lose/full.webp",
+            "bustPng": "assets/characters/spike/lose/bust.png",
+            "bustWebp": "assets/characters/spike/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/spike/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/spike/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/spike/lose/icon.png",
+            "iconWebp": "assets/characters/spike/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "honey": {
+      "name": "Honey",
+      "legacyAvatarId": "bear",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/honey/idle/master.png",
+            "fullPng": "assets/characters/honey/idle/full.png",
+            "fullWebp": "assets/characters/honey/idle/full.webp",
+            "bustPng": "assets/characters/honey/idle/bust.png",
+            "bustWebp": "assets/characters/honey/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/honey/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/honey/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/honey/idle/icon.png",
+            "iconWebp": "assets/characters/honey/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/honey/talk/master.png",
+            "fullPng": "assets/characters/honey/talk/full.png",
+            "fullWebp": "assets/characters/honey/talk/full.webp",
+            "bustPng": "assets/characters/honey/talk/bust.png",
+            "bustWebp": "assets/characters/honey/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/honey/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/honey/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/honey/talk/icon.png",
+            "iconWebp": "assets/characters/honey/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/honey/hype/master.png",
+            "fullPng": "assets/characters/honey/hype/full.png",
+            "fullWebp": "assets/characters/honey/hype/full.webp",
+            "bustPng": "assets/characters/honey/hype/bust.png",
+            "bustWebp": "assets/characters/honey/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/honey/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/honey/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/honey/hype/icon.png",
+            "iconWebp": "assets/characters/honey/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/honey/win/master.png",
+            "fullPng": "assets/characters/honey/win/full.png",
+            "fullWebp": "assets/characters/honey/win/full.webp",
+            "bustPng": "assets/characters/honey/win/bust.png",
+            "bustWebp": "assets/characters/honey/win/bust.webp",
+            "avatarCirclePng": "assets/characters/honey/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/honey/win/avatar-circle.webp",
+            "iconPng": "assets/characters/honey/win/icon.png",
+            "iconWebp": "assets/characters/honey/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/honey/lose/master.png",
+            "fullPng": "assets/characters/honey/lose/full.png",
+            "fullWebp": "assets/characters/honey/lose/full.webp",
+            "bustPng": "assets/characters/honey/lose/bust.png",
+            "bustWebp": "assets/characters/honey/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/honey/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/honey/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/honey/lose/icon.png",
+            "iconWebp": "assets/characters/honey/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "flash": {
+      "name": "Flash",
+      "legacyAvatarId": "rabbit",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/flash/idle/master.png",
+            "fullPng": "assets/characters/flash/idle/full.png",
+            "fullWebp": "assets/characters/flash/idle/full.webp",
+            "bustPng": "assets/characters/flash/idle/bust.png",
+            "bustWebp": "assets/characters/flash/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/flash/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/flash/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/flash/idle/icon.png",
+            "iconWebp": "assets/characters/flash/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/flash/talk/master.png",
+            "fullPng": "assets/characters/flash/talk/full.png",
+            "fullWebp": "assets/characters/flash/talk/full.webp",
+            "bustPng": "assets/characters/flash/talk/bust.png",
+            "bustWebp": "assets/characters/flash/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/flash/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/flash/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/flash/talk/icon.png",
+            "iconWebp": "assets/characters/flash/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/flash/hype/master.png",
+            "fullPng": "assets/characters/flash/hype/full.png",
+            "fullWebp": "assets/characters/flash/hype/full.webp",
+            "bustPng": "assets/characters/flash/hype/bust.png",
+            "bustWebp": "assets/characters/flash/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/flash/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/flash/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/flash/hype/icon.png",
+            "iconWebp": "assets/characters/flash/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/flash/win/master.png",
+            "fullPng": "assets/characters/flash/win/full.png",
+            "fullWebp": "assets/characters/flash/win/full.webp",
+            "bustPng": "assets/characters/flash/win/bust.png",
+            "bustWebp": "assets/characters/flash/win/bust.webp",
+            "avatarCirclePng": "assets/characters/flash/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/flash/win/avatar-circle.webp",
+            "iconPng": "assets/characters/flash/win/icon.png",
+            "iconWebp": "assets/characters/flash/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/flash/lose/master.png",
+            "fullPng": "assets/characters/flash/lose/full.png",
+            "fullWebp": "assets/characters/flash/lose/full.webp",
+            "bustPng": "assets/characters/flash/lose/bust.png",
+            "bustWebp": "assets/characters/flash/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/flash/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/flash/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/flash/lose/icon.png",
+            "iconWebp": "assets/characters/flash/lose/icon.webp"
+          }
+        }
+      }
+    },
+    "marcellius": {
+      "name": "Marcellius",
+      "legacyAvatarId": "octopus",
+      "poses": {
+        "idle": {
+          "available": true,
+          "paths": {
+            "master": "assets/characters/marcellius/idle/master.png",
+            "fullPng": "assets/characters/marcellius/idle/full.png",
+            "fullWebp": "assets/characters/marcellius/idle/full.webp",
+            "bustPng": "assets/characters/marcellius/idle/bust.png",
+            "bustWebp": "assets/characters/marcellius/idle/bust.webp",
+            "avatarCirclePng": "assets/characters/marcellius/idle/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/marcellius/idle/avatar-circle.webp",
+            "iconPng": "assets/characters/marcellius/idle/icon.png",
+            "iconWebp": "assets/characters/marcellius/idle/icon.webp"
+          }
+        },
+        "talk": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/marcellius/talk/master.png",
+            "fullPng": "assets/characters/marcellius/talk/full.png",
+            "fullWebp": "assets/characters/marcellius/talk/full.webp",
+            "bustPng": "assets/characters/marcellius/talk/bust.png",
+            "bustWebp": "assets/characters/marcellius/talk/bust.webp",
+            "avatarCirclePng": "assets/characters/marcellius/talk/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/marcellius/talk/avatar-circle.webp",
+            "iconPng": "assets/characters/marcellius/talk/icon.png",
+            "iconWebp": "assets/characters/marcellius/talk/icon.webp"
+          }
+        },
+        "hype": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/marcellius/hype/master.png",
+            "fullPng": "assets/characters/marcellius/hype/full.png",
+            "fullWebp": "assets/characters/marcellius/hype/full.webp",
+            "bustPng": "assets/characters/marcellius/hype/bust.png",
+            "bustWebp": "assets/characters/marcellius/hype/bust.webp",
+            "avatarCirclePng": "assets/characters/marcellius/hype/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/marcellius/hype/avatar-circle.webp",
+            "iconPng": "assets/characters/marcellius/hype/icon.png",
+            "iconWebp": "assets/characters/marcellius/hype/icon.webp"
+          }
+        },
+        "win": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/marcellius/win/master.png",
+            "fullPng": "assets/characters/marcellius/win/full.png",
+            "fullWebp": "assets/characters/marcellius/win/full.webp",
+            "bustPng": "assets/characters/marcellius/win/bust.png",
+            "bustWebp": "assets/characters/marcellius/win/bust.webp",
+            "avatarCirclePng": "assets/characters/marcellius/win/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/marcellius/win/avatar-circle.webp",
+            "iconPng": "assets/characters/marcellius/win/icon.png",
+            "iconWebp": "assets/characters/marcellius/win/icon.webp"
+          }
+        },
+        "lose": {
+          "available": false,
+          "paths": {
+            "master": "assets/characters/marcellius/lose/master.png",
+            "fullPng": "assets/characters/marcellius/lose/full.png",
+            "fullWebp": "assets/characters/marcellius/lose/full.webp",
+            "bustPng": "assets/characters/marcellius/lose/bust.png",
+            "bustWebp": "assets/characters/marcellius/lose/bust.webp",
+            "avatarCirclePng": "assets/characters/marcellius/lose/avatar-circle.png",
+            "avatarCircleWebp": "assets/characters/marcellius/lose/avatar-circle.webp",
+            "iconPng": "assets/characters/marcellius/lose/icon.png",
+            "iconWebp": "assets/characters/marcellius/lose/icon.webp"
+          }
+        }
+      }
+    }
+  }
+}
