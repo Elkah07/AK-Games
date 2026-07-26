@@ -4492,3 +4492,225 @@ select:focus-visible,
     gap: 14px !important;
   }
 }
+
+/* AK'GAMES V1.0 — MODALE SALON */
+.ak-room-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 12000;
+  display: grid;
+  place-items: center;
+  padding:
+    max(22px, env(safe-area-inset-top))
+    20px
+    max(22px, env(safe-area-inset-bottom));
+  background:
+    radial-gradient(circle at 50% 38%, rgba(139, 92, 246, .18), transparent 34%),
+    rgba(2, 3, 12, .82);
+  opacity: 0;
+  backdrop-filter: blur(14px) saturate(.8);
+  -webkit-backdrop-filter: blur(14px) saturate(.8);
+  transition: opacity .18s ease;
+}
+
+.ak-room-dialog-backdrop.is-visible {
+  opacity: 1;
+}
+
+.ak-room-dialog-backdrop.is-closing {
+  opacity: 0;
+}
+
+.ak-room-dialog {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 430px);
+  overflow: hidden;
+  padding: 34px 24px 24px;
+  border: 1px solid rgba(192, 132, 252, .48);
+  border-radius: 30px;
+  background:
+    linear-gradient(145deg, rgba(48, 31, 76, .97), rgba(15, 12, 30, .985) 68%),
+    #120d20;
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, .58),
+    0 0 0 1px rgba(255, 255, 255, .025) inset,
+    0 0 48px rgba(124, 58, 237, .2);
+  color: #fff;
+  text-align: center;
+  transform: translateY(18px) scale(.965);
+  transition: transform .2s cubic-bezier(.2,.8,.2,1);
+}
+
+.ak-room-dialog-backdrop.is-visible .ak-room-dialog {
+  transform: translateY(0) scale(1);
+}
+
+.ak-room-dialog-glow {
+  position: absolute;
+  z-index: -1;
+  top: -110px;
+  left: 50%;
+  width: 270px;
+  height: 220px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(168, 85, 247, .25);
+  filter: blur(58px);
+  pointer-events: none;
+}
+
+.ak-room-dialog-icon {
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 18px;
+  border: 1px solid rgba(192, 132, 252, .52);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(192, 132, 252, .3), transparent 60%),
+    rgba(75, 36, 119, .42);
+  box-shadow:
+    0 0 34px rgba(168, 85, 247, .22),
+    0 0 0 10px rgba(139, 92, 246, .055);
+}
+
+.ak-room-dialog-icon svg {
+  width: 48px;
+  height: 48px;
+  overflow: visible;
+  fill: rgba(238, 223, 255, .08);
+  stroke: #f5edff;
+  stroke-width: 3.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 10px rgba(192, 132, 252, .55));
+}
+
+.ak-room-dialog-eyebrow {
+  margin: 0 0 7px;
+  color: #c9a7ff;
+  font-size: .74rem;
+  font-weight: 900;
+  letter-spacing: .19em;
+}
+
+.ak-room-dialog h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.8rem, 7vw, 2.35rem);
+  line-height: 1.03;
+  letter-spacing: -.035em;
+}
+
+.ak-room-dialog-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: min(230px, 78%);
+  margin: 20px auto 17px;
+  color: #b96cff;
+}
+
+.ak-room-dialog-divider span {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, .58));
+}
+
+.ak-room-dialog-divider span:last-child {
+  background: linear-gradient(90deg, rgba(168, 85, 247, .58), transparent);
+}
+
+.ak-room-dialog-divider b {
+  font-size: .95rem;
+  font-weight: 400;
+}
+
+.ak-room-dialog-message {
+  max-width: 340px;
+  margin: 0 auto;
+  color: rgba(229, 225, 239, .76);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.ak-room-dialog-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.ak-room-dialog-actions:has(.ak-room-dialog-btn-secondary) {
+  grid-template-columns: 1fr 1fr;
+}
+
+.ak-room-dialog-btn {
+  min-height: 54px;
+  border-radius: 17px;
+  font: inherit;
+  font-size: .96rem;
+  font-weight: 850;
+  cursor: pointer;
+  transition: transform .14s ease, filter .14s ease, border-color .14s ease;
+}
+
+.ak-room-dialog-btn:active {
+  transform: scale(.975);
+}
+
+.ak-room-dialog-btn:focus-visible {
+  outline: 3px solid rgba(216, 180, 254, .95);
+  outline-offset: 3px;
+}
+
+.ak-room-dialog-btn-primary {
+  border: 1px solid rgba(216, 180, 254, .66);
+  background: linear-gradient(135deg, #a855f7, #6d28d9);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(109, 40, 217, .34);
+}
+
+.ak-room-dialog-btn-danger {
+  border: 1px solid rgba(251, 113, 133, .58);
+  background: linear-gradient(135deg, #be3d63, #7f2449);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(127, 36, 73, .28);
+}
+
+.ak-room-dialog-btn-secondary {
+  border: 1px solid rgba(196, 181, 253, .2);
+  background: rgba(255, 255, 255, .055);
+  color: rgba(245, 243, 255, .9);
+}
+
+@media (max-width: 390px) {
+  .ak-room-dialog {
+    padding: 28px 18px 18px;
+    border-radius: 25px;
+  }
+
+  .ak-room-dialog-icon {
+    width: 78px;
+    height: 78px;
+  }
+
+  .ak-room-dialog-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .ak-room-dialog-actions:has(.ak-room-dialog-btn-secondary) {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ak-room-dialog-backdrop,
+  .ak-room-dialog {
+    transition-duration: .01ms !important;
+  }
+}

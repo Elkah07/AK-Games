@@ -329,6 +329,123 @@
     `;
   }
 
+  function removeRoomDialog() {
+    document.querySelector(".ak-room-dialog-backdrop")?.remove();
+  }
+
+  function showRoomDialog({
+    eyebrow = "AK'GAMES",
+    title: dialogTitle,
+    message,
+    confirmLabel = "Continuer",
+    cancelLabel = "",
+    destructive = false,
+    icon = "door"
+  }) {
+    removeRoomDialog();
+
+    return new Promise(resolve => {
+      const backdrop = document.createElement("div");
+      backdrop.className = "ak-room-dialog-backdrop";
+
+      const iconMarkup = icon === "leave"
+        ? `
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M15 10h25a4 4 0 0 1 4 4v36a4 4 0 0 1-4 4H15z"></path>
+            <path d="M31 32H55"></path>
+            <path d="m48 25 7 7-7 7"></path>
+            <circle cx="35" cy="32" r="1.8"></circle>
+          </svg>
+        `
+        : `
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M18 10h27a4 4 0 0 1 4 4v40H18z"></path>
+            <path d="M18 10 35 16v38L18 48z"></path>
+            <circle cx="31" cy="33" r="1.8"></circle>
+          </svg>
+        `;
+
+      backdrop.innerHTML = `
+        <section
+          class="ak-room-dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="akRoomDialogTitle"
+          aria-describedby="akRoomDialogMessage"
+        >
+          <div class="ak-room-dialog-glow" aria-hidden="true"></div>
+
+          <div class="ak-room-dialog-icon" aria-hidden="true">
+            ${iconMarkup}
+          </div>
+
+          <p class="ak-room-dialog-eyebrow">${escapeHtml(eyebrow)}</p>
+          <h2 id="akRoomDialogTitle">${escapeHtml(dialogTitle)}</h2>
+
+          <div class="ak-room-dialog-divider" aria-hidden="true">
+            <span></span><b>✦</b><span></span>
+          </div>
+
+          <p id="akRoomDialogMessage" class="ak-room-dialog-message">
+            ${escapeHtml(message)}
+          </p>
+
+          <div class="ak-room-dialog-actions">
+            ${cancelLabel ? `
+              <button type="button" class="ak-room-dialog-btn ak-room-dialog-btn-secondary" data-room-dialog-cancel>
+                ${escapeHtml(cancelLabel)}
+              </button>
+            ` : ""}
+            <button
+              type="button"
+              class="ak-room-dialog-btn ${destructive ? "ak-room-dialog-btn-danger" : "ak-room-dialog-btn-primary"}"
+              data-room-dialog-confirm
+            >
+              ${escapeHtml(confirmLabel)}
+            </button>
+          </div>
+        </section>
+      `;
+
+      const finish = value => {
+        document.removeEventListener("keydown", onKeydown);
+        backdrop.classList.add("is-closing");
+        window.setTimeout(() => {
+          backdrop.remove();
+          resolve(value);
+        }, 150);
+      };
+
+      const onKeydown = event => {
+        if (event.key === "Escape" && cancelLabel) finish(false);
+      };
+
+      backdrop.querySelector("[data-room-dialog-confirm]")?.addEventListener("click", () => finish(true));
+      backdrop.querySelector("[data-room-dialog-cancel]")?.addEventListener("click", () => finish(false));
+      backdrop.addEventListener("click", event => {
+        if (event.target === backdrop && cancelLabel) finish(false);
+      });
+
+      document.body.appendChild(backdrop);
+      document.addEventListener("keydown", onKeydown);
+
+      window.requestAnimationFrame(() => {
+        backdrop.classList.add("is-visible");
+        backdrop.querySelector("[data-room-dialog-confirm]")?.focus();
+      });
+    });
+  }
+
+  function showClosedRoomDialog() {
+    return showRoomDialog({
+      eyebrow: "ROOM TERMINÉE",
+      title: "Salon fermé",
+      message: "La room n’est plus disponible. Tu peux retourner à l’accueil et lancer une nouvelle partie.",
+      confirmLabel: "Retour à l’accueil",
+      icon: "door"
+    });
+  }
+
   function activateRoomListener() {
     stopRoomListener();
 
@@ -345,8 +462,9 @@
           state.isHost = false;
           state.mode = null;
 
-          alert("Le salon a été fermé.");
-          renderHome();
+          showClosedRoomDialog().then(() => {
+            renderHome();
+          });
           return;
         }
 
@@ -725,8 +843,21 @@
     });
 
     document.querySelector("#leaveMultiplayerRoom").addEventListener("click", async () => {
-      const message = state.isHost ? "Fermer ce salon pour tout le monde ?" : "Quitter ce salon ?";
-      if (!confirm(message)) return;
+      const closingForEveryone = state.isHost;
+
+      const confirmed = await showRoomDialog({
+        eyebrow: closingForEveryone ? "FERMER LA ROOM" : "QUITTER LA ROOM",
+        title: closingForEveryone ? "Fermer le salon ?" : "Quitter le salon ?",
+        message: closingForEveryone
+          ? "Tous les joueurs seront renvoyés vers l’accueil et le code de la room ne fonctionnera plus."
+          : "Tu quitteras la room, mais le reste du groupe pourra continuer à jouer.",
+        confirmLabel: closingForEveryone ? "Fermer la room" : "Quitter",
+        cancelLabel: "Annuler",
+        destructive: closingForEveryone,
+        icon: "leave"
+      });
+
+      if (!confirmed) return;
 
       try {
         await AKFirebase.leaveRoom(state.roomCode, state.isHost);
