@@ -8283,6 +8283,318 @@
     if (stage) stage.textContent = "Un point pour le plus petit camp, deux pour la personne seule sur son option.";
   };
 
+
+  /* =========================================================
+     AK'GAMES V2.9 - MIME MULTIJOUEUR
+     Brief prive, duos, difficulte et premier devineur
+     ========================================================= */
+
+  const akMimeMultiBaseRenderMegaSetup = renderMegaSetup;
+  renderMegaSetup = function () {
+    const game = state.megaGame;
+    if (!game || game.gameName !== "Mime" || !isMultiplayer()) return akMimeMultiBaseRenderMegaSetup();
+    ensureMimeGameConfig(game);
+    clearV014MultiTimer();
+    title.textContent = "Mime";
+    setBackVisible(true);
+    if (!state.isHost) {
+      screen.innerHTML = `
+        <section class="game-cover game-cover-mega mime-cover"><span class="game-cover-icon">🎭</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>Mime</h2><p>L’hôte choisit les thèmes, les niveaux, le chrono et les mimes personnalisés.</p></div></section>
+        ${renderMultiWaiting("L’hôte prépare la troupe", "La partie commencera automatiquement sur tous les téléphones.", "👑")}`;
+      return;
+    }
+    screen.innerHTML = `
+      <section class="game-cover game-cover-mega mime-cover"><span class="game-cover-icon">🎭</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>Mime</h2><p>Le sujet n’apparaît que sur le téléphone des mimeurs. Le premier devineur gagne un point.</p></div></section>
+      ${akMimeSetupMarkup(game, "multimime")}
+      <button id="startMultiMime" class="primary-btn full">Lancer la partie de Mime</button>`;
+    akMimeBindSetup(game, "multimime", renderMegaSetup);
+    document.querySelector("#startMultiMime")?.addEventListener("click", startMegaGame);
+  };
+
+  const akMimeMultiBaseStartMegaGame = startMegaGame;
+  startMegaGame = async function () {
+    const game = state.megaGame;
+    if (!isMultiplayer() || !game || game.gameName !== "Mime") return akMimeMultiBaseStartMegaGame();
+    if (!state.isHost) return;
+    ensureMimeGameConfig(game);
+    if (!game.mimeThemes.length) return alert("Sélectionne au moins un thème.");
+    if (!game.mimeDifficulties.length) return alert("Sélectionne au moins une difficulté.");
+    screen.innerHTML = `<div class="notice">Distribution secrète des mimes…</div>`;
+    try {
+      let pool = await loadJsonFile("data/mime.json", "Impossible de charger les mimes.");
+      if (game.mimeIncludeCustom) pool = pool.concat(akMimeLoadCustom().map(item => ({ ...item, custom: true })));
+      pool = akMimeFilterPool(pool, game);
+      if (!pool.length) throw new Error("Aucun mime ne correspond à ces filtres.");
+      const selected = akMimeBalancedSelect(pool, Math.min(game.roundCount, pool.length), `multi:mime:${game.mimeThemes.join("-")}:${game.mimeDifficulties.join("-")}`);
+      const items = akMimeAssignActors(selected, state.players);
+      const playerIds = state.players.map(player => player.id);
+      const zeros = Object.fromEntries(playerIds.map(id => [id, 0]));
+      await AKFirebase.setGame(state.roomCode, {
+        state: {
+          type: "mega-turn",
+          phase: "mime-brief",
+          sessionGameId: createSessionGameId("mime"),
+          items,
+          currentIndex: 0,
+          currentPlayerId: items[0]?.leadPlayerId || playerIds[0] || null,
+          scores: { ...zeros },
+          rounds: {},
+          currentResult: null,
+          mimeActorSuccess: { ...zeros },
+          mimeGuesserSuccess: { ...zeros },
+          mimeFailedItems: {},
+          settings: {
+            gameName: "Mime",
+            icon: "🎭",
+            engine: "turn",
+            mimeMode: true,
+            roundCount: items.length,
+            durationSeconds: game.durationSeconds,
+            mimeThemes: [...game.mimeThemes],
+            mimeDifficulties: [...game.mimeDifficulties],
+            mimeIncludeCustom: Boolean(game.mimeIncludeCustom),
+            privatePrompt: true,
+            scoreless: false
+          },
+          turnEndsAt: null,
+          startedAt: AKFirebase.now(),
+          updatedAt: AKFirebase.now()
+        },
+        actions: null,
+        votes: null,
+        answers: null
+      });
+    } catch (error) {
+      console.error(error);
+      alert(error.message || "Impossible de lancer Mime.");
+      renderMegaSetup();
+    }
+  };
+
+  function akMimeMultiActors(item) {
+    return (item?.actorIds || []).map(id => state.players.find(player => player.id === id)).filter(Boolean);
+  }
+
+  function akMimeMultiActorNames(item) {
+    return akMimeMultiActors(item).map(player => player.name).join(" et ");
+  }
+
+  function akMimeMultiActorCards(item) {
+    return akMimeMultiActors(item).map(player => `<article><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong></article>`).join("");
+  }
+
+  const akMimeMultiBaseProcessMegaTurn = processMultiMegaTurn;
+  processMultiMegaTurn = function (gameState, actions) {
+    if (!gameState?.settings?.mimeMode) return akMimeMultiBaseProcessMegaTurn(gameState, actions);
+    if (!state.isHost) return;
+    const item = gameState.items?.[Number(gameState.currentIndex || 0)];
+    if (!item) return;
+    const leadId = item.leadPlayerId || item.actorIds?.[0] || gameState.currentPlayerId;
+    const action = actions?.[leadId];
+
+    if (gameState.phase === "mime-brief") {
+      if (!action?.payload?.ready) return;
+      const lock = `mime_ready_${gameState.currentIndex}_${action.id || "ready"}`;
+      if (state.multiProcessingActionId === lock) return;
+      state.multiProcessingActionId = lock;
+      AKFirebase.updateGame(state.roomCode, {
+        "state/phase": "turn",
+        "state/turnEndsAt": AKFirebase.now() + Number(gameState.settings?.durationSeconds || 45) * 1000,
+        "state/updatedAt": AKFirebase.now(),
+        actions: null
+      }).finally(() => { state.multiProcessingActionId = null; });
+      return;
+    }
+
+    if (gameState.phase !== "turn") return;
+    const expired = Number(gameState.turnEndsAt || 0) > 0 && Number(gameState.turnEndsAt) <= AKFirebase.now();
+    if (!action && !expired) return;
+    const lock = `mime_result_${gameState.currentIndex}_${action?.id || "timer"}`;
+    if (state.multiProcessingActionId === lock) return;
+    state.multiProcessingActionId = lock;
+
+    const success = Boolean(action?.payload?.success) && !expired;
+    const actorIds = Array.isArray(item.actorIds) ? item.actorIds : [leadId];
+    const rawGuesserId = action?.payload?.guesserId || null;
+    const guesserId = rawGuesserId && !actorIds.includes(rawGuesserId) && state.players.some(player => player.id === rawGuesserId) ? rawGuesserId : null;
+    const points = success ? akMimePoints(item) : 0;
+    const scores = { ...(gameState.scores || {}) };
+    const actorSuccess = { ...(gameState.mimeActorSuccess || {}) };
+    const guesserSuccess = { ...(gameState.mimeGuesserSuccess || {}) };
+    const failedItems = { ...(gameState.mimeFailedItems || {}) };
+
+    if (success) {
+      actorIds.forEach(id => {
+        scores[id] = Number(scores[id] || 0) + points;
+        actorSuccess[id] = Number(actorSuccess[id] || 0) + 1;
+      });
+      if (guesserId) {
+        scores[guesserId] = Number(scores[guesserId] || 0) + 1;
+        guesserSuccess[guesserId] = Number(guesserSuccess[guesserId] || 0) + 1;
+      }
+    } else {
+      failedItems[gameState.currentIndex] = { itemId: item.id, text: item.text, difficulty: item.difficulty, timedOut: expired };
+    }
+
+    const result = {
+      itemId: item.id,
+      text: item.text,
+      success,
+      timedOut: expired,
+      actorIds,
+      guesserId,
+      points,
+      difficulty: item.difficulty
+    };
+    AKFirebase.updateGame(state.roomCode, {
+      "state/phase": "mime-results",
+      "state/currentResult": result,
+      "state/scores": scores,
+      "state/mimeActorSuccess": actorSuccess,
+      "state/mimeGuesserSuccess": guesserSuccess,
+      "state/mimeFailedItems": failedItems,
+      [`state/rounds/${gameState.currentIndex}`]: result,
+      "state/turnEndsAt": null,
+      "state/updatedAt": AKFirebase.now(),
+      actions: null
+    }).finally(() => { state.multiProcessingActionId = null; });
+  };
+
+  function akMimeMultiRenderBrief(gameState, item, actions) {
+    const actorIds = Array.isArray(item.actorIds) ? item.actorIds : [];
+    const isActor = actorIds.includes(state.currentUid);
+    const isLead = state.currentUid === (item.leadPlayerId || actorIds[0]);
+    const readySent = Boolean(actions?.[state.currentUid]?.payload?.ready);
+    title.textContent = "Mime secret";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Mime")}
+      ${isActor ? `
+        <section class="mime-private-card">${akMimeBadges(item)}<span class="mime-private-icon">🤫</span><small>TON MIME SECRET</small><h2>${escapeHtml(item.text || "")}</h2><p>${actorIds.length > 1 ? `Tu mimes avec ${escapeHtml(akMimeMultiActorNames(item))}.` : "Mémorise le sujet avant de lancer le chrono."}</p></section>
+        ${isLead ? readySent ? renderMultiWaiting("Signal envoyé", "Le chrono va démarrer sur tous les téléphones.", "✓") : `<button id="multiMimeReady" class="primary-btn full">J’ai mémorisé · Lancer le chrono</button>` : renderMultiWaiting("Prépare ton mime", `${escapeHtml(state.players.find(player => player.id === (item.leadPlayerId || actorIds[0]))?.name || "Ton partenaire")} lancera le chrono.`, "🎭")}`
+        : `${renderMultiWaiting(`${escapeHtml(akMimeMultiActorNames(item))} prépare${actorIds.length > 1 ? "nt" : ""} le mime`, "Le sujet reste caché sur ton téléphone.", "🤫")}`}
+      <section class="mime-performer-row">${akMimeMultiActorCards(item)}</section>`;
+    document.querySelector("#multiMimeReady")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      try { await sendMultiAction("mime-ready", { ready: true }); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; }
+    });
+  }
+
+  function akMimeMultiRenderPlaying(gameState, item, actions) {
+    const actorIds = Array.isArray(item.actorIds) ? item.actorIds : [];
+    const isActor = actorIds.includes(state.currentUid);
+    const isLead = state.currentUid === (item.leadPlayerId || actorIds[0]);
+    const pending = actions?.[state.currentUid];
+    const candidates = state.players.filter(player => !actorIds.includes(player.id));
+    title.textContent = "Mime";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Mime")}
+      <section class="mime-playing-card">${akMimeBadges(item)}<div class="mime-live-icon">🎭</div><small>${isActor ? "TON SUJET" : "À TOI DE DEVINER"}</small><h2>${isActor ? escapeHtml(item.text || "") : `${escapeHtml(akMimeMultiActorNames(item))} ${actorIds.length > 1 ? "miment ensemble" : "mime"}`}</h2><div class="mime-performer-row">${akMimeMultiActorCards(item)}</div><div class="mega-mini-timer mime-timer"><strong id="v014MultiCountdown">${Math.max(0, Math.ceil((Number(gameState.turnEndsAt || 0) - AKFirebase.now()) / 1000))}</strong><span>secondes</span><div class="progress-track"><div id="v014MultiTimerFill" class="progress-fill"></div></div></div><p>Pas de parole, de lettres dessinées ni de mot de la même famille.</p></section>
+      ${isLead ? pending ? renderMultiWaiting("Résultat envoyé", "Le verdict arrive sur tous les téléphones.", "✓") : `
+        <section id="multiMimeMainActions" class="decision-grid"><button id="multiMimeFound" class="primary-btn">✅ Trouvé !</button><button id="multiMimeSkip" class="secondary-btn">Passer</button></section>
+        <section id="multiMimeGuesserChoice" class="mime-multi-guesser-choice" hidden><h3>Qui a trouvé en premier ?</h3><div class="mime-guesser-grid">${candidates.map(player => `<button type="button" data-multi-mime-guesser="${player.id}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>+1 point</small></button>`).join("")}</div><button id="multiMimeCollective" class="secondary-btn full">Réponse collective</button></section>` : isActor ? renderMultiWaiting("Tu es en scène", `${escapeHtml(item.leadPlayerId === state.currentUid ? "Tu valides le résultat" : "Le mimeur principal valide le résultat")}.`, "🎭") : renderMultiWaiting("Observe et devine", "La première bonne réponse gagne 1 point.", "🔎")}`;
+
+    document.querySelector("#multiMimeFound")?.addEventListener("click", () => {
+      const actionsNode = document.querySelector("#multiMimeMainActions");
+      const choiceNode = document.querySelector("#multiMimeGuesserChoice");
+      if (actionsNode) actionsNode.hidden = true;
+      if (choiceNode) choiceNode.hidden = false;
+    });
+    document.querySelector("#multiMimeSkip")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      try { await sendMultiAction("mime-result", { success: false }); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; }
+    });
+    document.querySelectorAll("[data-multi-mime-guesser]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-multi-mime-guesser]").forEach(node => node.disabled = true);
+      try { await sendMultiAction("mime-result", { success: true, guesserId: button.dataset.multiMimeGuesser }); }
+      catch (error) { console.error(error); document.querySelectorAll("[data-multi-mime-guesser]").forEach(node => node.disabled = false); }
+    }));
+    document.querySelector("#multiMimeCollective")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      try { await sendMultiAction("mime-result", { success: true, guesserId: null }); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; }
+    });
+    if (gameState.turnEndsAt) startV014MultiTimer(gameState.turnEndsAt, gameState.settings?.durationSeconds || 45, () => processMultiMegaTurn(gameState, actions));
+  }
+
+  async function akMimeAdvanceMultiRound(gameState, button) {
+    button.disabled = true;
+    clearV014MultiTimer();
+    const next = Number(gameState.currentIndex || 0) + 1;
+    const finished = next >= (gameState.items || []).length;
+    const nextItem = gameState.items?.[next];
+    try {
+      await AKFirebase.updateGame(state.roomCode, {
+        "state/phase": finished ? "final" : "mime-brief",
+        "state/currentIndex": finished ? gameState.currentIndex : next,
+        "state/currentPlayerId": finished ? gameState.currentPlayerId : (nextItem?.leadPlayerId || nextItem?.actorIds?.[0] || null),
+        "state/currentResult": null,
+        "state/turnEndsAt": null,
+        "state/finishedAt": finished ? AKFirebase.now() : null,
+        "state/updatedAt": AKFirebase.now(),
+        actions: null
+      });
+    } catch (error) {
+      console.error(error);
+      button.disabled = false;
+      alert("Impossible de passer au mime suivant.");
+    }
+  }
+
+  function akMimeMultiRenderResult(gameState, item) {
+    const result = gameState.currentResult || {};
+    const guesser = state.players.find(player => player.id === result.guesserId);
+    title.textContent = result.success ? "Mime trouvé" : result.timedOut ? "Temps écoulé" : "Mime passé";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Mime")}
+      <section class="reveal-stage reveal-v07 mime-result-card"><span class="game-cover-icon">${result.success ? "🎉" : result.timedOut ? "⏱️" : "↪️"}</span>${akMimeBadges(item)}<h2>${result.success ? "Mime trouvé !" : result.timedOut ? "Temps écoulé" : "Mime passé"}</h2><p>${escapeHtml(item.text || "")}</p></section>
+      <section class="mime-result-summary"><article><span>${Number(item.actors || 1) === 2 ? "🧑‍🤝‍🧑" : "🎭"}</span><strong>${escapeHtml(akMimeMultiActorNames(item))}</strong><small>${result.success ? `+${Number(result.points || 0)} point${Number(result.points || 0) > 1 ? "s" : ""} ${Number(item.actors || 1) === 2 ? "chacun" : ""}` : "0 point"}</small></article>${result.success ? `<article><span>🔎</span><strong>${guesser ? escapeHtml(guesser.name) : "Réponse collective"}</strong><small>${guesser ? "+1 point" : "Aucun point individuel"}</small></article>` : ""}</section>
+      ${state.isHost ? `<button id="nextMultiMime" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Mime suivant"}</button>` : renderMultiWaiting("En attente de l’hôte", "Le prochain mime va être distribué.", "👑")}`;
+    document.querySelector("#nextMultiMime")?.addEventListener("click", event => akMimeAdvanceMultiRound(gameState, event.currentTarget));
+  }
+
+  const akMimeMultiBaseRenderMegaTurn = renderMultiMegaTurn;
+  renderMultiMegaTurn = function (gameState, actions) {
+    if (!gameState?.settings?.mimeMode) return akMimeMultiBaseRenderMegaTurn(gameState, actions);
+    const item = gameState.items?.[Number(gameState.currentIndex || 0)];
+    if (!item) return;
+    if (gameState.phase === "mime-results") return akMimeMultiRenderResult(gameState, item);
+    if (gameState.phase === "mime-brief") return akMimeMultiRenderBrief(gameState, item, actions || {});
+    return akMimeMultiRenderPlaying(gameState, item, actions || {});
+  };
+
+  const akMimeMultiBaseRenderMegaFinal = renderMultiMegaFinal;
+  renderMultiMegaFinal = function (gameState) {
+    if (!gameState?.settings?.mimeMode) return akMimeMultiBaseRenderMegaFinal(gameState);
+    clearV014MultiTimer();
+    const ranking = [...state.players].sort((a, b) => Number(gameState.scores?.[b.id] || 0) - Number(gameState.scores?.[a.id] || 0));
+    const best = Math.max(0, ...ranking.map(player => Number(gameState.scores?.[player.id] || 0)));
+    const winners = ranking.filter(player => Number(gameState.scores?.[player.id] || 0) === best && best > 0);
+    const topBy = stats => {
+      const rows = state.players.map(player => ({ player, value: Number(stats?.[player.id] || 0) }));
+      const max = Math.max(0, ...rows.map(row => row.value));
+      return { max, players: max ? rows.filter(row => row.value === max).map(row => row.player) : [] };
+    };
+    const actorTop = topBy(gameState.mimeActorSuccess);
+    const guesserTop = topBy(gameState.mimeGuesserSuccess);
+    const failed = Object.values(gameState.mimeFailedItems || {}).sort((a, b) => akMimePoints({ difficulty: b.difficulty }) - akMimePoints({ difficulty: a.difficulty }))[0];
+    const names = top => top.players.map(player => escapeHtml(player.name)).join(" et ");
+    title.textContent = "Classement final";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="winner-stage winner-stage-v07 mega-final-stage"><div class="winner-crown">🎭🏆</div><h2>${winners.length ? winners.map(player => escapeHtml(player.name)).join(" et ") : "Rideau !"}</h2><p>${winners.length ? `${winners.length > 1 ? "terminent" : "termine"} en tête de la troupe.` : "Tous les mimes sont terminés."}</p></section>
+      <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(gameState.scores?.[player.id] || 0)} pts</span></div>`).join("")}</section>
+      <section class="mime-final-awards"><article><span>🎭</span><small>MEILLEUR MIME</small><strong>${actorTop.max ? names(actorTop) : "Aucun mime trouvé"}</strong><p>${actorTop.max ? `${actorTop.max} mime${actorTop.max > 1 ? "s" : ""} réussi${actorTop.max > 1 ? "s" : ""}` : "La revanche sera théâtrale."}</p></article><article><span>🔎</span><small>MEILLEUR DEVINEUR</small><strong>${guesserTop.max ? names(guesserTop) : "Réponses collectives"}</strong><p>${guesserTop.max ? `${guesserTop.max} première${guesserTop.max > 1 ? "s" : ""} bonne${guesserTop.max > 1 ? "s" : ""} réponse${guesserTop.max > 1 ? "s" : ""}` : "Aucun point individuel attribué."}</p></article><article><span>${failed ? "🧱" : "✨"}</span><small>${failed ? "MIME RESTÉ INCOMPRIS" : "SANS-FAUTE"}</small><strong>${failed ? escapeHtml(failed.text || "") : "Tous les mimes ont été trouvés"}</strong><p>${failed ? `${akMimeDifficultyMeta[akMimeDifficulty(failed.difficulty)].icon} ${akMimeDifficultyMeta[akMimeDifficulty(failed.difficulty)].label}` : "La troupe était connectée par télépathie."}</p></article></section>
+      ${renderPostGameContinuation(gameState)}`;
+    ensureEveningResult(gameState);
+    bindPostGameContinuation(gameState);
+  };
+
+
   window.AKGamesMultiplayer = Object.freeze({
     launchRandomGame: () => launchRandomMultiplayerGame()
   });

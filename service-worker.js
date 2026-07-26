@@ -1,15 +1,15 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v2.8-minorite-750";
+const CACHE_VERSION = "akgames-v2.9-mime-650";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=minorite-v2",
+  "/styles.css?v=mime-v2",
   "/creator.css?v=creator-v1.3-access",
-  "/app.js?v=minorite-v2",
+  "/app.js?v=mime-v2",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
-  "/multiplayer.js?v=minorite-v2",
+  "/multiplayer.js?v=mime-v2",
   "/pwa.js",
   "/manifest.webmanifest",
   "/icons/icon-192.png",
