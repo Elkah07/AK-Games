@@ -1,58 +1,76 @@
-AK'GAMES — MODE CRÉATEUR V1
-===========================
+AK'GAMES — MODE CRÉATEUR V1.1 PRIVÉ
+====================================
 
-ACCÈS
------
-1. Ouvrir AK'Games.
-2. Aller dans les paramètres.
-3. Appuyer sur « Mode créateur ».
-4. Lors de la première ouverture, créer un code d'au moins 6 caractères.
+IMPORTANT
+---------
+Cette version REMPLACE le ZIP « Mode créateur V1 » précédent.
 
-Le code est enregistré uniquement sur l'appareil, sous forme d'empreinte locale.
-Il protège l'interface mais ne constitue pas une authentification serveur.
+Le mode créateur n'est plus accessible avec un simple code local.
+Il faut désormais réunir DEUX autorisations :
 
-LABORATOIRE DE TEST
--------------------
-Le tableau de bord permet de générer 2, 3, 4 ou 6 joueurs virtuels.
-Cela lance les jeux en mode « un téléphone » avec le contenu +18 déverrouillé.
-Ce laboratoire teste les règles, les cartes, les scores, les écrans et les fins de partie.
-Il ne remplace pas un dernier test de synchronisation sur plusieurs appareils réels.
+1. l'UID Firebase de l'appareil doit être autorisé manuellement dans Firebase ;
+2. le code créateur local doit ensuite être saisi sur cet appareil.
 
-SIGNALEMENTS
-------------
-Une commande « Signaler cette carte » apparaît pendant les jeux.
-Le signalement contient automatiquement :
-- le jeu ;
-- l'identifiant de la carte ;
-- le texte affiché ;
-- le motif ;
-- la note facultative ;
-- la date et le mode de jeu.
+Un joueur qui télécharge l'application ne voit donc aucun bouton « Mode créateur ».
+Même s'il inspecte le code ou modifie son stockage local, les outils privés refusent
+de s'ouvrir tant que son UID n'est pas autorisé par Firebase.
 
-Chaque signalement est d'abord conservé localement. L'application essaie ensuite de
-l'envoyer dans Firebase sous /contentReports.
+CE QUE LES JOUEURS PEUVENT VOIR
+-------------------------------
+Les joueurs voient uniquement « Signaler cette carte » pendant une partie.
+Ils peuvent envoyer une question incohérente, en double, mal formulée ou bugguée.
 
-ACTIVER LA BOÎTE FIREBASE GLOBALE
----------------------------------
-Les règles Firebase autorisent tous les joueurs authentifiés anonymement à CRÉER un
-signalement, mais personne ne peut lire la boîte sans autorisation créatrice.
+Ils n'ont pas accès :
+- au laboratoire avec joueurs virtuels ;
+- à la boîte de réception des signalements ;
+- au navigateur des fichiers JSON ;
+- aux diagnostics ;
+- aux outils de cache et de test.
 
-Après le premier déploiement :
-1. Ouvrir le mode créateur puis « Signalements ».
-2. Copier l'UID Firebase affiché.
-3. Dans Firebase Console > Realtime Database > Données, créer :
+PREMIÈRE ACTIVATION SUR TON APPAREIL
+------------------------------------
+1. Déploie les fichiers de ce ZIP.
+2. Sur L'APPAREIL que tu utiliseras comme créatrice, ouvre l'adresse de l'application
+   en ajoutant ceci à la fin :
+
+   ?creator-setup=1
+
+   Exemple :
+   https://ton-site.web.app/?creator-setup=1
+
+3. Appuie sur « Copier mon UID ».
+4. Ouvre Firebase Console > Realtime Database > Données.
+5. Crée exactement cette structure :
 
    creatorAccess
-     VOTRE_UID
+     TON_UID_FIREBASE
        true
 
-4. Revenir dans l'application et appuyer sur « Réessayer ».
+6. Recharge AK'Games sur le même appareil.
+7. Le bloc « Mode créateur » apparaîtra uniquement dans tes paramètres.
+8. À la première ouverture, choisis ton code créateur local.
 
-Une fois ce réglage fait, l'appareil peut lire, classer, résoudre, ignorer, supprimer
-et exporter tous les signalements envoyés depuis les autres téléphones.
+IMPORTANT : creatorAccess ne peut pas être modifié depuis l'application. Seule la
+console Firebase ou un environnement administrateur peut autoriser un nouvel UID.
+Les joueurs ne peuvent donc pas s'ajouter eux-mêmes.
 
-DÉPLOIEMENT
------------
-Le workflow GitHub du projet déploie déjà Hosting ET Database. Le fichier
-« database.rules.json » doit donc être conservé dans le dépôt pour activer les
-nouvelles règles.
+SI TU CHANGES DE TÉLÉPHONE OU RÉINSTALLER L'APPLICATION
+-------------------------------------------------------
+L'authentification Firebase étant anonyme, effacer les données de l'application,
+changer de navigateur ou changer d'appareil peut créer un nouvel UID.
+Il faudra alors refaire l'étape ?creator-setup=1 et autoriser ce nouvel UID.
+Tu peux supprimer l'ancien UID dans creatorAccess si tu ne l'utilises plus.
+
+SÉCURITÉ FIREBASE
+-----------------
+Le fichier database.rules.json conserve les protections suivantes :
+- chaque UID peut uniquement lire sa propre autorisation creatorAccess ;
+- aucun utilisateur de l'application ne peut écrire dans creatorAccess ;
+- tous les joueurs authentifiés peuvent créer un signalement ;
+- seuls les UID autorisés peuvent lire et gérer la boîte globale.
+
+CONNEXION INTERNET
+------------------
+L'ouverture des outils privés effectue une vérification Firebase. Une connexion est
+nécessaire pour confirmer que l'UID est toujours autorisé. Le bouton de signalement
+des joueurs continue à conserver les envois localement lorsqu'ils sont hors ligne.

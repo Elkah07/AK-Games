@@ -6,6 +6,15 @@
   const AK_CREATOR_REPORTS_KEY = "akgames_creator_reports_v1";
   const AK_CREATOR_DEVICE_KEY = "akgames_creator_device_v1";
   const AK_CREATOR_MAX_LOCAL_REPORTS = 500;
+  const AK_CREATOR_ACCESS_CACHE_MS = 30000;
+
+  let akCreatorAccessCache = {
+    checkedAt: 0,
+    allowed: false,
+    uid: null,
+    reason: "",
+    pending: null
+  };
 
   const AK_CREATOR_SOURCES = [
     ["Qui de nous ?", "data/qui-de-nous.json"],
@@ -167,14 +176,17 @@
   }
 
   async function akCreatorUnlock() {
+    // Le PIN n'est qu'une seconde serrure locale. L'autorisation Firebase du
+    // compte courant est obligatoire avant d'afficher ou d'exécuter un outil.
+    if (!(await akCreatorRequireServerAccess({ force: true }))) return false;
     if (akCreatorIsUnlocked()) return true;
-    const storedHash = localStorage.getItem(AK_CREATOR_PIN_KEY);
 
+    const storedHash = localStorage.getItem(AK_CREATOR_PIN_KEY);
     if (!storedHash) {
       const values = await akCreatorModal({
         titleText: "Créer ton code créateur",
-        description: "Ce code protège les outils sur cet appareil. Il ne remplace pas la sécurité Firebase des signalements en ligne.",
-        confirmLabel: "Créer le mode créateur",
+        description: "Ton compte Firebase est autorisé. Ce code ajoute une seconde protection sur cet appareil.",
+        confirmLabel: "Créer le code",
         fields: [
           { name: "pin", label: "Nouveau code", type: "password", autocomplete: "new-password", maxlength: 40, placeholder: "6 caractères minimum" },
           { name: "confirmPin", label: "Confirmer le code", type: "password", autocomplete: "new-password", maxlength: 40, placeholder: "Retape le même code" }
@@ -192,7 +204,7 @@
 
     const values = await akCreatorModal({
       titleText: "Ouvrir le mode créateur",
-      description: "Entre ton code pour accéder au laboratoire et aux signalements.",
+      description: "Compte autorisé. Entre maintenant ton code local.",
       confirmLabel: "Déverrouiller",
       fields: [{ name: "pin", label: "Code créateur", type: "password", autocomplete: "current-password", maxlength: 40, placeholder: "Ton code" }]
     });
@@ -239,14 +251,89 @@
     }
   }
 
-  async function akCreatorHasCloudAccess() {
-    const user = await akCreatorFirebaseUser();
-    if (!user || !window.AKFirebase?.db) return { allowed: false, uid: null, reason: "Firebase indisponible" };
+  async function akCreatorHasCloudAccess(force = false) {
+    const now = Date.now();
+    if (!force && akCreatorAccessCache.checkedAt && now - akCreatorAccessCache.checkedAt < AK_CREATOR_ACCESS_CACHE_MS) {
+      return {
+        allowed: akCreatorAccessCache.allowed,
+        uid: akCreatorAccessCache.uid,
+        reason: akCreatorAccessCache.reason
+      };
+    }
+    if (akCreatorAccessCache.pending) return akCreatorAccessCache.pending;
+
+    akCreatorAccessCache.pending = (async () => {
+      const user = await akCreatorFirebaseUser();
+      if (!user || !window.AKFirebase?.db) {
+        return { allowed: false, uid: user?.uid || null, reason: "Firebase indisponible" };
+      }
+      try {
+        const snapshot = await window.AKFirebase.db.ref(`creatorAccess/${user.uid}`).once("value");
+        const allowed = snapshot.val() === true;
+        return {
+          allowed,
+          uid: user.uid,
+          reason: allowed ? "" : "Ce compte n'est pas autorisé comme créateur"
+        };
+      } catch (error) {
+        return { allowed: false, uid: user.uid, reason: error?.message || "Vérification impossible" };
+      }
+    })();
+
+    const result = await akCreatorAccessCache.pending;
+    akCreatorAccessCache = { ...result, checkedAt: Date.now(), pending: null };
+    return result;
+  }
+
+  function akCreatorRemovePrivateEntrances() {
+    document.querySelector("#akCreatorSettingsCard")?.remove();
+    document.querySelector("#akCreatorHomeShortcut")?.remove();
+    document.querySelector("#akCreatorDockButton")?.remove();
+  }
+
+  async function akCreatorRequireServerAccess({ silent = false, force = false } = {}) {
+    const access = await akCreatorHasCloudAccess(force);
+    if (access.allowed) return true;
+
+    akCreatorSetUnlocked(false);
+    akCreatorRemovePrivateEntrances();
+    if (!silent) {
+      alert("Accès réservé au compte créateur autorisé dans Firebase.");
+    }
+    return false;
+  }
+
+  async function akCreatorShowSetupUidIfRequested() {
+    const url = new URL(window.location.href);
+    if (url.searchParams.get("creator-setup") !== "1") return;
+
+    // Retire immédiatement le paramètre pour éviter de rouvrir l'assistant à
+    // chaque navigation ou rechargement de la PWA.
+    url.searchParams.delete("creator-setup");
+    window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+
+    const access = await akCreatorHasCloudAccess(true);
+    if (!access.uid) {
+      alert("Impossible de récupérer l'UID Firebase de cet appareil. Vérifie la connexion internet puis réessaie.");
+      return;
+    }
+
+    const values = await akCreatorModal({
+      eyebrow: "ACTIVATION PRIVÉE",
+      titleText: access.allowed ? "Cet appareil est déjà autorisé" : "Autoriser ton appareil créateur",
+      description: access.allowed
+        ? `UID Firebase : ${access.uid}`
+        : `UID Firebase : ${access.uid}. Copie-le, puis ajoute creatorAccess/${access.uid} = true dans la Realtime Database. Les autres appareils ne pourront pas s'autoriser eux-mêmes.`,
+      confirmLabel: "Copier mon UID",
+      fields: []
+    });
+    if (!values) return;
     try {
-      const snapshot = await window.AKFirebase.db.ref(`creatorAccess/${user.uid}`).once("value");
-      return { allowed: snapshot.val() === true, uid: user.uid, reason: snapshot.val() === true ? "" : "Accès créateur non activé dans Firebase" };
-    } catch (error) {
-      return { allowed: false, uid: user.uid, reason: error?.message || "Accès refusé" };
+      if (!navigator.clipboard?.writeText) throw new Error("Clipboard indisponible");
+      await navigator.clipboard.writeText(access.uid);
+      akCreatorToast("UID Firebase copié.");
+    } catch {
+      window.prompt("Copie cet UID Firebase :", access.uid);
     }
   }
 
@@ -268,7 +355,7 @@
       status: "open",
       createdAt: Number(report.createdAt || Date.now()),
       updatedAt: Number(report.updatedAt || report.createdAt || Date.now()),
-      appVersion: "creator-v1"
+      appVersion: "creator-v1.1-private"
     };
   }
 
@@ -520,7 +607,8 @@
     }));
   }
 
-  function akCreatorStartLab(count = 4) {
+  async function akCreatorStartLab(count = 4) {
+    if (!(await akCreatorUnlock())) return;
     akCreatorResetGameStates();
     state.mode = "single";
     state.roomCode = null;
@@ -638,11 +726,9 @@
 
       ${!cloudResult.access.allowed ? `
         <section class="ak-creator-cloud-warning">
-          <strong>☁️ Réception Firebase à activer</strong>
-          <p>Les joueurs peuvent déjà envoyer des signalements en ligne. Pour les lire ici, autorise cet appareil dans la Realtime Database.</p>
-          <code>creatorAccess/${akCreatorEscape(cloudResult.access.uid || "UID_INDISPONIBLE")} = true</code>
+          <strong>☁️ Connexion créatrice interrompue</strong>
+          <p>${akCreatorEscape(cloudResult.access.reason || "Impossible de vérifier l'autorisation Firebase.")}</p>
           <div class="ak-creator-inline-actions">
-            <button type="button" class="secondary-btn" data-ak-copy-uid data-uid="${akCreatorEscape(cloudResult.access.uid || "")}">Copier mon UID</button>
             <button type="button" class="secondary-btn" data-ak-retry-cloud>Réessayer</button>
           </div>
         </section>
@@ -707,12 +793,6 @@
       });
     });
     screen.querySelector("[data-ak-export-reports]")?.addEventListener("click", () => akCreatorDownload(`akgames-signalements-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(allReports, null, 2)));
-    screen.querySelector("[data-ak-copy-uid]")?.addEventListener("click", async event => {
-      const uid = event.currentTarget.dataset.uid;
-      if (!uid) return;
-      await navigator.clipboard?.writeText(uid);
-      akCreatorToast("UID Firebase copié.");
-    });
     screen.querySelector("[data-ak-retry-cloud]")?.addEventListener("click", () => akCreatorRenderInbox(filter, search));
   }
 
@@ -840,13 +920,11 @@
     setBackVisible(true);
     const localReports = akCreatorLoadReports();
     const counts = akCreatorReportCounts(localReports);
-    const cloud = await akCreatorHasCloudAccess();
-
     screen.innerHTML = `
       <section class="ak-creator-hero">
         <div class="ak-creator-hero-mark">AK</div>
         <div><small>LABORATOIRE PRIVÉ</small><h2>Mode créateur</h2><p>Teste, inspecte et nettoie les jeux sans convoquer toute une équipe de cobayes.</p></div>
-        <span class="ak-creator-status">${cloud.allowed ? "☁️ cloud relié" : "📱 local actif"}</span>
+        <span class="ak-creator-status">🔐 compte autorisé</span>
       </section>
 
       <section class="ak-creator-section">
@@ -878,9 +956,8 @@
         </button>
       </section>
 
-      <section class="ak-creator-cloud-card ${cloud.allowed ? "is-connected" : ""}">
-        <div><span>${cloud.allowed ? "☁️" : "🔑"}</span><div><strong>${cloud.allowed ? "Réception Firebase activée" : "Réception Firebase à autoriser"}</strong><p>${cloud.allowed ? "Les signalements envoyés depuis les autres téléphones remonteront dans ta boîte." : "Le signalement fonctionne déjà. L’accès ci-dessous sert uniquement à lire et gérer la boîte globale."}</p></div></div>
-        ${cloud.allowed ? "" : `<code>creatorAccess/${akCreatorEscape(cloud.uid || "UID_INDISPONIBLE")} = true</code><button type="button" class="secondary-btn" data-ak-copy-dashboard-uid data-uid="${akCreatorEscape(cloud.uid || "")}">Copier mon UID</button>`}
+      <section class="ak-creator-cloud-card is-connected">
+        <div><span>☁️</span><div><strong>Compte créateur vérifié</strong><p>La boîte Firebase et les outils privés sont réservés à cet UID autorisé.</p></div></div>
       </section>
     `;
 
@@ -899,21 +976,17 @@
       state.akCreatorScreen = null;
       renderHome();
     });
-    screen.querySelector("[data-ak-copy-dashboard-uid]")?.addEventListener("click", async event => {
-      const uid = event.currentTarget.dataset.uid;
-      if (!uid) return;
-      await navigator.clipboard?.writeText(uid);
-      akCreatorToast("UID Firebase copié.");
-    });
   }
 
-  function akCreatorMountDock() {
+  async function akCreatorMountDock() {
     const existing = document.querySelector("#akCreatorDockButton");
-    if (!akCreatorIsUnlocked() || state.akCreatorScreen || state.roomCode) {
+    const access = await akCreatorHasCloudAccess();
+    if (!access.allowed || !akCreatorIsUnlocked() || state.akCreatorScreen || state.roomCode) {
       existing?.remove();
       return;
     }
-    if (existing) return;
+    if (document.querySelector("#akCreatorDockButton")) return;
+
     const button = document.createElement("button");
     button.id = "akCreatorDockButton";
     button.className = "ak-creator-dock-button";
@@ -921,6 +994,10 @@
     button.setAttribute("aria-label", "Ouvrir les outils créateur");
     button.innerHTML = "🛠️";
     button.addEventListener("click", async () => {
+      if (!(await akCreatorRequireServerAccess({ force: true }))) {
+        button.remove();
+        return;
+      }
       const values = await akCreatorModal({
         eyebrow: "OUTILS RAPIDES",
         titleText: state.akCreatorLab ? "Laboratoire en cours" : "Mode créateur",
@@ -954,8 +1031,20 @@
     document.body.appendChild(button);
   }
 
-  function akCreatorMountSettingsCard() {
-    if (!document.querySelector("#resetApp") || document.querySelector("#akCreatorSettingsCard")) return;
+  async function akCreatorMountSettingsCard() {
+    const existing = document.querySelector("#akCreatorSettingsCard");
+    if (!document.querySelector("#resetApp")) {
+      existing?.remove();
+      return;
+    }
+
+    const access = await akCreatorHasCloudAccess();
+    if (!access.allowed) {
+      existing?.remove();
+      return;
+    }
+    if (document.querySelector("#akCreatorSettingsCard")) return;
+
     const card = document.createElement("section");
     card.id = "akCreatorSettingsCard";
     card.className = "ak-creator-settings-card";
@@ -967,8 +1056,15 @@
     card.querySelector("[data-ak-open-creator]")?.addEventListener("click", akCreatorRenderDashboard);
   }
 
-  function akCreatorMountHomeShortcut() {
-    if (!akCreatorIsUnlocked() || document.querySelector("#akCreatorHomeShortcut")) return;
+  async function akCreatorMountHomeShortcut() {
+    const existing = document.querySelector("#akCreatorHomeShortcut");
+    const access = await akCreatorHasCloudAccess();
+    if (!access.allowed || !akCreatorIsUnlocked()) {
+      existing?.remove();
+      return;
+    }
+    if (document.querySelector("#akCreatorHomeShortcut")) return;
+
     const home = document.querySelector(".home-launch");
     if (!home) return;
     const button = document.createElement("button");
@@ -1021,21 +1117,30 @@
   });
   akCreatorObserver.observe(document.body, { childList: true, subtree: true });
 
-  window.addEventListener("online", akCreatorSyncPendingReports);
+  window.addEventListener("online", () => {
+    akCreatorAccessCache.checkedAt = 0;
+    akCreatorSyncPendingReports();
+    akCreatorMountDock();
+    akCreatorMountSettingsCard();
+    akCreatorMountHomeShortcut();
+  });
+
+  window.AKFirebase?.auth?.onAuthStateChanged(() => {
+    akCreatorAccessCache.checkedAt = 0;
+    akCreatorAccessCache.pending = null;
+    window.requestAnimationFrame(() => {
+      akCreatorMountDock();
+      akCreatorMountSettingsCard();
+      akCreatorMountHomeShortcut();
+    });
+  });
+
   window.setTimeout(akCreatorSyncPendingReports, 1200);
+  window.setTimeout(akCreatorShowSetupUidIfRequested, 350);
   window.requestAnimationFrame(() => {
     akCreatorMountReportControl();
     akCreatorMountDock();
     akCreatorMountSettingsCard();
     akCreatorMountHomeShortcut();
   });
-
-  window.AKGamesCreator = {
-    open: akCreatorRenderDashboard,
-    inbox: akCreatorRenderInbox,
-    browser: akCreatorRenderContentBrowser,
-    startLab: akCreatorStartLab,
-    currentContent: akCreatorCurrentContent,
-    syncReports: akCreatorSyncPendingReports
-  };
 })();
