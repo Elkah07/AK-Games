@@ -1,10 +1,10 @@
 /* =========================================================
-   AK'GAMES V4.11 — RÉGLAGES ÉTENDUS
+   AK'GAMES V4.13 — RÉGLAGES + AUDIO
    Apparence, confort, mascottes, contenu et données locales
    ========================================================= */
 (() => {
   const STORAGE_KEY = "akgames_settings_v2";
-  const VERSION_LABEL = "V4.11";
+  const VERSION_LABEL = "V4.13";
   const DEFAULTS = Object.freeze({
     theme: "system",
     animations: "normal",
@@ -169,8 +169,13 @@
     navigator.vibrate(pattern);
   }
 
-  function tone(kind = "tap") {
+  function playSound(id, options = {}) {
     if (!preferences.sounds || preferences.soundVolume <= 0) return;
+    if (window.AKSound?.play) {
+      window.AKSound.play(id, options);
+      return;
+    }
+    // Secours très léger si le pack audio n'est pas encore chargé.
     try {
       const AudioCtor = window.AudioContext || window.webkitAudioContext;
       if (!AudioCtor) return;
@@ -179,18 +184,28 @@
       const oscillator = audioContext.createOscillator();
       const gain = audioContext.createGain();
       const now = audioContext.currentTime;
-      const volume = (preferences.soundVolume / 100) * 0.06;
-      const frequencies = { tap: 420, choice: 540, success: 760, danger: 210 };
-      oscillator.type = kind === "success" ? "sine" : "triangle";
-      oscillator.frequency.setValueAtTime(frequencies[kind] || frequencies.tap, now);
-      if (kind === "success") oscillator.frequency.exponentialRampToValueAtTime(980, now + 0.12);
+      oscillator.type = "triangle";
+      oscillator.frequency.setValueAtTime(id.includes("error") || id.includes("wrong") ? 220 : 620, now);
       gain.gain.setValueAtTime(0.0001, now);
-      gain.gain.exponentialRampToValueAtTime(Math.max(0.0002, volume), now + 0.012);
-      gain.gain.exponentialRampToValueAtTime(0.0001, now + (kind === "success" ? 0.18 : 0.09));
+      gain.gain.exponentialRampToValueAtTime((preferences.soundVolume / 100) * 0.04, now + 0.01);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.10);
       oscillator.connect(gain).connect(audioContext.destination);
       oscillator.start(now);
-      oscillator.stop(now + (kind === "success" ? 0.2 : 0.11));
+      oscillator.stop(now + 0.11);
     } catch {}
+  }
+
+  function tone(kind = "tap") {
+    const map = {
+      tap: "ui_tap",
+      choice: "ui_confirm",
+      success: "correct",
+      danger: "ui_error",
+      back: "ui_back",
+      toggleOn: "ui_toggle_on",
+      toggleOff: "ui_toggle_off"
+    };
+    playSound(map[kind] || map.tap);
   }
 
   document.addEventListener("click", event => {
@@ -198,8 +213,20 @@
     if (!button || button.disabled) return;
     const dangerous = button.classList.contains("danger-btn");
     const choice = button.matches(".primary-btn, .choice-pill, [data-answer], [data-choice]");
-    tone(dangerous ? "danger" : choice ? "choice" : "tap");
+    const id = button.id || "";
+    if (id === "backBtn") tone("back");
+    else if (id === "settingsBtn") playSound("ui_open_settings");
+    else if (dangerous) tone("danger");
+    else if (choice) tone("choice");
+    else tone("tap");
     vibration(dangerous ? [18, 35, 18] : choice ? 18 : 8);
+  }, true);
+
+  document.addEventListener("change", event => {
+    const control = event.target;
+    if (!control.matches('input[type="checkbox"], input[type="radio"], select')) return;
+    if (control.matches('input[type="checkbox"]')) tone(control.checked ? "toggleOn" : "toggleOff");
+    else playSound("ui_toggle_on", { gain: .85 });
   }, true);
 
   const FILTER_RULES = [
@@ -698,19 +725,19 @@
     overlay.setAttribute("aria-live", "assertive");
     overlay.innerHTML = `<small>PROCHAINE MANCHE</small><strong>${left}</strong>`;
     document.body.appendChild(overlay);
-    tone("choice");
+    playSound("countdown_tick");
     vibration(10);
     const interval = setInterval(() => {
       left -= 1;
       if (left <= 0) {
         clearInterval(interval);
         overlay.querySelector("strong").textContent = "GO !";
-        tone("success");
+        playSound("countdown_go");
         vibration([12, 35, 20]);
         setTimeout(() => { overlay.remove(); countdownBusy = false; }, 430);
       } else {
         overlay.querySelector("strong").textContent = String(left);
-        tone("tap");
+        playSound("countdown_tick");
       }
     }, 760);
   }
@@ -727,7 +754,8 @@
         const winnerKey = winner.textContent.trim().slice(0, 180);
         if (winnerKey && winnerKey !== lastWinnerSoundKey) {
           lastWinnerSoundKey = winnerKey;
-          tone("success");
+          const lower = winnerKey.toLowerCase();
+          playSound(lower.includes("égal") ? "tie" : /défaite|perdu|perdant/.test(lower) ? "defeat" : "victory");
           vibration([25, 35, 25, 35, 45]);
         }
       }
@@ -742,6 +770,7 @@
     apply: applyDocumentPreferences,
     filterPool,
     tone,
+    playSound,
     vibration,
     version: VERSION_LABEL
   };

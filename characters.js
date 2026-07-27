@@ -288,6 +288,7 @@
     `;
     document.body.appendChild(bubble);
     enhancePoseImages();
+    if (settings?.mascotSounds !== false) window.AKSound?.playMascot?.(id, "select");
 
     window.clearTimeout(pickerBubbleTimer);
     const displayTime = settings?.mascotFrequency === "chatty" ? 7600 : settings?.mascotFrequency === "discreet" ? 4000 : 5600;
@@ -465,6 +466,7 @@
     const anchor = screen.querySelector(".decision-grid, .toolbar, .primary-btn.full, .game-progress");
     if (anchor) anchor.insertAdjacentElement("beforebegin", bubble);
     else screen.appendChild(bubble);
+    if (settings?.mascotSounds !== false) window.AKSound?.playMascot?.(id, isWinner ? "result" : "hype");
     window.clearTimeout(speechTimer);
     const speechTime = frequency === "chatty" ? 8500 : frequency === "discreet" ? 4200 : 6500;
     speechTimer = window.setTimeout(() => bubble.classList.add("quiet"), speechTime);
