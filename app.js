@@ -5,6 +5,7 @@ const state = {
   alcohol: false,
   players: [],
   draftPlayer: { name: "", avatarId: null },
+  editingPlayerId: null,
   currentCategory: null,
   quiDeNous: null,
   laughDuel: null,
@@ -536,84 +537,299 @@ function renderSetup() {
   });
 }
 
-function renderPlayerForm() {
-  title.textContent = "Crée ton joueur";
+function renderPlayerForm(options = {}) {
+  const editingPlayer = state.players.find(player => player.id === state.editingPlayerId) || null;
+  const selectedAvatar = state.draftPlayer.avatarId ? avatarById(state.draftPlayer.avatarId) : null;
+  const playerCount = state.players.length;
+  const maxPlayers = avatars.length;
+
+  title.textContent = editingPlayer ? `Modifie ${editingPlayer.name}` : playerCount ? "Ajoute un joueur" : "Crée les joueurs";
   setBackVisible(true);
 
+  const avatarCards = avatars.map(avatar => {
+    const owner = state.players.find(player => player.avatarId === avatar.id && player.id !== state.editingPlayerId);
+    const selected = state.draftPlayer.avatarId === avatar.id;
+    const classes = ["avatar-card"];
+    if (selected) classes.push("selected");
+    if (owner) classes.push("taken");
+
+    return `
+      <button
+        type="button"
+        class="${classes.join(" ")}"
+        data-avatar="${avatar.id}"
+        aria-label="${owner ? `${escapeHtml(avatar.name)}, pris par ${escapeHtml(owner.name)}` : `Choisir ${escapeHtml(avatar.name)}`}"
+        aria-pressed="${selected ? "true" : "false"}"
+        aria-disabled="${owner ? "true" : "false"}"
+        ${owner ? "disabled" : ""}
+      >
+        <span class="avatar-selection-check" aria-hidden="true">✓</span>
+        ${owner ? `<span class="avatar-taken-label">Pris par ${escapeHtml(owner.name)}</span>` : ""}
+        <span class="avatar-emoji" aria-hidden="true">${avatar.emoji}</span>
+        <span class="avatar-name">${escapeHtml(avatar.name)}</span>
+      </button>
+    `;
+  }).join("");
+
+  const playerCards = state.players.map(player => {
+    const avatar = avatarById(player.avatarId);
+    const isEditing = player.id === state.editingPlayerId;
+    return `
+      <article class="player-card player-manager-card ${isEditing ? "is-editing" : ""}" data-player-card="${player.id}">
+        <div class="player-main">
+          <div class="player-avatar" data-avatar-id="${player.avatarId}">${avatar.emoji}</div>
+          <div>
+            <strong>${escapeHtml(player.name)}</strong>
+            <div class="helper">${escapeHtml(avatar.name)}${isEditing ? " · Modification en cours" : ""}</div>
+          </div>
+        </div>
+        <div class="player-card-actions">
+          <button type="button" class="secondary-btn compact-player-action" data-edit-player="${player.id}" aria-label="Modifier ${escapeHtml(player.name)}">✏️ Modifier</button>
+          <button type="button" class="danger-btn compact-player-action" data-remove-player="${player.id}" aria-label="Supprimer ${escapeHtml(player.name)}">🗑️ Supprimer</button>
+        </div>
+      </article>
+    `;
+  }).join("");
+
   screen.innerHTML = `
-    <section class="card">
-      <div class="form-group">
-        <label for="playerName">Ton prénom</label>
-        <input id="playerName" class="text-input" maxlength="20" autocomplete="nickname" autocapitalize="words" enterkeyhint="done" placeholder="Ex. Kathie" value="${escapeHtml(state.draftPlayer.name)}">
-      </div>
-    </section>
+    <div class="player-manager-screen">
+      <section class="player-manager-heading">
+        <div>
+          <span class="player-count-badge">${playerCount} joueur${playerCount === 1 ? "" : "s"} ajouté${playerCount === 1 ? "" : "s"}</span>
+          <h2>${editingPlayer ? "Modifie ce joueur" : playerCount ? "Ajoute quelqu’un au groupe" : "Compose ton groupe"}</h2>
+          <p>${playerCount >= 2 ? "Vous pouvez déjà commencer, ou ajouter d’autres personnes." : "Ajoute au moins deux joueurs pour lancer une partie."}</p>
+        </div>
+        <span class="player-capacity">${playerCount}/${maxPlayers}</span>
+      </section>
 
-    <section class="card">
-      <h2 class="section-title">Choisis ton personnage</h2>
-      <p class="helper">Chaque mascotte a sa personnalité. Un personnage déjà choisi devient indisponible pour les autres joueurs.</p>
-      <div class="spacer"></div>
-      <div class="avatar-grid">
-        ${avatars.map(a => `
-          <button type="button" class="avatar-card ${state.draftPlayer.avatarId === a.id ? "selected" : ""}" data-avatar="${a.id}" aria-label="Choisir ${escapeHtml(a.name)}" aria-pressed="${state.draftPlayer.avatarId === a.id ? "true" : "false"}">
-            <span class="avatar-emoji" aria-hidden="true">${a.emoji}</span>
-            <span class="avatar-name">${a.name}</span>
+      <section id="playerFormCard" class="card player-form-card ${editingPlayer ? "editing-player" : ""}">
+        <div class="player-form-kicker">${editingPlayer ? "MODIFICATION" : "NOUVEAU JOUEUR"}</div>
+        <div class="form-group">
+          <label for="playerName">Prénom</label>
+          <input id="playerName" class="text-input" maxlength="20" autocomplete="nickname" autocapitalize="words" enterkeyhint="done" placeholder="Ex. Kathie" value="${escapeHtml(state.draftPlayer.name)}">
+        </div>
+
+        <div id="selectedCharacterBlock" class="selected-character-block ${selectedAvatar ? "has-character" : "is-empty"}" aria-live="polite">
+          <div class="selected-character-preview">
+            <span id="selectedCharacterAvatar" class="selected-character-avatar" data-avatar-id="${state.draftPlayer.avatarId || ""}" aria-hidden="true">${selectedAvatar?.emoji || "?"}</span>
+            <div>
+              <small>PERSONNAGE SÉLECTIONNÉ</small>
+              <strong id="selectedCharacterName">${selectedAvatar ? escapeHtml(selectedAvatar.name) : "Aucune mascotte choisie"}</strong>
+              <span id="selectedCharacterHint">${selectedAvatar ? "Tout est prêt pour ce joueur." : "Choisis une mascotte juste en dessous."}</span>
+            </div>
+          </div>
+          <div class="selected-character-actions">
+            ${editingPlayer ? `<button id="cancelPlayerEdit" type="button" class="secondary-btn">Annuler</button>` : ""}
+            <button id="savePlayer" type="button" class="primary-btn" ${!state.draftPlayer.name.trim() || !state.draftPlayer.avatarId ? "disabled" : ""}>
+              ${editingPlayer
+                ? `Enregistrer${state.draftPlayer.name.trim() ? ` ${escapeHtml(state.draftPlayer.name.trim())}` : ""}`
+                : state.draftPlayer.name.trim()
+                  ? `Ajouter ${escapeHtml(state.draftPlayer.name.trim())}`
+                  : "Ajouter ce joueur"}
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card mascot-picker-card">
+        <div class="player-section-heading">
+          <div>
+            <h2 class="section-title">Choisis une mascotte</h2>
+            <p class="helper">Les mascottes déjà utilisées indiquent directement qui les a choisies.</p>
+          </div>
+          <span>${maxPlayers - playerCount} disponible${maxPlayers - playerCount === 1 ? "" : "s"}</span>
+        </div>
+        <div class="spacer"></div>
+        <div class="avatar-grid">${avatarCards}</div>
+      </section>
+
+      <section class="created-players-section">
+        <div class="player-section-heading">
+          <div>
+            <h2 class="section-title">Joueurs déjà créés</h2>
+            <p class="helper">Modifie un prénom ou une mascotte sans recommencer toute la configuration.</p>
+          </div>
+          <span>${playerCount}</span>
+        </div>
+        <div class="player-list">
+          ${playerCards || `<div class="notice player-empty-state">Les futures légendes de la soirée apparaîtront ici.</div>`}
+        </div>
+      </section>
+
+      ${playerCount >= 2 ? `
+        <div class="player-start-fab-wrap">
+          <button id="openGames" type="button" class="primary-btn player-start-fab">
+            <span>Commencer la partie</span>
+            <small>${playerCount} joueurs prêts</small>
           </button>
-        `).join("")}
-      </div>
-    </section>
-
-    <button id="savePlayer" class="primary-btn full">Ajouter le joueur</button>
+        </div>
+      ` : ""}
+    </div>
   `;
 
   const playerNameInput = document.querySelector("#playerName");
-  playerNameInput.addEventListener("input", e => state.draftPlayer.name = e.target.value);
+  const saveButton = document.querySelector("#savePlayer");
+  const selectedBlock = document.querySelector("#selectedCharacterBlock");
+
+  function refreshDraftSummary({ animate = false } = {}) {
+    const name = state.draftPlayer.name.trim();
+    const avatar = state.draftPlayer.avatarId ? avatarById(state.draftPlayer.avatarId) : null;
+    const avatarElement = document.querySelector("#selectedCharacterAvatar");
+    const nameElement = document.querySelector("#selectedCharacterName");
+    const hintElement = document.querySelector("#selectedCharacterHint");
+
+    selectedBlock?.classList.toggle("has-character", Boolean(avatar));
+    selectedBlock?.classList.toggle("is-empty", !avatar);
+    if (avatarElement) {
+      avatarElement.innerHTML = avatar?.emoji || "?";
+      avatarElement.dataset.avatarId = avatar?.id || "";
+    }
+    if (nameElement) nameElement.textContent = avatar?.name || "Aucune mascotte choisie";
+    if (hintElement) hintElement.textContent = avatar ? "Tout est prêt pour ce joueur." : "Choisis une mascotte juste en dessous.";
+
+    if (saveButton) {
+      saveButton.disabled = !name || !avatar;
+      saveButton.textContent = editingPlayer
+        ? (name ? `Enregistrer ${name}` : "Enregistrer les modifications")
+        : (name ? `Ajouter ${name}` : "Ajouter ce joueur");
+    }
+
+    if (animate && selectedBlock) {
+      selectedBlock.classList.remove("selection-pop");
+      void selectedBlock.offsetWidth;
+      selectedBlock.classList.add("selection-pop");
+    }
+  }
+
+  playerNameInput.addEventListener("input", event => {
+    state.draftPlayer.name = event.target.value;
+    refreshDraftSummary();
+  });
   playerNameInput.addEventListener("keydown", event => {
     if (event.key !== "Enter") return;
     event.preventDefault();
-    document.querySelector("#savePlayer")?.click();
+    saveButton?.click();
   });
 
-  document.querySelectorAll(".avatar-card[data-avatar]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (btn.disabled) return;
-      selectDraftAvatar(btn.dataset.avatar);
+  document.querySelectorAll(".avatar-card[data-avatar]").forEach(button => {
+    button.addEventListener("click", () => {
+      if (button.disabled) return;
+      selectDraftAvatar(button.dataset.avatar);
+      document.querySelectorAll(".avatar-card[data-avatar]").forEach(card => {
+        const selected = card.dataset.avatar === state.draftPlayer.avatarId;
+        card.classList.toggle("selected", selected);
+        card.setAttribute("aria-pressed", selected ? "true" : "false");
+      });
+      button.classList.remove("selection-pop");
+      void button.offsetWidth;
+      button.classList.add("selection-pop");
+      refreshDraftSummary({ animate: true });
+      window.requestAnimationFrame(() => {
+        document.querySelector("#playerFormCard")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
     });
   });
 
-  document.querySelector("#savePlayer").addEventListener("click", () => {
+  saveButton.addEventListener("click", () => {
     const name = state.draftPlayer.name.trim();
+    const avatarId = state.draftPlayer.avatarId;
+    const editingId = state.editingPlayerId;
 
-    if (!name || !state.draftPlayer.avatarId) {
+    if (!name || !avatarId) {
       alert("Entre un prénom et choisis un personnage.");
       return;
     }
 
     const normalizedName = name.toLocaleLowerCase("fr-FR");
-    if (state.players.some(player => String(player.name || "").trim().toLocaleLowerCase("fr-FR") === normalizedName)) {
+    if (state.players.some(player => player.id !== editingId && String(player.name || "").trim().toLocaleLowerCase("fr-FR") === normalizedName)) {
       alert("Ce prénom est déjà utilisé dans la partie. Choisis-en un autre pour éviter les confusions.");
       playerNameInput.focus();
       return;
     }
 
-    if (state.players.some(player => player.avatarId === state.draftPlayer.avatarId)) {
-      alert("Ce personnage est déjà utilisé dans la partie. Choisis-en un autre.");
+    const avatarOwner = state.players.find(player => player.id !== editingId && player.avatarId === avatarId);
+    if (avatarOwner) {
+      alert(`Cette mascotte est déjà prise par ${avatarOwner.name}.`);
       state.draftPlayer.avatarId = null;
-      renderPlayerForm();
+      renderPlayerForm({ focusName: false });
       return;
     }
 
     window.AKCharacters?.hidePickerBubble?.();
 
-    state.players.push({
-      id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now() + Math.random()),
-      name,
-      avatarId: state.draftPlayer.avatarId
-    });
+    if (editingId) {
+      const player = state.players.find(item => item.id === editingId);
+      if (player) {
+        player.name = name;
+        player.avatarId = avatarId;
+      }
+      window.AKSound?.play?.("ui_confirm");
+    } else {
+      state.players.push({
+        id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now() + Math.random()),
+        name,
+        avatarId
+      });
+      window.AKSound?.play?.("player_added");
+    }
 
+    state.editingPlayerId = null;
     state.draftPlayer = { name: "", avatarId: null };
-    pushScreen("player-form");
-    renderLobby();
+    renderPlayerForm({ focusName: true, scrollTop: true });
   });
+
+  document.querySelector("#cancelPlayerEdit")?.addEventListener("click", () => {
+    state.editingPlayerId = null;
+    state.draftPlayer = { name: "", avatarId: null };
+    window.AKCharacters?.hidePickerBubble?.();
+    renderPlayerForm({ focusName: true, scrollTop: true });
+  });
+
+  document.querySelectorAll("[data-edit-player]").forEach(button => {
+    button.addEventListener("click", () => {
+      const player = state.players.find(item => item.id === button.dataset.editPlayer);
+      if (!player) return;
+      state.editingPlayerId = player.id;
+      state.draftPlayer = { name: player.name, avatarId: player.avatarId };
+      renderPlayerForm({ focusName: true, scrollTop: true });
+    });
+  });
+
+  document.querySelectorAll("[data-remove-player]").forEach(button => {
+    button.addEventListener("click", () => {
+      const player = state.players.find(item => item.id === button.dataset.removePlayer);
+      if (!player) return;
+      if (!confirm(`Supprimer ${player.name} de la soirée ?`)) return;
+      state.players = state.players.filter(item => item.id !== player.id);
+      if (state.editingPlayerId === player.id) {
+        state.editingPlayerId = null;
+        state.draftPlayer = { name: "", avatarId: null };
+      }
+      window.AKSound?.play?.("player_removed");
+      renderPlayerForm({ focusName: false });
+    });
+  });
+
+  document.querySelector("#openGames")?.addEventListener("click", () => {
+    if (state.players.length < 2) return;
+    state.editingPlayerId = null;
+    state.draftPlayer = { name: "", avatarId: null };
+    window.AKCharacters?.hidePickerBubble?.();
+    pushScreen("player-form");
+    renderPlayChoice();
+  });
+
+  refreshDraftSummary();
+
+  if (options.scrollTop) {
+    window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
+  }
+  if (options.focusName) {
+    window.requestAnimationFrame(() => {
+      playerNameInput.focus({ preventScroll: true });
+      playerNameInput.select();
+    });
+  }
 }
 
 function renderLobby() {
@@ -2657,6 +2873,7 @@ function renderSettings() {
     state.alcohol = false;
     state.players = [];
     state.draftPlayer = { name: "", avatarId: null };
+    state.editingPlayerId = null;
     state.currentCategory = null;
     [
       "quiDeNous",

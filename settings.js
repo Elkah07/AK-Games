@@ -1,10 +1,10 @@
 /* =========================================================
-   AK'GAMES V4.13 — RÉGLAGES + AUDIO
+   AK'GAMES V4.14 — RÉGLAGES + PARCOURS JOUEURS
    Apparence, confort, mascottes, contenu et données locales
    ========================================================= */
 (() => {
   const STORAGE_KEY = "akgames_settings_v2";
-  const VERSION_LABEL = "V4.13";
+  const VERSION_LABEL = "V4.14";
   const DEFAULTS = Object.freeze({
     theme: "system",
     animations: "normal",
@@ -393,6 +393,7 @@
     state.alcohol = preferences.defaultAlcohol;
     state.players = [];
     state.draftPlayer = { name: "", avatarId: null };
+    state.editingPlayerId = null;
     state.currentCategory = null;
     ["quiDeNous", "laughDuel", "bestLiar", "actionTruth", "ambiancePoll", "sameBrain", "minorityGame", "whoAnswered", "almostImpostor", "fakeExpert", "whoAmI", "megaGame"].forEach(key => { state[key] = null; });
     state.history = [];

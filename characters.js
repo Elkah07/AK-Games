@@ -232,9 +232,13 @@
     return pool[Math.floor(Math.random() * pool.length)] || definition.personality;
   }
 
-  function usedAvatarIds() {
+  function usedAvatarOwners() {
     const players = Array.isArray(state?.players) ? state.players : [];
-    return new Set(players.map(player => player.avatarId).filter(Boolean));
+    return new Map(
+      players
+        .filter(player => player?.avatarId)
+        .map(player => [player.avatarId, player])
+    );
   }
 
   let pickerBubbleTimer = null;
@@ -319,16 +323,27 @@
     }
   }
 
-  function markTaken(ids) {
+  function markTaken(ownersOrIds) {
     const selected = state?.draftPlayer?.avatarId;
+    const editingId = state?.editingPlayerId || null;
+    const owners = ownersOrIds instanceof Map ? ownersOrIds : new Map([...ownersOrIds].map(id => [id, null]));
+
     document.querySelectorAll(".avatar-card[data-avatar]").forEach(button => {
       const id = button.dataset.avatar;
-      const taken = ids.has(id) && id !== selected;
+      const owner = owners.get(id) || null;
+      const belongsToEditedPlayer = Boolean(owner && editingId && owner.id === editingId);
+      const taken = owners.has(id) && id !== selected && !belongsToEditedPlayer;
       button.classList.toggle("taken", taken);
       button.disabled = taken;
       button.setAttribute("aria-disabled", taken ? "true" : "false");
       button.querySelector(".avatar-taken-label")?.remove();
-      if (taken) button.insertAdjacentHTML("beforeend", `<span class="avatar-taken-label">Déjà choisi</span>`);
+
+      if (taken) {
+        const label = document.createElement("span");
+        label.className = "avatar-taken-label";
+        label.textContent = owner?.name ? `Pris par ${owner.name}` : "Déjà choisi";
+        button.appendChild(label);
+      }
     });
   }
 
@@ -336,12 +351,16 @@
     if (state?.mode !== "multi-guest" || !state.pendingJoinCode || !window.AKFirebase?.getRoomPlayers) return;
     try {
       const players = await window.AKFirebase.getRoomPlayers(state.pendingJoinCode);
-      const ids = new Set(Object.values(players || {}).map(player => player?.avatarId).filter(Boolean));
-      markTaken(ids);
-      if (state?.draftPlayer?.avatarId && ids.has(state.draftPlayer.avatarId)) {
+      const owners = new Map(
+        Object.entries(players || {})
+          .filter(([, player]) => player?.avatarId)
+          .map(([id, player]) => [player.avatarId, { id, ...player }])
+      );
+      markTaken(owners);
+      if (state?.draftPlayer?.avatarId && owners.has(state.draftPlayer.avatarId)) {
         state.draftPlayer.avatarId = null;
         document.querySelector(".character-picker-quote")?.remove();
-        markTaken(ids);
+        markTaken(owners);
       }
     } catch (error) {
       console.warn("Impossible de charger les personnages déjà choisis", error);
@@ -360,7 +379,7 @@
   function enhanceCharacterPicker() {
     const grid = document.querySelector(".avatar-grid");
     if (!grid) return;
-    markTaken(usedAvatarIds());
+    markTaken(usedAvatarOwners());
     addPickerPreview();
     refreshMultiplayerTaken();
 
@@ -370,7 +389,8 @@
       saveButton.addEventListener("click", event => {
         const id = state?.draftPlayer?.avatarId;
         if (!id) return;
-        const duplicate = (state?.players || []).some(player => player.avatarId === id);
+        const editingId = state?.editingPlayerId || null;
+        const duplicate = (state?.players || []).some(player => player.avatarId === id && player.id !== editingId && player.id !== state?.currentUid);
         if (!duplicate) return;
         event.preventDefault();
         event.stopImmediatePropagation();

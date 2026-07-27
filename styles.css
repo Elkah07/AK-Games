@@ -10042,3 +10042,422 @@ html[data-theme="light"] .ak-back-toast {
   background: rgba(255,255,255,.96);
   box-shadow: 0 14px 36px rgba(82,52,134,.13);
 }
+
+/* =========================================================
+   AK'GAMES V4.14 — PARCOURS FLUIDE D'AJOUT DES JOUEURS
+   ========================================================= */
+.player-manager-screen {
+  display: grid;
+  gap: 18px;
+  padding-bottom: calc(112px + env(safe-area-inset-bottom));
+}
+
+.player-manager-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 4px 2px 2px;
+}
+
+.player-manager-heading > div {
+  min-width: 0;
+}
+
+.player-manager-heading h2 {
+  margin: 10px 0 7px;
+  font-size: clamp(1.45rem, 5vw, 2.15rem);
+  letter-spacing: -.04em;
+}
+
+.player-manager-heading p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.player-count-badge,
+.player-capacity,
+.player-section-heading > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 0 11px;
+  border: 1px solid rgba(174, 124, 255, .24);
+  border-radius: 999px;
+  background: rgba(139, 92, 246, .11);
+  color: #d9c7ff;
+  font-size: .76rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.player-capacity {
+  min-width: 52px;
+  min-height: 52px;
+  font-size: .9rem;
+}
+
+.player-form-card {
+  display: grid;
+  gap: 15px;
+  scroll-margin-top: calc(104px + env(safe-area-inset-top));
+  border-color: rgba(164, 112, 255, .25);
+  background:
+    radial-gradient(circle at 94% 5%, rgba(139, 92, 246, .14), transparent 31%),
+    var(--card-bg);
+}
+
+.player-form-card.editing-player {
+  border-color: rgba(245, 158, 11, .36);
+  background:
+    radial-gradient(circle at 94% 5%, rgba(245, 158, 11, .12), transparent 31%),
+    var(--card-bg);
+}
+
+.player-form-kicker {
+  color: #bfa5ff;
+  font-size: .68rem;
+  font-weight: 950;
+  letter-spacing: .17em;
+}
+
+.selected-character-block {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .035);
+  transition: border-color .18s ease, background .18s ease, transform .18s ease;
+}
+
+.selected-character-block.has-character {
+  border-color: rgba(167, 139, 250, .37);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(139, 92, 246, .15), transparent 35%),
+    rgba(139, 92, 246, .07);
+}
+
+.selected-character-preview {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.selected-character-preview > div {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.selected-character-preview small {
+  color: #bca3f7;
+  font-size: .63rem;
+  font-weight: 900;
+  letter-spacing: .11em;
+}
+
+.selected-character-preview strong,
+.selected-character-preview span {
+  overflow-wrap: anywhere;
+}
+
+.selected-character-preview strong {
+  font-size: 1.02rem;
+}
+
+.selected-character-preview span:not(.selected-character-avatar) {
+  color: var(--muted);
+  font-size: .81rem;
+}
+
+.selected-character-avatar {
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(185, 151, 255, .24);
+  border-radius: 18px;
+  background: rgba(8, 6, 18, .55);
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.selected-character-avatar .ak-avatar-image,
+.selected-character-avatar.ak-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: inherit;
+}
+
+.selected-character-block.is-empty .selected-character-avatar {
+  color: var(--muted);
+  opacity: .65;
+}
+
+.selected-character-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.selected-character-actions button {
+  min-height: 46px;
+}
+
+.player-section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.player-section-heading > div {
+  min-width: 0;
+}
+
+.player-section-heading .helper {
+  margin: 6px 0 0;
+}
+
+.mascot-picker-card .avatar-grid {
+  margin-top: 4px;
+}
+
+.avatar-selection-check {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  z-index: 4;
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  border: 2px solid rgba(255, 255, 255, .88);
+  border-radius: 50%;
+  background: #8b5cf6;
+  color: white;
+  box-shadow: 0 8px 22px rgba(76, 29, 149, .38);
+  font-size: 1rem;
+  font-weight: 950;
+  opacity: 0;
+  transform: scale(.55) rotate(-12deg);
+  transition: opacity .18s ease, transform .2s cubic-bezier(.2,.9,.2,1.25);
+  pointer-events: none;
+}
+
+.avatar-card.selected .avatar-selection-check {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+.avatar-card.selected {
+  transform: scale(1.025);
+}
+
+.avatar-card.selection-pop,
+.selected-character-block.selection-pop {
+  animation: akPlayerSelectionPop .34s cubic-bezier(.2,.9,.2,1.22);
+}
+
+@keyframes akPlayerSelectionPop {
+  0% { transform: scale(.97); }
+  55% { transform: scale(1.035); }
+  100% { transform: scale(1); }
+}
+
+.avatar-card.taken {
+  opacity: .48;
+}
+
+.avatar-taken-label {
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+  max-width: calc(100% - 54px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: rgba(8, 6, 18, .92);
+}
+
+.created-players-section {
+  display: grid;
+  gap: 12px;
+}
+
+.player-manager-card {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--card-bg);
+}
+
+.player-manager-card.is-editing {
+  border-color: rgba(245, 158, 11, .38);
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, .09);
+}
+
+.player-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.compact-player-action {
+  min-height: 40px;
+  padding: 8px 11px;
+  border-radius: 12px;
+  font-size: .78rem;
+}
+
+.player-empty-state {
+  text-align: center;
+}
+
+.player-start-fab-wrap {
+  position: fixed;
+  z-index: 180;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  padding: 14px max(14px, env(safe-area-inset-right)) max(14px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(7, 9, 20, .82) 34%, rgba(7, 9, 20, .97));
+}
+
+.player-start-fab {
+  width: min(700px, 100%);
+  min-height: 66px;
+  display: grid;
+  place-items: center;
+  gap: 2px;
+  border-radius: 22px;
+  pointer-events: auto;
+  box-shadow: 0 18px 48px rgba(76, 29, 149, .46);
+}
+
+.player-start-fab span {
+  font-size: 1.03rem;
+  font-weight: 950;
+}
+
+.player-start-fab small {
+  color: rgba(255, 255, 255, .78);
+  font-size: .72rem;
+  font-weight: 750;
+}
+
+html[data-theme="light"] .player-count-badge,
+html[data-theme="light"] .player-capacity,
+html[data-theme="light"] .player-section-heading > span {
+  color: #6840a8;
+  border-color: rgba(108, 64, 168, .17);
+  background: rgba(124, 58, 237, .07);
+}
+
+html[data-theme="light"] .player-form-card,
+html[data-theme="light"] .player-manager-card {
+  background-color: rgba(255, 255, 255, .96);
+}
+
+html[data-theme="light"] .selected-character-block {
+  background: rgba(107, 70, 193, .035);
+}
+
+html[data-theme="light"] .selected-character-block.has-character {
+  border-color: rgba(124, 58, 237, .22);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(124, 58, 237, .10), transparent 35%),
+    rgba(124, 58, 237, .04);
+}
+
+html[data-theme="light"] .selected-character-avatar {
+  background: rgba(124, 58, 237, .06);
+}
+
+html[data-theme="light"] .avatar-taken-label {
+  color: #fff;
+  background: rgba(50, 31, 78, .90);
+}
+
+html[data-theme="light"] .player-start-fab-wrap {
+  background: linear-gradient(180deg, transparent, rgba(246, 242, 255, .84) 34%, rgba(246, 242, 255, .98));
+}
+
+@media (max-width: 700px) {
+  .selected-character-block {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-character-actions {
+    justify-content: stretch;
+  }
+
+  .selected-character-actions button {
+    flex: 1 1 160px;
+  }
+
+  .player-manager-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .player-card-actions {
+    width: 100%;
+  }
+
+  .player-card-actions button {
+    flex: 1 1 130px;
+  }
+}
+
+@media (max-width: 430px) {
+  .player-manager-heading h2 {
+    font-size: 1.5rem;
+  }
+
+  .player-manager-heading p {
+    font-size: .88rem;
+  }
+
+  .player-capacity {
+    min-width: 46px;
+    min-height: 46px;
+  }
+
+  .selected-character-preview {
+    align-items: flex-start;
+  }
+
+  .selected-character-avatar {
+    width: 52px;
+    height: 52px;
+    flex-basis: 52px;
+  }
+
+  .compact-player-action {
+    width: auto !important;
+  }
+}
+
+/* Le sélecteur de mascottes doit devenir entièrement clair, sans conserver
+   l'ancien dégradé sombre de la classe .card. */
+html[data-theme="light"] .mascot-picker-card,
+html[data-theme="light"] .player-manager-card {
+  background: rgba(255, 255, 255, .96);
+  color: var(--text);
+}

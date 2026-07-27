@@ -1,22 +1,22 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v4.13-full-sound-pack";
+const CACHE_VERSION = "akgames-v4.14-player-flow";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=ui-v51-sound",
+  "/styles.css?v=ui-v52-player-flow",
   "/creator.css?v=creator-v1.3-access",
   "/character-poses.css?v=characters-v5",
-  "/app.js?v=ui-v51-sound",
+  "/app.js?v=ui-v52-player-flow",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
   "/multiplayer.js?v=ui-v51-sound",
   "/character-poses.js?v=characters-v5",
   "/sound-manager.js?v=sound-v1",
   "/character-voice-engine.js?v=characters-v5",
-  "/characters.js?v=characters-v7-sound",
+  "/characters.js?v=characters-v8-player-flow",
   "/game-help.js?v=ui-v48",
-  "/settings.js?v=settings-v4.13",
+  "/settings.js?v=settings-v4.14",
   "/pwa.js",
   "/manifest.webmanifest",
   "/data/akgames-characters.json",
