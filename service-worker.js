@@ -1,15 +1,15 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v4.2-defis-adultes-400";
+const CACHE_VERSION = "akgames-v4.3-classement-secret-500";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=characters-v1",
+  "/styles.css?v=ranking-v43",
   "/creator.css?v=creator-v1.3-access",
-  "/app.js?v=characters-v1",
+  "/app.js?v=ranking-v43",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
-  "/multiplayer.js?v=characters-v1",
+  "/multiplayer.js?v=ranking-v43",
   "/characters.js?v=characters-v1",
   "/game-help.js?v=characters-v1",
   "/pwa.js",

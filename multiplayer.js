@@ -10559,6 +10559,105 @@
     launchRandomGame: () => launchRandomMultiplayerGame()
   });
 
+
+  /* AK'GAMES V4.3 — LE CLASSEMENT SECRET 500 MULTIJOUEUR */
+  const akRankingMultiBaseRenderSetupV43 = renderMegaSetup;
+  renderMegaSetup = function renderMegaSetupRankingMultiV43() {
+    const game = state.megaGame;
+    if (!isMultiplayer() || !game || game.gameName !== AK_RANKING_GAME_V43) return akRankingMultiBaseRenderSetupV43();
+    akRankingEnsureV43(game); clearV014MultiTimer(); title.textContent = AK_RANKING_GAME_V43; setBackVisible(true);
+    screen.innerHTML = `<section class="game-cover game-cover-mega engine-ranking"><span class="game-cover-icon">🏅</span><div><small>MULTIJOUEUR · 500 CLASSEMENTS</small><h2>Le Classement secret</h2><p>Chaque classement reste privé sur son téléphone jusqu’à la révélation.</p></div></section>${state.isHost ? akRankingSetupMarkupV43(game, "rankingMulti") : `<section class="card"><h2 class="section-title">Réglages de l’hôte</h2><p class="helper">L’hôte choisit le mode, les thèmes et la longueur.</p></section>`}<div class="notice">Les préférences sont personnelles : aucune réponse ne doit être défendue ou contestée.</div>${state.isHost ? `<button id="startMultiRankingV43" class="primary-btn full">Lancer sur tous les téléphones</button>` : renderMultiWaiting("En attente de l’hôte", "La partie commencera automatiquement.", "👑")}`;
+    if (state.isHost) { akRankingBindSetupV43(game, "rankingMulti", renderMegaSetup, false); document.querySelector("#startMultiRankingV43")?.addEventListener("click", startMegaGame); }
+  };
+
+  const akRankingMultiBaseStartV43 = startMegaGame;
+  startMegaGame = async function startMegaGameRankingMultiV43() {
+    const game = state.megaGame;
+    if (!isMultiplayer() || !game || game.gameName !== AK_RANKING_GAME_V43) return akRankingMultiBaseStartV43();
+    if (!state.isHost) return;
+    akRankingEnsureV43(game);
+    if (state.players.length < 2) return alert("Le Classement secret demande au moins deux joueurs.");
+    screen.innerHTML = `<div class="notice">Synchronisation des classements secrets…</div>`;
+    try {
+      const raw = await loadJsonFile("data/classement-secret.json", "Impossible de charger les classements.");
+      const pool = akRankingBuildPoolV43(raw, game);
+      if (!pool.length) throw new Error("Aucun classement ne correspond à ces réglages.");
+      const items = akRankingFreshSelectV43(pool, Math.min(game.roundCount, pool.length), `multi:${game.rankingMode}:${game.rankingThemes.join("-")}:${game.rankingLevels.join("-")}`);
+      const playerIds = state.players.map(player => player.id), now = AKFirebase.now();
+      await AKFirebase.setGame(state.roomCode, { state: {
+        type: "mega-ranking", phase: "ranking", sessionGameId: createSessionGameId("mega-ranking-v43"), items, currentIndex: 0,
+        targetId: playerIds[0] || null, pairIds: [playerIds[0], playerIds[1]].filter(Boolean), scores: Object.fromEntries(playerIds.map(id => [id,0])), rounds: {}, currentResult: null,
+        rankingStats: { intuition: Object.fromEntries(playerIds.map(id => [id,0])), predictability: Object.fromEntries(playerIds.map(id => [id,0])), alignment: Object.fromEntries(playerIds.map(id => [id,0])), chaos: null },
+        settings: { gameName: AK_RANKING_GAME_V43, icon: "🏅", engine: "ranking", roundCount: items.length, rankingV43: true, rankingMode: game.rankingMode, rankingThemes: [...game.rankingThemes], rankingLevels: [...game.rankingLevels], includeCustom: Boolean(game.rankingIncludeCustom) },
+        startedAt: now, updatedAt: now
+      }, answers: null, votes: null, actions: null });
+      akRankingSavePrefsV43(game); state.multiView = "mega-game";
+    } catch (error) { console.error(error); alert(error.message || "Impossible de lancer le jeu."); renderMegaSetup(); }
+  };
+
+  function akRankingMultiIdsV43(gameState) {
+    const ids = state.players.map(player => player.id), count = Math.max(1, ids.length), round = Number(gameState.currentIndex || 0), mode = gameState.settings?.rankingMode || "guess";
+    if (mode === "mirror") return [ids[round % count], ids[(round + 1) % count]].filter((id,index,rows) => id && rows.indexOf(id) === index);
+    return ids;
+  }
+  function akRankingMultiTargetV43(gameState) { const ids = state.players.map(player => player.id); return ids[Number(gameState.currentIndex || 0) % Math.max(1, ids.length)] || null; }
+  function akRankingMultiResultV43(gameState, answers) {
+    const item = megaMultiCurrentItem(gameState), ids = akRankingMultiIdsV43(gameState), mode = gameState.settings?.rankingMode || "guess";
+    const rankings = Object.fromEntries(ids.map(id => [id, answers[id]?.ranking || []]));
+    const scores = { ...(gameState.scores || {}) }, stats = JSON.parse(JSON.stringify(gameState.rankingStats || { intuition:{}, predictability:{}, alignment:{}, chaos:null }));
+    let result = { itemId: item?.id || "", mode, rankings, chaos: 0 };
+    if (mode === "guess") {
+      const targetId = akRankingMultiTargetV43(gameState), reference = rankings[targetId], rows = [];
+      ids.filter(id => id !== targetId).forEach(id => { const comparison = akRankingCompareV43(reference, rankings[id]); scores[id] = Number(scores[id] || 0) + comparison.points; stats.intuition[id] = Number(stats.intuition?.[id] || 0) + comparison.points; stats.predictability[targetId] = Number(stats.predictability?.[targetId] || 0) + comparison.points; if (!comparison.points) scores[targetId] = Number(scores[targetId] || 0) + 1; result.chaos += comparison.distance; rows.push({ id, ...comparison }); });
+      result = { ...result, targetId, results: rows };
+    } else if (mode === "mirror") {
+      const comparison = akRankingCompareV43(rankings[ids[0]], rankings[ids[1]]); ids.forEach(id => { scores[id] = Number(scores[id] || 0) + comparison.points; stats.alignment[id] = Number(stats.alignment?.[id] || 0) + comparison.points; }); result = { ...result, pairIds: ids, comparison, chaos: comparison.distance };
+    } else {
+      const consensusRows = akRankingConsensusV43(ids.map(id => rankings[id]), item.items.length), consensus = consensusRows.map(row => row.index), rows = [];
+      ids.forEach(id => { const comparison = akRankingCompareV43(consensus, rankings[id]); const points = comparison.exact + (comparison.perfect ? 2 : 0); scores[id] = Number(scores[id] || 0) + points; stats.alignment[id] = Number(stats.alignment?.[id] || 0) + points; result.chaos += comparison.distance; rows.push({ id, ...comparison, points }); }); result = { ...result, consensus, consensusRows, results: rows };
+    }
+    if (!stats.chaos || result.chaos > Number(stats.chaos.value || 0)) stats.chaos = { value: result.chaos, title: item?.title || "Classement", itemId: item?.id || "" };
+    return { result, scores, stats };
+  }
+  function processMultiRankingV43(gameState, answers) {
+    if (!state.isHost || gameState.phase !== "ranking") return;
+    const ids = akRankingMultiIdsV43(gameState), complete = ids.every(id => Array.isArray(answers[id]?.ranking) && answers[id].ranking.length === (megaMultiCurrentItem(gameState)?.items || []).length);
+    if (!complete) return;
+    const lock = `ranking_v43_${gameState.currentIndex}_${ids.join("_")}`; if (state.multiProcessingActionId === lock) return; state.multiProcessingActionId = lock;
+    const computed = akRankingMultiResultV43(gameState, answers), round = Number(gameState.currentIndex || 0);
+    AKFirebase.updateGame(state.roomCode, { "state/phase":"results", "state/currentResult":computed.result, "state/scores":computed.scores, "state/rankingStats":computed.stats, [`state/rounds/${round}`]:computed.result, "state/updatedAt":AKFirebase.now() }).finally(() => { state.multiProcessingActionId = null; });
+  }
+  function renderMultiRankingBuilderV43(gameState, answers) {
+    const item = megaMultiCurrentItem(gameState), ids = akRankingMultiIdsV43(gameState), mode = gameState.settings?.rankingMode || "guess", targetId = akRankingMultiTargetV43(gameState), isParticipant = ids.includes(state.currentUid), answered = Array.isArray(answers[state.currentUid]?.ranking);
+    title.textContent = AK_RANKING_GAME_V43;
+    if (!isParticipant) { screen.innerHTML = `${multiMegaProgress(gameState,"Classement")}${renderMultiWaiting("Ce duel se joue sans toi", "Observe les résultats dès que les deux classements seront terminés.", "🪞")}`; return; }
+    if (answered) { screen.innerHTML = `${multiMegaProgress(gameState,"Classement")}${renderMultiWaiting("Classement verrouillé", `${Object.keys(answers).filter(id => ids.includes(id)).length}/${ids.length} réponses reçues.`, "🔒")}`; return; }
+    const player = megaMultiPlayer(state.currentUid), target = megaMultiPlayer(targetId), instruction = mode === "guess" && state.currentUid !== targetId ? `Reconstitue le classement complet de ${target?.name || "la personne"}.` : mode === "guess" ? "Crée ton vrai classement. Les autres essaient de le reconstruire." : mode === "mirror" ? "Classe selon tes propres préférences." : "Classe avant de découvrir le consensus du groupe.";
+    const draftKey = `ranking_v43_${gameState.sessionGameId}_${gameState.currentIndex}_${state.currentUid}`; let draft=[]; try { draft=JSON.parse(sessionStorage.getItem(draftKey)||"[]"); } catch { draft=[]; }
+    draft = draft.filter(index => Number.isInteger(index) && index >= 0 && index < item.items.length && draft.indexOf(index) === draft.lastIndexOf(index));
+    const available = item.items.map((_,index)=>index).filter(index=>!draft.includes(index));
+    screen.innerHTML = `${multiMegaProgress(gameState,"Classement")}<section class="card ranking-private-card-v43"><span class="viz-badge">ÉCRAN DE ${escapeHtml(player?.name || "JOUEUR").toUpperCase()}</span><h2 class="section-title">${escapeHtml(item.title)}</h2><p class="helper">${escapeHtml(instruction)}</p></section><section class="secret-ranking-builder ranking-builder-v43"><div class="ranking-picked">${draft.map((index,position)=>`<div><span>${position+1}</span><strong>${escapeHtml(item.items[index])}</strong></div>`).join("")||`<div class="notice">Commence par ton numéro un.</div>`}</div><div class="ranking-available">${available.map(index=>`<button class="secondary-btn" data-ranking-multi-pick-v43="${index}">${escapeHtml(item.items[index])}</button>`).join("")}</div></section><div class="toolbar"><button id="rankingMultiUndoV43" class="secondary-btn" ${draft.length?"":"disabled"}>↶ Annuler</button><button id="rankingMultiConfirmV43" class="primary-btn" ${draft.length===item.items.length?"":"disabled"}>Valider en secret</button></div>`;
+    document.querySelectorAll("[data-ranking-multi-pick-v43]").forEach(button=>button.addEventListener("click",()=>{draft.push(Number(button.dataset.rankingMultiPickV43));sessionStorage.setItem(draftKey,JSON.stringify(draft));renderMultiRankingBuilderV43(gameState,answers);}));
+    document.querySelector("#rankingMultiUndoV43")?.addEventListener("click",()=>{draft.pop();sessionStorage.setItem(draftKey,JSON.stringify(draft));renderMultiRankingBuilderV43(gameState,answers);});
+    document.querySelector("#rankingMultiConfirmV43")?.addEventListener("click",async event=>{event.currentTarget.disabled=true;try{await AKFirebase.writeOwnGameEntry(state.roomCode,"answers",{ranking:draft,submittedAt:AKFirebase.now()});sessionStorage.removeItem(draftKey);}catch(error){console.error(error);event.currentTarget.disabled=false;}});
+  }
+  function renderMultiRankingResultV43(gameState) {
+    const item=megaMultiCurrentItem(gameState), result=gameState.currentResult||{}, mode=result.mode||"guess"; title.textContent="Classement révélé"; let content="";
+    if(mode==="guess"){const target=megaMultiPlayer(result.targetId);content=`<section class="winner-stage winner-stage-v07"><div class="winner-crown">🕵️</div><h2>Le classement de ${escapeHtml(target?.name||"la personne")}</h2><p>${(result.results||[]).filter(row=>row.perfect).length} reconstruction parfaite.</p></section>${akRankingOrderMarkupV43(item,result.rankings?.[result.targetId],`Vrai classement de ${target?.name||"la personne"}`)}<section class="ranking-score-list-v43">${(result.results||[]).map(row=>{const player=megaMultiPlayer(row.id);return `<div><span>${avatarById(player?.avatarId).emoji}</span><strong>${escapeHtml(player?.name||"Joueur")}</strong><small>${row.exact} exact · ${row.adjacent} proche</small><b>+${row.points}</b></div>`;}).join("")}</section>`;}else if(mode==="mirror"){content=`<section class="winner-stage winner-stage-v07"><div class="winner-crown">🪞</div><h2>Classement miroir</h2><p>${result.comparison?.exact||0} position(s) identique(s).</p></section><div class="ranking-dual-grid-v43">${(result.pairIds||[]).map(id=>akRankingOrderMarkupV43(item,result.rankings?.[id],megaMultiPlayer(id)?.name)).join("")}</div><div class="viz-callout">+${result.comparison?.points||0} points chacun.</div>`;}else{const biggest=[...(result.consensusRows||[])].sort((a,b)=>b.spread-a.spread)[0];content=`<section class="winner-stage winner-stage-v07"><div class="winner-crown">👥</div><h2>Consensus du groupe</h2><p>Le plus gros désaccord concerne « ${escapeHtml(item.items[biggest?.index]||"")} ».</p></section>${akRankingOrderMarkupV43(item,result.consensus,"Classement moyen")}<section class="ranking-score-list-v43">${(result.results||[]).map(row=>{const player=megaMultiPlayer(row.id);return `<div><span>${avatarById(player?.avatarId).emoji}</span><strong>${escapeHtml(player?.name||"Joueur")}</strong><small>${row.exact} place(s) comme le groupe</small><b>+${row.points}</b></div>`;}).join("")}</section>`;}
+    screen.innerHTML=`${multiMegaProgress(gameState,"Classement")}${content}${state.isHost?`<button id="nextMultiRankingV43" class="primary-btn full">${Number(gameState.currentIndex||0)+1>=(gameState.items||[]).length?"Voir le palmarès":"Classement suivant"}</button>`:renderMultiWaiting("En attente de l’hôte","Le prochain classement arrive.","👑")}`;
+    document.querySelector("#nextMultiRankingV43")?.addEventListener("click",async event=>{event.currentTarget.disabled=true;const next=Number(gameState.currentIndex||0)+1,finished=next>=(gameState.items||[]).length;try{await AKFirebase.updateGame(state.roomCode,{"state/phase":finished?"final":"ranking","state/currentIndex":finished?gameState.currentIndex:next,"state/currentResult":null,"state/targetId":finished?gameState.targetId:state.players[next%Math.max(1,state.players.length)]?.id||null,"state/pairIds":finished?gameState.pairIds:[state.players[next%Math.max(1,state.players.length)]?.id,state.players[(next+1)%Math.max(1,state.players.length)]?.id].filter(Boolean),"state/finishedAt":finished?AKFirebase.now():null,"state/updatedAt":AKFirebase.now(),answers:null,votes:null,actions:null});}catch(error){console.error(error);event.currentTarget.disabled=false;}});
+  }
+  const akRankingMultiBaseFinalV43 = renderMultiMegaFinal;
+  renderMultiMegaFinal = function renderMultiMegaFinalRankingV43(gameState) {
+    if (gameState.type !== "mega-ranking" || !gameState.settings?.rankingV43) return akRankingMultiBaseFinalV43(gameState);
+    const ranking=[...state.players].sort((a,b)=>Number(gameState.scores?.[b.id]||0)-Number(gameState.scores?.[a.id]||0)), stats=gameState.rankingStats||{}, mode=gameState.settings?.rankingMode||"guess", source=mode==="guess"?stats.intuition:stats.alignment, best=state.players.map(player=>({player,value:Number(source?.[player.id]||0)})).sort((a,b)=>b.value-a.value)[0];
+    title.textContent="Palmarès des classements";setBackVisible(false);screen.innerHTML=`<section class="winner-stage winner-stage-v07 mega-final-stage"><div class="winner-crown">🏅🏆</div><h2>${ranking[0]?escapeHtml(ranking[0].name):"Partie terminée"}</h2><p>Les préférences sont classées. Les dossiers sont ouverts.</p></section><section class="final-ranking">${ranking.map((player,index)=>`<div class="ranking-row"><span class="ranking-position">${index+1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(gameState.scores?.[player.id]||0)} pts</span></div>`).join("")}</section><section class="impostor-awards">${best?.value?`<article><span>🧠</span><div><small>${mode==="guess"?"MEILLEURE INTUITION":"PLUS PROCHE DU GROUPE"}</small><strong>${escapeHtml(best.player.name)}</strong><p>${best.value} points de proximité</p></div></article>`:""}${stats.chaos?`<article><span>🌀</span><div><small>CLASSEMENT LE PLUS CHAOTIQUE</small><strong>${escapeHtml(stats.chaos.title)}</strong><p>${stats.chaos.value} places d’écart</p></div></article>`:""}</section>${state.isHost?`<button id="multiRankingExitV43" class="primary-btn full">Retour aux jeux</button>`:renderMultiWaiting("Partie terminée","L’hôte peut revenir au menu.","🏆")}`;document.querySelector("#multiRankingExitV43")?.addEventListener("click",()=>{state.megaGame=null;renderPlayChoice();});
+  };
+  const akRankingMultiBaseSyncV43 = syncMultiMegaGame;
+  syncMultiMegaGame = function syncMultiMegaGameRankingV43(room) {
+    const gameState=room.game?.state;if(gameState?.type!=="mega-ranking"||!gameState.settings?.rankingV43)return akRankingMultiBaseSyncV43(room);const answers=room.game?.answers||{};clearV09MultiTimer();if(gameState.phase==="final")return renderMultiMegaFinal(gameState);if(gameState.phase==="ranking"){processMultiRankingV43(gameState,answers);return renderMultiRankingBuilderV43(gameState,answers);}return renderMultiRankingResultV43(gameState);
+  };
+
 })();
 
 

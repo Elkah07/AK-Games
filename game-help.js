@@ -87,11 +87,11 @@
       comfort: "La personne ciblée choisit librement sa réponse : les autres ne doivent pas la contester."
     },
     "Le Classement secret": {
-      intro: "Une personne classe plusieurs propositions en secret. Les autres essaient de deviner son choix numéro un.",
-      steps: ["La personne ciblée crée son classement.", "Les autres choisissent l’option qu’ils pensent placée en tête.", "Le classement réel est révélé.", "Les bonnes prédictions rapportent des points."],
-      scoring: "Une bonne prédiction rapporte le nombre de points affiché dans la partie.",
-      options: "Choisissez la longueur de partie et les packs disponibles.",
-      comfort: "Le classement représente le choix du moment, pas une vérité définitive sur la personne."
+      intro: "Classe plusieurs propositions en privé, puis compare ton ordre à celui d’une personne ou du groupe.",
+      steps: ["Choisissez Devine mon classement, Classement miroir ou Classement du groupe.", "Chaque personne concernée construit un ordre complet en secret.", "Les classements sont révélés ensemble.", "L’application mesure les places exactes, les écarts et les désaccords."],
+      scoring: "Devine mon classement : 2 points par place exacte, 1 point à une place près et 3 points de bonus pour l’ordre parfait. Les modes Miroir et Groupe récompensent la proximité.",
+      options: "500 classements, 12 thèmes, trois intensités, 5 à 50 manches et classements personnalisés de 3 à 8 propositions.",
+      comfort: "Un classement exprime une préférence du moment. Personne ne doit contester, corriger ou exiger une justification."
     },
     "Mime": {
       intro: "Une ou deux personnes doivent faire deviner une scène sans parler.",

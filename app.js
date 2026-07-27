@@ -14134,3 +14134,321 @@ renderMegaFinal = function renderMegaFinalAdultChallengeV42() {
   document.querySelector("#adultChallengeReplayV42")?.addEventListener("click", () => { resetMegaGame(AK_ADULT_CHALLENGE_GAME_V42, replay); renderMegaSetup(); });
   document.querySelector("#adultChallengeOtherV42")?.addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
 };
+
+
+/* =========================================================
+   AK'GAMES V4.3 — LE CLASSEMENT SECRET 500
+   Trois modes, classement complet, thèmes et cartes perso
+   ========================================================= */
+
+const AK_RANKING_GAME_V43 = "Le Classement secret";
+const AK_RANKING_THEMES_V43 = [
+  { id: "preferences", icon: "✨", label: "Goûts et préférences" },
+  { id: "food", icon: "🍕", label: "Nourriture" },
+  { id: "friendship", icon: "🫂", label: "Amitié" },
+  { id: "parties", icon: "🎉", label: "Soirées" },
+  { id: "travel", icon: "✈️", label: "Voyages" },
+  { id: "everyday", icon: "🏠", label: "Quotidien" },
+  { id: "personality", icon: "🪞", label: "Personnalité" },
+  { id: "digital", icon: "📱", label: "Réseaux et numérique" },
+  { id: "entertainment", icon: "🎬", label: "Cinéma, musique et jeux" },
+  { id: "absurd", icon: "🌀", label: "Situations absurdes" },
+  { id: "dilemmas", icon: "⚖️", label: "Dilemmes" },
+  { id: "habits", icon: "🧩", label: "Petites habitudes" }
+];
+const AK_RANKING_LEVELS_V43 = [
+  { id: "light", icon: "🌱", label: "Léger" },
+  { id: "personal", icon: "💬", label: "Personnel" },
+  { id: "chaos", icon: "🌀", label: "Chaos" }
+];
+const AK_RANKING_MODES_V43 = [
+  { id: "guess", icon: "🕵️", label: "Devine mon classement", text: "Une personne classe, les autres reconstruisent tout son ordre." },
+  { id: "mirror", icon: "🪞", label: "Classement miroir", text: "Deux personnes classent les mêmes choix et comparent leur proximité." },
+  { id: "group", icon: "👥", label: "Classement du groupe", text: "Tout le monde classe, puis l’application calcule le consensus." }
+];
+const AK_RANKING_PREFS_KEY_V43 = "akgames_ranking_secret_v43";
+const AK_RANKING_CUSTOM_KEY_V43 = "akgames_ranking_secret_custom_v43";
+const AK_RANKING_HISTORY_KEY_V43 = "akgames_ranking_secret_history_v43";
+
+V014_GAME_CONFIGS[AK_RANKING_GAME_V43].description = "Classe tout en secret, reconstruis les préférences des autres et mesure les plus gros désaccords du groupe.";
+V014_GAME_CONFIGS[AK_RANKING_GAME_V43].defaultRounds = 10;
+
+function akRankingReadJsonV43(key, fallback) {
+  try { return JSON.parse(localStorage.getItem(key) || "null") ?? fallback; }
+  catch { return fallback; }
+}
+function akRankingWriteJsonV43(key, value) {
+  try { localStorage.setItem(key, JSON.stringify(value)); } catch {}
+}
+function akRankingAllThemeIdsV43() { return AK_RANKING_THEMES_V43.map(item => item.id); }
+function akRankingAllLevelIdsV43() { return AK_RANKING_LEVELS_V43.map(item => item.id); }
+function akRankingCustomCardsV43() {
+  const rows = akRankingReadJsonV43(AK_RANKING_CUSTOM_KEY_V43, []);
+  return Array.isArray(rows) ? rows.filter(row => row && Array.isArray(row.items) && row.items.length >= 3) : [];
+}
+function akRankingSaveCustomCardsV43(rows) { akRankingWriteJsonV43(AK_RANKING_CUSTOM_KEY_V43, rows); }
+
+function akRankingEnsureV43(game, replayConfig = {}) {
+  if (!game || game.gameName !== AK_RANKING_GAME_V43) return game;
+  const prefs = akRankingReadJsonV43(AK_RANKING_PREFS_KEY_V43, {});
+  game.rankingMode = replayConfig.rankingMode || game.rankingMode || prefs.rankingMode || "guess";
+  game.rankingThemes = [...new Set(replayConfig.rankingThemes || game.rankingThemes || prefs.rankingThemes || akRankingAllThemeIdsV43())].filter(id => akRankingAllThemeIdsV43().includes(id));
+  game.rankingLevels = [...new Set(replayConfig.rankingLevels || game.rankingLevels || prefs.rankingLevels || akRankingAllLevelIdsV43())].filter(id => akRankingAllLevelIdsV43().includes(id));
+  game.rankingIncludeCustom = replayConfig.rankingIncludeCustom ?? game.rankingIncludeCustom ?? prefs.rankingIncludeCustom ?? true;
+  game.rankingCustomCards = akRankingCustomCardsV43();
+  game.roundCount = Number(replayConfig.roundCount || game.roundCount || prefs.roundCount || 10);
+  game.rankingAnswers = game.rankingAnswers || {};
+  game.rankingDraft = game.rankingDraft || [];
+  game.rankingParticipantIndex = Number(game.rankingParticipantIndex || 0);
+  game.rankingCurrentIds = game.rankingCurrentIds || [];
+  game.rankingIntuition = game.rankingIntuition || Object.fromEntries(state.players.map(player => [player.id, 0]));
+  game.rankingPredictability = game.rankingPredictability || Object.fromEntries(state.players.map(player => [player.id, 0]));
+  game.rankingAlignment = game.rankingAlignment || Object.fromEntries(state.players.map(player => [player.id, 0]));
+  game.rankingChaos = game.rankingChaos || null;
+  return game;
+}
+
+function akRankingSavePrefsV43(game) {
+  akRankingWriteJsonV43(AK_RANKING_PREFS_KEY_V43, {
+    rankingMode: game.rankingMode,
+    rankingThemes: [...game.rankingThemes],
+    rankingLevels: [...game.rankingLevels],
+    rankingIncludeCustom: Boolean(game.rankingIncludeCustom),
+    roundCount: Number(game.roundCount || 10)
+  });
+}
+
+function akRankingRoundChoicesV43() { return [5, 10, 15, 20, 30, 50]; }
+function akRankingChipWallV43(items, selected, attr) {
+  return `<div class="ranking-filter-wall-v43">${items.map(item => `<button type="button" class="choice-chip ${selected.includes(item.id) ? "active" : ""}" ${attr}="${item.id}"><span>${item.icon}</span>${escapeHtml(item.label)}</button>`).join("")}</div>`;
+}
+function akRankingSetupMarkupV43(game, prefix = "ranking") {
+  akRankingEnsureV43(game);
+  const custom = game.rankingCustomCards || [];
+  return `
+    <section class="card setup-card-v07 ranking-setup-v43">
+      <div class="form-group"><label for="${prefix}Rounds">Nombre de classements</label><select id="${prefix}Rounds" class="text-input">${akRankingRoundChoicesV43().map(value => `<option value="${value}" ${Number(game.roundCount) === value ? "selected" : ""}>${value} classement${value > 1 ? "s" : ""}</option>`).join("")}</select></div>
+      <h3>Mode de jeu</h3>
+      <div class="ranking-mode-grid-v43">${AK_RANKING_MODES_V43.map(mode => `<button type="button" class="ranking-mode-card-v43 ${game.rankingMode === mode.id ? "active" : ""}" data-ranking-mode-v43="${mode.id}"><span>${mode.icon}</span><strong>${escapeHtml(mode.label)}</strong><small>${escapeHtml(mode.text)}</small></button>`).join("")}</div>
+      <h3>Thèmes</h3>${akRankingChipWallV43(AK_RANKING_THEMES_V43, game.rankingThemes, "data-ranking-theme-v43")}
+      <h3>Intensité</h3>${akRankingChipWallV43(AK_RANKING_LEVELS_V43, game.rankingLevels, "data-ranking-level-v43")}
+      <label class="ranking-custom-toggle-v43"><input id="${prefix}IncludeCustom" type="checkbox" ${game.rankingIncludeCustom ? "checked" : ""}> Mélanger mes classements personnalisés (${custom.length})</label>
+    </section>
+    <details class="card ranking-custom-editor-v43">
+      <summary>➕ Ajouter un classement personnalisé</summary>
+      <div class="form-group top-gap"><label for="${prefix}CustomTitle">Consigne</label><input id="${prefix}CustomTitle" class="text-input" maxlength="160" placeholder="Ex. Classe ces destinations pour nos prochaines vacances"></div>
+      <div class="form-group"><label for="${prefix}CustomItems">Propositions, une par ligne (3 à 8)</label><textarea id="${prefix}CustomItems" class="text-input" rows="6" placeholder="Lisbonne\nRome\nMontréal\nTokyo\nReykjavík"></textarea></div>
+      <div class="form-group"><label for="${prefix}CustomLevel">Intensité</label><select id="${prefix}CustomLevel" class="text-input">${AK_RANKING_LEVELS_V43.map(level => `<option value="${level.id}">${level.icon} ${escapeHtml(level.label)}</option>`).join("")}</select></div>
+      <button id="${prefix}SaveCustom" type="button" class="secondary-btn full">Enregistrer ce classement</button>
+      ${custom.length ? `<div class="ranking-custom-list-v43">${custom.map(card => `<div><span><strong>${escapeHtml(card.title)}</strong><small>${card.items.length} propositions</small></span><button type="button" class="icon-btn" data-ranking-delete-custom-v43="${escapeHtml(card.id)}" aria-label="Supprimer">🗑️</button></div>`).join("")}</div>` : `<p class="helper top-gap">Aucun classement personnalisé pour le moment.</p>`}
+    </details>`;
+}
+
+function akRankingBindSetupV43(game, prefix = "ranking", rerender = renderMegaSetup, readOnly = false) {
+  akRankingEnsureV43(game);
+  const changeSelection = (key, id, allIds) => {
+    if (readOnly) return;
+    const selected = [...game[key]];
+    const next = selected.includes(id) ? selected.filter(value => value !== id) : [...selected, id];
+    if (!next.length) return alert("Garde au moins un choix sélectionné.");
+    game[key] = allIds.filter(value => next.includes(value));
+    akRankingSavePrefsV43(game); rerender();
+  };
+  document.querySelector(`#${prefix}Rounds`)?.addEventListener("change", event => { game.roundCount = Number(event.target.value); akRankingSavePrefsV43(game); });
+  document.querySelectorAll("[data-ranking-mode-v43]").forEach(button => { button.disabled = readOnly; button.addEventListener("click", () => { game.rankingMode = button.dataset.rankingModeV43; akRankingSavePrefsV43(game); rerender(); }); });
+  document.querySelectorAll("[data-ranking-theme-v43]").forEach(button => { button.disabled = readOnly; button.addEventListener("click", () => changeSelection("rankingThemes", button.dataset.rankingThemeV43, akRankingAllThemeIdsV43())); });
+  document.querySelectorAll("[data-ranking-level-v43]").forEach(button => { button.disabled = readOnly; button.addEventListener("click", () => changeSelection("rankingLevels", button.dataset.rankingLevelV43, akRankingAllLevelIdsV43())); });
+  document.querySelector(`#${prefix}IncludeCustom`)?.addEventListener("change", event => { game.rankingIncludeCustom = event.target.checked; akRankingSavePrefsV43(game); });
+  document.querySelector(`#${prefix}SaveCustom`)?.addEventListener("click", () => {
+    if (readOnly) return;
+    const titleInput = document.querySelector(`#${prefix}CustomTitle`);
+    const itemsInput = document.querySelector(`#${prefix}CustomItems`);
+    const levelInput = document.querySelector(`#${prefix}CustomLevel`);
+    const titleValue = String(titleInput?.value || "").trim();
+    const itemValues = String(itemsInput?.value || "").split(/\n+/).map(value => value.trim()).filter(Boolean);
+    const uniqueItems = [...new Set(itemValues)];
+    if (titleValue.length < 6) return alert("Écris une consigne un peu plus précise.");
+    if (uniqueItems.length < 3 || uniqueItems.length > 8) return alert("Ajoute entre 3 et 8 propositions différentes.");
+    const rows = akRankingCustomCardsV43();
+    rows.unshift({ id: `ranking_custom_${Date.now()}`, title: titleValue, items: uniqueItems, theme: "custom", themeLabel: "Personnalisé", level: levelInput?.value || "light", levelLabel: "Personnalisé", custom: true });
+    akRankingSaveCustomCardsV43(rows.slice(0, 100));
+    game.rankingCustomCards = akRankingCustomCardsV43(); game.rankingIncludeCustom = true; akRankingSavePrefsV43(game); rerender();
+  });
+  document.querySelectorAll("[data-ranking-delete-custom-v43]").forEach(button => { button.disabled = readOnly; button.addEventListener("click", () => {
+    if (readOnly) return;
+    const id = button.dataset.rankingDeleteCustomV43;
+    akRankingSaveCustomCardsV43(akRankingCustomCardsV43().filter(card => card.id !== id));
+    game.rankingCustomCards = akRankingCustomCardsV43(); rerender();
+  }); });
+}
+
+function akRankingBuildPoolV43(raw, game) {
+  akRankingEnsureV43(game);
+  let pool = (Array.isArray(raw) ? raw : []).filter(card => game.rankingThemes.includes(card.theme) && game.rankingLevels.includes(card.level) && Array.isArray(card.items) && card.items.length >= 3);
+  if (game.rankingIncludeCustom) pool = pool.concat(game.rankingCustomCards || []);
+  return pool;
+}
+function akRankingShuffleV43(rows) {
+  const output = [...rows];
+  for (let i = output.length - 1; i > 0; i -= 1) { const j = Math.floor(Math.random() * (i + 1)); [output[i], output[j]] = [output[j], output[i]]; }
+  return output;
+}
+function akRankingFreshSelectV43(pool, count, key = "default") {
+  const history = akRankingReadJsonV43(AK_RANKING_HISTORY_KEY_V43, {});
+  const recent = new Set(Array.isArray(history[key]) ? history[key] : []);
+  const fresh = akRankingShuffleV43(pool.filter(item => !recent.has(item.id)));
+  const fallback = akRankingShuffleV43(pool.filter(item => recent.has(item.id)));
+  const selected = [...fresh, ...fallback].slice(0, Math.max(0, Math.min(count, pool.length)));
+  history[key] = [...selected.map(item => item.id), ...(history[key] || [])].filter((id, index, rows) => rows.indexOf(id) === index).slice(0, 120);
+  akRankingWriteJsonV43(AK_RANKING_HISTORY_KEY_V43, history);
+  return selected;
+}
+function akRankingPlayerV43(id) { return state.players.find(player => player.id === id) || null; }
+function akRankingRoundIdsV43(game) {
+  const count = Math.max(1, state.players.length);
+  if (game.rankingMode === "mirror") return [state.players[game.currentIndex % count]?.id, state.players[(game.currentIndex + 1) % count]?.id].filter((id, index, rows) => id && rows.indexOf(id) === index);
+  if (game.rankingMode === "group") return state.players.map(player => player.id);
+  const target = state.players[game.currentIndex % count]?.id;
+  return [target, ...state.players.map(player => player.id).filter(id => id !== target)].filter(Boolean);
+}
+function akRankingPositionsV43(ranking) { return Object.fromEntries((ranking || []).map((item, position) => [Number(item), position])); }
+function akRankingCompareV43(reference, proposal) {
+  const ref = akRankingPositionsV43(reference), guess = akRankingPositionsV43(proposal);
+  let exact = 0, adjacent = 0, distance = 0;
+  Object.keys(ref).forEach(key => { const delta = Math.abs(Number(ref[key]) - Number(guess[key])); distance += delta; if (delta === 0) exact += 1; else if (delta === 1) adjacent += 1; });
+  const perfect = exact === reference.length;
+  return { exact, adjacent, distance, perfect, points: exact * 2 + adjacent + (perfect ? 3 : 0) };
+}
+function akRankingConsensusV43(rankings, itemCount) {
+  const entries = Array.from({ length: itemCount }, (_, index) => {
+    const positions = rankings.map(ranking => akRankingPositionsV43(ranking)[index]).filter(value => Number.isFinite(value));
+    const average = positions.reduce((sum, value) => sum + value, 0) / Math.max(1, positions.length);
+    const spread = positions.length ? Math.max(...positions) - Math.min(...positions) : 0;
+    return { index, average, spread };
+  });
+  return entries.sort((a, b) => a.average - b.average || a.index - b.index);
+}
+function akRankingResetRoundV43(game) {
+  game.rankingAnswers = {}; game.rankingDraft = []; game.rankingParticipantIndex = 0; game.rankingCurrentIds = akRankingRoundIdsV43(game);
+}
+function akRankingCurrentPersonV43(game) { return akRankingPlayerV43(game.rankingCurrentIds[game.rankingParticipantIndex]); }
+
+const akRankingBaseResetMegaV43 = resetMegaGame;
+resetMegaGame = function resetMegaGameRankingV43(gameName, replayConfig = {}) {
+  akRankingBaseResetMegaV43(gameName, replayConfig);
+  if (gameName === AK_RANKING_GAME_V43) akRankingEnsureV43(state.megaGame, replayConfig);
+};
+
+const akRankingBaseRenderSetupV43 = renderMegaSetup;
+renderMegaSetup = function renderMegaSetupRankingV43() {
+  const game = state.megaGame;
+  if (!game || game.gameName !== AK_RANKING_GAME_V43) return akRankingBaseRenderSetupV43();
+  akRankingEnsureV43(game);
+  clearV014Timer(); title.textContent = AK_RANKING_GAME_V43; setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-mega engine-ranking"><span class="game-cover-icon">🏅</span><div><small>500 CLASSEMENTS · 3 MODES</small><h2>Le Classement secret</h2><p>Classe tout en privé, reconstruis les préférences des autres et découvre les plus gros écarts du groupe.</p></div></section>
+    ${akRankingSetupMarkupV43(game, "rankingLocal")}
+    <div class="notice">Chaque classement est une préférence du moment. Aucune réponse ne doit être contestée ou justifiée.</div>
+    <button id="startMegaGame" class="primary-btn full">Lancer Le Classement secret</button>`;
+  akRankingBindSetupV43(game, "rankingLocal", renderMegaSetup, false);
+  document.querySelector("#startMegaGame")?.addEventListener("click", startMegaGame);
+};
+
+const akRankingBaseStartMegaV43 = startMegaGame;
+startMegaGame = async function startMegaGameRankingV43() {
+  const game = state.megaGame;
+  if (!game || game.gameName !== AK_RANKING_GAME_V43) return akRankingBaseStartMegaV43();
+  akRankingEnsureV43(game);
+  if (state.players.length < 2) return alert("Le Classement secret demande au moins deux joueurs.");
+  if (!game.rankingThemes.length && !(game.rankingIncludeCustom && game.rankingCustomCards.length)) return alert("Choisis au moins un thème ou ajoute un classement personnalisé.");
+  if (!game.rankingLevels.length && !(game.rankingIncludeCustom && game.rankingCustomCards.length)) return alert("Choisis au moins une intensité.");
+  screen.innerHTML = `<div class="notice">Préparation des classements secrets…</div>`;
+  try {
+    const raw = await loadJsonFile("data/classement-secret.json", "Impossible de charger les classements.");
+    const pool = akRankingBuildPoolV43(raw, game);
+    if (!pool.length) throw new Error("Aucun classement ne correspond à ces réglages.");
+    game.items = akRankingFreshSelectV43(pool, Math.min(game.roundCount, pool.length), `solo:${game.rankingMode}:${game.rankingThemes.join("-")}:${game.rankingLevels.join("-")}`);
+    game.currentIndex = 0; game.scores = v014ScoreMap(); game.rounds = [];
+    game.rankingIntuition = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.rankingPredictability = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.rankingAlignment = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.rankingChaos = null;
+    akRankingResetRoundV43(game); akRankingSavePrefsV43(game); renderMegaCurrent();
+  } catch (error) { console.error(error); alert(error.message || "Impossible de lancer le jeu."); renderMegaSetup(); }
+};
+
+function renderRankingGateV43() {
+  const game = akRankingEnsureV43(state.megaGame);
+  if (!game.rankingCurrentIds.length) akRankingResetRoundV43(game);
+  if (game.rankingParticipantIndex >= game.rankingCurrentIds.length) return renderRankingRevealV43();
+  const player = akRankingCurrentPersonV43(game), item = game.items[game.currentIndex];
+  const target = akRankingPlayerV43(game.rankingCurrentIds[0]);
+  const roleText = game.rankingMode === "guess" && game.rankingParticipantIndex > 0 ? `Reconstruis le classement complet de ${target?.name || "la personne"}.` : game.rankingMode === "mirror" ? "Classe ces choix selon tes propres préférences." : game.rankingMode === "group" ? "Crée ton classement personnel avant le consensus du groupe." : "Crée ton vrai classement, sans montrer l’écran.";
+  title.textContent = AK_RANKING_GAME_V43; setBackVisible(false);
+  screen.innerHTML = `${v014Progress(game, "Classement")}<section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(player?.avatarId).emoji}</div><span class="category-chip">${escapeHtml(player?.name || "Joueur").toUpperCase()}</span><h2>${escapeHtml(item.title)}</h2><p>${escapeHtml(roleText)}</p><button id="openRankingV43" class="primary-btn">Ouvrir mon classement privé</button></section>`;
+  document.querySelector("#openRankingV43")?.addEventListener("click", renderRankingBuilderV43);
+}
+function renderRankingBuilderV43() {
+  const game = state.megaGame, item = game.items[game.currentIndex], player = akRankingCurrentPersonV43(game);
+  const selected = game.rankingDraft || [], available = item.items.map((_, index) => index).filter(index => !selected.includes(index));
+  title.textContent = `Classement de ${player?.name || "Joueur"}`;
+  screen.innerHTML = `${v014Progress(game, "Classement")}<section class="card ranking-private-card-v43"><span class="viz-badge">ÉCRAN PRIVÉ</span><h2 class="section-title">${escapeHtml(item.title)}</h2><p class="helper">Clique du numéro 1 au dernier. Tu peux annuler le dernier choix.</p></section><section class="secret-ranking-builder ranking-builder-v43"><div class="ranking-picked">${selected.map((index, position) => `<div><span>${position + 1}</span><strong>${escapeHtml(item.items[index])}</strong></div>`).join("") || `<div class="notice">Commence par ton numéro un.</div>`}</div><div class="ranking-available">${available.map(index => `<button class="secondary-btn" data-ranking-pick-v43="${index}">${escapeHtml(item.items[index])}</button>`).join("")}</div></section><div class="toolbar"><button id="undoRankingV43" class="secondary-btn" ${selected.length ? "" : "disabled"}>↶ Annuler</button><button id="confirmRankingV43" class="primary-btn" ${selected.length === item.items.length ? "" : "disabled"}>Valider en secret</button></div>`;
+  document.querySelectorAll("[data-ranking-pick-v43]").forEach(button => button.addEventListener("click", () => { game.rankingDraft.push(Number(button.dataset.rankingPickV43)); renderRankingBuilderV43(); }));
+  document.querySelector("#undoRankingV43")?.addEventListener("click", () => { game.rankingDraft.pop(); renderRankingBuilderV43(); });
+  document.querySelector("#confirmRankingV43")?.addEventListener("click", () => { game.rankingAnswers[player.id] = [...game.rankingDraft]; game.rankingDraft = []; game.rankingParticipantIndex += 1; renderRankingGateV43(); });
+}
+function akRankingOrderMarkupV43(item, ranking, label = "") {
+  return `<article class="ranking-reveal-card-v43">${label ? `<h3>${escapeHtml(label)}</h3>` : ""}${(ranking || []).map((index, position) => `<div class="ranking-row"><span class="ranking-position">${position + 1}</span><strong>${escapeHtml(item.items[index] || "")}</strong></div>`).join("")}</article>`;
+}
+function renderRankingRevealV43() {
+  const game = state.megaGame, item = game.items[game.currentIndex], ids = game.rankingCurrentIds, answers = game.rankingAnswers;
+  let intro = "", details = "", chaosValue = 0, round;
+  if (game.rankingMode === "guess") {
+    const targetId = ids[0], target = akRankingPlayerV43(targetId), reference = answers[targetId], results = [];
+    ids.slice(1).forEach(id => { const comparison = akRankingCompareV43(reference, answers[id]); game.scores[id] = Number(game.scores[id] || 0) + comparison.points; game.rankingIntuition[id] = Number(game.rankingIntuition[id] || 0) + comparison.points; game.rankingPredictability[targetId] = Number(game.rankingPredictability[targetId] || 0) + comparison.points; if (!comparison.points) game.scores[targetId] = Number(game.scores[targetId] || 0) + 1; chaosValue += comparison.distance; results.push({ id, ...comparison }); });
+    intro = `<section class="winner-stage winner-stage-v07"><div class="winner-crown">🕵️</div><h2>Le classement de ${escapeHtml(target?.name || "la personne")}</h2><p>${results.filter(result => result.perfect).length} classement${results.filter(result => result.perfect).length > 1 ? "s" : ""} parfaitement reconstruit${results.filter(result => result.perfect).length > 1 ? "s" : ""}.</p></section>`;
+    details = `${akRankingOrderMarkupV43(item, reference, `Vrai classement de ${target?.name || "la personne"}`)}<section class="ranking-score-list-v43">${results.map(result => { const player = akRankingPlayerV43(result.id); return `<div><span>${avatarById(player?.avatarId).emoji}</span><strong>${escapeHtml(player?.name || "Joueur")}</strong><small>${result.exact} exact · ${result.adjacent} à une place</small><b>+${result.points}</b></div>`; }).join("")}</section>`;
+    round = { itemId: item.id, mode: game.rankingMode, targetId, answers: { ...answers }, results, chaos: chaosValue };
+  } else if (game.rankingMode === "mirror") {
+    const [firstId, secondId] = ids, first = akRankingPlayerV43(firstId), second = akRankingPlayerV43(secondId), comparison = akRankingCompareV43(answers[firstId], answers[secondId]);
+    game.scores[firstId] = Number(game.scores[firstId] || 0) + comparison.points; game.scores[secondId] = Number(game.scores[secondId] || 0) + comparison.points; game.rankingAlignment[firstId] += comparison.points; game.rankingAlignment[secondId] += comparison.points; chaosValue = comparison.distance;
+    intro = `<section class="winner-stage winner-stage-v07"><div class="winner-crown">🪞</div><h2>${escapeHtml(first?.name || "Joueur")} & ${escapeHtml(second?.name || "Joueur")}</h2><p>${comparison.exact} position${comparison.exact > 1 ? "s" : ""} identique${comparison.exact > 1 ? "s" : ""}, ${comparison.adjacent} presque identique${comparison.adjacent > 1 ? "s" : ""}.</p></section>`;
+    details = `<div class="ranking-dual-grid-v43">${akRankingOrderMarkupV43(item, answers[firstId], first?.name)}${akRankingOrderMarkupV43(item, answers[secondId], second?.name)}</div><div class="viz-callout">Score miroir : +${comparison.points} points chacun.</div>`;
+    round = { itemId: item.id, mode: game.rankingMode, pairIds: ids, answers: { ...answers }, comparison, chaos: chaosValue };
+  } else {
+    const rankings = ids.map(id => answers[id]), consensusRows = akRankingConsensusV43(rankings, item.items.length), consensus = consensusRows.map(row => row.index), results = [];
+    ids.forEach(id => { const comparison = akRankingCompareV43(consensus, answers[id]); const points = comparison.exact + (comparison.perfect ? 2 : 0); game.scores[id] = Number(game.scores[id] || 0) + points; game.rankingAlignment[id] = Number(game.rankingAlignment[id] || 0) + points; chaosValue += comparison.distance; results.push({ id, ...comparison, points }); });
+    const biggest = [...consensusRows].sort((a,b) => b.spread - a.spread)[0];
+    intro = `<section class="winner-stage winner-stage-v07"><div class="winner-crown">👥</div><h2>Le classement moyen du groupe</h2><p>Le plus gros désaccord concerne « ${escapeHtml(item.items[biggest?.index] || "") } ».</p></section>`;
+    details = `${akRankingOrderMarkupV43(item, consensus, "Consensus du groupe")}<section class="ranking-score-list-v43">${results.map(result => { const player = akRankingPlayerV43(result.id); return `<div><span>${avatarById(player?.avatarId).emoji}</span><strong>${escapeHtml(player?.name || "Joueur")}</strong><small>${result.exact} place${result.exact > 1 ? "s" : ""} comme le groupe</small><b>+${result.points}</b></div>`; }).join("")}</section>`;
+    round = { itemId: item.id, mode: game.rankingMode, answers: { ...answers }, consensus, consensusRows, results, chaos: chaosValue };
+  }
+  game.rounds.push(round);
+  if (!game.rankingChaos || chaosValue > game.rankingChaos.value) game.rankingChaos = { value: chaosValue, title: item.title, itemId: item.id };
+  title.textContent = "Classement révélé";
+  screen.innerHTML = `${v014Progress(game, "Classement")}${intro}${details}<button id="nextRankingV43" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le palmarès" : "Classement suivant"}</button>`;
+  document.querySelector("#nextRankingV43")?.addEventListener("click", () => { game.currentIndex += 1; if (game.currentIndex >= game.items.length) return renderMegaFinal(); akRankingResetRoundV43(game); renderMegaCurrent(); });
+}
+
+const akRankingBaseRenderCurrentV43 = renderMegaCurrent;
+renderMegaCurrent = function renderMegaCurrentRankingV43() {
+  if (state.megaGame?.gameName === AK_RANKING_GAME_V43) {
+    if (state.megaGame.currentIndex >= state.megaGame.items.length) return renderMegaFinal();
+    return renderRankingGateV43();
+  }
+  return akRankingBaseRenderCurrentV43();
+};
+function akRankingTopPlayerV43(values) { return state.players.map(player => ({ player, value: Number(values?.[player.id] || 0) })).sort((a,b) => b.value - a.value)[0]; }
+const akRankingBaseFinalV43 = renderMegaFinal;
+renderMegaFinal = function renderMegaFinalRankingV43() {
+  const game = state.megaGame;
+  if (!game || game.gameName !== AK_RANKING_GAME_V43) return akRankingBaseFinalV43();
+  const ranking = [...state.players].sort((a,b) => Number(game.scores[b.id] || 0) - Number(game.scores[a.id] || 0));
+  const intuition = akRankingTopPlayerV43(game.rankingMode === "guess" ? game.rankingIntuition : game.rankingAlignment);
+  const predictable = akRankingTopPlayerV43(game.rankingPredictability);
+  const replay = { roundCount: game.roundCount, rankingMode: game.rankingMode, rankingThemes: [...game.rankingThemes], rankingLevels: [...game.rankingLevels], rankingIncludeCustom: game.rankingIncludeCustom };
+  title.textContent = "Palmarès des classements"; setBackVisible(false);
+  screen.innerHTML = `<section class="winner-stage winner-stage-v07 mega-final-stage"><div class="winner-crown">🏅🏆</div><h2>${ranking[0] ? escapeHtml(ranking[0].name) : "Partie terminée"}</h2><p>${game.rankingMode === "guess" ? "La meilleure lecture du groupe est révélée." : game.rankingMode === "mirror" ? "Les duos ont confronté leurs préférences." : "Le consensus du groupe a parlé."}</p></section><section class="final-ranking">${ranking.map((player,index) => `<div class="ranking-row"><span class="ranking-position">${index+1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section><section class="impostor-awards">${intuition?.value ? `<article><span>🧠</span><div><small>${game.rankingMode === "guess" ? "MEILLEURE INTUITION" : "PLUS PROCHE DU GROUPE"}</small><strong>${escapeHtml(intuition.player.name)}</strong><p>${intuition.value} points de proximité</p></div></article>` : ""}${game.rankingMode === "guess" && predictable?.value ? `<article><span>🔍</span><div><small>PERSONNE LA PLUS PRÉVISIBLE</small><strong>${escapeHtml(predictable.player.name)}</strong><p>${predictable.value} points devinés par les autres</p></div></article>` : ""}${game.rankingChaos ? `<article><span>🌀</span><div><small>CLASSEMENT LE PLUS CHAOTIQUE</small><strong>${escapeHtml(game.rankingChaos.title)}</strong><p>${game.rankingChaos.value} places d’écart cumulées</p></div></article>` : ""}</section><div class="toolbar"><button id="rankingReplayV43" class="secondary-btn">Rejouer</button><button id="rankingOtherV43" class="primary-btn">Autre jeu</button></div>`;
+  document.querySelector("#rankingReplayV43")?.addEventListener("click", () => { resetMegaGame(AK_RANKING_GAME_V43, replay); renderMegaSetup(); });
+  document.querySelector("#rankingOtherV43")?.addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
+};
