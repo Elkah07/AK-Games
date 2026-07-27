@@ -1,23 +1,22 @@
 {
-  "version": "4.0-sorted-complete",
+  "version": 4,
   "basePath": "assets/characters",
-  "availablePoses": [
+  "runtimeFormat": "WEBP transparent",
+  "sizes": {
+    "full": 1024,
+    "bust": 768,
+    "avatar-circle": 512,
+    "icon": 256
+  },
+  "poses": [
     "idle",
     "talk",
     "hype",
     "win",
     "lose"
   ],
-  "formats": {
-    "full": 1024,
-    "bust": 768,
-    "avatar-circle": 512,
-    "icon": 256
-  },
-  "fallback": {
-    "missingPose": "idle",
-    "missingVariant": "avatar-circle"
-  },
+  "characterCount": 17,
+  "expectedRuntimeFiles": 340,
   "characters": {
     "croa": {
       "name": "Croâ",

@@ -10,12 +10,12 @@
       "**/node_modules/**",
       "README*",
       "database.rules.json",
-      "styles-multiplayer.css",
-      "styles-pwa.css",
       "audit-*.html",
       "**/*.zip",
       "**/*.xlsx",
-      "**/*.md"
+      "**/*.md",
+      "docs/**",
+      "**/*.txt"
     ],
     "headers": [
       {

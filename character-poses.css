@@ -18,7 +18,7 @@
   filter: none;
 }
 
-/* Animations de secours tant que les illustrations talk/hype/win/lose ne sont pas dessinées. */
+/* Animations légères appliquées aux illustrations dédiées de chaque pose. */
 .ak-character--talk { animation: ak-character-talk 1.8s ease-in-out infinite; }
 .ak-character--hype { animation: ak-character-hype .72s ease-in-out infinite alternate; }
 .ak-character--win { animation: ak-character-win 1.05s cubic-bezier(.2,.8,.2,1) both; }

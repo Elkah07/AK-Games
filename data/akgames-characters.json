@@ -1,6 +1,6 @@
 {
-  "version": "2.0.0",
-  "generatedFor": "AK'Games",
+  "version": "3.0-sorted-complete",
+  "generatedFor": "AK'Games — 17 mascottes, 5 poses, 4 cadrages",
   "characterCount": 17,
   "events": {
     "selected": {
@@ -79,17 +79,37 @@
         "violet"
       ],
       "images": {
-        "sourcePng": "assets/characters/croa/source.png",
-        "fullPng": "assets/characters/croa/full.png",
-        "fullWebp": "assets/characters/croa/full.webp",
-        "bustPng": "assets/characters/croa/bust.png",
-        "bustWebp": "assets/characters/croa/bust.webp",
-        "avatarCirclePng": "assets/characters/croa/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/croa/avatar-circle.webp",
-        "iconPng": "assets/characters/croa/icon.png",
-        "iconWebp": "assets/characters/croa/icon.webp"
+        "idle": {
+          "full": "assets/characters/croa/idle/full.webp",
+          "bust": "assets/characters/croa/idle/bust.webp",
+          "avatar-circle": "assets/characters/croa/idle/avatar-circle.webp",
+          "icon": "assets/characters/croa/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/croa/talk/full.webp",
+          "bust": "assets/characters/croa/talk/bust.webp",
+          "avatar-circle": "assets/characters/croa/talk/avatar-circle.webp",
+          "icon": "assets/characters/croa/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/croa/hype/full.webp",
+          "bust": "assets/characters/croa/hype/bust.webp",
+          "avatar-circle": "assets/characters/croa/hype/avatar-circle.webp",
+          "icon": "assets/characters/croa/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/croa/win/full.webp",
+          "bust": "assets/characters/croa/win/bust.webp",
+          "avatar-circle": "assets/characters/croa/win/avatar-circle.webp",
+          "icon": "assets/characters/croa/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/croa/lose/full.webp",
+          "bust": "assets/characters/croa/lose/bust.webp",
+          "avatar-circle": "assets/characters/croa/lose/avatar-circle.webp",
+          "icon": "assets/characters/croa/lose/icon.webp"
+        }
       },
-      "sourceFile": "le_mascotte_croâ_en_tenues_stylées.png",
       "lines": {
         "selected": [
           "Le sac est bouclé. Je suis de la partie.",
@@ -224,17 +244,37 @@
         "violet"
       ],
       "images": {
-        "sourcePng": "assets/characters/loki/source.png",
-        "fullPng": "assets/characters/loki/full.png",
-        "fullWebp": "assets/characters/loki/full.webp",
-        "bustPng": "assets/characters/loki/bust.png",
-        "bustWebp": "assets/characters/loki/bust.webp",
-        "avatarCirclePng": "assets/characters/loki/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/loki/avatar-circle.webp",
-        "iconPng": "assets/characters/loki/icon.png",
-        "iconWebp": "assets/characters/loki/icon.webp"
+        "idle": {
+          "full": "assets/characters/loki/idle/full.webp",
+          "bust": "assets/characters/loki/idle/bust.webp",
+          "avatar-circle": "assets/characters/loki/idle/avatar-circle.webp",
+          "icon": "assets/characters/loki/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/loki/talk/full.webp",
+          "bust": "assets/characters/loki/talk/bust.webp",
+          "avatar-circle": "assets/characters/loki/talk/avatar-circle.webp",
+          "icon": "assets/characters/loki/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/loki/hype/full.webp",
+          "bust": "assets/characters/loki/hype/bust.webp",
+          "avatar-circle": "assets/characters/loki/hype/avatar-circle.webp",
+          "icon": "assets/characters/loki/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/loki/win/full.webp",
+          "bust": "assets/characters/loki/win/bust.webp",
+          "avatar-circle": "assets/characters/loki/win/avatar-circle.webp",
+          "icon": "assets/characters/loki/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/loki/lose/full.webp",
+          "bust": "assets/characters/loki/lose/bust.webp",
+          "avatar-circle": "assets/characters/loki/lose/avatar-circle.webp",
+          "icon": "assets/characters/loki/lose/icon.webp"
+        }
       },
-      "sourceFile": "loki_l_otarie_mignonne_en_imperméable.png",
       "lines": {
         "selected": [
           "Le goûter est sécurisé. Je suis de la partie.",
@@ -369,17 +409,37 @@
         "violet"
       ],
       "images": {
-        "sourcePng": "assets/characters/kaia/source.png",
-        "fullPng": "assets/characters/kaia/full.png",
-        "fullWebp": "assets/characters/kaia/full.webp",
-        "bustPng": "assets/characters/kaia/bust.png",
-        "bustWebp": "assets/characters/kaia/bust.webp",
-        "avatarCirclePng": "assets/characters/kaia/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/kaia/avatar-circle.webp",
-        "iconPng": "assets/characters/kaia/icon.png",
-        "iconWebp": "assets/characters/kaia/icon.webp"
+        "idle": {
+          "full": "assets/characters/kaia/idle/full.webp",
+          "bust": "assets/characters/kaia/idle/bust.webp",
+          "avatar-circle": "assets/characters/kaia/idle/avatar-circle.webp",
+          "icon": "assets/characters/kaia/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/kaia/talk/full.webp",
+          "bust": "assets/characters/kaia/talk/bust.webp",
+          "avatar-circle": "assets/characters/kaia/talk/avatar-circle.webp",
+          "icon": "assets/characters/kaia/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/kaia/hype/full.webp",
+          "bust": "assets/characters/kaia/hype/bust.webp",
+          "avatar-circle": "assets/characters/kaia/hype/avatar-circle.webp",
+          "icon": "assets/characters/kaia/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/kaia/win/full.webp",
+          "bust": "assets/characters/kaia/win/bust.webp",
+          "avatar-circle": "assets/characters/kaia/win/avatar-circle.webp",
+          "icon": "assets/characters/kaia/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/kaia/lose/full.webp",
+          "bust": "assets/characters/kaia/lose/bust.webp",
+          "avatar-circle": "assets/characters/kaia/lose/avatar-circle.webp",
+          "icon": "assets/characters/kaia/lose/icon.webp"
+        }
       },
-      "sourceFile": "kaia_l_anthropomorphe_panda_chic.png",
       "lines": {
         "selected": [
           "Les écouteurs sont en place. Je suis de la partie.",
@@ -514,17 +574,37 @@
         "lilas"
       ],
       "images": {
-        "sourcePng": "assets/characters/bonnie/source.png",
-        "fullPng": "assets/characters/bonnie/full.png",
-        "fullWebp": "assets/characters/bonnie/full.webp",
-        "bustPng": "assets/characters/bonnie/bust.png",
-        "bustWebp": "assets/characters/bonnie/bust.webp",
-        "avatarCirclePng": "assets/characters/bonnie/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/bonnie/avatar-circle.webp",
-        "iconPng": "assets/characters/bonnie/icon.png",
-        "iconWebp": "assets/characters/bonnie/icon.webp"
+        "idle": {
+          "full": "assets/characters/bonnie/idle/full.webp",
+          "bust": "assets/characters/bonnie/idle/bust.webp",
+          "avatar-circle": "assets/characters/bonnie/idle/avatar-circle.webp",
+          "icon": "assets/characters/bonnie/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/bonnie/talk/full.webp",
+          "bust": "assets/characters/bonnie/talk/bust.webp",
+          "avatar-circle": "assets/characters/bonnie/talk/avatar-circle.webp",
+          "icon": "assets/characters/bonnie/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/bonnie/hype/full.webp",
+          "bust": "assets/characters/bonnie/hype/bust.webp",
+          "avatar-circle": "assets/characters/bonnie/hype/avatar-circle.webp",
+          "icon": "assets/characters/bonnie/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/bonnie/win/full.webp",
+          "bust": "assets/characters/bonnie/win/bust.webp",
+          "avatar-circle": "assets/characters/bonnie/win/avatar-circle.webp",
+          "icon": "assets/characters/bonnie/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/bonnie/lose/full.webp",
+          "bust": "assets/characters/bonnie/lose/bust.webp",
+          "avatar-circle": "assets/characters/bonnie/lose/avatar-circle.webp",
+          "icon": "assets/characters/bonnie/lose/icon.webp"
+        }
       },
-      "sourceFile": "portrait_d_un_chiot_mignon_et_détendu.png",
       "lines": {
         "selected": [
           "Ma médaille brille pour l’équipe. Je suis de la partie.",
@@ -659,17 +739,37 @@
         "violet"
       ],
       "images": {
-        "sourcePng": "assets/characters/edgar/source.png",
-        "fullPng": "assets/characters/edgar/full.png",
-        "fullWebp": "assets/characters/edgar/full.webp",
-        "bustPng": "assets/characters/edgar/bust.png",
-        "bustWebp": "assets/characters/edgar/bust.webp",
-        "avatarCirclePng": "assets/characters/edgar/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/edgar/avatar-circle.webp",
-        "iconPng": "assets/characters/edgar/icon.png",
-        "iconWebp": "assets/characters/edgar/icon.webp"
+        "idle": {
+          "full": "assets/characters/edgar/idle/full.webp",
+          "bust": "assets/characters/edgar/idle/bust.webp",
+          "avatar-circle": "assets/characters/edgar/idle/avatar-circle.webp",
+          "icon": "assets/characters/edgar/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/edgar/talk/full.webp",
+          "bust": "assets/characters/edgar/talk/bust.webp",
+          "avatar-circle": "assets/characters/edgar/talk/avatar-circle.webp",
+          "icon": "assets/characters/edgar/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/edgar/hype/full.webp",
+          "bust": "assets/characters/edgar/hype/bust.webp",
+          "avatar-circle": "assets/characters/edgar/hype/avatar-circle.webp",
+          "icon": "assets/characters/edgar/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/edgar/win/full.webp",
+          "bust": "assets/characters/edgar/win/bust.webp",
+          "avatar-circle": "assets/characters/edgar/win/avatar-circle.webp",
+          "icon": "assets/characters/edgar/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/edgar/lose/full.webp",
+          "bust": "assets/characters/edgar/lose/bust.webp",
+          "avatar-circle": "assets/characters/edgar/lose/avatar-circle.webp",
+          "icon": "assets/characters/edgar/lose/icon.webp"
+        }
       },
-      "sourceFile": "edgar_le_corbeau_audacieux.png",
       "lines": {
         "selected": [
           "L’ombre a pris sa place. Je suis de la partie.",
@@ -804,17 +904,37 @@
         "crème"
       ],
       "images": {
-        "sourcePng": "assets/characters/filou/source.png",
-        "fullPng": "assets/characters/filou/full.png",
-        "fullWebp": "assets/characters/filou/full.webp",
-        "bustPng": "assets/characters/filou/bust.png",
-        "bustWebp": "assets/characters/filou/bust.webp",
-        "avatarCirclePng": "assets/characters/filou/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/filou/avatar-circle.webp",
-        "iconPng": "assets/characters/filou/icon.png",
-        "iconWebp": "assets/characters/filou/icon.webp"
+        "idle": {
+          "full": "assets/characters/filou/idle/full.webp",
+          "bust": "assets/characters/filou/idle/bust.webp",
+          "avatar-circle": "assets/characters/filou/idle/avatar-circle.webp",
+          "icon": "assets/characters/filou/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/filou/talk/full.webp",
+          "bust": "assets/characters/filou/talk/bust.webp",
+          "avatar-circle": "assets/characters/filou/talk/avatar-circle.webp",
+          "icon": "assets/characters/filou/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/filou/hype/full.webp",
+          "bust": "assets/characters/filou/hype/bust.webp",
+          "avatar-circle": "assets/characters/filou/hype/avatar-circle.webp",
+          "icon": "assets/characters/filou/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/filou/win/full.webp",
+          "bust": "assets/characters/filou/win/bust.webp",
+          "avatar-circle": "assets/characters/filou/win/avatar-circle.webp",
+          "icon": "assets/characters/filou/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/filou/lose/full.webp",
+          "bust": "assets/characters/filou/lose/bust.webp",
+          "avatar-circle": "assets/characters/filou/lose/avatar-circle.webp",
+          "icon": "assets/characters/filou/lose/icon.webp"
+        }
       },
-      "sourceFile": "filou_le_renard_stylé_et_confiant.png",
       "lines": {
         "selected": [
           "La boucle de ceinture annonce la couleur. Je suis de la partie.",
@@ -949,17 +1069,37 @@
         "violet"
       ],
       "images": {
-        "sourcePng": "assets/characters/nuggets/source.png",
-        "fullPng": "assets/characters/nuggets/full.png",
-        "fullWebp": "assets/characters/nuggets/full.webp",
-        "bustPng": "assets/characters/nuggets/bust.png",
-        "bustWebp": "assets/characters/nuggets/bust.webp",
-        "avatarCirclePng": "assets/characters/nuggets/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/nuggets/avatar-circle.webp",
-        "iconPng": "assets/characters/nuggets/icon.png",
-        "iconWebp": "assets/characters/nuggets/icon.webp"
+        "idle": {
+          "full": "assets/characters/nuggets/idle/full.webp",
+          "bust": "assets/characters/nuggets/idle/bust.webp",
+          "avatar-circle": "assets/characters/nuggets/idle/avatar-circle.webp",
+          "icon": "assets/characters/nuggets/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/nuggets/talk/full.webp",
+          "bust": "assets/characters/nuggets/talk/bust.webp",
+          "avatar-circle": "assets/characters/nuggets/talk/avatar-circle.webp",
+          "icon": "assets/characters/nuggets/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/nuggets/hype/full.webp",
+          "bust": "assets/characters/nuggets/hype/bust.webp",
+          "avatar-circle": "assets/characters/nuggets/hype/avatar-circle.webp",
+          "icon": "assets/characters/nuggets/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/nuggets/win/full.webp",
+          "bust": "assets/characters/nuggets/win/bust.webp",
+          "avatar-circle": "assets/characters/nuggets/win/avatar-circle.webp",
+          "icon": "assets/characters/nuggets/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/nuggets/lose/full.webp",
+          "bust": "assets/characters/nuggets/lose/bust.webp",
+          "avatar-circle": "assets/characters/nuggets/lose/avatar-circle.webp",
+          "icon": "assets/characters/nuggets/lose/icon.webp"
+        }
       },
-      "sourceFile": "nuggets_l_esprit_joueur_et_maladroit.png",
       "lines": {
         "selected": [
           "Mes bottes sont déjà parties sans moi. Je suis de la partie.",
@@ -1094,17 +1234,37 @@
         "bleu clair"
       ],
       "images": {
-        "sourcePng": "assets/characters/vapo/source.png",
-        "fullPng": "assets/characters/vapo/full.png",
-        "fullWebp": "assets/characters/vapo/full.webp",
-        "bustPng": "assets/characters/vapo/bust.png",
-        "bustWebp": "assets/characters/vapo/bust.webp",
-        "avatarCirclePng": "assets/characters/vapo/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/vapo/avatar-circle.webp",
-        "iconPng": "assets/characters/vapo/icon.png",
-        "iconWebp": "assets/characters/vapo/icon.webp"
+        "idle": {
+          "full": "assets/characters/vapo/idle/full.webp",
+          "bust": "assets/characters/vapo/idle/bust.webp",
+          "avatar-circle": "assets/characters/vapo/idle/avatar-circle.webp",
+          "icon": "assets/characters/vapo/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/vapo/talk/full.webp",
+          "bust": "assets/characters/vapo/talk/bust.webp",
+          "avatar-circle": "assets/characters/vapo/talk/avatar-circle.webp",
+          "icon": "assets/characters/vapo/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/vapo/hype/full.webp",
+          "bust": "assets/characters/vapo/hype/bust.webp",
+          "avatar-circle": "assets/characters/vapo/hype/avatar-circle.webp",
+          "icon": "assets/characters/vapo/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/vapo/win/full.webp",
+          "bust": "assets/characters/vapo/win/bust.webp",
+          "avatar-circle": "assets/characters/vapo/win/avatar-circle.webp",
+          "icon": "assets/characters/vapo/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/vapo/lose/full.webp",
+          "bust": "assets/characters/vapo/lose/bust.webp",
+          "avatar-circle": "assets/characters/vapo/lose/avatar-circle.webp",
+          "icon": "assets/characters/vapo/lose/icon.webp"
+        }
       },
-      "sourceFile": "fantôme_mignon_avec_un_dispositif_lumineux.png",
       "lines": {
         "selected": [
           "Un petit courant froid vient d’arriver. Je suis de la partie.",
@@ -1239,17 +1399,37 @@
         "violet"
       ],
       "images": {
-        "sourcePng": "assets/characters/rrrrh/source.png",
-        "fullPng": "assets/characters/rrrrh/full.png",
-        "fullWebp": "assets/characters/rrrrh/full.webp",
-        "bustPng": "assets/characters/rrrrh/bust.png",
-        "bustWebp": "assets/characters/rrrrh/bust.webp",
-        "avatarCirclePng": "assets/characters/rrrrh/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/rrrrh/avatar-circle.webp",
-        "iconPng": "assets/characters/rrrrh/icon.png",
-        "iconWebp": "assets/characters/rrrrh/icon.webp"
+        "idle": {
+          "full": "assets/characters/rrrrh/idle/full.webp",
+          "bust": "assets/characters/rrrrh/idle/bust.webp",
+          "avatar-circle": "assets/characters/rrrrh/idle/avatar-circle.webp",
+          "icon": "assets/characters/rrrrh/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/rrrrh/talk/full.webp",
+          "bust": "assets/characters/rrrrh/talk/bust.webp",
+          "avatar-circle": "assets/characters/rrrrh/talk/avatar-circle.webp",
+          "icon": "assets/characters/rrrrh/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/rrrrh/hype/full.webp",
+          "bust": "assets/characters/rrrrh/hype/bust.webp",
+          "avatar-circle": "assets/characters/rrrrh/hype/avatar-circle.webp",
+          "icon": "assets/characters/rrrrh/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/rrrrh/win/full.webp",
+          "bust": "assets/characters/rrrrh/win/bust.webp",
+          "avatar-circle": "assets/characters/rrrrh/win/avatar-circle.webp",
+          "icon": "assets/characters/rrrrh/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/rrrrh/lose/full.webp",
+          "bust": "assets/characters/rrrrh/lose/bust.webp",
+          "avatar-circle": "assets/characters/rrrrh/lose/avatar-circle.webp",
+          "icon": "assets/characters/rrrrh/lose/icon.webp"
+        }
       },
-      "sourceFile": "petit_dinosaure_aventurier_chibi.png",
       "lines": {
         "selected": [
           "Mon foulard scout est noué très fort. Je suis de la partie.",
@@ -1383,17 +1563,37 @@
         "prune"
       ],
       "images": {
-        "sourcePng": "assets/characters/sir-moustache/source.png",
-        "fullPng": "assets/characters/sir-moustache/full.png",
-        "fullWebp": "assets/characters/sir-moustache/full.webp",
-        "bustPng": "assets/characters/sir-moustache/bust.png",
-        "bustWebp": "assets/characters/sir-moustache/bust.webp",
-        "avatarCirclePng": "assets/characters/sir-moustache/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/sir-moustache/avatar-circle.webp",
-        "iconPng": "assets/characters/sir-moustache/icon.png",
-        "iconWebp": "assets/characters/sir-moustache/icon.webp"
+        "idle": {
+          "full": "assets/characters/sir-moustache/idle/full.webp",
+          "bust": "assets/characters/sir-moustache/idle/bust.webp",
+          "avatar-circle": "assets/characters/sir-moustache/idle/avatar-circle.webp",
+          "icon": "assets/characters/sir-moustache/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/sir-moustache/talk/full.webp",
+          "bust": "assets/characters/sir-moustache/talk/bust.webp",
+          "avatar-circle": "assets/characters/sir-moustache/talk/avatar-circle.webp",
+          "icon": "assets/characters/sir-moustache/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/sir-moustache/hype/full.webp",
+          "bust": "assets/characters/sir-moustache/hype/bust.webp",
+          "avatar-circle": "assets/characters/sir-moustache/hype/avatar-circle.webp",
+          "icon": "assets/characters/sir-moustache/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/sir-moustache/win/full.webp",
+          "bust": "assets/characters/sir-moustache/win/bust.webp",
+          "avatar-circle": "assets/characters/sir-moustache/win/avatar-circle.webp",
+          "icon": "assets/characters/sir-moustache/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/sir-moustache/lose/full.webp",
+          "bust": "assets/characters/sir-moustache/lose/bust.webp",
+          "avatar-circle": "assets/characters/sir-moustache/lose/avatar-circle.webp",
+          "icon": "assets/characters/sir-moustache/lose/icon.webp"
+        }
       },
-      "sourceFile": "chat_élégant_en_costume_sophistiqué.png",
       "lines": {
         "selected": [
           "Les boutons de manchette sont alignés. Je suis de la partie.",
@@ -1528,17 +1728,37 @@
         "bleu glacier"
       ],
       "images": {
-        "sourcePng": "assets/characters/snow/source.png",
-        "fullPng": "assets/characters/snow/full.png",
-        "fullWebp": "assets/characters/snow/full.webp",
-        "bustPng": "assets/characters/snow/bust.png",
-        "bustWebp": "assets/characters/snow/bust.webp",
-        "avatarCirclePng": "assets/characters/snow/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/snow/avatar-circle.webp",
-        "iconPng": "assets/characters/snow/icon.png",
-        "iconWebp": "assets/characters/snow/icon.webp"
+        "idle": {
+          "full": "assets/characters/snow/idle/full.webp",
+          "bust": "assets/characters/snow/idle/bust.webp",
+          "avatar-circle": "assets/characters/snow/idle/avatar-circle.webp",
+          "icon": "assets/characters/snow/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/snow/talk/full.webp",
+          "bust": "assets/characters/snow/talk/bust.webp",
+          "avatar-circle": "assets/characters/snow/talk/avatar-circle.webp",
+          "icon": "assets/characters/snow/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/snow/hype/full.webp",
+          "bust": "assets/characters/snow/hype/bust.webp",
+          "avatar-circle": "assets/characters/snow/hype/avatar-circle.webp",
+          "icon": "assets/characters/snow/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/snow/win/full.webp",
+          "bust": "assets/characters/snow/win/bust.webp",
+          "avatar-circle": "assets/characters/snow/win/avatar-circle.webp",
+          "icon": "assets/characters/snow/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/snow/lose/full.webp",
+          "bust": "assets/characters/snow/lose/bust.webp",
+          "avatar-circle": "assets/characters/snow/lose/avatar-circle.webp",
+          "icon": "assets/characters/snow/lose/icon.webp"
+        }
       },
-      "sourceFile": "manchot_mignon_en_tenue_d_hiver.png",
       "lines": {
         "selected": [
           "Mes moufles sont bien serrées. Je suis de la partie.",
@@ -1673,17 +1893,37 @@
         "jaune"
       ],
       "images": {
-        "sourcePng": "assets/characters/maurice/source.png",
-        "fullPng": "assets/characters/maurice/full.png",
-        "fullWebp": "assets/characters/maurice/full.webp",
-        "bustPng": "assets/characters/maurice/bust.png",
-        "bustWebp": "assets/characters/maurice/bust.webp",
-        "avatarCirclePng": "assets/characters/maurice/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/maurice/avatar-circle.webp",
-        "iconPng": "assets/characters/maurice/icon.png",
-        "iconWebp": "assets/characters/maurice/icon.webp"
+        "idle": {
+          "full": "assets/characters/maurice/idle/full.webp",
+          "bust": "assets/characters/maurice/idle/bust.webp",
+          "avatar-circle": "assets/characters/maurice/idle/avatar-circle.webp",
+          "icon": "assets/characters/maurice/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/maurice/talk/full.webp",
+          "bust": "assets/characters/maurice/talk/bust.webp",
+          "avatar-circle": "assets/characters/maurice/talk/avatar-circle.webp",
+          "icon": "assets/characters/maurice/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/maurice/hype/full.webp",
+          "bust": "assets/characters/maurice/hype/bust.webp",
+          "avatar-circle": "assets/characters/maurice/hype/avatar-circle.webp",
+          "icon": "assets/characters/maurice/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/maurice/win/full.webp",
+          "bust": "assets/characters/maurice/win/bust.webp",
+          "avatar-circle": "assets/characters/maurice/win/avatar-circle.webp",
+          "icon": "assets/characters/maurice/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/maurice/lose/full.webp",
+          "bust": "assets/characters/maurice/lose/bust.webp",
+          "avatar-circle": "assets/characters/maurice/lose/avatar-circle.webp",
+          "icon": "assets/characters/maurice/lose/icon.webp"
+        }
       },
-      "sourceFile": "poisson_surpris_avec_lunettes_et_bouée.png",
       "lines": {
         "selected": [
           "Ma bouée ne suffit pas à cette pression. Je suis de la partie.",
@@ -1818,17 +2058,37 @@
         "vert sauge"
       ],
       "images": {
-        "sourcePng": "assets/characters/moon/source.png",
-        "fullPng": "assets/characters/moon/full.png",
-        "fullWebp": "assets/characters/moon/full.webp",
-        "bustPng": "assets/characters/moon/bust.png",
-        "bustWebp": "assets/characters/moon/bust.webp",
-        "avatarCirclePng": "assets/characters/moon/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/moon/avatar-circle.webp",
-        "iconPng": "assets/characters/moon/icon.png",
-        "iconWebp": "assets/characters/moon/icon.webp"
+        "idle": {
+          "full": "assets/characters/moon/idle/full.webp",
+          "bust": "assets/characters/moon/idle/bust.webp",
+          "avatar-circle": "assets/characters/moon/idle/avatar-circle.webp",
+          "icon": "assets/characters/moon/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/moon/talk/full.webp",
+          "bust": "assets/characters/moon/talk/bust.webp",
+          "avatar-circle": "assets/characters/moon/talk/avatar-circle.webp",
+          "icon": "assets/characters/moon/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/moon/hype/full.webp",
+          "bust": "assets/characters/moon/hype/bust.webp",
+          "avatar-circle": "assets/characters/moon/hype/avatar-circle.webp",
+          "icon": "assets/characters/moon/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/moon/win/full.webp",
+          "bust": "assets/characters/moon/win/bust.webp",
+          "avatar-circle": "assets/characters/moon/win/avatar-circle.webp",
+          "icon": "assets/characters/moon/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/moon/lose/full.webp",
+          "bust": "assets/characters/moon/lose/bust.webp",
+          "avatar-circle": "assets/characters/moon/lose/avatar-circle.webp",
+          "icon": "assets/characters/moon/lose/icon.webp"
+        }
       },
-      "sourceFile": "éléphant_mignon_avec_écharpe_verte.png",
       "lines": {
         "selected": [
           "Le foulard est bien en place. Je suis de la partie.",
@@ -1963,17 +2223,37 @@
         "noir"
       ],
       "images": {
-        "sourcePng": "assets/characters/spike/source.png",
-        "fullPng": "assets/characters/spike/full.png",
-        "fullWebp": "assets/characters/spike/full.webp",
-        "bustPng": "assets/characters/spike/bust.png",
-        "bustWebp": "assets/characters/spike/bust.webp",
-        "avatarCirclePng": "assets/characters/spike/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/spike/avatar-circle.webp",
-        "iconPng": "assets/characters/spike/icon.png",
-        "iconWebp": "assets/characters/spike/icon.webp"
+        "idle": {
+          "full": "assets/characters/spike/idle/full.webp",
+          "bust": "assets/characters/spike/idle/bust.webp",
+          "avatar-circle": "assets/characters/spike/idle/avatar-circle.webp",
+          "icon": "assets/characters/spike/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/spike/talk/full.webp",
+          "bust": "assets/characters/spike/talk/bust.webp",
+          "avatar-circle": "assets/characters/spike/talk/avatar-circle.webp",
+          "icon": "assets/characters/spike/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/spike/hype/full.webp",
+          "bust": "assets/characters/spike/hype/bust.webp",
+          "avatar-circle": "assets/characters/spike/hype/avatar-circle.webp",
+          "icon": "assets/characters/spike/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/spike/win/full.webp",
+          "bust": "assets/characters/spike/win/bust.webp",
+          "avatar-circle": "assets/characters/spike/win/avatar-circle.webp",
+          "icon": "assets/characters/spike/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/spike/lose/full.webp",
+          "bust": "assets/characters/spike/lose/bust.webp",
+          "avatar-circle": "assets/characters/spike/lose/avatar-circle.webp",
+          "icon": "assets/characters/spike/lose/icon.webp"
+        }
       },
-      "sourceFile": "cactus_au_look_audacieux.png",
       "lines": {
         "selected": [
           "Les lunettes cachent mon enthousiasme inexistant. Je suis de la partie.",
@@ -2108,17 +2388,37 @@
         "bordeaux"
       ],
       "images": {
-        "sourcePng": "assets/characters/honey/source.png",
-        "fullPng": "assets/characters/honey/full.png",
-        "fullWebp": "assets/characters/honey/full.webp",
-        "bustPng": "assets/characters/honey/bust.png",
-        "bustWebp": "assets/characters/honey/bust.webp",
-        "avatarCirclePng": "assets/characters/honey/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/honey/avatar-circle.webp",
-        "iconPng": "assets/characters/honey/icon.png",
-        "iconWebp": "assets/characters/honey/icon.webp"
+        "idle": {
+          "full": "assets/characters/honey/idle/full.webp",
+          "bust": "assets/characters/honey/idle/bust.webp",
+          "avatar-circle": "assets/characters/honey/idle/avatar-circle.webp",
+          "icon": "assets/characters/honey/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/honey/talk/full.webp",
+          "bust": "assets/characters/honey/talk/bust.webp",
+          "avatar-circle": "assets/characters/honey/talk/avatar-circle.webp",
+          "icon": "assets/characters/honey/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/honey/hype/full.webp",
+          "bust": "assets/characters/honey/hype/bust.webp",
+          "avatar-circle": "assets/characters/honey/hype/avatar-circle.webp",
+          "icon": "assets/characters/honey/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/honey/win/full.webp",
+          "bust": "assets/characters/honey/win/bust.webp",
+          "avatar-circle": "assets/characters/honey/win/avatar-circle.webp",
+          "icon": "assets/characters/honey/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/honey/lose/full.webp",
+          "bust": "assets/characters/honey/lose/bust.webp",
+          "avatar-circle": "assets/characters/honey/lose/avatar-circle.webp",
+          "icon": "assets/characters/honey/lose/icon.webp"
+        }
       },
-      "sourceFile": "ours_en_pull_et_écharpe_cosy.png",
       "lines": {
         "selected": [
           "Le foulard est bien chaud. Je suis de la partie.",
@@ -2253,17 +2553,37 @@
         "violet"
       ],
       "images": {
-        "sourcePng": "assets/characters/flash/source.png",
-        "fullPng": "assets/characters/flash/full.png",
-        "fullWebp": "assets/characters/flash/full.webp",
-        "bustPng": "assets/characters/flash/bust.png",
-        "bustWebp": "assets/characters/flash/bust.webp",
-        "avatarCirclePng": "assets/characters/flash/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/flash/avatar-circle.webp",
-        "iconPng": "assets/characters/flash/icon.png",
-        "iconWebp": "assets/characters/flash/icon.webp"
+        "idle": {
+          "full": "assets/characters/flash/idle/full.webp",
+          "bust": "assets/characters/flash/idle/bust.webp",
+          "avatar-circle": "assets/characters/flash/idle/avatar-circle.webp",
+          "icon": "assets/characters/flash/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/flash/talk/full.webp",
+          "bust": "assets/characters/flash/talk/bust.webp",
+          "avatar-circle": "assets/characters/flash/talk/avatar-circle.webp",
+          "icon": "assets/characters/flash/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/flash/hype/full.webp",
+          "bust": "assets/characters/flash/hype/bust.webp",
+          "avatar-circle": "assets/characters/flash/hype/avatar-circle.webp",
+          "icon": "assets/characters/flash/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/flash/win/full.webp",
+          "bust": "assets/characters/flash/win/bust.webp",
+          "avatar-circle": "assets/characters/flash/win/avatar-circle.webp",
+          "icon": "assets/characters/flash/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/flash/lose/full.webp",
+          "bust": "assets/characters/flash/lose/bust.webp",
+          "avatar-circle": "assets/characters/flash/lose/avatar-circle.webp",
+          "icon": "assets/characters/flash/lose/icon.webp"
+        }
       },
-      "sourceFile": "lapin_énergique_en_tenue_sportive.png",
       "lines": {
         "selected": [
           "Les lunettes sont déjà prêtes au décollage. Je suis de la partie.",
@@ -2398,17 +2718,37 @@
         "violet"
       ],
       "images": {
-        "sourcePng": "assets/characters/marcellius/source.png",
-        "fullPng": "assets/characters/marcellius/full.png",
-        "fullWebp": "assets/characters/marcellius/full.webp",
-        "bustPng": "assets/characters/marcellius/bust.png",
-        "bustWebp": "assets/characters/marcellius/bust.webp",
-        "avatarCirclePng": "assets/characters/marcellius/avatar-circle.png",
-        "avatarCircleWebp": "assets/characters/marcellius/avatar-circle.webp",
-        "iconPng": "assets/characters/marcellius/icon.png",
-        "iconWebp": "assets/characters/marcellius/icon.webp"
+        "idle": {
+          "full": "assets/characters/marcellius/idle/full.webp",
+          "bust": "assets/characters/marcellius/idle/bust.webp",
+          "avatar-circle": "assets/characters/marcellius/idle/avatar-circle.webp",
+          "icon": "assets/characters/marcellius/idle/icon.webp"
+        },
+        "talk": {
+          "full": "assets/characters/marcellius/talk/full.webp",
+          "bust": "assets/characters/marcellius/talk/bust.webp",
+          "avatar-circle": "assets/characters/marcellius/talk/avatar-circle.webp",
+          "icon": "assets/characters/marcellius/talk/icon.webp"
+        },
+        "hype": {
+          "full": "assets/characters/marcellius/hype/full.webp",
+          "bust": "assets/characters/marcellius/hype/bust.webp",
+          "avatar-circle": "assets/characters/marcellius/hype/avatar-circle.webp",
+          "icon": "assets/characters/marcellius/hype/icon.webp"
+        },
+        "win": {
+          "full": "assets/characters/marcellius/win/full.webp",
+          "bust": "assets/characters/marcellius/win/bust.webp",
+          "avatar-circle": "assets/characters/marcellius/win/avatar-circle.webp",
+          "icon": "assets/characters/marcellius/win/icon.webp"
+        },
+        "lose": {
+          "full": "assets/characters/marcellius/lose/full.webp",
+          "bust": "assets/characters/marcellius/lose/bust.webp",
+          "avatar-circle": "assets/characters/marcellius/lose/avatar-circle.webp",
+          "icon": "assets/characters/marcellius/lose/icon.webp"
+        }
       },
-      "sourceFile": "un_poulpe_studieux_et_débordé.png",
       "lines": {
         "selected": [
           "Trois tentacules travaillent déjà. Je suis de la partie.",

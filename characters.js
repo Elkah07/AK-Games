@@ -1,10 +1,22 @@
 (function () {
   "use strict";
 
+  function posePath(id, pose = "idle", variant = "avatar-circle") {
+    return window.AKCharacterPoses?.resolve?.(id, pose, variant) || "";
+  }
+
+  function poseForEvent(eventName) {
+    if (["round_win", "final_win", "win"].includes(eventName)) return "win";
+    if (["round_miss", "final_lose", "lose"].includes(eventName)) return "lose";
+    if (["game_start", "resume", "hype"].includes(eventName)) return "hype";
+    if (["turn_start", "phone_pass", "selected", "select", "turn"].includes(eventName)) return "talk";
+    return "idle";
+  }
+
   const CHARACTER_DEFINITIONS = {
     frog: {
       name: "Croâ",
-      image: "assets/characters/croa.webp",
+      image: posePath("frog", "idle", "avatar-circle"),
       personality: "Cool, maline et un peu insolente",
       lines: {
         select: ["Bon choix. J’allais justement te choisir aussi.", "On va gagner sans trop transpirer, d’accord ?"],
@@ -15,7 +27,7 @@
     },
     otter: {
       name: "Loki",
-      image: "assets/characters/loki.webp",
+      image: posePath("otter", "idle", "avatar-circle"),
       personality: "Câline, gourmande et délicieusement paresseuse",
       lines: {
         select: ["Je viens, mais quelqu’un a prévu les snacks ?", "D’accord, mais je joue assise."],
@@ -26,7 +38,7 @@
     },
     panda: {
       name: "Kaia",
-      image: "assets/characters/kaia.webp",
+      image: posePath("panda", "idle", "avatar-circle"),
       personality: "Calme, stylée et faussement sage",
       lines: {
         select: ["Tu as du goût. C’est déjà un bon début.", "Je suis sage. Enfin, en public."],
@@ -37,7 +49,7 @@
     },
     dog: {
       name: "Bonnie",
-      image: "assets/characters/bonnie.webp",
+      image: posePath("dog", "idle", "avatar-circle"),
       personality: "Ultra douce, innocente et adorable",
       lines: {
         select: ["On va jouer ensemble ? Trop bien !", "Je promets de faire de mon mieux !"],
@@ -48,7 +60,7 @@
     },
     crow: {
       name: "Edgar",
-      image: "assets/characters/edgar.webp",
+      image: posePath("crow", "idle", "avatar-circle"),
       personality: "Intelligent, sarcastique et légèrement sombre",
       lines: {
         select: ["Enfin une décision raisonnable.", "Je savais que tu finirais par comprendre."],
@@ -59,7 +71,7 @@
     },
     fox: {
       name: "Filou",
-      image: "assets/characters/filou.webp",
+      image: posePath("fox", "idle", "avatar-circle"),
       personality: "Confiant, rusé et charmeur",
       lines: {
         select: ["Tu viens de faire le choix le plus élégant.", "Avec moi, même perdre aura du style."],
@@ -70,7 +82,7 @@
     },
     duck: {
       name: "Nuggets",
-      image: "assets/characters/nuggets.webp",
+      image: posePath("duck", "idle", "avatar-circle"),
       personality: "Maladroit, surexcité et très mignon",
       lines: {
         select: ["OUI ! Attends… on joue à quoi déjà ?", "Je suis prêt ! Enfin je crois !"],
@@ -81,7 +93,7 @@
     },
     ghost: {
       name: "Vapo",
-      image: "assets/characters/vapo.webp",
+      image: posePath("ghost", "idle", "avatar-circle"),
       personality: "Doux, étrange et légèrement mystérieux",
       lines: {
         select: ["Je serai là… la plupart du temps.", "Tu m’as vu ? Parfait."],
@@ -92,7 +104,7 @@
     },
     dino: {
       name: "Rrrrh",
-      image: "assets/characters/rrrrh.webp",
+      image: posePath("dino", "idle", "avatar-circle"),
       personality: "Énergique, aventurier et pas toujours très malin",
       lines: {
         select: ["MISSION ACCEPTÉE ! C’était quoi la mission ?", "Scout Rrrrh au rapport !"],
@@ -103,7 +115,7 @@
     },
     cat: {
       name: "Sir Moustache",
-      image: "assets/characters/sir-moustache.webp",
+      image: posePath("cat", "idle", "avatar-circle"),
       personality: "Hautain, respectable et clairement le patron",
       lines: {
         select: ["Votre jugement n’est pas entièrement mauvais.", "Très bien. Je prends la direction des opérations."],
@@ -114,7 +126,7 @@
     },
     penguin: {
       name: "Snow",
-      image: "assets/characters/snow.webp",
+      image: posePath("penguin", "idle", "avatar-circle"),
       personality: "Timide, adorable et légèrement gauche",
       lines: {
         select: ["Moi ? D’accord… merci.", "Je vais essayer de ne pas glisser."],
@@ -125,7 +137,7 @@
     },
     fish: {
       name: "Maurice",
-      image: "assets/characters/maurice.webp",
+      image: posePath("fish", "idle", "avatar-circle"),
       personality: "Dramatique, nerveux et théâtral",
       lines: {
         select: ["Enfin ! Mon public m’attendait !", "Je sens déjà le drame monter."],
@@ -136,7 +148,7 @@
     },
     elephant: {
       name: "Moon",
-      image: "assets/characters/moon.webp",
+      image: posePath("elephant", "idle", "avatar-circle"),
       personality: "Protecteur, gentil et solide",
       lines: {
         select: ["Je reste avec toi, on forme une équipe.", "Pas d’inquiétude, je suis là."],
@@ -147,7 +159,7 @@
     },
     cactus: {
       name: "Spike",
-      image: "assets/characters/spike.webp",
+      image: posePath("cactus", "idle", "avatar-circle"),
       personality: "Insolent, blasé et piquant",
       lines: {
         select: ["Bon. Au moins tu n’as pas choisi au hasard.", "Essaie de suivre le rythme."],
@@ -158,7 +170,7 @@
     },
     bear: {
       name: "Honey",
-      image: "assets/characters/honey.webp",
+      image: posePath("bear", "idle", "avatar-circle"),
       personality: "Calme, rassurant et tendre",
       lines: {
         select: ["On va passer un bon moment.", "Je suis content d’être dans ton équipe."],
@@ -169,7 +181,7 @@
     },
     rabbit: {
       name: "Flash",
-      image: "assets/characters/flash.webp",
+      image: posePath("rabbit", "idle", "avatar-circle"),
       personality: "Rapide, hyperactive et imprévisible",
       lines: {
         select: ["GO GO GO ! On commence quand ?", "Trop tard, j’ai déjà démarré !"],
@@ -180,7 +192,7 @@
     },
     octopus: {
       name: "Marcellius",
-      image: "assets/characters/marcellius.webp",
+      image: posePath("octopus", "idle", "avatar-circle"),
       personality: "Intelligente, débordée et généreuse",
       lines: {
         select: ["Parfait, j’avais justement huit choses à gérer.", "Je note ça quelque part… sur une tentacule."],
@@ -191,8 +203,12 @@
     }
   };
 
-  function imageMarkup(id, name, image) {
-    return `<img class="ak-avatar-image" data-avatar-id="${id}" src="${image}" alt="${name}" loading="lazy" decoding="async">`;
+  function imageMarkup(id, name, imageOrOptions = null) {
+    const options = imageOrOptions && typeof imageOrOptions === "object" ? imageOrOptions : {};
+    const pose = options.pose || "idle";
+    const variant = options.variant || "avatar-circle";
+    const src = posePath(id, pose, variant) || (typeof imageOrOptions === "string" ? imageOrOptions : definitionFor(id)?.image || "");
+    return `<img class="ak-avatar-image ak-character ak-character--${pose} ak-character--${variant}" data-avatar-id="${id}" data-character-pose="${pose}" data-character-variant="${variant}" src="${src}" alt="${name}" loading="lazy" decoding="async">`;
   }
 
   if (typeof avatars !== "undefined" && Array.isArray(avatars)) {
@@ -209,6 +225,8 @@
   }
 
   function randomLine(id, moment = "turn") {
+    const voiceLine = window.AKCharacterVoice?.getLine?.(id, moment);
+    if (voiceLine) return voiceLine;
     const definition = definitionFor(id);
     const pool = definition.lines?.[moment] || definition.lines?.turn || [definition.personality];
     return pool[Math.floor(Math.random() * pool.length)] || definition.personality;
@@ -236,7 +254,7 @@
     const definition = definitionFor(selected);
     grid.insertAdjacentHTML("afterend", `
       <div class="character-picker-quote" aria-live="polite">
-        <span>${imageMarkup(selected, definition.name, definition.image)}</span>
+        <span>${imageMarkup(selected, definition.name, { pose: "talk", variant: "bust" })}</span>
         <p><strong>${definition.name}</strong> « ${randomLine(selected, "select")} »</p>
       </div>`);
   }
@@ -329,6 +347,35 @@
     return winner || null;
   }
 
+  function enhancePoseImages() {
+    document.querySelectorAll("img.ak-avatar-image[data-avatar-id]").forEach(image => {
+      const id = image.dataset.avatarId;
+      let pose = image.dataset.characterPose || "idle";
+      let variant = image.dataset.characterVariant || "avatar-circle";
+
+      if (image.closest(".giant-avatar")) {
+        variant = "full";
+        pose = image.closest(".winner-stage") ? "win" : "talk";
+      } else if (image.closest(".winner-stage")) {
+        variant = "full";
+        pose = "win";
+      } else if (image.closest(".character-picker-quote, .character-speech-bubble")) {
+        variant = "bust";
+        pose = image.closest(".character-speech-bubble")?.dataset.pose || pose || "talk";
+      } else {
+        variant = "avatar-circle";
+        pose = "idle";
+      }
+
+      const next = posePath(id, pose, variant);
+      if (next && image.getAttribute("src") !== next) image.setAttribute("src", next);
+      image.dataset.characterPose = pose;
+      image.dataset.characterVariant = variant;
+      image.classList.remove("ak-character--idle", "ak-character--talk", "ak-character--hype", "ak-character--win", "ak-character--lose", "ak-character--full", "ak-character--bust", "ak-character--avatar-circle", "ak-character--icon");
+      image.classList.add(`ak-character--${pose}`, `ak-character--${variant}`);
+    });
+  }
+
   let lastSpeechKey = "";
   let speechTimer = null;
   function maybeSpeak() {
@@ -345,8 +392,9 @@
     screen.querySelector(".character-speech-bubble")?.remove();
     const bubble = document.createElement("aside");
     bubble.className = "character-speech-bubble";
+    bubble.dataset.pose = poseForEvent(moment);
     bubble.setAttribute("aria-live", "polite");
-    bubble.innerHTML = `<span>${imageMarkup(id, definition.name, definition.image)}</span><p><strong>${definition.name}</strong> « ${randomLine(id, moment)} »</p>`;
+    bubble.innerHTML = `<span>${imageMarkup(id, definition.name, { pose: poseForEvent(moment), variant: "bust" })}</span><p><strong>${definition.name}</strong> « ${randomLine(id, moment)} »</p>`;
     const anchor = screen.querySelector(".decision-grid, .toolbar, .primary-btn.full, .game-progress");
     if (anchor) anchor.insertAdjacentElement("beforebegin", bubble);
     else screen.appendChild(bubble);
@@ -359,6 +407,7 @@
     observer._timer = window.setTimeout(() => {
       enhanceCharacterPicker();
       enhanceLobbyCapacity();
+      enhancePoseImages();
       maybeSpeak();
     }, 40);
   });
@@ -368,9 +417,16 @@
     definitions: CHARACTER_DEFINITIONS,
     randomLine,
     enhanceCharacterPicker,
+    enhancePoseImages,
+    posePath,
+    imageMarkup,
     say(id, moment = "turn") {
       const definition = definitionFor(id);
-      return { name: definition.name, text: randomLine(id, moment), image: definition.image };
+      return { name: definition.name, text: randomLine(id, moment), image: posePath(id, poseForEvent(moment), "bust") };
     }
   };
+
+  window.AKCharacterVoice?.ready?.then(() => {
+    enhancePoseImages();
+  });
 })();
