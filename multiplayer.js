@@ -5216,6 +5216,7 @@
 
   function megaMultiSetupControls(game) {
     const config = game.config;
+    if (game.gameName === AK_BOMB_GAME_V44) return akBombSetupMarkupV44(game, "multiMega", !state.isHost);
     const roundOptions = akRouletteIsGame(game)
       ? [8, 12, 16, 20, 25, 30].map(value => `<option value="${value}" ${Number(game.roundCount) === value ? "selected" : ""}>${value} défis</option>`).join("")
       : akQuizUsesDifficulty(game)
@@ -5224,7 +5225,7 @@
     return `
       <section class="card setup-card-v07">
         <div class="form-group"><label for="multiMegaRounds">Nombre de manches</label><select id="multiMegaRounds" class="text-input">${roundOptions}</select></div>
-        ${config.engine === "bomb" ? `<div class="form-group top-gap"><label for="multiMegaDuration">Temps de la bombe</label><select id="multiMegaDuration" class="text-input">${[15,20,25,30,40].map(value => `<option value="${value}" ${game.durationSeconds === value ? "selected" : ""}>${value} secondes</option>`).join("")}</select></div>` : config.timer ? `<div class="form-group top-gap"><label for="multiMegaDuration">Chronomètre</label><select id="multiMegaDuration" class="text-input">${[30,45,60,90].map(value => `<option value="${value}" ${game.durationSeconds === value ? "selected" : ""}>${value} secondes</option>`).join("")}</select></div>` : ""}
+        ${config.engine === "bomb" ? "" : config.timer ? `<div class="form-group top-gap"><label for="multiMegaDuration">Chronomètre</label><select id="multiMegaDuration" class="text-input">${[30,45,60,90].map(value => `<option value="${value}" ${game.durationSeconds === value ? "selected" : ""}>${value} secondes</option>`).join("")}</select></div>` : ""}
       </section>
       ${v014KnowSetupControls(game)}
       ${akQuizUsesDifficulty(game) ? akQuizDifficultySetupMarkup(game) : ""}
@@ -5249,6 +5250,7 @@
       if (akRouletteIsGame(game)) akRouletteSavePreferences(game);
     });
     document.querySelector("#multiMegaDuration")?.addEventListener("change", event => game.durationSeconds = Number(event.target.value));
+    if (game.gameName === AK_BOMB_GAME_V44) akBombBindSetupV44(game, "multiMega", renderMegaSetup, !state.isHost);
     bindV014KnowSetupControls(game);
     if (akQuizUsesDifficulty(game)) {
       document.querySelectorAll("[data-quiz-difficulty]").forEach(button => {
@@ -5279,7 +5281,12 @@
       const rawPool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
       let pool = v014FilterKnowPool(rawPool, game);
       let items;
-      if (akRouletteIsGame(game)) {
+      if (game.gameName === AK_BOMB_GAME_V44) {
+        pool = akBombBuildPoolV44(rawPool, game);
+        if (!pool.length) throw new Error("Aucune carte de La Bombe ne correspond aux réglages.");
+        items = akBombFreshSelectV44(pool, Math.min(game.roundCount, pool.length), `multi:bomb:${game.bombMode}:${game.bombThemes.join("-")}:${game.bombDifficulties.join("-")}`);
+        akBombSavePrefsV44(game);
+      } else if (akRouletteIsGame(game)) {
         pool = akRouletteBuildPool(rawPool, game, state.players);
         if (!pool.length) throw new Error("Aucun défi ne correspond à ces thèmes, formats et nombre de joueurs.");
         const selected = akRouletteSelectBalanced(pool, Math.min(game.roundCount, pool.length), `multi:roulette:${game.rouletteThemes.join("-")}:${game.rouletteFormats.join("-")}`);
@@ -5315,16 +5322,35 @@
           selectedPacks: v014NormalizeKnowPacks(game.selectedPacks),
           selectedDifficulties: akQuizNormalizeDifficulties(game.selectedDifficulties),
           confidenceMode: game.confidenceMode !== false,
+          bombV44: game.gameName === AK_BOMB_GAME_V44,
+          bombMode: game.gameName === AK_BOMB_GAME_V44 ? game.bombMode : null,
+          bombMinSeconds: game.gameName === AK_BOMB_GAME_V44 ? game.bombMinSeconds : null,
+          bombMaxSeconds: game.gameName === AK_BOMB_GAME_V44 ? game.bombMaxSeconds : null,
+          bombOrder: game.gameName === AK_BOMB_GAME_V44 ? game.bombOrder : null,
+          bombLives: game.gameName === AK_BOMB_GAME_V44 ? game.bombLives : null,
+          bombSkipLimit: game.gameName === AK_BOMB_GAME_V44 ? game.bombSkipLimit : null,
+          bombSound: game.gameName === AK_BOMB_GAME_V44 ? game.bombSound : null,
+          bombVibration: game.gameName === AK_BOMB_GAME_V44 ? game.bombVibration : null,
           rouletteMode: akRouletteIsGame(game),
           rouletteThemes: akRouletteIsGame(game) ? [...game.rouletteThemes] : null,
           rouletteFormats: akRouletteIsGame(game) ? [...game.rouletteFormats] : null,
           rouletteSource: akRouletteIsGame(game) ? game.rouletteSource : null
         },
-        bombEndsAt: game.engine === "bomb" ? AKFirebase.now() + Number(game.durationSeconds || 25) * 1000 : null,
+        bombRoundDuration: game.engine === "bomb" ? akBombRandomDurationV44(game) : null,
+        bombEndsAt: game.engine === "bomb" ? null : null,
+        usedAnswers: game.engine === "bomb" ? [] : null,
+        rejectedAnswer: null,
+        lives: game.engine === "bomb" ? Object.fromEntries(playerIds.map(id => [id, Number(game.bombLives || 3)])) : null,
+        skips: game.engine === "bomb" ? Object.fromEntries(playerIds.map(id => [id, Number(game.bombSkipLimit || 0)])) : null,
+        answerCounts: game.engine === "bomb" ? Object.fromEntries(playerIds.map(id => [id, 0])) : null,
+        explosions: game.engine === "bomb" ? Object.fromEntries(playerIds.map(id => [id, 0])) : null,
+        teams: game.engine === "bomb" ? Object.fromEntries(playerIds.map((id,index) => [id,index % 2])) : null,
+        bombDirection: 1,
         turnEndsAt: game.engine === "turn" && game.config.timer ? AKFirebase.now() + Number(game.durationSeconds || 45) * 1000 : null,
         startedAt: AKFirebase.now(),
         updatedAt: AKFirebase.now()
       };
+      if (game.engine === "bomb") baseState.bombEndsAt = AKFirebase.now() + Number(baseState.bombRoundDuration || 25) * 1000;
       await AKFirebase.setGame(state.roomCode, { state: baseState, votes: null, answers: null, actions: null });
     } catch (error) {
       console.error(error);
@@ -5568,67 +5594,90 @@
     document.querySelector("#nextMultiScenario")?.addEventListener("click", event => advanceMultiMegaRound(event, gameState, "voting", ["votes", "answers", "actions"]));
   }
 
+  function multiBombActivePlayersV44(gameState) {
+    return state.players.filter(player => gameState.settings?.bombMode !== "elimination" || Number(gameState.lives?.[player.id] || 0) > 0);
+  }
+  function multiBombNextPlayerV44(gameState, currentId) {
+    const active = multiBombActivePlayersV44(gameState);
+    if (!active.length) return currentId;
+    if (gameState.settings?.bombOrder === "random" && active.length > 1) {
+      const choices = active.filter(player => player.id !== currentId);
+      return choices[Math.floor(Math.random() * choices.length)]?.id || currentId;
+    }
+    const index = state.players.findIndex(player => player.id === currentId);
+    const direction = Number(gameState.bombDirection || 1);
+    for (let step = 1; step <= state.players.length; step += 1) {
+      const nextIndex = (index + direction * step + state.players.length * 4) % state.players.length;
+      if (active.some(player => player.id === state.players[nextIndex]?.id)) return state.players[nextIndex].id;
+    }
+    return currentId;
+  }
   function processMultiMegaBomb(gameState, actions) {
     if (!state.isHost || gameState.phase !== "playing") return;
     const action = actions[gameState.currentPlayerId];
     const expired = Number(gameState.bombEndsAt || 0) <= AKFirebase.now();
     if (!action && !expired) return;
-    const lock = `mega_bomb_${gameState.currentIndex}_${action?.id || "timer"}`;
+    const lock = `mega_bomb_v44_${gameState.currentIndex}_${action?.id || "timer"}`;
     if (state.multiProcessingActionId === lock) return;
     state.multiProcessingActionId = lock;
+    const mode = gameState.settings?.bombMode || "classic";
     if (action?.payload?.pass && !expired) {
-      const index = state.players.findIndex(player => player.id === gameState.currentPlayerId);
-      const next = state.players[(index + 1) % Math.max(1, state.players.length)]?.id || gameState.currentPlayerId;
-      AKFirebase.updateGame(state.roomCode, { "state/currentPlayerId": next, "state/updatedAt": AKFirebase.now(), actions: null }).finally(() => { state.multiProcessingActionId = null; });
+      const item = megaMultiCurrentItem(gameState);
+      const manual = item?.answerMode === "manual";
+      const answer = String(action.payload.answer || "").trim();
+      const normalized = akBombNormalizeV44(answer);
+      const used = Array.isArray(gameState.usedAnswers) ? [...gameState.usedAnswers] : [];
+      if (!manual && (!answer || used.some(row => row.normalized === normalized))) {
+        const message = !answer ? "Écris une réponse avant de passer." : `« ${answer} » a déjà été donné.`;
+        AKFirebase.updateGame(state.roomCode, { "state/rejectedAnswer": { playerId: gameState.currentPlayerId, message }, "state/updatedAt": AKFirebase.now(), actions: null }).finally(() => { state.multiProcessingActionId = null; });
+        return;
+      }
+      used.push({ playerId: gameState.currentPlayerId, answer: manual ? "Défi validé" : answer, normalized: manual ? `manual_${used.length}` : normalized });
+      const scores = { ...(gameState.scores || {}) }, answerCounts = { ...(gameState.answerCounts || {}) };
+      answerCounts[gameState.currentPlayerId] = Number(answerCounts[gameState.currentPlayerId] || 0) + 1;
+      if (mode === "points") scores[gameState.currentPlayerId] = Number(scores[gameState.currentPlayerId] || 0) + 1;
+      const direction = item?.chaosEffect === "reverse" ? Number(gameState.bombDirection || 1) * -1 : Number(gameState.bombDirection || 1);
+      const nextState = { ...gameState, bombDirection: direction };
+      const next = multiBombNextPlayerV44(nextState, gameState.currentPlayerId);
+      const acceleratedEnd = mode === "infernal" ? Math.max(AKFirebase.now() + 1200, Number(gameState.bombEndsAt || 0) - 1200) : gameState.bombEndsAt;
+      AKFirebase.updateGame(state.roomCode, { "state/currentPlayerId": next, "state/usedAnswers": used, "state/scores": scores, "state/answerCounts": answerCounts, "state/bombDirection": direction, "state/bombEndsAt": acceleratedEnd, "state/rejectedAnswer": null, "state/updatedAt": AKFirebase.now(), actions: null }).finally(() => { state.multiProcessingActionId = null; });
+      return;
+    }
+    if (action?.payload?.skip && !expired) {
+      const skips = { ...(gameState.skips || {}) }, left = Number(skips[gameState.currentPlayerId] || 0);
+      if (left <= 0) { state.multiProcessingActionId = null; return; }
+      skips[gameState.currentPlayerId] = left - 1;
+      const next = multiBombNextPlayerV44(gameState, gameState.currentPlayerId);
+      AKFirebase.updateGame(state.roomCode, { "state/currentPlayerId": next, "state/skips": skips, "state/rejectedAnswer": null, "state/updatedAt": AKFirebase.now(), actions: null }).finally(() => { state.multiProcessingActionId = null; });
       return;
     }
     const loserId = gameState.currentPlayerId;
-    const scores = { ...(gameState.scores || {}) };
-    state.players.filter(player => player.id !== loserId).forEach(player => scores[player.id] = Number(scores[player.id] || 0) + 1);
-    const result = { loserId, itemId: megaMultiCurrentItem(gameState)?.id || "" };
-    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, [`state/rounds/${gameState.currentIndex}`]: result, "state/bombEndsAt": null, "state/updatedAt": AKFirebase.now(), actions: null }).finally(() => { state.multiProcessingActionId = null; });
+    const scores = { ...(gameState.scores || {}) }, lives = { ...(gameState.lives || {}) }, explosions = { ...(gameState.explosions || {}) };
+    explosions[loserId] = Number(explosions[loserId] || 0) + 1;
+    let resultText = "";
+    if (mode === "points") { scores[loserId] = Number(scores[loserId] || 0) - 2; resultText = "−2 points pour la personne qui tenait la bombe."; }
+    else if (mode === "elimination") { lives[loserId] = Math.max(0, Number(lives[loserId] || 0) - 1); const active = state.players.filter(player => Number(lives[player.id] || 0) > 0); if (active.length === 1) scores[active[0].id] = Number(scores[active[0].id] || 0) + 5; resultText = `Il reste ${lives[loserId]} vie${lives[loserId] === 1 ? "" : "s"}.`; }
+    else if (mode === "teams") { const losing = Number(gameState.teams?.[loserId] || 0), winning = losing === 0 ? 1 : 0; state.players.filter(player => Number(gameState.teams?.[player.id] || 0) === winning).forEach(player => scores[player.id] = Number(scores[player.id] || 0) + 1); resultText = `L’équipe ${winning === 0 ? "A" : "B"} gagne la manche.`; }
+    else { state.players.filter(player => player.id !== loserId).forEach(player => scores[player.id] = Number(scores[player.id] || 0) + 1); resultText = "Toutes les autres personnes marquent 1 point."; }
+    const result = { loserId, itemId: megaMultiCurrentItem(gameState)?.id || "", answers: gameState.usedAnswers || [], resultText };
+    AKFirebase.updateGame(state.roomCode, { "state/phase": "results", "state/currentResult": result, "state/scores": scores, "state/lives": lives, "state/explosions": explosions, [`state/rounds/${gameState.currentIndex}`]: result, "state/bombEndsAt": null, "state/updatedAt": AKFirebase.now(), actions: null }).finally(() => { state.multiProcessingActionId = null; });
   }
 
   function renderMultiMegaBomb(gameState, actions) {
-    const item = megaMultiCurrentItem(gameState);
-    const player = megaMultiPlayer(gameState.currentPlayerId);
-    const isCurrent = state.currentUid === gameState.currentPlayerId;
-    const pending = actions[state.currentUid];
-    title.textContent = "La Bombe";
-    setBackVisible(false);
-    screen.innerHTML = `
-      ${multiMegaProgress(gameState, "Bombe")}
-      <section class="bomb-stage"><div class="bomb-icon">💣</div><div class="bomb-countdown"><strong id="v014MultiCountdown">${Math.max(0, Math.ceil((Number(gameState.bombEndsAt || 0) - AKFirebase.now()) / 1000))}</strong><span>secondes</span></div><span class="category-chip">${avatarById(player?.avatarId).emoji} ${escapeHtml(player?.name || "Joueur").toUpperCase()}</span><h2>${escapeHtml(item?.category || "Catégorie")}</h2><p>${isCurrent ? "Donne une réponse, puis passe la bombe." : `La bombe est chez ${escapeHtml(player?.name || "la personne")}.`}</p><div class="progress-track"><div id="v014MultiTimerFill" class="progress-fill"></div></div></section>
-      ${isCurrent ? pending ? renderMultiWaiting("Action envoyée", "La bombe change de téléphone…", "💣") : `<section class="decision-grid"><button id="multiPassBomb" class="primary-btn">Répondu, je passe →</button><button id="multiBoomBomb" class="danger-btn">💥 BOOM</button></section>` : renderMultiWaiting("Reste prêt·e", "Ton téléphone s’activera quand la bombe arrivera chez toi.", "⏳")}`;
-    document.querySelector("#multiPassBomb")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-bomb", { pass: true }).catch(() => event.currentTarget.disabled = false); });
-    document.querySelector("#multiBoomBomb")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-bomb", { explode: true }).catch(() => event.currentTarget.disabled = false); });
-    startV014MultiTimer(gameState.bombEndsAt, gameState.settings?.durationSeconds || 25, () => processMultiMegaBomb(gameState, actions));
+    const item = megaMultiCurrentItem(gameState), player = megaMultiPlayer(gameState.currentPlayerId), isCurrent = state.currentUid === gameState.currentPlayerId, pending = actions[state.currentUid], manual = item?.answerMode === "manual", rejected = gameState.rejectedAnswer?.playerId === state.currentUid ? gameState.rejectedAnswer.message : "", skipLeft = Number(gameState.skips?.[state.currentUid] || 0);
+    title.textContent = "La Bombe"; setBackVisible(false);
+    screen.innerHTML = `${multiMegaProgress(gameState, "Bombe")}<section class="bomb-stage bomb-stage-v44"><div class="bomb-icon">💣</div><div class="bomb-secret-clock-v44"><strong>?</strong><span>durée secrète</span><span id="v014MultiCountdown" class="bomb-hidden-count-v44">${Math.max(0, Math.ceil((Number(gameState.bombEndsAt || 0) - AKFirebase.now()) / 1000))}</span></div><span class="category-chip">${avatarById(player?.avatarId).emoji} ${escapeHtml(player?.name || "Joueur").toUpperCase()}</span><h2>${escapeHtml(item?.prompt || item?.category || "Catégorie")}</h2>${akBombEffectTextV44(item) ? `<p class="bomb-effect-v44">💥 ${escapeHtml(akBombEffectTextV44(item))}</p>` : ""}<div class="progress-track"><div id="v014MultiTimerFill" class="progress-fill"></div></div></section>${rejected ? `<div class="notice danger-notice-v44">⚠️ ${escapeHtml(rejected)}</div>` : ""}${(gameState.usedAnswers || []).length ? `<section class="bomb-answer-history-v44"><small>RÉPONSES DÉJÀ DONNÉES</small><div>${gameState.usedAnswers.slice(-10).map(row => `<span>${escapeHtml(row.answer)}</span>`).join("")}</div></section>` : ""}${isCurrent ? pending ? renderMultiWaiting("Action envoyée", "La bombe change de téléphone…", "💣") : `<section class="card bomb-answer-card-v44">${manual ? `<p class="helper">Le groupe valide ton son ou ton geste.</p><button id="multiPassBomb" class="primary-btn full">Défi fait, je passe →</button>` : `<label for="multiBombAnswerV44">Ta réponse</label><div class="bomb-answer-row-v44"><input id="multiBombAnswerV44" class="text-input" maxlength="60" autocomplete="off" placeholder="Réponse différente…"><button id="multiPassBomb" class="primary-btn">Je passe →</button></div>`}<div class="toolbar"><button id="multiSkipBombV44" class="secondary-btn" ${skipLeft > 0 ? "" : "disabled"}>Joker (${skipLeft})</button><button id="multiBoomBomb" class="danger-btn">💥 Elle a explosé</button></div></section>` : renderMultiWaiting("Reste prêt·e", `La bombe est chez ${escapeHtml(player?.name || "la personne")}.`, "⏳")}`;
+    const sendPass = async () => { const answer = document.querySelector("#multiBombAnswerV44")?.value.trim() || ""; document.querySelectorAll("#multiPassBomb,#multiSkipBombV44,#multiBoomBomb").forEach(node => node.disabled = true); await sendMultiAction("mega-bomb", { pass: true, answer }).catch(() => document.querySelectorAll("#multiPassBomb,#multiSkipBombV44,#multiBoomBomb").forEach(node => node.disabled = false)); };
+    document.querySelector("#multiPassBomb")?.addEventListener("click", sendPass); document.querySelector("#multiBombAnswerV44")?.addEventListener("keydown", event => { if (event.key === "Enter") sendPass(); }); document.querySelector("#multiSkipBombV44")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-bomb", { skip: true }).catch(() => event.currentTarget.disabled = false); }); document.querySelector("#multiBoomBomb")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-bomb", { explode: true }).catch(() => event.currentTarget.disabled = false); });
+    startV014MultiTimer(gameState.bombEndsAt, gameState.bombRoundDuration || 25, () => processMultiMegaBomb(gameState, actions)); document.querySelector("#multiBombAnswerV44")?.focus();
   }
 
   function renderMultiMegaBombResult(gameState) {
-    clearV014MultiTimer();
-    const loser = megaMultiPlayer(gameState.currentResult?.loserId);
-    title.textContent = "BOOM !";
-    screen.innerHTML = `
-      ${multiMegaProgress(gameState, "Bombe")}
-      <section class="winner-stage bomb-result-stage"><div class="winner-crown">💥</div><div class="giant-avatar">${avatarById(loser?.avatarId).emoji}</div><h2>La bombe explose chez ${escapeHtml(loser?.name || "un joueur")}</h2><p>Toutes les autres personnes marquent un point.</p></section>
-      ${state.alcohol ? `<div class="alcohol-callout">🍻 Petit toast facultatif, avec la boisson de son choix, eau comprise.</div>` : ""}
-      ${state.isHost ? `<button id="nextMultiBomb" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Nouvelle bombe"}</button>` : renderMultiWaiting("En attente de l’hôte", "Une nouvelle bombe va être lancée.", "👑")}`;
-    document.querySelector("#nextMultiBomb")?.addEventListener("click", async event => {
-      event.currentTarget.disabled = true;
-      const next = Number(gameState.currentIndex || 0) + 1;
-      const finished = next >= (gameState.items || []).length;
-      const ids = state.players.map(player => player.id);
-      try { await AKFirebase.updateGame(state.roomCode, {
-        "state/phase": finished ? "final" : "playing",
-        "state/currentIndex": finished ? gameState.currentIndex : next,
-        "state/currentResult": null,
-        "state/currentPlayerId": ids[Math.floor(Math.random() * Math.max(1, ids.length))] || null,
-        "state/bombEndsAt": finished ? null : AKFirebase.now() + Number(gameState.settings?.durationSeconds || 25) * 1000,
-        "state/finishedAt": finished ? AKFirebase.now() : null,
-        "state/updatedAt": AKFirebase.now(), actions: null, votes: null, answers: null
-      }); } catch (error) { console.error(error); event.currentTarget.disabled = false; }
-    });
+    clearV014MultiTimer(); const loser = megaMultiPlayer(gameState.currentResult?.loserId); title.textContent = "BOOM !";
+    akBombPlayExplosionV44({ bombSound: gameState.settings?.bombSound !== false, bombVibration: gameState.settings?.bombVibration !== false });
+    const active = multiBombActivePlayersV44(gameState), eliminationDone = gameState.settings?.bombMode === "elimination" && active.length <= 1;
+    screen.innerHTML = `${multiMegaProgress(gameState, "Bombe")}<section class="winner-stage bomb-result-stage bomb-result-v44"><div class="winner-crown">💥</div><div class="giant-avatar">${avatarById(loser?.avatarId).emoji}</div><h2>La bombe explose chez ${escapeHtml(loser?.name || "un joueur")}</h2><p>${escapeHtml(gameState.currentResult?.resultText || "La manche est terminée.")}</p></section>${(gameState.currentResult?.answers || []).length ? `<section class="bomb-answer-history-v44"><small>${gameState.currentResult.answers.length} RÉPONSES VALIDÉES</small><div>${gameState.currentResult.answers.map(row => `<span>${escapeHtml(row.answer)}</span>`).join("")}</div></section>` : ""}${state.isHost ? `<button id="nextMultiBomb" class="primary-btn full">${eliminationDone || Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Nouvelle bombe"}</button>` : renderMultiWaiting("En attente de l’hôte", "Une nouvelle bombe va être lancée.", "👑")}`;
+    document.querySelector("#nextMultiBomb")?.addEventListener("click", async event => { event.currentTarget.disabled = true; const next = Number(gameState.currentIndex || 0) + 1, finished = eliminationDone || next >= (gameState.items || []).length, ids = multiBombActivePlayersV44(gameState).map(player => player.id), duration = akBombRandomDurationV44(gameState); try { await AKFirebase.updateGame(state.roomCode, { "state/phase": finished ? "final" : "playing", "state/currentIndex": finished ? gameState.currentIndex : next, "state/currentResult": null, "state/currentPlayerId": ids[Math.floor(Math.random() * Math.max(1, ids.length))] || null, "state/bombRoundDuration": duration, "state/bombEndsAt": finished ? null : AKFirebase.now() + duration * 1000, "state/usedAnswers": [], "state/rejectedAnswer": null, "state/finishedAt": finished ? AKFirebase.now() : null, "state/updatedAt": AKFirebase.now(), actions: null, votes: null, answers: null }); } catch (error) { console.error(error); event.currentTarget.disabled = false; } });
   }
 
   function processMultiMegaKnow(gameState, answers, votes) {

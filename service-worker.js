@@ -1,17 +1,17 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v4.3-classement-secret-500";
+const CACHE_VERSION = "akgames-v4.4-bombe-600";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=ranking-v43",
+  "/styles.css?v=bomb-v44",
   "/creator.css?v=creator-v1.3-access",
-  "/app.js?v=ranking-v43",
+  "/app.js?v=bomb-v44",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
-  "/multiplayer.js?v=ranking-v43",
+  "/multiplayer.js?v=bomb-v44",
   "/characters.js?v=characters-v1",
-  "/game-help.js?v=characters-v1",
+  "/game-help.js?v=bomb-v44",
   "/pwa.js",
   "/manifest.webmanifest",
   "/icons/icon-192.png",

@@ -1,0 +1,141 @@
+{
+  "pack": "AK-Games_modifs_bombe_600_V1",
+  "cards": 600,
+  "themeCounts": {
+    "categories": 100,
+    "lettres": 80,
+    "precision": 70,
+    "associations": 60,
+    "personnel": 60,
+    "culture_pop": 60,
+    "absurde": 50,
+    "vocal_geste": 50,
+    "memoire": 40,
+    "chaos": 30
+  },
+  "difficultyCounts": {
+    "facile": 243,
+    "moyen": 248,
+    "difficile": 109
+  },
+  "answerModeCounts": {
+    "text": 539,
+    "manual": 61
+  },
+  "uniqueIds": 600,
+  "uniquePrompts": 600,
+  "modes": [
+    "classic",
+    "elimination",
+    "points",
+    "teams",
+    "infernal"
+  ],
+  "checks": [
+    {
+      "name": "600 cartes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "600 ids uniques",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "600 consignes uniques",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "répartition thèmes",
+      "ok": true,
+      "detail": "{'categories': 100, 'lettres': 80, 'precision': 70, 'associations': 60, 'personnel': 60, 'culture_pop': 60, 'absurde': 50, 'vocal_geste': 50, 'memoire': 40, 'chaos': 30}"
+    },
+    {
+      "name": "schéma complet",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "JSON relisible",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "app.js présent",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "multiplayer.js présent",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "styles.css présent",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "service-worker.js présent",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "game-help.js présent",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "creator.js présent",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html présent",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "marqueur local V44",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "marqueur multi V44",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cache V44",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "syntaxe app.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "syntaxe multiplayer.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "syntaxe service-worker.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "syntaxe game-help.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "syntaxe creator.js",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

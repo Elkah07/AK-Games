@@ -70,7 +70,7 @@
     ["Roulette de défis", "data/roulette-defis.json"],
     ["Mime", "data/mime.json"],
     ["Imitation", "data/imitation.json"],
-    ["La Bombe", "data/bombe.json"],
+    ["La Bombe · 600", "data/bombe.json"],
     ["Culture générale", "data/quiz-culture.json"],
     ["Cinéma", "data/quiz-cinema.json"],
     ["Musique", "data/quiz-musique.json"],

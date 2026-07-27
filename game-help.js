@@ -136,11 +136,11 @@
       comfort: "Les cartes adultes sont réservées aux majeurs consentants. Une improvisation ne doit jamais servir de conseil médical, juridique ou dangereux."
     },
     "La Bombe": {
-      intro: "Le téléphone passe rapidement de main en main. Chaque personne doit donner une réponse différente avant l’explosion.",
-      steps: ["Une catégorie est affichée.", "La personne répond puis passe le téléphone.", "Une réponse déjà donnée est interdite.", "La personne qui tient le téléphone lorsque la bombe explose perd la manche."],
-      scoring: "Les points ou pénalités dépendent du mode affiché.",
-      options: "Choisissez la durée de la bombe et le nombre de manches.",
-      comfort: "Passez le téléphone avec précaution : il ne doit jamais être lancé."
+      intro: "Parmi 600 cartes, le téléphone circule pendant une durée secrète. Chaque personne doit répondre sans reprendre une réponse déjà donnée.",
+      steps: ["Choisissez les thèmes, difficultés et le mode.", "La personne qui tient la bombe écrit sa réponse ou réalise le défi.", "L’application refuse automatiquement les doublons écrits.", "La bombe passe au joueur suivant jusqu’à l’explosion."],
+      scoring: "Classique : les autres gagnent 1 point. À points : chaque réponse vaut 1 point et l’explosion en retire 2. Élimination : une vie est retirée. Équipes : l’équipe opposée gagne la manche. Infernale : chaque passage accélère la mèche.",
+      options: "Choisissez 5 à 50 manches, une fenêtre d’explosion de 10 à 60 secondes, les thèmes, difficultés, jokers, ordre fixe ou aléatoire et cartes personnalisées.",
+      comfort: "Le téléphone se passe de main en main et ne doit jamais être lancé. Un joker permet de passer une consigne."
     },
     "Culture générale": { intro: "Un quiz général couvrant plusieurs domaines.", steps: ["Choisissez Facile, Moyen, Difficile ou une combinaison.", "Chaque joueur répond en secret.", "La bonne réponse est révélée.", "Les scores sont mis à jour avant la question suivante."], scoring: "Facile : 1 point. Moyen : 2 points. Difficile : 3 points.", options: "Parties jusqu’à 150 questions avec répartition équilibrée des difficultés.", comfort: "Une erreur ne retire aucun point." },
     "Cinéma": { intro: "Un quiz sur les films, les personnages, les réalisateurs et l’histoire du cinéma.", steps: ["Sélectionnez les difficultés.", "Tout le monde répond.", "La solution et l’explication apparaissent.", "La question suivante démarre."], scoring: "Facile : 1 point. Moyen : 2 points. Difficile : 3 points.", options: "Vous pouvez combiner les trois niveaux et choisir une partie courte ou marathon.", comfort: "Les questions ne nécessitent pas d’avoir vu tous les films cités." },
