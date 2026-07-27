@@ -1,1 +1,0 @@
-Pose hype de Moon à illustrer et valider. Le moteur utilise automatiquement idle en attendant.

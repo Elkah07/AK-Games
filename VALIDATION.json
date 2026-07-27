@@ -1,25 +1,25 @@
 {
   "characters": [
-    "rrrrh",
-    "sir-moustache",
-    "snow"
+    "maurice",
+    "moon",
+    "spike"
   ],
   "posesAdded": {
-    "rrrrh": [
+    "maurice": [
       "idle",
       "talk",
       "hype",
       "win",
       "lose"
     ],
-    "sir-moustache": [
+    "moon": [
       "idle",
       "talk",
       "hype",
       "win",
       "lose"
     ],
-    "snow": [
+    "spike": [
       "idle",
       "talk",
       "hype",
@@ -36,8 +36,7 @@
   "webpCount": 63,
   "totalFiles": 66,
   "notes": [
-    "Sir Moustache idle corrected with transparent background.",
-    "Snow idle corrected with transparent background.",
-    "Rrrrh, Sir Moustache and Snow now have idle + talk + hype + win + lose."
+    "Maurice, Moon and Spike now have idle + talk + hype + win + lose.",
+    "Idle assets were rebuilt from validated full characters."
   ]
 }

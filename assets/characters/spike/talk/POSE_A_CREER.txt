@@ -1,1 +1,0 @@
-Pose talk de Spike à illustrer et valider. Le moteur utilise automatiquement idle en attendant.
