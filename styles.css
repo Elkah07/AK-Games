@@ -8292,3 +8292,265 @@ body.game-rules-open {
 .never-level-option.active { border-color:#f43f8c; background:rgba(244,63,140,.13); box-shadow:0 0 0 1px rgba(244,63,140,.1) inset; }
 .never-custom-meta { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 @media (max-width:760px) { .never-level-grid { grid-template-columns:1fr; } .never-custom-meta { grid-template-columns:1fr; } }
+
+/* =========================================================
+   AK'GAMES V3.5 — L'IMPOSTEUR SAIT PRESQUE TOUT
+   ========================================================= */
+.impostor-settings-card,
+.impostor-filter-card,
+.impostor-custom-card {
+  margin-top: 14px;
+}
+
+.impostor-settings-grid,
+.impostor-custom-hints {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.impostor-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.impostor-section-head small {
+  display: block;
+  color: var(--muted);
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.impostor-section-head h2 {
+  margin: 3px 0 0;
+  font-size: 1rem;
+}
+
+.impostor-section-head > span {
+  min-width: 42px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: rgba(126, 65, 255, .12);
+  color: var(--accent);
+  text-align: center;
+  font-weight: 900;
+}
+
+.impostor-mini-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.impostor-theme-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.impostor-theme-grid .never-theme-option {
+  min-height: 68px;
+}
+
+.impostor-difficulty-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.impostor-difficulty-grid .option-card {
+  margin: 0;
+}
+
+.impostor-difficulty-grid .option-card.selected {
+  border-color: var(--accent);
+  background: rgba(126, 65, 255, .10);
+}
+
+.impostor-difficulty-grid small {
+  display: block;
+  margin-top: 4px;
+}
+
+.impostor-custom-card .secondary-btn {
+  margin-top: 10px;
+}
+
+.impostor-custom-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.impostor-custom-list article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel-soft);
+}
+
+.impostor-custom-list article > div {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.impostor-custom-list strong,
+.impostor-custom-list small {
+  overflow-wrap: anywhere;
+}
+
+.impostor-speaking-order {
+  margin: 12px 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel);
+}
+
+.impostor-speaking-order > small {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--muted);
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.impostor-speaking-order > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.impostor-speaking-order span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: var(--panel-soft);
+  border: 1px solid var(--line);
+  font-weight: 800;
+}
+
+.impostor-speaking-order b {
+  display: inline-grid;
+  place-items: center;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  font-size: .72rem;
+}
+
+.suspect-card {
+  position: relative;
+}
+
+.suspect-card .impostor-checkmark {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  opacity: 0;
+  transform: scale(.7);
+  transition: opacity .16s ease, transform .16s ease;
+}
+
+.suspect-card.selected {
+  border-color: var(--accent);
+  background: rgba(126, 65, 255, .12);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.suspect-card.selected .impostor-checkmark {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.impostor-guess-results,
+.impostor-awards {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.impostor-guess-results article,
+.impostor-awards article {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  background: var(--panel);
+}
+
+.impostor-guess-results article > span,
+.impostor-awards article > span {
+  font-size: 1.6rem;
+}
+
+.impostor-guess-results article > div,
+.impostor-awards article > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.impostor-guess-results small,
+.impostor-awards small,
+.impostor-awards p {
+  display: block;
+  margin: 2px 0 0;
+  color: var(--muted);
+}
+
+.impostor-guess-results em {
+  font-style: normal;
+  font-weight: 900;
+}
+
+.impostor-guess-results article.correct {
+  border-color: rgba(35, 178, 113, .45);
+  background: rgba(35, 178, 113, .08);
+}
+
+.impostor-guess-results article.fooled {
+  border-color: rgba(240, 101, 101, .35);
+}
+
+@media (max-width: 720px) {
+  .impostor-settings-grid,
+  .impostor-custom-hints,
+  .impostor-difficulty-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impostor-theme-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .impostor-theme-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impostor-section-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

@@ -156,9 +156,9 @@
       comfort: "La réponse doit rester inventée : aucune obligation de révéler une anecdote réelle."
     },
     "L’Imposteur sait presque tout": {
-      intro: "Tout le monde connaît le mot exact sauf l’imposteur, qui reçoit seulement un indice proche.",
-      steps: ["Chaque joueur découvre son rôle en privé.", "Le groupe discute du mot sans le prononcer.", "Tout le monde vote pour l’imposteur.", "S’il est démasqué, l’imposteur peut encore tenter de deviner le mot."],
-      scoring: "Le groupe marque en trouvant l’imposteur. L’imposteur marque s’il échappe au vote ou retrouve le mot.",
+      intro: "Les joueurs informés voient uniquement le mot. Un ou deux imposteurs reçoivent seulement un indice, sans connaître l’identité de l’autre.",
+      steps: ["Choisissez les thèmes, la difficulté et le nombre d’imposteurs.", "Chaque joueur découvre son information en privé.", "Donnez un indice chacun dans l’ordre affiché, sans prononcer le mot.", "Votez secrètement pour un ou deux suspects.", "Chaque imposteur démasqué peut encore tenter de retrouver le mot parmi quatre propositions."],
+      scoring: "+1 par imposteur correctement désigné. +2 pour chaque imposteur qui échappe au vote. +1 si un imposteur démasqué retrouve le mot.",
       options: "Choisissez le nombre de manches et les packs disponibles.",
       comfort: "Les indices doivent aider le groupe sans rendre le mot immédiatement évident."
     },

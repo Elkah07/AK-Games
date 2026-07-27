@@ -4406,59 +4406,244 @@ renderGames = function () {
 
 /* ---------- L’IMPOSTEUR SAIT PRESQUE TOUT ---------- */
 
+const AK_IMPOSTOR_CUSTOM_KEY = "akgames_impostor_custom_v3";
+const AK_IMPOSTOR_THEMES = [
+  { id: "nourriture", label: "Nourriture", icon: "🍕" },
+  { id: "objets", label: "Objets", icon: "🧰" },
+  { id: "lieux", label: "Lieux", icon: "📍" },
+  { id: "animaux", label: "Animaux", icon: "🦊" },
+  { id: "metiers", label: "Métiers", icon: "🧑‍💼" },
+  { id: "quotidien", label: "Quotidien", icon: "🏠" },
+  { id: "voyages", label: "Voyages", icon: "✈️" },
+  { id: "sport", label: "Sport", icon: "🏆" },
+  { id: "nature", label: "Nature", icon: "🌿" },
+  { id: "technologie", label: "Technologie", icon: "💻" },
+  { id: "musique", label: "Musique", icon: "🎵" },
+  { id: "cinema_series", label: "Cinéma et séries", icon: "🎬" },
+  { id: "jeux", label: "Jeux", icon: "🎮" },
+  { id: "culture_pop", label: "Culture populaire", icon: "✨" }
+];
+const AK_IMPOSTOR_ADULT_THEMES = [
+  { id: "attirance", label: "Attirance", icon: "🧲" },
+  { id: "rendez_vous", label: "Rendez-vous", icon: "🥂" },
+  { id: "ex", label: "Ex", icon: "📼" },
+  { id: "couple", label: "Couple", icon: "💞" },
+  { id: "jalousie", label: "Jalousie", icon: "👀" },
+  { id: "messages", label: "Messages", icon: "📱" },
+  { id: "intimite", label: "Intimité", icon: "🌙" },
+  { id: "fantasmes", label: "Fantasmes", icon: "💭" },
+  { id: "soirees", label: "Soirées", icon: "🪩" },
+  { id: "relations_libres", label: "Sans engagement", icon: "🪽" }
+];
+const AK_IMPOSTOR_DIFFICULTIES = [
+  { id: "easy", label: "Facile", icon: "🌱", help: "Indice assez proche" },
+  { id: "medium", label: "Moyen", icon: "⚡", help: "Indice plus large" },
+  { id: "hard", label: "Difficile", icon: "🔥", help: "Indice ambigu" }
+];
+
+function loadImpostorCustomCards() {
+  try {
+    const value = JSON.parse(localStorage.getItem(AK_IMPOSTOR_CUSTOM_KEY) || "[]");
+    return Array.isArray(value) ? value.filter(item => item?.word && item?.hints?.easy && item?.hints?.medium && item?.hints?.hard) : [];
+  } catch (_) {
+    return [];
+  }
+}
+
+function saveImpostorCustomCards(cards) {
+  try { localStorage.setItem(AK_IMPOSTOR_CUSTOM_KEY, JSON.stringify(cards || [])); } catch (_) {}
+}
+
+function normalizeImpostorCard(item, adult = false) {
+  const fallback = String(item?.hint || "Observe le thème et reste crédible.");
+  return {
+    ...item,
+    id: String(item?.id || `imp_custom_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`),
+    word: String(item?.word || "Mot mystère").trim(),
+    hints: {
+      easy: String(item?.hints?.easy || fallback).trim(),
+      medium: String(item?.hints?.medium || fallback).trim(),
+      hard: String(item?.hints?.hard || fallback).trim()
+    },
+    decoys: Array.isArray(item?.decoys) ? item.decoys.filter(Boolean).slice(0, 3).map(String) : [],
+    theme: String(item?.theme || "personnalise"),
+    adult: Boolean(item?.adult ?? adult)
+  };
+}
+
+function impostorThemeMeta(theme, adult = false) {
+  return [...AK_IMPOSTOR_THEMES, ...AK_IMPOSTOR_ADULT_THEMES].find(item => item.id === theme)
+    || { id: theme, label: adult ? "Adulte" : "Mystère", icon: adult ? "🌶️" : "🕶️" };
+}
+
 function resetAlmostImpostorState(config = {}) {
+  const existing = state.almostImpostor || {};
+  const classicThemes = AK_IMPOSTOR_THEMES.map(item => item.id);
+  const adultThemes = AK_IMPOSTOR_ADULT_THEMES.map(item => item.id);
+  const playerIds = state.players.map(player => player.id);
   state.almostImpostor = {
-    roundCount: Number(config.roundCount || 6),
-    includeAdult: Boolean(config.includeAdult),
-    discussionSeconds: Number(config.discussionSeconds || 60),
+    roundCount: Number(config.roundCount ?? existing.roundCount ?? 8),
+    discussionSeconds: Number(config.discussionSeconds ?? existing.discussionSeconds ?? 60),
+    includeAdult: Boolean(config.includeAdult ?? existing.includeAdult ?? false),
+    impostorCount: Math.min(state.players.length >= 6 ? 2 : 1, Math.max(1, Number(config.impostorCount ?? existing.impostorCount ?? 1))),
+    classicThemes: Array.isArray(config.classicThemes) ? [...new Set(config.classicThemes)] : (Array.isArray(existing.classicThemes) ? existing.classicThemes : classicThemes),
+    adultThemes: Array.isArray(config.adultThemes) ? [...new Set(config.adultThemes)] : (Array.isArray(existing.adultThemes) ? existing.adultThemes : adultThemes),
+    difficulties: Array.isArray(config.difficulties) ? [...new Set(config.difficulties)] : (Array.isArray(existing.difficulties) ? existing.difficulties : ["easy", "medium", "hard"]),
+    includeCustom: Boolean(config.includeCustom ?? existing.includeCustom ?? true),
+    customCards: loadImpostorCustomCards(),
     items: [],
     currentIndex: 0,
+    currentDifficulty: "medium",
     roleOrder: [],
     roleViewIndex: 0,
+    speakingOrder: [],
+    impostorIds: [],
     impostorId: null,
     votes: {},
     currentVoterIndex: 0,
-    scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    scores: Object.fromEntries(playerIds.map(id => [id, 0])),
     currentResult: null,
-    rounds: []
+    guessQueue: [],
+    guessIndex: 0,
+    guesses: {},
+    rounds: [],
+    stats: {
+      detectiveCorrect: Object.fromEntries(playerIds.map(id => [id, 0])),
+      impostorEscapes: Object.fromEntries(playerIds.map(id => [id, 0])),
+      impostorGuesses: Object.fromEntries(playerIds.map(id => [id, 0])),
+      innocentAccusations: Object.fromEntries(playerIds.map(id => [id, 0]))
+    }
   };
+}
+
+function renderImpostorThemeGrid(themes, selected, attribute, adult = false) {
+  return `<div class="impostor-theme-grid">${themes.map(theme => `<label class="never-theme-option ${selected.includes(theme.id) ? "active" : ""}">
+    <input type="checkbox" ${attribute}="${theme.id}" ${selected.includes(theme.id) ? "checked" : ""}>
+    <span>${theme.icon}</span><strong>${escapeHtml(theme.label)}</strong>
+  </label>`).join("")}</div>`;
+}
+
+function bindImpostorThemeToggles(selector, key) {
+  document.querySelectorAll(selector).forEach(input => input.addEventListener("change", () => {
+    const value = input.dataset.impostorTheme || input.dataset.impostorAdultTheme;
+    const game = state.almostImpostor;
+    game[key] = input.checked ? [...new Set([...game[key], value])] : game[key].filter(item => item !== value);
+    input.closest("label")?.classList.toggle("active", input.checked);
+  }));
 }
 
 function renderAlmostImpostorSetup() {
   clearV09Timer();
   if (!state.almostImpostor) resetAlmostImpostorState();
   const game = state.almostImpostor;
+  const custom = game.customCards || [];
+  const twoAllowed = state.players.length >= 6;
+  if (!twoAllowed) game.impostorCount = 1;
   title.textContent = "L’Imposteur sait presque tout";
   setBackVisible(true);
   screen.innerHTML = `
-    <section class="game-cover game-cover-impostor"><span class="game-cover-icon">🕶️</span><div><small>IMPOSTEURS & DÉDUCTION</small><h2>L’Imposteur sait presque tout</h2><p>Tout le monde connaît le mot. L’imposteur ne reçoit qu’un indice et doit survivre au vote.</p></div></section>
-    <section class="card setup-card-v07">
-      <div class="form-group"><label for="impostorRounds">Nombre de manches</label><select id="impostorRounds" class="text-input">${[4,6,8,10].map(v => `<option value="${v}" ${game.roundCount === v ? "selected" : ""}>${v} manches</option>`).join("")}</select></div>
-      <div class="form-group top-gap"><label for="impostorTimer">Temps de discussion</label><select id="impostorTimer" class="text-input">${[45,60,90].map(v => `<option value="${v}" ${game.discussionSeconds === v ? "selected" : ""}>${v} secondes</option>`).join("")}</select></div>
+    <section class="game-cover game-cover-impostor"><span class="game-cover-icon">🕶️</span><div><small>IMPOSTEURS & DÉDUCTION</small><h2>L’Imposteur sait presque tout</h2><p>Les joueurs connaissent le mot. ${twoAllowed ? "Un ou deux imposteurs" : "L’imposteur"} ne reçoivent qu’un indice et doivent se fondre dans le groupe.</p></div></section>
+    <section class="card setup-card-v07 impostor-settings-card">
+      <div class="impostor-settings-grid">
+        <div class="form-group"><label for="impostorRounds">Nombre de manches</label><select id="impostorRounds" class="text-input">${[3,5,8,10,15,20,30,50,75,100].map(v => `<option value="${v}" ${game.roundCount === v ? "selected" : ""}>${v} manche${v > 1 ? "s" : ""}</option>`).join("")}</select></div>
+        <div class="form-group"><label for="impostorTimer">Discussion</label><select id="impostorTimer" class="text-input">${[45,60,90,120].map(v => `<option value="${v}" ${game.discussionSeconds === v ? "selected" : ""}>${v} secondes</option>`).join("")}</select></div>
+        <div class="form-group"><label for="impostorCount">Nombre d’imposteurs</label><select id="impostorCount" class="text-input"><option value="1" ${game.impostorCount === 1 ? "selected" : ""}>1 imposteur</option>${twoAllowed ? `<option value="2" ${game.impostorCount === 2 ? "selected" : ""}>2 imposteurs</option>` : ""}</select><small class="helper">${twoAllowed ? "Les deux imposteurs ne connaissent pas l’identité de l’autre." : "Le mode deux imposteurs se débloque à partir de 6 joueurs."}</small></div>
+      </div>
     </section>
-    ${state.adult ? `<label class="option-card premium-toggle"><input id="impostorAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Crushs, relations et dossiers de soirée.</span></span></label>` : ""}
-    <div class="notice">Détective correct : +1 point. Imposteur non démasqué : +2 points. Mot deviné après capture : +1 point.</div>
+    <section class="card impostor-filter-card">
+      <div class="impostor-section-head"><div><small>DIFFICULTÉ</small><h2>Quel niveau d’indice ?</h2></div><span>${game.difficulties.length}/3</span></div>
+      <div class="impostor-difficulty-grid">${AK_IMPOSTOR_DIFFICULTIES.map(level => `<label class="option-card mini-option ${game.difficulties.includes(level.id) ? "selected" : ""}"><input type="checkbox" data-impostor-difficulty="${level.id}" ${game.difficulties.includes(level.id) ? "checked" : ""}><span><strong>${level.icon} ${level.label}</strong><small>${level.help}</small></span></label>`).join("")}</div>
+    </section>
+    <section class="card impostor-filter-card">
+      <div class="impostor-section-head"><div><small>THÈMES CLASSIQUES</small><h2>Choisis les univers</h2></div><div class="impostor-mini-actions"><button type="button" id="allImpostorThemes" class="text-btn">Tout</button><button type="button" id="noneImpostorThemes" class="text-btn">Aucun</button></div></div>
+      ${renderImpostorThemeGrid(AK_IMPOSTOR_THEMES, game.classicThemes, "data-impostor-theme")}
+    </section>
+    ${state.adult ? `<section class="card impostor-filter-card"><label class="option-card premium-toggle"><input id="impostorAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les 200 cartes adultes</strong><br><span class="helper">Attirance, ex, couple, intimité et dossiers de soirée.</span></span></label>${game.includeAdult ? `<div class="impostor-section-head top-gap"><div><small>THÈMES ADULTES</small><h2>Choisis le piment</h2></div><div class="impostor-mini-actions"><button type="button" id="allImpostorAdultThemes" class="text-btn">Tout</button><button type="button" id="noneImpostorAdultThemes" class="text-btn">Aucun</button></div></div>${renderImpostorThemeGrid(AK_IMPOSTOR_ADULT_THEMES, game.adultThemes, "data-impostor-adult-theme", true)}` : ""}</section>` : ""}
+    <section class="card impostor-custom-card">
+      <h2 class="section-title">✍️ Mes cartes</h2><p class="helper">Ajoute ton propre mot, les trois niveaux d’indice et trois faux mots. Elles restent enregistrées sur cet appareil.</p>
+      <div class="form-group top-gap"><label for="impostorCustomWord">Mot secret</label><input id="impostorCustomWord" class="text-input" maxlength="80" placeholder="Ex. Machine à raclette"></div>
+      <div class="impostor-custom-hints"><div class="form-group"><label for="impostorCustomEasy">Indice facile</label><input id="impostorCustomEasy" class="text-input" maxlength="150" placeholder="Très proche du mot"></div><div class="form-group"><label for="impostorCustomMedium">Indice moyen</label><input id="impostorCustomMedium" class="text-input" maxlength="150" placeholder="Assez large"></div><div class="form-group"><label for="impostorCustomHard">Indice difficile</label><input id="impostorCustomHard" class="text-input" maxlength="150" placeholder="Ambigu mais jouable"></div></div>
+      <div class="form-group"><label for="impostorCustomDecoys">Trois faux mots séparés par des virgules</label><input id="impostorCustomDecoys" class="text-input" maxlength="180" placeholder="Fondue, Crêpière, Grille-pain"></div>
+      <label class="option-card mini-option"><input id="impostorCustomAdult" type="checkbox"><span><strong>🌶️ Carte adulte</strong></span></label>
+      <button type="button" id="addImpostorCustom" class="secondary-btn full">Ajouter la carte</button>
+      ${custom.length ? `<label class="option-card mini-option top-gap"><input id="includeImpostorCustom" type="checkbox" ${game.includeCustom ? "checked" : ""}><span><strong>Inclure mes ${custom.length} carte${custom.length > 1 ? "s" : ""}</strong></span></label><details class="top-gap"><summary>Gérer mes cartes</summary><div class="impostor-custom-list">${custom.map(item => `<article><div><strong>${item.adult ? "🌶️ " : ""}${escapeHtml(item.word)}</strong><small>${escapeHtml(item.hints.medium)}</small></div><button type="button" class="danger-btn" data-remove-impostor-custom="${item.id}">Supprimer</button></article>`).join("")}</div></details>` : ""}
+    </section>
+    <div class="notice"><strong>Barème :</strong> +1 par imposteur correctement désigné · +2 par imposteur qui échappe au vote · +1 si un imposteur démasqué retrouve le mot.</div>
     <button id="startImpostor" class="primary-btn full">Distribuer les rôles</button>
   `;
-  document.querySelector("#impostorRounds").addEventListener("change", e => game.roundCount = Number(e.target.value));
-  document.querySelector("#impostorTimer").addEventListener("change", e => game.discussionSeconds = Number(e.target.value));
-  document.querySelector("#impostorAdult")?.addEventListener("change", e => game.includeAdult = e.target.checked);
+
+  document.querySelector("#impostorRounds").addEventListener("change", event => game.roundCount = Number(event.target.value));
+  document.querySelector("#impostorTimer").addEventListener("change", event => game.discussionSeconds = Number(event.target.value));
+  document.querySelector("#impostorCount").addEventListener("change", event => game.impostorCount = Number(event.target.value));
+  document.querySelector("#impostorAdult")?.addEventListener("change", event => { game.includeAdult = event.target.checked; renderAlmostImpostorSetup(); });
+  document.querySelector("#includeImpostorCustom")?.addEventListener("change", event => game.includeCustom = event.target.checked);
+  bindImpostorThemeToggles("[data-impostor-theme]", "classicThemes");
+  bindImpostorThemeToggles("[data-impostor-adult-theme]", "adultThemes");
+  document.querySelectorAll("[data-impostor-difficulty]").forEach(input => input.addEventListener("change", () => {
+    const value = input.dataset.impostorDifficulty;
+    game.difficulties = input.checked ? [...new Set([...game.difficulties, value])] : game.difficulties.filter(item => item !== value);
+    input.closest("label")?.classList.toggle("selected", input.checked);
+  }));
+  document.querySelector("#allImpostorThemes")?.addEventListener("click", () => { game.classicThemes = AK_IMPOSTOR_THEMES.map(item => item.id); renderAlmostImpostorSetup(); });
+  document.querySelector("#noneImpostorThemes")?.addEventListener("click", () => { game.classicThemes = []; renderAlmostImpostorSetup(); });
+  document.querySelector("#allImpostorAdultThemes")?.addEventListener("click", () => { game.adultThemes = AK_IMPOSTOR_ADULT_THEMES.map(item => item.id); renderAlmostImpostorSetup(); });
+  document.querySelector("#noneImpostorAdultThemes")?.addEventListener("click", () => { game.adultThemes = []; renderAlmostImpostorSetup(); });
+  document.querySelector("#addImpostorCustom")?.addEventListener("click", () => {
+    const word = document.querySelector("#impostorCustomWord").value.trim();
+    const easy = document.querySelector("#impostorCustomEasy").value.trim();
+    const medium = document.querySelector("#impostorCustomMedium").value.trim();
+    const hard = document.querySelector("#impostorCustomHard").value.trim();
+    const decoys = document.querySelector("#impostorCustomDecoys").value.split(",").map(value => value.trim()).filter(Boolean);
+    if (!word || !easy || !medium || !hard || decoys.length !== 3) return alert("Ajoute un mot, les trois indices et exactement trois faux mots.");
+    const item = normalizeImpostorCard({ id: `imp_custom_${Date.now()}`, word, hints: { easy, medium, hard }, decoys, theme: "personnalise", adult: document.querySelector("#impostorCustomAdult").checked });
+    game.customCards = [...game.customCards, item];
+    game.includeCustom = true;
+    saveImpostorCustomCards(game.customCards);
+    renderAlmostImpostorSetup();
+  });
+  document.querySelectorAll("[data-remove-impostor-custom]").forEach(button => button.addEventListener("click", () => {
+    game.customCards = game.customCards.filter(item => item.id !== button.dataset.removeImpostorCustom);
+    saveImpostorCustomCards(game.customCards);
+    renderAlmostImpostorSetup();
+  }));
   document.querySelector("#startImpostor").addEventListener("click", startAlmostImpostorGame);
+}
+
+async function buildAlmostImpostorPool(game) {
+  let pool = [];
+  if (game.classicThemes.length) {
+    const classic = await loadJsonFile("data/imposteur.json", "Impossible de charger les mots de l’imposteur.");
+    pool.push(...classic.map(item => normalizeImpostorCard(item, false)).filter(item => game.classicThemes.includes(item.theme)));
+  }
+  if (state.adult && game.includeAdult && game.adultThemes.length) {
+    const adult = await loadJsonFile("data/imposteur-adulte.json", "Impossible de charger les cartes adultes.");
+    pool.push(...adult.map(item => normalizeImpostorCard(item, true)).filter(item => game.adultThemes.includes(item.theme)));
+  }
+  if (game.includeCustom) pool.push(...game.customCards.map(item => normalizeImpostorCard(item, item.adult)).filter(item => !item.adult || (state.adult && game.includeAdult)));
+  return [...new Map(pool.map(item => [item.id, item])).values()];
 }
 
 async function startAlmostImpostorGame() {
   const game = state.almostImpostor;
-  screen.innerHTML = `<div class="notice">Mélange des mots et distribution des lunettes noires…</div>`;
+  if (!game.difficulties.length) return alert("Choisis au moins une difficulté.");
+  if (!game.classicThemes.length && !(state.adult && game.includeAdult && game.adultThemes.length) && !(game.includeCustom && game.customCards.length)) return alert("Choisis au moins un thème ou ajoute une carte personnalisée.");
+  screen.innerHTML = `<div class="notice">Mélange des mots et distribution des faux-semblants…</div>`;
   try {
-    let pool = await loadJsonFile("data/imposteur.json", "Impossible de charger les mots de l’imposteur.");
-    if (state.adult && game.includeAdult) pool = pool.concat(await loadJsonFile("data/imposteur-adulte.json", "Impossible de charger les cartes adultes."));
-    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "solo:almost-impostor");
+    const pool = await buildAlmostImpostorPool(game);
+    if (!pool.length) throw new Error("Aucune carte ne correspond aux filtres choisis.");
+    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "solo:almost-impostor:v3");
     game.currentIndex = 0;
     game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
     game.rounds = [];
+    game.stats = {
+      detectiveCorrect: Object.fromEntries(state.players.map(player => [player.id, 0])),
+      impostorEscapes: Object.fromEntries(state.players.map(player => [player.id, 0])),
+      impostorGuesses: Object.fromEntries(state.players.map(player => [player.id, 0])),
+      innocentAccusations: Object.fromEntries(state.players.map(player => [player.id, 0]))
+    };
     prepareAlmostImpostorRound();
   } catch (error) {
-    alert(error.message);
+    alert(error.message || "Impossible de lancer la partie.");
     renderAlmostImpostorSetup();
   }
 }
@@ -4466,12 +4651,20 @@ async function startAlmostImpostorGame() {
 function prepareAlmostImpostorRound() {
   const game = state.almostImpostor;
   if (game.currentIndex >= game.items.length) return renderAlmostImpostorEnd();
+  const playerIds = shuffleArray(state.players.map(player => player.id));
+  const count = Math.min(game.impostorCount, Math.max(1, state.players.length - 1));
+  game.impostorIds = playerIds.slice(0, count);
+  game.impostorId = game.impostorIds[0];
   game.roleOrder = shuffleArray(state.players.map(player => player.id));
+  game.speakingOrder = shuffleArray(state.players.map(player => player.id));
   game.roleViewIndex = 0;
-  game.impostorId = game.roleOrder[Math.floor(Math.random() * game.roleOrder.length)];
-  game.votes = {};
   game.currentVoterIndex = 0;
+  game.currentDifficulty = game.difficulties[Math.floor(Math.random() * game.difficulties.length)] || "medium";
+  game.votes = {};
   game.currentResult = null;
+  game.guessQueue = [];
+  game.guessIndex = 0;
+  game.guesses = {};
   renderAlmostImpostorRoleGate();
 }
 
@@ -4479,11 +4672,11 @@ function renderAlmostImpostorRoleGate() {
   const game = state.almostImpostor;
   if (game.roleViewIndex >= game.roleOrder.length) return renderAlmostImpostorDiscussion();
   const player = state.players.find(item => item.id === game.roleOrder[game.roleViewIndex]);
-  title.textContent = "Rôle secret";
+  title.textContent = "Distribution des rôles";
   setBackVisible(false);
   screen.innerHTML = `
     ${renderV09Progress(game.currentIndex + 1, game.items.length, "Manche")}
-    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(player.avatarId).emoji}</div><span class="category-chip">ÉCRAN PRIVÉ</span><h2>Passe le téléphone à ${escapeHtml(player.name)}</h2><p>Regarde ton rôle puis cache l’écran avant de continuer.</p><button id="openImpostorRole" class="primary-btn">Je suis ${escapeHtml(player.name)}</button></section>
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(player.avatarId).emoji}</div><span class="category-chip">ÉCRAN PRIVÉ</span><h2>Passe le téléphone à ${escapeHtml(player.name)}</h2><p>Personne d’autre ne doit regarder. Mémorise ton information puis cache l’écran.</p><button id="openImpostorRole" class="primary-btn">Je suis ${escapeHtml(player.name)}</button></section>
   `;
   document.querySelector("#openImpostorRole").addEventListener("click", renderAlmostImpostorRole);
 }
@@ -4492,38 +4685,35 @@ function renderAlmostImpostorRole() {
   const game = state.almostImpostor;
   const card = game.items[game.currentIndex];
   const playerId = game.roleOrder[game.roleViewIndex];
-  const isImpostor = playerId === game.impostorId;
+  const isImpostor = game.impostorIds.includes(playerId);
+  const hint = card.hints?.[game.currentDifficulty] || card.hints?.medium || card.hint || "Reste vague.";
+  const difficulty = AK_IMPOSTOR_DIFFICULTIES.find(item => item.id === game.currentDifficulty) || AK_IMPOSTOR_DIFFICULTIES[1];
+  const theme = impostorThemeMeta(card.theme, card.adult);
   title.textContent = isImpostor ? "Tu es l’imposteur" : "Tu connais le mot";
   screen.innerHTML = `
     ${renderV09Progress(game.currentIndex + 1, game.items.length, "Manche")}
     <section class="secret-role-card ${isImpostor ? "impostor" : "civil"}">
       <span>${isImpostor ? "🕶️" : "🔐"}</span>
-      <small>${isImpostor ? "IMPOSTEUR" : "ÉQUIPE INFORMÉE"}</small>
-      <h2>${isImpostor ? "Tu ne connais pas le mot" : escapeHtml(card.word)}</h2>
-      <p><strong>Indice :</strong> ${escapeHtml(card.hint)}</p>
-      ${isImpostor ? `<em>Écoute les autres, donne un indice crédible et évite les soupçons.</em>` : `<em>Donne un indice utile, mais pas trop évident.</em>`}
+      <small>${isImpostor ? `IMPOSTEUR · ${difficulty.icon} ${difficulty.label.toUpperCase()}` : "ÉQUIPE INFORMÉE"}</small>
+      <h2>${isImpostor ? escapeHtml(hint) : escapeHtml(card.word)}</h2>
+      <p><strong>${theme.icon} Thème :</strong> ${escapeHtml(theme.label)}</p>
+      <em>${isImpostor ? `Tu ne connais pas le mot. ${game.impostorIds.length > 1 ? "Un autre imposteur existe, mais son identité reste secrète." : "Écoute les autres et reste crédible."}` : "Tu ne vois aucun indice. Donne un mot utile sans révéler le secret."}</em>
     </section>
     <button id="hideImpostorRole" class="primary-btn full">J’ai mémorisé</button>
   `;
-  document.querySelector("#hideImpostorRole").addEventListener("click", () => {
-    game.roleViewIndex += 1;
-    renderAlmostImpostorRoleGate();
-  });
+  document.querySelector("#hideImpostorRole").addEventListener("click", () => { game.roleViewIndex += 1; renderAlmostImpostorRoleGate(); });
 }
 
 function renderAlmostImpostorDiscussion() {
   const game = state.almostImpostor;
   const card = game.items[game.currentIndex];
-  title.textContent = "Discussion";
+  const theme = impostorThemeMeta(card.theme, card.adult);
+  title.textContent = "Tour des indices";
   setBackVisible(false);
   screen.innerHTML = `
     ${renderV09Progress(game.currentIndex + 1, game.items.length, "Manche")}
-    <section class="timer-stage v09-timer-stage">
-      <span class="category-chip">${escapeHtml(card.category || "mystère").toUpperCase()}</span>
-      <div id="v09TimerRing" class="v09-timer-ring"><strong id="v09Countdown">${game.discussionSeconds}</strong><small>secondes</small></div>
-      <h2>Donnez chacun un indice</h2>
-      <p>Interdiction de prononcer le mot. Observez les hésitations, les détours et les regards suspects.</p>
-    </section>
+    <section class="timer-stage v09-timer-stage"><span class="category-chip">${theme.icon} ${escapeHtml(theme.label.toUpperCase())}</span><div id="v09TimerRing" class="v09-timer-ring"><strong id="v09Countdown">${game.discussionSeconds}</strong><small>secondes</small></div><h2>Un indice chacun</h2><p>Ne prononcez pas le mot, ne répétez pas un indice déjà donné et observez les hésitations.</p></section>
+    <section class="impostor-speaking-order"><small>ORDRE DE PAROLE</small><div>${game.speakingOrder.map((id, index) => { const player = state.players.find(item => item.id === id); return `<span><b>${index + 1}</b>${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)}</span>`; }).join("")}</div></section>
     <button id="impostorVoteNow" class="secondary-btn full">Passer aux votes</button>
   `;
   const vote = () => { clearV09Timer(); game.currentVoterIndex = 0; renderAlmostImpostorVoteGate(); };
@@ -4539,7 +4729,7 @@ function renderAlmostImpostorVoteGate() {
   setBackVisible(false);
   screen.innerHTML = `
     ${renderV09Progress(game.currentIndex + 1, game.items.length, "Manche")}
-    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(voter.avatarId).emoji}</div><span class="category-chip">VOTE SECRET</span><h2>Passe le téléphone à ${escapeHtml(voter.name)}</h2><p>Choisis la personne qui semble connaître un peu moins que les autres.</p><button id="openImpostorVote" class="primary-btn">Je suis ${escapeHtml(voter.name)}</button></section>
+    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(voter.avatarId).emoji}</div><span class="category-chip">VOTE SECRET</span><h2>Passe le téléphone à ${escapeHtml(voter.name)}</h2><p>${game.impostorIds.length > 1 ? "Tu devras désigner deux suspects." : "Choisis la personne qui semble connaître un peu moins que les autres."}</p><button id="openImpostorVote" class="primary-btn">Je suis ${escapeHtml(voter.name)}</button></section>
   `;
   document.querySelector("#openImpostorVote").addEventListener("click", renderAlmostImpostorVote);
 }
@@ -4548,61 +4738,106 @@ function renderAlmostImpostorVote() {
   const game = state.almostImpostor;
   const voter = state.players[game.currentVoterIndex];
   const candidates = state.players.filter(player => player.id !== voter.id);
-  title.textContent = "Qui est l’imposteur ?";
+  const required = game.impostorIds.length;
+  let selected = [];
+  title.textContent = required > 1 ? "Qui sont les imposteurs ?" : "Qui est l’imposteur ?";
   screen.innerHTML = `
     ${renderV09Progress(game.currentIndex + 1, game.items.length, "Manche")}
-    <section class="suspect-grid">${candidates.map(player => `<button class="suspect-card" data-impostor-vote="${player.id}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong></button>`).join("")}</section>
+    <div class="notice" id="impostorVoteHelp">Choisis ${required} suspect${required > 1 ? "s" : ""}.</div>
+    <section class="suspect-grid">${candidates.map(player => `<button class="suspect-card" data-impostor-vote="${player.id}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small class="impostor-checkmark">✓</small></button>`).join("")}</section>
+    <button id="confirmImpostorVote" class="primary-btn full" disabled>Valider mon vote</button>
   `;
+  const refresh = () => {
+    document.querySelectorAll("[data-impostor-vote]").forEach(button => button.classList.toggle("selected", selected.includes(button.dataset.impostorVote)));
+    const confirm = document.querySelector("#confirmImpostorVote");
+    confirm.disabled = selected.length !== required;
+    document.querySelector("#impostorVoteHelp").textContent = selected.length === required ? "Choix complet. Tu peux valider." : `Choisis encore ${required - selected.length} suspect${required - selected.length > 1 ? "s" : ""}.`;
+  };
   document.querySelectorAll("[data-impostor-vote]").forEach(button => button.addEventListener("click", () => {
-    game.votes[voter.id] = button.dataset.impostorVote;
+    const id = button.dataset.impostorVote;
+    if (selected.includes(id)) selected = selected.filter(value => value !== id);
+    else if (selected.length < required) selected.push(id);
+    refresh();
+  }));
+  document.querySelector("#confirmImpostorVote").addEventListener("click", () => {
+    game.votes[voter.id] = [...selected];
     game.currentVoterIndex += 1;
     renderAlmostImpostorVoteGate();
-  }));
+  });
+  refresh();
+}
+
+function calculateOfficialImpostorSuspects(game) {
+  const counts = Object.fromEntries(state.players.map(player => [player.id, 0]));
+  Object.values(game.votes).forEach(value => (Array.isArray(value) ? value : [value]).filter(Boolean).forEach(id => counts[id] = Number(counts[id] || 0) + 1));
+  const ranked = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+  const required = game.impostorIds.length;
+  const cutoff = Number(ranked[required - 1]?.[1] || 0);
+  if (!cutoff) return { counts, officialIds: [] };
+  const above = ranked.filter(([, value]) => value > cutoff).map(([id]) => id);
+  const tied = ranked.filter(([, value]) => value === cutoff).map(([id]) => id);
+  const remaining = required - above.length;
+  const officialIds = tied.length === remaining ? [...above, ...tied] : above;
+  return { counts, officialIds };
 }
 
 function resolveAlmostImpostorVotes() {
   const game = state.almostImpostor;
-  const counts = {};
-  Object.values(game.votes).forEach(id => counts[id] = Number(counts[id] || 0) + 1);
-  const max = Math.max(0, ...Object.values(counts));
-  const topIds = Object.keys(counts).filter(id => counts[id] === max);
-  const caught = topIds.length === 1 && topIds[0] === game.impostorId;
-  const correctVoters = Object.entries(game.votes).filter(([, id]) => id === game.impostorId).map(([id]) => id);
-  correctVoters.forEach(id => game.scores[id] = Number(game.scores[id] || 0) + 1);
-  game.currentResult = { caught, topIds, counts, correctVoters, guess: null, guessCorrect: false };
-  if (!caught) {
-    game.scores[game.impostorId] = Number(game.scores[game.impostorId] || 0) + 2;
-    renderAlmostImpostorResult();
-    return;
-  }
-  renderAlmostImpostorGuessGate();
+  const card = game.items[game.currentIndex];
+  const { counts, officialIds } = calculateOfficialImpostorSuspects(game);
+  const caughtIds = game.impostorIds.filter(id => officialIds.includes(id));
+  const escapedIds = game.impostorIds.filter(id => !caughtIds.includes(id));
+  const correctByVoter = {};
+  Object.entries(game.votes).forEach(([voterId, targets]) => {
+    const list = Array.isArray(targets) ? targets : [targets];
+    const correct = list.filter(id => game.impostorIds.includes(id)).length;
+    correctByVoter[voterId] = correct;
+    game.scores[voterId] = Number(game.scores[voterId] || 0) + correct;
+    game.stats.detectiveCorrect[voterId] = Number(game.stats.detectiveCorrect[voterId] || 0) + correct;
+    list.filter(id => !game.impostorIds.includes(id)).forEach(id => game.stats.innocentAccusations[id] = Number(game.stats.innocentAccusations[id] || 0) + 1);
+  });
+  escapedIds.forEach(id => {
+    game.scores[id] = Number(game.scores[id] || 0) + 2;
+    game.stats.impostorEscapes[id] = Number(game.stats.impostorEscapes[id] || 0) + 1;
+  });
+  const wrongVotes = Object.values(game.votes).reduce((sum, targets) => sum + (Array.isArray(targets) ? targets : [targets]).filter(id => !game.impostorIds.includes(id)).length, 0);
+  game.currentResult = { itemId: card.id, word: card.word, votes: JSON.parse(JSON.stringify(game.votes)), counts, officialIds, caughtIds, escapedIds, correctByVoter, guesses: {}, deceptionScore: wrongVotes + escapedIds.length * state.players.length };
+  game.guessQueue = [...caughtIds];
+  game.guessIndex = 0;
+  game.guesses = {};
+  if (game.guessQueue.length) renderAlmostImpostorGuessGate(); else renderAlmostImpostorResult();
 }
 
 function renderAlmostImpostorGuessGate() {
   const game = state.almostImpostor;
-  const impostor = state.players.find(player => player.id === game.impostorId);
+  if (game.guessIndex >= game.guessQueue.length) return renderAlmostImpostorResult();
+  const impostor = state.players.find(player => player.id === game.guessQueue[game.guessIndex]);
   title.textContent = "Dernière chance";
-  screen.innerHTML = `
-    <section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(impostor.avatarId).emoji}</div><span class="category-chip">IMPOSTEUR DÉMASQUÉ</span><h2>Passe le téléphone à ${escapeHtml(impostor.name)}</h2><p>Tu peux encore gagner un point en retrouvant le mot exact.</p><button id="openImpostorGuess" class="primary-btn">Tenter le mot</button></section>
-  `;
+  setBackVisible(false);
+  screen.innerHTML = `<section class="handoff-stage handoff-v07"><div class="giant-avatar">${avatarById(impostor.avatarId).emoji}</div><span class="category-chip">IMPOSTEUR DÉMASQUÉ</span><h2>Passe le téléphone à ${escapeHtml(impostor.name)}</h2><p>Tu peux encore gagner un point en retrouvant le mot exact.</p><button id="openImpostorGuess" class="primary-btn">Tenter le mot</button></section>`;
   document.querySelector("#openImpostorGuess").addEventListener("click", renderAlmostImpostorGuess);
 }
 
 function renderAlmostImpostorGuess() {
   const game = state.almostImpostor;
   const card = game.items[game.currentIndex];
-  const options = shuffleArray([card.word, ...(card.decoys || [])]);
-  title.textContent = "Quel était le mot ?";
-  screen.innerHTML = `
-    <section class="v09-question-card"><span>🕶️</span><small>DERNIÈRE CHANCE</small><h2>${escapeHtml(card.hint)}</h2></section>
-    <section class="v09-option-grid">${options.map(option => `<button class="v09-choice-card" data-impostor-guess="${escapeHtml(option)}">${escapeHtml(option)}</button>`).join("")}</section>
-  `;
+  const impostorId = game.guessQueue[game.guessIndex];
+  const difficulty = AK_IMPOSTOR_DIFFICULTIES.find(item => item.id === game.currentDifficulty) || AK_IMPOSTOR_DIFFICULTIES[1];
+  const hint = card.hints?.[game.currentDifficulty] || card.hints?.medium || card.hint || "";
+  const options = shuffleArray([card.word, ...(card.decoys || [])].filter(Boolean));
+  title.textContent = "Retrouve le mot";
+  screen.innerHTML = `<section class="v09-question-card"><span>🕶️</span><small>${difficulty.icon} TON INDICE</small><h2>${escapeHtml(hint)}</h2></section><section class="v09-option-grid">${options.map(option => `<button class="v09-choice-card" data-impostor-guess="${escapeHtml(option)}">${escapeHtml(option)}</button>`).join("")}</section>`;
   document.querySelectorAll("[data-impostor-guess]").forEach(button => button.addEventListener("click", () => {
     const guess = button.dataset.impostorGuess;
-    game.currentResult.guess = guess;
-    game.currentResult.guessCorrect = guess === card.word;
-    if (game.currentResult.guessCorrect) game.scores[game.impostorId] = Number(game.scores[game.impostorId] || 0) + 1;
-    renderAlmostImpostorResult();
+    const correct = guess === card.word;
+    game.guesses[impostorId] = { guess, correct };
+    game.currentResult.guesses[impostorId] = { guess, correct };
+    if (correct) {
+      game.scores[impostorId] = Number(game.scores[impostorId] || 0) + 1;
+      game.stats.impostorGuesses[impostorId] = Number(game.stats.impostorGuesses[impostorId] || 0) + 1;
+    }
+    game.guessIndex += 1;
+    renderAlmostImpostorGuessGate();
   }));
 }
 
@@ -4610,31 +4845,55 @@ function renderAlmostImpostorResult() {
   const game = state.almostImpostor;
   const card = game.items[game.currentIndex];
   const result = game.currentResult;
-  const impostor = state.players.find(player => player.id === game.impostorId);
-  game.rounds.push({ itemId: card.id, impostorId: game.impostorId, votes: { ...game.votes }, ...result });
+  const impostors = game.impostorIds.map(id => state.players.find(player => player.id === id)).filter(Boolean);
+  if (!result.saved) {
+    result.saved = true;
+    game.rounds.push({ ...JSON.parse(JSON.stringify(result)), impostorIds: [...game.impostorIds], difficulty: game.currentDifficulty, theme: card.theme });
+  }
   title.textContent = "Révélation";
   setBackVisible(false);
+  const allCaught = result.caughtIds.length === game.impostorIds.length;
+  const noneCaught = result.caughtIds.length === 0;
   screen.innerHTML = `
-    <section class="reveal-stage reveal-v07 impostor-reveal"><span class="game-cover-icon">${avatarById(impostor.avatarId).emoji}</span><h2>${escapeHtml(impostor.name)} était l’imposteur</h2><p>Le mot était <strong>${escapeHtml(card.word)}</strong>.</p></section>
-    <section class="vote-breakdown">${state.players.map(player => {
-      const target = state.players.find(item => item.id === game.votes[player.id]);
-      const correct = game.votes[player.id] === game.impostorId;
-      return `<article class="who-vote-row ${correct ? "correct" : "fooled"}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>a voté ${escapeHtml(target?.name || "?")}</small><em>${correct ? "+1 pt" : "raté"}</em></article>`;
-    }).join("")}</section>
-    <div class="special-event ${result.caught ? "" : "tie"}"><strong>${result.caught ? "🔍 Imposteur démasqué" : "🕶️ L’imposteur s’échappe"}</strong><p>${result.caught ? (result.guessCorrect ? "Le mot a tout de même été retrouvé : +1 point imposteur." : "Le groupe a gagné cette enquête.") : "+2 points pour la couverture parfaite."}</p></div>
-    ${state.alcohol ? `<div class="alcohol-callout">🍻 ${result.caught ? "L’imposteur peut trinquer s’il en a envie." : "Les joueurs ayant raté leur vote peuvent trinquer s’ils en ont envie."}</div>` : ""}
+    <section class="reveal-stage reveal-v07 impostor-reveal"><span class="game-cover-icon">${impostors.map(player => avatarById(player.avatarId).emoji).join(" ")}</span><h2>${impostors.map(player => escapeHtml(player.name)).join(" et ")} ${impostors.length > 1 ? "étaient les imposteurs" : "était l’imposteur"}</h2><p>Le mot était <strong>${escapeHtml(card.word)}</strong>.</p></section>
+    <section class="vote-breakdown">${state.players.map(player => { const targets = (game.votes[player.id] || []).map(id => state.players.find(item => item.id === id)).filter(Boolean); const correct = Number(result.correctByVoter[player.id] || 0); return `<article class="who-vote-row ${correct ? "correct" : "fooled"}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>a voté ${targets.map(target => escapeHtml(target.name)).join(" et ") || "personne"}</small><em>${correct ? `+${correct} pt${correct > 1 ? "s" : ""}` : "raté"}</em></article>`; }).join("")}</section>
+    <div class="special-event ${allCaught ? "" : "tie"}"><strong>${allCaught ? "🔍 Tous les imposteurs sont démasqués" : noneCaught ? "🕶️ Couverture parfaite" : "⚖️ Une partie du masque tombe"}</strong><p>${allCaught ? "Le groupe a identifié toute l’équipe cachée." : noneCaught ? `+2 points pour chaque imposteur qui s’échappe.` : `${result.caughtIds.length} imposteur${result.caughtIds.length > 1 ? "s" : ""} démasqué${result.caughtIds.length > 1 ? "s" : ""}, ${result.escapedIds.length} encore dans l’ombre.`}</p></div>
+    ${Object.keys(result.guesses || {}).length ? `<section class="impostor-guess-results">${Object.entries(result.guesses).map(([id, data]) => { const player = state.players.find(item => item.id === id); return `<article class="${data.correct ? "correct" : "fooled"}"><span>${avatarById(player.avatarId).emoji}</span><div><strong>${escapeHtml(player.name)}</strong><small>a choisi ${escapeHtml(data.guess)}</small></div><em>${data.correct ? "+1 pt" : "raté"}</em></article>`; }).join("")}</section>` : ""}
+    ${state.alcohol ? `<div class="alcohol-callout">🍻 Les personnes trompées peuvent trinquer avec la boisson de leur choix, sans obligation.</div>` : ""}
     <button id="nextImpostorRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Manche suivante"}</button>
   `;
   document.querySelector("#nextImpostorRound").addEventListener("click", () => { game.currentIndex += 1; prepareAlmostImpostorRound(); });
 }
 
+function impostorTopStat(stats) {
+  const entries = state.players.map(player => ({ player, value: Number(stats?.[player.id] || 0) })).sort((a, b) => b.value - a.value);
+  return entries[0] || { player: state.players[0], value: 0 };
+}
+
 function renderAlmostImpostorEnd() {
   const game = state.almostImpostor;
-  renderV09Final({
-    icon: "🕶️", heading: "Les masques sont tombés", text: "Détectives précis et imposteurs insaisissables se partagent le podium.", scores: game.scores,
-    replay: () => { resetAlmostImpostorState({ roundCount: game.roundCount, includeAdult: game.includeAdult, discussionSeconds: game.discussionSeconds }); renderAlmostImpostorSetup(); },
-    other: () => { state.almostImpostor = null; renderPlayChoice(); }
-  });
+  clearV09Timer();
+  const ranking = [...state.players].sort((a, b) => Number(game.scores[b.id] || 0) - Number(game.scores[a.id] || 0));
+  const detective = impostorTopStat(game.stats.detectiveCorrect);
+  const impostorScores = Object.fromEntries(state.players.map(player => [player.id, Number(game.stats.impostorEscapes[player.id] || 0) * 2 + Number(game.stats.impostorGuesses[player.id] || 0)]));
+  const shadow = impostorTopStat(impostorScores);
+  const accused = impostorTopStat(game.stats.innocentAccusations);
+  const trickiest = [...game.rounds].sort((a, b) => Number(b.deceptionScore || 0) - Number(a.deceptionScore || 0))[0];
+  title.textContent = "Classement final";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="winner-stage winner-stage-v07 v09-final-stage"><div class="winner-crown">🕶️🏆</div><h2>Les masques sont tombés</h2><p>Détectives précis et imposteurs insaisissables se partagent le podium.</p></section>
+    <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
+    <section class="impostor-awards">
+      ${detective.value ? `<article><span>🔎</span><div><small>MEILLEUR DÉTECTIVE</small><strong>${escapeHtml(detective.player.name)}</strong><p>${detective.value} imposteur${detective.value > 1 ? "s" : ""} correctement désigné${detective.value > 1 ? "s" : ""}</p></div></article>` : ""}
+      ${shadow.value ? `<article><span>🕶️</span><div><small>MEILLEUR IMPOSTEUR</small><strong>${escapeHtml(shadow.player.name)}</strong><p>${game.stats.impostorEscapes[shadow.player.id] || 0} fuite${Number(game.stats.impostorEscapes[shadow.player.id] || 0) > 1 ? "s" : ""} · ${game.stats.impostorGuesses[shadow.player.id] || 0} mot${Number(game.stats.impostorGuesses[shadow.player.id] || 0) > 1 ? "s" : ""} retrouvé${Number(game.stats.impostorGuesses[shadow.player.id] || 0) > 1 ? "s" : ""}</p></div></article>` : ""}
+      ${accused.value ? `<article><span>😇</span><div><small>INNOCENT LE PLUS ACCUSÉ</small><strong>${escapeHtml(accused.player.name)}</strong><p>${accused.value} accusation${accused.value > 1 ? "s" : ""} injuste${accused.value > 1 ? "s" : ""}</p></div></article>` : ""}
+      ${trickiest ? `<article><span>🧩</span><div><small>CARTE LA PLUS TROMPEUSE</small><strong>${escapeHtml(trickiest.word || "Mystère")}</strong><p>${Number(trickiest.deceptionScore || 0)} point${Number(trickiest.deceptionScore || 0) > 1 ? "s" : ""} de confusion</p></div></article>` : ""}
+    </section>
+    <div class="toolbar"><button id="v09Replay" class="secondary-btn">Rejouer</button><button id="v09Other" class="primary-btn">Autre jeu</button></div>
+  `;
+  document.querySelector("#v09Replay").addEventListener("click", () => { resetAlmostImpostorState({ roundCount: game.roundCount, includeAdult: game.includeAdult, discussionSeconds: game.discussionSeconds, impostorCount: game.impostorCount, classicThemes: game.classicThemes, adultThemes: game.adultThemes, difficulties: game.difficulties, includeCustom: game.includeCustom }); renderAlmostImpostorSetup(); });
+  document.querySelector("#v09Other").addEventListener("click", () => { state.almostImpostor = null; renderPlayChoice(); });
 }
 
 /* ---------- LE FAUX EXPERT ---------- */

@@ -1,277 +1,3002 @@
 [
   {
-    "id": "imp_a_001_premier_baiser",
-    "word": "Premier baiser",
-    "hint": "Je peux durer deux secondes et être raconté pendant dix ans",
+    "id": "imp_a_001_ex",
+    "word": "Ex",
+    "hints": {
+      "hard": "J’appartiens au passé.",
+      "medium": "Je réapparais parfois dans les conversations.",
+      "easy": "Mon prénom peut changer l’ambiance."
+    },
     "decoys": [
-      "Premier rendez-vous",
-      "Câlin",
-      "Déclaration"
+      "Ex qui revient",
+      "Photo d’ex conservée",
+      "Retour chez son ex"
     ],
-    "category": "relations"
+    "theme": "ex"
   },
   {
-    "id": "imp_a_002_application_de_rencontre",
+    "id": "imp_a_002_crush",
+    "word": "Crush",
+    "hints": {
+      "hard": "J’occupe beaucoup de pensées.",
+      "medium": "Je peux ne rien savoir de mon rôle.",
+      "easy": "Un simple message peut devenir important."
+    },
+    "decoys": [
+      "Compliment ambigu",
+      "Flirt",
+      "Crush au travail"
+    ],
+    "theme": "attirance"
+  },
+  {
+    "id": "imp_a_003_match_tinder",
+    "word": "Match Tinder",
+    "hints": {
+      "hard": "Je commence par un écran.",
+      "medium": "Je peux disparaître sans explication.",
+      "easy": "Une photo a beaucoup de responsabilités."
+    },
+    "decoys": [
+      "Mot de passe partagé",
+      "Relation à distance",
+      "Ghosting"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_004_date_catastrophique",
+    "word": "Date catastrophique",
+    "hints": {
+      "hard": "Je deviens souvent une bonne anecdote.",
+      "medium": "Les silences y sont trop visibles.",
+      "easy": "On regarde parfois l’heure discrètement."
+    },
+    "decoys": [
+      "Ultimatum amoureux",
+      "Relation libre",
+      "Double date"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_005_premier_baiser",
+    "word": "Premier baiser",
+    "hints": {
+      "hard": "Je peux être très court.",
+      "medium": "Je reste longtemps dans la mémoire.",
+      "easy": "Le timing compte beaucoup."
+    },
+    "decoys": [
+      "Ghosting",
+      "Relation toxique",
+      "Match Tinder"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_006_sexto",
+    "word": "Sexto",
+    "hints": {
+      "hard": "Je me relit avant d’être envoyé.",
+      "medium": "Je demande de choisir les mots avec soin.",
+      "easy": "Une capture d’écran serait dangereuse."
+    },
+    "decoys": [
+      "Stalker son ex",
+      "Ex devenu ami",
+      "Souvenir d’ex"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_007_nude",
+    "word": "Nude",
+    "hints": {
+      "hard": "Je demande de la confiance.",
+      "medium": "Le cadrage est important.",
+      "easy": "Je ne devrait jamais être partagé sans accord."
+    },
+    "decoys": [
+      "Capture d’écran envoyée à la personne concernée",
+      "Double texto",
+      "Message à trois heures du matin"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_008_plan_cul",
+    "word": "Plan cul",
+    "hints": {
+      "hard": "Je nécessite de la clarté.",
+      "medium": "Les attentes doivent être dites.",
+      "easy": "Je ne suis pas forcément une relation."
+    },
+    "decoys": [
+      "Friendzone",
+      "Polyamour",
+      "Couple libre"
+    ],
+    "theme": "relations_libres"
+  },
+  {
+    "id": "imp_a_009_love_room",
+    "word": "Love room",
+    "hints": {
+      "hard": "Je suis une chambre très thématique.",
+      "medium": "J’assume beaucoup son ambiance.",
+      "easy": "Je ne suis pas choisie pour travailler."
+    },
+    "decoys": [
+      "Consentement",
+      "Playlist sensuelle",
+      "Strip-poker"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_010_strip_tease",
+    "word": "Strip-tease",
+    "hints": {
+      "hard": "Je demande du rythme.",
+      "medium": "Je peux être sexy ou très drôle.",
+      "easy": "Les vêtements diminuent progressivement."
+    },
+    "decoys": [
+      "Safe word",
+      "Lubrifiant",
+      "Nuit sans téléphone"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_011_ami_avec_benefices",
+    "word": "Ami avec bénéfices",
+    "hints": {
+      "hard": "Je mélange deux catégories.",
+      "medium": "Les règles sont importantes.",
+      "easy": "Les émotions peuvent compliquer le contrat."
+    },
+    "decoys": [
+      "Application de rencontre",
+      "Baiser volé",
+      "Anniversaire oublié"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_012_relation_secrete",
+    "word": "Relation secrète",
+    "hints": {
+      "hard": "Je demande de la discrétion.",
+      "medium": "Je crée beaucoup de messages prudents.",
+      "easy": "Les emplois du temps deviennent stratégiques."
+    },
+    "decoys": [
+      "Friendzone",
+      "Exclusivité",
+      "Polyamour"
+    ],
+    "theme": "relations_libres"
+  },
+  {
+    "id": "imp_a_013_baiser_vole",
+    "word": "Baiser volé",
+    "hints": {
+      "hard": "J’arrive vite.",
+      "medium": "Je peux lancer un très long débrief.",
+      "easy": "Le consentement reste essentiel."
+    },
+    "decoys": [
+      "Dispute de couple",
+      "Date catastrophique",
+      "Emménagement"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_014_nuit_blanche_a_deux",
+    "word": "Nuit blanche à deux",
+    "hints": {
+      "hard": "Je contiens peu de sommeil.",
+      "medium": "Le temps passe vite.",
+      "easy": "Le lendemain se voit souvent."
+    },
+    "decoys": [
+      "Notification compromettante",
+      "Club de strip-tease",
+      "Safe word"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_015_declaration",
+    "word": "Déclaration",
+    "hints": {
+      "hard": "Je demande du courage.",
+      "medium": "Je peux changer une relation.",
+      "easy": "Le silence juste après semble très long."
+    },
+    "decoys": [
+      "Double date",
+      "Match avec un ami",
+      "Premier baiser"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_016_flirt",
+    "word": "Flirt",
+    "hints": {
+      "hard": "Je joue avec les sous-entendus.",
+      "medium": "J’utilise beaucoup le regard.",
+      "easy": "Il peut être léger ou très clair."
+    },
+    "decoys": [
+      "Tension sexuelle",
+      "Jeu de séduction",
+      "Regard insistant"
+    ],
+    "theme": "attirance"
+  },
+  {
+    "id": "imp_a_017_jalousie_mal_cachee",
+    "word": "Jalousie mal cachée",
+    "hints": {
+      "hard": "Je prétends souvent que tout va bien.",
+      "medium": "Je regarde certains détails de trop près.",
+      "easy": "Je me remarque dans le ton."
+    },
+    "decoys": [
+      "Sortie sans partenaire",
+      "Localisation partagée",
+      "Collègue trop proche"
+    ],
+    "theme": "jalousie"
+  },
+  {
+    "id": "imp_a_018_message_envoye_trop_tard",
+    "word": "Message envoyé trop tard",
+    "hints": {
+      "hard": "Je pars souvent après minuit.",
+      "medium": "Je contiens parfois trop de sincérité.",
+      "easy": "Le réveil peut apporter des regrets."
+    },
+    "decoys": [
+      "Photo intime sauvegardée",
+      "Ghosting après intimité",
+      "Rupture par message"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_019_photo_compromettante",
+    "word": "Photo compromettante",
+    "hints": {
+      "hard": "Je deviens dangereuse dans une conversation de groupe.",
+      "medium": "Je rappelle une soirée précise.",
+      "easy": "Quelqu’un promet toujours de ne pas la montrer."
+    },
+    "decoys": [
+      "Secret de soirée",
+      "Mensonge sur son âge",
+      "Jeu à boire osé"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_020_retour_chez_son_ex",
+    "word": "Retour chez son ex",
+    "hints": {
+      "hard": "Je ressemble rarement à une décision purement logique.",
+      "medium": "Je réveille de vieux souvenirs.",
+      "easy": "Les amis ont souvent un avis."
+    },
+    "decoys": [
+      "Match avec l’ex d’un ami",
+      "Message vocal sexy",
+      "Comparaison avec l’ex"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_021_coup_de_foudre",
+    "word": "Coup de foudre",
+    "hints": {
+      "hard": "J’arrive sans prévenir.",
+      "medium": "J’ignore le calendrier.",
+      "easy": "Il peut changer une soirée."
+    },
+    "decoys": [
+      "Papillons dans le ventre",
+      "Crush au travail",
+      "Crush sur un collègue"
+    ],
+    "theme": "attirance"
+  },
+  {
+    "id": "imp_a_022_tenue_tres_sexy",
+    "word": "Tenue très sexy",
+    "hints": {
+      "hard": "J’attire les regards.",
+      "medium": "Je demande parfois de l’assurance.",
+      "easy": "Je peux devenir le sujet d’un compliment."
+    },
+    "decoys": [
+      "Ex croisé en soirée",
+      "Retour d’ex",
+      "Retour chez un ex"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_023_secret_de_couple",
+    "word": "Secret de couple",
+    "hints": {
+      "hard": "Je n’appartient qu’à deux personnes.",
+      "medium": "Je crée un langage privé.",
+      "easy": "Il peut être tendre ou gênant."
+    },
+    "decoys": [
+      "Présentation aux parents",
+      "Ami avec bénéfices",
+      "Relation pansement"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_024_fantasme",
+    "word": "Fantasme",
+    "hints": {
+      "hard": "J’existe d’abord dans l’imagination.",
+      "medium": "Je demande de la confiance pour être partagé.",
+      "easy": "Il ne devient jamais une obligation."
+    },
+    "decoys": [
+      "Baiser à trois",
+      "Tenue spéciale",
+      "Fantasme de célébrité"
+    ],
+    "theme": "fantasmes"
+  },
+  {
+    "id": "imp_a_025_date_improvise",
+    "word": "Date improvisé",
+    "hints": {
+      "hard": "Je demande peu de préparation.",
+      "medium": "Je peux devenir le meilleur souvenir.",
+      "easy": "Le hasard fait une partie du travail."
+    },
+    "decoys": [
+      "Demande en mariage",
+      "Emménagement",
+      "Double date"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_026_premier_rendez_vous",
+    "word": "Premier rendez-vous",
+    "hints": {
+      "hard": "Je mélange préparation et nervosité.",
+      "medium": "On vérifie souvent son téléphone avant mon début.",
+      "easy": "Je peux lancer une histoire ou devenir une anecdote."
+    },
+    "decoys": [
+      "Message après le rendez-vous",
+      "Baiser de fin",
+      "Blind date"
+    ],
+    "theme": "rendez_vous"
+  },
+  {
+    "id": "imp_a_027_rendez_vous_arrange",
+    "word": "Rendez-vous arrangé",
+    "hints": {
+      "hard": "Deux personnes m’organisent sans se connaître vraiment.",
+      "medium": "Des amis jouent parfois les entremetteurs.",
+      "easy": "La surprise fait partie du programme."
+    },
+    "decoys": [
+      "Date secret",
+      "Baiser de fin",
+      "Premier rendez-vous"
+    ],
+    "theme": "rendez_vous"
+  },
+  {
+    "id": "imp_a_028_speed_dating",
+    "word": "Speed dating",
+    "hints": {
+      "hard": "J’enchaîne plusieurs rencontres très courtes.",
+      "medium": "Une cloche peut marquer les changements.",
+      "easy": "Quelques minutes servent à décider si l’on veut se revoir."
+    },
+    "decoys": [
+      "Demande en mariage",
+      "Match avec un ami",
+      "Compte commun"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_029_relation_a_distance",
+    "word": "Relation à distance",
+    "hints": {
+      "hard": "Je demande beaucoup de messages et d’organisation.",
+      "medium": "Les retrouvailles ont une importance particulière.",
+      "easy": "Des kilomètres séparent les partenaires."
+    },
+    "decoys": [
+      "Voyage en amoureux",
+      "Grosse dispute",
+      "Relation libre"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_030_relation_libre",
+    "word": "Relation libre",
+    "hints": {
+      "hard": "Je repose sur des accords précis.",
+      "medium": "L’exclusivité n’y fonctionne pas de façon classique.",
+      "easy": "Communication et consentement sont indispensables."
+    },
+    "decoys": [
+      "Grosse dispute",
+      "Baiser volé",
+      "Compte commun"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_031_couple_secret",
+    "word": "Couple secret",
+    "hints": {
+      "hard": "J’existe sans être officiellement montré.",
+      "medium": "Les messages doivent parfois rester discrets.",
+      "easy": "Les proches ne connaissent pas forcément la relation."
+    },
+    "decoys": [
+      "Présentation aux parents",
+      "Match avec un ami",
+      "Amour de vacances"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_032_rupture_par_message",
+    "word": "Rupture par message",
+    "hints": {
+      "hard": "J’évite une conversation en face à face.",
+      "medium": "Quelques lignes peuvent mettre fin à des mois.",
+      "easy": "Je suis rarement considérée comme très élégante."
+    },
+    "decoys": [
+      "Nude",
+      "Message épinglé",
+      "Conversation archivée"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_033_ghosting",
+    "word": "Ghosting",
+    "hints": {
+      "hard": "Je transforme soudainement une conversation en silence.",
+      "medium": "Aucune explication claire ne m’accompagne.",
+      "easy": "Les messages restent sans réponse."
+    },
+    "decoys": [
+      "Match Tinder",
+      "Breadcrumbing",
+      "Anniversaire de couple"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_034_breadcrumbing",
+    "word": "Breadcrumbing",
+    "hints": {
+      "hard": "Je donne juste assez d’attention pour maintenir l’espoir.",
+      "medium": "J’alterne signes d’intérêt et disparition.",
+      "easy": "Je ne conduit presque jamais à un vrai engagement."
+    },
+    "decoys": [
+      "Match avec un ami",
+      "Premier baiser",
+      "Grosse dispute"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_035_friendzone",
+    "word": "Friendzone",
+    "hints": {
+      "hard": "Une personne espère plus que l’autre.",
+      "medium": "L’amitié devient parfois inconfortable.",
+      "easy": "Je suis souvent annoncée par une phrase sur le fait d’être formidable mais pas de cette façon."
+    },
+    "decoys": [
+      "Relation sans étiquette",
+      "Polyamour",
+      "Coup d’un soir"
+    ],
+    "theme": "relations_libres"
+  },
+  {
+    "id": "imp_a_036_reconciliation",
+    "word": "Réconciliation",
+    "hints": {
+      "hard": "Je viens après une dispute ou une séparation.",
+      "medium": "Des excuses et des changements peuvent me permettre.",
+      "easy": "Je remet deux personnes du même côté."
+    },
+    "decoys": [
+      "Application de rencontre",
+      "Présentation aux parents",
+      "Amour de vacances"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_037_demande_en_mariage",
+    "word": "Demande en mariage",
+    "hints": {
+      "hard": "Je contient une grande question.",
+      "medium": "Une bague m’accompagne souvent sans être obligatoire.",
+      "easy": "Une réponse change officiellement un projet de vie."
+    },
+    "decoys": [
+      "Relation toxique",
+      "Ultimatum amoureux",
+      "Relation pansement"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_038_anniversaire_de_couple",
+    "word": "Anniversaire de couple",
+    "hints": {
+      "hard": "Je marque une date importante à deux.",
+      "medium": "Un dîner ou un cadeau peut me célébrer.",
+      "easy": "Oublier mon jour crée parfois une crise."
+    },
+    "decoys": [
+      "Date catastrophique",
+      "Speed dating",
+      "Relation saine"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_039_ex_qui_revient",
+    "word": "Ex qui revient",
+    "hints": {
+      "hard": "J’appartiens au passé mais réapparaît dans les messages.",
+      "medium": "J’affirme souvent avoir changé.",
+      "easy": "Ma présence teste les limites actuelles."
+    },
+    "decoys": [
+      "Message de l’ex",
+      "Stalker son ex",
+      "Ex toxique"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_040_crush_au_travail",
+    "word": "Crush au travail",
+    "hints": {
+      "hard": "Je rends les pauses et réunions plus intéressantes.",
+      "medium": "La discrétion devient importante.",
+      "easy": "Vie professionnelle et attirance se mélangent."
+    },
+    "decoys": [
+      "Crush sur un collègue",
+      "Jeu de séduction",
+      "Alchimie"
+    ],
+    "theme": "attirance"
+  },
+  {
+    "id": "imp_a_041_crush_sur_un_ami",
+    "word": "Crush sur un ami",
+    "hints": {
+      "hard": "Je complique une relation déjà proche.",
+      "medium": "Avouer mes sentiments peut tout changer.",
+      "easy": "Le groupe remarque parfois avant les personnes concernées."
+    },
+    "decoys": [
+      "Crush au travail",
+      "Jeu de séduction",
+      "Flirt"
+    ],
+    "theme": "attirance"
+  },
+  {
+    "id": "imp_a_042_amour_de_vacances",
+    "word": "Amour de vacances",
+    "hints": {
+      "hard": "Je nais loin du quotidien.",
+      "medium": "Une date de retour plane au-dessus de moi.",
+      "easy": "Je peux durer une semaine ou traverser les années."
+    },
+    "decoys": [
+      "Râteau",
+      "Date improvisé",
+      "Présentation aux parents"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_043_relation_pansement",
+    "word": "Relation pansement",
+    "hints": {
+      "hard": "Je commence peu après une rupture.",
+      "medium": "Une personne précédente reste encore très présente émotionnellement.",
+      "easy": "J’aide parfois à oublier sans vraiment guérir."
+    },
+    "decoys": [
+      "Réconciliation",
+      "Baiser volé",
+      "Déclaration"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_044_jalousie_retroactive",
+    "word": "Jalousie rétroactive",
+    "hints": {
+      "hard": "Je concerne des histoires terminées avant la relation actuelle.",
+      "medium": "Des ex deviennent importants sans être présents.",
+      "easy": "Je transforme le passé du partenaire en source d’angoisse."
+    },
+    "decoys": [
+      "Jalousie mal cachée",
+      "Danse très rapprochée",
+      "Téléphone retourné"
+    ],
+    "theme": "jalousie"
+  },
+  {
+    "id": "imp_a_045_relation_toxique",
+    "word": "Relation toxique",
+    "hints": {
+      "hard": "J’alterne souvent intensité et souffrance.",
+      "medium": "Contrôle, peur ou humiliation peuvent m’accompagner.",
+      "easy": "Partir de moi peut demander de l’aide."
+    },
+    "decoys": [
+      "Mot de passe partagé",
+      "Speed dating",
+      "Déclaration"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_046_relation_saine",
+    "word": "Relation saine",
+    "hints": {
+      "hard": "Je laisse de la place à chacun.",
+      "medium": "Respect, confiance et communication me structurent.",
+      "easy": "Les désaccords ne menacent pas la sécurité de l’autre."
+    },
+    "decoys": [
+      "Clé de chez l’autre",
+      "Réconciliation",
+      "Double date"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_047_rateau",
+    "word": "Râteau",
+    "hints": {
+      "hard": "J’arrive après une tentative de séduction.",
+      "medium": "Une réponse négative me définit.",
+      "easy": "L’ego met parfois un moment à se relever."
+    },
+    "decoys": [
+      "Voyage en amoureux",
+      "Speed dating",
+      "Double date"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_048_match_avec_un_ami",
+    "word": "Match avec un ami",
+    "hints": {
+      "hard": "Une application révèle une attirance mutuelle inattendue.",
+      "medium": "Vous vous connaissiez déjà avant le swipe.",
+      "easy": "La conversation change soudainement de ton."
+    },
+    "decoys": [
+      "Demande en mariage",
+      "Speed dating",
+      "Râteau"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_049_double_date",
+    "word": "Double date",
+    "hints": {
+      "hard": "Deux duos se retrouvent en même temps.",
+      "medium": "Une mauvaise alchimie peut contaminer toute la table.",
+      "easy": "Quatre personnes partagent la pression du rendez-vous."
+    },
+    "decoys": [
+      "Relation à distance",
+      "Compromis",
+      "Match Tinder"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_050_presentation_aux_parents",
+    "word": "Présentation aux parents",
+    "hints": {
+      "hard": "J’officialise souvent un degré de sérieux.",
+      "medium": "Une tenue et des sujets de conversation sont choisis avec soin.",
+      "easy": "Le repas peut ressembler à un entretien."
+    },
+    "decoys": [
+      "Breadcrumbing",
+      "Projet de vie",
+      "Relation à distance"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_051_dispute_de_couple",
+    "word": "Dispute de couple",
+    "hints": {
+      "hard": "Je commence parfois pour un détail et convoque tout le passé.",
+      "medium": "Le ton compte autant que le sujet.",
+      "easy": "Je peux finir par des excuses, du silence ou une décision."
+    },
+    "decoys": [
+      "Premier baiser",
+      "Ami avec bénéfices",
+      "Grosse dispute"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_052_compte_commun",
+    "word": "Compte commun",
+    "hints": {
+      "hard": "Je mélange une partie de deux finances.",
+      "medium": "Confiance et règles claires sont indispensables.",
+      "easy": "Dépenses partagées et projets à deux m’alimentent."
+    },
+    "decoys": [
+      "Mot de passe partagé",
+      "Râteau",
+      "Dispute de couple"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_053_cle_de_chez_lautre",
+    "word": "Clé de chez l’autre",
+    "hints": {
+      "hard": "Je tiens dans une poche mais symbolise beaucoup.",
+      "medium": "Elle facilite les visites sans sonner.",
+      "easy": "La donner marque souvent une nouvelle étape."
+    },
+    "decoys": [
+      "Couple secret",
+      "Relation toxique",
+      "Projet de vie"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_054_demenagement_en_couple",
+    "word": "Déménagement en couple",
+    "hints": {
+      "hard": "Je mélange cartons et grandes décisions.",
+      "medium": "Habitudes privées deviennent visibles.",
+      "easy": "Choisir les meubles teste parfois la relation."
+    },
+    "decoys": [
+      "Compte commun",
+      "Ghosting",
+      "Grosse dispute"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_055_voyage_en_amoureux",
+    "word": "Voyage en amoureux",
+    "hints": {
+      "hard": "Je retire les routines habituelles.",
+      "medium": "Organisation, budget et fatigue révèlent beaucoup.",
+      "easy": "Des photos heureuses ne racontent pas toujours les disputes logistiques."
+    },
+    "decoys": [
+      "Date catastrophique",
+      "Projet de vie",
+      "Anniversaire de couple"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_056_pause_dans_le_couple",
+    "word": "Pause dans le couple",
+    "hints": {
+      "hard": "Je suspend sans toujours terminer.",
+      "medium": "Mes règles doivent être définies pour éviter le chaos.",
+      "easy": "Je peux rapprocher, éloigner ou simplement retarder une rupture."
+    },
+    "decoys": [
+      "Relation pansement",
+      "Breadcrumbing",
+      "Clé de chez l’autre"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_057_ultimatum_amoureux",
+    "word": "Ultimatum amoureux",
+    "hints": {
+      "hard": "J’impose un choix et une limite de temps.",
+      "medium": "J’apparais lorsque la patience est presque épuisée.",
+      "easy": "Une décision importante doit me suivre."
+    },
+    "decoys": [
+      "Relation libre",
+      "Déménagement en couple",
+      "Application de rencontre"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_058_sex_toy",
+    "word": "Sex-toy",
+    "hints": {
+      "hard": "Je suis conçu pour le plaisir.",
+      "medium": "Je peux être utilisé seul ou à plusieurs adultes consentants.",
+      "easy": "Hygiène, communication et choix personnel m’accompagnent."
+    },
+    "decoys": [
+      "Amitié avec son ex",
+      "Retour d’ex",
+      "Ex toxique"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_059_preservatif",
+    "word": "Préservatif",
+    "hints": {
+      "hard": "Je forme une barrière.",
+      "medium": "Je réduit les risques de grossesse et de nombreuses infections.",
+      "easy": "Je dois être utilisé correctement et une seule fois."
+    },
+    "decoys": [
+      "Matin câlin",
+      "Jeu de cartes coquin",
+      "Petit-déjeuner après un date"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_060_lubrifiant",
+    "word": "Lubrifiant",
+    "hints": {
+      "hard": "Je réduit les frottements.",
+      "medium": "J’existe à base d’eau, de silicone ou d’autres formulations.",
+      "easy": "Sa compatibilité avec le reste du matériel compte."
+    },
+    "decoys": [
+      "Safeword",
+      "Massage sensuel",
+      "Lumière allumée"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_061_depistage",
+    "word": "Dépistage",
+    "hints": {
+      "hard": "Je concerne la santé sexuelle.",
+      "medium": "Je peux se faire même sans symptôme.",
+      "easy": "J’aide à protéger soi-même et ses partenaires."
+    },
+    "decoys": [
+      "Préservatif",
+      "Lumière allumée",
+      "Douche à deux"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_062_consentement",
+    "word": "Consentement",
+    "hints": {
+      "hard": "Je dois être libre, clair et réversible.",
+      "medium": "Le silence ne me remplace pas.",
+      "easy": "Je suis nécessaire à chaque étape d’une interaction intime."
+    },
+    "decoys": [
+      "Trace de maquillage sur un vêtement",
+      "Lumière allumée",
+      "Playlist sensuelle"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_063_safeword",
+    "word": "Safeword",
+    "hints": {
+      "hard": "Je suis choisi avant certaines pratiques.",
+      "medium": "Je permets d’arrêter immédiatement sans ambiguïté.",
+      "easy": "Un mot simple et inattendu me rend efficace."
+    },
+    "decoys": [
+      "Massage sensuel",
+      "Club de strip-tease",
+      "Prendre l’initiative"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_064_strip_poker",
+    "word": "Strip-poker",
+    "hints": {
+      "hard": "Je mélange cartes et vêtements.",
+      "medium": "Une perte peut enlever une couche.",
+      "easy": "Mes règles doivent être acceptées avant de commencer."
+    },
+    "decoys": [
+      "Parfum sur l’oreiller",
+      "Nuit sans téléphone",
+      "Trace de maquillage sur un vêtement"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_065_douche_a_deux",
+    "word": "Douche à deux",
+    "hints": {
+      "hard": "Je parsage un espace assez petit.",
+      "medium": "L’eau chaude peut ne pas suffire pour tout le monde.",
+      "easy": "Je peux être intime ou simplement peu pratique."
+    },
+    "decoys": [
+      "Nuit blanche à deux",
+      "Massage sensuel",
+      "Petit-déjeuner après un date"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_066_massage_sensuel",
+    "word": "Massage sensuel",
+    "hints": {
+      "hard": "J’utilise les mains et une ambiance calme.",
+      "medium": "Le rythme est plus important que la force.",
+      "easy": "Les limites doivent être discutées."
+    },
+    "decoys": [
+      "Réveil après une nuit imprévue",
+      "Colis discret",
+      "Consentement enthousiaste"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_067_baiser_dans_le_cou",
+    "word": "Baiser dans le cou",
+    "hints": {
+      "hard": "Je ne vise pas les lèvres.",
+      "medium": "Je peux provoquer des frissons.",
+      "easy": "Je me situe près d’une zone très sensible."
+    },
+    "decoys": [
+      "Colis discret",
+      "Tiroir chez l’autre",
+      "Playlist sensuelle"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_068_marque_de_succion",
+    "word": "Marque de succion",
+    "hints": {
+      "hard": "Je peux apparaître après un moment intime.",
+      "medium": "Je reste visible plusieurs jours.",
+      "easy": "Un col haut tente parfois de me cacher."
+    },
+    "decoys": [
+      "Chambre d’hôtel",
+      "Après-câlin",
+      "Matin câlin"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_069_jeu_de_role_intime",
+    "word": "Jeu de rôle intime",
+    "hints": {
+      "hard": "Je fais incarner une situation ou un personnage.",
+      "medium": "L’imagination compte autant que les accessoires.",
+      "easy": "Les règles et limites se discutent à l’avance."
+    },
+    "decoys": [
+      "Baiser à trois",
+      "Lieu insolite",
+      "Inconnu séduisant"
+    ],
+    "theme": "fantasmes"
+  },
+  {
+    "id": "imp_a_070_tenue_sexy",
+    "word": "Tenue sexy",
+    "hints": {
+      "hard": "Je suis choisie pour séduire ou se sentir désirable.",
+      "medium": "Confiance et confort restent plus importants que le regard extérieur.",
+      "easy": "Elle peut être montrée ou gardée pour soi."
+    },
+    "decoys": [
+      "Date avec l’ex d’un ami",
+      "Relation exclusive",
+      "Sexto"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_071_playlist_sensuelle",
+    "word": "Playlist sensuelle",
+    "hints": {
+      "hard": "J’accompagne une ambiance intime.",
+      "medium": "Un mauvais morceau peut casser le moment.",
+      "easy": "Rythme et paroles sont sélectionnés avec attention."
+    },
+    "decoys": [
+      "Jeu de cartes coquin",
+      "Baiser dans le cou",
+      "Colis discret"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_072_chambre_dhotel",
+    "word": "Chambre d’hôtel",
+    "hints": {
+      "hard": "J’offre un décor temporaire loin du quotidien.",
+      "medium": "Personne n’y range vraiment ses affaires.",
+      "easy": "Elle accueille parfois des moments plus intimes que touristiques."
+    },
+    "decoys": [
+      "Préservatif",
+      "Strip-poker",
+      "Jacuzzi privé"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_073_jacuzzi_prive",
+    "word": "Jacuzzi privé",
+    "hints": {
+      "hard": "Je mélange eau chaude et bulles.",
+      "medium": "Je suis souvent vendu comme romantique.",
+      "easy": "Il ne remplace pas une vraie conversation sur l’hygiène et les limites."
+    },
+    "decoys": [
+      "Préliminaires",
+      "Lumière allumée",
+      "Baiser dans le cou"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_074_fantasme_partage",
+    "word": "Fantasme partagé",
+    "hints": {
+      "hard": "Je quitte l’imagination pour entrer dans une conversation.",
+      "medium": "Parler de moi ne crée jamais une obligation.",
+      "easy": "Confiance et absence de jugement me rendent plus facile."
+    },
+    "decoys": [
+      "Lieu insolite",
+      "Jeu de rôle intime",
+      "Liste de fantasmes"
+    ],
+    "theme": "fantasmes"
+  },
+  {
+    "id": "imp_a_075_photo_suggestive",
+    "word": "Photo suggestive",
+    "hints": {
+      "hard": "Je montre sans tout montrer.",
+      "medium": "Le cadrage et la lumière comptent beaucoup.",
+      "easy": "Elle ne doit être envoyée qu’à une personne de confiance et consentante."
+    },
+    "decoys": [
+      "Lumière allumée",
+      "Marque de succion",
+      "Playlist sensuelle"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_076_message_vocal_sexy",
+    "word": "Message vocal sexy",
+    "hints": {
+      "hard": "J’utilise la voix plutôt qu’une image.",
+      "medium": "Le réécouter peut être très gênant au mauvais endroit.",
+      "easy": "Des écouteurs sont fortement recommandés."
+    },
+    "decoys": [
+      "Sex-toy",
+      "Message de l’ex",
+      "Ex qui revient"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_077_camera_allumee_au_mauvais_moment",
+    "word": "Caméra allumée au mauvais moment",
+    "hints": {
+      "hard": "Je transforme un oubli en panique.",
+      "medium": "Un appel vidéo me rend possible.",
+      "easy": "Le bouton couper l’image devient soudain vital."
+    },
+    "decoys": [
+      "Baiser dans le cou",
+      "Safeword",
+      "Notification compromettante"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_078_notification_compromettante",
+    "word": "Notification compromettante",
+    "hints": {
+      "hard": "J’apparais sur un écran visible.",
+      "medium": "Quelques mots suffisent à créer un silence.",
+      "easy": "Le mode aperçu des messages me donne du pouvoir."
+    },
+    "decoys": [
+      "Dépistage",
+      "Préliminaires",
+      "Photo suggestive"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_079_colis_discret",
+    "word": "Colis discret",
+    "hints": {
+      "hard": "Je ne révèle pas clairement son contenu.",
+      "medium": "Il protège la vie privée lors d’un achat intime.",
+      "easy": "Le livreur ne sait pas nécessairement ce qu’il transporte."
+    },
+    "decoys": [
+      "Strip-poker",
+      "Matin câlin",
+      "Love box"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_080_soiree_libertine",
+    "word": "Soirée libertine",
+    "hints": {
+      "hard": "Je me déroule dans un lieu réservé aux adultes.",
+      "medium": "Codes, consentement et respect y sont centraux.",
+      "easy": "Observer ou participer doit toujours rester un choix."
+    },
+    "decoys": [
+      "Like accidentel sur une vieille photo",
+      "Lendemain flou",
+      "Mensonge sur son âge"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_081_club_de_strip_tease",
+    "word": "Club de strip-tease",
+    "hints": {
+      "hard": "Je propose des performances érotiques.",
+      "medium": "Des règles encadrent le contact et les photos.",
+      "easy": "Je suis un lieu pour adultes."
+    },
+    "decoys": [
+      "Baiser dans le cou",
+      "Nuit blanche à deux",
+      "Petit-déjeuner après un date"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_082_love_box",
+    "word": "Love box",
+    "hints": {
+      "hard": "Je rassemble plusieurs objets ou idées pour un moment à deux.",
+      "medium": "Elle peut être achetée ou composée soi-même.",
+      "easy": "Le contenu reste une invitation, jamais une obligation."
+    },
+    "decoys": [
+      "Douche à deux",
+      "Baiser dans le cou",
+      "Safeword"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_083_jeu_de_cartes_coquin",
+    "word": "Jeu de cartes coquin",
+    "hints": {
+      "hard": "Je pose des questions ou propose des défis intimes.",
+      "medium": "Chaque carte doit pouvoir être refusée.",
+      "easy": "Je sert surtout à lancer une conversation ou une ambiance."
+    },
+    "decoys": [
+      "Photo suggestive",
+      "Musique au lit",
+      "Lingerie"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_084_nuit_sans_telephone",
+    "word": "Nuit sans téléphone",
+    "hints": {
+      "hard": "Je mets les écrans de côté.",
+      "medium": "Je demande de supporter le silence ou de créer de vraies activités.",
+      "easy": "Elle peut rendre un moment plus présent et plus intime."
+    },
+    "decoys": [
+      "Massage sensuel",
+      "Love box",
+      "Douche à deux"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_085_reveil_apres_une_nuit_imprevue",
+    "word": "Réveil après une nuit imprévue",
+    "hints": {
+      "hard": "Je mélange souvenirs, fatigue et recherche de vêtements.",
+      "medium": "La lumière du matin change l’ambiance.",
+      "easy": "Une conversation sur la suite devient souvent nécessaire."
+    },
+    "decoys": [
+      "Marque de succion",
+      "Consentement",
+      "Limite négociée"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_086_petit_dejeuner_apres_un_date",
+    "word": "Petit-déjeuner après un date",
+    "hints": {
+      "hard": "Je me déroule le lendemain plutôt que le soir.",
+      "medium": "Il peut confirmer une connexion ou révéler un malaise.",
+      "easy": "Café et croissants doivent parfois sauver la discussion."
+    },
+    "decoys": [
+      "Limite négociée",
+      "Strip-tease",
+      "Préservatif"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_087_trace_de_maquillage_sur_un_vetement",
+    "word": "Trace de maquillage sur un vêtement",
+    "hints": {
+      "hard": "Je peux trahir un rapprochement.",
+      "medium": "J’apparais sur un col, une manche ou une joue.",
+      "easy": "Une machine à laver devient complice."
+    },
+    "decoys": [
+      "Préliminaires",
+      "Colis discret",
+      "Baiser dans le cou"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_088_parfum_sur_loreiller",
+    "word": "Parfum sur l’oreiller",
+    "hints": {
+      "hard": "Je reste après le départ de quelqu’un.",
+      "medium": "Je peux réveiller un souvenir très précis.",
+      "easy": "Il disparaît plus lentement que la personne."
+    },
+    "decoys": [
+      "Désir interdit",
+      "Musique au lit",
+      "Trace de maquillage sur un vêtement"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_089_tiroir_chez_lautre",
+    "word": "Tiroir chez l’autre",
+    "hints": {
+      "hard": "Je réserve une petite place permanente.",
+      "medium": "Quelques vêtements ou produits y restent.",
+      "easy": "Je symbolise une présence régulière."
+    },
+    "decoys": [
+      "Love box",
+      "Parfum sur l’oreiller",
+      "Lingerie"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_090_like_accidentel_sur_une_vieille_photo",
+    "word": "Like accidentel sur une vieille photo",
+    "hints": {
+      "hard": "J’arrive pendant une exploration trop profonde d’un profil.",
+      "medium": "Une notification peut me dénoncer immédiatement.",
+      "easy": "Retirer le cœur ne garantit pas l’oubli."
+    },
+    "decoys": [
+      "Vérité osée",
+      "Jeu à boire osé",
+      "Boîte de nuit"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_091_message_envoye_au_mauvais_contact",
+    "word": "Message envoyé au mauvais contact",
+    "hints": {
+      "hard": "Je transforme une conversation privée en catastrophe.",
+      "medium": "Le prénom affiché n’était pas le bon.",
+      "easy": "Le bouton supprimer pour tout le monde devient une course."
+    },
+    "decoys": [
+      "Message envoyé trop tard",
+      "Message à 2 h du matin",
+      "Message supprimé avant lecture"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_092_capture_decran_envoyee_a_la_personne_concernee",
+    "word": "Capture d’écran envoyée à la personne concernée",
+    "hints": {
+      "hard": "Je devais commenter un message avec quelqu’un d’autre.",
+      "medium": "Je contient souvent le nom exact de mon destinataire involontaire.",
+      "easy": "Aucune excuse ne semble assez rapide."
+    },
+    "decoys": [
+      "Message supprimé avant lecture",
+      "Sexting",
+      "Emoji ambigu"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_093_mensonge_sur_son_age",
+    "word": "Mensonge sur son âge",
+    "hints": {
+      "hard": "Je modifie quelques années pour séduire ou rassurer.",
+      "medium": "Une date de naissance finit souvent par me contredire.",
+      "easy": "J’abîme la confiance plus que le chiffre lui-même."
+    },
+    "decoys": [
+      "Lendemain flou",
+      "Jeu à boire osé",
+      "Secret de soirée"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_094_faux_profil_de_rencontre",
+    "word": "Faux profil de rencontre",
+    "hints": {
+      "hard": "J’utilise une identité ou des photos trompeuses.",
+      "medium": "La personne réelle ne correspond pas à la promesse.",
+      "easy": "Une rencontre en lieu public et des vérifications réduisent mes risques."
+    },
+    "decoys": [
+      "Photo compromettante",
+      "Lendemain flou",
+      "Soirée libertine"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_095_historique_de_recherche_genant",
+    "word": "Historique de recherche gênant",
+    "hints": {
+      "hard": "Je conserve des questions très personnelles ou absurdes.",
+      "medium": "Un partage d’écran peut me révéler.",
+      "easy": "Le mode navigation privée arrive parfois trop tard."
+    },
+    "decoys": [
+      "Baiser en soirée",
+      "Danse sensuelle",
+      "Soirée libertine"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_096_playlist_dex",
+    "word": "Playlist d’ex",
+    "hints": {
+      "hard": "Je contient des chansons associées à une ancienne histoire.",
+      "medium": "Elle peut être cachée sans être supprimée.",
+      "easy": "Un morceau suffit à ramener plusieurs souvenirs."
+    },
+    "decoys": [
+      "Comparaison avec l’ex",
+      "Retour chez un ex",
+      "Relation exclusive"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_097_prenom_tatoue",
+    "word": "Prénom tatoué",
+    "hints": {
+      "hard": "Je transforme une relation en inscription durable.",
+      "medium": "Une rupture ne m’efface pas.",
+      "easy": "Un recouvrement créatif peut devenir nécessaire."
+    },
+    "decoys": [
+      "Vérité osée",
+      "Historique de recherche gênant",
+      "Crush de soirée"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_098_rencontre_avec_deux_ex_a_la_meme_soiree",
+    "word": "Rencontre avec deux ex à la même soirée",
+    "hints": {
+      "hard": "Je réunit plusieurs chapitres qu’on aurait préféré séparer.",
+      "medium": "Les présentations deviennent étrangement polies.",
+      "easy": "La stratégie de placement dans la pièce prend une importance capitale."
+    },
+    "decoys": [
+      "Match avec l’ex d’un ami",
+      "Tenue sexy",
+      "Photo d’ex conservée"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_099_relation_exclusive",
+    "word": "Relation exclusive",
+    "hints": {
+      "hard": "Je demande que les partenaires ne construisent pas d’autres relations amoureuses ou sexuelles selon leurs accords.",
+      "medium": "Mes limites doivent être dites plutôt que supposées.",
+      "easy": "La fidélité me définit différemment pour chaque couple."
+    },
+    "decoys": [
+      "Comparaison avec l’ex",
+      "Amitié avec son ex",
+      "Ex croisé en soirée"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_100_date_avec_lex_dun_ami",
+    "word": "Date avec l’ex d’un ami",
+    "hints": {
+      "hard": "Je mélange attirance et loyauté.",
+      "medium": "Une conversation avec l’ami concerné peut éviter une explosion.",
+      "easy": "Le passé de deux personnes se retrouve à la même table."
+    },
+    "decoys": [
+      "Ex",
+      "Ex toxique",
+      "Playlist d’ex"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_101_application_de_rencontre",
     "word": "Application de rencontre",
-    "hint": "On y glisse plus vite qu’on ne se présente",
+    "hints": {
+      "hard": "Je reste volontairement vague : on y glisse plus vite qu’on ne se présente",
+      "medium": "Je appartiens au thème « Couple ».",
+      "easy": "Mon nom commence par « A » et je peux être confondu avec Réseau social."
+    },
     "decoys": [
       "Réseau social",
       "Messagerie",
       "Album photo"
     ],
-    "category": "relations"
+    "theme": "couple"
   },
   {
-    "id": "imp_a_003_crush",
-    "word": "Crush",
-    "hint": "Je peux occuper beaucoup de pensées sans payer de loyer",
-    "decoys": [
-      "Ex",
-      "Ami proche",
-      "Collègue"
-    ],
-    "category": "relations"
-  },
-  {
-    "id": "imp_a_004_date_catastrophique",
-    "word": "Date catastrophique",
-    "hint": "On en rit souvent davantage après qu’au moment même",
-    "decoys": [
-      "Rupture",
-      "Soirée ratée",
-      "Entretien"
-    ],
-    "category": "relations"
-  },
-  {
-    "id": "imp_a_005_message_2_h_du_matin",
+    "id": "imp_a_102_message_a_2_h_du_matin",
     "word": "Message à 2 h du matin",
-    "hint": "Je peux être courageux, gênant ou les deux",
+    "hints": {
+      "hard": "Je reste volontairement vague : je peux être courageux, gênant ou les deux",
+      "medium": "Je appartiens au thème « Messages compromettants ».",
+      "easy": "Mon nom commence par « M » et je peux être confondu avec Appel manqué."
+    },
     "decoys": [
       "Appel manqué",
       "Note vocale",
       "Invitation"
     ],
-    "category": "relations"
+    "theme": "messages"
   },
   {
-    "id": "imp_a_006_ex",
-    "word": "Ex",
-    "hint": "Je fais partie du passé mais parfois des conversations présentes",
-    "decoys": [
-      "Crush",
-      "Meilleur ami",
-      "Voisin"
-    ],
-    "category": "relations"
-  },
-  {
-    "id": "imp_a_007_flirt",
-    "word": "Flirt",
-    "hint": "Je ressemble à une conversation qui joue avec le feu",
-    "decoys": [
-      "Débat",
-      "Compliment",
-      "Dispute"
-    ],
-    "category": "relations"
-  },
-  {
-    "id": "imp_a_008_rencard_surprise",
+    "id": "imp_a_103_rencard_surprise",
     "word": "Rencard surprise",
-    "hint": "Je mélange attente, tenue choisie et inconnue",
+    "hints": {
+      "hard": "Je reste volontairement vague : je mélange attente, tenue choisie et inconnue",
+      "medium": "Je appartiens au thème « Couple ».",
+      "easy": "Mon nom commence par « R » et je peux être confondu avec Anniversaire."
+    },
     "decoys": [
       "Anniversaire",
       "Entretien",
       "Voyage"
     ],
-    "category": "relations"
+    "theme": "couple"
   },
   {
-    "id": "imp_a_009_photo_compromettante",
-    "word": "Photo compromettante",
-    "hint": "Je devient plus dangereuse quand quelqu’un dit “je la garde”",
-    "decoys": [
-      "Capture d’écran",
-      "Selfie",
-      "Photo de groupe"
-    ],
-    "category": "dossiers"
-  },
-  {
-    "id": "imp_a_010_secret_de_soire",
+    "id": "imp_a_104_secret_de_soiree",
     "word": "Secret de soirée",
-    "hint": "Je circule souvent plus vite que prévu",
+    "hints": {
+      "hard": "Je reste volontairement vague : je circule souvent plus vite que prévu",
+      "medium": "Je appartiens au thème « Soirées ».",
+      "easy": "Mon nom commence par « S » et je peux être confondu avec Rumeur."
+    },
     "decoys": [
       "Rumeur",
       "Blague",
       "Invitation"
     ],
-    "category": "dossiers"
+    "theme": "soirees"
   },
   {
-    "id": "imp_a_011_jalousie",
+    "id": "imp_a_105_jalousie",
     "word": "Jalousie",
-    "hint": "Je peux apparaître avant même qu’il se passe quelque chose",
+    "hints": {
+      "hard": "Je reste volontairement vague : je peux apparaître avant même qu’il se passe quelque chose",
+      "medium": "Je appartiens au thème des émotions et des relations.",
+      "easy": "Mon nom commence par « J » et je peux être confondu avec Colère."
+    },
     "decoys": [
       "Colère",
       "Admiration",
       "Timidité"
     ],
-    "category": "relations"
+    "theme": "jalousie"
   },
   {
-    "id": "imp_a_012_plan_cul",
-    "word": "Plan cul",
-    "hint": "Je demande souvent moins de promesses et plus de clarté",
-    "decoys": [
-      "Relation sérieuse",
-      "Amitié",
-      "Date"
-    ],
-    "category": "relations"
-  },
-  {
-    "id": "imp_a_013_dclaration",
-    "word": "Déclaration",
-    "hint": "Je peux changer une amitié en silence gênant ou en histoire",
-    "decoys": [
-      "Compliment",
-      "Excuse",
-      "Toast"
-    ],
-    "category": "relations"
-  },
-  {
-    "id": "imp_a_014_love_room",
-    "word": "Love room",
-    "hint": "Je transforme une chambre en scénario beaucoup trop assumé",
-    "decoys": [
-      "Hôtel",
-      "Spa",
-      "Suite"
-    ],
-    "category": "adulte"
-  },
-  {
-    "id": "imp_a_015_strip_tease",
-    "word": "Strip-tease",
-    "hint": "Je demande du rythme, de l’assurance et parfois beaucoup d’humour",
-    "decoys": [
-      "Karaoké",
-      "Danse lente",
-      "Défilé"
-    ],
-    "category": "adulte"
-  },
-  {
-    "id": "imp_a_016_sexto",
-    "word": "Sexto",
-    "hint": "Je me relit souvent avec plus de stress qu’un devoir",
-    "decoys": [
-      "SMS",
-      "Mail",
-      "Note vocale"
-    ],
-    "category": "adulte"
-  },
-  {
-    "id": "imp_a_017_coup_de_foudre",
-    "word": "Coup de foudre",
-    "hint": "J’arrive sans mode d’emploi et ignore le calendrier",
-    "decoys": [
-      "Crush",
-      "Amitié",
-      "Rupture"
-    ],
-    "category": "relations"
-  },
-  {
-    "id": "imp_a_018_relation_secrte",
-    "word": "Relation secrète",
-    "hint": "Je demande beaucoup de discrétion et encore plus de coordination",
-    "decoys": [
-      "Surprise",
-      "Colocation",
-      "Projet"
-    ],
-    "category": "relations"
-  },
-  {
-    "id": "imp_a_019_nuit_blanche_deux",
-    "word": "Nuit blanche à deux",
-    "hint": "Je peux contenir très peu de sommeil et beaucoup d’histoires",
-    "decoys": [
-      "Soirée pyjama",
-      "Voyage",
-      "Festival"
-    ],
-    "category": "adulte"
-  },
-  {
-    "id": "imp_a_020_tenue_trop_sexy",
+    "id": "imp_a_106_tenue_trop_sexy",
     "word": "Tenue trop sexy",
-    "hint": "Je peux lancer plus de regards que de conversations",
+    "hints": {
+      "hard": "Je reste volontairement vague : je peux lancer plus de regards que de conversations",
+      "medium": "Je appartiens au thème « Ex ».",
+      "easy": "Mon nom commence par « T » et je peux être confondu avec Déguisement."
+    },
     "decoys": [
       "Déguisement",
       "Pyjama",
       "Uniforme"
     ],
-    "category": "adulte"
+    "theme": "ex"
   },
   {
-    "id": "imp_a_021_retour_chez_un_ex",
+    "id": "imp_a_107_retour_chez_un_ex",
     "word": "Retour chez un ex",
-    "hint": "Je ressemble rarement à une décision prise avec une calculatrice",
+    "hints": {
+      "hard": "Je reste volontairement vague : je ressemble rarement à une décision prise avec une calculatrice",
+      "medium": "Je appartiens au thème « Ex ».",
+      "easy": "Mon nom commence par « R » et je peux être confondu avec Reprendre un abonnement."
+    },
     "decoys": [
       "Reprendre un abonnement",
       "Revoir un film",
       "Revenir en voyage"
     ],
-    "category": "relations"
+    "theme": "ex"
   },
   {
-    "id": "imp_a_022_ami_avec_bnfices",
-    "word": "Ami avec bénéfices",
-    "hint": "Je mélange une étiquette simple et des émotions parfois moins simples",
-    "decoys": [
-      "Couple libre",
-      "Plan cul",
-      "Meilleur ami"
-    ],
-    "category": "relations"
-  },
-  {
-    "id": "imp_a_023_baiser_vol",
-    "word": "Baiser volé",
-    "hint": "J’arrive vite et déclenche parfois un très long débrief",
-    "decoys": [
-      "Câlin",
-      "Clin d’œil",
-      "Danse"
-    ],
-    "category": "relations"
-  },
-  {
-    "id": "imp_a_024_nude",
-    "word": "Nude",
-    "hint": "Je demande confiance, cadrage et beaucoup de prudence",
-    "decoys": [
-      "Selfie",
-      "Photo de profil",
-      "Capture d’écran"
-    ],
-    "category": "adulte"
-  },
-  {
-    "id": "imp_a_025_dsir_interdit",
+    "id": "imp_a_108_desir_interdit",
     "word": "Désir interdit",
-    "hint": "Je devient souvent plus intense précisément parce qu’il est compliqué",
+    "hints": {
+      "hard": "Je reste volontairement vague : je devient souvent plus intense précisément parce qu’il est compliqué",
+      "medium": "Je appartiens au thème « Intimité ».",
+      "easy": "Mon nom commence par « D » et je peux être confondu avec Projet secret."
+    },
     "decoys": [
       "Projet secret",
       "Défi",
       "Rêve"
     ],
-    "category": "adulte"
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_109_regard_insistant",
+    "word": "Regard insistant",
+    "hints": {
+      "hard": "Je ne prononce rien.",
+      "medium": "Je dure parfois une seconde de trop.",
+      "easy": "Mes yeux montrent clairement que quelqu’un plaît."
+    },
+    "decoys": [
+      "Crush au travail",
+      "Crush secret",
+      "Tension sexuelle"
+    ],
+    "theme": "attirance"
+  },
+  {
+    "id": "imp_a_110_alchimie",
+    "word": "Alchimie",
+    "hints": {
+      "hard": "Je ne se mesure pas en laboratoire ici.",
+      "medium": "Je rend les échanges fluides et chargés.",
+      "easy": "Deux personnes sentent naturellement qu’il se passe quelque chose."
+    },
+    "decoys": [
+      "Type physique",
+      "Crush au travail",
+      "Coup de foudre"
+    ],
+    "theme": "attirance"
+  },
+  {
+    "id": "imp_a_111_papillons_dans_le_ventre",
+    "word": "Papillons dans le ventre",
+    "hints": {
+      "hard": "Je ne suis pas vraiment un insecte.",
+      "medium": "Je apparaît avant de voir quelqu’un qui plaît.",
+      "easy": "Une sensation nerveuse et agréable me remplit le ventre."
+    },
+    "decoys": [
+      "Type physique",
+      "Crush au travail",
+      "Jeu de séduction"
+    ],
+    "theme": "attirance"
+  },
+  {
+    "id": "imp_a_112_type_physique",
+    "word": "Type physique",
+    "hints": {
+      "hard": "Je rassemble des préférences visuelles.",
+      "medium": "Je peut concerner une taille, un style ou un sourire.",
+      "easy": "On dit parfois que quelqu’un correspond exactement à moi."
+    },
+    "decoys": [
+      "Coup de foudre",
+      "Crush sur un collègue",
+      "Alchimie"
+    ],
+    "theme": "attirance"
+  },
+  {
+    "id": "imp_a_113_voix_seduisante",
+    "word": "Voix séduisante",
+    "hints": {
+      "hard": "Je passe par les oreilles.",
+      "medium": "Un simple bonjour peut suffire.",
+      "easy": "Mon timbre rend une personne particulièrement attirante."
+    },
+    "decoys": [
+      "Jeu de séduction",
+      "Coup de foudre",
+      "Type physique"
+    ],
+    "theme": "attirance"
+  },
+  {
+    "id": "imp_a_114_tension_sexuelle",
+    "word": "Tension sexuelle",
+    "hints": {
+      "hard": "Je reste souvent non dite.",
+      "medium": "Les silences et les regards me renforcent.",
+      "easy": "Deux personnes attirées ressentent une énergie très claire."
+    },
+    "decoys": [
+      "Crush secret",
+      "Crush sur un ami",
+      "Crush"
+    ],
+    "theme": "attirance"
+  },
+  {
+    "id": "imp_a_115_compliment_ambigu",
+    "word": "Compliment ambigu",
+    "hints": {
+      "hard": "Je peut sembler innocent.",
+      "medium": "Mon double sens fait réfléchir après coup.",
+      "easy": "On hésite à savoir si je suis poli ou clairement séducteur."
+    },
+    "decoys": [
+      "Flirt",
+      "Crush sur un collègue",
+      "Papillons dans le ventre"
+    ],
+    "theme": "attirance"
+  },
+  {
+    "id": "imp_a_116_crush_secret",
+    "word": "Crush secret",
+    "hints": {
+      "hard": "Je occupe des pensées sans être annoncé.",
+      "medium": "Une seule personne connaît parfois mon existence.",
+      "easy": "On aime quelqu’un sans lui avoir avoué."
+    },
+    "decoys": [
+      "Alchimie",
+      "Compliment ambigu",
+      "Voix séduisante"
+    ],
+    "theme": "attirance"
+  },
+  {
+    "id": "imp_a_117_blind_date",
+    "word": "Blind date",
+    "hints": {
+      "hard": "Je arrive avec très peu d’informations.",
+      "medium": "Un proche ou une application peut me organiser.",
+      "easy": "On rencontre quelqu’un presque sans savoir à quoi s’attendre."
+    },
+    "decoys": [
+      "Dîner romantique",
+      "Retard au rendez-vous",
+      "Message après le rendez-vous"
+    ],
+    "theme": "rendez_vous"
+  },
+  {
+    "id": "imp_a_118_diner_romantique",
+    "word": "Dîner romantique",
+    "hints": {
+      "hard": "Je utilise souvent une table pour deux.",
+      "medium": "La lumière et l’ambiance comptent presque autant que le menu.",
+      "easy": "On partage un repas avec une intention amoureuse."
+    },
+    "decoys": [
+      "Message après le rendez-vous",
+      "Blind date",
+      "Rendez-vous surprise"
+    ],
+    "theme": "rendez_vous"
+  },
+  {
+    "id": "imp_a_119_verre_en_tete_a_tete",
+    "word": "Verre en tête-à-tête",
+    "hints": {
+      "hard": "Je peut durer trente minutes ou toute la nuit.",
+      "medium": "Deux boissons servent surtout de prétexte pour parler.",
+      "easy": "On se retrouve seul à seul dans un bar."
+    },
+    "decoys": [
+      "Rendez-vous arrangé",
+      "Addition partagée",
+      "Rendez-vous surprise"
+    ],
+    "theme": "rendez_vous"
+  },
+  {
+    "id": "imp_a_120_cinema_a_deux",
+    "word": "Cinéma à deux",
+    "hints": {
+      "hard": "Je ne facilite pas toujours la conversation.",
+      "medium": "On partage un écran, du popcorn et parfois un accoudoir.",
+      "easy": "Deux personnes regardent un film ensemble comme rendez-vous."
+    },
+    "decoys": [
+      "Dîner romantique",
+      "Message après le rendez-vous",
+      "Baiser de fin"
+    ],
+    "theme": "rendez_vous"
+  },
+  {
+    "id": "imp_a_121_rendez_vous_rate",
+    "word": "Rendez-vous raté",
+    "hints": {
+      "hard": "Je laisse une anecdote plutôt qu’une histoire d’amour.",
+      "medium": "Silences, retard ou incompatibilité peuvent me provoquer.",
+      "easy": "La rencontre se passe nettement moins bien que prévu."
+    },
+    "decoys": [
+      "Premier rendez-vous",
+      "Message après le rendez-vous",
+      "Dîner romantique"
+    ],
+    "theme": "rendez_vous"
+  },
+  {
+    "id": "imp_a_122_retard_au_rendez_vous",
+    "word": "Retard au rendez-vous",
+    "hints": {
+      "hard": "Je fait regarder l’heure souvent.",
+      "medium": "Un message « j’arrive » peut me accompagner longtemps.",
+      "easy": "Une personne attend l’autre avant une rencontre amoureuse."
+    },
+    "decoys": [
+      "Rendez-vous raté",
+      "Verre en tête-à-tête",
+      "Dîner romantique"
+    ],
+    "theme": "rendez_vous"
+  },
+  {
+    "id": "imp_a_123_addition_partagee",
+    "word": "Addition partagée",
+    "hints": {
+      "hard": "Je arrive à la fin du repas.",
+      "medium": "Je peut révéler des attentes différentes.",
+      "easy": "Chaque personne paie sa part du rendez-vous."
+    },
+    "decoys": [
+      "Premier rendez-vous",
+      "Blind date",
+      "Dîner romantique"
+    ],
+    "theme": "rendez_vous"
+  },
+  {
+    "id": "imp_a_124_baiser_de_fin",
+    "word": "Baiser de fin",
+    "hints": {
+      "hard": "Je se décide souvent devant une porte ou une voiture.",
+      "medium": "Quelques secondes d’hésitation me précèdent.",
+      "easy": "Un rendez-vous se termine par un premier rapprochement."
+    },
+    "decoys": [
+      "Rendez-vous raté",
+      "Verre en tête-à-tête",
+      "Dîner romantique"
+    ],
+    "theme": "rendez_vous"
+  },
+  {
+    "id": "imp_a_125_message_apres_le_rendez_vous",
+    "word": "Message après le rendez-vous",
+    "hints": {
+      "hard": "Je est analysé mot par mot.",
+      "medium": "Je peut arriver immédiatement ou le lendemain.",
+      "easy": "On écrit pour dire que la rencontre a plu ou proposer la suite."
+    },
+    "decoys": [
+      "Blind date",
+      "Retard au rendez-vous",
+      "Baiser de fin"
+    ],
+    "theme": "rendez_vous"
+  },
+  {
+    "id": "imp_a_126_retour_dex",
+    "word": "Retour d’ex",
+    "hints": {
+      "hard": "Je rouvre un dossier fermé.",
+      "medium": "Un simple « tu deviens quoi ? » peut me annoncer.",
+      "easy": "Une ancienne relation tente de revenir dans la vie de quelqu’un."
+    },
+    "decoys": [
+      "Message vocal sexy",
+      "Match avec l’ex d’un ami",
+      "Souvenir d’ex"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_127_message_de_lex",
+    "word": "Message de l’ex",
+    "hints": {
+      "hard": "Je apparaît souvent au mauvais moment.",
+      "medium": "Mon expéditeur connaît déjà beaucoup de choses.",
+      "easy": "Une ancienne relation envoie de nouvelles paroles."
+    },
+    "decoys": [
+      "Ex",
+      "Comparaison avec l’ex",
+      "Date avec l’ex d’un ami"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_128_photo_dex_conservee",
+    "word": "Photo d’ex conservée",
+    "hints": {
+      "hard": "Je reste dans une galerie ou une boîte.",
+      "medium": "Je peut être oubliée ou gardée volontairement.",
+      "easy": "Une image d’une ancienne relation n’a pas été supprimée."
+    },
+    "decoys": [
+      "Retour chez un ex",
+      "Relation exclusive",
+      "Ex qui revient"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_129_amitie_avec_son_ex",
+    "word": "Amitié avec son ex",
+    "hints": {
+      "hard": "Je demande des limites très claires.",
+      "medium": "Le passé amoureux devient une relation amicale.",
+      "easy": "Deux anciennes partenaires continuent à se fréquenter sans être en couple."
+    },
+    "decoys": [
+      "Match avec l’ex d’un ami",
+      "Tenue sexy",
+      "Ex devenu ami"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_130_comparaison_avec_lex",
+    "word": "Comparaison avec l’ex",
+    "hints": {
+      "hard": "Je transforme le passé en référence.",
+      "medium": "Je peut blesser même sans mauvaise intention.",
+      "easy": "Le comportement d’un partenaire est mesuré à celui d’une ancienne relation."
+    },
+    "decoys": [
+      "Souvenir d’ex",
+      "Amitié avec son ex",
+      "Tenue trop sexy"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_131_souvenir_dex",
+    "word": "Souvenir d’ex",
+    "hints": {
+      "hard": "Je peut être un objet, un lieu ou une chanson.",
+      "medium": "Je réveille une histoire terminée.",
+      "easy": "Quelque chose rappelle directement une ancienne relation."
+    },
+    "decoys": [
+      "Relation exclusive",
+      "Ex croisé en soirée",
+      "Tenue très sexy"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_132_ex_toxique",
+    "word": "Ex toxique",
+    "hints": {
+      "hard": "Je appartient au passé mais peut encore peser.",
+      "medium": "Manipulation et conflits me caractérisent.",
+      "easy": "Une ancienne relation a eu un comportement nocif."
+    },
+    "decoys": [
+      "Playlist d’ex",
+      "Comparaison avec l’ex",
+      "Relation exclusive"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_133_ex_devenu_ami",
+    "word": "Ex devenu ami",
+    "hints": {
+      "hard": "Je ai changé de catégorie.",
+      "medium": "La proximité reste mais la romance est finie.",
+      "easy": "Une ancienne relation fait désormais partie du cercle amical."
+    },
+    "decoys": [
+      "Playlist d’ex",
+      "Photo d’ex conservée",
+      "Tenue trop sexy"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_134_ex_croise_en_soiree",
+    "word": "Ex croisé en soirée",
+    "hints": {
+      "hard": "Je change l’ambiance en une seconde.",
+      "medium": "Le passé arrive dans la même pièce.",
+      "easy": "Une ancienne relation apparaît pendant une sortie."
+    },
+    "decoys": [
+      "Comparaison avec l’ex",
+      "Message de l’ex",
+      "Retour chez son ex"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_135_stalker_son_ex",
+    "word": "Stalker son ex",
+    "hints": {
+      "hard": "Je se fait souvent discrètement.",
+      "medium": "Profils, stories et anciennes photos deviennent une enquête.",
+      "easy": "On surveille la vie en ligne d’une ancienne relation."
+    },
+    "decoys": [
+      "Souvenir d’ex",
+      "Sexto",
+      "Message vocal sexy"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_136_mot_de_passe_partage",
+    "word": "Mot de passe partagé",
+    "hints": {
+      "hard": "Je ouvre plus qu’un téléphone.",
+      "medium": "Je repose sur une grande confiance.",
+      "easy": "Deux partenaires connaissent le code personnel de l’autre."
+    },
+    "decoys": [
+      "Secret de couple",
+      "Compromis",
+      "Présentation aux parents"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_137_projet_de_vie",
+    "word": "Projet de vie",
+    "hints": {
+      "hard": "Je regarde beaucoup plus loin que le prochain week-end.",
+      "medium": "Logement, famille ou voyages peuvent me composer.",
+      "easy": "Deux partenaires imaginent concrètement leur avenir ensemble."
+    },
+    "decoys": [
+      "Réconciliation",
+      "Emménagement",
+      "Relation toxique"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_138_grosse_dispute",
+    "word": "Grosse dispute",
+    "hints": {
+      "hard": "Je monte le volume et les émotions.",
+      "medium": "Des mots peuvent dépasser la pensée.",
+      "easy": "Un conflit important secoue la relation."
+    },
+    "decoys": [
+      "Relation à distance",
+      "Anniversaire de couple",
+      "Secret de couple"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_139_compromis",
+    "word": "Compromis",
+    "hints": {
+      "hard": "Je ne donne pas totalement raison à une seule personne.",
+      "medium": "Chacun renonce à une partie de ce qu’il voulait.",
+      "easy": "Une solution intermédiaire protège la relation."
+    },
+    "decoys": [
+      "Emménagement",
+      "Grosse dispute",
+      "Râteau"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_140_anniversaire_oublie",
+    "word": "Anniversaire oublié",
+    "hints": {
+      "hard": "Je transforme une date en problème.",
+      "medium": "Un rappel aurait pu me éviter.",
+      "easy": "Un partenaire ne se souvient pas d’un jour important."
+    },
+    "decoys": [
+      "Rencard surprise",
+      "Baiser volé",
+      "Speed dating"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_141_emmenagement",
+    "word": "Emménagement",
+    "hints": {
+      "hard": "Je mélange deux placards et deux habitudes.",
+      "medium": "Les cartons changent le quotidien.",
+      "easy": "Deux partenaires commencent à vivre sous le même toit."
+    },
+    "decoys": [
+      "Baiser volé",
+      "Ghosting",
+      "Demande en mariage"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_142_like_suspect",
+    "word": "Like suspect",
+    "hints": {
+      "hard": "Je ne dure qu’un clic.",
+      "medium": "Une ancienne photo peut me rendre encore plus étrange.",
+      "easy": "Un partenaire aime une publication qui provoque des questions."
+    },
+    "decoys": [
+      "Sortie sans partenaire",
+      "Ancien crush",
+      "Meilleur ami attirant"
+    ],
+    "theme": "jalousie"
+  },
+  {
+    "id": "imp_a_143_meilleur_ami_attirant",
+    "word": "Meilleur ami attirant",
+    "hints": {
+      "hard": "Je est officiellement amical.",
+      "medium": "Ma proximité peut inquiéter un partenaire.",
+      "easy": "Une personne très séduisante fait partie du cercle proche."
+    },
+    "decoys": [
+      "Like suspect",
+      "Demande de preuve",
+      "Jalousie"
+    ],
+    "theme": "jalousie"
+  },
+  {
+    "id": "imp_a_144_collegue_trop_proche",
+    "word": "Collègue trop proche",
+    "hints": {
+      "hard": "Je passe beaucoup de temps au travail.",
+      "medium": "Messages et déjeuners dépassent peut-être le professionnel.",
+      "easy": "La relation avec une personne du bureau semble particulièrement intime."
+    },
+    "decoys": [
+      "Jalousie mal cachée",
+      "Jalousie rétroactive",
+      "Meilleur ami attirant"
+    ],
+    "theme": "jalousie"
+  },
+  {
+    "id": "imp_a_145_sortie_sans_partenaire",
+    "word": "Sortie sans partenaire",
+    "hints": {
+      "hard": "Je est normale mais peut réveiller des peurs.",
+      "medium": "Une soirée se déroule sans l’autre membre du couple.",
+      "easy": "Un partenaire sort seul avec ses amis."
+    },
+    "decoys": [
+      "Jalousie",
+      "Jalousie mal cachée",
+      "Collègue trop proche"
+    ],
+    "theme": "jalousie"
+  },
+  {
+    "id": "imp_a_146_telephone_retourne",
+    "word": "Téléphone retourné",
+    "hints": {
+      "hard": "Je cache simplement un écran.",
+      "medium": "Mon geste paraît parfois plus suspect qu’il ne l’est.",
+      "easy": "Un téléphone est posé face contre la table."
+    },
+    "decoys": [
+      "Like suspect",
+      "Demande de preuve",
+      "Commentaire jaloux"
+    ],
+    "theme": "jalousie"
+  },
+  {
+    "id": "imp_a_147_ancien_crush",
+    "word": "Ancien crush",
+    "hints": {
+      "hard": "Je appartient au passé mais reste séduisant.",
+      "medium": "Une rencontre actuelle peut réveiller des doutes.",
+      "easy": "Une personne qui plaisait autrefois réapparaît."
+    },
+    "decoys": [
+      "Téléphone retourné",
+      "Jalousie rétroactive",
+      "Demande de preuve"
+    ],
+    "theme": "jalousie"
+  },
+  {
+    "id": "imp_a_148_danse_tres_rapprochee",
+    "word": "Danse très rapprochée",
+    "hints": {
+      "hard": "Je se passe au rythme de la musique.",
+      "medium": "La distance entre deux corps devient minuscule.",
+      "easy": "Un partenaire danse de façon très intime avec quelqu’un."
+    },
+    "decoys": [
+      "Collègue trop proche",
+      "Ancien crush",
+      "Jalousie"
+    ],
+    "theme": "jalousie"
+  },
+  {
+    "id": "imp_a_149_commentaire_jaloux",
+    "word": "Commentaire jaloux",
+    "hints": {
+      "hard": "Je se glisse dans une phrase apparemment banale.",
+      "medium": "Mon ton révèle plus que mes mots.",
+      "easy": "Une remarque montre qu’une situation dérange sentimentalement."
+    },
+    "decoys": [
+      "Jalousie rétroactive",
+      "Téléphone retourné",
+      "Like suspect"
+    ],
+    "theme": "jalousie"
+  },
+  {
+    "id": "imp_a_150_localisation_partagee",
+    "word": "Localisation partagée",
+    "hints": {
+      "hard": "Je indique un point sur une carte.",
+      "medium": "Je peut rassurer ou devenir du contrôle.",
+      "easy": "Deux partenaires voient en direct où se trouve l’autre."
+    },
+    "decoys": [
+      "Jalousie",
+      "Meilleur ami attirant",
+      "Jalousie rétroactive"
+    ],
+    "theme": "jalousie"
+  },
+  {
+    "id": "imp_a_151_demande_de_preuve",
+    "word": "Demande de preuve",
+    "hints": {
+      "hard": "Je transforme la confiance en vérification.",
+      "medium": "Photo, capture ou appel peuvent me servir.",
+      "easy": "Un partenaire exige de confirmer où l’autre se trouve ou avec qui."
+    },
+    "decoys": [
+      "Like suspect",
+      "Jalousie mal cachée",
+      "Jalousie"
+    ],
+    "theme": "jalousie"
+  },
+  {
+    "id": "imp_a_152_sexting",
+    "word": "Sexting",
+    "hints": {
+      "hard": "Je mélange clavier et désir.",
+      "medium": "Je peut faire monter la température à distance.",
+      "easy": "Deux personnes échangent des messages explicitement suggestifs."
+    },
+    "decoys": [
+      "Message effacé",
+      "Message supprimé avant lecture",
+      "Ghosting après intimité"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_153_message_efface",
+    "word": "Message effacé",
+    "hints": {
+      "hard": "Je laisse parfois une mention à ma place.",
+      "medium": "Mon absence donne envie de savoir ce que je contenais.",
+      "easy": "Un texte envoyé est supprimé avant ou après lecture."
+    },
+    "decoys": [
+      "Sexting",
+      "Capture d’écran",
+      "Message envoyé trop tard"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_154_double_texto",
+    "word": "Double texto",
+    "hints": {
+      "hard": "Je arrive sans réponse au premier.",
+      "medium": "Je peut montrer de l’enthousiasme ou de l’impatience.",
+      "easy": "Une personne envoie deux messages de suite."
+    },
+    "decoys": [
+      "Message à trois heures du matin",
+      "Capture d’écran",
+      "Vocal suggestif"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_155_vu_sans_reponse",
+    "word": "Vu sans réponse",
+    "hints": {
+      "hard": "Je affiche une information minuscule mais frustrante.",
+      "medium": "Le message est ouvert, pourtant le silence continue.",
+      "easy": "On sait que l’autre a lu sans avoir répondu."
+    },
+    "decoys": [
+      "Conversation archivée",
+      "Double texto",
+      "Message à 2 h du matin"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_156_message_a_trois_heures_du_matin",
+    "word": "Message à trois heures du matin",
+    "hints": {
+      "hard": "Je arrive quand les filtres baissent.",
+      "medium": "Mon heure change souvent son interprétation.",
+      "easy": "Quelqu’un écrit très tard avec une intention possiblement ambiguë."
+    },
+    "decoys": [
+      "Rupture par message",
+      "Conversation archivée",
+      "Capture d’écran"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_157_capture_decran",
+    "word": "Capture d’écran",
+    "hints": {
+      "hard": "Je transforme une conversation privée en image.",
+      "medium": "Je peut servir de preuve ou être envoyée à un ami.",
+      "easy": "Le contenu d’un échange est enregistré visuellement."
+    },
+    "decoys": [
+      "Conversation archivée",
+      "Nude",
+      "Double texto"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_158_vocal_suggestif",
+    "word": "Vocal suggestif",
+    "hints": {
+      "hard": "Je utilise la voix plutôt que le clavier.",
+      "medium": "Le ton compte autant que les mots.",
+      "easy": "Un message audio contient une intention de séduction claire."
+    },
+    "decoys": [
+      "Message à trois heures du matin",
+      "Message effacé",
+      "Capture d’écran envoyée à la personne concernée"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_159_emoji_ambigu",
+    "word": "Emoji ambigu",
+    "hints": {
+      "hard": "Je tient dans un petit symbole.",
+      "medium": "Aubergine, pêche ou flamme peuvent me rendre moins innocent.",
+      "easy": "Un pictogramme laisse entendre quelque chose de sexuel ou romantique."
+    },
+    "decoys": [
+      "Message supprimé avant lecture",
+      "Ghosting après intimité",
+      "Photo intime sauvegardée"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_160_conversation_archivee",
+    "word": "Conversation archivée",
+    "hints": {
+      "hard": "Je disparaît de la liste principale sans être supprimée.",
+      "medium": "On me cache parfois pour ranger, parfois pour éviter des questions.",
+      "easy": "Un échange est déplacé dans un dossier discret."
+    },
+    "decoys": [
+      "Vu sans réponse",
+      "Ghosting après intimité",
+      "Message à trois heures du matin"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_161_preliminaires",
+    "word": "Préliminaires",
+    "hints": {
+      "hard": "Je arrive avant le moment principal.",
+      "medium": "Je privilégie la montée du désir et l’attention.",
+      "easy": "Caresses, baisers et jeux intimes me composent."
+    },
+    "decoys": [
+      "Petit-déjeuner après un date",
+      "Après-câlin",
+      "Musique au lit"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_162_lingerie",
+    "word": "Lingerie",
+    "hints": {
+      "hard": "Je se porte sous les vêtements.",
+      "medium": "Mon choix peut être confortable ou séduisant.",
+      "easy": "Des sous-vêtements travaillés créent une ambiance intime."
+    },
+    "decoys": [
+      "Petit-déjeuner après un date",
+      "Massage sensuel",
+      "Lumière allumée"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_163_matin_calin",
+    "word": "Matin câlin",
+    "hints": {
+      "hard": "Je se passe avant de vraiment commencer la journée.",
+      "medium": "Le réveil devient un moment de proximité.",
+      "easy": "Deux partenaires restent enlacés au lit le matin."
+    },
+    "decoys": [
+      "Douche à deux",
+      "Jacuzzi privé",
+      "Lumière allumée"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_164_lumiere_allumee",
+    "word": "Lumière allumée",
+    "hints": {
+      "hard": "Je rend tout visible.",
+      "medium": "Certaines personnes me aiment, d’autres préfèrent l’obscurité.",
+      "easy": "Un moment intime se déroule sans éteindre la lumière."
+    },
+    "decoys": [
+      "Strip-poker",
+      "Trace de maquillage sur un vêtement",
+      "Lubrifiant"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_165_musique_au_lit",
+    "word": "Musique au lit",
+    "hints": {
+      "hard": "Je donne un rythme et une ambiance.",
+      "medium": "Une playlist peut me préparer.",
+      "easy": "Des chansons accompagnent un moment intime."
+    },
+    "decoys": [
+      "Love room",
+      "Lingerie",
+      "Chambre d’hôtel"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_166_prendre_linitiative",
+    "word": "Prendre l’initiative",
+    "hints": {
+      "hard": "Je évite d’attendre que l’autre commence.",
+      "medium": "Je montre clairement une envie.",
+      "easy": "Une personne lance le rapprochement intime."
+    },
+    "decoys": [
+      "Club de strip-tease",
+      "Jeu de cartes coquin",
+      "Parfum sur l’oreiller"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_167_safe_word",
+    "word": "Safe word",
+    "hints": {
+      "hard": "Je est choisi à l’avance.",
+      "medium": "Je arrête immédiatement un jeu ou une pratique.",
+      "easy": "Un mot de sécurité protège les limites et le consentement."
+    },
+    "decoys": [
+      "Safeword",
+      "Douche à deux",
+      "Strip-tease"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_168_apres_calin",
+    "word": "Après-câlin",
+    "hints": {
+      "hard": "Je arrive quand le moment intense est terminé.",
+      "medium": "Je privilégie la tendresse et la proximité.",
+      "easy": "Deux partenaires restent enlacés après une relation intime."
+    },
+    "decoys": [
+      "Dépistage",
+      "Caméra allumée au mauvais moment",
+      "Safe word"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_169_lieu_insolite",
+    "word": "Lieu insolite",
+    "hints": {
+      "hard": "Je ne ressemble pas à une chambre habituelle.",
+      "medium": "Le risque d’être surpris peut faire partie de mon attrait.",
+      "easy": "Un fantasme se déroule dans un endroit inattendu."
+    },
+    "decoys": [
+      "Jeu de dominance",
+      "Baiser à trois",
+      "Jeu de rôle intime"
+    ],
+    "theme": "fantasmes"
+  },
+  {
+    "id": "imp_a_170_fantasme_de_celebrite",
+    "word": "Fantasme de célébrité",
+    "hints": {
+      "hard": "Je concerne quelqu’un de très connu.",
+      "medium": "Je reste souvent totalement imaginaire.",
+      "easy": "Une personne célèbre occupe un scénario intime rêvé."
+    },
+    "decoys": [
+      "Baiser à trois",
+      "Être surpris",
+      "Liste de fantasmes"
+    ],
+    "theme": "fantasmes"
+  },
+  {
+    "id": "imp_a_171_tenue_speciale",
+    "word": "Tenue spéciale",
+    "hints": {
+      "hard": "Je transforme l’apparence.",
+      "medium": "Uniforme, costume ou accessoire peuvent me composer.",
+      "easy": "Un vêtement précis fait partie d’un scénario de désir."
+    },
+    "decoys": [
+      "Fantasme de vacances",
+      "Fantasme",
+      "Jeu de rôle intime"
+    ],
+    "theme": "fantasmes"
+  },
+  {
+    "id": "imp_a_172_jeu_de_dominance",
+    "word": "Jeu de dominance",
+    "hints": {
+      "hard": "Je repose sur des rôles de contrôle négociés.",
+      "medium": "Limites et consentement sont indispensables.",
+      "easy": "Une personne guide et l’autre accepte volontairement de suivre."
+    },
+    "decoys": [
+      "Baiser à trois",
+      "Fantasme partagé",
+      "Jeu de rôle intime"
+    ],
+    "theme": "fantasmes"
+  },
+  {
+    "id": "imp_a_173_etre_surpris",
+    "word": "Être surpris",
+    "hints": {
+      "hard": "Je ajoute de l’imprévu.",
+      "medium": "Je ne doit jamais dépasser le consentement établi.",
+      "easy": "Un scénario joue avec l’idée qu’un moment arrive sans annonce détaillée."
+    },
+    "decoys": [
+      "Liste de fantasmes",
+      "Fantasme de célébrité",
+      "Tenue spéciale"
+    ],
+    "theme": "fantasmes"
+  },
+  {
+    "id": "imp_a_174_fantasme_de_vacances",
+    "word": "Fantasme de vacances",
+    "hints": {
+      "hard": "Je profite d’un lieu loin du quotidien.",
+      "medium": "Hôtel, plage ou voyage peuvent me inspirer.",
+      "easy": "Le désir est associé à une escapade."
+    },
+    "decoys": [
+      "Jeu de dominance",
+      "Fantasme de célébrité",
+      "Tenue spéciale"
+    ],
+    "theme": "fantasmes"
+  },
+  {
+    "id": "imp_a_175_inconnu_seduisant",
+    "word": "Inconnu séduisant",
+    "hints": {
+      "hard": "Je ne possède presque pas d’histoire commune.",
+      "medium": "Le mystère fait partie de mon attrait.",
+      "easy": "Une personne imaginée ou rencontrée récemment devient objet de désir."
+    },
+    "decoys": [
+      "Fantasme de célébrité",
+      "Être surpris",
+      "Baiser à trois"
+    ],
+    "theme": "fantasmes"
+  },
+  {
+    "id": "imp_a_176_liste_de_fantasmes",
+    "word": "Liste de fantasmes",
+    "hints": {
+      "hard": "Je rassemble plusieurs envies.",
+      "medium": "On me partage parfois pour ouvrir une discussion.",
+      "easy": "Des scénarios intimes souhaités sont écrits ensemble."
+    },
+    "decoys": [
+      "Lieu insolite",
+      "Tenue spéciale",
+      "Fantasme de célébrité"
+    ],
+    "theme": "fantasmes"
+  },
+  {
+    "id": "imp_a_177_baiser_en_soiree",
+    "word": "Baiser en soirée",
+    "hints": {
+      "hard": "Je peut arriver au milieu du bruit.",
+      "medium": "Le lendemain, tout le monde n’en donne pas la même importance.",
+      "easy": "Deux personnes s’embrassent pendant une fête."
+    },
+    "decoys": [
+      "Prénom tatoué",
+      "Ex croisé en boîte",
+      "Jeu à boire osé"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_178_danse_sensuelle",
+    "word": "Danse sensuelle",
+    "hints": {
+      "hard": "Je suit la musique de très près.",
+      "medium": "Les mouvements servent à séduire.",
+      "easy": "Une personne danse d’une manière clairement suggestive."
+    },
+    "decoys": [
+      "Baiser en soirée",
+      "Ex croisé en boîte",
+      "Like accidentel sur une vieille photo"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_179_jeu_a_boire_ose",
+    "word": "Jeu à boire osé",
+    "hints": {
+      "hard": "Je combine questions et gorgées.",
+      "medium": "Les révélations deviennent plus audacieuses au fil des tours.",
+      "easy": "Un jeu de soirée pousse à avouer ou réaliser des choses intimes."
+    },
+    "decoys": [
+      "Historique de recherche gênant",
+      "Prénom tatoué",
+      "Faux profil de rencontre"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_180_crush_de_soiree",
+    "word": "Crush de soirée",
+    "hints": {
+      "hard": "Je peut ne durer qu’une nuit.",
+      "medium": "La musique et l’ambiance me rendent plus intense.",
+      "easy": "Une personne rencontrée en fête plaît immédiatement."
+    },
+    "decoys": [
+      "Vérité osée",
+      "Secret de soirée",
+      "Faux profil de rencontre"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_181_dormir_chez_quelquun",
+    "word": "Dormir chez quelqu’un",
+    "hints": {
+      "hard": "Je évite parfois le trajet du retour.",
+      "medium": "Le canapé n’est pas toujours la seule option.",
+      "easy": "Après une fête, une personne passe la nuit chez une autre."
+    },
+    "decoys": [
+      "Soirée libertine",
+      "Ex croisé en boîte",
+      "Lendemain flou"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_182_verite_osee",
+    "word": "Vérité osée",
+    "hints": {
+      "hard": "Je arrive souvent dans un jeu.",
+      "medium": "Je met quelqu’un face à une question intime.",
+      "easy": "Une révélation personnelle est demandée devant le groupe."
+    },
+    "decoys": [
+      "Danse sensuelle",
+      "Baiser en soirée",
+      "Secret de soirée"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_183_boite_de_nuit",
+    "word": "Boîte de nuit",
+    "hints": {
+      "hard": "Je mélange obscurité, musique forte et foule.",
+      "medium": "On y danse plus qu’on ne parle.",
+      "easy": "Un club accueille une fête jusque tard."
+    },
+    "decoys": [
+      "Jeu à boire osé",
+      "Baiser en soirée",
+      "Crush de soirée"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_184_lendemain_flou",
+    "word": "Lendemain flou",
+    "hints": {
+      "hard": "Je manque de souvenirs précis.",
+      "medium": "Les messages du groupe peuvent me reconstruire.",
+      "easy": "Après une fête intense, on ne se rappelle pas clairement de tout."
+    },
+    "decoys": [
+      "Secret de soirée",
+      "Mensonge sur son âge",
+      "Like accidentel sur une vieille photo"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_185_ex_croise_en_boite",
+    "word": "Ex croisé en boîte",
+    "hints": {
+      "hard": "Je combine passé amoureux et musique forte.",
+      "medium": "La rencontre est imprévue.",
+      "easy": "Une ancienne relation apparaît dans le même club."
+    },
+    "decoys": [
+      "Prénom tatoué",
+      "Lendemain flou",
+      "Dormir chez quelqu’un"
+    ],
+    "theme": "soirees"
+  },
+  {
+    "id": "imp_a_186_couple_libre",
+    "word": "Couple libre",
+    "hints": {
+      "hard": "Je garde une relation principale sans exclusivité totale.",
+      "medium": "Mes règles varient selon les partenaires.",
+      "easy": "Un couple autorise certaines relations avec d’autres personnes."
+    },
+    "decoys": [
+      "Relation ouverte à distance",
+      "Plan cul",
+      "Sex-friend"
+    ],
+    "theme": "relations_libres"
+  },
+  {
+    "id": "imp_a_187_relation_sans_etiquette",
+    "word": "Relation sans étiquette",
+    "hints": {
+      "hard": "Je existe sans nom officiel.",
+      "medium": "On se comporte parfois comme un couple sans le dire.",
+      "easy": "Deux personnes se fréquentent sans définir leur statut."
+    },
+    "decoys": [
+      "Couple libre",
+      "Friendzone",
+      "Règles du couple libre"
+    ],
+    "theme": "relations_libres"
+  },
+  {
+    "id": "imp_a_188_polyamour",
+    "word": "Polyamour",
+    "hints": {
+      "hard": "Je autorise plusieurs liens amoureux consentis.",
+      "medium": "Communication et accords me structurent.",
+      "easy": "Une personne peut aimer plusieurs partenaires avec transparence."
+    },
+    "decoys": [
+      "Relation ouverte à distance",
+      "Relation secrète",
+      "Coup d’un soir"
+    ],
+    "theme": "relations_libres"
+  },
+  {
+    "id": "imp_a_189_exclusivite",
+    "word": "Exclusivité",
+    "hints": {
+      "hard": "Je ferme la porte aux autres relations.",
+      "medium": "Elle doit être discutée plutôt que supposée.",
+      "easy": "Deux personnes décident de ne fréquenter personne d’autre."
+    },
+    "decoys": [
+      "Pause avec règles",
+      "Sex-friend",
+      "Relation ouverte à distance"
+    ],
+    "theme": "relations_libres"
+  },
+  {
+    "id": "imp_a_190_sex_friend",
+    "word": "Sex-friend",
+    "hints": {
+      "hard": "Je mélange amitié et intimité.",
+      "medium": "Le lien n’est pas forcément amoureux.",
+      "easy": "Deux amis ont aussi une relation sexuelle consentie."
+    },
+    "decoys": [
+      "Polyamour",
+      "Relation ouverte à distance",
+      "Couple libre"
+    ],
+    "theme": "relations_libres"
+  },
+  {
+    "id": "imp_a_191_coup_dun_soir",
+    "word": "Coup d’un soir",
+    "hints": {
+      "hard": "Je ne promet pas de lendemain.",
+      "medium": "Je peut naître après une rencontre rapide.",
+      "easy": "Deux adultes partagent une seule nuit sans projet de relation."
+    },
+    "decoys": [
+      "Sex-friend",
+      "Relation ouverte à distance",
+      "Exclusivité"
+    ],
+    "theme": "relations_libres"
+  },
+  {
+    "id": "imp_a_192_pause_avec_regles",
+    "word": "Pause avec règles",
+    "hints": {
+      "hard": "Je suspend le couple sans tout autoriser automatiquement.",
+      "medium": "Mes limites doivent être décidées avant la distance.",
+      "easy": "Deux partenaires prennent du recul avec des accords précis."
+    },
+    "decoys": [
+      "Friendzone",
+      "Exclusivité",
+      "Couple libre"
+    ],
+    "theme": "relations_libres"
+  },
+  {
+    "id": "imp_a_193_date_avec_un_ami_dex",
+    "word": "Date avec un ami d’ex",
+    "hints": {
+      "hard": "Je relie une nouvelle rencontre à une ancienne histoire.",
+      "medium": "Le cercle social rend la situation délicate.",
+      "easy": "On sort avec une personne proche de son ancienne relation."
+    },
+    "decoys": [
+      "Dîner romantique",
+      "Rendez-vous surprise",
+      "Baiser de fin"
+    ],
+    "theme": "rendez_vous"
+  },
+  {
+    "id": "imp_a_194_message_supprime_avant_lecture",
+    "word": "Message supprimé avant lecture",
+    "hints": {
+      "hard": "Je ne laisse qu’une notification mystérieuse.",
+      "medium": "Mon contenu ne sera peut-être jamais connu.",
+      "easy": "Un texte est retiré avant que le destinataire puisse l’ouvrir."
+    },
+    "decoys": [
+      "Conversation archivée",
+      "Capture d’écran envoyée à la personne concernée",
+      "Emoji ambigu"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_195_regles_du_couple_libre",
+    "word": "Règles du couple libre",
+    "hints": {
+      "hard": "Je transforme la liberté en accords précis.",
+      "medium": "Je fixe ce qui doit être raconté ou évité.",
+      "easy": "Des partenaires définissent les limites de leurs relations extérieures."
+    },
+    "decoys": [
+      "Relation ouverte à distance",
+      "Couple libre",
+      "Sex-friend"
+    ],
+    "theme": "relations_libres"
+  },
+  {
+    "id": "imp_a_196_ghosting_apres_intimite",
+    "word": "Ghosting après intimité",
+    "hints": {
+      "hard": "Je transforme une proximité en silence brutal.",
+      "medium": "Les réponses disparaissent juste après un rapprochement.",
+      "easy": "Une personne coupe tout contact après un moment intime."
+    },
+    "decoys": [
+      "Vu sans réponse",
+      "Photo intime sauvegardée",
+      "Emoji ambigu"
+    ],
+    "theme": "messages"
+  },
+  {
+    "id": "imp_a_197_consentement_enthousiaste",
+    "word": "Consentement enthousiaste",
+    "hints": {
+      "hard": "Je va au-delà d’une simple absence de refus.",
+      "medium": "Je est clair, libre et peut changer à tout moment.",
+      "easy": "Chaque personne montre réellement qu’elle souhaite continuer."
+    },
+    "decoys": [
+      "Caméra allumée au mauvais moment",
+      "Consentement",
+      "Douche à deux"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_198_relation_ouverte_a_distance",
+    "word": "Relation ouverte à distance",
+    "hints": {
+      "hard": "Je combine kilomètres et liberté négociée.",
+      "medium": "La communication devient encore plus importante.",
+      "easy": "Des partenaires éloignés autorisent certaines rencontres extérieures."
+    },
+    "decoys": [
+      "Exclusivité",
+      "Coup d’un soir",
+      "Relation sans étiquette"
+    ],
+    "theme": "relations_libres"
+  },
+  {
+    "id": "imp_a_199_rendez_vous_surprise",
+    "word": "Rendez-vous surprise",
+    "hints": {
+      "hard": "Je cache le programme à une personne.",
+      "medium": "L’organisation repose sur la confiance.",
+      "easy": "Un partenaire prépare une rencontre sans révéler le lieu ou l’activité."
+    },
+    "decoys": [
+      "Retard au rendez-vous",
+      "Rendez-vous raté",
+      "Premier rendez-vous"
+    ],
+    "theme": "rendez_vous"
+  },
+  {
+    "id": "imp_a_200_match_avec_lex_dun_ami",
+    "word": "Match avec l’ex d’un ami",
+    "hints": {
+      "hard": "Je transforme une application en terrain délicat.",
+      "medium": "Une ancienne relation du cercle proche apparaît à l’écran.",
+      "easy": "On découvre une compatibilité en ligne avec l’ex d’une personne connue."
+    },
+    "decoys": [
+      "Retour d’ex",
+      "Message de l’ex",
+      "Playlist d’ex"
+    ],
+    "theme": "ex"
   }
 ]
