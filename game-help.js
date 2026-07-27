@@ -31,10 +31,10 @@
       comfort: "Réservé aux adultes. Passer reste possible à tout moment."
     },
     "Je n’ai jamais": {
-      intro: "Chaque phrase décrit une expérience. Tout le monde indique secrètement si cela lui est déjà arrivé.",
+      intro: "Parmi 600 phrases réparties en 12 thèmes, chaque carte décrit une expérience. Tout le monde indique secrètement si cela lui est déjà arrivé.",
       steps: ["Lisez la phrase.", "Chaque personne choisit Oui ou Non sur son écran.", "Les réponses sont révélées ensemble.", "Discutez seulement si les personnes concernées en ont envie."],
       scoring: "Le mode standard ne classe pas les joueurs. L’intérêt vient des découvertes et des points communs.",
-      options: "Choisissez les thèmes, la durée et le contenu adulte éventuel.",
+      options: "Choisissez un ou plusieurs des 12 thèmes, une partie de 10 à 100 phrases, ajoutez vos propres cartes et mélangez éventuellement le contenu adulte.",
       comfort: "Personne n’a à raconter les détails d’une expérience."
     },
     "Je n’ai jamais +18": {

@@ -8940,3 +8940,83 @@
 
 
 /* AK'GAMES V1.0 — AUDIT PASSE 11 : soirée longue, variantes +18 et consentement */
+
+/* AKGAMES JE N'AI JAMAIS 600 MULTI V1 */
+const akNeverMultiBaseRenderSetup = renderAmbiancePollSetup;
+renderAmbiancePollSetup = function () {
+  if (!isMultiplayer() || state.ambiancePoll?.type !== "never" || state.ambiancePoll?.forceAdult) {
+    return akNeverMultiBaseRenderSetup();
+  }
+  const game = state.ambiancePoll;
+  akNeverEnsure(game);
+  title.textContent = "Je n’ai jamais";
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-never">
+      <span class="game-cover-icon">🙋</span>
+      <div><small>MULTIJOUEUR · 600 PHRASES</small><h2>Je n’ai jamais</h2><p>Tout le monde répond sur son téléphone, puis les résultats sont révélés ensemble.</p></div>
+    </section>
+    ${state.isHost ? akNeverSetupMarkup(game, "multiNever") : `<section class="card"><h2 class="section-title">Réglages de l’hôte</h2><p class="helper">L’hôte choisit les thèmes et la durée avant de lancer la partie.</p></section>`}
+    ${state.adult && state.isHost ? `<label class="option-card premium-toggle"><input id="multiPollAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Elles se mélangent aux thèmes classiques.</span></span></label>` : ""}
+    ${state.isHost ? `<button id="startMultiPoll" class="primary-btn full">Lancer sur tous les téléphones</button>` : renderMultiWaiting("En attente de l’hôte", "La partie commencera automatiquement.", "👑")}`;
+  if (state.isHost) {
+    akNeverBindSetup(game, "multiNever", renderAmbiancePollSetup);
+    document.querySelector("#multiPollAdult")?.addEventListener("change", event => {
+      game.includeAdult = event.target.checked;
+    });
+    document.querySelector("#startMultiPoll")?.addEventListener("click", startAmbiancePollGame);
+  }
+};
+
+const akNeverMultiBaseStart = startAmbiancePollGame;
+startAmbiancePollGame = async function () {
+  if (!isMultiplayer() || state.ambiancePoll?.type !== "never" || state.ambiancePoll?.forceAdult) {
+    return akNeverMultiBaseStart();
+  }
+  if (!state.isHost) return;
+  const game = state.ambiancePoll;
+  akNeverEnsure(game);
+  const hasThemes = game.neverThemes.length > 0;
+  const hasCustom = game.neverIncludeCustom && game.neverCustomCards.length > 0;
+  const hasAdult = state.adult && game.includeAdult;
+  if (!hasThemes && !hasCustom && !hasAdult) {
+    return alert("Choisis au moins un thème, une phrase personnalisée ou le pack adulte.");
+  }
+  screen.innerHTML = `<div class="notice">Synchronisation des 600 phrases…</div>`;
+  try {
+    const classic = await loadJsonFile("data/je-nai-jamais.json", "Impossible de charger les phrases.");
+    let pool = akNeverBuildPool(classic, game);
+    if (hasAdult) {
+      pool = pool.concat(await loadJsonFile("data/je-nai-jamais-adulte.json", "Impossible de charger les phrases adultes."));
+    }
+    if (!pool.length) throw new Error("Aucune phrase ne correspond aux choix sélectionnés.");
+    const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "multi:never-have-i-ever:themes");
+    const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    const startedAt = AKFirebase.now();
+    await AKFirebase.setGame(state.roomCode, { state: {
+      type: "never-have-i-ever",
+      phase: "voting",
+      sessionGameId: createSessionGameId("never-have-i-ever"),
+      items,
+      currentIndex: 0,
+      scores,
+      rounds: {},
+      currentResult: null,
+      voteEndsAt: null,
+      settings: {
+        roundCount: items.length,
+        includeAdult: Boolean(game.includeAdult),
+        forceAdult: false,
+        neverThemes: [...game.neverThemes],
+        includeCustom: Boolean(game.neverIncludeCustom)
+      },
+      startedAt,
+      updatedAt: startedAt
+    }, votes: {} });
+    state.multiView = "ambiance-game";
+  } catch (error) {
+    console.error(error);
+    alert(error.message || "Impossible de lancer la partie.");
+    renderAmbiancePollSetup();
+  }
+};

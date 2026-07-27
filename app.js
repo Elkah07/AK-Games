@@ -10764,3 +10764,206 @@ renderMegaFinal = function () {
   });
   document.querySelector("#otherDrink")?.addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
 };
+
+/* AKGAMES JE N'AI JAMAIS 600 V1 */
+const AK_NEVER_THEMES = [
+  { id: "quotidien", icon: "🏠", label: "Quotidien" },
+  { id: "petites_hontes", icon: "😳", label: "Petites hontes" },
+  { id: "amitie_soirees", icon: "🎉", label: "Amitié & soirées" },
+  { id: "ecole_travail", icon: "💼", label: "École & travail" },
+  { id: "telephone_reseaux", icon: "📱", label: "Téléphone & réseaux" },
+  { id: "mensonges_secrets", icon: "🤫", label: "Mensonges & secrets" },
+  { id: "voyages_aventures", icon: "🧳", label: "Voyages & aventures" },
+  { id: "nourriture", icon: "🍕", label: "Nourriture" },
+  { id: "famille", icon: "🏡", label: "Famille" },
+  { id: "amour_seduction", icon: "💘", label: "Amour & séduction" },
+  { id: "argent_achats", icon: "🛍️", label: "Argent & achats" },
+  { id: "absurde_improbable", icon: "🛸", label: "Absurde & improbable" }
+];
+const AK_NEVER_CUSTOM_KEY = "akgames_never_custom_v1";
+
+function akNeverReadCustom() {
+  try {
+    const rows = JSON.parse(localStorage.getItem(AK_NEVER_CUSTOM_KEY) || "[]");
+    return Array.isArray(rows) ? rows.filter(row => row && typeof row.text === "string") : [];
+  } catch {
+    return [];
+  }
+}
+function akNeverSaveCustom(rows) {
+  localStorage.setItem(AK_NEVER_CUSTOM_KEY, JSON.stringify((rows || []).slice(-150)));
+}
+function akNeverNormalizeText(value) {
+  const clean = String(value || "").trim().replace(/\s+/g, " ");
+  if (!clean) return "";
+  return /^Je n[’']ai jamais\s/i.test(clean)
+    ? clean
+    : `Je n’ai jamais ${clean.charAt(0).toLowerCase()}${clean.slice(1)}`;
+}
+function akNeverEnsure(game, config = {}) {
+  if (!game || game.type !== "never") return game;
+  const allThemes = AK_NEVER_THEMES.map(theme => theme.id);
+  game.neverThemes = Array.isArray(config.neverThemes)
+    ? [...new Set(config.neverThemes)]
+    : (Array.isArray(game.neverThemes) ? game.neverThemes : allThemes);
+  game.neverCustomCards = akNeverReadCustom();
+  game.neverIncludeCustom = config.neverIncludeCustom ?? game.neverIncludeCustom ?? (game.neverCustomCards.length > 0);
+  game.roundCount = Number(config.roundCount || game.roundCount || 20);
+  return game;
+}
+function akNeverSetupMarkup(game, prefix = "never", readOnly = false) {
+  akNeverEnsure(game);
+  const disabled = readOnly ? "disabled" : "";
+  const custom = game.neverCustomCards || [];
+  return `
+    <section class="card never-settings-card">
+      <h2 class="section-title">Durée de la partie</h2>
+      <div class="never-round-grid">
+        ${[10, 20, 30, 50, 75, 100].map(value => `<button type="button" class="choice-pill ${game.roundCount === value ? "active" : ""}" data-never-round="${value}" ${disabled}>${value}</button>`).join("")}
+      </div>
+    </section>
+    <section class="card never-settings-card">
+      <div class="never-heading">
+        <div><h2 class="section-title">Thèmes</h2><p class="helper">Choisis-en un, plusieurs ou mélange les douze.</p></div>
+        ${readOnly ? "" : `<div class="toolbar"><button type="button" id="${prefix}AllThemes" class="secondary-btn">Tous</button><button type="button" id="${prefix}NoThemes" class="secondary-btn">Aucun</button></div>`}
+      </div>
+      <div class="never-theme-grid">
+        ${AK_NEVER_THEMES.map(theme => `<label class="never-theme-option ${game.neverThemes.includes(theme.id) ? "active" : ""}">
+          <input type="checkbox" data-never-theme="${theme.id}" ${game.neverThemes.includes(theme.id) ? "checked" : ""} ${disabled}>
+          <span>${theme.icon}</span><strong>${escapeHtml(theme.label)}</strong>
+        </label>`).join("")}
+      </div>
+    </section>
+    ${readOnly ? "" : `<section class="card never-settings-card">
+      <h2 class="section-title">Mes phrases</h2>
+      <p class="helper">Elles restent enregistrées uniquement sur cet appareil.</p>
+      <div class="form-group top-gap">
+        <label for="${prefix}CustomText">Nouvelle phrase</label>
+        <textarea id="${prefix}CustomText" class="text-input" maxlength="220" rows="3" placeholder="Ex. Je n’ai jamais dormi dans une tente."></textarea>
+      </div>
+      <button type="button" id="${prefix}AddCustom" class="secondary-btn full">Ajouter la phrase</button>
+      ${custom.length ? `<label class="option-card mini-option top-gap"><input id="${prefix}IncludeCustom" type="checkbox" ${game.neverIncludeCustom ? "checked" : ""}><span><strong>Inclure mes ${custom.length} phrase${custom.length > 1 ? "s" : ""}</strong></span></label>
+      <details class="top-gap"><summary>Gérer mes phrases</summary><div class="never-custom-list">${custom.map(item => `<article><p>${escapeHtml(item.text)}</p><button type="button" class="danger-btn" data-remove-never-custom="${item.id}">Supprimer</button></article>`).join("")}</div></details>` : ""}
+    </section>`}`;
+}
+function akNeverBindSetup(game, prefix, rerender) {
+  document.querySelectorAll("[data-never-round]").forEach(button => button.addEventListener("click", () => {
+    game.roundCount = Number(button.dataset.neverRound);
+    rerender();
+  }));
+  document.querySelectorAll("[data-never-theme]").forEach(input => input.addEventListener("change", () => {
+    const theme = input.dataset.neverTheme;
+    game.neverThemes = input.checked
+      ? [...new Set([...game.neverThemes, theme])]
+      : game.neverThemes.filter(value => value !== theme);
+    input.closest(".never-theme-option")?.classList.toggle("active", input.checked);
+  }));
+  document.querySelector(`#${prefix}AllThemes`)?.addEventListener("click", () => {
+    game.neverThemes = AK_NEVER_THEMES.map(theme => theme.id);
+    rerender();
+  });
+  document.querySelector(`#${prefix}NoThemes`)?.addEventListener("click", () => {
+    game.neverThemes = [];
+    rerender();
+  });
+  document.querySelector(`#${prefix}IncludeCustom`)?.addEventListener("change", event => {
+    game.neverIncludeCustom = event.target.checked;
+  });
+  document.querySelector(`#${prefix}AddCustom`)?.addEventListener("click", () => {
+    const text = akNeverNormalizeText(document.querySelector(`#${prefix}CustomText`)?.value);
+    if (!text) return alert("Écris d’abord une phrase.");
+    if (game.neverCustomCards.some(item => item.text.toLocaleLowerCase("fr") === text.toLocaleLowerCase("fr"))) {
+      return alert("Cette phrase existe déjà.");
+    }
+    const item = {
+      id: `jamais_perso_${Date.now()}`,
+      text,
+      category: "classic",
+      theme: "personnalise",
+      level: "custom",
+      alcoholCompatible: true,
+      custom: true
+    };
+    game.neverCustomCards = [...game.neverCustomCards, item].slice(-150);
+    game.neverIncludeCustom = true;
+    akNeverSaveCustom(game.neverCustomCards);
+    rerender();
+  });
+  document.querySelectorAll("[data-remove-never-custom]").forEach(button => button.addEventListener("click", () => {
+    game.neverCustomCards = game.neverCustomCards.filter(item => item.id !== button.dataset.removeNeverCustom);
+    game.neverIncludeCustom = game.neverIncludeCustom && game.neverCustomCards.length > 0;
+    akNeverSaveCustom(game.neverCustomCards);
+    rerender();
+  }));
+}
+function akNeverBuildPool(classicRows, game) {
+  const selected = new Set(game.neverThemes || []);
+  let pool = (Array.isArray(classicRows) ? classicRows : []).filter(item => selected.has(item.theme));
+  if (game.neverIncludeCustom) pool = pool.concat(game.neverCustomCards || []);
+  return pool;
+}
+
+const akNeverBaseReset = resetAmbiancePollState;
+resetAmbiancePollState = function (type, forceAdult = false, config = {}) {
+  akNeverBaseReset(type, forceAdult, config);
+  if (type === "never") {
+    const neverConfig = { ...config };
+    if (!Object.prototype.hasOwnProperty.call(config, "roundCount")) neverConfig.roundCount = 20;
+    akNeverEnsure(state.ambiancePoll, neverConfig);
+  }
+};
+
+const akNeverBaseRenderSetup = renderAmbiancePollSetup;
+renderAmbiancePollSetup = function () {
+  const game = state.ambiancePoll;
+  if (!game || game.type !== "never" || game.forceAdult) return akNeverBaseRenderSetup();
+  akNeverEnsure(game);
+  title.textContent = "Je n’ai jamais";
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-never">
+      <span class="game-cover-icon">🙋</span>
+      <div><small>600 PHRASES · 12 THÈMES</small><h2>Je n’ai jamais</h2><p>Répondez en secret, puis découvrez les expériences communes du groupe.</p></div>
+    </section>
+    ${akNeverSetupMarkup(game, "never")}
+    ${state.adult ? `<label class="option-card premium-toggle"><input id="pollAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter les cartes adultes</strong><br><span class="helper">Elles se mélangent aux thèmes classiques sélectionnés.</span></span></label>` : ""}
+    <button id="startPollGame" class="primary-btn full">Lancer la partie</button>`;
+  akNeverBindSetup(game, "never", renderAmbiancePollSetup);
+  document.querySelector("#pollAdult")?.addEventListener("change", event => {
+    game.includeAdult = event.target.checked;
+  });
+  document.querySelector("#startPollGame")?.addEventListener("click", startAmbiancePollGame);
+};
+
+const akNeverBaseStart = startAmbiancePollGame;
+startAmbiancePollGame = async function () {
+  const game = state.ambiancePoll;
+  if (!game || game.type !== "never" || game.forceAdult) return akNeverBaseStart();
+  akNeverEnsure(game);
+  const hasThemes = game.neverThemes.length > 0;
+  const hasCustom = game.neverIncludeCustom && game.neverCustomCards.length > 0;
+  const hasAdult = state.adult && game.includeAdult;
+  if (!hasThemes && !hasCustom && !hasAdult) {
+    return alert("Choisis au moins un thème, une phrase personnalisée ou le pack adulte.");
+  }
+  screen.innerHTML = `<div class="notice">Mélange des 600 phrases…</div>`;
+  try {
+    const classic = await loadJsonFile("data/je-nai-jamais.json", "Impossible de charger les phrases.");
+    let pool = akNeverBuildPool(classic, game);
+    if (hasAdult) {
+      pool = pool.concat(await loadJsonFile("data/je-nai-jamais-adulte.json", "Impossible de charger les phrases adultes."));
+    }
+    if (!pool.length) throw new Error("Aucune phrase ne correspond aux choix sélectionnés.");
+    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "solo:never-have-i-ever:themes");
+    game.currentIndex = 0;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.rounds = [];
+    renderAmbiancePollGate();
+  } catch (error) {
+    console.error(error);
+    alert(error.message || "Impossible de lancer la partie.");
+    renderAmbiancePollSetup();
+  }
+};

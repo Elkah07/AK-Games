@@ -8258,3 +8258,23 @@ body.game-rules-open {
   .game-rules-button { width: 43px; border-radius: 16px; }
   .game-rules-modal { padding: 16px; border-radius: 22px; }
 }
+
+/* JE N'AI JAMAIS 600 V1 */
+.never-settings-card { margin-bottom: 14px; }
+.never-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.never-heading p { margin:4px 0 0; }
+.never-round-grid { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:8px; }
+.never-theme-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-top:14px; }
+.never-theme-option { position:relative; display:flex; align-items:center; gap:9px; min-height:54px; padding:10px 12px; border:1px solid var(--border,rgba(255,255,255,.12)); border-radius:15px; background:rgba(255,255,255,.035); cursor:pointer; transition:.18s ease; }
+.never-theme-option input { position:absolute; opacity:0; pointer-events:none; }
+.never-theme-option span { font-size:1.35rem; }
+.never-theme-option strong { font-size:.86rem; line-height:1.15; }
+.never-theme-option.active { border-color:#9b5cff; background:rgba(155,92,255,.16); box-shadow:0 0 0 1px rgba(155,92,255,.12) inset; }
+.never-custom-list { display:grid; gap:8px; margin-top:10px; }
+.never-custom-list article { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 12px; border-radius:13px; background:rgba(255,255,255,.04); }
+.never-custom-list p { margin:0; font-size:.9rem; }
+@media (max-width:760px) {
+  .never-round-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .never-theme-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .never-heading { flex-direction:column; }
+}
