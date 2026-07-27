@@ -19,7 +19,7 @@
       image: posePath("frog", "idle", "avatar-circle"),
       personality: "Cool, maline et un peu insolente",
       lines: {
-        select: ["Bon choix. J’allais justement te choisir aussi.", "On va gagner sans trop transpirer, d’accord ?"],
+        select: ["Tu m’as choisie ? Enfin une décision qui ne finit pas dans une flaque.", "Parfait. J’apporte le talent, tu peux porter le téléphone.", "Croâ dans l’équipe. Le niveau vient de monter tout seul.", "Je saute avec toi, mais évite de ralentir toute la mare.", "Bon choix. J’avais déjà préparé mon air de victoire.", "On part ensemble. Je ne dirai pas « je te l’avais dit » avant la deuxième manche.", "La grenouille est engagée. Les autres peuvent commencer à s’inquiéter.", "J’accepte. Principalement parce que ton goût m’impressionne.", "Tu prends Croâ ? Audacieux, intelligent, presque suspect.", "Je suis prête. Mon humilité, elle, a décliné l’invitation.", "Équipe formée. Prépare une place sèche pour le trophée.", "Allons-y. J’ai des pattes courtes, pas de petites ambitions."],
         turn: ["Laisse faire la spécialiste.", "Regardez bien, ça va être propre."],
         win: ["Évidemment. Quel suspense.", "Je vous avais prévenus."],
         wait: ["Je réfléchis. Ça arrive même aux génies."]
@@ -30,7 +30,7 @@
       image: posePath("otter", "idle", "avatar-circle"),
       personality: "Câline, gourmande et délicieusement paresseuse",
       lines: {
-        select: ["Je viens, mais quelqu’un a prévu les snacks ?", "D’accord, mais je joue assise."],
+        select: ["Tu me choisis ? Très bien. Où est le bouton pour jouer allongée ?", "J’accepte, à condition que les récompenses soient comestibles.", "On fait équipe. Je fournis les câlins, tu fournis l’effort.", "Excellente décision. J’étais justement entre deux siestes stratégiques.", "D’accord, mais je refuse toute mission située à plus de trois coussins.", "Loki est là. Le goûter peut commencer… le jeu aussi, j’imagine.", "Tu as choisi la loutre la plus motivée de ce canapé.", "Je viens avec toi, mais mon énergie est encore en livraison.", "Promis, je me donne à fond. Enfin, à fond raisonnable.", "Bonne équipe : toi, moi et ce paquet de biscuits imaginaire.", "Je suis partante. Lentement, mais partante.", "On va gagner, ou grignoter jusqu’à oublier le score."],
         turn: ["Une seconde, je termine mentalement mon goûter.", "Je donne tout. Enfin… presque tout."],
         win: ["Victoire et petite sieste, le programme parfait.", "Je mérite clairement un biscuit."],
         wait: ["Je suis prête. Mon énergie, un peu moins."]
@@ -41,7 +41,7 @@
       image: posePath("panda", "idle", "avatar-circle"),
       personality: "Calme, stylée et faussement sage",
       lines: {
-        select: ["Tu as du goût. C’est déjà un bon début.", "Je suis sage. Enfin, en public."],
+        select: ["Tu as du goût. C’est rassurant pour la suite.", "Kaia sélectionnée. Le chaos aura au moins une belle tenue.", "Je suis très sage. Ne demande surtout pas confirmation aux autres.", "Restons calmes, élégants… et légèrement dangereux.", "Je prends la partie. Toi, garde l’air innocent.", "Choix validé. Aucun panda n’a été soudoyé, officiellement.", "Je gère la stratégie et le style. Tu peux respirer.", "On se lance sans courir, sans crier et sans laisser de preuves.", "Tu m’as choisie ? Parfait, j’avais envie de mal me comporter avec classe.", "Je suis prête. Mon visage calme ne garantit absolument rien.", "Ça va bien se passer. J’ai déjà l’air crédible.", "Équipe formée : discrète à l’extérieur, douteuse à l’intérieur."],
         turn: ["Pas de panique, je gère.", "L’air calme, le cerveau en ébullition."],
         win: ["Propre, net, sans froisser la tenue.", "Le talent fait peu de bruit."],
         wait: ["Je vous observe. C’est instructif."]
@@ -52,7 +52,7 @@
       image: posePath("dog", "idle", "avatar-circle"),
       personality: "Ultra douce, innocente et adorable",
       lines: {
-        select: ["On va jouer ensemble ? Trop bien !", "Je promets de faire de mon mieux !"],
+        select: ["Moi ? Tu es sûr(e) ? D’accord, je vais faire très très fort !", "Trop bien ! On est une vraie équipe maintenant ?", "Je promets d’essayer, même si je ne comprends pas tout tout de suite.", "Tu m’as choisie ! Attends, je dois prévenir mon sourire.", "On va jouer ensemble. J’espère que tout le monde s’amuse, même quand on gagne.", "Je suis prête ! Enfin… prête avec un petit peu de trac.", "Merci de me choisir. Je vais garder cette décision dans mon cœur.", "D’accord ! Mais si quelqu’un est triste, on fait une pause câlin.", "Je viens avec toi. J’ai apporté du courage et une friandise de secours.", "Je ne sais pas si je suis la meilleure, mais je serai la plus contente.", "Équipe Bonnie activée ! Ça sonne sérieux, non ?", "On y va doucement… puis très fièrement."],
         turn: ["D’accord, j’essaie !", "Vous me dites si je me trompe, hein ?"],
         win: ["On a gagné ? Pour de vrai ?", "Je suis trop fière de nous !"],
         wait: ["Je peux aider quelqu’un en attendant ?"]
@@ -63,7 +63,7 @@
       image: posePath("crow", "idle", "avatar-circle"),
       personality: "Intelligent, sarcastique et légèrement sombre",
       lines: {
-        select: ["Enfin une décision raisonnable.", "Je savais que tu finirais par comprendre."],
+        select: ["Enfin. La sélection naturelle produit parfois de bons résultats.", "Tu m’as choisi. Je réévalue légèrement l’humanité.", "Très bien. Je vais porter cette équipe intellectuellement.", "Edgar rejoint la partie. L’ambiance vient de gagner trois nuances de noir.", "Décision acceptable. Ne gâche pas ce rare moment.", "Je savais que tu finirais par choisir la compétence.", "On peut commencer. J’ai déjà prévu vos erreurs.", "Tu prends le corbeau sarcastique ? J’admire ton goût du danger verbal.", "Je suis dans ton équipe. Le reste du groupe peut rédiger ses excuses.", "Parfait. J’avais besoin d’une expérience sociale vaguement stimulante.", "Choix enregistré. Ton dossier remonte dans mon estime.", "Allons-y. Le désastre sera au moins bien commenté."],
         turn: ["Observez. Vous apprendrez peut-être quelque chose.", "Le plan est simple. Pour moi."],
         win: ["La surprise aurait été de perdre.", "Je vais faire semblant d’être étonné."],
         wait: ["Le silence améliore nettement certaines conversations."]
@@ -74,7 +74,7 @@
       image: posePath("fox", "idle", "avatar-circle"),
       personality: "Confiant, rusé et charmeur",
       lines: {
-        select: ["Tu viens de faire le choix le plus élégant.", "Avec moi, même perdre aura du style."],
+        select: ["Tu m’as choisi ? Je savais que ce sourire finirait par payer.", "Excellent choix. On va gagner avec assez de charme pour éviter les protestations.", "Filou entre en scène. Cache les points, je pourrais les séduire.", "Je suis avec toi. Fais-moi confiance, mais garde quand même un œil ouvert.", "On va jouer proprement. Enfin, proprement selon ma définition.", "Tu viens de recruter le renard le mieux habillé du tableau.", "Parfait. Je m’occupe du plan, du panache et de l’alibi.", "J’accepte. Ton instinct est presque aussi bon que le mien.", "On fait équipe ? Charmant. Les autres n’ont aucune chance, mais charmant.", "Choix validé. La victoire va avoir beaucoup d’allure.", "Je promets de ne tricher qu’avec mon sourire.", "Allons gagner quelque chose qui mérite mon profil."],
         turn: ["Faites-moi confiance. Ou faites semblant.", "Regardez et prenez des notes."],
         win: ["Le charme, la stratégie, le résultat.", "Je gagne avec une modestie remarquable."],
         wait: ["Je prépare quelque chose de très convaincant."]
@@ -85,7 +85,7 @@
       image: posePath("duck", "idle", "avatar-circle"),
       personality: "Maladroit, surexcité et très mignon",
       lines: {
-        select: ["OUI ! Attends… on joue à quoi déjà ?", "Je suis prêt ! Enfin je crois !"],
+        select: ["MOI ? OUI ! Attends… j’ai marché sur le bouton ?", "Je suis prêt ! J’ai même mis mes deux pieds dans le même sens.", "Tu m’as choisi ! C’était volontaire ou mon aile a encore glissé ?", "Nuggets dans l’équipe ! Personne ne panique avant moi.", "On va gagner ! Je ne sais pas comment, mais j’ai déjà crié.", "D’accord ! Je prends le courage, tu prends la notice.", "Je suis partant ! Où est-ce qu’on signe ? Pourquoi j’ai un stylo dans le bec ?", "Équipe formée ! J’espère que le sol est antidérapant.", "Tu peux compter sur moi. Jusqu’à trois, après je me mélange.", "Je viens ! Attends-moi, j’étais parti dans l’autre direction.", "Ça va être génial. Ou bruyant. Probablement les deux.", "Choisi, motivé, légèrement déséquilibré : le trio parfait."],
         turn: ["J’ai une idée ! Elle est peut-être mauvaise !", "Ça va marcher. Probablement."],
         win: ["J’AI GAGNÉ SANS TOMBER !", "C’était totalement prévu !"],
         wait: ["Pourquoi tout le monde me regarde ?"]
@@ -96,7 +96,7 @@
       image: posePath("ghost", "idle", "avatar-circle"),
       personality: "Doux, étrange et légèrement mystérieux",
       lines: {
-        select: ["Je serai là… la plupart du temps.", "Tu m’as vu ? Parfait."],
+        select: ["Tu m’as choisi… ou ton doigt a traversé l’écran ?", "Je viens avec toi. Ne t’inquiète pas si je flotte un peu hors sujet.", "Vapo sélectionné. La température vient de baisser, c’est bon signe.", "D’accord. Je serai discret… sauf quand les murs chuchotent.", "On fait équipe. J’ai déjà demandé l’avis des courants d’air.", "Je suis là. Enfin, aussi là qu’un fantôme peut l’être.", "Tu as senti ce petit frisson ? C’était mon oui.", "Parfait. Les vivants ont enfin pris une décision intéressante.", "Je t’accompagne. Quelque chose dans l’ombre approuve aussi.", "Choix validé. Mon absence de pouls est très enthousiaste.", "On peut commencer. J’ai laissé mon corps nulle part.", "Tu m’as vu, tu m’as choisi. Belle performance."],
         turn: ["Je sens une drôle d’énergie.", "Pouf… à moi de jouer."],
         win: ["Une victoire presque surnaturelle.", "Je disparais avant les félicitations."],
         wait: ["Je flotte et je réfléchis."]
@@ -107,7 +107,7 @@
       image: posePath("dino", "idle", "avatar-circle"),
       personality: "Énergique, aventurier et pas toujours très malin",
       lines: {
-        select: ["MISSION ACCEPTÉE ! C’était quoi la mission ?", "Scout Rrrrh au rapport !"],
+        select: ["RRRRH CHOISI ! Rrrrh savait que bouton violet était ami.", "Mission acceptée ! C’est quoi une mission ?", "On part à l’aventure ! J’ai pris une gourde vide et beaucoup de confiance.", "Tu choisis Rrrrh. Très bon choix de dinosaure, moins bon pour la discrétion.", "Rrrrh prêt ! Plan numéro un : foncer. Plan numéro deux : encore foncer.", "Équipe formée ! On gagne avant ou après le goûter de survie ?", "J’ai mis mon chapeau d’explorateur. Maintenant je suis officiellement expert.", "Tu peux compter sur moi. Rrrrh sait presque lire les règles.", "À L’AVENTURE ! Attends, pourquoi tout le monde reste assis ?", "Rrrrh dans la partie. Les boutons fragiles sont prévenus.", "Moi choisi ! Moi fier ! Moi… j’avais une troisième phrase.", "On va trouver la victoire. Elle se cache sûrement derrière le gros bouton."],
         turn: ["À L’AVENTURE !", "J’ai un plan ! Il manque juste le plan."],
         win: ["BADGE DE VICTOIRE POUR MOI !", "Rrrrh très fort. Rrrrh très content."],
         wait: ["Je peux explorer quelque chose ?"]
@@ -118,7 +118,7 @@
       image: posePath("cat", "idle", "avatar-circle"),
       personality: "Hautain, respectable et clairement le patron",
       lines: {
-        select: ["Votre jugement n’est pas entièrement mauvais.", "Très bien. Je prends la direction des opérations."],
+        select: ["Votre choix est tardif, mais finalement convenable.", "Très bien. Je prends la direction pendant que vous improvisez.", "Sir Moustache accepte. Faites prévenir le personnel.", "Vous avez choisi l’expérience. Une décision rare à votre âge.", "Je participerai, à condition que cette partie conserve un minimum de dignité.", "Parfait. J’ai déjà survécu à trois modes et à une mise à jour.", "Je suis des vôtres. Essayez simplement de ne pas toucher à ma moustache.", "Choix approuvé. Le comité des gens compétents peut enfin siéger.", "Je vais jouer. Quelqu’un devait apporter un peu de tenue.", "Fort bien. La jeunesse court, l’expérience gagne.", "Mon agenda est chargé, mais je peux sauver cette équipe.", "Vous m’avez sélectionné. Je note ce progrès dans votre éducation."],
         turn: ["Laissez passer le professionnel.", "Un peu de tenue, je vous prie."],
         win: ["Le conseil d’administration est satisfait.", "Un résultat conforme à mes attentes."],
         wait: ["Je supervise. C’est déjà beaucoup."]
@@ -129,7 +129,7 @@
       image: posePath("penguin", "idle", "avatar-circle"),
       personality: "Timide, adorable et légèrement gauche",
       lines: {
-        select: ["Moi ? D’accord… merci.", "Je vais essayer de ne pas glisser."],
+        select: ["Moi ? D’accord… je vais essayer de ne pas glisser sur l’écran.", "Tu m’as choisi ? C’est gentil. Maintenant mes ailes ne savent plus quoi faire.", "Je veux bien jouer… si personne ne regarde trop fort.", "Snow rejoint l’équipe. Enfin, dès que j’arrête de rougir.", "D’accord. J’ai un peu peur, mais une peur organisée.", "Je suis prêt… attends, non… si, prêt.", "Merci. Je vais faire de mon mieux et éviter les entrées spectaculaires.", "Tu peux compter sur moi, sauf pour marcher avec élégance.", "Je viens avec toi. J’ai répété mon « bonjour » seulement six fois.", "Choisi ! C’est beaucoup d’émotions pour un si petit pingouin.", "On commence ? Je vais me mettre ici, là où personne ne peut me bousculer.", "Je suis partant. Timidement, mais avec conviction."],
         turn: ["C’est déjà mon tour ?", "Je peux le faire. Doucement, mais je peux."],
         win: ["J’ai gagné ? C’est un peu intimidant.", "Je suis content… très discrètement."],
         wait: ["Je reste ici, ça me va bien."]
@@ -140,7 +140,7 @@
       image: posePath("fish", "idle", "avatar-circle"),
       personality: "Dramatique, nerveux et théâtral",
       lines: {
-        select: ["Enfin ! Mon public m’attendait !", "Je sens déjà le drame monter."],
+        select: ["ENFIN ! Le rôle principal trouve son interprète.", "Tu me choisis ? Que le rideau se lève et que quelqu’un apporte de l’eau.", "Maurice entre en scène ! Le public peut retenir son souffle.", "J’accepte ce destin, malgré le poids terrible de l’excellence.", "C’EST MOI ! Pardon, l’émotion fait vibrer mon bocal intérieur.", "On va jouer. Préparez les applaudissements et une issue de secours.", "Tu viens de choisir le drame, le talent et une légère tachycardie.", "Je suis prêt ! Non, je ne le suis pas ! Si, je le suis !", "La partie m’appelle. Ou c’est mon anxiété, difficile à dire.", "Mon heure est venue. J’avais répété cette entrée devant une algue.", "Je prends le rôle. Le suspense, lui, prend toute la place.", "Que l’aventure commence ! Je sens déjà le rebondissement tragique."],
         turn: ["C’EST MON MOMENT !", "Tout repose sur mes nageoires !"],
         win: ["UNE OVATION, JE VOUS PRIE !", "Le héros triomphe encore !"],
         wait: ["Cette attente est insoutenable !"]
@@ -151,7 +151,7 @@
       image: posePath("elephant", "idle", "avatar-circle"),
       personality: "Protecteur, gentil et solide",
       lines: {
-        select: ["Je reste avec toi, on forme une équipe.", "Pas d’inquiétude, je suis là."],
+        select: ["Je viens avec toi. Personne ne reste derrière.", "Tu m’as choisi ? Alors on avance ensemble, tranquillement.", "Moon est là. Tu peux souffler, je tiens l’équipe.", "D’accord. Je garde un œil sur le jeu et l’autre sur tout le monde.", "On va faire ça bien, sans écraser les plus petits.", "Je suis partant. Une équipe solide commence par se rassurer.", "Tu peux compter sur moi, même quand le plan devient lourd.", "Choix accepté. J’apporte le calme et une mémoire d’éléphant, évidemment.", "Je reste à tes côtés. C’est plus facile d’être courageux à plusieurs.", "On y va. Lentement si besoin, mais jamais seuls.", "Équipe Moon formée. Les problèmes peuvent prendre un ticket.", "Je suis là. Et oui, j’ai déjà pensé au plan de secours."],
         turn: ["On y va tranquillement.", "Je prends ça en charge."],
         win: ["Belle équipe. Tout le monde va bien ?", "Solides jusqu’au bout."],
         wait: ["Prenez votre temps, je garde la place."]
@@ -162,7 +162,7 @@
       image: posePath("cactus", "idle", "avatar-circle"),
       personality: "Insolent, blasé et piquant",
       lines: {
-        select: ["Bon. Au moins tu n’as pas choisi au hasard.", "Essaie de suivre le rythme."],
+        select: ["Tu m’as choisi. Tes standards ont enfin poussé.", "Bon. Essaie juste de ne pas rendre ça plus pénible que nécessaire.", "Spike sélectionné. Les câlins sont toujours hors contrat.", "Je participe, mais mon enthousiasme reste en pot.", "Excellent choix. Enfin, acceptable. N’en fais pas une fête.", "On fait équipe. Garde tes distances, émotionnellement et physiquement.", "Je suis prêt. C’est mon visage motivé, ne cherche pas la différence.", "Tu prends le cactus ? J’espère que tu sais gérer les remarques piquantes.", "D’accord. Je vais gagner pour écourter les célébrations.", "Choix validé. Le fun peut commencer, quelle menace.", "Je viens. Quelqu’un doit empêcher cette partie de devenir trop joyeuse.", "On y va. J’ai déjà épuisé mon quota de bonne humeur."],
         turn: ["Écartez-vous, ça risque de piquer.", "Je vais faire semblant d’être motivé."],
         win: ["Je suis ravi. Ça ne se voit pas ?", "Victoire. Quelle émotion bouleversante."],
         wait: ["Passionnant. Vraiment."]
@@ -173,7 +173,7 @@
       image: posePath("bear", "idle", "avatar-circle"),
       personality: "Calme, rassurant et tendre",
       lines: {
-        select: ["On va passer un bon moment.", "Je suis content d’être dans ton équipe."],
+        select: ["Tu m’as choisi ? Viens, on va rendre cette partie toute douce.", "Je suis avec toi. Pas besoin de courir pour bien jouer.", "D’accord. On gagne si on s’amuse, le reste est du décor.", "Honey rejoint l’équipe. J’ai apporté du calme pour tout le monde.", "Tu peux respirer, je m’occupe du petit stress qui traîne.", "Je viens volontiers. Une bonne équipe commence par se faire confiance.", "On va essayer ensemble, sans se gronder si ça rate.", "Merci de me choisir. Je garderai une place confortable à côté de moi.", "Je suis prêt. Doucement, sûrement, avec un peu de miel dans l’ambiance.", "On se lance. Les grandes victoires aiment aussi les petites pauses.", "Équipe Honey formée. Premier objectif : que personne ne se sente seul.", "Je reste avec toi, même si le jeu devient un peu sauvage."],
         turn: ["Respirons, puis on se lance.", "Pas besoin de se presser pour bien faire."],
         win: ["Bien joué à tout le monde.", "Une victoire toute douce."],
         wait: ["Je suis là si quelqu’un a besoin d’aide."]
@@ -184,7 +184,7 @@
       image: posePath("rabbit", "idle", "avatar-circle"),
       personality: "Rapide, hyperactive et imprévisible",
       lines: {
-        select: ["GO GO GO ! On commence quand ?", "Trop tard, j’ai déjà démarré !"],
+        select: ["CHOISI ! J’étais déjà parti, mais je suis revenu avant ton clic.", "On commence maintenant ? Maintenant maintenant ?", "Flash dans l’équipe ! Le bouton n’a même pas eu le temps de réagir.", "Très bon choix. Rapide, surtout. J’approuve.", "Je suis prêt depuis demain !", "GO ! Attends, il faut lire quelque chose ? Trop tard.", "Tu m’as choisi ? Parfait, j’ai déjà gagné trois parties imaginaires.", "Équipe formée en temps record. Chronomètre jaloux.", "Je prends la vitesse, tu prends les virages.", "On va tellement vite que la défaite ne nous verra pas passer.", "Flash activé ! Ne cligne pas des yeux, tu manquerais ma stratégie.", "Partant ! J’ai un plan, douze variantes et aucune patience."],
         turn: ["CHRONO LANCÉ DANS MA TÊTE !", "Vite, vite, vite !"],
         win: ["Déjà fini ? J’en veux encore !", "Rapide, propre, suivant !"],
         wait: ["Attendre est un sport très mauvais."]
@@ -195,7 +195,7 @@
       image: posePath("octopus", "idle", "avatar-circle"),
       personality: "Intelligente, débordée et généreuse",
       lines: {
-        select: ["Parfait, j’avais justement huit choses à gérer.", "Je note ça quelque part… sur une tentacule."],
+        select: ["Tu me choisis ? Parfait, je déplace seulement quatre urgences.", "Marcellius disponible. Enfin, six tentacules sur huit.", "Je viens. J’ai déjà créé un tableau pour organiser notre spontanéité.", "D’accord. Une tentacule pour le jeu, sept pour les imprévus.", "Choix enregistré, classé, sauvegardé et presque compris.", "Je prends l’équipe en charge. Quelqu’un a vu mon troisième stylo ?", "On peut commencer. J’ai huit bras et toujours pas assez de mains.", "Tu m’as choisi ? Merci. J’ajoute ça entre « sauver la partie » et « respirer ».", "Je suis partant. Mon planning, lui, vient de s’évanouir.", "Équipe formée. J’ai préparé trois plans, deux secours et un goûter.", "Je gère. C’est faux, mais dit avec assez d’assurance, ça aide.", "Allons-y. Si tout déborde, au moins je suis adapté."],
         turn: ["Une seconde, je termine trois autres tâches.", "J’ai plusieurs plans. Littéralement."],
         win: ["Victoire classée, tamponnée et archivée.", "Huit bras, huit fois plus efficace."],
         wait: ["Je m’organise. Enfin, j’essaie."]

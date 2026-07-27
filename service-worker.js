@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v4.8-theme-characters-splash";
+const CACHE_VERSION = "akgames-v4.9-personality-voices";
 
 const CORE_SHELL = [
   "/",

@@ -1,5 +1,5 @@
 {
-  "version": "3.0-sorted-complete",
+  "version": "3.1-personality-selection-voices",
   "generatedFor": "AK'Games — 17 mascottes, 5 poses, 4 cadrages",
   "characterCount": 17,
   "events": {
@@ -112,14 +112,18 @@
       },
       "lines": {
         "selected": [
-          "Le sac est bouclé. Je suis de la partie.",
-          "Bon choix. La boussole pointe vers le fun.",
-          "Tu m’embarques ? Les bottes sont prêtes.",
-          "Le prochain saut sera grand. On peut y aller.",
-          "Parfait. Le sentier n’attend que nous.",
-          "Le campement tient debout. Ça commence bien.",
-          "Je prends ma place. L’expédition vient de gagner une grenouille.",
-          "L’inconnu a l’air plutôt accueillant. Pas de retour en arrière."
+          "Tu m’as choisie ? Enfin une décision qui ne finit pas dans une flaque.",
+          "Parfait. J’apporte le talent, tu peux porter le téléphone.",
+          "Croâ dans l’équipe. Le niveau vient de monter tout seul.",
+          "Je saute avec toi, mais évite de ralentir toute la mare.",
+          "Bon choix. J’avais déjà préparé mon air de victoire.",
+          "On part ensemble. Je ne dirai pas « je te l’avais dit » avant la deuxième manche.",
+          "La grenouille est engagée. Les autres peuvent commencer à s’inquiéter.",
+          "J’accepte. Principalement parce que ton goût m’impressionne.",
+          "Tu prends Croâ ? Audacieux, intelligent, presque suspect.",
+          "Je suis prête. Mon humilité, elle, a décliné l’invitation.",
+          "Équipe formée. Prépare une place sèche pour le trophée.",
+          "Allons-y. J’ai des pattes courtes, pas de petites ambitions."
         ],
         "lobby_ready": [
           "Le sac est bouclé. Tout le monde est prêt ?",
@@ -277,14 +281,18 @@
       },
       "lines": {
         "selected": [
-          "Le goûter est sécurisé. Je suis de la partie.",
-          "Bon choix. Mon ventre a validé le programme.",
-          "Tu m’embarques ? Le canapé me manque déjà.",
-          "Je suis réveillée, c’est déjà héroïque. On peut y aller.",
-          "Parfait. Le coquillage porte chance.",
-          "Le ciré est prêt à encaisser. Ça commence bien.",
-          "Je prends ma place. J’ai apporté mon sourire le plus paresseux.",
-          "La sieste peut attendre cinq minutes. Pas de retour en arrière."
+          "Tu me choisis ? Très bien. Où est le bouton pour jouer allongée ?",
+          "J’accepte, à condition que les récompenses soient comestibles.",
+          "On fait équipe. Je fournis les câlins, tu fournis l’effort.",
+          "Excellente décision. J’étais justement entre deux siestes stratégiques.",
+          "D’accord, mais je refuse toute mission située à plus de trois coussins.",
+          "Loki est là. Le goûter peut commencer… le jeu aussi, j’imagine.",
+          "Tu as choisi la loutre la plus motivée de ce canapé.",
+          "Je viens avec toi, mais mon énergie est encore en livraison.",
+          "Promis, je me donne à fond. Enfin, à fond raisonnable.",
+          "Bonne équipe : toi, moi et ce paquet de biscuits imaginaire.",
+          "Je suis partante. Lentement, mais partante.",
+          "On va gagner, ou grignoter jusqu’à oublier le score."
         ],
         "lobby_ready": [
           "Le goûter est sécurisé. Tout le monde est prêt ?",
@@ -442,14 +450,18 @@
       },
       "lines": {
         "selected": [
-          "Les écouteurs sont en place. Je suis de la partie.",
-          "Bon choix. Le baggy est parfaitement ajusté.",
-          "Tu m’embarques ? Mon calme est opérationnel.",
-          "Je suis sage, en apparence seulement. On peut y aller.",
-          "Parfait. La playlist vient de devenir meilleure.",
-          "La sacoche contient probablement un plan. Ça commence bien.",
-          "Je prends ma place. Le niveau de style reste stable.",
-          "Je garde un œil tranquille sur le chaos. Pas de retour en arrière."
+          "Tu as du goût. C’est rassurant pour la suite.",
+          "Kaia sélectionnée. Le chaos aura au moins une belle tenue.",
+          "Je suis très sage. Ne demande surtout pas confirmation aux autres.",
+          "Restons calmes, élégants… et légèrement dangereux.",
+          "Je prends la partie. Toi, garde l’air innocent.",
+          "Choix validé. Aucun panda n’a été soudoyé, officiellement.",
+          "Je gère la stratégie et le style. Tu peux respirer.",
+          "On se lance sans courir, sans crier et sans laisser de preuves.",
+          "Tu m’as choisie ? Parfait, j’avais envie de mal me comporter avec classe.",
+          "Je suis prête. Mon visage calme ne garantit absolument rien.",
+          "Ça va bien se passer. J’ai déjà l’air crédible.",
+          "Équipe formée : discrète à l’extérieur, douteuse à l’intérieur."
         ],
         "lobby_ready": [
           "Les écouteurs sont en place. Tout le monde est prêt ?",
@@ -607,14 +619,18 @@
       },
       "lines": {
         "selected": [
-          "Ma médaille brille pour l’équipe. Je suis de la partie.",
-          "Bon choix. Mon bandana est bien noué.",
-          "Tu m’embarques ? Je suis là jusqu’au bout.",
-          "Une oreille écoute, l’autre essaie. On peut y aller.",
-          "Parfait. Le groupe peut compter sur moi.",
-          "J’ai apporté tout mon courage. Ça commence bien.",
-          "Je prends ma place. La salopette est prête pour la mission.",
-          "Je garde une place pour tout le monde. Pas de retour en arrière."
+          "Moi ? Tu es sûr(e) ? D’accord, je vais faire très très fort !",
+          "Trop bien ! On est une vraie équipe maintenant ?",
+          "Je promets d’essayer, même si je ne comprends pas tout tout de suite.",
+          "Tu m’as choisie ! Attends, je dois prévenir mon sourire.",
+          "On va jouer ensemble. J’espère que tout le monde s’amuse, même quand on gagne.",
+          "Je suis prête ! Enfin… prête avec un petit peu de trac.",
+          "Merci de me choisir. Je vais garder cette décision dans mon cœur.",
+          "D’accord ! Mais si quelqu’un est triste, on fait une pause câlin.",
+          "Je viens avec toi. J’ai apporté du courage et une friandise de secours.",
+          "Je ne sais pas si je suis la meilleure, mais je serai la plus contente.",
+          "Équipe Bonnie activée ! Ça sonne sérieux, non ?",
+          "On y va doucement… puis très fièrement."
         ],
         "lobby_ready": [
           "Ma médaille brille pour l’équipe. Tout le monde est prêt ?",
@@ -772,14 +788,18 @@
       },
       "lines": {
         "selected": [
-          "L’ombre a pris sa place. Je suis de la partie.",
-          "Bon choix. Mon analyse est déjà terminée.",
-          "Tu m’embarques ? Le silence est étonnamment instructif.",
-          "Cette room manque encore de subtilité. On peut y aller.",
-          "Parfait. La chaîne brille mieux dans le noir.",
-          "Je vois ce que les autres ne regardent pas. Ça commence bien.",
-          "Je prends ma place. Le présage est presque divertissant.",
-          "Mon sarcasme est parfaitement aiguisé. Pas de retour en arrière."
+          "Enfin. La sélection naturelle produit parfois de bons résultats.",
+          "Tu m’as choisi. Je réévalue légèrement l’humanité.",
+          "Très bien. Je vais porter cette équipe intellectuellement.",
+          "Edgar rejoint la partie. L’ambiance vient de gagner trois nuances de noir.",
+          "Décision acceptable. Ne gâche pas ce rare moment.",
+          "Je savais que tu finirais par choisir la compétence.",
+          "On peut commencer. J’ai déjà prévu vos erreurs.",
+          "Tu prends le corbeau sarcastique ? J’admire ton goût du danger verbal.",
+          "Je suis dans ton équipe. Le reste du groupe peut rédiger ses excuses.",
+          "Parfait. J’avais besoin d’une expérience sociale vaguement stimulante.",
+          "Choix enregistré. Ton dossier remonte dans mon estime.",
+          "Allons-y. Le désastre sera au moins bien commenté."
         ],
         "lobby_ready": [
           "L’ombre a pris sa place. Tout le monde est prêt ?",
@@ -937,14 +957,18 @@
       },
       "lines": {
         "selected": [
-          "La boucle de ceinture annonce la couleur. Je suis de la partie.",
-          "Bon choix. Mon sourire a déjà un plan.",
-          "Tu m’embarques ? Le charme est correctement réglé.",
-          "Je connais un raccourci, évidemment. On peut y aller.",
-          "Parfait. La ruse vient de mettre ses gants.",
-          "Le perfecto est ouvert, les options aussi. Ça commence bien.",
-          "Je prends ma place. J’entre toujours par la meilleure porte.",
-          "Le prochain coup sera élégant. Pas de retour en arrière."
+          "Tu m’as choisi ? Je savais que ce sourire finirait par payer.",
+          "Excellent choix. On va gagner avec assez de charme pour éviter les protestations.",
+          "Filou entre en scène. Cache les points, je pourrais les séduire.",
+          "Je suis avec toi. Fais-moi confiance, mais garde quand même un œil ouvert.",
+          "On va jouer proprement. Enfin, proprement selon ma définition.",
+          "Tu viens de recruter le renard le mieux habillé du tableau.",
+          "Parfait. Je m’occupe du plan, du panache et de l’alibi.",
+          "J’accepte. Ton instinct est presque aussi bon que le mien.",
+          "On fait équipe ? Charmant. Les autres n’ont aucune chance, mais charmant.",
+          "Choix validé. La victoire va avoir beaucoup d’allure.",
+          "Je promets de ne tricher qu’avec mon sourire.",
+          "Allons gagner quelque chose qui mérite mon profil."
         ],
         "lobby_ready": [
           "La boucle de ceinture annonce la couleur. Tout le monde est prêt ?",
@@ -1102,14 +1126,18 @@
       },
       "lines": {
         "selected": [
-          "Mes bottes sont déjà parties sans moi. Je suis de la partie.",
-          "Bon choix. La casquette tient presque droit.",
-          "Tu m’embarques ? J’ai une idée, elle est probablement mauvaise.",
-          "Tout va très vite dans ma petite tête. On peut y aller.",
-          "Parfait. Je n’ai encore rien renversé, incroyable.",
-          "L’énergie déborde par les plumes. Ça commence bien.",
-          "Je prends ma place. Je suis prêt depuis beaucoup trop longtemps.",
-          "Le sol a l’air glissant, parfait. Pas de retour en arrière."
+          "MOI ? OUI ! Attends… j’ai marché sur le bouton ?",
+          "Je suis prêt ! J’ai même mis mes deux pieds dans le même sens.",
+          "Tu m’as choisi ! C’était volontaire ou mon aile a encore glissé ?",
+          "Nuggets dans l’équipe ! Personne ne panique avant moi.",
+          "On va gagner ! Je ne sais pas comment, mais j’ai déjà crié.",
+          "D’accord ! Je prends le courage, tu prends la notice.",
+          "Je suis partant ! Où est-ce qu’on signe ? Pourquoi j’ai un stylo dans le bec ?",
+          "Équipe formée ! J’espère que le sol est antidérapant.",
+          "Tu peux compter sur moi. Jusqu’à trois, après je me mélange.",
+          "Je viens ! Attends-moi, j’étais parti dans l’autre direction.",
+          "Ça va être génial. Ou bruyant. Probablement les deux.",
+          "Choisi, motivé, légèrement déséquilibré : le trio parfait."
         ],
         "lobby_ready": [
           "Mes bottes sont déjà parties sans moi. Tout le monde est prêt ?",
@@ -1267,14 +1295,18 @@
       },
       "lines": {
         "selected": [
-          "Un petit courant froid vient d’arriver. Je suis de la partie.",
-          "Bon choix. Mon foulard flotte dans la bonne direction.",
-          "Tu m’embarques ? Je suis là, techniquement.",
-          "La vapeur dessine un sourire. On peut y aller.",
-          "Parfait. Le silence vient de devenir plus léger.",
-          "Je traverse la room sans déranger. Ça commence bien.",
-          "Je prends ma place. Mon halo est de bonne humeur.",
-          "Pouf, présence confirmée. Pas de retour en arrière."
+          "Tu m’as choisi… ou ton doigt a traversé l’écran ?",
+          "Je viens avec toi. Ne t’inquiète pas si je flotte un peu hors sujet.",
+          "Vapo sélectionné. La température vient de baisser, c’est bon signe.",
+          "D’accord. Je serai discret… sauf quand les murs chuchotent.",
+          "On fait équipe. J’ai déjà demandé l’avis des courants d’air.",
+          "Je suis là. Enfin, aussi là qu’un fantôme peut l’être.",
+          "Tu as senti ce petit frisson ? C’était mon oui.",
+          "Parfait. Les vivants ont enfin pris une décision intéressante.",
+          "Je t’accompagne. Quelque chose dans l’ombre approuve aussi.",
+          "Choix validé. Mon absence de pouls est très enthousiaste.",
+          "On peut commencer. J’ai laissé mon corps nulle part.",
+          "Tu m’as vu, tu m’as choisi. Belle performance."
         ],
         "lobby_ready": [
           "Un petit courant froid vient d’arriver. Tout le monde est prêt ?",
@@ -1432,14 +1464,18 @@
       },
       "lines": {
         "selected": [
-          "Mon foulard scout est noué très fort. Je suis de la partie.",
-          "Bon choix. Le mini sac contient sûrement quelque chose.",
-          "Tu m’embarques ? Je suis prêt à rugir pour aucune raison.",
-          "La piste a des traces, peut-être les miennes. On peut y aller.",
-          "Parfait. J’ai compté jusqu’à trois, enfin presque.",
-          "Le camp scout est officiellement réveillé. Ça commence bien.",
-          "Je prends ma place. Mes petites dents sont très motivées.",
-          "RRRRH, présence confirmée. Pas de retour en arrière."
+          "RRRRH CHOISI ! Rrrrh savait que bouton violet était ami.",
+          "Mission acceptée ! C’est quoi une mission ?",
+          "On part à l’aventure ! J’ai pris une gourde vide et beaucoup de confiance.",
+          "Tu choisis Rrrrh. Très bon choix de dinosaure, moins bon pour la discrétion.",
+          "Rrrrh prêt ! Plan numéro un : foncer. Plan numéro deux : encore foncer.",
+          "Équipe formée ! On gagne avant ou après le goûter de survie ?",
+          "J’ai mis mon chapeau d’explorateur. Maintenant je suis officiellement expert.",
+          "Tu peux compter sur moi. Rrrrh sait presque lire les règles.",
+          "À L’AVENTURE ! Attends, pourquoi tout le monde reste assis ?",
+          "Rrrrh dans la partie. Les boutons fragiles sont prévenus.",
+          "Moi choisi ! Moi fier ! Moi… j’avais une troisième phrase.",
+          "On va trouver la victoire. Elle se cache sûrement derrière le gros bouton."
         ],
         "lobby_ready": [
           "Mon foulard scout est noué très fort. Tout le monde est prêt ?",
@@ -1596,14 +1632,18 @@
       },
       "lines": {
         "selected": [
-          "Les boutons de manchette sont alignés. Je suis de la partie.",
-          "Bon choix. La moustache a rendu son avis.",
-          "Tu m’embarques ? La veste prune impose déjà le calme.",
-          "Cette assemblée peut enfin commencer. On peut y aller.",
-          "Parfait. Le patron a pris place.",
-          "La tenue reste irréprochable. Ça commence bien.",
-          "Je prends ma place. J’accorde mon attention à cette partie.",
-          "Le niveau de distinction vient de monter. Pas de retour en arrière."
+          "Votre choix est tardif, mais finalement convenable.",
+          "Très bien. Je prends la direction pendant que vous improvisez.",
+          "Sir Moustache accepte. Faites prévenir le personnel.",
+          "Vous avez choisi l’expérience. Une décision rare à votre âge.",
+          "Je participerai, à condition que cette partie conserve un minimum de dignité.",
+          "Parfait. J’ai déjà survécu à trois modes et à une mise à jour.",
+          "Je suis des vôtres. Essayez simplement de ne pas toucher à ma moustache.",
+          "Choix approuvé. Le comité des gens compétents peut enfin siéger.",
+          "Je vais jouer. Quelqu’un devait apporter un peu de tenue.",
+          "Fort bien. La jeunesse court, l’expérience gagne.",
+          "Mon agenda est chargé, mais je peux sauver cette équipe.",
+          "Vous m’avez sélectionné. Je note ce progrès dans votre éducation."
         ],
         "lobby_ready": [
           "Les boutons de manchette sont alignés. Tout le monde est prêt ?",
@@ -1761,14 +1801,18 @@
       },
       "lines": {
         "selected": [
-          "Mes moufles sont bien serrées. Je suis de la partie.",
-          "Bon choix. Les cache-oreilles me donnent du courage.",
-          "Tu m’embarques ? Je suis prêt, un tout petit peu nerveux.",
-          "La doudoune tient chaud au suspense. On peut y aller.",
-          "Parfait. J’ai glissé jusqu’ici sans tomber.",
-          "Le froid aide peut-être à réfléchir. Ça commence bien.",
-          "Je prends ma place. Je garde mes nageoires près de moi.",
-          "La glace semble plutôt accueillante. Pas de retour en arrière."
+          "Moi ? D’accord… je vais essayer de ne pas glisser sur l’écran.",
+          "Tu m’as choisi ? C’est gentil. Maintenant mes ailes ne savent plus quoi faire.",
+          "Je veux bien jouer… si personne ne regarde trop fort.",
+          "Snow rejoint l’équipe. Enfin, dès que j’arrête de rougir.",
+          "D’accord. J’ai un peu peur, mais une peur organisée.",
+          "Je suis prêt… attends, non… si, prêt.",
+          "Merci. Je vais faire de mon mieux et éviter les entrées spectaculaires.",
+          "Tu peux compter sur moi, sauf pour marcher avec élégance.",
+          "Je viens avec toi. J’ai répété mon « bonjour » seulement six fois.",
+          "Choisi ! C’est beaucoup d’émotions pour un si petit pingouin.",
+          "On commence ? Je vais me mettre ici, là où personne ne peut me bousculer.",
+          "Je suis partant. Timidement, mais avec conviction."
         ],
         "lobby_ready": [
           "Mes moufles sont bien serrées. Tout le monde est prêt ?",
@@ -1926,14 +1970,18 @@
       },
       "lines": {
         "selected": [
-          "Ma bouée ne suffit pas à cette pression. Je suis de la partie.",
-          "Bon choix. Les lunettes de nage ont vu le désastre arriver.",
-          "Tu m’embarques ? Mon cœur aquatique bat beaucoup trop vite.",
-          "Je nage déjà dans le suspense. On peut y aller.",
-          "Parfait. Cette situation exige une musique dramatique.",
-          "Mes nageoires tremblent avec élégance. Ça commence bien.",
-          "Je prends ma place. Je pressens une catastrophe splendide.",
-          "Le rideau se lève sur mon inquiétude. Pas de retour en arrière."
+          "ENFIN ! Le rôle principal trouve son interprète.",
+          "Tu me choisis ? Que le rideau se lève et que quelqu’un apporte de l’eau.",
+          "Maurice entre en scène ! Le public peut retenir son souffle.",
+          "J’accepte ce destin, malgré le poids terrible de l’excellence.",
+          "C’EST MOI ! Pardon, l’émotion fait vibrer mon bocal intérieur.",
+          "On va jouer. Préparez les applaudissements et une issue de secours.",
+          "Tu viens de choisir le drame, le talent et une légère tachycardie.",
+          "Je suis prêt ! Non, je ne le suis pas ! Si, je le suis !",
+          "La partie m’appelle. Ou c’est mon anxiété, difficile à dire.",
+          "Mon heure est venue. J’avais répété cette entrée devant une algue.",
+          "Je prends le rôle. Le suspense, lui, prend toute la place.",
+          "Que l’aventure commence ! Je sens déjà le rebondissement tragique."
         ],
         "lobby_ready": [
           "Ma bouée ne suffit pas à cette pression. Tout le monde est prêt ?",
@@ -2091,14 +2139,18 @@
       },
       "lines": {
         "selected": [
-          "Le foulard est bien en place. Je suis de la partie.",
-          "Bon choix. Je garde un œil sur toute l’équipe.",
-          "Tu m’embarques ? Mes pieds sont solidement posés.",
-          "Le groupe peut s’appuyer sur moi. On peut y aller.",
-          "Parfait. Je prends assez de place pour protéger tout le monde.",
-          "La chemise est ouverte, le cœur aussi. Ça commence bien.",
-          "Je prends ma place. Je reste calme quand ça secoue.",
-          "La room tient bon. Pas de retour en arrière."
+          "Je viens avec toi. Personne ne reste derrière.",
+          "Tu m’as choisi ? Alors on avance ensemble, tranquillement.",
+          "Moon est là. Tu peux souffler, je tiens l’équipe.",
+          "D’accord. Je garde un œil sur le jeu et l’autre sur tout le monde.",
+          "On va faire ça bien, sans écraser les plus petits.",
+          "Je suis partant. Une équipe solide commence par se rassurer.",
+          "Tu peux compter sur moi, même quand le plan devient lourd.",
+          "Choix accepté. J’apporte le calme et une mémoire d’éléphant, évidemment.",
+          "Je reste à tes côtés. C’est plus facile d’être courageux à plusieurs.",
+          "On y va. Lentement si besoin, mais jamais seuls.",
+          "Équipe Moon formée. Les problèmes peuvent prendre un ticket.",
+          "Je suis là. Et oui, j’ai déjà pensé au plan de secours."
         ],
         "lobby_ready": [
           "Le foulard est bien en place. Tout le monde est prêt ?",
@@ -2256,14 +2308,18 @@
       },
       "lines": {
         "selected": [
-          "Les lunettes cachent mon enthousiasme inexistant. Je suis de la partie.",
-          "Bon choix. Mes épines ont déjà un avis.",
-          "Tu m’embarques ? Je suis debout, c’est largement suffisant.",
-          "Le pot imaginaire déborde de patience. On peut y aller.",
-          "Parfait. Mon sourire minuscule juge cette room.",
-          "Les sneakers ont accepté de venir. Ça commence bien.",
-          "Je prends ma place. Je pique surtout quand on insiste.",
-          "Cette partie avait visiblement besoin de moi. Pas de retour en arrière."
+          "Tu m’as choisi. Tes standards ont enfin poussé.",
+          "Bon. Essaie juste de ne pas rendre ça plus pénible que nécessaire.",
+          "Spike sélectionné. Les câlins sont toujours hors contrat.",
+          "Je participe, mais mon enthousiasme reste en pot.",
+          "Excellent choix. Enfin, acceptable. N’en fais pas une fête.",
+          "On fait équipe. Garde tes distances, émotionnellement et physiquement.",
+          "Je suis prêt. C’est mon visage motivé, ne cherche pas la différence.",
+          "Tu prends le cactus ? J’espère que tu sais gérer les remarques piquantes.",
+          "D’accord. Je vais gagner pour écourter les célébrations.",
+          "Choix validé. Le fun peut commencer, quelle menace.",
+          "Je viens. Quelqu’un doit empêcher cette partie de devenir trop joyeuse.",
+          "On y va. J’ai déjà épuisé mon quota de bonne humeur."
         ],
         "lobby_ready": [
           "Les lunettes cachent mon enthousiasme inexistant. Tout le monde est prêt ?",
@@ -2421,14 +2477,18 @@
       },
       "lines": {
         "selected": [
-          "Le foulard est bien chaud. Je suis de la partie.",
-          "Bon choix. Mon gilet garde une place pour le calme.",
-          "Tu m’embarques ? Je suis là, prenez votre temps.",
-          "L’ambiance peut respirer. On peut y aller.",
-          "Parfait. Un peu de douceur ne fera pas de mal.",
-          "Je garde le groupe au chaud. Ça commence bien.",
-          "Je prends ma place. Mon sourire est prêt à rassurer.",
-          "Tout ira bien, même si ça hésite. Pas de retour en arrière."
+          "Tu m’as choisi ? Viens, on va rendre cette partie toute douce.",
+          "Je suis avec toi. Pas besoin de courir pour bien jouer.",
+          "D’accord. On gagne si on s’amuse, le reste est du décor.",
+          "Honey rejoint l’équipe. J’ai apporté du calme pour tout le monde.",
+          "Tu peux respirer, je m’occupe du petit stress qui traîne.",
+          "Je viens volontiers. Une bonne équipe commence par se faire confiance.",
+          "On va essayer ensemble, sans se gronder si ça rate.",
+          "Merci de me choisir. Je garderai une place confortable à côté de moi.",
+          "Je suis prêt. Doucement, sûrement, avec un peu de miel dans l’ambiance.",
+          "On se lance. Les grandes victoires aiment aussi les petites pauses.",
+          "Équipe Honey formée. Premier objectif : que personne ne se sente seul.",
+          "Je reste avec toi, même si le jeu devient un peu sauvage."
         ],
         "lobby_ready": [
           "Le foulard est bien chaud. Tout le monde est prêt ?",
@@ -2586,14 +2646,18 @@
       },
       "lines": {
         "selected": [
-          "Les lunettes sont déjà prêtes au décollage. Je suis de la partie.",
-          "Bon choix. Mon bracelet compte trop de battements.",
-          "Tu m’embarques ? Je suis arrivé avant la question.",
-          "Mes oreilles ont pris de l’avance. On peut y aller.",
-          "Parfait. La veste courte n’a pas le temps de fermer.",
-          "Je cours même quand rien ne bouge. Ça commence bien.",
-          "Je prends ma place. Mon cerveau a déjà sauté deux étapes.",
-          "La prochaine seconde est réservée. Pas de retour en arrière."
+          "CHOISI ! J’étais déjà parti, mais je suis revenu avant ton clic.",
+          "On commence maintenant ? Maintenant maintenant ?",
+          "Flash dans l’équipe ! Le bouton n’a même pas eu le temps de réagir.",
+          "Très bon choix. Rapide, surtout. J’approuve.",
+          "Je suis prêt depuis demain !",
+          "GO ! Attends, il faut lire quelque chose ? Trop tard.",
+          "Tu m’as choisi ? Parfait, j’ai déjà gagné trois parties imaginaires.",
+          "Équipe formée en temps record. Chronomètre jaloux.",
+          "Je prends la vitesse, tu prends les virages.",
+          "On va tellement vite que la défaite ne nous verra pas passer.",
+          "Flash activé ! Ne cligne pas des yeux, tu manquerais ma stratégie.",
+          "Partant ! J’ai un plan, douze variantes et aucune patience."
         ],
         "lobby_ready": [
           "Les lunettes sont déjà prêtes au décollage. Tout le monde est prêt ?",
@@ -2751,14 +2815,18 @@
       },
       "lines": {
         "selected": [
-          "Trois tentacules travaillent déjà. Je suis de la partie.",
-          "Bon choix. Les clés, les notes et le chrono sont presque rangés.",
-          "Tu m’embarques ? Je gère plusieurs urgences avec le sourire.",
-          "Une tentacule cherche encore le bon dossier. On peut y aller.",
-          "Parfait. Mes lunettes tiennent grâce à une organisation fragile.",
-          "Le bracelet AK est sur la tentacule responsable. Ça commence bien.",
-          "Je prends ma place. J’ai probablement une liste pour cette liste.",
-          "Tout est sous contrôle dans plusieurs directions. Pas de retour en arrière."
+          "Tu me choisis ? Parfait, je déplace seulement quatre urgences.",
+          "Marcellius disponible. Enfin, six tentacules sur huit.",
+          "Je viens. J’ai déjà créé un tableau pour organiser notre spontanéité.",
+          "D’accord. Une tentacule pour le jeu, sept pour les imprévus.",
+          "Choix enregistré, classé, sauvegardé et presque compris.",
+          "Je prends l’équipe en charge. Quelqu’un a vu mon troisième stylo ?",
+          "On peut commencer. J’ai huit bras et toujours pas assez de mains.",
+          "Tu m’as choisi ? Merci. J’ajoute ça entre « sauver la partie » et « respirer ».",
+          "Je suis partant. Mon planning, lui, vient de s’évanouir.",
+          "Équipe formée. J’ai préparé trois plans, deux secours et un goûter.",
+          "Je gère. C’est faux, mais dit avec assez d’assurance, ça aide.",
+          "Allons-y. Si tout déborde, au moins je suis adapté."
         ],
         "lobby_ready": [
           "Trois tentacules travaillent déjà. Tout le monde est prêt ?",
@@ -2872,5 +2940,12 @@
         ]
       }
     }
-  ]
+  ],
+  "selectionVoicePack": {
+    "linesPerCharacter": 12,
+    "totalLines": 204,
+    "strictExactDuplicates": 0,
+    "nearDuplicateCheck": true,
+    "design": "Voix propre à chaque personnalité, humour et motifs distinctifs."
+  }
 }
