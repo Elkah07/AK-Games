@@ -85,7 +85,7 @@
     ["Devinettes", "data/devinettes.json"],
     ["Questions osées", "data/questions-osees.json"],
     ["Jeux à boire", "data/jeux-a-boire.json"],
-    ["Roulette adulte", "data/defis-adultes.json"]
+    ["Défis adultes · 400", "data/defis-adultes.json"]
   ];
 
   const AK_CREATOR_REASON_LABELS = {

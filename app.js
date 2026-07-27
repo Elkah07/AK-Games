@@ -13596,3 +13596,541 @@ renderMegaFinal = function renderMegaFinalRiddleV41() {
   document.querySelector("#riddleReplayV41")?.addEventListener("click", () => { resetMegaGame(AK_RIDDLE_GAME_V41, replay); renderMegaSetup(); });
   document.querySelector("#riddleOtherV41")?.addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
 };
+
+/* =========================================================
+   AK'GAMES V4.2 — DÉFIS ADULTES 400
+   400 défis filtrables, solo/duo/groupe, alternatives confort
+   ========================================================= */
+
+const AK_ADULT_CHALLENGE_GAME_V42 = "Défis adultes";
+const AK_ADULT_CHALLENGE_CUSTOM_KEY_V42 = "akgames_adult_challenges_custom_v42";
+const AK_ADULT_CHALLENGE_PREFS_KEY_V42 = "akgames_adult_challenges_prefs_v42";
+
+const AK_ADULT_CHALLENGE_THEMES_V42 = [
+  { id: "seduction", icon: "✨", label: "Séduction" },
+  { id: "confidences", icon: "🤐", label: "Confidences" },
+  { id: "phone_messages", icon: "📱", label: "Téléphone & messages" },
+  { id: "duo", icon: "💞", label: "Défis en duo" },
+  { id: "group", icon: "🫂", label: "Défis de groupe" },
+  { id: "roleplay", icon: "🎭", label: "Jeu de rôle" },
+  { id: "physical_light", icon: "🕺", label: "Physiques légers" },
+  { id: "chaos", icon: "🌀", label: "Chaos & absurdes" }
+];
+
+const AK_ADULT_CHALLENGE_LEVELS_V42 = [
+  { id: "light", icon: "🌶️", label: "Léger", description: "Gênant, drôle ou charmeur." },
+  { id: "bold", icon: "🌶️🌶️", label: "Osé", description: "Plus personnel et plus audacieux." },
+  { id: "very_bold", icon: "🌶️🌶️🌶️", label: "Très osé", description: "Pour un groupe vraiment à l’aise." },
+  { id: "chaos", icon: "🌀", label: "Chaos", description: "Théâtral, ridicule ou imprévisible." }
+];
+
+const AK_ADULT_CHALLENGE_FORMATS_V42 = {
+  solo: { icon: "👤", label: "Solo" },
+  duo: { icon: "👥", label: "Duo" },
+  group: { icon: "🫂", label: "Groupe" }
+};
+
+if (typeof V014_GAME_CONFIGS !== "undefined" && V014_GAME_CONFIGS[AK_ADULT_CHALLENGE_GAME_V42]) {
+  Object.assign(V014_GAME_CONFIGS[AK_ADULT_CHALLENGE_GAME_V42], {
+    defaultRounds: 20,
+    adultChallenge: true,
+    description: "400 défis de séduction, confidences, impro et chaos, avec filtres de confort et droit de passer."
+  });
+}
+
+function akAdultChallengeReadJsonV42(key, fallback) {
+  try {
+    const value = JSON.parse(localStorage.getItem(key) || "null");
+    return value ?? fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function akAdultChallengeWriteJsonV42(key, value) {
+  try { localStorage.setItem(key, JSON.stringify(value)); } catch {}
+}
+
+function akAdultChallengeLoadCustomV42() {
+  const rows = akAdultChallengeReadJsonV42(AK_ADULT_CHALLENGE_CUSTOM_KEY_V42, []);
+  return Array.isArray(rows) ? rows.filter(row => row && row.text) : [];
+}
+
+function akAdultChallengeSaveCustomV42(rows) {
+  akAdultChallengeWriteJsonV42(AK_ADULT_CHALLENGE_CUSTOM_KEY_V42, Array.isArray(rows) ? rows : []);
+}
+
+function akAdultChallengeDefaultPrefsV42() {
+  return {
+    themes: AK_ADULT_CHALLENGE_THEMES_V42.map(item => item.id),
+    levels: AK_ADULT_CHALLENGE_LEVELS_V42.map(item => item.id),
+    allowContact: false,
+    allowPhone: true,
+    allowExternal: false,
+    allowMedia: false,
+    allowCouple: false,
+    allowAlcohol: false,
+    allowDuo: true,
+    timerSeconds: 0,
+    rerollLimit: 2,
+    includeCustom: true
+  };
+}
+
+function akAdultChallengeEnsureV42(game, source = {}) {
+  if (!game || game.gameName !== AK_ADULT_CHALLENGE_GAME_V42) return game;
+  const saved = akAdultChallengeReadJsonV42(AK_ADULT_CHALLENGE_PREFS_KEY_V42, {});
+  const defaults = akAdultChallengeDefaultPrefsV42();
+  const pick = (name, fallback) => source[name] ?? game[name] ?? saved[name] ?? fallback;
+  game.roundCount = Number(source.roundCount || game.roundCount || 20);
+  game.adultChallengeThemes = [...new Set((pick("adultChallengeThemes", pick("themes", defaults.themes)) || defaults.themes).filter(id => AK_ADULT_CHALLENGE_THEMES_V42.some(item => item.id === id)))];
+  game.adultChallengeLevels = [...new Set((pick("adultChallengeLevels", pick("levels", defaults.levels)) || defaults.levels).filter(id => AK_ADULT_CHALLENGE_LEVELS_V42.some(item => item.id === id)))];
+  if (!game.adultChallengeThemes.length) game.adultChallengeThemes = [...defaults.themes];
+  if (!game.adultChallengeLevels.length) game.adultChallengeLevels = [...defaults.levels];
+  game.adultChallengeAllowContact = Boolean(pick("adultChallengeAllowContact", pick("allowContact", defaults.allowContact)));
+  game.adultChallengeAllowPhone = Boolean(pick("adultChallengeAllowPhone", pick("allowPhone", defaults.allowPhone)));
+  game.adultChallengeAllowExternal = Boolean(pick("adultChallengeAllowExternal", pick("allowExternal", defaults.allowExternal)));
+  game.adultChallengeAllowMedia = Boolean(pick("adultChallengeAllowMedia", pick("allowMedia", defaults.allowMedia)));
+  game.adultChallengeAllowCouple = Boolean(pick("adultChallengeAllowCouple", pick("allowCouple", defaults.allowCouple)));
+  game.adultChallengeAllowAlcohol = Boolean(pick("adultChallengeAllowAlcohol", pick("allowAlcohol", defaults.allowAlcohol)));
+  game.adultChallengeAllowDuo = pick("adultChallengeAllowDuo", pick("allowDuo", defaults.allowDuo)) !== false;
+  game.adultChallengeTimerSeconds = Math.max(0, Number(pick("adultChallengeTimerSeconds", pick("timerSeconds", defaults.timerSeconds)) || 0));
+  game.adultChallengeRerollLimit = Math.max(0, Number(pick("adultChallengeRerollLimit", pick("rerollLimit", defaults.rerollLimit)) || 0));
+  game.adultChallengeIncludeCustom = pick("adultChallengeIncludeCustom", pick("includeCustom", defaults.includeCustom)) !== false;
+  game.adultChallengeCustomCards = Array.isArray(source.adultChallengeCustomCards) ? source.adultChallengeCustomCards : Array.isArray(game.adultChallengeCustomCards) ? game.adultChallengeCustomCards : akAdultChallengeLoadCustomV42();
+  game.adultChallengeRerollsLeft = Number(game.adultChallengeRerollsLeft ?? game.adultChallengeRerollLimit);
+  game.adultChallengeReserves = Array.isArray(game.adultChallengeReserves) ? game.adultChallengeReserves : [];
+  game.adultChallengeSuccessCounts = game.adultChallengeSuccessCounts || v014ScoreMap();
+  game.adultChallengeSkipCounts = game.adultChallengeSkipCounts || v014ScoreMap();
+  game.adultChallengeDuoCounts = game.adultChallengeDuoCounts || {};
+  game.adultChallengeChaosDuoCounts = game.adultChallengeChaosDuoCounts || {};
+  game.adultChallengeAlternativeShown = Boolean(game.adultChallengeAlternativeShown);
+  game.adultChallengeTurnEndsAt = Number(game.adultChallengeTurnEndsAt || 0) || null;
+  return game;
+}
+
+function akAdultChallengeSavePrefsV42(game) {
+  if (!game) return;
+  akAdultChallengeWriteJsonV42(AK_ADULT_CHALLENGE_PREFS_KEY_V42, {
+    themes: game.adultChallengeThemes,
+    levels: game.adultChallengeLevels,
+    allowContact: game.adultChallengeAllowContact,
+    allowPhone: game.adultChallengeAllowPhone,
+    allowExternal: game.adultChallengeAllowExternal,
+    allowMedia: game.adultChallengeAllowMedia,
+    allowCouple: game.adultChallengeAllowCouple,
+    allowAlcohol: game.adultChallengeAllowAlcohol,
+    allowDuo: game.adultChallengeAllowDuo,
+    timerSeconds: game.adultChallengeTimerSeconds,
+    rerollLimit: game.adultChallengeRerollLimit,
+    includeCustom: game.adultChallengeIncludeCustom
+  });
+}
+
+function akAdultChallengeThemeV42(id) {
+  return AK_ADULT_CHALLENGE_THEMES_V42.find(item => item.id === id) || AK_ADULT_CHALLENGE_THEMES_V42[0];
+}
+
+function akAdultChallengeLevelV42(id) {
+  return AK_ADULT_CHALLENGE_LEVELS_V42.find(item => item.id === id) || AK_ADULT_CHALLENGE_LEVELS_V42[0];
+}
+
+function akAdultChallengeIsGameV42(game = state.megaGame) {
+  return game?.gameName === AK_ADULT_CHALLENGE_GAME_V42;
+}
+
+function akAdultChallengeNormalizeCardV42(row, custom = false) {
+  const format = ["solo", "duo", "group"].includes(row?.format) ? row.format : "solo";
+  const theme = AK_ADULT_CHALLENGE_THEMES_V42.some(item => item.id === row?.theme) ? row.theme : "seduction";
+  const intensity = AK_ADULT_CHALLENGE_LEVELS_V42.some(item => item.id === row?.intensity) ? row.intensity : "light";
+  return {
+    id: row?.id || `defi_adulte_custom_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+    text: String(row?.text || "Défi surprise").trim(),
+    theme,
+    intensity,
+    format,
+    minPlayers: Math.max(1, Number(row?.minPlayers || (format === "group" ? 3 : format === "duo" ? 2 : 1))),
+    targetRequired: Boolean(row?.targetRequired || format === "duo" || String(row?.text || "").includes("{target}")),
+    contactRequired: Boolean(row?.contactRequired),
+    phoneRequired: Boolean(row?.phoneRequired),
+    externalMessageRequired: Boolean(row?.externalMessageRequired),
+    mediaRequired: Boolean(row?.mediaRequired),
+    coupleOnly: Boolean(row?.coupleOnly),
+    alcoholRelated: Boolean(row?.alcoholRelated),
+    timerSeconds: Math.max(0, Number(row?.timerSeconds || 0)),
+    alternative: String(row?.alternative || "").trim(),
+    custom: Boolean(custom || row?.custom)
+  };
+}
+
+function akAdultChallengeCardAllowedV42(card, game, playerCount = state.players.length) {
+  if (!game.adultChallengeThemes.includes(card.theme)) return false;
+  if (!game.adultChallengeLevels.includes(card.intensity)) return false;
+  if (Number(card.minPlayers || 1) > Number(playerCount || 0)) return false;
+  if (card.format === "duo" && !game.adultChallengeAllowDuo) return false;
+  if (card.contactRequired && !game.adultChallengeAllowContact) return false;
+  if (card.phoneRequired && !game.adultChallengeAllowPhone) return false;
+  if (card.externalMessageRequired && !game.adultChallengeAllowExternal) return false;
+  if (card.mediaRequired && !game.adultChallengeAllowMedia) return false;
+  if (card.coupleOnly && !game.adultChallengeAllowCouple) return false;
+  if (card.alcoholRelated && !game.adultChallengeAllowAlcohol) return false;
+  return true;
+}
+
+function akAdultChallengeBuildPoolV42(rawRows, game, playerCount = state.players.length) {
+  const official = (Array.isArray(rawRows) ? rawRows : []).map(row => akAdultChallengeNormalizeCardV42(row, false));
+  const custom = game.adultChallengeIncludeCustom ? game.adultChallengeCustomCards.map(row => akAdultChallengeNormalizeCardV42(row, true)) : [];
+  return [...official, ...custom].filter(card => akAdultChallengeCardAllowedV42(card, game, playerCount));
+}
+
+function akAdultChallengeSelectBalancedV42(pool, count, key) {
+  const requested = Math.min(Math.max(1, Number(count || 1)), pool.length);
+  const candidates = selectFreshItems(pool, Math.min(pool.length, Math.max(requested, requested + 24)), key);
+  const buckets = new Map();
+  AK_ADULT_CHALLENGE_THEMES_V42.forEach(theme => buckets.set(theme.id, []));
+  candidates.forEach(card => {
+    if (!buckets.has(card.theme)) buckets.set(card.theme, []);
+    buckets.get(card.theme).push(card);
+  });
+  buckets.forEach(cards => cards.splice(0, cards.length, ...shuffleArray(cards)));
+  const selected = [];
+  const themeOrder = shuffleArray([...buckets.keys()].filter(id => buckets.get(id)?.length));
+  while (selected.length < requested && themeOrder.some(id => buckets.get(id)?.length)) {
+    for (const id of themeOrder) {
+      const card = buckets.get(id)?.shift();
+      if (card) selected.push(card);
+      if (selected.length >= requested) break;
+    }
+  }
+  return selected;
+}
+
+function akAdultChallengePrepareItemsV42(cards, players = state.players) {
+  const ids = shuffleArray(players.map(player => player.id));
+  if (!ids.length) return [];
+  return cards.map((card, index) => {
+    const leadPlayerId = ids[index % ids.length];
+    let targetPlayerId = null;
+    if (card.targetRequired && ids.length > 1) {
+      const leadPosition = ids.indexOf(leadPlayerId);
+      targetPlayerId = ids[(leadPosition + 1 + (index % Math.max(1, ids.length - 1))) % ids.length];
+      if (targetPlayerId === leadPlayerId) targetPlayerId = ids[(leadPosition + 1) % ids.length];
+    }
+    const assignedPlayerIds = card.format === "group"
+      ? [...ids]
+      : card.format === "duo"
+        ? [leadPlayerId, targetPlayerId].filter(Boolean)
+        : [leadPlayerId];
+    return { ...card, leadPlayerId, targetPlayerId, assignedPlayerIds };
+  });
+}
+
+function akAdultChallengePlayerV42(id, players = state.players) {
+  return players.find(player => player.id === id) || null;
+}
+
+function akAdultChallengeTextV42(item, players = state.players) {
+  const lead = akAdultChallengePlayerV42(item?.leadPlayerId, players);
+  const target = akAdultChallengePlayerV42(item?.targetPlayerId, players);
+  return String(item?.text || "Défi surprise")
+    .replaceAll("{player}", lead?.name || "La personne désignée")
+    .replaceAll("{target}", target?.name || "la personne désignée")
+    .replaceAll("{group}", "le groupe");
+}
+
+function akAdultChallengeAssignmentV42(item, players = state.players) {
+  const lead = akAdultChallengePlayerV42(item?.leadPlayerId, players);
+  const target = akAdultChallengePlayerV42(item?.targetPlayerId, players);
+  if (item?.format === "group") return `${lead?.name || "La personne désignée"} mène le défi pour tout le groupe.`;
+  if (item?.format === "duo") return `${lead?.name || "Joueur 1"} joue avec ${target?.name || "Joueur 2"}.`;
+  if (target) return `${lead?.name || "La personne désignée"} réalise le défi avec ${target.name} comme cible.`;
+  return `C’est au tour de ${lead?.name || "la personne désignée"}.`;
+}
+
+function akAdultChallengeBadgesV42(item) {
+  const theme = akAdultChallengeThemeV42(item?.theme);
+  const level = akAdultChallengeLevelV42(item?.intensity);
+  const format = AK_ADULT_CHALLENGE_FORMATS_V42[item?.format] || AK_ADULT_CHALLENGE_FORMATS_V42.solo;
+  const requirements = [
+    item?.contactRequired ? "🤝 contact autorisé" : "",
+    item?.phoneRequired ? "📱 téléphone" : "",
+    item?.externalMessageRequired ? "📤 message extérieur" : "",
+    item?.mediaRequired ? "📸 photo/vidéo" : "",
+    item?.coupleOnly ? "💞 couple" : "",
+    item?.alcoholRelated ? "🥂 boisson au choix" : "",
+    item?.custom ? "✍️ personnalisé" : ""
+  ].filter(Boolean);
+  return `<div class="adult-challenge-badges-v42"><span>${theme.icon} ${escapeHtml(theme.label)}</span><span>${level.icon} ${escapeHtml(level.label)}</span><span>${format.icon} ${escapeHtml(format.label)}</span>${requirements.map(label => `<span>${escapeHtml(label)}</span>`).join("")}</div>`;
+}
+
+function akAdultChallengeSetupMarkupV42(game, prefix = "adultChallenge", readOnly = false) {
+  akAdultChallengeEnsureV42(game);
+  const rounds = [10, 15, 20, 30, 40, 50, 75, 100];
+  const timers = [0, 30, 45, 60, 90];
+  const toggles = [
+    ["AllowContact", "adultChallengeAllowContact", "🤝 Contact physique", "Uniquement lorsque toutes les personnes concernées sont d’accord."],
+    ["AllowPhone", "adultChallengeAllowPhone", "📱 Téléphone", "Autorise les cartes utilisant le téléphone sans envoi extérieur."],
+    ["AllowExternal", "adultChallengeAllowExternal", "📤 Messages extérieurs", "Autorise un message à une personne de confiance, avec alternative sans envoi."],
+    ["AllowMedia", "adultChallengeAllowMedia", "📸 Photos et vidéos", "Aucune image n’est publiée et chaque personne visible doit être d’accord."],
+    ["AllowCouple", "adultChallengeAllowCouple", "💞 Défis de couple", "Inclut les cartes conçues pour un couple ou deux volontaires très à l’aise."],
+    ["AllowAlcohol", "adultChallengeAllowAlcohol", "🥂 Cartes avec boisson", "Toujours remplaçable par de l’eau ou une boisson sans alcool."],
+    ["AllowDuo", "adultChallengeAllowDuo", "👥 Défis en duo", "Inclut les scènes et improvisations réalisées à deux."]
+  ];
+  return `
+    <section class="card adult-challenge-setup-v42">
+      <div class="adult-challenge-setup-heading-v42"><div><small>400 DÉFIS ADULTES</small><h3>Compose la soirée</h3></div><span>🔞 consentement d’abord</span></div>
+      <div class="adult-challenge-two-col-v42">
+        <div class="form-group"><label for="${prefix}Rounds">Nombre de défis</label><select id="${prefix}Rounds" class="text-input" ${readOnly ? "disabled" : ""}>${rounds.map(value => `<option value="${value}" ${Number(game.roundCount) === value ? "selected" : ""}>${value} défis</option>`).join("")}</select></div>
+        <div class="form-group"><label for="${prefix}Timer">Chronomètre</label><select id="${prefix}Timer" class="text-input" ${readOnly ? "disabled" : ""}>${timers.map(value => `<option value="${value}" ${Number(game.adultChallengeTimerSeconds) === value ? "selected" : ""}>${value ? `${value} secondes` : "Désactivé"}</option>`).join("")}</select></div>
+      </div>
+    </section>
+    <section class="card adult-challenge-section-v42"><div class="adult-challenge-section-title-v42"><div><small>THÈMES</small><h3>Choisis les terrains de jeu</h3></div><button type="button" id="${prefix}AllThemes" class="text-btn" ${readOnly ? "disabled" : ""}>Tout sélectionner</button></div><div class="adult-challenge-choice-grid-v42">${AK_ADULT_CHALLENGE_THEMES_V42.map(theme => { const active = game.adultChallengeThemes.includes(theme.id); return `<button type="button" class="adult-challenge-choice-v42 ${active ? "active" : ""}" data-adult-theme="${theme.id}" aria-pressed="${active}" ${readOnly ? "disabled" : ""}><span>${theme.icon}</span><strong>${escapeHtml(theme.label)}</strong><b>${active ? "✓" : "+"}</b></button>`; }).join("")}</div></section>
+    <section class="card adult-challenge-section-v42"><div class="adult-challenge-section-title-v42"><div><small>INTENSITÉS</small><h3>Jusqu’où va la soirée ?</h3></div><button type="button" id="${prefix}AllLevels" class="text-btn" ${readOnly ? "disabled" : ""}>Tout sélectionner</button></div><div class="adult-challenge-level-grid-v42">${AK_ADULT_CHALLENGE_LEVELS_V42.map(level => { const active = game.adultChallengeLevels.includes(level.id); return `<button type="button" class="adult-challenge-level-v42 ${active ? "active" : ""}" data-adult-level="${level.id}" aria-pressed="${active}" ${readOnly ? "disabled" : ""}><span>${level.icon}</span><strong>${escapeHtml(level.label)}</strong><small>${escapeHtml(level.description)}</small><b>${active ? "✓" : "+"}</b></button>`; }).join("")}</div></section>
+    <section class="card adult-challenge-section-v42"><div class="adult-challenge-section-title-v42"><div><small>FILTRES DE CONFORT</small><h3>Rien ne sort sans invitation</h3></div></div><div class="adult-challenge-switch-list-v42">${toggles.map(([suffix, prop, label, helper]) => `<label class="adult-challenge-switch-row-v42"><input id="${prefix}${suffix}" type="checkbox" ${game[prop] ? "checked" : ""} ${readOnly ? "disabled" : ""}><span><strong>${label}</strong><small>${helper}</small></span></label>`).join("")}</div></section>
+    <section class="card adult-challenge-section-v42"><div class="adult-challenge-section-title-v42"><div><small>JOKERS</small><h3>Relances disponibles</h3></div></div><select id="${prefix}Rerolls" class="text-input" ${readOnly ? "disabled" : ""}>${[0,1,2,3,5].map(value => `<option value="${value}" ${Number(game.adultChallengeRerollLimit) === value ? "selected" : ""}>${value ? `${value} relance${value > 1 ? "s" : ""}` : "Aucune relance"}</option>`).join("")}</select><p class="helper">Passer reste toujours possible et ne consomme jamais de joker.</p></section>
+    ${readOnly ? "" : `<section class="card adult-challenge-custom-v42"><div class="adult-challenge-section-title-v42"><div><small>DÉFIS PERSONNALISÉS</small><h3>Ajoute votre propre carte</h3></div><label class="adult-challenge-inline-check-v42"><input id="${prefix}IncludeCustom" type="checkbox" ${game.adultChallengeIncludeCustom ? "checked" : ""}> Inclure</label></div><textarea id="${prefix}CustomText" class="text-input" rows="3" maxlength="240" placeholder="Écris un défi adulte, clair et réalisable…"></textarea><div class="adult-challenge-custom-grid-v42"><select id="${prefix}CustomTheme" class="text-input">${AK_ADULT_CHALLENGE_THEMES_V42.map(theme => `<option value="${theme.id}">${theme.icon} ${escapeHtml(theme.label)}</option>`).join("")}</select><select id="${prefix}CustomLevel" class="text-input">${AK_ADULT_CHALLENGE_LEVELS_V42.map(level => `<option value="${level.id}">${level.icon} ${escapeHtml(level.label)}</option>`).join("")}</select><select id="${prefix}CustomFormat" class="text-input"><option value="solo">👤 Solo</option><option value="duo">👥 Duo</option><option value="group">🫂 Groupe</option></select></div><button type="button" id="${prefix}AddCustom" class="secondary-btn full">Ajouter le défi</button>${game.adultChallengeCustomCards.length ? `<div class="adult-challenge-custom-list-v42">${game.adultChallengeCustomCards.map(card => `<div><span>${akAdultChallengeThemeV42(card.theme).icon}</span><p>${escapeHtml(card.text)}</p><button type="button" data-remove-adult-custom="${card.id}" aria-label="Supprimer">×</button></div>`).join("")}</div>` : `<p class="helper">Aucun défi personnel enregistré sur cet appareil.</p>`}</section>`}
+    <div class="responsible-callout">🛡️ Un défi peut être passé, adapté ou arrêté immédiatement. Aucun contact, message, photo ou consommation n’est une obligation.</div>`;
+}
+
+function akAdultChallengeBindSetupV42(game, prefix, rerender, readOnly = false) {
+  if (readOnly) return;
+  document.querySelector(`#${prefix}Rounds`)?.addEventListener("change", event => { game.roundCount = Number(event.target.value); });
+  document.querySelector(`#${prefix}Timer`)?.addEventListener("change", event => { game.adultChallengeTimerSeconds = Number(event.target.value); });
+  document.querySelector(`#${prefix}Rerolls`)?.addEventListener("change", event => { game.adultChallengeRerollLimit = Number(event.target.value); });
+  document.querySelector(`#${prefix}IncludeCustom`)?.addEventListener("change", event => { game.adultChallengeIncludeCustom = event.target.checked; });
+  document.querySelectorAll("[data-adult-theme]").forEach(button => button.addEventListener("click", () => {
+    const id = button.dataset.adultTheme;
+    game.adultChallengeThemes = game.adultChallengeThemes.includes(id) ? game.adultChallengeThemes.filter(value => value !== id) : [...game.adultChallengeThemes, id];
+    rerender();
+  }));
+  document.querySelectorAll("[data-adult-level]").forEach(button => button.addEventListener("click", () => {
+    const id = button.dataset.adultLevel;
+    game.adultChallengeLevels = game.adultChallengeLevels.includes(id) ? game.adultChallengeLevels.filter(value => value !== id) : [...game.adultChallengeLevels, id];
+    rerender();
+  }));
+  document.querySelector(`#${prefix}AllThemes`)?.addEventListener("click", () => { game.adultChallengeThemes = AK_ADULT_CHALLENGE_THEMES_V42.map(item => item.id); rerender(); });
+  document.querySelector(`#${prefix}AllLevels`)?.addEventListener("click", () => { game.adultChallengeLevels = AK_ADULT_CHALLENGE_LEVELS_V42.map(item => item.id); rerender(); });
+  const toggleMap = {
+    AllowContact: "adultChallengeAllowContact",
+    AllowPhone: "adultChallengeAllowPhone",
+    AllowExternal: "adultChallengeAllowExternal",
+    AllowMedia: "adultChallengeAllowMedia",
+    AllowCouple: "adultChallengeAllowCouple",
+    AllowAlcohol: "adultChallengeAllowAlcohol",
+    AllowDuo: "adultChallengeAllowDuo"
+  };
+  Object.entries(toggleMap).forEach(([suffix, prop]) => document.querySelector(`#${prefix}${suffix}`)?.addEventListener("change", event => { game[prop] = event.target.checked; }));
+  document.querySelector(`#${prefix}AddCustom`)?.addEventListener("click", () => {
+    const text = document.querySelector(`#${prefix}CustomText`)?.value.trim() || "";
+    if (text.length < 8) return alert("Écris un défi un peu plus précis.");
+    const format = document.querySelector(`#${prefix}CustomFormat`)?.value || "solo";
+    const card = akAdultChallengeNormalizeCardV42({
+      id: `defi_adulte_custom_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+      text,
+      theme: document.querySelector(`#${prefix}CustomTheme`)?.value || "seduction",
+      intensity: document.querySelector(`#${prefix}CustomLevel`)?.value || "light",
+      format,
+      minPlayers: format === "group" ? 3 : format === "duo" ? 2 : 1,
+      targetRequired: format === "duo",
+      custom: true
+    }, true);
+    if (game.adultChallengeCustomCards.some(row => row.text.trim().toLocaleLowerCase("fr") === text.toLocaleLowerCase("fr"))) return alert("Ce défi personnalisé existe déjà.");
+    game.adultChallengeCustomCards.push(card);
+    game.adultChallengeIncludeCustom = true;
+    akAdultChallengeSaveCustomV42(game.adultChallengeCustomCards);
+    rerender();
+  });
+  document.querySelectorAll("[data-remove-adult-custom]").forEach(button => button.addEventListener("click", () => {
+    game.adultChallengeCustomCards = game.adultChallengeCustomCards.filter(card => card.id !== button.dataset.removeAdultCustom);
+    akAdultChallengeSaveCustomV42(game.adultChallengeCustomCards);
+    rerender();
+  }));
+}
+
+const akAdultChallengeBaseResetV42 = resetMegaGame;
+resetMegaGame = function resetMegaGameAdultChallengeV42(gameName, replayConfig = {}) {
+  akAdultChallengeBaseResetV42(gameName, replayConfig);
+  if (gameName === AK_ADULT_CHALLENGE_GAME_V42) akAdultChallengeEnsureV42(state.megaGame, replayConfig);
+};
+
+const akAdultChallengeBaseSetupV42 = renderMegaSetup;
+renderMegaSetup = function renderMegaSetupAdultChallengeV42() {
+  if (!akAdultChallengeIsGameV42() || state.mode !== "single") return akAdultChallengeBaseSetupV42();
+  const game = akAdultChallengeEnsureV42(state.megaGame);
+  clearV014Timer();
+  title.textContent = AK_ADULT_CHALLENGE_GAME_V42;
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-mega adult-challenge-cover-v42"><span class="game-cover-icon">🔥</span><div><small>PACK ADULTE · 400 CARTES</small><h2>Défis adultes</h2><p>Séduction, confidences, impro et chaos, avec des limites réglées avant de jouer.</p></div></section>
+    ${akAdultChallengeSetupMarkupV42(game, "adultChallenge")}
+    <button id="startAdultChallengeV42" class="primary-btn full">Lancer les défis</button>`;
+  akAdultChallengeBindSetupV42(game, "adultChallenge", renderMegaSetup);
+  document.querySelector("#startAdultChallengeV42")?.addEventListener("click", startMegaGame);
+};
+
+const akAdultChallengeBaseStartV42 = startMegaGame;
+startMegaGame = async function startMegaGameAdultChallengeV42() {
+  if (!akAdultChallengeIsGameV42() || state.mode !== "single") return akAdultChallengeBaseStartV42();
+  const game = akAdultChallengeEnsureV42(state.megaGame);
+  if (!game.adultChallengeThemes.length) return alert("Choisis au moins un thème.");
+  if (!game.adultChallengeLevels.length) return alert("Choisis au moins une intensité.");
+  screen.innerHTML = `<div class="notice">Mélange des 400 défis et pose des garde-fous…</div>`;
+  try {
+    const rows = await loadJsonFile("data/defis-adultes.json", "Impossible de charger les défis adultes.");
+    const pool = akAdultChallengeBuildPoolV42(rows, game, state.players.length);
+    if (!pool.length) throw new Error("Aucun défi ne correspond aux thèmes, intensités et filtres choisis.");
+    const needed = Math.min(pool.length, Number(game.roundCount || 20) + Number(game.adultChallengeRerollLimit || 0));
+    const selected = akAdultChallengeSelectBalancedV42(pool, needed, `solo:adult-challenge:v42:${game.adultChallengeThemes.join("-")}:${game.adultChallengeLevels.join("-")}`);
+    const prepared = akAdultChallengePrepareItemsV42(selected, state.players);
+    const playableCount = Math.min(Number(game.roundCount || 20), prepared.length);
+    game.items = prepared.slice(0, playableCount);
+    game.adultChallengeReserves = prepared.slice(playableCount);
+    game.currentIndex = 0;
+    game.scores = v014ScoreMap();
+    game.rounds = [];
+    game.adultChallengeSuccessCounts = v014ScoreMap();
+    game.adultChallengeSkipCounts = v014ScoreMap();
+    game.adultChallengeDuoCounts = {};
+    game.adultChallengeChaosDuoCounts = {};
+    game.adultChallengeRerollsLeft = Math.min(game.adultChallengeRerollLimit, game.adultChallengeReserves.length);
+    game.adultChallengeAlternativeShown = false;
+    game.adultChallengeTurnEndsAt = null;
+    akAdultChallengeSavePrefsV42(game);
+    renderMegaCurrent();
+  } catch (error) {
+    console.error(error);
+    alert(error.message || "Impossible de lancer les défis adultes.");
+    renderMegaSetup();
+  }
+};
+
+function akAdultChallengeUseRerollV42(game) {
+  if (!game?.adultChallengeRerollsLeft || !game.adultChallengeReserves.length) return;
+  const replacement = game.adultChallengeReserves.shift();
+  game.items[game.currentIndex] = replacement;
+  game.adultChallengeRerollsLeft -= 1;
+  game.adultChallengeAlternativeShown = false;
+  game.adultChallengeTurnEndsAt = null;
+  clearV014Timer();
+  renderMegaTurn();
+}
+
+const akAdultChallengeBaseTurnV42 = renderMegaTurn;
+renderMegaTurn = function renderMegaTurnAdultChallengeV42() {
+  if (!akAdultChallengeIsGameV42() || state.mode !== "single") return akAdultChallengeBaseTurnV42();
+  const game = akAdultChallengeEnsureV42(state.megaGame);
+  const item = game.items[game.currentIndex];
+  const lead = akAdultChallengePlayerV42(item?.leadPlayerId);
+  if (!item) return renderMegaFinal();
+  title.textContent = AK_ADULT_CHALLENGE_GAME_V42;
+  setBackVisible(false);
+  if (game.adultChallengeTimerSeconds && !game.adultChallengeTurnEndsAt) game.adultChallengeTurnEndsAt = Date.now() + game.adultChallengeTimerSeconds * 1000;
+  const participantCards = (item.assignedPlayerIds || []).map(id => {
+    const player = akAdultChallengePlayerV42(id);
+    return `<span>${avatarById(player?.avatarId).emoji} ${escapeHtml(player?.name || "Joueur")}</span>`;
+  }).join("");
+  screen.innerHTML = `
+    ${v014Progress(game, "Défi")}
+    <section class="adult-challenge-round-v42">
+      ${akAdultChallengeBadgesV42(item)}
+      <div class="adult-challenge-lead-v42"><span>${avatarById(lead?.avatarId).emoji}</span><div><small>PERSONNE QUI MÈNE</small><strong>${escapeHtml(lead?.name || "Joueur")}</strong></div></div>
+      <p class="adult-challenge-assignment-v42">${escapeHtml(akAdultChallengeAssignmentV42(item))}</p>
+      <div class="adult-challenge-participants-v42">${participantCards}</div>
+      <h2>${escapeHtml(akAdultChallengeTextV42(item))}</h2>
+      ${game.adultChallengeTimerSeconds ? `<div class="mega-mini-timer"><strong id="v014Countdown">${Math.max(0, Math.ceil((game.adultChallengeTurnEndsAt - Date.now()) / 1000))}</strong><span>secondes</span><div class="progress-track"><div id="v014TimerFill" class="progress-fill" style="width:100%"></div></div></div>` : ""}
+      ${item.alternative && game.adultChallengeAlternativeShown ? `<div class="adult-challenge-alternative-v42"><small>ALTERNATIVE CONFORT</small><p>${escapeHtml(item.alternative)}</p></div>` : ""}
+    </section>
+    <div class="adult-challenge-actions-v42">
+      <button id="adultChallengeDoneV42" class="primary-btn">✓ Défi réalisé</button>
+      <button id="adultChallengePassV42" class="secondary-btn">Passer sans pénalité</button>
+      ${item.alternative ? `<button id="adultChallengeAlternativeV42" class="secondary-btn">🛡️ ${game.adultChallengeAlternativeShown ? "Masquer" : "Voir"} l’alternative</button>` : ""}
+      ${game.adultChallengeRerollsLeft && game.adultChallengeReserves.length ? `<button id="adultChallengeRerollV42" class="secondary-btn">🎲 Relancer · ${game.adultChallengeRerollsLeft}</button>` : ""}
+    </div>
+    <div class="responsible-callout">Le bouton Passer suffit. Personne ne doit convaincre, insister ou demander une justification.</div>`;
+  document.querySelector("#adultChallengeDoneV42")?.addEventListener("click", () => finishMegaTurn(true));
+  document.querySelector("#adultChallengePassV42")?.addEventListener("click", () => finishMegaTurn(false));
+  document.querySelector("#adultChallengeAlternativeV42")?.addEventListener("click", () => { game.adultChallengeAlternativeShown = !game.adultChallengeAlternativeShown; renderMegaTurn(); });
+  document.querySelector("#adultChallengeRerollV42")?.addEventListener("click", () => akAdultChallengeUseRerollV42(game));
+  if (game.adultChallengeTurnEndsAt) startV014Timer(game.adultChallengeTurnEndsAt, "#v014Countdown", () => {
+    const timer = document.querySelector(".adult-challenge-round-v42 .mega-mini-timer");
+    if (timer) timer.classList.add("finished");
+  }, game.adultChallengeTimerSeconds);
+};
+
+const akAdultChallengeBaseFinishV42 = finishMegaTurn;
+finishMegaTurn = function finishMegaTurnAdultChallengeV42(success) {
+  if (!akAdultChallengeIsGameV42() || state.mode !== "single") return akAdultChallengeBaseFinishV42(success);
+  const game = state.megaGame;
+  const item = game.items[game.currentIndex];
+  const participants = Array.isArray(item.assignedPlayerIds) && item.assignedPlayerIds.length ? item.assignedPlayerIds : [item.leadPlayerId];
+  clearV014Timer();
+  if (success) {
+    participants.forEach(id => {
+      game.scores[id] = Number(game.scores[id] || 0) + 1;
+      game.adultChallengeSuccessCounts[id] = Number(game.adultChallengeSuccessCounts[id] || 0) + 1;
+    });
+    if (item.format === "duo" && participants.length >= 2) {
+      const pair = [...participants].sort().join("__");
+      game.adultChallengeDuoCounts[pair] = Number(game.adultChallengeDuoCounts[pair] || 0) + 1;
+      if (item.intensity === "chaos") game.adultChallengeChaosDuoCounts[pair] = Number(game.adultChallengeChaosDuoCounts[pair] || 0) + 1;
+    }
+  } else {
+    game.adultChallengeSkipCounts[item.leadPlayerId] = Number(game.adultChallengeSkipCounts[item.leadPlayerId] || 0) + 1;
+  }
+  game.rounds.push({ itemId: item.id, leadPlayerId: item.leadPlayerId, participantIds: participants, success: Boolean(success), theme: item.theme, intensity: item.intensity, format: item.format });
+  game.currentIndex += 1;
+  game.adultChallengeAlternativeShown = false;
+  game.adultChallengeTurnEndsAt = null;
+  renderMegaCurrent();
+};
+
+function akAdultChallengeTopV42(values, lowest = false) {
+  return state.players.map(player => ({ player, value: Number(values?.[player.id] || 0) })).sort((a, b) => lowest ? a.value - b.value : b.value - a.value)[0];
+}
+
+function akAdultChallengeTopPairV42(values) {
+  const entry = Object.entries(values || {}).sort((a, b) => Number(b[1]) - Number(a[1]))[0];
+  if (!entry) return null;
+  const players = entry[0].split("__").map(id => akAdultChallengePlayerV42(id)).filter(Boolean);
+  return { players, value: Number(entry[1] || 0) };
+}
+
+const akAdultChallengeBaseFinalV42 = renderMegaFinal;
+renderMegaFinal = function renderMegaFinalAdultChallengeV42() {
+  if (!akAdultChallengeIsGameV42() || state.mode !== "single") return akAdultChallengeBaseFinalV42();
+  const game = state.megaGame;
+  clearV014Timer();
+  const ranking = [...state.players].sort((a, b) => Number(game.scores[b.id] || 0) - Number(game.scores[a.id] || 0));
+  const courageous = akAdultChallengeTopV42(game.adultChallengeSuccessCounts);
+  const passer = akAdultChallengeTopV42(game.adultChallengeSkipCounts);
+  const chaosPair = akAdultChallengeTopPairV42(Object.keys(game.adultChallengeChaosDuoCounts || {}).length ? game.adultChallengeChaosDuoCounts : game.adultChallengeDuoCounts);
+  const replay = {
+    roundCount: game.roundCount,
+    adultChallengeThemes: [...game.adultChallengeThemes],
+    adultChallengeLevels: [...game.adultChallengeLevels],
+    adultChallengeAllowContact: game.adultChallengeAllowContact,
+    adultChallengeAllowPhone: game.adultChallengeAllowPhone,
+    adultChallengeAllowExternal: game.adultChallengeAllowExternal,
+    adultChallengeAllowMedia: game.adultChallengeAllowMedia,
+    adultChallengeAllowCouple: game.adultChallengeAllowCouple,
+    adultChallengeAllowAlcohol: game.adultChallengeAllowAlcohol,
+    adultChallengeAllowDuo: game.adultChallengeAllowDuo,
+    adultChallengeTimerSeconds: game.adultChallengeTimerSeconds,
+    adultChallengeRerollLimit: game.adultChallengeRerollLimit,
+    adultChallengeIncludeCustom: game.adultChallengeIncludeCustom,
+    adultChallengeCustomCards: game.adultChallengeCustomCards
+  };
+  title.textContent = "Palmarès des défis";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="winner-stage winner-stage-v07 mega-final-stage adult-challenge-final-v42"><div class="winner-crown">🔥🏆</div><h2>${ranking[0] ? escapeHtml(ranking[0].name) : "Partie terminée"}</h2><p>Les défis sont rangés. Les dossiers, beaucoup moins.</p></section>
+    <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
+    <section class="impostor-awards">
+      ${courageous?.value ? `<article><span>🔥</span><div><small>PLUS COURAGEUX·SE</small><strong>${escapeHtml(courageous.player.name)}</strong><p>${courageous.value} défi${courageous.value > 1 ? "s" : ""} validé${courageous.value > 1 ? "s" : ""}</p></div></article>` : ""}
+      ${passer?.value ? `<article><span>🛡️</span><div><small>DROIT DE PASSER LE PLUS UTILISÉ</small><strong>${escapeHtml(passer.player.name)}</strong><p>${passer.value} passage${passer.value > 1 ? "s" : ""}, zéro justification</p></div></article>` : ""}
+      ${chaosPair?.value && chaosPair.players.length >= 2 ? `<article><span>🌀</span><div><small>DUO LE PLUS CHAOTIQUE</small><strong>${chaosPair.players.map(player => escapeHtml(player.name)).join(" & ")}</strong><p>${chaosPair.value} défi${chaosPair.value > 1 ? "s" : ""} en duo</p></div></article>` : ""}
+    </section>
+    <div class="toolbar"><button id="adultChallengeReplayV42" class="secondary-btn">Rejouer</button><button id="adultChallengeOtherV42" class="primary-btn">Autre jeu</button></div>`;
+  document.querySelector("#adultChallengeReplayV42")?.addEventListener("click", () => { resetMegaGame(AK_ADULT_CHALLENGE_GAME_V42, replay); renderMegaSetup(); });
+  document.querySelector("#adultChallengeOtherV42")?.addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
+};

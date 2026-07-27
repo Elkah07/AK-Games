@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v4.1-devinettes-600";
+const CACHE_VERSION = "akgames-v4.2-defis-adultes-400";
 
 const CORE_SHELL = [
   "/",

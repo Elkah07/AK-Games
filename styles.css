@@ -9059,3 +9059,318 @@ body.game-rules-open {
 .riddle-validation-list-v41{display:grid;gap:10px;margin:14px 0}.riddle-validation-list-v41 article{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:11px;padding:12px;border:1px solid var(--border);border-radius:16px;background:var(--card)}.riddle-validation-list-v41 article>span{font-size:1.7rem}.riddle-validation-list-v41 p{margin:3px 0 0;color:var(--muted)}.riddle-validation-list-v41 button{white-space:nowrap}.riddle-solution-v41 em{display:inline-block;margin-top:10px;padding:6px 10px;border-radius:999px;background:var(--surface-soft);font-style:normal;color:var(--muted)}.riddle-solution-v41.solved{border-color:rgba(90,210,145,.45)}.riddle-solution-v41.unsolved{border-color:rgba(255,186,84,.45)}.answer-chip-wall .reader{border-color:rgba(157,126,255,.45);background:rgba(112,74,255,.12)}
 .riddle-reader-solution-v41{margin-top:14px;padding:14px;border-radius:16px;background:rgba(112,74,255,.13);border:1px solid rgba(157,126,255,.32)}.riddle-reader-solution-v41 small,.riddle-reader-solution-v41 strong{display:block}.riddle-reader-solution-v41 small{color:var(--muted);font-size:.72rem}.riddle-reader-solution-v41 strong{margin-top:4px;font-size:1.35rem}.riddle-winner-grid-v41{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}.riddle-winner-grid-v41 h3{grid-column:1/-1;margin:0 0 2px}.riddle-winner-grid-v41 button{display:flex;align-items:center;gap:10px;padding:13px;border:1px solid var(--border);border-radius:16px;background:var(--card);color:var(--text);text-align:left}.riddle-winner-grid-v41 button span{font-size:1.7rem}.riddle-winner-grid-v41 button strong,.riddle-winner-grid-v41 button small{display:block}.riddle-winner-grid-v41 button small{color:var(--muted)}.riddle-multi-answer-v41{margin-top:12px;padding:14px;border:1px solid var(--border);border-radius:18px;background:var(--card)}
 @media (max-width:680px){.riddle-setup-columns-v41,.riddle-custom-grid-v41{grid-template-columns:1fr}.riddle-theme-grid-v41{grid-template-columns:1fr}.riddle-difficulty-grid-v41{grid-template-columns:1fr}.riddle-validation-list-v41 article{grid-template-columns:auto minmax(0,1fr)}.riddle-validation-list-v41 button{grid-column:1/-1;width:100%}.riddle-winner-grid-v41{grid-template-columns:1fr}.riddle-action-grid-v41{grid-template-columns:1fr}.riddle-stat-strip-v41 strong{font-size:1.05rem}.riddle-stat-strip-v41 span{font-size:.72rem}}
+
+/* AK'GAMES V4.2 — DÉFIS ADULTES 400 */
+.adult-challenge-cover-v42 {
+  background:
+    radial-gradient(circle at 85% 15%, rgba(168, 85, 247, .20), transparent 34%),
+    linear-gradient(145deg, rgba(18, 10, 28, .98), rgba(44, 16, 63, .96));
+}
+
+.adult-challenge-setup-v42,
+.adult-challenge-section-v42,
+.adult-challenge-custom-v42 {
+  display: grid;
+  gap: 14px;
+}
+
+.adult-challenge-setup-heading-v42,
+.adult-challenge-section-title-v42 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.adult-challenge-setup-heading-v42 small,
+.adult-challenge-section-title-v42 small {
+  color: var(--muted);
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.adult-challenge-setup-heading-v42 h3,
+.adult-challenge-section-title-v42 h3 {
+  margin: 3px 0 0;
+}
+
+.adult-challenge-setup-heading-v42 > span {
+  border: 1px solid rgba(168, 85, 247, .35);
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: #d8b4fe;
+  background: rgba(168, 85, 247, .10);
+  font-size: .78rem;
+  white-space: nowrap;
+}
+
+.adult-challenge-two-col-v42,
+.adult-challenge-custom-grid-v42 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.adult-challenge-custom-grid-v42 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.adult-challenge-choice-grid-v42,
+.adult-challenge-level-grid-v42 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.adult-challenge-choice-v42,
+.adult-challenge-level-v42 {
+  position: relative;
+  min-height: 82px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card);
+  color: var(--text);
+  text-align: left;
+}
+
+.adult-challenge-level-v42 {
+  grid-template-columns: auto 1fr auto;
+}
+
+.adult-challenge-level-v42 small {
+  grid-column: 2 / 4;
+  color: var(--muted);
+}
+
+.adult-challenge-choice-v42 > span,
+.adult-challenge-level-v42 > span {
+  font-size: 1.35rem;
+}
+
+.adult-challenge-choice-v42 b,
+.adult-challenge-level-v42 b {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(148, 163, 184, .12);
+}
+
+.adult-challenge-choice-v42.active,
+.adult-challenge-level-v42.active {
+  border-color: rgba(168, 85, 247, .62);
+  background: rgba(168, 85, 247, .11);
+}
+
+.adult-challenge-choice-v42.active b,
+.adult-challenge-level-v42.active b {
+  background: #7c3aed;
+  color: white;
+}
+
+.adult-challenge-switch-list-v42 {
+  display: grid;
+  gap: 9px;
+}
+
+.adult-challenge-switch-row-v42 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(148, 163, 184, .045);
+}
+
+.adult-challenge-switch-row-v42 input,
+.adult-challenge-inline-check-v42 input {
+  margin-top: 3px;
+  accent-color: #7c3aed;
+}
+
+.adult-challenge-switch-row-v42 span {
+  display: grid;
+  gap: 3px;
+}
+
+.adult-challenge-switch-row-v42 small {
+  color: var(--muted);
+}
+
+.adult-challenge-inline-check-v42 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.adult-challenge-custom-list-v42 {
+  display: grid;
+  gap: 8px;
+}
+
+.adult-challenge-custom-list-v42 > div {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+}
+
+.adult-challenge-custom-list-v42 p {
+  margin: 0;
+}
+
+.adult-challenge-custom-list-v42 button {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(239, 68, 68, .12);
+  color: #fca5a5;
+  font-size: 1.25rem;
+}
+
+.adult-challenge-round-v42 {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid rgba(168, 85, 247, .32);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 90% 8%, rgba(168, 85, 247, .17), transparent 35%),
+    var(--card);
+}
+
+.adult-challenge-badges-v42,
+.adult-challenge-participants-v42 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.adult-challenge-badges-v42 span,
+.adult-challenge-participants-v42 span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 9px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(148, 163, 184, .07);
+  font-size: .78rem;
+}
+
+.adult-challenge-badges-v42 span:first-child {
+  border-color: rgba(168, 85, 247, .42);
+  background: rgba(168, 85, 247, .12);
+}
+
+.adult-challenge-lead-v42 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.adult-challenge-lead-v42 > span {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: rgba(168, 85, 247, .13);
+  font-size: 1.55rem;
+}
+
+.adult-challenge-lead-v42 div {
+  display: grid;
+  gap: 2px;
+}
+
+.adult-challenge-lead-v42 small {
+  color: var(--muted);
+  font-weight: 800;
+  letter-spacing: .06em;
+}
+
+.adult-challenge-assignment-v42 {
+  margin: 0;
+  color: #d8b4fe;
+  font-weight: 700;
+}
+
+.adult-challenge-round-v42 h2 {
+  margin: 2px 0;
+  font-size: clamp(1.35rem, 5vw, 2rem);
+  line-height: 1.25;
+}
+
+.adult-challenge-alternative-v42 {
+  padding: 13px;
+  border: 1px solid rgba(34, 197, 94, .32);
+  border-radius: 15px;
+  background: rgba(34, 197, 94, .075);
+}
+
+.adult-challenge-alternative-v42 small,
+.adult-challenge-alternative-v42 summary {
+  color: #86efac;
+  font-weight: 800;
+}
+
+.adult-challenge-alternative-v42 p {
+  margin: 6px 0 0;
+}
+
+.adult-challenge-actions-v42 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.adult-challenge-actions-v42 > button:only-child {
+  grid-column: 1 / -1;
+}
+
+.adult-challenge-round-v42 .mega-mini-timer.finished {
+  border-color: rgba(245, 158, 11, .45);
+  background: rgba(245, 158, 11, .08);
+}
+
+.adult-challenge-final-v42 {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(168, 85, 247, .24), transparent 46%),
+    var(--card);
+}
+
+@media (max-width: 620px) {
+  .adult-challenge-two-col-v42,
+  .adult-challenge-custom-grid-v42,
+  .adult-challenge-choice-grid-v42,
+  .adult-challenge-level-grid-v42,
+  .adult-challenge-actions-v42 {
+    grid-template-columns: 1fr;
+  }
+
+  .adult-challenge-setup-heading-v42,
+  .adult-challenge-section-title-v42 {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .adult-challenge-setup-heading-v42 > span {
+    width: fit-content;
+  }
+}

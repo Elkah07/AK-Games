@@ -204,6 +204,13 @@
       scoring: "Aucun score n’est lié à la consommation.",
       options: "Tranquille, Soirée et Sans filtre peuvent être combinés. L’hôte peut ajouter ses cartes.",
       comfort: "Aucun shot, cul-sec ou cumul imposé. Ne conduisez pas après avoir bu et respectez les limites de chacun."
+    },
+    "Défis adultes": {
+      intro: "Une base de 400 défis adultes en solo, duo ou groupe, avec des filtres de confort définis avant le lancement.",
+      steps: ["Choisissez les thèmes, les intensités et ce que le groupe autorise.", "L’application désigne la personne qui mène et les éventuels partenaires.", "Le défi peut être réalisé, adapté, relancé ou passé sans justification.", "Les participants gagnent un point lorsque le défi est validé."],
+      scoring: "Un défi réussi rapporte 1 point à chaque participant désigné. Passer ne retire aucun point.",
+      options: "10 à 100 défis, quatre intensités, chrono facultatif, relances limitées, cartes personnalisées et filtres pour contact, téléphone, messages, médias, couple, alcool et duos.",
+      comfort: "Réservé aux adultes consentants. Aucune personne ne doit être touchée, filmée, contactée ou impliquée sans son accord explicite. L’alternative confort et le bouton Passer restent prioritaires."
     }
   };
 
