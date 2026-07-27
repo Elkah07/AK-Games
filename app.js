@@ -11,6 +11,53 @@ const state = {
   bestLiar: null
 };
 
+const AK_THEME_STORAGE_KEY = "akgames_theme_v1";
+
+function normalizeAKTheme(value) {
+  return value === "light" ? "light" : "dark";
+}
+
+function getAKTheme() {
+  return normalizeAKTheme(document.documentElement.dataset.theme);
+}
+
+function applyAKTheme(value, options = {}) {
+  const theme = normalizeAKTheme(value);
+  const persist = options.persist !== false;
+  document.documentElement.dataset.theme = theme;
+  document.documentElement.style.colorScheme = theme;
+
+  const themeColor = theme === "light" ? "#F5F2FF" : "#0B0718";
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", themeColor);
+  document.querySelector('meta[name="color-scheme"]')?.setAttribute("content", theme);
+
+  if (persist) {
+    try {
+      localStorage.setItem(AK_THEME_STORAGE_KEY, theme);
+    } catch {
+      // Le changement reste actif même si le stockage local est indisponible.
+    }
+  }
+
+  window.dispatchEvent(new CustomEvent("akgames:themechange", { detail: { theme } }));
+  return theme;
+}
+
+function selectDraftAvatar(avatarId) {
+  if (!avatarId) return;
+  state.draftPlayer.avatarId = avatarId;
+
+  document.querySelectorAll(".avatar-card[data-avatar]").forEach(button => {
+    const selected = button.dataset.avatar === avatarId;
+    button.classList.toggle("selected", selected);
+    button.setAttribute("aria-pressed", selected ? "true" : "false");
+  });
+
+  window.AKCharacters?.showPickerBubble?.(avatarId, { forceNewLine: true });
+}
+
+applyAKTheme(document.documentElement.dataset.theme, { persist: false });
+
 const avatars = [
   { id: "frog", emoji: "🐸", name: "Grenouille" },
   { id: "otter", emoji: "🦦", name: "Loutre" },
@@ -526,10 +573,10 @@ function renderPlayerForm() {
     document.querySelector("#savePlayer")?.click();
   });
 
-  document.querySelectorAll("[data-avatar]").forEach(btn => {
+  document.querySelectorAll(".avatar-card[data-avatar]").forEach(btn => {
     btn.addEventListener("click", () => {
-      state.draftPlayer.avatarId = btn.dataset.avatar;
-      renderPlayerForm();
+      if (btn.disabled) return;
+      selectDraftAvatar(btn.dataset.avatar);
     });
   });
 
@@ -554,6 +601,8 @@ function renderPlayerForm() {
       renderPlayerForm();
       return;
     }
+
+    window.AKCharacters?.hidePickerBubble?.();
 
     state.players.push({
       id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now() + Math.random()),
@@ -2546,9 +2595,29 @@ function renderJoin() {
 function renderSettings() {
   pushScreen("settings-origin");
   title.textContent = "Paramètres";
+  const currentTheme = getAKTheme();
   setBackVisible(true);
 
   screen.innerHTML = `
+    <section class="card appearance-settings-card">
+      <h2 class="section-title">Apparence</h2>
+      <p class="helper">Le thème choisi reste mémorisé sur cet appareil.</p>
+      <div class="theme-choice-grid" role="radiogroup" aria-label="Thème de l’application">
+        <label class="theme-option ${currentTheme === "dark" ? "active" : ""}">
+          <input type="radio" name="settingsTheme" value="dark" ${currentTheme === "dark" ? "checked" : ""}>
+          <span aria-hidden="true">🌙</span>
+          <strong>Sombre</strong>
+          <small>Ambiance violet nuit</small>
+        </label>
+        <label class="theme-option ${currentTheme === "light" ? "active" : ""}">
+          <input type="radio" name="settingsTheme" value="light" ${currentTheme === "light" ? "checked" : ""}>
+          <span aria-hidden="true">☀️</span>
+          <strong>Clair</strong>
+          <small>Lumineux et contrasté</small>
+        </label>
+      </div>
+    </section>
+
     <section class="card">
       <h2 class="section-title">État de la session</h2>
       <p class="helper">Ces réglages modifient la partie actuelle.</p>
@@ -2566,6 +2635,16 @@ function renderSettings() {
 
     <button id="resetApp" class="danger-btn full">Réinitialiser la session</button>
   `;
+
+  document.querySelectorAll('input[name="settingsTheme"]').forEach(input => {
+    input.addEventListener("change", event => {
+      if (!event.target.checked) return;
+      const theme = applyAKTheme(event.target.value);
+      document.querySelectorAll(".theme-option").forEach(option => {
+        option.classList.toggle("active", option.querySelector("input")?.value === theme);
+      });
+    });
+  });
 
   document.querySelector("#settingsAdult").addEventListener("change", e => state.adult = e.target.checked);
   document.querySelector("#settingsAlcohol").addEventListener("change", e => state.alcohol = e.target.checked);

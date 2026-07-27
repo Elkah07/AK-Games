@@ -3,8 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0B0718" />
-  <meta name="color-scheme" content="dark" />
+  <meta id="themeColorMeta" name="theme-color" content="#0B0718" />
+  <meta id="colorSchemeMeta" name="color-scheme" content="dark" />
+  <script>
+    (() => {
+      const key = "akgames_theme_v1";
+      let theme = "dark";
+      try {
+        const saved = localStorage.getItem(key);
+        if (saved === "light" || saved === "dark") theme = saved;
+      } catch {}
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
 
   <title>AK'Games</title>
   <meta
@@ -23,9 +35,9 @@
   <meta name="apple-mobile-web-app-title" content="AK'Games" />
   <meta name="format-detection" content="telephone=no" />
 
-  <link rel="stylesheet" href="styles.css?v=blagues-v47" />
+  <link rel="stylesheet" href="styles.css?v=ui-v48" />
   <link rel="stylesheet" href="creator.css?v=creator-v1.3-access" />
-  <link rel="stylesheet" href="character-poses.css?v=characters-v4" />
+  <link rel="stylesheet" href="character-poses.css?v=characters-v5" />
 
   <style id="ak-home-rc4-guard">
     .ak-home-screen .screen{flex:0 0 auto!important;min-height:auto!important;height:auto!important;display:block!important}
@@ -34,9 +46,11 @@
 </head>
 <body>
   <div id="splashScreen" class="ak-splash" aria-hidden="true">
-    <img src="icons/icon-192.png" alt="" />
-    <strong>AK'Games</strong>
-    <span>La soirée démarre…</span>
+    <div class="ak-splash-inner">
+      <img src="icons/icon-192.png" alt="" />
+      <strong>AK'Games</strong>
+      <span>La soirée démarre…</span>
+    </div>
   </div>
 
   <div id="app">
@@ -80,12 +94,12 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
 
   <script src="firebase.js"></script>
-  <script src="app.js?v=blagues-v47"></script>
-  <script src="multiplayer.js?v=blagues-v47"></script>
-  <script src="character-poses.js?v=characters-v4"></script>
-  <script src="character-voice-engine.js?v=characters-v4"></script>
-  <script src="characters.js?v=characters-v4"></script>
-  <script src="game-help.js?v=blagues-v47"></script>
+  <script src="app.js?v=ui-v48"></script>
+  <script src="multiplayer.js?v=ui-v48"></script>
+  <script src="character-poses.js?v=characters-v5"></script>
+  <script src="character-voice-engine.js?v=characters-v5"></script>
+  <script src="characters.js?v=characters-v5"></script>
+  <script src="game-help.js?v=ui-v48"></script>
   <script src="creator.js?v=creator-v1.3-access"></script>
   <script src="pwa.js"></script>
 </body>

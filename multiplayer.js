@@ -637,10 +637,10 @@
       document.querySelector("#saveMultiplayerPlayer")?.click();
     });
 
-    document.querySelectorAll("[data-avatar]").forEach(button => {
+    document.querySelectorAll(".avatar-card[data-avatar]").forEach(button => {
       button.addEventListener("click", () => {
-        state.draftPlayer.avatarId = button.dataset.avatar;
-        renderPlayerForm();
+        if (button.disabled) return;
+        selectDraftAvatar(button.dataset.avatar);
       });
     });
 
@@ -678,6 +678,7 @@
           state.alcohol = Boolean(result.meta.alcohol);
         }
 
+        window.AKCharacters?.hidePickerBubble?.();
         state.roomCode = result.key;
         state.currentUid = result.uid;
         state.isHost = state.mode === "multi-host";

@@ -237,9 +237,66 @@
     return new Set(players.map(player => player.avatarId).filter(Boolean));
   }
 
+  let pickerBubbleTimer = null;
+  let pickerBubbleToken = 0;
+  let pickerSelectionKey = "";
+
+  function hidePickerBubble(immediate = false) {
+    const bubble = document.querySelector(".character-picker-quote");
+    if (!bubble) return;
+    window.clearTimeout(pickerBubbleTimer);
+    pickerSelectionKey = "";
+    if (immediate) {
+      bubble.remove();
+      return;
+    }
+    bubble.classList.add("is-hiding");
+    window.setTimeout(() => bubble.remove(), 220);
+  }
+
+  function showPickerBubble(id, options = {}) {
+    if (!id) return;
+    const forceNewLine = options.forceNewLine === true;
+    const key = String(id);
+    const current = document.querySelector(".character-picker-quote");
+
+    if (!forceNewLine && pickerSelectionKey === key && current) {
+      current.classList.remove("is-hiding");
+      return;
+    }
+
+    pickerSelectionKey = key;
+    pickerBubbleToken += 1;
+    const token = pickerBubbleToken;
+    const definition = definitionFor(id);
+    const line = randomLine(id, "select");
+
+    current?.remove();
+    const bubble = document.createElement("aside");
+    bubble.className = "character-picker-quote";
+    bubble.dataset.avatarId = id;
+    bubble.setAttribute("aria-live", "polite");
+    bubble.setAttribute("aria-atomic", "true");
+    bubble.innerHTML = `
+      <span>${imageMarkup(id, definition.name, { pose: "talk", variant: "bust" })}</span>
+      <p><strong>${definition.name}</strong><q>${line}</q></p>
+    `;
+    document.body.appendChild(bubble);
+    enhancePoseImages();
+
+    window.clearTimeout(pickerBubbleTimer);
+    pickerBubbleTimer = window.setTimeout(() => {
+      if (token === pickerBubbleToken) hidePickerBubble();
+    }, 5600);
+  }
+
   function addPickerPreview() {
     const grid = document.querySelector(".avatar-grid");
-    if (!grid) return;
+    if (!grid) {
+      hidePickerBubble(true);
+      return;
+    }
+
     const selected = state?.draftPlayer?.avatarId;
     grid.querySelectorAll("[data-avatar]").forEach(button => {
       const id = button.dataset.avatar;
@@ -249,14 +306,10 @@
         name.insertAdjacentHTML("afterend", `<span class="avatar-personality">${definition.personality}</span>`);
       }
     });
-    grid.parentElement?.querySelector(".character-picker-quote")?.remove();
-    if (!selected) return;
-    const definition = definitionFor(selected);
-    grid.insertAdjacentHTML("afterend", `
-      <div class="character-picker-quote" aria-live="polite">
-        <span>${imageMarkup(selected, definition.name, { pose: "talk", variant: "bust" })}</span>
-        <p><strong>${definition.name}</strong> « ${randomLine(selected, "select")} »</p>
-      </div>`);
+
+    if (selected && pickerSelectionKey !== String(selected)) {
+      showPickerBubble(selected);
+    }
   }
 
   function markTaken(ids) {
@@ -416,6 +469,8 @@
   window.AKCharacters = {
     definitions: CHARACTER_DEFINITIONS,
     randomLine,
+    showPickerBubble,
+    hidePickerBubble,
     enhanceCharacterPicker,
     enhancePoseImages,
     posePath,
