@@ -8645,3 +8645,229 @@ body.game-rules-open {
     font-size: 1.15rem;
   }
 }
+
+/* =========================================================
+   AK'GAMES V3.9 — LE FAUX EXPERT 750
+   ========================================================= */
+.expert-stat-strip-v39 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.expert-stat-strip-v39 article {
+  display: grid;
+  gap: 2px;
+  padding: 12px;
+  border: 1px solid var(--border, rgba(255,255,255,.12));
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+  text-align: center;
+}
+
+.expert-stat-strip-v39 strong {
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+.expert-stat-strip-v39 span {
+  color: var(--muted);
+  font-size: .78rem;
+}
+
+.expert-config-card-v39 {
+  margin-top: 14px;
+}
+
+.section-heading-row-v39 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.section-heading-row-v39 small {
+  color: var(--muted);
+  font-weight: 850;
+  letter-spacing: .08em;
+}
+
+.section-heading-row-v39 .section-title {
+  margin: 3px 0 0;
+}
+
+.section-heading-row-v39 > div:last-child {
+  display: flex;
+  gap: 7px;
+}
+
+.compact-btn-v39 {
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid var(--border, rgba(255,255,255,.12));
+  border-radius: 11px;
+  background: rgba(255,255,255,.05);
+  color: inherit;
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.compact-btn-v39:hover,
+.compact-btn-v39:focus-visible {
+  border-color: var(--accent);
+  background: rgba(126,65,255,.12);
+}
+
+.expert-theme-grid-v39 {
+  margin-top: 0;
+}
+
+.expert-theme-grid-v39 .never-theme-option.selected,
+.expert-theme-grid-v39 .never-theme-option:has(input:checked) {
+  border-color: var(--accent);
+  background: rgba(126,65,255,.13);
+  box-shadow: 0 0 0 1px rgba(126,65,255,.10) inset;
+}
+
+.expert-level-grid-v39 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.expert-level-grid-v39 .option-card {
+  margin: 0;
+  min-height: 58px;
+}
+
+.expert-level-grid-v39 .option-card.selected,
+.expert-level-grid-v39 .option-card:has(input:checked) {
+  border-color: var(--accent);
+  background: rgba(126,65,255,.12);
+}
+
+.expert-subtitle-v39 {
+  margin: 16px 0 10px;
+  font-size: .92rem;
+}
+
+.adult-expert-card-v39 {
+  border-color: rgba(244,63,140,.30);
+  background: rgba(244,63,140,.07);
+}
+
+.expert-custom-grid-v39 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+  margin-top: 12px;
+}
+
+.expert-custom-grid-v39 .form-group:nth-child(2),
+.expert-custom-grid-v39 .form-group:nth-child(3) {
+  grid-column: span 2;
+}
+
+.expert-textarea-v39 {
+  resize: vertical;
+  min-height: 88px;
+}
+
+.expert-custom-list-v39 {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.expert-custom-list-v39 article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--border, rgba(255,255,255,.10));
+  border-radius: 13px;
+  background: rgba(255,255,255,.035);
+}
+
+.expert-custom-list-v39 article > div {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.expert-custom-list-v39 strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.expert-custom-list-v39 small {
+  color: var(--muted);
+}
+
+.expert-custom-list-v39 button {
+  flex: 0 0 auto;
+  padding: 7px 9px;
+  border: 1px solid rgba(240,101,101,.28);
+  border-radius: 10px;
+  background: rgba(240,101,101,.08);
+  color: inherit;
+  cursor: pointer;
+}
+
+.expert-brief-badges-v39 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.expert-brief-badges-v39 span {
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  color: var(--muted);
+  font-size: .75rem;
+  font-weight: 750;
+}
+
+@media (max-width: 720px) {
+  .expert-theme-grid-v39,
+  .expert-level-grid-v39 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .expert-custom-grid-v39 {
+    grid-template-columns: 1fr;
+  }
+
+  .expert-custom-grid-v39 .form-group:nth-child(2),
+  .expert-custom-grid-v39 .form-group:nth-child(3) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 430px) {
+  .expert-stat-strip-v39 {
+    gap: 7px;
+  }
+
+  .expert-stat-strip-v39 article {
+    padding: 10px 6px;
+  }
+
+  .expert-theme-grid-v39,
+  .expert-level-grid-v39 {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading-row-v39 {
+    flex-direction: column;
+  }
+}

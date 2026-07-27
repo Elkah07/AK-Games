@@ -107,6 +107,13 @@
       options: "Choisissez thèmes, difficultés, mode sonore ou silencieux, durée, cartes solo ou duo et imitations personnalisées.",
       comfort: "Évitez les imitations humiliantes d’une personne présente, d’un handicap, d’un accent réel ou d’un groupe protégé. Une carte peut être passée immédiatement."
     },
+    "Imitation +18": {
+      intro: "La version adulte d’Imitation, avec 300 scènes de flirt, de rendez-vous, de couple, d’intimité et de jeux de rôle.",
+      steps: ["Les imitateurs découvrent la scène et les contraintes en privé.", "Le chronomètre démarre.", "Le groupe tente de reconnaître la situation.", "La première bonne réponse et la réussite des imitateurs rapportent des points."],
+      scoring: "Les imitateurs gagnent 1 à 4 points selon l’intensité. La première personne à trouver gagne 1 point.",
+      options: "Choisissez parmi 10 thèmes, quatre intensités, les scènes solo ou duo, le mode sonore et vos cartes personnalisées.",
+      comfort: "Réservé aux adultes consentants. Aucun contact, baiser, geste intime ou détail personnel n’est exigé. Une carte peut être passée immédiatement."
+    },
     "Le premier qui rit a perdu": {
       intro: "Deux adversaires essaient de se faire rire à tour de rôle tout en gardant leur sérieux.",
       steps: ["Choisissez les deux adversaires.", "La première personne raconte une blague de l’application ou la sienne.", "Si l’autre rit, le duel est tranché ou une vie est retirée selon le mode.", "Les rôles alternent jusqu’à la victoire."],
@@ -122,11 +129,11 @@
       comfort: "Les causes sont jouées comme un exercice d’improvisation, pas comme les opinions réelles des joueurs."
     },
     "Le Faux Expert": {
-      intro: "Un orateur présente un sujet. Il peut être véritable expert ou devoir improviser complètement.",
-      steps: ["L’orateur découvre son rôle en privé.", "Il parle pendant le temps prévu.", "Le groupe écoute sans connaître son rôle.", "Tout le monde vote Vrai expert ou Faux expert."],
-      scoring: "Les enquêteurs marquent en trouvant le rôle. L’orateur peut marquer s’il trompe le groupe.",
-      options: "Le nombre de conférences et le temps de parole sont configurables.",
-      comfort: "Le jeu récompense l’improvisation, pas la diffusion volontaire d’informations dangereuses."
+      intro: "Parmi 750 conférences, l’orateur reçoit en privé soit trois faits vérifiés, soit une piste de bluff. Le jury doit déterminer si son diplôme est authentique ou fraîchement imprimé dans une cave.",
+      steps: ["L’orateur découvre seul son sujet et son rôle.", "Il présente sa théorie pendant 30 à 120 secondes.", "Lorsque l’option est activée, chaque membre du jury peut poser une question courte.", "Tout le monde sauf l’orateur vote secrètement Vrai expert ou Faux expert.", "Le rôle et les trois faits vérifiés sont révélés."],
+      scoring: "Chaque bon verdict rapporte 1 point. Un vrai expert reconnu par la majorité gagne 2 points. Un faux expert gagne 1 point par personne trompée, plus 1 point bonus s’il trompe tout le jury.",
+      options: "Choisissez 5 à 100 passages, les thèmes, les difficultés, les intensités adultes, le chrono, les questions du jury et vos conférences personnalisées.",
+      comfort: "Les cartes adultes sont réservées aux majeurs consentants. Une improvisation ne doit jamais servir de conseil médical, juridique ou dangereux."
     },
     "La Bombe": {
       intro: "Le téléphone passe rapidement de main en main. Chaque personne doit donner une réponse différente avant l’explosion.",

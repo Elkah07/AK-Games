@@ -1,0 +1,88 @@
+{
+  "version": "V2",
+  "game": "Imitation +18",
+  "adultCards": 300,
+  "classicCardsIncluded": false,
+  "uniqueIds": 300,
+  "uniqueTexts": 300,
+  "categories": {
+    "flirt_seduction": 30,
+    "rendez_vous": 30,
+    "couple": 30,
+    "ex_jalousie": 30,
+    "messages_reseaux": 30,
+    "soirees": 30,
+    "intimite": 30,
+    "fantasmes_roleplay": 30,
+    "malaises_secrets": 30,
+    "duo_adulte": 30
+  },
+  "difficulties": {
+    "easy": 80,
+    "medium": 80,
+    "hard": 80,
+    "chaos": 60
+  },
+  "actors": {
+    "1": 270,
+    "2": 30
+  },
+  "checks": {
+    "allAdult": true,
+    "requiredFields": true,
+    "duoCount": 30,
+    "noExactDuplicates": true
+  },
+  "requiresPreviousPack": "AK-Games_modifs_imitation_600_V1.zip",
+  "browserTests": {
+    "globals": {
+      "reset": true,
+      "setup": true,
+      "start": true,
+      "adult": true
+    },
+    "localSetup": {
+      "adult": true,
+      "themeCount": 10,
+      "difficultyCount": 4,
+      "shows300": true,
+      "showsConsent": true,
+      "showsIntensity": true
+    },
+    "localStart": {
+      "count": 10,
+      "allAdult": true,
+      "stage": "handoff",
+      "hasHandoff": true
+    },
+    "private": {
+      "stage": "private",
+      "hasAdultLevel": true,
+      "hasSecret": true
+    },
+    "classicSeparate": {
+      "adult": false,
+      "themeCount": 12,
+      "shows600": true,
+      "hasClassicTheme": true
+    },
+    "multiSetup": {
+      "showsMulti": true,
+      "adult": true
+    },
+    "multiPayload": {
+      "gameName": "Imitation +18",
+      "adult": true,
+      "adultOnly": true,
+      "count": 10,
+      "allAdult": true,
+      "phase": "imitation-brief"
+    }
+  },
+  "syntaxChecks": {
+    "app.js": true,
+    "multiplayer.js": true,
+    "game-help.js": true,
+    "service-worker.js": true
+  }
+}

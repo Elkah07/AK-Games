@@ -5281,6 +5281,7 @@ const V014_GAME_CONFIGS = {
   "Roulette de défis": { engine: "turn", icon: "🎡", pack: "Défis & performance", data: "data/roulette-defis.json", description: "Une roulette de défis rapides, absurdes et parfaits pour réveiller la soirée.", defaultRounds: 12 },
   "Mime": { engine: "turn", icon: "🎬", pack: "Défis & performance", data: "data/mime.json", description: "Découvre ton mime en privé et fais-le deviner sans parler.", defaultRounds: 10, privatePrompt: true, timer: 45 },
   "Imitation": { engine: "turn", icon: "🎙️", pack: "Défis & performance", data: "data/imitation.json", description: "Voix, personnages et situations : le groupe doit reconnaître ton imitation.", defaultRounds: 10, privatePrompt: true, timer: 45 },
+  "Imitation +18": { engine: "turn", icon: "🌶️", pack: "Pack adulte", data: "data/imitation-adulte.json", description: "Flirt, rendez-vous, couple et scènes intimes à jouer sans contact imposé.", defaultRounds: 10, privatePrompt: true, timer: 45, adultOnly: true },
   "La Bombe": { engine: "bomb", icon: "💣", pack: "Jeux rapides", data: "data/bombe.json", description: "Donne une réponse, passe la bombe et évite d’être la personne chez qui elle explose.", defaultRounds: 6, timer: 25 },
   "Culture générale": { engine: "quiz", icon: "🌍", pack: "Quiz", data: "data/quiz-culture.json", description: "Des questions accessibles et variées pour tester toute la table.", defaultRounds: 12 },
   "Cinéma": { engine: "quiz", icon: "🍿", pack: "Quiz", data: "data/quiz-cinema.json", description: "Films cultes, animation, personnages et grandes répliques.", defaultRounds: 12 },
@@ -5463,7 +5464,7 @@ v014SetCategoryGames("quiz", ["Culture générale", "Cinéma", "Musique", "Jeux 
 v014SetCategoryGames("rapide", ["Devinettes", "Qui suis-je ?", "La Bombe", "Blind Test"]);
 v014SetCategoryGames("bluff", ["Qui ment le mieux ?", "L’Imposteur sait presque tout", "Qui a répondu ça ?", "Le Faux Expert", "Fake ou Réel ?"]);
 v014SetCategoryGames("scenario", ["Alerte Rouge"]);
-v014SetCategoryGames("adulte", ["Action ou Vérité +18", "Je n’ai jamais +18", "Tu préfères +18", "Questions osées", "Défis adultes", "Jeux à boire"]);
+v014SetCategoryGames("adulte", ["Action ou Vérité +18", "Je n’ai jamais +18", "Tu préfères +18", "Imitation +18", "Questions osées", "Défis adultes", "Jeux à boire"]);
 
 function clearV014Timer() {
   if (state.v014Timer) window.clearInterval(state.v014Timer);
@@ -6240,6 +6241,7 @@ const AK_AUDIT8_GAME_META = {
   "Roulette de défis": { minPlayers: 2, time: "10 min", goal: "Relève les défis tirés à tour de rôle, sans pénalité si tu préfères passer." },
   "Mime": { minPlayers: 2, time: "10 min", goal: "Fais deviner le sujet sans parler avant la fin du chronomètre." },
   "Imitation": { minPlayers: 2, time: "10 min", goal: "Imite la voix ou la situation afin que le groupe retrouve le sujet." },
+  "Imitation +18": { minPlayers: 2, time: "10–15 min", goal: "Fais deviner une scène adulte de flirt, de couple ou d’intimité, sans contact obligatoire." },
   "La Bombe": { minPlayers: 2, time: "5 min", goal: "Donne une réponse différente, puis passe vite le téléphone avant l’explosion." },
   "Culture générale": { minPlayers: 2, time: "10 min", goal: "Réponds en secret et marque un point par bonne réponse." },
   "Cinéma": { minPlayers: 2, time: "10 min", goal: "Réponds en secret aux questions sur les films et personnages." },
@@ -9798,7 +9800,7 @@ function akMimeCustomSetupMarkup(game, prefix = "mime") {
         <div class="form-group"><label for="${prefix}CustomText">Mime à faire deviner</label><textarea id="${prefix}CustomText" class="text-input" rows="3" maxlength="220" placeholder="Ex. Une personne qui essaie de monter un meuble sans notice"></textarea></div>
         <div class="mime-custom-grid">
           <div class="form-group"><label for="${prefix}CustomTheme">Thème</label><select id="${prefix}CustomTheme" class="text-input">${soloThemes.map(theme => `<option value="${theme.id}">${theme.icon} ${escapeHtml(theme.label)}</option>`).join("")}</select></div>
-          <div class="form-group"><label for="${prefix}CustomDifficulty">Difficulté</label><select id="${prefix}CustomDifficulty" class="text-input">${Object.entries(akMimeDifficultyMeta).map(([id, meta]) => `<option value="${id}">${meta.icon} ${escapeHtml(meta.label)} · ${meta.points} pt${meta.points > 1 ? "s" : ""}</option>`).join("")}</select></div>
+          <div class="form-group"><label for="${prefix}CustomDifficulty">${adult ? "Intensité" : "Difficulté"}</label><select id="${prefix}CustomDifficulty" class="text-input">${Object.entries(akMimeDifficultyMeta).map(([id, meta]) => `<option value="${id}">${meta.icon} ${escapeHtml(meta.label)} · ${meta.points} pt${meta.points > 1 ? "s" : ""}</option>`).join("")}</select></div>
           <div class="form-group"><label for="${prefix}CustomActors">Nombre de mimeurs</label><select id="${prefix}CustomActors" class="text-input"><option value="1">🧍 Une personne</option><option value="2" ${state.players.length < 3 ? "disabled" : ""}>🧑‍🤝‍🧑 Deux personnes</option></select></div>
         </div>
         <button id="${prefix}AddCustom" class="secondary-btn full" type="button">＋ Ajouter ce mime</button>
@@ -11444,6 +11446,54 @@ startAmbiancePollGame = async function () {
    ========================================================= */
 
 const AK_IMITATION_STORAGE_KEY = "akgames_custom_imitations_v1";
+const AK_IMITATION_ADULT_STORAGE_KEY = "akgames_custom_imitations_adult_v1";
+const AK_IMITATION_ADULT_GAME = "Imitation +18";
+
+const akImitationAdultThemes = [
+  { id: "flirt_seduction", icon: "💋", label: "Flirt & séduction" },
+  { id: "rendez_vous", icon: "🍸", label: "Rendez-vous" },
+  { id: "couple", icon: "💞", label: "Vie de couple" },
+  { id: "ex_jalousie", icon: "👀", label: "Ex & jalousie" },
+  { id: "messages_reseaux", icon: "📱", label: "Messages & réseaux" },
+  { id: "soirees", icon: "🪩", label: "Soirées" },
+  { id: "intimite", icon: "🛏️", label: "Intimité" },
+  { id: "fantasmes_roleplay", icon: "🎭", label: "Fantasmes & jeux de rôle" },
+  { id: "malaises_secrets", icon: "🫣", label: "Malaises & secrets" },
+  { id: "duo_adulte", icon: "🫦", label: "Duos adultes" }
+];
+
+const akImitationAdultDifficultyMeta = {
+  easy: { icon: "🌶️", label: "Léger", points: 1 },
+  medium: { icon: "😏", label: "Osé", points: 2 },
+  hard: { icon: "🔥", label: "Très osé", points: 3 },
+  chaos: { icon: "☢️", label: "Chaos", points: 4 }
+};
+
+function akImitationIsAdult(value = state.megaGame) {
+  if (typeof value === "boolean") return value;
+  if (typeof value === "string") return value === AK_IMITATION_ADULT_GAME || value === "adult";
+  return value?.gameName === AK_IMITATION_ADULT_GAME || value?.collection === "adult" || value?.imitationAdult === true;
+}
+
+function akImitationThemeList(value = state.megaGame) {
+  return akImitationIsAdult(value) ? akImitationAdultThemes : akImitationThemes;
+}
+
+function akImitationDifficultyMap(value = state.megaGame) {
+  return akImitationIsAdult(value) ? akImitationAdultDifficultyMeta : akImitationDifficultyMeta;
+}
+
+function akImitationCardTotal(value = state.megaGame) {
+  return akImitationIsAdult(value) ? 300 : 600;
+}
+
+function akImitationDataPath(value = state.megaGame) {
+  return akImitationIsAdult(value) ? "data/imitation-adulte.json" : "data/imitation.json";
+}
+
+function akImitationCustomStorageKey(value = state.megaGame) {
+  return akImitationIsAdult(value) ? AK_IMITATION_ADULT_STORAGE_KEY : AK_IMITATION_STORAGE_KEY;
+}
 
 const akImitationThemes = [
   { id: "animaux", icon: "🐾", label: "Animaux" },
@@ -11467,8 +11517,9 @@ const akImitationDifficultyMeta = {
   chaos: { icon: "☢️", label: "Chaos", points: 4 }
 };
 
-function akImitationThemeMeta(id) {
-  return akImitationThemes.find(theme => theme.id === id) || akImitationThemes[0];
+function akImitationThemeMeta(id, context = null) {
+  const themes = akImitationThemeList(context);
+  return themes.find(theme => theme.id === id) || themes[0];
 }
 
 function akImitationDifficulty(itemOrValue) {
@@ -11477,16 +11528,17 @@ function akImitationDifficulty(itemOrValue) {
 }
 
 function akImitationPoints(item) {
-  return akImitationDifficultyMeta[akImitationDifficulty(item)].points;
+  return akImitationDifficultyMap(item)[akImitationDifficulty(item)].points;
 }
 
 function akImitationPackId(item) {
-  return Number(item?.actors || 1) === 2 ? "duo" : (item?.category || "quotidien");
+  if (Number(item?.actors || 1) === 2) return akImitationIsAdult(item) ? "duo_adulte" : "duo";
+  return item?.category || (akImitationIsAdult(item) ? "flirt_seduction" : "quotidien");
 }
 
-function akImitationLoadCustom() {
+function akImitationLoadCustom(context = state.megaGame) {
   try {
-    const parsed = JSON.parse(localStorage.getItem(AK_IMITATION_STORAGE_KEY) || "[]");
+    const parsed = JSON.parse(localStorage.getItem(akImitationCustomStorageKey(context)) || "[]");
     return Array.isArray(parsed) ? parsed.filter(item => item && item.text) : [];
   } catch (error) {
     console.warn("Imitations personnalisées illisibles", error);
@@ -11494,29 +11546,32 @@ function akImitationLoadCustom() {
   }
 }
 
-function akImitationSaveCustom(items) {
-  localStorage.setItem(AK_IMITATION_STORAGE_KEY, JSON.stringify(Array.isArray(items) ? items : []));
+function akImitationSaveCustom(items, context = state.megaGame) {
+  localStorage.setItem(akImitationCustomStorageKey(context), JSON.stringify(Array.isArray(items) ? items : []));
 }
 
-function akImitationNormalizeThemes(values) {
-  const valid = new Set(akImitationThemes.map(theme => theme.id));
-  if (!Array.isArray(values)) return akImitationThemes.map(theme => theme.id);
+function akImitationNormalizeThemes(values, context = state.megaGame) {
+  const themes = akImitationThemeList(context);
+  const valid = new Set(themes.map(theme => theme.id));
+  if (!Array.isArray(values)) return themes.map(theme => theme.id);
   return [...new Set(values.filter(value => valid.has(value)))];
 }
 
-function akImitationNormalizeDifficulties(values) {
-  const valid = new Set(Object.keys(akImitationDifficultyMeta));
-  if (!Array.isArray(values)) return Object.keys(akImitationDifficultyMeta);
+function akImitationNormalizeDifficulties(values, context = state.megaGame) {
+  const difficultyMap = akImitationDifficultyMap(context);
+  const valid = new Set(Object.keys(difficultyMap));
+  if (!Array.isArray(values)) return Object.keys(difficultyMap);
   return [...new Set(values.filter(value => valid.has(value)))];
 }
 
 function ensureImitationGameConfig(game = state.megaGame) {
-  if (!game || game.gameName !== "Imitation") return game;
+  if (!game || !["Imitation", AK_IMITATION_ADULT_GAME].includes(game.gameName)) return game;
+  game.imitationAdult = akImitationIsAdult(game);
   game.roundCount = Math.max(3, Math.min(100, Number(game.roundCount || 10)));
   game.durationSeconds = [20, 30, 45, 60, 90].includes(Number(game.durationSeconds)) ? Number(game.durationSeconds) : 45;
-  game.imitationThemes = akImitationNormalizeThemes(game.imitationThemes);
-  if (state.players.length < 3) game.imitationThemes = game.imitationThemes.filter(theme => theme !== "duo");
-  game.imitationDifficulties = akImitationNormalizeDifficulties(game.imitationDifficulties);
+  game.imitationThemes = akImitationNormalizeThemes(game.imitationThemes, game);
+  if (state.players.length < 3) game.imitationThemes = game.imitationThemes.filter(theme => !["duo", "duo_adulte"].includes(theme));
+  game.imitationDifficulties = akImitationNormalizeDifficulties(game.imitationDifficulties, game);
   game.imitationAllowSounds = game.imitationAllowSounds !== false;
   game.imitationIncludeCustom = game.imitationIncludeCustom !== false;
   game.imitationStage = game.imitationStage || "handoff";
@@ -11529,8 +11584,8 @@ function ensureImitationGameConfig(game = state.megaGame) {
 }
 
 function akImitationBadges(item) {
-  const theme = akImitationThemeMeta(akImitationPackId(item));
-  const difficulty = akImitationDifficultyMeta[akImitationDifficulty(item)];
+  const theme = akImitationThemeMeta(akImitationPackId(item), item);
+  const difficulty = akImitationDifficultyMap(item)[akImitationDifficulty(item)];
   const actors = Number(item?.actors || 1);
   const sound = item?.soundMode === "required" ? "🔊 Son requis" : "🎙️ Son facultatif";
   return `<div class="mime-badge-row imitation-badge-row"><span>${theme.icon} ${escapeHtml(theme.label)}</span><span>${difficulty.icon} ${escapeHtml(difficulty.label)} · ${difficulty.points} pt${difficulty.points > 1 ? "s" : ""}</span><span>${actors === 2 ? "🧑‍🤝‍🧑 Duo" : "🧍 Solo"}</span><span>${sound}</span>${item?.custom ? `<span>✍️ Perso</span>` : ""}</div>`;
@@ -11546,25 +11601,28 @@ function akImitationConstraintMarkup(item, allowSounds = true) {
 }
 
 function akImitationCustomSetupMarkup(game, prefix = "imitation") {
-  const custom = akImitationLoadCustom();
-  const soloThemes = akImitationThemes.filter(theme => theme.id !== "duo");
+  const custom = akImitationLoadCustom(game);
+  const themes = akImitationThemeList(game);
+  const difficultyMap = akImitationDifficultyMap(game);
+  const adult = akImitationIsAdult(game);
+  const soloThemes = themes.filter(theme => !["duo", "duo_adulte"].includes(theme.id));
   return `
     <section class="card mime-custom-card imitation-custom-card">
       <div class="mime-section-heading"><div><small>TES PROPRES IDÉES</small><h3>Imitations personnalisées</h3></div><span>${custom.length}</span></div>
       <label class="option-card premium-toggle"><input id="${prefix}IncludeCustom" type="checkbox" ${game.imitationIncludeCustom ? "checked" : ""}><span><strong>Inclure mes cartes</strong><br><span class="helper">Elles restent enregistrées sur cet appareil.</span></span></label>
       <div class="mime-custom-form">
-        <div class="form-group"><label for="${prefix}CustomText">Sujet à faire deviner</label><textarea id="${prefix}CustomText" class="text-input" rows="3" maxlength="260" placeholder="Ex. Un GPS vexé qui refuse de recalculer l’itinéraire"></textarea></div>
+        <div class="form-group"><label for="${prefix}CustomText">Sujet à faire deviner</label><textarea id="${prefix}CustomText" class="text-input" rows="3" maxlength="260" placeholder="${adult ? "Ex. Une personne qui tente un flirt très assuré puis perd tous ses moyens" : "Ex. Un GPS vexé qui refuse de recalculer l’itinéraire"}"></textarea></div>
         <div class="mime-custom-grid">
           <div class="form-group"><label for="${prefix}CustomTheme">Thème</label><select id="${prefix}CustomTheme" class="text-input">${soloThemes.map(theme => `<option value="${theme.id}">${theme.icon} ${escapeHtml(theme.label)}</option>`).join("")}</select></div>
-          <div class="form-group"><label for="${prefix}CustomDifficulty">Difficulté</label><select id="${prefix}CustomDifficulty" class="text-input">${Object.entries(akImitationDifficultyMeta).map(([id, meta]) => `<option value="${id}">${meta.icon} ${escapeHtml(meta.label)} · ${meta.points} pt${meta.points > 1 ? "s" : ""}</option>`).join("")}</select></div>
+          <div class="form-group"><label for="${prefix}CustomDifficulty">Difficulté</label><select id="${prefix}CustomDifficulty" class="text-input">${Object.entries(difficultyMap).map(([id, meta]) => `<option value="${id}">${meta.icon} ${escapeHtml(meta.label)} · ${meta.points} pt${meta.points > 1 ? "s" : ""}</option>`).join("")}</select></div>
           <div class="form-group"><label for="${prefix}CustomActors">Imitateurs</label><select id="${prefix}CustomActors" class="text-input"><option value="1">🧍 Une personne</option><option value="2" ${state.players.length < 3 ? "disabled" : ""}>🧑‍🤝‍🧑 Deux personnes</option></select></div>
         </div>
         <label class="option-card premium-toggle"><input id="${prefix}CustomSound" type="checkbox"><span><strong>Cette carte exige des sons</strong><br><span class="helper">Elle sera retirée lorsque le mode silencieux est activé.</span></span></label>
         <button id="${prefix}AddCustom" class="secondary-btn full" type="button">＋ Ajouter cette imitation</button>
       </div>
       ${custom.length ? `<div class="mime-custom-list">${custom.slice().reverse().map(item => {
-        const theme = akImitationThemeMeta(akImitationPackId(item));
-        const difficulty = akImitationDifficultyMeta[akImitationDifficulty(item)];
+        const theme = akImitationThemeMeta(akImitationPackId(item), item);
+        const difficulty = akImitationDifficultyMap(item)[akImitationDifficulty(item)];
         return `<article><div><small>${theme.icon} ${escapeHtml(theme.label)} · ${difficulty.icon} ${escapeHtml(difficulty.label)} · ${Number(item.actors || 1) === 2 ? "Duo" : "Solo"}</small><strong>${escapeHtml(item.text)}</strong></div><button type="button" data-${prefix}-delete-custom="${escapeHtml(item.id)}" aria-label="Supprimer cette imitation">×</button></article>`;
       }).join("")}</div>` : `<p class="helper top-gap">Aucune imitation personnelle pour le moment.</p>`}
     </section>`;
@@ -11572,10 +11630,13 @@ function akImitationCustomSetupMarkup(game, prefix = "imitation") {
 
 function akImitationSetupMarkup(game, prefix = "imitation") {
   ensureImitationGameConfig(game);
+  const themes = akImitationThemeList(game);
+  const difficultyMap = akImitationDifficultyMap(game);
+  const adult = akImitationIsAdult(game);
   const duoUnavailable = state.players.length < 3;
   return `
     <section class="card mime-setup-card imitation-setup-card">
-      <div class="mime-section-heading"><div><small>FORMAT DE PARTIE</small><h3>Durée et nombre de manches</h3></div><span>600 cartes</span></div>
+      <div class="mime-section-heading"><div><small>FORMAT DE PARTIE</small><h3>Durée et nombre de manches</h3></div><span>${akImitationCardTotal(game)} cartes</span></div>
       <div class="choice-row mime-count-row">${[5, 10, 20, 40, 60, 100].map(value => `<button type="button" class="choice-pill ${game.roundCount === value ? "active" : ""}" data-${prefix}-count="${value}">${value}</button>`).join("")}</div>
       <div class="mime-custom-grid top-gap">
         <div class="form-group"><label for="${prefix}CustomCount">Nombre personnalisé</label><input id="${prefix}CustomCount" class="text-input" type="number" min="3" max="100" value="${game.roundCount}"></div>
@@ -11584,20 +11645,21 @@ function akImitationSetupMarkup(game, prefix = "imitation") {
       <label class="option-card premium-toggle top-gap"><input id="${prefix}AllowSounds" type="checkbox" ${game.imitationAllowSounds ? "checked" : ""}><span><strong>🎙️ Autoriser les voix et les sons</strong><br><span class="helper">Désactive pour une partie uniquement basée sur les gestes, expressions et attitudes.</span></span></label>
     </section>
     <section class="card mime-theme-card imitation-theme-card">
-      <div class="mime-section-heading"><div><small>PACKS D’IMITATIONS</small><h3>Choisis un ou plusieurs thèmes</h3></div><span>${game.imitationThemes.length}/${akImitationThemes.length}</span></div>
-      <div class="mime-theme-grid">${akImitationThemes.map(theme => {
+      <div class="mime-section-heading"><div><small>PACKS D’IMITATIONS</small><h3>Choisis un ou plusieurs thèmes</h3></div><span>${game.imitationThemes.length}/${themes.length}</span></div>
+      <div class="mime-theme-grid">${themes.map(theme => {
         const active = game.imitationThemes.includes(theme.id);
-        const disabled = theme.id === "duo" && duoUnavailable;
+        const disabled = ["duo", "duo_adulte"].includes(theme.id) && duoUnavailable;
         return `<button type="button" class="mime-theme-option ${active ? "active" : ""}" data-${prefix}-theme="${theme.id}" aria-pressed="${active}" ${disabled ? "disabled" : ""}><span>${theme.icon}</span><strong>${escapeHtml(theme.label)}</strong><b>${active ? "✓" : "+"}</b></button>`;
       }).join("")}</div>
       <div class="toolbar top-gap"><button id="${prefix}AllThemes" class="secondary-btn" type="button">Tout sélectionner</button><button id="${prefix}NoThemes" class="secondary-btn" type="button">Tout désélectionner</button></div>
       ${duoUnavailable ? `<p class="helper top-gap">🧑‍🤝‍🧑 Les imitations en duo sont disponibles à partir de 3 joueurs.</p>` : ""}
     </section>
     <section class="card mime-difficulty-card imitation-difficulty-card">
-      <div class="mime-section-heading"><div><small>NIVEAUX</small><h3>Difficultés combinables</h3></div><span>1 à 4 pts</span></div>
-      <div class="mime-difficulty-grid imitation-difficulty-grid">${Object.entries(akImitationDifficultyMeta).map(([id, meta]) => `<button type="button" class="mime-difficulty-option ${game.imitationDifficulties.includes(id) ? "active" : ""}" data-${prefix}-difficulty="${id}" aria-pressed="${game.imitationDifficulties.includes(id)}"><span>${meta.icon}</span><strong>${escapeHtml(meta.label)}</strong><small>${meta.points} point${meta.points > 1 ? "s" : ""}</small></button>`).join("")}</div>
+      <div class="mime-section-heading"><div><small>${adult ? "INTENSITÉS" : "NIVEAUX"}</small><h3>${adult ? "Intensités combinables" : "Difficultés combinables"}</h3></div><span>1 à 4 pts</span></div>
+      <div class="mime-difficulty-grid imitation-difficulty-grid">${Object.entries(difficultyMap).map(([id, meta]) => `<button type="button" class="mime-difficulty-option ${game.imitationDifficulties.includes(id) ? "active" : ""}" data-${prefix}-difficulty="${id}" aria-pressed="${game.imitationDifficulties.includes(id)}"><span>${meta.icon}</span><strong>${escapeHtml(meta.label)}</strong><small>${meta.points} point${meta.points > 1 ? "s" : ""}</small></button>`).join("")}</div>
       <p class="helper top-gap">Le ou les imitateurs gagnent la valeur du niveau. La première personne qui trouve gagne 1 point.</p>
     </section>
+    ${adult ? `<div class="responsible-callout">🔞 Adultes consentants uniquement. Aucun contact, baiser, geste intime ou justification n’est obligatoire. Une carte peut être passée immédiatement.</div>` : ""}
     ${akImitationCustomSetupMarkup(game, prefix)}`;
 }
 
@@ -11619,7 +11681,7 @@ function akImitationBindSetup(game, prefix = "imitation", rerender = renderMegaS
     rerender();
   }));
   document.querySelector(`#${prefix}AllThemes`)?.addEventListener("click", () => {
-    game.imitationThemes = akImitationThemes.filter(theme => theme.id !== "duo" || state.players.length >= 3).map(theme => theme.id);
+    game.imitationThemes = akImitationThemeList(game).filter(theme => !["duo", "duo_adulte"].includes(theme.id) || state.players.length >= 3).map(theme => theme.id);
     rerender();
   });
   document.querySelector(`#${prefix}NoThemes`)?.addEventListener("click", () => { game.imitationThemes = []; rerender(); });
@@ -11637,25 +11699,26 @@ function akImitationBindSetup(game, prefix = "imitation", rerender = renderMegaS
     const actors = Number(document.querySelector(`#${prefix}CustomActors`)?.value || 1);
     const soundMode = document.querySelector(`#${prefix}CustomSound`)?.checked ? "required" : "optional";
     if (actors === 2 && state.players.length < 3) return alert("Il faut au moins 3 joueurs pour enregistrer une imitation en duo dans cette partie.");
-    const custom = akImitationLoadCustom();
+    const custom = akImitationLoadCustom(game);
     custom.push({
       id: `imitation_custom_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
       text,
       answer: text,
-      category: actors === 2 ? "duo" : category,
+      category: actors === 2 ? (akImitationIsAdult(game) ? "duo_adulte" : "duo") : category,
       difficulty,
       actors,
       soundMode,
       forbiddenWords: [],
+      collection: akImitationIsAdult(game) ? "adult" : "classic",
       custom: true
     });
-    akImitationSaveCustom(custom);
+    akImitationSaveCustom(custom, game);
     game.imitationIncludeCustom = true;
     rerender();
   });
   document.querySelectorAll(`[data-${prefix}-delete-custom]`).forEach(button => button.addEventListener("click", () => {
     const id = button.dataset[`${prefix}DeleteCustom`];
-    akImitationSaveCustom(akImitationLoadCustom().filter(item => item.id !== id));
+    akImitationSaveCustom(akImitationLoadCustom(game).filter(item => item.id !== id), game);
     rerender();
   }));
 }
@@ -11758,14 +11821,14 @@ function akImitationCompleteRound(success, guesserId = null, timedOut = false) {
 function akImitationRenderHandoff(game, item) {
   const actors = akImitationActors(item);
   screen.innerHTML = `
-    ${v014Progress(game, "Imitation")}
+    ${v014Progress(game, game.gameName || "Imitation")}
     <section class="handoff-stage handoff-v07 mime-handoff imitation-handoff"><div class="mime-actor-row">${actors.map(player => `<span>${avatarById(player.avatarId).emoji}</span>`).join("")}</div><span class="category-chip">${Number(item.actors || 1) === 2 ? "IMITATION EN DUO" : "IMITATION SOLO"}</span><h2>${escapeHtml(akImitationActorNames(item))}</h2><p>${Number(item.actors || 1) === 2 ? "Donnez le téléphone aux deux imitateurs. Le reste du groupe ne doit pas voir le sujet." : `Donnez le téléphone à ${escapeHtml(actors[0]?.name || "la personne")}. Le groupe ne doit pas voir le sujet.`}</p><button id="imitationOpenPrivate" class="primary-btn">Afficher le sujet</button></section>`;
   document.querySelector("#imitationOpenPrivate")?.addEventListener("click", () => { game.imitationStage = "private"; renderMegaTurn(); });
 }
 
 function akImitationRenderPrivate(game, item) {
   screen.innerHTML = `
-    ${v014Progress(game, "Imitation")}
+    ${v014Progress(game, game.gameName || "Imitation")}
     <section class="mime-private-card imitation-private-card">${akImitationBadges(item)}<span class="mime-private-icon">🤫</span><small>TON IMITATION SECRÈTE</small><h2>${escapeHtml(item.text)}</h2>${akImitationConstraintMarkup(item, game.imitationAllowSounds)}</section>
     <button id="imitationStartRound" class="primary-btn full">J’ai mémorisé · Lancer le chrono</button>`;
   document.querySelector("#imitationStartRound")?.addEventListener("click", () => {
@@ -11778,7 +11841,7 @@ function akImitationRenderPrivate(game, item) {
 function akImitationRenderPlaying(game, item) {
   const actors = akImitationActors(item);
   screen.innerHTML = `
-    ${v014Progress(game, "Imitation")}
+    ${v014Progress(game, game.gameName || "Imitation")}
     <section class="mime-playing-card imitation-playing-card">
       ${akImitationBadges(item)}
       <div class="mime-live-icon">🎙️</div>
@@ -11804,7 +11867,7 @@ function akImitationRenderGuesser(game, item) {
   const candidates = state.players.filter(player => !actorSet.has(player.id));
   const elapsed = Math.max(1, Math.min(game.durationSeconds, Number(game.imitationElapsedSeconds || Math.round((Date.now() - Number(game.imitationStartedAt || Date.now())) / 1000))));
   screen.innerHTML = `
-    ${v014Progress(game, "Imitation")}
+    ${v014Progress(game, game.gameName || "Imitation")}
     <section class="mime-guesser-card imitation-guesser-card"><span>🔔</span><small>PREMIÈRE BONNE RÉPONSE</small><h2>Qui a trouvé en premier ?</h2><p>Cette personne gagne 1 point. ${escapeHtml(akImitationActorNames(item))} ${Number(item.actors || 1) === 2 ? "gagnent" : "gagne"} ${akImitationPoints(item)} point${akImitationPoints(item) > 1 ? "s" : ""}. Sujet trouvé en environ ${elapsed} seconde${elapsed > 1 ? "s" : ""}.</p></section>
     <section class="mime-guesser-grid">${candidates.map(player => `<button type="button" data-imitation-guesser="${player.id}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>+1 point</small></button>`).join("")}</section>
     <button id="imitationNoGuesser" class="secondary-btn full">Réponse collective</button>`;
@@ -11816,7 +11879,7 @@ function akImitationRenderResult(game, item) {
   const result = game.currentResult || {};
   const guesser = state.players.find(player => player.id === result.guesserId);
   screen.innerHTML = `
-    ${v014Progress(game, "Imitation")}
+    ${v014Progress(game, game.gameName || "Imitation")}
     <section class="reveal-stage reveal-v07 mime-result-card imitation-result-card"><span class="game-cover-icon">${result.success ? "🎉" : result.timedOut ? "⏱️" : "↪️"}</span>${akImitationBadges(item)}<h2>${result.success ? "Imitation trouvée !" : result.timedOut ? "Temps écoulé" : "Imitation passée"}</h2><p>${escapeHtml(item.text)}</p>${result.success ? `<span class="imitation-speed-chip">⚡ ${Number(result.elapsedSeconds || 0)} s</span>` : ""}</section>
     <section class="mime-result-summary">
       <article><span>${Number(item.actors || 1) === 2 ? "🧑‍🤝‍🧑" : "🎙️"}</span><strong>${escapeHtml(akImitationActorNames(item))}</strong><small>${result.success ? `+${result.points} point${result.points > 1 ? "s" : ""} ${Number(item.actors || 1) === 2 ? "chacun" : ""}` : "0 point"}</small></article>
@@ -11882,7 +11945,7 @@ startMegaGame = async function () {
   screen.innerHTML = `<div class="notice">Préparation des 600 imitations…</div>`;
   try {
     let pool = await loadJsonFile("data/imitation.json", "Impossible de charger les imitations.");
-    if (game.imitationIncludeCustom) pool = pool.concat(akImitationLoadCustom().map(item => ({ ...item, custom: true })));
+    if (game.imitationIncludeCustom) pool = pool.concat(akImitationLoadCustom(game).map(item => ({ ...item, custom: true })));
     pool = akImitationFilterPool(pool, game);
     if (!pool.length) throw new Error("Aucune imitation ne correspond à ces filtres.");
     const selected = akImitationBalancedSelect(pool, Math.min(game.roundCount, pool.length), `solo:imitation:${game.imitationThemes.join("-")}:${game.imitationDifficulties.join("-")}:${game.imitationAllowSounds ? "sound" : "silent"}`);
@@ -11966,3 +12029,566 @@ renderMegaFinal = function () {
   });
   document.querySelector("#otherMega")?.addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
 };
+
+
+/* =========================================================
+   AK'GAMES V3.2 - IMITATION +18
+   300 cartes adultes, intensites, duos et consentement
+   ========================================================= */
+
+if (V014_GAME_CONFIGS?.[AK_IMITATION_ADULT_GAME]) {
+  V014_GAME_CONFIGS[AK_IMITATION_ADULT_GAME].icon = "🌶️";
+  V014_GAME_CONFIGS[AK_IMITATION_ADULT_GAME].description = "Flirt, rendez-vous, couple, intimité et scènes à deux, sans contact imposé.";
+  V014_GAME_CONFIGS[AK_IMITATION_ADULT_GAME].defaultRounds = 10;
+  V014_GAME_CONFIGS[AK_IMITATION_ADULT_GAME].timer = 45;
+  if (typeof V014_GAME_ICONS === "object") V014_GAME_ICONS[AK_IMITATION_ADULT_GAME] = "🌶️";
+}
+
+const akAdultImitationBaseResetMegaGame = resetMegaGame;
+resetMegaGame = function (gameName, replayConfig = {}) {
+  akAdultImitationBaseResetMegaGame(gameName, replayConfig);
+  if (gameName !== AK_IMITATION_ADULT_GAME || !state.megaGame) return;
+  state.megaGame.imitationAdult = true;
+  state.megaGame.imitationThemes = akImitationNormalizeThemes(replayConfig.imitationThemes, state.megaGame);
+  state.megaGame.imitationDifficulties = akImitationNormalizeDifficulties(replayConfig.imitationDifficulties, state.megaGame);
+  state.megaGame.imitationAllowSounds = replayConfig.imitationAllowSounds !== false;
+  state.megaGame.imitationIncludeCustom = replayConfig.imitationIncludeCustom !== false;
+  ensureImitationGameConfig(state.megaGame);
+};
+
+const akAdultImitationBaseRenderMegaSetup = renderMegaSetup;
+renderMegaSetup = function () {
+  const game = state.megaGame;
+  if (!game || game.gameName !== AK_IMITATION_ADULT_GAME) return akAdultImitationBaseRenderMegaSetup();
+  ensureImitationGameConfig(game);
+  clearV014Timer();
+  title.textContent = AK_IMITATION_ADULT_GAME;
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-mega imitation-cover imitation-adult-cover"><span class="game-cover-icon">🌶️</span><div><small>PACK ADULTE</small><h2>Imitation +18</h2><p>Joue des scènes de flirt, de couple ou d’intimité sans contact obligatoire. Le malaise doit rester fictif, pas s’installer dans le salon.</p></div></section>
+    ${akImitationSetupMarkup(game, "imitationadult")}
+    <button id="startMegaGame" class="primary-btn full">Lancer Imitation +18</button>`;
+  akImitationBindSetup(game, "imitationadult", renderMegaSetup);
+  document.querySelector("#startMegaGame")?.addEventListener("click", startMegaGame);
+};
+
+const akAdultImitationBaseStartMegaGame = startMegaGame;
+startMegaGame = async function () {
+  const game = state.megaGame;
+  if (!game || game.gameName !== AK_IMITATION_ADULT_GAME) return akAdultImitationBaseStartMegaGame();
+  ensureImitationGameConfig(game);
+  if (!game.imitationThemes.length) return alert("Sélectionne au moins un thème adulte.");
+  if (!game.imitationDifficulties.length) return alert("Sélectionne au moins une intensité.");
+  screen.innerHTML = `<div class="notice">Préparation des 300 imitations adultes…</div>`;
+  try {
+    let pool = await loadJsonFile(akImitationDataPath(game), "Impossible de charger les imitations adultes.");
+    if (game.imitationIncludeCustom) pool = pool.concat(akImitationLoadCustom(game).map(item => ({ ...item, collection: "adult", custom: true })));
+    pool = akImitationFilterPool(pool, game);
+    if (!pool.length) throw new Error("Aucune imitation adulte ne correspond à ces filtres.");
+    const selected = akImitationBalancedSelect(pool, Math.min(game.roundCount, pool.length), `solo:imitation-adult:${game.imitationThemes.join("-")}:${game.imitationDifficulties.join("-")}:${game.imitationAllowSounds ? "sound" : "silent"}`);
+    game.items = akImitationAssignActors(selected);
+    game.currentIndex = 0;
+    game.scores = v014ScoreMap();
+    game.rounds = [];
+    game.imitationStage = "handoff";
+    game.currentResult = null;
+    game.imitationStartedAt = null;
+    game.imitationElapsedSeconds = null;
+    game.imitationStats = {
+      actorSuccess: Object.fromEntries(state.players.map(player => [player.id, 0])),
+      guesserSuccess: Object.fromEntries(state.players.map(player => [player.id, 0])),
+      fastest: null
+    };
+    renderMegaCurrent();
+  } catch (error) {
+    console.error(error);
+    alert(error.message || "Impossible de lancer Imitation +18.");
+    renderMegaSetup();
+  }
+};
+
+const akAdultImitationBaseRenderMegaTurn = renderMegaTurn;
+renderMegaTurn = function () {
+  const game = state.megaGame;
+  if (!game || game.gameName !== AK_IMITATION_ADULT_GAME) return akAdultImitationBaseRenderMegaTurn();
+  ensureImitationGameConfig(game);
+  clearV014Timer();
+  const item = game.items[game.currentIndex];
+  if (!item) return renderMegaFinal();
+  title.textContent = AK_IMITATION_ADULT_GAME;
+  setBackVisible(false);
+  if (game.imitationStage === "private") return akImitationRenderPrivate(game, item);
+  if (game.imitationStage === "playing") return akImitationRenderPlaying(game, item);
+  if (game.imitationStage === "guesser") return akImitationRenderGuesser(game, item);
+  if (game.imitationStage === "result") return akImitationRenderResult(game, item);
+  return akImitationRenderHandoff(game, item);
+};
+
+const akAdultImitationBaseRenderMegaFinal = renderMegaFinal;
+renderMegaFinal = function () {
+  const game = state.megaGame;
+  if (!game || game.gameName !== AK_IMITATION_ADULT_GAME) return akAdultImitationBaseRenderMegaFinal();
+  clearV014Timer();
+  const ranking = [...state.players].sort((a, b) => Number(game.scores[b.id] || 0) - Number(game.scores[a.id] || 0));
+  const best = Math.max(0, ...ranking.map(player => Number(game.scores[player.id] || 0)));
+  const winners = ranking.filter(player => Number(game.scores[player.id] || 0) === best && best > 0);
+  const topBy = stats => {
+    const rows = state.players.map(player => ({ player, value: Number(stats?.[player.id] || 0) }));
+    const max = Math.max(0, ...rows.map(row => row.value));
+    return { max, players: max ? rows.filter(row => row.value === max).map(row => row.player) : [] };
+  };
+  const actorTop = topBy(game.imitationStats?.actorSuccess);
+  const guesserTop = topBy(game.imitationStats?.guesserSuccess);
+  const fastest = game.imitationStats?.fastest;
+  const names = top => top.players.map(player => escapeHtml(player.name)).join(" et ");
+  const actorNames = ids => (ids || []).map(id => state.players.find(player => player.id === id)?.name).filter(Boolean).map(escapeHtml).join(" et ");
+  title.textContent = "Classement final";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="winner-stage winner-stage-v07 mega-final-stage imitation-final-stage"><div class="winner-crown">🌶️🎙️</div><h2>${winners.length ? winners.map(player => escapeHtml(player.name)).join(" et ") : "Rideau !"}</h2><p>${winners.length ? `${winners.length > 1 ? "terminent" : "termine"} en tête du studio +18.` : "Toutes les scènes sont terminées."}</p></section>
+    <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
+    <section class="mime-final-awards imitation-final-awards">
+      <article><span>🎙️</span><small>MEILLEUR IMITATEUR</small><strong>${actorTop.max ? names(actorTop) : "Aucune scène trouvée"}</strong><p>${actorTop.max ? `${actorTop.max} imitation${actorTop.max > 1 ? "s" : ""} réussie${actorTop.max > 1 ? "s" : ""}` : "La prochaine impro sera la bonne."}</p></article>
+      <article><span>🔎</span><small>MEILLEUR DEVINEUR</small><strong>${guesserTop.max ? names(guesserTop) : "Réponses collectives"}</strong><p>${guesserTop.max ? `${guesserTop.max} première${guesserTop.max > 1 ? "s" : ""} bonne${guesserTop.max > 1 ? "s" : ""} réponse${guesserTop.max > 1 ? "s" : ""}` : "Aucun point individuel attribué."}</p></article>
+      <article><span>${fastest ? "⚡" : "🎬"}</span><small>SCÈNE ÉCLAIR</small><strong>${fastest ? `${Number(fastest.seconds || 0)} secondes · ${actorNames(fastest.actorIds)}` : "Aucune manche trouvée"}</strong><p>${fastest ? escapeHtml(fastest.text || "") : "Le chrono réclame une revanche."}</p></article>
+    </section>
+    <div class="responsible-callout">🫶 Les résultats récompensent l’improvisation, jamais le niveau d’intimité accepté.</div>
+    <div class="toolbar"><button id="replayMega" class="secondary-btn">Rejouer</button><button id="otherMega" class="primary-btn">Autre jeu</button></div>`;
+  document.querySelector("#replayMega")?.addEventListener("click", () => {
+    resetMegaGame(AK_IMITATION_ADULT_GAME, {
+      roundCount: game.roundCount,
+      durationSeconds: game.durationSeconds,
+      imitationThemes: game.imitationThemes,
+      imitationDifficulties: game.imitationDifficulties,
+      imitationAllowSounds: game.imitationAllowSounds,
+      imitationIncludeCustom: game.imitationIncludeCustom
+    });
+    renderMegaSetup();
+  });
+  document.querySelector("#otherMega")?.addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
+};
+
+
+/* ===== AK'GAMES V3.9 — FAUX EXPERT 750 ===== */
+
+const AK_FAKE_EXPERT_CLASSIC_THEMES_V39 = [
+  { id: "science_nature", icon: "🔬", label: "Sciences et nature" },
+  { id: "animaux", icon: "🦊", label: "Animaux" },
+  { id: "nourriture", icon: "🍿", label: "Nourriture" },
+  { id: "objets_quotidien", icon: "🧰", label: "Objets du quotidien" },
+  { id: "technologie", icon: "💻", label: "Technologie" },
+  { id: "histoire_geographie", icon: "🗺️", label: "Histoire et géographie" },
+  { id: "culture_societe", icon: "🎭", label: "Culture et société" },
+  { id: "sport", icon: "🏅", label: "Sport" },
+  { id: "cinema_musique_jeux", icon: "🎬", label: "Cinéma, musique et jeux" },
+  { id: "bizarre_mais_vrai", icon: "🧪", label: "Bizarre mais vrai" }
+];
+
+const AK_FAKE_EXPERT_ADULT_THEMES_V39 = [
+  { id: "premiers_rendez_vous", icon: "🥂", label: "Premiers rendez-vous" },
+  { id: "attirance_seduction", icon: "🫦", label: "Attirance et séduction" },
+  { id: "couple_communication", icon: "💬", label: "Couple et communication" },
+  { id: "jalousie_confiance", icon: "👀", label: "Jalousie et confiance" },
+  { id: "ex_ruptures", icon: "💔", label: "Ex et ruptures" },
+  { id: "applications_rencontre", icon: "📱", label: "Applications de rencontre" },
+  { id: "messages_ambigus", icon: "💭", label: "Messages ambigus" },
+  { id: "intimite_consentement", icon: "🔐", label: "Intimité et consentement" },
+  { id: "corps_reactions", icon: "🔥", label: "Corps et réactions" },
+  { id: "soirees_lendemains", icon: "🌙", label: "Soirées et lendemains" }
+];
+
+const AK_FAKE_EXPERT_DIFFICULTIES_V39 = [
+  { id: "easy", icon: "🌱", label: "Facile" },
+  { id: "medium", icon: "⚡", label: "Moyen" },
+  { id: "hard", icon: "🔥", label: "Difficile" }
+];
+
+const AK_FAKE_EXPERT_ADULT_LEVELS_V39 = [
+  { id: "soft", icon: "🌶️", label: "Léger" },
+  { id: "bold", icon: "🌶️🌶️", label: "Osé" },
+  { id: "hot", icon: "🌶️🌶️🌶️", label: "Sans filtre" }
+];
+
+const AK_FAKE_EXPERT_CUSTOM_KEY_V39 = "akgames.fakeExpert.custom.v39";
+
+function loadFakeExpertCustomCardsV39() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(AK_FAKE_EXPERT_CUSTOM_KEY_V39) || "[]");
+    return Array.isArray(parsed) ? parsed.filter(item => item?.topic && Array.isArray(item?.facts)) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveFakeExpertCustomCardsV39(cards) {
+  try { localStorage.setItem(AK_FAKE_EXPERT_CUSTOM_KEY_V39, JSON.stringify(cards || [])); }
+  catch (error) { console.warn("Impossible de sauvegarder les dossiers personnalisés.", error); }
+}
+
+function normalizeFakeExpertCardV39(item, adult = false) {
+  const safe = item && typeof item === "object" ? item : {};
+  const facts = Array.isArray(safe.facts) ? safe.facts.map(value => String(value || "").trim()).filter(Boolean).slice(0, 3) : [];
+  while (facts.length < 3) facts.push("Le contexte et les détails modifient cette explication.");
+  const fakeTips = Array.isArray(safe.fakeTips)
+    ? safe.fakeTips.map(value => String(value || "").trim()).filter(Boolean).slice(0, 3)
+    : [String(safe.fakeTip || "Invente une théorie précise et défends-la avec aplomb.").trim()];
+  while (fakeTips.length < 3) fakeTips.push(fakeTips[0] || "Invente une théorie précise et défends-la avec aplomb.");
+  return {
+    ...safe,
+    id: String(safe.id || `expert_custom_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`),
+    sourceId: String(safe.sourceId || safe.id || `expert_source_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`),
+    topic: String(safe.topic || "Sujet mystère").trim(),
+    facts,
+    fakeTips,
+    fakeTip: fakeTips[0],
+    theme: String(safe.theme || (adult ? "premiers_rendez_vous" : "culture_societe")),
+    category: String(safe.theme || safe.category || (adult ? "premiers_rendez_vous" : "culture_societe")),
+    difficulty: String(safe.difficulty || (adult ? "soft" : "medium")),
+    adult: Boolean(safe.adult ?? adult),
+    custom: Boolean(safe.custom)
+  };
+}
+
+function fakeExpertThemeGridV39(items, selected, attribute) {
+  return `<div class="impostor-theme-grid expert-theme-grid-v39">${items.map(item => `
+    <label class="never-theme-option ${selected.includes(item.id) ? "selected" : ""}">
+      <input type="checkbox" ${attribute}="${item.id}" ${selected.includes(item.id) ? "checked" : ""}>
+      <span>${item.icon}</span><strong>${escapeHtml(item.label)}</strong>
+    </label>`).join("")}</div>`;
+}
+
+function fakeExpertDifficultyGridV39(items, selected, attribute) {
+  return `<div class="expert-level-grid-v39">${items.map(item => `
+    <label class="option-card mini-option ${selected.includes(item.id) ? "selected" : ""}">
+      <input type="checkbox" ${attribute}="${item.id}" ${selected.includes(item.id) ? "checked" : ""}>
+      <span><strong>${item.icon} ${escapeHtml(item.label)}</strong></span>
+    </label>`).join("")}</div>`;
+}
+
+function selectOneFakeExpertVariantPerSourceV39(pool) {
+  const grouped = new Map();
+  (Array.isArray(pool) ? pool : []).forEach(item => {
+    const key = item.sourceId || item.id;
+    if (!grouped.has(key)) grouped.set(key, []);
+    grouped.get(key).push(item);
+  });
+  const groups = shuffleArray([...grouped.values()].map(group => shuffleArray([...group])));
+  const ordered = [];
+  const maxVariants = Math.max(0, ...groups.map(group => group.length));
+  for (let pass = 0; pass < maxVariants; pass += 1) {
+    shuffleArray([...groups]).forEach(group => {
+      if (group[pass]) ordered.push(group[pass]);
+    });
+  }
+  return ordered;
+}
+
+function pickFakeExpertTipV39(card) {
+  const tips = Array.isArray(card?.fakeTips) && card.fakeTips.length ? card.fakeTips : [card?.fakeTip || "Invente une théorie crédible."];
+  return tips[Math.floor(Math.random() * tips.length)] || tips[0];
+}
+
+async function buildFakeExpertPoolV39(game) {
+  const classicRaw = await loadJsonFile("data/faux-expert.json", "Impossible de charger les 500 conférences classiques.");
+  const classic = classicRaw
+    .map(item => normalizeFakeExpertCardV39(item, false))
+    .filter(item => game.classicThemes.includes(item.theme) && game.difficulties.includes(item.difficulty));
+
+  let adult = [];
+  if (state.adult && game.includeAdult) {
+    const adultRaw = await loadJsonFile("data/faux-expert-adulte.json", "Impossible de charger les 250 conférences adultes.");
+    adult = adultRaw
+      .map(item => normalizeFakeExpertCardV39(item, true))
+      .filter(item => game.adultThemes.includes(item.theme) && game.adultLevels.includes(item.difficulty));
+  }
+
+  const custom = game.includeCustom
+    ? game.customCards
+      .map(item => normalizeFakeExpertCardV39(item, Boolean(item.adult)))
+      .filter(item => !item.adult || (state.adult && game.includeAdult))
+    : [];
+
+  return selectOneFakeExpertVariantPerSourceV39([...classic, ...adult, ...custom]);
+}
+
+resetFakeExpertState = function resetFakeExpertStateV39(config = {}) {
+  const saved = loadFakeExpertCustomCardsV39();
+  state.fakeExpert = {
+    roundCount: Number(config.roundCount || Math.max(5, state.players.length)),
+    includeAdult: Boolean(config.includeAdult),
+    speechSeconds: Number(config.speechSeconds || 60),
+    questionsEnabled: config.questionsEnabled !== false,
+    classicThemes: Array.isArray(config.classicThemes) ? [...config.classicThemes] : AK_FAKE_EXPERT_CLASSIC_THEMES_V39.map(item => item.id),
+    adultThemes: Array.isArray(config.adultThemes) ? [...config.adultThemes] : AK_FAKE_EXPERT_ADULT_THEMES_V39.map(item => item.id),
+    difficulties: Array.isArray(config.difficulties) ? [...config.difficulties] : AK_FAKE_EXPERT_DIFFICULTIES_V39.map(item => item.id),
+    adultLevels: Array.isArray(config.adultLevels) ? [...config.adultLevels] : AK_FAKE_EXPERT_ADULT_LEVELS_V39.map(item => item.id),
+    includeCustom: Boolean((config.includeCustom ?? true) && saved.length),
+    customCards: saved,
+    items: [],
+    currentIndex: 0,
+    speakerOrder: shuffleArray(state.players.map(player => player.id)),
+    speakerId: null,
+    role: null,
+    currentFakeTip: "",
+    votes: {},
+    currentVoterIndex: 0,
+    scores: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    juryCorrect: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    fakeSpeakerPoints: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    realExpertWins: Object.fromEntries(state.players.map(player => [player.id, 0])),
+    rounds: []
+  };
+};
+
+renderFakeExpertSetup = function renderFakeExpertSetupV39() {
+  clearV09Timer();
+  if (!state.fakeExpert) resetFakeExpertState();
+  const game = state.fakeExpert;
+  const minimum = Math.max(5, state.players.length);
+  const roundOptions = [minimum, game.roundCount, 8, 10, 12, 15, 20, 30, 50, 75, 100]
+    .filter((value, index, values) => value >= minimum && values.indexOf(value) === index)
+    .sort((a, b) => a - b);
+  const custom = game.customCards || [];
+  title.textContent = "Le Faux Expert";
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-expert"><span class="game-cover-icon">🎓</span><div><small>750 CONFÉRENCES</small><h2>Le Faux Expert</h2><p>Une personne reçoit de vrais faits ou une piste de bluff. Le jury écoute, questionne et tranche.</p></div></section>
+    <section class="expert-stat-strip-v39"><article><strong>500</strong><span>classiques</span></article><article><strong>250</strong><span>adultes</span></article><article><strong>3</strong><span>niveaux</span></article></section>
+    <section class="card setup-card-v07">
+      <div class="form-group"><label for="expertRounds">Nombre de passages</label><select id="expertRounds" class="text-input">${roundOptions.map(value => `<option value="${value}" ${game.roundCount === value ? "selected" : ""}>${value} passages</option>`).join("")}</select></div>
+      <div class="form-group top-gap"><label for="expertTimer">Temps de présentation</label><select id="expertTimer" class="text-input">${[30,45,60,90,120].map(value => `<option value="${value}" ${game.speechSeconds === value ? "selected" : ""}>${value} secondes</option>`).join("")}</select></div>
+      <label class="option-card mini-option top-gap"><input id="expertQuestions" type="checkbox" ${game.questionsEnabled ? "checked" : ""}><span><strong>🙋 Questions du public</strong><br><small>Chaque personne peut poser une question avant le vote.</small></span></label>
+    </section>
+
+    <section class="card expert-config-card-v39">
+      <div class="section-heading-row-v39"><div><small>CONFÉRENCES CLASSIQUES</small><h2>Choisis les thèmes</h2></div><div><button type="button" id="expertAllClassic" class="secondary-btn compact-btn-v39">Tout</button><button type="button" id="expertNoneClassic" class="secondary-btn compact-btn-v39">Aucun</button></div></div>
+      ${fakeExpertThemeGridV39(AK_FAKE_EXPERT_CLASSIC_THEMES_V39, game.classicThemes, "data-expert-classic-theme")}
+      <h3 class="expert-subtitle-v39">Difficulté des dossiers</h3>
+      ${fakeExpertDifficultyGridV39(AK_FAKE_EXPERT_DIFFICULTIES_V39, game.difficulties, "data-expert-difficulty")}
+    </section>
+
+    ${state.adult ? `<section class="card expert-config-card-v39 adult-expert-card-v39">
+      <label class="option-card premium-toggle"><input id="expertAdult" type="checkbox" ${game.includeAdult ? "checked" : ""}><span><strong>🌶️ Ajouter Faux Expert adulte</strong><br><span class="helper">250 conférences sur les dates, le couple, les messages, l’intimité et les soirées.</span></span></label>
+      ${game.includeAdult ? `<div class="section-heading-row-v39 top-gap"><div><small>PACK ADULTE</small><h2>Thèmes et intensités</h2></div><div><button type="button" id="expertAllAdult" class="secondary-btn compact-btn-v39">Tout</button><button type="button" id="expertNoneAdult" class="secondary-btn compact-btn-v39">Aucun</button></div></div>
+      ${fakeExpertThemeGridV39(AK_FAKE_EXPERT_ADULT_THEMES_V39, game.adultThemes, "data-expert-adult-theme")}
+      <h3 class="expert-subtitle-v39">Intensité</h3>${fakeExpertDifficultyGridV39(AK_FAKE_EXPERT_ADULT_LEVELS_V39, game.adultLevels, "data-expert-adult-level")}` : ""}
+    </section>` : ""}
+
+    <section class="card expert-custom-card-v39">
+      <h2 class="section-title">✍️ Mes conférences</h2>
+      <p class="helper">Ajoute un sujet, trois faits vrais et une piste de bluff. Les cartes restent sur cet appareil.</p>
+      <div class="form-group top-gap"><label for="expertCustomTopic">Sujet</label><input id="expertCustomTopic" class="text-input" maxlength="220" placeholder="Ex. Pourquoi les chats clignent-ils lentement des yeux ?"></div>
+      <div class="form-group top-gap"><label for="expertCustomFacts">Trois faits vrais, un par ligne</label><textarea id="expertCustomFacts" class="text-input expert-textarea-v39" maxlength="800" placeholder="Premier fait\nDeuxième fait\nTroisième fait"></textarea></div>
+      <div class="form-group top-gap"><label for="expertCustomTip">Piste de bluff</label><input id="expertCustomTip" class="text-input" maxlength="260" placeholder="Ex. Invente une théorie sur un code secret félin."></div>
+      <div class="expert-custom-grid-v39">
+        <div class="form-group"><label for="expertCustomTheme">Thème</label><select id="expertCustomTheme" class="text-input">${AK_FAKE_EXPERT_CLASSIC_THEMES_V39.map(item => `<option value="${item.id}">${item.icon} ${escapeHtml(item.label)}</option>`).join("")}${state.adult ? AK_FAKE_EXPERT_ADULT_THEMES_V39.map(item => `<option value="${item.id}" data-adult-theme="true">🌶️ ${escapeHtml(item.label)}</option>`).join("") : ""}</select></div>
+        <div class="form-group"><label for="expertCustomDifficulty">Niveau</label><select id="expertCustomDifficulty" class="text-input">${[...AK_FAKE_EXPERT_DIFFICULTIES_V39, ...(state.adult ? AK_FAKE_EXPERT_ADULT_LEVELS_V39 : [])].map(item => `<option value="${item.id}">${item.icon} ${escapeHtml(item.label)}</option>`).join("")}</select></div>
+      </div>
+      <button type="button" id="expertAddCustom" class="secondary-btn full top-gap">Ajouter la conférence</button>
+      ${custom.length ? `<label class="option-card mini-option top-gap"><input id="expertIncludeCustom" type="checkbox" ${game.includeCustom ? "checked" : ""}><span><strong>Utiliser mes ${custom.length} conférence${custom.length > 1 ? "s" : ""}</strong></span></label><details class="top-gap"><summary>Gérer mes conférences</summary><div class="impostor-custom-list">${custom.map(item => `<article><div><strong>${item.adult ? "🌶️ " : ""}${escapeHtml(item.topic)}</strong><small>${escapeHtml(item.fakeTips?.[0] || item.fakeTip || "")}</small></div><button type="button" class="danger-btn" data-remove-expert-custom="${item.id}">Supprimer</button></article>`).join("")}</div></details>` : ""}
+    </section>
+
+    <div class="notice"><strong>Barème :</strong> bon verdict +1 · vrai expert qui convainc la majorité +2 · faux expert +1 par personne trompée, avec +1 s’il trompe tout le monde.</div>
+    <button id="startExpert" class="primary-btn full">Ouvrir la conférence</button>
+  `;
+
+  document.querySelector("#expertRounds")?.addEventListener("change", event => game.roundCount = Number(event.target.value));
+  document.querySelector("#expertTimer")?.addEventListener("change", event => game.speechSeconds = Number(event.target.value));
+  document.querySelector("#expertQuestions")?.addEventListener("change", event => game.questionsEnabled = event.target.checked);
+  document.querySelector("#expertAdult")?.addEventListener("change", event => { game.includeAdult = event.target.checked; renderFakeExpertSetup(); });
+  document.querySelector("#expertIncludeCustom")?.addEventListener("change", event => game.includeCustom = event.target.checked);
+
+  document.querySelectorAll("[data-expert-classic-theme]").forEach(input => input.addEventListener("change", event => {
+    const id = event.target.dataset.expertClassicTheme;
+    game.classicThemes = event.target.checked ? [...new Set([...game.classicThemes, id])] : game.classicThemes.filter(value => value !== id);
+  }));
+  document.querySelectorAll("[data-expert-adult-theme]").forEach(input => input.addEventListener("change", event => {
+    const id = event.target.dataset.expertAdultTheme;
+    game.adultThemes = event.target.checked ? [...new Set([...game.adultThemes, id])] : game.adultThemes.filter(value => value !== id);
+  }));
+  document.querySelectorAll("[data-expert-difficulty]").forEach(input => input.addEventListener("change", event => {
+    const id = event.target.dataset.expertDifficulty;
+    game.difficulties = event.target.checked ? [...new Set([...game.difficulties, id])] : game.difficulties.filter(value => value !== id);
+  }));
+  document.querySelectorAll("[data-expert-adult-level]").forEach(input => input.addEventListener("change", event => {
+    const id = event.target.dataset.expertAdultLevel;
+    game.adultLevels = event.target.checked ? [...new Set([...game.adultLevels, id])] : game.adultLevels.filter(value => value !== id);
+  }));
+
+  document.querySelector("#expertAllClassic")?.addEventListener("click", () => { game.classicThemes = AK_FAKE_EXPERT_CLASSIC_THEMES_V39.map(item => item.id); renderFakeExpertSetup(); });
+  document.querySelector("#expertNoneClassic")?.addEventListener("click", () => { game.classicThemes = []; renderFakeExpertSetup(); });
+  document.querySelector("#expertAllAdult")?.addEventListener("click", () => { game.adultThemes = AK_FAKE_EXPERT_ADULT_THEMES_V39.map(item => item.id); renderFakeExpertSetup(); });
+  document.querySelector("#expertNoneAdult")?.addEventListener("click", () => { game.adultThemes = []; renderFakeExpertSetup(); });
+
+  document.querySelector("#expertAddCustom")?.addEventListener("click", () => {
+    const topic = document.querySelector("#expertCustomTopic")?.value.trim() || "";
+    const facts = (document.querySelector("#expertCustomFacts")?.value || "").split(/\n|;/).map(value => value.trim()).filter(Boolean);
+    const tip = document.querySelector("#expertCustomTip")?.value.trim() || "";
+    const theme = document.querySelector("#expertCustomTheme")?.value || "culture_societe";
+    const difficulty = document.querySelector("#expertCustomDifficulty")?.value || "medium";
+    const adult = AK_FAKE_EXPERT_ADULT_THEMES_V39.some(item => item.id === theme) || AK_FAKE_EXPERT_ADULT_LEVELS_V39.some(item => item.id === difficulty);
+    if (!topic) return alert("Écris d’abord un sujet.");
+    if (facts.length < 3) return alert("Ajoute trois faits vrais, un par ligne.");
+    if (!tip) return alert("Ajoute une piste de bluff pour le faux expert.");
+    if (game.customCards.some(item => item.topic.trim().toLocaleLowerCase("fr") === topic.toLocaleLowerCase("fr"))) return alert("Cette conférence existe déjà.");
+    const id = `expert_custom_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+    game.customCards.push(normalizeFakeExpertCardV39({ id, sourceId: id, topic, facts: facts.slice(0, 3), fakeTips: [tip], fakeTip: tip, theme, difficulty, adult, custom: true }, adult));
+    game.includeCustom = true;
+    saveFakeExpertCustomCardsV39(game.customCards);
+    renderFakeExpertSetup();
+  });
+
+  document.querySelectorAll("[data-remove-expert-custom]").forEach(button => button.addEventListener("click", () => {
+    game.customCards = game.customCards.filter(item => item.id !== button.dataset.removeExpertCustom);
+    if (!game.customCards.length) game.includeCustom = false;
+    saveFakeExpertCustomCardsV39(game.customCards);
+    renderFakeExpertSetup();
+  }));
+
+  document.querySelector("#startExpert")?.addEventListener("click", startFakeExpertGame);
+};
+
+startFakeExpertGame = async function startFakeExpertGameV39() {
+  const game = state.fakeExpert;
+  if (!game.difficulties.length && game.classicThemes.length) return alert("Choisis au moins une difficulté classique.");
+  if (state.adult && game.includeAdult && game.adultThemes.length && !game.adultLevels.length) return alert("Choisis au moins une intensité adulte.");
+  if (!game.classicThemes.length && !(state.adult && game.includeAdult && game.adultThemes.length) && !(game.includeCustom && game.customCards.length)) return alert("Choisis au moins un thème ou une conférence personnalisée.");
+  screen.innerHTML = `<div class="notice">Préparation de 750 diplômes plus ou moins douteux…</div>`;
+  try {
+    const pool = await buildFakeExpertPoolV39(game);
+    if (!pool.length) throw new Error("Aucune conférence ne correspond aux filtres choisis.");
+    game.items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `solo:fake-expert:v39:${game.classicThemes.join("-")}:${game.includeAdult}:${game.adultThemes.join("-")}:${game.difficulties.join("-")}:${game.adultLevels.join("-")}:${game.includeCustom}`);
+    game.currentIndex = 0;
+    game.speakerOrder = shuffleArray(Array.from({ length: game.items.length }, (_, index) => state.players[index % state.players.length].id));
+    game.scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.juryCorrect = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.fakeSpeakerPoints = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.realExpertWins = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.rounds = [];
+    prepareFakeExpertRound();
+  } catch (error) {
+    alert(error.message || "Impossible de lancer Faux Expert.");
+    renderFakeExpertSetup();
+  }
+};
+
+prepareFakeExpertRound = function prepareFakeExpertRoundV39() {
+  const game = state.fakeExpert;
+  if (game.currentIndex >= game.items.length) return renderFakeExpertEnd();
+  game.speakerId = game.speakerOrder[game.currentIndex % game.speakerOrder.length];
+  game.role = Math.random() < 0.5 ? "real" : "fake";
+  game.currentFakeTip = pickFakeExpertTipV39(game.items[game.currentIndex]);
+  game.votes = {};
+  game.currentVoterIndex = 0;
+  renderFakeExpertBriefGate();
+};
+
+renderFakeExpertBrief = function renderFakeExpertBriefV39() {
+  const game = state.fakeExpert;
+  const card = game.items[game.currentIndex];
+  const isReal = game.role === "real";
+  title.textContent = isReal ? "Vrai expert" : "Faux expert";
+  screen.innerHTML = `
+    ${renderV09Progress(game.currentIndex + 1, game.items.length, "Passage")}
+    <section class="secret-role-card expert-role ${isReal ? "civil" : "impostor"}">
+      <span>${isReal ? "🎓" : "🎭"}</span><small>${isReal ? "VRAI EXPERT" : "FAUX EXPERT"}</small><h2>${escapeHtml(card.topic)}</h2>
+      ${isReal ? `<ul class="expert-fact-list">${card.facts.map(fact => `<li>${escapeHtml(fact)}</li>`).join("")}</ul>` : `<p>${escapeHtml(game.currentFakeTip)}</p><em>Tu ne vois aucun fait vrai. Construis une théorie cohérente et évite les certitudes dangereuses.</em>`}
+      <div class="expert-brief-badges-v39"><span>${card.adult ? "🌶️ Adulte" : "🎓 Classique"}</span><span>${escapeHtml(card.theme.replaceAll("_", " "))}</span></div>
+    </section>
+    <button id="startExpertSpeech" class="primary-btn full">Je suis prêt·e à parler</button>`;
+  document.querySelector("#startExpertSpeech")?.addEventListener("click", renderFakeExpertSpeech);
+};
+
+renderFakeExpertSpeech = function renderFakeExpertSpeechV39() {
+  const game = state.fakeExpert;
+  const card = game.items[game.currentIndex];
+  const speaker = state.players.find(player => player.id === game.speakerId);
+  title.textContent = "Conférence express";
+  screen.innerHTML = `
+    ${renderV09Progress(game.currentIndex + 1, game.items.length, "Passage")}
+    <section class="timer-stage v09-timer-stage expert-stage">
+      <span class="category-chip">${avatarById(speaker.avatarId).emoji} ${escapeHtml(speaker.name)}</span>
+      <div id="v09TimerRing" class="v09-timer-ring"><strong id="v09Countdown">${game.speechSeconds}</strong><small>secondes</small></div>
+      <h2>${escapeHtml(card.topic)}</h2>
+      <p>${game.questionsEnabled ? "Chaque membre du jury peut poser une question courte. L’orateur répond sans rouvrir son brief." : "Le jury écoute sans interrompre, puis vote secrètement."}</p>
+    </section>
+    <button id="expertVoteNow" class="secondary-btn full">Passer au verdict</button>`;
+  const vote = () => { clearV09Timer(); game.currentVoterIndex = 0; renderFakeExpertVoteGate(); };
+  document.querySelector("#expertVoteNow")?.addEventListener("click", vote);
+  startV09Countdown(game.speechSeconds, vote);
+};
+
+renderFakeExpertResult = function renderFakeExpertResultV39() {
+  const game = state.fakeExpert;
+  const card = game.items[game.currentIndex];
+  const speaker = state.players.find(player => player.id === game.speakerId);
+  const voters = fakeExpertVoters(game);
+  const correctIds = Object.entries(game.votes).filter(([, vote]) => vote === game.role).map(([id]) => id);
+  const fooledIds = Object.entries(game.votes).filter(([, vote]) => vote !== game.role).map(([id]) => id);
+  correctIds.forEach(id => {
+    game.scores[id] = Number(game.scores[id] || 0) + 1;
+    game.juryCorrect[id] = Number(game.juryCorrect[id] || 0) + 1;
+  });
+
+  let speakerPoints = 0;
+  if (game.role === "real" && correctIds.length > voters.length / 2) {
+    speakerPoints = 2;
+    game.realExpertWins[game.speakerId] = Number(game.realExpertWins[game.speakerId] || 0) + 1;
+  }
+  if (game.role === "fake") {
+    speakerPoints = fooledIds.length + (fooledIds.length === voters.length && voters.length ? 1 : 0);
+    game.fakeSpeakerPoints[game.speakerId] = Number(game.fakeSpeakerPoints[game.speakerId] || 0) + speakerPoints;
+  }
+  game.scores[game.speakerId] = Number(game.scores[game.speakerId] || 0) + speakerPoints;
+  game.rounds.push({ itemId: card.id, sourceId: card.sourceId, topic: card.topic, speakerId: game.speakerId, role: game.role, votes: { ...game.votes }, correctIds, fooledIds, speakerPoints });
+
+  const speakerMessage = game.role === "real"
+    ? (speakerPoints ? "La majorité a reconnu le vrai dossier." : "Le vrai dossier n’a pas convaincu la majorité.")
+    : (fooledIds.length === voters.length ? "Le faux expert a piégé tout le jury." : `${fooledIds.length} membre${fooledIds.length > 1 ? "s" : ""} du jury trompé${fooledIds.length > 1 ? "s" : ""}.`);
+
+  title.textContent = "Diplôme révélé";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="reveal-stage reveal-v07 expert-reveal"><span class="game-cover-icon">${game.role === "real" ? "🎓" : "🎭"}</span><h2>${escapeHtml(speaker.name)} était ${game.role === "real" ? "un vrai expert" : "un faux expert"}</h2><p>${escapeHtml(card.topic)}</p></section>
+    <section class="who-vote-results">${voters.map(voter => {
+      const correct = correctIds.includes(voter.id);
+      return `<article class="who-vote-row ${correct ? "correct" : "fooled"}"><span>${avatarById(voter.avatarId).emoji}</span><strong>${escapeHtml(voter.name)}</strong><small>a voté ${game.votes[voter.id] === "real" ? "vrai expert" : "faux expert"}</small><em>${correct ? "+1 pt" : "trompé·e"}</em></article>`;
+    }).join("")}</section>
+    <details class="answer-wall-details" open><summary>Les trois faits vérifiés</summary><ul class="expert-fact-list">${card.facts.map(fact => `<li>${escapeHtml(fact)}</li>`).join("")}</ul></details>
+    <div class="special-event"><strong>${game.role === "real" ? "🎓" : "🎭"} ${escapeHtml(speakerMessage)}</strong><p>+${speakerPoints} point${speakerPoints > 1 ? "s" : ""} pour l’orateur.</p></div>
+    ${state.alcohol && fooledIds.length ? `<div class="alcohol-callout">🍻 Les personnes trompées peuvent trinquer avec la boisson de leur choix, sans obligation.</div>` : ""}
+    <button id="nextExpertRound" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir les récompenses" : "Orateur suivant"}</button>`;
+  document.querySelector("#nextExpertRound")?.addEventListener("click", () => { game.currentIndex += 1; prepareFakeExpertRound(); });
+};
+
+function fakeExpertTopPlayerV39(values) {
+  const entries = state.players.map(player => ({ player, value: Number(values?.[player.id] || 0) })).sort((a, b) => b.value - a.value);
+  return entries[0] || { player: state.players[0], value: 0 };
+}
+
+renderFakeExpertEnd = function renderFakeExpertEndV39() {
+  const game = state.fakeExpert;
+  const ranking = [...state.players].sort((a, b) => Number(game.scores[b.id] || 0) - Number(game.scores[a.id] || 0));
+  const juror = fakeExpertTopPlayerV39(game.juryCorrect);
+  const bluffer = fakeExpertTopPlayerV39(game.fakeSpeakerPoints);
+  const professor = fakeExpertTopPlayerV39(game.realExpertWins);
+  const trickiest = [...game.rounds].sort((a, b) => b.fooledIds.length - a.fooledIds.length)[0];
+  title.textContent = "Palmarès des experts";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="winner-stage winner-stage-v07 v09-final-stage"><div class="winner-crown">🎓🏆</div><h2>La faculté ferme ses portes</h2><p>Les diplômes étaient douteux, le classement est parfaitement officiel.</p></section>
+    <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
+    <section class="impostor-awards">
+      ${juror.value ? `<article><span>🔎</span><div><small>JURY LE PLUS LUCIDE</small><strong>${escapeHtml(juror.player.name)}</strong><p>${juror.value} verdict${juror.value > 1 ? "s" : ""} correct${juror.value > 1 ? "s" : ""}</p></div></article>` : ""}
+      ${bluffer.value ? `<article><span>🎭</span><div><small>MEILLEUR FAUX EXPERT</small><strong>${escapeHtml(bluffer.player.name)}</strong><p>${bluffer.value} point${bluffer.value > 1 ? "s" : ""} gagné${bluffer.value > 1 ? "s" : ""} en bluff</p></div></article>` : ""}
+      ${professor.value ? `<article><span>🎓</span><div><small>VRAI PROFESSEUR</small><strong>${escapeHtml(professor.player.name)}</strong><p>${professor.value} majorité${professor.value > 1 ? "s" : ""} convaincue${professor.value > 1 ? "s" : ""}</p></div></article>` : ""}
+      ${trickiest ? `<article><span>🧠</span><div><small>SUJET LE PLUS TROMPEUR</small><strong>${escapeHtml(trickiest.topic)}</strong><p>${trickiest.fooledIds.length} personne${trickiest.fooledIds.length > 1 ? "s" : ""} trompée${trickiest.fooledIds.length > 1 ? "s" : ""}</p></div></article>` : ""}
+    </section>
+    <div class="toolbar"><button id="expertReplayV39" class="secondary-btn">Rejouer</button><button id="expertOtherV39" class="primary-btn">Autre jeu</button></div>`;
+  document.querySelector("#expertReplayV39")?.addEventListener("click", () => {
+    resetFakeExpertState({ roundCount: game.roundCount, includeAdult: game.includeAdult, speechSeconds: game.speechSeconds, questionsEnabled: game.questionsEnabled, classicThemes: game.classicThemes, adultThemes: game.adultThemes, difficulties: game.difficulties, adultLevels: game.adultLevels, includeCustom: game.includeCustom });
+    renderFakeExpertSetup();
+  });
+  document.querySelector("#expertOtherV39")?.addEventListener("click", () => { state.fakeExpert = null; renderPlayChoice(); });
+};
+

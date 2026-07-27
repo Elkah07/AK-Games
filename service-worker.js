@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v3.6-imitation-600";
+const CACHE_VERSION = "akgames-v3.9-faux-expert-750";
 
 const CORE_SHELL = [
   "/",
@@ -68,6 +68,7 @@ const DATA_ASSETS = [
   "/data/roulette-defis.json",
   "/data/mime.json",
   "/data/imitation.json",
+  "/data/imitation-adulte.json",
   "/data/bombe.json",
   "/data/quiz-culture.json",
   "/data/quiz-cinema.json",

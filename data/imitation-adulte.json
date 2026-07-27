@@ -1,0 +1,4302 @@
+[
+  {
+    "id": "imitation_adulte_001",
+    "text": "Une personne qui tente de séduire quelqu’un uniquement avec son regard.",
+    "answer": "Une personne qui tente de séduire quelqu’un uniquement avec son regard",
+    "category": "flirt_seduction",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_002",
+    "text": "Une personne qui essaie d’avoir l’air mystérieuse alors qu’elle panique intérieurement.",
+    "answer": "Une personne qui essaie d’avoir l’air mystérieuse alors qu’elle panique intérieurement",
+    "category": "flirt_seduction",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_003",
+    "text": "Quelqu’un qui remarque que son crush le regarde et change instantanément de posture.",
+    "answer": "Quelqu’un qui remarque que son crush le regarde et change instantanément de posture",
+    "category": "flirt_seduction",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_004",
+    "text": "Une personne qui répète une phrase de drague devant son miroir puis perd toute assurance.",
+    "answer": "Une personne qui répète une phrase de drague devant son miroir puis perd toute assurance",
+    "category": "flirt_seduction",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_005",
+    "text": "Quelqu’un qui reçoit un compliment très direct et ne sait plus quoi faire de ses mains.",
+    "answer": "Quelqu’un qui reçoit un compliment très direct et ne sait plus quoi faire de ses mains",
+    "category": "flirt_seduction",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_006",
+    "text": "Une personne qui fait semblant de ne pas être intéressée tout en surveillant chaque mouvement.",
+    "answer": "Une personne qui fait semblant de ne pas être intéressée tout en surveillant chaque mouvement",
+    "category": "flirt_seduction",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_007",
+    "text": "Quelqu’un qui veut envoyer un baiser élégant mais transforme le geste en catastrophe.",
+    "answer": "Quelqu’un qui veut envoyer un baiser élégant mais transforme le geste en catastrophe",
+    "category": "flirt_seduction",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_008",
+    "text": "Une personne qui essaie de danser de façon séduisante sur une musique totalement inadaptée.",
+    "answer": "Une personne qui essaie de danser de façon séduisante sur une musique totalement inadaptée",
+    "category": "flirt_seduction",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_009",
+    "text": "Quelqu’un qui veut attirer l’attention au bar sans oser parler.",
+    "answer": "Quelqu’un qui veut attirer l’attention au bar sans oser parler",
+    "category": "flirt_seduction",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_010",
+    "text": "Une personne qui comprend trop tard qu’elle flirtait avec quelqu’un déjà en couple.",
+    "answer": "Une personne qui comprend trop tard qu’elle flirtait avec quelqu’un déjà en couple",
+    "category": "flirt_seduction",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_011",
+    "text": "Quelqu’un qui tente un sourire irrésistible avec quelque chose coincé entre les dents.",
+    "answer": "Quelqu’un qui tente un sourire irrésistible avec quelque chose coincé entre les dents",
+    "category": "flirt_seduction",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_012",
+    "text": "Une personne qui veut jouer la confiance absolue après avoir trébuché devant son crush.",
+    "answer": "Une personne qui veut jouer la confiance absolue après avoir trébuché devant son crush",
+    "category": "flirt_seduction",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_013",
+    "text": "Quelqu’un qui essaie de savoir discrètement si l’attirance est réciproque.",
+    "answer": "Quelqu’un qui essaie de savoir discrètement si l’attirance est réciproque",
+    "category": "flirt_seduction",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_014",
+    "text": "Une personne qui reçoit un numéro de téléphone et célèbre intérieurement sans rien montrer.",
+    "answer": "Une personne qui reçoit un numéro de téléphone et célèbre intérieurement sans rien montrer",
+    "category": "flirt_seduction",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_015",
+    "text": "Quelqu’un qui réalise que sa phrase de drague a été comprise de travers.",
+    "answer": "Quelqu’un qui réalise que sa phrase de drague a été comprise de travers",
+    "category": "flirt_seduction",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_016",
+    "text": "Une personne qui joue la jalousie pour attirer l’attention puis regrette immédiatement.",
+    "answer": "Une personne qui joue la jalousie pour attirer l’attention puis regrette immédiatement",
+    "category": "flirt_seduction",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_017",
+    "text": "Quelqu’un qui s’approche pour embrasser une joue et se trompe complètement de direction.",
+    "answer": "Quelqu’un qui s’approche pour embrasser une joue et se trompe complètement de direction",
+    "category": "flirt_seduction",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_018",
+    "text": "Une personne qui se prépare mentalement à faire le premier pas pendant cinq minutes.",
+    "answer": "Une personne qui se prépare mentalement à faire le premier pas pendant cinq minutes",
+    "category": "flirt_seduction",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_019",
+    "text": "Quelqu’un qui essaie d’être sensuel tout en ouvrant un emballage impossible.",
+    "answer": "Quelqu’un qui essaie d’être sensuel tout en ouvrant un emballage impossible",
+    "category": "flirt_seduction",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_020",
+    "text": "Une personne qui veut paraître inaccessible mais répond au message en deux secondes.",
+    "answer": "Une personne qui veut paraître inaccessible mais répond au message en deux secondes",
+    "category": "flirt_seduction",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_021",
+    "text": "Quelqu’un qui fait semblant de reconnaître une personne attirante pour pouvoir lui parler.",
+    "answer": "Quelqu’un qui fait semblant de reconnaître une personne attirante pour pouvoir lui parler",
+    "category": "flirt_seduction",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_022",
+    "text": "Une personne qui reçoit un clin d’œil et cherche à vérifier qu’il lui était bien destiné.",
+    "answer": "Une personne qui reçoit un clin d’œil et cherche à vérifier qu’il lui était bien destiné",
+    "category": "flirt_seduction",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_023",
+    "text": "Quelqu’un qui tente de flirter pendant qu’un ami fait des signes gênants derrière.",
+    "answer": "Quelqu’un qui tente de flirter pendant qu’un ami fait des signes gênants derrière",
+    "category": "flirt_seduction",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_024",
+    "text": "Une personne qui essaie de quitter une conversation avec élégance pour revenir trente secondes plus tard.",
+    "answer": "Une personne qui essaie de quitter une conversation avec élégance pour revenir trente secondes plus tard",
+    "category": "flirt_seduction",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_025",
+    "text": "Quelqu’un qui veut impressionner son crush avec une compétence qu’il ne maîtrise pas.",
+    "answer": "Quelqu’un qui veut impressionner son crush avec une compétence qu’il ne maîtrise pas",
+    "category": "flirt_seduction",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme dans une télénovela beaucoup trop dramatique."
+  },
+  {
+    "id": "imitation_adulte_026",
+    "text": "Une personne qui lutte pour ne pas sourire après un message très suggestif.",
+    "answer": "Une personne qui lutte pour ne pas sourire après un message très suggestif",
+    "category": "flirt_seduction",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Change brutalement d’émotion chaque fois que quelqu’un tape dans ses mains."
+  },
+  {
+    "id": "imitation_adulte_027",
+    "text": "Quelqu’un qui essaie d’avoir l’air détendu pendant un silence chargé de tension.",
+    "answer": "Quelqu’un qui essaie d’avoir l’air détendu pendant un silence chargé de tension",
+    "category": "flirt_seduction",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Fais tout avec le sérieux d’un documentaire animalier."
+  },
+  {
+    "id": "imitation_adulte_028",
+    "text": "Une personne qui découvre que son crush connaît déjà toutes ses anciennes techniques de drague.",
+    "answer": "Une personne qui découvre que son crush connaît déjà toutes ses anciennes techniques de drague",
+    "category": "flirt_seduction",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Ajoute un ralenti imaginaire à chaque moment important."
+  },
+  {
+    "id": "imitation_adulte_029",
+    "text": "Quelqu’un qui improvise une entrée séduisante puis oublie pourquoi il est venu.",
+    "answer": "Quelqu’un qui improvise une entrée séduisante puis oublie pourquoi il est venu",
+    "category": "flirt_seduction",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme si une caméra de téléréalité te suivait."
+  },
+  {
+    "id": "imitation_adulte_030",
+    "text": "Une personne qui croit vivre un moment romantique avant qu’un détail ridicule casse toute l’ambiance.",
+    "answer": "Une personne qui croit vivre un moment romantique avant qu’un détail ridicule casse toute l’ambiance",
+    "category": "flirt_seduction",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Termine avec une pose triomphale totalement injustifiée."
+  },
+  {
+    "id": "imitation_adulte_031",
+    "text": "Une personne qui arrive à un premier rendez-vous beaucoup trop en avance et fait semblant d’être occupée.",
+    "answer": "Une personne qui arrive à un premier rendez-vous beaucoup trop en avance et fait semblant d’être occupée",
+    "category": "rendez_vous",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_032",
+    "text": "Quelqu’un qui reconnaît son rendez-vous mais hésite parce que les photos étaient très différentes.",
+    "answer": "Quelqu’un qui reconnaît son rendez-vous mais hésite parce que les photos étaient très différentes",
+    "category": "rendez_vous",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_033",
+    "text": "Une personne qui tente de manger proprement un plat impossible devant quelqu’un qui lui plaît.",
+    "answer": "Une personne qui tente de manger proprement un plat impossible devant quelqu’un qui lui plaît",
+    "category": "rendez_vous",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_034",
+    "text": "Quelqu’un qui veut partager l’addition sans réussir à sortir sa carte bancaire.",
+    "answer": "Quelqu’un qui veut partager l’addition sans réussir à sortir sa carte bancaire",
+    "category": "rendez_vous",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_035",
+    "text": "Une personne qui découvre que son rendez-vous connaît son ex.",
+    "answer": "Une personne qui découvre que son rendez-vous connaît son ex",
+    "category": "rendez_vous",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_036",
+    "text": "Quelqu’un qui essaie de remplir un silence gênant avec une anecdote encore plus gênante.",
+    "answer": "Quelqu’un qui essaie de remplir un silence gênant avec une anecdote encore plus gênante",
+    "category": "rendez_vous",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_037",
+    "text": "Une personne qui comprend que le rendez-vous romantique était en réalité une sortie amicale.",
+    "answer": "Une personne qui comprend que le rendez-vous romantique était en réalité une sortie amicale",
+    "category": "rendez_vous",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_038",
+    "text": "Quelqu’un qui cache discrètement une tache apparue sur sa tenue pendant le dîner.",
+    "answer": "Quelqu’un qui cache discrètement une tache apparue sur sa tenue pendant le dîner",
+    "category": "rendez_vous",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_039",
+    "text": "Une personne qui reçoit un appel de secours préparé mais décide finalement de rester.",
+    "answer": "Une personne qui reçoit un appel de secours préparé mais décide finalement de rester",
+    "category": "rendez_vous",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_040",
+    "text": "Quelqu’un qui essaie de deviner si le rendez-vous se passe bien à partir de minuscules signes.",
+    "answer": "Quelqu’un qui essaie de deviner si le rendez-vous se passe bien à partir de minuscules signes",
+    "category": "rendez_vous",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_041",
+    "text": "Une personne qui veut proposer de rentrer ensemble sans paraître trop directe.",
+    "answer": "Une personne qui veut proposer de rentrer ensemble sans paraître trop directe",
+    "category": "rendez_vous",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_042",
+    "text": "Quelqu’un qui tombe sur son ex au milieu d’un rendez-vous prometteur.",
+    "answer": "Quelqu’un qui tombe sur son ex au milieu d’un rendez-vous prometteur",
+    "category": "rendez_vous",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_043",
+    "text": "Une personne qui fait semblant d’aimer une activité choisie par son rendez-vous.",
+    "answer": "Une personne qui fait semblant d’aimer une activité choisie par son rendez-vous",
+    "category": "rendez_vous",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_044",
+    "text": "Quelqu’un qui s’aperçoit qu’il a appelé son rendez-vous par le mauvais prénom.",
+    "answer": "Quelqu’un qui s’aperçoit qu’il a appelé son rendez-vous par le mauvais prénom",
+    "category": "rendez_vous",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_045",
+    "text": "Une personne qui reçoit un message très intime alors que son téléphone est posé face visible.",
+    "answer": "Une personne qui reçoit un message très intime alors que son téléphone est posé face visible",
+    "category": "rendez_vous",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_046",
+    "text": "Quelqu’un qui tente de commander quelque chose de sophistiqué sans savoir le prononcer.",
+    "answer": "Quelqu’un qui tente de commander quelque chose de sophistiqué sans savoir le prononcer",
+    "category": "rendez_vous",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_047",
+    "text": "Une personne qui prépare un au revoir romantique pendant que le taxi attend impatiemment.",
+    "answer": "Une personne qui prépare un au revoir romantique pendant que le taxi attend impatiemment",
+    "category": "rendez_vous",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_048",
+    "text": "Quelqu’un qui veut prolonger le rendez-vous mais n’ose pas le proposer clairement.",
+    "answer": "Quelqu’un qui veut prolonger le rendez-vous mais n’ose pas le proposer clairement",
+    "category": "rendez_vous",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_049",
+    "text": "Une personne qui découvre que son rendez-vous a invité un ami sans prévenir.",
+    "answer": "Une personne qui découvre que son rendez-vous a invité un ami sans prévenir",
+    "category": "rendez_vous",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_050",
+    "text": "Quelqu’un qui essaie de cacher qu’il a déjà consulté tout le profil de l’autre.",
+    "answer": "Quelqu’un qui essaie de cacher qu’il a déjà consulté tout le profil de l’autre",
+    "category": "rendez_vous",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_051",
+    "text": "Une personne qui réalise que son rendez-vous est beaucoup plus séduisant en vrai.",
+    "answer": "Une personne qui réalise que son rendez-vous est beaucoup plus séduisant en vrai",
+    "category": "rendez_vous",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_052",
+    "text": "Quelqu’un qui tente de rester naturel après un compliment particulièrement osé.",
+    "answer": "Quelqu’un qui tente de rester naturel après un compliment particulièrement osé",
+    "category": "rendez_vous",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_053",
+    "text": "Une personne qui doit choisir entre un baiser, une poignée de main et une accolade.",
+    "answer": "Une personne qui doit choisir entre un baiser, une poignée de main et une accolade",
+    "category": "rendez_vous",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_054",
+    "text": "Quelqu’un qui raconte une histoire pour impressionner puis se perd dans ses propres détails.",
+    "answer": "Quelqu’un qui raconte une histoire pour impressionner puis se perd dans ses propres détails",
+    "category": "rendez_vous",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_055",
+    "text": "Une personne qui croit que l’autre va l’embrasser alors qu’il voulait seulement récupérer son manteau.",
+    "answer": "Une personne qui croit que l’autre va l’embrasser alors qu’il voulait seulement récupérer son manteau",
+    "category": "rendez_vous",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme dans une télénovela beaucoup trop dramatique."
+  },
+  {
+    "id": "imitation_adulte_056",
+    "text": "Quelqu’un qui découvre une énorme différence de goûts au pire moment du dîner.",
+    "answer": "Quelqu’un qui découvre une énorme différence de goûts au pire moment du dîner",
+    "category": "rendez_vous",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Change brutalement d’émotion chaque fois que quelqu’un tape dans ses mains."
+  },
+  {
+    "id": "imitation_adulte_057",
+    "text": "Une personne qui veut discrètement envoyer un compte rendu du rendez-vous à ses amis.",
+    "answer": "Une personne qui veut discrètement envoyer un compte rendu du rendez-vous à ses amis",
+    "category": "rendez_vous",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Fais tout avec le sérieux d’un documentaire animalier."
+  },
+  {
+    "id": "imitation_adulte_058",
+    "text": "Quelqu’un qui tente de sauver un rendez-vous après une remarque maladroite.",
+    "answer": "Quelqu’un qui tente de sauver un rendez-vous après une remarque maladroite",
+    "category": "rendez_vous",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Ajoute un ralenti imaginaire à chaque moment important."
+  },
+  {
+    "id": "imitation_adulte_059",
+    "text": "Une personne qui comprend que l’alchimie est réciproque mais essaie de ne pas se précipiter.",
+    "answer": "Une personne qui comprend que l’alchimie est réciproque mais essaie de ne pas se précipiter",
+    "category": "rendez_vous",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme si une caméra de téléréalité te suivait."
+  },
+  {
+    "id": "imitation_adulte_060",
+    "text": "Quelqu’un qui termine un rendez-vous parfait puis marche immédiatement dans une flaque.",
+    "answer": "Quelqu’un qui termine un rendez-vous parfait puis marche immédiatement dans une flaque",
+    "category": "rendez_vous",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Termine avec une pose triomphale totalement injustifiée."
+  },
+  {
+    "id": "imitation_adulte_061",
+    "text": "Une personne qui réclame de l’attention pendant que son partenaire regarde une série.",
+    "answer": "Une personne qui réclame de l’attention pendant que son partenaire regarde une série",
+    "category": "couple",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_062",
+    "text": "Quelqu’un qui veut se réconcilier sans admettre qu’il avait tort.",
+    "answer": "Quelqu’un qui veut se réconcilier sans admettre qu’il avait tort",
+    "category": "couple",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_063",
+    "text": "Une personne qui essaie d’obtenir un câlin après avoir été particulièrement agaçante.",
+    "answer": "Une personne qui essaie d’obtenir un câlin après avoir été particulièrement agaçante",
+    "category": "couple",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_064",
+    "text": "Quelqu’un qui découvre que son partenaire a fini la nourriture qu’il gardait pour lui.",
+    "answer": "Quelqu’un qui découvre que son partenaire a fini la nourriture qu’il gardait pour lui",
+    "category": "couple",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_065",
+    "text": "Une personne qui veut annoncer une dépense inutile avec un charme exagéré.",
+    "answer": "Une personne qui veut annoncer une dépense inutile avec un charme exagéré",
+    "category": "couple",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_066",
+    "text": "Quelqu’un qui fait semblant de dormir pour éviter une conversation sérieuse.",
+    "answer": "Quelqu’un qui fait semblant de dormir pour éviter une conversation sérieuse",
+    "category": "couple",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_067",
+    "text": "Une personne qui essaie de récupérer toute la couverture pendant la nuit.",
+    "answer": "Une personne qui essaie de récupérer toute la couverture pendant la nuit",
+    "category": "couple",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_068",
+    "text": "Quelqu’un qui reçoit une déclaration romantique au moment le moins glamour possible.",
+    "answer": "Quelqu’un qui reçoit une déclaration romantique au moment le moins glamour possible",
+    "category": "couple",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_069",
+    "text": "Une personne qui veut vérifier discrètement si son partenaire est jaloux.",
+    "answer": "Une personne qui veut vérifier discrètement si son partenaire est jaloux",
+    "category": "couple",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_070",
+    "text": "Quelqu’un qui tente de rester fâché alors que l’autre le fait rire.",
+    "answer": "Quelqu’un qui tente de rester fâché alors que l’autre le fait rire",
+    "category": "couple",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_071",
+    "text": "Une personne qui demande où est rangé un objet sans avoir réellement cherché.",
+    "answer": "Une personne qui demande où est rangé un objet sans avoir réellement cherché",
+    "category": "couple",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_072",
+    "text": "Quelqu’un qui prépare une surprise romantique et cache très mal chaque indice.",
+    "answer": "Quelqu’un qui prépare une surprise romantique et cache très mal chaque indice",
+    "category": "couple",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_073",
+    "text": "Une personne qui veut choisir le film mais rejette toutes les propositions.",
+    "answer": "Une personne qui veut choisir le film mais rejette toutes les propositions",
+    "category": "couple",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_074",
+    "text": "Quelqu’un qui essaie de dire qu’il a besoin d’espace sans inquiéter son partenaire.",
+    "answer": "Quelqu’un qui essaie de dire qu’il a besoin d’espace sans inquiéter son partenaire",
+    "category": "couple",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_075",
+    "text": "Une personne qui découvre une habitude très étrange de son partenaire au réveil.",
+    "answer": "Une personne qui découvre une habitude très étrange de son partenaire au réveil",
+    "category": "couple",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_076",
+    "text": "Quelqu’un qui veut un massage mais essaie de le faire passer pour une nécessité médicale.",
+    "answer": "Quelqu’un qui veut un massage mais essaie de le faire passer pour une nécessité médicale",
+    "category": "couple",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_077",
+    "text": "Une personne qui tente de négocier qui doit se lever pour éteindre la lumière.",
+    "answer": "Une personne qui tente de négocier qui doit se lever pour éteindre la lumière",
+    "category": "couple",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_078",
+    "text": "Quelqu’un qui reçoit un cadeau qu’il n’aime pas et veut protéger les sentiments de l’autre.",
+    "answer": "Quelqu’un qui reçoit un cadeau qu’il n’aime pas et veut protéger les sentiments de l’autre",
+    "category": "couple",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_079",
+    "text": "Une personne qui cherche à obtenir le pardon avec une danse improvisée.",
+    "answer": "Une personne qui cherche à obtenir le pardon avec une danse improvisée",
+    "category": "couple",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_080",
+    "text": "Quelqu’un qui se rend compte qu’il a oublié une date importante.",
+    "answer": "Quelqu’un qui se rend compte qu’il a oublié une date importante",
+    "category": "couple",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_081",
+    "text": "Une personne qui veut parler d’un sujet intime mais choisit constamment le mauvais moment.",
+    "answer": "Une personne qui veut parler d’un sujet intime mais choisit constamment le mauvais moment",
+    "category": "couple",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_082",
+    "text": "Quelqu’un qui essaie de faire croire qu’il n’a pas fouillé dans les affaires de l’autre.",
+    "answer": "Quelqu’un qui essaie de faire croire qu’il n’a pas fouillé dans les affaires de l’autre",
+    "category": "couple",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_083",
+    "text": "Une personne qui veut être rassurée mais refuse de dire clairement ce qui ne va pas.",
+    "answer": "Une personne qui veut être rassurée mais refuse de dire clairement ce qui ne va pas",
+    "category": "couple",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_084",
+    "text": "Quelqu’un qui transforme une petite dispute en débat judiciaire complet.",
+    "answer": "Quelqu’un qui transforme une petite dispute en débat judiciaire complet",
+    "category": "couple",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_085",
+    "text": "Une personne qui essaie de réveiller son partenaire de façon séduisante puis abandonne.",
+    "answer": "Une personne qui essaie de réveiller son partenaire de façon séduisante puis abandonne",
+    "category": "couple",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme dans une télénovela beaucoup trop dramatique."
+  },
+  {
+    "id": "imitation_adulte_086",
+    "text": "Quelqu’un qui veut prendre une photo de couple parfaite malgré dix échecs.",
+    "answer": "Quelqu’un qui veut prendre une photo de couple parfaite malgré dix échecs",
+    "category": "couple",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Change brutalement d’émotion chaque fois que quelqu’un tape dans ses mains."
+  },
+  {
+    "id": "imitation_adulte_087",
+    "text": "Une personne qui découvre que son partenaire a raconté une anecdote privée aux amis.",
+    "answer": "Une personne qui découvre que son partenaire a raconté une anecdote privée aux amis",
+    "category": "couple",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Fais tout avec le sérieux d’un documentaire animalier."
+  },
+  {
+    "id": "imitation_adulte_088",
+    "text": "Quelqu’un qui tente de gagner une dispute en utilisant uniquement des regards.",
+    "answer": "Quelqu’un qui tente de gagner une dispute en utilisant uniquement des regards",
+    "category": "couple",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Ajoute un ralenti imaginaire à chaque moment important."
+  },
+  {
+    "id": "imitation_adulte_089",
+    "text": "Une personne qui veut faire une grande déclaration mais est interrompue par une notification ridicule.",
+    "answer": "Une personne qui veut faire une grande déclaration mais est interrompue par une notification ridicule",
+    "category": "couple",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme si une caméra de téléréalité te suivait."
+  },
+  {
+    "id": "imitation_adulte_090",
+    "text": "Quelqu’un qui comprend que son partenaire lui prépare une surprise et joue très mal l’ignorance.",
+    "answer": "Quelqu’un qui comprend que son partenaire lui prépare une surprise et joue très mal l’ignorance",
+    "category": "couple",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Termine avec une pose triomphale totalement injustifiée."
+  },
+  {
+    "id": "imitation_adulte_091",
+    "text": "Une personne qui aperçoit son ex avec quelqu’un d’autre et prétend que cela ne lui fait rien.",
+    "answer": "Une personne qui aperçoit son ex avec quelqu’un d’autre et prétend que cela ne lui fait rien",
+    "category": "ex_jalousie",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_092",
+    "text": "Quelqu’un qui croise l’ex de son partenaire et essaie de l’observer discrètement.",
+    "answer": "Quelqu’un qui croise l’ex de son partenaire et essaie de l’observer discrètement",
+    "category": "ex_jalousie",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_093",
+    "text": "Une personne qui reçoit un message de son ex après des mois de silence.",
+    "answer": "Une personne qui reçoit un message de son ex après des mois de silence",
+    "category": "ex_jalousie",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_094",
+    "text": "Quelqu’un qui assure ne pas être jaloux tout en posant vingt questions très précises.",
+    "answer": "Quelqu’un qui assure ne pas être jaloux tout en posant vingt questions très précises",
+    "category": "ex_jalousie",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_095",
+    "text": "Une personne qui voit son partenaire rire beaucoup trop fort avec quelqu’un d’autre.",
+    "answer": "Une personne qui voit son partenaire rire beaucoup trop fort avec quelqu’un d’autre",
+    "category": "ex_jalousie",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_096",
+    "text": "Quelqu’un qui découvre une ancienne photo de couple encore visible sur un profil.",
+    "answer": "Quelqu’un qui découvre une ancienne photo de couple encore visible sur un profil",
+    "category": "ex_jalousie",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_097",
+    "text": "Une personne qui tente de supprimer un ancien souvenir embarrassant avant que son partenaire le voie.",
+    "answer": "Une personne qui tente de supprimer un ancien souvenir embarrassant avant que son partenaire le voie",
+    "category": "ex_jalousie",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_098",
+    "text": "Quelqu’un qui rencontre une personne avec laquelle son partenaire a déjà flirté.",
+    "answer": "Quelqu’un qui rencontre une personne avec laquelle son partenaire a déjà flirté",
+    "category": "ex_jalousie",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_099",
+    "text": "Une personne qui veut savoir qui a envoyé un cœur sans demander directement.",
+    "answer": "Une personne qui veut savoir qui a envoyé un cœur sans demander directement",
+    "category": "ex_jalousie",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_100",
+    "text": "Quelqu’un qui compare silencieusement sa tenue à celle d’un ex très élégant.",
+    "answer": "Quelqu’un qui compare silencieusement sa tenue à celle d’un ex très élégant",
+    "category": "ex_jalousie",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_101",
+    "text": "Une personne qui reçoit une invitation au mariage de son ex.",
+    "answer": "Une personne qui reçoit une invitation au mariage de son ex",
+    "category": "ex_jalousie",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_102",
+    "text": "Quelqu’un qui prétend avoir oublié le prénom d’un ex dont il se souvient parfaitement.",
+    "answer": "Quelqu’un qui prétend avoir oublié le prénom d’un ex dont il se souvient parfaitement",
+    "category": "ex_jalousie",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_103",
+    "text": "Une personne qui voit son partenaire liker une photo particulièrement séduisante.",
+    "answer": "Une personne qui voit son partenaire liker une photo particulièrement séduisante",
+    "category": "ex_jalousie",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_104",
+    "text": "Quelqu’un qui tente de rester calme après avoir entendu une anecdote sur un ancien flirt.",
+    "answer": "Quelqu’un qui tente de rester calme après avoir entendu une anecdote sur un ancien flirt",
+    "category": "ex_jalousie",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_105",
+    "text": "Une personne qui réalise qu’elle parle beaucoup trop souvent de son ex.",
+    "answer": "Une personne qui réalise qu’elle parle beaucoup trop souvent de son ex",
+    "category": "ex_jalousie",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_106",
+    "text": "Quelqu’un qui veut récupérer un objet resté chez son ex sans créer de drame.",
+    "answer": "Quelqu’un qui veut récupérer un objet resté chez son ex sans créer de drame",
+    "category": "ex_jalousie",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_107",
+    "text": "Une personne qui croise simultanément son ex et son nouveau crush.",
+    "answer": "Une personne qui croise simultanément son ex et son nouveau crush",
+    "category": "ex_jalousie",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_108",
+    "text": "Quelqu’un qui découvre que son meilleur ami discute avec son ex.",
+    "answer": "Quelqu’un qui découvre que son meilleur ami discute avec son ex",
+    "category": "ex_jalousie",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_109",
+    "text": "Une personne qui assure que son ex est devenu un simple ami avec un sourire peu convaincant.",
+    "answer": "Une personne qui assure que son ex est devenu un simple ami avec un sourire peu convaincant",
+    "category": "ex_jalousie",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_110",
+    "text": "Quelqu’un qui voit apparaître le prénom d’un ex dans les suggestions de recherche.",
+    "answer": "Quelqu’un qui voit apparaître le prénom d’un ex dans les suggestions de recherche",
+    "category": "ex_jalousie",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_111",
+    "text": "Une personne qui essaie de raconter une histoire sans révéler qu’elle concerne son ex.",
+    "answer": "Une personne qui essaie de raconter une histoire sans révéler qu’elle concerne son ex",
+    "category": "ex_jalousie",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_112",
+    "text": "Quelqu’un qui apprend que son partenaire va à une soirée où sera présent son ex.",
+    "answer": "Quelqu’un qui apprend que son partenaire va à une soirée où sera présent son ex",
+    "category": "ex_jalousie",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_113",
+    "text": "Une personne qui tente de paraître mature pendant une rencontre très tendue avec un ex.",
+    "answer": "Une personne qui tente de paraître mature pendant une rencontre très tendue avec un ex",
+    "category": "ex_jalousie",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_114",
+    "text": "Quelqu’un qui découvre que son ex s’est énormément amélioré depuis la rupture.",
+    "answer": "Quelqu’un qui découvre que son ex s’est énormément amélioré depuis la rupture",
+    "category": "ex_jalousie",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_115",
+    "text": "Une personne qui veut demander si elle embrasse mieux qu’un ex puis se retient.",
+    "answer": "Une personne qui veut demander si elle embrasse mieux qu’un ex puis se retient",
+    "category": "ex_jalousie",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme dans une télénovela beaucoup trop dramatique."
+  },
+  {
+    "id": "imitation_adulte_116",
+    "text": "Quelqu’un qui surprend son partenaire en train de relire une ancienne conversation.",
+    "answer": "Quelqu’un qui surprend son partenaire en train de relire une ancienne conversation",
+    "category": "ex_jalousie",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Change brutalement d’émotion chaque fois que quelqu’un tape dans ses mains."
+  },
+  {
+    "id": "imitation_adulte_117",
+    "text": "Une personne qui reçoit un compliment de son ex devant son partenaire actuel.",
+    "answer": "Une personne qui reçoit un compliment de son ex devant son partenaire actuel",
+    "category": "ex_jalousie",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Fais tout avec le sérieux d’un documentaire animalier."
+  },
+  {
+    "id": "imitation_adulte_118",
+    "text": "Quelqu’un qui essaie de ne pas consulter le nouveau profil de son ex.",
+    "answer": "Quelqu’un qui essaie de ne pas consulter le nouveau profil de son ex",
+    "category": "ex_jalousie",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Ajoute un ralenti imaginaire à chaque moment important."
+  },
+  {
+    "id": "imitation_adulte_119",
+    "text": "Une personne qui comprend qu’elle est jalouse d’une situation totalement innocente.",
+    "answer": "Une personne qui comprend qu’elle est jalouse d’une situation totalement innocente",
+    "category": "ex_jalousie",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme si une caméra de téléréalité te suivait."
+  },
+  {
+    "id": "imitation_adulte_120",
+    "text": "Quelqu’un qui transforme une question banale sur un ex en interrogatoire de police.",
+    "answer": "Quelqu’un qui transforme une question banale sur un ex en interrogatoire de police",
+    "category": "ex_jalousie",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Termine avec une pose triomphale totalement injustifiée."
+  },
+  {
+    "id": "imitation_adulte_121",
+    "text": "Une personne qui écrit un message très osé puis hésite devant le bouton d’envoi.",
+    "answer": "Une personne qui écrit un message très osé puis hésite devant le bouton d’envoi",
+    "category": "messages_reseaux",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_122",
+    "text": "Quelqu’un qui envoie accidentellement un message de flirt dans le mauvais groupe.",
+    "answer": "Quelqu’un qui envoie accidentellement un message de flirt dans le mauvais groupe",
+    "category": "messages_reseaux",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_123",
+    "text": "Une personne qui attend une réponse en actualisant la conversation toutes les trois secondes.",
+    "answer": "Une personne qui attend une réponse en actualisant la conversation toutes les trois secondes",
+    "category": "messages_reseaux",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_124",
+    "text": "Quelqu’un qui reçoit une photo suggestive au milieu d’une réunion très sérieuse.",
+    "answer": "Quelqu’un qui reçoit une photo suggestive au milieu d’une réunion très sérieuse",
+    "category": "messages_reseaux",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_125",
+    "text": "Une personne qui essaie de prendre un selfie séduisant sans trouver le bon angle.",
+    "answer": "Une personne qui essaie de prendre un selfie séduisant sans trouver le bon angle",
+    "category": "messages_reseaux",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_126",
+    "text": "Quelqu’un qui supprime puis réécrit le même message dix fois.",
+    "answer": "Quelqu’un qui supprime puis réécrit le même message dix fois",
+    "category": "messages_reseaux",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_127",
+    "text": "Une personne qui voit que son crush est en ligne mais ne répond toujours pas.",
+    "answer": "Une personne qui voit que son crush est en ligne mais ne répond toujours pas",
+    "category": "messages_reseaux",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_128",
+    "text": "Quelqu’un qui tente d’écouter discrètement un message vocal particulièrement intime.",
+    "answer": "Quelqu’un qui tente d’écouter discrètement un message vocal particulièrement intime",
+    "category": "messages_reseaux",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_129",
+    "text": "Une personne qui remarque qu’elle a aimé une très ancienne photo en espionnant un profil.",
+    "answer": "Une personne qui remarque qu’elle a aimé une très ancienne photo en espionnant un profil",
+    "category": "messages_reseaux",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_130",
+    "text": "Quelqu’un qui veut envoyer un simple bonsoir mais transforme le message en déclaration.",
+    "answer": "Quelqu’un qui veut envoyer un simple bonsoir mais transforme le message en déclaration",
+    "category": "messages_reseaux",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_131",
+    "text": "Une personne qui reçoit trois points de suspension après un message risqué.",
+    "answer": "Une personne qui reçoit trois points de suspension après un message risqué",
+    "category": "messages_reseaux",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_132",
+    "text": "Quelqu’un qui découvre qu’une capture d’écran a été envoyée à la personne concernée.",
+    "answer": "Quelqu’un qui découvre qu’une capture d’écran a été envoyée à la personne concernée",
+    "category": "messages_reseaux",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_133",
+    "text": "Une personne qui essaie de deviner le ton d’un message extrêmement court.",
+    "answer": "Une personne qui essaie de deviner le ton d’un message extrêmement court",
+    "category": "messages_reseaux",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_134",
+    "text": "Quelqu’un qui prépare une réponse détachée après avoir célébré la réception du message.",
+    "answer": "Quelqu’un qui prépare une réponse détachée après avoir célébré la réception du message",
+    "category": "messages_reseaux",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_135",
+    "text": "Une personne qui utilise un filtre séduisant puis l’application le retire au pire moment.",
+    "answer": "Une personne qui utilise un filtre séduisant puis l’application le retire au pire moment",
+    "category": "messages_reseaux",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_136",
+    "text": "Quelqu’un qui reçoit un appel vidéo alors qu’il prétendait être parfaitement apprêté.",
+    "answer": "Quelqu’un qui reçoit un appel vidéo alors qu’il prétendait être parfaitement apprêté",
+    "category": "messages_reseaux",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_137",
+    "text": "Une personne qui veut publier une photo pour rendre quelqu’un jaloux.",
+    "answer": "Une personne qui veut publier une photo pour rendre quelqu’un jaloux",
+    "category": "messages_reseaux",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_138",
+    "text": "Quelqu’un qui réalise qu’il a laissé un message vocal beaucoup trop long.",
+    "answer": "Quelqu’un qui réalise qu’il a laissé un message vocal beaucoup trop long",
+    "category": "messages_reseaux",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_139",
+    "text": "Une personne qui essaie de cacher une notification compromettante sur son écran verrouillé.",
+    "answer": "Une personne qui essaie de cacher une notification compromettante sur son écran verrouillé",
+    "category": "messages_reseaux",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_140",
+    "text": "Quelqu’un qui reçoit un emoji ambigu et convoque mentalement un conseil d’experts.",
+    "answer": "Quelqu’un qui reçoit un emoji ambigu et convoque mentalement un conseil d’experts",
+    "category": "messages_reseaux",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_141",
+    "text": "Une personne qui tente d’annuler l’envoi d’un message déjà lu.",
+    "answer": "Une personne qui tente d’annuler l’envoi d’un message déjà lu",
+    "category": "messages_reseaux",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_142",
+    "text": "Quelqu’un qui répond volontairement plus tard tout en surveillant l’heure.",
+    "answer": "Quelqu’un qui répond volontairement plus tard tout en surveillant l’heure",
+    "category": "messages_reseaux",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_143",
+    "text": "Une personne qui essaie d’être séduisante pendant un appel vidéo avec une mauvaise connexion.",
+    "answer": "Une personne qui essaie d’être séduisante pendant un appel vidéo avec une mauvaise connexion",
+    "category": "messages_reseaux",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_144",
+    "text": "Quelqu’un qui découvre que son message privé a été montré à tout un groupe d’amis.",
+    "answer": "Quelqu’un qui découvre que son message privé a été montré à tout un groupe d’amis",
+    "category": "messages_reseaux",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_145",
+    "text": "Une personne qui veut envoyer une photo flatteuse mais sélectionne la mauvaise image.",
+    "answer": "Une personne qui veut envoyer une photo flatteuse mais sélectionne la mauvaise image",
+    "category": "messages_reseaux",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme dans une télénovela beaucoup trop dramatique."
+  },
+  {
+    "id": "imitation_adulte_146",
+    "text": "Quelqu’un qui fait défiler une conversation pour retrouver le moment exact où le flirt a commencé.",
+    "answer": "Quelqu’un qui fait défiler une conversation pour retrouver le moment exact où le flirt a commencé",
+    "category": "messages_reseaux",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Change brutalement d’émotion chaque fois que quelqu’un tape dans ses mains."
+  },
+  {
+    "id": "imitation_adulte_147",
+    "text": "Une personne qui reçoit une réaction enflammée à une story et prépare sa réponse.",
+    "answer": "Une personne qui reçoit une réaction enflammée à une story et prépare sa réponse",
+    "category": "messages_reseaux",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Fais tout avec le sérieux d’un documentaire animalier."
+  },
+  {
+    "id": "imitation_adulte_148",
+    "text": "Quelqu’un qui essaie d’expliquer pourquoi il a consulté un profil à trois heures du matin.",
+    "answer": "Quelqu’un qui essaie d’expliquer pourquoi il a consulté un profil à trois heures du matin",
+    "category": "messages_reseaux",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Ajoute un ralenti imaginaire à chaque moment important."
+  },
+  {
+    "id": "imitation_adulte_149",
+    "text": "Une personne qui commence un message sensuel puis est interrompue par sa famille.",
+    "answer": "Une personne qui commence un message sensuel puis est interrompue par sa famille",
+    "category": "messages_reseaux",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme si une caméra de téléréalité te suivait."
+  },
+  {
+    "id": "imitation_adulte_150",
+    "text": "Quelqu’un qui comprend qu’un message très romantique était un copier-coller.",
+    "answer": "Quelqu’un qui comprend qu’un message très romantique était un copier-coller",
+    "category": "messages_reseaux",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Termine avec une pose triomphale totalement injustifiée."
+  },
+  {
+    "id": "imitation_adulte_151",
+    "text": "Une personne qui repère quelqu’un d’attirant de l’autre côté de la piste de danse.",
+    "answer": "Une personne qui repère quelqu’un d’attirant de l’autre côté de la piste de danse",
+    "category": "soirees",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_152",
+    "text": "Quelqu’un qui danse de façon très assurée jusqu’à ce que la musique change brutalement.",
+    "answer": "Quelqu’un qui danse de façon très assurée jusqu’à ce que la musique change brutalement",
+    "category": "soirees",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_153",
+    "text": "Une personne qui tente de discuter dans un club sans entendre un seul mot.",
+    "answer": "Une personne qui tente de discuter dans un club sans entendre un seul mot",
+    "category": "soirees",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_154",
+    "text": "Quelqu’un qui veut rejoindre une conversation séduisante mais arrive au pire moment.",
+    "answer": "Quelqu’un qui veut rejoindre une conversation séduisante mais arrive au pire moment",
+    "category": "soirees",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_155",
+    "text": "Une personne qui retrouve son crush à une soirée alors qu’elle avait promis de rester calme.",
+    "answer": "Une personne qui retrouve son crush à une soirée alors qu’elle avait promis de rester calme",
+    "category": "soirees",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_156",
+    "text": "Quelqu’un qui essaie de quitter une fête discrètement avec quelqu’un.",
+    "answer": "Quelqu’un qui essaie de quitter une fête discrètement avec quelqu’un",
+    "category": "soirees",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_157",
+    "text": "Une personne qui reçoit une proposition ambiguë et cherche ses amis du regard.",
+    "answer": "Une personne qui reçoit une proposition ambiguë et cherche ses amis du regard",
+    "category": "soirees",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_158",
+    "text": "Quelqu’un qui danse avec une personne puis réalise que ce n’était pas celle qu’il croyait.",
+    "answer": "Quelqu’un qui danse avec une personne puis réalise que ce n’était pas celle qu’il croyait",
+    "category": "soirees",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_159",
+    "text": "Une personne qui tente d’avoir l’air sobre après avoir renversé son verre.",
+    "answer": "Une personne qui tente d’avoir l’air sobre après avoir renversé son verre",
+    "category": "soirees",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_160",
+    "text": "Quelqu’un qui veut impressionner tout le monde avec un mouvement de danse risqué.",
+    "answer": "Quelqu’un qui veut impressionner tout le monde avec un mouvement de danse risqué",
+    "category": "soirees",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_161",
+    "text": "Une personne qui fait semblant d’adorer la musique pour rester près de son crush.",
+    "answer": "Une personne qui fait semblant d’adorer la musique pour rester près de son crush",
+    "category": "soirees",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_162",
+    "text": "Quelqu’un qui surprend deux personnes en train de s’embrasser dans un coin.",
+    "answer": "Quelqu’un qui surprend deux personnes en train de s’embrasser dans un coin",
+    "category": "soirees",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_163",
+    "text": "Une personne qui essaie d’organiser un retour discret après une nuit très animée.",
+    "answer": "Une personne qui essaie d’organiser un retour discret après une nuit très animée",
+    "category": "soirees",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_164",
+    "text": "Quelqu’un qui reçoit un compliment très direct dans la file des toilettes.",
+    "answer": "Quelqu’un qui reçoit un compliment très direct dans la file des toilettes",
+    "category": "soirees",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_165",
+    "text": "Une personne qui tente de récupérer son manteau sans interrompre une scène romantique.",
+    "answer": "Une personne qui tente de récupérer son manteau sans interrompre une scène romantique",
+    "category": "soirees",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_166",
+    "text": "Quelqu’un qui essaie de retrouver la personne avec qui il flirtait après avoir perdu le groupe.",
+    "answer": "Quelqu’un qui essaie de retrouver la personne avec qui il flirtait après avoir perdu le groupe",
+    "category": "soirees",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_167",
+    "text": "Une personne qui danse en pensant être filmée puis découvre que la caméra visait quelqu’un d’autre.",
+    "answer": "Une personne qui danse en pensant être filmée puis découvre que la caméra visait quelqu’un d’autre",
+    "category": "soirees",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_168",
+    "text": "Quelqu’un qui promet une dernière danse puis enchaîne cinq chansons.",
+    "answer": "Quelqu’un qui promet une dernière danse puis enchaîne cinq chansons",
+    "category": "soirees",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_169",
+    "text": "Une personne qui veut présenter deux célibataires qui se détestent immédiatement.",
+    "answer": "Une personne qui veut présenter deux célibataires qui se détestent immédiatement",
+    "category": "soirees",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_170",
+    "text": "Quelqu’un qui reçoit une invitation à une after et hésite théâtralement.",
+    "answer": "Quelqu’un qui reçoit une invitation à une after et hésite théâtralement",
+    "category": "soirees",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_171",
+    "text": "Une personne qui tente une sortie majestueuse mais doit revenir chercher son téléphone.",
+    "answer": "Une personne qui tente une sortie majestueuse mais doit revenir chercher son téléphone",
+    "category": "soirees",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_172",
+    "text": "Quelqu’un qui se retrouve entre son crush et une personne beaucoup trop entreprenante.",
+    "answer": "Quelqu’un qui se retrouve entre son crush et une personne beaucoup trop entreprenante",
+    "category": "soirees",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_173",
+    "text": "Une personne qui veut chuchoter quelque chose de séduisant mais doit hurler à cause de la musique.",
+    "answer": "Une personne qui veut chuchoter quelque chose de séduisant mais doit hurler à cause de la musique",
+    "category": "soirees",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_174",
+    "text": "Quelqu’un qui essaie de cacher un baiser récent à ses amis observateurs.",
+    "answer": "Quelqu’un qui essaie de cacher un baiser récent à ses amis observateurs",
+    "category": "soirees",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_175",
+    "text": "Une personne qui comprend que tout le groupe a remarqué son flirt.",
+    "answer": "Une personne qui comprend que tout le groupe a remarqué son flirt",
+    "category": "soirees",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme dans une télénovela beaucoup trop dramatique."
+  },
+  {
+    "id": "imitation_adulte_176",
+    "text": "Quelqu’un qui tente de créer une ambiance romantique avec des lumières de soirée clignotantes.",
+    "answer": "Quelqu’un qui tente de créer une ambiance romantique avec des lumières de soirée clignotantes",
+    "category": "soirees",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Change brutalement d’émotion chaque fois que quelqu’un tape dans ses mains."
+  },
+  {
+    "id": "imitation_adulte_177",
+    "text": "Une personne qui veut inviter quelqu’un à danser sans réussir à traverser la foule.",
+    "answer": "Une personne qui veut inviter quelqu’un à danser sans réussir à traverser la foule",
+    "category": "soirees",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Fais tout avec le sérieux d’un documentaire animalier."
+  },
+  {
+    "id": "imitation_adulte_178",
+    "text": "Quelqu’un qui rencontre le colocataire extrêmement curieux de la personne qui lui plaît.",
+    "answer": "Quelqu’un qui rencontre le colocataire extrêmement curieux de la personne qui lui plaît",
+    "category": "soirees",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Ajoute un ralenti imaginaire à chaque moment important."
+  },
+  {
+    "id": "imitation_adulte_179",
+    "text": "Une personne qui essaie d’écourter une conversation pour rejoindre un flirt prometteur.",
+    "answer": "Une personne qui essaie d’écourter une conversation pour rejoindre un flirt prometteur",
+    "category": "soirees",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme si une caméra de téléréalité te suivait."
+  },
+  {
+    "id": "imitation_adulte_180",
+    "text": "Quelqu’un qui se réveille après la soirée et tente de reconstruire la chronologie des événements.",
+    "answer": "Quelqu’un qui se réveille après la soirée et tente de reconstruire la chronologie des événements",
+    "category": "soirees",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Termine avec une pose triomphale totalement injustifiée."
+  },
+  {
+    "id": "imitation_adulte_181",
+    "text": "Une personne qui essaie de créer une ambiance romantique mais la lumière refuse de s’éteindre.",
+    "answer": "Une personne qui essaie de créer une ambiance romantique mais la lumière refuse de s’éteindre",
+    "category": "intimite",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_182",
+    "text": "Quelqu’un qui veut paraître très sûr de lui en retirant un vêtement coincé.",
+    "answer": "Quelqu’un qui veut paraître très sûr de lui en retirant un vêtement coincé",
+    "category": "intimite",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_183",
+    "text": "Une personne qui cherche discrètement où poser ses mains pendant un moment intime.",
+    "answer": "Une personne qui cherche discrètement où poser ses mains pendant un moment intime",
+    "category": "intimite",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_184",
+    "text": "Quelqu’un qui interrompt un baiser parce qu’il croit avoir entendu un bruit.",
+    "answer": "Quelqu’un qui interrompt un baiser parce qu’il croit avoir entendu un bruit",
+    "category": "intimite",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_185",
+    "text": "Une personne qui tente une entrée sensuelle dans une chambre puis se cogne contre un meuble.",
+    "answer": "Une personne qui tente une entrée sensuelle dans une chambre puis se cogne contre un meuble",
+    "category": "intimite",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_186",
+    "text": "Quelqu’un qui veut mettre une musique romantique mais lance une playlist totalement absurde.",
+    "answer": "Quelqu’un qui veut mettre une musique romantique mais lance une playlist totalement absurde",
+    "category": "intimite",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_187",
+    "text": "Une personne qui essaie de fermer une porte sans casser l’ambiance.",
+    "answer": "Une personne qui essaie de fermer une porte sans casser l’ambiance",
+    "category": "intimite",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_188",
+    "text": "Quelqu’un qui veut chuchoter quelque chose de séduisant mais oublie sa phrase.",
+    "answer": "Quelqu’un qui veut chuchoter quelque chose de séduisant mais oublie sa phrase",
+    "category": "intimite",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_189",
+    "text": "Une personne qui reçoit un compliment intime et devient soudainement très timide.",
+    "answer": "Une personne qui reçoit un compliment intime et devient soudainement très timide",
+    "category": "intimite",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_190",
+    "text": "Quelqu’un qui essaie de retirer élégamment ses chaussures alors qu’un lacet résiste.",
+    "answer": "Quelqu’un qui essaie de retirer élégamment ses chaussures alors qu’un lacet résiste",
+    "category": "intimite",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_191",
+    "text": "Une personne qui veut prolonger un baiser mais doit éternuer.",
+    "answer": "Une personne qui veut prolonger un baiser mais doit éternuer",
+    "category": "intimite",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_192",
+    "text": "Quelqu’un qui cherche à vérifier discrètement si l’autre est à l’aise.",
+    "answer": "Quelqu’un qui cherche à vérifier discrètement si l’autre est à l’aise",
+    "category": "intimite",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_193",
+    "text": "Une personne qui propose de ralentir le rythme avec beaucoup trop de solennité.",
+    "answer": "Une personne qui propose de ralentir le rythme avec beaucoup trop de solennité",
+    "category": "intimite",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_194",
+    "text": "Quelqu’un qui essaie de demander clairement ce que l’autre aime.",
+    "answer": "Quelqu’un qui essaie de demander clairement ce que l’autre aime",
+    "category": "intimite",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_195",
+    "text": "Une personne qui tente de cacher son stress derrière une assurance exagérée.",
+    "answer": "Une personne qui tente de cacher son stress derrière une assurance exagérée",
+    "category": "intimite",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_196",
+    "text": "Quelqu’un qui découvre que le lit fait énormément de bruit au moindre mouvement.",
+    "answer": "Quelqu’un qui découvre que le lit fait énormément de bruit au moindre mouvement",
+    "category": "intimite",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_197",
+    "text": "Une personne qui veut enlever un accessoire séduisant mais ne comprend pas comment il fonctionne.",
+    "answer": "Une personne qui veut enlever un accessoire séduisant mais ne comprend pas comment il fonctionne",
+    "category": "intimite",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_198",
+    "text": "Quelqu’un qui essaie de garder une expression romantique après une crampe soudaine.",
+    "answer": "Quelqu’un qui essaie de garder une expression romantique après une crampe soudaine",
+    "category": "intimite",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_199",
+    "text": "Une personne qui doit répondre à un appel familial au pire moment.",
+    "answer": "Une personne qui doit répondre à un appel familial au pire moment",
+    "category": "intimite",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_200",
+    "text": "Quelqu’un qui cherche le bouton d’une lampe tout en essayant de rester séduisant.",
+    "answer": "Quelqu’un qui cherche le bouton d’une lampe tout en essayant de rester séduisant",
+    "category": "intimite",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_201",
+    "text": "Une personne qui veut faire une surprise intime mais révèle tout trop tôt.",
+    "answer": "Une personne qui veut faire une surprise intime mais révèle tout trop tôt",
+    "category": "intimite",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_202",
+    "text": "Quelqu’un qui demande une pause avec douceur sans casser la connexion.",
+    "answer": "Quelqu’un qui demande une pause avec douceur sans casser la connexion",
+    "category": "intimite",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_203",
+    "text": "Une personne qui essaie de remettre ses vêtements dans le bon ordre très rapidement.",
+    "answer": "Une personne qui essaie de remettre ses vêtements dans le bon ordre très rapidement",
+    "category": "intimite",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_204",
+    "text": "Quelqu’un qui veut rester discret alors qu’un animal domestique observe la scène.",
+    "answer": "Quelqu’un qui veut rester discret alors qu’un animal domestique observe la scène",
+    "category": "intimite",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_205",
+    "text": "Une personne qui tente de faire un massage sensuel mais a les mains glacées.",
+    "answer": "Une personne qui tente de faire un massage sensuel mais a les mains glacées",
+    "category": "intimite",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme dans une télénovela beaucoup trop dramatique."
+  },
+  {
+    "id": "imitation_adulte_206",
+    "text": "Quelqu’un qui réalise que son téléphone filme encore une vidéo totalement innocente.",
+    "answer": "Quelqu’un qui réalise que son téléphone filme encore une vidéo totalement innocente",
+    "category": "intimite",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Change brutalement d’émotion chaque fois que quelqu’un tape dans ses mains."
+  },
+  {
+    "id": "imitation_adulte_207",
+    "text": "Une personne qui essaie de passer d’un fou rire à une ambiance romantique.",
+    "answer": "Une personne qui essaie de passer d’un fou rire à une ambiance romantique",
+    "category": "intimite",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Fais tout avec le sérieux d’un documentaire animalier."
+  },
+  {
+    "id": "imitation_adulte_208",
+    "text": "Quelqu’un qui veut parler de protection et de limites de façon naturelle.",
+    "answer": "Quelqu’un qui veut parler de protection et de limites de façon naturelle",
+    "category": "intimite",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Ajoute un ralenti imaginaire à chaque moment important."
+  },
+  {
+    "id": "imitation_adulte_209",
+    "text": "Une personne qui vérifie le consentement avec une attention presque trop cérémonieuse.",
+    "answer": "Une personne qui vérifie le consentement avec une attention presque trop cérémonieuse",
+    "category": "intimite",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme si une caméra de téléréalité te suivait."
+  },
+  {
+    "id": "imitation_adulte_210",
+    "text": "Quelqu’un qui tente une pose séduisante puis demande discrètement de l’aide pour se relever.",
+    "answer": "Quelqu’un qui tente une pose séduisante puis demande discrètement de l’aide pour se relever",
+    "category": "intimite",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Termine avec une pose triomphale totalement injustifiée."
+  },
+  {
+    "id": "imitation_adulte_211",
+    "text": "Une personne qui joue un personnage mystérieux mais oublie immédiatement son accent.",
+    "answer": "Une personne qui joue un personnage mystérieux mais oublie immédiatement son accent",
+    "category": "fantasmes_roleplay",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_212",
+    "text": "Quelqu’un qui essaie d’incarner un espion séduisant avec un gadget ridicule.",
+    "answer": "Quelqu’un qui essaie d’incarner un espion séduisant avec un gadget ridicule",
+    "category": "fantasmes_roleplay",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_213",
+    "text": "Une personne qui improvise une scène de rencontre entre inconnus dans un hôtel imaginaire.",
+    "answer": "Une personne qui improvise une scène de rencontre entre inconnus dans un hôtel imaginaire",
+    "category": "fantasmes_roleplay",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_214",
+    "text": "Quelqu’un qui joue un royal très autoritaire tout en demandant timidement la permission.",
+    "answer": "Quelqu’un qui joue un royal très autoritaire tout en demandant timidement la permission",
+    "category": "fantasmes_roleplay",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_215",
+    "text": "Une personne qui tente un rôle de professeur sévère mais éclate de rire.",
+    "answer": "Une personne qui tente un rôle de professeur sévère mais éclate de rire",
+    "category": "fantasmes_roleplay",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_216",
+    "text": "Quelqu’un qui incarne un détective chargé d’enquêter sur une disparition de vêtements.",
+    "answer": "Quelqu’un qui incarne un détective chargé d’enquêter sur une disparition de vêtements",
+    "category": "fantasmes_roleplay",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_217",
+    "text": "Une personne qui joue une star de cinéma faisant une entrée très glamour.",
+    "answer": "Une personne qui joue une star de cinéma faisant une entrée très glamour",
+    "category": "fantasmes_roleplay",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_218",
+    "text": "Quelqu’un qui improvise un personnage de vampire charmant mais allergique au dramatique.",
+    "answer": "Quelqu’un qui improvise un personnage de vampire charmant mais allergique au dramatique",
+    "category": "fantasmes_roleplay",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_219",
+    "text": "Une personne qui joue un pirate séducteur terrifié par une petite araignée.",
+    "answer": "Une personne qui joue un pirate séducteur terrifié par une petite araignée",
+    "category": "fantasmes_roleplay",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_220",
+    "text": "Quelqu’un qui incarne un serveur extrêmement charmeur dans un restaurant imaginaire.",
+    "answer": "Quelqu’un qui incarne un serveur extrêmement charmeur dans un restaurant imaginaire",
+    "category": "fantasmes_roleplay",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_221",
+    "text": "Une personne qui joue un inconnu rencontré dans un train de nuit.",
+    "answer": "Une personne qui joue un inconnu rencontré dans un train de nuit",
+    "category": "fantasmes_roleplay",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_222",
+    "text": "Quelqu’un qui improvise une audition pour devenir partenaire romantique officiel.",
+    "answer": "Quelqu’un qui improvise une audition pour devenir partenaire romantique officiel",
+    "category": "fantasmes_roleplay",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_223",
+    "text": "Une personne qui incarne un super-héros dont le pouvoir consiste à faire rougir les gens.",
+    "answer": "Une personne qui incarne un super-héros dont le pouvoir consiste à faire rougir les gens",
+    "category": "fantasmes_roleplay",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_224",
+    "text": "Quelqu’un qui joue un garde du corps beaucoup trop protecteur.",
+    "answer": "Quelqu’un qui joue un garde du corps beaucoup trop protecteur",
+    "category": "fantasmes_roleplay",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_225",
+    "text": "Une personne qui improvise une scène de retrouvailles passionnées après dix ans.",
+    "answer": "Une personne qui improvise une scène de retrouvailles passionnées après dix ans",
+    "category": "fantasmes_roleplay",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_226",
+    "text": "Quelqu’un qui incarne un voisin venu demander quelque chose de très peu crédible.",
+    "answer": "Quelqu’un qui incarne un voisin venu demander quelque chose de très peu crédible",
+    "category": "fantasmes_roleplay",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_227",
+    "text": "Une personne qui joue une célébrité cachant une relation secrète aux photographes.",
+    "answer": "Une personne qui joue une célébrité cachant une relation secrète aux photographes",
+    "category": "fantasmes_roleplay",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_228",
+    "text": "Quelqu’un qui improvise un entretien d’embauche pour un poste de partenaire idéal.",
+    "answer": "Quelqu’un qui improvise un entretien d’embauche pour un poste de partenaire idéal",
+    "category": "fantasmes_roleplay",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_229",
+    "text": "Une personne qui incarne un magicien dont tous les tours deviennent romantiques.",
+    "answer": "Une personne qui incarne un magicien dont tous les tours deviennent romantiques",
+    "category": "fantasmes_roleplay",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_230",
+    "text": "Quelqu’un qui joue un coach de séduction incapable d’appliquer ses propres conseils.",
+    "answer": "Quelqu’un qui joue un coach de séduction incapable d’appliquer ses propres conseils",
+    "category": "fantasmes_roleplay",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_231",
+    "text": "Une personne qui improvise un personnage de méchant très attirant mais maladroit.",
+    "answer": "Une personne qui improvise un personnage de méchant très attirant mais maladroit",
+    "category": "fantasmes_roleplay",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_232",
+    "text": "Quelqu’un qui incarne une personne inconnue laissant un mot secret dans un café.",
+    "answer": "Quelqu’un qui incarne une personne inconnue laissant un mot secret dans un café",
+    "category": "fantasmes_roleplay",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_233",
+    "text": "Une personne qui joue un agent secret utilisant un mot de passe beaucoup trop suggestif.",
+    "answer": "Une personne qui joue un agent secret utilisant un mot de passe beaucoup trop suggestif",
+    "category": "fantasmes_roleplay",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_234",
+    "text": "Quelqu’un qui improvise un rendez-vous dans une époque historique imaginaire.",
+    "answer": "Quelqu’un qui improvise un rendez-vous dans une époque historique imaginaire",
+    "category": "fantasmes_roleplay",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_235",
+    "text": "Une personne qui incarne un fantôme charmant essayant de séduire un vivant.",
+    "answer": "Une personne qui incarne un fantôme charmant essayant de séduire un vivant",
+    "category": "fantasmes_roleplay",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme dans une télénovela beaucoup trop dramatique."
+  },
+  {
+    "id": "imitation_adulte_236",
+    "text": "Quelqu’un qui joue une personne riche proposant un contrat romantique extravagant.",
+    "answer": "Quelqu’un qui joue une personne riche proposant un contrat romantique extravagant",
+    "category": "fantasmes_roleplay",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Change brutalement d’émotion chaque fois que quelqu’un tape dans ses mains."
+  },
+  {
+    "id": "imitation_adulte_237",
+    "text": "Une personne qui improvise une rencontre interdite entre deux camps rivaux.",
+    "answer": "Une personne qui improvise une rencontre interdite entre deux camps rivaux",
+    "category": "fantasmes_roleplay",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Fais tout avec le sérieux d’un documentaire animalier."
+  },
+  {
+    "id": "imitation_adulte_238",
+    "text": "Quelqu’un qui incarne un personnage de téléréalité annonçant un coup de foudre.",
+    "answer": "Quelqu’un qui incarne un personnage de téléréalité annonçant un coup de foudre",
+    "category": "fantasmes_roleplay",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Ajoute un ralenti imaginaire à chaque moment important."
+  },
+  {
+    "id": "imitation_adulte_239",
+    "text": "Une personne qui joue un thérapeute de couple totalement dépassé par la tension ambiante.",
+    "answer": "Une personne qui joue un thérapeute de couple totalement dépassé par la tension ambiante",
+    "category": "fantasmes_roleplay",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme si une caméra de téléréalité te suivait."
+  },
+  {
+    "id": "imitation_adulte_240",
+    "text": "Quelqu’un qui improvise le fantasme le plus cliché possible avec un sérieux absolu.",
+    "answer": "Quelqu’un qui improvise le fantasme le plus cliché possible avec un sérieux absolu",
+    "category": "fantasmes_roleplay",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Termine avec une pose triomphale totalement injustifiée."
+  },
+  {
+    "id": "imitation_adulte_241",
+    "text": "Une personne qui se réveille et réalise qu’elle ne reconnaît pas immédiatement la pièce.",
+    "answer": "Une personne qui se réveille et réalise qu’elle ne reconnaît pas immédiatement la pièce",
+    "category": "malaises_secrets",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_242",
+    "text": "Quelqu’un qui essaie de partir discrètement mais ne retrouve plus ses vêtements.",
+    "answer": "Quelqu’un qui essaie de partir discrètement mais ne retrouve plus ses vêtements",
+    "category": "malaises_secrets",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_243",
+    "text": "Une personne qui rencontre le colocataire au petit-déjeuner après une nuit inattendue.",
+    "answer": "Une personne qui rencontre le colocataire au petit-déjeuner après une nuit inattendue",
+    "category": "malaises_secrets",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_244",
+    "text": "Quelqu’un qui veut demander le prénom de l’autre sans avouer qu’il l’a oublié.",
+    "answer": "Quelqu’un qui veut demander le prénom de l’autre sans avouer qu’il l’a oublié",
+    "category": "malaises_secrets",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_245",
+    "text": "Une personne qui découvre un message envoyé pendant la nuit et refuse de l’ouvrir.",
+    "answer": "Une personne qui découvre un message envoyé pendant la nuit et refuse de l’ouvrir",
+    "category": "malaises_secrets",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_246",
+    "text": "Quelqu’un qui essaie de cacher une marque visible avant de sortir.",
+    "answer": "Quelqu’un qui essaie de cacher une marque visible avant de sortir",
+    "category": "malaises_secrets",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_247",
+    "text": "Une personne qui reçoit un appel de ses amis demandant tous les détails.",
+    "answer": "Une personne qui reçoit un appel de ses amis demandant tous les détails",
+    "category": "malaises_secrets",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_248",
+    "text": "Quelqu’un qui reconstruit une conversation gênante à partir de souvenirs incomplets.",
+    "answer": "Quelqu’un qui reconstruit une conversation gênante à partir de souvenirs incomplets",
+    "category": "malaises_secrets",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_249",
+    "text": "Une personne qui tente de récupérer un objet oublié chez quelqu’un sans relancer le flirt.",
+    "answer": "Une personne qui tente de récupérer un objet oublié chez quelqu’un sans relancer le flirt",
+    "category": "malaises_secrets",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_250",
+    "text": "Quelqu’un qui croise une connaissance en quittant un appartement au petit matin.",
+    "answer": "Quelqu’un qui croise une connaissance en quittant un appartement au petit matin",
+    "category": "malaises_secrets",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_251",
+    "text": "Une personne qui veut savoir si la nuit signifiait quelque chose sans poser la question.",
+    "answer": "Une personne qui veut savoir si la nuit signifiait quelque chose sans poser la question",
+    "category": "malaises_secrets",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_252",
+    "text": "Quelqu’un qui reçoit un message très enthousiaste alors qu’il espérait rester discret.",
+    "answer": "Quelqu’un qui reçoit un message très enthousiaste alors qu’il espérait rester discret",
+    "category": "malaises_secrets",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_253",
+    "text": "Une personne qui réalise qu’elle a raconté un secret pendant un moment de confiance.",
+    "answer": "Une personne qui réalise qu’elle a raconté un secret pendant un moment de confiance",
+    "category": "malaises_secrets",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_254",
+    "text": "Quelqu’un qui tente de répondre normalement à une question très compromettante.",
+    "answer": "Quelqu’un qui tente de répondre normalement à une question très compromettante",
+    "category": "malaises_secrets",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_255",
+    "text": "Une personne qui cherche une excuse crédible pour expliquer sa tenue du lendemain.",
+    "answer": "Une personne qui cherche une excuse crédible pour expliquer sa tenue du lendemain",
+    "category": "malaises_secrets",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_256",
+    "text": "Quelqu’un qui découvre que ses amis avaient parié sur l’issue de la soirée.",
+    "answer": "Quelqu’un qui découvre que ses amis avaient parié sur l’issue de la soirée",
+    "category": "malaises_secrets",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_257",
+    "text": "Une personne qui essaie d’effacer une trace de rouge à lèvres sans miroir.",
+    "answer": "Une personne qui essaie d’effacer une trace de rouge à lèvres sans miroir",
+    "category": "malaises_secrets",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_258",
+    "text": "Quelqu’un qui veut remercier pour la soirée sans envoyer un message trop froid ou trop intense.",
+    "answer": "Quelqu’un qui veut remercier pour la soirée sans envoyer un message trop froid ou trop intense",
+    "category": "malaises_secrets",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_259",
+    "text": "Une personne qui comprend qu’elle a laissé son téléphone chez son flirt.",
+    "answer": "Une personne qui comprend qu’elle a laissé son téléphone chez son flirt",
+    "category": "malaises_secrets",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_260",
+    "text": "Quelqu’un qui reçoit une invitation à recommencer et joue la surprise.",
+    "answer": "Quelqu’un qui reçoit une invitation à recommencer et joue la surprise",
+    "category": "malaises_secrets",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_261",
+    "text": "Une personne qui tente de nier une attirance que tout le monde a remarquée.",
+    "answer": "Une personne qui tente de nier une attirance que tout le monde a remarquée",
+    "category": "malaises_secrets",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_262",
+    "text": "Quelqu’un qui découvre une photo de la soirée où son flirt est très évident.",
+    "answer": "Quelqu’un qui découvre une photo de la soirée où son flirt est très évident",
+    "category": "malaises_secrets",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_263",
+    "text": "Une personne qui doit expliquer pourquoi elle est rentrée beaucoup plus tard que prévu.",
+    "answer": "Une personne qui doit expliquer pourquoi elle est rentrée beaucoup plus tard que prévu",
+    "category": "malaises_secrets",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_264",
+    "text": "Quelqu’un qui rencontre par hasard la personne de la veille dans un contexte très sérieux.",
+    "answer": "Quelqu’un qui rencontre par hasard la personne de la veille dans un contexte très sérieux",
+    "category": "malaises_secrets",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_265",
+    "text": "Une personne qui veut établir des limites après un rapprochement inattendu.",
+    "answer": "Une personne qui veut établir des limites après un rapprochement inattendu",
+    "category": "malaises_secrets",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme dans une télénovela beaucoup trop dramatique."
+  },
+  {
+    "id": "imitation_adulte_266",
+    "text": "Quelqu’un qui essaie de savoir si l’autre a apprécié sans demander directement.",
+    "answer": "Quelqu’un qui essaie de savoir si l’autre a apprécié sans demander directement",
+    "category": "malaises_secrets",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Change brutalement d’émotion chaque fois que quelqu’un tape dans ses mains."
+  },
+  {
+    "id": "imitation_adulte_267",
+    "text": "Une personne qui découvre que son rendez-vous a raconté la soirée à un ami commun.",
+    "answer": "Une personne qui découvre que son rendez-vous a raconté la soirée à un ami commun",
+    "category": "malaises_secrets",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Fais tout avec le sérieux d’un documentaire animalier."
+  },
+  {
+    "id": "imitation_adulte_268",
+    "text": "Quelqu’un qui veut transformer une aventure en relation mais ne trouve pas les mots.",
+    "answer": "Quelqu’un qui veut transformer une aventure en relation mais ne trouve pas les mots",
+    "category": "malaises_secrets",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Ajoute un ralenti imaginaire à chaque moment important."
+  },
+  {
+    "id": "imitation_adulte_269",
+    "text": "Une personne qui tente de faire comme si rien ne s’était passé devant le groupe.",
+    "answer": "Une personne qui tente de faire comme si rien ne s’était passé devant le groupe",
+    "category": "malaises_secrets",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme si une caméra de téléréalité te suivait."
+  },
+  {
+    "id": "imitation_adulte_270",
+    "text": "Quelqu’un qui réalise qu’il a envoyé le compte rendu de la soirée à la mauvaise personne.",
+    "answer": "Quelqu’un qui réalise qu’il a envoyé le compte rendu de la soirée à la mauvaise personne",
+    "category": "malaises_secrets",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Termine avec une pose triomphale totalement injustifiée."
+  },
+  {
+    "id": "imitation_adulte_271",
+    "text": "Deux personnes rejouent un premier rendez-vous où chacune veut paraître plus détendue que l’autre.",
+    "answer": "Deux personnes rejouent un premier rendez-vous où chacune veut paraître plus détendue que l’autre",
+    "category": "duo_adulte",
+    "difficulty": "easy",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_272",
+    "text": "Deux personnes jouent un couple qui se dispute silencieusement pendant un dîner chic.",
+    "answer": "Deux personnes jouent un couple qui se dispute silencieusement pendant un dîner chic",
+    "category": "duo_adulte",
+    "difficulty": "easy",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_273",
+    "text": "Deux personnes improvisent une rencontre très séduisante dans un ascenseur bloqué.",
+    "answer": "Deux personnes improvisent une rencontre très séduisante dans un ascenseur bloqué",
+    "category": "duo_adulte",
+    "difficulty": "easy",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_274",
+    "text": "Deux personnes jouent des ex qui prétendent être parfaitement à l’aise en se recroisant.",
+    "answer": "Deux personnes jouent des ex qui prétendent être parfaitement à l’aise en se recroisant",
+    "category": "duo_adulte",
+    "difficulty": "easy",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_275",
+    "text": "Deux personnes rejouent un baiser interrompu cinq fois par des événements imaginaires.",
+    "answer": "Deux personnes rejouent un baiser interrompu cinq fois par des événements imaginaires",
+    "category": "duo_adulte",
+    "difficulty": "easy",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_276",
+    "text": "Deux personnes incarnent des inconnus qui flirtent sans parler dans une file d’attente.",
+    "answer": "Deux personnes incarnent des inconnus qui flirtent sans parler dans une file d’attente",
+    "category": "duo_adulte",
+    "difficulty": "easy",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_277",
+    "text": "Deux personnes jouent un couple essayant de cacher une nuit agitée à leurs colocataires.",
+    "answer": "Deux personnes jouent un couple essayant de cacher une nuit agitée à leurs colocataires",
+    "category": "duo_adulte",
+    "difficulty": "easy",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_278",
+    "text": "Deux personnes improvisent une scène de jalousie à partir d’un simple emoji.",
+    "answer": "Deux personnes improvisent une scène de jalousie à partir d’un simple emoji",
+    "category": "duo_adulte",
+    "difficulty": "easy",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_279",
+    "text": "Deux personnes jouent un rendez-vous où chacune a préparé une excuse pour partir.",
+    "answer": "Deux personnes jouent un rendez-vous où chacune a préparé une excuse pour partir",
+    "category": "duo_adulte",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_280",
+    "text": "Deux personnes incarnent un couple qui négocie qui fera le premier pas.",
+    "answer": "Deux personnes incarnent un couple qui négocie qui fera le premier pas",
+    "category": "duo_adulte",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_281",
+    "text": "Deux personnes rejouent une réconciliation beaucoup trop dramatique.",
+    "answer": "Deux personnes rejouent une réconciliation beaucoup trop dramatique",
+    "category": "duo_adulte",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_282",
+    "text": "Deux personnes improvisent une danse de séduction complètement désynchronisée.",
+    "answer": "Deux personnes improvisent une danse de séduction complètement désynchronisée",
+    "category": "duo_adulte",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_283",
+    "text": "Deux personnes jouent une conversation intime interrompue par un serveur imaginaire.",
+    "answer": "Deux personnes jouent une conversation intime interrompue par un serveur imaginaire",
+    "category": "duo_adulte",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_284",
+    "text": "Deux personnes incarnent des espions amoureux qui doivent cacher leur relation.",
+    "answer": "Deux personnes incarnent des espions amoureux qui doivent cacher leur relation",
+    "category": "duo_adulte",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_285",
+    "text": "Deux personnes rejouent le moment où chacune croit que l’autre va l’embrasser.",
+    "answer": "Deux personnes rejouent le moment où chacune croit que l’autre va l’embrasser",
+    "category": "duo_adulte",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_286",
+    "text": "Deux personnes improvisent un couple découvrant un message compromettant.",
+    "answer": "Deux personnes improvisent un couple découvrant un message compromettant",
+    "category": "duo_adulte",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "séduire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_287",
+    "text": "Deux personnes jouent une rencontre entre une célébrité et un admirateur très sûr de lui.",
+    "answer": "Deux personnes jouent une rencontre entre une célébrité et un admirateur très sûr de lui",
+    "category": "duo_adulte",
+    "difficulty": "hard",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_288",
+    "text": "Deux personnes incarnent un couple qui essaie de choisir une musique romantique.",
+    "answer": "Deux personnes incarnent un couple qui essaie de choisir une musique romantique",
+    "category": "duo_adulte",
+    "difficulty": "hard",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_289",
+    "text": "Deux personnes rejouent un au revoir où aucune ne veut réellement partir.",
+    "answer": "Deux personnes rejouent un au revoir où aucune ne veut réellement partir",
+    "category": "duo_adulte",
+    "difficulty": "hard",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_290",
+    "text": "Deux personnes improvisent une scène de chambre où tout l’équipement imaginaire tombe en panne.",
+    "answer": "Deux personnes improvisent une scène de chambre où tout l’équipement imaginaire tombe en panne",
+    "category": "duo_adulte",
+    "difficulty": "hard",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_291",
+    "text": "Deux personnes jouent un couple qui vérifie ses limites avec un sérieux excessif.",
+    "answer": "Deux personnes jouent un couple qui vérifie ses limites avec un sérieux excessif",
+    "category": "duo_adulte",
+    "difficulty": "hard",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_292",
+    "text": "Deux personnes incarnent des voisins attirés l’un par l’autre mais incapables de l’avouer.",
+    "answer": "Deux personnes incarnent des voisins attirés l’un par l’autre mais incapables de l’avouer",
+    "category": "duo_adulte",
+    "difficulty": "hard",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_293",
+    "text": "Deux personnes rejouent un rendez-vous secret où tout le monde semble les reconnaître.",
+    "answer": "Deux personnes rejouent un rendez-vous secret où tout le monde semble les reconnaître",
+    "category": "duo_adulte",
+    "difficulty": "hard",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_294",
+    "text": "Deux personnes improvisent une séance photo séduisante qui devient totalement ridicule.",
+    "answer": "Deux personnes improvisent une séance photo séduisante qui devient totalement ridicule",
+    "category": "duo_adulte",
+    "difficulty": "hard",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "embrasser",
+      "sexy"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_adulte_295",
+    "text": "Deux personnes jouent un couple surpris par un appel vidéo familial au pire moment.",
+    "answer": "Deux personnes jouent un couple surpris par un appel vidéo familial au pire moment",
+    "category": "duo_adulte",
+    "difficulty": "chaos",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme dans une télénovela beaucoup trop dramatique."
+  },
+  {
+    "id": "imitation_adulte_296",
+    "text": "Deux personnes incarnent deux rivaux qui découvrent une attirance réciproque.",
+    "answer": "Deux personnes incarnent deux rivaux qui découvrent une attirance réciproque",
+    "category": "duo_adulte",
+    "difficulty": "chaos",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Change brutalement d’émotion chaque fois que quelqu’un tape dans ses mains."
+  },
+  {
+    "id": "imitation_adulte_297",
+    "text": "Deux personnes rejouent une déclaration passionnée faite dans un lieu complètement inadapté.",
+    "answer": "Deux personnes rejouent une déclaration passionnée faite dans un lieu complètement inadapté",
+    "category": "duo_adulte",
+    "difficulty": "chaos",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Fais tout avec le sérieux d’un documentaire animalier."
+  },
+  {
+    "id": "imitation_adulte_298",
+    "text": "Deux personnes improvisent un couple qui tente de quitter une soirée sans être vu.",
+    "answer": "Deux personnes improvisent un couple qui tente de quitter une soirée sans être vu",
+    "category": "duo_adulte",
+    "difficulty": "chaos",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Ajoute un ralenti imaginaire à chaque moment important."
+  },
+  {
+    "id": "imitation_adulte_299",
+    "text": "Deux personnes jouent une scène de rôle romantique et changent accidentellement de personnage.",
+    "answer": "Deux personnes jouent une scène de rôle romantique et changent accidentellement de personnage",
+    "category": "duo_adulte",
+    "difficulty": "chaos",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Joue la scène comme si une caméra de téléréalité te suivait."
+  },
+  {
+    "id": "imitation_adulte_300",
+    "text": "Deux personnes incarnent un duo qui veut créer une ambiance très sensuelle sans aucun contact.",
+    "answer": "Deux personnes incarnent un duo qui veut créer une ambiance très sensuelle sans aucun contact",
+    "category": "duo_adulte",
+    "difficulty": "chaos",
+    "actors": 2,
+    "collection": "adult",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amour",
+      "désir",
+      "sexy"
+    ],
+    "acceptedAnswers": [],
+    "twist": "Termine avec une pose triomphale totalement injustifiée."
+  }
+]
