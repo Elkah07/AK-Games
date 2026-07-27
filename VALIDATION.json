@@ -1,25 +1,25 @@
 {
   "characters": [
-    "maurice",
-    "moon",
-    "spike"
+    "honey",
+    "flash",
+    "marcellius"
   ],
   "posesAdded": {
-    "maurice": [
+    "honey": [
       "idle",
       "talk",
       "hype",
       "win",
       "lose"
     ],
-    "moon": [
+    "flash": [
       "idle",
       "talk",
       "hype",
       "win",
       "lose"
     ],
-    "spike": [
+    "marcellius": [
       "idle",
       "talk",
       "hype",
@@ -36,7 +36,8 @@
   "webpCount": 63,
   "totalFiles": 66,
   "notes": [
-    "Maurice, Moon and Spike now have idle + talk + hype + win + lose.",
-    "Idle assets were rebuilt from validated full characters."
+    "Honey, Flash and Marcellius now have idle + talk + hype + win + lose.",
+    "Generated pose sheets were cleaned to remove border-connected backgrounds.",
+    "This lot completes all 17 characters."
   ]
 }
