@@ -135,6 +135,13 @@
       options: "Choisissez 5 à 100 passages, les thèmes, les difficultés, les intensités adultes, le chrono, les questions du jury et vos conférences personnalisées.",
       comfort: "Les cartes adultes sont réservées aux majeurs consentants. Une improvisation ne doit jamais servir de conseil médical, juridique ou dangereux."
     },
+    "La Bombe +18": {
+      intro: "350 cartes adultes de confidences, séduction, couple, ex, messages et chaos, avec une durée d’explosion toujours secrète.",
+      steps: ["Choisissez thèmes, intensités et filtres de confort.", "La personne qui tient la bombe répond ou réalise la mini-scène.", "Une réponse déjà donnée est refusée.", "La bombe circule jusqu’à l’explosion."],
+      scoring: "Les cinq modes de La Bombe classique sont disponibles : classique, élimination, points, équipes et infernale.",
+      options: "Choisissez 5 à 50 manches, quatre intensités, sept filtres de confort, des jokers, le chrono secret et des cartes personnalisées.",
+      comfort: "Réservé aux adultes consentants. Le joker permet de passer sans justification. Les filtres peuvent retirer les ex, l’intimité, le couple, les téléphones, les gestes, les cartes ciblées et l’alcool."
+    },
     "La Bombe": {
       intro: "Parmi 600 cartes, le téléphone circule pendant une durée secrète. Chaque personne doit répondre sans reprendre une réponse déjà donnée.",
       steps: ["Choisissez les thèmes, difficultés et le mode.", "La personne qui tient la bombe écrit sa réponse ou réalise le défi.", "L’application refuse automatiquement les doublons écrits.", "La bombe passe au joueur suivant jusqu’à l’explosion."],

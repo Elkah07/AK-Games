@@ -5216,6 +5216,7 @@
 
   function megaMultiSetupControls(game) {
     const config = game.config;
+    if (game.gameName === AK_BOMB_ADULT_GAME_V45) return akBombAdultSetupMarkupV45(game, "multiBombAdult", !state.isHost);
     if (game.gameName === AK_BOMB_GAME_V44) return akBombSetupMarkupV44(game, "multiMega", !state.isHost);
     const roundOptions = akRouletteIsGame(game)
       ? [8, 12, 16, 20, 25, 30].map(value => `<option value="${value}" ${Number(game.roundCount) === value ? "selected" : ""}>${value} défis</option>`).join("")
@@ -5250,6 +5251,7 @@
       if (akRouletteIsGame(game)) akRouletteSavePreferences(game);
     });
     document.querySelector("#multiMegaDuration")?.addEventListener("change", event => game.durationSeconds = Number(event.target.value));
+    if (game.gameName === AK_BOMB_ADULT_GAME_V45) akBombAdultBindSetupV45(game, "multiBombAdult", renderMegaSetup, !state.isHost);
     if (game.gameName === AK_BOMB_GAME_V44) akBombBindSetupV44(game, "multiMega", renderMegaSetup, !state.isHost);
     bindV014KnowSetupControls(game);
     if (akQuizUsesDifficulty(game)) {
@@ -5281,7 +5283,12 @@
       const rawPool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
       let pool = v014FilterKnowPool(rawPool, game);
       let items;
-      if (game.gameName === AK_BOMB_GAME_V44) {
+      if (game.gameName === AK_BOMB_ADULT_GAME_V45) {
+        pool = akBombAdultBuildPoolV45(rawPool, game);
+        if (!pool.length) throw new Error("Aucune carte de La Bombe +18 ne correspond aux réglages et filtres.");
+        items = akBombAdultFreshSelectV45(pool, Math.min(game.roundCount, pool.length), `multi:bomb-adult:${game.bombMode}:${game.bombThemes.join("-")}:${game.bombDifficulties.join("-")}`);
+        akBombAdultSavePrefsV45(game);
+      } else if (game.gameName === AK_BOMB_GAME_V44) {
         pool = akBombBuildPoolV44(rawPool, game);
         if (!pool.length) throw new Error("Aucune carte de La Bombe ne correspond aux réglages.");
         items = akBombFreshSelectV44(pool, Math.min(game.roundCount, pool.length), `multi:bomb:${game.bombMode}:${game.bombThemes.join("-")}:${game.bombDifficulties.join("-")}`);
@@ -5322,15 +5329,15 @@
           selectedPacks: v014NormalizeKnowPacks(game.selectedPacks),
           selectedDifficulties: akQuizNormalizeDifficulties(game.selectedDifficulties),
           confidenceMode: game.confidenceMode !== false,
-          bombV44: game.gameName === AK_BOMB_GAME_V44,
-          bombMode: game.gameName === AK_BOMB_GAME_V44 ? game.bombMode : null,
-          bombMinSeconds: game.gameName === AK_BOMB_GAME_V44 ? game.bombMinSeconds : null,
-          bombMaxSeconds: game.gameName === AK_BOMB_GAME_V44 ? game.bombMaxSeconds : null,
-          bombOrder: game.gameName === AK_BOMB_GAME_V44 ? game.bombOrder : null,
-          bombLives: game.gameName === AK_BOMB_GAME_V44 ? game.bombLives : null,
-          bombSkipLimit: game.gameName === AK_BOMB_GAME_V44 ? game.bombSkipLimit : null,
-          bombSound: game.gameName === AK_BOMB_GAME_V44 ? game.bombSound : null,
-          bombVibration: game.gameName === AK_BOMB_GAME_V44 ? game.bombVibration : null,
+          bombV44: game.config.engine === "bomb",
+          bombMode: game.config.engine === "bomb" ? game.bombMode : null,
+          bombMinSeconds: game.config.engine === "bomb" ? game.bombMinSeconds : null,
+          bombMaxSeconds: game.config.engine === "bomb" ? game.bombMaxSeconds : null,
+          bombOrder: game.config.engine === "bomb" ? game.bombOrder : null,
+          bombLives: game.config.engine === "bomb" ? game.bombLives : null,
+          bombSkipLimit: game.config.engine === "bomb" ? game.bombSkipLimit : null,
+          bombSound: game.config.engine === "bomb" ? game.bombSound : null,
+          bombVibration: game.config.engine === "bomb" ? game.bombVibration : null,
           rouletteMode: akRouletteIsGame(game),
           rouletteThemes: akRouletteIsGame(game) ? [...game.rouletteThemes] : null,
           rouletteFormats: akRouletteIsGame(game) ? [...game.rouletteFormats] : null,
@@ -5665,8 +5672,8 @@
 
   function renderMultiMegaBomb(gameState, actions) {
     const item = megaMultiCurrentItem(gameState), player = megaMultiPlayer(gameState.currentPlayerId), isCurrent = state.currentUid === gameState.currentPlayerId, pending = actions[state.currentUid], manual = item?.answerMode === "manual", rejected = gameState.rejectedAnswer?.playerId === state.currentUid ? gameState.rejectedAnswer.message : "", skipLeft = Number(gameState.skips?.[state.currentUid] || 0);
-    title.textContent = "La Bombe"; setBackVisible(false);
-    screen.innerHTML = `${multiMegaProgress(gameState, "Bombe")}<section class="bomb-stage bomb-stage-v44"><div class="bomb-icon">💣</div><div class="bomb-secret-clock-v44"><strong>?</strong><span>durée secrète</span><span id="v014MultiCountdown" class="bomb-hidden-count-v44">${Math.max(0, Math.ceil((Number(gameState.bombEndsAt || 0) - AKFirebase.now()) / 1000))}</span></div><span class="category-chip">${avatarById(player?.avatarId).emoji} ${escapeHtml(player?.name || "Joueur").toUpperCase()}</span><h2>${escapeHtml(item?.prompt || item?.category || "Catégorie")}</h2>${akBombEffectTextV44(item) ? `<p class="bomb-effect-v44">💥 ${escapeHtml(akBombEffectTextV44(item))}</p>` : ""}<div class="progress-track"><div id="v014MultiTimerFill" class="progress-fill"></div></div></section>${rejected ? `<div class="notice danger-notice-v44">⚠️ ${escapeHtml(rejected)}</div>` : ""}${(gameState.usedAnswers || []).length ? `<section class="bomb-answer-history-v44"><small>RÉPONSES DÉJÀ DONNÉES</small><div>${gameState.usedAnswers.slice(-10).map(row => `<span>${escapeHtml(row.answer)}</span>`).join("")}</div></section>` : ""}${isCurrent ? pending ? renderMultiWaiting("Action envoyée", "La bombe change de téléphone…", "💣") : `<section class="card bomb-answer-card-v44">${manual ? `<p class="helper">Le groupe valide ton son ou ton geste.</p><button id="multiPassBomb" class="primary-btn full">Défi fait, je passe →</button>` : `<label for="multiBombAnswerV44">Ta réponse</label><div class="bomb-answer-row-v44"><input id="multiBombAnswerV44" class="text-input" maxlength="60" autocomplete="off" placeholder="Réponse différente…"><button id="multiPassBomb" class="primary-btn">Je passe →</button></div>`}<div class="toolbar"><button id="multiSkipBombV44" class="secondary-btn" ${skipLeft > 0 ? "" : "disabled"}>Joker (${skipLeft})</button><button id="multiBoomBomb" class="danger-btn">💥 Elle a explosé</button></div></section>` : renderMultiWaiting("Reste prêt·e", `La bombe est chez ${escapeHtml(player?.name || "la personne")}.`, "⏳")}`;
+    title.textContent = gameState.settings?.gameName || "La Bombe"; setBackVisible(false);
+    screen.innerHTML = `${multiMegaProgress(gameState, "Bombe")}<section class="bomb-stage bomb-stage-v44"><div class="bomb-icon">💣</div><div class="bomb-secret-clock-v44"><strong>?</strong><span>durée secrète</span><span id="v014MultiCountdown" class="bomb-hidden-count-v44">${Math.max(0, Math.ceil((Number(gameState.bombEndsAt || 0) - AKFirebase.now()) / 1000))}</span></div><span class="category-chip">${avatarById(player?.avatarId).emoji} ${escapeHtml(player?.name || "Joueur").toUpperCase()}</span><h2>${escapeHtml(item?.prompt || item?.category || "Catégorie")}</h2>${akBombEffectTextV44(item) ? `<p class="bomb-effect-v44">💥 ${escapeHtml(akBombEffectTextV44(item))}</p>` : ""}${item?.alternative ? `<details class="notice"><summary>Alternative douce</summary><p>${escapeHtml(item.alternative)}</p></details>` : ""}<div class="progress-track"><div id="v014MultiTimerFill" class="progress-fill"></div></div></section>${rejected ? `<div class="notice danger-notice-v44">⚠️ ${escapeHtml(rejected)}</div>` : ""}${(gameState.usedAnswers || []).length ? `<section class="bomb-answer-history-v44"><small>RÉPONSES DÉJÀ DONNÉES</small><div>${gameState.usedAnswers.slice(-10).map(row => `<span>${escapeHtml(row.answer)}</span>`).join("")}</div></section>` : ""}${isCurrent ? pending ? renderMultiWaiting("Action envoyée", "La bombe change de téléphone…", "💣") : `<section class="card bomb-answer-card-v44">${manual ? `<p class="helper">Le groupe valide ton son ou ton geste.</p><button id="multiPassBomb" class="primary-btn full">Défi fait, je passe →</button>` : `<label for="multiBombAnswerV44">Ta réponse</label><div class="bomb-answer-row-v44"><input id="multiBombAnswerV44" class="text-input" maxlength="60" autocomplete="off" placeholder="Réponse différente…"><button id="multiPassBomb" class="primary-btn">Je passe →</button></div>`}<div class="toolbar"><button id="multiSkipBombV44" class="secondary-btn" ${skipLeft > 0 ? "" : "disabled"}>Joker (${skipLeft})</button><button id="multiBoomBomb" class="danger-btn">💥 Elle a explosé</button></div></section>` : renderMultiWaiting("Reste prêt·e", `La bombe est chez ${escapeHtml(player?.name || "la personne")}.`, "⏳")}`;
     const sendPass = async () => { const answer = document.querySelector("#multiBombAnswerV44")?.value.trim() || ""; document.querySelectorAll("#multiPassBomb,#multiSkipBombV44,#multiBoomBomb").forEach(node => node.disabled = true); await sendMultiAction("mega-bomb", { pass: true, answer }).catch(() => document.querySelectorAll("#multiPassBomb,#multiSkipBombV44,#multiBoomBomb").forEach(node => node.disabled = false)); };
     document.querySelector("#multiPassBomb")?.addEventListener("click", sendPass); document.querySelector("#multiBombAnswerV44")?.addEventListener("keydown", event => { if (event.key === "Enter") sendPass(); }); document.querySelector("#multiSkipBombV44")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-bomb", { skip: true }).catch(() => event.currentTarget.disabled = false); }); document.querySelector("#multiBoomBomb")?.addEventListener("click", async event => { event.currentTarget.disabled = true; await sendMultiAction("mega-bomb", { explode: true }).catch(() => event.currentTarget.disabled = false); });
     startV014MultiTimer(gameState.bombEndsAt, gameState.bombRoundDuration || 25, () => processMultiMegaBomb(gameState, actions)); document.querySelector("#multiBombAnswerV44")?.focus();

@@ -1,0 +1,5328 @@
+[
+  {
+    "id": "bombe_adulte_confidences_001",
+    "prompt": "Cite une qualité que tu prétends ne pas rechercher mais qui te fait craquer.",
+    "category": "Cite une qualité que tu prétends ne pas rechercher mais qui te fait craquer.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_002",
+    "prompt": "Donne un exemple d’une qualité que tu prétends ne pas rechercher mais qui te fait craquer.",
+    "category": "Donne un exemple d’une qualité que tu prétends ne pas rechercher mais qui te fait craquer.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_003",
+    "prompt": "Trouve une qualité que tu prétends ne pas rechercher mais qui te fait craquer sans raconter toute l’histoire.",
+    "category": "Trouve une qualité que tu prétends ne pas rechercher mais qui te fait craquer sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_004",
+    "prompt": "Cite une habitude que tu cacherais pendant un premier week-end à deux.",
+    "category": "Cite une habitude que tu cacherais pendant un premier week-end à deux.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_005",
+    "prompt": "Donne un exemple d’une habitude que tu cacherais pendant un premier week-end à deux.",
+    "category": "Donne un exemple d’une habitude que tu cacherais pendant un premier week-end à deux.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_006",
+    "prompt": "Trouve une habitude que tu cacherais pendant un premier week-end à deux sans raconter toute l’histoire.",
+    "category": "Trouve une habitude que tu cacherais pendant un premier week-end à deux sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_007",
+    "prompt": "Cite une petite jalousie que tu n’avouerais pas immédiatement.",
+    "category": "Cite une petite jalousie que tu n’avouerais pas immédiatement.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_008",
+    "prompt": "Donne un exemple d’une petite jalousie que tu n’avouerais pas immédiatement.",
+    "category": "Donne un exemple d’une petite jalousie que tu n’avouerais pas immédiatement.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_009",
+    "prompt": "Trouve une petite jalousie que tu n’avouerais pas immédiatement sans raconter toute l’histoire.",
+    "category": "Trouve une petite jalousie que tu n’avouerais pas immédiatement sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_010",
+    "prompt": "Cite une excuse déjà utilisée pour éviter un rendez-vous.",
+    "category": "Cite une excuse déjà utilisée pour éviter un rendez-vous.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_011",
+    "prompt": "Donne un exemple d’une excuse déjà utilisée pour éviter un rendez-vous.",
+    "category": "Donne un exemple d’une excuse déjà utilisée pour éviter un rendez-vous.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_012",
+    "prompt": "Trouve une excuse déjà utilisée pour éviter un rendez-vous sans raconter toute l’histoire.",
+    "category": "Trouve une excuse déjà utilisée pour éviter un rendez-vous sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_013",
+    "prompt": "Cite un compliment qui t’a vraiment marqué.",
+    "category": "Cite un compliment qui t’a vraiment marqué.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_014",
+    "prompt": "Donne un exemple d’un compliment qui t’a vraiment marqué.",
+    "category": "Donne un exemple d’un compliment qui t’a vraiment marqué.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_015",
+    "prompt": "Trouve un compliment qui t’a vraiment marqué sans raconter toute l’histoire.",
+    "category": "Trouve un compliment qui t’a vraiment marqué sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_016",
+    "prompt": "Cite une situation où tu as fait semblant d’être détaché·e.",
+    "category": "Cite une situation où tu as fait semblant d’être détaché·e.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_017",
+    "prompt": "Donne un exemple d’une situation où tu as fait semblant d’être détaché·e.",
+    "category": "Donne un exemple d’une situation où tu as fait semblant d’être détaché·e.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_018",
+    "prompt": "Trouve une situation où tu as fait semblant d’être détaché·e sans raconter toute l’histoire.",
+    "category": "Trouve une situation où tu as fait semblant d’être détaché·e sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_019",
+    "prompt": "Cite un détail physique que tu remarques très vite.",
+    "category": "Cite un détail physique que tu remarques très vite.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_020",
+    "prompt": "Donne un exemple d’un détail physique que tu remarques très vite.",
+    "category": "Donne un exemple d’un détail physique que tu remarques très vite.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_021",
+    "prompt": "Trouve un détail physique que tu remarques très vite sans raconter toute l’histoire.",
+    "category": "Trouve un détail physique que tu remarques très vite sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_022",
+    "prompt": "Cite une chose que tu as déjà prétendu aimer pour plaire à quelqu’un.",
+    "category": "Cite une chose que tu as déjà prétendu aimer pour plaire à quelqu’un.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_023",
+    "prompt": "Donne un exemple d’une chose que tu as déjà prétendu aimer pour plaire à quelqu’un.",
+    "category": "Donne un exemple d’une chose que tu as déjà prétendu aimer pour plaire à quelqu’un.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_024",
+    "prompt": "Trouve une chose que tu as déjà prétendu aimer pour plaire à quelqu’un sans raconter toute l’histoire.",
+    "category": "Trouve une chose que tu as déjà prétendu aimer pour plaire à quelqu’un sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_025",
+    "prompt": "Cite une raison un peu honteuse d’avoir regardé le profil de quelqu’un.",
+    "category": "Cite une raison un peu honteuse d’avoir regardé le profil de quelqu’un.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_026",
+    "prompt": "Donne un exemple d’une raison un peu honteuse d’avoir regardé le profil de quelqu’un.",
+    "category": "Donne un exemple d’une raison un peu honteuse d’avoir regardé le profil de quelqu’un.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_027",
+    "prompt": "Trouve une raison un peu honteuse d’avoir regardé le profil de quelqu’un sans raconter toute l’histoire.",
+    "category": "Trouve une raison un peu honteuse d’avoir regardé le profil de quelqu’un sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_028",
+    "prompt": "Cite un mensonge gentil déjà raconté après un rendez-vous.",
+    "category": "Cite un mensonge gentil déjà raconté après un rendez-vous.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_029",
+    "prompt": "Donne un exemple d’un mensonge gentil déjà raconté après un rendez-vous.",
+    "category": "Donne un exemple d’un mensonge gentil déjà raconté après un rendez-vous.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_030",
+    "prompt": "Trouve un mensonge gentil déjà raconté après un rendez-vous sans raconter toute l’histoire.",
+    "category": "Trouve un mensonge gentil déjà raconté après un rendez-vous sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_031",
+    "prompt": "Cite une peur irrationnelle dans une nouvelle relation.",
+    "category": "Cite une peur irrationnelle dans une nouvelle relation.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_032",
+    "prompt": "Donne un exemple d’une peur irrationnelle dans une nouvelle relation.",
+    "category": "Donne un exemple d’une peur irrationnelle dans une nouvelle relation.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_033",
+    "prompt": "Trouve une peur irrationnelle dans une nouvelle relation sans raconter toute l’histoire.",
+    "category": "Trouve une peur irrationnelle dans une nouvelle relation sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_034",
+    "prompt": "Cite une chose que tu pourrais suranalyser pendant des heures.",
+    "category": "Cite une chose que tu pourrais suranalyser pendant des heures.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_035",
+    "prompt": "Donne un exemple d’une chose que tu pourrais suranalyser pendant des heures.",
+    "category": "Donne un exemple d’une chose que tu pourrais suranalyser pendant des heures.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_036",
+    "prompt": "Trouve une chose que tu pourrais suranalyser pendant des heures sans raconter toute l’histoire.",
+    "category": "Trouve une chose que tu pourrais suranalyser pendant des heures sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_037",
+    "prompt": "Cite une petite habitude qui peut casser ton attirance.",
+    "category": "Cite une petite habitude qui peut casser ton attirance.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_038",
+    "prompt": "Donne un exemple d’une petite habitude qui peut casser ton attirance.",
+    "category": "Donne un exemple d’une petite habitude qui peut casser ton attirance.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_039",
+    "prompt": "Trouve une petite habitude qui peut casser ton attirance sans raconter toute l’histoire.",
+    "category": "Trouve une petite habitude qui peut casser ton attirance sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_040",
+    "prompt": "Cite un signe que tu es en train de t’attacher.",
+    "category": "Cite un signe que tu es en train de t’attacher.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_041",
+    "prompt": "Donne un exemple d’un signe que tu es en train de t’attacher.",
+    "category": "Donne un exemple d’un signe que tu es en train de t’attacher.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_042",
+    "prompt": "Trouve un signe que tu es en train de t’attacher sans raconter toute l’histoire.",
+    "category": "Trouve un signe que tu es en train de t’attacher sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_043",
+    "prompt": "Cite une chose que tu n’oserais pas demander au premier rendez-vous.",
+    "category": "Cite une chose que tu n’oserais pas demander au premier rendez-vous.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_044",
+    "prompt": "Donne un exemple d’une chose que tu n’oserais pas demander au premier rendez-vous.",
+    "category": "Donne un exemple d’une chose que tu n’oserais pas demander au premier rendez-vous.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_045",
+    "prompt": "Trouve une chose que tu n’oserais pas demander au premier rendez-vous sans raconter toute l’histoire.",
+    "category": "Trouve une chose que tu n’oserais pas demander au premier rendez-vous sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_046",
+    "prompt": "Cite un moment où ton ego pourrait prendre le dessus.",
+    "category": "Cite un moment où ton ego pourrait prendre le dessus.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_047",
+    "prompt": "Donne un exemple d’un moment où ton ego pourrait prendre le dessus.",
+    "category": "Donne un exemple d’un moment où ton ego pourrait prendre le dessus.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_048",
+    "prompt": "Trouve un moment où ton ego pourrait prendre le dessus sans raconter toute l’histoire.",
+    "category": "Trouve un moment où ton ego pourrait prendre le dessus sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_049",
+    "prompt": "Cite une chose romantique que tu trouves secrètement adorable.",
+    "category": "Cite une chose romantique que tu trouves secrètement adorable.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_050",
+    "prompt": "Donne un exemple d’une chose romantique que tu trouves secrètement adorable.",
+    "category": "Donne un exemple d’une chose romantique que tu trouves secrètement adorable.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_051",
+    "prompt": "Trouve une chose romantique que tu trouves secrètement adorable sans raconter toute l’histoire.",
+    "category": "Trouve une chose romantique que tu trouves secrètement adorable sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_052",
+    "prompt": "Cite un comportement que tu pardonnes trop facilement.",
+    "category": "Cite un comportement que tu pardonnes trop facilement.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_053",
+    "prompt": "Donne un exemple d’un comportement que tu pardonnes trop facilement.",
+    "category": "Donne un exemple d’un comportement que tu pardonnes trop facilement.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_054",
+    "prompt": "Trouve un comportement que tu pardonnes trop facilement sans raconter toute l’histoire.",
+    "category": "Trouve un comportement que tu pardonnes trop facilement sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_055",
+    "prompt": "Cite une chose que tu regretterais d’avoir dite trop vite.",
+    "category": "Cite une chose que tu regretterais d’avoir dite trop vite.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_056",
+    "prompt": "Donne un exemple d’une chose que tu regretterais d’avoir dite trop vite.",
+    "category": "Donne un exemple d’une chose que tu regretterais d’avoir dite trop vite.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_057",
+    "prompt": "Trouve une chose que tu regretterais d’avoir dite trop vite sans raconter toute l’histoire.",
+    "category": "Trouve une chose que tu regretterais d’avoir dite trop vite sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_058",
+    "prompt": "Cite une situation dans laquelle tu pourrais rougir immédiatement.",
+    "category": "Cite une situation dans laquelle tu pourrais rougir immédiatement.",
+    "theme": "confidences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_059",
+    "prompt": "Donne un exemple d’une situation dans laquelle tu pourrais rougir immédiatement.",
+    "category": "Donne un exemple d’une situation dans laquelle tu pourrais rougir immédiatement.",
+    "theme": "confidences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_confidences_060",
+    "prompt": "Trouve une situation dans laquelle tu pourrais rougir immédiatement sans raconter toute l’histoire.",
+    "category": "Trouve une situation dans laquelle tu pourrais rougir immédiatement sans raconter toute l’histoire.",
+    "theme": "confidences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une petite gêne totalement inoffensive."
+  },
+  {
+    "id": "bombe_adulte_seduction_001",
+    "prompt": "Cite une qualité attirante qu’une personne autour de la table pourrait avoir, sans la nommer.",
+    "category": "Cite une qualité attirante qu’une personne autour de la table pourrait avoir, sans la nommer.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "target"
+    ],
+    "alternative": "Alternative douce : cite une qualité agréable dans un groupe, sans viser personne."
+  },
+  {
+    "id": "bombe_adulte_seduction_002",
+    "prompt": "Donne un compliment élégant à la personne assise à ta droite, sans parler de son physique.",
+    "category": "Donne un compliment élégant à la personne assise à ta droite, sans parler de son physique.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "target"
+    ],
+    "alternative": "Alternative douce : cite une qualité agréable dans un groupe, sans viser personne."
+  },
+  {
+    "id": "bombe_adulte_seduction_003",
+    "prompt": "Cite une personne du groupe qui ferait un excellent partenaire de karaoké.",
+    "category": "Cite une personne du groupe qui ferait un excellent partenaire de karaoké.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "target"
+    ],
+    "alternative": "Alternative douce : cite une qualité agréable dans un groupe, sans viser personne."
+  },
+  {
+    "id": "bombe_adulte_seduction_004",
+    "prompt": "Choisis quelqu’un du groupe et invente-lui un surnom de star romantique.",
+    "category": "Choisis quelqu’un du groupe et invente-lui un surnom de star romantique.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "target"
+    ],
+    "alternative": "Alternative douce : cite une qualité agréable dans un groupe, sans viser personne."
+  },
+  {
+    "id": "bombe_adulte_seduction_005",
+    "prompt": "Cite une qualité de conversation que quelqu’un autour de la table possède peut-être.",
+    "category": "Cite une qualité de conversation que quelqu’un autour de la table possède peut-être.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "target"
+    ],
+    "alternative": "Alternative douce : cite une qualité agréable dans un groupe, sans viser personne."
+  },
+  {
+    "id": "bombe_adulte_seduction_006",
+    "prompt": "Désigne la personne qui improviserait le meilleur premier rendez-vous, sans te justifier.",
+    "category": "Désigne la personne qui improviserait le meilleur premier rendez-vous, sans te justifier.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "target"
+    ],
+    "alternative": "Alternative douce : cite une qualité agréable dans un groupe, sans viser personne."
+  },
+  {
+    "id": "bombe_adulte_seduction_007",
+    "prompt": "Cite une personne du groupe qui garderait le mieux son calme pendant un rendez-vous gênant.",
+    "category": "Cite une personne du groupe qui garderait le mieux son calme pendant un rendez-vous gênant.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "target"
+    ],
+    "alternative": "Alternative douce : cite une qualité agréable dans un groupe, sans viser personne."
+  },
+  {
+    "id": "bombe_adulte_seduction_008",
+    "prompt": "Choisis quelqu’un et donne-lui un compliment de film romantique, avec son accord.",
+    "category": "Choisis quelqu’un et donne-lui un compliment de film romantique, avec son accord.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "target"
+    ],
+    "alternative": "Alternative douce : cite une qualité agréable dans un groupe, sans viser personne."
+  },
+  {
+    "id": "bombe_adulte_seduction_009",
+    "prompt": "Cite une façon élégante de proposer un deuxième rendez-vous.",
+    "category": "Cite une façon élégante de proposer un deuxième rendez-vous.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_010",
+    "prompt": "Donne un exemple d’une façon élégante de proposer un deuxième rendez-vous.",
+    "category": "Donne un exemple d’une façon élégante de proposer un deuxième rendez-vous.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_011",
+    "prompt": "Cite un compliment qui ne porte pas sur le physique.",
+    "category": "Cite un compliment qui ne porte pas sur le physique.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_012",
+    "prompt": "Donne un exemple d’un compliment qui ne porte pas sur le physique.",
+    "category": "Donne un exemple d’un compliment qui ne porte pas sur le physique.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_013",
+    "prompt": "Cite un lieu original pour un premier rendez-vous.",
+    "category": "Cite un lieu original pour un premier rendez-vous.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_014",
+    "prompt": "Donne un exemple d’un lieu original pour un premier rendez-vous.",
+    "category": "Donne un exemple d’un lieu original pour un premier rendez-vous.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_015",
+    "prompt": "Cite une manière de montrer son intérêt sans le dire.",
+    "category": "Cite une manière de montrer son intérêt sans le dire.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_016",
+    "prompt": "Donne un exemple d’une manière de montrer son intérêt sans le dire.",
+    "category": "Donne un exemple d’une manière de montrer son intérêt sans le dire.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_017",
+    "prompt": "Cite une chanson parfaite pour une ambiance de flirt.",
+    "category": "Cite une chanson parfaite pour une ambiance de flirt.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_018",
+    "prompt": "Donne un exemple d’une chanson parfaite pour une ambiance de flirt.",
+    "category": "Donne un exemple d’une chanson parfaite pour une ambiance de flirt.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_019",
+    "prompt": "Cite un geste qui peut être séduisant sans contact.",
+    "category": "Cite un geste qui peut être séduisant sans contact.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_020",
+    "prompt": "Donne un exemple d’un geste qui peut être séduisant sans contact.",
+    "category": "Donne un exemple d’un geste qui peut être séduisant sans contact.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_021",
+    "prompt": "Cite une question qui crée rapidement de la complicité.",
+    "category": "Cite une question qui crée rapidement de la complicité.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_022",
+    "prompt": "Donne un exemple d’une question qui crée rapidement de la complicité.",
+    "category": "Donne un exemple d’une question qui crée rapidement de la complicité.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_023",
+    "prompt": "Cite une raison de prolonger un rendez-vous.",
+    "category": "Cite une raison de prolonger un rendez-vous.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_024",
+    "prompt": "Donne un exemple d’une raison de prolonger un rendez-vous.",
+    "category": "Donne un exemple d’une raison de prolonger un rendez-vous.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_025",
+    "prompt": "Cite une façon drôle de briser un silence gênant.",
+    "category": "Cite une façon drôle de briser un silence gênant.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_026",
+    "prompt": "Donne un exemple d’une façon drôle de briser un silence gênant.",
+    "category": "Donne un exemple d’une façon drôle de briser un silence gênant.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_027",
+    "prompt": "Cite un signe qu’un rendez-vous se passe vraiment bien.",
+    "category": "Cite un signe qu’un rendez-vous se passe vraiment bien.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_028",
+    "prompt": "Donne un exemple d’un signe qu’un rendez-vous se passe vraiment bien.",
+    "category": "Donne un exemple d’un signe qu’un rendez-vous se passe vraiment bien.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_029",
+    "prompt": "Cite une manière subtile de demander le numéro de quelqu’un.",
+    "category": "Cite une manière subtile de demander le numéro de quelqu’un.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_030",
+    "prompt": "Donne un exemple d’une manière subtile de demander le numéro de quelqu’un.",
+    "category": "Donne un exemple d’une manière subtile de demander le numéro de quelqu’un.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_031",
+    "prompt": "Cite une activité qui rapproche sans mettre de pression.",
+    "category": "Cite une activité qui rapproche sans mettre de pression.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_032",
+    "prompt": "Donne un exemple d’une activité qui rapproche sans mettre de pression.",
+    "category": "Donne un exemple d’une activité qui rapproche sans mettre de pression.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_033",
+    "prompt": "Cite une odeur ou un parfum que tu trouves attirant.",
+    "category": "Cite une odeur ou un parfum que tu trouves attirant.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_034",
+    "prompt": "Donne un exemple d’une odeur ou un parfum que tu trouves attirant.",
+    "category": "Donne un exemple d’une odeur ou un parfum que tu trouves attirant.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_035",
+    "prompt": "Cite une façon de répondre à un compliment.",
+    "category": "Cite une façon de répondre à un compliment.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_036",
+    "prompt": "Donne un exemple d’une façon de répondre à un compliment.",
+    "category": "Donne un exemple d’une façon de répondre à un compliment.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_037",
+    "prompt": "Cite un petit détail qui donne envie de revoir quelqu’un.",
+    "category": "Cite un petit détail qui donne envie de revoir quelqu’un.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_038",
+    "prompt": "Donne un exemple d’un petit détail qui donne envie de revoir quelqu’un.",
+    "category": "Donne un exemple d’un petit détail qui donne envie de revoir quelqu’un.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_039",
+    "prompt": "Cite une façon de transformer un moment banal en moment romantique.",
+    "category": "Cite une façon de transformer un moment banal en moment romantique.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_040",
+    "prompt": "Donne un exemple d’une façon de transformer un moment banal en moment romantique.",
+    "category": "Donne un exemple d’une façon de transformer un moment banal en moment romantique.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_041",
+    "prompt": "Cite un message qui donne envie de répondre immédiatement.",
+    "category": "Cite un message qui donne envie de répondre immédiatement.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_042",
+    "prompt": "Donne un exemple d’un message qui donne envie de répondre immédiatement.",
+    "category": "Donne un exemple d’un message qui donne envie de répondre immédiatement.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_043",
+    "prompt": "Cite une situation où un regard peut tout dire.",
+    "category": "Cite une situation où un regard peut tout dire.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_044",
+    "prompt": "Donne un exemple d’une situation où un regard peut tout dire.",
+    "category": "Donne un exemple d’une situation où un regard peut tout dire.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_045",
+    "prompt": "Cite une manière de séduire sans jouer un personnage.",
+    "category": "Cite une manière de séduire sans jouer un personnage.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_046",
+    "prompt": "Donne un exemple d’une manière de séduire sans jouer un personnage.",
+    "category": "Donne un exemple d’une manière de séduire sans jouer un personnage.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_047",
+    "prompt": "Cite une qualité de conversation très attirante.",
+    "category": "Cite une qualité de conversation très attirante.",
+    "theme": "seduction",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_048",
+    "prompt": "Donne un exemple d’une qualité de conversation très attirante.",
+    "category": "Donne un exemple d’une qualité de conversation très attirante.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_seduction_049",
+    "prompt": "Cite un signe qu’une personne est à l’aise avec toi.",
+    "category": "Cite un signe qu’une personne est à l’aise avec toi.",
+    "theme": "seduction",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite quelque chose qui rend une conversation agréable."
+  },
+  {
+    "id": "bombe_adulte_seduction_050",
+    "prompt": "Donne un exemple d’un signe qu’une personne est à l’aise avec toi.",
+    "category": "Donne un exemple d’un signe qu’une personne est à l’aise avec toi.",
+    "theme": "seduction",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : donne un exemple de compliment amical."
+  },
+  {
+    "id": "bombe_adulte_couple_001",
+    "prompt": "Cite une petite règle de couple qui peut éviter une dispute.",
+    "category": "Cite une petite règle de couple qui peut éviter une dispute.",
+    "theme": "couple",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_002",
+    "prompt": "Donne un exemple d’une petite règle de couple qui peut éviter une dispute.",
+    "category": "Donne un exemple d’une petite règle de couple qui peut éviter une dispute.",
+    "theme": "couple",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_003",
+    "prompt": "Trouve une petite règle de couple qui peut éviter une dispute en moins de cinq secondes.",
+    "category": "Trouve une petite règle de couple qui peut éviter une dispute en moins de cinq secondes.",
+    "theme": "couple",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_004",
+    "prompt": "Cite une habitude de couple que tu trouves mignonne.",
+    "category": "Cite une habitude de couple que tu trouves mignonne.",
+    "theme": "couple",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_005",
+    "prompt": "Donne un exemple d’une habitude de couple que tu trouves mignonne.",
+    "category": "Donne un exemple d’une habitude de couple que tu trouves mignonne.",
+    "theme": "couple",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_006",
+    "prompt": "Trouve une habitude de couple que tu trouves mignonne en moins de cinq secondes.",
+    "category": "Trouve une habitude de couple que tu trouves mignonne en moins de cinq secondes.",
+    "theme": "couple",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_007",
+    "prompt": "Cite une raison valable de demander un peu d’espace.",
+    "category": "Cite une raison valable de demander un peu d’espace.",
+    "theme": "couple",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_008",
+    "prompt": "Donne un exemple d’une raison valable de demander un peu d’espace.",
+    "category": "Donne un exemple d’une raison valable de demander un peu d’espace.",
+    "theme": "couple",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_009",
+    "prompt": "Trouve une raison valable de demander un peu d’espace en moins de cinq secondes.",
+    "category": "Trouve une raison valable de demander un peu d’espace en moins de cinq secondes.",
+    "theme": "couple",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_010",
+    "prompt": "Cite une chose à décider avant d’emménager ensemble.",
+    "category": "Cite une chose à décider avant d’emménager ensemble.",
+    "theme": "couple",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_011",
+    "prompt": "Donne un exemple d’une chose à décider avant d’emménager ensemble.",
+    "category": "Donne un exemple d’une chose à décider avant d’emménager ensemble.",
+    "theme": "couple",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_012",
+    "prompt": "Trouve une chose à décider avant d’emménager ensemble en moins de cinq secondes.",
+    "category": "Trouve une chose à décider avant d’emménager ensemble en moins de cinq secondes.",
+    "theme": "couple",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_013",
+    "prompt": "Cite une manière saine de gérer la jalousie.",
+    "category": "Cite une manière saine de gérer la jalousie.",
+    "theme": "couple",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_014",
+    "prompt": "Donne un exemple d’une manière saine de gérer la jalousie.",
+    "category": "Donne un exemple d’une manière saine de gérer la jalousie.",
+    "theme": "couple",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_015",
+    "prompt": "Trouve une manière saine de gérer la jalousie en moins de cinq secondes.",
+    "category": "Trouve une manière saine de gérer la jalousie en moins de cinq secondes.",
+    "theme": "couple",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_016",
+    "prompt": "Cite un sujet qu’un couple devrait pouvoir aborder franchement.",
+    "category": "Cite un sujet qu’un couple devrait pouvoir aborder franchement.",
+    "theme": "couple",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_017",
+    "prompt": "Donne un exemple d’un sujet qu’un couple devrait pouvoir aborder franchement.",
+    "category": "Donne un exemple d’un sujet qu’un couple devrait pouvoir aborder franchement.",
+    "theme": "couple",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_018",
+    "prompt": "Trouve un sujet qu’un couple devrait pouvoir aborder franchement en moins de cinq secondes.",
+    "category": "Trouve un sujet qu’un couple devrait pouvoir aborder franchement en moins de cinq secondes.",
+    "theme": "couple",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_019",
+    "prompt": "Cite une façon de réparer une dispute.",
+    "category": "Cite une façon de réparer une dispute.",
+    "theme": "couple",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_020",
+    "prompt": "Donne un exemple d’une façon de réparer une dispute.",
+    "category": "Donne un exemple d’une façon de réparer une dispute.",
+    "theme": "couple",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_021",
+    "prompt": "Trouve une façon de réparer une dispute en moins de cinq secondes.",
+    "category": "Trouve une façon de réparer une dispute en moins de cinq secondes.",
+    "theme": "couple",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_022",
+    "prompt": "Cite une attention simple qui entretient la relation.",
+    "category": "Cite une attention simple qui entretient la relation.",
+    "theme": "couple",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_023",
+    "prompt": "Donne un exemple d’une attention simple qui entretient la relation.",
+    "category": "Donne un exemple d’une attention simple qui entretient la relation.",
+    "theme": "couple",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_024",
+    "prompt": "Trouve une attention simple qui entretient la relation en moins de cinq secondes.",
+    "category": "Trouve une attention simple qui entretient la relation en moins de cinq secondes.",
+    "theme": "couple",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_025",
+    "prompt": "Cite une différence de caractère qui peut bien fonctionner.",
+    "category": "Cite une différence de caractère qui peut bien fonctionner.",
+    "theme": "couple",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_026",
+    "prompt": "Donne un exemple d’une différence de caractère qui peut bien fonctionner.",
+    "category": "Donne un exemple d’une différence de caractère qui peut bien fonctionner.",
+    "theme": "couple",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_027",
+    "prompt": "Trouve une différence de caractère qui peut bien fonctionner en moins de cinq secondes.",
+    "category": "Trouve une différence de caractère qui peut bien fonctionner en moins de cinq secondes.",
+    "theme": "couple",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_028",
+    "prompt": "Cite une limite importante à respecter dans un couple.",
+    "category": "Cite une limite importante à respecter dans un couple.",
+    "theme": "couple",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_029",
+    "prompt": "Donne un exemple d’une limite importante à respecter dans un couple.",
+    "category": "Donne un exemple d’une limite importante à respecter dans un couple.",
+    "theme": "couple",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_030",
+    "prompt": "Trouve une limite importante à respecter dans un couple en moins de cinq secondes.",
+    "category": "Trouve une limite importante à respecter dans un couple en moins de cinq secondes.",
+    "theme": "couple",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_031",
+    "prompt": "Cite une activité parfaite pour sortir de la routine.",
+    "category": "Cite une activité parfaite pour sortir de la routine.",
+    "theme": "couple",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_032",
+    "prompt": "Donne un exemple d’une activité parfaite pour sortir de la routine.",
+    "category": "Donne un exemple d’une activité parfaite pour sortir de la routine.",
+    "theme": "couple",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_033",
+    "prompt": "Trouve une activité parfaite pour sortir de la routine en moins de cinq secondes.",
+    "category": "Trouve une activité parfaite pour sortir de la routine en moins de cinq secondes.",
+    "theme": "couple",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_034",
+    "prompt": "Cite une chose qu’il vaut mieux ne pas comparer avec son ex.",
+    "category": "Cite une chose qu’il vaut mieux ne pas comparer avec son ex.",
+    "theme": "couple",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple",
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_035",
+    "prompt": "Donne un exemple d’une chose qu’il vaut mieux ne pas comparer avec son ex.",
+    "category": "Donne un exemple d’une chose qu’il vaut mieux ne pas comparer avec son ex.",
+    "theme": "couple",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple",
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_036",
+    "prompt": "Trouve une chose qu’il vaut mieux ne pas comparer avec son ex en moins de cinq secondes.",
+    "category": "Trouve une chose qu’il vaut mieux ne pas comparer avec son ex en moins de cinq secondes.",
+    "theme": "couple",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple",
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_037",
+    "prompt": "Cite une façon de montrer qu’on écoute vraiment.",
+    "category": "Cite une façon de montrer qu’on écoute vraiment.",
+    "theme": "couple",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_038",
+    "prompt": "Donne un exemple d’une façon de montrer qu’on écoute vraiment.",
+    "category": "Donne un exemple d’une façon de montrer qu’on écoute vraiment.",
+    "theme": "couple",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_039",
+    "prompt": "Trouve une façon de montrer qu’on écoute vraiment en moins de cinq secondes.",
+    "category": "Trouve une façon de montrer qu’on écoute vraiment en moins de cinq secondes.",
+    "theme": "couple",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_040",
+    "prompt": "Cite une habitude qui peut devenir agaçante à deux.",
+    "category": "Cite une habitude qui peut devenir agaçante à deux.",
+    "theme": "couple",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_041",
+    "prompt": "Donne un exemple d’une habitude qui peut devenir agaçante à deux.",
+    "category": "Donne un exemple d’une habitude qui peut devenir agaçante à deux.",
+    "theme": "couple",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_042",
+    "prompt": "Trouve une habitude qui peut devenir agaçante à deux en moins de cinq secondes.",
+    "category": "Trouve une habitude qui peut devenir agaçante à deux en moins de cinq secondes.",
+    "theme": "couple",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_043",
+    "prompt": "Cite une raison de célébrer quelque chose sans date particulière.",
+    "category": "Cite une raison de célébrer quelque chose sans date particulière.",
+    "theme": "couple",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_044",
+    "prompt": "Donne un exemple d’une raison de célébrer quelque chose sans date particulière.",
+    "category": "Donne un exemple d’une raison de célébrer quelque chose sans date particulière.",
+    "theme": "couple",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_couple_045",
+    "prompt": "Trouve une raison de célébrer quelque chose sans date particulière en moins de cinq secondes.",
+    "category": "Trouve une raison de célébrer quelque chose sans date particulière en moins de cinq secondes.",
+    "theme": "couple",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : cite une qualité importante dans une amitié."
+  },
+  {
+    "id": "bombe_adulte_ex_001",
+    "prompt": "Cite une bonne raison de recontacter son ex.",
+    "category": "Cite une bonne raison de recontacter son ex.",
+    "theme": "ex",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_002",
+    "prompt": "Donne un exemple d’une bonne raison de recontacter son ex.",
+    "category": "Donne un exemple d’une bonne raison de recontacter son ex.",
+    "theme": "ex",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_003",
+    "prompt": "Cite une mauvaise raison de recontacter son ex.",
+    "category": "Cite une mauvaise raison de recontacter son ex.",
+    "theme": "ex",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_004",
+    "prompt": "Donne un exemple d’une mauvaise raison de recontacter son ex.",
+    "category": "Donne un exemple d’une mauvaise raison de recontacter son ex.",
+    "theme": "ex",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_005",
+    "prompt": "Cite un objet qu’on peut oublier de rendre après une rupture.",
+    "category": "Cite un objet qu’on peut oublier de rendre après une rupture.",
+    "theme": "ex",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_006",
+    "prompt": "Donne un exemple d’un objet qu’on peut oublier de rendre après une rupture.",
+    "category": "Donne un exemple d’un objet qu’on peut oublier de rendre après une rupture.",
+    "theme": "ex",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_007",
+    "prompt": "Cite une phrase qu’il vaut mieux ne jamais envoyer à son ex.",
+    "category": "Cite une phrase qu’il vaut mieux ne jamais envoyer à son ex.",
+    "theme": "ex",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_008",
+    "prompt": "Donne un exemple d’une phrase qu’il vaut mieux ne jamais envoyer à son ex.",
+    "category": "Donne un exemple d’une phrase qu’il vaut mieux ne jamais envoyer à son ex.",
+    "theme": "ex",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_009",
+    "prompt": "Cite une raison de supprimer son ex des réseaux.",
+    "category": "Cite une raison de supprimer son ex des réseaux.",
+    "theme": "ex",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_010",
+    "prompt": "Donne un exemple d’une raison de supprimer son ex des réseaux.",
+    "category": "Donne un exemple d’une raison de supprimer son ex des réseaux.",
+    "theme": "ex",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_011",
+    "prompt": "Cite une raison de rester en bons termes avec son ex.",
+    "category": "Cite une raison de rester en bons termes avec son ex.",
+    "theme": "ex",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_012",
+    "prompt": "Donne un exemple d’une raison de rester en bons termes avec son ex.",
+    "category": "Donne un exemple d’une raison de rester en bons termes avec son ex.",
+    "theme": "ex",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_013",
+    "prompt": "Cite un signe qu’on n’a pas totalement tourné la page.",
+    "category": "Cite un signe qu’on n’a pas totalement tourné la page.",
+    "theme": "ex",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_014",
+    "prompt": "Donne un exemple d’un signe qu’on n’a pas totalement tourné la page.",
+    "category": "Donne un exemple d’un signe qu’on n’a pas totalement tourné la page.",
+    "theme": "ex",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_015",
+    "prompt": "Cite une situation où croiser son ex serait particulièrement gênant.",
+    "category": "Cite une situation où croiser son ex serait particulièrement gênant.",
+    "theme": "ex",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_016",
+    "prompt": "Donne un exemple d’une situation où croiser son ex serait particulièrement gênant.",
+    "category": "Donne un exemple d’une situation où croiser son ex serait particulièrement gênant.",
+    "theme": "ex",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_017",
+    "prompt": "Cite une chanson qu’on pourrait associer à une rupture.",
+    "category": "Cite une chanson qu’on pourrait associer à une rupture.",
+    "theme": "ex",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_018",
+    "prompt": "Donne un exemple d’une chanson qu’on pourrait associer à une rupture.",
+    "category": "Donne un exemple d’une chanson qu’on pourrait associer à une rupture.",
+    "theme": "ex",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_019",
+    "prompt": "Cite une chose qu’on apprend souvent après une séparation.",
+    "category": "Cite une chose qu’on apprend souvent après une séparation.",
+    "theme": "ex",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_020",
+    "prompt": "Donne un exemple d’une chose qu’on apprend souvent après une séparation.",
+    "category": "Donne un exemple d’une chose qu’on apprend souvent après une séparation.",
+    "theme": "ex",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_021",
+    "prompt": "Cite un détail qu’il vaut mieux ne pas demander sur les ex.",
+    "category": "Cite un détail qu’il vaut mieux ne pas demander sur les ex.",
+    "theme": "ex",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_022",
+    "prompt": "Donne un exemple d’un détail qu’il vaut mieux ne pas demander sur les ex.",
+    "category": "Donne un exemple d’un détail qu’il vaut mieux ne pas demander sur les ex.",
+    "theme": "ex",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_023",
+    "prompt": "Cite une raison de refuser de revoir son ex.",
+    "category": "Cite une raison de refuser de revoir son ex.",
+    "theme": "ex",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_024",
+    "prompt": "Donne un exemple d’une raison de refuser de revoir son ex.",
+    "category": "Donne un exemple d’une raison de refuser de revoir son ex.",
+    "theme": "ex",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_025",
+    "prompt": "Cite une façon mature de récupérer ses affaires.",
+    "category": "Cite une façon mature de récupérer ses affaires.",
+    "theme": "ex",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_026",
+    "prompt": "Donne un exemple d’une façon mature de récupérer ses affaires.",
+    "category": "Donne un exemple d’une façon mature de récupérer ses affaires.",
+    "theme": "ex",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_027",
+    "prompt": "Cite une chose qu’on pourrait regretter après une rupture.",
+    "category": "Cite une chose qu’on pourrait regretter après une rupture.",
+    "theme": "ex",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_028",
+    "prompt": "Donne un exemple d’une chose qu’on pourrait regretter après une rupture.",
+    "category": "Donne un exemple d’une chose qu’on pourrait regretter après une rupture.",
+    "theme": "ex",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_029",
+    "prompt": "Cite un souvenir qu’il peut être difficile de jeter.",
+    "category": "Cite un souvenir qu’il peut être difficile de jeter.",
+    "theme": "ex",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_030",
+    "prompt": "Donne un exemple d’un souvenir qu’il peut être difficile de jeter.",
+    "category": "Donne un exemple d’un souvenir qu’il peut être difficile de jeter.",
+    "theme": "ex",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_031",
+    "prompt": "Cite une phrase de rupture trop cliché.",
+    "category": "Cite une phrase de rupture trop cliché.",
+    "theme": "ex",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_032",
+    "prompt": "Donne un exemple d’une phrase de rupture trop cliché.",
+    "category": "Donne un exemple d’une phrase de rupture trop cliché.",
+    "theme": "ex",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_033",
+    "prompt": "Cite une façon de répondre à un ex qui réapparaît soudainement.",
+    "category": "Cite une façon de répondre à un ex qui réapparaît soudainement.",
+    "theme": "ex",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_034",
+    "prompt": "Donne un exemple d’une façon de répondre à un ex qui réapparaît soudainement.",
+    "category": "Donne un exemple d’une façon de répondre à un ex qui réapparaît soudainement.",
+    "theme": "ex",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_035",
+    "prompt": "Cite une chose qu’il vaut mieux éviter juste après une rupture.",
+    "category": "Cite une chose qu’il vaut mieux éviter juste après une rupture.",
+    "theme": "ex",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_036",
+    "prompt": "Donne un exemple d’une chose qu’il vaut mieux éviter juste après une rupture.",
+    "category": "Donne un exemple d’une chose qu’il vaut mieux éviter juste après une rupture.",
+    "theme": "ex",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_037",
+    "prompt": "Cite un signe qu’une rupture a été bien digérée.",
+    "category": "Cite un signe qu’une rupture a été bien digérée.",
+    "theme": "ex",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_038",
+    "prompt": "Donne un exemple d’un signe qu’une rupture a été bien digérée.",
+    "category": "Donne un exemple d’un signe qu’une rupture a été bien digérée.",
+    "theme": "ex",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_ex_039",
+    "prompt": "Cite une raison de ne pas comparer deux relations.",
+    "category": "Cite une raison de ne pas comparer deux relations.",
+    "theme": "ex",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : cite une manière de tourner une page sans parler d’une personne précise."
+  },
+  {
+    "id": "bombe_adulte_ex_040",
+    "prompt": "Donne un exemple d’une raison de ne pas comparer deux relations.",
+    "category": "Donne un exemple d’une raison de ne pas comparer deux relations.",
+    "theme": "ex",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : donne un exemple de nouveau départ."
+  },
+  {
+    "id": "bombe_adulte_messages_001",
+    "prompt": "Cite un message qu’on peut regretter d’avoir envoyé trop tard le soir.",
+    "category": "Cite un message qu’on peut regretter d’avoir envoyé trop tard le soir.",
+    "theme": "messages",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_002",
+    "prompt": "Donne un exemple d’un message qu’on peut regretter d’avoir envoyé trop tard le soir.",
+    "category": "Donne un exemple d’un message qu’on peut regretter d’avoir envoyé trop tard le soir.",
+    "theme": "messages",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_003",
+    "prompt": "Cite une raison de laisser un message en vu.",
+    "category": "Cite une raison de laisser un message en vu.",
+    "theme": "messages",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_004",
+    "prompt": "Donne un exemple d’une raison de laisser un message en vu.",
+    "category": "Donne un exemple d’une raison de laisser un message en vu.",
+    "theme": "messages",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_005",
+    "prompt": "Cite une phrase qui peut sembler froide par texto.",
+    "category": "Cite une phrase qui peut sembler froide par texto.",
+    "theme": "messages",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_006",
+    "prompt": "Donne un exemple d’une phrase qui peut sembler froide par texto.",
+    "category": "Donne un exemple d’une phrase qui peut sembler froide par texto.",
+    "theme": "messages",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_007",
+    "prompt": "Cite un emoji qui peut être mal interprété.",
+    "category": "Cite un emoji qui peut être mal interprété.",
+    "theme": "messages",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_008",
+    "prompt": "Donne un exemple d’un emoji qui peut être mal interprété.",
+    "category": "Donne un exemple d’un emoji qui peut être mal interprété.",
+    "theme": "messages",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_009",
+    "prompt": "Cite une excuse crédible pour répondre très tard.",
+    "category": "Cite une excuse crédible pour répondre très tard.",
+    "theme": "messages",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_010",
+    "prompt": "Donne un exemple d’une excuse crédible pour répondre très tard.",
+    "category": "Donne un exemple d’une excuse crédible pour répondre très tard.",
+    "theme": "messages",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_011",
+    "prompt": "Cite une chose qu’il vaut mieux dire en face qu’en message.",
+    "category": "Cite une chose qu’il vaut mieux dire en face qu’en message.",
+    "theme": "messages",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_012",
+    "prompt": "Donne un exemple d’une chose qu’il vaut mieux dire en face qu’en message.",
+    "category": "Donne un exemple d’une chose qu’il vaut mieux dire en face qu’en message.",
+    "theme": "messages",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_013",
+    "prompt": "Cite un signe qu’une conversation par messages devient du flirt.",
+    "category": "Cite un signe qu’une conversation par messages devient du flirt.",
+    "theme": "messages",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_014",
+    "prompt": "Donne un exemple d’un signe qu’une conversation par messages devient du flirt.",
+    "category": "Donne un exemple d’un signe qu’une conversation par messages devient du flirt.",
+    "theme": "messages",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_015",
+    "prompt": "Cite un message parfait après un bon rendez-vous.",
+    "category": "Cite un message parfait après un bon rendez-vous.",
+    "theme": "messages",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_016",
+    "prompt": "Donne un exemple d’un message parfait après un bon rendez-vous.",
+    "category": "Donne un exemple d’un message parfait après un bon rendez-vous.",
+    "theme": "messages",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_017",
+    "prompt": "Cite une notification qu’on ne voudrait pas voir apparaître devant tout le monde.",
+    "category": "Cite une notification qu’on ne voudrait pas voir apparaître devant tout le monde.",
+    "theme": "messages",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_018",
+    "prompt": "Donne un exemple d’une notification qu’on ne voudrait pas voir apparaître devant tout le monde.",
+    "category": "Donne un exemple d’une notification qu’on ne voudrait pas voir apparaître devant tout le monde.",
+    "theme": "messages",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_019",
+    "prompt": "Cite une raison de relire une conversation ancienne.",
+    "category": "Cite une raison de relire une conversation ancienne.",
+    "theme": "messages",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_020",
+    "prompt": "Donne un exemple d’une raison de relire une conversation ancienne.",
+    "category": "Donne un exemple d’une raison de relire une conversation ancienne.",
+    "theme": "messages",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_021",
+    "prompt": "Cite un type de photo qu’on peut envoyer sans montrer son visage.",
+    "category": "Cite un type de photo qu’on peut envoyer sans montrer son visage.",
+    "theme": "messages",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy",
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_022",
+    "prompt": "Donne un exemple d’un type de photo qu’on peut envoyer sans montrer son visage.",
+    "category": "Donne un exemple d’un type de photo qu’on peut envoyer sans montrer son visage.",
+    "theme": "messages",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy",
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_023",
+    "prompt": "Cite une phrase à éviter dans une bio d’application de rencontre.",
+    "category": "Cite une phrase à éviter dans une bio d’application de rencontre.",
+    "theme": "messages",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_024",
+    "prompt": "Donne un exemple d’une phrase à éviter dans une bio d’application de rencontre.",
+    "category": "Donne un exemple d’une phrase à éviter dans une bio d’application de rencontre.",
+    "theme": "messages",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_025",
+    "prompt": "Cite une façon drôle de relancer une conversation.",
+    "category": "Cite une façon drôle de relancer une conversation.",
+    "theme": "messages",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_026",
+    "prompt": "Donne un exemple d’une façon drôle de relancer une conversation.",
+    "category": "Donne un exemple d’une façon drôle de relancer une conversation.",
+    "theme": "messages",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_027",
+    "prompt": "Cite un message qui peut immédiatement inquiéter.",
+    "category": "Cite un message qui peut immédiatement inquiéter.",
+    "theme": "messages",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_028",
+    "prompt": "Donne un exemple d’un message qui peut immédiatement inquiéter.",
+    "category": "Donne un exemple d’un message qui peut immédiatement inquiéter.",
+    "theme": "messages",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_029",
+    "prompt": "Cite une raison de désactiver l’aperçu des notifications.",
+    "category": "Cite une raison de désactiver l’aperçu des notifications.",
+    "theme": "messages",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_030",
+    "prompt": "Donne un exemple d’une raison de désactiver l’aperçu des notifications.",
+    "category": "Donne un exemple d’une raison de désactiver l’aperçu des notifications.",
+    "theme": "messages",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_031",
+    "prompt": "Cite une chose que l’autocorrect pourrait rendre très gênante.",
+    "category": "Cite une chose que l’autocorrect pourrait rendre très gênante.",
+    "theme": "messages",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_032",
+    "prompt": "Donne un exemple d’une chose que l’autocorrect pourrait rendre très gênante.",
+    "category": "Donne un exemple d’une chose que l’autocorrect pourrait rendre très gênante.",
+    "theme": "messages",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_033",
+    "prompt": "Cite une manière polie d’arrêter une conversation.",
+    "category": "Cite une manière polie d’arrêter une conversation.",
+    "theme": "messages",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_034",
+    "prompt": "Donne un exemple d’une manière polie d’arrêter une conversation.",
+    "category": "Donne un exemple d’une manière polie d’arrêter une conversation.",
+    "theme": "messages",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_035",
+    "prompt": "Cite une question qui ne devrait pas être posée par message.",
+    "category": "Cite une question qui ne devrait pas être posée par message.",
+    "theme": "messages",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_036",
+    "prompt": "Donne un exemple d’une question qui ne devrait pas être posée par message.",
+    "category": "Donne un exemple d’une question qui ne devrait pas être posée par message.",
+    "theme": "messages",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_037",
+    "prompt": "Cite un signe qu’une personne répond par politesse seulement.",
+    "category": "Cite un signe qu’une personne répond par politesse seulement.",
+    "theme": "messages",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_038",
+    "prompt": "Donne un exemple d’un signe qu’une personne répond par politesse seulement.",
+    "category": "Donne un exemple d’un signe qu’une personne répond par politesse seulement.",
+    "theme": "messages",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_messages_039",
+    "prompt": "Cite une raison acceptable d’effacer un message.",
+    "category": "Cite une raison acceptable d’effacer un message.",
+    "theme": "messages",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite un message amical qui fait plaisir."
+  },
+  {
+    "id": "bombe_adulte_messages_040",
+    "prompt": "Donne un exemple d’une raison acceptable d’effacer un message.",
+    "category": "Donne un exemple d’une raison acceptable d’effacer un message.",
+    "theme": "messages",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : donne un exemple de message pour remercier quelqu’un."
+  },
+  {
+    "id": "bombe_adulte_soirees_001",
+    "prompt": "Cite une excuse pour quitter une soirée plus tôt.",
+    "category": "Cite une excuse pour quitter une soirée plus tôt.",
+    "theme": "soirees",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_002",
+    "prompt": "Cite une chose qu’on regrette souvent le lendemain d’une soirée.",
+    "category": "Cite une chose qu’on regrette souvent le lendemain d’une soirée.",
+    "theme": "soirees",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "alcohol"
+    ],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_003",
+    "prompt": "Cite une chanson qui remplit facilement une piste de danse.",
+    "category": "Cite une chanson qui remplit facilement une piste de danse.",
+    "theme": "soirees",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_004",
+    "prompt": "Cite un signe qu’il est temps de rentrer.",
+    "category": "Cite un signe qu’il est temps de rentrer.",
+    "theme": "soirees",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_005",
+    "prompt": "Cite un endroit improbable où finir une soirée.",
+    "category": "Cite un endroit improbable où finir une soirée.",
+    "theme": "soirees",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_006",
+    "prompt": "Cite une raison de perdre ses amis dans une soirée.",
+    "category": "Cite une raison de perdre ses amis dans une soirée.",
+    "theme": "soirees",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_007",
+    "prompt": "Cite une chose à toujours vérifier avant de rentrer.",
+    "category": "Cite une chose à toujours vérifier avant de rentrer.",
+    "theme": "soirees",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_008",
+    "prompt": "Cite une façon de refuser un verre sans se justifier.",
+    "category": "Cite une façon de refuser un verre sans se justifier.",
+    "theme": "soirees",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "alcohol"
+    ],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_009",
+    "prompt": "Cite une boisson sans alcool parfaite pour trinquer.",
+    "category": "Cite une boisson sans alcool parfaite pour trinquer.",
+    "theme": "soirees",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "alcohol"
+    ],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_010",
+    "prompt": "Cite une situation où un karaoké peut devenir très gênant.",
+    "category": "Cite une situation où un karaoké peut devenir très gênant.",
+    "theme": "soirees",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_011",
+    "prompt": "Cite une chose qu’on ne devrait jamais publier pendant une soirée.",
+    "category": "Cite une chose qu’on ne devrait jamais publier pendant une soirée.",
+    "theme": "soirees",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_012",
+    "prompt": "Cite une excuse pour ne pas danser.",
+    "category": "Cite une excuse pour ne pas danser.",
+    "theme": "soirees",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_013",
+    "prompt": "Cite une façon de sauver une conversation ennuyeuse.",
+    "category": "Cite une façon de sauver une conversation ennuyeuse.",
+    "theme": "soirees",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_014",
+    "prompt": "Cite un objet souvent perdu en soirée.",
+    "category": "Cite un objet souvent perdu en soirée.",
+    "theme": "soirees",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_015",
+    "prompt": "Cite une raison de finir pieds nus.",
+    "category": "Cite une raison de finir pieds nus.",
+    "theme": "soirees",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_016",
+    "prompt": "Cite un type de personne qu’on rencontre toujours en soirée.",
+    "category": "Cite un type de personne qu’on rencontre toujours en soirée.",
+    "theme": "soirees",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_017",
+    "prompt": "Cite une chose à faire pour raccompagner quelqu’un en sécurité.",
+    "category": "Cite une chose à faire pour raccompagner quelqu’un en sécurité.",
+    "theme": "soirees",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_018",
+    "prompt": "Cite une phrase typique prononcée juste avant une mauvaise idée.",
+    "category": "Cite une phrase typique prononcée juste avant une mauvaise idée.",
+    "theme": "soirees",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_019",
+    "prompt": "Cite une façon de calmer un conflit pendant une soirée.",
+    "category": "Cite une façon de calmer un conflit pendant une soirée.",
+    "theme": "soirees",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_020",
+    "prompt": "Cite une raison de préférer une petite soirée à une grande fête.",
+    "category": "Cite une raison de préférer une petite soirée à une grande fête.",
+    "theme": "soirees",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_021",
+    "prompt": "Cite un souvenir flou qu’on pourrait avoir au réveil.",
+    "category": "Cite un souvenir flou qu’on pourrait avoir au réveil.",
+    "theme": "soirees",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "alcohol"
+    ],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_022",
+    "prompt": "Cite une manière d’aider un ami qui veut partir.",
+    "category": "Cite une manière d’aider un ami qui veut partir.",
+    "theme": "soirees",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_023",
+    "prompt": "Cite une erreur classique dans un groupe de discussion après minuit.",
+    "category": "Cite une erreur classique dans un groupe de discussion après minuit.",
+    "theme": "soirees",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_024",
+    "prompt": "Cite une raison de commander à manger très tard.",
+    "category": "Cite une raison de commander à manger très tard.",
+    "theme": "soirees",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_025",
+    "prompt": "Cite un défi de soirée qui peut rester totalement sans alcool.",
+    "category": "Cite un défi de soirée qui peut rester totalement sans alcool.",
+    "theme": "soirees",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_026",
+    "prompt": "Cite une chose qui paraît géniale à deux heures du matin.",
+    "category": "Cite une chose qui paraît géniale à deux heures du matin.",
+    "theme": "soirees",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_027",
+    "prompt": "Cite une raison de garder de l’eau à portée de main.",
+    "category": "Cite une raison de garder de l’eau à portée de main.",
+    "theme": "soirees",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "alcohol"
+    ],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_028",
+    "prompt": "Cite une manière de dire non à une pression de groupe.",
+    "category": "Cite une manière de dire non à une pression de groupe.",
+    "theme": "soirees",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_029",
+    "prompt": "Cite une situation où le canapé devient le meilleur endroit du monde.",
+    "category": "Cite une situation où le canapé devient le meilleur endroit du monde.",
+    "theme": "soirees",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_030",
+    "prompt": "Cite un signe qu’une personne a besoin d’une pause.",
+    "category": "Cite un signe qu’une personne a besoin d’une pause.",
+    "theme": "soirees",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_031",
+    "prompt": "Cite une façon de danser sans connaître les paroles.",
+    "category": "Cite une façon de danser sans connaître les paroles.",
+    "theme": "soirees",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_032",
+    "prompt": "Cite une raison de couper son téléphone pendant une soirée.",
+    "category": "Cite une raison de couper son téléphone pendant une soirée.",
+    "theme": "soirees",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_033",
+    "prompt": "Cite une petite mission amusante à donner à un ami.",
+    "category": "Cite une petite mission amusante à donner à un ami.",
+    "theme": "soirees",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_034",
+    "prompt": "Cite une façon de rendre une soirée plus inclusive.",
+    "category": "Cite une façon de rendre une soirée plus inclusive.",
+    "theme": "soirees",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_soirees_035",
+    "prompt": "Cite une phrase de lendemain de soirée très crédible.",
+    "category": "Cite une phrase de lendemain de soirée très crédible.",
+    "theme": "soirees",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une activité sympa pour une soirée calme."
+  },
+  {
+    "id": "bombe_adulte_preferences_001",
+    "prompt": "Cite une ambiance idéale pour un rendez-vous romantique.",
+    "category": "Cite une ambiance idéale pour un rendez-vous romantique.",
+    "theme": "preferences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_002",
+    "prompt": "Cite une qualité de personnalité plus importante que le physique.",
+    "category": "Cite une qualité de personnalité plus importante que le physique.",
+    "theme": "preferences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_003",
+    "prompt": "Cite un type de compliment que tu préfères recevoir.",
+    "category": "Cite un type de compliment que tu préfères recevoir.",
+    "theme": "preferences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_004",
+    "prompt": "Cite une manière de montrer de l’affection que tu apprécies.",
+    "category": "Cite une manière de montrer de l’affection que tu apprécies.",
+    "theme": "preferences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_005",
+    "prompt": "Cite un détail qui rend une personne mystérieuse.",
+    "category": "Cite un détail qui rend une personne mystérieuse.",
+    "theme": "preferences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_006",
+    "prompt": "Cite une situation romantique que tu aimerais vivre.",
+    "category": "Cite une situation romantique que tu aimerais vivre.",
+    "theme": "preferences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_007",
+    "prompt": "Cite un lieu où tu aimerais passer un week-end à deux.",
+    "category": "Cite un lieu où tu aimerais passer un week-end à deux.",
+    "theme": "preferences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_008",
+    "prompt": "Cite une tenue qui donne immédiatement confiance.",
+    "category": "Cite une tenue qui donne immédiatement confiance.",
+    "theme": "preferences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_009",
+    "prompt": "Cite une chanson qui pourrait accompagner un moment romantique.",
+    "category": "Cite une chanson qui pourrait accompagner un moment romantique.",
+    "theme": "preferences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_010",
+    "prompt": "Cite une façon de créer une ambiance intime sans contact.",
+    "category": "Cite une façon de créer une ambiance intime sans contact.",
+    "theme": "preferences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_011",
+    "prompt": "Cite une limite qu’il est important d’exprimer clairement.",
+    "category": "Cite une limite qu’il est important d’exprimer clairement.",
+    "theme": "preferences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_012",
+    "prompt": "Cite une manière de demander le consentement sans casser l’ambiance.",
+    "category": "Cite une manière de demander le consentement sans casser l’ambiance.",
+    "theme": "preferences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_013",
+    "prompt": "Cite un type de rendez-vous que tu choisirais plutôt qu’un restaurant.",
+    "category": "Cite un type de rendez-vous que tu choisirais plutôt qu’un restaurant.",
+    "theme": "preferences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_014",
+    "prompt": "Cite une qualité qui rend quelqu’un rassurant.",
+    "category": "Cite une qualité qui rend quelqu’un rassurant.",
+    "theme": "preferences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_015",
+    "prompt": "Cite une attention qui peut te faire fondre.",
+    "category": "Cite une attention qui peut te faire fondre.",
+    "theme": "preferences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_016",
+    "prompt": "Cite une manière de faire comprendre qu’on souhaite ralentir.",
+    "category": "Cite une manière de faire comprendre qu’on souhaite ralentir.",
+    "theme": "preferences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_017",
+    "prompt": "Cite une préférence qu’on devrait pouvoir annoncer sans honte.",
+    "category": "Cite une préférence qu’on devrait pouvoir annoncer sans honte.",
+    "theme": "preferences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_018",
+    "prompt": "Cite un signe qu’une personne respecte vraiment les limites.",
+    "category": "Cite un signe qu’une personne respecte vraiment les limites.",
+    "theme": "preferences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_019",
+    "prompt": "Cite une façon de rendre un moment plus complice.",
+    "category": "Cite une façon de rendre un moment plus complice.",
+    "theme": "preferences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_020",
+    "prompt": "Cite un détail de voix que tu peux trouver attirant.",
+    "category": "Cite un détail de voix que tu peux trouver attirant.",
+    "theme": "preferences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_021",
+    "prompt": "Cite une activité idéale pour apprendre à se connaître.",
+    "category": "Cite une activité idéale pour apprendre à se connaître.",
+    "theme": "preferences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_022",
+    "prompt": "Cite un geste tendre qui ne demande aucun contact physique.",
+    "category": "Cite un geste tendre qui ne demande aucun contact physique.",
+    "theme": "preferences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_023",
+    "prompt": "Cite une manière de dire ce qu’on aime sans pression.",
+    "category": "Cite une manière de dire ce qu’on aime sans pression.",
+    "theme": "preferences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_024",
+    "prompt": "Cite une chose qui peut rendre un rendez-vous mémorable.",
+    "category": "Cite une chose qui peut rendre un rendez-vous mémorable.",
+    "theme": "preferences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_025",
+    "prompt": "Cite un trait d’humour particulièrement séduisant.",
+    "category": "Cite un trait d’humour particulièrement séduisant.",
+    "theme": "preferences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_026",
+    "prompt": "Cite une qualité qui donne envie de se confier.",
+    "category": "Cite une qualité qui donne envie de se confier.",
+    "theme": "preferences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_027",
+    "prompt": "Cite une façon de créer de l’anticipation avant un rendez-vous.",
+    "category": "Cite une façon de créer de l’anticipation avant un rendez-vous.",
+    "theme": "preferences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_028",
+    "prompt": "Cite une préférence de rythme dans une nouvelle relation.",
+    "category": "Cite une préférence de rythme dans une nouvelle relation.",
+    "theme": "preferences",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_029",
+    "prompt": "Cite une manière de vérifier que tout le monde est à l’aise.",
+    "category": "Cite une manière de vérifier que tout le monde est à l’aise.",
+    "theme": "preferences",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_preferences_030",
+    "prompt": "Cite un petit plaisir romantique très simple.",
+    "category": "Cite un petit plaisir romantique très simple.",
+    "theme": "preferences",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : cite une préférence pour une sortie entre amis."
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_001",
+    "prompt": "Imite quelqu’un qui essaie de séduire avec beaucoup trop de confiance.",
+    "category": "Imite quelqu’un qui essaie de séduire avec beaucoup trop de confiance.",
+    "theme": "vocal_geste",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "seductive"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_002",
+    "prompt": "Joue une personne qui reçoit un compliment et ne sait plus quoi répondre.",
+    "category": "Joue une personne qui reçoit un compliment et ne sait plus quoi répondre.",
+    "theme": "vocal_geste",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "surprise"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_003",
+    "prompt": "Imite une déclaration romantique faite par un robot.",
+    "category": "Imite une déclaration romantique faite par un robot.",
+    "theme": "vocal_geste",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "robot"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_004",
+    "prompt": "Mime quelqu’un qui aperçoit son crush de très loin.",
+    "category": "Mime quelqu’un qui aperçoit son crush de très loin.",
+    "theme": "vocal_geste",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "physical"
+    ],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "dramatic"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_005",
+    "prompt": "Joue un rendez-vous où les deux personnes parlent en même temps.",
+    "category": "Joue un rendez-vous où les deux personnes parlent en même temps.",
+    "theme": "vocal_geste",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "double"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_006",
+    "prompt": "Imite une personne qui relit dix fois le même message avant de répondre.",
+    "category": "Imite une personne qui relit dix fois le même message avant de répondre.",
+    "theme": "vocal_geste",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "slow"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_007",
+    "prompt": "Joue quelqu’un qui veut partir d’un rendez-vous sans être impoli.",
+    "category": "Joue quelqu’un qui veut partir d’un rendez-vous sans être impoli.",
+    "theme": "vocal_geste",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "presenter"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_008",
+    "prompt": "Imite une personne jalouse qui prétend ne pas l’être.",
+    "category": "Imite une personne jalouse qui prétend ne pas l’être.",
+    "theme": "vocal_geste",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "poker"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_009",
+    "prompt": "Mime une notification très compromettante qui apparaît au mauvais moment.",
+    "category": "Mime une notification très compromettante qui apparaît au mauvais moment.",
+    "theme": "vocal_geste",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "dramatic"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_010",
+    "prompt": "Joue un ex qui réapparaît avec une excuse extrêmement faible.",
+    "category": "Joue un ex qui réapparaît avec une excuse extrêmement faible.",
+    "theme": "vocal_geste",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "accent"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_011",
+    "prompt": "Imite quelqu’un qui essaie de danser de manière séduisante mais perd le rythme.",
+    "category": "Imite quelqu’un qui essaie de danser de manière séduisante mais perd le rythme.",
+    "theme": "vocal_geste",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "physical"
+    ],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "slow"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_012",
+    "prompt": "Joue une personne qui invente une bio d’application de rencontre beaucoup trop ambitieuse.",
+    "category": "Joue une personne qui invente une bio d’application de rencontre beaucoup trop ambitieuse.",
+    "theme": "vocal_geste",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "presenter"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_013",
+    "prompt": "Imite un serveur qui comprend qu’il assiste à un premier rendez-vous catastrophique.",
+    "category": "Imite un serveur qui comprend qu’il assiste à un premier rendez-vous catastrophique.",
+    "theme": "vocal_geste",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "whisper"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_014",
+    "prompt": "Joue une personne qui reçoit un message « Il faut qu’on parle ».",
+    "category": "Joue une personne qui reçoit un message « Il faut qu’on parle ».",
+    "theme": "vocal_geste",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple",
+      "phone"
+    ],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "surprise"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_015",
+    "prompt": "Mime quelqu’un qui essaie discrètement de vérifier son haleine.",
+    "category": "Mime quelqu’un qui essaie discrètement de vérifier son haleine.",
+    "theme": "vocal_geste",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "physical"
+    ],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "poker"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_016",
+    "prompt": "Imite une publicité pour un parfum supposé rendre irrésistible.",
+    "category": "Imite une publicité pour un parfum supposé rendre irrésistible.",
+    "theme": "vocal_geste",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "presenter"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_017",
+    "prompt": "Joue une personne qui découvre que son crush aime exactement la même série.",
+    "category": "Joue une personne qui découvre que son crush aime exactement la même série.",
+    "theme": "vocal_geste",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "surprise"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_018",
+    "prompt": "Imite quelqu’un qui raconte une rupture avec beaucoup trop de détails.",
+    "category": "Imite quelqu’un qui raconte une rupture avec beaucoup trop de détails.",
+    "theme": "vocal_geste",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "dramatic"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_019",
+    "prompt": "Joue une personne qui tente un compliment et se mélange complètement.",
+    "category": "Joue une personne qui tente un compliment et se mélange complètement.",
+    "theme": "vocal_geste",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "slow"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_020",
+    "prompt": "Mime un couple qui essaie de choisir un restaurant depuis une heure.",
+    "category": "Mime un couple qui essaie de choisir un restaurant depuis une heure.",
+    "theme": "vocal_geste",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple",
+      "physical"
+    ],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "double"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_021",
+    "prompt": "Imite une personne qui veut paraître mystérieuse mais révèle tout en trente secondes.",
+    "category": "Imite une personne qui veut paraître mystérieuse mais révèle tout en trente secondes.",
+    "theme": "vocal_geste",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "poker"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_022",
+    "prompt": "Joue une conversation de flirt uniquement avec des sons incompréhensibles.",
+    "category": "Joue une conversation de flirt uniquement avec des sons incompréhensibles.",
+    "theme": "vocal_geste",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "whisper"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_023",
+    "prompt": "Imite quelqu’un qui réalise qu’il a envoyé le message à la mauvaise personne.",
+    "category": "Imite quelqu’un qui réalise qu’il a envoyé le message à la mauvaise personne.",
+    "theme": "vocal_geste",
+    "difficulty": "ose",
+    "intensity": "ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "surprise"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_024",
+    "prompt": "Mime une entrée très confiante dans une soirée où tu ne connais personne.",
+    "category": "Mime une entrée très confiante dans une soirée où tu ne connais personne.",
+    "theme": "vocal_geste",
+    "difficulty": "tres_ose",
+    "intensity": "tres_ose",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "physical"
+    ],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "dramatic"
+  },
+  {
+    "id": "bombe_adulte_vocal_geste_025",
+    "prompt": "Joue une demande de deuxième rendez-vous comme une annonce officielle.",
+    "category": "Joue une demande de deuxième rendez-vous comme une annonce officielle.",
+    "theme": "vocal_geste",
+    "difficulty": "leger",
+    "intensity": "leger",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : fais la même scène comme dans un dessin animé.",
+    "chaosEffect": "presenter"
+  },
+  {
+    "id": "bombe_adulte_chaos_001",
+    "prompt": "Cite une qualité attirante sans utiliser la lettre E.",
+    "category": "Cite une qualité attirante sans utiliser la lettre E.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Cite une qualité amicale.",
+    "chaosEffect": "no_e"
+  },
+  {
+    "id": "bombe_adulte_chaos_002",
+    "prompt": "Cite deux excuses de rendez-vous au lieu d’une.",
+    "category": "Cite deux excuses de rendez-vous au lieu d’une.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Cite deux excuses pour annuler une sortie.",
+    "chaosEffect": "double"
+  },
+  {
+    "id": "bombe_adulte_chaos_003",
+    "prompt": "Réponds en chuchotant comme si ta réponse était top secrète.",
+    "category": "Réponds en chuchotant comme si ta réponse était top secrète.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Réponds simplement à voix basse.",
+    "chaosEffect": "whisper"
+  },
+  {
+    "id": "bombe_adulte_chaos_004",
+    "prompt": "Cite une réponse puis transforme-la en slogan publicitaire.",
+    "category": "Cite une réponse puis transforme-la en slogan publicitaire.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Cite une réponse courte.",
+    "chaosEffect": "presenter"
+  },
+  {
+    "id": "bombe_adulte_chaos_005",
+    "prompt": "Cite une raison de rougir en un seul mot.",
+    "category": "Cite une raison de rougir en un seul mot.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Cite une émotion en un mot.",
+    "chaosEffect": "one_word"
+  },
+  {
+    "id": "bombe_adulte_chaos_006",
+    "prompt": "Donne une réponse avec une voix de robot séducteur.",
+    "category": "Donne une réponse avec une voix de robot séducteur.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Donne une réponse avec une voix de robot.",
+    "chaosEffect": "robot"
+  },
+  {
+    "id": "bombe_adulte_chaos_007",
+    "prompt": "Cite quelque chose de romantique en moins de deux secondes.",
+    "category": "Cite quelque chose de romantique en moins de deux secondes.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Cite une activité agréable.",
+    "chaosEffect": "fast"
+  },
+  {
+    "id": "bombe_adulte_chaos_008",
+    "prompt": "Cite une réponse qui commence par la dernière lettre de la précédente.",
+    "category": "Cite une réponse qui commence par la dernière lettre de la précédente.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Cite une réponse différente.",
+    "chaosEffect": "chain"
+  },
+  {
+    "id": "bombe_adulte_chaos_009",
+    "prompt": "Cite une chose gênante sans prononcer la lettre A.",
+    "category": "Cite une chose gênante sans prononcer la lettre A.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Cite une petite gêne.",
+    "chaosEffect": "no_a"
+  },
+  {
+    "id": "bombe_adulte_chaos_010",
+    "prompt": "Réponds comme si tu présentais la météo des relations amoureuses.",
+    "category": "Réponds comme si tu présentais la météo des relations amoureuses.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Réponds comme un présentateur météo.",
+    "chaosEffect": "presenter"
+  },
+  {
+    "id": "bombe_adulte_chaos_011",
+    "prompt": "Cite une chose qu’on peut regretter après minuit, puis passe la bombe à l’envers.",
+    "category": "Cite une chose qu’on peut regretter après minuit, puis passe la bombe à l’envers.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : Cite une chose qu’on peut oublier après minuit.",
+    "chaosEffect": "reverse"
+  },
+  {
+    "id": "bombe_adulte_chaos_012",
+    "prompt": "Donne une réponse et ajoute un compliment totalement innocent.",
+    "category": "Donne une réponse et ajoute un compliment totalement innocent.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Donne seulement la réponse.",
+    "chaosEffect": "dramatic"
+  },
+  {
+    "id": "bombe_adulte_chaos_013",
+    "prompt": "Cite une préférence sans utiliser le mot « amour ».",
+    "category": "Cite une préférence sans utiliser le mot « amour ».",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Cite une préférence de sortie.",
+    "chaosEffect": "poker"
+  },
+  {
+    "id": "bombe_adulte_chaos_014",
+    "prompt": "Imite un message vocal de flirt qui dure beaucoup trop longtemps.",
+    "category": "Imite un message vocal de flirt qui dure beaucoup trop longtemps.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : Imite un message vocal amical trop long.",
+    "chaosEffect": "slow"
+  },
+  {
+    "id": "bombe_adulte_chaos_015",
+    "prompt": "Cite deux qualités compatibles dans un couple.",
+    "category": "Cite deux qualités compatibles dans un couple.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple"
+    ],
+    "alternative": "Alternative douce : Cite deux qualités compatibles dans une équipe.",
+    "chaosEffect": "double"
+  },
+  {
+    "id": "bombe_adulte_chaos_016",
+    "prompt": "Réponds avec exactement cinq mots.",
+    "category": "Réponds avec exactement cinq mots.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Réponds brièvement.",
+    "chaosEffect": "short"
+  },
+  {
+    "id": "bombe_adulte_chaos_017",
+    "prompt": "Cite une excuse pour ne pas embrasser quelqu’un sans vexer la personne.",
+    "category": "Cite une excuse pour ne pas embrasser quelqu’un sans vexer la personne.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : Cite une façon polie de dire non.",
+    "chaosEffect": "fast"
+  },
+  {
+    "id": "bombe_adulte_chaos_018",
+    "prompt": "Joue une micro-scène de jalousie en gardant un visage parfaitement neutre.",
+    "category": "Joue une micro-scène de jalousie en gardant un visage parfaitement neutre.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "couple",
+      "physical"
+    ],
+    "alternative": "Alternative douce : Joue une micro-scène de contrariété.",
+    "chaosEffect": "poker"
+  },
+  {
+    "id": "bombe_adulte_chaos_019",
+    "prompt": "Cite une chose que tu ne montrerais pas sur ton téléphone, sans dire laquelle.",
+    "category": "Cite une chose que tu ne montrerais pas sur ton téléphone, sans dire laquelle.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "phone"
+    ],
+    "alternative": "Alternative douce : Cite une application protégée par mot de passe.",
+    "chaosEffect": "one_word"
+  },
+  {
+    "id": "bombe_adulte_chaos_020",
+    "prompt": "Donne une réponse en chantant comme dans une comédie romantique.",
+    "category": "Donne une réponse en chantant comme dans une comédie romantique.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Donne une réponse en chantant.",
+    "chaosEffect": "sing"
+  },
+  {
+    "id": "bombe_adulte_chaos_021",
+    "prompt": "Cite une raison de ne pas recontacter son ex, puis épelle le dernier mot.",
+    "category": "Cite une raison de ne pas recontacter son ex, puis épelle le dernier mot.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "ex"
+    ],
+    "alternative": "Alternative douce : Cite une raison de ne pas revenir sur une ancienne décision.",
+    "chaosEffect": "spell"
+  },
+  {
+    "id": "bombe_adulte_chaos_022",
+    "prompt": "Réponds comme si tu recevais un prix pour le pire flirt de l’année.",
+    "category": "Réponds comme si tu recevais un prix pour le pire flirt de l’année.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Réponds comme si tu recevais un prix drôle.",
+    "chaosEffect": "presenter"
+  },
+  {
+    "id": "bombe_adulte_chaos_023",
+    "prompt": "Cite une limite personnelle en moins de trois secondes.",
+    "category": "Cite une limite personnelle en moins de trois secondes.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "intimacy"
+    ],
+    "alternative": "Alternative douce : Cite une limite dans un jeu.",
+    "chaosEffect": "countdown"
+  },
+  {
+    "id": "bombe_adulte_chaos_024",
+    "prompt": "Cite une chose attirante qui ne concerne pas le physique.",
+    "category": "Cite une chose attirante qui ne concerne pas le physique.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "text",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [],
+    "alternative": "Alternative douce : Cite une qualité humaine.",
+    "chaosEffect": "no_i"
+  },
+  {
+    "id": "bombe_adulte_chaos_025",
+    "prompt": "Fais deviner une situation romantique uniquement avec un geste.",
+    "category": "Fais deviner une situation romantique uniquement avec un geste.",
+    "theme": "chaos",
+    "difficulty": "chaos",
+    "intensity": "chaos",
+    "answerMode": "manual",
+    "minimumPlayers": 2,
+    "allowRepeats": false,
+    "examples": [],
+    "sensitive": [
+      "physical"
+    ],
+    "alternative": "Alternative douce : Fais deviner une activité de loisir avec un geste.",
+    "chaosEffect": "eyes_closed"
+  }
+]

@@ -1,0 +1,205 @@
+{
+  "version": "V2",
+  "game": "La Bombe +18",
+  "cards": 350,
+  "themes": {
+    "confidences": 60,
+    "seduction": 50,
+    "couple": 45,
+    "ex": 40,
+    "messages": 40,
+    "soirees": 35,
+    "preferences": 30,
+    "vocal_geste": 25,
+    "chaos": 25
+  },
+  "intensities": {
+    "leger": 109,
+    "ose": 110,
+    "tres_ose": 106,
+    "chaos": 25
+  },
+  "answerModes": {
+    "text": 314,
+    "manual": 36
+  },
+  "sensitiveCounts": {
+    "ex": 46,
+    "intimacy": 25,
+    "couple": 50,
+    "phone": 51,
+    "physical": 7,
+    "target": 8,
+    "alcohol": 5
+  },
+  "checksPassed": 33,
+  "checksTotal": 33,
+  "checks": [
+    {
+      "name": "350 cartes",
+      "ok": true,
+      "detail": "350"
+    },
+    {
+      "name": "350 identifiants uniques",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "350 consignes uniques",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "répartition exacte",
+      "ok": true,
+      "detail": "Counter({'confidences': 60, 'seduction': 50, 'couple': 45, 'ex': 40, 'messages': 40, 'soirees': 35, 'preferences': 30, 'vocal_geste': 25, 'chaos': 25})"
+    },
+    {
+      "name": "toutes les alternatives présentes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "toutes les sensibilités sont des listes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "intensités valides",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "modes de réponse valides",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "configuration locale présente",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "filtres locaux présents",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pool adulte filtré",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "anti-répétition adulte",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "démarrage local adulte",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "fin locale adulte",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "configuration multi adulte",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "démarrage multi adulte",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "titre multi dynamique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cache data adulte",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cache version mis à jour",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "index version mis à jour",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "aide adulte présente",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "filtre ex retire bien des cartes",
+      "ok": true,
+      "detail": "46 retirées"
+    },
+    {
+      "name": "filtre intimacy retire bien des cartes",
+      "ok": true,
+      "detail": "25 retirées"
+    },
+    {
+      "name": "filtre couple retire bien des cartes",
+      "ok": true,
+      "detail": "50 retirées"
+    },
+    {
+      "name": "filtre phone retire bien des cartes",
+      "ok": true,
+      "detail": "51 retirées"
+    },
+    {
+      "name": "filtre physical retire bien des cartes",
+      "ok": true,
+      "detail": "7 retirées"
+    },
+    {
+      "name": "filtre alcohol retire bien des cartes",
+      "ok": true,
+      "detail": "5 retirées"
+    },
+    {
+      "name": "bombe classique conservée",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "600 cartes classiques conservées",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "syntaxe app.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "syntaxe multiplayer.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "syntaxe game-help.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "syntaxe service-worker.js",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "note": "Le parcours Firebase réel doit encore être vérifié après déploiement sur plusieurs téléphones."
+}

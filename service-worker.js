@@ -1,17 +1,17 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v4.4-bombe-600";
+const CACHE_VERSION = "akgames-v4.5-bombe-adulte-350";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=bomb-v44",
+  "/styles.css?v=bomb-adult-v45",
   "/creator.css?v=creator-v1.3-access",
-  "/app.js?v=bomb-v44",
+  "/app.js?v=bomb-adult-v45",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
-  "/multiplayer.js?v=bomb-v44",
+  "/multiplayer.js?v=bomb-adult-v45",
   "/characters.js?v=characters-v1",
-  "/game-help.js?v=bomb-v44",
+  "/game-help.js?v=bomb-adult-v45",
   "/pwa.js",
   "/manifest.webmanifest",
   "/icons/icon-192.png",
@@ -70,6 +70,7 @@ const DATA_ASSETS = [
   "/data/imitation.json",
   "/data/imitation-adulte.json",
   "/data/bombe.json",
+  "/data/bombe-adulte.json",
   "/data/quiz-culture.json",
   "/data/quiz-cinema.json",
   "/data/quiz-musique.json",
