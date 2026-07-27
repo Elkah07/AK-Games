@@ -1,16 +1,16 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v4.11-extended-settings";
+const CACHE_VERSION = "akgames-v4.12-theme-fix";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=ui-v49-settings",
+  "/styles.css?v=ui-v50-theme-fix",
   "/creator.css?v=creator-v1.3-access",
   "/character-poses.css?v=characters-v5",
-  "/app.js?v=ui-v49-settings",
+  "/app.js?v=ui-v50-theme-fix",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
-  "/multiplayer.js?v=ui-v49-settings",
+  "/multiplayer.js?v=ui-v50-theme-fix",
   "/character-poses.js?v=characters-v5",
   "/character-voice-engine.js?v=characters-v5",
   "/characters.js?v=characters-v6-settings",
