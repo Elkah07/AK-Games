@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v3.9-faux-expert-750";
+const CACHE_VERSION = "akgames-v4.0-fake-reel-850";
 
 const CORE_SHELL = [
   "/",
@@ -77,6 +77,7 @@ const DATA_ASSETS = [
   "/data/quiz-logos.json",
   "/data/plaide-cause.json",
   "/data/fake-reel.json",
+  "/data/fake-reel-adulte.json",
   "/data/alerte-rouge.json",
   "/data/tu-me-connais.json",
   "/data/classement-secret.json",

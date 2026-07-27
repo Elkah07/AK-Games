@@ -176,7 +176,20 @@
       options: "Choisissez les thèmes, le nombre de réponses enquêtées et les questions personnalisées.",
       comfort: "Les réponses peuvent être passées ou formulées sans détail personnel."
     },
-    "Fake ou Réel ?": { intro: "Décidez si chaque affirmation est vraie ou inventée.", steps: ["Une affirmation est présentée.", "Chaque joueur vote Fake ou Réel.", "La solution et son explication sont révélées.", "Les bonnes réponses marquent."], scoring: "Une bonne réponse rapporte le point indiqué.", options: "Choisissez les thèmes et la longueur de partie.", comfort: "Les explications de l’application servent de référence pour la manche." },
+    "Fake ou Réel ?": {
+      intro: "Décidez si chaque affirmation est réelle ou inventée, puis découvrez l’explication derrière le piège.",
+      steps: ["Choisissez les thèmes, la difficulté et le nombre d’affirmations.", "Chaque personne vote secrètement Fake ou Réel.", "La réponse et son explication sont révélées ensemble.", "La série en cours est mise à jour avant la carte suivante."],
+      scoring: "Chaque bonne réponse rapporte 1 point. Toutes les 3 bonnes réponses consécutives, un bonus de 1 point est ajouté.",
+      options: "600 cartes classiques, 12 thèmes, trois difficultés, cartes personnalisées et mélange adulte facultatif.",
+      comfort: "Les explications servent de référence pour la manche. Les cartes santé donnent des informations générales et non un diagnostic."
+    },
+    "Fake ou Réel +18": {
+      intro: "Une version adulte consacrée aux mythes du corps, du consentement, des rencontres, du couple et de la vie privée numérique.",
+      steps: ["Choisissez les thèmes et les intensités.", "Chaque personne vote secrètement Fake ou Réel.", "L’explication fiable est révélée.", "La partie continue sans demander de raconter son expérience personnelle."],
+      scoring: "Chaque bonne réponse rapporte 1 point. Une série de 3 bonnes réponses ajoute 1 point bonus.",
+      options: "250 cartes adultes, 10 thèmes, trois intensités et cartes personnalisées.",
+      comfort: "Réservé aux adultes. Aucune carte ne remplace un avis médical et chacun peut passer sans justification."
+    },
     "Alerte Rouge": { intro: "Le groupe traverse une histoire à embranchements et vote pour la décision à prendre.", steps: ["Un scénario et plusieurs options apparaissent.", "Tout le monde vote secrètement.", "L’option majoritaire est appliquée.", "La conséquence est révélée avant la suite de l’histoire."], scoring: "Les joueurs ayant choisi l’option retenue gagnent généralement 1 point.", options: "Choisissez le nombre de scénarios.", comfort: "Les situations sont fictives : le vote ne représente pas forcément les valeurs réelles des joueurs." },
     "Questions osées": {
       intro: "Des questions adultes à discuter sans score, en tour par tour ou avec tout le groupe.",

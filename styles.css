@@ -8871,3 +8871,181 @@ body.game-rules-open {
     flex-direction: column;
   }
 }
+
+/* AK'GAMES V4.0 — Fake ou Réel 850 */
+.fake-real-cover-v40 {
+  background: linear-gradient(135deg, rgba(42, 20, 79, .96), rgba(13, 12, 28, .98));
+  border: 1px solid rgba(188, 131, 255, .28);
+}
+.fake-real-cover-v40.adult {
+  background: linear-gradient(135deg, rgba(104, 20, 62, .96), rgba(28, 11, 28, .98));
+}
+.fake-real-stat-strip-v40,
+.fake-real-rule-strip-v40 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .65rem;
+  margin: 1rem 0;
+}
+.fake-real-stat-strip-v40 article,
+.fake-real-rule-strip-v40 span {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(255,255,255,.035);
+  padding: .85rem .7rem;
+  text-align: center;
+}
+.fake-real-stat-strip-v40 strong {
+  display: block;
+  font-size: 1.25rem;
+}
+.fake-real-stat-strip-v40 span,
+.fake-real-rule-strip-v40 span {
+  font-size: .82rem;
+  color: var(--muted);
+}
+.fake-real-theme-grid-v40 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .65rem;
+  margin-top: .85rem;
+}
+.fake-real-theme-grid-v40 .never-theme-option {
+  min-height: 86px;
+}
+.fake-real-level-grid-v40 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .65rem;
+}
+.fake-real-config-v40,
+.fake-real-custom-v40 {
+  margin-top: 1rem;
+}
+.fake-real-adult-config-v40 {
+  border-color: rgba(255, 102, 170, .25);
+  background: linear-gradient(145deg, rgba(255, 62, 142, .06), rgba(255,255,255,.02));
+}
+.fake-real-custom-grid-v40 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+}
+.fake-real-custom-list-v40 {
+  display: grid;
+  gap: .55rem;
+  margin-top: .8rem;
+}
+.fake-real-custom-list-v40 article {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: .65rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: .7rem;
+  background: rgba(255,255,255,.025);
+}
+.fake-real-custom-list-v40 article > span {
+  font-size: 1.25rem;
+}
+.fake-real-custom-list-v40 strong,
+.fake-real-custom-list-v40 small {
+  display: block;
+}
+.fake-real-custom-list-v40 small {
+  color: var(--muted);
+  margin-top: .2rem;
+}
+.fake-real-custom-list-v40 button {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  color: inherit;
+  font-size: 1.2rem;
+}
+.fake-real-card-meta-v40 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .45rem;
+  margin-bottom: .75rem;
+}
+.fake-real-card-meta-v40 span {
+  padding: .35rem .65rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.11);
+  font-size: .78rem;
+}
+.fake-real-question-v40 h2 {
+  max-width: 850px;
+  margin-inline: auto;
+}
+.fake-real-question-v40.adult {
+  border-color: rgba(255, 100, 168, .25);
+}
+.fake-real-vote-grid-v40 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .9rem;
+  margin-top: 1rem;
+}
+.fake-real-vote-btn {
+  display: grid;
+  place-items: center;
+  gap: .25rem;
+  min-height: 145px;
+  padding: 1rem;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.035);
+  color: inherit;
+}
+.fake-real-vote-btn span {
+  font-size: 2.1rem;
+}
+.fake-real-vote-btn strong {
+  font-size: 1.35rem;
+}
+.fake-real-vote-btn small {
+  color: var(--muted);
+}
+.fake-real-vote-btn.fake:hover,
+.fake-real-vote-btn.fake:focus-visible {
+  border-color: rgba(255, 105, 135, .6);
+  background: rgba(255, 75, 115, .1);
+}
+.fake-real-vote-btn.real:hover,
+.fake-real-vote-btn.real:focus-visible {
+  border-color: rgba(85, 230, 170, .6);
+  background: rgba(35, 210, 145, .1);
+}
+.fake-real-reveal-v40 small,
+.fake-real-reveal-v40 em {
+  display: block;
+}
+.fake-real-reveal-v40 em {
+  margin-top: .8rem;
+  color: var(--muted);
+  font-size: .78rem;
+  font-style: normal;
+}
+.fake-real-reveal-v40.real {
+  border-color: rgba(73, 226, 163, .35);
+}
+.fake-real-reveal-v40.fake {
+  border-color: rgba(255, 100, 144, .35);
+}
+@media (max-width: 760px) {
+  .fake-real-theme-grid-v40 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fake-real-custom-grid-v40 { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .fake-real-stat-strip-v40,
+  .fake-real-rule-strip-v40 { grid-template-columns: 1fr; }
+  .fake-real-vote-grid-v40 { grid-template-columns: 1fr; }
+  .fake-real-vote-btn { min-height: 115px; }
+}

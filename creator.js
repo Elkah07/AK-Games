@@ -78,6 +78,7 @@
     ["Devine le logo", "data/quiz-logos.json"],
     ["Plaide ta cause", "data/plaide-cause.json"],
     ["Fake ou Réel ?", "data/fake-reel.json"],
+    ["Fake ou Réel +18", "data/fake-reel-adulte.json"],
     ["Alerte Rouge", "data/alerte-rouge.json"],
     ["Tu me connais ou pas ?", "data/tu-me-connais.json"],
     ["Le Classement secret", "data/classement-secret.json"],

@@ -1,0 +1,257 @@
+{
+  "pack": "AK-Games_modifs_fake-reel_850_V1",
+  "generatedAt": "2026-07-27",
+  "summary": {
+    "classicCards": 600,
+    "adultCards": 250,
+    "totalCards": 850,
+    "classicAnswers": {
+      "fake": 300,
+      "reel": 300
+    },
+    "adultAnswers": {
+      "fake": 120,
+      "reel": 130
+    },
+    "classicThemes": {
+      "animaux_nature": 50,
+      "cinema_series": 50,
+      "corps_humain": 50,
+      "culture_pop": 50,
+      "geographie": 50,
+      "histoire": 50,
+      "musique": 50,
+      "nourriture": 50,
+      "objets_quotidien": 50,
+      "sciences": 50,
+      "sport": 50,
+      "technologie": 50
+    },
+    "adultThemes": {
+      "applications_messages": 25,
+      "consentement": 25,
+      "contraception": 25,
+      "corps_reactions": 25,
+      "couple_communication": 25,
+      "ex_jalousie": 25,
+      "images_vie_privee": 25,
+      "ist_depistage": 25,
+      "plaisir_intimite": 25,
+      "rencontres": 25
+    },
+    "classicDifficulties": {
+      "medium": 204,
+      "easy": 204,
+      "hard": 192
+    },
+    "adultIntensities": {
+      "bold": 80,
+      "soft": 90,
+      "unfiltered": 80
+    }
+  },
+  "runtimeTests": {
+    "localClassic": "passed: configuration, chargement, vote secret de deux joueurs et révélation",
+    "localAdult": "passed: catalogue adulte, configuration, chargement et vote",
+    "multiplayerClassic": "passed: création de 20 cartes synchronisées et calcul du résultat simulé",
+    "multiplayerAdult": "passed: création de 20 cartes synchronisées et calcul du résultat simulé",
+    "realFirebaseDevices": "not run: à contrôler après déploiement sur deux téléphones"
+  },
+  "previousDatabasesRetained": {
+    "je-nai-jamais.json": 600,
+    "je-nai-jamais-adulte.json": 400,
+    "imposteur.json": 500,
+    "imposteur-adulte.json": 200,
+    "imitation.json": 600,
+    "imitation-adulte.json": 300,
+    "faux-expert.json": 500,
+    "faux-expert-adulte.json": 250
+  },
+  "checks": [
+    {
+      "name": "600 cartes classiques",
+      "status": "passed",
+      "details": "600"
+    },
+    {
+      "name": "250 cartes adultes",
+      "status": "passed",
+      "details": "250"
+    },
+    {
+      "name": "850 cartes totales",
+      "status": "passed",
+      "details": "850"
+    },
+    {
+      "name": "Identifiants uniques",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Affirmations uniques",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Schéma complet",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Réponses valides",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Textes non vides",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Répartition classique 300/300",
+      "status": "passed",
+      "details": "Counter({0: 300, 1: 300})"
+    },
+    {
+      "name": "Répartition adulte équilibrée",
+      "status": "passed",
+      "details": "Counter({1: 130, 0: 120})"
+    },
+    {
+      "name": "12 thèmes classiques de 50 cartes",
+      "status": "passed",
+      "details": "Counter({'animaux_nature': 50, 'objets_quotidien': 50, 'corps_humain': 50, 'culture_pop': 50, 'nourriture': 50, 'cinema_series': 50, 'histoire': 50, 'sport': 50, 'sciences': 50, 'musique': 50, 'technologie': 50, 'geographie': 50})"
+    },
+    {
+      "name": "10 thèmes adultes de 25 cartes",
+      "status": "passed",
+      "details": "Counter({'rencontres': 25, 'images_vie_privee': 25, 'corps_reactions': 25, 'contraception': 25, 'ist_depistage': 25, 'couple_communication': 25, 'consentement': 25, 'plaisir_intimite': 25, 'ex_jalousie': 25, 'applications_messages': 25})"
+    },
+    {
+      "name": "3 difficultés classiques",
+      "status": "passed",
+      "details": "Counter({'medium': 204, 'easy': 204, 'hard': 192})"
+    },
+    {
+      "name": "3 intensités adultes",
+      "status": "passed",
+      "details": "Counter({'soft': 90, 'bold': 80, 'unfiltered': 80})"
+    },
+    {
+      "name": "Aucun ancien faux énoncé mal accordé",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Syntaxe JavaScript app.js",
+      "status": "passed",
+      "details": "OK"
+    },
+    {
+      "name": "Syntaxe JavaScript multiplayer.js",
+      "status": "passed",
+      "details": "OK"
+    },
+    {
+      "name": "Syntaxe JavaScript game-help.js",
+      "status": "passed",
+      "details": "OK"
+    },
+    {
+      "name": "Syntaxe JavaScript service-worker.js",
+      "status": "passed",
+      "details": "OK"
+    },
+    {
+      "name": "Syntaxe JavaScript creator.js",
+      "status": "passed",
+      "details": "OK"
+    },
+    {
+      "name": "CSS Fake ou Réel présent",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Jeu classique branché",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Jeu adulte branché",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Multijoueur branché",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Aides de jeu présentes",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Cache PWA mis à jour",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Mode créateur branché",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Base précédente conservée : je-nai-jamais.json",
+      "status": "passed",
+      "details": "600"
+    },
+    {
+      "name": "Base précédente conservée : je-nai-jamais-adulte.json",
+      "status": "passed",
+      "details": "400"
+    },
+    {
+      "name": "Base précédente conservée : imposteur.json",
+      "status": "passed",
+      "details": "500"
+    },
+    {
+      "name": "Base précédente conservée : imposteur-adulte.json",
+      "status": "passed",
+      "details": "200"
+    },
+    {
+      "name": "Base précédente conservée : imitation.json",
+      "status": "passed",
+      "details": "600"
+    },
+    {
+      "name": "Base précédente conservée : imitation-adulte.json",
+      "status": "passed",
+      "details": "300"
+    },
+    {
+      "name": "Base précédente conservée : faux-expert.json",
+      "status": "passed",
+      "details": "500"
+    },
+    {
+      "name": "Base précédente conservée : faux-expert-adulte.json",
+      "status": "passed",
+      "details": "250"
+    }
+  ],
+  "sha256": {
+    "app.js": "12de498a6f2de836d46bc45833a06bec8b722824962af5727c5b87b22a298319",
+    "multiplayer.js": "2ed907e48767b6663483b3c9bcc0ae1810bc2999ef7a495f58327b65ada289b9",
+    "game-help.js": "e0033b703626feb9f7557426c9e05fff7a90e7dbaa074187f33040335f3259e4",
+    "styles.css": "9f994f1140a3f229aa2fc8db739b3c1cb2c05b3cf855aed7ad5e8ef136f70b9a",
+    "service-worker.js": "05a8d441c1017ce9973c6d647e7c1d4899e6f7700fb512536e288996e803d788",
+    "creator.js": "e62f1c20127fc5cec617d8e2cfa645b4cee2ffa5ab09c3fc89984a2df8c9dc22",
+    "data/fake-reel.json": "9723137d1f50a6aa1cf939be500d63bb35f1cff8720c98f3332bcd5da679b0c2",
+    "data/fake-reel-adulte.json": "184cc85e27ea7f0b34ef95377753075c1bb9097d652a439ba3b902174a6e9287"
+  }
+}

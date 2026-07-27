@@ -9765,6 +9765,215 @@
     document.querySelector("#nextMultiExpertV39")?.addEventListener("click", event => secureV09Advance(event, gameState, "brief"));
   };
 
+
+  /* AK'GAMES V4.0 — FAKE OU RÉEL 850 MULTIJOUEUR */
+  const akFakeRealMultiBaseSetupV40 = renderMegaSetup;
+  renderMegaSetup = function renderMegaSetupFakeRealMultiV40() {
+    if (!isMultiplayer() || !akFakeRealIsGameV40()) return akFakeRealMultiBaseSetupV40();
+    const game = state.megaGame;
+    const adultOnly = akFakeRealIsAdultV40(game);
+    clearV014MultiTimer();
+    title.textContent = game.gameName;
+    setBackVisible(true);
+    screen.innerHTML = `
+      <section class="game-cover game-cover-mega fake-real-cover-v40 ${adultOnly ? "adult" : ""}">
+        <span class="game-cover-icon">${adultOnly ? "🌶️" : "🧪"}</span>
+        <div><small>MULTIJOUEUR · ${adultOnly ? "250 CARTES ADULTES" : "600 CARTES CLASSIQUES"}</small><h2>${escapeHtml(game.gameName)}</h2><p>Chaque personne vote sur son téléphone, puis l’explication est révélée à tout le groupe.</p></div>
+      </section>
+      <section class="fake-real-stat-strip-v40"><article><strong>${adultOnly ? "250" : "600"}</strong><span>cartes</span></article><article><strong>${adultOnly ? "10" : "12"}</strong><span>thèmes</span></article><article><strong>50/50</strong><span>fake & réel</span></article></section>
+      ${state.isHost ? akFakeRealSetupMarkupV40(game, "multiFakeReal") : `<section class="card"><h2 class="section-title">Réglages de l’hôte</h2><p class="helper">L’hôte choisit les thèmes, les niveaux et le nombre d’affirmations.</p></section>`}
+      ${adultOnly ? `<div class="responsible-callout">🛡️ Informations générales uniquement. Personne n’a à raconter son expérience personnelle.</div>` : ""}
+      ${state.isHost ? `<button id="startMultiFakeRealV40" class="primary-btn full">Lancer sur tous les téléphones</button>` : renderMultiWaiting("En attente de l’hôte", "La partie commencera automatiquement.", "👑")}`;
+    if (state.isHost) {
+      akFakeRealBindSetupV40(game, "multiFakeReal", renderMegaSetup);
+      document.querySelector("#startMultiFakeRealV40")?.addEventListener("click", startMegaGame);
+    }
+  };
+
+  const akFakeRealMultiBaseStartV40 = startMegaGame;
+  startMegaGame = async function startMegaGameFakeRealMultiV40() {
+    if (!isMultiplayer() || !akFakeRealIsGameV40()) return akFakeRealMultiBaseStartV40();
+    if (!state.isHost || !state.megaGame) return;
+    const game = state.megaGame;
+    const adultOnly = akFakeRealIsAdultV40(game);
+    if (!adultOnly && (!game.fakeRealClassicThemes.length || !game.fakeRealDifficulties.length) && !(game.fakeRealIncludeCustom && game.fakeRealCustomCards.some(item => !item.adult))) return alert("Choisis au moins un thème et une difficulté classiques.");
+    if ((adultOnly || game.fakeRealIncludeAdult) && (!game.fakeRealAdultThemes.length || !game.fakeRealAdultLevels.length) && !(game.fakeRealIncludeCustom && game.fakeRealCustomCards.some(item => item.adult))) return alert("Choisis au moins un thème et une intensité adultes.");
+    screen.innerHTML = `<div class="notice">Synchronisation des intox et des vérités…</div>`;
+    try {
+      const pool = await akFakeRealBuildPoolV40(game);
+      if (!pool.length) throw new Error("Aucune affirmation ne correspond aux filtres choisis.");
+      const items = akFakeRealSelectBalancedV40(pool, game.roundCount, `multi:fake-real:v40:${game.gameName}:${game.fakeRealClassicThemes.join("-")}:${game.fakeRealAdultThemes.join("-")}`);
+      const playerIds = state.players.map(player => player.id);
+      const scores = Object.fromEntries(playerIds.map(id => [id, 0]));
+      const streaks = Object.fromEntries(playerIds.map(id => [id, 0]));
+      const bestStreaks = Object.fromEntries(playerIds.map(id => [id, 0]));
+      const correctCounts = Object.fromEntries(playerIds.map(id => [id, 0]));
+      await AKFirebase.setGame(state.roomCode, { state: {
+        type: "mega-quiz",
+        phase: "voting",
+        sessionGameId: createSessionGameId("fake-real-v40"),
+        items,
+        currentIndex: 0,
+        scores,
+        fakeRealStreaks: streaks,
+        fakeRealBestStreaks: bestStreaks,
+        fakeRealCorrectCounts: correctCounts,
+        rounds: {},
+        currentResult: null,
+        settings: {
+          gameName: game.gameName,
+          icon: game.config.icon,
+          engine: "quiz",
+          roundCount: items.length,
+          fakeReal: true,
+          fakeRealAdult: adultOnly,
+          fakeRealIncludeAdult: Boolean(game.fakeRealIncludeAdult),
+          fakeRealClassicThemes: [...game.fakeRealClassicThemes],
+          fakeRealAdultThemes: [...game.fakeRealAdultThemes],
+          fakeRealDifficulties: [...game.fakeRealDifficulties],
+          fakeRealAdultLevels: [...game.fakeRealAdultLevels],
+          fakeRealIncludeCustom: Boolean(game.fakeRealIncludeCustom)
+        },
+        startedAt: AKFirebase.now(),
+        updatedAt: AKFirebase.now()
+      }, votes: {}, answers: null, actions: null });
+      state.multiView = "v09-game";
+    } catch (error) {
+      console.error(error);
+      alert(error.message || "Impossible de lancer Fake ou Réel.");
+      renderMegaSetup();
+    }
+  };
+
+  const akFakeRealMultiBaseProcessQuizV40 = processMultiMegaQuiz;
+  processMultiMegaQuiz = function processMultiMegaQuizFakeRealV40(gameState, votes) {
+    if (!gameState.settings?.fakeReal) return akFakeRealMultiBaseProcessQuizV40(gameState, votes);
+    if (!state.isHost || gameState.phase !== "voting" || Object.keys(votes).length < state.players.length) return;
+    const lock = `fake_real_v40_${gameState.currentIndex}_${Object.keys(votes).length}`;
+    if (state.multiProcessingActionId === lock) return;
+    state.multiProcessingActionId = lock;
+    const item = megaMultiCurrentItem(gameState);
+    const correct = Number(item?.answer);
+    const scores = { ...(gameState.scores || {}) };
+    const streaks = { ...(gameState.fakeRealStreaks || {}) };
+    const bestStreaks = { ...(gameState.fakeRealBestStreaks || {}) };
+    const correctCounts = { ...(gameState.fakeRealCorrectCounts || {}) };
+    const earned = {};
+    let correctCount = 0;
+    state.players.forEach(player => {
+      const won = Number(votes[player.id]) === correct;
+      if (won) {
+        correctCount += 1;
+        streaks[player.id] = Number(streaks[player.id] || 0) + 1;
+        bestStreaks[player.id] = Math.max(Number(bestStreaks[player.id] || 0), streaks[player.id]);
+        correctCounts[player.id] = Number(correctCounts[player.id] || 0) + 1;
+        const bonus = streaks[player.id] % 3 === 0 ? 1 : 0;
+        earned[player.id] = 1 + bonus;
+        scores[player.id] = Number(scores[player.id] || 0) + earned[player.id];
+      } else {
+        streaks[player.id] = 0;
+        earned[player.id] = 0;
+      }
+    });
+    const result = {
+      itemId: item?.id || "",
+      question: item?.question || "",
+      correct,
+      points: 1,
+      votes: { ...votes },
+      earned,
+      correctCount,
+      theme: item?.theme || "",
+      adult: Boolean(item?.adult)
+    };
+    AKFirebase.updateGame(state.roomCode, {
+      "state/phase": "results",
+      "state/currentResult": result,
+      "state/scores": scores,
+      "state/fakeRealStreaks": streaks,
+      "state/fakeRealBestStreaks": bestStreaks,
+      "state/fakeRealCorrectCounts": correctCounts,
+      [`state/rounds/${gameState.currentIndex}`]: result,
+      "state/updatedAt": AKFirebase.now()
+    }).finally(() => { state.multiProcessingActionId = null; });
+  };
+
+  const akFakeRealMultiBaseRenderVoteV40 = renderMultiMegaQuizVote;
+  renderMultiMegaQuizVote = function renderMultiMegaQuizVoteFakeRealV40(gameState, votes) {
+    if (!gameState.settings?.fakeReal) return akFakeRealMultiBaseRenderVoteV40(gameState, votes);
+    const item = megaMultiCurrentItem(gameState);
+    const ownVote = votes[state.currentUid];
+    const theme = akFakeRealThemeMetaV40(item?.theme, item?.adult);
+    const level = akFakeRealLevelMetaV40(item?.difficulty, item?.adult);
+    title.textContent = gameState.settings?.gameName || "Fake ou Réel";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Affirmation")}
+      <section class="quiz-question-card fake-real-question-v40 ${item?.adult ? "adult" : ""}">
+        <div class="fake-real-card-meta-v40"><span>${theme.icon} ${escapeHtml(theme.label)}</span><span>${level.icon} ${escapeHtml(level.label)}</span></div>
+        <h2>${escapeHtml(item?.question || "")}</h2>
+      </section>
+      ${ownVote !== undefined ? renderMultiWaiting("Vote verrouillé", `${Object.keys(votes).length}/${state.players.length} réponses reçues.`, "🔒") : `<section class="fake-real-vote-grid-v40"><button class="fake-real-vote-btn fake" data-multi-mega-vote="0"><span>🎭</span><strong>FAKE</strong><small>C’est une intox</small></button><button class="fake-real-vote-btn real" data-multi-mega-vote="1"><span>✅</span><strong>RÉEL</strong><small>C’est vrai</small></button></section>`}
+      ${renderPlayerSubmissionStatus(votes, "A voté", "Réfléchit…")}`;
+    document.querySelectorAll("[data-multi-mega-vote]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-multi-mega-vote]").forEach(node => node.disabled = true);
+      try { await AKFirebase.writeOwnGameEntry(state.roomCode, "votes", Number(button.dataset.multiMegaVote)); }
+      catch (error) { console.error(error); document.querySelectorAll("[data-multi-mega-vote]").forEach(node => node.disabled = false); }
+    }));
+  };
+
+  const akFakeRealMultiBaseRenderResultV40 = renderMultiMegaQuizResult;
+  renderMultiMegaQuizResult = function renderMultiMegaQuizResultFakeRealV40(gameState) {
+    if (!gameState.settings?.fakeReal) return akFakeRealMultiBaseRenderResultV40(gameState);
+    const item = megaMultiCurrentItem(gameState);
+    const result = gameState.currentResult || {};
+    const correct = Number(result.correct);
+    const theme = akFakeRealThemeMetaV40(item?.theme, item?.adult);
+    title.textContent = correct === 1 ? "C’était réel" : "C’était fake";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Affirmation")}
+      <section class="reveal-stage reveal-v07 fake-real-reveal-v40 ${correct === 1 ? "real" : "fake"}">
+        <span class="game-cover-icon">${correct === 1 ? "✅" : "🎭"}</span>
+        <small>${theme.icon} ${escapeHtml(theme.label)}</small>
+        <h2>${correct === 1 ? "RÉEL" : "FAKE"}</h2>
+        <p>${escapeHtml(item?.explanation || "Réponse révélée.")}</p>
+        ${item?.source ? `<em>Source de la carte : ${escapeHtml(item.source)}</em>` : ""}
+      </section>
+      <section class="answer-chip-wall">${state.players.map(player => {
+        const won = Number(result.votes?.[player.id]) === correct;
+        const points = Number(result.earned?.[player.id] || 0);
+        return `<span class="${won ? "correct" : "wrong"}">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · ${escapeHtml(item?.options?.[result.votes?.[player.id]] || "-")}${won ? ` · +${points}${points > 1 ? " 🔥" : ""}` : ""}</span>`;
+      }).join("")}</section>
+      ${Number(result.correctCount || 0) ? `<div class="special-event"><strong>${Number(result.correctCount || 0)}/${state.players.length} bonne${Number(result.correctCount || 0) > 1 ? "s" : ""} réponse${Number(result.correctCount || 0) > 1 ? "s" : ""}</strong><p>Une série de 3 bonnes réponses rapporte un point bonus.</p></div>` : `<div class="special-event tie"><strong>Piège parfait</strong><p>Cette affirmation a trompé tout le groupe.</p></div>`}
+      ${state.isHost ? `<button id="nextMultiMegaQuiz" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Affirmation suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La prochaine affirmation apparaîtra automatiquement.", "👑")}`;
+    document.querySelector("#nextMultiMegaQuiz")?.addEventListener("click", event => advanceMultiMegaRound(event, gameState, "voting", ["votes", "answers", "actions"]));
+  };
+
+  const akFakeRealMultiBaseFinalV40 = renderMultiMegaFinal;
+  renderMultiMegaFinal = function renderMultiMegaFinalFakeRealV40(gameState) {
+    if (!gameState.settings?.fakeReal) return akFakeRealMultiBaseFinalV40(gameState);
+    clearV014MultiTimer();
+    const ranking = [...state.players].sort((a, b) => Number(gameState.scores?.[b.id] || 0) - Number(gameState.scores?.[a.id] || 0));
+    const bestStreak = state.players.map(player => ({ player, value: Number(gameState.fakeRealBestStreaks?.[player.id] || 0) })).sort((a, b) => b.value - a.value)[0];
+    const mostCorrect = state.players.map(player => ({ player, value: Number(gameState.fakeRealCorrectCounts?.[player.id] || 0) })).sort((a, b) => b.value - a.value)[0];
+    const rounds = Object.values(gameState.rounds || {});
+    const trickiest = [...rounds].sort((a, b) => Number(a.correctCount || 0) - Number(b.correctCount || 0))[0];
+    title.textContent = "Palmarès Fake ou Réel";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="winner-stage winner-stage-v07 mega-final-stage"><div class="winner-crown">🧪🏆</div><h2>${ranking.length ? escapeHtml(ranking[0].name) : "Partie terminée"}</h2><p>La machine à intox a livré son verdict.</p></section>
+      <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(gameState.scores?.[player.id] || 0)} pts</span></div>`).join("")}</section>
+      <section class="impostor-awards">
+        ${bestStreak?.value ? `<article><span>🔥</span><div><small>MEILLEURE SÉRIE</small><strong>${escapeHtml(bestStreak.player.name)}</strong><p>${bestStreak.value} bonnes réponses d’affilée</p></div></article>` : ""}
+        ${mostCorrect?.value ? `<article><span>🧠</span><div><small>PLUS DE BONNES RÉPONSES</small><strong>${escapeHtml(mostCorrect.player.name)}</strong><p>${mostCorrect.value}/${gameState.items?.length || 0}</p></div></article>` : ""}
+        ${trickiest ? `<article><span>🕳️</span><div><small>AFFIRMATION LA PLUS PIÉGEUSE</small><strong>${escapeHtml(trickiest.question || "Mystère")}</strong><p>${Number(trickiest.correctCount || 0)}/${state.players.length} bonne${Number(trickiest.correctCount || 0) > 1 ? "s" : ""} réponse${Number(trickiest.correctCount || 0) > 1 ? "s" : ""}</p></div></article>` : ""}
+      </section>
+      ${renderPostGameContinuation(gameState)}`;
+    ensureEveningResult(gameState);
+    bindPostGameContinuation(gameState);
+  };
+
   window.AKGamesMultiplayer = Object.freeze({
     launchRandomGame: () => launchRandomMultiplayerGame()
   });

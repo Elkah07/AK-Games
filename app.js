@@ -12592,3 +12592,474 @@ renderFakeExpertEnd = function renderFakeExpertEndV39() {
   document.querySelector("#expertOtherV39")?.addEventListener("click", () => { state.fakeExpert = null; renderPlayChoice(); });
 };
 
+
+/* =========================================================
+   AK'GAMES V4.0 — FAKE OU RÉEL 850
+   600 cartes classiques + 250 cartes adultes
+   ========================================================= */
+
+const AK_FAKE_REAL_CLASSIC_GAME_V40 = "Fake ou Réel ?";
+const AK_FAKE_REAL_ADULT_GAME_V40 = "Fake ou Réel +18";
+const AK_FAKE_REAL_CUSTOM_KEY_V40 = "akgames_fake_real_custom_v40";
+
+const AK_FAKE_REAL_CLASSIC_THEMES_V40 = [
+  { id: "animaux_nature", icon: "🦉", label: "Animaux & nature" },
+  { id: "corps_humain", icon: "🫀", label: "Corps humain" },
+  { id: "sciences", icon: "🧪", label: "Sciences" },
+  { id: "histoire", icon: "🏺", label: "Histoire" },
+  { id: "geographie", icon: "🌍", label: "Géographie" },
+  { id: "nourriture", icon: "🍜", label: "Nourriture" },
+  { id: "cinema_series", icon: "🎬", label: "Cinéma & séries" },
+  { id: "musique", icon: "🎵", label: "Musique" },
+  { id: "sport", icon: "🏅", label: "Sport" },
+  { id: "technologie", icon: "💻", label: "Technologie & marques" },
+  { id: "objets_quotidien", icon: "💡", label: "Objets du quotidien" },
+  { id: "culture_pop", icon: "🎮", label: "Jeux & culture pop" }
+];
+
+const AK_FAKE_REAL_ADULT_THEMES_V40 = [
+  { id: "consentement", icon: "🛡️", label: "Consentement" },
+  { id: "contraception", icon: "🩺", label: "Contraception" },
+  { id: "ist_depistage", icon: "🔬", label: "IST & dépistage" },
+  { id: "corps_reactions", icon: "💓", label: "Corps & réactions" },
+  { id: "plaisir_intimite", icon: "✨", label: "Plaisir & intimité" },
+  { id: "rencontres", icon: "🥂", label: "Rencontres" },
+  { id: "applications_messages", icon: "📱", label: "Applications & messages" },
+  { id: "couple_communication", icon: "💬", label: "Couple & communication" },
+  { id: "ex_jalousie", icon: "🌪️", label: "Ex, jalousie & limites" },
+  { id: "images_vie_privee", icon: "🔐", label: "Images & vie privée" }
+];
+
+const AK_FAKE_REAL_DIFFICULTIES_V40 = [
+  { id: "easy", icon: "🌱", label: "Facile" },
+  { id: "medium", icon: "⚡", label: "Moyen" },
+  { id: "hard", icon: "🔥", label: "Difficile" }
+];
+
+const AK_FAKE_REAL_ADULT_LEVELS_V40 = [
+  { id: "soft", icon: "🌶️", label: "Léger" },
+  { id: "bold", icon: "🔥", label: "Osé" },
+  { id: "unfiltered", icon: "💥", label: "Sans filtre" }
+];
+
+V014_GAME_CONFIGS[AK_FAKE_REAL_CLASSIC_GAME_V40] = {
+  ...(V014_GAME_CONFIGS[AK_FAKE_REAL_CLASSIC_GAME_V40] || {}),
+  engine: "quiz",
+  icon: "🧪",
+  pack: "Bluff & argumentation",
+  data: "data/fake-reel.json",
+  description: "Une affirmation, deux camps : info réelle ou énorme intox ?",
+  defaultRounds: 20,
+  fakeReal: true
+};
+V014_GAME_CONFIGS[AK_FAKE_REAL_ADULT_GAME_V40] = {
+  engine: "quiz",
+  icon: "🌶️",
+  pack: "Pack adulte",
+  data: "data/fake-reel-adulte.json",
+  description: "Mythes, corps, rencontres, consentement et dossiers numériques à démêler.",
+  defaultRounds: 20,
+  adultOnly: true,
+  fakeReal: true,
+  fakeRealAdult: true
+};
+V014_NEW_GAMES.add(AK_FAKE_REAL_ADULT_GAME_V40);
+V014_READY_GAMES.add(AK_FAKE_REAL_ADULT_GAME_V40);
+V014_GAME_ICONS[AK_FAKE_REAL_ADULT_GAME_V40] = "🌶️";
+AK_AUDIT8_GAME_META[AK_FAKE_REAL_ADULT_GAME_V40] = { minPlayers: 2, time: "10–15 min", goal: "Démêle les mythes du corps, du consentement, des rencontres et de la vie privée." };
+
+v014SetCategoryGames("quiz", ["Culture générale", "Cinéma", "Musique", "Jeux vidéo", "Devine le logo", AK_FAKE_REAL_CLASSIC_GAME_V40]);
+v014SetCategoryGames("bluff", ["Qui ment le mieux ?", "L’Imposteur sait presque tout", "Qui a répondu ça ?", "Le Faux Expert", AK_FAKE_REAL_CLASSIC_GAME_V40]);
+v014SetCategoryGames("adulte", ["Action ou Vérité +18", "Je n’ai jamais +18", "Tu préfères +18", "Imitation +18", AK_FAKE_REAL_ADULT_GAME_V40, "Questions osées", "Défis adultes", "Jeux à boire"]);
+
+function akFakeRealIsGameV40(game = state.megaGame) {
+  return Boolean(game && (game.gameName === AK_FAKE_REAL_CLASSIC_GAME_V40 || game.gameName === AK_FAKE_REAL_ADULT_GAME_V40));
+}
+
+function akFakeRealIsAdultV40(game = state.megaGame) {
+  return Boolean(game?.gameName === AK_FAKE_REAL_ADULT_GAME_V40 || game?.fakeRealAdult);
+}
+
+function akFakeRealLoadCustomV40() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(AK_FAKE_REAL_CUSTOM_KEY_V40) || "[]");
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (error) {
+    console.warn("Impossible de charger les cartes Fake ou Réel personnalisées.", error);
+    return [];
+  }
+}
+
+function akFakeRealSaveCustomV40(cards) {
+  try { localStorage.setItem(AK_FAKE_REAL_CUSTOM_KEY_V40, JSON.stringify(cards || [])); }
+  catch (error) { console.warn("Impossible de sauvegarder les cartes Fake ou Réel personnalisées.", error); }
+}
+
+function akFakeRealNormalizeCardV40(item, adult = false) {
+  const safe = item && typeof item === "object" ? item : {};
+  const statement = String(safe.question || safe.statement || "Affirmation mystère").trim();
+  const answer = safe.answer === true ? 1 : safe.answer === false ? 0 : Number(safe.answer) === 1 ? 1 : 0;
+  return {
+    ...safe,
+    id: String(safe.id || `fake_real_custom_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`),
+    question: statement,
+    statement,
+    options: ["Fake", "Réel"],
+    answer,
+    explanation: String(safe.explanation || (answer ? "Cette affirmation est réelle." : "Cette affirmation est fausse.")).trim(),
+    theme: String(safe.theme || (adult ? "rencontres" : "culture_pop")),
+    difficulty: String(safe.difficulty || (adult ? "soft" : "medium")),
+    adult: Boolean(safe.adult ?? adult),
+    source: String(safe.source || (safe.custom ? "Carte personnalisée" : "Base AK’Games")),
+    custom: Boolean(safe.custom)
+  };
+}
+
+function akFakeRealThemeMetaV40(id, adult = false) {
+  const list = adult ? AK_FAKE_REAL_ADULT_THEMES_V40 : AK_FAKE_REAL_CLASSIC_THEMES_V40;
+  return list.find(item => item.id === id) || { id, icon: adult ? "🌶️" : "🧪", label: String(id || "Mix").replaceAll("_", " ") };
+}
+
+function akFakeRealLevelMetaV40(id, adult = false) {
+  const list = adult ? AK_FAKE_REAL_ADULT_LEVELS_V40 : AK_FAKE_REAL_DIFFICULTIES_V40;
+  return list.find(item => item.id === id) || { id, icon: adult ? "🌶️" : "⚡", label: String(id || "Mix") };
+}
+
+function akFakeRealGridV40(items, selected, attribute) {
+  return `<div class="fake-real-theme-grid-v40">${items.map(item => `
+    <label class="never-theme-option ${selected.includes(item.id) ? "selected" : ""}">
+      <input type="checkbox" ${attribute}="${item.id}" ${selected.includes(item.id) ? "checked" : ""}>
+      <span>${item.icon}</span><strong>${escapeHtml(item.label)}</strong>
+    </label>`).join("")}</div>`;
+}
+
+function akFakeRealLevelGridV40(items, selected, attribute) {
+  return `<div class="fake-real-level-grid-v40">${items.map(item => `
+    <label class="option-card mini-option ${selected.includes(item.id) ? "selected" : ""}">
+      <input type="checkbox" ${attribute}="${item.id}" ${selected.includes(item.id) ? "checked" : ""}>
+      <span><strong>${item.icon} ${escapeHtml(item.label)}</strong></span>
+    </label>`).join("")}</div>`;
+}
+
+function akFakeRealRoundOptionsV40(selected) {
+  return [10, 15, 20, 30, 50, 75, 100]
+    .map(value => `<option value="${value}" ${Number(selected) === value ? "selected" : ""}>${value} affirmations</option>`)
+    .join("");
+}
+
+function akFakeRealSetupMarkupV40(game, prefix = "fakeReal") {
+  const adultOnly = akFakeRealIsAdultV40(game);
+  const custom = game.fakeRealCustomCards || [];
+  const activeCustom = custom.filter(item => Boolean(item.adult) === adultOnly || (!adultOnly && game.fakeRealIncludeAdult));
+  const adultSection = state.adult && !adultOnly ? `
+    <section class="card fake-real-config-v40 fake-real-adult-config-v40">
+      <label class="option-card premium-toggle"><input id="${prefix}IncludeAdult" type="checkbox" ${game.fakeRealIncludeAdult ? "checked" : ""}><span><strong>🌶️ Mélanger les 250 affirmations adultes</strong><br><span class="helper">Consentement, corps, rencontres, applications, couple et vie privée.</span></span></label>
+      ${game.fakeRealIncludeAdult ? `<div class="section-heading-row-v39 top-gap"><div><small>PACK ADULTE</small><h2>Thèmes et intensités</h2></div></div>
+      ${akFakeRealGridV40(AK_FAKE_REAL_ADULT_THEMES_V40, game.fakeRealAdultThemes, `data-${prefix}-adult-theme`)}
+      <h3 class="expert-subtitle-v39">Intensité</h3>
+      ${akFakeRealLevelGridV40(AK_FAKE_REAL_ADULT_LEVELS_V40, game.fakeRealAdultLevels, `data-${prefix}-adult-level`)}` : ""}
+    </section>` : "";
+
+  const mainConfig = adultOnly ? `
+    <section class="card fake-real-config-v40 fake-real-adult-config-v40">
+      <div class="section-heading-row-v39"><div><small>250 AFFIRMATIONS +18</small><h2>Choisis les thèmes</h2></div></div>
+      ${akFakeRealGridV40(AK_FAKE_REAL_ADULT_THEMES_V40, game.fakeRealAdultThemes, `data-${prefix}-adult-theme`)}
+      <h3 class="expert-subtitle-v39">Intensité</h3>
+      ${akFakeRealLevelGridV40(AK_FAKE_REAL_ADULT_LEVELS_V40, game.fakeRealAdultLevels, `data-${prefix}-adult-level`)}
+    </section>` : `
+    <section class="card fake-real-config-v40">
+      <div class="section-heading-row-v39"><div><small>600 AFFIRMATIONS CLASSIQUES</small><h2>Choisis les thèmes</h2></div></div>
+      ${akFakeRealGridV40(AK_FAKE_REAL_CLASSIC_THEMES_V40, game.fakeRealClassicThemes, `data-${prefix}-classic-theme`)}
+      <h3 class="expert-subtitle-v39">Difficulté</h3>
+      ${akFakeRealLevelGridV40(AK_FAKE_REAL_DIFFICULTIES_V40, game.fakeRealDifficulties, `data-${prefix}-difficulty`)}
+    </section>`;
+
+  const themeOptions = (adultOnly ? AK_FAKE_REAL_ADULT_THEMES_V40 : AK_FAKE_REAL_CLASSIC_THEMES_V40)
+    .map(item => `<option value="${item.id}">${item.icon} ${escapeHtml(item.label)}</option>`).join("");
+  const levelOptions = (adultOnly ? AK_FAKE_REAL_ADULT_LEVELS_V40 : AK_FAKE_REAL_DIFFICULTIES_V40)
+    .map(item => `<option value="${item.id}">${item.icon} ${escapeHtml(item.label)}</option>`).join("");
+
+  return `
+    <section class="card setup-card-v07">
+      <div class="form-group"><label for="${prefix}Rounds">Nombre d’affirmations</label><select id="${prefix}Rounds" class="text-input">${akFakeRealRoundOptionsV40(game.roundCount)}</select></div>
+      <div class="fake-real-rule-strip-v40"><span>✅ +1 par bonne réponse</span><span>🔥 +1 tous les 3 sans-faute</span><span>🔒 vote secret</span></div>
+    </section>
+    ${mainConfig}
+    ${adultSection}
+    <section class="card fake-real-custom-v40">
+      <h2 class="section-title">✍️ Mes affirmations</h2>
+      <p class="helper">Ajoute tes propres intox ou vérités. Elles restent enregistrées sur cet appareil.</p>
+      <div class="form-group top-gap"><label for="${prefix}CustomStatement">Affirmation</label><textarea id="${prefix}CustomStatement" class="text-input" maxlength="280" rows="3" placeholder="Ex. Les poulpes peuvent résoudre certains puzzles."></textarea></div>
+      <div class="fake-real-custom-grid-v40 top-gap">
+        <div class="form-group"><label for="${prefix}CustomAnswer">Réponse</label><select id="${prefix}CustomAnswer" class="text-input"><option value="1">Réel</option><option value="0">Fake</option></select></div>
+        <div class="form-group"><label for="${prefix}CustomTheme">Thème</label><select id="${prefix}CustomTheme" class="text-input">${themeOptions}</select></div>
+        <div class="form-group"><label for="${prefix}CustomLevel">Niveau</label><select id="${prefix}CustomLevel" class="text-input">${levelOptions}</select></div>
+      </div>
+      <div class="form-group top-gap"><label for="${prefix}CustomExplanation">Explication</label><textarea id="${prefix}CustomExplanation" class="text-input" maxlength="420" rows="3" placeholder="Explique pourquoi l’affirmation est vraie ou fausse."></textarea></div>
+      <button type="button" id="${prefix}AddCustom" class="secondary-btn full top-gap">Ajouter cette affirmation</button>
+      ${custom.length ? `<label class="option-card mini-option top-gap"><input id="${prefix}IncludeCustom" type="checkbox" ${game.fakeRealIncludeCustom ? "checked" : ""}><span><strong>Utiliser mes ${custom.length} carte${custom.length > 1 ? "s" : ""}</strong></span></label>
+      <div class="fake-real-custom-list-v40">${custom.map(item => `<article><span>${item.answer === 1 ? "✅" : "🎭"}</span><div><strong>${escapeHtml(item.question)}</strong><small>${item.adult ? "Adulte" : "Classique"} · ${escapeHtml(akFakeRealThemeMetaV40(item.theme, item.adult).label)}</small></div><button type="button" data-${prefix}-remove-custom="${item.id}" aria-label="Supprimer">×</button></article>`).join("")}</div>` : `<div class="notice top-gap">Aucune affirmation personnalisée pour le moment.</div>`}
+    </section>
+    ${adultOnly ? `<div class="responsible-callout">🛡️ Le pack +18 donne des informations générales et ne remplace pas un avis médical. Chacun peut passer une carte.</div>` : ""}`;
+}
+
+function akFakeRealBindSetupV40(game, prefix, rerender) {
+  document.querySelector(`#${prefix}Rounds`)?.addEventListener("change", event => game.roundCount = Number(event.target.value));
+  document.querySelector(`#${prefix}IncludeAdult`)?.addEventListener("change", event => { game.fakeRealIncludeAdult = event.target.checked; rerender(); });
+  document.querySelector(`#${prefix}IncludeCustom`)?.addEventListener("change", event => game.fakeRealIncludeCustom = event.target.checked);
+
+  const bindChecks = (attribute, key) => document.querySelectorAll(`[${attribute}]`).forEach(input => input.addEventListener("change", () => {
+    const value = input.getAttribute(attribute);
+    const current = Array.isArray(game[key]) ? [...game[key]] : [];
+    game[key] = input.checked ? [...new Set([...current, value])] : current.filter(item => item !== value);
+  }));
+  bindChecks(`data-${prefix}-classic-theme`, "fakeRealClassicThemes");
+  bindChecks(`data-${prefix}-adult-theme`, "fakeRealAdultThemes");
+  bindChecks(`data-${prefix}-difficulty`, "fakeRealDifficulties");
+  bindChecks(`data-${prefix}-adult-level`, "fakeRealAdultLevels");
+
+  document.querySelector(`#${prefix}AddCustom`)?.addEventListener("click", () => {
+    const statement = document.querySelector(`#${prefix}CustomStatement`)?.value.trim() || "";
+    const explanation = document.querySelector(`#${prefix}CustomExplanation`)?.value.trim() || "";
+    const answer = Number(document.querySelector(`#${prefix}CustomAnswer`)?.value || 0);
+    const theme = document.querySelector(`#${prefix}CustomTheme`)?.value || "culture_pop";
+    const difficulty = document.querySelector(`#${prefix}CustomLevel`)?.value || "medium";
+    const adult = akFakeRealIsAdultV40(game);
+    if (!statement) return alert("Écris d’abord une affirmation.");
+    if (!explanation) return alert("Ajoute une explication pour la révélation.");
+    if (game.fakeRealCustomCards.some(item => item.question.trim().toLocaleLowerCase("fr") === statement.toLocaleLowerCase("fr"))) return alert("Cette affirmation personnalisée existe déjà.");
+    const id = `fake_real_custom_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+    game.fakeRealCustomCards.push(akFakeRealNormalizeCardV40({ id, question: statement, answer, explanation, theme, difficulty, adult, custom: true, source: "Carte personnalisée" }, adult));
+    game.fakeRealIncludeCustom = true;
+    akFakeRealSaveCustomV40(game.fakeRealCustomCards);
+    rerender();
+  });
+
+  document.querySelectorAll(`[data-${prefix}-remove-custom]`).forEach(button => button.addEventListener("click", () => {
+    const cardId = button.getAttribute(`data-${prefix}-remove-custom`);
+    game.fakeRealCustomCards = game.fakeRealCustomCards.filter(item => item.id !== cardId);
+    if (!game.fakeRealCustomCards.length) game.fakeRealIncludeCustom = false;
+    akFakeRealSaveCustomV40(game.fakeRealCustomCards);
+    rerender();
+  }));
+}
+
+async function akFakeRealBuildPoolV40(game) {
+  const adultOnly = akFakeRealIsAdultV40(game);
+  let pool = [];
+  if (!adultOnly) {
+    const classicRaw = await loadJsonFile("data/fake-reel.json", "Impossible de charger les 600 affirmations classiques.");
+    pool.push(...classicRaw.map(item => akFakeRealNormalizeCardV40(item, false)).filter(item => game.fakeRealClassicThemes.includes(item.theme) && game.fakeRealDifficulties.includes(item.difficulty)));
+  }
+  if (adultOnly || (state.adult && game.fakeRealIncludeAdult)) {
+    const adultRaw = await loadJsonFile("data/fake-reel-adulte.json", "Impossible de charger les 250 affirmations adultes.");
+    pool.push(...adultRaw.map(item => akFakeRealNormalizeCardV40(item, true)).filter(item => game.fakeRealAdultThemes.includes(item.theme) && game.fakeRealAdultLevels.includes(item.difficulty)));
+  }
+  if (game.fakeRealIncludeCustom) {
+    pool.push(...game.fakeRealCustomCards.map(item => akFakeRealNormalizeCardV40(item, Boolean(item.adult))).filter(item => adultOnly ? item.adult : (!item.adult || (state.adult && game.fakeRealIncludeAdult))));
+  }
+  return pool;
+}
+
+function akFakeRealSelectBalancedV40(pool, count, memoryKey) {
+  const safeCount = Math.min(Math.max(1, Number(count || 20)), pool.length);
+  const real = pool.filter(item => Number(item.answer) === 1);
+  const fake = pool.filter(item => Number(item.answer) === 0);
+  const realTarget = Math.min(real.length, Math.ceil(safeCount / 2));
+  const fakeTarget = Math.min(fake.length, safeCount - realTarget);
+  const selectedReal = selectFreshItems(real, realTarget, `${memoryKey}:real`);
+  const selectedFake = selectFreshItems(fake, fakeTarget, `${memoryKey}:fake`);
+  let selected = [];
+  const firstReal = Math.random() < 0.5;
+  const left = [...selectedReal];
+  const right = [...selectedFake];
+  while (left.length || right.length) {
+    const first = firstReal ? left : right;
+    const second = firstReal ? right : left;
+    if (first.length) selected.push(first.shift());
+    if (second.length) selected.push(second.shift());
+  }
+  if (selected.length < safeCount) {
+    const used = new Set(selected.map(item => item.id));
+    selected.push(...selectFreshItems(pool.filter(item => !used.has(item.id)), safeCount - selected.length, `${memoryKey}:extra`));
+  }
+  return selected.slice(0, safeCount);
+}
+
+const akFakeRealBaseResetMegaV40 = resetMegaGame;
+resetMegaGame = function resetMegaGameFakeRealV40(gameName, replayConfig = {}) {
+  akFakeRealBaseResetMegaV40(gameName, replayConfig);
+  if (!akFakeRealIsGameV40(state.megaGame)) return;
+  const game = state.megaGame;
+  const custom = akFakeRealLoadCustomV40().map(item => akFakeRealNormalizeCardV40(item, Boolean(item.adult)));
+  game.fakeRealAdult = gameName === AK_FAKE_REAL_ADULT_GAME_V40;
+  game.roundCount = Number(replayConfig.roundCount || 20);
+  game.fakeRealClassicThemes = Array.isArray(replayConfig.fakeRealClassicThemes) ? [...replayConfig.fakeRealClassicThemes] : AK_FAKE_REAL_CLASSIC_THEMES_V40.map(item => item.id);
+  game.fakeRealAdultThemes = Array.isArray(replayConfig.fakeRealAdultThemes) ? [...replayConfig.fakeRealAdultThemes] : AK_FAKE_REAL_ADULT_THEMES_V40.map(item => item.id);
+  game.fakeRealDifficulties = Array.isArray(replayConfig.fakeRealDifficulties) ? [...replayConfig.fakeRealDifficulties] : AK_FAKE_REAL_DIFFICULTIES_V40.map(item => item.id);
+  game.fakeRealAdultLevels = Array.isArray(replayConfig.fakeRealAdultLevels) ? [...replayConfig.fakeRealAdultLevels] : AK_FAKE_REAL_ADULT_LEVELS_V40.map(item => item.id);
+  game.fakeRealIncludeAdult = Boolean(replayConfig.fakeRealIncludeAdult);
+  game.fakeRealCustomCards = custom;
+  game.fakeRealIncludeCustom = Boolean((replayConfig.fakeRealIncludeCustom ?? true) && custom.length);
+  game.fakeRealStreaks = Object.fromEntries(state.players.map(player => [player.id, 0]));
+  game.fakeRealBestStreaks = Object.fromEntries(state.players.map(player => [player.id, 0]));
+  game.fakeRealCorrectCounts = Object.fromEntries(state.players.map(player => [player.id, 0]));
+};
+
+const akFakeRealBaseRenderMegaSetupV40 = renderMegaSetup;
+renderMegaSetup = function renderMegaSetupFakeRealV40() {
+  if (!akFakeRealIsGameV40()) return akFakeRealBaseRenderMegaSetupV40();
+  const game = state.megaGame;
+  clearV014Timer();
+  const adultOnly = akFakeRealIsAdultV40(game);
+  title.textContent = game.gameName;
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-mega fake-real-cover-v40 ${adultOnly ? "adult" : ""}">
+      <span class="game-cover-icon">${adultOnly ? "🌶️" : "🧪"}</span>
+      <div><small>${adultOnly ? "250 AFFIRMATIONS ADULTES" : "600 AFFIRMATIONS CLASSIQUES"}</small><h2>${escapeHtml(game.gameName)}</h2><p>${adultOnly ? "Démêle les mythes du corps, des rencontres et de la vie privée." : "Vote Fake ou Réel, puis découvre l’explication derrière chaque piège."}</p></div>
+    </section>
+    <section class="fake-real-stat-strip-v40"><article><strong>${adultOnly ? "250" : "600"}</strong><span>cartes</span></article><article><strong>${adultOnly ? "10" : "12"}</strong><span>thèmes</span></article><article><strong>50/50</strong><span>fake & réel</span></article></section>
+    ${akFakeRealSetupMarkupV40(game, "fakeReal")}
+    <button id="startFakeRealV40" class="primary-btn full">Lancer ${escapeHtml(game.gameName)}</button>`;
+  akFakeRealBindSetupV40(game, "fakeReal", renderMegaSetup);
+  document.querySelector("#startFakeRealV40")?.addEventListener("click", startMegaGame);
+};
+
+const akFakeRealBaseStartMegaV40 = startMegaGame;
+startMegaGame = async function startMegaGameFakeRealV40() {
+  if (!akFakeRealIsGameV40() || state.mode !== "single") return akFakeRealBaseStartMegaV40();
+  const game = state.megaGame;
+  const adultOnly = akFakeRealIsAdultV40(game);
+  if (!adultOnly && (!game.fakeRealClassicThemes.length || !game.fakeRealDifficulties.length) && !(game.fakeRealIncludeCustom && game.fakeRealCustomCards.some(item => !item.adult))) return alert("Choisis au moins un thème et une difficulté classiques.");
+  if ((adultOnly || game.fakeRealIncludeAdult) && (!game.fakeRealAdultThemes.length || !game.fakeRealAdultLevels.length) && !(game.fakeRealIncludeCustom && game.fakeRealCustomCards.some(item => item.adult))) return alert("Choisis au moins un thème et une intensité adultes.");
+  screen.innerHTML = `<div class="notice">Mélange équilibré des intox et des vérités…</div>`;
+  try {
+    const pool = await akFakeRealBuildPoolV40(game);
+    if (!pool.length) throw new Error("Aucune affirmation ne correspond aux filtres choisis.");
+    game.items = akFakeRealSelectBalancedV40(pool, game.roundCount, `solo:fake-real:v40:${game.gameName}:${game.fakeRealClassicThemes.join("-")}:${game.fakeRealAdultThemes.join("-")}`);
+    game.currentIndex = 0;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    game.scores = v014ScoreMap();
+    game.rounds = [];
+    game.fakeRealStreaks = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.fakeRealBestStreaks = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    game.fakeRealCorrectCounts = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    renderMegaCurrent();
+  } catch (error) {
+    console.error(error);
+    alert(error.message || "Impossible de lancer Fake ou Réel.");
+    renderMegaSetup();
+  }
+};
+
+const akFakeRealBaseQuizVoteV40 = renderMegaQuizVote;
+renderMegaQuizVote = function renderMegaQuizVoteFakeRealV40() {
+  if (!akFakeRealIsGameV40()) return akFakeRealBaseQuizVoteV40();
+  const game = state.megaGame;
+  const item = game.items[game.currentIndex];
+  const player = state.players[game.currentVoterIndex];
+  const meta = akFakeRealThemeMetaV40(item.theme, item.adult);
+  const level = akFakeRealLevelMetaV40(item.difficulty, item.adult);
+  title.textContent = game.gameName;
+  screen.innerHTML = `
+    ${v014Progress(game, "Affirmation")}
+    <section class="quiz-question-card fake-real-question-v40 ${item.adult ? "adult" : ""}">
+      <div class="fake-real-card-meta-v40"><span>${meta.icon} ${escapeHtml(meta.label)}</span><span>${level.icon} ${escapeHtml(level.label)}</span>${item.custom ? `<span>✍️ Personnalisée</span>` : ""}</div>
+      <span class="category-chip">VOTE DE ${escapeHtml(player.name).toUpperCase()}</span>
+      <h2>${escapeHtml(item.question)}</h2>
+    </section>
+    <section class="fake-real-vote-grid-v40">
+      <button class="fake-real-vote-btn fake" data-mega-answer="0"><span>🎭</span><strong>FAKE</strong><small>C’est une intox</small></button>
+      <button class="fake-real-vote-btn real" data-mega-answer="1"><span>✅</span><strong>RÉEL</strong><small>C’est vrai</small></button>
+    </section>`;
+  document.querySelectorAll("[data-mega-answer]").forEach(button => button.addEventListener("click", () => {
+    game.votes[player.id] = Number(button.dataset.megaAnswer);
+    game.currentVoterIndex += 1;
+    renderMegaQuizGate();
+  }));
+};
+
+const akFakeRealBaseQuizRevealV40 = renderMegaQuizReveal;
+renderMegaQuizReveal = function renderMegaQuizRevealFakeRealV40() {
+  if (!akFakeRealIsGameV40()) return akFakeRealBaseQuizRevealV40();
+  const game = state.megaGame;
+  const item = game.items[game.currentIndex];
+  const correct = Number(item.answer);
+  const meta = akFakeRealThemeMetaV40(item.theme, item.adult);
+  const earned = {};
+  const correctPlayers = [];
+  state.players.forEach(player => {
+    const won = Number(game.votes[player.id]) === correct;
+    if (won) {
+      correctPlayers.push(player);
+      game.fakeRealStreaks[player.id] = Number(game.fakeRealStreaks[player.id] || 0) + 1;
+      game.fakeRealBestStreaks[player.id] = Math.max(Number(game.fakeRealBestStreaks[player.id] || 0), game.fakeRealStreaks[player.id]);
+      game.fakeRealCorrectCounts[player.id] = Number(game.fakeRealCorrectCounts[player.id] || 0) + 1;
+      const bonus = game.fakeRealStreaks[player.id] % 3 === 0 ? 1 : 0;
+      earned[player.id] = 1 + bonus;
+      game.scores[player.id] = Number(game.scores[player.id] || 0) + earned[player.id];
+    } else {
+      game.fakeRealStreaks[player.id] = 0;
+      earned[player.id] = 0;
+    }
+  });
+  game.rounds.push({ itemId: item.id, question: item.question, votes: { ...game.votes }, correct, correctCount: correctPlayers.length, earned: { ...earned }, theme: item.theme, adult: Boolean(item.adult) });
+  title.textContent = correct === 1 ? "C’était réel" : "C’était fake";
+  setBackVisible(false);
+  screen.innerHTML = `
+    ${v014Progress(game, "Affirmation")}
+    <section class="reveal-stage reveal-v07 fake-real-reveal-v40 ${correct === 1 ? "real" : "fake"}">
+      <span class="game-cover-icon">${correct === 1 ? "✅" : "🎭"}</span>
+      <small>${meta.icon} ${escapeHtml(meta.label)}</small>
+      <h2>${correct === 1 ? "RÉEL" : "FAKE"}</h2>
+      <p>${escapeHtml(item.explanation || "Réponse révélée.")}</p>
+      ${item.source ? `<em>Source de la carte : ${escapeHtml(item.source)}</em>` : ""}
+    </section>
+    <section class="answer-chip-wall">${state.players.map(player => {
+      const won = Number(game.votes[player.id]) === correct;
+      const bonus = Number(earned[player.id] || 0) > 1;
+      return `<span class="${won ? "correct" : "wrong"}">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · ${escapeHtml(item.options?.[game.votes[player.id]] || "-")}${won ? ` · +${earned[player.id]}${bonus ? " 🔥" : ""}` : ""}</span>`;
+    }).join("")}</section>
+    ${correctPlayers.length ? `<div class="special-event"><strong>${correctPlayers.length}/${state.players.length} bonne${correctPlayers.length > 1 ? "s" : ""} réponse${correctPlayers.length > 1 ? "s" : ""}</strong><p>Une série de 3 bonnes réponses rapporte un point bonus.</p></div>` : `<div class="special-event tie"><strong>Piège parfait</strong><p>Cette affirmation a trompé toute la table.</p></div>`}
+    <button id="nextMegaQuiz" class="primary-btn full">${game.currentIndex + 1 >= game.items.length ? "Voir le classement" : "Affirmation suivante"}</button>`;
+  document.querySelector("#nextMegaQuiz")?.addEventListener("click", () => {
+    game.currentIndex += 1;
+    game.currentVoterIndex = 0;
+    game.votes = {};
+    renderMegaCurrent();
+  });
+};
+
+const akFakeRealBaseMegaFinalV40 = renderMegaFinal;
+renderMegaFinal = function renderMegaFinalFakeRealV40() {
+  if (!akFakeRealIsGameV40()) return akFakeRealBaseMegaFinalV40();
+  const game = state.megaGame;
+  const ranking = [...state.players].sort((a, b) => Number(game.scores[b.id] || 0) - Number(game.scores[a.id] || 0));
+  const bestStreakEntry = state.players.map(player => ({ player, value: Number(game.fakeRealBestStreaks[player.id] || 0) })).sort((a, b) => b.value - a.value)[0];
+  const mostCorrectEntry = state.players.map(player => ({ player, value: Number(game.fakeRealCorrectCounts[player.id] || 0) })).sort((a, b) => b.value - a.value)[0];
+  const trickiest = [...game.rounds].sort((a, b) => a.correctCount - b.correctCount)[0];
+  const replay = {
+    roundCount: game.roundCount,
+    fakeRealClassicThemes: [...game.fakeRealClassicThemes],
+    fakeRealAdultThemes: [...game.fakeRealAdultThemes],
+    fakeRealDifficulties: [...game.fakeRealDifficulties],
+    fakeRealAdultLevels: [...game.fakeRealAdultLevels],
+    fakeRealIncludeAdult: game.fakeRealIncludeAdult,
+    fakeRealIncludeCustom: game.fakeRealIncludeCustom
+  };
+  title.textContent = "Palmarès Fake ou Réel";
+  setBackVisible(false);
+  screen.innerHTML = `
+    <section class="winner-stage winner-stage-v07 mega-final-stage"><div class="winner-crown">🧪🏆</div><h2>${ranking.length ? escapeHtml(ranking[0].name) : "Partie terminée"}</h2><p>La machine à intox a livré son verdict.</p></section>
+    <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(game.scores[player.id] || 0)} pts</span></div>`).join("")}</section>
+    <section class="impostor-awards">
+      ${bestStreakEntry?.value ? `<article><span>🔥</span><div><small>MEILLEURE SÉRIE</small><strong>${escapeHtml(bestStreakEntry.player.name)}</strong><p>${bestStreakEntry.value} bonnes réponses d’affilée</p></div></article>` : ""}
+      ${mostCorrectEntry?.value ? `<article><span>🧠</span><div><small>PLUS GRAND NOMBRE DE BONNES RÉPONSES</small><strong>${escapeHtml(mostCorrectEntry.player.name)}</strong><p>${mostCorrectEntry.value}/${game.items.length}</p></div></article>` : ""}
+      ${trickiest ? `<article><span>🕳️</span><div><small>AFFIRMATION LA PLUS PIÉGEUSE</small><strong>${escapeHtml(trickiest.question)}</strong><p>${trickiest.correctCount}/${state.players.length} bonne${trickiest.correctCount > 1 ? "s" : ""} réponse${trickiest.correctCount > 1 ? "s" : ""}</p></div></article>` : ""}
+    </section>
+    <div class="toolbar"><button id="fakeRealReplayV40" class="secondary-btn">Rejouer</button><button id="fakeRealOtherV40" class="primary-btn">Autre jeu</button></div>`;
+  document.querySelector("#fakeRealReplayV40")?.addEventListener("click", () => { resetMegaGame(game.gameName, replay); renderMegaSetup(); });
+  document.querySelector("#fakeRealOtherV40")?.addEventListener("click", () => { state.megaGame = null; renderPlayChoice(); });
+};
