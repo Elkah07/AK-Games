@@ -1,25 +1,25 @@
 {
   "characters": [
-    "filou",
-    "nuggets",
-    "vapo"
+    "rrrrh",
+    "sir-moustache",
+    "snow"
   ],
   "posesAdded": {
-    "filou": [
+    "rrrrh": [
       "idle",
       "talk",
       "hype",
       "win",
       "lose"
     ],
-    "nuggets": [
+    "sir-moustache": [
       "idle",
       "talk",
       "hype",
       "win",
       "lose"
     ],
-    "vapo": [
+    "snow": [
       "idle",
       "talk",
       "hype",
@@ -36,7 +36,8 @@
   "webpCount": 63,
   "totalFiles": 66,
   "notes": [
-    "Includes corrected transparent idle for Vapo.",
-    "Filou, Nuggets, and Vapo now have idle + talk + hype + win + lose."
+    "Sir Moustache idle corrected with transparent background.",
+    "Snow idle corrected with transparent background.",
+    "Rrrrh, Sir Moustache and Snow now have idle + talk + hype + win + lose."
   ]
 }

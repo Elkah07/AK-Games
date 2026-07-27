@@ -1,108 +1,108 @@
 window.AKGAME_CHARACTER_POSES = window.AKGAME_CHARACTER_POSES || {};
 Object.assign(window.AKGAME_CHARACTER_POSES, {
-  "filou": {
-    "name": "Filou",
-    "legacyAvatarId": "fox",
-    "legacyPath": "assets/characters/filou.webp",
+  "rrrrh": {
+    "name": "Rrrrh",
+    "legacyAvatarId": "dinosaur",
+    "legacyPath": "assets/characters/rrrrh.webp",
     "idle": {
-      "full": "assets/characters/filou/idle/full.webp",
-      "bust": "assets/characters/filou/idle/bust.webp",
-      "avatar-circle": "assets/characters/filou/idle/avatar-circle.webp",
-      "icon": "assets/characters/filou/idle/icon.webp"
+      "full": "assets/characters/rrrrh/idle/full.webp",
+      "bust": "assets/characters/rrrrh/idle/bust.webp",
+      "avatar-circle": "assets/characters/rrrrh/idle/avatar-circle.webp",
+      "icon": "assets/characters/rrrrh/idle/icon.webp"
     },
     "talk": {
-      "full": "assets/characters/filou/talk/full.webp",
-      "bust": "assets/characters/filou/talk/bust.webp",
-      "avatar-circle": "assets/characters/filou/talk/avatar-circle.webp",
-      "icon": "assets/characters/filou/talk/icon.webp"
+      "full": "assets/characters/rrrrh/talk/full.webp",
+      "bust": "assets/characters/rrrrh/talk/bust.webp",
+      "avatar-circle": "assets/characters/rrrrh/talk/avatar-circle.webp",
+      "icon": "assets/characters/rrrrh/talk/icon.webp"
     },
     "hype": {
-      "full": "assets/characters/filou/hype/full.webp",
-      "bust": "assets/characters/filou/hype/bust.webp",
-      "avatar-circle": "assets/characters/filou/hype/avatar-circle.webp",
-      "icon": "assets/characters/filou/hype/icon.webp"
+      "full": "assets/characters/rrrrh/hype/full.webp",
+      "bust": "assets/characters/rrrrh/hype/bust.webp",
+      "avatar-circle": "assets/characters/rrrrh/hype/avatar-circle.webp",
+      "icon": "assets/characters/rrrrh/hype/icon.webp"
     },
     "win": {
-      "full": "assets/characters/filou/win/full.webp",
-      "bust": "assets/characters/filou/win/bust.webp",
-      "avatar-circle": "assets/characters/filou/win/avatar-circle.webp",
-      "icon": "assets/characters/filou/win/icon.webp"
+      "full": "assets/characters/rrrrh/win/full.webp",
+      "bust": "assets/characters/rrrrh/win/bust.webp",
+      "avatar-circle": "assets/characters/rrrrh/win/avatar-circle.webp",
+      "icon": "assets/characters/rrrrh/win/icon.webp"
     },
     "lose": {
-      "full": "assets/characters/filou/lose/full.webp",
-      "bust": "assets/characters/filou/lose/bust.webp",
-      "avatar-circle": "assets/characters/filou/lose/avatar-circle.webp",
-      "icon": "assets/characters/filou/lose/icon.webp"
+      "full": "assets/characters/rrrrh/lose/full.webp",
+      "bust": "assets/characters/rrrrh/lose/bust.webp",
+      "avatar-circle": "assets/characters/rrrrh/lose/avatar-circle.webp",
+      "icon": "assets/characters/rrrrh/lose/icon.webp"
     }
   },
-  "nuggets": {
-    "name": "Nuggets",
-    "legacyAvatarId": "chick",
-    "legacyPath": "assets/characters/nuggets.webp",
+  "sir-moustache": {
+    "name": "Sir Moustache",
+    "legacyAvatarId": "cat",
+    "legacyPath": "assets/characters/sir-moustache.webp",
     "idle": {
-      "full": "assets/characters/nuggets/idle/full.webp",
-      "bust": "assets/characters/nuggets/idle/bust.webp",
-      "avatar-circle": "assets/characters/nuggets/idle/avatar-circle.webp",
-      "icon": "assets/characters/nuggets/idle/icon.webp"
+      "full": "assets/characters/sir-moustache/idle/full.webp",
+      "bust": "assets/characters/sir-moustache/idle/bust.webp",
+      "avatar-circle": "assets/characters/sir-moustache/idle/avatar-circle.webp",
+      "icon": "assets/characters/sir-moustache/idle/icon.webp"
     },
     "talk": {
-      "full": "assets/characters/nuggets/talk/full.webp",
-      "bust": "assets/characters/nuggets/talk/bust.webp",
-      "avatar-circle": "assets/characters/nuggets/talk/avatar-circle.webp",
-      "icon": "assets/characters/nuggets/talk/icon.webp"
+      "full": "assets/characters/sir-moustache/talk/full.webp",
+      "bust": "assets/characters/sir-moustache/talk/bust.webp",
+      "avatar-circle": "assets/characters/sir-moustache/talk/avatar-circle.webp",
+      "icon": "assets/characters/sir-moustache/talk/icon.webp"
     },
     "hype": {
-      "full": "assets/characters/nuggets/hype/full.webp",
-      "bust": "assets/characters/nuggets/hype/bust.webp",
-      "avatar-circle": "assets/characters/nuggets/hype/avatar-circle.webp",
-      "icon": "assets/characters/nuggets/hype/icon.webp"
+      "full": "assets/characters/sir-moustache/hype/full.webp",
+      "bust": "assets/characters/sir-moustache/hype/bust.webp",
+      "avatar-circle": "assets/characters/sir-moustache/hype/avatar-circle.webp",
+      "icon": "assets/characters/sir-moustache/hype/icon.webp"
     },
     "win": {
-      "full": "assets/characters/nuggets/win/full.webp",
-      "bust": "assets/characters/nuggets/win/bust.webp",
-      "avatar-circle": "assets/characters/nuggets/win/avatar-circle.webp",
-      "icon": "assets/characters/nuggets/win/icon.webp"
+      "full": "assets/characters/sir-moustache/win/full.webp",
+      "bust": "assets/characters/sir-moustache/win/bust.webp",
+      "avatar-circle": "assets/characters/sir-moustache/win/avatar-circle.webp",
+      "icon": "assets/characters/sir-moustache/win/icon.webp"
     },
     "lose": {
-      "full": "assets/characters/nuggets/lose/full.webp",
-      "bust": "assets/characters/nuggets/lose/bust.webp",
-      "avatar-circle": "assets/characters/nuggets/lose/avatar-circle.webp",
-      "icon": "assets/characters/nuggets/lose/icon.webp"
+      "full": "assets/characters/sir-moustache/lose/full.webp",
+      "bust": "assets/characters/sir-moustache/lose/bust.webp",
+      "avatar-circle": "assets/characters/sir-moustache/lose/avatar-circle.webp",
+      "icon": "assets/characters/sir-moustache/lose/icon.webp"
     }
   },
-  "vapo": {
-    "name": "Vapo",
-    "legacyAvatarId": "ghost",
-    "legacyPath": "assets/characters/vapo.webp",
+  "snow": {
+    "name": "Snow",
+    "legacyAvatarId": "penguin",
+    "legacyPath": "assets/characters/snow.webp",
     "idle": {
-      "full": "assets/characters/vapo/idle/full.webp",
-      "bust": "assets/characters/vapo/idle/bust.webp",
-      "avatar-circle": "assets/characters/vapo/idle/avatar-circle.webp",
-      "icon": "assets/characters/vapo/idle/icon.webp"
+      "full": "assets/characters/snow/idle/full.webp",
+      "bust": "assets/characters/snow/idle/bust.webp",
+      "avatar-circle": "assets/characters/snow/idle/avatar-circle.webp",
+      "icon": "assets/characters/snow/idle/icon.webp"
     },
     "talk": {
-      "full": "assets/characters/vapo/talk/full.webp",
-      "bust": "assets/characters/vapo/talk/bust.webp",
-      "avatar-circle": "assets/characters/vapo/talk/avatar-circle.webp",
-      "icon": "assets/characters/vapo/talk/icon.webp"
+      "full": "assets/characters/snow/talk/full.webp",
+      "bust": "assets/characters/snow/talk/bust.webp",
+      "avatar-circle": "assets/characters/snow/talk/avatar-circle.webp",
+      "icon": "assets/characters/snow/talk/icon.webp"
     },
     "hype": {
-      "full": "assets/characters/vapo/hype/full.webp",
-      "bust": "assets/characters/vapo/hype/bust.webp",
-      "avatar-circle": "assets/characters/vapo/hype/avatar-circle.webp",
-      "icon": "assets/characters/vapo/hype/icon.webp"
+      "full": "assets/characters/snow/hype/full.webp",
+      "bust": "assets/characters/snow/hype/bust.webp",
+      "avatar-circle": "assets/characters/snow/hype/avatar-circle.webp",
+      "icon": "assets/characters/snow/hype/icon.webp"
     },
     "win": {
-      "full": "assets/characters/vapo/win/full.webp",
-      "bust": "assets/characters/vapo/win/bust.webp",
-      "avatar-circle": "assets/characters/vapo/win/avatar-circle.webp",
-      "icon": "assets/characters/vapo/win/icon.webp"
+      "full": "assets/characters/snow/win/full.webp",
+      "bust": "assets/characters/snow/win/bust.webp",
+      "avatar-circle": "assets/characters/snow/win/avatar-circle.webp",
+      "icon": "assets/characters/snow/win/icon.webp"
     },
     "lose": {
-      "full": "assets/characters/vapo/lose/full.webp",
-      "bust": "assets/characters/vapo/lose/bust.webp",
-      "avatar-circle": "assets/characters/vapo/lose/avatar-circle.webp",
-      "icon": "assets/characters/vapo/lose/icon.webp"
+      "full": "assets/characters/snow/lose/full.webp",
+      "bust": "assets/characters/snow/lose/bust.webp",
+      "avatar-circle": "assets/characters/snow/lose/avatar-circle.webp",
+      "icon": "assets/characters/snow/lose/icon.webp"
     }
   }
 });
