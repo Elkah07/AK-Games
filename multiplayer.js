@@ -9020,3 +9020,70 @@ startAmbiancePollGame = async function () {
     renderAmbiancePollSetup();
   }
 };
+
+
+/* AKGAMES JE N'AI JAMAIS ADULTE 400 MULTI V2 */
+const akNeverAdultMultiBaseRenderSetup = renderAmbiancePollSetup;
+renderAmbiancePollSetup = function () {
+  if (!isMultiplayer() || state.ambiancePoll?.type !== "never" || !state.ambiancePoll?.forceAdult) return akNeverAdultMultiBaseRenderSetup();
+  const game = state.ambiancePoll;
+  akNeverAdultEnsure(game);
+  title.textContent = "Je n’ai jamais +18";
+  setBackVisible(true);
+  screen.innerHTML = `
+    <section class="game-cover game-cover-never never-adult-cover"><span class="game-cover-icon">🌶️</span><div><small>MULTIJOUEUR · 400 PHRASES</small><h2>Je n’ai jamais +18</h2><p>Chaque personne répond sur son téléphone, puis les réponses sont révélées ensemble.</p></div></section>
+    ${state.isHost ? akNeverAdultSetupMarkup(game, "multiNeverAdult") : `<section class="card"><h2 class="section-title">Réglages de l’hôte</h2><p class="helper">L’hôte choisit les thèmes, les intensités et la durée.</p></section>`}
+    <div class="responsible-callout">🛡️ Réservé aux adultes consentants. Une carte peut être passée sans justification.</div>
+    ${state.isHost ? `<button id="startMultiPoll" class="primary-btn full">Lancer sur tous les téléphones</button>` : renderMultiWaiting("En attente de l’hôte", "La partie commencera automatiquement.", "👑")}`;
+  if (state.isHost) {
+    akNeverAdultBindSetup(game, "multiNeverAdult", renderAmbiancePollSetup);
+    document.querySelector("#startMultiPoll")?.addEventListener("click", startAmbiancePollGame);
+  }
+};
+
+const akNeverAdultMultiBaseStart = startAmbiancePollGame;
+startAmbiancePollGame = async function () {
+  if (!isMultiplayer() || state.ambiancePoll?.type !== "never" || !state.ambiancePoll?.forceAdult) return akNeverAdultMultiBaseStart();
+  if (!state.isHost) return;
+  const game = state.ambiancePoll;
+  akNeverAdultEnsure(game);
+  const hasThemes = game.neverAdultThemes.length > 0;
+  const hasLevels = game.neverAdultLevels.length > 0;
+  const hasCustom = game.neverAdultIncludeCustom && game.neverAdultCustomCards.length > 0;
+  if ((!hasThemes || !hasLevels) && !hasCustom) return alert("Choisis au moins un thème et une intensité.");
+  screen.innerHTML = `<div class="notice">Synchronisation des 400 phrases adultes…</div>`;
+  try {
+    const rows = await loadJsonFile("data/je-nai-jamais-adulte.json", "Impossible de charger les phrases adultes.");
+    const pool = akNeverAdultBuildPool(rows, game);
+    if (!pool.length) throw new Error("Aucune phrase ne correspond aux choix sélectionnés.");
+    const items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), "multi:never-have-i-ever:adult:v2");
+    const scores = Object.fromEntries(state.players.map(player => [player.id, 0]));
+    const startedAt = AKFirebase.now();
+    await AKFirebase.setGame(state.roomCode, { state: {
+      type: "never-have-i-ever",
+      phase: "voting",
+      sessionGameId: createSessionGameId("never-have-i-ever-adult"),
+      items,
+      currentIndex: 0,
+      scores,
+      rounds: {},
+      currentResult: null,
+      voteEndsAt: null,
+      settings: {
+        roundCount: items.length,
+        includeAdult: true,
+        forceAdult: true,
+        neverAdultThemes: [...game.neverAdultThemes],
+        neverAdultLevels: [...game.neverAdultLevels],
+        includeCustom: Boolean(game.neverAdultIncludeCustom)
+      },
+      startedAt,
+      updatedAt: startedAt
+    }, votes: {} });
+    state.multiView = "ambiance-game";
+  } catch (error) {
+    console.error(error);
+    alert(error.message || "Impossible de lancer la partie adulte.");
+    renderAmbiancePollSetup();
+  }
+};

@@ -8278,3 +8278,17 @@ body.game-rules-open {
   .never-theme-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .never-heading { flex-direction:column; }
 }
+
+
+/* JE N'AI JAMAIS ADULTE 400 V2 */
+.never-adult-cover { background: linear-gradient(135deg, rgba(91,33,182,.33), rgba(190,24,93,.19)); }
+.never-level-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-top:14px; }
+.never-level-option { position:relative; display:flex; align-items:flex-start; gap:10px; min-height:82px; padding:13px; border:1px solid var(--border,rgba(255,255,255,.12)); border-radius:16px; background:rgba(255,255,255,.035); cursor:pointer; transition:.18s ease; }
+.never-level-option input { position:absolute; opacity:0; pointer-events:none; }
+.never-level-option > span { font-size:1.5rem; line-height:1; }
+.never-level-option div { display:grid; gap:4px; }
+.never-level-option strong { font-size:.92rem; }
+.never-level-option small { color:var(--muted,#a7a7b2); font-size:.76rem; line-height:1.25; }
+.never-level-option.active { border-color:#f43f8c; background:rgba(244,63,140,.13); box-shadow:0 0 0 1px rgba(244,63,140,.1) inset; }
+.never-custom-meta { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+@media (max-width:760px) { .never-level-grid { grid-template-columns:1fr; } .never-custom-meta { grid-template-columns:1fr; } }

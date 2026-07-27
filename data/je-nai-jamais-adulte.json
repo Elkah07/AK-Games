@@ -1,402 +1,3202 @@
 [
   {
     "id": "jamais_adulte_001",
-    "text": "Je n’ai jamais envoyé un nude avec mon visage visible.",
-    "category": "adult"
+    "text": "Je n’ai jamais eu un crush immédiat sur quelqu’un juste à cause de son regard.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_002",
-    "text": "Je n’ai jamais embrassé quelqu’un quelques minutes après l’avoir rencontré.",
-    "category": "adult"
+    "text": "Je n’ai jamais flirté uniquement pour voir si je plaisais encore.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_003",
-    "text": "Je n’ai jamais eu envie de coucher avec une personne présente dans cette pièce.",
-    "category": "adult"
+    "text": "Je n’ai jamais changé ma façon de m’habiller pour attirer l’attention d’une personne.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_004",
-    "text": "Je n’ai jamais envoyé un sexto pendant que j’étais au travail.",
-    "category": "adult"
+    "text": "Je n’ai jamais fait semblant de ne pas remarquer quelqu’un qui me plaisait.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_005",
-    "text": "Je n’ai jamais eu un crush sur le ou la partenaire d’un(e) ami(e).",
-    "category": "adult"
+    "text": "Je n’ai jamais demandé à un ami de vérifier discrètement si quelqu’un était célibataire.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_006",
-    "text": "Je n’ai jamais couché avec quelqu’un sans connaître son nom de famille.",
-    "category": "adult"
+    "text": "Je n’ai jamais prolongé une conversation uniquement parce que la personne me plaisait.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_007",
-    "text": "Je n’ai jamais menti sur mon nombre de partenaires.",
-    "category": "adult"
+    "text": "Je n’ai jamais rougi à cause d’un compliment venant de la bonne personne.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_008",
-    "text": "Je n’ai jamais eu une aventure avec un ex après notre rupture.",
-    "category": "adult"
+    "text": "Je n’ai jamais regretté de ne pas avoir tenté ma chance avec quelqu’un.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_009",
-    "text": "Je n’ai jamais fait semblant de ne pas être jaloux ou jalouse.",
-    "category": "adult"
+    "text": "Je n’ai jamais cherché le profil d’une personne juste après l’avoir rencontrée.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_010",
-    "text": "Je n’ai jamais embrassé deux personnes différentes dans la même soirée.",
-    "category": "adult"
+    "text": "Je n’ai jamais essayé de rendre quelqu’un jaloux pour attirer son attention.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_011",
-    "text": "Je n’ai jamais eu une relation purement physique.",
-    "category": "adult"
+    "text": "Je n’ai jamais eu envie d’embrasser quelqu’un au milieu d’une conversation banale.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_012",
-    "text": "Je n’ai jamais regretté un message dès la seconde où je l’ai envoyé.",
-    "category": "adult"
+    "text": "Je n’ai jamais laissé volontairement planer un doute sur mes intentions.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_013",
-    "text": "Je n’ai jamais enregistré une photo sexy uniquement pour moi.",
-    "category": "adult"
+    "text": "Je n’ai jamais trouvé quelqu’un plus attirant après l’avoir entendu rire.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_014",
-    "text": "Je n’ai jamais supprimé une conversation pour éviter qu’on la voie.",
-    "category": "adult"
+    "text": "Je n’ai jamais eu un type de personne très précis en tête.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_015",
-    "text": "Je n’ai jamais eu un rendez-vous qui s’est terminé beaucoup plus vite que prévu.",
-    "category": "adult"
+    "text": "Je n’ai jamais envoyé un message clairement destiné à séduire quelqu’un.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_016",
-    "text": "Je n’ai jamais été attiré(e) par quelqu’un uniquement à cause de sa voix.",
-    "category": "adult"
+    "text": "Je n’ai jamais fait le premier pas alors que j’étais persuadé·e d’être rejeté·e.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_017",
-    "text": "Je n’ai jamais fantasmé sur un(e) collègue.",
-    "category": "adult"
+    "text": "Je n’ai jamais embrassé quelqu’un que je connaissais depuis moins d’une heure.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_018",
-    "text": "Je n’ai jamais embrassé quelqu’un dans un lieu public très risqué.",
-    "category": "adult"
+    "text": "Je n’ai jamais flirté avec deux personnes pendant la même soirée.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_019",
-    "text": "Je n’ai jamais eu une histoire avec une personne beaucoup plus âgée que moi.",
-    "category": "adult"
+    "text": "Je n’ai jamais eu un crush sur une personne déjà en couple.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_020",
-    "text": "Je n’ai jamais eu une histoire avec une personne beaucoup plus jeune que moi, mais majeure.",
-    "category": "adult"
+    "text": "Je n’ai jamais utilisé une excuse pour me rapprocher physiquement de quelqu’un.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_021",
-    "text": "Je n’ai jamais simulé du plaisir.",
-    "category": "adult"
+    "text": "Je n’ai jamais entretenu volontairement une tension sans vouloir aller plus loin.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_022",
-    "text": "Je n’ai jamais appelé quelqu’un par le mauvais prénom dans un moment intime.",
-    "category": "adult"
+    "text": "Je n’ai jamais embrassé quelqu’un simplement pour vérifier s’il y avait une alchimie.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_023",
-    "text": "Je n’ai jamais envoyé un message très explicite à la mauvaise personne.",
-    "category": "adult"
+    "text": "Je n’ai jamais été attiré·e par quelqu’un que mes amis ne comprenaient absolument pas.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_024",
-    "text": "Je n’ai jamais été surpris(e) pendant un moment intime.",
-    "category": "adult"
+    "text": "Je n’ai jamais fait durer un flirt pendant des semaines sans savoir où il menait.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_025",
-    "text": "Je n’ai jamais eu envie de revoir quelqu’un uniquement pour le sexe.",
-    "category": "adult"
+    "text": "Je n’ai jamais eu envie de séduire une personne uniquement parce qu’elle semblait inaccessible.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_026",
-    "text": "Je n’ai jamais gardé une photo intime d’un ex après la rupture.",
-    "category": "adult"
+    "text": "Je n’ai jamais laissé quelqu’un croire que j’étais plus intéressé·e que je ne l’étais vraiment.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_027",
-    "text": "Je n’ai jamais fait un rêve très chaud sur quelqu’un que je connais.",
-    "category": "adult"
+    "text": "Je n’ai jamais eu une attirance réciproque avec quelqu’un sans que rien ne se passe.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_028",
-    "text": "Je n’ai jamais eu un crush sur une personne qui me détestait.",
-    "category": "adult"
+    "text": "Je n’ai jamais tenté de séduire quelqu’un dans un contexte complètement inapproprié.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_029",
-    "text": "Je n’ai jamais embrassé quelqu’un pour rendre une autre personne jalouse.",
-    "category": "adult"
+    "text": "Je n’ai jamais ressenti une attirance pour une personne présente dans mon groupe d’amis.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_030",
-    "text": "Je n’ai jamais fait semblant d’être occupé(e) pour éviter un rendez-vous.",
-    "category": "adult"
+    "text": "Je n’ai jamais embrassé quelqu’un en sachant que cela compliquerait tout.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_031",
-    "text": "Je n’ai jamais stalké un crush sur plusieurs réseaux sociaux.",
-    "category": "adult"
+    "text": "Je n’ai jamais eu envie de revoir quelqu’un principalement pour son physique.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_032",
-    "text": "Je n’ai jamais été attiré(e) par une personne que je trouvais insupportable.",
-    "category": "adult"
+    "text": "Je n’ai jamais dragué quelqu’un alors que je savais que ce serait sans lendemain.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_033",
-    "text": "Je n’ai jamais eu une aventure que personne ici ne connaît.",
-    "category": "adult"
+    "text": "Je n’ai jamais entretenu une ambiguïté avec une personne proche.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_034",
-    "text": "Je n’ai jamais testé une application de rencontre juste pour m’amuser.",
-    "category": "adult"
+    "text": "Je n’ai jamais caché une attirance importante à tout mon entourage.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_035",
-    "text": "Je n’ai jamais accepté un rendez-vous en sachant que je ne voulais rien de sérieux.",
-    "category": "adult"
+    "text": "Je n’ai jamais eu un crush sur la personne avec qui un ami sortait ou avait déjà flirté.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_036",
-    "text": "Je n’ai jamais eu deux crushs en même temps.",
-    "category": "adult"
+    "text": "Je n’ai jamais confondu attirance, ego et véritable intérêt.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_037",
-    "text": "Je n’ai jamais été tenté(e) de retourner avec mon ex pour une seule nuit.",
-    "category": "adult"
+    "text": "Je n’ai jamais embrassé quelqu’un que j’avais juré de ne jamais embrasser.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_038",
-    "text": "Je n’ai jamais embrassé quelqu’un dans une voiture.",
-    "category": "adult"
+    "text": "Je n’ai jamais été attiré·e par une personne uniquement parce qu’elle me résistait.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_039",
-    "text": "Je n’ai jamais fait l’amour dans un endroit où l’on pouvait facilement être découvert.",
-    "category": "adult"
+    "text": "Je n’ai jamais fait semblant d’être détaché·e alors que j’étais complètement captivé·e.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_040",
-    "text": "Je n’ai jamais menti sur ce que j’aimais au lit.",
-    "category": "adult"
+    "text": "Je n’ai jamais eu une attirance que je n’assumerais pas facilement devant ce groupe.",
+    "category": "adult",
+    "theme": "attirance_seduction",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_041",
-    "text": "Je n’ai jamais eu un fantasme que j’ai eu honte d’avouer.",
-    "category": "adult"
+    "text": "Je n’ai jamais annulé un rendez-vous au dernier moment par stress.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_042",
-    "text": "Je n’ai jamais été attiré(e) par le meilleur ami ou la meilleure amie d’un ex.",
-    "category": "adult"
+    "text": "Je n’ai jamais préparé à l’avance des sujets de conversation pour un date.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_043",
-    "text": "Je n’ai jamais regardé les anciennes photos d’un ex en pleine nuit.",
-    "category": "adult"
+    "text": "Je n’ai jamais prétendu aimer quelque chose pour faire bonne impression pendant un rendez-vous.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_044",
-    "text": "Je n’ai jamais envoyé « Tu dors ? » avec une intention très claire.",
-    "category": "adult"
+    "text": "Je n’ai jamais consulté le profil d’une personne pendant que j’étais encore au rendez-vous avec elle.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_045",
-    "text": "Je n’ai jamais eu un rendez-vous uniquement pour oublier quelqu’un d’autre.",
-    "category": "adult"
+    "text": "Je n’ai jamais demandé à un ami de m’appeler pour me fournir une excuse de départ.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_046",
-    "text": "Je n’ai jamais utilisé un faux prétexte pour rester dormir chez quelqu’un.",
-    "category": "adult"
+    "text": "Je n’ai jamais su dès les cinq premières minutes qu’il n’y aurait pas de deuxième rendez-vous.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_047",
-    "text": "Je n’ai jamais eu une histoire secrète.",
-    "category": "adult"
+    "text": "Je n’ai jamais été agréablement surpris·e par une personne qui ne me plaisait pas beaucoup en photo.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_048",
-    "text": "Je n’ai jamais eu envie d’embrasser quelqu’un en plein milieu d’une dispute.",
-    "category": "adult"
+    "text": "Je n’ai jamais raconté un date en direct à mes amis par messages.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_049",
-    "text": "Je n’ai jamais été attiré(e) par quelqu’un dont je ne partageais aucune valeur.",
-    "category": "adult"
+    "text": "Je n’ai jamais menti légèrement sur moi avant une première rencontre.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_050",
-    "text": "Je n’ai jamais demandé à un(e) ami(e) de m’aider à séduire quelqu’un.",
-    "category": "adult"
+    "text": "Je n’ai jamais oublié le prénom d’une personne pendant un rendez-vous.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_051",
-    "text": "Je n’ai jamais fait semblant de ne pas voir un message pour paraître moins intéressé(e).",
-    "category": "adult"
+    "text": "Je n’ai jamais eu un date qui ressemblait davantage à un entretien d’embauche.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_052",
-    "text": "Je n’ai jamais envoyé une photo suggestive sans qu’on me la demande.",
-    "category": "adult"
+    "text": "Je n’ai jamais accepté un rendez-vous uniquement parce que je m’ennuyais.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_053",
-    "text": "Je n’ai jamais reçu une proposition indécente qui m’a réellement tenté(e).",
-    "category": "adult"
+    "text": "Je n’ai jamais prolongé un date alors que je voulais déjà rentrer.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_054",
-    "text": "Je n’ai jamais eu de sentiments après avoir promis que ce serait seulement physique.",
-    "category": "adult"
+    "text": "Je n’ai jamais embrassé quelqu’un à la fin d’un rendez-vous uniquement par politesse ou hésitation.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "soft",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_055",
-    "text": "Je n’ai jamais oublié une personne à cause d’un seul baiser.",
-    "category": "adult"
+    "text": "Je n’ai jamais eu plusieurs premiers rendez-vous la même semaine.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_056",
-    "text": "Je n’ai jamais été attiré(e) par quelqu’un uniquement parce que c’était interdit.",
-    "category": "adult"
+    "text": "Je n’ai jamais quitté un rendez-vous sans dire clairement que je partais.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_057",
-    "text": "Je n’ai jamais eu un plan d’un soir.",
-    "category": "adult"
+    "text": "Je n’ai jamais invité quelqu’un chez moi dès le premier rendez-vous.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_058",
-    "text": "Je n’ai jamais revu un plan d’un soir en secret.",
-    "category": "adult"
+    "text": "Je n’ai jamais été invité·e chez quelqu’un en comprenant très bien le sous-entendu.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_059",
-    "text": "Je n’ai jamais utilisé un surnom gênant pendant un moment intime.",
-    "category": "adult"
+    "text": "Je n’ai jamais eu un premier rendez-vous qui s’est terminé au petit matin.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_060",
-    "text": "Je n’ai jamais prétendu aimer quelque chose au lit pour faire plaisir.",
-    "category": "adult"
+    "text": "Je n’ai jamais revu quelqu’un malgré un premier rendez-vous franchement mauvais.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_061",
-    "text": "Je n’ai jamais eu envie d’essayer une relation ouverte.",
-    "category": "adult"
+    "text": "Je n’ai jamais comparé discrètement deux personnes que je fréquentais en même temps.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_062",
-    "text": "Je n’ai jamais fantasmé sur une célébrité au point d’en parler à mon ou ma partenaire.",
-    "category": "adult"
+    "text": "Je n’ai jamais accepté un date avec quelqu’un dont je savais déjà que je ne voulais rien de sérieux.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_063",
-    "text": "Je n’ai jamais envoyé une photo puis paniqué en attendant la réponse.",
-    "category": "adult"
+    "text": "Je n’ai jamais prétendu être moins expérimenté·e que je ne l’étais pendant une rencontre.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_064",
-    "text": "Je n’ai jamais embrassé quelqu’un que je venais de rencontrer en soirée.",
-    "category": "adult"
+    "text": "Je n’ai jamais raconté une fausse anecdote pour paraître plus intéressant·e lors d’un date.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_065",
-    "text": "Je n’ai jamais eu une conversation très explicite avec quelqu’un sans jamais le ou la rencontrer.",
-    "category": "adult"
+    "text": "Je n’ai jamais embrassé quelqu’un dans un lieu public bondé pendant un rendez-vous.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_066",
-    "text": "Je n’ai jamais été attiré(e) par quelqu’un à cause de son parfum.",
-    "category": "adult"
+    "text": "Je n’ai jamais passé la nuit chez quelqu’un sans avoir prévu de rester.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_067",
-    "text": "Je n’ai jamais eu un crush immédiat en croisant simplement un regard.",
-    "category": "adult"
+    "text": "Je n’ai jamais regretté d’avoir donné mon adresse à une personne rencontrée récemment.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_068",
-    "text": "Je n’ai jamais été jaloux ou jalouse d’une personne qui ne m’appartenait pas.",
-    "category": "adult"
+    "text": "Je n’ai jamais ignoré un signal d’alarme parce que l’attirance était trop forte.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "spicy",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_069",
-    "text": "Je n’ai jamais refusé d’avouer qu’une personne me plaisait alors que tout le monde le savait.",
-    "category": "adult"
+    "text": "Je n’ai jamais découvert après un rendez-vous que la personne m’avait caché une information majeure.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_070",
-    "text": "Je n’ai jamais voulu tenter quelque chose avec quelqu’un puis reculé au dernier moment.",
-    "category": "adult"
+    "text": "Je n’ai jamais continué à voir quelqu’un uniquement parce que l’alchimie physique était excellente.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_071",
-    "text": "Je n’ai jamais reçu un compliment qui m’a donné envie d’embrasser la personne.",
-    "category": "adult"
+    "text": "Je n’ai jamais eu un rendez-vous avec une personne rencontrée le jour même.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_072",
-    "text": "Je n’ai jamais embrassé quelqu’un pour gagner un pari.",
-    "category": "adult"
+    "text": "Je n’ai jamais invité deux personnes différentes au même endroit sans m’en rendre compte.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_073",
-    "text": "Je n’ai jamais fait une liste mentale des personnes avec qui je pourrais coucher.",
-    "category": "adult"
+    "text": "Je n’ai jamais recroisé par hasard un ancien date pendant un nouveau rendez-vous.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_074",
-    "text": "Je n’ai jamais été attiré(e) par une personne rencontrée sur les réseaux sociaux.",
-    "category": "adult"
+    "text": "Je n’ai jamais utilisé une application de rencontre en étant assis·e à côté de quelqu’un que je fréquentais.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_075",
-    "text": "Je n’ai jamais eu envie de lire les sextos de quelqu’un d’autre.",
-    "category": "adult"
+    "text": "Je n’ai jamais eu un date qui s’est transformé en nuit complètement imprévue.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_076",
-    "text": "Je n’ai jamais menti sur l’endroit où j’étais pour rejoindre quelqu’un.",
-    "category": "adult"
+    "text": "Je n’ai jamais laissé une personne dormir chez moi alors que je voulais qu’elle parte.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_077",
-    "text": "Je n’ai jamais eu une aventure pendant des vacances.",
-    "category": "adult"
+    "text": "Je n’ai jamais été surpris·e par un colocataire ou un proche au lendemain d’un rendez-vous.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_078",
-    "text": "Je n’ai jamais été surpris(e) par mes propres goûts.",
-    "category": "adult"
+    "text": "Je n’ai jamais inventé une urgence pour interrompre une rencontre intime.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_079",
-    "text": "Je n’ai jamais eu envie qu’une personne prenne totalement le contrôle.",
-    "category": "adult"
+    "text": "Je n’ai jamais eu une aventure avec quelqu’un rencontré pendant un voyage.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   },
   {
     "id": "jamais_adulte_080",
-    "text": "Je n’ai jamais regretté de ne pas avoir tenté ma chance avec quelqu’un.",
-    "category": "adult"
+    "text": "Je n’ai jamais eu un rendez-vous dont je ne raconterais pas tous les détails ici.",
+    "category": "adult",
+    "theme": "dates_rencontres",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_081",
+    "text": "Je n’ai jamais regardé le profil d’un ex par curiosité.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_082",
+    "text": "Je n’ai jamais relu une ancienne conversation après une rupture.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_083",
+    "text": "Je n’ai jamais gardé un cadeau d’ex en le cachant à une nouvelle personne.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_084",
+    "text": "Je n’ai jamais comparé une nouvelle relation à une ancienne.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_085",
+    "text": "Je n’ai jamais regretté une rupture pendant au moins quelques heures.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_086",
+    "text": "Je n’ai jamais repris contact avec un ex sans raison vraiment claire.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_087",
+    "text": "Je n’ai jamais espéré qu’un ex remarque que j’allais très bien sans lui ou elle.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_088",
+    "text": "Je n’ai jamais supprimé puis réajouté un ex sur les réseaux sociaux.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_089",
+    "text": "Je n’ai jamais conservé des photos de couple longtemps après la séparation.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_090",
+    "text": "Je n’ai jamais demandé des nouvelles d’un ex à une connaissance commune.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_091",
+    "text": "Je n’ai jamais rêvé d’un ex alors que j’étais dans une nouvelle relation.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_092",
+    "text": "Je n’ai jamais menti sur la date de mon dernier contact avec un ex.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_093",
+    "text": "Je n’ai jamais pensé qu’une relation passée aurait pu fonctionner à un autre moment.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_094",
+    "text": "Je n’ai jamais été jaloux ou jalouse de la nouvelle personne d’un ex.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_095",
+    "text": "Je n’ai jamais embrassé un ex après notre rupture.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_096",
+    "text": "Je n’ai jamais recouché avec un ex en sachant que c’était une mauvaise idée.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_097",
+    "text": "Je n’ai jamais entretenu une relation ambiguë avec un ex.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_098",
+    "text": "Je n’ai jamais répondu à un message d’ex tard dans la nuit.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_099",
+    "text": "Je n’ai jamais caché à une nouvelle relation que je parlais encore à un ex.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_100",
+    "text": "Je n’ai jamais voulu reconquérir un ex principalement par ego.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_101",
+    "text": "Je n’ai jamais utilisé un ex comme point de comparaison intime.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_102",
+    "text": "Je n’ai jamais gardé le numéro d’un ex sous un faux nom.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_103",
+    "text": "Je n’ai jamais eu une aventure avec l’ex d’une connaissance.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_104",
+    "text": "Je n’ai jamais retourné chez un ex uniquement parce que je me sentais seul·e.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_105",
+    "text": "Je n’ai jamais accepté de revoir un ex en prétendant que ce serait seulement amical.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_106",
+    "text": "Je n’ai jamais découvert qu’un ex me mentait depuis longtemps.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_107",
+    "text": "Je n’ai jamais eu deux ruptures puis deux réconciliations avec la même personne.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_108",
+    "text": "Je n’ai jamais embrassé un ex alors que l’un de nous était déjà engagé ailleurs.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_109",
+    "text": "Je n’ai jamais conservé une photo intime d’un ex après la fin de la relation.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_110",
+    "text": "Je n’ai jamais repris une relation en sachant que les mêmes problèmes reviendraient.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_111",
+    "text": "Je n’ai jamais eu envie d’écrire à un ex pendant une dispute avec ma relation actuelle.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_112",
+    "text": "Je n’ai jamais revu un ex sans le dire à la personne avec qui j’étais.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_113",
+    "text": "Je n’ai jamais couché avec un ex uniquement pour obtenir une forme de conclusion.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_114",
+    "text": "Je n’ai jamais eu une relation secrète avec une personne officiellement considérée comme un ex.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_115",
+    "text": "Je n’ai jamais pensé à un ex pendant un moment intime avec quelqu’un d’autre.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_116",
+    "text": "Je n’ai jamais volontairement provoqué une rencontre avec un ex.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_117",
+    "text": "Je n’ai jamais gardé un secret important concernant une ancienne relation.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_118",
+    "text": "Je n’ai jamais été tenté·e de revenir vers l’ex qui m’a fait le plus de mal.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_119",
+    "text": "Je n’ai jamais regretté davantage la personne que la relation elle-même.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_120",
+    "text": "Je n’ai jamais eu une histoire avec un ex que mes proches ignorent encore.",
+    "category": "adult",
+    "theme": "ex_relations",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_121",
+    "text": "Je n’ai jamais été jaloux ou jalouse sans raison concrète.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_122",
+    "text": "Je n’ai jamais observé discrètement qui aimait les photos de la personne avec qui j’étais.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_123",
+    "text": "Je n’ai jamais posé une question dont je connaissais déjà la réponse pour tester quelqu’un.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_124",
+    "text": "Je n’ai jamais ressenti de jalousie envers un ami proche de ma relation.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_125",
+    "text": "Je n’ai jamais prétendu ne pas être jaloux ou jalouse alors que je l’étais énormément.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_126",
+    "text": "Je n’ai jamais fouillé dans les abonnements récents d’une personne.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_127",
+    "text": "Je n’ai jamais été rassuré·e par un détail que je n’aurais probablement pas dû vérifier.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_128",
+    "text": "Je n’ai jamais provoqué une petite jalousie pour mesurer l’intérêt de quelqu’un.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_129",
+    "text": "Je n’ai jamais eu peur d’être remplacé·e par une personne précise.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_130",
+    "text": "Je n’ai jamais interprété excessivement un simple message ou un emoji.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_131",
+    "text": "Je n’ai jamais demandé à voir une conversation par manque de confiance.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_132",
+    "text": "Je n’ai jamais caché une interaction pour éviter une dispute inutile.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_133",
+    "text": "Je n’ai jamais été attiré·e par quelqu’un d’autre pendant une relation.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_134",
+    "text": "Je n’ai jamais pensé qu’un flirt ne comptait pas vraiment comme une trahison.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_135",
+    "text": "Je n’ai jamais entretenu un flirt alors que j’étais engagé·e dans une relation.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_136",
+    "text": "Je n’ai jamais menti sur l’identité d’une personne qui m’écrivait.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_137",
+    "text": "Je n’ai jamais embrassé quelqu’un d’autre pendant une relation exclusive.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_138",
+    "text": "Je n’ai jamais été la personne avec qui quelqu’un trompait sa relation.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_139",
+    "text": "Je n’ai jamais pardonné une infidélité.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_140",
+    "text": "Je n’ai jamais envisagé une relation ouverte.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_141",
+    "text": "Je n’ai jamais posé des règles différentes pour moi et pour ma relation.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_142",
+    "text": "Je n’ai jamais gardé une option de secours pendant que je fréquentais quelqu’un.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_143",
+    "text": "Je n’ai jamais caché un flirt en disant que ce n’était qu’une amitié.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_144",
+    "text": "Je n’ai jamais eu une relation où la fidélité n’était pas clairement définie.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_145",
+    "text": "Je n’ai jamais découvert une infidélité grâce aux réseaux sociaux.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_146",
+    "text": "Je n’ai jamais continué une relation après avoir perdu confiance.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_147",
+    "text": "Je n’ai jamais espionné le téléphone d’une personne sans son accord.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_148",
+    "text": "Je n’ai jamais été tenté·e de me venger après une trahison.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_149",
+    "text": "Je n’ai jamais eu une relation parallèle émotionnelle sans contact physique.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_150",
+    "text": "Je n’ai jamais minimisé une trahison parce que je ne voulais pas rompre.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_151",
+    "text": "Je n’ai jamais menti sur l’endroit où j’étais pour éviter des questions.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_152",
+    "text": "Je n’ai jamais caché que j’avais passé la nuit avec quelqu’un.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_153",
+    "text": "Je n’ai jamais franchi une limite de couple en sachant parfaitement qu’elle existait.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_154",
+    "text": "Je n’ai jamais eu une aventure avec une personne déjà engagée.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_155",
+    "text": "Je n’ai jamais toléré un comportement que j’aurais jugé impardonnable chez quelqu’un d’autre.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_156",
+    "text": "Je n’ai jamais utilisé la jalousie comme moyen de contrôle.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_157",
+    "text": "Je n’ai jamais découvert que j’étais la deuxième relation sans le savoir.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_158",
+    "text": "Je n’ai jamais maintenu deux histoires en parallèle.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_159",
+    "text": "Je n’ai jamais caché une vérité qui aurait probablement mis fin à une relation.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_160",
+    "text": "Je n’ai jamais fait quelque chose que je qualifierais moi-même d’infidélité.",
+    "category": "adult",
+    "theme": "jalousie_fidelite",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_161",
+    "text": "Je n’ai jamais relu plusieurs fois un message avant de l’envoyer à un crush.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_162",
+    "text": "Je n’ai jamais supprimé un message parce qu’il semblait trop intéressé.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_163",
+    "text": "Je n’ai jamais attendu volontairement avant de répondre pour paraître détaché·e.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_164",
+    "text": "Je n’ai jamais envoyé une photo spécialement choisie pour plaire à quelqu’un.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_165",
+    "text": "Je n’ai jamais fait une capture d’écran d’une conversation pour l’envoyer à mes amis.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_166",
+    "text": "Je n’ai jamais regretté immédiatement un message envoyé tard le soir.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_167",
+    "text": "Je n’ai jamais envoyé un message à la mauvaise personne.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_168",
+    "text": "Je n’ai jamais utilisé un emoji pour rendre un message volontairement ambigu.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_169",
+    "text": "Je n’ai jamais enregistré une photo reçue sans en parler à la personne.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_170",
+    "text": "Je n’ai jamais vérifié plusieurs fois si quelqu’un avait vu mon message.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_171",
+    "text": "Je n’ai jamais envoyé un selfie après en avoir pris plus de vingt.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_172",
+    "text": "Je n’ai jamais relancé quelqu’un alors que la personne ne répondait manifestement pas.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_173",
+    "text": "Je n’ai jamais menti en disant que je n’avais pas vu un message.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_174",
+    "text": "Je n’ai jamais supprimé toute une conversation pour éviter qu’elle soit découverte.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_175",
+    "text": "Je n’ai jamais envoyé un message explicitement séduisant.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_176",
+    "text": "Je n’ai jamais reçu une photo intime que je n’avais pas vraiment demandée.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_177",
+    "text": "Je n’ai jamais envoyé une photo intime en cachant mon visage.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_178",
+    "text": "Je n’ai jamais envoyé une photo intime avec mon visage visible.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_179",
+    "text": "Je n’ai jamais fait monter la tension uniquement par messages.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_180",
+    "text": "Je n’ai jamais utilisé une application éphémère pour envoyer quelque chose de compromettant.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_181",
+    "text": "Je n’ai jamais eu une conversation très intime avec une personne que je n’avais jamais rencontrée.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_182",
+    "text": "Je n’ai jamais envoyé un message osé puis mis mon téléphone en mode avion par panique.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_183",
+    "text": "Je n’ai jamais reçu un message intime pendant que j’étais entouré·e de ma famille.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_184",
+    "text": "Je n’ai jamais caché des photos dans un dossier verrouillé.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_185",
+    "text": "Je n’ai jamais menti sur la personne à qui j’envoyais des messages tard le soir.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_186",
+    "text": "Je n’ai jamais eu une conversation en ligne plus intense que la rencontre réelle.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_187",
+    "text": "Je n’ai jamais envoyé la même photo à plusieurs personnes.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_188",
+    "text": "Je n’ai jamais demandé une photo intime à quelqu’un.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_189",
+    "text": "Je n’ai jamais montré à une autre personne une photo intime reçue en privé.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_190",
+    "text": "Je n’ai jamais enregistré une conversation compromettante par peur qu’elle disparaisse.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_191",
+    "text": "Je n’ai jamais utilisé un faux compte pour observer quelqu’un.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_192",
+    "text": "Je n’ai jamais envoyé un message intime à quelqu’un déjà engagé dans une relation.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_193",
+    "text": "Je n’ai jamais reçu un message qui aurait pu provoquer une rupture s’il avait été découvert.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_194",
+    "text": "Je n’ai jamais retrouvé une ancienne photo intime en faisant défiler ma galerie.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_195",
+    "text": "Je n’ai jamais fait semblant d’avoir envoyé un message à la mauvaise personne pour créer une ouverture.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_196",
+    "text": "Je n’ai jamais utilisé la fonction de suppression pour tout le monde après un message trop osé.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_197",
+    "text": "Je n’ai jamais gardé une conversation secrète pendant plusieurs mois.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_198",
+    "text": "Je n’ai jamais eu peur qu’une photo privée soit diffusée.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_199",
+    "text": "Je n’ai jamais envoyé quelque chose que je refuserais catégoriquement de montrer ici.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_200",
+    "text": "Je n’ai jamais eu une vie numérique intime que mon entourage ne soupçonne pas.",
+    "category": "adult",
+    "theme": "messages_photos",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_201",
+    "text": "Je n’ai jamais été trop nerveux ou nerveuse pour profiter d’un premier moment intime.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_202",
+    "text": "Je n’ai jamais ri au pire moment pendant une situation intime.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_203",
+    "text": "Je n’ai jamais prétendu avoir plus d’expérience que je n’en avais.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_204",
+    "text": "Je n’ai jamais prétendu être moins expérimenté·e que je ne l’étais.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_205",
+    "text": "Je n’ai jamais interrompu un moment intime parce que quelque chose me faisait rire.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_206",
+    "text": "Je n’ai jamais eu besoin de musique ou d’une ambiance précise pour me détendre.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_207",
+    "text": "Je n’ai jamais regretté de ne pas avoir communiqué clairement ce que je voulais.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_208",
+    "text": "Je n’ai jamais été surpris·e par une préférence d’une personne.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_209",
+    "text": "Je n’ai jamais découvert une nouvelle préférence grâce à quelqu’un.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_210",
+    "text": "Je n’ai jamais eu un moment intime complètement gâché par un téléphone.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_211",
+    "text": "Je n’ai jamais été interrompu·e par un colocataire, un proche ou un animal.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_212",
+    "text": "Je n’ai jamais eu une expérience meilleure que ce que j’avais imaginé.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_213",
+    "text": "Je n’ai jamais eu une expérience beaucoup plus gênante que prévu.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_214",
+    "text": "Je n’ai jamais simulé du plaisir pour écourter un moment.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_215",
+    "text": "Je n’ai jamais eu une relation intime dès le premier soir.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_216",
+    "text": "Je n’ai jamais eu une aventure dans un lieu inhabituel.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_217",
+    "text": "Je n’ai jamais eu une expérience intime en vacances.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_218",
+    "text": "Je n’ai jamais été attiré·e par quelqu’un uniquement après un premier baiser.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_219",
+    "text": "Je n’ai jamais eu une relation basée principalement sur l’attirance physique.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_220",
+    "text": "Je n’ai jamais essayé quelque chose uniquement pour faire plaisir à l’autre.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_221",
+    "text": "Je n’ai jamais changé d’avis au dernier moment pendant une situation intime.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_222",
+    "text": "Je n’ai jamais eu une expérience avec quelqu’un dont je connaissais à peine le nom de famille.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_223",
+    "text": "Je n’ai jamais fait semblant de savoir exactement ce que je faisais.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_224",
+    "text": "Je n’ai jamais eu une aventure avec une personne rencontrée lors d’une soirée.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_225",
+    "text": "Je n’ai jamais eu une relation intime avec un ami ou une amie proche.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_226",
+    "text": "Je n’ai jamais eu une expérience avec une personne que je pensais ne jamais revoir.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_227",
+    "text": "Je n’ai jamais eu une période où ma vie intime était nettement plus active que mes proches ne l’imaginaient.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_228",
+    "text": "Je n’ai jamais accepté une proposition intime que j’aurais refusée dans un autre contexte.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_229",
+    "text": "Je n’ai jamais eu une expérience à trois.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_230",
+    "text": "Je n’ai jamais eu plusieurs partenaires au cours de la même semaine.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_231",
+    "text": "Je n’ai jamais eu une aventure dans un endroit où nous risquions d’être surpris.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_232",
+    "text": "Je n’ai jamais essayé un jeu de rôle intime.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_233",
+    "text": "Je n’ai jamais utilisé un accessoire intime avec une autre personne.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_234",
+    "text": "Je n’ai jamais eu une expérience avec une différence d’âge importante entre adultes.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_235",
+    "text": "Je n’ai jamais couché avec une personne du travail ou des études.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_236",
+    "text": "Je n’ai jamais eu une aventure avec une personne de mon cercle proche.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_237",
+    "text": "Je n’ai jamais eu une expérience dont je n’ai parlé à absolument personne.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_238",
+    "text": "Je n’ai jamais menti sur le nombre de mes partenaires.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_239",
+    "text": "Je n’ai jamais eu une expérience intime qui a changé ma façon de voir une relation.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_240",
+    "text": "Je n’ai jamais vécu quelque chose d’intime que je n’assumerais pas facilement devant ce groupe.",
+    "category": "adult",
+    "theme": "experiences_intimes",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_241",
+    "text": "Je n’ai jamais imaginé un rendez-vous parfait dans les moindres détails.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_242",
+    "text": "Je n’ai jamais eu une curiosité intime que je n’ai jamais osé exprimer.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_243",
+    "text": "Je n’ai jamais été surpris·e par l’un de mes propres fantasmes.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_244",
+    "text": "Je n’ai jamais été attiré·e par une dynamique très différente de mes habitudes.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_245",
+    "text": "Je n’ai jamais eu envie d’essayer quelque chose après l’avoir vu dans une fiction.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_246",
+    "text": "Je n’ai jamais fantasmé sur une personne inaccessible.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_247",
+    "text": "Je n’ai jamais imaginé une situation avec quelqu’un que je vois régulièrement.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_248",
+    "text": "Je n’ai jamais eu une préférence que j’ai mis longtemps à comprendre.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_249",
+    "text": "Je n’ai jamais eu envie de changer complètement de rôle dans une relation intime.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_250",
+    "text": "Je n’ai jamais gardé une curiosité secrète par peur d’être jugé·e.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_251",
+    "text": "Je n’ai jamais parlé d’un fantasme pour la première fois par message.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_252",
+    "text": "Je n’ai jamais découvert qu’une personne partageait une envie que je pensais étrange.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_253",
+    "text": "Je n’ai jamais eu un fantasme qui m’attire uniquement en imagination.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_254",
+    "text": "Je n’ai jamais eu envie d’explorer davantage ma sensualité.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_255",
+    "text": "Je n’ai jamais voulu essayer un lieu ou une ambiance très spécifique.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_256",
+    "text": "Je n’ai jamais été curieux ou curieuse d’une relation ouverte.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_257",
+    "text": "Je n’ai jamais imaginé une expérience avec plus de deux personnes.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_258",
+    "text": "Je n’ai jamais eu envie d’être observé·e ou admiré·e dans un contexte intime.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_259",
+    "text": "Je n’ai jamais eu envie d’inverser complètement la personne qui prend l’initiative.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_260",
+    "text": "Je n’ai jamais voulu tester une dynamique de pouvoir entre adultes consentants.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_261",
+    "text": "Je n’ai jamais eu une liste mentale de choses que j’aimerais essayer.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_262",
+    "text": "Je n’ai jamais fantasmé sur une personne célèbre.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_263",
+    "text": "Je n’ai jamais eu un fantasme lié à un uniforme ou à un rôle précis.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_264",
+    "text": "Je n’ai jamais imaginé une aventure avec une personne inconnue.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_265",
+    "text": "Je n’ai jamais eu envie d’essayer une expérience dans un lieu luxueux ou insolite.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_266",
+    "text": "Je n’ai jamais été curieux ou curieuse d’assister à une soirée réservée aux adultes.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_267",
+    "text": "Je n’ai jamais eu envie de réaliser un fantasme pendant un voyage.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_268",
+    "text": "Je n’ai jamais partagé une envie intime avec quelqu’un avant de savoir si elle était réciproque.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_269",
+    "text": "Je n’ai jamais eu un fantasme qui implique une personne présente dans cette pièce.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_270",
+    "text": "Je n’ai jamais été curieux ou curieuse d’une expérience sans engagement mais très intense.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_271",
+    "text": "Je n’ai jamais imaginé une expérience avec deux personnes que je connais.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_272",
+    "text": "Je n’ai jamais eu envie d’enregistrer un moment intime uniquement pour nous.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_273",
+    "text": "Je n’ai jamais envisagé d’explorer un club ou un événement pour adultes.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_274",
+    "text": "Je n’ai jamais voulu essayer une pratique que mon entourage ne devinerait jamais.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_275",
+    "text": "Je n’ai jamais eu un fantasme récurrent depuis plusieurs années.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_276",
+    "text": "Je n’ai jamais découvert une envie intime en lisant ou en écoutant quelqu’un en parler.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_277",
+    "text": "Je n’ai jamais eu envie d’expérimenter avec une personne en qui j’avais une confiance absolue.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_278",
+    "text": "Je n’ai jamais fantasmé sur une situation que je refuserais probablement dans la réalité.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_279",
+    "text": "Je n’ai jamais eu une curiosité que je n’avouerais qu’anonymement.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_280",
+    "text": "Je n’ai jamais gardé mon fantasme principal entièrement secret.",
+    "category": "adult",
+    "theme": "fantasmes_curiosites",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_281",
+    "text": "Je n’ai jamais accepté une aventure en sachant qu’elle ne mènerait à rien de sérieux.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_282",
+    "text": "Je n’ai jamais préféré une relation légère à une relation officielle.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_283",
+    "text": "Je n’ai jamais revu quelqu’un uniquement pour passer un bon moment sans projet commun.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_284",
+    "text": "Je n’ai jamais eu du mal à définir une relation qui devait rester simple.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_285",
+    "text": "Je n’ai jamais développé des sentiments dans une relation censée être sans engagement.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_286",
+    "text": "Je n’ai jamais senti que l’autre personne s’attachait plus que moi.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_287",
+    "text": "Je n’ai jamais accepté une relation légère après une rupture.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_288",
+    "text": "Je n’ai jamais quitté discrètement un logement au petit matin.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_289",
+    "text": "Je n’ai jamais laissé quelqu’un partir sans savoir si nous nous reverrions.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_290",
+    "text": "Je n’ai jamais continué une aventure uniquement parce qu’elle était pratique.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_291",
+    "text": "Je n’ai jamais eu une relation où nous ne nous voyions presque que la nuit.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_292",
+    "text": "Je n’ai jamais menti à mes amis sur la nature réelle d’une relation.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_293",
+    "text": "Je n’ai jamais appelé quelqu’un uniquement parce que je me sentais seul·e.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_294",
+    "text": "Je n’ai jamais confondu confort, attirance et sentiments.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_295",
+    "text": "Je n’ai jamais eu une aventure d’un soir.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_296",
+    "text": "Je n’ai jamais eu plusieurs aventures sans engagement à la même période.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_297",
+    "text": "Je n’ai jamais accepté de revoir quelqu’un alors que je savais que la situation me ferait du mal.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_298",
+    "text": "Je n’ai jamais ignoré les messages d’une personne après une nuit ensemble.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_299",
+    "text": "Je n’ai jamais été ignoré·e après une nuit ensemble.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_300",
+    "text": "Je n’ai jamais regretté d’avoir transformé une amitié en aventure.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_301",
+    "text": "Je n’ai jamais gardé une aventure secrète vis-à-vis de tout mon groupe d’amis.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_302",
+    "text": "Je n’ai jamais eu un plan régulier avec une personne dont je ne connaissais presque rien.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_303",
+    "text": "Je n’ai jamais prétendu ne rien ressentir pour préserver une relation légère.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_304",
+    "text": "Je n’ai jamais arrêté une aventure parce que l’autre voulait davantage.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_305",
+    "text": "Je n’ai jamais continué une aventure malgré des attentes complètement différentes.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_306",
+    "text": "Je n’ai jamais eu une relation sans engagement avec quelqu’un que je voyais au quotidien.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_307",
+    "text": "Je n’ai jamais couché avec une personne sans vouloir la revoir ensuite.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_308",
+    "text": "Je n’ai jamais revu une aventure passée plusieurs mois plus tard.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_309",
+    "text": "Je n’ai jamais eu une relation légère avec l’ex d’une connaissance.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_310",
+    "text": "Je n’ai jamais eu une aventure avec quelqu’un rencontré en ligne le jour même.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_311",
+    "text": "Je n’ai jamais invité quelqu’un uniquement pour une nuit sans le dire clairement.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_312",
+    "text": "Je n’ai jamais été dans une relation où chacun fréquentait aussi d’autres personnes.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_313",
+    "text": "Je n’ai jamais eu une aventure dans une ville où je ne vivais pas.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_314",
+    "text": "Je n’ai jamais maintenu une relation légère pendant plus d’un an.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_315",
+    "text": "Je n’ai jamais utilisé une relation sans engagement pour oublier quelqu’un d’autre.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_316",
+    "text": "Je n’ai jamais eu une aventure avec une personne déjà très proche de mon entourage.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_317",
+    "text": "Je n’ai jamais menti en disant qu’une relation était sans importance.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_318",
+    "text": "Je n’ai jamais découvert trop tard que je n’étais qu’une aventure pour l’autre personne.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_319",
+    "text": "Je n’ai jamais eu une relation secrète que les gens auraient été très surpris de découvrir.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_320",
+    "text": "Je n’ai jamais eu une aventure dont je refuserais de révéler l’identité ici.",
+    "category": "adult",
+    "theme": "plans_sans_engagement",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_321",
+    "text": "Je n’ai jamais caché un crush à tous mes amis.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_322",
+    "text": "Je n’ai jamais menti sur la personne avec qui j’avais passé la soirée.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_323",
+    "text": "Je n’ai jamais inventé une version plus sage d’une nuit mouvementée.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_324",
+    "text": "Je n’ai jamais supprimé une preuve avant de prêter mon téléphone.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_325",
+    "text": "Je n’ai jamais gardé le secret d’une aventure appartenant à quelqu’un d’autre.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_326",
+    "text": "Je n’ai jamais prétendu ne pas connaître une personne avec qui j’avais eu une histoire.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_327",
+    "text": "Je n’ai jamais eu peur qu’un ami raconte un dossier au mauvais moment.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_328",
+    "text": "Je n’ai jamais caché une relation parce que mon entourage l’aurait mal comprise.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_329",
+    "text": "Je n’ai jamais menti sur l’endroit où j’avais dormi.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_330",
+    "text": "Je n’ai jamais eu un surnom secret pour parler d’une personne dans un groupe de discussion.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_331",
+    "text": "Je n’ai jamais nié un flirt pourtant évident.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_332",
+    "text": "Je n’ai jamais découvert une vérité intime par hasard.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_333",
+    "text": "Je n’ai jamais gardé une information compromettante sur une personne présente.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_334",
+    "text": "Je n’ai jamais regretté d’avoir confié un détail intime à quelqu’un.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_335",
+    "text": "Je n’ai jamais eu une histoire avec quelqu’un que mes proches détestaient.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_336",
+    "text": "Je n’ai jamais inventé un alibi pour protéger une aventure.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_337",
+    "text": "Je n’ai jamais menti sur le nombre de personnes que je fréquentais.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_338",
+    "text": "Je n’ai jamais été surpris·e en train de mentir sur une relation.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_339",
+    "text": "Je n’ai jamais eu un dossier intime capturé sur une photo de groupe innocente.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_340",
+    "text": "Je n’ai jamais utilisé un code ou un emoji pour parler d’une aventure.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_341",
+    "text": "Je n’ai jamais raconté une expérience intime en changeant l’identité de la personne.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_342",
+    "text": "Je n’ai jamais caché une relation avec une personne connue de mon entourage.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_343",
+    "text": "Je n’ai jamais eu une aventure qui aurait créé un vrai conflit si elle avait été révélée.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_344",
+    "text": "Je n’ai jamais fait semblant de rencontrer quelqu’un pour la première fois.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_345",
+    "text": "Je n’ai jamais appris que plusieurs personnes connaissaient déjà mon secret.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_346",
+    "text": "Je n’ai jamais eu une histoire avec une personne que j’avais publiquement critiquée.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_347",
+    "text": "Je n’ai jamais menti sur la chronologie de deux relations.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_348",
+    "text": "Je n’ai jamais supprimé un contact avant de montrer mon téléphone.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_349",
+    "text": "Je n’ai jamais été la seule personne à ignorer un énorme secret de relation.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_350",
+    "text": "Je n’ai jamais demandé à quelqu’un de mentir pour moi après une nuit compliquée.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_351",
+    "text": "Je n’ai jamais caché une aventure à une personne qui pensait tout savoir de moi.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_352",
+    "text": "Je n’ai jamais eu une relation avec quelqu’un que je ne pouvais pas présenter publiquement.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_353",
+    "text": "Je n’ai jamais utilisé une fausse localisation ou une fausse excuse pour protéger un secret.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_354",
+    "text": "Je n’ai jamais eu une histoire avec deux personnes du même cercle social.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_355",
+    "text": "Je n’ai jamais découvert qu’une personne racontait nos détails intimes autour d’elle.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_356",
+    "text": "Je n’ai jamais été menacé·e par la révélation d’un secret sentimental.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_357",
+    "text": "Je n’ai jamais gardé une preuve d’une aventure après avoir juré l’avoir supprimée.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_358",
+    "text": "Je n’ai jamais eu une relation que je qualifierais encore aujourd’hui de totalement secrète.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_359",
+    "text": "Je n’ai jamais caché une expérience qui changerait l’image que certaines personnes ont de moi.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_360",
+    "text": "Je n’ai jamais un dossier que personne ici ne soupçonnerait.",
+    "category": "adult",
+    "theme": "secrets_dossiers",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_361",
+    "text": "Je n’ai jamais eu du mal à dire clairement ce que je voulais dans une relation.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_362",
+    "text": "Je n’ai jamais dit oui alors que j’aurais préféré prendre davantage de temps.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_363",
+    "text": "Je n’ai jamais changé d’avis après avoir commencé un moment intime.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_364",
+    "text": "Je n’ai jamais été soulagé·e qu’une personne me demande explicitement mon accord.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_365",
+    "text": "Je n’ai jamais évité une conversation importante sur mes limites.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_366",
+    "text": "Je n’ai jamais découvert qu’une limite évoluait selon la confiance que j’avais en la personne.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_367",
+    "text": "Je n’ai jamais eu peur de décevoir quelqu’un en refusant quelque chose.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_368",
+    "text": "Je n’ai jamais interrompu une situation parce que je ne me sentais plus à l’aise.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_369",
+    "text": "Je n’ai jamais demandé à ralentir sans savoir comment l’expliquer.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_370",
+    "text": "Je n’ai jamais regretté de ne pas avoir posé davantage de questions avant une expérience.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_371",
+    "text": "Je n’ai jamais eu besoin d’établir une règle très précise dans une relation.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_372",
+    "text": "Je n’ai jamais préféré parler de mes limites par message plutôt qu’en face.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_373",
+    "text": "Je n’ai jamais compris trop tard qu’une personne et moi n’avions pas les mêmes attentes.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_374",
+    "text": "Je n’ai jamais remercié quelqu’un d’avoir respecté immédiatement un refus.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_375",
+    "text": "Je n’ai jamais accepté une expérience après en avoir longuement parlé au préalable.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_376",
+    "text": "Je n’ai jamais utilisé un mot ou un signal clair pour pouvoir arrêter une situation.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_377",
+    "text": "Je n’ai jamais demandé un dépistage ou une protection avant une nouvelle relation intime.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_378",
+    "text": "Je n’ai jamais arrêté de voir quelqu’un parce que la personne ne respectait pas mes limites.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_379",
+    "text": "Je n’ai jamais eu une discussion détaillée sur l’exclusivité avant de m’engager.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_380",
+    "text": "Je n’ai jamais découvert une incompatibilité intime importante grâce à une conversation honnête.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_381",
+    "text": "Je n’ai jamais eu besoin de corriger une personne sur ce qu’elle pensait que j’aimais.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_382",
+    "text": "Je n’ai jamais prétendu être à l’aise pour éviter un moment gênant.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_383",
+    "text": "Je n’ai jamais demandé à quelqu’un ce qui était strictement interdit pour lui ou elle.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_384",
+    "text": "Je n’ai jamais refusé une photo ou un message intime sans donner d’explication.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_385",
+    "text": "Je n’ai jamais demandé qu’une photo privée soit supprimée devant moi.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_386",
+    "text": "Je n’ai jamais eu une conversation sur la contraception ou la protection après qu’elle aurait dû avoir lieu.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_387",
+    "text": "Je n’ai jamais dit stop à quelqu’un qui pensait que tout allait bien.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_388",
+    "text": "Je n’ai jamais regretté d’avoir accepté quelque chose par pression implicite.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "spicy",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_389",
+    "text": "Je n’ai jamais dû rappeler qu’un accord pouvait être retiré à tout moment.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_390",
+    "text": "Je n’ai jamais quitté une relation parce que mes besoins n’étaient jamais écoutés.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_391",
+    "text": "Je n’ai jamais eu une limite que je n’avais encore jamais osé formuler.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_392",
+    "text": "Je n’ai jamais demandé à une personne de garder strictement privé ce qui s’était passé entre nous.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_393",
+    "text": "Je n’ai jamais découvert qu’une personne avait partagé un détail intime sans mon accord.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_394",
+    "text": "Je n’ai jamais posé une limite qui a surpris quelqu’un.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_395",
+    "text": "Je n’ai jamais accepté une pratique uniquement après avoir établi des règles de sécurité précises.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_396",
+    "text": "Je n’ai jamais eu besoin de réparer la confiance après une limite mal comprise.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_397",
+    "text": "Je n’ai jamais coupé contact avec quelqu’un après un comportement insistant.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_398",
+    "text": "Je n’ai jamais eu une conversation intime plus honnête que toutes mes conversations sentimentales.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_399",
+    "text": "Je n’ai jamais découvert qu’exprimer mes limites améliorait réellement l’expérience.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "unfiltered",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_adulte_400",
+    "text": "Je n’ai jamais une limite importante que je n’expliquerais pas facilement devant ce groupe.",
+    "category": "adult",
+    "theme": "limites_communication",
+    "level": "unfiltered",
+    "alcoholCompatible": true
   }
 ]

@@ -38,11 +38,11 @@
       comfort: "Personne n’a à raconter les détails d’une expérience."
     },
     "Je n’ai jamais +18": {
-      intro: "Une version adulte de Je n’ai jamais, avec des expériences plus intimes.",
-      steps: ["Une affirmation est affichée.", "Chacun répond secrètement.", "Le groupe découvre uniquement les choix prévus par le mode.", "La manche suivante peut être lancée immédiatement."],
+      intro: "Une base de 400 phrases adultes réparties en 10 thèmes et trois intensités, du flirt léger aux cartes sans filtre.",
+      steps: ["Choisissez les thèmes et les intensités.", "Une affirmation est affichée.", "Chacun répond secrètement Jamais ou Déjà.", "Les réponses sont révélées, sans obligation de raconter les détails."],
       scoring: "Aucun point n’est attribué pour une expérience intime.",
-      options: "Le contenu +18 peut être mélangé ou joué séparément.",
-      comfort: "Réponses facultatives et aucune obligation de développer."
+      options: "Parties de 10 à 100 cartes, thèmes et intensités combinables, plus des phrases personnalisées enregistrées sur l’appareil de l’hôte.",
+      comfort: "Réservé aux adultes consentants. Passer, garder le silence ou refuser de développer ne demande aucune justification."
     },
     "Tu préfères": {
       intro: "Tout le monde choisit secrètement entre deux options, puis découvre la répartition du groupe.",
