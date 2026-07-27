@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v3.5-impostor-700";
+const CACHE_VERSION = "akgames-v3.6-imitation-600";
 
 const CORE_SHELL = [
   "/",

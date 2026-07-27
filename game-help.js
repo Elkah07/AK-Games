@@ -101,11 +101,11 @@
       comfort: "Pas de parole ni de bruit servant directement d’indice, sauf adaptation décidée par le groupe."
     },
     "Imitation": {
-      intro: "Une personne imite une voix, une attitude ou une situation pour la faire reconnaître.",
-      steps: ["Le sujet est découvert en privé.", "Le chrono démarre.", "Le groupe tente de deviner.", "Validez la réussite ou passez."],
-      scoring: "La réussite rapporte les points indiqués par le jeu.",
-      options: "La durée et le nombre de manches sont configurables.",
-      comfort: "Évitez les imitations blessantes d’une personne présente ou d’un groupe protégé."
+      intro: "Une ou deux personnes font reconnaître une voix, une attitude ou une situation avant la fin du chronomètre.",
+      steps: ["Les imitateurs découvrent le sujet et les éventuels mots interdits en privé.", "Le chrono démarre sur tous les téléphones.", "Le groupe propose des réponses.", "En cas de réussite, indiquez qui a trouvé en premier."],
+      scoring: "Les imitateurs gagnent 1 à 4 points selon la difficulté. La première bonne réponse rapporte 1 point.",
+      options: "Choisissez thèmes, difficultés, mode sonore ou silencieux, durée, cartes solo ou duo et imitations personnalisées.",
+      comfort: "Évitez les imitations humiliantes d’une personne présente, d’un handicap, d’un accent réel ou d’un groupe protégé. Une carte peut être passée immédiatement."
     },
     "Le premier qui rit a perdu": {
       intro: "Deux adversaires essaient de se faire rire à tour de rôle tout en gardant leur sérieux.",

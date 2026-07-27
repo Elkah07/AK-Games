@@ -8554,3 +8554,94 @@ body.game-rules-open {
     flex-direction: column;
   }
 }
+
+/* AK'Games V3.1 - Imitation */
+.imitation-cover {
+  background:
+    radial-gradient(circle at 88% 18%, rgba(216, 180, 254, 0.2), transparent 34%),
+    linear-gradient(145deg, rgba(28, 17, 42, 0.98), rgba(62, 31, 92, 0.96));
+}
+
+.imitation-badge-row > span:nth-child(4) {
+  border-color: rgba(192, 132, 252, 0.32);
+  background: rgba(139, 92, 246, 0.12);
+}
+
+.imitation-constraint-stack {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  margin-top: 18px;
+  text-align: left;
+}
+
+.imitation-constraint-stack > div {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 11px;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.imitation-constraint-stack > div > span {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 13px;
+  background: rgba(139, 92, 246, 0.14);
+  font-size: 1.35rem;
+}
+
+.imitation-constraint-stack p,
+.imitation-constraint-stack strong,
+.imitation-constraint-stack small {
+  display: block;
+  margin: 0;
+}
+
+.imitation-constraint-stack small {
+  margin-top: 3px;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.imitation-speed-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(192, 132, 252, 0.38);
+  background: rgba(139, 92, 246, 0.14);
+  font-weight: 800;
+}
+
+.imitation-difficulty-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.imitation-final-stage .winner-crown {
+  filter: drop-shadow(0 8px 20px rgba(139, 92, 246, 0.25));
+}
+
+@media (max-width: 680px) {
+  .imitation-difficulty-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .imitation-constraint-stack > div {
+    grid-template-columns: 34px minmax(0, 1fr);
+    padding: 11px;
+  }
+
+  .imitation-constraint-stack > div > span {
+    width: 34px;
+    height: 34px;
+    font-size: 1.15rem;
+  }
+}

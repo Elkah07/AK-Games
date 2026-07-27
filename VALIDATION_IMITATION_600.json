@@ -1,0 +1,49 @@
+{
+  "version": "AK-Games Imitation 600 V1",
+  "totalCards": 600,
+  "uniqueIds": 600,
+  "uniqueTexts": 600,
+  "collections": {
+    "classic": 450,
+    "challenge": 100,
+    "duo": 50
+  },
+  "difficulties": {
+    "easy": 100,
+    "medium": 200,
+    "hard": 240,
+    "chaos": 60
+  },
+  "themes": {
+    "animaux": 50,
+    "metiers": 45,
+    "sports": 45,
+    "quotidien": 50,
+    "attitudes": 45,
+    "culture_pop": 45,
+    "musique_scene": 40,
+    "objets_machines": 45,
+    "voyages": 45,
+    "situations": 45,
+    "absurde_chaos": 95,
+    "duo": 50
+  },
+  "actors": {
+    "1": 550,
+    "2": 50
+  },
+  "soundModes": {
+    "optional": 512,
+    "required": 88
+  },
+  "maxTextLength": 228,
+  "tests": {
+    "jsonSchemaAndValues": "passed",
+    "javascriptSyntax": "passed",
+    "localFlow": "passed: setup > private reveal > timer > guesser > result",
+    "multiplayerSetup": "passed: host setup creates mega-turn/imitation-brief with 10 selected items",
+    "multiplayerFlow": "passed: private brief > ready > playing > result processing",
+    "serviceWorker": "passed: cache version bumped and imitation data cached"
+  },
+  "issues": []
+}

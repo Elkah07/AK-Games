@@ -9010,6 +9010,341 @@
   };
 
 
+
+  /* =========================================================
+     AK'GAMES V3.1 - IMITATION MULTIJOUEUR
+     Brief prive, sons, duos, chronometre et premier devineur
+     ========================================================= */
+
+  const akImitationMultiBaseRenderMegaSetup = renderMegaSetup;
+  renderMegaSetup = function () {
+    const game = state.megaGame;
+    if (!game || game.gameName !== "Imitation" || !isMultiplayer()) return akImitationMultiBaseRenderMegaSetup();
+    ensureImitationGameConfig(game);
+    clearV014MultiTimer();
+    title.textContent = "Imitation";
+    setBackVisible(true);
+    if (!state.isHost) {
+      screen.innerHTML = `
+        <section class="game-cover game-cover-mega imitation-cover"><span class="game-cover-icon">🎙️</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>Imitation</h2><p>L’hôte choisit les thèmes, les niveaux, le chrono et le mode sonore.</p></div></section>
+        ${renderMultiWaiting("L’hôte prépare le studio", "La partie commencera automatiquement sur tous les téléphones.", "👑")}`;
+      return;
+    }
+    screen.innerHTML = `
+      <section class="game-cover game-cover-mega imitation-cover"><span class="game-cover-icon">🎙️</span><div><small>MULTIJOUEUR SYNCHRONISÉ</small><h2>Imitation</h2><p>Le sujet n’apparaît que sur le téléphone des imitateurs. La première bonne réponse rapporte un point.</p></div></section>
+      ${akImitationSetupMarkup(game, "multiimitation")}
+      <button id="startMultiImitation" class="primary-btn full">Lancer la partie d’Imitation</button>`;
+    akImitationBindSetup(game, "multiimitation", renderMegaSetup);
+    document.querySelector("#startMultiImitation")?.addEventListener("click", startMegaGame);
+  };
+
+  const akImitationMultiBaseStartMegaGame = startMegaGame;
+  startMegaGame = async function () {
+    const game = state.megaGame;
+    if (!isMultiplayer() || !game || game.gameName !== "Imitation") return akImitationMultiBaseStartMegaGame();
+    if (!state.isHost) return;
+    ensureImitationGameConfig(game);
+    if (!game.imitationThemes.length) return alert("Sélectionne au moins un thème.");
+    if (!game.imitationDifficulties.length) return alert("Sélectionne au moins une difficulté.");
+    screen.innerHTML = `<div class="notice">Distribution secrète des 600 imitations…</div>`;
+    try {
+      let pool = await loadJsonFile("data/imitation.json", "Impossible de charger les imitations.");
+      if (game.imitationIncludeCustom) pool = pool.concat(akImitationLoadCustom().map(item => ({ ...item, custom: true })));
+      pool = akImitationFilterPool(pool, game);
+      if (!pool.length) throw new Error("Aucune imitation ne correspond à ces filtres.");
+      const selected = akImitationBalancedSelect(pool, Math.min(game.roundCount, pool.length), `multi:imitation:${game.imitationThemes.join("-")}:${game.imitationDifficulties.join("-")}:${game.imitationAllowSounds ? "sound" : "silent"}`);
+      const items = akImitationAssignActors(selected, state.players);
+      const playerIds = state.players.map(player => player.id);
+      const zeros = Object.fromEntries(playerIds.map(id => [id, 0]));
+      await AKFirebase.setGame(state.roomCode, {
+        state: {
+          type: "mega-turn",
+          phase: "imitation-brief",
+          sessionGameId: createSessionGameId("imitation"),
+          items,
+          currentIndex: 0,
+          currentPlayerId: items[0]?.leadPlayerId || playerIds[0] || null,
+          scores: { ...zeros },
+          rounds: {},
+          currentResult: null,
+          imitationActorSuccess: { ...zeros },
+          imitationGuesserSuccess: { ...zeros },
+          imitationFailedItems: {},
+          imitationFastest: null,
+          settings: {
+            gameName: "Imitation",
+            icon: "🎙️",
+            engine: "turn",
+            imitationMode: true,
+            roundCount: items.length,
+            durationSeconds: game.durationSeconds,
+            imitationThemes: [...game.imitationThemes],
+            imitationDifficulties: [...game.imitationDifficulties],
+            imitationAllowSounds: Boolean(game.imitationAllowSounds),
+            imitationIncludeCustom: Boolean(game.imitationIncludeCustom),
+            privatePrompt: true,
+            scoreless: false
+          },
+          roundStartedAt: null,
+          turnEndsAt: null,
+          startedAt: AKFirebase.now(),
+          updatedAt: AKFirebase.now()
+        },
+        actions: null,
+        votes: null,
+        answers: null
+      });
+    } catch (error) {
+      console.error(error);
+      alert(error.message || "Impossible de lancer Imitation.");
+      renderMegaSetup();
+    }
+  };
+
+  function akImitationMultiActors(item) {
+    return (item?.actorIds || []).map(id => state.players.find(player => player.id === id)).filter(Boolean);
+  }
+
+  function akImitationMultiActorNames(item) {
+    return akImitationMultiActors(item).map(player => player.name).join(" et ");
+  }
+
+  function akImitationMultiActorCards(item) {
+    return akImitationMultiActors(item).map(player => `<article><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong></article>`).join("");
+  }
+
+  const akImitationMultiBaseProcessMegaTurn = processMultiMegaTurn;
+  processMultiMegaTurn = function (gameState, actions) {
+    if (!gameState?.settings?.imitationMode) return akImitationMultiBaseProcessMegaTurn(gameState, actions);
+    if (!state.isHost) return;
+    const item = gameState.items?.[Number(gameState.currentIndex || 0)];
+    if (!item) return;
+    const leadId = item.leadPlayerId || item.actorIds?.[0] || gameState.currentPlayerId;
+    const action = actions?.[leadId];
+
+    if (gameState.phase === "imitation-brief") {
+      if (!action?.payload?.ready) return;
+      const lock = `imitation_ready_${gameState.currentIndex}_${action.id || "ready"}`;
+      if (state.multiProcessingActionId === lock) return;
+      state.multiProcessingActionId = lock;
+      const now = AKFirebase.now();
+      AKFirebase.updateGame(state.roomCode, {
+        "state/phase": "imitation-playing",
+        "state/roundStartedAt": now,
+        "state/turnEndsAt": now + Number(gameState.settings?.durationSeconds || 45) * 1000,
+        "state/updatedAt": now,
+        actions: null
+      }).finally(() => { state.multiProcessingActionId = null; });
+      return;
+    }
+
+    if (gameState.phase !== "imitation-playing") return;
+    const expired = Number(gameState.turnEndsAt || 0) > 0 && Number(gameState.turnEndsAt) <= AKFirebase.now();
+    if (!action && !expired) return;
+    const lock = `imitation_result_${gameState.currentIndex}_${action?.id || "timer"}`;
+    if (state.multiProcessingActionId === lock) return;
+    state.multiProcessingActionId = lock;
+
+    const success = Boolean(action?.payload?.success) && !expired;
+    const actorIds = Array.isArray(item.actorIds) ? item.actorIds : [leadId];
+    const rawGuesserId = action?.payload?.guesserId || null;
+    const guesserId = rawGuesserId && !actorIds.includes(rawGuesserId) && state.players.some(player => player.id === rawGuesserId) ? rawGuesserId : null;
+    const points = success ? akImitationPoints(item) : 0;
+    const scores = { ...(gameState.scores || {}) };
+    const actorSuccess = { ...(gameState.imitationActorSuccess || {}) };
+    const guesserSuccess = { ...(gameState.imitationGuesserSuccess || {}) };
+    const failedItems = { ...(gameState.imitationFailedItems || {}) };
+    const duration = Number(gameState.settings?.durationSeconds || 45);
+    const actionElapsed = Number(action?.payload?.elapsedSeconds || 0);
+    const elapsedSeconds = success
+      ? Math.max(1, Math.min(duration, actionElapsed > 0 ? actionElapsed : Math.round((AKFirebase.now() - Number(gameState.roundStartedAt || AKFirebase.now())) / 1000)))
+      : duration;
+    let fastest = gameState.imitationFastest ? { ...gameState.imitationFastest } : null;
+
+    if (success) {
+      actorIds.forEach(id => {
+        scores[id] = Number(scores[id] || 0) + points;
+        actorSuccess[id] = Number(actorSuccess[id] || 0) + 1;
+      });
+      if (guesserId) {
+        scores[guesserId] = Number(scores[guesserId] || 0) + 1;
+        guesserSuccess[guesserId] = Number(guesserSuccess[guesserId] || 0) + 1;
+      }
+      if (!fastest || elapsedSeconds < Number(fastest.seconds || Infinity)) {
+        fastest = { seconds: elapsedSeconds, text: item.text, actorIds: [...actorIds], guesserId };
+      }
+    } else {
+      failedItems[gameState.currentIndex] = { itemId: item.id, text: item.text, difficulty: item.difficulty, timedOut: expired };
+    }
+
+    const result = {
+      itemId: item.id,
+      text: item.text,
+      success,
+      timedOut: expired,
+      actorIds,
+      guesserId,
+      points,
+      elapsedSeconds,
+      difficulty: item.difficulty,
+      category: item.category
+    };
+    AKFirebase.updateGame(state.roomCode, {
+      "state/phase": "imitation-results",
+      "state/currentResult": result,
+      "state/scores": scores,
+      "state/imitationActorSuccess": actorSuccess,
+      "state/imitationGuesserSuccess": guesserSuccess,
+      "state/imitationFailedItems": failedItems,
+      "state/imitationFastest": fastest,
+      [`state/rounds/${gameState.currentIndex}`]: result,
+      "state/roundStartedAt": null,
+      "state/turnEndsAt": null,
+      "state/updatedAt": AKFirebase.now(),
+      actions: null
+    }).finally(() => { state.multiProcessingActionId = null; });
+  };
+
+  function akImitationMultiRenderBrief(gameState, item, actions) {
+    const actorIds = Array.isArray(item.actorIds) ? item.actorIds : [];
+    const isActor = actorIds.includes(state.currentUid);
+    const isLead = state.currentUid === (item.leadPlayerId || actorIds[0]);
+    const readySent = Boolean(actions?.[state.currentUid]?.payload?.ready);
+    title.textContent = "Imitation secrète";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Imitation")}
+      ${isActor ? `
+        <section class="mime-private-card imitation-private-card">${akImitationBadges(item)}<span class="mime-private-icon">🤫</span><small>TON IMITATION SECRÈTE</small><h2>${escapeHtml(item.text || "")}</h2>${akImitationConstraintMarkup(item, gameState.settings?.imitationAllowSounds !== false)}</section>
+        ${isLead ? readySent ? renderMultiWaiting("Signal envoyé", "Le chrono va démarrer sur tous les téléphones.", "✓") : `<button id="multiImitationReady" class="primary-btn full">J’ai mémorisé · Lancer le chrono</button>` : renderMultiWaiting("Prépare ton imitation", `${escapeHtml(state.players.find(player => player.id === (item.leadPlayerId || actorIds[0]))?.name || "Ton partenaire")} lancera le chrono.`, "🎙️")}`
+        : `${renderMultiWaiting(`${escapeHtml(akImitationMultiActorNames(item))} prépare${actorIds.length > 1 ? "nt" : ""} l’imitation`, "Le sujet reste caché sur ton téléphone.", "🤫")}`}
+      <section class="mime-performer-row">${akImitationMultiActorCards(item)}</section>`;
+    document.querySelector("#multiImitationReady")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      try { await sendMultiAction("imitation-ready", { ready: true }); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; }
+    });
+  }
+
+  function akImitationMultiRenderPlaying(gameState, item, actions) {
+    const actorIds = Array.isArray(item.actorIds) ? item.actorIds : [];
+    const isActor = actorIds.includes(state.currentUid);
+    const isLead = state.currentUid === (item.leadPlayerId || actorIds[0]);
+    const pending = Boolean(actions?.[state.currentUid]);
+    const candidates = state.players.filter(player => !actorIds.includes(player.id));
+    const soundAllowed = gameState.settings?.imitationAllowSounds !== false;
+    let foundElapsedSeconds = null;
+    title.textContent = "Imitation";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Imitation")}
+      <section class="mime-playing-card imitation-playing-card">${akImitationBadges(item)}<div class="mime-live-icon">🎙️</div><small>${isActor ? "TON SUJET" : "À TOI DE DEVINER"}</small><h2>${isActor ? escapeHtml(item.text || "") : `${escapeHtml(akImitationMultiActorNames(item))} ${actorIds.length > 1 ? "imitent ensemble" : "imite"}`}</h2><div class="mime-performer-row">${akImitationMultiActorCards(item)}</div><div class="mega-mini-timer mime-timer"><strong id="v014MultiCountdown">${Math.max(0, Math.ceil((Number(gameState.turnEndsAt || 0) - AKFirebase.now()) / 1000))}</strong><span>secondes</span><div class="progress-track"><div id="v014MultiTimerFill" class="progress-fill"></div></div></div><p>${soundAllowed ? "Voix, sons, expressions et gestes autorisés. La réponse et les mots interdits restent interdits." : "Mode silencieux : gestes, expressions et attitudes seulement."}</p></section>
+      ${isLead ? pending ? renderMultiWaiting("Résultat envoyé", "Le verdict arrive sur tous les téléphones.", "✓") : `
+        <section id="multiImitationMainActions" class="decision-grid"><button id="multiImitationFound" class="primary-btn">✅ Trouvé !</button><button id="multiImitationSkip" class="secondary-btn">Passer</button></section>
+        <section id="multiImitationGuesserChoice" class="mime-multi-guesser-choice" hidden><h3>Qui a trouvé en premier ?</h3><div class="mime-guesser-grid">${candidates.map(player => `<button type="button" data-multi-imitation-guesser="${player.id}"><span>${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><small>+1 point</small></button>`).join("")}</div><button id="multiImitationCollective" class="secondary-btn full">Réponse collective</button></section>` : isActor ? renderMultiWaiting("Tu es en scène", `${escapeHtml(item.leadPlayerId === state.currentUid ? "Tu valides le résultat" : "L’imitateur principal valide le résultat")}.`, "🎙️") : renderMultiWaiting("Observe et devine", "La première bonne réponse gagne 1 point.", "🔎")}`;
+
+    document.querySelector("#multiImitationFound")?.addEventListener("click", () => {
+      foundElapsedSeconds = Math.max(1, Math.min(Number(gameState.settings?.durationSeconds || 45), Math.round((AKFirebase.now() - Number(gameState.roundStartedAt || AKFirebase.now())) / 1000)));
+      const actionsNode = document.querySelector("#multiImitationMainActions");
+      const choiceNode = document.querySelector("#multiImitationGuesserChoice");
+      if (actionsNode) actionsNode.hidden = true;
+      if (choiceNode) choiceNode.hidden = false;
+    });
+    document.querySelector("#multiImitationSkip")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      try { await sendMultiAction("imitation-result", { success: false }); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; }
+    });
+    document.querySelectorAll("[data-multi-imitation-guesser]").forEach(button => button.addEventListener("click", async () => {
+      document.querySelectorAll("[data-multi-imitation-guesser]").forEach(node => node.disabled = true);
+      try { await sendMultiAction("imitation-result", { success: true, guesserId: button.dataset.multiImitationGuesser, elapsedSeconds: foundElapsedSeconds }); }
+      catch (error) { console.error(error); document.querySelectorAll("[data-multi-imitation-guesser]").forEach(node => node.disabled = false); }
+    }));
+    document.querySelector("#multiImitationCollective")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      try { await sendMultiAction("imitation-result", { success: true, guesserId: null, elapsedSeconds: foundElapsedSeconds }); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; }
+    });
+    if (gameState.turnEndsAt) startV014MultiTimer(gameState.turnEndsAt, gameState.settings?.durationSeconds || 45, () => processMultiMegaTurn(gameState, actions));
+  }
+
+  async function akImitationAdvanceMultiRound(gameState, button) {
+    button.disabled = true;
+    clearV014MultiTimer();
+    const next = Number(gameState.currentIndex || 0) + 1;
+    const finished = next >= (gameState.items || []).length;
+    const nextItem = gameState.items?.[next];
+    try {
+      await AKFirebase.updateGame(state.roomCode, {
+        "state/phase": finished ? "final" : "imitation-brief",
+        "state/currentIndex": finished ? gameState.currentIndex : next,
+        "state/currentPlayerId": finished ? gameState.currentPlayerId : (nextItem?.leadPlayerId || nextItem?.actorIds?.[0] || null),
+        "state/currentResult": null,
+        "state/roundStartedAt": null,
+        "state/turnEndsAt": null,
+        "state/finishedAt": finished ? AKFirebase.now() : null,
+        "state/updatedAt": AKFirebase.now(),
+        actions: null
+      });
+    } catch (error) {
+      console.error(error);
+      button.disabled = false;
+      alert("Impossible de passer à l’imitation suivante.");
+    }
+  }
+
+  function akImitationMultiRenderResult(gameState, item) {
+    const result = gameState.currentResult || {};
+    const guesser = state.players.find(player => player.id === result.guesserId);
+    title.textContent = result.success ? "Imitation trouvée" : result.timedOut ? "Temps écoulé" : "Imitation passée";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Imitation")}
+      <section class="reveal-stage reveal-v07 mime-result-card imitation-result-card"><span class="game-cover-icon">${result.success ? "🎉" : result.timedOut ? "⏱️" : "↪️"}</span>${akImitationBadges(item)}<h2>${result.success ? "Imitation trouvée !" : result.timedOut ? "Temps écoulé" : "Imitation passée"}</h2><p>${escapeHtml(item.text || "")}</p>${result.success ? `<span class="imitation-speed-chip">⚡ ${Number(result.elapsedSeconds || 0)} s</span>` : ""}</section>
+      <section class="mime-result-summary"><article><span>${Number(item.actors || 1) === 2 ? "🧑‍🤝‍🧑" : "🎙️"}</span><strong>${escapeHtml(akImitationMultiActorNames(item))}</strong><small>${result.success ? `+${Number(result.points || 0)} point${Number(result.points || 0) > 1 ? "s" : ""} ${Number(item.actors || 1) === 2 ? "chacun" : ""}` : "0 point"}</small></article>${result.success ? `<article><span>🔎</span><strong>${guesser ? escapeHtml(guesser.name) : "Réponse collective"}</strong><small>${guesser ? "+1 point" : "Aucun point individuel"}</small></article>` : ""}</section>
+      ${state.isHost ? `<button id="nextMultiImitation" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Imitation suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La prochaine imitation va être distribuée.", "👑")}`;
+    document.querySelector("#nextMultiImitation")?.addEventListener("click", event => akImitationAdvanceMultiRound(gameState, event.currentTarget));
+  }
+
+  const akImitationMultiBaseRenderMegaTurn = renderMultiMegaTurn;
+  renderMultiMegaTurn = function (gameState, actions) {
+    if (!gameState?.settings?.imitationMode) return akImitationMultiBaseRenderMegaTurn(gameState, actions);
+    const item = gameState.items?.[Number(gameState.currentIndex || 0)];
+    if (!item) return;
+    if (gameState.phase === "imitation-results") return akImitationMultiRenderResult(gameState, item);
+    if (gameState.phase === "imitation-brief") return akImitationMultiRenderBrief(gameState, item, actions || {});
+    return akImitationMultiRenderPlaying(gameState, item, actions || {});
+  };
+
+  const akImitationMultiBaseRenderMegaFinal = renderMultiMegaFinal;
+  renderMultiMegaFinal = function (gameState) {
+    if (!gameState?.settings?.imitationMode) return akImitationMultiBaseRenderMegaFinal(gameState);
+    clearV014MultiTimer();
+    const ranking = [...state.players].sort((a, b) => Number(gameState.scores?.[b.id] || 0) - Number(gameState.scores?.[a.id] || 0));
+    const best = Math.max(0, ...ranking.map(player => Number(gameState.scores?.[player.id] || 0)));
+    const winners = ranking.filter(player => Number(gameState.scores?.[player.id] || 0) === best && best > 0);
+    const topBy = stats => {
+      const rows = state.players.map(player => ({ player, value: Number(stats?.[player.id] || 0) }));
+      const max = Math.max(0, ...rows.map(row => row.value));
+      return { max, players: max ? rows.filter(row => row.value === max).map(row => row.player) : [] };
+    };
+    const actorTop = topBy(gameState.imitationActorSuccess);
+    const guesserTop = topBy(gameState.imitationGuesserSuccess);
+    const fastest = gameState.imitationFastest;
+    const names = top => top.players.map(player => escapeHtml(player.name)).join(" et ");
+    const actorNames = ids => (ids || []).map(id => state.players.find(player => player.id === id)?.name).filter(Boolean).map(escapeHtml).join(" et ");
+    title.textContent = "Classement final";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="winner-stage winner-stage-v07 mega-final-stage imitation-final-stage"><div class="winner-crown">🎙️🏆</div><h2>${winners.length ? winners.map(player => escapeHtml(player.name)).join(" et ") : "Rideau !"}</h2><p>${winners.length ? `${winners.length > 1 ? "terminent" : "termine"} en tête du studio.` : "Toutes les imitations sont terminées."}</p></section>
+      <section class="final-ranking">${ranking.map((player, index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(gameState.scores?.[player.id] || 0)} pts</span></div>`).join("")}</section>
+      <section class="mime-final-awards imitation-final-awards"><article><span>🎙️</span><small>MEILLEUR IMITATEUR</small><strong>${actorTop.max ? names(actorTop) : "Aucune imitation trouvée"}</strong><p>${actorTop.max ? `${actorTop.max} imitation${actorTop.max > 1 ? "s" : ""} réussie${actorTop.max > 1 ? "s" : ""}` : "La prochaine voix sera la bonne."}</p></article><article><span>🔎</span><small>MEILLEUR DEVINEUR</small><strong>${guesserTop.max ? names(guesserTop) : "Réponses collectives"}</strong><p>${guesserTop.max ? `${guesserTop.max} première${guesserTop.max > 1 ? "s" : ""} bonne${guesserTop.max > 1 ? "s" : ""} réponse${guesserTop.max > 1 ? "s" : ""}` : "Aucun point individuel attribué."}</p></article><article><span>${fastest ? "⚡" : "🎬"}</span><small>IMITATION ÉCLAIR</small><strong>${fastest ? `${Number(fastest.seconds || 0)} secondes · ${actorNames(fastest.actorIds)}` : "Aucune manche trouvée"}</strong><p>${fastest ? escapeHtml(fastest.text || "") : "Le chrono réclame une revanche."}</p></article></section>
+      ${renderPostGameContinuation(gameState)}`;
+    ensureEveningResult(gameState);
+    bindPostGameContinuation(gameState);
+  };
+
+
   window.AKGamesMultiplayer = Object.freeze({
     launchRandomGame: () => launchRandomMultiplayerGame()
   });
