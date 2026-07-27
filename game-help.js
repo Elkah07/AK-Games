@@ -322,3 +322,5 @@
 
   window.AKGameHelp = { open: openRuleModal, rules: RULES };
 })();
+
+/* AK'GAMES V4.7 — Le premier qui rit a perdu : 800 blagues classiques, 350 adultes, duel et tournoi. */

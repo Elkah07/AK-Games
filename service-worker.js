@@ -1,17 +1,17 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v4.6-alerte-rouge-500";
+const CACHE_VERSION = "akgames-v4.7-blagues-1150";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=alerte-v46",
+  "/styles.css?v=blagues-v47",
   "/creator.css?v=creator-v1.3-access",
-  "/app.js?v=alerte-v46",
+  "/app.js?v=blagues-v47",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
-  "/multiplayer.js?v=alerte-v46",
+  "/multiplayer.js?v=blagues-v47",
   "/characters.js?v=characters-v1",
-  "/game-help.js?v=alerte-v46",
+  "/game-help.js?v=blagues-v47",
   "/pwa.js",
   "/manifest.webmanifest",
   "/icons/icon-192.png",

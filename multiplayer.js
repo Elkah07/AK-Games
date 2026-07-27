@@ -10727,6 +10727,49 @@
     const gameState=room.game?.state;if(gameState?.type!=="mega-ranking"||!gameState.settings?.rankingV43)return akRankingMultiBaseSyncV43(room);const answers=room.game?.answers||{};clearV09MultiTimer();if(gameState.phase==="final")return renderMultiMegaFinal(gameState);if(gameState.phase==="ranking"){processMultiRankingV43(gameState,answers);return renderMultiRankingBuilderV43(gameState,answers);}return renderMultiRankingResultV43(gameState);
   };
 
+
+
+  /* AK'GAMES V4.7 — BLAGUES 800 + 350 ADULTES MULTI */
+  const akLaughMultiBaseStartV47 = startLaughDuel;
+  startLaughDuel = async function(){
+    if(!isMultiplayer()) return akLaughMultiBaseStartV47();
+    if(!state.isHost)return;
+    const game=akLaughEnsureV47(state.laughDuel);
+    if(game.gameFormat==='duel'&&(!game.player1Id||!game.player2Id||game.player1Id===game.player2Id))return alert('Choisis deux joueurs différents.');
+    if(game.gameFormat==='tournament'&&game.tournamentPlayers.length<3)return alert('Choisis au moins trois participants.');
+    screen.innerHTML='<div class="notice">Synchronisation des 1 150 blagues…</div>';
+    try{
+      const [classicRows,adultRows]=await Promise.all([loadJsonFile('data/blagues.json','Impossible de charger les blagues.'),state.adult&&game.includeAdult?loadJsonFile('data/blagues-adulte.json','Impossible de charger les blagues adultes.'):Promise.resolve([])]);
+      const pool=akLaughBuildPoolV47(classicRows,adultRows,game);if(!pool.length)throw new Error('Aucune blague ne correspond à ces filtres.');
+      let p1=game.player1Id,p2=game.player2Id,tournament=null;
+      if(game.gameFormat==='tournament'){
+        const ids=shuffleArray(game.tournamentPlayers.filter(id=>state.players.some(p=>p.id===id)));p1=ids[0];p2=ids[1];tournament={enabled:true,round:1,roundPlayers:ids,nextRound:ids.length%2===1?[ids[ids.length-1]]:[],matchIndex:0,championId:null};
+      }
+      const lifeCount=game.mode==='lives'?3:1,currentTurnId=Math.random()<.5?p1:p2;
+      await AKFirebase.setGame(state.roomCode,{state:{type:'laugh-duel',phase:'turn-choice',sessionGameId:createSessionGameId('laugh-duel-v47'),player1Id:p1,player2Id:p2,mode:game.mode,settings:{categories:[...game.categories],styles:[...game.styles],includeAdult:Boolean(game.includeAdult),adultCategories:[...game.adultCategories],adultLevels:[...game.adultLevels],gameFormat:game.gameFormat},jokes:shuffleArray(pool).slice(0,Math.min(pool.length,180)),usedJokeIds:[],currentTurnId,currentJoke:null,jokeSource:null,punchlineVisible:false,lives:{[p1]:lifeCount,[p2]:lifeCount},turnNumber:1,lastResult:null,winnerId:null,loserId:null,tournament,startedAt:AKFirebase.now(),updatedAt:AKFirebase.now()}});state.multiView='laugh-duel-game';
+    }catch(error){console.error(error);alert(error.message||'Impossible de lancer le duel.');renderLaughDuelSetup();}
+  };
+  const akLaughMultiBaseHeaderV47 = renderMultiLaughDuelHeader;
+  renderMultiLaughDuelHeader = function(gameState){const base=akLaughMultiBaseHeaderV47(gameState);return `${gameState.tournament?.enabled?`<div class="laugh-tournament-chip-v47">🏆 Tour ${Number(gameState.tournament.round||1)} · Duel ${Math.floor(Number(gameState.tournament.matchIndex||0)/2)+1}</div>`:''}${base}`;};
+  const akLaughMultiBaseJokeV47 = renderMultiLaughJoke;
+  renderMultiLaughJoke = function(gameState){akLaughMultiBaseJokeV47(gameState);const chip=document.querySelector('.private-joke-card .category-chip');if(chip&&gameState.currentJoke)chip.innerHTML=akLaughLabelV47(gameState.currentJoke);};
+  const akLaughMultiBaseFinalV47 = renderMultiLaughFinal;
+  renderMultiLaughFinal = function(gameState){
+    if(!gameState.tournament?.enabled)return akLaughMultiBaseFinalV47(gameState);
+    const winner=playerById(gameState.winnerId),loser=playerById(gameState.loserId),t=gameState.tournament;
+    title.textContent='Résultat du tournoi';setBackVisible(false);
+    screen.innerHTML=`<section class="winner-stage"><div class="winner-crown">👑</div><div class="giant-avatar">${avatarById(winner?.avatarId).emoji}</div><h2>${escapeHtml(winner?.name||'Le gagnant')} remporte ce duel</h2><p>${escapeHtml(loser?.name||"L'autre joueur")} a craqué en premier.</p></section>${state.isHost?`<button id="multiLaughTournamentNextV47" class="primary-btn full">Continuer le tournoi</button>`:renderMultiWaiting("En attente de l’hôte","Le prochain duel apparaîtra automatiquement.","🏆")}`;
+    document.querySelector('#multiLaughTournamentNextV47')?.addEventListener('click',async e=>{e.currentTarget.disabled=true;let nextRound=[...(t.nextRound||[]),gameState.winnerId],roundPlayers=[...(t.roundPlayers||[])],matchIndex=Number(t.matchIndex||0)+2,round=Number(t.round||1);let champion=null,p1=null,p2=null;
+      if(matchIndex+1<roundPlayers.length){p1=roundPlayers[matchIndex];p2=roundPlayers[matchIndex+1];}
+      else if(nextRound.length===1){champion=nextRound[0];}
+      else{round+=1;roundPlayers=shuffleArray([...new Set(nextRound)]);nextRound=[];matchIndex=0;if(roundPlayers.length%2===1)nextRound.push(roundPlayers[roundPlayers.length-1]);p1=roundPlayers[0];p2=roundPlayers[1];}
+      if(champion){await AKFirebase.updateGame(state.roomCode,{'state/tournament/championId':champion,'state/phase':'tournament-champion','state/updatedAt':AKFirebase.now()});return;}
+      const lifeCount=gameState.mode==='lives'?3:1;await AKFirebase.updateGame(state.roomCode,{'state/player1Id':p1,'state/player2Id':p2,'state/currentTurnId':Math.random()<.5?p1:p2,'state/lives':{[p1]:lifeCount,[p2]:lifeCount},'state/phase':'turn-choice','state/currentJoke':null,'state/punchlineVisible':false,'state/winnerId':null,'state/loserId':null,'state/lastResult':null,'state/turnNumber':1,'state/tournament/round':round,'state/tournament/roundPlayers':roundPlayers,'state/tournament/nextRound':nextRound,'state/tournament/matchIndex':matchIndex,'state/updatedAt':AKFirebase.now(),actions:null});
+    });
+  };
+  const akLaughMultiBaseSyncV47 = syncMultiLaughDuel;
+  syncMultiLaughDuel = function(room){const gameState=room.game?.state;if(gameState?.type==='laugh-duel'&&gameState.phase==='tournament-champion'){const champion=playerById(gameState.tournament?.championId);title.textContent='Champion du tournoi';setBackVisible(false);screen.innerHTML=`<section class="winner-stage laugh-champion-v47"><div class="winner-crown">🏆</div><div class="giant-avatar">${avatarById(champion?.avatarId).emoji}</div><h2>${escapeHtml(champion?.name||'Le champion')} gagne le tournoi !</h2><p>Visage de marbre, dignité presque intacte.</p></section>${renderPostGameContinuation(gameState)}`;ensureEveningResult(gameState);bindPostGameContinuation(gameState);return;}return akLaughMultiBaseSyncV47(room);};
+
 })();
 
 
