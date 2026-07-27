@@ -1,0 +1,271 @@
+{
+  "pack": "AK-Games Devinettes 600 V1",
+  "generatedAt": "2026-07-27",
+  "summary": {
+    "cards": 600,
+    "themes": {
+      "corps_humain": 60,
+      "logique": 40,
+      "animaux_nature": 80,
+      "lieux_voyages": 60,
+      "nourriture": 70,
+      "technologie": 50,
+      "objets": 100,
+      "absurdes_pieges": 30,
+      "mots_expressions": 50,
+      "metiers_personnages": 60
+    },
+    "difficulties": {
+      "medium": 295,
+      "hard": 214,
+      "easy": 91
+    },
+    "uniqueQuestions": 600,
+    "uniqueAnswers": 294,
+    "checksPassed": 48,
+    "checksTotal": 48
+  },
+  "checks": [
+    {
+      "name": "600 cartes présentes",
+      "ok": true,
+      "detail": "600"
+    },
+    {
+      "name": "Tous les objets ont les champs requis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Identifiants uniques",
+      "ok": true,
+      "detail": "600"
+    },
+    {
+      "name": "Questions exactes uniques",
+      "ok": true,
+      "detail": "600"
+    },
+    {
+      "name": "Questions normalisées uniques",
+      "ok": true,
+      "detail": "600"
+    },
+    {
+      "name": "Répartition des 10 thèmes correcte",
+      "ok": true,
+      "detail": "{'corps_humain': 60, 'logique': 40, 'animaux_nature': 80, 'lieux_voyages': 60, 'nourriture': 70, 'technologie': 50, 'objets': 100, 'absurdes_pieges': 30, 'mots_expressions': 50, 'metiers_personnages': 60}"
+    },
+    {
+      "name": "Trois difficultés valides",
+      "ok": true,
+      "detail": "{'medium': 295, 'hard': 214, 'easy': 91}"
+    },
+    {
+      "name": "Deux indices par carte",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Réponses acceptées présentes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Réponse officielle acceptée",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Aucun alias corrompu",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Aucun identifiant mal formé",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Aucun texte vide",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Ancienne faute permetss absente",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Conjugaisons fautives ciblées absentes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Explications individualisées",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Au moins 100 réponses distinctes",
+      "ok": true,
+      "detail": "294"
+    },
+    {
+      "name": "Capacité de partie à 100 manches",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Validation sans article",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Validation avec article",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Validation tolère une petite faute",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Mauvaise réponse refusée",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Barème sans indice = 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Barème avec 1 indice = 2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Barème avec 2 indices = 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Simulation 100 manches complète",
+      "ok": true,
+      "detail": "100"
+    },
+    {
+      "name": "Simulation sans réponse répétée",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Simulation répartie sur 10 thèmes",
+      "ok": true,
+      "detail": "{'animaux_nature': 10, 'objets': 10, 'corps_humain': 10, 'metiers_personnages': 10, 'mots_expressions': 10, 'technologie': 10, 'logique': 10, 'nourriture': 10, 'lieux_voyages': 10, 'absurdes_pieges': 10}"
+    },
+    {
+      "name": "Configuration Devinettes V4.1 branchée",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "10 thèmes affichés",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Deux modes de jeu présents",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Validation automatique et manuelle",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Chronos proposés",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Cartes personnalisées intégrées",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Anti-répétition par réponse intégré",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Multijoueur Devinettes branché",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Scores multijoueurs synchronisés",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Styles Devinettes présents",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Aperçu créateur affiche les indices",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Règles du jeu actualisées",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Cache PWA versionné",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "JSON Devinettes préchargé",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Syntaxe JavaScript valide : app.js",
+      "ok": true,
+      "detail": "OK"
+    },
+    {
+      "name": "Syntaxe JavaScript valide : multiplayer.js",
+      "ok": true,
+      "detail": "OK"
+    },
+    {
+      "name": "Syntaxe JavaScript valide : creator.js",
+      "ok": true,
+      "detail": "OK"
+    },
+    {
+      "name": "Syntaxe JavaScript valide : game-help.js",
+      "ok": true,
+      "detail": "OK"
+    },
+    {
+      "name": "Syntaxe JavaScript valide : service-worker.js",
+      "ok": true,
+      "detail": "OK"
+    },
+    {
+      "name": "Les 46 bases JSON du projet restent valides",
+      "ok": true,
+      "detail": "46 fichiers"
+    }
+  ],
+  "manualTestRemaining": "Tester une vraie salle Firebase sur plusieurs téléphones après déploiement."
+}

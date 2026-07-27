@@ -154,7 +154,7 @@
       options: "Choisissez la durée, le nombre de tours et le contenu adulte éventuel.",
       comfort: "Les réponses du groupe doivent rester Oui, Non ou Ça dépend, sans donner directement le nom."
     },
-    "Devinettes": { intro: "Résolvez des énigmes courtes et des jeux de logique.", steps: ["Une devinette est affichée.", "Les joueurs cherchent la réponse.", "La solution est révélée lorsque le groupe le décide.", "Le premier à trouver marque."], scoring: "La première bonne réponse rapporte généralement 1 point.", options: "Choisissez la longueur et les thèmes disponibles.", comfort: "Le groupe peut demander la réponse et passer sans pénalité." },
+    "Devinettes": { intro: "Résolvez 600 énigmes avec des réponses libres et deux indices progressifs.", steps: ["Choisissez les thèmes, les difficultés et le mode de jeu.", "Tout le monde répond secrètement, ou un lecteur tournant anime la manche.", "Un ou deux indices peuvent être révélés.", "Les réponses sont vérifiées automatiquement ou validées par le groupe avant la solution."], scoring: "Sans indice : 3 points. Après un indice : 2 points. Après deux indices : 1 point.", options: "Parties de 10 à 100 devinettes, chrono facultatif, 10 thèmes, 3 difficultés et cartes personnalisées.", comfort: "Une réponse peut rester vide et le groupe peut accepter une formulation proche en validation manuelle." },
     "Qui ment le mieux ?": {
       intro: "Tout le monde invente un mensonge crédible en réponse à la même situation, puis le groupe vote pour le meilleur.",
       steps: ["Une situation est affichée.", "Chaque joueur écrit son mensonge en secret.", "Toutes les réponses sont mélangées et lues anonymement.", "Le groupe vote : Mensonge incroyable, Moui ou Grave nul selon le mode."],

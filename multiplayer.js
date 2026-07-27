@@ -9974,6 +9974,308 @@
     bindPostGameContinuation(gameState);
   };
 
+
+  /* AK'GAMES V4.1 — DEVINETTES 600 MULTIJOUEUR */
+  const akRiddleMultiBaseSetupV41 = renderMegaSetup;
+  renderMegaSetup = function renderMegaSetupRiddleMultiV41() {
+    if (!isMultiplayer() || !akRiddleIsGameV41()) return akRiddleMultiBaseSetupV41();
+    const game = state.megaGame;
+    akRiddleEnsureV41(game);
+    clearV014MultiTimer();
+    title.textContent = AK_RIDDLE_GAME_V41;
+    setBackVisible(true);
+    screen.innerHTML = `
+      <section class="game-cover game-cover-mega riddle-cover-v41"><span class="game-cover-icon">🧩</span><div><small>MULTIJOUEUR · 600 DEVINETTES</small><h2>Devinettes</h2><p>Chaque réponse reste secrète jusqu’au verdict commun.</p></div></section>
+      <section class="riddle-stat-strip-v41"><article><strong>600</strong><span>devinettes</span></article><article><strong>10</strong><span>thèmes</span></article><article><strong>3 → 1</strong><span>points</span></article></section>
+      ${akRiddleSetupMarkupV41(game, "multiRiddle", !state.isHost)}
+      ${state.isHost ? `<button id="startMultiRiddleV41" class="primary-btn full">Lancer sur tous les téléphones</button>` : renderMultiWaiting("En attente de l’hôte", "L’hôte choisit les thèmes et les réglages.", "👑")}`;
+    if (state.isHost) {
+      akRiddleBindSetupV41(game, "multiRiddle", renderMegaSetup);
+      document.querySelector("#startMultiRiddleV41")?.addEventListener("click", startMegaGame);
+    }
+  };
+
+  const akRiddleMultiBaseStartV41 = startMegaGame;
+  startMegaGame = async function startMegaGameRiddleMultiV41() {
+    if (!isMultiplayer() || !akRiddleIsGameV41()) return akRiddleMultiBaseStartV41();
+    if (!state.isHost || !state.megaGame) return;
+    const game = state.megaGame;
+    akRiddleEnsureV41(game);
+    if (!game.riddleThemes.length || !game.riddleDifficulties.length) return alert("Choisis au moins un thème et une difficulté.");
+    screen.innerHTML = `<div class="notice">Synchronisation des 600 devinettes…</div>`;
+    try {
+      const pool = await akRiddleBuildPoolV41(game);
+      if (!pool.length) throw new Error("Aucune devinette ne correspond aux filtres choisis.");
+      const items = akRiddleSelectItemsV41(pool, game.roundCount, `multi:riddles:v41:${game.riddleThemes.join("-")}:${game.riddleDifficulties.join("-")}`)
+        .map((item, index) => ({ ...item, readerId: game.riddlePlayMode === "reader" ? state.players[index % state.players.length]?.id : null }));
+      const playerIds = state.players.map(player => player.id);
+      const startedAt = AKFirebase.now();
+      await AKFirebase.setGame(state.roomCode, { state: {
+        type: "mega-quiz",
+        phase: "voting",
+        sessionGameId: createSessionGameId("riddles-v41"),
+        items,
+        currentIndex: 0,
+        scores: Object.fromEntries(playerIds.map(id => [id, 0])),
+        riddleCorrectCounts: Object.fromEntries(playerIds.map(id => [id, 0])),
+        riddleBestTimes: Object.fromEntries(playerIds.map(id => [id, null])),
+        riddleHintsUsed: 0,
+        riddleEndsAt: game.riddleTimerSeconds ? startedAt + game.riddleTimerSeconds * 1000 : null,
+        roundStartedAt: startedAt,
+        rounds: {},
+        currentResult: null,
+        settings: {
+          gameName: AK_RIDDLE_GAME_V41,
+          icon: "🧩",
+          engine: "quiz",
+          roundCount: items.length,
+          riddle: true,
+          riddleThemes: [...game.riddleThemes],
+          riddleDifficulties: [...game.riddleDifficulties],
+          riddlePlayMode: game.riddlePlayMode,
+          riddleValidationMode: game.riddleValidationMode,
+          riddleTimerSeconds: game.riddleTimerSeconds,
+          riddleIncludeCustom: Boolean(game.riddleIncludeCustom)
+        },
+        startedAt,
+        updatedAt: startedAt
+      }, votes: {}, answers: null, actions: null });
+      state.multiView = "v09-game";
+    } catch (error) {
+      console.error(error);
+      alert(error.message || "Impossible de lancer les devinettes.");
+      renderMegaSetup();
+    }
+  };
+
+  function akRiddleMultiResponderIdsV41(gameState, item) {
+    const ids = state.players.map(player => player.id);
+    return gameState.settings?.riddlePlayMode === "reader" ? ids.filter(id => id !== item?.readerId) : ids;
+  }
+
+  function akRiddleMultiDraftV41(gameState, votes, verdicts) {
+    const item = megaMultiCurrentItem(gameState);
+    const responderIds = akRiddleMultiResponderIdsV41(gameState, item);
+    const points = akRiddlePointsV41(gameState.riddleHintsUsed);
+    const safeVotes = Object.fromEntries(responderIds.map(id => [id, votes?.[id] || { text: "", elapsedMs: 0 }]));
+    const safeVerdicts = Object.fromEntries(responderIds.map(id => [id, Boolean(verdicts?.[id])]));
+    const correctIds = responderIds.filter(id => safeVerdicts[id]);
+    const elapsedValues = correctIds.map(id => Number(safeVotes[id]?.elapsedMs || 0)).filter(value => value > 0);
+    return {
+      itemId: item?.id || "",
+      question: item?.question || "",
+      answer: item?.answer || "",
+      votes: safeVotes,
+      verdicts: safeVerdicts,
+      correctIds,
+      correctCount: correctIds.length,
+      points,
+      hintsUsed: Number(gameState.riddleHintsUsed || 0),
+      readerId: item?.readerId || null,
+      fastestMs: elapsedValues.length ? Math.min(...elapsedValues) : null
+    };
+  }
+
+  async function akRiddleMultiFinalizeV41(gameState, votes, forcedVerdicts = null) {
+    if (!state.isHost) return;
+    const item = megaMultiCurrentItem(gameState);
+    if (!item) return;
+    const responderIds = akRiddleMultiResponderIdsV41(gameState, item);
+    const automatic = Object.fromEntries(responderIds.map(id => [id, akRiddleAnswerMatchesV41(item, votes?.[id]?.text)]));
+    const verdicts = forcedVerdicts || automatic;
+    const draft = akRiddleMultiDraftV41(gameState, votes, verdicts);
+    if (!forcedVerdicts && gameState.settings?.riddleValidationMode === "manual") {
+      const lock = `riddle_v41_validation_${gameState.currentIndex}`;
+      if (state.multiProcessingActionId === lock || gameState.phase !== "voting") return;
+      state.multiProcessingActionId = lock;
+      try {
+        await AKFirebase.updateGame(state.roomCode, {
+          "state/phase": "riddle-validation",
+          "state/currentResult": draft,
+          "state/updatedAt": AKFirebase.now()
+        });
+      } finally { state.multiProcessingActionId = null; }
+      return;
+    }
+    const lock = `riddle_v41_result_${gameState.currentIndex}`;
+    if (state.multiProcessingActionId === lock) return;
+    state.multiProcessingActionId = lock;
+    const scores = { ...(gameState.scores || {}) };
+    const correctCounts = { ...(gameState.riddleCorrectCounts || {}) };
+    const bestTimes = { ...(gameState.riddleBestTimes || {}) };
+    draft.correctIds.forEach(id => {
+      scores[id] = Number(scores[id] || 0) + draft.points;
+      correctCounts[id] = Number(correctCounts[id] || 0) + 1;
+      const elapsed = Number(draft.votes[id]?.elapsedMs || 0);
+      if (elapsed > 0 && (!bestTimes[id] || elapsed < Number(bestTimes[id]))) bestTimes[id] = elapsed;
+    });
+    try {
+      await AKFirebase.updateGame(state.roomCode, {
+        "state/phase": "results",
+        "state/currentResult": draft,
+        "state/scores": scores,
+        "state/riddleCorrectCounts": correctCounts,
+        "state/riddleBestTimes": bestTimes,
+        [`state/rounds/${gameState.currentIndex}`]: draft,
+        "state/updatedAt": AKFirebase.now()
+      });
+    } finally { state.multiProcessingActionId = null; }
+  }
+
+  const akRiddleMultiBaseProcessQuizV41 = processMultiMegaQuiz;
+  processMultiMegaQuiz = function processMultiMegaQuizRiddleV41(gameState, votes) {
+    if (!gameState.settings?.riddle) return akRiddleMultiBaseProcessQuizV41(gameState, votes);
+    if (!state.isHost || gameState.phase !== "voting") return;
+    const item = megaMultiCurrentItem(gameState);
+    const responderIds = akRiddleMultiResponderIdsV41(gameState, item);
+    const submitted = responderIds.filter(id => votes?.[id] !== undefined).length;
+    const expired = Boolean(gameState.riddleEndsAt && AKFirebase.now() >= Number(gameState.riddleEndsAt));
+    if (submitted < responderIds.length && !expired) return;
+    akRiddleMultiFinalizeV41(gameState, votes || {}).catch(error => console.error(error));
+  };
+
+  async function akRiddleMultiRevealHintV41(gameState) {
+    if (!state.isHost || Number(gameState.riddleHintsUsed || 0) >= 2) return;
+    await AKFirebase.updateGame(state.roomCode, {
+      "state/riddleHintsUsed": Number(gameState.riddleHintsUsed || 0) + 1,
+      "state/updatedAt": AKFirebase.now()
+    });
+  }
+
+  function akRiddleMultiRenderValidationV41(gameState) {
+    const item = megaMultiCurrentItem(gameState);
+    const draft = gameState.currentResult || {};
+    const responderIds = akRiddleMultiResponderIdsV41(gameState, item);
+    state.akRiddleMultiVerdictsV41 = state.akRiddleMultiVerdictsV41?.index === gameState.currentIndex
+      ? state.akRiddleMultiVerdictsV41
+      : { index: gameState.currentIndex, values: { ...(draft.verdicts || {}) } };
+    title.textContent = "Validation des réponses";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Devinette")}
+      ${state.isHost ? `<section class="reveal-stage reveal-v07 riddle-solution-v41"><span class="game-cover-icon">🔐</span><small>SOLUTION PRIVÉE DE L’HÔTE</small><h2>${escapeHtml(item?.answer || "")}</h2><p>Corrige les réponses proches avant le verdict collectif.</p></section><section class="riddle-validation-list-v41">${responderIds.map(id => {
+        const player = state.players.find(entry => entry.id === id);
+        const correct = Boolean(state.akRiddleMultiVerdictsV41.values[id]);
+        return `<article><span>${avatarById(player?.avatarId).emoji}</span><div><strong>${escapeHtml(player?.name || "Joueur")}</strong><p>${escapeHtml(draft.votes?.[id]?.text || "Aucune réponse")}</p></div><button type="button" data-multi-riddle-verdict="${id}" class="${correct ? "primary-btn" : "secondary-btn"}">${correct ? "✓ Correcte" : "✗ Incorrecte"}</button></article>`;
+      }).join("")}</section><button id="confirmMultiRiddleV41" class="primary-btn full">Révéler le verdict</button>` : renderMultiWaiting("Validation en cours", "L’hôte vérifie les formulations proches.", "🔐")}`;
+    document.querySelectorAll("[data-multi-riddle-verdict]").forEach(button => button.addEventListener("click", () => {
+      const id = button.dataset.multiRiddleVerdict;
+      state.akRiddleMultiVerdictsV41.values[id] = !state.akRiddleMultiVerdictsV41.values[id];
+      akRiddleMultiRenderValidationV41(gameState);
+    }));
+    document.querySelector("#confirmMultiRiddleV41")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      try { await akRiddleMultiFinalizeV41(gameState, draft.votes || {}, state.akRiddleMultiVerdictsV41.values); }
+      catch (error) { console.error(error); event.currentTarget.disabled = false; }
+    });
+  }
+
+  const akRiddleMultiBaseRenderVoteV41 = renderMultiMegaQuizVote;
+  renderMultiMegaQuizVote = function renderMultiMegaQuizVoteRiddleV41(gameState, votes) {
+    if (!gameState.settings?.riddle) return akRiddleMultiBaseRenderVoteV41(gameState, votes);
+    if (gameState.phase === "riddle-validation") return akRiddleMultiRenderValidationV41(gameState);
+    const item = megaMultiCurrentItem(gameState);
+    const reader = state.players.find(player => player.id === item?.readerId);
+    const isReader = gameState.settings?.riddlePlayMode === "reader" && state.currentUid === item?.readerId;
+    const responderIds = akRiddleMultiResponderIdsV41(gameState, item);
+    const submitted = responderIds.filter(id => votes?.[id] !== undefined).length;
+    const ownVote = votes?.[state.currentUid];
+    const hintsUsed = Number(gameState.riddleHintsUsed || 0);
+    const duration = Number(gameState.settings?.riddleTimerSeconds || 0);
+    title.textContent = AK_RIDDLE_GAME_V41;
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Devinette")}
+      <section class="riddle-question-card-v41">${akRiddleBadgesV41(item)}${isReader ? `<span class="category-chip">LECTEUR · ${escapeHtml(reader?.name || "").toUpperCase()}</span>` : ""}<span class="riddle-big-icon-v41">🧩</span><h2>${escapeHtml(item?.question || "")}</h2>${isReader ? `<div class="riddle-reader-solution-v41"><small>SOLUTION PRIVÉE</small><strong>${escapeHtml(item?.answer || "")}</strong></div>` : ""}${gameState.riddleEndsAt ? `<div class="mega-mini-timer riddle-timer-v41"><strong id="v014MultiCountdown">${Math.max(0, Math.ceil((Number(gameState.riddleEndsAt) - AKFirebase.now()) / 1000))}</strong><span>secondes</span><div class="progress-track"><div id="v014MultiTimerFill" class="progress-fill"></div></div></div>` : ""}</section>
+      <section class="riddle-hints-v41">${[0,1].map(index => `<article class="${index < hintsUsed || isReader ? "revealed" : "locked"}"><span>${index + 1}</span><div><small>INDICE ${index + 1}</small><p>${index < hintsUsed || isReader ? escapeHtml(item?.hints?.[index] || "Aucun indice supplémentaire.") : "Indice encore caché"}</p></div></article>`).join("")}</section>
+      ${state.isHost ? `<div class="riddle-action-grid-v41"><button id="multiRiddleHintV41" class="secondary-btn" ${hintsUsed >= 2 ? "disabled" : ""}>💡 ${hintsUsed ? "Indice suivant" : "Débloquer un indice"}</button><button id="multiRiddleFinishV41" class="secondary-btn">Révéler maintenant</button></div>` : ""}
+      ${isReader ? renderMultiWaiting("Tu es le lecteur", `${submitted}/${responderIds.length} réponse${responderIds.length > 1 ? "s" : ""} reçue${submitted > 1 ? "s" : ""}. Tu connais la solution, mais tu ne participes pas à cette manche.`, "📣") : ownVote !== undefined ? renderMultiWaiting("Réponse verrouillée", `${submitted}/${responderIds.length} réponse${responderIds.length > 1 ? "s" : ""} reçue${submitted > 1 ? "s" : ""}.`, "🔒") : `<section class="riddle-multi-answer-v41"><label for="multiRiddleAnswerV41">Ta réponse</label><input id="multiRiddleAnswerV41" class="text-input" maxlength="100" autocomplete="off" placeholder="Écris ta réponse"><button id="submitMultiRiddleV41" class="primary-btn full">Verrouiller ma réponse</button></section>`}
+      ${renderPlayerSubmissionStatus(Object.fromEntries(responderIds.filter(id => votes?.[id] !== undefined).map(id => [id, true])), "A répondu", "Réfléchit…")}`;
+    document.querySelector("#multiRiddleHintV41")?.addEventListener("click", event => { event.currentTarget.disabled = true; akRiddleMultiRevealHintV41(gameState).catch(() => event.currentTarget.disabled = false); });
+    document.querySelector("#multiRiddleFinishV41")?.addEventListener("click", event => { event.currentTarget.disabled = true; akRiddleMultiFinalizeV41(gameState, votes || {}).catch(() => event.currentTarget.disabled = false); });
+    const submit = async () => {
+      const input = document.querySelector("#multiRiddleAnswerV41");
+      const text = input?.value.trim() || "";
+      document.querySelector("#submitMultiRiddleV41").disabled = true;
+      try {
+        await AKFirebase.writeOwnGameEntry(state.roomCode, "votes", { text, elapsedMs: Math.max(0, AKFirebase.now() - Number(gameState.roundStartedAt || AKFirebase.now())) });
+      } catch (error) {
+        console.error(error);
+        document.querySelector("#submitMultiRiddleV41").disabled = false;
+      }
+    };
+    document.querySelector("#submitMultiRiddleV41")?.addEventListener("click", submit);
+    document.querySelector("#multiRiddleAnswerV41")?.addEventListener("keydown", event => { if (event.key === "Enter") submit(); });
+    if (gameState.riddleEndsAt) startV014MultiTimer(gameState.riddleEndsAt, duration || 45, () => { if (state.isHost) akRiddleMultiFinalizeV41(gameState, votes || {}).catch(error => console.error(error)); });
+  };
+
+  const akRiddleMultiBaseRenderResultV41 = renderMultiMegaQuizResult;
+  renderMultiMegaQuizResult = function renderMultiMegaQuizResultRiddleV41(gameState) {
+    if (!gameState.settings?.riddle) return akRiddleMultiBaseRenderResultV41(gameState);
+    clearV014MultiTimer();
+    const item = megaMultiCurrentItem(gameState);
+    const result = gameState.currentResult || {};
+    const readerMode = gameState.settings?.riddlePlayMode === "reader";
+    title.textContent = result.correctIds?.length ? "Trouvé !" : "Mystère résolu";
+    setBackVisible(false);
+    screen.innerHTML = `
+      ${multiMegaProgress(gameState, "Devinette")}
+      <section class="reveal-stage reveal-v07 riddle-solution-v41 ${result.correctIds?.length ? "solved" : "unsolved"}"><span class="game-cover-icon">${result.correctIds?.length ? "🎉" : "🧩"}</span>${akRiddleBadgesV41(item)}<small>LA RÉPONSE ÉTAIT</small><h2>${escapeHtml(item?.answer || "")}</h2><p>${escapeHtml(item?.explanation || "Solution révélée.")}</p><em>${Number(result.hintsUsed || 0) ? `${Number(result.hintsUsed)} indice${Number(result.hintsUsed) > 1 ? "s" : ""} utilisé${Number(result.hintsUsed) > 1 ? "s" : ""} · ${Number(result.points || 1)} point${Number(result.points || 1) > 1 ? "s" : ""}` : `Sans indice · ${Number(result.points || 3)} points`}</em></section>
+      <section class="answer-chip-wall">${state.players.map(player => {
+        if (readerMode && player.id === result.readerId) return `<span class="reader">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · lecteur</span>`;
+        const won = result.correctIds?.includes(player.id);
+        return `<span class="${won ? "correct" : "wrong"}">${avatarById(player.avatarId).emoji} ${escapeHtml(player.name)} · ${escapeHtml(result.votes?.[player.id]?.text || "Aucune réponse")}${won ? ` · +${Number(result.points || 1)}` : ""}</span>`;
+      }).join("")}</section>
+      ${state.isHost ? `<button id="nextMultiRiddleV41" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le palmarès" : "Devinette suivante"}</button>` : renderMultiWaiting("En attente de l’hôte", "La prochaine devinette apparaîtra automatiquement.", "👑")}`;
+    document.querySelector("#nextMultiRiddleV41")?.addEventListener("click", async event => {
+      event.currentTarget.disabled = true;
+      const next = Number(gameState.currentIndex || 0) + 1;
+      const finished = next >= (gameState.items || []).length;
+      const now = AKFirebase.now();
+      try {
+        await AKFirebase.updateGame(state.roomCode, {
+          "state/phase": finished ? "final" : "voting",
+          "state/currentIndex": finished ? gameState.currentIndex : next,
+          "state/currentResult": null,
+          "state/riddleHintsUsed": 0,
+          "state/roundStartedAt": finished ? gameState.roundStartedAt : now,
+          "state/riddleEndsAt": finished || !Number(gameState.settings?.riddleTimerSeconds || 0) ? null : now + Number(gameState.settings.riddleTimerSeconds) * 1000,
+          "state/finishedAt": finished ? now : null,
+          "state/updatedAt": now,
+          votes: null,
+          answers: null,
+          actions: null
+        });
+        state.akRiddleMultiVerdictsV41 = null;
+      } catch (error) {
+        console.error(error);
+        event.currentTarget.disabled = false;
+        alert("Impossible de passer à la devinette suivante.");
+      }
+    });
+  };
+
+  const akRiddleMultiBaseFinalV41 = renderMultiMegaFinal;
+  renderMultiMegaFinal = function renderMultiMegaFinalRiddleV41(gameState) {
+    if (!gameState.settings?.riddle) return akRiddleMultiBaseFinalV41(gameState);
+    clearV014MultiTimer();
+    const ranking = [...state.players].sort((a,b) => Number(gameState.scores?.[b.id] || 0) - Number(gameState.scores?.[a.id] || 0));
+    const mostCorrect = state.players.map(player => ({ player, value: Number(gameState.riddleCorrectCounts?.[player.id] || 0) })).sort((a,b) => b.value - a.value)[0];
+    const fastest = state.players.map(player => ({ player, value: Number(gameState.riddleBestTimes?.[player.id] || 0) })).filter(row => row.value > 0).sort((a,b) => a.value - b.value)[0];
+    const rounds = Object.values(gameState.rounds || {});
+    const trickiest = [...rounds].sort((a,b) => Number(a.correctCount || 0) - Number(b.correctCount || 0))[0];
+    title.textContent = "Palmarès des énigmes";
+    setBackVisible(false);
+    screen.innerHTML = `
+      <section class="winner-stage winner-stage-v07 mega-final-stage riddle-final-v41"><div class="winner-crown">🧩🏆</div><h2>${ranking[0] ? escapeHtml(ranking[0].name) : "Partie terminée"}</h2><p>Le sphinx numérique reconnaît officiellement sa défaite.</p></section>
+      <section class="final-ranking">${ranking.map((player,index) => `<div class="ranking-row"><span class="ranking-position">${index + 1}</span><span class="result-avatar">${avatarById(player.avatarId).emoji}</span><strong>${escapeHtml(player.name)}</strong><span>${Number(gameState.scores?.[player.id] || 0)} pts</span></div>`).join("")}</section>
+      <section class="impostor-awards">${mostCorrect?.value ? `<article><span>🧠</span><div><small>PLUS DE DEVINETTES RÉSOLUES</small><strong>${escapeHtml(mostCorrect.player.name)}</strong><p>${mostCorrect.value}/${gameState.items?.length || 0}</p></div></article>` : ""}${fastest?.value ? `<article><span>⚡</span><div><small>RÉPONSE LA PLUS RAPIDE</small><strong>${escapeHtml(fastest.player.name)}</strong><p>${(fastest.value / 1000).toFixed(1)} seconde${fastest.value >= 2000 ? "s" : ""}</p></div></article>` : ""}${trickiest ? `<article><span>🕳️</span><div><small>DEVINETTE LA PLUS PIÉGEUSE</small><strong>${escapeHtml(trickiest.question || "Mystère")}</strong><p>${Number(trickiest.correctCount || 0)} bonne${Number(trickiest.correctCount || 0) > 1 ? "s" : ""} réponse${Number(trickiest.correctCount || 0) > 1 ? "s" : ""}</p></div></article>` : ""}</section>
+      ${renderPostGameContinuation(gameState)}`;
+    ensureEveningResult(gameState);
+    bindPostGameContinuation(gameState);
+  };
+
+
   window.AKGamesMultiplayer = Object.freeze({
     launchRandomGame: () => launchRandomMultiplayerGame()
   });

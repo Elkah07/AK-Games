@@ -554,6 +554,7 @@
     }
     if (Array.isArray(item.items)) return item.items.join(" | ");
     if (Array.isArray(item.clues)) return item.clues.join(" | ");
+    if (Array.isArray(item.hints)) return item.hints.join(" | ");
     if (Array.isArray(item.facts)) return item.facts.join(" | ");
     if (Array.isArray(item.decoys)) return item.decoys.join(" | ");
     return "";
