@@ -2267,6 +2267,8 @@
         durationSeconds: Number(config.durationSeconds || V014_GAME_CONFIGS[config.gameName].timer || 45),
         selectedPacks: config.selectedPacks || ["mix"],
         selectedDifficulties: config.selectedDifficulties || ["easy", "medium", "hard"],
+        alertThemes: config.alertThemes || akAlertAllV46(AK_ALERT_THEMES_V46),
+        alertIntensities: config.alertIntensities || akAlertAllV46(AK_ALERT_INTENSITIES_V46),
         confidenceMode: config.confidenceMode !== false
       });
       await startMegaGame();
@@ -5216,6 +5218,7 @@
 
   function megaMultiSetupControls(game) {
     const config = game.config;
+    if (game.gameName === AK_ALERT_GAME_V46) return akAlertFilterMarkupV46(game, !state.isHost);
     if (game.gameName === AK_BOMB_ADULT_GAME_V45) return akBombAdultSetupMarkupV45(game, "multiBombAdult", !state.isHost);
     if (game.gameName === AK_BOMB_GAME_V44) return akBombSetupMarkupV44(game, "multiMega", !state.isHost);
     const roundOptions = akRouletteIsGame(game)
@@ -5251,6 +5254,7 @@
       if (akRouletteIsGame(game)) akRouletteSavePreferences(game);
     });
     document.querySelector("#multiMegaDuration")?.addEventListener("change", event => game.durationSeconds = Number(event.target.value));
+    if (game.gameName === AK_ALERT_GAME_V46) akAlertBindSetupV46(game, renderMegaSetup, !state.isHost);
     if (game.gameName === AK_BOMB_ADULT_GAME_V45) akBombAdultBindSetupV45(game, "multiBombAdult", renderMegaSetup, !state.isHost);
     if (game.gameName === AK_BOMB_GAME_V44) akBombBindSetupV44(game, "multiMega", renderMegaSetup, !state.isHost);
     bindV014KnowSetupControls(game);
@@ -5283,7 +5287,11 @@
       const rawPool = await loadJsonFile(game.config.data, `Impossible de charger ${game.gameName}.`);
       let pool = v014FilterKnowPool(rawPool, game);
       let items;
-      if (game.gameName === AK_BOMB_ADULT_GAME_V45) {
+      if (game.gameName === AK_ALERT_GAME_V46) {
+        pool = akAlertBuildPoolV46(rawPool, game);
+        if (!pool.length) throw new Error("Aucun scénario Alerte Rouge ne correspond aux filtres.");
+        items = selectFreshItems(pool, Math.min(game.roundCount, pool.length), `multi:alert-v46:${game.alertThemes.join("-")}:${game.alertIntensities.join("-")}`);
+      } else if (game.gameName === AK_BOMB_ADULT_GAME_V45) {
         pool = akBombAdultBuildPoolV45(rawPool, game);
         if (!pool.length) throw new Error("Aucune carte de La Bombe +18 ne correspond aux réglages et filtres.");
         items = akBombAdultFreshSelectV45(pool, Math.min(game.roundCount, pool.length), `multi:bomb-adult:${game.bombMode}:${game.bombThemes.join("-")}:${game.bombDifficulties.join("-")}`);
@@ -5328,6 +5336,9 @@
           scoreless: Boolean(game.config.scoreless || game.config.questionMode || game.config.drinkingGame),
           selectedPacks: v014NormalizeKnowPacks(game.selectedPacks),
           selectedDifficulties: akQuizNormalizeDifficulties(game.selectedDifficulties),
+          alertV46: game.gameName === AK_ALERT_GAME_V46,
+          alertThemes: game.gameName === AK_ALERT_GAME_V46 ? [...game.alertThemes] : null,
+          alertIntensities: game.gameName === AK_ALERT_GAME_V46 ? [...game.alertIntensities] : null,
           confidenceMode: game.confidenceMode !== false,
           bombV44: game.config.engine === "bomb",
           bombMode: game.config.engine === "bomb" ? game.bombMode : null,
@@ -5579,6 +5590,7 @@
     setBackVisible(false);
     screen.innerHTML = `
       ${multiMegaProgress(gameState, "Scénario")}
+      ${gameState.settings?.alertV46 ? akAlertMetaV46(item) : ""}
       <section class="scenario-card"><span>🚨</span><small>${escapeHtml(item?.title || "ALERTE").toUpperCase()}</small><h2>${escapeHtml(item?.text || "")}</h2></section>
       ${ownVote !== undefined ? renderMultiWaiting("Décision verrouillée", `${Object.keys(votes).length}/${state.players.length} décisions reçues.`, "🔒") : `<section class="mega-option-grid">${(item?.options || []).map((option, index) => `<button class="mega-option-btn scenario-option" data-multi-scenario="${index}"><span>${index + 1}</span><strong>${escapeHtml(option.label)}</strong></button>`).join("")}</section>`}
       ${renderPlayerSubmissionStatus(votes, "A choisi", "Décide…")}`;
@@ -5595,6 +5607,7 @@
     title.textContent = "Conséquence";
     screen.innerHTML = `
       ${multiMegaProgress(gameState, "Scénario")}
+      ${gameState.settings?.alertV46 ? akAlertMetaV46(item) : ""}
       <section class="reveal-stage reveal-v07 scenario-reveal"><span class="game-cover-icon">🚨</span><h2>${escapeHtml(item?.options?.[result.chosen]?.label || "Décision prise")}</h2><p>${escapeHtml(item?.options?.[result.chosen]?.outcome || "L’histoire continue.")}</p></section>
       <section class="vote-distribution">${(item?.options || []).map((option, index) => `<div><strong>${escapeHtml(option.label)}</strong><span>${Number(result.counts?.[index] || 0)} vote${Number(result.counts?.[index] || 0) > 1 ? "s" : ""}</span></div>`).join("")}</section>
       ${state.isHost ? `<button id="nextMultiScenario" class="primary-btn full">${Number(gameState.currentIndex || 0) + 1 >= (gameState.items || []).length ? "Voir le classement" : "Scénario suivant"}</button>` : renderMultiWaiting("En attente de l’hôte", "La suite va apparaître.", "👑")}`;

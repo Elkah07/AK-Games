@@ -1,17 +1,17 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v4.5-bombe-adulte-350";
+const CACHE_VERSION = "akgames-v4.6-alerte-rouge-500";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=bomb-adult-v45",
+  "/styles.css?v=alerte-v46",
   "/creator.css?v=creator-v1.3-access",
-  "/app.js?v=bomb-adult-v45",
+  "/app.js?v=alerte-v46",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
-  "/multiplayer.js?v=bomb-adult-v45",
+  "/multiplayer.js?v=alerte-v46",
   "/characters.js?v=characters-v1",
-  "/game-help.js?v=bomb-adult-v45",
+  "/game-help.js?v=alerte-v46",
   "/pwa.js",
   "/manifest.webmanifest",
   "/icons/icon-192.png",
