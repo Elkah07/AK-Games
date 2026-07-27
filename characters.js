@@ -255,6 +255,11 @@
   }
 
   function showPickerBubble(id, options = {}) {
+    const settings = window.AKSettings?.get?.();
+    if (settings && settings.mascotBubbles === false) {
+      hidePickerBubble(true);
+      return;
+    }
     if (!id) return;
     const forceNewLine = options.forceNewLine === true;
     const key = String(id);
@@ -285,9 +290,10 @@
     enhancePoseImages();
 
     window.clearTimeout(pickerBubbleTimer);
+    const displayTime = settings?.mascotFrequency === "chatty" ? 7600 : settings?.mascotFrequency === "discreet" ? 4000 : 5600;
     pickerBubbleTimer = window.setTimeout(() => {
       if (token === pickerBubbleToken) hidePickerBubble();
-    }, 5600);
+    }, displayTime);
   }
 
   function addPickerPreview() {
@@ -432,6 +438,11 @@
   let lastSpeechKey = "";
   let speechTimer = null;
   function maybeSpeak() {
+    const settings = window.AKSettings?.get?.();
+    if (settings && settings.mascotBubbles === false) {
+      screen?.querySelector?.(".character-speech-bubble")?.remove();
+      return;
+    }
     const target = speechTarget();
     if (!target || !screen?.isConnected) return;
     const id = target.dataset.avatarId;
@@ -440,6 +451,9 @@
     const key = `${id}|${heading}|${isWinner ? "win" : "turn"}`;
     if (!id || key === lastSpeechKey) return;
     lastSpeechKey = key;
+    const frequency = settings?.mascotFrequency || "normal";
+    const chance = frequency === "chatty" ? 1 : frequency === "discreet" ? 0.32 : 0.72;
+    if (!isWinner && Math.random() > chance) return;
     const moment = isWinner ? "win" : "turn";
     const definition = definitionFor(id);
     screen.querySelector(".character-speech-bubble")?.remove();
@@ -452,7 +466,8 @@
     if (anchor) anchor.insertAdjacentElement("beforebegin", bubble);
     else screen.appendChild(bubble);
     window.clearTimeout(speechTimer);
-    speechTimer = window.setTimeout(() => bubble.classList.add("quiet"), 6500);
+    const speechTime = frequency === "chatty" ? 8500 : frequency === "discreet" ? 4200 : 6500;
+    speechTimer = window.setTimeout(() => bubble.classList.add("quiet"), speechTime);
   }
 
   const observer = new MutationObserver(() => {

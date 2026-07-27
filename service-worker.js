@@ -1,20 +1,21 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v4.10-all-character-voices";
+const CACHE_VERSION = "akgames-v4.11-extended-settings";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=ui-v48",
+  "/styles.css?v=ui-v49-settings",
   "/creator.css?v=creator-v1.3-access",
   "/character-poses.css?v=characters-v5",
-  "/app.js?v=ui-v48",
+  "/app.js?v=ui-v49-settings",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js",
-  "/multiplayer.js?v=ui-v48",
+  "/multiplayer.js?v=ui-v49-settings",
   "/character-poses.js?v=characters-v5",
   "/character-voice-engine.js?v=characters-v5",
-  "/characters.js?v=characters-v5",
+  "/characters.js?v=characters-v6-settings",
   "/game-help.js?v=ui-v48",
+  "/settings.js?v=settings-v4.11",
   "/pwa.js",
   "/manifest.webmanifest",
   "/data/akgames-characters.json",

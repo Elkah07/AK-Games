@@ -1158,7 +1158,8 @@
         throw new Error("Impossible de charger les questions classiques.");
       }
 
-      const baseQuestions = await baseResponse.json();
+      const baseQuestionsRaw = await baseResponse.json();
+      const baseQuestions = window.AKSettings?.filterPool?.(baseQuestionsRaw) || baseQuestionsRaw;
       let pool = baseQuestions.filter(question => game.categories.includes(question.category));
 
       if (state.adult && game.includeAdult) {
@@ -1168,7 +1169,8 @@
           throw new Error("Impossible de charger les questions adultes.");
         }
 
-        const adultQuestions = await adultResponse.json();
+        const adultQuestionsRaw = await adultResponse.json();
+        const adultQuestions = window.AKSettings?.filterPool?.(adultQuestionsRaw) || adultQuestionsRaw;
         pool = pool.concat(adultQuestions);
       }
 
@@ -2537,13 +2539,15 @@
       const classicResponse = await fetch("data/qui-ment-prompts.json");
       if (!classicResponse.ok) throw new Error("Impossible de charger les situations.");
 
-      const classicPrompts = await classicResponse.json();
+      const classicPromptsRaw = await classicResponse.json();
+      const classicPrompts = window.AKSettings?.filterPool?.(classicPromptsRaw) || classicPromptsRaw;
       let pool = classicPrompts.filter(prompt => game.categories.includes(prompt.category));
 
       if (state.adult && game.includeAdult) {
         const adultResponse = await fetch("data/qui-ment-prompts-adulte.json");
         if (!adultResponse.ok) throw new Error("Impossible de charger les situations adultes.");
-        const adultPrompts = await adultResponse.json();
+        const adultPromptsRaw = await adultResponse.json();
+        const adultPrompts = window.AKSettings?.filterPool?.(adultPromptsRaw) || adultPromptsRaw;
         pool = pool.concat(adultPrompts);
       }
 
@@ -3043,13 +3047,15 @@
       const classicResponse = await fetch("data/blagues.json");
       if (!classicResponse.ok) throw new Error("Impossible de charger les blagues.");
 
-      const classicJokes = await classicResponse.json();
+      const classicJokesRaw = await classicResponse.json();
+      const classicJokes = window.AKSettings?.filterPool?.(classicJokesRaw) || classicJokesRaw;
       let pool = classicJokes.filter(joke => game.categories.includes(joke.category));
 
       if (state.adult && game.includeAdult) {
         const adultResponse = await fetch("data/blagues-adulte.json");
         if (!adultResponse.ok) throw new Error("Impossible de charger les blagues adultes.");
-        const adultJokes = await adultResponse.json();
+        const adultJokesRaw = await adultResponse.json();
+        const adultJokes = window.AKSettings?.filterPool?.(adultJokesRaw) || adultJokesRaw;
         pool = pool.concat(adultJokes);
       }
 
