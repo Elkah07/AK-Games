@@ -283,6 +283,9 @@
     current?.remove();
     const bubble = document.createElement("aside");
     bubble.className = "character-picker-quote";
+    if (document.querySelector(".multiplayer-player-submit")) {
+      bubble.classList.add("multiplayer-picker-quote");
+    }
     bubble.dataset.avatarId = id;
     bubble.setAttribute("aria-live", "polite");
     bubble.setAttribute("aria-atomic", "true");

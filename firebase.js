@@ -57,7 +57,7 @@
   const serverTimestamp = () => firebase.database.ServerValue.TIMESTAMP;
   const now = () => Date.now() + serverTimeOffset;
 
-  const HOST_TAKEOVER_GRACE_MS = 12000;
+  const HOST_TAKEOVER_GRACE_MS = 60000;
   const MAX_ROOM_PLAYERS = 17;
   const MAX_SESSION_HISTORY = 50;
   const ROOM_TTL_MS = 24 * 60 * 60 * 1000;
@@ -302,6 +302,7 @@
           return {
             meta: {
               hostUid: user.uid,
+              creatorUid: user.uid,
               adult: Boolean(adult),
               alcohol: Boolean(alcohol),
               status: "lobby",
@@ -393,6 +394,21 @@
       .replace(/\s+/g, " ")
       .normalize("NFKC")
       .toLocaleLowerCase("fr-FR");
+  }
+
+  function roomCreatorUid(room) {
+    const explicit = String(room?.meta?.creatorUid || "").trim();
+    if (explicit) return explicit;
+
+    const createdAt = Number(room?.meta?.createdAt || 0);
+    const entries = Object.entries(room?.players || {})
+      .sort(([, a], [, b]) => Number(a?.joinedAt || 0) - Number(b?.joinedAt || 0));
+
+    const exactCreator = createdAt
+      ? entries.find(([, player]) => Number(player?.joinedAt || 0) === createdAt)
+      : null;
+
+    return exactCreator?.[0] || entries[0]?.[0] || null;
   }
 
   async function joinRoom(code, { name, avatarId }) {
@@ -748,6 +764,43 @@
     return room;
   }
 
+
+  async function reclaimCreatorHost(code) {
+    const user = await ready();
+    const key = normalizeCode(code);
+    if (!key) return false;
+
+    const roomSnapshot = await db.ref(`rooms/${key}`).once("value");
+    if (!roomSnapshot.exists()) return false;
+
+    const room = roomSnapshot.val() || {};
+    const creatorUid = roomCreatorUid(room);
+    const me = room.players?.[user.uid] || null;
+
+    if (!creatorUid || creatorUid !== user.uid || !me || me.online === false) return false;
+    if (room.meta?.hostUid === user.uid) return true;
+
+    const metaRef = db.ref(`rooms/${key}/meta`);
+    const result = await metaRef.transaction(currentMeta => {
+      if (!currentMeta) return;
+      const storedCreatorUid = String(currentMeta.creatorUid || creatorUid || "");
+      if (storedCreatorUid !== user.uid) return;
+
+      return {
+        ...currentMeta,
+        creatorUid: user.uid,
+        hostUid: user.uid,
+        updatedAt: now(),
+        recoveryNotice: {
+          id: `creator_host_${now()}_${user.uid}`,
+          message: `${me.name || "L’hôte"} récupère le contrôle du salon.`,
+          at: now()
+        }
+      };
+    }, undefined, false);
+
+    return Boolean(result.committed);
+  }
 
   async function claimHost(code) {
     const user = await ready();
@@ -1286,6 +1339,8 @@
     listenRoom,
     leaveRoom,
     claimHost,
+    reclaimCreatorHost,
+    getCurrentUid: () => currentUser?.uid || null,
     removeDisconnectedPlayer,
     repairGameAfterPlayerRemoval,
     assertRoomCanStart,

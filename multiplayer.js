@@ -33,8 +33,9 @@
   state.hostRecoveryTargetUid = null;
   state.lastRoomRecoveryNoticeId = null;
   state.roomRecoveryUiTimer = null;
+  state.creatorHostReclaimPromise = null;
 
-  const HOST_RECOVERY_GRACE_MS = 12000;
+  const HOST_RECOVERY_GRACE_MS = 60000;
   const PLAYER_REMOVAL_GRACE_MS = 8000;
 
   const SESSION_KEY = "akgames_multiplayer_session_v1";
@@ -70,6 +71,68 @@
     return state.players.find(player => player.id === state.currentUid) || null;
   }
 
+  function roomCreatorUid(room) {
+    const explicit = String(room?.meta?.creatorUid || "").trim();
+    if (explicit) return explicit;
+
+    const createdAt = Number(room?.meta?.createdAt || 0);
+    const entries = Object.entries(room?.players || {})
+      .sort(([, a], [, b]) => Number(a?.joinedAt || 0) - Number(b?.joinedAt || 0));
+    const exactCreator = createdAt
+      ? entries.find(([, player]) => Number(player?.joinedAt || 0) === createdAt)
+      : null;
+
+    return exactCreator?.[0] || entries[0]?.[0] || null;
+  }
+
+  function recoverCreatorHostIfNeeded(room) {
+    const authenticatedUid = window.AKFirebase?.getCurrentUid?.();
+    if (authenticatedUid) state.currentUid = authenticatedUid;
+
+    const creatorUid = roomCreatorUid(room);
+    const currentHostUid = room?.meta?.hostUid || null;
+    const me = room?.players?.[state.currentUid] || null;
+    const shouldRecover = Boolean(
+      state.roomCode
+      && creatorUid
+      && creatorUid === state.currentUid
+      && currentHostUid !== state.currentUid
+      && me
+      && me.online !== false
+    );
+
+    if (!shouldRecover) return false;
+
+    state.mode = "multi-host";
+    state.isHost = false;
+    state.multiView = "creator-host-recovery";
+
+    if (!state.creatorHostReclaimPromise) {
+      renderMultiplayerLoading("Récupération du rôle d’hôte…");
+      state.creatorHostReclaimPromise = window.AKFirebase.reclaimCreatorHost(state.roomCode)
+        .then(reclaimed => {
+          if (!reclaimed && state.roomData) {
+            state.isHost = state.roomData.meta?.hostUid === state.currentUid;
+            state.mode = state.isHost ? "multi-host" : "multi-guest";
+            state.multiView = "lobby";
+            renderLobby();
+          }
+        })
+        .catch(error => {
+          console.error("Impossible de rendre le contrôle au créateur du salon :", error);
+          state.isHost = state.roomData?.meta?.hostUid === state.currentUid;
+          state.mode = state.isHost ? "multi-host" : "multi-guest";
+          state.multiView = "lobby";
+          renderLobby();
+        })
+        .finally(() => {
+          state.creatorHostReclaimPromise = null;
+        });
+    }
+
+    return true;
+  }
+
   function roomPlayersFromObject(playersObject) {
     return Object.entries(playersObject || {})
       .map(([id, value]) => ({
@@ -92,6 +155,7 @@
       roomCode: state.roomCode,
       mode: state.mode,
       isHost: state.isHost,
+      isCreator: roomCreatorUid(state.roomData) === state.currentUid,
       name: me?.name || "",
       avatarId: me?.avatarId || "frog"
     }));
@@ -110,6 +174,7 @@
       state.roomUnsubscribe();
     }
     state.roomUnsubscribe = null;
+    state.creatorHostReclaimPromise = null;
     clearHostRecoveryTimer();
     clearRoomRecoveryUiTimer();
     document.querySelector("#roomRecoveryPanel")?.remove();
@@ -469,15 +534,24 @@
         }
 
         state.roomData = room;
+        state.players = roomPlayersFromObject(room.players);
+
+        const authenticatedUid = window.AKFirebase?.getCurrentUid?.();
+        if (authenticatedUid) state.currentUid = authenticatedUid;
 
         if (room.meta) {
           state.adult = Boolean(room.meta.adult);
           state.alcohol = Boolean(room.meta.alcohol);
+
+          if (recoverCreatorHostIfNeeded(room)) {
+            persistRoomSession();
+            return;
+          }
+
           state.isHost = room.meta.hostUid === state.currentUid;
           state.mode = state.isHost ? "multi-host" : "multi-guest";
         }
 
-        state.players = roomPlayersFromObject(room.players);
         persistRoomSession();
         processRoomRecoveryNotice(room);
         scheduleHostRecovery(room);
@@ -622,9 +696,11 @@
         </div>
       </section>
 
-      <button id="saveMultiplayerPlayer" class="primary-btn full">
-        ${state.mode === "multi-host" ? "Créer le salon" : "Rejoindre la partie"}
-      </button>
+      <div class="multiplayer-player-submit">
+        <button id="saveMultiplayerPlayer" class="primary-btn full">
+          ${state.mode === "multi-host" ? "Créer le salon" : "Rejoindre la partie"}
+        </button>
+      </div>
     `;
 
     const playerNameInput = document.querySelector("#playerName");
