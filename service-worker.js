@@ -1,10 +1,10 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v4.17-guest-join-float";
+const CACHE_VERSION = "akgames-v4.18-mascot-stability";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=ui-v55-guest-join-float",
+  "/styles.css?v=ui-v56-mascot-stable",
   "/creator.css?v=creator-v1.3-access",
   "/character-poses.css?v=characters-v5",
   "/app.js?v=ui-v52-player-flow",
@@ -14,7 +14,7 @@ const CORE_SHELL = [
   "/character-poses.js?v=characters-v5",
   "/sound-manager.js?v=sound-v1",
   "/character-voice-engine.js?v=characters-v5",
-  "/characters.js?v=characters-v9-join-fix",
+  "/characters.js?v=characters-v10-stable",
   "/game-help.js?v=ui-v48",
   "/settings.js?v=settings-v4.14",
   "/pwa.js",

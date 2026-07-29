@@ -276,7 +276,6 @@
 
     pickerSelectionKey = key;
     pickerBubbleToken += 1;
-    const token = pickerBubbleToken;
     const definition = definitionFor(id);
     const line = randomLine(id, "select");
 
@@ -297,11 +296,11 @@
     enhancePoseImages();
     if (settings?.mascotSounds !== false) window.AKSound?.playMascot?.(id, "select");
 
+    // La bulle reste affichée tant que le personnage est sélectionné.
+    // Une nouvelle phrase est générée uniquement quand l’utilisateur clique
+    // de nouveau sur cette mascotte ou en choisit une autre.
     window.clearTimeout(pickerBubbleTimer);
-    const displayTime = settings?.mascotFrequency === "chatty" ? 7600 : settings?.mascotFrequency === "discreet" ? 4000 : 5600;
-    pickerBubbleTimer = window.setTimeout(() => {
-      if (token === pickerBubbleToken) hidePickerBubble();
-    }, displayTime);
+    pickerBubbleTimer = null;
   }
 
   function addPickerPreview() {
@@ -336,16 +335,29 @@
       const owner = owners.get(id) || null;
       const belongsToEditedPlayer = Boolean(owner && editingId && owner.id === editingId);
       const taken = owners.has(id) && id !== selected && !belongsToEditedPlayer;
-      button.classList.toggle("taken", taken);
-      button.disabled = taken;
-      button.setAttribute("aria-disabled", taken ? "true" : "false");
-      button.querySelector(".avatar-taken-label")?.remove();
+      const expectedLabel = owner?.name ? `Pris par ${owner.name}` : "Déjà choisi";
+      const currentTaken = button.classList.contains("taken");
+      const currentDisabled = Boolean(button.disabled);
+      const currentAriaDisabled = button.getAttribute("aria-disabled");
+      let label = button.querySelector(".avatar-taken-label");
+
+      // Ne modifie le DOM que lorsque l’état change réellement. Cela évite la
+      // boucle de synchronisation qui faisait clignoter les mascottes prises.
+      if (currentTaken !== taken) button.classList.toggle("taken", taken);
+      if (currentDisabled !== taken) button.disabled = taken;
+      if (currentAriaDisabled !== (taken ? "true" : "false")) {
+        button.setAttribute("aria-disabled", taken ? "true" : "false");
+      }
 
       if (taken) {
-        const label = document.createElement("span");
-        label.className = "avatar-taken-label";
-        label.textContent = owner?.name ? `Pris par ${owner.name}` : "Déjà choisi";
-        button.appendChild(label);
+        if (!label) {
+          label = document.createElement("span");
+          label.className = "avatar-taken-label";
+          button.appendChild(label);
+        }
+        if (label.textContent !== expectedLabel) label.textContent = expectedLabel;
+      } else if (label) {
+        label.remove();
       }
     });
   }

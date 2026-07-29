@@ -10734,3 +10734,46 @@ html[data-theme="light"] .multiplayer-player-submit {
     max-height: min(165px, 25dvh);
   }
 }
+
+
+/* =========================================================
+   AK'GAMES V4.18 — Mascottes prises et bulles stables
+   ========================================================= */
+.avatar-card.taken,
+.avatar-card.taken:hover,
+.avatar-card.taken:active,
+.avatar-card.taken:focus-visible {
+  opacity: .46;
+  filter: grayscale(1) saturate(.25);
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+  border-color: var(--line);
+  box-shadow: none;
+  background: var(--card-bg);
+}
+
+.avatar-card.taken *,
+.avatar-card.taken .ak-avatar-image,
+.avatar-card.taken .avatar-emoji {
+  animation: none !important;
+  transition: none !important;
+}
+
+.avatar-card.taken .avatar-selection-check {
+  display: none;
+}
+
+.avatar-card.taken .avatar-taken-label {
+  opacity: 1;
+  filter: none;
+}
+
+html[data-theme="light"] .avatar-card.taken,
+html[data-theme="light"] .avatar-card.taken:hover,
+html[data-theme="light"] .avatar-card.taken:active,
+html[data-theme="light"] .avatar-card.taken:focus-visible {
+  border-color: rgba(64,38,96,.12);
+  background: rgba(241,238,247,.96);
+  box-shadow: none;
+}
