@@ -34,6 +34,7 @@
   state.lastRoomRecoveryNoticeId = null;
   state.roomRecoveryUiTimer = null;
   state.creatorHostReclaimPromise = null;
+  state.pendingMultiGameSelection = null;
 
   const HOST_RECOVERY_GRACE_MS = 60000;
   const PLAYER_REMOVAL_GRACE_MS = 8000;
@@ -7351,6 +7352,71 @@
     bindPostGameContinuation(gameState);
   };
 
+  function canCurrentPlayerChooseGame() {
+    const roomHostUid = String(state.roomData?.meta?.hostUid || "");
+    const creatorUid = String(roomCreatorUid(state.roomData) || "");
+    const currentUid = String(state.currentUid || "");
+    return Boolean(
+      state.isHost
+      || (currentUid && roomHostUid === currentUid)
+      || (currentUid && creatorUid === currentUid && roomHostUid !== currentUid)
+    );
+  }
+
+  function launchSelectedMultiplayerGame(game) {
+    if (!game) return;
+    const availability = akAudit8GameAvailability(game);
+    if (availability.locked) return alert(availability.reason);
+    if (!canCurrentPlayerChooseGame()) {
+      alert("Seul l’hôte peut valider le prochain jeu.");
+      return;
+    }
+
+    state.pendingMultiGameSelection = null;
+    screen.classList.remove("has-game-selection-bar");
+
+    if (V014_GAME_CONFIGS[game]) { state.multiView = "mega-setup"; pushScreen("games"); resetMegaGame(game); renderMegaSetup(); return; }
+    if (game === "Qui de nous ?") { state.multiView = "who-us-setup"; pushScreen("games"); resetWhoUsState(); renderWhoUsSetup(); return; }
+    if (game === "Le premier qui rit a perdu") { state.multiView = "laugh-duel-setup"; pushScreen("games"); resetLaughDuelState(); renderLaughDuelSetup(); return; }
+    if (game === "Qui ment le mieux ?") { state.multiView = "best-liar-setup"; pushScreen("games"); resetBestLiarState(); renderBestLiarSetup(); return; }
+    if (game === "Action ou Vérité" || game === "Action ou Vérité +18") { state.multiView = "action-truth-setup"; pushScreen("games"); resetActionTruthState(game.includes("+18")); renderActionTruthSetup(); return; }
+    if (game === "Je n’ai jamais" || game === "Je n’ai jamais +18") { state.multiView = "ambiance-poll-setup"; pushScreen("games"); resetAmbiancePollState("never", game.includes("+18")); renderAmbiancePollSetup(); return; }
+    if (game === "Tu préfères" || game === "Tu préfères +18") { state.multiView = "ambiance-poll-setup"; pushScreen("games"); resetAmbiancePollState("would", game.includes("+18")); renderAmbiancePollSetup(); return; }
+    if (game === "Même cerveau") { state.multiView = "same-brain-setup"; pushScreen("games"); resetSameBrainState(); renderSameBrainSetup(); return; }
+    if (game === "Minorité") { state.multiView = "minority-setup"; pushScreen("games"); resetMinorityState(); renderMinoritySetup(); return; }
+    if (game === "Qui a répondu ça ?") { state.multiView = "who-answered-setup"; pushScreen("games"); resetWhoAnsweredState(); renderWhoAnsweredSetup(); return; }
+    if (game === "L’Imposteur sait presque tout") { state.multiView = "almost-impostor-setup"; pushScreen("games"); resetAlmostImpostorState(); renderAlmostImpostorSetup(); return; }
+    if (game === "Le Faux Expert") { state.multiView = "fake-expert-setup"; pushScreen("games"); resetFakeExpertState(); renderFakeExpertSetup(); return; }
+    if (game === "Qui suis-je ?") { state.multiView = "who-am-i-setup"; pushScreen("games"); resetWhoAmIState(); renderWhoAmISetup(); return; }
+    renderMultiNotReady(game);
+  }
+
+  function updateMultiGameSelection(game, canChoose) {
+    if (!canChoose || !game) return;
+    state.pendingMultiGameSelection = game;
+
+    document.querySelectorAll(".game-list [data-game]").forEach(card => {
+      const selected = card.dataset.game === game;
+      card.classList.toggle("is-selected", selected);
+      card.setAttribute("aria-pressed", selected ? "true" : "false");
+      const chevron = card.querySelector(".game-card-chevron");
+      if (chevron) chevron.textContent = selected ? "✓" : "›";
+    });
+
+    const bar = document.querySelector("#multiGameSelectionBar");
+    const label = document.querySelector("#multiSelectedGameName");
+    const button = document.querySelector("#confirmMultiGameSelection");
+    if (bar) bar.classList.remove("hidden");
+    if (label) label.textContent = game;
+    if (button) {
+      button.disabled = false;
+      button.textContent = `Valider « ${game} »`;
+      button.setAttribute("aria-label", `Valider le jeu ${game}`);
+    }
+    screen.classList.add("has-game-selection-bar");
+    window.AKSound?.play?.("ui_confirm", { gain: .82, cooldown: 160 });
+  }
+
   renderGames = function () {
     if (!isMultiplayer()) return localRenderGames();
     clearV09MultiTimer();
@@ -7359,35 +7425,47 @@
     if (!category) return renderCategories();
     title.textContent = category.name;
     setBackVisible(true);
+
+    const canChoose = canCurrentPlayerChooseGame();
+    const selected = category.games.includes(state.pendingMultiGameSelection)
+      && V014_READY_GAMES.has(state.pendingMultiGameSelection)
+      && !akAudit8GameAvailability(state.pendingMultiGameSelection).locked
+        ? state.pendingMultiGameSelection
+        : null;
+    if (!selected) state.pendingMultiGameSelection = null;
+
+    screen.classList.toggle("has-game-selection-bar", Boolean(canChoose && selected));
     screen.innerHTML = `
       <section class="catalog-intro catalog-intro-v014"><span>${category.emoji}</span><div><small>CATÉGORIE</small><strong>${escapeHtml(category.name)}</strong><p>${escapeHtml(category.description)}</p></div><b>${category.games.filter(game => V014_READY_GAMES.has(game)).length} jeux</b></section>
+      ${canChoose
+        ? `<div class="notice game-choice-instruction"><strong>Choisis un jeu, puis valide.</strong><br><span>Le jeu sélectionné sera entouré et le bouton apparaîtra en bas de l’écran.</span></div>`
+        : `<div class="notice game-choice-instruction guest"><strong>👑 L’hôte choisit le prochain jeu.</strong><br><span>Tu peux consulter les règles avec le bouton ?.</span></div>`}
       <section class="game-list game-list-v07">${category.games.map(game => {
         const ready = V014_READY_GAMES.has(game);
         const isNew = V014_NEW_GAMES.has(game);
         const icon = V014_GAME_ICONS[game] || "🎲";
         const availability = ready ? akAudit8GameAvailability(game) : { locked: true, reason: "À intégrer" };
-        return `<button class="game-card game-card-v07 ${availability.locked ? "disabled" : ""} ${isNew ? "game-card-new game-card-mega" : ""}" ${availability.locked ? "disabled" : ""} data-game="${escapeHtml(game)}"><span class="game-card-icon">${icon}</span><span class="game-card-copy"><strong>${escapeHtml(game)}</strong><span class="helper">${escapeHtml(availability.locked ? availability.reason : akAudit8GameMeta(game).goal)}</span><span class="game-meta">${ready ? akAudit8CatalogBadges(game, true) : `<span class="badge">bientôt</span>`}</span></span><span class="game-card-chevron">›</span></button>`;
-      }).join("")}</section>`;
+        const isSelected = selected === game;
+        const guestLocked = !canChoose && !availability.locked;
+        return `<button class="game-card game-card-v07 ${availability.locked ? "disabled" : ""} ${guestLocked ? "guest-choice-locked" : ""} ${isSelected ? "is-selected" : ""} ${isNew ? "game-card-new game-card-mega" : ""}" ${availability.locked ? "disabled" : ""} data-game="${escapeHtml(game)}" aria-pressed="${isSelected ? "true" : "false"}" ${guestLocked ? 'aria-disabled="true"' : ""}><span class="game-card-icon">${icon}</span><span class="game-card-copy"><strong>${escapeHtml(game)}</strong><span class="helper">${escapeHtml(availability.locked ? availability.reason : akAudit8GameMeta(game).goal)}</span><span class="game-meta">${ready ? akAudit8CatalogBadges(game, true) : `<span class="badge">bientôt</span>`}</span></span><span class="game-card-chevron">${isSelected ? "✓" : "›"}</span></button>`;
+      }).join("")}</section>
+      ${canChoose ? `<aside id="multiGameSelectionBar" class="game-selection-bar ${selected ? "" : "hidden"}" aria-live="polite"><div><small>JEU SÉLECTIONNÉ</small><strong id="multiSelectedGameName">${escapeHtml(selected || "")}</strong></div><button id="confirmMultiGameSelection" type="button" class="primary-btn" ${selected ? "" : "disabled"}>${selected ? `Valider « ${escapeHtml(selected)} »` : "Valider ce jeu"}</button></aside>` : ""}`;
 
-    document.querySelectorAll("[data-game]:not([disabled])").forEach(button => button.addEventListener("click", () => {
+    document.querySelectorAll(".game-list [data-game]:not([disabled])").forEach(button => button.addEventListener("click", event => {
+      event.preventDefault();
       const game = button.dataset.game;
       const availability = akAudit8GameAvailability(game);
       if (availability.locked) return alert(availability.reason);
-      if (V014_GAME_CONFIGS[game]) { state.multiView = "mega-setup"; pushScreen("games"); resetMegaGame(game); renderMegaSetup(); return; }
-      if (game === "Qui de nous ?") { state.multiView = "who-us-setup"; pushScreen("games"); resetWhoUsState(); renderWhoUsSetup(); return; }
-      if (game === "Le premier qui rit a perdu") { state.multiView = "laugh-duel-setup"; pushScreen("games"); resetLaughDuelState(); renderLaughDuelSetup(); return; }
-      if (game === "Qui ment le mieux ?") { state.multiView = "best-liar-setup"; pushScreen("games"); resetBestLiarState(); renderBestLiarSetup(); return; }
-      if (game === "Action ou Vérité" || game === "Action ou Vérité +18") { state.multiView = "action-truth-setup"; pushScreen("games"); resetActionTruthState(game.includes("+18")); renderActionTruthSetup(); return; }
-      if (game === "Je n’ai jamais" || game === "Je n’ai jamais +18") { state.multiView = "ambiance-poll-setup"; pushScreen("games"); resetAmbiancePollState("never", game.includes("+18")); renderAmbiancePollSetup(); return; }
-      if (game === "Tu préfères" || game === "Tu préfères +18") { state.multiView = "ambiance-poll-setup"; pushScreen("games"); resetAmbiancePollState("would", game.includes("+18")); renderAmbiancePollSetup(); return; }
-      if (game === "Même cerveau") { state.multiView = "same-brain-setup"; pushScreen("games"); resetSameBrainState(); renderSameBrainSetup(); return; }
-      if (game === "Minorité") { state.multiView = "minority-setup"; pushScreen("games"); resetMinorityState(); renderMinoritySetup(); return; }
-      if (game === "Qui a répondu ça ?") { state.multiView = "who-answered-setup"; pushScreen("games"); resetWhoAnsweredState(); renderWhoAnsweredSetup(); return; }
-      if (game === "L’Imposteur sait presque tout") { state.multiView = "almost-impostor-setup"; pushScreen("games"); resetAlmostImpostorState(); renderAlmostImpostorSetup(); return; }
-      if (game === "Le Faux Expert") { state.multiView = "fake-expert-setup"; pushScreen("games"); resetFakeExpertState(); renderFakeExpertSetup(); return; }
-      if (game === "Qui suis-je ?") { state.multiView = "who-am-i-setup"; pushScreen("games"); resetWhoAmIState(); renderWhoAmISetup(); return; }
-      renderMultiNotReady(game);
+      if (!canChoose) {
+        alert("Seul l’hôte peut choisir et valider le prochain jeu.");
+        return;
+      }
+      updateMultiGameSelection(game, canChoose);
     }));
+
+    document.querySelector("#confirmMultiGameSelection")?.addEventListener("click", () => {
+      launchSelectedMultiplayerGame(state.pendingMultiGameSelection);
+    });
   };
 
   function akAudit8WrapMultiSetup(renderer, gameName) {

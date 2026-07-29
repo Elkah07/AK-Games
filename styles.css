@@ -10509,3 +10509,148 @@ html[data-theme="light"] .multiplayer-player-submit {
     bottom: calc(86px + env(safe-area-inset-bottom));
   }
 }
+
+
+/* =========================================================
+   AK'GAMES V4.16 — Validation explicite du choix d'un jeu
+   ========================================================= */
+.game-choice-instruction {
+  margin-bottom: 4px;
+}
+
+.game-choice-instruction span {
+  color: var(--muted);
+}
+
+.game-choice-instruction.guest {
+  border-color: rgba(196,181,253,.20);
+}
+
+.game-card-v07 {
+  position: relative;
+}
+
+.game-card-v07.is-selected {
+  border-color: #b87cff;
+  background:
+    radial-gradient(circle at 90% 12%, rgba(168,85,247,.25), transparent 34%),
+    linear-gradient(145deg, rgba(37,27,78,.99), rgba(15,18,43,.99));
+  box-shadow:
+    0 0 0 2px rgba(168,85,247,.22),
+    0 18px 42px rgba(55,22,110,.28),
+    inset 0 1px 0 rgba(255,255,255,.08);
+  transform: scale(1.012);
+}
+
+.game-card-v07.is-selected .game-card-chevron {
+  border-color: rgba(216,180,254,.46);
+  background: rgba(168,85,247,.24);
+  color: #f3e8ff;
+  font-size: 1.15rem;
+  font-weight: 950;
+}
+
+.game-card-v07.guest-choice-locked {
+  cursor: default;
+}
+
+.game-selection-bar {
+  position: fixed;
+  right: auto;
+  bottom: calc(14px + env(safe-area-inset-bottom));
+  left: 50%;
+  z-index: 4500;
+  width: min(690px, calc(100% - 28px));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  padding: 13px 14px;
+  transform: translateX(-50%);
+  border: 1px solid rgba(196,181,253,.30);
+  border-radius: 22px;
+  background: rgba(10,9,25,.97);
+  box-shadow: 0 22px 70px rgba(0,0,0,.48), inset 0 1px 0 rgba(255,255,255,.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.game-selection-bar.hidden {
+  display: none;
+}
+
+.game-selection-bar > div {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.game-selection-bar small {
+  color: #b99be8;
+  font-size: .67rem;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.game-selection-bar strong {
+  overflow: hidden;
+  color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.game-selection-bar .primary-btn {
+  width: auto;
+  min-width: 170px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.screen.has-game-selection-bar .game-list {
+  padding-bottom: 118px;
+}
+
+html[data-theme="light"] .game-card-v07.is-selected {
+  border-color: #7c3aed;
+  background:
+    radial-gradient(circle at 90% 12%, rgba(124,58,237,.14), transparent 34%),
+    linear-gradient(145deg, #ffffff, #f0e9ff);
+  box-shadow: 0 0 0 2px rgba(124,58,237,.16), 0 16px 36px rgba(82,52,134,.15);
+}
+
+html[data-theme="light"] .game-card-v07.is-selected .game-card-chevron {
+  color: #5b21b6;
+  border-color: rgba(124,58,237,.24);
+  background: rgba(124,58,237,.11);
+}
+
+html[data-theme="light"] .game-selection-bar {
+  border-color: rgba(124,58,237,.20);
+  background: rgba(255,255,255,.98);
+  box-shadow: 0 20px 56px rgba(82,52,134,.18), inset 0 1px 0 rgba(255,255,255,.92);
+}
+
+html[data-theme="light"] .game-selection-bar small {
+  color: #7550b5;
+}
+
+html[data-theme="light"] .game-selection-bar strong {
+  color: #251638;
+}
+
+@media (max-width: 560px) {
+  .game-selection-bar {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    padding: 12px;
+  }
+
+  .game-selection-bar .primary-btn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .screen.has-game-selection-bar .game-list {
+    padding-bottom: 162px;
+  }
+}
