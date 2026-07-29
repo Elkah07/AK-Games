@@ -7356,40 +7356,84 @@
   function canCurrentPlayerChooseGame() {
     const roomHostUid = String(state.roomData?.meta?.hostUid || "");
     const creatorUid = String(roomCreatorUid(state.roomData) || "");
-    const currentUid = String(state.currentUid || "");
+    const currentUid = String(window.AKFirebase?.getCurrentUid?.() || state.currentUid || "");
     return Boolean(
-      state.isHost
-      || (currentUid && roomHostUid === currentUid)
-      || (currentUid && creatorUid === currentUid && roomHostUid !== currentUid)
+      currentUid
+      && (
+        state.isHost
+        || roomHostUid === currentUid
+        || creatorUid === currentUid
+      )
     );
   }
 
-  function launchSelectedMultiplayerGame(game) {
-    if (!game) return;
+  async function ensureCurrentPlayerHostControl() {
+    const authenticatedUid = String(window.AKFirebase?.getCurrentUid?.() || state.currentUid || "");
+    if (authenticatedUid) state.currentUid = authenticatedUid;
+
+    const roomHostUid = String(state.roomData?.meta?.hostUid || "");
+    if (authenticatedUid && roomHostUid === authenticatedUid) {
+      state.isHost = true;
+      state.mode = "multi-host";
+      persistRoomSession();
+      return true;
+    }
+
+    const creatorUid = String(roomCreatorUid(state.roomData) || "");
+    if (!authenticatedUid || creatorUid !== authenticatedUid || !state.roomCode) {
+      return false;
+    }
+
+    try {
+      const reclaimed = await window.AKFirebase.reclaimCreatorHost(state.roomCode);
+      if (!reclaimed) return false;
+
+      state.isHost = true;
+      state.mode = "multi-host";
+      state.roomData ||= {};
+      state.roomData.meta ||= {};
+      state.roomData.meta.creatorUid = authenticatedUid;
+      state.roomData.meta.hostUid = authenticatedUid;
+      persistRoomSession();
+      return true;
+    } catch (error) {
+      console.error("Impossible de confirmer le rôle d’hôte avant le lancement :", error);
+      return false;
+    }
+  }
+
+  async function launchSelectedMultiplayerGame(game) {
+    if (!game) return false;
     const availability = akAudit8GameAvailability(game);
-    if (availability.locked) return alert(availability.reason);
-    if (!canCurrentPlayerChooseGame()) {
-      alert("Seul l’hôte peut valider le prochain jeu.");
-      return;
+    if (availability.locked) {
+      alert(availability.reason);
+      return false;
+    }
+
+    const hasHostControl = await ensureCurrentPlayerHostControl();
+    if (!hasHostControl) {
+      alert("Le rôle d’hôte n’est pas encore synchronisé. Retourne au salon puis réessaie dans quelques secondes.");
+      return false;
     }
 
     state.pendingMultiGameSelection = null;
     screen.classList.remove("has-game-selection-bar");
 
-    if (V014_GAME_CONFIGS[game]) { state.multiView = "mega-setup"; pushScreen("games"); resetMegaGame(game); renderMegaSetup(); return; }
-    if (game === "Qui de nous ?") { state.multiView = "who-us-setup"; pushScreen("games"); resetWhoUsState(); renderWhoUsSetup(); return; }
-    if (game === "Le premier qui rit a perdu") { state.multiView = "laugh-duel-setup"; pushScreen("games"); resetLaughDuelState(); renderLaughDuelSetup(); return; }
-    if (game === "Qui ment le mieux ?") { state.multiView = "best-liar-setup"; pushScreen("games"); resetBestLiarState(); renderBestLiarSetup(); return; }
-    if (game === "Action ou Vérité" || game === "Action ou Vérité +18") { state.multiView = "action-truth-setup"; pushScreen("games"); resetActionTruthState(game.includes("+18")); renderActionTruthSetup(); return; }
-    if (game === "Je n’ai jamais" || game === "Je n’ai jamais +18") { state.multiView = "ambiance-poll-setup"; pushScreen("games"); resetAmbiancePollState("never", game.includes("+18")); renderAmbiancePollSetup(); return; }
-    if (game === "Tu préfères" || game === "Tu préfères +18") { state.multiView = "ambiance-poll-setup"; pushScreen("games"); resetAmbiancePollState("would", game.includes("+18")); renderAmbiancePollSetup(); return; }
-    if (game === "Même cerveau") { state.multiView = "same-brain-setup"; pushScreen("games"); resetSameBrainState(); renderSameBrainSetup(); return; }
-    if (game === "Minorité") { state.multiView = "minority-setup"; pushScreen("games"); resetMinorityState(); renderMinoritySetup(); return; }
-    if (game === "Qui a répondu ça ?") { state.multiView = "who-answered-setup"; pushScreen("games"); resetWhoAnsweredState(); renderWhoAnsweredSetup(); return; }
-    if (game === "L’Imposteur sait presque tout") { state.multiView = "almost-impostor-setup"; pushScreen("games"); resetAlmostImpostorState(); renderAlmostImpostorSetup(); return; }
-    if (game === "Le Faux Expert") { state.multiView = "fake-expert-setup"; pushScreen("games"); resetFakeExpertState(); renderFakeExpertSetup(); return; }
-    if (game === "Qui suis-je ?") { state.multiView = "who-am-i-setup"; pushScreen("games"); resetWhoAmIState(); renderWhoAmISetup(); return; }
+    if (V014_GAME_CONFIGS[game]) { state.multiView = "mega-setup"; pushScreen("games"); resetMegaGame(game); renderMegaSetup(); return true; }
+    if (game === "Qui de nous ?") { state.multiView = "who-us-setup"; pushScreen("games"); resetWhoUsState(); renderWhoUsSetup(); return true; }
+    if (game === "Le premier qui rit a perdu") { state.multiView = "laugh-duel-setup"; pushScreen("games"); resetLaughDuelState(); renderLaughDuelSetup(); return true; }
+    if (game === "Qui ment le mieux ?") { state.multiView = "best-liar-setup"; pushScreen("games"); resetBestLiarState(); renderBestLiarSetup(); return true; }
+    if (game === "Action ou Vérité" || game === "Action ou Vérité +18") { state.multiView = "action-truth-setup"; pushScreen("games"); resetActionTruthState(game.includes("+18")); renderActionTruthSetup(); return true; }
+    if (game === "Je n’ai jamais" || game === "Je n’ai jamais +18") { state.multiView = "ambiance-poll-setup"; pushScreen("games"); resetAmbiancePollState("never", game.includes("+18")); renderAmbiancePollSetup(); return true; }
+    if (game === "Tu préfères" || game === "Tu préfères +18") { state.multiView = "ambiance-poll-setup"; pushScreen("games"); resetAmbiancePollState("would", game.includes("+18")); renderAmbiancePollSetup(); return true; }
+    if (game === "Même cerveau") { state.multiView = "same-brain-setup"; pushScreen("games"); resetSameBrainState(); renderSameBrainSetup(); return true; }
+    if (game === "Minorité") { state.multiView = "minority-setup"; pushScreen("games"); resetMinorityState(); renderMinoritySetup(); return true; }
+    if (game === "Qui a répondu ça ?") { state.multiView = "who-answered-setup"; pushScreen("games"); resetWhoAnsweredState(); renderWhoAnsweredSetup(); return true; }
+    if (game === "L’Imposteur sait presque tout") { state.multiView = "almost-impostor-setup"; pushScreen("games"); resetAlmostImpostorState(); renderAlmostImpostorSetup(); return true; }
+    if (game === "Le Faux Expert") { state.multiView = "fake-expert-setup"; pushScreen("games"); resetFakeExpertState(); renderFakeExpertSetup(); return true; }
+    if (game === "Qui suis-je ?") { state.multiView = "who-am-i-setup"; pushScreen("games"); resetWhoAmIState(); renderWhoAmISetup(); return true; }
     renderMultiNotReady(game);
+    return false;
   }
 
   function updateMultiGameSelection(game, canChoose) {
@@ -7464,8 +7508,22 @@
       updateMultiGameSelection(game, canChoose);
     }));
 
-    document.querySelector("#confirmMultiGameSelection")?.addEventListener("click", () => {
-      launchSelectedMultiplayerGame(state.pendingMultiGameSelection);
+    document.querySelector("#confirmMultiGameSelection")?.addEventListener("click", async event => {
+      const button = event.currentTarget;
+      const selectedGame = state.pendingMultiGameSelection;
+      if (!selectedGame || button.disabled) return;
+
+      const previousLabel = button.textContent;
+      button.disabled = true;
+      button.classList.add("is-loading");
+      button.textContent = "Ouverture du jeu…";
+
+      const opened = await launchSelectedMultiplayerGame(selectedGame);
+      if (!opened && document.body.contains(button)) {
+        button.disabled = false;
+        button.classList.remove("is-loading");
+        button.textContent = previousLabel;
+      }
     });
   };
 

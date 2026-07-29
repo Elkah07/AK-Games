@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v4.20-home-gradient";
+const CACHE_VERSION = "akgames-v4.21-game-launch";
 
 const CORE_SHELL = [
   "/",
@@ -10,7 +10,7 @@ const CORE_SHELL = [
   "/app.js?v=ui-v52-player-flow",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js?v=firebase-v2-host-fix",
-  "/multiplayer.js?v=ui-v55-guest-join-float",
+  "/multiplayer.js?v=ui-v59-game-launch",
   "/character-poses.js?v=characters-v5",
   "/sound-manager.js?v=sound-v1",
   "/character-voice-engine.js?v=characters-v5",
