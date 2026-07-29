@@ -57,11 +57,23 @@
   const serverTimestamp = () => firebase.database.ServerValue.TIMESTAMP;
   const now = () => Date.now() + serverTimeOffset;
 
-  const HOST_TAKEOVER_GRACE_MS = 60000;
+  const PRESENCE_GRACE_MS = 120000;
+  const HOST_TAKEOVER_GRACE_MS = PRESENCE_GRACE_MS;
+  const PRESENCE_HEARTBEAT_MS = 20000;
+  const presenceBindings = new Map();
   const MAX_ROOM_PLAYERS = 17;
   const MAX_SESSION_HISTORY = 50;
   const ROOM_TTL_MS = 24 * 60 * 60 * 1000;
   const GAME_START_RECOVERY_MS = 15000;
+
+
+  function playerIsEffectivelyOnline(player) {
+    if (!player) return false;
+    if (player.online !== false) return true;
+
+    const lastSeen = Number(player.lastSeen || 0);
+    return lastSeen > 0 && now() - lastSeen < PRESENCE_GRACE_MS;
+  }
 
   function createSubmissionRoundId() {
     const randomPart = Math.random().toString(36).slice(2, 10);
@@ -349,18 +361,77 @@
     return readyPromise;
   }
 
+  function detachPresence(code, uid) {
+    const roomKey = normalizeCode(code);
+    const bindingKey = `${roomKey}:${uid}`;
+    const binding = presenceBindings.get(bindingKey);
+    if (!binding) return;
+
+    binding.active = false;
+    binding.connectedRef.off("value", binding.handleConnection);
+    document.removeEventListener("visibilitychange", binding.handleVisibility);
+    window.removeEventListener("focus", binding.handleFocus);
+    window.clearInterval(binding.heartbeatTimer);
+    binding.playerRef.onDisconnect().cancel().catch(() => {});
+    presenceBindings.delete(bindingKey);
+  }
+
   function attachPresence(code, uid) {
-    const ref = db.ref(`rooms/${normalizeCode(code)}/players/${uid}`);
+    const roomKey = normalizeCode(code);
+    const bindingKey = `${roomKey}:${uid}`;
+    const existing = presenceBindings.get(bindingKey);
 
-    ref.update({
-      online: true,
-      lastSeen: serverTimestamp()
-    }).catch(() => {});
+    if (existing) {
+      existing.markOnline();
+      return;
+    }
 
-    ref.onDisconnect().update({
-      online: false,
-      lastSeen: serverTimestamp()
-    });
+    const playerRef = db.ref(`rooms/${roomKey}/players/${uid}`);
+    const connectedRef = db.ref(".info/connected");
+    const binding = {
+      active: true,
+      playerRef,
+      connectedRef,
+      heartbeatTimer: null,
+      handleConnection: null,
+      handleVisibility: null,
+      handleFocus: null,
+      markOnline: null
+    };
+
+    binding.markOnline = async () => {
+      if (!binding.active) return;
+      try {
+        await playerRef.update({
+          online: true,
+          lastSeen: serverTimestamp()
+        });
+      } catch {}
+    };
+
+    binding.handleConnection = snapshot => {
+      if (!binding.active || snapshot.val() !== true) return;
+
+      playerRef.onDisconnect().update({
+        online: false,
+        lastSeen: serverTimestamp()
+      }).then(() => binding.markOnline()).catch(() => {});
+    };
+
+    binding.handleVisibility = () => {
+      if (document.visibilityState === "visible") binding.markOnline();
+    };
+    binding.handleFocus = () => binding.markOnline();
+
+    connectedRef.on("value", binding.handleConnection);
+    document.addEventListener("visibilitychange", binding.handleVisibility);
+    window.addEventListener("focus", binding.handleFocus);
+    binding.heartbeatTimer = window.setInterval(() => {
+      if (document.visibilityState === "visible") binding.markOnline();
+    }, PRESENCE_HEARTBEAT_MS);
+
+    presenceBindings.set(bindingKey, binding);
+    if (document.visibilityState !== "hidden") binding.markOnline();
   }
 
   async function createRoom({ name, avatarId, adult, alcohol }) {
@@ -713,6 +784,8 @@
     const user = await ready();
     const key = normalizeCode(code);
 
+    detachPresence(key, user.uid);
+
     if (isHost) {
       const updates = {};
       updates[`rooms/${key}`] = null;
@@ -750,8 +823,8 @@
     }
 
     const players = Object.values(room.players || {});
-    const offlineCount = players.filter(player => player?.online === false).length;
-    const onlineCount = players.filter(player => player?.online !== false).length;
+    const offlineCount = players.filter(player => !playerIsEffectivelyOnline(player)).length;
+    const onlineCount = players.filter(player => playerIsEffectivelyOnline(player)).length;
 
     if (offlineCount > 0) {
       throw new Error("Un joueur est déconnecté. Retire-le du salon ou attends sa reconnexion avant de lancer.");
@@ -777,7 +850,7 @@
     const creatorUid = roomCreatorUid(room);
     const me = room.players?.[user.uid] || null;
 
-    if (!creatorUid || creatorUid !== user.uid || !me || me.online === false) return false;
+    if (!creatorUid || creatorUid !== user.uid || !playerIsEffectivelyOnline(me)) return false;
     if (room.meta?.hostUid === user.uid) return true;
 
     const metaRef = db.ref(`rooms/${key}/meta`);
@@ -814,19 +887,19 @@
     const currentHost = room.players?.[currentHostUid] || null;
     const me = room.players?.[user.uid] || null;
 
-    if (!me || me.online === false) return false;
+    if (!playerIsEffectivelyOnline(me)) return false;
     if (currentHostUid === user.uid) return true;
 
     const hostUnavailable = !currentHost
       || (
-        currentHost.online === false
+        !playerIsEffectivelyOnline(currentHost)
         && Number(currentHost.lastSeen || 0) <= now() - HOST_TAKEOVER_GRACE_MS
       );
 
     if (!hostUnavailable) return false;
 
     const candidates = Object.entries(room.players || {})
-      .filter(([, player]) => player?.online !== false)
+      .filter(([, player]) => playerIsEffectivelyOnline(player))
       .sort(([, a], [, b]) => Number(a?.joinedAt || 0) - Number(b?.joinedAt || 0));
 
     if (candidates[0]?.[0] !== user.uid) return false;
@@ -997,8 +1070,8 @@
         return;
       }
 
-      if (removedPlayer.online !== false) {
-        abortReason = "Ce joueur est de nouveau en ligne.";
+      if (playerIsEffectivelyOnline(removedPlayer)) {
+        abortReason = "Ce joueur est toujours en ligne ou peut encore se reconnecter.";
         return;
       }
 
@@ -1338,6 +1411,7 @@
     loadRoom,
     listenRoom,
     leaveRoom,
+    detachPresence,
     claimHost,
     reclaimCreatorHost,
     getCurrentUid: () => currentUser?.uid || null,

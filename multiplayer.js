@@ -35,8 +35,10 @@
   state.roomRecoveryUiTimer = null;
   state.creatorHostReclaimPromise = null;
   state.pendingMultiGameSelection = null;
+  state.presenceGraceTimer = null;
 
-  const HOST_RECOVERY_GRACE_MS = 60000;
+  const PRESENCE_GRACE_MS = 120000;
+  const HOST_RECOVERY_GRACE_MS = PRESENCE_GRACE_MS;
   const PLAYER_REMOVAL_GRACE_MS = 8000;
 
   const SESSION_KEY = "akgames_multiplayer_session_v1";
@@ -63,6 +65,15 @@
   const localStartFakeExpertGame = startFakeExpertGame;
   const localRenderWhoAmISetup = renderWhoAmISetup;
   const localStartWhoAmIGame = startWhoAmIGame;
+
+
+  function playerIsEffectivelyOnline(player) {
+    if (!player) return false;
+    if (player.online !== false) return true;
+
+    const lastSeen = Number(player.lastSeen || 0);
+    return lastSeen > 0 && AKFirebase.now() - lastSeen < PRESENCE_GRACE_MS;
+  }
 
   function isMultiplayer() {
     return state.mode === "multi-host" || state.mode === "multi-guest";
@@ -98,8 +109,7 @@
       && creatorUid
       && creatorUid === state.currentUid
       && currentHostUid !== state.currentUid
-      && me
-      && me.online !== false
+      && playerIsEffectivelyOnline(me)
     );
 
     if (!shouldRecover) return false;
@@ -136,15 +146,46 @@
 
   function roomPlayersFromObject(playersObject) {
     return Object.entries(playersObject || {})
-      .map(([id, value]) => ({
-        id,
-        name: value.name || "Joueur",
-        avatarId: value.avatarId || "frog",
-        online: value.online !== false,
-        joinedAt: value.joinedAt || 0,
-        lastSeen: value.lastSeen || 0
-      }))
+      .map(([id, value]) => {
+        const online = playerIsEffectivelyOnline(value);
+        return {
+          id,
+          name: value.name || "Joueur",
+          avatarId: value.avatarId || "frog",
+          online,
+          reconnecting: value.online === false && online,
+          joinedAt: value.joinedAt || 0,
+          lastSeen: value.lastSeen || 0
+        };
+      })
       .sort((a, b) => (a.joinedAt || 0) - (b.joinedAt || 0));
+  }
+
+  function clearPresenceGraceTimer() {
+    if (state.presenceGraceTimer) window.clearTimeout(state.presenceGraceTimer);
+    state.presenceGraceTimer = null;
+  }
+
+  function schedulePresenceGraceRefresh(room) {
+    clearPresenceGraceTimer();
+    if (!room?.players) return;
+
+    const remainingDelays = Object.values(room.players)
+      .filter(player => player?.online === false && playerIsEffectivelyOnline(player))
+      .map(player => PRESENCE_GRACE_MS - Math.max(0, AKFirebase.now() - Number(player.lastSeen || 0)))
+      .filter(delay => delay > 0);
+
+    if (!remainingDelays.length) return;
+
+    state.presenceGraceTimer = window.setTimeout(() => {
+      state.presenceGraceTimer = null;
+      if (state.roomData !== room) return;
+
+      state.players = roomPlayersFromObject(room.players);
+      scheduleHostRecovery(room);
+      scheduleRoomRecoveryUi(room);
+      if (state.multiView === "lobby") renderLobby();
+    }, Math.min(...remainingDelays) + 180);
   }
 
   function persistRoomSession() {
@@ -178,6 +219,7 @@
     state.creatorHostReclaimPromise = null;
     clearHostRecoveryTimer();
     clearRoomRecoveryUiTimer();
+    clearPresenceGraceTimer();
     document.querySelector("#roomRecoveryPanel")?.remove();
   }
 
@@ -226,7 +268,7 @@
     const hostUid = room?.meta?.hostUid;
     const hostPlayer = room?.players?.[hostUid] || null;
 
-    if (!hostUid || state.isHost || hostPlayer?.online !== false) {
+    if (!hostUid || state.isHost || playerIsEffectivelyOnline(hostPlayer)) {
       clearHostRecoveryTimer();
       return;
     }
@@ -281,7 +323,7 @@
         offlineFor: Math.max(0, AKFirebase.now() - Number(player.lastSeen || 0))
       }));
 
-    if (!state.isHost && hostPlayer?.online === false) {
+    if (!state.isHost && !playerIsEffectivelyOnline(hostPlayer)) {
       const panel = document.createElement("section");
       panel.id = "roomRecoveryPanel";
       panel.className = "connection-recovery-panel waiting";
@@ -519,6 +561,7 @@
       state.roomCode,
       room => {
         if (!room) {
+          window.AKFirebase.detachPresence?.(state.roomCode, state.currentUid);
           stopRoomListener();
           clearRoomSession();
 
@@ -557,6 +600,7 @@
         processRoomRecoveryNotice(room);
         scheduleHostRecovery(room);
         scheduleRoomRecoveryUi(room);
+        schedulePresenceGraceRefresh(room);
 
         const gameState = room.game?.state || null;
 
