@@ -11034,8 +11034,6 @@
   const akLaughMultiBaseSyncV47 = syncMultiLaughDuel;
   syncMultiLaughDuel = function(room){const gameState=room.game?.state;if(gameState?.type==='laugh-duel'&&gameState.phase==='tournament-champion'){const champion=playerById(gameState.tournament?.championId);title.textContent='Champion du tournoi';setBackVisible(false);screen.innerHTML=`<section class="winner-stage laugh-champion-v47"><div class="winner-crown">🏆</div><div class="giant-avatar">${avatarById(champion?.avatarId).emoji}</div><h2>${escapeHtml(champion?.name||'Le champion')} gagne le tournoi !</h2><p>Visage de marbre, dignité presque intacte.</p></section>${renderPostGameContinuation(gameState)}`;ensureEveningResult(gameState);bindPostGameContinuation(gameState);return;}return akLaughMultiBaseSyncV47(room);};
 
-})();
-
 
 /* AK'GAMES V1.0 — AUDIT PASSE 11 : soirée longue, variantes +18 et consentement */
 
@@ -11185,3 +11183,5 @@ startAmbiancePollGame = async function () {
     renderAmbiancePollSetup();
   }
 };
+
+})();

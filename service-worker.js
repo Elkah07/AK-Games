@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v4.22-presence-grace";
+const CACHE_VERSION = "akgames-v4.23-core-launch-audit";
 
 const CORE_SHELL = [
   "/",
@@ -7,10 +7,10 @@ const CORE_SHELL = [
   "/styles.css?v=ui-v58-home-gradient",
   "/creator.css?v=creator-v1.3-access",
   "/character-poses.css?v=characters-v5",
-  "/app.js?v=ui-v52-player-flow",
+  "/app.js?v=ui-v61-core-audit",
   "/creator.js?v=creator-v1.3-access",
   "/firebase.js?v=firebase-v3-presence-grace",
-  "/multiplayer.js?v=ui-v60-presence-grace",
+  "/multiplayer.js?v=ui-v61-core-audit",
   "/character-poses.js?v=characters-v5",
   "/sound-manager.js?v=sound-v1",
   "/character-voice-engine.js?v=characters-v5",
