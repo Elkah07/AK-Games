@@ -697,7 +697,8 @@
         </div>
       </section>
 
-      <div class="multiplayer-player-submit">
+      <div class="multiplayer-player-submit-spacer" aria-hidden="true"></div>
+      <div class="multiplayer-player-submit ${state.mode === "multi-guest" ? "is-guest" : "is-host"}">
         <button id="saveMultiplayerPlayer" class="primary-btn full">
           ${state.mode === "multi-host" ? "Créer le salon" : "Rejoindre la partie"}
         </button>

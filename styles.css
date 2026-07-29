@@ -10654,3 +10654,83 @@ html[data-theme="light"] .game-selection-bar strong {
     padding-bottom: 162px;
   }
 }
+
+
+/* =========================================================
+   AK'GAMES V4.17 — BOUTON INVITÉ TOUJOURS ACCESSIBLE
+   ========================================================= */
+.multiplayer-player-submit-spacer {
+  width: 100%;
+  height: calc(92px + env(safe-area-inset-bottom));
+  pointer-events: none;
+}
+
+.multiplayer-player-submit {
+  position: fixed;
+  z-index: 9000;
+  right: max(12px, env(safe-area-inset-right));
+  bottom: max(10px, env(safe-area-inset-bottom));
+  left: max(12px, env(safe-area-inset-left));
+  width: min(760px, calc(100vw - 24px - env(safe-area-inset-left) - env(safe-area-inset-right)));
+  margin: 0 auto;
+  padding: 9px;
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--line));
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--panel) 95%, transparent);
+  box-shadow: 0 18px 48px rgba(0,0,0,.38);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+.multiplayer-player-submit.is-guest {
+  border-color: color-mix(in srgb, #a855f7 42%, var(--line));
+  box-shadow:
+    0 18px 48px rgba(0,0,0,.38),
+    0 0 0 1px rgba(168,85,247,.08);
+}
+
+.multiplayer-player-submit .primary-btn {
+  width: 100%;
+  min-height: 56px;
+  margin: 0;
+  border-radius: 15px;
+  box-shadow: 0 9px 24px rgba(91,33,182,.28);
+}
+
+.character-picker-quote.multiplayer-picker-quote {
+  z-index: 8950;
+  bottom: calc(96px + env(safe-area-inset-bottom));
+  max-height: min(180px, 28dvh);
+  overflow: hidden;
+}
+
+html[data-theme="light"] .multiplayer-player-submit {
+  border-color: rgba(124,58,237,.22);
+  background: rgba(252,249,255,.97);
+  box-shadow: 0 18px 42px rgba(74,45,120,.17);
+}
+
+@media (max-width: 620px) {
+  .multiplayer-player-submit-spacer {
+    height: calc(88px + env(safe-area-inset-bottom));
+  }
+
+  .multiplayer-player-submit {
+    right: max(8px, env(safe-area-inset-right));
+    bottom: max(7px, env(safe-area-inset-bottom));
+    left: max(8px, env(safe-area-inset-left));
+    width: calc(100vw - 16px - env(safe-area-inset-left) - env(safe-area-inset-right));
+    padding: 7px;
+    border-radius: 18px;
+  }
+
+  .multiplayer-player-submit .primary-btn {
+    min-height: 54px;
+    border-radius: 14px;
+  }
+
+  .character-picker-quote.multiplayer-picker-quote {
+    bottom: calc(88px + env(safe-area-inset-bottom));
+    max-height: min(165px, 25dvh);
+  }
+}
