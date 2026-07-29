@@ -1,10 +1,10 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v4.19-home-header";
+const CACHE_VERSION = "akgames-v4.20-home-gradient";
 
 const CORE_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=ui-v57-home-header",
+  "/styles.css?v=ui-v58-home-gradient",
   "/creator.css?v=creator-v1.3-access",
   "/character-poses.css?v=characters-v5",
   "/app.js?v=ui-v52-player-flow",

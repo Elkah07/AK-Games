@@ -10779,12 +10779,13 @@ html[data-theme="light"] .avatar-card.taken:focus-visible {
 }
 
 /* =========================================================
-   AK'GAMES V4.19 — ACCUEIL : FOND DU HEADER SANS BLOC NOIR
-   Le logo garde son carré noir arrondi, mais le header se fond
-   désormais naturellement dans l'arrière-plan de la page.
+   AK'GAMES V4.20 — ACCUEIL : DÉGRADÉ NOIR RECADRÉ
+   Le halo noir part désormais réellement du coin supérieur gauche,
+   derrière le logo, puis disparaît progressivement sans former de bloc.
    ========================================================= */
 .ak-home-screen .app-header {
-  isolation: auto;
+  position: sticky;
+  isolation: isolate;
   overflow: visible;
   background: transparent !important;
   backdrop-filter: none !important;
@@ -10792,10 +10793,70 @@ html[data-theme="light"] .avatar-card.taken:focus-visible {
 }
 
 .ak-home-screen .app-header::before {
-  display: none !important;
-  content: none !important;
+  display: block !important;
+  content: "" !important;
+  position: absolute;
+  z-index: -1;
+  top: -48px;
+  right: calc(50% - 50vw);
+  bottom: -28px;
+  left: calc(50% - 50vw);
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 250px 155px at 34px 42px,
+      rgba(0,0,0,.82) 0%,
+      rgba(2,2,8,.70) 30%,
+      rgba(5,5,15,.42) 58%,
+      rgba(7,9,20,.14) 78%,
+      transparent 100%),
+    linear-gradient(105deg,
+      rgba(0,0,0,.52) 0%,
+      rgba(3,3,10,.36) 30%,
+      rgba(7,9,20,.12) 63%,
+      transparent 88%);
 }
 
-html[data-theme="light"] .ak-home-screen .app-header {
-  background: transparent !important;
+html[data-theme="light"] .ak-home-screen .app-header::before {
+  background:
+    radial-gradient(ellipse 250px 155px at 34px 42px,
+      rgba(21,15,33,.48) 0%,
+      rgba(37,25,58,.27) 34%,
+      rgba(76,52,111,.10) 65%,
+      transparent 100%),
+    linear-gradient(105deg,
+      rgba(31,20,47,.20) 0%,
+      rgba(76,52,111,.08) 42%,
+      transparent 84%);
+}
+
+@media (max-width: 430px) {
+  .ak-home-screen .app-header::before {
+    top: -42px;
+    bottom: -24px;
+    background:
+      radial-gradient(ellipse 225px 145px at 28px 38px,
+        rgba(0,0,0,.84) 0%,
+        rgba(2,2,8,.68) 32%,
+        rgba(5,5,15,.38) 59%,
+        rgba(7,9,20,.12) 79%,
+        transparent 100%),
+      linear-gradient(105deg,
+        rgba(0,0,0,.48) 0%,
+        rgba(3,3,10,.30) 31%,
+        rgba(7,9,20,.10) 62%,
+        transparent 88%);
+  }
+
+  html[data-theme="light"] .ak-home-screen .app-header::before {
+    background:
+      radial-gradient(ellipse 225px 145px at 28px 38px,
+        rgba(21,15,33,.46) 0%,
+        rgba(37,25,58,.25) 35%,
+        rgba(76,52,111,.09) 66%,
+        transparent 100%),
+      linear-gradient(105deg,
+        rgba(31,20,47,.18) 0%,
+        rgba(76,52,111,.07) 42%,
+        transparent 84%);
+  }
 }
