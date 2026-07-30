@@ -1818,5 +1818,525 @@
     "category": "adult",
     "adult": true,
     "id": "minorite_adulte_172"
+  },
+  {
+    "question": "Pour créer une tension immédiate, tu choisis…",
+    "options": [
+      "Un regard prolongé",
+      "Un compliment murmuré",
+      "Un contact très léger"
+    ],
+    "theme": "tension",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_141"
+  },
+  {
+    "question": "Le pire endroit pour recevoir un sexto serait…",
+    "options": [
+      "Au travail",
+      "À table en famille",
+      "Pendant un rendez-vous avec quelqu’un d’autre"
+    ],
+    "theme": "messages",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_142"
+  },
+  {
+    "question": "Une aventure réussie doit surtout laisser…",
+    "options": [
+      "Un bon souvenir",
+      "Une envie de recommencer",
+      "Aucun problème le lendemain"
+    ],
+    "theme": "relations",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_143"
+  },
+  {
+    "question": "Le geste le plus intime sans baiser, c’est…",
+    "options": [
+      "Dormir enlacés",
+      "Se confier dans le noir",
+      "Prendre une douche ensemble"
+    ],
+    "theme": "intimite",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_144"
+  },
+  {
+    "question": "Pour un premier rendez-vous adulte, tu préfères…",
+    "options": [
+      "Un bar discret",
+      "Un dîner chez l’un de vous",
+      "Une activité qui permet de flirter"
+    ],
+    "theme": "rendez-vous",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_145"
+  },
+  {
+    "question": "Si ton crush ne répond plus, tu…",
+    "options": [
+      "Relances une fois",
+      "Attends qu’il revienne",
+      "Passes immédiatement à autre chose"
+    ],
+    "theme": "messages",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_146"
+  },
+  {
+    "question": "Dans une relation libre, la règle prioritaire serait…",
+    "options": [
+      "Tout raconter",
+      "Ne jamais ramener quelqu’un chez soi",
+      "Interdire les proches et les ex"
+    ],
+    "theme": "limites",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_147"
+  },
+  {
+    "question": "Le détail qui gâche le plus un rapprochement…",
+    "options": [
+      "Une mauvaise hygiène",
+      "Un prénom incorrect",
+      "Un téléphone qui sonne sans arrêt"
+    ],
+    "theme": "turn-off",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_148"
+  },
+  {
+    "question": "La meilleure preuve d’attirance, c’est…",
+    "options": [
+      "Les gestes",
+      "Les mots",
+      "Le temps accordé"
+    ],
+    "theme": "attirance",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_149"
+  },
+  {
+    "question": "Pour avouer un fantasme, tu préfères…",
+    "options": [
+      "Le dire directement",
+      "L’écrire",
+      "Le glisser dans un jeu"
+    ],
+    "theme": "confessions",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_150"
+  },
+  {
+    "question": "Le compliment le plus séduisant concerne…",
+    "options": [
+      "Le regard",
+      "La voix",
+      "L’assurance"
+    ],
+    "theme": "seduction",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_151"
+  },
+  {
+    "question": "Après une excellente nuit, tu veux plutôt…",
+    "options": [
+      "Un petit-déjeuner ensemble",
+      "Un message dans la journée",
+      "Aucune attente particulière"
+    ],
+    "theme": "lendemain",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_152"
+  },
+  {
+    "question": "Si un ex réapparaît, tu regardes d’abord…",
+    "options": [
+      "Ses intentions",
+      "Tes sentiments actuels",
+      "Ce qui avait provoqué la rupture"
+    ],
+    "theme": "ex",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_153"
+  },
+  {
+    "question": "La tenue la plus efficace pour séduire est…",
+    "options": [
+      "Très élégante",
+      "Décontractée mais ajustée",
+      "Choisie spécialement par l’autre"
+    ],
+    "theme": "style",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_154"
+  },
+  {
+    "question": "Le meilleur moyen de demander un baiser…",
+    "options": [
+      "Une question claire",
+      "Un regard puis une pause",
+      "Dire simplement son envie"
+    ],
+    "theme": "consentement",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_155"
+  },
+  {
+    "question": "Une photo intime ne devrait être envoyée que…",
+    "options": [
+      "Sans visage",
+      "Avec une confiance totale",
+      "Après un accord explicite"
+    ],
+    "theme": "consentement",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_156"
+  },
+  {
+    "question": "Le plus attirant dans une voix, c’est…",
+    "options": [
+      "Le timbre",
+      "L’accent",
+      "La façon de prononcer ton prénom"
+    ],
+    "theme": "sensations",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_157"
+  },
+  {
+    "question": "Dans un flirt, tu remarques d’abord…",
+    "options": [
+      "Les réponses rapides",
+      "Le langage corporel",
+      "Les petites attentions"
+    ],
+    "theme": "flirt",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_158"
+  },
+  {
+    "question": "La jalousie devient inacceptable quand…",
+    "options": [
+      "Elle impose des interdictions",
+      "Elle pousse à fouiller",
+      "Elle humilie en public"
+    ],
+    "theme": "jalousie",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_159"
+  },
+  {
+    "question": "Pour une nuit totalement improvisée, l’essentiel est…",
+    "options": [
+      "La protection",
+      "La confiance",
+      "Un moyen simple de partir"
+    ],
+    "theme": "securite",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_160"
+  },
+  {
+    "question": "Le rendez-vous le plus excitant serait…",
+    "options": [
+      "Dans une ville inconnue",
+      "Sous une fausse identité",
+      "Dans un lieu normalement fermé"
+    ],
+    "theme": "audace",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_161"
+  },
+  {
+    "question": "Le secret le plus difficile à cacher au groupe serait…",
+    "options": [
+      "Un crush ici présent",
+      "Une aventure avec un ex",
+      "Une relation déjà engagée"
+    ],
+    "theme": "secrets",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_162"
+  },
+  {
+    "question": "Si l’alchimie est forte mais la conversation mauvaise, tu…",
+    "options": [
+      "Tentes un second rendez-vous",
+      "Proposes quelque chose de léger",
+      "Arrêtes là"
+    ],
+    "theme": "rendez-vous",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_163"
+  },
+  {
+    "question": "Ce qui rend un baiser mémorable, c’est…",
+    "options": [
+      "L’attente avant",
+      "La synchronisation",
+      "La personne avec qui il arrive"
+    ],
+    "theme": "intimite",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_164"
+  },
+  {
+    "question": "Pour surprendre ton partenaire, tu choisis…",
+    "options": [
+      "Une tenue inattendue",
+      "Un lieu secret",
+      "Une proposition jamais osée"
+    ],
+    "theme": "couple",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_165"
+  },
+  {
+    "question": "Le pire mensonge sur une application de rencontre concerne…",
+    "options": [
+      "Les photos",
+      "La situation amoureuse",
+      "Les intentions"
+    ],
+    "theme": "rencontres",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_166"
+  },
+  {
+    "question": "Une limite est plus facile à exprimer…",
+    "options": [
+      "Avant le rendez-vous",
+      "Au moment concerné",
+      "Par message"
+    ],
+    "theme": "limites",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_167"
+  },
+  {
+    "question": "Dans une soirée, le signe le plus évident d’un crush est…",
+    "options": [
+      "Il cherche toujours ton regard",
+      "Il reste près de toi",
+      "Il rit à tout ce que tu dis"
+    ],
+    "theme": "attirance",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_168"
+  },
+  {
+    "question": "Si quelqu’un embrasse mal, tu…",
+    "options": [
+      "Le guides discrètement",
+      "En parles après",
+      "Évites un second essai"
+    ],
+    "theme": "baiser",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_169"
+  },
+  {
+    "question": "Pour garder un flirt secret, le plus difficile serait…",
+    "options": [
+      "Ne pas échanger de regards",
+      "Ne pas envoyer de messages",
+      "Ne rien raconter à ses amis"
+    ],
+    "theme": "secrets",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_170"
+  },
+  {
+    "question": "Le choix le plus risqué serait…",
+    "options": [
+      "Sortir avec un collègue",
+      "Revoir un ex",
+      "Flirter avec le meilleur ami de son ex"
+    ],
+    "theme": "audace",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_171"
+  },
+  {
+    "question": "Une relation passionnelle vaut le risque si…",
+    "options": [
+      "La communication est honnête",
+      "Les limites sont respectées",
+      "Les deux savent qu’elle peut finir vite"
+    ],
+    "theme": "relations",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_172"
+  },
+  {
+    "question": "Le meilleur prétexte pour prolonger un rendez-vous…",
+    "options": [
+      "Commander encore quelque chose",
+      "Proposer une balade",
+      "Demander de l’aide pour rentrer"
+    ],
+    "theme": "flirt",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_173"
+  },
+  {
+    "question": "Ce que tu ne voudrais jamais entendre après un baiser…",
+    "options": [
+      "« C’était mieux avec mon ex »",
+      "« Je voulais juste vérifier »",
+      "« On reste amis ? »"
+    ],
+    "theme": "malaises",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_174"
+  },
+  {
+    "question": "La qualité la plus importante chez un amant ou une amante…",
+    "options": [
+      "L’écoute",
+      "La confiance",
+      "L’imagination"
+    ],
+    "theme": "intimite",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_175"
+  },
+  {
+    "question": "Si ton crush flirte avec une autre personne devant toi, tu…",
+    "options": [
+      "Montres ton intérêt",
+      "Prends tes distances",
+      "Flirtes aussi ailleurs"
+    ],
+    "theme": "jalousie",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_176"
+  },
+  {
+    "question": "Le message le plus difficile à ignorer serait…",
+    "options": [
+      "« Je suis devant chez toi »",
+      "« J’ai rêvé de toi »",
+      "« Il faut qu’on parle de l’autre soir »"
+    ],
+    "theme": "messages",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_177"
+  },
+  {
+    "question": "Pour une réconciliation passionnée, il faut d’abord…",
+    "options": [
+      "Des excuses sincères",
+      "Du temps pour redescendre",
+      "Une discussion sur le fond"
+    ],
+    "theme": "couple",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_178"
+  },
+  {
+    "question": "Une bonne surprise romantique doit être…",
+    "options": [
+      "Privée",
+      "Très personnalisée",
+      "Facile à refuser"
+    ],
+    "theme": "consentement",
+    "intensity": "light",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_179"
+  },
+  {
+    "question": "Dans un jeu adulte, tu préfères révéler…",
+    "options": [
+      "Une expérience passée",
+      "Une envie future",
+      "Une limite actuelle"
+    ],
+    "theme": "jeu",
+    "intensity": "medium",
+    "category": "adult",
+    "adult": true,
+    "id": "minorite_adulte_v4_180"
   }
 ]

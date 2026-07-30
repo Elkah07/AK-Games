@@ -778,5 +778,305 @@
     "optionA": "Une nuit avec une personne qui parle de son ex",
     "optionB": "Une nuit avec une personne qui refuse de te dire son prénom complet",
     "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_131",
+    "optionA": "Recevoir un message très osé au travail",
+    "optionB": "Envoyer par erreur ce message dans le groupe familial",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_132",
+    "optionA": "Un rendez-vous parfait sans aucun baiser",
+    "optionB": "Un baiser incroyable après un rendez-vous catastrophique",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_133",
+    "optionA": "Connaître tous les fantasmes de ton partenaire",
+    "optionB": "Lui révéler tous les tiens",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_134",
+    "optionA": "Être surpris en petite tenue par tes voisins",
+    "optionB": "Par les parents de ton partenaire",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_135",
+    "optionA": "Revoir ton meilleur ex pour une soirée",
+    "optionB": "Rencontrer enfin ton crush inaccessible",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_136",
+    "optionA": "Une relation très passionnelle mais instable",
+    "optionB": "Une relation très stable mais peu passionnelle",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_137",
+    "optionA": "Devoir lire ton dernier sexto à voix haute",
+    "optionB": "Montrer ta dernière recherche liée au sexe",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_138",
+    "optionA": "Ne plus jamais pouvoir embrasser",
+    "optionB": "Ne plus jamais pouvoir flirter",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_139",
+    "optionA": "Être excellent au premier baiser mais mauvais en conversation",
+    "optionB": "Être excellent en conversation mais rater le premier baiser",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_140",
+    "optionA": "Un crush qui répond immédiatement sans humour",
+    "optionB": "Un crush hilarant qui répond trois jours plus tard",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_141",
+    "optionA": "Que ton partenaire connaisse le nombre exact de tes conquêtes",
+    "optionB": "Qu’il rencontre la personne qui t’a le plus marqué",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_142",
+    "optionA": "Passer une nuit avec ton crush sans téléphone",
+    "optionB": "Lui laisser ton téléphone déverrouillé pendant une heure",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_143",
+    "optionA": "Un rendez-vous romantique préparé dans les moindres détails",
+    "optionB": "Une aventure totalement improvisée",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_144",
+    "optionA": "Avouer ton attirance en face",
+    "optionB": "L’écrire dans un message impossible à supprimer",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_145",
+    "optionA": "Que ton ex raconte votre pire rendez-vous",
+    "optionB": "Que ton meilleur ami raconte ton plus gros râteau",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_146",
+    "optionA": "Flirter avec quelqu’un qui ressemble à ton ex",
+    "optionB": "Avec quelqu’un qui ressemble à ton meilleur ami",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_147",
+    "optionA": "Recevoir un compliment très cru",
+    "optionB": "Recevoir une déclaration beaucoup trop romantique",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_148",
+    "optionA": "Une nuit dans un hôtel de luxe",
+    "optionB": "Une nuit improvisée dans un endroit insolite",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_149",
+    "optionA": "Savoir exactement qui a un crush sur toi",
+    "optionB": "Savoir exactement qui fait semblant de t’apprécier",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_150",
+    "optionA": "Te faire surprendre pendant un baiser",
+    "optionB": "Surprendre ton partenaire en plein flirt ambigu",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_151",
+    "optionA": "Ne dater que des personnes plus âgées",
+    "optionB": "Ne dater que des personnes plus jeunes",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_152",
+    "optionA": "Un partenaire qui parle trop de ses ex",
+    "optionB": "Un partenaire qui refuse d’en parler",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_153",
+    "optionA": "Avoir une alchimie incroyable avec quelqu’un qui vit loin",
+    "optionB": "Une alchimie moyenne avec quelqu’un qui habite à côté",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_154",
+    "optionA": "Être quitté par message",
+    "optionB": "Devoir rompre en plein restaurant",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_155",
+    "optionA": "Recevoir une photo intime non sollicitée",
+    "optionB": "Envoyer une photo intime au mauvais contact",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_156",
+    "optionA": "Tout avouer après une infidélité émotionnelle",
+    "optionB": "Ne rien dire mais couper définitivement le contact",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_157",
+    "optionA": "Que tes amis choisissent ton prochain rendez-vous",
+    "optionB": "Que ton ex le choisisse",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_158",
+    "optionA": "Une relation secrète avec ton crush",
+    "optionB": "Une relation publique avec quelqu’un qui ne te plaît qu’à moitié",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_159",
+    "optionA": "Être très attiré par quelqu’un qui embrasse mal",
+    "optionB": "Être peu attiré par quelqu’un qui embrasse parfaitement",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_160",
+    "optionA": "Partager tous tes mots de passe en couple",
+    "optionB": "Ne jamais avoir le droit de toucher au téléphone de l’autre",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_161",
+    "optionA": "Une demande officielle très romantique",
+    "optionB": "Une relation qui commence sans jamais mettre d’étiquette",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_162",
+    "optionA": "Rejouer ton premier baiser devant le groupe",
+    "optionB": "Imiter ton dernier flirt pendant une minute",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_163",
+    "optionA": "Être toujours celui ou celle qui fait le premier pas",
+    "optionB": "Ne jamais pouvoir faire le premier pas",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_164",
+    "optionA": "Apprendre qu’un ami fantasme sur toi",
+    "optionB": "Apprendre que ton crush fantasme sur ton ami",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_165",
+    "optionA": "Un massage parfait sans suite",
+    "optionB": "Une nuit passionnée sans aucune tendresse",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_166",
+    "optionA": "Te réveiller chez quelqu’un sans te rappeler la soirée",
+    "optionB": "Te rappeler chaque détail d’une soirée très gênante",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_167",
+    "optionA": "Être attiré par la personnalité mais pas le physique",
+    "optionB": "Par le physique mais pas la personnalité",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_168",
+    "optionA": "Faire une pause d’un mois sans contact",
+    "optionB": "Rester ensemble mais dormir séparément pendant six mois",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_169",
+    "optionA": "Dire précisément ce que tu veux",
+    "optionB": "Devoir tout faire comprendre uniquement par gestes",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_170",
+    "optionA": "Que ta famille lise ton profil de rencontre",
+    "optionB": "Que tes collègues voient toutes tes photos de profil",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_171",
+    "optionA": "Un partenaire très jaloux mais démonstratif",
+    "optionB": "Un partenaire totalement détaché mais confiant",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_172",
+    "optionA": "Avoir une aventure avec ton premier amour",
+    "optionB": "Avec ton crush de célébrité",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_173",
+    "optionA": "Découvrir un jouet intime chez ton partenaire",
+    "optionB": "Découvrir qu’il a trouvé le tien",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_174",
+    "optionA": "Une relation libre avec des règles strictes",
+    "optionB": "Une relation exclusive sans aucune vie privée",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_175",
+    "optionA": "Devoir demander avant chaque baiser pendant un mois",
+    "optionB": "Ne pouvoir embrasser que dans le noir",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_176",
+    "optionA": "Un dîner sensuel cuisiné maison",
+    "optionB": "Une soirée dans un club très audacieux",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_177",
+    "optionA": "Être le meilleur souvenir d’un ex",
+    "optionB": "Oublier complètement tous les tiens",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_178",
+    "optionA": "Connaître la vérité sur tous les mensonges de ton partenaire",
+    "optionB": "Pouvoir effacer un seul de tes propres mensonges",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_179",
+    "optionA": "Recevoir une déclaration pendant une dispute",
+    "optionB": "Recevoir un message de rupture pendant une soirée parfaite",
+    "category": "adult"
+  },
+  {
+    "id": "prefere_adulte_v4_180",
+    "optionA": "Avoir un crush réciproque au mauvais moment",
+    "optionB": "Un crush non réciproque au moment parfait",
+    "category": "adult"
   }
 ]

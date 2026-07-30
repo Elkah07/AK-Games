@@ -768,5 +768,495 @@
     "category": "adulte",
     "adultTheme": "limites",
     "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_111",
+    "prompt": "Quelle chanson choisirais-tu pour installer une ambiance de séduction?",
+    "category": "adulte",
+    "adultTheme": "ambiance",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_112",
+    "prompt": "Quel détail chez quelqu’un peut te faire oublier ce que tu voulais dire?",
+    "category": "adulte",
+    "adultTheme": "seduction",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_113",
+    "prompt": "Quelle proposition osée pourrais-tu accepter sur un coup de tête?",
+    "category": "adulte",
+    "adultTheme": "audace",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_114",
+    "prompt": "Quel est le pire lieu où recevoir accidentellement un message intime?",
+    "category": "adulte",
+    "adultTheme": "malaises",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_115",
+    "prompt": "Quelle règle poserais-tu absolument dans une relation libre?",
+    "category": "adulte",
+    "adultTheme": "limites",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_116",
+    "prompt": "Quel vêtement te donne le plus confiance en ton pouvoir de séduction?",
+    "category": "adulte",
+    "adultTheme": "style",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_117",
+    "prompt": "Quel aveu ferais-tu seulement dans le noir?",
+    "category": "adulte",
+    "adultTheme": "confessions",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_118",
+    "prompt": "Quelle célébrité pourrait te faire perdre tous tes moyens?",
+    "category": "adulte",
+    "adultTheme": "crush",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_119",
+    "prompt": "Quel mensonge innocent as-tu déjà utilisé pour prolonger un rendez-vous?",
+    "category": "adulte",
+    "adultTheme": "rendez-vous",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_120",
+    "prompt": "Quelle attention te paraît plus intime qu’un cadeau?",
+    "category": "adulte",
+    "adultTheme": "intimite",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_121",
+    "prompt": "Quel ancien flirt serais-tu le plus curieux ou curieuse de recroiser?",
+    "category": "adulte",
+    "adultTheme": "ex",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_122",
+    "prompt": "Quelle habitude peut rendre quelqu’un immédiatement moins attirant?",
+    "category": "adulte",
+    "adultTheme": "turn-off",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_123",
+    "prompt": "Quel message pourrais-tu envoyer à 2 h du matin et regretter au réveil?",
+    "category": "adulte",
+    "adultTheme": "messages",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_124",
+    "prompt": "Quelle limite personnelle as-tu mis le plus de temps à comprendre?",
+    "category": "adulte",
+    "adultTheme": "limites",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_125",
+    "prompt": "Quel compliment te déstabiliserait vraiment?",
+    "category": "adulte",
+    "adultTheme": "seduction",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_126",
+    "prompt": "Quelle question aimerais-tu poser à tous tes ex sans conséquence?",
+    "category": "adulte",
+    "adultTheme": "ex",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_127",
+    "prompt": "Quel lieu insolite te semblerait excitant pour un rendez-vous?",
+    "category": "adulte",
+    "adultTheme": "audace",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_128",
+    "prompt": "Quelle qualité te donnerait envie de revoir quelqu’un malgré un premier rendez-vous moyen?",
+    "category": "adulte",
+    "adultTheme": "rendez-vous",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_129",
+    "prompt": "Quel est ton plus gros signal d’alarme dans les messages de drague?",
+    "category": "adulte",
+    "adultTheme": "turn-off",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_130",
+    "prompt": "Quelle chose n’oserais-tu jamais faire devant un miroir?",
+    "category": "adulte",
+    "adultTheme": "malaises",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_131",
+    "prompt": "Quel défi de séduction serais-tu certain ou certaine de gagner?",
+    "category": "adulte",
+    "adultTheme": "jeu",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_132",
+    "prompt": "Quelle rumeur sur ta vie sentimentale pourrait sembler crédible?",
+    "category": "adulte",
+    "adultTheme": "confessions",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_133",
+    "prompt": "Quel objet chez toi trahit le mieux ta vie intime?",
+    "category": "adulte",
+    "adultTheme": "secrets",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_134",
+    "prompt": "Quelle serait ta réaction si ton crush t’embrassait sans prévenir?",
+    "category": "adulte",
+    "adultTheme": "crush",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_135",
+    "prompt": "Quel détail rend un baiser mémorable pour toi?",
+    "category": "adulte",
+    "adultTheme": "intimite",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_136",
+    "prompt": "Quelle habitude de couple gardes-tu normalement secrète?",
+    "category": "adulte",
+    "adultTheme": "couple",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_137",
+    "prompt": "Quel serait le titre du film inspiré de ta vie amoureuse?",
+    "category": "adulte",
+    "adultTheme": "humour",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_138",
+    "prompt": "Quelle phrase ne voudrais-tu jamais entendre juste après un baiser?",
+    "category": "adulte",
+    "adultTheme": "malaises",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_139",
+    "prompt": "Quel endroit choisirais-tu pour un rendez-vous totalement anonyme?",
+    "category": "adulte",
+    "adultTheme": "rendez-vous",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_140",
+    "prompt": "Quelle photo de toi ne devrait surtout pas être projetée ici?",
+    "category": "adulte",
+    "adultTheme": "secrets",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_141",
+    "prompt": "Quel est le geste le plus séduisant qu’on ait fait pour toi?",
+    "category": "adulte",
+    "adultTheme": "seduction",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_142",
+    "prompt": "Quelle différence d’âge te ferait hésiter avant un rendez-vous?",
+    "category": "adulte",
+    "adultTheme": "limites",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_143",
+    "prompt": "Quel personnage fictif serait ton crush le moins assumé?",
+    "category": "adulte",
+    "adultTheme": "crush",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_144",
+    "prompt": "Quelle chose pourrais-tu pardonner à une aventure mais pas à un partenaire?",
+    "category": "adulte",
+    "adultTheme": "relations",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_145",
+    "prompt": "Quel signe montre selon toi qu’une personne embrasse bien avant même le premier baiser?",
+    "category": "adulte",
+    "adultTheme": "intuition",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_146",
+    "prompt": "Quelle situation te rendrait immédiatement jaloux ou jalouse?",
+    "category": "adulte",
+    "adultTheme": "jalousie",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_147",
+    "prompt": "Quel souvenir de rendez-vous raconterais-tu en changeant tous les noms?",
+    "category": "adulte",
+    "adultTheme": "confessions",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_148",
+    "prompt": "Quelle règle imposerais-tu si ton téléphone était fouillé ce soir?",
+    "category": "adulte",
+    "adultTheme": "secrets",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_149",
+    "prompt": "Quel mot ou surnom te paraît étonnamment séduisant?",
+    "category": "adulte",
+    "adultTheme": "seduction",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_150",
+    "prompt": "Quelle expérience romantique aimerais-tu vivre au moins une fois?",
+    "category": "adulte",
+    "adultTheme": "fantasmes",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_151",
+    "prompt": "Quel est ton talent le plus utile pour séduire?",
+    "category": "adulte",
+    "adultTheme": "flirt",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_152",
+    "prompt": "Quelle erreur de prénom serait la plus difficile à rattraper?",
+    "category": "adulte",
+    "adultTheme": "malaises",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_153",
+    "prompt": "Quel type de message te fait répondre immédiatement?",
+    "category": "adulte",
+    "adultTheme": "messages",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_154",
+    "prompt": "Quelle tenue d’un partenaire aimerais-tu choisir toi-même?",
+    "category": "adulte",
+    "adultTheme": "style",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_155",
+    "prompt": "Quel petit secret rendrait ton profil de rencontre plus honnête?",
+    "category": "adulte",
+    "adultTheme": "confessions",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_156",
+    "prompt": "Quelle demande intime refuserais-tu même contre beaucoup d’argent?",
+    "category": "adulte",
+    "adultTheme": "limites",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_157",
+    "prompt": "Quel scénario de film romantique aimerais-tu tester dans la vraie vie?",
+    "category": "adulte",
+    "adultTheme": "fantasmes",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_158",
+    "prompt": "Quelle chose te ferait quitter discrètement un rendez-vous?",
+    "category": "adulte",
+    "adultTheme": "turn-off",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_159",
+    "prompt": "Quel ancien message pourrais-tu relire sans jamais le montrer?",
+    "category": "adulte",
+    "adultTheme": "secrets",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_160",
+    "prompt": "Quelle est la manière la plus élégante de dire que tu as envie d’un baiser?",
+    "category": "adulte",
+    "adultTheme": "consentement",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_161",
+    "prompt": "Quel endroit de ton corps préfères-tu qu’on complimente?",
+    "category": "adulte",
+    "adultTheme": "seduction",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_162",
+    "prompt": "Quelle règle devrait toujours s’appliquer aux photos intimes?",
+    "category": "adulte",
+    "adultTheme": "consentement",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_163",
+    "prompt": "Quel moment banal devient facilement romantique pour toi?",
+    "category": "adulte",
+    "adultTheme": "intimite",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_164",
+    "prompt": "Quelle chose ne voudrais-tu jamais savoir sur les ex de ton partenaire?",
+    "category": "adulte",
+    "adultTheme": "ex",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_165",
+    "prompt": "Quel pari adulte accepterais-tu de faire avec la personne de ton choix ici?",
+    "category": "adulte",
+    "adultTheme": "jeu",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_166",
+    "prompt": "Quelle odeur associes-tu immédiatement à l’attirance?",
+    "category": "adulte",
+    "adultTheme": "sensations",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_167",
+    "prompt": "Quel comportement en soirée révèle qu’une personne est attirée?",
+    "category": "adulte",
+    "adultTheme": "intuition",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_168",
+    "prompt": "Quelle conversation faut-il avoir avant une aventure sans lendemain?",
+    "category": "adulte",
+    "adultTheme": "limites",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_169",
+    "prompt": "Quel est le lieu le moins romantique où tu as pourtant flirté?",
+    "category": "adulte",
+    "adultTheme": "confessions",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_170",
+    "prompt": "Quelle personne du groupe serait ton meilleur coach en séduction?",
+    "category": "adulte",
+    "adultTheme": "groupe",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_171",
+    "prompt": "Quel geste peut faire monter la tension sans aucun contact?",
+    "category": "adulte",
+    "adultTheme": "tension",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_172",
+    "prompt": "Quelle surprise romantique te mettrait plutôt mal à l’aise?",
+    "category": "adulte",
+    "adultTheme": "malaises",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_173",
+    "prompt": "Quel sujet intime peux-tu aborder très facilement?",
+    "category": "adulte",
+    "adultTheme": "confessions",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_174",
+    "prompt": "Quelle règle absurde inventerais-tu pour tes prochains rendez-vous?",
+    "category": "adulte",
+    "adultTheme": "humour",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_175",
+    "prompt": "Quel indice ferait comprendre à tes amis que tu as passé une excellente nuit?",
+    "category": "adulte",
+    "adultTheme": "lendemain",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_176",
+    "prompt": "Quelle chose pourrais-tu écrire dans un sexto mais jamais dire à voix haute?",
+    "category": "adulte",
+    "adultTheme": "messages",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_177",
+    "prompt": "Quel est ton meilleur prétexte pour rester cinq minutes de plus?",
+    "category": "adulte",
+    "adultTheme": "flirt",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_178",
+    "prompt": "Quelle partie d’un premier rendez-vous juges-tu la plus révélatrice?",
+    "category": "adulte",
+    "adultTheme": "rendez-vous",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_179",
+    "prompt": "Quel choix amoureux passé défendrais-tu encore aujourd’hui?",
+    "category": "adulte",
+    "adultTheme": "relations",
+    "adult": true
+  },
+  {
+    "id": "qui_repondu_adulte_v4_180",
+    "prompt": "Quelle question adulte répondrais-tu uniquement de façon anonyme?",
+    "category": "adulte",
+    "adultTheme": "secrets",
+    "adult": true
   }
 ]

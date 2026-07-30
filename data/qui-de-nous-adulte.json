@@ -658,5 +658,425 @@
     "question": "Qui de nous serait le plus susceptible de garder un secret intime confié par un ex?",
     "category": "adulte",
     "adult": true
+  },
+  {
+    "id": "adulte_v4_111_qui_de_nous",
+    "question": "Qui de nous tomberait amoureux ou amoureuse d’un plan censé rester sans lendemain?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_112_qui_de_nous",
+    "question": "Qui de nous inventerait une excuse pour dormir chez son crush?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_113_qui_de_nous",
+    "question": "Qui de nous paniquerait le plus après avoir envoyé un message osé?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_114_qui_de_nous",
+    "question": "Qui de nous réussirait le mieux un rendez-vous entièrement improvisé?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_115_qui_de_nous",
+    "question": "Qui de nous serait le plus capable de séduire uniquement avec son regard?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_116_qui_de_nous",
+    "question": "Qui de nous pourrait embrasser quelqu’un à la suite d’un pari?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_117_qui_de_nous",
+    "question": "Qui de nous aurait le plus de mal à rester discret après une nuit incroyable?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_118_qui_de_nous",
+    "question": "Qui de nous serait le plus tenté de recontacter un ex après minuit?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_119_qui_de_nous",
+    "question": "Qui de nous mentirait le mieux sur l’origine d’un suçon?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_120_qui_de_nous",
+    "question": "Qui de nous demanderait le plus clairement le consentement avant un baiser?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_121_qui_de_nous",
+    "question": "Qui de nous pourrait avoir un crush secret sur la personne la plus inattendue?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_122_qui_de_nous",
+    "question": "Qui de nous serait le plus jaloux d’un simple message reçu par son partenaire?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_123_qui_de_nous",
+    "question": "Qui de nous oserait proposer une expérience nouvelle en premier?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_124_qui_de_nous",
+    "question": "Qui de nous annulerait un rendez-vous à cause d’un mauvais pressentiment?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_125_qui_de_nous",
+    "question": "Qui de nous conserverait le plus longtemps un souvenir d’une ancienne relation?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_126_qui_de_nous",
+    "question": "Qui de nous saurait le mieux créer une ambiance romantique en dix minutes?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_127_qui_de_nous",
+    "question": "Qui de nous rirait au pire moment pendant une tentative de séduction?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_128_qui_de_nous",
+    "question": "Qui de nous pourrait confondre attirance et sentiments?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_129_qui_de_nous",
+    "question": "Qui de nous aurait le plus de succès sur une application de rencontre?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_130_qui_de_nous",
+    "question": "Qui de nous supprimerait une conversation avant de prêter son téléphone?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_131_qui_de_nous",
+    "question": "Qui de nous pourrait sortir avec quelqu’un uniquement pour sa voix?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_132_qui_de_nous",
+    "question": "Qui de nous serait le plus difficile à impressionner lors d’un premier rendez-vous?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_133_qui_de_nous",
+    "question": "Qui de nous pourrait tomber sous le charme d’une personne beaucoup plus âgée?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_134_qui_de_nous",
+    "question": "Qui de nous aurait le courage de dire immédiatement qu’un baiser ne lui a pas plu?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_135_qui_de_nous",
+    "question": "Qui de nous préparerait une playlist spéciale avant un rendez-vous?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_136_qui_de_nous",
+    "question": "Qui de nous pourrait séduire quelqu’un sans prononcer un compliment?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_137_qui_de_nous",
+    "question": "Qui de nous aurait le plus de mal à respecter une relation secrète?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_138_qui_de_nous",
+    "question": "Qui de nous ferait semblant de ne pas être attiré pour se protéger?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_139_qui_de_nous",
+    "question": "Qui de nous serait le plus curieux de connaître les fantasmes de son partenaire?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_140_qui_de_nous",
+    "question": "Qui de nous pourrait être repéré en premier dans une soirée libertine?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_141_qui_de_nous",
+    "question": "Qui de nous enverrait un message suggestif au mauvais destinataire?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_142_qui_de_nous",
+    "question": "Qui de nous serait le plus susceptible de proposer une liste de limites écrite?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_143_qui_de_nous",
+    "question": "Qui de nous pourrait craquer pour son ou sa meilleure amie?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_144_qui_de_nous",
+    "question": "Qui de nous raconterait le plus de détails à ses amis après un rendez-vous?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_145_qui_de_nous",
+    "question": "Qui de nous serait capable de refuser une célébrité très attirante?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_146_qui_de_nous",
+    "question": "Qui de nous choisirait l’alchimie plutôt que la stabilité?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_147_qui_de_nous",
+    "question": "Qui de nous aurait le plus peur d’être reconnu sur une application de rencontre?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_148_qui_de_nous",
+    "question": "Qui de nous pourrait organiser un rendez-vous dans un lieu interdit?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_149_qui_de_nous",
+    "question": "Qui de nous ferait le premier pas après des semaines de tension?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_150_qui_de_nous",
+    "question": "Qui de nous se remettrait le plus vite d’un râteau spectaculaire?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_151_qui_de_nous",
+    "question": "Qui de nous aurait le plus de règles avant une aventure sans lendemain?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_152_qui_de_nous",
+    "question": "Qui de nous pourrait pardonner un flirt ambigu avec un ex?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_153_qui_de_nous",
+    "question": "Qui de nous remarquerait immédiatement qu’une personne porte un parfum différent?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_154_qui_de_nous",
+    "question": "Qui de nous serait le plus gêné de devoir lire ses anciens sextos à voix haute?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_155_qui_de_nous",
+    "question": "Qui de nous pourrait embrasser quelqu’un sans connaître son prénom?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_156_qui_de_nous",
+    "question": "Qui de nous transformerait une dispute en réconciliation très passionnée?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_157_qui_de_nous",
+    "question": "Qui de nous serait le plus à l’aise pour acheter un objet intime?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_158_qui_de_nous",
+    "question": "Qui de nous pourrait avoir deux crushs en même temps sans savoir choisir?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_159_qui_de_nous",
+    "question": "Qui de nous fouillerait le plus probablement le profil d’un crush jusqu’en 2014?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_160_qui_de_nous",
+    "question": "Qui de nous saurait le mieux cacher une attirance interdite?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_161_qui_de_nous",
+    "question": "Qui de nous pourrait quitter une soirée main dans la main avec une personne rencontrée le soir même?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_162_qui_de_nous",
+    "question": "Qui de nous ferait le meilleur compliment à l’oreille?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_163_qui_de_nous",
+    "question": "Qui de nous serait le plus exigeant sur l’hygiène avant un rapprochement?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_164_qui_de_nous",
+    "question": "Qui de nous oserait demander exactement ce qu’il ou elle aime?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_165_qui_de_nous",
+    "question": "Qui de nous serait le plus tenté par une relation à distance très intense?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_166_qui_de_nous",
+    "question": "Qui de nous confondrait le prénom d’un crush avec celui d’un ex?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_167_qui_de_nous",
+    "question": "Qui de nous pourrait refuser de partager le mot de passe de son téléphone?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_168_qui_de_nous",
+    "question": "Qui de nous serait le plus susceptible de garder une photo intime de soi sans jamais l’envoyer?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_169_qui_de_nous",
+    "question": "Qui de nous tomberait le plus facilement sous le charme d’un accent?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_170_qui_de_nous",
+    "question": "Qui de nous pourrait passer une nuit entière à seulement parler avec son crush?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_171_qui_de_nous",
+    "question": "Qui de nous serait le plus direct pour annoncer ses intentions?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_172_qui_de_nous",
+    "question": "Qui de nous pourrait regretter un tatouage fait en couple?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_173_qui_de_nous",
+    "question": "Qui de nous aurait le plus de mal à choisir entre passion et tranquillité?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_174_qui_de_nous",
+    "question": "Qui de nous serait le meilleur ailier ou la meilleure ailière en soirée?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_175_qui_de_nous",
+    "question": "Qui de nous accepterait le plus volontiers un rendez-vous mystère?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_176_qui_de_nous",
+    "question": "Qui de nous aurait le plus de chances de recevoir une déclaration inattendue?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_177_qui_de_nous",
+    "question": "Qui de nous saurait le mieux poser une limite sans casser l’ambiance?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_178_qui_de_nous",
+    "question": "Qui de nous pourrait développer un crush pour la voix d’un inconnu en ligne?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_179_qui_de_nous",
+    "question": "Qui de nous serait le plus gêné par une surprise romantique en public?",
+    "category": "adulte",
+    "adult": true
+  },
+  {
+    "id": "adulte_v4_180_qui_de_nous",
+    "question": "Qui de nous pourrait rester ami avec tous ses ex?",
+    "category": "adulte",
+    "adult": true
   }
 ]
