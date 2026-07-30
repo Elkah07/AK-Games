@@ -1,4 +1,4 @@
-[
+  [
   {
     "question": "Ton envie du moment se porte sur…",
     "options": [
@@ -1222,5 +1222,581 @@
     "category": "classic",
     "adult": false,
     "id": "minorite_330"
+  },
+  {
+    "question": "Tu gagnes une journée entièrement libre. Tu pars vers…",
+    "options": [
+      "Une ville inconnue",
+      "Un coin de nature",
+      "Ton canapé sans culpabilité"
+    ],
+    "theme": "mode_de_vie",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_001"
+  },
+  {
+    "question": "Pour sauver une soirée qui retombe, tu proposes…",
+    "options": [
+      "Un jeu compétitif",
+      "Une sortie improvisée",
+      "Une conversation qui part loin"
+    ],
+    "theme": "soiree",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_002"
+  },
+  {
+    "question": "Tu dois perdre un sens pendant une semaine. Tu sacrifies…",
+    "options": [
+      "Le goût",
+      "L’odorat",
+      "L’ouïe"
+    ],
+    "theme": "dilemme",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_003"
+  },
+  {
+    "question": "Une célébrité raconte ta vie au cinéma. Tu choisis…",
+    "options": [
+      "Une comédie",
+      "Un thriller",
+      "Un documentaire gênant"
+    ],
+    "theme": "absurde",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_004"
+  },
+  {
+    "question": "Ton téléphone ne garde qu’une fonction. Tu conserves…",
+    "options": [
+      "Les messages",
+      "L’appareil photo",
+      "La musique"
+    ],
+    "theme": "technologie",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_005"
+  },
+  {
+    "question": "Tu peux maîtriser instantanément un talent. Tu prends…",
+    "options": [
+      "Parler toutes les langues",
+      "Jouer de tous les instruments",
+      "Cuisiner comme un chef"
+    ],
+    "theme": "talents",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_006"
+  },
+  {
+    "question": "Pendant une dispute, tu préfères…",
+    "options": [
+      "Tout régler immédiatement",
+      "Faire une pause",
+      "Écrire ce que tu ressens"
+    ],
+    "theme": "relations",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_007"
+  },
+  {
+    "question": "Tu dois vivre un mois dans un décor de film. Tu choisis…",
+    "options": [
+      "Un vaisseau spatial",
+      "Un château fantastique",
+      "Une petite ville romantique"
+    ],
+    "theme": "imaginaire",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_008"
+  },
+  {
+    "question": "Une enveloppe contient une vérité sur toi. Tu veux lire…",
+    "options": [
+      "Ce que les gens admirent",
+      "Ce qu’ils n’osent pas dire",
+      "Ce que tu deviendras"
+    ],
+    "theme": "introspection",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_009"
+  },
+  {
+    "question": "Tu organises un repas sans limite de budget. Priorité à…",
+    "options": [
+      "La nourriture incroyable",
+      "Le lieu spectaculaire",
+      "Les invités parfaits"
+    ],
+    "theme": "soiree",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_010"
+  },
+  {
+    "question": "Tu peux effacer une petite corvée de l’existence. Tu supprimes…",
+    "options": [
+      "Faire la vaisselle",
+      "Répondre aux mails",
+      "Attendre dans les files"
+    ],
+    "theme": "quotidien",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_011"
+  },
+  {
+    "question": "Face à un mystère dans votre logement, tu deviens…",
+    "options": [
+      "La personne rationnelle",
+      "La personne qui enquête",
+      "La personne déjà partie"
+    ],
+    "theme": "absurde",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_012"
+  },
+  {
+    "question": "Tu reçois 10 000 €, mais tu dois les dépenser aujourd’hui. Tu choisis…",
+    "options": [
+      "Un voyage",
+      "Des cadeaux aux proches",
+      "Un achat complètement déraisonnable"
+    ],
+    "theme": "argent",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_013"
+  },
+  {
+    "question": "Ton groupe doit participer à une émission. Vous tentez…",
+    "options": [
+      "Un quiz",
+      "Une aventure de survie",
+      "Un concours de talents"
+    ],
+    "theme": "groupe",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_014"
+  },
+  {
+    "question": "Tu peux revivre une seule ambiance. Tu choisis…",
+    "options": [
+      "Un matin d’enfance",
+      "Une soirée mémorable",
+      "Un voyage marquant"
+    ],
+    "theme": "souvenirs",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_015"
+  },
+  {
+    "question": "Un bouton améliore un aspect de ta vie. Tu augmentes…",
+    "options": [
+      "Ton énergie",
+      "Ta confiance",
+      "Ta chance"
+    ],
+    "theme": "introspection",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_016"
+  },
+  {
+    "question": "Au karaoké, tu assumes plutôt…",
+    "options": [
+      "Un tube ultra kitsch",
+      "Une chanson très difficile",
+      "Un duo romantique"
+    ],
+    "theme": "soiree",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_017"
+  },
+  {
+    "question": "Tu dois recevoir chaque jour le même message. Tu choisis…",
+    "options": [
+      "Une blague",
+      "Un compliment",
+      "Une information utile"
+    ],
+    "theme": "relations",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_018"
+  },
+  {
+    "question": "Pour une semaine sans argent, tu comptes surtout sur…",
+    "options": [
+      "Ton sens de la débrouille",
+      "Tes proches",
+      "Ton charme"
+    ],
+    "theme": "survie",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_019"
+  },
+  {
+    "question": "Tu découvres une pièce secrète chez toi. Tu espères trouver…",
+    "options": [
+      "Une bibliothèque",
+      "Un cinéma",
+      "Un passage vers ailleurs"
+    ],
+    "theme": "imaginaire",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_020"
+  },
+  {
+    "question": "Dans un groupe, tu remarques d’abord…",
+    "options": [
+      "La personne la plus drôle",
+      "La plus discrète",
+      "La plus sûre d’elle"
+    ],
+    "theme": "social",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_021"
+  },
+  {
+    "question": "Tu dois expliquer l’humanité à des extraterrestres avec un objet. Tu prends…",
+    "options": [
+      "Un smartphone",
+      "Une photo de famille",
+      "Une poubelle"
+    ],
+    "theme": "absurde",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_022"
+  },
+  {
+    "question": "Ton futur toi t’envoie trois mots. Tu veux qu’ils parlent de…",
+    "options": [
+      "Travail",
+      "Amour",
+      "Aventure"
+    ],
+    "theme": "introspection",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_023"
+  },
+  {
+    "question": "Une panne te bloque douze heures. Tu préfères être…",
+    "options": [
+      "Dans un ascenseur avec des amis",
+      "Dans un train confortable",
+      "Dans un aéroport vide"
+    ],
+    "theme": "dilemme",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_024"
+  },
+  {
+    "question": "Tu peux poser une question sans provoquer de conflit. Tu interroges…",
+    "options": [
+      "Un proche",
+      "Ton ex",
+      "Ton patron"
+    ],
+    "theme": "social",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_025"
+  },
+  {
+    "question": "Un animal devient ton colocataire raisonnable. Tu choisis…",
+    "options": [
+      "Un corbeau très intelligent",
+      "Une loutre affectueuse",
+      "Un panda paresseux"
+    ],
+    "theme": "animaux",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_026"
+  },
+  {
+    "question": "Tu dois changer de prénom pour une semaine. Tu prends…",
+    "options": [
+      "Un prénom royal",
+      "Un prénom très ancien",
+      "Un prénom de personnage fictif"
+    ],
+    "theme": "absurde",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_027"
+  },
+  {
+    "question": "Tu ne peux garder qu’un type de souvenir. Tu choisis…",
+    "options": [
+      "Les photos",
+      "Les objets",
+      "Les messages"
+    ],
+    "theme": "souvenirs",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_028"
+  },
+  {
+    "question": "Une règle sociale disparaît. Tu supprimes…",
+    "options": [
+      "Faire la bise",
+      "Répondre immédiatement",
+      "S’habiller selon l’occasion"
+    ],
+    "theme": "social",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_029"
+  },
+  {
+    "question": "Tu dois lancer un commerce improbable. Tu ouvres…",
+    "options": [
+      "Un bar à céréales nocturne",
+      "Une garderie pour plantes",
+      "Une agence d’excuses"
+    ],
+    "theme": "creativite",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_030"
+  },
+  {
+    "question": "Tu préfères qu’on se souvienne de toi pour…",
+    "options": [
+      "Ton humour",
+      "Ta gentillesse",
+      "Ton courage"
+    ],
+    "theme": "introspection",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_031"
+  },
+  {
+    "question": "Une soirée parfaite se termine par…",
+    "options": [
+      "Un fou rire incontrôlable",
+      "Une discussion à cœur ouvert",
+      "Une aventure imprévue"
+    ],
+    "theme": "soiree",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_032"
+  },
+  {
+    "question": "Tu peux instaurer une tradition dans ton groupe. Ce sera…",
+    "options": [
+      "Un voyage annuel",
+      "Une soirée à thème",
+      "Un cadeau absurde tiré au sort"
+    ],
+    "theme": "groupe",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_033"
+  },
+  {
+    "question": "Tu dois confier un secret à quelqu’un. Tu choisis la personne…",
+    "options": [
+      "La plus loyale",
+      "La plus calme",
+      "La moins curieuse"
+    ],
+    "theme": "social",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_034"
+  },
+  {
+    "question": "Tu peux rendre une chose gratuite pour tous. Tu choisis…",
+    "options": [
+      "Les transports",
+      "La nourriture de base",
+      "Les activités culturelles"
+    ],
+    "theme": "societe",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_035"
+  },
+  {
+    "question": "Pour gagner un pari, tu préfères devoir…",
+    "options": [
+      "Faire rire un inconnu",
+      "Convaincre un enfant",
+      "Improviser un discours"
+    ],
+    "theme": "defi",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_036"
+  },
+  {
+    "question": "Tu reçois un super-pouvoir peu impressionnant. Tu prends…",
+    "options": [
+      "Toujours trouver une place",
+      "Ne jamais perdre tes clés",
+      "Connaître la bonne file d’attente"
+    ],
+    "theme": "absurde",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_037"
+  },
+  {
+    "question": "Tu dois vivre sans une habitude moderne. Tu abandonnes…",
+    "options": [
+      "Les livraisons",
+      "Le streaming",
+      "Les notifications"
+    ],
+    "theme": "technologie",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_038"
+  },
+  {
+    "question": "On t’offre une heure de vérité totale. Tu la passes avec…",
+    "options": [
+      "Ta famille",
+      "Tes amis",
+      "Toi-même"
+    ],
+    "theme": "introspection",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_039"
+  },
+  {
+    "question": "Tu dois défendre une opinion ridicule. Tu choisis…",
+    "options": [
+      "Les chaussettes dans les sandales",
+      "L’ananas sur la pizza",
+      "Dormir avec la lumière"
+    ],
+    "theme": "debat",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_040"
+  },
+  {
+    "question": "Tu organises une fuite spectaculaire. Ton véhicule est…",
+    "options": [
+      "Un scooter",
+      "Une montgolfière",
+      "Un pédalo"
+    ],
+    "theme": "absurde",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_041"
+  },
+  {
+    "question": "Ta maison prend la personnalité d’un objet. Tu préfères…",
+    "options": [
+      "Une bibliothèque calme",
+      "Une enceinte festive",
+      "Une cafetière nerveuse"
+    ],
+    "theme": "imaginaire",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_042"
+  },
+  {
+    "question": "Tu peux entendre une pensée par jour. Tu choisis celle…",
+    "options": [
+      "D’un inconnu",
+      "D’un proche",
+      "De ton animal"
+    ],
+    "theme": "imaginaire",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_043"
+  },
+  {
+    "question": "Ton groupe échange ses métiers pour une journée. Tu prends celui…",
+    "options": [
+      "Le plus facile",
+      "Le plus prestigieux",
+      "Le plus mystérieux"
+    ],
+    "theme": "groupe",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_044"
+  },
+  {
+    "question": "Tu dois choisir une bande-son permanente. Elle sera…",
+    "options": [
+      "Épique",
+      "Relaxante",
+      "Comique"
+    ],
+    "theme": "imaginaire",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_045"
+  },
+  {
+    "question": "Tu peux connaître une statistique sur ta vie. Tu demandes…",
+    "options": [
+      "Le nombre de fous rires restants",
+      "Le temps perdu à chercher des objets",
+      "Le nombre de gens marqués par toi"
+    ],
+    "theme": "introspection",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_046"
+  },
+  {
+    "question": "À une fête costumée sans thème, tu arrives en…",
+    "options": [
+      "Personnage historique",
+      "Objet du quotidien",
+      "Version future de toi"
+    ],
+    "theme": "soiree",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_047"
+  },
+  {
+    "question": "Tu dois envoyer un message honnête maintenant. Il va à…",
+    "options": [
+      "Quelqu’un qui te manque",
+      "Quelqu’un que tu admires",
+      "Quelqu’un à qui tu dois une explication"
+    ],
+    "theme": "relations",
+    "category": "classic",
+    "adult": false,
+    "id": "minorite_nouveau_048"
   }
 ]

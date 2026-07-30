@@ -1,2082 +1,1346 @@
 [
   {
-    "id": "blague_absurde_001_jai_achete_une_plante_artificielle_pour_ne",
-    "setup": "J’ai acheté une plante artificielle pour ne plus oublier de l’arroser.",
-    "punchline": "Elle est morte de déception.",
-    "category": "absurde",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_002_mon_grille_pain_ma_demande_de_definir_notr",
-    "setup": "Mon grille-pain m’a demandé de définir notre relation.",
-    "punchline": "J’ai dit : « C’est compliqué, mais chaud. »",
-    "category": "absurde",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_003_un_fantome_entre_dans_un_bar",
-    "setup": "Un fantôme entre dans un bar.",
-    "punchline": "Le serveur lui demande : « Je vous sers quelque chose ? » Il répond : « Non merci, je ne fais que passer. »",
-    "category": "absurde",
+    "id": "blague_papa_001_pourquoi_les_plongeurs_plongent_ils_toujours_en_arri",
+    "setup": "Pourquoi les plongeurs plongent-ils toujours en arrière et jamais en avant ?",
+    "punchline": "Parce que sinon ils tombent dans le bateau.",
+    "category": "classique",
     "style": "question_reponse",
     "adult": false
   },
   {
-    "id": "blague_absurde_004_jai_voulu_discuter_avec_mon_reflet",
-    "setup": "J’ai voulu discuter avec mon reflet.",
-    "punchline": "Il répétait tout. Relation toxique.",
-    "category": "absurde",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_005_mon_cactus_ma_bloque_sur_les_reseaux",
-    "setup": "Mon cactus m’a bloqué sur les réseaux.",
-    "punchline": "Apparemment, je suis trop piquant.",
-    "category": "absurde",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_006_jai_demande_a_mon_frigo_ce_quil_pensait_de",
-    "setup": "J’ai demandé à mon frigo ce qu’il pensait de moi.",
-    "punchline": "Il a laissé un froid.",
-    "category": "absurde",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_007_un_escargot_ma_depasse_ce_matin",
-    "setup": "Un escargot m’a dépassé ce matin.",
-    "punchline": "Je préfère ne pas parler de mon niveau d’énergie.",
-    "category": "absurde",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_008_la_lune_ma_envoye_un_vocal_de_quatre_minut",
-    "setup": "La lune m’a envoyé un vocal de quatre minutes.",
-    "punchline": "Elle avait besoin de décrocher.",
-    "category": "absurde",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_009_jai_essaye_de_faire_une_sieste_debout",
-    "setup": "J’ai essayé de faire une sieste debout.",
-    "punchline": "C’était un sommeil verticalement ambitieux.",
-    "category": "absurde",
+    "id": "blague_papa_002_que_dit_une_imprimante_dans_l_eau",
+    "setup": "Que dit une imprimante dans l’eau ?",
+    "punchline": "J’ai papier.",
+    "category": "objets",
     "style": "question_reponse",
     "adult": false
   },
   {
-    "id": "blague_absurde_010_mon_parapluie_est_parti_sans_moi",
-    "setup": "Mon parapluie est parti sans moi.",
-    "punchline": "Il voulait prendre l’air avant la pluie.",
-    "category": "absurde",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_001_jai_range_mon_appartement_pour_retrouver_m",
-    "setup": "J’ai rangé mon appartement pour retrouver mes clés.",
-    "punchline": "Maintenant je ne retrouve plus mon appartement.",
-    "category": "quotidien",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_002_je_me_suis_leve_tot_pour_profiter_de_la_jo",
-    "setup": "Je me suis levé tôt pour profiter de la journée.",
-    "punchline": "J’ai surtout profité de l’occasion pour me rendormir.",
-    "category": "quotidien",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_003_mon_reveil_et_moi_avons_une_relation_saine",
-    "setup": "Mon réveil et moi avons une relation saine.",
-    "punchline": "Il parle, je l’ignore, puis on se revoit demain.",
-    "category": "quotidien",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_004_jai_fait_une_liste_de_choses_a_faire",
-    "setup": "J’ai fait une liste de choses à faire.",
-    "punchline": "Premier point : retrouver la liste.",
-    "category": "quotidien",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_005_je_cuisine_tres_bien_sous_pression",
-    "setup": "Je cuisine très bien sous pression.",
-    "punchline": "Surtout quand le livreur annonce trente minutes de retard.",
-    "category": "quotidien",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_006_jai_ouvert_le_frigo_pour_reflechir",
-    "setup": "J’ai ouvert le frigo pour réfléchir.",
-    "punchline": "La lumière était allumée, pas les idées.",
-    "category": "quotidien",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_007_jai_achete_une_boite_pour_ranger_les_autre",
-    "setup": "J’ai acheté une boîte pour ranger les autres boîtes.",
-    "punchline": "Je suis officiellement adulte.",
-    "category": "quotidien",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_008_je_voulais_economiser_ce_mois_ci",
-    "setup": "Je voulais économiser ce mois-ci.",
-    "punchline": "Puis mon panier en ligne m’a rappelé qu’il croyait en moi.",
-    "category": "quotidien",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_009_jai_plie_le_linge_immediatement",
-    "setup": "J’ai plié le linge immédiatement.",
-    "punchline": "Je précise : dans un rêve, mais très réaliste.",
-    "category": "quotidien",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_010_mon_canape_me_soutient_dans_tous_mes_proje",
-    "setup": "Mon canapé me soutient dans tous mes projets.",
-    "punchline": "Surtout ceux qui consistent à ne pas bouger.",
-    "category": "quotidien",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_001_mon_collegue_a_dit_fais_comme_chez_toi",
-    "setup": "Mon collègue a dit : « Fais comme chez toi. »",
-    "punchline": "J’ai fermé l’ordinateur et je suis parti.",
-    "category": "travail_etudes",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_002_jai_une_reunion_pour_preparer_la_reunion",
-    "setup": "J’ai une réunion pour préparer la réunion.",
-    "punchline": "Ensuite, on fera un compte rendu pour expliquer pourquoi rien n’a avancé.",
-    "category": "travail_etudes",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_003_le_prof_a_demande_qui_navait_pas_compris",
-    "setup": "Le prof a demandé qui n’avait pas compris.",
-    "punchline": "J’ai attendu de voir si la réponse était notée.",
-    "category": "travail_etudes",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_004_mon_cv_dit_que_je_sais_travailler_sous_pre",
-    "setup": "Mon CV dit que je sais travailler sous pression.",
-    "punchline": "Mon visage dit que c’était une faute de frappe.",
-    "category": "travail_etudes",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_005_jai_voulu_etre_proactif_au_travail",
-    "setup": "J’ai voulu être proactif au travail.",
-    "punchline": "J’ai anticipé ma pause.",
-    "category": "travail_etudes",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_006_mon_groupe_de_projet_fonctionne_parfaiteme",
-    "setup": "Mon groupe de projet fonctionne parfaitement.",
-    "punchline": "Personne ne sait qui fait quoi, ensemble.",
-    "category": "travail_etudes",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_007_jai_appris_tout_le_chapitre_la_veille",
-    "setup": "J’ai appris tout le chapitre la veille.",
-    "punchline": "Le contrôle portait sur le chapitre d’après. Belle ouverture d’esprit.",
-    "category": "travail_etudes",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_008_mon_patron_ma_demande_ou_je_me_voyais_dans",
-    "setup": "Mon patron m’a demandé où je me voyais dans cinq ans.",
-    "punchline": "J’ai répondu : « Idéalement, pas dans cette réunion. »",
-    "category": "travail_etudes",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_009_jai_mis_maitrise_dexcel_sur_mon_cv",
-    "setup": "J’ai mis « maîtrise d’Excel » sur mon CV.",
-    "punchline": "Je sais changer la couleur des cases avec confiance.",
-    "category": "travail_etudes",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_010_a_lecole_on_ma_appris_a_resoudre_des_probl",
-    "setup": "À l’école, on m’a appris à résoudre des problèmes.",
-    "punchline": "Adulte, j’ai surtout appris à les repousser à lundi.",
-    "category": "travail_etudes",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_001_mon_telephone_connait_mon_visage",
-    "setup": "Mon téléphone connaît mon visage.",
-    "punchline": "Mais pas quand je viens de me réveiller. Il a des limites morales.",
-    "category": "technologie",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_002_jai_accepte_les_cookies",
-    "setup": "J’ai accepté les cookies.",
-    "punchline": "Je n’ai toujours rien reçu avec des pépites.",
-    "category": "technologie",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_003_mon_gps_a_dit_faites_demi_tour_des_que_pos",
-    "setup": "Mon GPS a dit : « Faites demi-tour dès que possible. »",
-    "punchline": "Même lui remet mes choix de vie en question.",
-    "category": "technologie",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_004_jai_un_mot_de_passe_tres_securise",
-    "setup": "J’ai un mot de passe très sécurisé.",
-    "punchline": "Tellement sécurisé que même moi je ne peux pas entrer.",
-    "category": "technologie",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_005_mon_ordinateur_a_demande_une_mise_a_jour",
-    "setup": "Mon ordinateur a demandé une mise à jour.",
-    "punchline": "Je lui ai répondu que moi aussi, mais qu’on verrait ça plus tard.",
-    "category": "technologie",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_006_jai_supprime_une_application_pour_gagner_d",
-    "setup": "J’ai supprimé une application pour gagner du temps.",
-    "punchline": "J’ai passé vingt minutes à chercher quoi installer à la place.",
-    "category": "technologie",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_007_le_wi_fi_est_tombe_en_panne",
-    "setup": "Le Wi-Fi est tombé en panne.",
-    "punchline": "On a découvert que des gens vivaient dans la maison.",
-    "category": "technologie",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_008_mon_telephone_affiche_1_de_batterie",
-    "setup": "Mon téléphone affiche 1 % de batterie.",
-    "punchline": "Nous vivons désormais chaque seconde comme si c’était la dernière.",
-    "category": "technologie",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_009_jai_demande_a_lassistant_vocal_de_me_surpr",
-    "setup": "J’ai demandé à l’assistant vocal de me surprendre.",
-    "punchline": "Il a appelé ma mère.",
-    "category": "technologie",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_010_mon_historique_de_navigation_est_tres_orga",
-    "setup": "Mon historique de navigation est très organisé.",
-    "punchline": "Il raconte précisément comment une question simple est devenue une enquête de trois heures.",
-    "category": "technologie",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_001_pourquoi_les_poissons_detestent_ils_lordin",
-    "setup": "Pourquoi les poissons détestent-ils l’ordinateur ?",
-    "punchline": "Parce qu’ils ont peur du net.",
-    "category": "animaux",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_002_mon_chat_me_regarde_comme_si_je_lui_devais",
-    "setup": "Mon chat me regarde comme si je lui devais de l’argent.",
-    "punchline": "Techniquement, le loyer est à son nom.",
-    "category": "animaux",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_003_jai_appris_un_tour_a_mon_chien",
-    "setup": "J’ai appris un tour à mon chien.",
-    "punchline": "Maintenant, il fait semblant de ne pas me connaître quand je sors les croquettes bas de gamme.",
+    "id": "blague_papa_003_que_dit_un_escargot_quand_il_croise_une_limace",
+    "setup": "Que dit un escargot quand il croise une limace ?",
+    "punchline": "Oh non, un naturiste !",
     "category": "animaux",
     "style": "question_reponse",
     "adult": false
   },
   {
-    "id": "blague_animaux_004_un_pigeon_ma_suivi_pendant_dix_minutes",
-    "setup": "Un pigeon m’a suivi pendant dix minutes.",
-    "punchline": "Je crois que j’ai été choisi pour une quête secondaire.",
-    "category": "animaux",
-    "style": "mini_histoire",
+    "id": "blague_papa_004_quel_est_le_comble_pour_un_electricien",
+    "setup": "Quel est le comble pour un électricien ?",
+    "punchline": "De ne pas être au courant.",
+    "category": "metiers",
+    "style": "comble",
     "adult": false
   },
   {
-    "id": "blague_animaux_005_les_dauphins_sont_tres_intelligents",
-    "setup": "Les dauphins sont très intelligents.",
-    "punchline": "Ils vivent dans l’eau et n’ont jamais accepté une visioconférence.",
-    "category": "animaux",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_006_mon_hamster_court_toute_la_nuit",
-    "setup": "Mon hamster court toute la nuit.",
-    "punchline": "Il prépare probablement sa fuite fiscale.",
-    "category": "animaux",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_007_pourquoi_les_girafes_ne_racontent_elles_ja",
-    "setup": "Pourquoi les girafes ne racontent-elles jamais de secrets ?",
-    "punchline": "Parce que ça finit toujours par se savoir de haut.",
-    "category": "animaux",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_008_mon_chien_aboie_des_quon_sonne",
-    "setup": "Mon chien aboie dès qu’on sonne.",
-    "punchline": "C’est son système de visiophone, mais avec plus de salive.",
-    "category": "animaux",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_009_une_mouette_a_vole_mon_sandwich",
-    "setup": "Une mouette a volé mon sandwich.",
-    "punchline": "Au moins quelqu’un a apprécié ma cuisine.",
-    "category": "animaux",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_010_le_paresseux_porte_tres_bien_son_nom",
-    "setup": "Le paresseux porte très bien son nom.",
-    "punchline": "C’est le seul animal dont la fiche de poste est aussi un avertissement.",
-    "category": "animaux",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_001_jai_essaye_un_regime_ou_lon_mange_selon_se",
-    "setup": "J’ai essayé un régime où l’on mange selon ses émotions.",
-    "punchline": "Apparemment, « toutes » n’était pas une émotion prévue.",
-    "category": "nourriture",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_002_mon_avocat_etait_trop_mur",
-    "setup": "Mon avocat était trop mûr.",
-    "punchline": "Il a plaidé coupable tout seul.",
-    "category": "nourriture",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_003_jai_commande_une_salade_pour_etre_raisonna",
-    "setup": "J’ai commandé une salade pour être raisonnable.",
-    "punchline": "Elle est arrivée à côté des frites, donc l’équilibre est respecté.",
-    "category": "nourriture",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_004_pourquoi_la_pizza_ne_raconte_t_elle_jamais",
-    "setup": "Pourquoi la pizza ne raconte-t-elle jamais ses secrets ?",
-    "punchline": "Parce qu’elle finit toujours par se faire couper.",
-    "category": "nourriture",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_005_jai_fait_des_pates_pour_quatre",
-    "setup": "J’ai fait des pâtes pour quatre.",
-    "punchline": "Comme je suis une personne organisée, j’ai mangé les quatre portions.",
-    "category": "nourriture",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_006_le_cafe_ne_resout_pas_mes_problemes",
-    "setup": "Le café ne résout pas mes problèmes.",
-    "punchline": "Mais il leur donne une vitesse d’exécution remarquable.",
-    "category": "nourriture",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_007_mon_gateau_sest_effondre",
-    "setup": "Mon gâteau s’est effondré.",
-    "punchline": "Il a pris la critique très personnellement.",
-    "category": "nourriture",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_008_jai_demande_une_cuisson_a_point",
-    "setup": "J’ai demandé une cuisson à point.",
-    "punchline": "Le serveur m’a répondu : « Le point de quoi ? » On a tous appris quelque chose.",
-    "category": "nourriture",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_009_pourquoi_les_oignons_sont_ils_populaires",
-    "setup": "Pourquoi les oignons sont-ils populaires ?",
-    "punchline": "Parce qu’ils savent faire pleurer leur public.",
-    "category": "nourriture",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_010_jai_voulu_partager_mon_dessert",
-    "setup": "J’ai voulu partager mon dessert.",
-    "punchline": "Puis j’ai compris que l’amitié avait des limites.",
-    "category": "nourriture",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_001_dans_ma_famille_on_communique_beaucoup",
-    "setup": "Dans ma famille, on communique beaucoup.",
-    "punchline": "Surtout par sous-entendus et portes de placard fermées un peu trop fort.",
-    "category": "famille_amis",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_002_mon_ami_ma_dit_sois_naturel",
-    "setup": "Mon ami m’a dit : « Sois naturel. »",
-    "punchline": "J’ai annulé, je suis resté chez moi.",
-    "category": "famille_amis",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_003_ma_mere_dit_toujours_quelle_ne_juge_pas",
-    "setup": "Ma mère dit toujours qu’elle ne juge pas.",
-    "punchline": "Elle archive simplement les erreurs pour les fêtes de famille.",
-    "category": "famille_amis",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_004_mon_pere_raconte_la_meme_blague_depuis_qui",
-    "setup": "Mon père raconte la même blague depuis quinze ans.",
-    "punchline": "On rit maintenant par tradition patrimoniale.",
-    "category": "famille_amis",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_005_mon_groupe_damis_est_tres_soude",
-    "setup": "Mon groupe d’amis est très soudé.",
-    "punchline": "Surtout quand il faut désigner qui appellera pour réserver.",
-    "category": "famille_amis",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_006_jai_demande_un_conseil_a_mon_frere",
-    "setup": "J’ai demandé un conseil à mon frère.",
-    "punchline": "Il m’a donné une anecdote sur lui. C’est sa formule premium.",
-    "category": "famille_amis",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_007_les_repas_de_famille_commencent_par_alors_",
-    "setup": "Les repas de famille commencent par « Alors, quoi de neuf ? »",
-    "punchline": "Et finissent par une enquête fiscale non sollicitée.",
-    "category": "famille_amis",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_008_une_amie_ma_dit_quelle_arrivait_dans_cinq_",
-    "setup": "Une amie m’a dit qu’elle arrivait dans cinq minutes.",
-    "punchline": "Elle habite dans un fuseau horaire émotionnel.",
-    "category": "famille_amis",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_009_mon_cousin_a_lance_je_ne_veux_pas_creer_de",
-    "setup": "Mon cousin a lancé : « Je ne veux pas créer de débat. »",
-    "punchline": "Le débat avait déjà mis sa veste.",
-    "category": "famille_amis",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_010_mes_amis_connaissent_tous_mes_defauts",
-    "setup": "Mes amis connaissent tous mes défauts.",
-    "punchline": "Ils les appellent « contenu exclusif ».",
-    "category": "famille_amis",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_001_jai_regarde_une_serie_en_une_nuit",
-    "setup": "J’ai regardé une série en une nuit.",
-    "punchline": "Le lendemain, je connaissais mieux les personnages que mes voisins.",
-    "category": "culture_pop",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_002_les_films_dhorreur_seraient_plus_courts_av",
-    "setup": "Les films d’horreur seraient plus courts avec un groupe WhatsApp.",
-    "punchline": "« Ne descendez pas à la cave. Vu à 22:41. »",
-    "category": "culture_pop",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_003_dans_les_films_tout_le_monde_trouve_une_pl",
-    "setup": "Dans les films, tout le monde trouve une place devant l’entrée.",
-    "punchline": "Voilà le vrai élément fantastique.",
-    "category": "culture_pop",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_004_jai_lance_un_film_de_deux_heures_pour_me_d",
-    "setup": "J’ai lancé un film de deux heures pour me détendre.",
-    "punchline": "J’ai passé quarante minutes à choisir lequel.",
-    "category": "culture_pop",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_005_les_heros_disent_toujours_on_se_separe",
-    "setup": "Les héros disent toujours : « On se sépare. »",
-    "punchline": "La sélection naturelle adore les scénaristes.",
-    "category": "culture_pop",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_006_jecoute_une_chanson_triste_pour_aller_mieu",
-    "setup": "J’écoute une chanson triste pour aller mieux.",
-    "punchline": "La logique a quitté la playlist, mais l’ambiance est impeccable.",
-    "category": "culture_pop",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_007_pourquoi_les_super_heros_ne_repondent_ils_",
-    "setup": "Pourquoi les super-héros ne répondent-ils jamais au téléphone ?",
-    "punchline": "Parce qu’ils sont toujours en mode avion.",
-    "category": "culture_pop",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_008_jai_essaye_de_regarder_un_episode_seulemen",
-    "setup": "J’ai essayé de regarder un épisode seulement.",
-    "punchline": "La plateforme a ri plus fort que moi.",
-    "category": "culture_pop",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_009_les_documentaires_animaliers_ont_toujours_",
-    "setup": "Les documentaires animaliers ont toujours une musique dramatique.",
-    "punchline": "Même quand une chèvre cherche juste une feuille.",
-    "category": "culture_pop",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_010_mon_jeu_video_me_felicite_davoir_termine_l",
-    "setup": "Mon jeu vidéo me félicite d’avoir terminé le tutoriel.",
-    "punchline": "Enfin une institution qui reconnaît mes progrès.",
-    "category": "culture_pop",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_001_quel_est_le_fruit_prefere_des_poissons",
-    "setup": "Quel est le fruit préféré des poissons ?",
-    "punchline": "La pêche.",
-    "category": "jeux_de_mots",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_002_pourquoi_les_boulangers_sont_ils_calmes",
-    "setup": "Pourquoi les boulangers sont-ils calmes ?",
-    "punchline": "Parce qu’ils savent laisser retomber la pression.",
-    "category": "jeux_de_mots",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_003_un_electricien_entre_dans_un_bar",
-    "setup": "Un électricien entre dans un bar.",
-    "punchline": "Il demande un courant d’air.",
-    "category": "jeux_de_mots",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_004_je_connais_une_blague_sur_les_ascenseurs",
-    "setup": "Je connais une blague sur les ascenseurs.",
-    "punchline": "Elle marche à tous les étages.",
-    "category": "jeux_de_mots",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_005_pourquoi_les_photographes_sont_ils_patient",
-    "setup": "Pourquoi les photographes sont-ils patients ?",
-    "punchline": "Parce qu’ils savent attendre le bon déclic.",
-    "category": "jeux_de_mots",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_006_jai_voulu_ecrire_un_livre_sur_les_chaises",
-    "setup": "J’ai voulu écrire un livre sur les chaises.",
-    "punchline": "Mais l’histoire ne tenait pas debout.",
-    "category": "jeux_de_mots",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_007_pourquoi_les_calendriers_sont_ils_stresses",
-    "setup": "Pourquoi les calendriers sont-ils stressés ?",
-    "punchline": "Leurs jours sont comptés.",
-    "category": "jeux_de_mots",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_008_un_serrurier_a_quitte_son_travail",
-    "setup": "Un serrurier a quitté son travail.",
-    "punchline": "Il ne trouvait plus la clé de la motivation.",
-    "category": "jeux_de_mots",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_009_pourquoi_les_horloges_sont_elles_honnetes",
-    "setup": "Pourquoi les horloges sont-elles honnêtes ?",
-    "punchline": "Parce qu’elles finissent toujours par donner l’heure juste.",
-    "category": "jeux_de_mots",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_010_jai_raconte_une_blague_a_mon_oreiller",
-    "setup": "J’ai raconté une blague à mon oreiller.",
-    "punchline": "Il est resté de plume.",
-    "category": "jeux_de_mots",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_001_quest_ce_qui_est_rouge_et_mauvais_pour_les",
-    "setup": "Qu’est-ce qui est rouge et mauvais pour les dents ?",
-    "punchline": "Une brique.",
-    "category": "anti_blagues",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_002_pourquoi_le_poulet_traverse_t_il_la_route",
-    "setup": "Pourquoi le poulet traverse-t-il la route ?",
-    "punchline": "Parce qu’il est de l’autre côté après.",
-    "category": "anti_blagues",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_003_que_dit_un_mur_a_lautre_mur",
-    "setup": "Que dit un mur à l’autre mur ?",
-    "punchline": "Rien. Les murs ne parlent pas.",
-    "category": "anti_blagues",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_004_quel_est_le_comble_pour_un_jardinier",
+    "id": "blague_papa_005_quel_est_le_comble_pour_un_jardinier",
     "setup": "Quel est le comble pour un jardinier ?",
-    "punchline": "Aucun. Les métiers n’ont pas de combles, les maisons oui.",
-    "category": "anti_blagues",
-    "style": "mini_histoire",
+    "punchline": "Se mettre à poil devant ses tomates pour les faire rougir.",
+    "category": "metiers",
+    "style": "comble",
     "adult": false
   },
   {
-    "id": "blague_anti_blagues_005_un_homme_entre_dans_un_cafe",
-    "setup": "Un homme entre dans un café.",
-    "punchline": "Il commande un café et le paie. Fin.",
-    "category": "anti_blagues",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_006_pourquoi_le_livre_est_il_tombe",
-    "setup": "Pourquoi le livre est-il tombé ?",
-    "punchline": "Parce qu’on l’a posé trop près du bord.",
-    "category": "anti_blagues",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_007_que_fait_un_poisson_dans_leau",
-    "setup": "Que fait un poisson dans l’eau ?",
-    "punchline": "Principalement du poisson.",
-    "category": "anti_blagues",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_008_pourquoi_lordinateur_est_il_froid",
-    "setup": "Pourquoi l’ordinateur est-il froid ?",
-    "punchline": "La pièce est à dix-sept degrés.",
-    "category": "anti_blagues",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_009_deux_tomates_traversent_la_route",
-    "setup": "Deux tomates traversent la route.",
-    "punchline": "Elles arrivent de l’autre côté. C’était prudent.",
-    "category": "anti_blagues",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_010_que_fait_un_nuage_quand_il_est_fatigue",
-    "setup": "Que fait un nuage quand il est fatigué ?",
-    "punchline": "On ne sait pas, il n’a pas rempli le questionnaire.",
-    "category": "anti_blagues",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_011_jai_demande_a_lobjet_aspirateur_de_garder_",
-    "setup": "J’ai demandé à l’objet « aspirateur » de garder un secret.",
-    "punchline": "Depuis, cet objet me fait du chantage avec beaucoup de dignité.",
-    "category": "absurde",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_012_lobjet_aspirateur_a_decide_de_prendre_une_",
-    "setup": "L’objet « aspirateur » a décidé de prendre une année sabbatique.",
-    "punchline": "Il ne faisait déjà rien, mais maintenant c’est officiel.",
-    "category": "absurde",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_013_jai_croise_un_lama_en_costume_dans_lascens",
-    "setup": "J’ai croisé un lama en costume dans l’ascenseur.",
-    "punchline": "Il/Elle a appuyé sur « dimension parallèle » sans me regarder.",
-    "category": "absurde",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_014_lobjet_aspirateur_fait_une_crise_existenti",
-    "setup": "L’objet « aspirateur » fait une crise existentielle.",
-    "punchline": "Il ne sait plus s’il sert vraiment à quelque chose. Moi non plus, on se rapproche.",
-    "category": "absurde",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_015_jai_inscrit_lobjet_aspirateur_a_un_cours_d",
-    "setup": "J’ai inscrit l’objet « aspirateur » à un cours de confiance en soi.",
-    "punchline": "Aujourd’hui, il refuse de fonctionner sans applaudissements.",
-    "category": "absurde",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_016_un_lama_en_costume_ma_demande_mon_signe_as",
-    "setup": "Un lama en costume m’a demandé mon signe astrologique.",
-    "punchline": "J’ai répondu « sortie de secours ».",
-    "category": "absurde",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_017_jai_recu_une_lettre_de_la_planete_mars",
-    "setup": "J’ai reçu une lettre de la planète Mars.",
-    "punchline": "Ils veulent récupérer l’idée que j’ai eue à trois heures du matin.",
-    "category": "absurde",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_018_lobjet_aspirateur_a_cree_un_syndicat",
-    "setup": "L’objet « aspirateur » a créé un syndicat.",
-    "punchline": "La principale revendication : ne plus être utilisé le lundi.",
-    "category": "absurde",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_021_jai_croise_une_licorne_comptable_dans_lasc",
-    "setup": "J’ai croisé une licorne comptable dans l’ascenseur.",
-    "punchline": "Il/Elle a appuyé sur « dimension parallèle » sans me regarder.",
-    "category": "absurde",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_024_une_licorne_comptable_ma_demande_mon_signe",
-    "setup": "Une licorne comptable m’a demandé mon signe astrologique.",
-    "punchline": "J’ai répondu « sortie de secours ».",
-    "category": "absurde",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_025_jai_recu_une_lettre_dun_futur_tres_adminis",
-    "setup": "J’ai reçu une lettre d’un futur très administratif.",
-    "punchline": "Ils veulent récupérer l’idée que j’ai eue à trois heures du matin.",
-    "category": "absurde",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_029_jai_croise_un_pigeon_detective_dans_lascen",
-    "setup": "J’ai croisé un pigeon détective dans l’ascenseur.",
-    "punchline": "Il/Elle a appuyé sur « dimension parallèle » sans me regarder.",
-    "category": "absurde",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_032_un_pigeon_detective_ma_demande_mon_signe_a",
-    "setup": "Un pigeon détective m’a demandé mon signe astrologique.",
-    "punchline": "J’ai répondu « sortie de secours ».",
-    "category": "absurde",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_033_jai_recu_une_lettre_de_le_royaume_des_obje",
-    "setup": "J’ai reçu une lettre de le royaume des objets perdus.",
-    "punchline": "Ils veulent récupérer l’idée que j’ai eue à trois heures du matin.",
-    "category": "absurde",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_037_jai_croise_un_robot_fatigue_dans_lascenseu",
-    "setup": "J’ai croisé un robot fatigué dans l’ascenseur.",
-    "punchline": "Il/Elle a appuyé sur « dimension parallèle » sans me regarder.",
-    "category": "absurde",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_absurde_040_un_robot_fatigue_ma_demande_mon_signe_astr",
-    "setup": "Un robot fatigué m’a demandé mon signe astrologique.",
-    "punchline": "J’ai répondu « sortie de secours ».",
-    "category": "absurde",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_011_jai_mis_mes_lunettes_dans_un_endroit_sur",
-    "setup": "J’ai mis mes lunettes dans un endroit sûr.",
-    "punchline": "La sécurité est excellente : personne ne le retrouvera, surtout pas moi.",
-    "category": "quotidien",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_012_jai_decide_de_faire_faire_la_vaisselle_imm",
-    "setup": "J’ai décidé de faire faire la vaisselle immédiatement.",
-    "punchline": "J’ai immédiatement décidé de commencer demain.",
-    "category": "quotidien",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_013_mon_niveau_dorganisation_est_impressionnan",
-    "setup": "Mon niveau d’organisation est impressionnant.",
-    "punchline": "J’ai trois listes différentes pour noter que je dois faire la vaisselle.",
-    "category": "quotidien",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_014_jai_ouvert_le_frigo_avec_un_objectif_preci",
-    "setup": "J’ai ouvert le frigo avec un objectif précis.",
-    "punchline": "L’objectif a disparu avant la porte.",
-    "category": "quotidien",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_015_je_suis_alle_chercher_mes_lunettes_dans_un",
-    "setup": "Je suis allé chercher mes lunettes dans une autre pièce.",
-    "punchline": "Je suis revenu avec un verre d’eau et aucune explication.",
-    "category": "quotidien",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_016_petite_precision_jai_voulu_faire_une_petit",
-    "setup": "Petite précision : j’ai voulu faire une petite pause de cinq minutes.",
-    "punchline": "Elle a obtenu un CDI.",
-    "category": "quotidien",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_017_jai_enfin_termine_faire_la_vaisselle",
-    "setup": "J’ai enfin terminé faire la vaisselle.",
-    "punchline": "J’ai célébré si longtemps qu’il faut recommencer.",
-    "category": "quotidien",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_018_petite_precision_le_dimanche_soir_je_prepa",
-    "setup": "Petite précision : le dimanche soir, je prépare ma semaine.",
-    "punchline": "Je regarde surtout lundi arriver sans autorisation.",
-    "category": "quotidien",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_021_mon_niveau_dorganisation_est_impressionnan",
-    "setup": "Mon niveau d’organisation est impressionnant.",
-    "punchline": "J’ai trois listes différentes pour noter que je dois répondre aux messages.",
-    "category": "quotidien",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_025_jai_enfin_termine_repondre_aux_messages",
-    "setup": "J’ai enfin terminé répondre aux messages.",
-    "punchline": "J’ai célébré si longtemps qu’il faut recommencer.",
-    "category": "quotidien",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_029_mon_niveau_dorganisation_est_impressionnan",
-    "setup": "Mon niveau d’organisation est impressionnant.",
-    "punchline": "J’ai trois listes différentes pour noter que je dois ranger le bureau.",
-    "category": "quotidien",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_033_jai_enfin_termine_ranger_le_bureau",
-    "setup": "J’ai enfin terminé ranger le bureau.",
-    "punchline": "J’ai célébré si longtemps qu’il faut recommencer.",
-    "category": "quotidien",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_037_mon_niveau_dorganisation_est_impressionnan",
-    "setup": "Mon niveau d’organisation est impressionnant.",
-    "punchline": "J’ai trois listes différentes pour noter que je dois trier les papiers.",
-    "category": "quotidien",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_041_jai_enfin_termine_trier_les_papiers",
-    "setup": "J’ai enfin terminé trier les papiers.",
-    "punchline": "J’ai célébré si longtemps qu’il faut recommencer.",
-    "category": "quotidien",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_045_mon_niveau_dorganisation_est_impressionnan",
-    "setup": "Mon niveau d’organisation est impressionnant.",
-    "punchline": "J’ai trois listes différentes pour noter que je dois plier le linge.",
-    "category": "quotidien",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_quotidien_049_jai_enfin_termine_plier_le_linge",
-    "setup": "J’ai enfin terminé plier le linge.",
-    "punchline": "J’ai célébré si longtemps qu’il faut recommencer.",
-    "category": "quotidien",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_011_on_ma_demande_de_rendre_le_dossier_avant_m",
-    "setup": "On m’a demandé de rendre le dossier avant midi.",
-    "punchline": "J’ai rendu mon badge à 11 h 58, par prudence.",
-    "category": "travail_etudes",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_012_petite_precision_la_reunion_avait_un_ordre",
-    "setup": "Petite précision : la réunion avait un ordre du jour très clair.",
-    "punchline": "Ignorer l’ordre du jour pendant une heure.",
-    "category": "travail_etudes",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_013_petite_precision_jai_demande_une_precision",
-    "setup": "Petite précision : j’ai demandé une précision au professeur.",
-    "punchline": "Il a reformulé la même phrase avec plus de syllabes.",
-    "category": "travail_etudes",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_014_petite_precision_mon_collegue_a_ecrit_peti",
-    "setup": "Petite précision : mon collègue a écrit « petit point rapide ».",
-    "punchline": "J’ai prévenu ma famille que je rentrerais tard.",
-    "category": "travail_etudes",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_015_jai_voulu_prendre_de_lavance_sur_la_presen",
-    "setup": "J’ai voulu prendre de l’avance sur la présentation.",
-    "punchline": "J’ai surtout pris de l’avance sur l’inquiétude.",
-    "category": "travail_etudes",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_016_petite_precision_le_devoir_etait_a_faire_e",
-    "setup": "Petite précision : le devoir était à faire en groupe.",
-    "punchline": "Nous avons réparti équitablement le travail : une personne travaille, les autres mettent des emojis.",
-    "category": "travail_etudes",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_017_petite_precision_mon_ordinateur_profession",
-    "setup": "Petite précision : mon ordinateur professionnel a planté.",
-    "punchline": "Il a posé sa démission avant moi.",
-    "category": "travail_etudes",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_018_petite_precision_jai_recu_un_mail_marque_u",
-    "setup": "Petite précision : j’ai reçu un mail marqué « urgent ».",
-    "punchline": "Il concernait une réunion prévue dans trois semaines. L’urgence est un état d’esprit.",
-    "category": "travail_etudes",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_025_confession_du_jour_mon_ordinateur_professi",
-    "setup": "Confession du jour : mon ordinateur professionnel a planté.",
-    "punchline": "Il a posé sa démission avant moi.",
-    "category": "travail_etudes",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_028_moment_de_verite_la_reunion_avait_un_ordre",
-    "setup": "Moment de vérité : la réunion avait un ordre du jour très clair.",
-    "punchline": "Ignorer l’ordre du jour pendant une heure.",
-    "category": "travail_etudes",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_033_moment_de_verite_mon_ordinateur_profession",
-    "setup": "Moment de vérité : mon ordinateur professionnel a planté.",
-    "punchline": "Il a posé sa démission avant moi.",
-    "category": "travail_etudes",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_044_pour_situer_lambiance_la_reunion_avait_un_",
-    "setup": "Pour situer l’ambiance : la réunion avait un ordre du jour très clair.",
-    "punchline": "Ignorer l’ordre du jour pendant une heure.",
-    "category": "travail_etudes",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_049_pour_situer_lambiance_mon_ordinateur_profe",
-    "setup": "Pour situer l’ambiance : mon ordinateur professionnel a planté.",
-    "punchline": "Il a posé sa démission avant moi.",
-    "category": "travail_etudes",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_052_anecdote_veridique_la_reunion_avait_un_ord",
-    "setup": "Anecdote véridique : la réunion avait un ordre du jour très clair.",
-    "punchline": "Ignorer l’ordre du jour pendant une heure.",
-    "category": "travail_etudes",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_travail_etudes_057_anecdote_veridique_mon_ordinateur_professi",
-    "setup": "Anecdote véridique : mon ordinateur professionnel a planté.",
-    "punchline": "Il a posé sa démission avant moi.",
-    "category": "travail_etudes",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_011_mon_telephone_ma_propose_un_souvenir_de_ma",
-    "setup": "Mon téléphone m’a proposé un souvenir de ma pire coupe de cheveux.",
-    "punchline": "Je n’avais pas demandé une attaque personnelle en haute définition.",
-    "category": "technologie",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_012_petite_precision_lapplication_ma_demande_s",
-    "setup": "Petite précision : l’application m’a demandé si j’aimais son service.",
-    "punchline": "J’ai fermé la fenêtre. C’est notre langage amoureux.",
-    "category": "technologie",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_013_petite_precision_jai_essaye_de_creer_un_mo",
-    "setup": "Petite précision : j’ai essayé de créer un mot de passe simple.",
-    "punchline": "Le site exige désormais une rune nordique, un solo de batterie et le sang d’un administrateur.",
-    "category": "technologie",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_014_mon_autocorrect_a_change_merci_en_enleveme",
-    "setup": "Mon autocorrect a changé « merci » en « enlèvement ».",
-    "punchline": "J’ai maintenant une nouvelle identité et trois explications à fournir.",
-    "category": "technologie",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_015_petite_precision_le_wi_fi_fonctionne_parfa",
-    "setup": "Petite précision : le Wi-Fi fonctionne parfaitement.",
-    "punchline": "À condition de ne pas avoir besoin d’Internet.",
-    "category": "technologie",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_016_petite_precision_jai_fait_une_sauvegarde_d",
-    "setup": "Petite précision : j’ai fait une sauvegarde de mes fichiers.",
-    "punchline": "Quelque part. La technologie aime garder du suspense.",
-    "category": "technologie",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_017_petite_precision_mon_telephone_mannonce_mo",
-    "setup": "Petite précision : mon téléphone m’annonce mon temps d’écran.",
-    "punchline": "Je préfère quand il ment sur mon âge.",
-    "category": "technologie",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_018_petite_precision_jai_desactive_les_notific",
-    "setup": "Petite précision : j’ai désactivé les notifications pour être tranquille.",
-    "punchline": "Maintenant je vérifie l’écran toutes les douze secondes, de façon autonome.",
-    "category": "technologie",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_019_mon_telephone_ma_propose_un_souvenir_dune_",
-    "setup": "Mon téléphone m’a proposé un souvenir d’une soirée dont personne ne parle.",
-    "punchline": "Je n’avais pas demandé une attaque personnelle en haute définition.",
-    "category": "technologie",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_020_confession_du_jour_lapplication_ma_demande",
-    "setup": "Confession du jour : l’application m’a demandé si j’aimais son service.",
-    "punchline": "J’ai fermé la fenêtre. C’est notre langage amoureux.",
-    "category": "technologie",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_022_mon_autocorrect_a_change_reunion_en_a_jama",
-    "setup": "Mon autocorrect a changé « réunion » en « à jamais ».",
-    "punchline": "J’ai maintenant une nouvelle identité et trois explications à fournir.",
-    "category": "technologie",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_023_confession_du_jour_le_wi_fi_fonctionne_par",
-    "setup": "Confession du jour : le Wi-Fi fonctionne parfaitement.",
-    "punchline": "À condition de ne pas avoir besoin d’Internet.",
-    "category": "technologie",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_024_confession_du_jour_jai_fait_une_sauvegarde",
-    "setup": "Confession du jour : j’ai fait une sauvegarde de mes fichiers.",
-    "punchline": "Quelque part. La technologie aime garder du suspense.",
-    "category": "technologie",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_025_confession_du_jour_mon_telephone_mannonce_",
-    "setup": "Confession du jour : mon téléphone m’annonce mon temps d’écran.",
-    "punchline": "Je préfère quand il ment sur mon âge.",
-    "category": "technologie",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_technologie_028_moment_de_verite_lapplication_ma_demande_s",
-    "setup": "Moment de vérité : l’application m’a demandé si j’aimais son service.",
-    "punchline": "J’ai fermé la fenêtre. C’est notre langage amoureux.",
-    "category": "technologie",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_011_mon_chat_me_juge_quand_je_mange",
-    "setup": "Mon chat me juge quand je mange.",
-    "punchline": "L’animal oublie qu’il a déjà léché une pantoufle.",
-    "category": "animaux",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_012_pourquoi_les_chats_evitent_ils_la_visiocon",
-    "setup": "Pourquoi les chats évitent-ils la visioconférence ?",
-    "punchline": "Parce qu’ils préfèrent couper le micro et vivre.",
+    "id": "blague_papa_006_pourquoi_les_canards_ont_ils_autant_de_plumes",
+    "setup": "Pourquoi les canards ont-ils autant de plumes ?",
+    "punchline": "Pour couvrir leur derrière.",
     "category": "animaux",
     "style": "question_reponse",
     "adult": false
   },
   {
-    "id": "blague_animaux_013_jai_essaye_dexpliquer_les_regles_a_mon_cha",
-    "setup": "J’ai essayé d’expliquer les règles à mon chat.",
-    "punchline": "L’animal a mangé le règlement. Contestation recevable.",
-    "category": "animaux",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_014_un_chat_est_entre_dans_ma_cuisine",
-    "setup": "Un chat est entré dans ma cuisine.",
-    "punchline": "La bête a regardé le menu et demandé à parler au responsable.",
-    "category": "animaux",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_015_mon_chat_a_un_meilleur_equilibre_de_vie_qu",
-    "setup": "Mon chat a un meilleur équilibre de vie que moi.",
-    "punchline": "Il dort, mange, puis récupère de cette journée chargée.",
-    "category": "animaux",
+    "id": "blague_papa_007_comment_appelle_t_on_un_boomerang_qui_ne_revient_pas",
+    "setup": "Comment appelle-t-on un boomerang qui ne revient pas ?",
+    "punchline": "Un bâton.",
+    "category": "objets",
     "style": "anti_blague",
     "adult": false
   },
   {
-    "id": "blague_animaux_016_pourquoi_les_chats_sont_ils_mauvais_au_pok",
-    "setup": "Pourquoi les chats sont-ils mauvais au poker ?",
-    "punchline": "Parce que tout se lit dans leur regard.",
-    "category": "animaux",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_017_jai_filme_un_chat_pendant_dix_minutes",
-    "setup": "J’ai filmé un chat pendant dix minutes.",
-    "punchline": "La vedette n’a rien fait. La vidéo a tout de même plus de rythme que ma journée.",
-    "category": "animaux",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_018_un_chat_ma_fixe_dans_le_parc",
-    "setup": "Un chat m’a fixé dans le parc.",
-    "punchline": "J’ai senti que la bête connaissait mon historique bancaire.",
-    "category": "animaux",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_019_mon_chien_me_juge_quand_je_mange",
-    "setup": "Mon chien me juge quand je mange.",
-    "punchline": "L’animal oublie qu’il a déjà léché un carton.",
-    "category": "animaux",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_024_pourquoi_les_chiens_sont_ils_mauvais_au_po",
-    "setup": "Pourquoi les chiens sont-ils mauvais au poker ?",
-    "punchline": "Parce que tout se lit dans leur nageoires.",
-    "category": "animaux",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_027_mon_pigeon_me_juge_quand_je_mange",
-    "setup": "Mon pigeon me juge quand je mange.",
-    "punchline": "L’animal oublie qu’il a déjà léché une télécommande.",
-    "category": "animaux",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_032_pourquoi_les_pigeons_sont_ils_mauvais_au_p",
-    "setup": "Pourquoi les pigeons sont-ils mauvais au poker ?",
-    "punchline": "Parce que tout se lit dans leur sourcils imaginaires.",
-    "category": "animaux",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_035_mon_hamster_me_juge_quand_je_mange",
-    "setup": "Mon hamster me juge quand je mange.",
-    "punchline": "L’animal oublie qu’il a déjà léché une plante artificielle.",
-    "category": "animaux",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_040_pourquoi_les_hamsters_sont_ils_mauvais_au_",
-    "setup": "Pourquoi les hamsters sont-ils mauvais au poker ?",
-    "punchline": "Parce que tout se lit dans leur posture.",
-    "category": "animaux",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_animaux_043_mon_lapin_me_juge_quand_je_mange",
-    "setup": "Mon lapin me juge quand je mange.",
-    "punchline": "L’animal oublie qu’il a déjà léché un sac plastique.",
-    "category": "animaux",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_011_jai_prepare_un_gratin_maison",
-    "setup": "J’ai préparé un gratin maison.",
-    "punchline": "Même la maison a demandé d’où ça venait.",
-    "category": "nourriture",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_012_pourquoi_la_pizza_ne_va_jamais_aux_reunion",
-    "setup": "Pourquoi la pizza ne va jamais aux réunions ?",
-    "punchline": "Parce que cet aliment finit toujours par être servi.",
-    "category": "nourriture",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_013_jai_essaye_de_partager_la_pizza",
-    "setup": "J’ai essayé de partager la pizza.",
-    "punchline": "Mon cœur était prêt, ma fourchette beaucoup moins.",
-    "category": "nourriture",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_014_le_serveur_ma_demande_si_tout_allait_bien",
-    "setup": "Le serveur m’a demandé si tout allait bien.",
-    "punchline": "J’avais déjà mangé un gratin; il était trop tard pour l’honnêteté.",
-    "category": "nourriture",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_015_jai_achete_la_pizza_pour_la_semaine",
-    "setup": "J’ai acheté la pizza pour la semaine.",
-    "punchline": "La semaine a duré quarante minutes.",
+    "id": "blague_papa_008_que_fait_une_fraise_sur_un_cheval",
+    "setup": "Que fait une fraise sur un cheval ?",
+    "punchline": "Tagada, tagada.",
     "category": "nourriture",
     "style": "question_reponse",
     "adult": false
   },
   {
-    "id": "blague_nourriture_016_petite_precision_mon_plat_avait_lair_meill",
-    "setup": "Petite précision : mon plat avait l’air meilleur sur la photo.",
-    "punchline": "Moi aussi, donc je respecte la stratégie.",
+    "id": "blague_papa_009_pourquoi_les_poissons_n_aiment_ils_pas_jouer_au_tenn",
+    "setup": "Pourquoi les poissons n’aiment-ils pas jouer au tennis ?",
+    "punchline": "Parce qu’ils ont peur du filet.",
+    "category": "animaux",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_010_comment_appelle_t_on_un_chat_tombe_dans_un_pot_de_pe",
+    "setup": "Comment appelle-t-on un chat tombé dans un pot de peinture le 25 décembre ?",
+    "punchline": "Un chat-peint de Noël.",
+    "category": "animaux",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_011_que_dit_un_oignon_quand_il_se_cogne",
+    "setup": "Que dit un oignon quand il se cogne ?",
+    "punchline": "Aïe.",
     "category": "nourriture",
-    "style": "mini_histoire",
+    "style": "anti_blague",
     "adult": false
   },
   {
-    "id": "blague_nourriture_017_petite_precision_jai_suivi_la_recette_a_la",
-    "setup": "Petite précision : j’ai suivi la recette à la lettre.",
-    "punchline": "La lettre était probablement un avis de catastrophe.",
+    "id": "blague_papa_012_pourquoi_les_squelettes_ne_se_battent_ils_jamais",
+    "setup": "Pourquoi les squelettes ne se battent-ils jamais ?",
+    "punchline": "Parce qu’ils n’ont pas le cran.",
+    "category": "personnages",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_013_quel_est_le_sport_prefere_des_insectes",
+    "setup": "Quel est le sport préféré des insectes ?",
+    "punchline": "Le criquet.",
+    "category": "animaux",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_014_que_dit_une_mere_a_son_fils_geek_quand_le_diner_est_",
+    "setup": "Que dit une mère à son fils geek quand le dîner est prêt ?",
+    "punchline": "Alt Tab !",
+    "category": "tech",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_015_pourquoi_le_livre_de_maths_etait_il_triste",
+    "setup": "Pourquoi le livre de maths était-il triste ?",
+    "punchline": "Parce qu’il avait trop de problèmes.",
+    "category": "ecole",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_016_comment_appelle_t_on_un_chien_magicien",
+    "setup": "Comment appelle-t-on un chien magicien ?",
+    "punchline": "Un labracadabrador.",
+    "category": "animaux",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_017_que_dit_un_citron_cambrioleur",
+    "setup": "Que dit un citron cambrioleur ?",
+    "punchline": "Plus un zeste !",
     "category": "nourriture",
     "style": "jeu_de_mots",
     "adult": false
   },
   {
-    "id": "blague_nourriture_018_pourquoi_la_pizza_reste_toujours_calme",
-    "setup": "Pourquoi la pizza reste toujours calme ?",
-    "punchline": "Parce que cet aliment sait qu’on finira par le laisser reposer.",
-    "category": "nourriture",
-    "style": "anti_blague",
+    "id": "blague_papa_018_pourquoi_les_vaches_ferment_elles_les_yeux_pendant_l",
+    "setup": "Pourquoi les vaches ferment-elles les yeux pendant la traite ?",
+    "punchline": "Pour faire du lait concentré.",
+    "category": "animaux",
+    "style": "question_reponse",
     "adult": false
   },
   {
-    "id": "blague_nourriture_025_confession_du_jour_jai_suivi_la_recette_a_",
-    "setup": "Confession du jour : j’ai suivi la recette à la lettre.",
-    "punchline": "La lettre était probablement un avis de catastrophe.",
-    "category": "nourriture",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_nourriture_033_moment_de_verite_jai_suivi_la_recette_a_la",
-    "setup": "Moment de vérité : j’ai suivi la recette à la lettre.",
-    "punchline": "La lettre était probablement un avis de catastrophe.",
+    "id": "blague_papa_019_quel_fruit_deteste_les_poissons",
+    "setup": "Quel fruit déteste les poissons ?",
+    "punchline": "La pêche.",
     "category": "nourriture",
     "style": "question_reponse",
     "adult": false
   },
   {
-    "id": "blague_nourriture_049_pour_situer_lambiance_jai_suivi_la_recette",
-    "setup": "Pour situer l’ambiance : j’ai suivi la recette à la lettre.",
-    "punchline": "La lettre était probablement un avis de catastrophe.",
+    "id": "blague_papa_020_comment_appelle_t_on_un_crocodile_qui_surveille_une_",
+    "setup": "Comment appelle-t-on un crocodile qui surveille une pharmacie ?",
+    "punchline": "Un Lacoste de garde.",
+    "category": "animaux",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_021_pourquoi_les_girafes_ont_elles_un_long_cou",
+    "setup": "Pourquoi les girafes ont-elles un long cou ?",
+    "punchline": "Parce que leurs pieds sentent mauvais.",
+    "category": "animaux",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_022_quel_est_le_fromage_prefere_des_ours",
+    "setup": "Quel est le fromage préféré des ours ?",
+    "punchline": "Le camem-bear.",
     "category": "nourriture",
-    "style": "observation",
+    "style": "jeu_de_mots",
     "adult": false
   },
   {
-    "id": "blague_nourriture_057_anecdote_veridique_jai_suivi_la_recette_a_",
-    "setup": "Anecdote véridique : j’ai suivi la recette à la lettre.",
-    "punchline": "La lettre était probablement un avis de catastrophe.",
+    "id": "blague_papa_023_comment_appelle_t_on_un_mouton_sans_pattes",
+    "setup": "Comment appelle-t-on un mouton sans pattes ?",
+    "punchline": "Un nuage.",
+    "category": "animaux",
+    "style": "absurde",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_024_que_fait_un_crocodile_quand_il_rencontre_une_superbe",
+    "setup": "Que fait un crocodile quand il rencontre une superbe femelle ?",
+    "punchline": "Il Lacoste.",
+    "category": "animaux",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_025_pourquoi_les_abeilles_ont_elles_les_cheveux_collants",
+    "setup": "Pourquoi les abeilles ont-elles les cheveux collants ?",
+    "punchline": "Parce qu’elles utilisent du miel-gel.",
+    "category": "animaux",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_026_quel_est_le_comble_pour_un_facteur",
+    "setup": "Quel est le comble pour un facteur ?",
+    "punchline": "Perdre la lettre.",
+    "category": "metiers",
+    "style": "comble",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_027_quel_est_le_comble_pour_un_serrurier",
+    "setup": "Quel est le comble pour un serrurier ?",
+    "punchline": "Se faire mettre à la porte.",
+    "category": "metiers",
+    "style": "comble",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_028_quel_est_le_comble_pour_un_patissier",
+    "setup": "Quel est le comble pour un pâtissier ?",
+    "punchline": "Ne pas savoir couper la poire en deux.",
+    "category": "metiers",
+    "style": "comble",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_029_quel_est_le_comble_pour_un_photographe",
+    "setup": "Quel est le comble pour un photographe ?",
+    "punchline": "Manquer de développement.",
+    "category": "metiers",
+    "style": "comble",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_030_pourquoi_les_ordinateurs_vont_ils_chez_le_medecin",
+    "setup": "Pourquoi les ordinateurs vont-ils chez le médecin ?",
+    "punchline": "Parce qu’ils ont attrapé un virus.",
+    "category": "tech",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_031_que_dit_un_mur_a_l_autre_mur",
+    "setup": "Que dit un mur à l’autre mur ?",
+    "punchline": "On se retrouve à l’angle.",
+    "category": "objets",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_032_comment_appelle_t_on_un_ascenseur_tres_poli",
+    "setup": "Comment appelle-t-on un ascenseur très poli ?",
+    "punchline": "Un élévateur bien élevé.",
+    "category": "objets",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_033_pourquoi_les_calendriers_sont_ils_toujours_stresses",
+    "setup": "Pourquoi les calendriers sont-ils toujours stressés ?",
+    "punchline": "Parce que leurs jours sont comptés.",
+    "category": "objets",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_034_que_dit_une_pile_a_une_autre_pile",
+    "setup": "Que dit une pile à une autre pile ?",
+    "punchline": "On a de l’énergie entre nous.",
+    "category": "objets",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_035_pourquoi_le_telephone_porte_t_il_des_lunettes",
+    "setup": "Pourquoi le téléphone porte-t-il des lunettes ?",
+    "punchline": "Parce qu’il a perdu ses contacts.",
+    "category": "tech",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_036_comment_appelle_t_on_un_ordinateur_qui_chante",
+    "setup": "Comment appelle-t-on un ordinateur qui chante ?",
+    "punchline": "Un Dell-auteur-compositeur.",
+    "category": "tech",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_037_pourquoi_le_wi_fi_a_t_il_quitte_la_maison",
+    "setup": "Pourquoi le Wi-Fi a-t-il quitté la maison ?",
+    "punchline": "Il ne se sentait plus connecté.",
+    "category": "tech",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_038_que_fait_un_clavier_quand_il_a_froid",
+    "setup": "Que fait un clavier quand il a froid ?",
+    "punchline": "Il met la touche espace.",
+    "category": "tech",
+    "style": "absurde",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_039_pourquoi_le_smartphone_est_il_alle_a_l_ecole",
+    "setup": "Pourquoi le smartphone est-il allé à l’école ?",
+    "punchline": "Pour améliorer sa réception.",
+    "category": "tech",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_040_comment_appelle_t_on_un_ordinateur_en_retard",
+    "setup": "Comment appelle-t-on un ordinateur en retard ?",
+    "punchline": "Un PC pressé, mais pas assez.",
+    "category": "tech",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_041_que_dit_un_zero_a_un_huit",
+    "setup": "Que dit un zéro à un huit ?",
+    "punchline": "Belle ceinture !",
+    "category": "ecole",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_042_pourquoi_le_professeur_de_musique_avait_il_une_echel",
+    "setup": "Pourquoi le professeur de musique avait-il une échelle ?",
+    "punchline": "Pour atteindre les notes les plus hautes.",
+    "category": "ecole",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_043_quel_est_le_comble_pour_un_professeur_de_geographie",
+    "setup": "Quel est le comble pour un professeur de géographie ?",
+    "punchline": "Perdre le nord.",
+    "category": "ecole",
+    "style": "comble",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_044_pourquoi_les_eleves_mangent_ils_leurs_devoirs",
+    "setup": "Pourquoi les élèves mangent-ils leurs devoirs ?",
+    "punchline": "Parce que le professeur a dit que c’était du gâteau.",
+    "category": "ecole",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_045_que_dit_un_stylo_a_un_crayon",
+    "setup": "Que dit un stylo à un crayon ?",
+    "punchline": "Tu as bonne mine.",
+    "category": "ecole",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_046_pourquoi_le_dictionnaire_est_il_si_calme",
+    "setup": "Pourquoi le dictionnaire est-il si calme ?",
+    "punchline": "Parce qu’il a toujours le dernier mot.",
+    "category": "ecole",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_047_quel_est_le_dessert_prefere_des_profs_de_maths",
+    "setup": "Quel est le dessert préféré des profs de maths ?",
+    "punchline": "La tarte π.",
+    "category": "ecole",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_048_pourquoi_les_angles_ne_racontent_ils_pas_de_secrets",
+    "setup": "Pourquoi les angles ne racontent-ils pas de secrets ?",
+    "punchline": "Parce qu’ils finissent toujours par être droits.",
+    "category": "ecole",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_049_que_fait_une_feuille_quand_elle_a_peur",
+    "setup": "Que fait une feuille quand elle a peur ?",
+    "punchline": "Elle tremble.",
+    "category": "nature",
+    "style": "anti_blague",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_050_pourquoi_les_arbres_detestent_ils_les_controles",
+    "setup": "Pourquoi les arbres détestent-ils les contrôles ?",
+    "punchline": "Parce qu’ils sèchent.",
+    "category": "ecole",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_051_comment_appelle_t_on_un_dinosaure_qui_connait_beauco",
+    "setup": "Comment appelle-t-on un dinosaure qui connaît beaucoup de synonymes ?",
+    "punchline": "Un thésaurus.",
+    "category": "animaux",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_052_pourquoi_les_elephants_n_utilisent_ils_pas_d_ordinat",
+    "setup": "Pourquoi les éléphants n’utilisent-ils pas d’ordinateur ?",
+    "punchline": "Parce qu’ils ont peur de la souris.",
+    "category": "animaux",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_053_comment_appelle_t_on_un_poisson_sans_yeux",
+    "setup": "Comment appelle-t-on un poisson sans yeux ?",
+    "punchline": "Un psson.",
+    "category": "animaux",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_054_que_dit_un_chien_quand_il_s_assoit_sur_du_papier_de_",
+    "setup": "Que dit un chien quand il s’assoit sur du papier de verre ?",
+    "punchline": "Ouaf, ça gratte !",
+    "category": "animaux",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_055_pourquoi_les_poules_n_ont_elles_pas_de_seins",
+    "setup": "Pourquoi les poules n’ont-elles pas de seins ?",
+    "punchline": "Parce que les coqs n’ont pas de mains.",
+    "category": "animaux",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_056_comment_appelle_t_on_une_mouche_sans_ailes",
+    "setup": "Comment appelle-t-on une mouche sans ailes ?",
+    "punchline": "Une marche.",
+    "category": "animaux",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_057_que_fait_un_hibou_au_supermarche",
+    "setup": "Que fait un hibou au supermarché ?",
+    "punchline": "Il fait ses chouettes courses.",
+    "category": "animaux",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_058_pourquoi_le_cochon_est_il_mauvais_au_football",
+    "setup": "Pourquoi le cochon est-il mauvais au football ?",
+    "punchline": "Parce qu’il garde toujours la balle au groin.",
+    "category": "animaux",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_059_quel_animal_est_le_plus_connecte",
+    "setup": "Quel animal est le plus connecté ?",
+    "punchline": "Le porc USB.",
+    "category": "animaux",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_060_comment_appelle_t_on_un_lapin_qui_raconte_des_blague",
+    "setup": "Comment appelle-t-on un lapin qui raconte des blagues ?",
+    "punchline": "Un comique à grandes oreilles.",
+    "category": "animaux",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_061_pourquoi_les_crabes_ne_donnent_ils_jamais_rien",
+    "setup": "Pourquoi les crabes ne donnent-ils jamais rien ?",
+    "punchline": "Parce qu’ils sont pinces.",
+    "category": "animaux",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_062_que_dit_une_vache_qui_medite",
+    "setup": "Que dit une vache qui médite ?",
+    "punchline": "Meuh-maste.",
+    "category": "animaux",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_063_quel_poisson_travaille_dans_le_batiment",
+    "setup": "Quel poisson travaille dans le bâtiment ?",
+    "punchline": "Le thon-maçon.",
+    "category": "animaux",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_064_pourquoi_le_requin_a_t_il_mange_son_devoir",
+    "setup": "Pourquoi le requin a-t-il mangé son devoir ?",
+    "punchline": "Parce que son professeur lui avait dit de se jeter à l’eau.",
+    "category": "animaux",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_065_comment_appelle_t_on_un_pingouin_dans_le_desert",
+    "setup": "Comment appelle-t-on un pingouin dans le désert ?",
+    "punchline": "Perdu.",
+    "category": "animaux",
+    "style": "anti_blague",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_066_que_dit_un_mouton_a_un_autre_pour_l_encourager",
+    "setup": "Que dit un mouton à un autre pour l’encourager ?",
+    "punchline": "Bêêê-lieve in yourself.",
+    "category": "animaux",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_067_pourquoi_la_banane_est_elle_allee_chez_le_medecin",
+    "setup": "Pourquoi la banane est-elle allée chez le médecin ?",
+    "punchline": "Parce qu’elle ne se sentait pas dans son assiette.",
     "category": "nourriture",
     "style": "question_reponse",
     "adult": false
   },
   {
-    "id": "blague_nourriture_065_apres_reflexion_jai_suivi_la_recette_a_la_",
-    "setup": "Après réflexion : j’ai suivi la recette à la lettre.",
-    "punchline": "La lettre était probablement un avis de catastrophe.",
+    "id": "blague_papa_068_que_dit_un_sushi_a_une_abeille",
+    "setup": "Que dit un sushi à une abeille ?",
+    "punchline": "Wasabi !",
     "category": "nourriture",
     "style": "jeu_de_mots",
     "adult": false
   },
   {
-    "id": "blague_nourriture_073_sans_jugement_jai_suivi_la_recette_a_la_le",
-    "setup": "Sans jugement : j’ai suivi la recette à la lettre.",
-    "punchline": "La lettre était probablement un avis de catastrophe.",
+    "id": "blague_papa_069_pourquoi_les_tomates_rougissent_elles",
+    "setup": "Pourquoi les tomates rougissent-elles ?",
+    "punchline": "Parce qu’elles ont vu la salade se déshabiller.",
     "category": "nourriture",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_011_petite_precision_mon_ami_a_dit_je_ne_reste",
-    "setup": "Petite précision : mon ami a dit : « Je ne reste qu’une heure. »",
-    "punchline": "Il est maintenant copropriétaire du canapé.",
-    "category": "famille_amis",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_012_petite_precision_dans_ma_famille_quelquun_",
-    "setup": "Petite précision : dans ma famille, quelqu’un dit toujours « sans vouloir être indiscret ».",
-    "punchline": "Puis lance une enquête avec pièces à conviction.",
-    "category": "famille_amis",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_013_jai_prete_un_livre_a_un_ami",
-    "setup": "J’ai prêté un livre à un ami.",
-    "punchline": "Nous avons célébré ensemble le premier anniversaire de sa disparition.",
-    "category": "famille_amis",
     "style": "question_reponse",
     "adult": false
   },
   {
-    "id": "blague_famille_amis_014_mon_groupe_damis_a_essaye_dorganiser_un_we",
-    "setup": "Mon groupe d’amis a essayé d’organiser un week-end.",
-    "punchline": "Après 143 messages, nous avons choisi de ne rien faire.",
-    "category": "famille_amis",
+    "id": "blague_papa_070_comment_appelle_t_on_une_pomme_qui_joue_de_la_trompe",
+    "setup": "Comment appelle-t-on une pomme qui joue de la trompette ?",
+    "punchline": "Une pomme-pom-pom-pomme.",
+    "category": "nourriture",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_071_quel_est_le_gateau_le_plus_dur_au_monde",
+    "setup": "Quel est le gâteau le plus dur au monde ?",
+    "punchline": "La bûche de Noël.",
+    "category": "nourriture",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_072_que_dit_un_cafe_en_retard",
+    "setup": "Que dit un café en retard ?",
+    "punchline": "Désolé, j’ai été retenu au lait.",
+    "category": "nourriture",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_073_pourquoi_le_raisin_s_est_il_arrete_au_milieu_de_la_r",
+    "setup": "Pourquoi le raisin s’est-il arrêté au milieu de la route ?",
+    "punchline": "Parce qu’il était à bout de jus.",
+    "category": "nourriture",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_074_comment_appelle_t_on_une_baguette_qui_sait_faire_du_",
+    "setup": "Comment appelle-t-on une baguette qui sait faire du karaté ?",
+    "punchline": "Du pain dans ta gueule.",
+    "category": "nourriture",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_075_pourquoi_les_champignons_sont_ils_invites_a_toutes_l",
+    "setup": "Pourquoi les champignons sont-ils invités à toutes les soirées ?",
+    "punchline": "Parce qu’ils sont vraiment fun-guys.",
+    "category": "nourriture",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_076_que_dit_une_crepe_a_une_autre_crepe",
+    "setup": "Que dit une crêpe à une autre crêpe ?",
+    "punchline": "Tu me fais tourner la tête.",
+    "category": "nourriture",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_077_pourquoi_le_fromage_ne_raconte_t_il_jamais_ses_secre",
+    "setup": "Pourquoi le fromage ne raconte-t-il jamais ses secrets ?",
+    "punchline": "Parce qu’il a peur qu’on en fasse tout un fromage.",
+    "category": "nourriture",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_078_comment_appelle_t_on_un_yaourt_dans_la_foret",
+    "setup": "Comment appelle-t-on un yaourt dans la forêt ?",
+    "punchline": "Un yaourt nature.",
+    "category": "nourriture",
+    "style": "anti_blague",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_079_quel_legume_va_tres_vite",
+    "setup": "Quel légume va très vite ?",
+    "punchline": "Le chou-marin.",
+    "category": "nourriture",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_080_pourquoi_les_pates_ne_se_disputent_elles_jamais",
+    "setup": "Pourquoi les pâtes ne se disputent-elles jamais ?",
+    "punchline": "Parce qu’elles finissent toujours par mettre de l’eau dans leur vin.",
+    "category": "nourriture",
+    "style": "absurde",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_081_que_dit_une_biscotte_quand_elle_tombe_dans_l_eau",
+    "setup": "Que dit une biscotte quand elle tombe dans l’eau ?",
+    "punchline": "Je suis trempée jusqu’aux miettes.",
+    "category": "nourriture",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_082_comment_appelle_t_on_une_pizza_qui_raconte_des_secre",
+    "setup": "Comment appelle-t-on une pizza qui raconte des secrets ?",
+    "punchline": "Une pizza quatre confidences.",
+    "category": "nourriture",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_083_pourquoi_le_beurre_ne_gagne_t_il_jamais_aux_cartes",
+    "setup": "Pourquoi le beurre ne gagne-t-il jamais aux cartes ?",
+    "punchline": "Parce qu’il se fait toujours tartiner.",
+    "category": "nourriture",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_084_que_dit_le_sel_au_poivre",
+    "setup": "Que dit le sel au poivre ?",
+    "punchline": "Arrête de me chercher des grains.",
+    "category": "nourriture",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_085_pourquoi_le_boulanger_a_t_il_braque_une_banque",
+    "setup": "Pourquoi le boulanger a-t-il braqué une banque ?",
+    "punchline": "Parce qu’il avait besoin de blé.",
+    "category": "metiers",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_086_quel_est_le_comble_pour_un_coiffeur",
+    "setup": "Quel est le comble pour un coiffeur ?",
+    "punchline": "Se faire des cheveux.",
+    "category": "metiers",
+    "style": "comble",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_087_quel_est_le_comble_pour_un_plombier",
+    "setup": "Quel est le comble pour un plombier ?",
+    "punchline": "Prendre la fuite.",
+    "category": "metiers",
+    "style": "comble",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_088_quel_est_le_comble_pour_un_dentiste",
+    "setup": "Quel est le comble pour un dentiste ?",
+    "punchline": "Avoir une dent contre tout le monde.",
+    "category": "metiers",
+    "style": "comble",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_089_quel_est_le_comble_pour_un_policier",
+    "setup": "Quel est le comble pour un policier ?",
+    "punchline": "Avoir un coup de foudre en plein service.",
+    "category": "metiers",
+    "style": "comble",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_090_quel_est_le_comble_pour_un_menuisier",
+    "setup": "Quel est le comble pour un menuisier ?",
+    "punchline": "Avoir une femme rabat-joie.",
+    "category": "metiers",
+    "style": "comble",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_091_pourquoi_le_medecin_est_il_devenu_jardinier",
+    "setup": "Pourquoi le médecin est-il devenu jardinier ?",
+    "punchline": "Parce qu’il voulait prendre soin de ses patients en pot.",
+    "category": "metiers",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_092_comment_appelle_t_on_un_avocat_qui_cuisine",
+    "setup": "Comment appelle-t-on un avocat qui cuisine ?",
+    "punchline": "Un maître queux de justice.",
+    "category": "metiers",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_093_pourquoi_le_pompier_apporte_t_il_une_echelle_au_bar",
+    "setup": "Pourquoi le pompier apporte-t-il une échelle au bar ?",
+    "punchline": "Parce que les verres sont offerts au premier étage.",
+    "category": "metiers",
+    "style": "absurde",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_094_que_dit_un_comptable_quand_il_quitte_une_soiree",
+    "setup": "Que dit un comptable quand il quitte une soirée ?",
+    "punchline": "Je vous laisse faire le bilan.",
+    "category": "metiers",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_095_pourquoi_le_facteur_ne_joue_t_il_jamais_a_cache_cach",
+    "setup": "Pourquoi le facteur ne joue-t-il jamais à cache-cache ?",
+    "punchline": "Parce qu’on finit toujours par l’adresser.",
+    "category": "metiers",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_096_comment_appelle_t_on_un_musicien_qui_prend_son_temps",
+    "setup": "Comment appelle-t-on un musicien qui prend son temps ?",
+    "punchline": "Un tempo-risateur.",
+    "category": "metiers",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_097_pourquoi_le_cuisinier_a_t_il_ete_renvoye",
+    "setup": "Pourquoi le cuisinier a-t-il été renvoyé ?",
+    "punchline": "Parce qu’il n’en faisait qu’à sa sauce.",
+    "category": "metiers",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_098_que_fait_un_serrurier_quand_il_est_triste",
+    "setup": "Que fait un serrurier quand il est triste ?",
+    "punchline": "Il cherche la clé du bonheur.",
+    "category": "metiers",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_099_pourquoi_le_photographe_est_il_toujours_positif",
+    "setup": "Pourquoi le photographe est-il toujours positif ?",
+    "punchline": "Parce qu’il développe le bon côté des choses.",
+    "category": "metiers",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_100_comment_appelle_t_on_un_juge_qui_adore_le_cafe",
+    "setup": "Comment appelle-t-on un juge qui adore le café ?",
+    "punchline": "Un magistrat serré.",
+    "category": "metiers",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_101_monsieur_et_madame_terieur_ont_deux_fils_comment_s_a",
+    "setup": "Monsieur et Madame Térieur ont deux fils. Comment s’appellent-ils ?",
+    "punchline": "Alain et Alex. Alain Térieur et Alex Térieur.",
+    "category": "noms",
+    "style": "monsieur_madame",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_102_monsieur_et_madame_forme_ont_trois_fils_comment_s_ap",
+    "setup": "Monsieur et Madame Forme ont trois fils. Comment s’appellent-ils ?",
+    "punchline": "Guy, Guy et Guy. Guy Forme.",
+    "category": "noms",
+    "style": "monsieur_madame",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_103_monsieur_et_madame_bon_ont_un_fils_comment_s_appelle",
+    "setup": "Monsieur et Madame Bon ont un fils. Comment s’appelle-t-il ?",
+    "punchline": "Jean. Jambon.",
+    "category": "noms",
+    "style": "monsieur_madame",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_104_monsieur_et_madame_terieur_ont_une_fille_comment_s_a",
+    "setup": "Monsieur et Madame Térieur ont une fille. Comment s’appelle-t-elle ?",
+    "punchline": "Alex. À l’extérieur.",
+    "category": "noms",
+    "style": "monsieur_madame",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_105_monsieur_et_madame_ouille_ont_un_fils_comment_s_appe",
+    "setup": "Monsieur et Madame Ouille ont un fils. Comment s’appelle-t-il ?",
+    "punchline": "Jacques. Jackouille.",
+    "category": "noms",
+    "style": "monsieur_madame",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_106_monsieur_et_madame_duciel_ont_cinq_enfants_comment_s",
+    "setup": "Monsieur et Madame Duciel ont cinq enfants. Comment s’appellent-ils ?",
+    "punchline": "Betty, Babette, Bill, Bob et Bruce. Betty Babette Bill Bob Bruce Duciel.",
+    "category": "noms",
+    "style": "monsieur_madame",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_107_monsieur_et_madame_nana_ont_un_fils_comment_s_appell",
+    "setup": "Monsieur et Madame Nana ont un fils. Comment s’appelle-t-il ?",
+    "punchline": "Judas. Jus d’ananas.",
+    "category": "noms",
+    "style": "monsieur_madame",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_108_monsieur_et_madame_ateur_ont_une_fille_comment_s_app",
+    "setup": "Monsieur et Madame Ateur ont une fille. Comment s’appelle-t-elle ?",
+    "punchline": "Dora. Dorateur.",
+    "category": "noms",
+    "style": "monsieur_madame",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_109_monsieur_et_madame_cule_ont_un_fils_comment_s_appell",
+    "setup": "Monsieur et Madame Cule ont un fils. Comment s’appelle-t-il ?",
+    "punchline": "Hercule.",
+    "category": "noms",
+    "style": "monsieur_madame",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_110_monsieur_et_madame_dalor_ont_un_fils_comment_s_appel",
+    "setup": "Monsieur et Madame Dalor ont un fils. Comment s’appelle-t-il ?",
+    "punchline": "Homère. Homère Dalor.",
+    "category": "noms",
+    "style": "monsieur_madame",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_111_pourquoi_les_fantomes_mentent_ils_si_mal",
+    "setup": "Pourquoi les fantômes mentent-ils si mal ?",
+    "punchline": "Parce qu’on voit à travers eux.",
+    "category": "personnages",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_112_que_commande_un_vampire_au_bar",
+    "setup": "Que commande un vampire au bar ?",
+    "punchline": "Un sang pression.",
+    "category": "personnages",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_113_pourquoi_les_sorcieres_prennent_elles_un_balai",
+    "setup": "Pourquoi les sorcières prennent-elles un balai ?",
+    "punchline": "Parce que l’aspirateur est trop lourd.",
+    "category": "personnages",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_114_comment_appelle_t_on_un_zombie_qui_cuisine",
+    "setup": "Comment appelle-t-on un zombie qui cuisine ?",
+    "punchline": "Un cordon bleu très saignant.",
+    "category": "personnages",
+    "style": "absurde",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_115_pourquoi_le_pirate_n_apprend_il_pas_l_alphabet",
+    "setup": "Pourquoi le pirate n’apprend-il pas l’alphabet ?",
+    "punchline": "Parce qu’il reste bloqué à R.",
+    "category": "personnages",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_116_que_dit_un_extraterrestre_quand_il_arrive_sur_terre",
+    "setup": "Que dit un extraterrestre quand il arrive sur Terre ?",
+    "punchline": "Alors, c’est ici qu’on manque d’espace ?",
+    "category": "personnages",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_117_pourquoi_le_chevalier_a_t_il_emporte_un_crayon",
+    "setup": "Pourquoi le chevalier a-t-il emporté un crayon ?",
+    "punchline": "Pour dessiner son épée.",
+    "category": "personnages",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_118_comment_appelle_t_on_un_super_heros_qui_fait_la_sies",
+    "setup": "Comment appelle-t-on un super-héros qui fait la sieste ?",
+    "punchline": "Captain Flemme.",
+    "category": "personnages",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_119_pourquoi_le_robot_est_il_parti_en_vacances",
+    "setup": "Pourquoi le robot est-il parti en vacances ?",
+    "punchline": "Il avait besoin de recharger ses batteries.",
+    "category": "personnages",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_120_que_fait_un_magicien_quand_il_a_froid",
+    "setup": "Que fait un magicien quand il a froid ?",
+    "punchline": "Il met sa cape et disparaît sous la couette.",
+    "category": "personnages",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_121_pourquoi_le_soleil_ne_va_t_il_jamais_a_l_universite",
+    "setup": "Pourquoi le soleil ne va-t-il jamais à l’université ?",
+    "punchline": "Parce qu’il a déjà des millions de degrés.",
+    "category": "nature",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_122_que_dit_la_mer_a_la_plage",
+    "setup": "Que dit la mer à la plage ?",
+    "punchline": "Rien, elle lui fait des vagues.",
+    "category": "nature",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_123_pourquoi_le_vent_est_il_mauvais_gardien_de_secrets",
+    "setup": "Pourquoi le vent est-il mauvais gardien de secrets ?",
+    "punchline": "Parce qu’il finit toujours par tout souffler.",
+    "category": "nature",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_124_comment_appelle_t_on_une_montagne_qui_raconte_des_bl",
+    "setup": "Comment appelle-t-on une montagne qui raconte des blagues ?",
+    "punchline": "Un sommet d’humour.",
+    "category": "nature",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_125_pourquoi_la_pluie_ne_paie_t_elle_jamais_ses_factures",
+    "setup": "Pourquoi la pluie ne paie-t-elle jamais ses factures ?",
+    "punchline": "Parce qu’elle tombe toujours à découvert.",
+    "category": "nature",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_126_que_dit_un_nuage_a_un_autre_nuage",
+    "setup": "Que dit un nuage à un autre nuage ?",
+    "punchline": "J’ai un coup de foudre pour toi.",
+    "category": "nature",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_127_pourquoi_la_neige_est_elle_mauvaise_en_affaires",
+    "setup": "Pourquoi la neige est-elle mauvaise en affaires ?",
+    "punchline": "Parce qu’elle fond sous la pression.",
+    "category": "nature",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_128_comment_appelle_t_on_une_riviere_qui_hesite",
+    "setup": "Comment appelle-t-on une rivière qui hésite ?",
+    "punchline": "Un courant alternatif.",
+    "category": "nature",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_129_pourquoi_les_volcans_sont_ils_populaires",
+    "setup": "Pourquoi les volcans sont-ils populaires ?",
+    "punchline": "Parce qu’ils ont une personnalité explosive.",
+    "category": "nature",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_130_que_fait_la_lune_quand_elle_a_faim",
+    "setup": "Que fait la lune quand elle a faim ?",
+    "punchline": "Elle croque un quartier.",
+    "category": "nature",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_131_pourquoi_le_velo_ne_tient_il_pas_debout_tout_seul",
+    "setup": "Pourquoi le vélo ne tient-il pas debout tout seul ?",
+    "punchline": "Parce qu’il est deux-tendu.",
+    "category": "objets",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_132_que_dit_une_chaise_a_une_autre_chaise",
+    "setup": "Que dit une chaise à une autre chaise ?",
+    "punchline": "On peut compter l’une sur l’autre.",
+    "category": "objets",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_133_pourquoi_la_montre_a_t_elle_ete_punie",
+    "setup": "Pourquoi la montre a-t-elle été punie ?",
+    "punchline": "Parce qu’elle tuait le temps.",
+    "category": "objets",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_134_comment_appelle_t_on_une_porte_qui_fait_de_la_musiqu",
+    "setup": "Comment appelle-t-on une porte qui fait de la musique ?",
+    "punchline": "Une porte de concert.",
+    "category": "objets",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_135_que_dit_une_ampoule_quand_elle_a_une_idee",
+    "setup": "Que dit une ampoule quand elle a une idée ?",
+    "punchline": "Ça m’éclaire !",
+    "category": "objets",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_136_pourquoi_le_canape_ne_sort_il_jamais",
+    "setup": "Pourquoi le canapé ne sort-il jamais ?",
+    "punchline": "Parce qu’il préfère rester posé.",
+    "category": "objets",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_137_comment_appelle_t_on_une_valise_qui_reflechit",
+    "setup": "Comment appelle-t-on une valise qui réfléchit ?",
+    "punchline": "Un cas de conscience.",
+    "category": "objets",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_138_pourquoi_le_miroir_ne_critique_t_il_personne",
+    "setup": "Pourquoi le miroir ne critique-t-il personne ?",
+    "punchline": "Parce qu’il ferait mieux de se regarder.",
+    "category": "objets",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_139_que_dit_une_chaussure_a_une_autre_chaussure",
+    "setup": "Que dit une chaussure à une autre chaussure ?",
+    "punchline": "On fait la paire ?",
+    "category": "objets",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_140_pourquoi_le_frigo_est_il_un_bon_ami",
+    "setup": "Pourquoi le frigo est-il un bon ami ?",
+    "punchline": "Parce qu’il garde toujours son sang-froid.",
+    "category": "objets",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_141_mon_medecin_m_a_conseille_d_arreter_les_repas_tardif",
+    "setup": "Mon médecin m’a conseillé d’arrêter les repas tardifs.",
+    "punchline": "Alors je mange plus vite.",
+    "category": "quotidien",
     "style": "mini_histoire",
     "adult": false
   },
   {
-    "id": "blague_famille_amis_015_petite_precision_ma_mere_ma_demande_si_je_",
-    "setup": "Petite précision : ma mère m’a demandé si je mangeais correctement.",
-    "punchline": "J’ai envoyé une photo de persil à côté d’une pizza.",
-    "category": "famille_amis",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_016_petite_precision_mon_pere_a_decouvert_les_",
-    "setup": "Petite précision : mon père a découvert les messages vocaux.",
-    "punchline": "Il produit maintenant des podcasts sans générique.",
-    "category": "famille_amis",
+    "id": "blague_papa_142_j_ai_une_blague_sur_les_travaux",
+    "setup": "J’ai une blague sur les travaux.",
+    "punchline": "Mais elle n’est pas encore finie.",
+    "category": "quotidien",
     "style": "anti_blague",
     "adult": false
   },
   {
-    "id": "blague_famille_amis_017_petite_precision_une_amie_a_promis_de_gard",
-    "setup": "Petite précision : une amie a promis de garder mon secret.",
-    "punchline": "Elle l’a gardé dans une conversation avec seulement six personnes.",
-    "category": "famille_amis",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_018_petite_precision_les_retrouvailles_de_fami",
-    "setup": "Petite précision : les retrouvailles de famille sont chaleureuses.",
-    "punchline": "On commence par s’embrasser et on finit par comparer les trajectoires professionnelles.",
-    "category": "famille_amis",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_019_confession_du_jour_mon_ami_a_dit_je_ne_res",
-    "setup": "Confession du jour : mon ami a dit : « Je ne reste qu’une heure. »",
-    "punchline": "Il est maintenant copropriétaire du canapé.",
-    "category": "famille_amis",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_023_confession_du_jour_ma_mere_ma_demande_si_j",
-    "setup": "Confession du jour : ma mère m’a demandé si je mangeais correctement.",
-    "punchline": "J’ai envoyé une photo de persil à côté d’une pizza.",
-    "category": "famille_amis",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_027_moment_de_verite_mon_ami_a_dit_je_ne_reste",
-    "setup": "Moment de vérité : mon ami a dit : « Je ne reste qu’une heure. »",
-    "punchline": "Il est maintenant copropriétaire du canapé.",
-    "category": "famille_amis",
+    "id": "blague_papa_143_j_ai_une_blague_sur_le_papier",
+    "setup": "J’ai une blague sur le papier.",
+    "punchline": "Elle est déchirante.",
+    "category": "quotidien",
     "style": "jeu_de_mots",
     "adult": false
   },
   {
-    "id": "blague_famille_amis_031_moment_de_verite_ma_mere_ma_demande_si_je_",
-    "setup": "Moment de vérité : ma mère m’a demandé si je mangeais correctement.",
-    "punchline": "J’ai envoyé une photo de persil à côté d’une pizza.",
-    "category": "famille_amis",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_043_pour_situer_lambiance_mon_ami_a_dit_je_ne_",
-    "setup": "Pour situer l’ambiance : mon ami a dit : « Je ne reste qu’une heure. »",
-    "punchline": "Il est maintenant copropriétaire du canapé.",
-    "category": "famille_amis",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_047_pour_situer_lambiance_ma_mere_ma_demande_s",
-    "setup": "Pour situer l’ambiance : ma mère m’a demandé si je mangeais correctement.",
-    "punchline": "J’ai envoyé une photo de persil à côté d’une pizza.",
-    "category": "famille_amis",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_famille_amis_051_anecdote_veridique_mon_ami_a_dit_je_ne_res",
-    "setup": "Anecdote véridique : mon ami a dit : « Je ne reste qu’une heure. »",
-    "punchline": "Il est maintenant copropriétaire du canapé.",
-    "category": "famille_amis",
+    "id": "blague_papa_144_j_ai_une_blague_sur_les_ascenseurs",
+    "setup": "J’ai une blague sur les ascenseurs.",
+    "punchline": "Elle fonctionne à plusieurs niveaux.",
+    "category": "quotidien",
     "style": "jeu_de_mots",
     "adult": false
   },
   {
-    "id": "blague_culture_pop_011_dans_les_films_daction_le_heros_dit_toujou",
-    "setup": "Dans les films d’action, le héros dit toujours « J’ai un plan ».",
-    "punchline": "Le plan consiste surtout à courir très fort pendant que tout explose.",
-    "category": "culture_pop",
-    "style": "anti_blague",
+    "id": "blague_papa_145_j_ai_une_blague_sur_le_chomage",
+    "setup": "J’ai une blague sur le chômage.",
+    "punchline": "Mais elle ne marche pas.",
+    "category": "quotidien",
+    "style": "jeu_de_mots",
     "adult": false
   },
   {
-    "id": "blague_culture_pop_012_jai_regarde_une_serie_policiere_pour_me_cu",
-    "setup": "J’ai regardé une série policière pour me cultiver.",
-    "punchline": "Je peux maintenant expliquer en détail pourquoi deux inconnus auraient dû communiquer.",
-    "category": "culture_pop",
-    "style": "observation",
+    "id": "blague_papa_146_j_ai_voulu_devenir_vegetarien",
+    "setup": "J’ai voulu devenir végétarien.",
+    "punchline": "Mais j’ai laissé tomber, je n’avais pas la salade.",
+    "category": "quotidien",
+    "style": "jeu_de_mots",
     "adult": false
   },
   {
-    "id": "blague_culture_pop_013_petite_precision_les_mechants_de_film_expl",
-    "setup": "Petite précision : les méchants de film expliquent toujours leur plan.",
-    "punchline": "Le véritable pouvoir, c’est une présentation PowerPoint sans limite de temps.",
-    "category": "culture_pop",
-    "style": "dialogue",
+    "id": "blague_papa_147_ma_femme_m_a_dit_de_faire_des_fentes_pour_rester_en_",
+    "setup": "Ma femme m’a dit de faire des fentes pour rester en forme.",
+    "punchline": "C’est un grand pas en avant.",
+    "category": "quotidien",
+    "style": "jeu_de_mots",
     "adult": false
   },
   {
-    "id": "blague_culture_pop_014_jai_lance_une_serie_policiere_en_bruit_de_",
-    "setup": "J’ai lancé une série policière en bruit de fond.",
-    "punchline": "Trois heures plus tard, je défendais un personnage secondaire comme un membre de ma famille.",
-    "category": "culture_pop",
-    "style": "question_reponse",
+    "id": "blague_papa_148_je_lis_un_livre_sur_l_apesanteur",
+    "setup": "Je lis un livre sur l’apesanteur.",
+    "punchline": "Impossible de le lâcher.",
+    "category": "quotidien",
+    "style": "jeu_de_mots",
     "adult": false
   },
   {
-    "id": "blague_culture_pop_015_petite_precision_dans_les_jeux_video_on_tr",
-    "setup": "Petite précision : dans les jeux vidéo, on trouve de l’argent dans les poubelles.",
-    "punchline": "J’ai essayé dehors. Le réalisme a ses limites.",
-    "category": "culture_pop",
+    "id": "blague_papa_149_j_ai_vendu_mon_aspirateur",
+    "setup": "J’ai vendu mon aspirateur.",
+    "punchline": "Il ne faisait que ramasser la poussière.",
+    "category": "quotidien",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_150_je_connais_une_excellente_blague_sur_les_horloges",
+    "setup": "Je connais une excellente blague sur les horloges.",
+    "punchline": "Mais elle prend trop de temps.",
+    "category": "quotidien",
+    "style": "jeu_de_mots",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_151_deux_antennes_se_rencontrent_sur_un_toit_tombent_amo",
+    "setup": "Deux antennes se rencontrent sur un toit, tombent amoureuses et se marient.",
+    "punchline": "La cérémonie était moyenne, mais la réception était excellente.",
+    "category": "objets",
     "style": "mini_histoire",
     "adult": false
   },
   {
-    "id": "blague_culture_pop_016_petite_precision_les_series_disent_precede",
-    "setup": "Petite précision : les séries disent « précédemment ».",
-    "punchline": "Moi aussi, j’aimerais un montage clair de mes erreurs.",
-    "category": "culture_pop",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_017_pourquoi_les_heros_de_les_films_daction_na",
-    "setup": "Pourquoi les héros de les films d’action n’appellent-ils jamais la police ?",
-    "punchline": "Parce que le film durerait dix-sept minutes.",
-    "category": "culture_pop",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_018_petite_precision_jai_vu_le_generique_jusqu",
-    "setup": "Petite précision : j’ai vu le générique jusqu’au bout.",
-    "punchline": "J’attends toujours la scène secrète de ma propre journée.",
-    "category": "culture_pop",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_020_jai_regarde_une_emission_de_cuisine_pour_m",
-    "setup": "J’ai regardé une émission de cuisine pour me cultiver.",
-    "punchline": "Je peux maintenant expliquer en détail pourquoi deux inconnus auraient dû communiquer.",
-    "category": "culture_pop",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_023_confession_du_jour_dans_les_jeux_video_on_",
-    "setup": "Confession du jour : dans les jeux vidéo, on trouve de l’argent dans les poubelles.",
-    "punchline": "J’ai essayé dehors. Le réalisme a ses limites.",
-    "category": "culture_pop",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_024_confession_du_jour_les_series_disent_prece",
-    "setup": "Confession du jour : les séries disent « précédemment ».",
-    "punchline": "Moi aussi, j’aimerais un montage clair de mes erreurs.",
-    "category": "culture_pop",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_026_confession_du_jour_jai_vu_le_generique_jus",
-    "setup": "Confession du jour : j’ai vu le générique jusqu’au bout.",
-    "punchline": "J’attends toujours la scène secrète de ma propre journée.",
-    "category": "culture_pop",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_028_jai_regarde_un_documentaire_animalier_pour",
-    "setup": "J’ai regardé un documentaire animalier pour me cultiver.",
-    "punchline": "Je peux maintenant expliquer en détail pourquoi deux inconnus auraient dû communiquer.",
-    "category": "culture_pop",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_culture_pop_031_moment_de_verite_dans_les_jeux_video_on_tr",
-    "setup": "Moment de vérité : dans les jeux vidéo, on trouve de l’argent dans les poubelles.",
-    "punchline": "J’ai essayé dehors. Le réalisme a ses limites.",
-    "category": "culture_pop",
+    "id": "blague_papa_152_deux_poissons_sont_dans_un_aquarium_l_un_demande_tu_",
+    "setup": "Deux poissons sont dans un aquarium. L’un demande : « Tu sais conduire ce truc ? »",
+    "punchline": "L’autre répond : « Non, mais toi tu sais parler ? »",
+    "category": "animaux",
     "style": "dialogue",
     "adult": false
   },
   {
-    "id": "blague_culture_pop_032_moment_de_verite_les_series_disent_precede",
-    "setup": "Moment de vérité : les séries disent « précédemment ».",
-    "punchline": "Moi aussi, j’aimerais un montage clair de mes erreurs.",
-    "category": "culture_pop",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_011_pourquoi_le_boulanger_ne_perd_jamais_patie",
-    "setup": "Pourquoi le boulanger ne perd jamais patience ?",
-    "punchline": "Parce que ce métier apprend à cultiver le calme.",
-    "category": "jeux_de_mots",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_012_jai_raconte_une_blague_a_une_chaise",
-    "setup": "J’ai raconté une blague à une chaise.",
-    "punchline": "Ça n’a pas fait bonne impression.",
-    "category": "jeux_de_mots",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_013_quel_est_le_comble_pour_le_jardinier",
-    "setup": "Quel est le comble pour le jardinier ?",
-    "punchline": "manquer de pain sur la planche.",
-    "category": "jeux_de_mots",
-    "style": "question_reponse",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_014_pourquoi_une_chaise_est_toujours_invite",
-    "setup": "Pourquoi une chaise est toujours invité ?",
-    "punchline": "Parce que cet objet sait avoir toujours le mot juste.",
-    "category": "jeux_de_mots",
+    "id": "blague_papa_153_un_homme_entre_dans_une_bibliotheque_et_demande_un_k",
+    "setup": "Un homme entre dans une bibliothèque et demande un kebab.",
+    "punchline": "La bibliothécaire chuchote : « Monsieur, ici c’est une bibliothèque. » Il chuchote : « Pardon… un kebab. »",
+    "category": "quotidien",
     "style": "mini_histoire",
     "adult": false
   },
   {
-    "id": "blague_jeux_de_mots_015_dans_un_bar_le_boulanger_commandun_double_",
-    "setup": "Dans un bar, le boulanger command’un double verrou.",
-    "punchline": "Le serveur note la commande sans poser de question.",
-    "category": "jeux_de_mots",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_016_jai_commence_un_roman_sur_un_stylo",
-    "setup": "J’ai commencé un roman sur un stylo.",
-    "punchline": "Mais l’intrigue ne tenait pas debout.",
-    "category": "jeux_de_mots",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_017_pourquoi_une_chaise_refuse_de_mentir",
-    "setup": "Pourquoi une chaise refuse de mentir ?",
-    "punchline": "Parce que il ne veut pas raturer les faits.",
-    "category": "jeux_de_mots",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_018_mon_ami_qui_travaille_comme_le_boulanger_a",
-    "setup": "Mon ami qui travaille comme le boulanger a quitté son travail.",
-    "punchline": "Il avait perdu la main verte.",
-    "category": "jeux_de_mots",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_020_jai_raconte_une_blague_a_un_reveil",
-    "setup": "J’ai raconté une blague à un réveil.",
-    "punchline": "Ça n’a pas fait ses bagages.",
-    "category": "jeux_de_mots",
+    "id": "blague_papa_154_un_escargot_entre_dans_un_bar_le_serveur_le_met_deho",
+    "setup": "Un escargot entre dans un bar. Le serveur le met dehors.",
+    "punchline": "Un an plus tard, l’escargot revient : « Pourquoi t’as fait ça ? »",
+    "category": "animaux",
     "style": "mini_histoire",
     "adult": false
   },
   {
-    "id": "blague_jeux_de_mots_021_quel_est_le_comble_pour_le_musicien",
-    "setup": "Quel est le comble pour le musicien ?",
-    "punchline": "ne jamais voir le bon angle.",
-    "category": "jeux_de_mots",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_024_jai_commence_un_roman_sur_une_valise",
-    "setup": "J’ai commencé un roman sur une valise.",
-    "punchline": "Mais je n’ai jamais trouvé le bon réveil narratif.",
-    "category": "jeux_de_mots",
+    "id": "blague_papa_155_deux_muffins_cuisent_dans_un_four_le_premier_dit_il_",
+    "setup": "Deux muffins cuisent dans un four. Le premier dit : « Il fait chaud ici. »",
+    "punchline": "Le second hurle : « Aaaah ! Un muffin qui parle ! »",
+    "category": "nourriture",
     "style": "dialogue",
     "adult": false
   },
   {
-    "id": "blague_jeux_de_mots_028_jai_raconte_une_blague_a_un_miroir",
-    "setup": "J’ai raconté une blague à un miroir.",
-    "punchline": "Ça n’a pas trouvé ses mots.",
-    "category": "jeux_de_mots",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_029_quel_est_le_comble_pour_le_professeur",
-    "setup": "Quel est le comble pour le professeur ?",
-    "punchline": "ne pas être au courant.",
-    "category": "jeux_de_mots",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_032_jai_commence_un_roman_sur_un_dictionnaire",
-    "setup": "J’ai commencé un roman sur un dictionnaire.",
-    "punchline": "Mais le reflet manquait de profondeur.",
-    "category": "jeux_de_mots",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_033_pourquoi_un_miroir_refuse_de_mentir",
-    "setup": "Pourquoi un miroir refuse de mentir ?",
-    "punchline": "Parce que il connaît la définition exacte.",
-    "category": "jeux_de_mots",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_036_jai_raconte_une_blague_a_un_stylo",
-    "setup": "J’ai raconté une blague à un stylo.",
-    "punchline": "Ça n’a pas pris le temps de mijoter.",
-    "category": "jeux_de_mots",
+    "id": "blague_papa_156_un_client_demande_garcon_ce_cafe_a_le_gout_de_boue",
+    "setup": "Un client demande : « Garçon, ce café a le goût de boue ! »",
+    "punchline": "Le serveur répond : « Normal, il est tout frais moulu. »",
+    "category": "nourriture",
     "style": "dialogue",
     "adult": false
   },
   {
-    "id": "blague_jeux_de_mots_037_quel_est_le_comble_pour_le_cuisinier",
-    "setup": "Quel est le comble pour le cuisinier ?",
-    "punchline": "se planter.",
-    "category": "jeux_de_mots",
+    "id": "blague_papa_157_serveur_il_y_a_une_mouche_dans_ma_soupe",
+    "setup": "— Serveur, il y a une mouche dans ma soupe !",
+    "punchline": "— Ne vous inquiétez pas, l’araignée sur le pain va s’en occuper.",
+    "category": "nourriture",
+    "style": "dialogue",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_158_docteur_j_ai_mal_quand_j_appuie_ici_ici_et_ici",
+    "setup": "— Docteur, j’ai mal quand j’appuie ici, ici et ici.",
+    "punchline": "— Vous avez le doigt cassé.",
+    "category": "quotidien",
+    "style": "dialogue",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_159_papa_tu_peux_m_expliquer_ce_qu_est_une_eclipse",
+    "setup": "— Papa, tu peux m’expliquer ce qu’est une éclipse ?",
+    "punchline": "— Non, pas maintenant, ça tombe mal.",
+    "category": "nature",
+    "style": "dialogue",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_160_j_ai_perdu_mon_chien",
+    "setup": "— J’ai perdu mon chien.",
+    "punchline": "— Mets une annonce. — Ça ne sert à rien, il ne sait pas lire.",
+    "category": "animaux",
+    "style": "dialogue",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_161_pourquoi_ne_faut_il_jamais_raconter_une_blague_a_un_",
+    "setup": "Pourquoi ne faut-il jamais raconter une blague à un ballon ?",
+    "punchline": "Parce qu’il risque d’éclater de rire.",
+    "category": "objets",
     "style": "question_reponse",
     "adult": false
   },
   {
-    "id": "blague_jeux_de_mots_040_jai_commence_un_roman_sur_une_casserole",
-    "setup": "J’ai commencé un roman sur une casserole.",
-    "punchline": "Mais je suis resté sans mots.",
-    "category": "jeux_de_mots",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_041_pourquoi_un_stylo_refuse_de_mentir",
-    "setup": "Pourquoi un stylo refuse de mentir ?",
-    "punchline": "Parce que elle laisse mijoter la vérité.",
-    "category": "jeux_de_mots",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_044_jai_raconte_une_blague_a_un_frigo",
-    "setup": "J’ai raconté une blague à un frigo.",
-    "punchline": "Ça n’a pas sonné.",
-    "category": "jeux_de_mots",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_045_quel_est_le_comble_pour_la_photographe",
-    "setup": "Quel est le comble pour la photographe ?",
-    "punchline": "perdre la clé du succès.",
-    "category": "jeux_de_mots",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_048_jai_commence_un_roman_sur_un_reveil",
-    "setup": "J’ai commencé un roman sur un réveil.",
-    "punchline": "Mais l’histoire était trop froide.",
-    "category": "jeux_de_mots",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_jeux_de_mots_049_pourquoi_un_frigo_refuse_de_mentir",
-    "setup": "Pourquoi un frigo refuse de mentir ?",
-    "punchline": "Parce que il finit toujours par sonner juste.",
-    "category": "jeux_de_mots",
+    "id": "blague_papa_162_pourquoi_les_secrets_aiment_ils_les_ascenseurs",
+    "setup": "Pourquoi les secrets aiment-ils les ascenseurs ?",
+    "punchline": "Parce qu’ils restent entre quatre murs et changent de niveau.",
+    "category": "objets",
     "style": "question_reponse",
     "adult": false
   },
   {
-    "id": "blague_jeux_de_mots_056_jai_commence_un_roman_sur_un_stylo",
-    "setup": "J’ai commencé un roman sur un stylo.",
-    "punchline": "Mais le héros a fait ses valises.",
-    "category": "jeux_de_mots",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_011_quest_ce_qui_est_rouge_et_qui_attend",
-    "setup": "Qu’est-ce qui est rouge et qui attend ?",
-    "punchline": "Un objet rouge posé là depuis un moment.",
-    "category": "anti_blagues",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_012_pourquoi_un_canard_traverse_t_il_elle_la_r",
-    "setup": "Pourquoi un canard traverse-t-il/elle la route ?",
-    "punchline": "Pour aller là où il/elle voulait aller.",
-    "category": "anti_blagues",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_013_un_un_boulanger_entre_dans_un_bar",
-    "setup": "Un un boulanger entre dans un bar.",
-    "punchline": "Il/Elle commande, paie, puis repart. Les commerces fonctionnent ainsi.",
-    "category": "anti_blagues",
+    "id": "blague_papa_163_que_dit_un_gps_quand_il_rompt",
+    "setup": "Que dit un GPS quand il rompt ?",
+    "punchline": "Recalcul de l’itinéraire sentimental.",
+    "category": "tech",
     "style": "question_reponse",
     "adult": false
   },
   {
-    "id": "blague_anti_blagues_014_que_dit_une_chaise_a_un_four",
-    "setup": "Que dit une chaise à un four ?",
-    "punchline": "Rien. Aucun des deux ne possède d’appareil phonatoire.",
-    "category": "anti_blagues",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_015_quel_est_le_point_commun_entre_une_banane_",
-    "setup": "Quel est le point commun entre une banane et une colline ?",
-    "punchline": "Ils figurent tous les deux dans cette question.",
-    "category": "anti_blagues",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_016_pourquoi_une_chaise_est_par_terre",
-    "setup": "Pourquoi une chaise est par terre ?",
-    "punchline": "La gravité et une mauvaise décision.",
-    "category": "anti_blagues",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_017_que_fait_un_canard_quand_la_faim_arrive",
-    "setup": "Que fait un canard quand la faim arrive ?",
-    "punchline": "L’animal cherche généralement à manger.",
-    "category": "anti_blagues",
-    "style": "observation",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_018_petite_precision_combien_faut_il_de_person",
-    "setup": "Petite précision : combien faut-il de personnes pour changer une ampoule ?",
-    "punchline": "Au moins une personne qui sait où se trouve l’ampoule neuve.",
-    "category": "anti_blagues",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_022_que_dit_un_reveil_a_un_sac",
-    "setup": "Que dit un réveil à un sac ?",
-    "punchline": "Rien. Aucun des deux ne possède d’appareil phonatoire.",
-    "category": "anti_blagues",
-    "style": "anti_blague",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_030_que_dit_un_dictionnaire_a_un_impermeable",
-    "setup": "Que dit un dictionnaire à un imperméable ?",
-    "punchline": "Rien. Aucun des deux ne possède d’appareil phonatoire.",
-    "category": "anti_blagues",
-    "style": "dialogue",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_031_quel_est_le_point_commun_entre_une_chausse",
-    "setup": "Quel est le point commun entre une chaussette et un piano ?",
-    "punchline": "Ils figurent tous les deux dans cette question.",
-    "category": "anti_blagues",
+    "id": "blague_papa_164_pourquoi_les_lunettes_ont_elles_divorce",
+    "setup": "Pourquoi les lunettes ont-elles divorcé ?",
+    "punchline": "Elles n’avaient plus la même vision.",
+    "category": "objets",
     "style": "question_reponse",
     "adult": false
   },
   {
-    "id": "blague_anti_blagues_038_que_dit_un_frigo_a_une_souris",
-    "setup": "Que dit un frigo à une souris ?",
-    "punchline": "Rien. Aucun des deux ne possède d’appareil phonatoire.",
-    "category": "anti_blagues",
-    "style": "mini_histoire",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_039_quel_est_le_point_commun_entre_un_volcan_e",
-    "setup": "Quel est le point commun entre un volcan et une assiette ?",
-    "punchline": "Ils figurent tous les deux dans cette question.",
-    "category": "anti_blagues",
-    "style": "jeu_de_mots",
-    "adult": false
-  },
-  {
-    "id": "blague_anti_blagues_046_que_dit_une_lampe_a_une_montre",
-    "setup": "Que dit une lampe à une montre ?",
-    "punchline": "Rien. Aucun des deux ne possède d’appareil phonatoire.",
-    "category": "anti_blagues",
+    "id": "blague_papa_165_comment_appelle_t_on_un_reveil_qui_chante",
+    "setup": "Comment appelle-t-on un réveil qui chante ?",
+    "punchline": "Une alarme vocale.",
+    "category": "objets",
     "style": "anti_blague",
     "adult": false
   },
   {
-    "id": "blague_anti_blagues_047_quel_est_le_point_commun_entre_une_photo_e",
-    "setup": "Quel est le point commun entre une photo et une gare ?",
-    "punchline": "Ils figurent tous les deux dans cette question.",
-    "category": "anti_blagues",
-    "style": "observation",
+    "id": "blague_papa_166_pourquoi_le_savon_a_t_il_quitte_la_salle_de_bain",
+    "setup": "Pourquoi le savon a-t-il quitté la salle de bain ?",
+    "punchline": "Il en avait marre de se faire mousser.",
+    "category": "objets",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_167_que_dit_un_marteau_a_un_clou",
+    "setup": "Que dit un marteau à un clou ?",
+    "punchline": "Je vais droit au but.",
+    "category": "objets",
+    "style": "question_reponse",
+    "adult": false
+  },
+  {
+    "id": "blague_papa_168_pourquoi_le_parapluie_est_il_toujours_invite",
+    "setup": "Pourquoi le parapluie est-il toujours invité ?",
+    "punchline": "Parce qu’il met de l’ambiance quand ça tombe à l’eau.",
+    "category": "objets",
+    "style": "question_reponse",
     "adult": false
   }
 ]
