@@ -1,0 +1,655 @@
+{
+  "pack": "AK’Games Sound Pack Complet V1",
+  "format": "WAV PCM 16-bit mono",
+  "sampleRate": 44100,
+  "commonSoundCount": 41,
+  "mascotSoundCount": 51,
+  "totalSoundCount": 92,
+  "license": "Créations sonores originales générées pour AK’Games, sans samples externes.",
+  "sounds": [
+    {
+      "id": "answer_lock",
+      "file": "assets/sounds/answer_lock.wav",
+      "description": "Réponse verrouillée",
+      "bytes": 7982,
+      "sha256": "aab9fabeb647266191511df7f25ce29cea7515bd963540fc7814aedb4c7189d4"
+    },
+    {
+      "id": "answer_reveal",
+      "file": "assets/sounds/answer_reveal.wav",
+      "description": "Révélation de réponse",
+      "bytes": 38852,
+      "sha256": "dd8d28d445b9e3ad0ffc9d1ed9dcd699b83122cd2e8e6d38353f8e2adc780ef2"
+    },
+    {
+      "id": "card_reveal",
+      "file": "assets/sounds/card_reveal.wav",
+      "description": "Révélation d’une carte",
+      "bytes": 31796,
+      "sha256": "9c30c7fc976bd155b3e5c93b6e1174b1a97d62621c3b6375344d5a33d683043f"
+    },
+    {
+      "id": "card_swipe",
+      "file": "assets/sounds/card_swipe.wav",
+      "description": "Glissement de carte",
+      "bytes": 22094,
+      "sha256": "e00d4c567be0f7c30e02a860b8920c8deddb497078b88e409ea9acfdc4b4f8d8"
+    },
+    {
+      "id": "code_copy",
+      "file": "assets/sounds/code_copy.wav",
+      "description": "Code copié",
+      "bytes": 20330,
+      "sha256": "40f8d993751ec3f38a2f79649adbcde4a0ab1831073a180a34931db1e4803bde"
+    },
+    {
+      "id": "correct",
+      "file": "assets/sounds/correct.wav",
+      "description": "Bonne réponse",
+      "bytes": 43262,
+      "sha256": "0e331321b6ad73ba35a6a33fd5aebe781461fc1a2bf51a77ca297b9deef7336a"
+    },
+    {
+      "id": "countdown_go",
+      "file": "assets/sounds/countdown_go.wav",
+      "description": "GO du compte à rebours",
+      "bytes": 30032,
+      "sha256": "31e742acd13e762d149817fa27f2da4a0923f0122557227773586b4ac2b094de"
+    },
+    {
+      "id": "countdown_tick",
+      "file": "assets/sounds/countdown_tick.wav",
+      "description": "Tick de compte à rebours",
+      "bytes": 8864,
+      "sha256": "39a69603bd97c46e9de5d0c5d19115f882a9880edcfecff7c76dd84d5def54f5"
+    },
+    {
+      "id": "defeat",
+      "file": "assets/sounds/defeat.wav",
+      "description": "Défaite finale",
+      "bytes": 67076,
+      "sha256": "4c7bb7a3171c1f5f6b19f88317daf317e635dc5bf507010454fa867b1c3d9a43"
+    },
+    {
+      "id": "game_start",
+      "file": "assets/sounds/game_start.wav",
+      "description": "Lancement de partie",
+      "bytes": 56492,
+      "sha256": "bf6eb3f676085b6ba77636021117f07ebd818ddfdf5b840ab2d2411fd121c2d3"
+    },
+    {
+      "id": "mascot_bonnie_hype",
+      "file": "assets/sounds/mascot_bonnie_hype.wav",
+      "description": "Bonnie · hype · ultra douce et adorable",
+      "bytes": 31796,
+      "sha256": "132fe8a6cfd0270b73afecb2ca67072f8a818473a7d208badc768e55aca58aae"
+    },
+    {
+      "id": "mascot_bonnie_result",
+      "file": "assets/sounds/mascot_bonnie_result.wav",
+      "description": "Bonnie · result · ultra douce et adorable",
+      "bytes": 42820,
+      "sha256": "6e23fb7384c6d322427d4a9fdf2d8b2508c8148e0be17be764505a9224421134"
+    },
+    {
+      "id": "mascot_bonnie_select",
+      "file": "assets/sounds/mascot_bonnie_select.wav",
+      "description": "Bonnie · select · ultra douce et adorable",
+      "bytes": 36206,
+      "sha256": "c861b98046474bca4c23a35dda6ab122391ddf98146a1f7f32e2aa8f23f5aa94"
+    },
+    {
+      "id": "mascot_croa_hype",
+      "file": "assets/sounds/mascot_croa_hype.wav",
+      "description": "Croâ · hype · maline et insolente",
+      "bytes": 39292,
+      "sha256": "27c516258ed3e915a1fb4cda60bf04f5f662222914049e95e6f68e27fac0fb76"
+    },
+    {
+      "id": "mascot_croa_result",
+      "file": "assets/sounds/mascot_croa_result.wav",
+      "description": "Croâ · result · maline et insolente",
+      "bytes": 48554,
+      "sha256": "c76d2f8ed89ebb95a5f026363b0bcb2e9facb7004568e35f96e24e9a55bb881d"
+    },
+    {
+      "id": "mascot_croa_select",
+      "file": "assets/sounds/mascot_croa_select.wav",
+      "description": "Croâ · select · maline et insolente",
+      "bytes": 30032,
+      "sha256": "7528e11f949de28b385cd79e7dfbb10f001ba9306abdd0690c1c2f0529be75f3"
+    },
+    {
+      "id": "mascot_edgar_hype",
+      "file": "assets/sounds/mascot_edgar_hype.wav",
+      "description": "Edgar · hype · intelligent, sarcastique et sombre",
+      "bytes": 30032,
+      "sha256": "7a3e83cbf95b5706b4166a526c18a7f371d48fbe4c740d414181c5125aed2be8"
+    },
+    {
+      "id": "mascot_edgar_result",
+      "file": "assets/sounds/mascot_edgar_result.wav",
+      "description": "Edgar · result · intelligent, sarcastique et sombre",
+      "bytes": 51200,
+      "sha256": "b102c047c21dfe1cf6452bf33387d1e16da4f7c43a7d4bab6a8b061846db3d03"
+    },
+    {
+      "id": "mascot_edgar_select",
+      "file": "assets/sounds/mascot_edgar_select.wav",
+      "description": "Edgar · select · intelligent, sarcastique et sombre",
+      "bytes": 37088,
+      "sha256": "2c636751e3885a6f2388c43848e40377c0dd2faba7689c28ce7d47f14c4f36a2"
+    },
+    {
+      "id": "mascot_filou_hype",
+      "file": "assets/sounds/mascot_filou_hype.wav",
+      "description": "Filou · hype · rusé, confiant et charmeur",
+      "bytes": 32236,
+      "sha256": "af4b131d6fbb73c745128a79fdd53f009c2875bd95c4e9d8ac0e38127370935c"
+    },
+    {
+      "id": "mascot_filou_result",
+      "file": "assets/sounds/mascot_filou_result.wav",
+      "description": "Filou · result · rusé, confiant et charmeur",
+      "bytes": 45026,
+      "sha256": "7c13161d634ca0a4773b556a262af54c7e0ea59b01d1f72f5bbabf0ecf65637e"
+    },
+    {
+      "id": "mascot_filou_select",
+      "file": "assets/sounds/mascot_filou_select.wav",
+      "description": "Filou · select · rusé, confiant et charmeur",
+      "bytes": 52964,
+      "sha256": "219448b487a9ebc48689e80f8c7eb820e8fccb52557c486f8971e7bd49751785"
+    },
+    {
+      "id": "mascot_flash_hype",
+      "file": "assets/sounds/mascot_flash_hype.wav",
+      "description": "Flash · hype · rapide, hyperactif et imprévisible",
+      "bytes": 52786,
+      "sha256": "64625d5566e4f4dc87a47ea479c38099e8c8e80eac4c899b6304a37cf7e559d8"
+    },
+    {
+      "id": "mascot_flash_result",
+      "file": "assets/sounds/mascot_flash_result.wav",
+      "description": "Flash · result · rapide, hyperactif et imprévisible",
+      "bytes": 37970,
+      "sha256": "6930545dea2e60c17ef21e3f8f58006ef0567939e64ec0ef7f067b924a98173e"
+    },
+    {
+      "id": "mascot_flash_select",
+      "file": "assets/sounds/mascot_flash_select.wav",
+      "description": "Flash · select · rapide, hyperactif et imprévisible",
+      "bytes": 19448,
+      "sha256": "c04d5da4e889648d2d1ca2baaea82cb5b942f46275f654735107bdbccc66b4d7"
+    },
+    {
+      "id": "mascot_honey_hype",
+      "file": "assets/sounds/mascot_honey_hype.wav",
+      "description": "Honey · hype · calme, rassurant et tendre",
+      "bytes": 33560,
+      "sha256": "5c22ac1e871dc89442fda37f6f20c4e554e4446772f524da61328e91c0d3df0c"
+    },
+    {
+      "id": "mascot_honey_result",
+      "file": "assets/sounds/mascot_honey_result.wav",
+      "description": "Honey · result · calme, rassurant et tendre",
+      "bytes": 48994,
+      "sha256": "7ff819225e872499cc4ab1a71fd721b338c31bae93472e4a533dcc1580af635c"
+    },
+    {
+      "id": "mascot_honey_select",
+      "file": "assets/sounds/mascot_honey_select.wav",
+      "description": "Honey · select · calme, rassurant et tendre",
+      "bytes": 41498,
+      "sha256": "f8826b4a9ad9969b0dc8b8d16a07def5413998678642499df592a715791f3952"
+    },
+    {
+      "id": "mascot_kaia_hype",
+      "file": "assets/sounds/mascot_kaia_hype.wav",
+      "description": "Kaia · hype · calme, stylée et fausse sage",
+      "bytes": 31796,
+      "sha256": "8fd0d5cd65dc443f0c25d78ec33162085e865ab6948472c1ae1f489fd716caaf"
+    },
+    {
+      "id": "mascot_kaia_result",
+      "file": "assets/sounds/mascot_kaia_result.wav",
+      "description": "Kaia · result · calme, stylée et fausse sage",
+      "bytes": 49436,
+      "sha256": "b11f27572e7c6984d8f9db9f12e2c56d461c846fc0265afde5941fe0ffa3156f"
+    },
+    {
+      "id": "mascot_kaia_select",
+      "file": "assets/sounds/mascot_kaia_select.wav",
+      "description": "Kaia · select · calme, stylée et fausse sage",
+      "bytes": 33998,
+      "sha256": "49c94b9a33b04a86e015ba0f701d3df8bfbd3c1a876e237baea30e4dd6ffefee"
+    },
+    {
+      "id": "mascot_loki_hype",
+      "file": "assets/sounds/mascot_loki_hype.wav",
+      "description": "Loki · hype · câline, gourmande et paresseuse",
+      "bytes": 35324,
+      "sha256": "faa1e2c9194e57b763647da6928324eb4a1224b76ccab3589cbf476dfc0e5a25"
+    },
+    {
+      "id": "mascot_loki_result",
+      "file": "assets/sounds/mascot_loki_result.wav",
+      "description": "Loki · result · câline, gourmande et paresseuse",
+      "bytes": 47230,
+      "sha256": "e4b0c2d2ad3c731e04ab3512f85fec2fcdfbbd593c5d491dff9697405d0830b2"
+    },
+    {
+      "id": "mascot_loki_select",
+      "file": "assets/sounds/mascot_loki_select.wav",
+      "description": "Loki · select · câline, gourmande et paresseuse",
+      "bytes": 39734,
+      "sha256": "2a4414aff70a74b07ed11a77458f635eef8d7c2de673a4311387a3ac08c1284a"
+    },
+    {
+      "id": "mascot_marcellius_hype",
+      "file": "assets/sounds/mascot_marcellius_hype.wav",
+      "description": "Marcellius · hype · intelligente, débordée et généreuse",
+      "bytes": 38852,
+      "sha256": "7cf8650c5a82ffbd72cb8ef9df62c67df9cbe73466ae6426989afbb072a09b8f"
+    },
+    {
+      "id": "mascot_marcellius_result",
+      "file": "assets/sounds/mascot_marcellius_result.wav",
+      "description": "Marcellius · result · intelligente, débordée et généreuse",
+      "bytes": 52964,
+      "sha256": "aea08648a00619739ad43de6cde82bd683895976433791765697701feabf8a1a"
+    },
+    {
+      "id": "mascot_marcellius_select",
+      "file": "assets/sounds/mascot_marcellius_select.wav",
+      "description": "Marcellius · select · intelligente, débordée et généreuse",
+      "bytes": 25788,
+      "sha256": "5c9e000ffaf370243cb0baaba2d5e0c8955512eacb4b7803e5eeb95ff6f8a81c"
+    },
+    {
+      "id": "mascot_maurice_hype",
+      "file": "assets/sounds/mascot_maurice_hype.wav",
+      "description": "Maurice · hype · dramatique, nerveux et théâtral",
+      "bytes": 37088,
+      "sha256": "2ee10565fcce5bd84450ead091dc6d7531a9855f47f9867b148faa81185f8f09"
+    },
+    {
+      "id": "mascot_maurice_result",
+      "file": "assets/sounds/mascot_maurice_result.wav",
+      "description": "Maurice · result · dramatique, nerveux et théâtral",
+      "bytes": 50318,
+      "sha256": "9ff531a278a791866b8c0e1d060c0aa025c5ef7e9aa19c14c10e404a024bd191"
+    },
+    {
+      "id": "mascot_maurice_select",
+      "file": "assets/sounds/mascot_maurice_select.wav",
+      "description": "Maurice · select · dramatique, nerveux et théâtral",
+      "bytes": 37088,
+      "sha256": "ce334a252b0a3d8f9ee9ba04d216882e244a169a6071b91798fd18a8268f4b69"
+    },
+    {
+      "id": "mascot_moon_hype",
+      "file": "assets/sounds/mascot_moon_hype.wav",
+      "description": "Moon · hype · protecteur, gentil et solide",
+      "bytes": 37088,
+      "sha256": "de96d3bafe767a900decdfd500d3b9566bd873361cfa48c5d9c2a620c24d450f"
+    },
+    {
+      "id": "mascot_moon_result",
+      "file": "assets/sounds/mascot_moon_result.wav",
+      "description": "Moon · result · protecteur, gentil et solide",
+      "bytes": 56492,
+      "sha256": "ed53613ac09f04629c5623318579f8825b1466ab3befc84daae7e1ee8a799ed2"
+    },
+    {
+      "id": "mascot_moon_select",
+      "file": "assets/sounds/mascot_moon_select.wav",
+      "description": "Moon · select · protecteur, gentil et solide",
+      "bytes": 37088,
+      "sha256": "973cbe730620e9af6d2286532fde4c3200a5c0e5b26dc6ef05b2a7eb71436569"
+    },
+    {
+      "id": "mascot_nuggets_hype",
+      "file": "assets/sounds/mascot_nuggets_hype.wav",
+      "description": "Nuggets · hype · maladroit et surexcité",
+      "bytes": 37088,
+      "sha256": "af6cbe1da65fc65c62b96088a3c1f1936c95ad99e54349db43ae370effbb3be3"
+    },
+    {
+      "id": "mascot_nuggets_result",
+      "file": "assets/sounds/mascot_nuggets_result.wav",
+      "description": "Nuggets · result · maladroit et surexcité",
+      "bytes": 40616,
+      "sha256": "6b08c911082c9e19ec7706f3f6dc142d1938dc4a8aa9d11c47cc822ec9a14010"
+    },
+    {
+      "id": "mascot_nuggets_select",
+      "file": "assets/sounds/mascot_nuggets_select.wav",
+      "description": "Nuggets · select · maladroit et surexcité",
+      "bytes": 31354,
+      "sha256": "b688eb5d58fdf19dbef020904afb00e6ea67022905240bef36b7e37615d6fa3d"
+    },
+    {
+      "id": "mascot_rrrrh_hype",
+      "file": "assets/sounds/mascot_rrrrh_hype.wav",
+      "description": "Rrrrh · hype · énergique, aventureux et un peu stupide",
+      "bytes": 38852,
+      "sha256": "75ef36d9628f99190cc84e636d9a1408aba72758b394d4905eeade393f7663a2"
+    },
+    {
+      "id": "mascot_rrrrh_result",
+      "file": "assets/sounds/mascot_rrrrh_result.wav",
+      "description": "Rrrrh · result · énergique, aventureux et un peu stupide",
+      "bytes": 54728,
+      "sha256": "462a2f5995671340772cd1897ccec3cc93838af116761418d782062a8e692a6d"
+    },
+    {
+      "id": "mascot_rrrrh_select",
+      "file": "assets/sounds/mascot_rrrrh_select.wav",
+      "description": "Rrrrh · select · énergique, aventureux et un peu stupide",
+      "bytes": 44144,
+      "sha256": "00962667d4e070870d64b7fc19a687459f3e7ef0b59ff2d2a1aec25707206eba"
+    },
+    {
+      "id": "mascot_sir-moustache_hype",
+      "file": "assets/sounds/mascot_sir-moustache_hype.wav",
+      "description": "Sir Moustache · hype · hautain, respectable et expérimenté",
+      "bytes": 30032,
+      "sha256": "0fc3acadf091130d8cc673ea603c652d7c8ef6c5bb3c0c456713c69e33b97062"
+    },
+    {
+      "id": "mascot_sir-moustache_result",
+      "file": "assets/sounds/mascot_sir-moustache_result.wav",
+      "description": "Sir Moustache · result · hautain, respectable et expérimenté",
+      "bytes": 56492,
+      "sha256": "abca63dbb33e8b7e57c2f352980985d10aab0fb43d8b06b421d230c35f717e05"
+    },
+    {
+      "id": "mascot_sir-moustache_select",
+      "file": "assets/sounds/mascot_sir-moustache_select.wav",
+      "description": "Sir Moustache · select · hautain, respectable et expérimenté",
+      "bytes": 27386,
+      "sha256": "c9e71a422d244e83b56c58aad58f30055cc04bd1879b943c36ef5f69e6b2bb6f"
+    },
+    {
+      "id": "mascot_snow_hype",
+      "file": "assets/sounds/mascot_snow_hype.wav",
+      "description": "Snow · hype · timide, adorable et légèrement gauche",
+      "bytes": 35764,
+      "sha256": "0a24979eab51af6b372a7e54e4f0f2ca18188e9481a2308ea4fe2f1a2f0ee221"
+    },
+    {
+      "id": "mascot_snow_result",
+      "file": "assets/sounds/mascot_snow_result.wav",
+      "description": "Snow · result · timide, adorable et légèrement gauche",
+      "bytes": 44144,
+      "sha256": "6a6847ccf038158aa62103edf415f9c9e4198aaca6748272bb7a07fd6e92d934"
+    },
+    {
+      "id": "mascot_snow_select",
+      "file": "assets/sounds/mascot_snow_select.wav",
+      "description": "Snow · select · timide, adorable et légèrement gauche",
+      "bytes": 38852,
+      "sha256": "2dbab10c7250d80900b47d6d6299cca487c91215941cb35c5d2ce05d49417f6f"
+    },
+    {
+      "id": "mascot_spike_hype",
+      "file": "assets/sounds/mascot_spike_hype.wav",
+      "description": "Spike · hype · insolent, blasé et piquant",
+      "bytes": 31796,
+      "sha256": "d47468e6222fc82af2d3ab14c74a6eee7d7d1cd84b6307402f7d9a7f1146fd3f"
+    },
+    {
+      "id": "mascot_spike_result",
+      "file": "assets/sounds/mascot_spike_result.wav",
+      "description": "Spike · result · insolent, blasé et piquant",
+      "bytes": 38850,
+      "sha256": "3684ff812796391d7d06ecdc81eb890a6fc5f24624584cffeb993e996ed8cab9"
+    },
+    {
+      "id": "mascot_spike_select",
+      "file": "assets/sounds/mascot_spike_select.wav",
+      "description": "Spike · select · insolent, blasé et piquant",
+      "bytes": 15920,
+      "sha256": "5592d29ce9af9c4298119ed4322fe4d2f51e08143bb4c60070489911538f28bf"
+    },
+    {
+      "id": "mascot_vapo_hype",
+      "file": "assets/sounds/mascot_vapo_hype.wav",
+      "description": "Vapo · hype · doux, étrange et mystérieux",
+      "bytes": 31796,
+      "sha256": "36270f657e7a69db98063f2e1a9b4708d4760c7d675f4b33c25945cce0ca659e"
+    },
+    {
+      "id": "mascot_vapo_result",
+      "file": "assets/sounds/mascot_vapo_result.wav",
+      "description": "Vapo · result · doux, étrange et mystérieux",
+      "bytes": 50318,
+      "sha256": "aa745232eb8acb08140519e4c91cb586b7a18b995477a0d974994196984720bd"
+    },
+    {
+      "id": "mascot_vapo_select",
+      "file": "assets/sounds/mascot_vapo_select.wav",
+      "description": "Vapo · select · doux, étrange et mystérieux",
+      "bytes": 38852,
+      "sha256": "eb8dc1e6f1df07f44e357c94ea38d8b5a2e2bf80bc27fd86333eb277dfc7618a"
+    },
+    {
+      "id": "next_turn",
+      "file": "assets/sounds/next_turn.wav",
+      "description": "Tour suivant",
+      "bytes": 16802,
+      "sha256": "4ffe5b6f14e2f19e2abaee0a913562b281108daa980c4e373c3ab8376a105259"
+    },
+    {
+      "id": "pass_phone",
+      "file": "assets/sounds/pass_phone.wav",
+      "description": "Passe le téléphone",
+      "bytes": 24740,
+      "sha256": "904d4dba2c9fd97ead6a784a507d2bbbca9bc92a6ee28f21f2ceda8753bd7db8"
+    },
+    {
+      "id": "pause",
+      "file": "assets/sounds/pause.wav",
+      "description": "Partie en pause",
+      "bytes": 29150,
+      "sha256": "f3e561b3c04bf14e7c53419fab97b9fb8d6379bdb8f37cdbdad6ed2b65cf5765"
+    },
+    {
+      "id": "player_added",
+      "file": "assets/sounds/player_added.wav",
+      "description": "Joueur ajouté",
+      "bytes": 30032,
+      "sha256": "13c1841fd30552ba11dfa3093d34f6b003d58e637dc6553948247445f0912799"
+    },
+    {
+      "id": "player_ready",
+      "file": "assets/sounds/player_ready.wav",
+      "description": "Joueur prêt",
+      "bytes": 23858,
+      "sha256": "356d9e014a7e8d80312b57713a3c50fcddea465255788f3f88a27a5e5848bdb0"
+    },
+    {
+      "id": "player_removed",
+      "file": "assets/sounds/player_removed.wav",
+      "description": "Joueur retiré",
+      "bytes": 22976,
+      "sha256": "1f2837ff82a69f76ce81daf86769faaddb1135da72144761ec2b912cdf1505c6"
+    },
+    {
+      "id": "popup_close",
+      "file": "assets/sounds/popup_close.wav",
+      "description": "Fenêtre fermée",
+      "bytes": 21212,
+      "sha256": "301fb51333c431df8529e1322953f69fc06f6b4ca35e01e6080ee1d6efa48de9"
+    },
+    {
+      "id": "popup_open",
+      "file": "assets/sounds/popup_open.wav",
+      "description": "Fenêtre ouverte",
+      "bytes": 21212,
+      "sha256": "e6ab35d0a837eb0790f30b9bd77d6bbe6ff20e91995782686ce827784d4a4709"
+    },
+    {
+      "id": "resume",
+      "file": "assets/sounds/resume.wav",
+      "description": "Reprise de partie",
+      "bytes": 24740,
+      "sha256": "44276b4837fe40238634f9255533ffd3a9030411b54419d38bc26f229588dced"
+    },
+    {
+      "id": "room_create",
+      "file": "assets/sounds/room_create.wav",
+      "description": "Création d’une room",
+      "bytes": 35324,
+      "sha256": "0d31b68f93068c5d806c15239c1c3dd310031645fc3c18aec1e92c619bff8fda"
+    },
+    {
+      "id": "room_join",
+      "file": "assets/sounds/room_join.wav",
+      "description": "Un joueur rejoint la room",
+      "bytes": 34442,
+      "sha256": "1a73a78b6a4968bf5f0933c8cc5dfcf4a39b702322db3b37f93ce3f0f1ee48ce"
+    },
+    {
+      "id": "room_leave",
+      "file": "assets/sounds/room_leave.wav",
+      "description": "Un joueur quitte la room",
+      "bytes": 30914,
+      "sha256": "af6d6b9438a60295815e83fcbf530e4bb94e29a54689b1ab93b7c0ee0e76b7f1"
+    },
+    {
+      "id": "round_start",
+      "file": "assets/sounds/round_start.wav",
+      "description": "Début de manche",
+      "bytes": 35324,
+      "sha256": "50e9851de6c35968b0d3b2d2eb335816cfaf670111283c5a96318c6b2c9be20c"
+    },
+    {
+      "id": "score_up",
+      "file": "assets/sounds/score_up.wav",
+      "description": "Points gagnés",
+      "bytes": 28268,
+      "sha256": "a49dab25de3632a7d56af0a220d3f23b62f62868afb3ab6d7233ea35ce747386"
+    },
+    {
+      "id": "screen_open",
+      "file": "assets/sounds/screen_open.wav",
+      "description": "Ouverture d’un écran",
+      "bytes": 21212,
+      "sha256": "b86b4bde722b7f79d2bfe57eae84302c301103aabb2914e4a41f3610503f2695"
+    },
+    {
+      "id": "skip",
+      "file": "assets/sounds/skip.wav",
+      "description": "Carte passée",
+      "bytes": 14156,
+      "sha256": "3bb977dfeaf3b5f444de3c2756518a1eb4b8bea21ced9b65aa657eca7ed3b2ce"
+    },
+    {
+      "id": "tie",
+      "file": "assets/sounds/tie.wav",
+      "description": "Égalité",
+      "bytes": 35324,
+      "sha256": "e5e4bc6b55dc811e3d6d1aa20144671ff1d0882a9f9f34edcf307aa53cd10039"
+    },
+    {
+      "id": "timer_end",
+      "file": "assets/sounds/timer_end.wav",
+      "description": "Fin du chronomètre",
+      "bytes": 31796,
+      "sha256": "babc76ecef551f5e2dd11a9a47e04ea741bef3a363007630f48db7f6b944a2c6"
+    },
+    {
+      "id": "timer_warning",
+      "file": "assets/sounds/timer_warning.wav",
+      "description": "Alerte de chronomètre",
+      "bytes": 30914,
+      "sha256": "f5668338cc4540e5491ae34bbdf3ffc17e8aaa22ee0ec19969dc6fbbea08644a"
+    },
+    {
+      "id": "ui_back",
+      "file": "assets/sounds/ui_back.wav",
+      "description": "Retour descendant",
+      "bytes": 14156,
+      "sha256": "a0f51cf075d9689debe3b5cc86e6d3c9bb311b5fa54e2b5ffdc87379fba39e83"
+    },
+    {
+      "id": "ui_close_settings",
+      "file": "assets/sounds/ui_close_settings.wav",
+      "description": "Fermeture des réglages",
+      "bytes": 25622,
+      "sha256": "a756e5eb2590a9f12410bc28a166e8c4295ccc087992efd1edf1cfc3eb1fb703"
+    },
+    {
+      "id": "ui_confirm",
+      "file": "assets/sounds/ui_confirm.wav",
+      "description": "Validation positive",
+      "bytes": 23858,
+      "sha256": "25edbbd6929aa4a7c3f5f8124a9989738dafa4ef5e968aaf70ea8b7a17dd9b3d"
+    },
+    {
+      "id": "ui_error",
+      "file": "assets/sounds/ui_error.wav",
+      "description": "Erreur douce et grave",
+      "bytes": 29150,
+      "sha256": "dc3e0fd7711fe0d6d3c05104756c2afae1ee99ca78ebf45d55a41cde179fcc52"
+    },
+    {
+      "id": "ui_install",
+      "file": "assets/sounds/ui_install.wav",
+      "description": "Installation réussie",
+      "bytes": 39734,
+      "sha256": "d55593f96b98e9602e1cd937626a9df7f82112e89f2cd4c217e51048ec823175"
+    },
+    {
+      "id": "ui_notification",
+      "file": "assets/sounds/ui_notification.wav",
+      "description": "Notification courte",
+      "bytes": 27826,
+      "sha256": "c2eb9212e69617307ba181bc3748468c440657d0136d2a6f8fe079e3859124df"
+    },
+    {
+      "id": "ui_open_settings",
+      "file": "assets/sounds/ui_open_settings.wav",
+      "description": "Ouverture des réglages",
+      "bytes": 27386,
+      "sha256": "e867d2295b5878fd0e7d3951b85f20b45e825c383a445fd8f2198b6d6b055e9e"
+    },
+    {
+      "id": "ui_tap",
+      "file": "assets/sounds/ui_tap.wav",
+      "description": "Clic tactile lumineux",
+      "bytes": 7540,
+      "sha256": "f4e9ac8fd69e934a4e7a89774f47f73cde9a161fc0c2deda676405eefca91265"
+    },
+    {
+      "id": "ui_toggle_off",
+      "file": "assets/sounds/ui_toggle_off.wav",
+      "description": "Interrupteur désactivé",
+      "bytes": 11510,
+      "sha256": "dec0e057875c4cd6d51220e6dae19bae8df3c2f6fb29dd562cc6c91b16ac2986"
+    },
+    {
+      "id": "ui_toggle_on",
+      "file": "assets/sounds/ui_toggle_on.wav",
+      "description": "Interrupteur activé",
+      "bytes": 11510,
+      "sha256": "401f0eb7e87876241604fc85bea2ad652b49c729ae2145a01f3a065ab0167acd"
+    },
+    {
+      "id": "victory",
+      "file": "assets/sounds/victory.wav",
+      "description": "Victoire finale",
+      "bytes": 75896,
+      "sha256": "c1926aef245855a43a2c19a24ae1c274d0078a202bfd3ac5a53912de57755e62"
+    },
+    {
+      "id": "wrong",
+      "file": "assets/sounds/wrong.wav",
+      "description": "Mauvaise réponse",
+      "bytes": 38852,
+      "sha256": "cfb17394452d55aedee652f4730404c1bdd5ebcecad3327f2614d71002900dc9"
+    }
+  ]
+}
