@@ -1,0 +1,48 @@
+.ak-character-picture {
+  display: inline-grid;
+  place-items: center;
+  overflow: visible;
+}
+
+.ak-character {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transform-origin: 50% 85%;
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.32));
+}
+
+.ak-character--avatar-circle,
+.ak-character--icon {
+  filter: none;
+}
+
+/* Animations légères appliquées aux illustrations dédiées de chaque pose. */
+.ak-character--talk { animation: ak-character-talk 1.8s ease-in-out infinite; }
+.ak-character--hype { animation: ak-character-hype .72s ease-in-out infinite alternate; }
+.ak-character--win { animation: ak-character-win 1.05s cubic-bezier(.2,.8,.2,1) both; }
+.ak-character--lose { animation: ak-character-lose .8s ease-out both; filter: saturate(.72) drop-shadow(0 12px 18px rgba(0,0,0,.3)); }
+
+@keyframes ak-character-talk {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  45% { transform: translateY(-4px) rotate(-1deg); }
+  55% { transform: translateY(-2px) rotate(1deg); }
+}
+@keyframes ak-character-hype {
+  from { transform: translateY(0) scale(1); }
+  to { transform: translateY(-10px) scale(1.025); }
+}
+@keyframes ak-character-win {
+  0% { transform: translateY(18px) scale(.94); opacity: 0; }
+  55% { transform: translateY(-14px) scale(1.05); opacity: 1; }
+  100% { transform: translateY(0) scale(1); }
+}
+@keyframes ak-character-lose {
+  0% { transform: translateY(-4px) rotate(0); }
+  100% { transform: translateY(7px) rotate(-2deg) scale(.98); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ak-character { animation: none !important; }
+}
