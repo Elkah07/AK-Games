@@ -257,12 +257,6 @@
     "category": "classic"
   },
   {
-    "id": "prefere_011",
-    "optionA": "Ne plus jamais mentir",
-    "optionB": "Entendre toujours la vérité",
-    "category": "classic"
-  },
-  {
     "id": "prefere_333",
     "optionA": "Tenter le métier de tes rêves avec 30 % de chances de réussir",
     "optionB": "Choisir un métier sûr qui ne te passionne pas",
@@ -333,12 +327,6 @@
     "id": "prefere_218",
     "optionA": "Pouvoir choisir tes rêves chaque nuit",
     "optionB": "Ne plus jamais faire de cauchemars mais ne plus rêver du tout",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_014",
-    "optionA": "Pouvoir parler aux animaux",
-    "optionB": "Parler toutes les langues",
     "category": "classic"
   },
   {
@@ -428,12 +416,6 @@
     "category": "classic"
   },
   {
-    "id": "prefere_119",
-    "optionA": "Perdre toutes tes photos",
-    "optionB": "Perdre tous tes messages",
-    "category": "classic"
-  },
-  {
     "id": "prefere_018",
     "optionA": "Être coincé(e) dans un ascenseur",
     "optionB": "Être coincé(e) dans les embouteillages pendant huit heures",
@@ -446,13 +428,6 @@
     "category": "classic"
   },
   {
-    "id": "prefere_340",
-    "optionA": "Ne plus jamais revoir ton meilleur ami",
-    "optionB": "Continuer à le voir en sachant qu’il te déteste",
-    "category": "classic",
-    "specialType": "double_peine"
-  },
-  {
     "id": "prefere_120",
     "optionA": "Revenir dix ans en arrière avec tes souvenirs actuels",
     "optionB": "Voir exactement ta vie dans dix ans sans pouvoir la changer",
@@ -462,12 +437,6 @@
     "id": "prefere_224",
     "optionA": "Appeler ton ex en haut-parleur devant tout le groupe",
     "optionB": "Envoyer « tu me manques » à ton dernier crush",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_019",
-    "optionA": "Toujours dire ce que tu penses",
-    "optionB": "Ne plus pouvoir donner ton avis",
     "category": "classic"
   },
   {
@@ -506,12 +475,6 @@
     "optionB": "Savoir qui tu étais sans pouvoir redevenir cette personne",
     "category": "classic",
     "specialType": "double_peine"
-  },
-  {
-    "id": "prefere_226",
-    "optionA": "Que ton téléphone projette automatiquement ta dernière photo",
-    "optionB": "Que ton dernier message vocal se lance devant tout le monde",
-    "category": "classic"
   },
   {
     "id": "prefere_021",
@@ -555,12 +518,6 @@
     "optionB": "Transformer la soirée en concours de danse",
     "category": "classic",
     "specialType": "choix_collectif"
-  },
-  {
-    "id": "prefere_124",
-    "optionA": "Pouvoir réparer une seule erreur de ton passé",
-    "optionB": "Pouvoir éviter une seule erreur de ton futur",
-    "category": "classic"
   },
   {
     "id": "prefere_023",
@@ -618,12 +575,6 @@
     "category": "classic"
   },
   {
-    "id": "prefere_025",
-    "optionA": "Ne plus jamais dormir",
-    "optionB": "Dormir douze heures par jour",
-    "category": "classic"
-  },
-  {
     "id": "prefere_127",
     "optionA": "Perdre ta maison dans un incendie sans perdre personne",
     "optionB": "Garder ta maison mais perdre tous tes souvenirs matériels",
@@ -639,12 +590,6 @@
     "id": "prefere_232",
     "optionA": "Faire une déclaration d’amour à la mauvaise personne",
     "optionB": "Refuser accidentellement la bonne personne",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_026",
-    "optionA": "Avoir toujours raison",
-    "optionB": "Toujours obtenir ce que tu veux",
     "category": "classic"
   },
   {
@@ -813,13 +758,6 @@
     "category": "classic"
   },
   {
-    "id": "prefere_354",
-    "optionA": "Passer un week-end sans téléphone",
-    "optionB": "Passer un week-end sans argent",
-    "category": "classic",
-    "specialType": "choix_collectif"
-  },
-  {
     "id": "prefere_033",
     "optionA": "Avoir une semaine de quatre jours",
     "optionB": "Travailler seulement six mois par an",
@@ -841,12 +779,6 @@
     "id": "prefere_355",
     "optionA": "Décider à la place d’un ami qui hésite",
     "optionB": "Le laisser prendre une décision que tu penses mauvaise",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_034",
-    "optionA": "Connaître la date de ta mort",
-    "optionB": "Connaître la cause de ta mort",
     "category": "classic"
   },
   {
@@ -1058,12 +990,6 @@
     "category": "classic"
   },
   {
-    "id": "prefere_144",
-    "optionA": "Être jugé(e) pour quelque chose que tu n’as pas fait",
-    "optionB": "Voir une personne innocente être jugée à ta place",
-    "category": "classic"
-  },
-  {
     "id": "prefere_252",
     "optionA": "Entendre la même chanson dans ta tête toute la journée",
     "optionB": "Avoir constamment un mot sur le bout de la langue",
@@ -1098,12 +1024,6 @@
     "id": "prefere_365",
     "optionA": "Laisser une intelligence artificielle choisir ton métier",
     "optionB": "La laisser choisir ton futur partenaire",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_044",
-    "optionA": "Voir dix minutes dans le futur",
-    "optionB": "Revenir dix minutes dans le passé",
     "category": "classic"
   },
   {
@@ -1190,12 +1110,6 @@
     "id": "prefere_149",
     "optionA": "Pouvoir connaître la vérité sur une seule personne",
     "optionB": "Pouvoir effacer un seul mensonge que tu as raconté",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_258",
-    "optionA": "Toujours avoir trop chaud en hiver",
-    "optionB": "Toujours avoir trop froid en été",
     "category": "classic"
   },
   {
@@ -1346,27 +1260,9 @@
     "category": "classic"
   },
   {
-    "id": "prefere_265",
-    "optionA": "Devenir riche grâce à quelque chose dont tu as honte",
-    "optionB": "Rester modeste grâce à quelque chose dont tu es très fier ou fière",
-    "category": "classic"
-  },
-  {
     "id": "prefere_054",
     "optionA": "Ne plus jamais utiliser d’emoji",
     "optionB": "Ne plus jamais envoyer de vocal",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_375",
-    "optionA": "Recevoir une note publique après chaque interaction sociale",
-    "optionB": "Ne plus jamais savoir l’impression que tu donnes",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_266",
-    "optionA": "Recevoir 100 000 € aujourd’hui",
-    "optionB": "Recevoir 1 000 € par mois pour le reste de ta vie",
     "category": "classic"
   },
   {
@@ -1382,13 +1278,6 @@
     "category": "classic"
   },
   {
-    "id": "prefere_376",
-    "optionA": "Ne plus jamais avoir besoin de dormir",
-    "optionB": "Ne plus jamais avoir besoin de travailler",
-    "category": "classic",
-    "specialType": "prediction_majorite"
-  },
-  {
     "id": "prefere_267",
     "optionA": "Gagner le double de ton salaire mais travailler tous les week-ends",
     "optionB": "Garder ton salaire actuel avec trois jours de repos par semaine",
@@ -1401,21 +1290,9 @@
     "category": "classic"
   },
   {
-    "id": "prefere_056",
-    "optionA": "Pouvoir arrêter le temps",
-    "optionB": "Pouvoir accélérer le temps",
-    "category": "classic"
-  },
-  {
     "id": "prefere_377",
     "optionA": "Utiliser une technologie qui prédit tes ruptures",
     "optionB": "Ne jamais savoir si une relation va durer",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_268",
-    "optionA": "Être propriétaire d’une grande maison très loin de tout",
-    "optionB": "Louer toute ta vie un petit appartement au centre de ta ville préférée",
     "category": "classic"
   },
   {
@@ -1429,13 +1306,6 @@
     "optionA": "Ne plus jamais payer de logement",
     "optionB": "Ne plus jamais payer de nourriture",
     "category": "classic"
-  },
-  {
-    "id": "prefere_378",
-    "optionA": "Être capable de lire les pensées",
-    "optionB": "Être capable de voir l’avenir",
-    "category": "classic",
-    "specialType": "prediction_majorite"
   },
   {
     "id": "prefere_057",
@@ -1491,12 +1361,6 @@
     "optionB": "Mettre fin immédiatement à la relation",
     "category": "classic",
     "specialType": "changement_autorise"
-  },
-  {
-    "id": "prefere_161",
-    "optionA": "Être incapable de faire confiance",
-    "optionB": "Faire confiance trop facilement à tout le monde",
-    "category": "classic"
   },
   {
     "id": "prefere_272",
@@ -1578,29 +1442,11 @@
     "category": "classic"
   },
   {
-    "id": "prefere_276",
-    "optionA": "Avoir une carte bancaire illimitée pendant un mois",
-    "optionB": "Recevoir 100 000 € sans aucune condition",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_063",
-    "optionA": "Ne jamais pouvoir fermer une porte",
-    "optionB": "Ne jamais pouvoir ouvrir une fenêtre",
-    "category": "classic"
-  },
-  {
     "id": "prefere_384",
     "optionA": "Révéler une vérité qui divise le groupe",
     "optionB": "Garder le secret pour préserver la paix",
     "category": "classic",
     "specialType": "changement_autorise"
-  },
-  {
-    "id": "prefere_165",
-    "optionA": "Être célèbre pour quelque chose que tu détestes",
-    "optionB": "Rester inconnu(e) malgré une œuvre dont tu es fier ou fière",
-    "category": "classic"
   },
   {
     "id": "prefere_277",
@@ -1667,12 +1513,6 @@
     "id": "prefere_280",
     "optionA": "Avoir beaucoup d’argent mais ne pouvoir aider personne",
     "optionB": "Avoir peu d’argent mais toujours pouvoir aider tes proches",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_387",
-    "optionA": "Disposer d’eau potable pour un mois sans nourriture",
-    "optionB": "Disposer de nourriture pour un mois sans eau potable",
     "category": "classic"
   },
   {
@@ -1768,27 +1608,9 @@
     "category": "classic"
   },
   {
-    "id": "prefere_391",
-    "optionA": "Traverser seul(e) un désert pendant trois jours",
-    "optionB": "Passer trois nuits seul(e) dans une forêt inconnue",
-    "category": "classic"
-  },
-  {
     "id": "prefere_172",
     "optionA": "Perdre ton droit de vote",
     "optionB": "Être obligé(e) de voter à chaque élection pour un candidat choisi au hasard",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_285",
-    "optionA": "Être coincé(e) sur une île avec la personne la plus drôle du groupe",
-    "optionB": "Être coincé(e) avec la personne la plus débrouillarde",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_071",
-    "optionA": "Pouvoir respirer sous l’eau",
-    "optionB": "Pouvoir voler",
     "category": "classic"
   },
   {
@@ -1829,12 +1651,6 @@
     "category": "classic"
   },
   {
-    "id": "prefere_174",
-    "optionA": "Être la seule personne à connaître une catastrophe future",
-    "optionB": "Ne rien savoir mais pouvoir profiter pleinement du présent",
-    "category": "classic"
-  },
-  {
     "id": "prefere_073",
     "optionA": "Renoncer aux vacances pendant cinq ans",
     "optionB": "Renoncer aux restaurants pendant cinq ans",
@@ -1852,12 +1668,6 @@
     "optionB": "Garder une information qui ne changerait peut-être rien",
     "category": "classic",
     "specialType": "changement_autorise"
-  },
-  {
-    "id": "prefere_175",
-    "optionA": "Ne plus jamais pouvoir revenir sur une décision",
-    "optionB": "Ne jamais pouvoir prendre une décision définitive",
-    "category": "classic"
   },
   {
     "id": "prefere_289",
@@ -1945,12 +1755,6 @@
     "category": "classic"
   },
   {
-    "id": "prefere_293",
-    "optionA": "Partager tous tes secrets avec ton meilleur ami",
-    "optionB": "Connaître tous les siens sans pouvoir partager les tiens",
-    "category": "classic"
-  },
-  {
     "id": "prefere_398",
     "optionA": "Dépenser 500 € dans une expérience inoubliable",
     "optionB": "Acheter un objet utile qui durera dix ans",
@@ -2029,556 +1833,5 @@
     "optionA": "Ne plus jamais pouvoir célébrer tes réussites",
     "optionB": "Devoir rendre publics tous tes échecs",
     "category": "classic"
-  },
-  {
-    "id": "prefere_401",
-    "optionA": "Affronter un froid extrême avec un abri fragile",
-    "optionB": "Affronter une chaleur extrême avec très peu d’eau",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_297",
-    "optionA": "Découvrir qu’un ami parle de toi derrière ton dos",
-    "optionB": "Découvrir qu’il ne parle jamais de toi",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_081",
-    "optionA": "Ne plus jamais pouvoir commander ton plat préféré",
-    "optionB": "Ne manger que ton plat préféré pendant un an",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_298",
-    "optionA": "Toujours devoir dire ce que tu penses au groupe",
-    "optionB": "Ne plus jamais pouvoir donner ton opinion",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_402",
-    "optionA": "Accepter un défi très gênant",
-    "optionB": "Répondre honnêtement à une question très intime",
-    "category": "classic",
-    "specialType": "qui_choisirait_quoi"
-  },
-  {
-    "id": "prefere_183",
-    "optionA": "Être heureux ou heureuse dans une relation fondée sur un mensonge",
-    "optionB": "Être seul(e) après avoir découvert toute la vérité",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_082",
-    "optionA": "Être toujours filmé(e)",
-    "optionB": "Ne jamais pouvoir prendre de photo",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_299",
-    "optionA": "Être la personne la plus drôle du groupe",
-    "optionB": "Être la personne à qui tout le monde fait confiance",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_403",
-    "optionA": "Toujours avoir un caillou dans ta chaussure",
-    "optionB": "Toujours avoir une miette dans ton lit",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_184",
-    "optionA": "Choisir une personne pour oublier toute votre histoire",
-    "optionB": "Être la seule personne à vous en souvenir",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_083",
-    "optionA": "Changer de ville chaque mois",
-    "optionB": "Ne jamais quitter ta ville",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_300",
-    "optionA": "Être invité(e) partout sans jamais te sentir proche de personne",
-    "optionB": "Être rarement invité(e) mais avoir deux amis très proches",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_185",
-    "optionA": "Vivre avec quelqu’un qui t’aime plus que tu ne l’aimes",
-    "optionB": "Aimer quelqu’un plus qu’il ou elle ne t’aime",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_404",
-    "optionA": "Dormir sous une tente en pleine nature",
-    "optionB": "Dormir dans un hôtel minuscule mais luxueux",
-    "category": "classic",
-    "specialType": "qui_choisirait_quoi"
-  },
-  {
-    "id": "prefere_084",
-    "optionA": "Avoir un rire contagieux",
-    "optionB": "Avoir une voix hypnotique",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_301",
-    "optionA": "Avoir une amitié parfaite à distance",
-    "optionB": "Une amitié compliquée mais quotidienne",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_186",
-    "optionA": "Renoncer à toutes tes convictions pour protéger tes proches",
-    "optionB": "Garder tes convictions et les mettre en danger",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_405",
-    "optionA": "Avoir toutes tes manches légèrement mouillées",
-    "optionB": "Avoir ton téléphone toujours un peu gras",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_302",
-    "optionA": "Devoir pardonner une trahison amicale",
-    "optionB": "Couper définitivement les ponts sans explication",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_085",
-    "optionA": "Gagner à la loterie mais le cacher",
-    "optionB": "Devenir célèbre du jour au lendemain",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_187",
-    "optionA": "Être incapable de changer d’avis",
-    "optionB": "Changer d’avis chaque fois que quelqu’un te contredit",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_406",
-    "optionA": "Prendre une décision avec son instinct",
-    "optionB": "Faire une liste complète des avantages et des inconvénients",
-    "category": "classic",
-    "specialType": "qui_choisirait_quoi"
-  },
-  {
-    "id": "prefere_303",
-    "optionA": "Avoir des bras de T-Rex",
-    "optionB": "Avoir des jambes de flamant rose",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_086",
-    "optionA": "Vivre sans montre",
-    "optionB": "Vivre sans calendrier",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_188",
-    "optionA": "Savoir exactement pourquoi chaque personne t’a quitté(e)",
-    "optionB": "Ne jamais connaître la vraie raison",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_407",
-    "optionA": "Éternuer chaque fois que tu mens",
-    "optionB": "Avoir le hoquet chaque fois que tu es gêné(e)",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_304",
-    "optionA": "Parler uniquement en chantant",
-    "optionB": "Danser chaque fois que quelqu’un prononce ton prénom",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_087",
-    "optionA": "Toujours devoir raconter une blague avant de parler",
-    "optionB": "Toujours devoir danser avant de t’asseoir",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_305",
-    "optionA": "Être poursuivi(e) une fois par an par un escargot immortel",
-    "optionB": "Être poursuivi(e) une fois par mois par une oie extrêmement agressive",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_189",
-    "optionA": "Perdre ta capacité à reconnaître les émotions des autres",
-    "optionB": "Ne plus pouvoir cacher les tiennes",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_408",
-    "optionA": "Rire pendant une situation très sérieuse",
-    "optionB": "Rester parfaitement sérieux ou sérieuse pendant une scène absurde",
-    "category": "classic",
-    "specialType": "qui_choisirait_quoi"
-  },
-  {
-    "id": "prefere_088",
-    "optionA": "Avoir un petit dragon",
-    "optionB": "Avoir une licorne",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_306",
-    "optionA": "Avoir une voix de dessin animé",
-    "optionB": "Avoir un rire de méchant de film",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_190",
-    "optionA": "Donner toute ta fortune à une cause essentielle",
-    "optionB": "La garder pour assurer l’avenir de ta famille",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_409",
-    "optionA": "Avoir un chargeur qui fonctionne uniquement dans une certaine position",
-    "optionB": "Avoir des écouteurs qui se déconnectent toutes les dix minutes",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_089",
-    "optionA": "Être capable de réparer n’importe quoi",
-    "optionB": "Être capable de cuisiner n’importe quoi",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_307",
-    "optionA": "Avoir des cheveux qui changent de couleur selon ton humeur",
-    "optionB": "Avoir des oreilles qui bougent quand tu mens",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_191",
-    "optionA": "Ne plus jamais pouvoir être fier ou fière de toi",
-    "optionB": "Être fier ou fière de toi mais décevoir toutes les personnes importantes",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_410",
-    "optionA": "Ne plus jamais utiliser d’oreiller",
-    "optionB": "Ne plus jamais utiliser de couverture",
-    "category": "classic",
-    "specialType": "reponse_eclair_extreme"
-  },
-  {
-    "id": "prefere_308",
-    "optionA": "Ne pouvoir marcher qu’en moonwalk",
-    "optionB": "Ne pouvoir courir qu’en faisant des petits bonds",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_090",
-    "optionA": "Ne plus jamais faire la queue",
-    "optionB": "Ne plus jamais être dans les embouteillages",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_192",
-    "optionA": "Pouvoir sauver ton couple en oubliant un événement majeur",
-    "optionB": "Garder tous tes souvenirs et accepter la rupture",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_411",
-    "optionA": "Sentir une étiquette qui gratte dans tous tes vêtements",
-    "optionB": "Avoir toujours un cheveu qui touche ton visage",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_309",
-    "optionA": "Avoir un canard qui te suit partout",
-    "optionB": "Avoir un perroquet qui répète toutes tes phrases gênantes",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_091",
-    "optionA": "Perdre toutes tes anciennes photos",
-    "optionB": "Ne plus jamais pouvoir prendre de nouvelles photos",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_193",
-    "optionA": "Découvrir que ton enfant a commis quelque chose de grave",
-    "optionB": "Ne jamais le savoir mais vivre avec un doute permanent",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_310",
-    "optionA": "Porter des chaussures qui couinent",
-    "optionB": "Porter un pantalon qui change de couleur toutes les heures",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_412",
-    "optionA": "Perdre ton téléphone",
-    "optionB": "Perdre ton portefeuille",
-    "category": "classic",
-    "specialType": "reponse_eclair_extreme"
-  },
-  {
-    "id": "prefere_092",
-    "optionA": "Être très bon en sport",
-    "optionB": "Être très bon en musique",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_311",
-    "optionA": "Avoir un nez qui s’allonge quand tu exagères",
-    "optionB": "Avoir les joues qui brillent quand tu as honte",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_194",
-    "optionA": "Être totalement honnête avec tout le monde",
-    "optionB": "Protéger les autres avec des mensonges bienveillants",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_413",
-    "optionA": "Devoir attendre trente secondes avant chaque ascenseur",
-    "optionB": "Monter systématiquement un étage de trop",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_093",
-    "optionA": "Recevoir un cadeau surprise chaque semaine",
-    "optionB": "Choisir un gros cadeau par an",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_312",
-    "optionA": "Pouvoir parler aux meubles",
-    "optionB": "Pouvoir entendre les pensées des plantes",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_195",
-    "optionA": "Ne plus jamais pouvoir recommencer après un échec",
-    "optionB": "Ne jamais pouvoir terminer ce que tu commences",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_414",
-    "optionA": "Toujours parler trop fort",
-    "optionB": "Toujours parler trop doucement",
-    "category": "classic",
-    "specialType": "reponse_eclair_extreme"
-  },
-  {
-    "id": "prefere_094",
-    "optionA": "Tout planifier",
-    "optionB": "Tout improviser",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_313",
-    "optionA": "Manger uniquement des aliments bleus",
-    "optionB": "Boire uniquement dans des verres pour enfants",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_196",
-    "optionA": "Être aimé(e) pour ton apparence uniquement",
-    "optionB": "Être admiré(e) pour ton esprit sans jamais susciter d’attirance",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_415",
-    "optionA": "Avoir toutes tes boissons avec un glaçon fondu",
-    "optionB": "Avoir tous tes plats avec une sauce légèrement trop froide",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_314",
-    "optionA": "Avoir une moustache qui pousse d’un centimètre par jour",
-    "optionB": "Avoir des sourcils qui changent de forme selon ton humeur",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_095",
-    "optionA": "Vivre près de la mer",
-    "optionB": "Vivre près des montagnes",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_197",
-    "optionA": "Avoir une mémoire parfaite de tous tes échecs",
-    "optionB": "Oublier progressivement toutes tes réussites",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_315",
-    "optionA": "Être accompagné(e) d’une musique dramatique à chaque entrée",
-    "optionB": "Être applaudi(e) automatiquement à chaque sortie",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_416",
-    "optionA": "Être toujours en avance d’une heure",
-    "optionB": "Être toujours en retard de dix minutes",
-    "category": "classic",
-    "specialType": "reponse_eclair_extreme"
-  },
-  {
-    "id": "prefere_096",
-    "optionA": "Toujours savoir quand on te ment",
-    "optionB": "Pouvoir mentir sans jamais être découvert(e)",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_198",
-    "optionA": "Vivre dans le passé avec les personnes perdues",
-    "optionB": "Rester dans le présent sans jamais pouvoir les revoir",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_316",
-    "optionA": "Devoir porter une cape tous les jours",
-    "optionB": "Devoir porter une couronne à chaque repas",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_417",
-    "optionA": "Ne jamais réussir à déchirer proprement du papier aluminium",
-    "optionB": "Ne jamais ouvrir un sachet sans le déchirer entièrement",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_097",
-    "optionA": "Passer une soirée avec tes amis d’enfance",
-    "optionB": "Passer une soirée avec tes futurs amis",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_199",
-    "optionA": "Obtenir immédiatement tout ce que tu veux",
-    "optionB": "Continuer à désirer sans jamais être certain(e) de réussir",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_317",
-    "optionA": "Avoir des doigts qui brillent dans le noir",
-    "optionB": "Avoir des genoux qui font de la musique",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_418",
-    "optionA": "Vivre sans musique",
-    "optionB": "Vivre sans films ni séries",
-    "category": "classic",
-    "specialType": "reponse_eclair_extreme"
-  },
-  {
-    "id": "prefere_098",
-    "optionA": "Avoir un bouton pour retrouver les objets perdus",
-    "optionB": "Un bouton pour se rendormir instantanément",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_318",
-    "optionA": "Ne pouvoir répondre que par des proverbes",
-    "optionB": "Ne pouvoir poser des questions qu’en rimes",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_200",
-    "optionA": "Être certain(e) que personne ne te trahira",
-    "optionB": "Pouvoir aimer sans jamais savoir si tu seras trahi(e)",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_419",
-    "optionA": "Toujours t’asseoir sur une chaise légèrement bancale",
-    "optionB": "Toujours utiliser une table un peu trop basse",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_099",
-    "optionA": "Ne plus jamais payer de loyer",
-    "optionB": "Ne plus jamais payer de nourriture",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_319",
-    "optionA": "Avoir une mini-version de toi sur ton épaule",
-    "optionB": "Être suivi(e) par un nuage personnel",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_201",
-    "optionA": "Perdre la possibilité de choisir ton avenir",
-    "optionB": "Pouvoir choisir ton avenir mais devoir renoncer à ton passé",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_100",
-    "optionA": "Changer une seule décision passée",
-    "optionB": "Voir une seule décision future",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_420",
-    "optionA": "Savoir voler",
-    "optionB": "Savoir te téléporter",
-    "category": "classic",
-    "specialType": "reponse_eclair_extreme"
-  },
-  {
-    "id": "prefere_320",
-    "optionA": "Éternuer des confettis",
-    "optionB": "Pleurer des bulles de savon",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_202",
-    "optionA": "Être obligé(e) de choisir entre ton avenir amoureux et ton avenir professionnel",
-    "optionB": "Renoncer aux deux pour préserver ta famille",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_321",
-    "optionA": "Avoir une alarme qui sonne dès que tu procrastines",
-    "optionB": "Avoir une voix qui annonce chacune de tes erreurs",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_421",
-    "optionA": "Entendre une notification fantôme toutes les heures",
-    "optionB": "Sentir ton téléphone vibrer alors qu’il n’a rien reçu",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_101",
-    "optionA": "Être la personne la plus courageuse",
-    "optionB": "Être la personne la plus créative",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_102",
-    "optionA": "Toujours avoir une batterie à 1 %",
-    "optionB": "Toujours avoir un réseau très lent",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_322",
-    "optionA": "Devoir saluer chaque pigeon",
-    "optionB": "Devoir remercier chaque distributeur automatique",
-    "category": "classic"
-  },
-  {
-    "id": "prefere_422",
-    "optionA": "Choisir l’amour",
-    "optionB": "Choisir l’argent",
-    "category": "classic",
-    "specialType": "reponse_eclair_extreme"
   }
 ]

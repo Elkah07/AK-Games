@@ -84,12 +84,6 @@
     "adult": false
   },
   {
-    "id": "ment_excuses_015",
-    "prompt": "Fais croire que tu avais une bonne raison de mentir sur l’endroit où tu étais.",
-    "category": "excuses",
-    "adult": false
-  },
-  {
     "id": "ment_excuses_016",
     "prompt": "Invente une excuse crédible pour expliquer pourquoi tu connais le mot de passe Wi-Fi d’un inconnu.",
     "category": "excuses",
@@ -98,54 +92,6 @@
   {
     "id": "ment_excuses_017",
     "prompt": "Justifie pourquoi tu as rendu un objet emprunté dans un état méconnaissable.",
-    "category": "excuses",
-    "adult": false
-  },
-  {
-    "id": "ment_excuses_018",
-    "prompt": "Invente la meilleure raison pour avoir pris une journée entière sans prévenir personne.",
-    "category": "excuses",
-    "adult": false
-  },
-  {
-    "id": "ment_excuses_019",
-    "prompt": "Explique pourquoi ton nom apparaît sur une réservation que tu prétends ne pas connaître.",
-    "category": "excuses",
-    "adult": false
-  },
-  {
-    "id": "ment_excuses_020",
-    "prompt": "Invente une excuse pour avoir envoyé le même message romantique à deux personnes.",
-    "category": "excuses",
-    "adult": false
-  },
-  {
-    "id": "ment_excuses_021",
-    "prompt": "Fais croire que tu n’as pas volontairement ignoré quelqu’un croisé dans la rue.",
-    "category": "excuses",
-    "adult": false
-  },
-  {
-    "id": "ment_excuses_022",
-    "prompt": "Invente une raison crédible pour avoir menti sur ton âge pendant toute une soirée.",
-    "category": "excuses",
-    "adult": false
-  },
-  {
-    "id": "ment_excuses_023",
-    "prompt": "Justifie pourquoi tu as une photo compromettante d’un ami dans tes favoris.",
-    "category": "excuses",
-    "adult": false
-  },
-  {
-    "id": "ment_excuses_024",
-    "prompt": "Invente une excuse pour avoir promis la même chose à deux personnes différentes.",
-    "category": "excuses",
-    "adult": false
-  },
-  {
-    "id": "ment_excuses_025",
-    "prompt": "Explique de façon convaincante pourquoi tu as soudainement changé de prénom sur les réseaux sociaux.",
     "category": "excuses",
     "adult": false
   },
@@ -246,60 +192,6 @@
     "adult": false
   },
   {
-    "id": "ment_quotidien_017",
-    "prompt": "Invente une raison crédible pour avoir une alarme nommée « surtout ne pas oublier » sans savoir ce qu’elle signifie.",
-    "category": "quotidien",
-    "adult": false
-  },
-  {
-    "id": "ment_quotidien_018",
-    "prompt": "Fais croire que tu collectionnes volontairement les notices de meubles.",
-    "category": "quotidien",
-    "adult": false
-  },
-  {
-    "id": "ment_quotidien_019",
-    "prompt": "Invente pourquoi tu regardes parfois derrière le rideau de douche avant d’entrer dans la salle de bain.",
-    "category": "quotidien",
-    "adult": false
-  },
-  {
-    "id": "ment_quotidien_020",
-    "prompt": "Explique de façon convaincante pourquoi tu as déjà pris un parapluie par grand soleil.",
-    "category": "quotidien",
-    "adult": false
-  },
-  {
-    "id": "ment_quotidien_021",
-    "prompt": "Invente une raison logique pour avoir gardé une plante en plastique en vie pendant des années.",
-    "category": "quotidien",
-    "adult": false
-  },
-  {
-    "id": "ment_quotidien_022",
-    "prompt": "Fais croire que tu as une vraie méthode scientifique pour choisir ta place dans le canapé.",
-    "category": "quotidien",
-    "adult": false
-  },
-  {
-    "id": "ment_quotidien_023",
-    "prompt": "Invente pourquoi tu as deux contacts différents enregistrés sous le même prénom.",
-    "category": "quotidien",
-    "adult": false
-  },
-  {
-    "id": "ment_quotidien_024",
-    "prompt": "Explique pourquoi tu as déjà préparé un repas complet au milieu de la nuit.",
-    "category": "quotidien",
-    "adult": false
-  },
-  {
-    "id": "ment_quotidien_025",
-    "prompt": "Invente une raison crédible pour avoir un sac rempli uniquement de câbles inconnus.",
-    "category": "quotidien",
-    "adult": false
-  },
-  {
     "id": "ment_dossiers_001",
     "prompt": "Invente le secret le plus crédible que tu pourrais cacher à tout le groupe.",
     "category": "dossiers",
@@ -326,12 +218,6 @@
   {
     "id": "ment_dossiers_005",
     "prompt": "Invente un surnom honteux que ta famille utiliserait encore pour toi.",
-    "category": "dossiers",
-    "adult": false
-  },
-  {
-    "id": "ment_dossiers_006",
-    "prompt": "Fais croire que tu as déjà lu une conversation qui ne t’était pas destinée.",
     "category": "dossiers",
     "adult": false
   },
@@ -398,54 +284,6 @@
   {
     "id": "ment_dossiers_017",
     "prompt": "Invente une raison pour laquelle ton historique de recherches ne doit jamais être projeté sur un écran.",
-    "category": "dossiers",
-    "adult": false
-  },
-  {
-    "id": "ment_dossiers_018",
-    "prompt": "Fais croire que tu as déjà découvert un compte secret appartenant à quelqu’un que tu connais.",
-    "category": "dossiers",
-    "adult": false
-  },
-  {
-    "id": "ment_dossiers_019",
-    "prompt": "Invente le pacte étrange que tu aurais conclu avec ton meilleur ami.",
-    "category": "dossiers",
-    "adult": false
-  },
-  {
-    "id": "ment_dossiers_020",
-    "prompt": "Explique quelle vérité ridicule tu aurais cachée pendant plusieurs années.",
-    "category": "dossiers",
-    "adult": false
-  },
-  {
-    "id": "ment_dossiers_021",
-    "prompt": "Invente pourquoi un ancien camarade refuse encore de te parler.",
-    "category": "dossiers",
-    "adult": false
-  },
-  {
-    "id": "ment_dossiers_022",
-    "prompt": "Fais croire que tu connais le véritable auteur d’un énorme mensonge raconté au groupe.",
-    "category": "dossiers",
-    "adult": false
-  },
-  {
-    "id": "ment_dossiers_023",
-    "prompt": "Invente ce que tu aurais accidentellement entendu derrière une porte fermée.",
-    "category": "dossiers",
-    "adult": false
-  },
-  {
-    "id": "ment_dossiers_024",
-    "prompt": "Explique pourquoi une personne ici ne devrait jamais te confier son téléphone déverrouillé.",
-    "category": "dossiers",
-    "adult": false
-  },
-  {
-    "id": "ment_dossiers_025",
-    "prompt": "Invente le dossier le plus absurde que ta famille pourrait ressortir à ton mariage.",
     "category": "dossiers",
     "adult": false
   },
@@ -546,60 +384,6 @@
     "adult": false
   },
   {
-    "id": "ment_improbable_017",
-    "prompt": "Invente une raison crédible pour laquelle une école étrangère possède ton dossier.",
-    "category": "improbable",
-    "adult": false
-  },
-  {
-    "id": "ment_improbable_018",
-    "prompt": "Fais croire que tu as déjà reçu une lettre destinée à un chef d’État.",
-    "category": "improbable",
-    "adult": false
-  },
-  {
-    "id": "ment_improbable_019",
-    "prompt": "Invente comment tu as pu te retrouver seul(e) dans un parc d’attractions fermé.",
-    "category": "improbable",
-    "adult": false
-  },
-  {
-    "id": "ment_improbable_020",
-    "prompt": "Explique pourquoi une compagnie aérienne refuse de prononcer ton nom au micro.",
-    "category": "improbable",
-    "adult": false
-  },
-  {
-    "id": "ment_improbable_021",
-    "prompt": "Invente une histoire crédible où tu aurais découvert une pièce secrète.",
-    "category": "improbable",
-    "adult": false
-  },
-  {
-    "id": "ment_improbable_022",
-    "prompt": "Fais croire qu’une application connue a été inspirée par une de tes idées.",
-    "category": "improbable",
-    "adult": false
-  },
-  {
-    "id": "ment_improbable_023",
-    "prompt": "Invente pourquoi un groupe de touristes t’a suivi pendant une heure.",
-    "category": "improbable",
-    "adult": false
-  },
-  {
-    "id": "ment_improbable_024",
-    "prompt": "Explique comment tu as accidentellement participé à une cérémonie officielle.",
-    "category": "improbable",
-    "adult": false
-  },
-  {
-    "id": "ment_improbable_025",
-    "prompt": "Invente une raison crédible pour laquelle une personne inconnue t’appelle chaque année à ton anniversaire.",
-    "category": "improbable",
-    "adult": false
-  },
-  {
     "id": "ment_chaos_001",
     "prompt": "Invente comment une simple soirée chez toi a fini avec les pompiers devant la porte.",
     "category": "chaos",
@@ -654,12 +438,6 @@
     "adult": false
   },
   {
-    "id": "ment_chaos_010",
-    "prompt": "Invente une histoire où tu aurais perdu quelque chose appartenant à tout le groupe.",
-    "category": "chaos",
-    "adult": false
-  },
-  {
     "id": "ment_chaos_011",
     "prompt": "Fais croire que tu as déjà envoyé un message privé à une conversation de cent personnes.",
     "category": "chaos",
@@ -698,54 +476,6 @@
   {
     "id": "ment_chaos_017",
     "prompt": "Explique pourquoi un repas de famille s’est terminé avec quelqu’un dans une fontaine.",
-    "category": "chaos",
-    "adult": false
-  },
-  {
-    "id": "ment_chaos_018",
-    "prompt": "Invente une histoire où tu aurais dû remplacer toutes les serrures d’un logement.",
-    "category": "chaos",
-    "adult": false
-  },
-  {
-    "id": "ment_chaos_019",
-    "prompt": "Fais croire que tu as déjà perdu un enfant qui n’était même pas sous ta responsabilité.",
-    "category": "chaos",
-    "adult": false
-  },
-  {
-    "id": "ment_chaos_020",
-    "prompt": "Invente comment une réservation mal comprise a créé une guerre entre deux groupes d’amis.",
-    "category": "chaos",
-    "adult": false
-  },
-  {
-    "id": "ment_chaos_021",
-    "prompt": "Explique pourquoi tu as dû quitter un lieu en courant sans récupérer tes affaires.",
-    "category": "chaos",
-    "adult": false
-  },
-  {
-    "id": "ment_chaos_022",
-    "prompt": "Invente une histoire crédible où une simple photo a déclenché une rupture.",
-    "category": "chaos",
-    "adult": false
-  },
-  {
-    "id": "ment_chaos_023",
-    "prompt": "Fais croire que tu as accidentellement annoncé une fausse grossesse à toute une famille.",
-    "category": "chaos",
-    "adult": false
-  },
-  {
-    "id": "ment_chaos_024",
-    "prompt": "Invente comment un trajet de dix minutes est devenu une aventure de douze heures.",
-    "category": "chaos",
-    "adult": false
-  },
-  {
-    "id": "ment_chaos_025",
-    "prompt": "Explique pourquoi une soirée karaoké a fini avec un avocat au téléphone.",
     "category": "chaos",
     "adult": false
   },
@@ -846,60 +576,6 @@
     "adult": false
   },
   {
-    "id": "ment_celebrites_017",
-    "prompt": "Invente une raison crédible pour laquelle une influenceuse a copié une de tes idées.",
-    "category": "celebrites",
-    "adult": false
-  },
-  {
-    "id": "ment_celebrites_018",
-    "prompt": "Fais croire que tu as participé à une fête privée remplie de célébrités.",
-    "category": "celebrites",
-    "adult": false
-  },
-  {
-    "id": "ment_celebrites_019",
-    "prompt": "Invente comment tu as remplacé au pied levé un membre de l’équipe d’un artiste.",
-    "category": "celebrites",
-    "adult": false
-  },
-  {
-    "id": "ment_celebrites_020",
-    "prompt": "Explique pourquoi une star t’a envoyé un cadeau sans message.",
-    "category": "celebrites",
-    "adult": false
-  },
-  {
-    "id": "ment_celebrites_021",
-    "prompt": "Invente une histoire crédible où tu aurais été pris(e) pour le garde du corps d’une célébrité.",
-    "category": "celebrites",
-    "adult": false
-  },
-  {
-    "id": "ment_celebrites_022",
-    "prompt": "Fais croire que tu connais le véritable sens caché d’une chanson très connue.",
-    "category": "celebrites",
-    "adult": false
-  },
-  {
-    "id": "ment_celebrites_023",
-    "prompt": "Invente pourquoi une personne célèbre refuse désormais d’aller dans ton restaurant préféré.",
-    "category": "celebrites",
-    "adult": false
-  },
-  {
-    "id": "ment_celebrites_024",
-    "prompt": "Explique comment tu as gagné un pari contre une star internationale.",
-    "category": "celebrites",
-    "adult": false
-  },
-  {
-    "id": "ment_celebrites_025",
-    "prompt": "Invente une raison crédible pour laquelle une célébrité te suit avec un compte secret.",
-    "category": "celebrites",
-    "adult": false
-  },
-  {
     "id": "ment_exploits_001",
     "prompt": "Fais croire au groupe que tu maîtrises une compétence totalement inattendue.",
     "category": "exploits",
@@ -966,12 +642,6 @@
     "adult": false
   },
   {
-    "id": "ment_exploits_012",
-    "prompt": "Invente un tour de magie si convaincant que personne n’en aurait trouvé le truc.",
-    "category": "exploits",
-    "adult": false
-  },
-  {
     "id": "ment_exploits_013",
     "prompt": "Fais croire que tu peux mémoriser une quantité absurde d’informations en quelques minutes.",
     "category": "exploits",
@@ -998,54 +668,6 @@
   {
     "id": "ment_exploits_017",
     "prompt": "Fais croire que tu as déjà piloté un véhicule que tu n’étais pas censé(e) savoir conduire.",
-    "category": "exploits",
-    "adult": false
-  },
-  {
-    "id": "ment_exploits_018",
-    "prompt": "Invente comment tu aurais désamorcé une situation dangereuse grâce à ton calme.",
-    "category": "exploits",
-    "adult": false
-  },
-  {
-    "id": "ment_exploits_019",
-    "prompt": "Explique pourquoi tu serais capable de retrouver n’importe qui avec seulement trois indices.",
-    "category": "exploits",
-    "adult": false
-  },
-  {
-    "id": "ment_exploits_020",
-    "prompt": "Invente un talent artistique caché que personne ici ne soupçonne.",
-    "category": "exploits",
-    "adult": false
-  },
-  {
-    "id": "ment_exploits_021",
-    "prompt": "Fais croire que tu peux imiter parfaitement une vingtaine de voix.",
-    "category": "exploits",
-    "adult": false
-  },
-  {
-    "id": "ment_exploits_022",
-    "prompt": "Invente comment tu aurais réparé une machine complexe sans aucune connaissance technique.",
-    "category": "exploits",
-    "adult": false
-  },
-  {
-    "id": "ment_exploits_023",
-    "prompt": "Explique pourquoi tu as déjà été recruté(e) pour une mission ultra-confidentielle.",
-    "category": "exploits",
-    "adult": false
-  },
-  {
-    "id": "ment_exploits_024",
-    "prompt": "Invente l’exploit le plus fou que tu aurais accompli pour gagner un pari.",
-    "category": "exploits",
-    "adult": false
-  },
-  {
-    "id": "ment_exploits_025",
-    "prompt": "Fais croire que tu détiens encore un record local que personne n’a réussi à battre.",
     "category": "exploits",
     "adult": false
   },
@@ -1146,60 +768,6 @@
     "adult": false
   },
   {
-    "id": "ment_travail_ecole_017",
-    "prompt": "Invente la pire catastrophe que tu aurais causée lors de ton premier jour.",
-    "category": "travail_ecole",
-    "adult": false
-  },
-  {
-    "id": "ment_travail_ecole_018",
-    "prompt": "Fais croire que tu as déjà négocié ton salaire avec une technique totalement absurde.",
-    "category": "travail_ecole",
-    "adult": false
-  },
-  {
-    "id": "ment_travail_ecole_019",
-    "prompt": "Invente comment tu aurais réussi à éviter un examen important pendant plusieurs années.",
-    "category": "travail_ecole",
-    "adult": false
-  },
-  {
-    "id": "ment_travail_ecole_020",
-    "prompt": "Explique pourquoi un ancien professeur se souvient encore parfaitement de toi.",
-    "category": "travail_ecole",
-    "adult": false
-  },
-  {
-    "id": "ment_travail_ecole_021",
-    "prompt": "Invente une mission secrète que ton patron t’aurait confiée en dehors de ton poste.",
-    "category": "travail_ecole",
-    "adult": false
-  },
-  {
-    "id": "ment_travail_ecole_022",
-    "prompt": "Fais croire que tu as déjà découvert une énorme fraude dans ton école ou ton entreprise.",
-    "category": "travail_ecole",
-    "adult": false
-  },
-  {
-    "id": "ment_travail_ecole_023",
-    "prompt": "Invente comment tu aurais obtenu un diplôme dans un domaine que tu ne connais pas.",
-    "category": "travail_ecole",
-    "adult": false
-  },
-  {
-    "id": "ment_travail_ecole_024",
-    "prompt": "Explique pourquoi toute une classe aurait dû refaire un contrôle à cause de toi.",
-    "category": "travail_ecole",
-    "adult": false
-  },
-  {
-    "id": "ment_travail_ecole_025",
-    "prompt": "Invente une raison crédible pour laquelle ton badge professionnel ouvre une porte interdite.",
-    "category": "travail_ecole",
-    "adult": false
-  },
-  {
     "id": "ment_voyages_001",
     "prompt": "Invente comment tu aurais pris le mauvais avion et découvert l’erreur après l’atterrissage.",
     "category": "voyages",
@@ -1272,12 +840,6 @@
     "adult": false
   },
   {
-    "id": "ment_voyages_013",
-    "prompt": "Invente une histoire crédible où tu aurais passé une frontière caché(e) dans un véhicule.",
-    "category": "voyages",
-    "adult": false
-  },
-  {
     "id": "ment_voyages_014",
     "prompt": "Fais croire que tu as déjà organisé une excursion pour cinquante personnes sans parler la langue.",
     "category": "voyages",
@@ -1302,54 +864,6 @@
     "adult": false
   },
   {
-    "id": "ment_voyages_018",
-    "prompt": "Fais croire que tu as déjà découvert un lieu absent de toutes les cartes.",
-    "category": "voyages",
-    "adult": false
-  },
-  {
-    "id": "ment_voyages_019",
-    "prompt": "Invente comment tu aurais terminé un voyage dans le véhicule d’une personnalité importante.",
-    "category": "voyages",
-    "adult": false
-  },
-  {
-    "id": "ment_voyages_020",
-    "prompt": "Explique pourquoi un pays t’aurait officiellement demandé de ne plus revenir.",
-    "category": "voyages",
-    "adult": false
-  },
-  {
-    "id": "ment_voyages_021",
-    "prompt": "Invente l’objet le plus étrange que tu aurais rapporté clandestinement de vacances.",
-    "category": "voyages",
-    "adult": false
-  },
-  {
-    "id": "ment_voyages_022",
-    "prompt": "Fais croire que tu as déjà travaillé dans un hôtel pour payer ton séjour.",
-    "category": "voyages",
-    "adult": false
-  },
-  {
-    "id": "ment_voyages_023",
-    "prompt": "Invente comment tu aurais retrouvé une valise perdue grâce à un détail minuscule.",
-    "category": "voyages",
-    "adult": false
-  },
-  {
-    "id": "ment_voyages_024",
-    "prompt": "Explique pourquoi une famille étrangère te considère encore comme l’un de ses membres.",
-    "category": "voyages",
-    "adult": false
-  },
-  {
-    "id": "ment_voyages_025",
-    "prompt": "Invente une aventure crédible où ton voyage romantique aurait fini en expédition de survie.",
-    "category": "voyages",
-    "adult": false
-  },
-  {
     "id": "ment_soirees_001",
     "prompt": "Invente une raison crédible pour laquelle tu t’es réveillé(e) avec un trophée inconnu.",
     "category": "soirees",
@@ -1370,12 +884,6 @@
   {
     "id": "ment_soirees_004",
     "prompt": "Explique pourquoi une fête entière aurait applaudi ton arrivée.",
-    "category": "soirees",
-    "adult": false
-  },
-  {
-    "id": "ment_soirees_005",
-    "prompt": "Invente une histoire crédible où tu aurais passé la soirée dans le mauvais appartement.",
     "category": "soirees",
     "adult": false
   },
@@ -1452,54 +960,6 @@
     "adult": false
   },
   {
-    "id": "ment_soirees_018",
-    "prompt": "Fais croire que tu as déjà été confondu(e) avec l’organisateur officiel d’un événement.",
-    "category": "soirees",
-    "adult": false
-  },
-  {
-    "id": "ment_soirees_019",
-    "prompt": "Invente comment tu aurais passé une soirée entière sous une fausse identité.",
-    "category": "soirees",
-    "adult": false
-  },
-  {
-    "id": "ment_soirees_020",
-    "prompt": "Explique pourquoi quelqu’un aurait fait un discours de remerciement à ton sujet.",
-    "category": "soirees",
-    "adult": false
-  },
-  {
-    "id": "ment_soirees_021",
-    "prompt": "Invente l’histoire la plus crédible expliquant comment tu as perdu une chaussure sans t’en rendre compte.",
-    "category": "soirees",
-    "adult": false
-  },
-  {
-    "id": "ment_soirees_022",
-    "prompt": "Fais croire que tu as déjà dormi dans un lieu complètement inattendu après une fête.",
-    "category": "soirees",
-    "adult": false
-  },
-  {
-    "id": "ment_soirees_023",
-    "prompt": "Invente comment tu aurais déclenché une demande en mariage qui ne te concernait pas.",
-    "category": "soirees",
-    "adult": false
-  },
-  {
-    "id": "ment_soirees_024",
-    "prompt": "Explique pourquoi une photo de toi serait affichée derrière le bar d’un établissement.",
-    "category": "soirees",
-    "adult": false
-  },
-  {
-    "id": "ment_soirees_025",
-    "prompt": "Invente une raison crédible pour laquelle personne ne se souvient de la fin de ta dernière soirée.",
-    "category": "soirees",
-    "adult": false
-  },
-  {
     "id": "ment_argent_luxe_001",
     "prompt": "Invente une raison crédible pour laquelle tu possèdes un objet qui vaut plus cher qu’une voiture.",
     "category": "argent_luxe",
@@ -1526,12 +986,6 @@
   {
     "id": "ment_argent_luxe_005",
     "prompt": "Invente une histoire crédible où tu aurais vécu gratuitement dans un hôtel de luxe.",
-    "category": "argent_luxe",
-    "adult": false
-  },
-  {
-    "id": "ment_argent_luxe_006",
-    "prompt": "Fais croire que tu as déjà été pris(e) pour un milliardaire pendant une journée.",
     "category": "argent_luxe",
     "adult": false
   },
@@ -1596,60 +1050,6 @@
     "adult": false
   },
   {
-    "id": "ment_argent_luxe_017",
-    "prompt": "Invente l’investissement ridicule qui t’aurait rapporté une fortune.",
-    "category": "argent_luxe",
-    "adult": false
-  },
-  {
-    "id": "ment_argent_luxe_018",
-    "prompt": "Fais croire que tu as déjà caché une grosse somme d’argent dans un objet banal.",
-    "category": "argent_luxe",
-    "adult": false
-  },
-  {
-    "id": "ment_argent_luxe_019",
-    "prompt": "Invente comment tu aurais été invité(e) à une vente aux enchères privée.",
-    "category": "argent_luxe",
-    "adult": false
-  },
-  {
-    "id": "ment_argent_luxe_020",
-    "prompt": "Explique pourquoi un restaurant très chic t’aurait interdit de payer l’addition.",
-    "category": "argent_luxe",
-    "adult": false
-  },
-  {
-    "id": "ment_argent_luxe_021",
-    "prompt": "Invente une raison crédible pour laquelle tu possèdes la clé d’une propriété luxueuse.",
-    "category": "argent_luxe",
-    "adult": false
-  },
-  {
-    "id": "ment_argent_luxe_022",
-    "prompt": "Fais croire que tu as déjà vendu quelque chose sans savoir que cela valait une fortune.",
-    "category": "argent_luxe",
-    "adult": false
-  },
-  {
-    "id": "ment_argent_luxe_023",
-    "prompt": "Invente comment une simple photo t’aurait rapporté plusieurs milliers d’euros.",
-    "category": "argent_luxe",
-    "adult": false
-  },
-  {
-    "id": "ment_argent_luxe_024",
-    "prompt": "Explique pourquoi une personne extrêmement riche t’aurait demandé un prêt.",
-    "category": "argent_luxe",
-    "adult": false
-  },
-  {
-    "id": "ment_argent_luxe_025",
-    "prompt": "Invente l’histoire la plus convaincante expliquant comment tu as voyagé en jet privé.",
-    "category": "argent_luxe",
-    "adult": false
-  },
-  {
     "id": "ment_enfance_famille_001",
     "prompt": "Invente la bêtise d’enfance la plus énorme que ta famille aurait réussi à cacher.",
     "category": "enfance_famille",
@@ -1710,12 +1110,6 @@
     "adult": false
   },
   {
-    "id": "ment_enfance_famille_011",
-    "prompt": "Invente comment tu aurais gagné un concours scolaire totalement truqué.",
-    "category": "enfance_famille",
-    "adult": false
-  },
-  {
     "id": "ment_enfance_famille_012",
     "prompt": "Explique pourquoi toute ta famille aurait dû déménager à cause d’une de tes bêtises.",
     "category": "enfance_famille",
@@ -1746,68 +1140,8 @@
     "adult": false
   },
   {
-    "id": "ment_enfance_famille_017",
-    "prompt": "Invente une raison crédible pour laquelle tu as déjà dormi dans un placard pendant une nuit entière.",
-    "category": "enfance_famille",
-    "adult": false
-  },
-  {
-    "id": "ment_enfance_famille_018",
-    "prompt": "Fais croire que tu avais une double vie complète à l’école primaire.",
-    "category": "enfance_famille",
-    "adult": false
-  },
-  {
-    "id": "ment_enfance_famille_019",
-    "prompt": "Invente comment tu aurais été responsable de la disparition d’une mascotte scolaire.",
-    "category": "enfance_famille",
-    "adult": false
-  },
-  {
-    "id": "ment_enfance_famille_020",
-    "prompt": "Explique pourquoi un voisin de ton enfance se souvient encore de toi avec peur.",
-    "category": "enfance_famille",
-    "adult": false
-  },
-  {
-    "id": "ment_enfance_famille_021",
-    "prompt": "Invente la promesse absurde que ta famille t’aurait fait signer quand tu étais enfant.",
-    "category": "enfance_famille",
-    "adult": false
-  },
-  {
-    "id": "ment_enfance_famille_022",
-    "prompt": "Fais croire que tu as déjà organisé un mariage fictif dans la cour de récréation.",
-    "category": "enfance_famille",
-    "adult": false
-  },
-  {
-    "id": "ment_enfance_famille_023",
-    "prompt": "Invente comment tu aurais obtenu un rôle principal dans un spectacle sans savoir jouer.",
-    "category": "enfance_famille",
-    "adult": false
-  },
-  {
-    "id": "ment_enfance_famille_024",
-    "prompt": "Explique pourquoi ta famille conserverait encore une facture à ton nom datant de ton enfance.",
-    "category": "enfance_famille",
-    "adult": false
-  },
-  {
-    "id": "ment_enfance_famille_025",
-    "prompt": "Invente une histoire crédible où tu aurais convaincu tes parents qu’un personnage imaginaire existait vraiment.",
-    "category": "enfance_famille",
-    "adult": false
-  },
-  {
     "id": "ment_reseaux_tech_001",
     "prompt": "Invente une raison crédible pour laquelle un de tes anciens messages est devenu viral.",
-    "category": "reseaux_tech",
-    "adult": false
-  },
-  {
-    "id": "ment_reseaux_tech_002",
-    "prompt": "Fais croire que tu as déjà piraté quelque chose sans aucune compétence informatique.",
     "category": "reseaux_tech",
     "adult": false
   },
@@ -1878,12 +1212,6 @@
     "adult": false
   },
   {
-    "id": "ment_reseaux_tech_014",
-    "prompt": "Fais croire que tu as déjà vendu un objet virtuel pour une somme énorme.",
-    "category": "reseaux_tech",
-    "adult": false
-  },
-  {
     "id": "ment_reseaux_tech_015",
     "prompt": "Invente comment tu aurais découvert une faille importante dans un site très connu.",
     "category": "reseaux_tech",
@@ -1898,54 +1226,6 @@
   {
     "id": "ment_reseaux_tech_017",
     "prompt": "Invente une raison crédible pour laquelle une intelligence artificielle t’aurait bloqué(e).",
-    "category": "reseaux_tech",
-    "adult": false
-  },
-  {
-    "id": "ment_reseaux_tech_018",
-    "prompt": "Fais croire que tu as déjà entretenu une conversation entière avec une célébrité sans le savoir.",
-    "category": "reseaux_tech",
-    "adult": false
-  },
-  {
-    "id": "ment_reseaux_tech_019",
-    "prompt": "Invente comment une photo supprimée aurait malgré tout été affichée publiquement.",
-    "category": "reseaux_tech",
-    "adult": false
-  },
-  {
-    "id": "ment_reseaux_tech_020",
-    "prompt": "Explique pourquoi un de tes mots de passe serait connu par une personne à l’autre bout du monde.",
-    "category": "reseaux_tech",
-    "adult": false
-  },
-  {
-    "id": "ment_reseaux_tech_021",
-    "prompt": "Invente une histoire crédible où tu aurais créé une tendance mondiale par erreur.",
-    "category": "reseaux_tech",
-    "adult": false
-  },
-  {
-    "id": "ment_reseaux_tech_022",
-    "prompt": "Fais croire que tu as déjà reçu une invitation numérique réservée à cinquante personnes.",
-    "category": "reseaux_tech",
-    "adult": false
-  },
-  {
-    "id": "ment_reseaux_tech_023",
-    "prompt": "Invente comment tu aurais retrouvé un objet volé grâce aux réseaux sociaux.",
-    "category": "reseaux_tech",
-    "adult": false
-  },
-  {
-    "id": "ment_reseaux_tech_024",
-    "prompt": "Explique pourquoi ton historique de géolocalisation montrerait un endroit impossible.",
-    "category": "reseaux_tech",
-    "adult": false
-  },
-  {
-    "id": "ment_reseaux_tech_025",
-    "prompt": "Invente une raison crédible pour laquelle un site internet affiche encore ton ancien surnom dans son code.",
     "category": "reseaux_tech",
     "adult": false
   },
@@ -1998,12 +1278,6 @@
     "adult": false
   },
   {
-    "id": "ment_relations_crush_009",
-    "prompt": "Invente une raison crédible pour laquelle tu as déjà été invité(e) au mariage d’un ex.",
-    "category": "relations_crush",
-    "adult": false
-  },
-  {
     "id": "ment_relations_crush_010",
     "prompt": "Fais croire que tu as entretenu une relation à distance avec quelqu’un vivant dans la même rue.",
     "category": "relations_crush",
@@ -2018,12 +1292,6 @@
   {
     "id": "ment_relations_crush_012",
     "prompt": "Explique pourquoi une personne aurait créé une playlist entière portant ton prénom.",
-    "category": "relations_crush",
-    "adult": false
-  },
-  {
-    "id": "ment_relations_crush_013",
-    "prompt": "Invente une histoire crédible où tu aurais fait semblant d’être en couple pour obtenir quelque chose.",
     "category": "relations_crush",
     "adult": false
   },
@@ -2048,54 +1316,6 @@
   {
     "id": "ment_relations_crush_017",
     "prompt": "Invente une raison crédible pour laquelle tu as déjà utilisé un faux prénom pendant un rendez-vous.",
-    "category": "relations_crush",
-    "adult": false
-  },
-  {
-    "id": "ment_relations_crush_018",
-    "prompt": "Fais croire que tu as reçu une demande en mariage dès le premier rendez-vous.",
-    "category": "relations_crush",
-    "adult": false
-  },
-  {
-    "id": "ment_relations_crush_019",
-    "prompt": "Invente comment tu aurais échangé ton numéro avec la mauvaise personne et continué à discuter.",
-    "category": "relations_crush",
-    "adult": false
-  },
-  {
-    "id": "ment_relations_crush_020",
-    "prompt": "Explique pourquoi un ex t’aurait demandé de participer à son futur mariage.",
-    "category": "relations_crush",
-    "adult": false
-  },
-  {
-    "id": "ment_relations_crush_021",
-    "prompt": "Invente une histoire crédible où trois personnes auraient pensé être en rendez-vous avec toi le même soir.",
-    "category": "relations_crush",
-    "adult": false
-  },
-  {
-    "id": "ment_relations_crush_022",
-    "prompt": "Fais croire que tu as déjà écrit une lettre d’amour devenue célèbre sans ton nom.",
-    "category": "relations_crush",
-    "adult": false
-  },
-  {
-    "id": "ment_relations_crush_023",
-    "prompt": "Invente comment une application de rencontre t’aurait proposé ton propre profil.",
-    "category": "relations_crush",
-    "adult": false
-  },
-  {
-    "id": "ment_relations_crush_024",
-    "prompt": "Explique pourquoi ton crush aurait reçu un cadeau signé de ton nom que tu n’avais jamais envoyé.",
-    "category": "relations_crush",
-    "adult": false
-  },
-  {
-    "id": "ment_relations_crush_025",
-    "prompt": "Invente une raison crédible pour laquelle une personne inconnue prétend avoir été en couple avec toi.",
     "category": "relations_crush",
     "adult": false
   }

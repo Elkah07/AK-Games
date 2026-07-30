@@ -1,6 +1,6 @@
 [
   {
-    "text": "Quel détail physique remarques-tu généralement en premier chez quelqu’un ?",
+    "text": "Quel détail physique remarques-tu généralement en premier chez quelqu’un?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "soft",
@@ -9,7 +9,7 @@
     "id": "osee_001"
   },
   {
-    "text": "Quel type de regard peut immédiatement te déstabiliser ?",
+    "text": "Quel type de regard peut immédiatement te déstabiliser?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "soft",
@@ -18,7 +18,7 @@
     "id": "osee_002"
   },
   {
-    "text": "Quel trait de personnalité rend quelqu’un beaucoup plus attirant à tes yeux ?",
+    "text": "Quel trait de personnalité rend quelqu’un beaucoup plus attirant à tes yeux?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "soft",
@@ -27,7 +27,7 @@
     "id": "osee_003"
   },
   {
-    "text": "Quel geste de séduction discret fonctionne presque toujours sur toi ?",
+    "text": "Quel geste de séduction discret fonctionne presque toujours sur toi?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "soft",
@@ -36,7 +36,7 @@
     "id": "osee_004"
   },
   {
-    "text": "Quel style vestimentaire peut te faire craquer sans prévenir ?",
+    "text": "Quel style vestimentaire peut te faire craquer sans prévenir?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "soft",
@@ -45,7 +45,7 @@
     "id": "osee_005"
   },
   {
-    "text": "Quelle façon de parler trouves-tu particulièrement séduisante ?",
+    "text": "Quelle façon de parler trouves-tu particulièrement séduisante?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "soft",
@@ -54,7 +54,7 @@
     "id": "osee_006"
   },
   {
-    "text": "Quel compliment te fait le plus facilement rougir ?",
+    "text": "Quel compliment te fait le plus facilement rougir?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "soft",
@@ -63,7 +63,7 @@
     "id": "osee_007"
   },
   {
-    "text": "Quelle qualité peut rendre attirante une personne qui ne correspond pas à ton type habituel ?",
+    "text": "Quelle qualité peut rendre attirante une personne qui ne correspond pas à ton type habituel?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "soft",
@@ -72,7 +72,7 @@
     "id": "osee_008"
   },
   {
-    "text": "Quel premier message te donnerait vraiment envie de répondre ?",
+    "text": "Quel premier message te donnerait vraiment envie de répondre?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "soft",
@@ -81,7 +81,7 @@
     "id": "osee_009"
   },
   {
-    "text": "Quel signe te fait comprendre que quelqu’un essaie de te séduire ?",
+    "text": "Quel signe te fait comprendre que quelqu’un essaie de te séduire?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "soft",
@@ -90,7 +90,7 @@
     "id": "osee_010"
   },
   {
-    "text": "Quelle ambiance te semble idéale pour créer une vraie tension avec quelqu’un ?",
+    "text": "Quelle ambiance te semble idéale pour créer une vraie tension avec quelqu’un?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "soft",
@@ -99,7 +99,7 @@
     "id": "osee_011"
   },
   {
-    "text": "Quel défaut peut paradoxalement te sembler charmant chez quelqu’un ?",
+    "text": "Quel défaut peut paradoxalement te sembler charmant chez quelqu’un?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "soft",
@@ -108,7 +108,7 @@
     "id": "osee_012"
   },
   {
-    "text": "Qu’est-ce qui peut transformer une simple amitié en attirance pour toi ?",
+    "text": "Qu’est-ce qui peut transformer une simple amitié en attirance pour toi?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "soft",
@@ -117,16 +117,7 @@
     "id": "osee_013"
   },
   {
-    "text": "Quel type d’humour te fait le plus facilement tomber sous le charme ?",
-    "theme": "attraction",
-    "themeLabel": "Attirance et séduction",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_014"
-  },
-  {
-    "text": "Quelle attitude peut faire monter la tension entre toi et quelqu’un sans qu’un mot soit prononcé ?",
+    "text": "Quelle attitude peut faire monter la tension entre toi et quelqu’un sans qu’un mot soit prononcé?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "hot",
@@ -135,7 +126,7 @@
     "id": "osee_015"
   },
   {
-    "text": "Quel type de proximité physique te trouble le plus rapidement ?",
+    "text": "Quel type de proximité physique te trouble le plus rapidement?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "hot",
@@ -144,7 +135,7 @@
     "id": "osee_016"
   },
   {
-    "text": "Quelle initiative prise par l’autre personne te paraît la plus séduisante ?",
+    "text": "Quelle initiative prise par l’autre personne te paraît la plus séduisante?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "hot",
@@ -153,7 +144,7 @@
     "id": "osee_017"
   },
   {
-    "text": "Quel endroit inattendu pourrait rendre un flirt beaucoup plus intense ?",
+    "text": "Quel endroit inattendu pourrait rendre un flirt beaucoup plus intense?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "hot",
@@ -162,7 +153,7 @@
     "id": "osee_018"
   },
   {
-    "text": "Quelle phrase pourrait te donner envie d’embrasser quelqu’un immédiatement ?",
+    "text": "Quelle phrase pourrait te donner envie d’embrasser quelqu’un immédiatement?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "hot",
@@ -171,7 +162,7 @@
     "id": "osee_019"
   },
   {
-    "text": "Quel comportement te fait comprendre que l’attirance est clairement réciproque ?",
+    "text": "Quel comportement te fait comprendre que l’attirance est clairement réciproque?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "hot",
@@ -180,7 +171,7 @@
     "id": "osee_020"
   },
   {
-    "text": "Quelle situation de flirt as-tu déjà prolongée volontairement juste pour faire durer la tension ?",
+    "text": "Quelle situation de flirt as-tu déjà prolongée volontairement juste pour faire durer la tension?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "hot",
@@ -189,7 +180,7 @@
     "id": "osee_021"
   },
   {
-    "text": "Qu’est-ce qui te plaît le plus dans le fait d’être désiré(e) ?",
+    "text": "Qu’est-ce qui te plaît le plus dans le fait d’être désiré(e)?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "hot",
@@ -198,7 +189,7 @@
     "id": "osee_022"
   },
   {
-    "text": "Quelle différence entre ton type habituel et tes attirances réelles t’amuse le plus ?",
+    "text": "Quelle différence entre ton type habituel et tes attirances réelles t’amuse le plus?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "hot",
@@ -207,7 +198,7 @@
     "id": "osee_023"
   },
   {
-    "text": "Quel jeu de séduction serais-tu capable de faire durer toute une soirée ?",
+    "text": "Quel jeu de séduction serais-tu capable de faire durer toute une soirée?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "hot",
@@ -216,7 +207,7 @@
     "id": "osee_024"
   },
   {
-    "text": "À quel moment d’un rendez-vous sais-tu généralement si tu as envie d’aller plus loin ?",
+    "text": "À quel moment d’un rendez-vous sais-tu généralement si tu as envie d’aller plus loin?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "hot",
@@ -225,7 +216,7 @@
     "id": "osee_025"
   },
   {
-    "text": "Quel contact apparemment innocent peut devenir très suggestif pour toi ?",
+    "text": "Quel contact apparemment innocent peut devenir très suggestif pour toi?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "hot",
@@ -234,7 +225,7 @@
     "id": "osee_026"
   },
   {
-    "text": "Quelle personne te semblerait plus séduisante après une conversation vraiment profonde ?",
+    "text": "Quelle personne te semblerait plus séduisante après une conversation vraiment profonde?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "hot",
@@ -243,7 +234,7 @@
     "id": "osee_027"
   },
   {
-    "text": "Quel signe de confiance en soi peut te faire perdre tes moyens ?",
+    "text": "Quel signe de confiance en soi peut te faire perdre tes moyens?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "hot",
@@ -252,7 +243,7 @@
     "id": "osee_028"
   },
   {
-    "text": "As-tu déjà été fortement attiré(e) par quelqu’un que tu n’aurais jamais osé présenter à tes proches ?",
+    "text": "As-tu déjà été fortement attiré(e) par quelqu’un que tu n’aurais jamais osé présenter à tes proches?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "nofilter",
@@ -261,7 +252,7 @@
     "id": "osee_029"
   },
   {
-    "text": "Quelle personne de ton entourage t’a déjà attiré(e) alors que tu savais que c’était une mauvaise idée ?",
+    "text": "Quelle personne de ton entourage t’a déjà attiré(e) alors que tu savais que c’était une mauvaise idée?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "nofilter",
@@ -270,7 +261,7 @@
     "id": "osee_030"
   },
   {
-    "text": "As-tu déjà entretenu un flirt uniquement parce que l’attention te plaisait ?",
+    "text": "As-tu déjà entretenu un flirt uniquement parce que l’attention te plaisait?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "nofilter",
@@ -279,7 +270,7 @@
     "id": "osee_031"
   },
   {
-    "text": "Quelle attirance passée te mettrait le plus mal à l’aise si elle devenait publique ?",
+    "text": "Quelle attirance passée te mettrait le plus mal à l’aise si elle devenait publique?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "nofilter",
@@ -288,7 +279,7 @@
     "id": "osee_032"
   },
   {
-    "text": "As-tu déjà comparé physiquement deux personnes avec qui tu avais une histoire ?",
+    "text": "As-tu déjà comparé physiquement deux personnes avec qui tu avais une histoire?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "nofilter",
@@ -297,7 +288,7 @@
     "id": "osee_033"
   },
   {
-    "text": "Quel type de personne t’attire alors que tu sais qu’il ou elle ne te conviendrait pas du tout ?",
+    "text": "Quel type de personne t’attire alors que tu sais qu’il ou elle ne te conviendrait pas du tout?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "nofilter",
@@ -306,7 +297,7 @@
     "id": "osee_034"
   },
   {
-    "text": "As-tu déjà fait semblant de ne pas être attiré(e) par quelqu’un pour protéger ton ego ?",
+    "text": "As-tu déjà fait semblant de ne pas être attiré(e) par quelqu’un pour protéger ton ego?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "nofilter",
@@ -315,7 +306,7 @@
     "id": "osee_035"
   },
   {
-    "text": "Quelle personne connue de ton entourage pourrait le plus facilement te faire oublier tes principes ?",
+    "text": "Quelle personne connue de ton entourage pourrait le plus facilement te faire oublier tes principes?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "nofilter",
@@ -324,7 +315,7 @@
     "id": "osee_036"
   },
   {
-    "text": "As-tu déjà regretté d’avoir montré trop clairement ton attirance ?",
+    "text": "As-tu déjà regretté d’avoir montré trop clairement ton attirance?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "nofilter",
@@ -333,7 +324,7 @@
     "id": "osee_037"
   },
   {
-    "text": "Quelle différence entre ce que tu dis aimer et ce qui t’attire réellement serait la plus surprenante ?",
+    "text": "Quelle différence entre ce que tu dis aimer et ce qui t’attire réellement serait la plus surprenante?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "nofilter",
@@ -342,7 +333,7 @@
     "id": "osee_038"
   },
   {
-    "text": "As-tu déjà continué à voir quelqu’un uniquement parce que l’alchimie physique était très forte ?",
+    "text": "As-tu déjà continué à voir quelqu’un uniquement parce que l’alchimie physique était très forte?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "nofilter",
@@ -351,7 +342,7 @@
     "id": "osee_039"
   },
   {
-    "text": "Quelle attirance interdite ou compliquée as-tu déjà eu du mal à ignorer ?",
+    "text": "Quelle attirance interdite ou compliquée as-tu déjà eu du mal à ignorer?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "nofilter",
@@ -360,7 +351,7 @@
     "id": "osee_040"
   },
   {
-    "text": "As-tu déjà été jaloux ou jalouse de voir une personne qui ne t’appartenait pas séduire quelqu’un d’autre ?",
+    "text": "As-tu déjà été jaloux ou jalouse de voir une personne qui ne t’appartenait pas séduire quelqu’un d’autre?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "nofilter",
@@ -369,7 +360,7 @@
     "id": "osee_041"
   },
   {
-    "text": "Quel aveu sur ton type réel surprendrait le plus les personnes présentes ?",
+    "text": "Quel aveu sur ton type réel surprendrait le plus les personnes présentes?",
     "theme": "attraction",
     "themeLabel": "Attirance et séduction",
     "intensity": "nofilter",
@@ -378,7 +369,7 @@
     "id": "osee_042"
   },
   {
-    "text": "Quel scénario romantique un peu cliché aimerais-tu malgré tout vivre un jour ?",
+    "text": "Quel scénario romantique un peu cliché aimerais-tu malgré tout vivre un jour?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "soft",
@@ -387,7 +378,7 @@
     "id": "osee_043"
   },
   {
-    "text": "Dans quel lieu rêverais-tu de vivre un moment de séduction mémorable ?",
+    "text": "Dans quel lieu rêverais-tu de vivre un moment de séduction mémorable?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "soft",
@@ -396,7 +387,7 @@
     "id": "osee_044"
   },
   {
-    "text": "Quelle tenue aimerais-tu porter ou voir portée pour une soirée très spéciale ?",
+    "text": "Quelle tenue aimerais-tu porter ou voir portée pour une soirée très spéciale?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "soft",
@@ -405,7 +396,7 @@
     "id": "osee_045"
   },
   {
-    "text": "Quel rôle aimerais-tu que l’autre personne prenne davantage dans la séduction ?",
+    "text": "Quel rôle aimerais-tu que l’autre personne prenne davantage dans la séduction?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "soft",
@@ -414,7 +405,7 @@
     "id": "osee_046"
   },
   {
-    "text": "Quelle ambiance idéale imagines-tu pour un rendez-vous qui se termine très bien ?",
+    "text": "Quelle ambiance idéale imagines-tu pour un rendez-vous qui se termine très bien?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "soft",
@@ -423,7 +414,7 @@
     "id": "osee_047"
   },
   {
-    "text": "Quel fantasme de film ou de série te paraît secrètement attirant ?",
+    "text": "Quel fantasme de film ou de série te paraît secrètement attirant?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "soft",
@@ -432,7 +423,7 @@
     "id": "osee_048"
   },
   {
-    "text": "Quelle surprise romantique pourrait réellement te faire craquer ?",
+    "text": "Quelle surprise romantique pourrait réellement te faire craquer?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "soft",
@@ -441,7 +432,7 @@
     "id": "osee_049"
   },
   {
-    "text": "Quel type de voyage te semble parfait pour raviver le désir ?",
+    "text": "Quel type de voyage te semble parfait pour raviver le désir?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "soft",
@@ -450,7 +441,7 @@
     "id": "osee_050"
   },
   {
-    "text": "Quelle expérience nouvelle aimerais-tu essayer uniquement avec une personne de grande confiance ?",
+    "text": "Quelle expérience nouvelle aimerais-tu essayer uniquement avec une personne de grande confiance?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "soft",
@@ -459,7 +450,7 @@
     "id": "osee_051"
   },
   {
-    "text": "Quel jeu de rôle léger pourrait t’amuser sans te mettre mal à l’aise ?",
+    "text": "Quel jeu de rôle léger pourrait t’amuser sans te mettre mal à l’aise?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "soft",
@@ -468,7 +459,7 @@
     "id": "osee_052"
   },
   {
-    "text": "Quelle célébrité correspond le plus à ton fantasme purement esthétique ?",
+    "text": "Quelle célébrité correspond le plus à ton fantasme purement esthétique?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "soft",
@@ -477,7 +468,7 @@
     "id": "osee_053"
   },
   {
-    "text": "Quel détail d’un décor peut rendre une situation beaucoup plus séduisante pour toi ?",
+    "text": "Quel détail d’un décor peut rendre une situation beaucoup plus séduisante pour toi?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "soft",
@@ -486,7 +477,7 @@
     "id": "osee_054"
   },
   {
-    "text": "Quelle idée un peu audacieuse te semble plus attirante en imagination qu’en réalité ?",
+    "text": "Quelle idée un peu audacieuse te semble plus attirante en imagination qu’en réalité?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "soft",
@@ -495,7 +486,7 @@
     "id": "osee_055"
   },
   {
-    "text": "Quel fantasme tendre ou sensuel aimerais-tu qu’on devine sans avoir à le demander ?",
+    "text": "Quel fantasme tendre ou sensuel aimerais-tu qu’on devine sans avoir à le demander?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "soft",
@@ -504,7 +495,7 @@
     "id": "osee_056"
   },
   {
-    "text": "Quel fantasme serais-tu le plus susceptible de réaliser si tu étais certain(e) de ne pas être jugé(e) ?",
+    "text": "Quel fantasme serais-tu le plus susceptible de réaliser si tu étais certain(e) de ne pas être jugé(e)?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "hot",
@@ -513,7 +504,7 @@
     "id": "osee_057"
   },
   {
-    "text": "Quelle situation de pouvoir ou de contrôle t’intrigue le plus dans l’intimité ?",
+    "text": "Quelle situation de pouvoir ou de contrôle t’intrigue le plus dans l’intimité?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "hot",
@@ -522,7 +513,7 @@
     "id": "osee_058"
   },
   {
-    "text": "Quel scénario impliquant un lieu inhabituel t’attire le plus ?",
+    "text": "Quel scénario impliquant un lieu inhabituel t’attire le plus?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "hot",
@@ -531,7 +522,7 @@
     "id": "osee_059"
   },
   {
-    "text": "Quelle nouveauté aimerais-tu proposer mais hésites encore à formuler ?",
+    "text": "Quelle nouveauté aimerais-tu proposer mais hésites encore à formuler?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "hot",
@@ -540,7 +531,7 @@
     "id": "osee_060"
   },
   {
-    "text": "Quel fantasme préfères-tu garder dans l’imaginaire plutôt que réellement vivre ?",
+    "text": "Quel fantasme préfères-tu garder dans l’imaginaire plutôt que réellement vivre?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "hot",
@@ -549,7 +540,7 @@
     "id": "osee_061"
   },
   {
-    "text": "Quelle mise en scène pourrait rendre une rencontre beaucoup plus excitante pour toi ?",
+    "text": "Quelle mise en scène pourrait rendre une rencontre beaucoup plus excitante pour toi?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "hot",
@@ -558,7 +549,7 @@
     "id": "osee_062"
   },
   {
-    "text": "Quel rôle fictif aimerais-tu incarner le temps d’une soirée ?",
+    "text": "Quel rôle fictif aimerais-tu incarner le temps d’une soirée?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "hot",
@@ -567,7 +558,7 @@
     "id": "osee_063"
   },
   {
-    "text": "Quelle règle temporaire pourrait rendre un jeu de séduction particulièrement intense ?",
+    "text": "Quelle règle temporaire pourrait rendre un jeu de séduction particulièrement intense?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "hot",
@@ -576,7 +567,7 @@
     "id": "osee_064"
   },
   {
-    "text": "Quel fantasme te semble surtout attirant parce qu’il est difficile à organiser ?",
+    "text": "Quel fantasme te semble surtout attirant parce qu’il est difficile à organiser?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "hot",
@@ -585,7 +576,7 @@
     "id": "osee_065"
   },
   {
-    "text": "Quelle expérience à deux te semblerait plus facile à tenter loin de chez toi ?",
+    "text": "Quelle expérience à deux te semblerait plus facile à tenter loin de chez toi?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "hot",
@@ -594,7 +585,7 @@
     "id": "osee_066"
   },
   {
-    "text": "Quel scénario aimerais-tu préparer longtemps à l’avance plutôt qu’improviser ?",
+    "text": "Quel scénario aimerais-tu préparer longtemps à l’avance plutôt qu’improviser?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "hot",
@@ -603,7 +594,7 @@
     "id": "osee_067"
   },
   {
-    "text": "Quelle part de mystère aimerais-tu conserver pendant une expérience intime ?",
+    "text": "Quelle part de mystère aimerais-tu conserver pendant une expérience intime?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "hot",
@@ -612,7 +603,7 @@
     "id": "osee_068"
   },
   {
-    "text": "Quel fantasme dépendrait entièrement de la confiance que tu accordes à l’autre personne ?",
+    "text": "Quel fantasme dépendrait entièrement de la confiance que tu accordes à l’autre personne?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "hot",
@@ -621,7 +612,7 @@
     "id": "osee_069"
   },
   {
-    "text": "Quelle envie te paraît trop audacieuse pour un début de relation mais possible plus tard ?",
+    "text": "Quelle envie te paraît trop audacieuse pour un début de relation mais possible plus tard?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "hot",
@@ -630,7 +621,7 @@
     "id": "osee_070"
   },
   {
-    "text": "Quel fantasme n’as-tu encore jamais avoué à une personne avec qui tu as été intime ?",
+    "text": "Quel fantasme n’as-tu encore jamais avoué à une personne avec qui tu as été intime?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "nofilter",
@@ -639,7 +630,7 @@
     "id": "osee_071"
   },
   {
-    "text": "As-tu déjà pensé à quelqu’un d’autre pendant un moment intime ?",
+    "text": "As-tu déjà pensé à quelqu’un d’autre pendant un moment intime?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "nofilter",
@@ -648,7 +639,7 @@
     "id": "osee_072"
   },
   {
-    "text": "Quel fantasme te ferait le plus peur s’il était découvert dans tes notes ou tes recherches ?",
+    "text": "Quel fantasme te ferait le plus peur s’il était découvert dans tes notes ou tes recherches?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "nofilter",
@@ -657,7 +648,7 @@
     "id": "osee_073"
   },
   {
-    "text": "Quelle envie as-tu déjà minimisée parce que tu craignais la réaction de l’autre personne ?",
+    "text": "Quelle envie as-tu déjà minimisée parce que tu craignais la réaction de l’autre personne?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "nofilter",
@@ -666,7 +657,7 @@
     "id": "osee_074"
   },
   {
-    "text": "As-tu déjà accepté une expérience surtout pour faire plaisir alors qu’elle ne t’attirait pas vraiment ?",
+    "text": "As-tu déjà accepté une expérience surtout pour faire plaisir alors qu’elle ne t’attirait pas vraiment?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "nofilter",
@@ -675,7 +666,7 @@
     "id": "osee_075"
   },
   {
-    "text": "Quel fantasme impliquant une personne inaccessible t’est déjà passé par la tête ?",
+    "text": "Quel fantasme impliquant une personne inaccessible t’est déjà passé par la tête?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "nofilter",
@@ -684,7 +675,7 @@
     "id": "osee_076"
   },
   {
-    "text": "Quelle idée te tente mais entre en conflit avec l’image que tu donnes habituellement ?",
+    "text": "Quelle idée te tente mais entre en conflit avec l’image que tu donnes habituellement?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "nofilter",
@@ -693,7 +684,7 @@
     "id": "osee_077"
   },
   {
-    "text": "Quel scénario te paraît excitant uniquement parce qu’il serait interdit ou risqué socialement ?",
+    "text": "Quel scénario te paraît excitant uniquement parce qu’il serait interdit ou risqué socialement?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "nofilter",
@@ -702,7 +693,7 @@
     "id": "osee_078"
   },
   {
-    "text": "As-tu déjà regretté d’avoir révélé un fantasme à quelqu’un ?",
+    "text": "As-tu déjà regretté d’avoir révélé un fantasme à quelqu’un?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "nofilter",
@@ -711,7 +702,7 @@
     "id": "osee_079"
   },
   {
-    "text": "Quelle envie intime pourrais-tu difficilement assumer devant une personne très traditionnelle ?",
+    "text": "Quelle envie intime pourrais-tu difficilement assumer devant une personne très traditionnelle?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "nofilter",
@@ -720,7 +711,7 @@
     "id": "osee_080"
   },
   {
-    "text": "Quel fantasme te semble impossible à réaliser sans une confiance absolue ?",
+    "text": "Quel fantasme te semble impossible à réaliser sans une confiance absolue?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "nofilter",
@@ -729,7 +720,7 @@
     "id": "osee_081"
   },
   {
-    "text": "As-tu déjà découvert qu’une envie réelle était très différente de ce que tu imaginais ?",
+    "text": "As-tu déjà découvert qu’une envie réelle était très différente de ce que tu imaginais?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "nofilter",
@@ -738,7 +729,7 @@
     "id": "osee_082"
   },
   {
-    "text": "Quelle curiosité intime préférerais-tu tester sans que personne ne le sache ?",
+    "text": "Quelle curiosité intime préférerais-tu tester sans que personne ne le sache?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "nofilter",
@@ -747,7 +738,7 @@
     "id": "osee_083"
   },
   {
-    "text": "Quel fantasme serait le plus difficile à expliquer sans être mal compris(e) ?",
+    "text": "Quel fantasme serait le plus difficile à expliquer sans être mal compris(e)?",
     "theme": "fantasies",
     "themeLabel": "Fantasmes et envies",
     "intensity": "nofilter",
@@ -756,7 +747,7 @@
     "id": "osee_084"
   },
   {
-    "text": "Quel rendez-vous a le plus dépassé tes attentes ?",
+    "text": "Quel rendez-vous a le plus dépassé tes attentes?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "soft",
@@ -765,7 +756,7 @@
     "id": "osee_085"
   },
   {
-    "text": "Quelle première impression complètement fausse as-tu déjà eue sur quelqu’un ?",
+    "text": "Quelle première impression complètement fausse as-tu déjà eue sur quelqu’un?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "soft",
@@ -774,7 +765,7 @@
     "id": "osee_086"
   },
   {
-    "text": "Quel baiser as-tu le plus longtemps repensé après coup ?",
+    "text": "Quel baiser as-tu le plus longtemps repensé après coup?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "soft",
@@ -783,7 +774,7 @@
     "id": "osee_087"
   },
   {
-    "text": "Quelle rencontre inattendue t’a déjà marqué(e) ?",
+    "text": "Quelle rencontre inattendue t’a déjà marqué(e)?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "soft",
@@ -792,7 +783,7 @@
     "id": "osee_088"
   },
   {
-    "text": "Quel geste tendre reçu dans le passé t’a le plus touché(e) ?",
+    "text": "Quel geste tendre reçu dans le passé t’a le plus touché(e)?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "soft",
@@ -801,7 +792,7 @@
     "id": "osee_089"
   },
   {
-    "text": "Quelle histoire a commencé d’une manière que tu n’aurais jamais pu prévoir ?",
+    "text": "Quelle histoire a commencé d’une manière que tu n’aurais jamais pu prévoir?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "soft",
@@ -810,7 +801,7 @@
     "id": "osee_090"
   },
   {
-    "text": "Quel rendez-vous raté est devenu drôle avec le temps ?",
+    "text": "Quel rendez-vous raté est devenu drôle avec le temps?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "soft",
@@ -819,7 +810,7 @@
     "id": "osee_091"
   },
   {
-    "text": "Quelle personne t’a déjà surpris(e) en étant beaucoup plus séduisante en vrai qu’en photo ?",
+    "text": "Quelle personne t’a déjà surpris(e) en étant beaucoup plus séduisante en vrai qu’en photo?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "soft",
@@ -828,7 +819,7 @@
     "id": "osee_092"
   },
   {
-    "text": "Quel souvenir de flirt te fait encore sourire aujourd’hui ?",
+    "text": "Quel souvenir de flirt te fait encore sourire aujourd’hui?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "soft",
@@ -837,7 +828,7 @@
     "id": "osee_093"
   },
   {
-    "text": "Quelle expérience t’a appris ce que tu recherchais vraiment chez quelqu’un ?",
+    "text": "Quelle expérience t’a appris ce que tu recherchais vraiment chez quelqu’un?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "soft",
@@ -846,7 +837,7 @@
     "id": "osee_094"
   },
   {
-    "text": "Quel moment romantique as-tu vécu sans avoir compris tout de suite qu’il l’était ?",
+    "text": "Quel moment romantique as-tu vécu sans avoir compris tout de suite qu’il l’était?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "soft",
@@ -855,7 +846,7 @@
     "id": "osee_095"
   },
   {
-    "text": "Quelle relation t’a le plus fait évoluer dans ta manière d’aimer ?",
+    "text": "Quelle relation t’a le plus fait évoluer dans ta manière d’aimer?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "soft",
@@ -864,7 +855,7 @@
     "id": "osee_096"
   },
   {
-    "text": "Quel rendez-vous aurais-tu aimé pouvoir recommencer différemment ?",
+    "text": "Quel rendez-vous aurais-tu aimé pouvoir recommencer différemment?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "soft",
@@ -873,7 +864,7 @@
     "id": "osee_097"
   },
   {
-    "text": "Quelle anecdote de séduction raconterais-tu volontiers dans vingt ans ?",
+    "text": "Quelle anecdote de séduction raconterais-tu volontiers dans vingt ans?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "soft",
@@ -882,7 +873,7 @@
     "id": "osee_098"
   },
   {
-    "text": "Quelle expérience intime a le plus changé tes préférences ?",
+    "text": "Quelle expérience intime a le plus changé tes préférences?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "hot",
@@ -891,16 +882,7 @@
     "id": "osee_099"
   },
   {
-    "text": "Quel moment de tension a duré bien plus longtemps que prévu avant que quelque chose se passe ?",
-    "theme": "experiences",
-    "themeLabel": "Expériences et souvenirs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_100"
-  },
-  {
-    "text": "Quelle rencontre spontanée t’a le plus surpris(e) ?",
+    "text": "Quelle rencontre spontanée t’a le plus surpris(e)?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "hot",
@@ -909,16 +891,7 @@
     "id": "osee_101"
   },
   {
-    "text": "Quel lieu inhabituel est associé à l’un de tes souvenirs les plus osés ?",
-    "theme": "experiences",
-    "themeLabel": "Expériences et souvenirs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_102"
-  },
-  {
-    "text": "Quelle expérience t’a appris l’importance de parler clairement de ses envies ?",
+    "text": "Quelle expérience t’a appris l’importance de parler clairement de ses envies?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "hot",
@@ -927,7 +900,7 @@
     "id": "osee_103"
   },
   {
-    "text": "Quel moment intime t’a fait rire alors qu’il devait être très sérieux ?",
+    "text": "Quel moment intime t’a fait rire alors qu’il devait être très sérieux?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "hot",
@@ -936,7 +909,7 @@
     "id": "osee_104"
   },
   {
-    "text": "Quelle initiative inattendue de quelqu’un t’a particulièrement plu ?",
+    "text": "Quelle initiative inattendue de quelqu’un t’a particulièrement plu?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "hot",
@@ -945,7 +918,7 @@
     "id": "osee_105"
   },
   {
-    "text": "Quel rendez-vous a basculé le plus vite d’une ambiance sage à une ambiance très différente ?",
+    "text": "Quel rendez-vous a basculé le plus vite d’une ambiance sage à une ambiance très différente?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "hot",
@@ -954,7 +927,7 @@
     "id": "osee_106"
   },
   {
-    "text": "Quelle expérience t’a semblé meilleure parce qu’elle n’était pas prévue ?",
+    "text": "Quelle expérience t’a semblé meilleure parce qu’elle n’était pas prévue?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "hot",
@@ -963,7 +936,7 @@
     "id": "osee_107"
   },
   {
-    "text": "Quel souvenir intime t’a le plus aidé(e) à prendre confiance en toi ?",
+    "text": "Quel souvenir intime t’a le plus aidé(e) à prendre confiance en toi?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "hot",
@@ -972,7 +945,7 @@
     "id": "osee_108"
   },
   {
-    "text": "Quelle erreur de débutant(e) peux-tu aujourd’hui raconter avec humour ?",
+    "text": "Quelle erreur de débutant(e) peux-tu aujourd’hui raconter avec humour?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "hot",
@@ -981,7 +954,7 @@
     "id": "osee_109"
   },
   {
-    "text": "Quelle expérience as-tu appréciée uniquement parce que la personne te mettait parfaitement à l’aise ?",
+    "text": "Quelle expérience as-tu appréciée uniquement parce que la personne te mettait parfaitement à l’aise?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "hot",
@@ -990,7 +963,7 @@
     "id": "osee_110"
   },
   {
-    "text": "Quel moment de complicité après une rencontre t’a davantage marqué(e) que la rencontre elle-même ?",
+    "text": "Quel moment de complicité après une rencontre t’a davantage marqué(e) que la rencontre elle-même?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "hot",
@@ -999,7 +972,7 @@
     "id": "osee_111"
   },
   {
-    "text": "Quelle expérience t’a fait comprendre qu’une bonne communication pouvait tout changer ?",
+    "text": "Quelle expérience t’a fait comprendre qu’une bonne communication pouvait tout changer?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "hot",
@@ -1008,7 +981,7 @@
     "id": "osee_112"
   },
   {
-    "text": "As-tu déjà prétendu avoir davantage d’expérience que tu n’en avais réellement ?",
+    "text": "As-tu déjà prétendu avoir davantage d’expérience que tu n’en avais réellement?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "nofilter",
@@ -1017,7 +990,7 @@
     "id": "osee_113"
   },
   {
-    "text": "Quelle expérience intime as-tu regrettée presque immédiatement ?",
+    "text": "Quelle expérience intime as-tu regrettée presque immédiatement?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "nofilter",
@@ -1026,7 +999,7 @@
     "id": "osee_114"
   },
   {
-    "text": "As-tu déjà simulé du plaisir pour écourter ou éviter une conversation gênante ?",
+    "text": "As-tu déjà simulé du plaisir pour écourter ou éviter une conversation gênante?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "nofilter",
@@ -1035,7 +1008,7 @@
     "id": "osee_115"
   },
   {
-    "text": "Quelle rencontre passée préférerais-tu effacer de la mémoire de l’autre personne ?",
+    "text": "Quelle rencontre passée préférerais-tu effacer de la mémoire de l’autre personne?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "nofilter",
@@ -1044,16 +1017,7 @@
     "id": "osee_116"
   },
   {
-    "text": "As-tu déjà revu quelqu’un uniquement parce que l’expérience physique était réussie ?",
-    "theme": "experiences",
-    "themeLabel": "Expériences et souvenirs",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_117"
-  },
-  {
-    "text": "Quelle situation intime t’a fait réaliser que tu n’étais pas du tout compatible avec quelqu’un ?",
+    "text": "Quelle situation intime t’a fait réaliser que tu n’étais pas du tout compatible avec quelqu’un?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "nofilter",
@@ -1062,16 +1026,7 @@
     "id": "osee_118"
   },
   {
-    "text": "As-tu déjà menti sur le nombre de personnes avec qui tu avais eu une histoire ?",
-    "theme": "experiences",
-    "themeLabel": "Expériences et souvenirs",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_119"
-  },
-  {
-    "text": "Quelle expérience as-tu racontée de manière beaucoup plus flatteuse que la réalité ?",
+    "text": "Quelle expérience as-tu racontée de manière beaucoup plus flatteuse que la réalité?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "nofilter",
@@ -1080,7 +1035,7 @@
     "id": "osee_120"
   },
   {
-    "text": "As-tu déjà quitté un rendez-vous ou une rencontre sans donner la vraie raison ?",
+    "text": "As-tu déjà quitté un rendez-vous ou une rencontre sans donner la vraie raison?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "nofilter",
@@ -1089,7 +1044,7 @@
     "id": "osee_121"
   },
   {
-    "text": "Quelle expérience t’a le plus fait douter de ton propre jugement ?",
+    "text": "Quelle expérience t’a le plus fait douter de ton propre jugement?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "nofilter",
@@ -1098,7 +1053,7 @@
     "id": "osee_122"
   },
   {
-    "text": "As-tu déjà confondu désir et sentiments au point de compliquer une relation ?",
+    "text": "As-tu déjà confondu désir et sentiments au point de compliquer une relation?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "nofilter",
@@ -1107,7 +1062,7 @@
     "id": "osee_123"
   },
   {
-    "text": "Quel souvenir intime te ferait le plus paniquer s’il était raconté par l’autre personne ?",
+    "text": "Quel souvenir intime te ferait le plus paniquer s’il était raconté par l’autre personne?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "nofilter",
@@ -1116,7 +1071,7 @@
     "id": "osee_124"
   },
   {
-    "text": "As-tu déjà accepté de revoir quelqu’un après avoir juré que ce serait la dernière fois ?",
+    "text": "As-tu déjà accepté de revoir quelqu’un après avoir juré que ce serait la dernière fois?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "nofilter",
@@ -1125,7 +1080,7 @@
     "id": "osee_125"
   },
   {
-    "text": "Quelle expérience passée révèle le plus une version de toi que peu de gens connaissent ?",
+    "text": "Quelle expérience passée révèle le plus une version de toi que peu de gens connaissent?",
     "theme": "experiences",
     "themeLabel": "Expériences et souvenirs",
     "intensity": "nofilter",
@@ -1134,7 +1089,7 @@
     "id": "osee_126"
   },
   {
-    "text": "Quel compliment as-tu déjà fait sans le penser totalement ?",
+    "text": "Quel compliment as-tu déjà fait sans le penser totalement?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "soft",
@@ -1143,7 +1098,7 @@
     "id": "osee_127"
   },
   {
-    "text": "Quelle petite habitude romantique te gêne d’avouer que tu apprécies ?",
+    "text": "Quelle petite habitude romantique te gêne d’avouer que tu apprécies?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "soft",
@@ -1152,7 +1107,7 @@
     "id": "osee_128"
   },
   {
-    "text": "Quel message as-tu déjà réécrit plusieurs fois avant de l’envoyer à un crush ?",
+    "text": "Quel message as-tu déjà réécrit plusieurs fois avant de l’envoyer à un crush?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "soft",
@@ -1161,7 +1116,7 @@
     "id": "osee_129"
   },
   {
-    "text": "Quelle excuse as-tu déjà utilisée pour prolonger une conversation avec quelqu’un ?",
+    "text": "Quelle excuse as-tu déjà utilisée pour prolonger une conversation avec quelqu’un?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "soft",
@@ -1170,7 +1125,7 @@
     "id": "osee_130"
   },
   {
-    "text": "Quel comportement adoptes-tu quand tu veux attirer l’attention sans l’assumer ?",
+    "text": "Quel comportement adoptes-tu quand tu veux attirer l’attention sans l’assumer?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "soft",
@@ -1179,7 +1134,7 @@
     "id": "osee_131"
   },
   {
-    "text": "Quelle chanson pourrait révéler ton côté le plus romantique ?",
+    "text": "Quelle chanson pourrait révéler ton côté le plus romantique?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "soft",
@@ -1188,7 +1143,7 @@
     "id": "osee_132"
   },
   {
-    "text": "Quel détail gênant de ton historique amoureux racontes-tu rarement ?",
+    "text": "Quel détail gênant de ton historique amoureux racontes-tu rarement?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "soft",
@@ -1197,7 +1152,7 @@
     "id": "osee_133"
   },
   {
-    "text": "Quelle personne as-tu déjà essayé d’impressionner de manière un peu ridicule ?",
+    "text": "Quelle personne as-tu déjà essayé d’impressionner de manière un peu ridicule?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "soft",
@@ -1206,7 +1161,7 @@
     "id": "osee_134"
   },
   {
-    "text": "Quel signe d’intérêt as-tu déjà interprété beaucoup trop vite ?",
+    "text": "Quel signe d’intérêt as-tu déjà interprété beaucoup trop vite?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "soft",
@@ -1215,7 +1170,7 @@
     "id": "osee_135"
   },
   {
-    "text": "Quelle peur amoureuse caches-tu le mieux ?",
+    "text": "Quelle peur amoureuse caches-tu le mieux?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "soft",
@@ -1224,7 +1179,7 @@
     "id": "osee_136"
   },
   {
-    "text": "Quel acte de jalousie léger as-tu déjà regretté ?",
+    "text": "Quel acte de jalousie léger as-tu déjà regretté?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "soft",
@@ -1233,7 +1188,7 @@
     "id": "osee_137"
   },
   {
-    "text": "Quelle vérité sur ta manière de flirter surprendrait tes proches ?",
+    "text": "Quelle vérité sur ta manière de flirter surprendrait tes proches?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "soft",
@@ -1242,7 +1197,7 @@
     "id": "osee_138"
   },
   {
-    "text": "Quel conseil amoureux donnes-tu alors que tu ne l’appliques jamais ?",
+    "text": "Quel conseil amoureux donnes-tu alors que tu ne l’appliques jamais?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "soft",
@@ -1251,7 +1206,7 @@
     "id": "osee_139"
   },
   {
-    "text": "Quelle attention reçue as-tu fait semblant de ne pas apprécier alors qu’elle t’a touché(e) ?",
+    "text": "Quelle attention reçue as-tu fait semblant de ne pas apprécier alors qu’elle t’a touché(e)?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "soft",
@@ -1260,7 +1215,7 @@
     "id": "osee_140"
   },
   {
-    "text": "Quel mensonge as-tu déjà raconté pour paraître plus détaché(e) après une rencontre ?",
+    "text": "Quel mensonge as-tu déjà raconté pour paraître plus détaché(e) après une rencontre?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "hot",
@@ -1269,7 +1224,7 @@
     "id": "osee_141"
   },
   {
-    "text": "As-tu déjà gardé une conversation ambiguë secrète alors que tu savais qu’elle poserait problème ?",
+    "text": "As-tu déjà gardé une conversation ambiguë secrète alors que tu savais qu’elle poserait problème?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "hot",
@@ -1278,7 +1233,7 @@
     "id": "osee_142"
   },
   {
-    "text": "Quelle vérité sur tes préférences as-tu déjà cachée par peur d’être jugé(e) ?",
+    "text": "Quelle vérité sur tes préférences as-tu déjà cachée par peur d’être jugé(e)?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "hot",
@@ -1287,7 +1242,7 @@
     "id": "osee_143"
   },
   {
-    "text": "As-tu déjà entretenu l’intérêt de quelqu’un sans vouloir réellement aller plus loin ?",
+    "text": "As-tu déjà entretenu l’intérêt de quelqu’un sans vouloir réellement aller plus loin?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "hot",
@@ -1296,7 +1251,7 @@
     "id": "osee_144"
   },
   {
-    "text": "Quelle personne as-tu déjà recontactée uniquement parce que tu te sentais seul(e) ?",
+    "text": "Quelle personne as-tu déjà recontactée uniquement parce que tu te sentais seul(e)?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "hot",
@@ -1305,7 +1260,7 @@
     "id": "osee_145"
   },
   {
-    "text": "Quel message osé as-tu déjà regretté dès qu’il a été envoyé ?",
+    "text": "Quel message osé as-tu déjà regretté dès qu’il a été envoyé?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "hot",
@@ -1314,7 +1269,7 @@
     "id": "osee_146"
   },
   {
-    "text": "As-tu déjà prétendu ne rien ressentir pour garder le contrôle d’une situation ?",
+    "text": "As-tu déjà prétendu ne rien ressentir pour garder le contrôle d’une situation?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "hot",
@@ -1323,7 +1278,7 @@
     "id": "osee_147"
   },
   {
-    "text": "Quelle confession intime as-tu faite à quelqu’un trop rapidement ?",
+    "text": "Quelle confession intime as-tu faite à quelqu’un trop rapidement?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "hot",
@@ -1332,7 +1287,7 @@
     "id": "osee_148"
   },
   {
-    "text": "As-tu déjà accepté un rendez-vous alors que ton intérêt principal était ailleurs ?",
+    "text": "As-tu déjà accepté un rendez-vous alors que ton intérêt principal était ailleurs?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "hot",
@@ -1341,7 +1296,7 @@
     "id": "osee_149"
   },
   {
-    "text": "Quel détail de ta vie sentimentale as-tu volontairement présenté différemment à tes amis ?",
+    "text": "Quel détail de ta vie sentimentale as-tu volontairement présenté différemment à tes amis?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "hot",
@@ -1350,7 +1305,7 @@
     "id": "osee_150"
   },
   {
-    "text": "As-tu déjà utilisé la jalousie pour provoquer une réaction ?",
+    "text": "As-tu déjà utilisé la jalousie pour provoquer une réaction?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "hot",
@@ -1359,7 +1314,7 @@
     "id": "osee_151"
   },
   {
-    "text": "Quelle personne as-tu déjà embrassée en sachant que cela compliquerait tout ?",
+    "text": "Quelle personne as-tu déjà embrassée en sachant que cela compliquerait tout?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "hot",
@@ -1368,7 +1323,7 @@
     "id": "osee_152"
   },
   {
-    "text": "Quel secret de séduction serais-tu le plus gêné(e) de voir dévoilé ?",
+    "text": "Quel secret de séduction serais-tu le plus gêné(e) de voir dévoilé?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "hot",
@@ -1377,7 +1332,7 @@
     "id": "osee_153"
   },
   {
-    "text": "As-tu déjà fait croire qu’une relation comptait moins qu’elle ne comptait réellement ?",
+    "text": "As-tu déjà fait croire qu’une relation comptait moins qu’elle ne comptait réellement?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "hot",
@@ -1386,7 +1341,7 @@
     "id": "osee_154"
   },
   {
-    "text": "Quelle est la chose la plus égoïste que tu aies faite dans une relation ?",
+    "text": "Quelle est la chose la plus égoïste que tu aies faite dans une relation?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "nofilter",
@@ -1395,7 +1350,7 @@
     "id": "osee_155"
   },
   {
-    "text": "As-tu déjà trompé quelqu’un émotionnellement sans considérer cela comme une tromperie sur le moment ?",
+    "text": "As-tu déjà trompé quelqu’un émotionnellement sans considérer cela comme une tromperie sur le moment?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "nofilter",
@@ -1404,7 +1359,7 @@
     "id": "osee_156"
   },
   {
-    "text": "Quel mensonge important as-tu déjà maintenu pour éviter une rupture ?",
+    "text": "Quel mensonge important as-tu déjà maintenu pour éviter une rupture?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "nofilter",
@@ -1413,7 +1368,7 @@
     "id": "osee_157"
   },
   {
-    "text": "As-tu déjà gardé quelqu’un comme option de secours ?",
+    "text": "As-tu déjà gardé quelqu’un comme option de secours?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "nofilter",
@@ -1422,7 +1377,7 @@
     "id": "osee_158"
   },
   {
-    "text": "Quelle vérité intime n’as-tu jamais osé dire à une personne avec qui tu partageais pourtant beaucoup ?",
+    "text": "Quelle vérité intime n’as-tu jamais osé dire à une personne avec qui tu partageais pourtant beaucoup?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "nofilter",
@@ -1431,7 +1386,7 @@
     "id": "osee_159"
   },
   {
-    "text": "As-tu déjà fouillé dans le téléphone ou les messages de quelqu’un sans permission ?",
+    "text": "As-tu déjà fouillé dans le téléphone ou les messages de quelqu’un sans permission?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "nofilter",
@@ -1440,7 +1395,7 @@
     "id": "osee_160"
   },
   {
-    "text": "Quelle personne as-tu déjà manipulée, même légèrement, pour obtenir de l’attention ?",
+    "text": "Quelle personne as-tu déjà manipulée, même légèrement, pour obtenir de l’attention?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "nofilter",
@@ -1449,7 +1404,7 @@
     "id": "osee_161"
   },
   {
-    "text": "As-tu déjà promis une exclusivité que tu n’étais pas certain(e) de respecter ?",
+    "text": "As-tu déjà promis une exclusivité que tu n’étais pas certain(e) de respecter?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "nofilter",
@@ -1458,7 +1413,7 @@
     "id": "osee_162"
   },
   {
-    "text": "Quelle conversation compromettante as-tu déjà supprimée pour éviter des questions ?",
+    "text": "Quelle conversation compromettante as-tu déjà supprimée pour éviter des questions?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "nofilter",
@@ -1467,7 +1422,7 @@
     "id": "osee_163"
   },
   {
-    "text": "As-tu déjà menti sur tes sentiments pour continuer à profiter d’une relation ?",
+    "text": "As-tu déjà menti sur tes sentiments pour continuer à profiter d’une relation?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "nofilter",
@@ -1476,7 +1431,7 @@
     "id": "osee_164"
   },
   {
-    "text": "Quelle décision sentimentale te ferait le plus honte si tous les détails étaient connus ?",
+    "text": "Quelle décision sentimentale te ferait le plus honte si tous les détails étaient connus?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "nofilter",
@@ -1485,7 +1440,7 @@
     "id": "osee_165"
   },
   {
-    "text": "As-tu déjà fait culpabiliser quelqu’un pour qu’il ou elle reste près de toi ?",
+    "text": "As-tu déjà fait culpabiliser quelqu’un pour qu’il ou elle reste près de toi?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "nofilter",
@@ -1494,7 +1449,7 @@
     "id": "osee_166"
   },
   {
-    "text": "Quelle trahison légère as-tu minimisée alors qu’elle aurait pu blesser l’autre personne ?",
+    "text": "Quelle trahison légère as-tu minimisée alors qu’elle aurait pu blesser l’autre personne?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "nofilter",
@@ -1503,7 +1458,7 @@
     "id": "osee_167"
   },
   {
-    "text": "Quel secret amoureux ou intime emporterais-tu volontiers dans ta tombe ?",
+    "text": "Quel secret amoureux ou intime emporterais-tu volontiers dans ta tombe?",
     "theme": "confessions",
     "themeLabel": "Dossiers et confessions",
     "intensity": "nofilter",
@@ -1512,7 +1467,7 @@
     "id": "osee_168"
   },
   {
-    "text": "Quelle qualité d’un ex reconnais-tu encore volontiers aujourd’hui ?",
+    "text": "Quelle qualité d’un ex reconnais-tu encore volontiers aujourd’hui?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "soft",
@@ -1521,16 +1476,7 @@
     "id": "osee_169"
   },
   {
-    "text": "Quel souvenir avec un ex te fait encore sourire sans regret ?",
-    "theme": "exes",
-    "themeLabel": "Ex et anciennes relations",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_170"
-  },
-  {
-    "text": "As-tu déjà gardé un cadeau d’un ex parce que tu l’aimais vraiment ?",
+    "text": "As-tu déjà gardé un cadeau d’un ex parce que tu l’aimais vraiment?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "soft",
@@ -1539,7 +1485,7 @@
     "id": "osee_171"
   },
   {
-    "text": "Quelle chanson te rappelle immédiatement une ancienne histoire ?",
+    "text": "Quelle chanson te rappelle immédiatement une ancienne histoire?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "soft",
@@ -1548,7 +1494,7 @@
     "id": "osee_172"
   },
   {
-    "text": "Quel ex pourrait aujourd’hui devenir simplement un ami ou une amie ?",
+    "text": "Quel ex pourrait aujourd’hui devenir simplement un ami ou une amie?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "soft",
@@ -1557,7 +1503,7 @@
     "id": "osee_173"
   },
   {
-    "text": "Quelle leçon utile as-tu tirée de ta dernière rupture ?",
+    "text": "Quelle leçon utile as-tu tirée de ta dernière rupture?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "soft",
@@ -1566,7 +1512,7 @@
     "id": "osee_174"
   },
   {
-    "text": "Quel comportement d’un ex as-tu compris seulement longtemps après ?",
+    "text": "Quel comportement d’un ex as-tu compris seulement longtemps après?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "soft",
@@ -1575,7 +1521,7 @@
     "id": "osee_175"
   },
   {
-    "text": "As-tu déjà regardé le profil d’un ex par simple curiosité ?",
+    "text": "As-tu déjà regardé le profil d’un ex par simple curiosité?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "soft",
@@ -1584,7 +1530,7 @@
     "id": "osee_176"
   },
   {
-    "text": "Quelle ancienne relation a le plus influencé tes critères actuels ?",
+    "text": "Quelle ancienne relation a le plus influencé tes critères actuels?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "soft",
@@ -1593,7 +1539,7 @@
     "id": "osee_177"
   },
   {
-    "text": "Quel détail te fait immédiatement penser à une personne de ton passé ?",
+    "text": "Quel détail te fait immédiatement penser à une personne de ton passé?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "soft",
@@ -1602,7 +1548,7 @@
     "id": "osee_178"
   },
   {
-    "text": "As-tu déjà rêvé d’un ex sans comprendre pourquoi ?",
+    "text": "As-tu déjà rêvé d’un ex sans comprendre pourquoi?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "soft",
@@ -1611,7 +1557,7 @@
     "id": "osee_179"
   },
   {
-    "text": "Quelle rupture s’est mieux terminée que tu ne l’aurais imaginé ?",
+    "text": "Quelle rupture s’est mieux terminée que tu ne l’aurais imaginé?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "soft",
@@ -1620,7 +1566,7 @@
     "id": "osee_180"
   },
   {
-    "text": "Quel ex tes amis appréciaient-ils davantage que toi à la fin ?",
+    "text": "Quel ex tes amis appréciaient-ils davantage que toi à la fin?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "soft",
@@ -1629,7 +1575,7 @@
     "id": "osee_181"
   },
   {
-    "text": "Quelle habitude d’une ancienne relation as-tu conservée ?",
+    "text": "Quelle habitude d’une ancienne relation as-tu conservée?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "soft",
@@ -1638,7 +1584,7 @@
     "id": "osee_182"
   },
   {
-    "text": "Avec quel type d’ex pourrais-tu être tenté(e) de replonger dans un moment de faiblesse ?",
+    "text": "Avec quel type d’ex pourrais-tu être tenté(e) de replonger dans un moment de faiblesse?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "hot",
@@ -1647,7 +1593,7 @@
     "id": "osee_183"
   },
   {
-    "text": "As-tu déjà recontacté un ex pour une raison différente de celle que tu as donnée ?",
+    "text": "As-tu déjà recontacté un ex pour une raison différente de celle que tu as donnée?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "hot",
@@ -1656,7 +1602,7 @@
     "id": "osee_184"
   },
   {
-    "text": "Quelle ancienne relation avait la meilleure alchimie malgré une mauvaise compatibilité ?",
+    "text": "Quelle ancienne relation avait la meilleure alchimie malgré une mauvaise compatibilité?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "hot",
@@ -1665,7 +1611,7 @@
     "id": "osee_185"
   },
   {
-    "text": "As-tu déjà comparé une nouvelle personne à un ex pendant un moment intime ?",
+    "text": "As-tu déjà comparé une nouvelle personne à un ex pendant un moment intime?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "hot",
@@ -1674,7 +1620,7 @@
     "id": "osee_186"
   },
   {
-    "text": "Quel message d’un ex pourrait encore te troubler aujourd’hui ?",
+    "text": "Quel message d’un ex pourrait encore te troubler aujourd’hui?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "hot",
@@ -1683,7 +1629,7 @@
     "id": "osee_187"
   },
   {
-    "text": "As-tu déjà caché à quelqu’un que tu continuais à parler à un ex ?",
+    "text": "As-tu déjà caché à quelqu’un que tu continuais à parler à un ex?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "hot",
@@ -1692,16 +1638,7 @@
     "id": "osee_188"
   },
   {
-    "text": "Quelle personne de ton passé pourrait le plus facilement raviver une tension ?",
-    "theme": "exes",
-    "themeLabel": "Ex et anciennes relations",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_189"
-  },
-  {
-    "text": "As-tu déjà repris contact avec un ex uniquement pour vérifier qu’il ou elle pensait encore à toi ?",
+    "text": "As-tu déjà repris contact avec un ex uniquement pour vérifier qu’il ou elle pensait encore à toi?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "hot",
@@ -1710,7 +1647,7 @@
     "id": "osee_190"
   },
   {
-    "text": "Quel ex serait le plus dangereux à revoir après quelques verres ?",
+    "text": "Quel ex serait le plus dangereux à revoir après quelques verres?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "hot",
@@ -1719,7 +1656,7 @@
     "id": "osee_191"
   },
   {
-    "text": "As-tu déjà regretté une rupture principalement à cause de l’attirance physique ?",
+    "text": "As-tu déjà regretté une rupture principalement à cause de l’attirance physique?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "hot",
@@ -1728,7 +1665,7 @@
     "id": "osee_192"
   },
   {
-    "text": "Quelle limite poserais-tu si ton ou ta partenaire restait très proche d’un ex ?",
+    "text": "Quelle limite poserais-tu si ton ou ta partenaire restait très proche d’un ex?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "hot",
@@ -1737,7 +1674,7 @@
     "id": "osee_193"
   },
   {
-    "text": "As-tu déjà gardé des photos intimes d’une ancienne relation plus longtemps que nécessaire ?",
+    "text": "As-tu déjà gardé des photos intimes d’une ancienne relation plus longtemps que nécessaire?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "hot",
@@ -1746,7 +1683,7 @@
     "id": "osee_194"
   },
   {
-    "text": "Quel ex a le plus influencé ce que tu apprécies aujourd’hui dans l’intimité ?",
+    "text": "Quel ex a le plus influencé ce que tu apprécies aujourd’hui dans l’intimité?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "hot",
@@ -1755,7 +1692,7 @@
     "id": "osee_195"
   },
   {
-    "text": "As-tu déjà embrassé un ex après avoir affirmé que tout était définitivement terminé ?",
+    "text": "As-tu déjà embrassé un ex après avoir affirmé que tout était définitivement terminé?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "hot",
@@ -1764,7 +1701,7 @@
     "id": "osee_196"
   },
   {
-    "text": "Quel ex reprendrais-tu le plus probablement si toutes les conséquences disparaissaient ?",
+    "text": "Quel ex reprendrais-tu le plus probablement si toutes les conséquences disparaissaient?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "nofilter",
@@ -1773,7 +1710,7 @@
     "id": "osee_197"
   },
   {
-    "text": "As-tu déjà trompé une nouvelle personne avec un ex, physiquement ou émotionnellement ?",
+    "text": "As-tu déjà trompé une nouvelle personne avec un ex, physiquement ou émotionnellement?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "nofilter",
@@ -1782,7 +1719,7 @@
     "id": "osee_198"
   },
   {
-    "text": "Quelle vérité sur une ancienne relation n’as-tu jamais racontée à tes proches ?",
+    "text": "Quelle vérité sur une ancienne relation n’as-tu jamais racontée à tes proches?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "nofilter",
@@ -1791,7 +1728,7 @@
     "id": "osee_199"
   },
   {
-    "text": "As-tu déjà utilisé une nouvelle relation pour rendre un ex jaloux ou jalouse ?",
+    "text": "As-tu déjà utilisé une nouvelle relation pour rendre un ex jaloux ou jalouse?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "nofilter",
@@ -1800,7 +1737,7 @@
     "id": "osee_200"
   },
   {
-    "text": "Quel ex pourrait révéler la version la moins flatteuse de toi ?",
+    "text": "Quel ex pourrait révéler la version la moins flatteuse de toi?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "nofilter",
@@ -1809,7 +1746,7 @@
     "id": "osee_201"
   },
   {
-    "text": "As-tu déjà gardé un contact avec un ex comme porte de sortie possible ?",
+    "text": "As-tu déjà gardé un contact avec un ex comme porte de sortie possible?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "nofilter",
@@ -1818,7 +1755,7 @@
     "id": "osee_202"
   },
   {
-    "text": "Quelle comparaison entre un ex et une personne actuelle n’oserais-tu jamais formuler ?",
+    "text": "Quelle comparaison entre un ex et une personne actuelle n’oserais-tu jamais formuler?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "nofilter",
@@ -1827,7 +1764,7 @@
     "id": "osee_203"
   },
   {
-    "text": "As-tu déjà menti sur la manière dont une ancienne relation s’était réellement terminée ?",
+    "text": "As-tu déjà menti sur la manière dont une ancienne relation s’était réellement terminée?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "nofilter",
@@ -1836,7 +1773,7 @@
     "id": "osee_204"
   },
   {
-    "text": "Quel ex as-tu le plus idéalisé après la rupture alors que la relation était mauvaise ?",
+    "text": "Quel ex as-tu le plus idéalisé après la rupture alors que la relation était mauvaise?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "nofilter",
@@ -1845,7 +1782,7 @@
     "id": "osee_205"
   },
   {
-    "text": "As-tu déjà souhaité qu’un ex échoue dans sa nouvelle relation ?",
+    "text": "As-tu déjà souhaité qu’un ex échoue dans sa nouvelle relation?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "nofilter",
@@ -1854,7 +1791,7 @@
     "id": "osee_206"
   },
   {
-    "text": "Quelle chose intime apprise avec un ex n’as-tu jamais avoué venir de cette relation ?",
+    "text": "Quelle chose intime apprise avec un ex n’as-tu jamais avoué venir de cette relation?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "nofilter",
@@ -1863,7 +1800,7 @@
     "id": "osee_207"
   },
   {
-    "text": "As-tu déjà repris une relation uniquement parce que la solitude te faisait peur ?",
+    "text": "As-tu déjà repris une relation uniquement parce que la solitude te faisait peur?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "nofilter",
@@ -1872,7 +1809,7 @@
     "id": "osee_208"
   },
   {
-    "text": "Quel secret partagé avec un ex pourrait encore te mettre dans une situation délicate ?",
+    "text": "Quel secret partagé avec un ex pourrait encore te mettre dans une situation délicate?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "nofilter",
@@ -1881,7 +1818,7 @@
     "id": "osee_209"
   },
   {
-    "text": "As-tu déjà voulu récupérer un ex seulement après avoir vu qu’il ou elle passait à autre chose ?",
+    "text": "As-tu déjà voulu récupérer un ex seulement après avoir vu qu’il ou elle passait à autre chose?",
     "theme": "exes",
     "themeLabel": "Ex et anciennes relations",
     "intensity": "nofilter",
@@ -1890,7 +1827,7 @@
     "id": "osee_210"
   },
   {
-    "text": "Quelle petite attention te fait te sentir réellement aimé(e) ?",
+    "text": "Quelle petite attention te fait te sentir réellement aimé(e)?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "soft",
@@ -1899,7 +1836,7 @@
     "id": "osee_211"
   },
   {
-    "text": "Quelle habitude de couple te semble indispensable au quotidien ?",
+    "text": "Quelle habitude de couple te semble indispensable au quotidien?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "soft",
@@ -1908,7 +1845,7 @@
     "id": "osee_212"
   },
   {
-    "text": "Quel sujet devrait toujours être discuté avant de devenir sérieux avec quelqu’un ?",
+    "text": "Quel sujet devrait toujours être discuté avant de devenir sérieux avec quelqu’un?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "soft",
@@ -1917,7 +1854,7 @@
     "id": "osee_213"
   },
   {
-    "text": "Quelle place l’indépendance doit-elle garder dans une relation ?",
+    "text": "Quelle place l’indépendance doit-elle garder dans une relation?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "soft",
@@ -1926,7 +1863,7 @@
     "id": "osee_214"
   },
   {
-    "text": "Quel signe te fait comprendre qu’une relation devient vraiment importante ?",
+    "text": "Quel signe te fait comprendre qu’une relation devient vraiment importante?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "soft",
@@ -1935,7 +1872,7 @@
     "id": "osee_215"
   },
   {
-    "text": "Quelle preuve d’affection apprécies-tu le plus en public ?",
+    "text": "Quelle preuve d’affection apprécies-tu le plus en public?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "soft",
@@ -1944,7 +1881,7 @@
     "id": "osee_216"
   },
   {
-    "text": "Quel compromis te paraît facile à faire par amour ?",
+    "text": "Quel compromis te paraît facile à faire par amour?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "soft",
@@ -1953,7 +1890,7 @@
     "id": "osee_217"
   },
   {
-    "text": "Quelle routine pourrait renforcer un couple selon toi ?",
+    "text": "Quelle routine pourrait renforcer un couple selon toi?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "soft",
@@ -1962,7 +1899,7 @@
     "id": "osee_218"
   },
   {
-    "text": "Quel comportement te rassure le plus quand tu doutes d’une relation ?",
+    "text": "Quel comportement te rassure le plus quand tu doutes d’une relation?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "soft",
@@ -1971,7 +1908,7 @@
     "id": "osee_219"
   },
   {
-    "text": "Quelle différence de personnalité peut rendre un couple plus fort ?",
+    "text": "Quelle différence de personnalité peut rendre un couple plus fort?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "soft",
@@ -1980,7 +1917,7 @@
     "id": "osee_220"
   },
   {
-    "text": "Quelle fréquence de messages te semble idéale dans une relation ?",
+    "text": "Quelle fréquence de messages te semble idéale dans une relation?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "soft",
@@ -1989,7 +1926,7 @@
     "id": "osee_221"
   },
   {
-    "text": "Quel projet commun te ferait te sentir particulièrement engagé(e) ?",
+    "text": "Quel projet commun te ferait te sentir particulièrement engagé(e)?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "soft",
@@ -1998,7 +1935,7 @@
     "id": "osee_222"
   },
   {
-    "text": "Quelle place les amis doivent-ils conserver dans la vie d’un couple ?",
+    "text": "Quelle place les amis doivent-ils conserver dans la vie d’un couple?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "soft",
@@ -2007,7 +1944,7 @@
     "id": "osee_223"
   },
   {
-    "text": "Quel défaut pourrais-tu accepter facilement chez une personne que tu aimes ?",
+    "text": "Quel défaut pourrais-tu accepter facilement chez une personne que tu aimes?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "soft",
@@ -2016,7 +1953,7 @@
     "id": "osee_224"
   },
   {
-    "text": "Où places-tu la limite entre flirt innocent et infidélité ?",
+    "text": "Où places-tu la limite entre flirt innocent et infidélité?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "hot",
@@ -2025,7 +1962,7 @@
     "id": "osee_225"
   },
   {
-    "text": "Pourrais-tu accepter une relation ouverte si la confiance était totale ?",
+    "text": "Pourrais-tu accepter une relation ouverte si la confiance était totale?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "hot",
@@ -2034,7 +1971,7 @@
     "id": "osee_226"
   },
   {
-    "text": "Quelle forme de jalousie te paraît compréhensible sans être saine ?",
+    "text": "Quelle forme de jalousie te paraît compréhensible sans être saine?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "hot",
@@ -2043,7 +1980,7 @@
     "id": "osee_227"
   },
   {
-    "text": "Quel secret intime doit absolument être partagé dans un couple sérieux ?",
+    "text": "Quel secret intime doit absolument être partagé dans un couple sérieux?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "hot",
@@ -2052,7 +1989,7 @@
     "id": "osee_228"
   },
   {
-    "text": "Pourrais-tu pardonner un baiser avec quelqu’un d’autre ?",
+    "text": "Pourrais-tu pardonner un baiser avec quelqu’un d’autre?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "hot",
@@ -2061,7 +1998,7 @@
     "id": "osee_229"
   },
   {
-    "text": "Quelle différence de désir serait la plus difficile à gérer dans une relation ?",
+    "text": "Quelle différence de désir serait la plus difficile à gérer dans une relation?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "hot",
@@ -2070,7 +2007,7 @@
     "id": "osee_230"
   },
   {
-    "text": "Quel comportement en ligne considérerais-tu comme une vraie trahison ?",
+    "text": "Quel comportement en ligne considérerais-tu comme une vraie trahison?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "hot",
@@ -2079,7 +2016,7 @@
     "id": "osee_231"
   },
   {
-    "text": "Pourrais-tu rester avec quelqu’un qui refuse toute discussion sur l’intimité ?",
+    "text": "Pourrais-tu rester avec quelqu’un qui refuse toute discussion sur l’intimité?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "hot",
@@ -2088,7 +2025,7 @@
     "id": "osee_232"
   },
   {
-    "text": "Quelle liberté individuelle ne voudrais-tu jamais abandonner en couple ?",
+    "text": "Quelle liberté individuelle ne voudrais-tu jamais abandonner en couple?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "hot",
@@ -2097,7 +2034,7 @@
     "id": "osee_233"
   },
   {
-    "text": "Quel type d’attirance extérieure te semblerait acceptable à avouer à son ou sa partenaire ?",
+    "text": "Quel type d’attirance extérieure te semblerait acceptable à avouer à son ou sa partenaire?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "hot",
@@ -2106,7 +2043,7 @@
     "id": "osee_234"
   },
   {
-    "text": "Pourrais-tu supporter que ton ou ta partenaire soit encore très proche d’un ancien amour ?",
+    "text": "Pourrais-tu supporter que ton ou ta partenaire soit encore très proche d’un ancien amour?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "hot",
@@ -2115,7 +2052,7 @@
     "id": "osee_235"
   },
   {
-    "text": "Quelle règle te semblerait indispensable dans une relation à distance ?",
+    "text": "Quelle règle te semblerait indispensable dans une relation à distance?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "hot",
@@ -2124,7 +2061,7 @@
     "id": "osee_236"
   },
   {
-    "text": "Quel désaccord intime pourrait devenir un motif de rupture pour toi ?",
+    "text": "Quel désaccord intime pourrait devenir un motif de rupture pour toi?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "hot",
@@ -2133,7 +2070,7 @@
     "id": "osee_237"
   },
   {
-    "text": "Quelle vérité difficile préférerais-tu entendre plutôt que découvrir plus tard ?",
+    "text": "Quelle vérité difficile préférerais-tu entendre plutôt que découvrir plus tard?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "hot",
@@ -2142,7 +2079,7 @@
     "id": "osee_238"
   },
   {
-    "text": "Pourrais-tu rester avec quelqu’un après une infidélité complète si cette personne semblait réellement changer ?",
+    "text": "Pourrais-tu rester avec quelqu’un après une infidélité complète si cette personne semblait réellement changer?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "nofilter",
@@ -2151,7 +2088,7 @@
     "id": "osee_239"
   },
   {
-    "text": "As-tu déjà franchi une limite de couple que tu aurais toi-même mal vécue dans l’autre sens ?",
+    "text": "As-tu déjà franchi une limite de couple que tu aurais toi-même mal vécue dans l’autre sens?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "nofilter",
@@ -2160,7 +2097,7 @@
     "id": "osee_240"
   },
   {
-    "text": "Quelle forme de tromperie serais-tu le plus tenté(e) de minimiser ?",
+    "text": "Quelle forme de tromperie serais-tu le plus tenté(e) de minimiser?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "nofilter",
@@ -2169,7 +2106,7 @@
     "id": "osee_241"
   },
   {
-    "text": "Pourrais-tu aimer deux personnes en même temps sans quitter immédiatement l’une d’elles ?",
+    "text": "Pourrais-tu aimer deux personnes en même temps sans quitter immédiatement l’une d’elles?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "nofilter",
@@ -2178,7 +2115,7 @@
     "id": "osee_242"
   },
   {
-    "text": "Quelle information sur ton passé pourrait changer la manière dont un ou une partenaire te voit ?",
+    "text": "Quelle information sur ton passé pourrait changer la manière dont un ou une partenaire te voit?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "nofilter",
@@ -2187,7 +2124,7 @@
     "id": "osee_243"
   },
   {
-    "text": "As-tu déjà surveillé ou testé la fidélité de quelqu’un sans lui dire ?",
+    "text": "As-tu déjà surveillé ou testé la fidélité de quelqu’un sans lui dire?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "nofilter",
@@ -2196,7 +2133,7 @@
     "id": "osee_244"
   },
   {
-    "text": "Quel besoin intime pourrait te pousser à remettre en question une relation pourtant stable ?",
+    "text": "Quel besoin intime pourrait te pousser à remettre en question une relation pourtant stable?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "nofilter",
@@ -2205,7 +2142,7 @@
     "id": "osee_245"
   },
   {
-    "text": "Pourrais-tu accepter que ton ou ta partenaire ait une vie intime numérique sans toi ?",
+    "text": "Pourrais-tu accepter que ton ou ta partenaire ait une vie intime numérique sans toi?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "nofilter",
@@ -2214,2289 +2151,12 @@
     "id": "osee_246"
   },
   {
-    "text": "Quelle limite as-tu déjà posée davantage par peur que par réelle conviction ?",
+    "text": "Quelle limite as-tu déjà posée davantage par peur que par réelle conviction?",
     "theme": "couple",
     "themeLabel": "Couple et fidélité",
     "intensity": "nofilter",
     "intensityLabel": "Sans filtre",
     "category": "adult-question",
     "id": "osee_247"
-  },
-  {
-    "text": "As-tu déjà fait semblant d’être satisfait(e) dans une relation pour éviter un conflit ?",
-    "theme": "couple",
-    "themeLabel": "Couple et fidélité",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_248"
-  },
-  {
-    "text": "Quelle concession amoureuse as-tu faite en sachant qu’elle te rendrait malheureux ou malheureuse ?",
-    "theme": "couple",
-    "themeLabel": "Couple et fidélité",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_249"
-  },
-  {
-    "text": "Pourrais-tu rester en couple avec quelqu’un que tu aimes mais ne désires plus ?",
-    "theme": "couple",
-    "themeLabel": "Couple et fidélité",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_250"
-  },
-  {
-    "text": "Quel comportement de ton ou ta partenaire te pousserait à vérifier ses messages ?",
-    "theme": "couple",
-    "themeLabel": "Couple et fidélité",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_251"
-  },
-  {
-    "text": "Quelle vérité sur la fidélité penses-tu que beaucoup de gens n’osent pas reconnaître ?",
-    "theme": "couple",
-    "themeLabel": "Couple et fidélité",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_252"
-  },
-  {
-    "text": "Préfères-tu une séduction très directe ou une tension qui s’installe lentement ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_253"
-  },
-  {
-    "text": "Préfères-tu recevoir des compliments ou sentir l’intérêt dans les gestes ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_254"
-  },
-  {
-    "text": "Préfères-tu organiser un rendez-vous ou te laisser surprendre ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_255"
-  },
-  {
-    "text": "Préfères-tu les longues conversations de nuit ou les moments de silence complices ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_256"
-  },
-  {
-    "text": "Préfères-tu une personne très démonstrative ou plus discrète ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_257"
-  },
-  {
-    "text": "Préfères-tu être abordé(e) ou faire le premier pas ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_258"
-  },
-  {
-    "text": "Préfères-tu un rendez-vous élégant ou une soirée improvisée ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_259"
-  },
-  {
-    "text": "Préfères-tu les messages fréquents ou les échanges plus rares mais intenses ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_260"
-  },
-  {
-    "text": "Préfères-tu les gestes tendres en public ou uniquement en privé ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_261"
-  },
-  {
-    "text": "Préfères-tu quelqu’un qui te ressemble ou qui te complète ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_262"
-  },
-  {
-    "text": "Préfères-tu une déclaration claire ou comprendre les sentiments progressivement ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_263"
-  },
-  {
-    "text": "Préfères-tu rire beaucoup ou parler profondément pendant un rendez-vous ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_264"
-  },
-  {
-    "text": "Préfères-tu une relation très fusionnelle ou beaucoup d’espace personnel ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_265"
-  },
-  {
-    "text": "Préfères-tu un amour rassurant ou une relation plus imprévisible ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_266"
-  },
-  {
-    "text": "Préfères-tu prendre l’initiative ou être surpris(e) par l’autre personne ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_267"
-  },
-  {
-    "text": "Préfères-tu une ambiance tendre ou une tension beaucoup plus intense ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_268"
-  },
-  {
-    "text": "Préfères-tu parler de tes envies à l’avance ou les découvrir sur le moment ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_269"
-  },
-  {
-    "text": "Préfères-tu une rencontre spontanée ou un scénario soigneusement préparé ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_270"
-  },
-  {
-    "text": "Préfères-tu garder la lumière allumée ou créer une ambiance plus discrète ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_271"
-  },
-  {
-    "text": "Préfères-tu les mots suggestifs ou les gestes silencieux ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_272"
-  },
-  {
-    "text": "Préfères-tu que l’autre personne guide ou qu’elle te laisse tout décider ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_273"
-  },
-  {
-    "text": "Préfères-tu une soirée très longue ou un moment bref mais particulièrement intense ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_274"
-  },
-  {
-    "text": "Préfères-tu une personne expérimentée ou quelqu’un avec qui tout découvrir ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_275"
-  },
-  {
-    "text": "Préfères-tu le suspense avant la rencontre ou la spontanéité totale ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_276"
-  },
-  {
-    "text": "Préfères-tu parler après un moment intime ou simplement rester proche sans rien dire ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_277"
-  },
-  {
-    "text": "Préfères-tu une forte complicité émotionnelle ou une alchimie immédiate ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_278"
-  },
-  {
-    "text": "Préfères-tu essayer quelque chose de nouveau ou perfectionner ce que tu apprécies déjà ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_279"
-  },
-  {
-    "text": "Préfères-tu être séduit(e) avec humour ou avec une attitude très assurée ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_280"
-  },
-  {
-    "text": "Quelle préférence intime as-tu déjà cachée parce qu’elle ne correspondait pas aux attentes de l’autre personne ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_281"
-  },
-  {
-    "text": "Quel besoin te paraît indispensable même s’il peut sembler difficile à demander ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_282"
-  },
-  {
-    "text": "Quelle différence de rythme ou d’envie te frustrerait le plus dans une relation ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_283"
-  },
-  {
-    "text": "Préférerais-tu une excellente alchimie sans sentiments ou des sentiments forts avec peu d’alchimie ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_284"
-  },
-  {
-    "text": "Quelle préférence physique as-tu du mal à assumer parce qu’elle paraît superficielle ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_285"
-  },
-  {
-    "text": "Préférerais-tu savoir exactement ce que l’autre personne pense de toi ou conserver le doute ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_286"
-  },
-  {
-    "text": "Quel compromis intime serais-tu incapable de maintenir sur la durée ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_287"
-  },
-  {
-    "text": "Préférerais-tu découvrir une incompatibilité dès le premier rendez-vous ou après être tombé(e) amoureux ou amoureuse ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_288"
-  },
-  {
-    "text": "Quelle préférence passée as-tu complètement changée avec l’expérience ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_289"
-  },
-  {
-    "text": "Quel aspect de l’intimité est plus important pour toi que tu ne l’avoues généralement ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_290"
-  },
-  {
-    "text": "Préférerais-tu être désiré(e) très fortement ou compris(e) parfaitement ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_291"
-  },
-  {
-    "text": "Quelle préférence te ferait refuser une relation même si tout le reste semblait idéal ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_292"
-  },
-  {
-    "text": "Quel besoin de validation cherches-tu parfois dans la séduction ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_293"
-  },
-  {
-    "text": "Quelle préférence réelle contredit le plus l’image romantique que tu donnes ?",
-    "theme": "preferences",
-    "themeLabel": "Préférences intimes",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_294"
-  },
-  {
-    "text": "Quelle limite personnelle aimerais-tu que les autres comprennent sans avoir à l’expliquer longtemps ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_295"
-  },
-  {
-    "text": "Quel comportement pendant un rendez-vous te ferait immédiatement perdre confiance ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_296"
-  },
-  {
-    "text": "Quelle question te paraît trop personnelle lors d’une première rencontre ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_297"
-  },
-  {
-    "text": "Quel signe montre selon toi qu’une personne respecte vraiment ton consentement ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_298"
-  },
-  {
-    "text": "Quelle place le droit de changer d’avis doit-il avoir dans une relation ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_299"
-  },
-  {
-    "text": "Quel sujet doit être abordé avant toute expérience nouvelle ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_300"
-  },
-  {
-    "text": "Quelle forme de pression te semble souvent banalisée alors qu’elle ne devrait pas l’être ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_301"
-  },
-  {
-    "text": "Quel geste de respect peut te mettre immédiatement à l’aise ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_302"
-  },
-  {
-    "text": "Quelle limite numérique aimerais-tu voir davantage respectée dans les relations ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_303"
-  },
-  {
-    "text": "Quel comportement te ferait arrêter une conversation de séduction ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_304"
-  },
-  {
-    "text": "Quelle différence fais-tu entre insistance et véritable intérêt ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_305"
-  },
-  {
-    "text": "Quel mot ou signal te paraît utile pour interrompre une situation sans débat ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_306"
-  },
-  {
-    "text": "Quelle attitude après un refus montre la maturité d’une personne ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_307"
-  },
-  {
-    "text": "Quelle limite as-tu appris à poser plus clairement avec le temps ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_308"
-  },
-  {
-    "text": "Quelle limite intime est non négociable pour toi ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_309"
-  },
-  {
-    "text": "As-tu déjà eu du mal à dire non alors que tu n’étais pas réellement à l’aise ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_310"
-  },
-  {
-    "text": "Quel accord devrait toujours être explicite plutôt que supposé ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_311"
-  },
-  {
-    "text": "Quelle différence de limites serait la plus difficile à gérer dans un couple ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_312"
-  },
-  {
-    "text": "Comment réagirais-tu si une personne partageait un détail intime sur toi sans permission ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_313"
-  },
-  {
-    "text": "Quelle pratique ou situation exige selon toi une discussion très claire avant de commencer ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_314"
-  },
-  {
-    "text": "As-tu déjà découvert une limite seulement au moment où elle était franchie ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_315"
-  },
-  {
-    "text": "Quel comportement après un moment intime pourrait te faire te sentir utilisé(e) ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_316"
-  },
-  {
-    "text": "Quelle règle poserais-tu concernant les photos ou vidéos privées ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_317"
-  },
-  {
-    "text": "Quelle limite accepterais-tu d’explorer progressivement mais jamais sous pression ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_318"
-  },
-  {
-    "text": "Comment voudrais-tu qu’une personne vérifie ton confort sans casser l’ambiance ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_319"
-  },
-  {
-    "text": "Quelle réaction face à un refus te ferait couper définitivement le contact ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_320"
-  },
-  {
-    "text": "Quel sujet de santé ou de sécurité doit toujours être abordé honnêtement ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_321"
-  },
-  {
-    "text": "Quelle limite émotionnelle peut être aussi importante qu’une limite physique ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_322"
-  },
-  {
-    "text": "As-tu déjà laissé croire que tu étais d’accord pour éviter de décevoir quelqu’un ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_323"
-  },
-  {
-    "text": "Quelle limite as-tu tolérée trop longtemps dans une ancienne relation ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_324"
-  },
-  {
-    "text": "As-tu déjà franchi une limite de quelqu’un sans comprendre immédiatement la gravité de ton geste ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_325"
-  },
-  {
-    "text": "Quelle situation t’a appris que le silence ne signifie pas forcément un accord ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_326"
-  },
-  {
-    "text": "As-tu déjà caché ton inconfort pour ne pas paraître inexpérimenté(e) ou difficile ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_327"
-  },
-  {
-    "text": "Quelle limite te serait la plus difficile à annoncer à une nouvelle personne ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_328"
-  },
-  {
-    "text": "As-tu déjà regretté de ne pas avoir interrompu une situation plus tôt ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_329"
-  },
-  {
-    "text": "Quelle pression sociale ou sentimentale peut selon toi fausser le consentement ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_330"
-  },
-  {
-    "text": "As-tu déjà accepté quelque chose par peur que l’autre personne parte ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_331"
-  },
-  {
-    "text": "Quelle limite voudrais-tu avoir posée plus clairement dans une ancienne relation ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_332"
-  },
-  {
-    "text": "As-tu déjà minimisé le refus de quelqu’un parce que tu étais déçu(e) ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_333"
-  },
-  {
-    "text": "Quelle vérité sur tes limites pourrait surprendre une personne qui pense bien te connaître ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_334"
-  },
-  {
-    "text": "As-tu déjà évité une conversation essentielle sur la sécurité ou la santé par gêne ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_335"
-  },
-  {
-    "text": "Quelle limite émotionnelle as-tu le plus de mal à faire respecter quand tu es attaché(e) ?",
-    "theme": "boundaries",
-    "themeLabel": "Limites et consentement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_336"
-  },
-  {
-    "text": "Quel type de message te donne immédiatement envie de répondre ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_337"
-  },
-  {
-    "text": "Combien de temps peux-tu attendre avant de relancer quelqu’un qui te plaît ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_338"
-  },
-  {
-    "text": "Quelle réaction en ligne considères-tu comme un vrai signe de flirt ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_339"
-  },
-  {
-    "text": "Quel emoji utilises-tu le plus quand tu essaies d’être séduisant(e) ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_340"
-  },
-  {
-    "text": "As-tu déjà préparé une story en espérant qu’une personne précise la voie ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_341"
-  },
-  {
-    "text": "Quel détail d’un profil peut te donner envie d’engager la conversation ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_342"
-  },
-  {
-    "text": "Quelle photo de toi choisirais-tu pour attirer l’attention sans en faire trop ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_343"
-  },
-  {
-    "text": "Quel comportement sur les réseaux te semble immédiatement peu attirant ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_344"
-  },
-  {
-    "text": "As-tu déjà relu une ancienne conversation parce qu’elle te faisait sourire ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_345"
-  },
-  {
-    "text": "Quel délai de réponse te fait commencer à douter de l’intérêt de quelqu’un ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_346"
-  },
-  {
-    "text": "Préfères-tu recevoir un vocal spontané ou un long message écrit ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_347"
-  },
-  {
-    "text": "Quelle application a le plus influencé ta vie sentimentale ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_348"
-  },
-  {
-    "text": "As-tu déjà aimé une publication ancienne par accident en regardant un profil ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_349"
-  },
-  {
-    "text": "Quel type de contenu partagé peut créer une vraie complicité avec quelqu’un ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_350"
-  },
-  {
-    "text": "As-tu déjà envoyé un message très osé puis posé ton téléphone loin de toi par peur de la réponse ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_351"
-  },
-  {
-    "text": "Quel type de sexto te paraît le plus attirant : direct, drôle, suggestif ou très détaillé ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_352"
-  },
-  {
-    "text": "As-tu déjà conservé une conversation uniquement parce qu’elle te plaisait à relire ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_353"
-  },
-  {
-    "text": "Quelle règle devrais-tu respecter avant d’envoyer une photo intime ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_354"
-  },
-  {
-    "text": "As-tu déjà flirté avec plusieurs personnes en même temps sur une application ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_355"
-  },
-  {
-    "text": "Quel message tardif pourrait te convaincre de revoir quelqu’un ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_356"
-  },
-  {
-    "text": "As-tu déjà utilisé une application de rencontre sans intention claire de rencontrer quelqu’un ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_357"
-  },
-  {
-    "text": "Quelle conversation numérique a le plus rapidement changé de ton ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_358"
-  },
-  {
-    "text": "As-tu déjà supprimé un message osé avant qu’il soit lu ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_359"
-  },
-  {
-    "text": "Quel détail d’une photo peut la rendre beaucoup plus suggestive sans être explicite ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_360"
-  },
-  {
-    "text": "As-tu déjà envoyé une photo destinée à une seule personne en espérant secrètement un compliment précis ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_361"
-  },
-  {
-    "text": "Quelle limite poses-tu concernant le partage de captures d’écran entre amis ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_362"
-  },
-  {
-    "text": "As-tu déjà repris contact avec quelqu’un uniquement à cause d’une publication attirante ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_363"
-  },
-  {
-    "text": "Quel type de contenu privé ne devrais-tu jamais enregistrer sans accord clair ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_364"
-  },
-  {
-    "text": "As-tu déjà envoyé une photo intime à quelqu’un que tu connaissais à peine ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_365"
-  },
-  {
-    "text": "Quelle conversation présente dans ton téléphone serait la plus compromettante si elle était projetée ici ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_366"
-  },
-  {
-    "text": "As-tu déjà montré les messages intimes de quelqu’un à un ami ou une amie ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_367"
-  },
-  {
-    "text": "As-tu déjà menti sur la personne avec qui tu échangeais tard le soir ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_368"
-  },
-  {
-    "text": "Quelle recherche récente te gênerait le plus si elle était affichée au groupe ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_369"
-  },
-  {
-    "text": "As-tu déjà gardé des photos privées après la fin d’une relation ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_370"
-  },
-  {
-    "text": "As-tu déjà utilisé un faux prétexte pour obtenir une photo suggestive ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_371"
-  },
-  {
-    "text": "Quelle personne serait la plus dangereuse à laisser consulter librement ton téléphone ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_372"
-  },
-  {
-    "text": "As-tu déjà envoyé un message intime à la mauvaise personne ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_373"
-  },
-  {
-    "text": "As-tu déjà enregistré une capture d’écran d’une conversation sans que l’autre personne le sache ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_374"
-  },
-  {
-    "text": "Quelle activité numérique considérerais-tu comme une infidélité même sans rencontre physique ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_375"
-  },
-  {
-    "text": "As-tu déjà effacé une discussion entière avant de montrer ton téléphone à quelqu’un ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_376"
-  },
-  {
-    "text": "Quelle photo de ta galerie provoquerait le plus de questions si elle apparaissait maintenant ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_377"
-  },
-  {
-    "text": "As-tu déjà utilisé les réseaux pour rendre volontairement quelqu’un jaloux ou jalouse ?",
-    "theme": "digital",
-    "themeLabel": "Sextos et vie numérique",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_378"
-  },
-  {
-    "text": "Pourrais-tu apprécier un rendez-vous sans chercher immédiatement une relation sérieuse ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_379"
-  },
-  {
-    "text": "Quel signe montre qu’une rencontre légère reste respectueuse ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_380"
-  },
-  {
-    "text": "Quelle conversation devrait avoir lieu avant une histoire sans engagement ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_381"
-  },
-  {
-    "text": "Préfères-tu savoir dès le départ ce que l’autre personne recherche ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_382"
-  },
-  {
-    "text": "Quel comportement rendrait un lendemain de rendez-vous particulièrement agréable ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_383"
-  },
-  {
-    "text": "Pourrais-tu devenir ami(e) avec quelqu’un après une rencontre sans lendemain ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_384"
-  },
-  {
-    "text": "Quelle règle simple éviterait le plus de malentendus dans une relation légère ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_385"
-  },
-  {
-    "text": "Quel type de personne pourrait te donner envie d’une aventure spontanée ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_386"
-  },
-  {
-    "text": "Quelle importance accordes-tu au message envoyé le lendemain ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_387"
-  },
-  {
-    "text": "Pourrais-tu revoir quelqu’un régulièrement sans vouloir définir la relation ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_388"
-  },
-  {
-    "text": "Quel détail peut transformer une rencontre occasionnelle en début de relation ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_389"
-  },
-  {
-    "text": "Préférerais-tu une rencontre avec une personne inconnue ou quelqu’un déjà dans ton cercle ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_390"
-  },
-  {
-    "text": "Quelle honnêteté minimale attends-tu dans une relation sans engagement ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_391"
-  },
-  {
-    "text": "Quel souvenir positif peut rester d’une rencontre très brève ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_392"
-  },
-  {
-    "text": "Pourrais-tu avoir une aventure avec quelqu’un que tu dois revoir souvent ensuite ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_393"
-  },
-  {
-    "text": "Quelle condition te ferait accepter une rencontre très spontanée ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_394"
-  },
-  {
-    "text": "As-tu déjà développé des sentiments dans une relation censée rester légère ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_395"
-  },
-  {
-    "text": "Quel type de message te ferait accepter un rendez-vous de dernière minute ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_396"
-  },
-  {
-    "text": "Pourrais-tu revoir une personne uniquement pour l’alchimie physique ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_397"
-  },
-  {
-    "text": "Quelle limite poserais-tu dans une relation régulière sans engagement ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_398"
-  },
-  {
-    "text": "As-tu déjà prétendu vouloir quelque chose de léger alors que tu espérais davantage ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_399"
-  },
-  {
-    "text": "Quel serait le pire endroit pour croiser quelqu’un après une aventure sans lendemain ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_400"
-  },
-  {
-    "text": "Pourrais-tu avoir une histoire avec un ami proche sans risquer l’amitié ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_401"
-  },
-  {
-    "text": "Quelle règle concernant l’exclusivité devrait être clarifiée même dans une relation légère ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_402"
-  },
-  {
-    "text": "As-tu déjà évité le message du lendemain parce que tu ne savais pas quoi dire ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_403"
-  },
-  {
-    "text": "Quel détail pourrait te faire quitter une rencontre avant qu’elle n’aille plus loin ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_404"
-  },
-  {
-    "text": "Pourrais-tu accepter une relation discrète si les raisons étaient honnêtes ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_405"
-  },
-  {
-    "text": "Quelle différence entre désir et attachement est la plus difficile à gérer selon toi ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_406"
-  },
-  {
-    "text": "As-tu déjà utilisé quelqu’un comme distraction après une rupture ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_407"
-  },
-  {
-    "text": "As-tu déjà laissé croire qu’une rencontre pouvait devenir sérieuse alors que tu ne le pensais pas ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_408"
-  },
-  {
-    "text": "Quelle personne de ton entourage serait la plus compliquée à avoir comme aventure ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_409"
-  },
-  {
-    "text": "As-tu déjà regretté une rencontre parce que tu savais devoir revoir la personne dans un contexte social ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_410"
-  },
-  {
-    "text": "Pourrais-tu avoir une aventure avec l’ex d’un ami ou d’une amie proche ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_411"
-  },
-  {
-    "text": "As-tu déjà ghosté quelqu’un après une rencontre intime ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_412"
-  },
-  {
-    "text": "Quelle raison réelle t’a déjà poussé(e) à revoir quelqu’un que tu n’appréciais pas particulièrement ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_413"
-  },
-  {
-    "text": "As-tu déjà caché une aventure à tes amis parce que tu savais qu’ils désapprouveraient ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_414"
-  },
-  {
-    "text": "Pourrais-tu accepter d’être la personne secrète dans la vie de quelqu’un de célibataire ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_415"
-  },
-  {
-    "text": "As-tu déjà confondu une forte alchimie avec une compatibilité réelle ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_416"
-  },
-  {
-    "text": "Quelle aventure passée serait la plus gênante à raconter avec tous les détails ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_417"
-  },
-  {
-    "text": "As-tu déjà revu quelqu’un uniquement pour ne pas finir la soirée seul(e) ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_418"
-  },
-  {
-    "text": "Pourrais-tu garder une relation légère si tu apprenais que l’autre personne voyait beaucoup d’autres gens ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_419"
-  },
-  {
-    "text": "Quelle limite morale pourrais-tu être tenté(e) de contourner dans un moment de solitude ?",
-    "theme": "casual",
-    "themeLabel": "Rencontres sans engagement",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_420"
-  },
-  {
-    "text": "Si ton crush te proposait de partir demain en week-end, accepterais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_421"
-  },
-  {
-    "text": "Si tu pouvais revivre un seul rendez-vous, lequel choisirais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_422"
-  },
-  {
-    "text": "Si tu devenais invisible pendant une soirée, quelle curiosité sentimentale voudrais-tu satisfaire ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_423"
-  },
-  {
-    "text": "Si tu pouvais lire une seule pensée d’une personne qui te plaît, laquelle choisirais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_424"
-  },
-  {
-    "text": "Si une célébrité correspondant parfaitement à ton type te proposait un verre, que ferais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_425"
-  },
-  {
-    "text": "Si tu pouvais effacer une gêne vécue pendant un rendez-vous, laquelle serait-ce ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_426"
-  },
-  {
-    "text": "Si tu devais laisser un ami choisir ton prochain rendez-vous, à qui ferais-tu confiance ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_427"
-  },
-  {
-    "text": "Si tu pouvais recevoir une réponse totalement honnête d’un ex, quelle question poserais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_428"
-  },
-  {
-    "text": "Si tu devais séduire quelqu’un sans parler, quel serait ton plan ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_429"
-  },
-  {
-    "text": "Si une personne idéale vivait à l’autre bout du monde, tenterais-tu une relation ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_430"
-  },
-  {
-    "text": "Si tu pouvais changer un seul détail de ta manière de flirter, lequel choisirais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_431"
-  },
-  {
-    "text": "Si tu devais organiser le rendez-vous parfait avec un budget illimité, que prévoirais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_432"
-  },
-  {
-    "text": "Si tu pouvais savoir à l’avance si une relation va durer, voudrais-tu le savoir ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_433"
-  },
-  {
-    "text": "Si tu devais choisir entre être toujours désiré(e) ou toujours compris(e), que prendrais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_434"
-  },
-  {
-    "text": "Si une personne qui t’attire te proposait une expérience totalement nouvelle, de quoi dépendrait ta réponse ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_435"
-  },
-  {
-    "text": "Si tu pouvais réaliser un fantasme sans aucune conséquence, lequel choisirais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_436"
-  },
-  {
-    "text": "Si ton ou ta partenaire te proposait une relation ouverte pendant un mois, accepterais-tu d’en discuter ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_437"
-  },
-  {
-    "text": "Si tu pouvais revoir une personne de ton passé pour une seule nuit, qui choisirais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_438"
-  },
-  {
-    "text": "Si une personne présente avouait être attirée par toi, quelle réaction aurais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_439"
-  },
-  {
-    "text": "Si tu pouvais poser une seule question intime à n’importe qui ici avec une réponse obligatoire, laquelle serait-ce ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_440"
-  },
-  {
-    "text": "Si tu apprenais que ton crush avait un fantasme impliquant quelqu’un d’autre, voudrais-tu connaître les détails ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_441"
-  },
-  {
-    "text": "Si tu devais choisir entre une relation passionnelle courte et une relation stable sans grande passion, que choisirais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_442"
-  },
-  {
-    "text": "Si une caméra pouvait montrer un seul de tes rendez-vous passés au groupe, lequel éviterais-tu absolument ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_443"
-  },
-  {
-    "text": "Si tu pouvais supprimer une seule limite sociale le temps d’une soirée, laquelle serait-ce ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_444"
-  },
-  {
-    "text": "Si tu devais partager un secret intime pour gagner une grosse somme, jusqu’où irais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_445"
-  },
-  {
-    "text": "Si ton ou ta partenaire voulait essayer quelque chose qui ne t’attire pas, comment négocierais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_446"
-  },
-  {
-    "text": "Si une personne inconnue te plaisait énormément mais refusait de donner son vrai prénom, continuerais-tu la rencontre ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_447"
-  },
-  {
-    "text": "Si tu pouvais connaître la véritable opinion de tous tes ex sur toi, accepterais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_448"
-  },
-  {
-    "text": "Si tu étais certain(e) de ne jamais être découvert(e), pourrais-tu tromper quelqu’un que tu aimes ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_449"
-  },
-  {
-    "text": "Si ton ou ta partenaire te donnait une autorisation unique d’aller voir ailleurs, l’utiliserais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_450"
-  },
-  {
-    "text": "Si tu devais révéler soit ton historique de recherches soit toutes tes conversations intimes, que choisirais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_451"
-  },
-  {
-    "text": "Si tu pouvais effacer une seule personne de ton passé amoureux, le ferais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_452"
-  },
-  {
-    "text": "Si quelqu’un t’offrait une somme énorme pour raconter publiquement ta vie intime, accepterais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_453"
-  },
-  {
-    "text": "Si ton crush te proposait une relation secrète tout en voyant quelqu’un d’autre, que ferais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_454"
-  },
-  {
-    "text": "Si tu pouvais savoir exactement qui parmi tes proches a déjà fantasmé sur toi, voudrais-tu la liste ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_455"
-  },
-  {
-    "text": "Si une personne parfaite pour toi refusait toute exclusivité, resterais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_456"
-  },
-  {
-    "text": "Si tu devais choisir entre perdre définitivement un grand amour ou révéler ton secret le plus intime, que choisirais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_457"
-  },
-  {
-    "text": "Si tu apprenais que ton ou ta partenaire avait lu tous tes anciens messages privés, pourrais-tu pardonner ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_458"
-  },
-  {
-    "text": "Si tu pouvais modifier anonymement un souvenir intime de quelqu’un, lequel choisirais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_459"
-  },
-  {
-    "text": "Si ton ex et ton crush actuel t’écrivaient au même moment pour te voir, à qui répondrais-tu d’abord ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_460"
-  },
-  {
-    "text": "Si une vérité pouvait détruire ton couple mais que la cacher ne blessait personne, la dirais-tu ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_461"
-  },
-  {
-    "text": "Si tu pouvais vivre une expérience interdite sans conséquence émotionnelle ni sociale, qu’est-ce qui te tenterait ?",
-    "theme": "hypotheticals",
-    "themeLabel": "Situations hypothétiques",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_462"
-  },
-  {
-    "text": "Qui dans le groupe te semblerait le meilleur conseiller ou la meilleure conseillère pour un premier rendez-vous ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_463"
-  },
-  {
-    "text": "Quelle personne présente comprendrait le mieux ton type habituel ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_464"
-  },
-  {
-    "text": "Avec qui ici serais-tu le plus à l’aise pour parler d’un crush ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_465"
-  },
-  {
-    "text": "Quelle personne du groupe serait la plus douée pour organiser un rendez-vous parfait ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_466"
-  },
-  {
-    "text": "Qui ici repérerait le plus vite que tu es attiré(e) par quelqu’un ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_467"
-  },
-  {
-    "text": "Quelle personne présente garderait le mieux un secret sentimental ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_468"
-  },
-  {
-    "text": "Avec qui ici pourrais-tu le plus facilement partir en week-end improvisé ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_469"
-  },
-  {
-    "text": "Qui dans le groupe ferait le meilleur profil d’application de rencontre pour toi ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_470"
-  },
-  {
-    "text": "Quelle personne présente te connaît assez pour deviner ton type ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_471"
-  },
-  {
-    "text": "Qui ici te donnerait le conseil amoureux le plus honnête, même s’il fait mal ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_472"
-  },
-  {
-    "text": "Avec qui dans le groupe pourrais-tu le plus facilement jouer les faux couples pour une soirée ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_473"
-  },
-  {
-    "text": "Qui ici réussirait le mieux à te trouver un rendez-vous compatible ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_474"
-  },
-  {
-    "text": "Quelle personne présente remarquerait immédiatement si tu mens sur tes sentiments ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_475"
-  },
-  {
-    "text": "Qui dans le groupe serait le meilleur soutien après une rupture ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "soft",
-    "intensityLabel": "Piment doux",
-    "category": "adult-question",
-    "id": "osee_476"
-  },
-  {
-    "text": "Quelle personne présente pourrait le plus facilement te mettre mal à l’aise avec un compliment osé ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_477"
-  },
-  {
-    "text": "Qui dans le groupe serait le plus susceptible de deviner correctement l’un de tes fantasmes ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_478"
-  },
-  {
-    "text": "Avec qui ici serais-tu le plus à l’aise pour discuter de tes limites intimes ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_479"
-  },
-  {
-    "text": "Quelle personne présente pourrait le mieux jouer ton ou ta partenaire fictive pendant une soirée ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_480"
-  },
-  {
-    "text": "Qui ici aurait le plus de chances de te convaincre de tenter quelque chose de nouveau ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_481"
-  },
-  {
-    "text": "Quelle personne du groupe serait la plus dangereuse pour garder ton téléphone déverrouillé ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_482"
-  },
-  {
-    "text": "Qui ici serait le plus capable de reconnaître ton comportement quand tu flirtes ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_483"
-  },
-  {
-    "text": "Avec qui dans le groupe pourrais-tu parler le plus librement de tes expériences passées ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_484"
-  },
-  {
-    "text": "Quelle personne présente te semblerait la plus difficile à repousser si elle te séduisait sérieusement ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_485"
-  },
-  {
-    "text": "Qui ici pourrait le plus facilement te faire rougir avec une seule question ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_486"
-  },
-  {
-    "text": "Quelle personne du groupe serait la plus à l’aise pour donner un conseil intime honnête ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_487"
-  },
-  {
-    "text": "Qui ici pourrait le mieux deviner le type de message osé auquel tu répondrais ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_488"
-  },
-  {
-    "text": "Quelle personne présente te semblerait la plus capable de garder un secret très compromettant ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_489"
-  },
-  {
-    "text": "Avec qui ici pourrais-tu le plus facilement parler d’une attirance interdite ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "hot",
-    "intensityLabel": "Très osé",
-    "category": "adult-question",
-    "id": "osee_490"
-  },
-  {
-    "text": "Quelle personne présente t’a déjà semblé attirante, même brièvement ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_491"
-  },
-  {
-    "text": "Qui dans le groupe serait le plus gênant à croiser juste après un rendez-vous intime ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_492"
-  },
-  {
-    "text": "Quelle personne ici serait la plus dangereuse si elle connaissait tous tes secrets sentimentaux ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_493"
-  },
-  {
-    "text": "Qui dans le groupe pourrait révéler le dossier le plus compromettant sur ta vie amoureuse ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_494"
-  },
-  {
-    "text": "Quelle personne présente te surprendrait le plus en avouant avoir déjà fantasmé sur toi ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_495"
-  },
-  {
-    "text": "Avec qui ici serait-il le plus risqué de créer une ambiguïté ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_496"
-  },
-  {
-    "text": "Qui dans le groupe te jugerait le moins après une confession intime très gênante ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_497"
-  },
-  {
-    "text": "Quelle personne présente pourrait le plus facilement découvrir que tu mens sur une ancienne relation ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_498"
-  },
-  {
-    "text": "Qui ici serait le plus difficile à regarder dans les yeux après avoir répondu honnêtement à cette partie ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_499"
-  },
-  {
-    "text": "Quelle personne du groupe ne devrait surtout pas voir l’intégralité de ton historique de messages ?",
-    "theme": "group",
-    "themeLabel": "Entre joueurs",
-    "intensity": "nofilter",
-    "intensityLabel": "Sans filtre",
-    "category": "adult-question",
-    "id": "osee_500"
   }
 ]

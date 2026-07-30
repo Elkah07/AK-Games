@@ -470,106 +470,6 @@
     "id": "who_a_047"
   },
   {
-    "label": "Un match avec un ami",
-    "category": "relations",
-    "clues": [
-      "Une application révèle une attirance mutuelle inattendue.",
-      "Vous vous connaissiez déjà avant le swipe.",
-      "La conversation change soudainement de ton."
-    ],
-    "id": "who_a_048"
-  },
-  {
-    "label": "Un double date",
-    "category": "relations",
-    "clues": [
-      "Deux duos se retrouvent en même temps.",
-      "Une mauvaise alchimie peut contaminer toute la table.",
-      "Quatre personnes partagent la pression du rendez-vous."
-    ],
-    "id": "who_a_049"
-  },
-  {
-    "label": "Une présentation aux parents",
-    "category": "relations",
-    "clues": [
-      "J’officialise souvent un degré de sérieux.",
-      "Une tenue et des sujets de conversation sont choisis avec soin.",
-      "Le repas peut ressembler à un entretien."
-    ],
-    "id": "who_a_050"
-  },
-  {
-    "label": "Une dispute de couple",
-    "category": "relations",
-    "clues": [
-      "Je commence parfois pour un détail et convoque tout le passé.",
-      "Le ton compte autant que le sujet.",
-      "Je peux finir par des excuses, du silence ou une décision."
-    ],
-    "id": "who_a_051"
-  },
-  {
-    "label": "Un compte commun",
-    "category": "relations",
-    "clues": [
-      "Je mélange une partie de deux finances.",
-      "Confiance et règles claires sont indispensables.",
-      "Dépenses partagées et projets à deux m’alimentent."
-    ],
-    "id": "who_a_052"
-  },
-  {
-    "label": "Une clé de chez l’autre",
-    "category": "relations",
-    "clues": [
-      "Je tiens dans une poche mais symbolise beaucoup.",
-      "Elle facilite les visites sans sonner.",
-      "La donner marque souvent une nouvelle étape."
-    ],
-    "id": "who_a_053"
-  },
-  {
-    "label": "Un déménagement en couple",
-    "category": "relations",
-    "clues": [
-      "Je mélange cartons et grandes décisions.",
-      "Habitudes privées deviennent visibles.",
-      "Choisir les meubles teste parfois la relation."
-    ],
-    "id": "who_a_054"
-  },
-  {
-    "label": "Un voyage en amoureux",
-    "category": "relations",
-    "clues": [
-      "Je retire les routines habituelles.",
-      "Organisation, budget et fatigue révèlent beaucoup.",
-      "Des photos heureuses ne racontent pas toujours les disputes logistiques."
-    ],
-    "id": "who_a_055"
-  },
-  {
-    "label": "Une pause dans le couple",
-    "category": "relations",
-    "clues": [
-      "Je suspend sans toujours terminer.",
-      "Mes règles doivent être définies pour éviter le chaos.",
-      "Je peux rapprocher, éloigner ou simplement retarder une rupture."
-    ],
-    "id": "who_a_056"
-  },
-  {
-    "label": "Un ultimatum amoureux",
-    "category": "relations",
-    "clues": [
-      "J’impose un choix et une limite de temps.",
-      "J’apparais lorsque la patience est presque épuisée.",
-      "Une décision importante doit me suivre."
-    ],
-    "id": "who_a_057"
-  },
-  {
     "label": "Un sex-toy",
     "category": "adulte",
     "clues": [
@@ -870,26 +770,6 @@
     "id": "who_a_087"
   },
   {
-    "label": "Un parfum sur l’oreiller",
-    "category": "adulte",
-    "clues": [
-      "Je reste après le départ de quelqu’un.",
-      "Je peux réveiller un souvenir très précis.",
-      "Il disparaît plus lentement que la personne."
-    ],
-    "id": "who_a_088"
-  },
-  {
-    "label": "Un tiroir chez l’autre",
-    "category": "adulte",
-    "clues": [
-      "Je réserve une petite place permanente.",
-      "Quelques vêtements ou produits y restent.",
-      "Je symbolise une présence régulière."
-    ],
-    "id": "who_a_089"
-  },
-  {
     "label": "Un like accidentel sur une vieille photo",
     "category": "dossiers",
     "clues": [
@@ -978,25 +858,5 @@
       "La stratégie de placement dans la pièce prend une importance capitale."
     ],
     "id": "who_a_098"
-  },
-  {
-    "label": "Une relation exclusive",
-    "category": "relations",
-    "clues": [
-      "Je demande que les partenaires ne construisent pas d’autres relations amoureuses ou sexuelles selon leurs accords.",
-      "Mes limites doivent être dites plutôt que supposées.",
-      "La fidélité me définit différemment pour chaque couple."
-    ],
-    "id": "who_a_099"
-  },
-  {
-    "label": "Un date avec l’ex d’un ami",
-    "category": "relations",
-    "clues": [
-      "Je mélange attirance et loyauté.",
-      "Une conversation avec l’ami concerné peut éviter une explosion.",
-      "Le passé de deux personnes se retrouve à la même table."
-    ],
-    "id": "who_a_100"
   }
 ]

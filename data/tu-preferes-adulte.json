@@ -438,12 +438,6 @@
     "category": "adult"
   },
   {
-    "id": "prefere_adulte_074",
-    "optionA": "Être le crush secret de quelqu’un dans le groupe",
-    "optionB": "Savoir qui te désire mais devoir garder le secret",
-    "category": "adult"
-  },
-  {
     "id": "prefere_adulte_075",
     "optionA": "Toujours devoir dire exactement ce que tu veux",
     "optionB": "Laisser l’autre deviner avec le risque qu’il se trompe",
@@ -624,12 +618,6 @@
     "category": "adult"
   },
   {
-    "id": "prefere_adulte_105",
-    "optionA": "Avoir un partenaire qui raconte tout à son meilleur ami",
-    "optionB": "Avoir un partenaire qui ne parle jamais de votre intimité, même avec toi",
-    "category": "adult"
-  },
-  {
     "id": "prefere_adulte_106",
     "optionA": "Une nuit avec quelqu’un de sublime qui ne te fait pas rire",
     "optionB": "Une nuit avec quelqu’un de drôle qui ne correspond pas du tout à tes goûts",
@@ -789,114 +777,6 @@
     "id": "prefere_adulte_132",
     "optionA": "Une nuit avec une personne qui parle de son ex",
     "optionB": "Une nuit avec une personne qui refuse de te dire son prénom complet",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_133",
-    "optionA": "Découvrir que quelqu’un t’a donné une note après votre nuit",
-    "optionB": "Devoir noter honnêtement toutes tes anciennes expériences",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_134",
-    "optionA": "Être très connu(e) pour tes talents intimes",
-    "optionB": "Être totalement sous-estimé(e) mais garder le secret",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_135",
-    "optionA": "Un baiser avec ton meilleur ami qui change tout",
-    "optionB": "Refuser et découvrir plus tard que l’attirance était réciproque",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_136",
-    "optionA": "Une relation où vous racontez tous vos fantasmes",
-    "optionB": "Une relation où vous en réalisez certains sans jamais en parler",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_137",
-    "optionA": "Être avec quelqu’un qui a exactement les mêmes goûts",
-    "optionB": "Être avec quelqu’un dont les goûts te surprennent constamment",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_138",
-    "optionA": "Découvrir que ton crush a déjà couché avec deux personnes du groupe",
-    "optionB": "Découvrir que deux personnes du groupe veulent coucher avec ton crush",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_139",
-    "optionA": "Faire une nuit blanche uniquement pour parler de sexe",
-    "optionB": "Faire une nuit blanche sans avoir le droit d’en parler",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_140",
-    "optionA": "Recevoir une demande en mariage juste après une nuit incroyable",
-    "optionB": "Recevoir une proposition de relation libre juste après la même nuit",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_141",
-    "optionA": "Coucher avec quelqu’un qui veut immédiatement officialiser",
-    "optionB": "Refuser quelqu’un qui te plaît parce qu’il ne veut rien de sérieux",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_142",
-    "optionA": "Que ton partenaire garde une boîte de souvenirs intimes de ses ex",
-    "optionB": "Qu’il ou elle te demande de jeter tous les tiens",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_143",
-    "optionA": "Être avec quelqu’un qui veut des photos intimes mais n’en envoie jamais",
-    "optionB": "Être avec quelqu’un qui en envoie beaucoup mais refuse d’en recevoir",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_144",
-    "optionA": "Découvrir que ton partenaire te compare secrètement à son ex",
-    "optionB": "Découvrir que son ex te compare publiquement à lui ou elle",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_145",
-    "optionA": "Une nuit avec ton crush dans une chambre minuscule et mal isolée",
-    "optionB": "Une suite immense mais avec son meilleur ami dans la pièce voisine",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_146",
-    "optionA": "Dire à voix haute ton fantasme le plus précis",
-    "optionB": "L’écrire anonymement puis laisser le groupe deviner lequel est le tien",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_147",
-    "optionA": "Une aventure avec quelqu’un de très connu",
-    "optionB": "Une aventure avec quelqu’un que tout ton entourage déteste",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_148",
-    "optionA": "Être incapable de mentir sur ton attirance",
-    "optionB": "Être incapable de dire clairement quand quelqu’un ne t’attire pas",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_149",
-    "optionA": "Un partenaire qui veut tout savoir de tes expériences passées",
-    "optionB": "Un partenaire qui refuse de parler des siennes",
-    "category": "adult"
-  },
-  {
-    "id": "prefere_adulte_150",
-    "optionA": "Découvrir que ton crush t’a enregistré(e) sous un surnom très sexuel",
-    "optionB": "Découvrir qu’il ou elle a oublié ton prénom après votre nuit",
     "category": "adult"
   }
 ]

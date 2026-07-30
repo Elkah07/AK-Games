@@ -65,45 +65,6 @@
     "id": "minorite_adulte_005"
   },
   {
-    "question": "En suivant ton premier instinct, pour montrer ton intérêt, tu choisis…",
-    "options": [
-      "Compliment direct",
-      "Premier message audacieux",
-      "Réaction discrète sur les réseaux"
-    ],
-    "theme": "attirance",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_006"
-  },
-  {
-    "question": "Sans demander l’avis du groupe, ce qui crée le plus de tension selon toi, c’est…",
-    "options": [
-      "Regard insistant",
-      "Humour complice",
-      "Réaction discrète sur les réseaux"
-    ],
-    "theme": "attirance",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_007"
-  },
-  {
-    "question": "Version osée : pour montrer ton intérêt, tu choisis…",
-    "options": [
-      "Regard insistant",
-      "Compliment direct",
-      "Premier message audacieux"
-    ],
-    "theme": "attirance",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_008"
-  },
-  {
     "question": "Sans pouvoir répondre « ça dépend », ce qui crée le plus de tension selon toi, c’est…",
     "options": [
       "Humour complice",
@@ -260,19 +221,6 @@
     "id": "minorite_adulte_020"
   },
   {
-    "question": "Sans protéger ton image, ce qui crée le plus de tension selon toi, c’est…",
-    "options": [
-      "Réaction discrète sur les réseaux",
-      "Invitation claire",
-      "Conversation très personnelle"
-    ],
-    "theme": "attirance",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_021"
-  },
-  {
     "question": "Pour un premier rendez-vous réussi, tu choisis…",
     "options": [
       "Bar intimiste",
@@ -351,32 +299,6 @@
     "id": "minorite_adulte_027"
   },
   {
-    "question": "Sans demander l’avis du groupe, ce qui rend un date mémorable, c’est…",
-    "options": [
-      "Restaurant vivant",
-      "Activité ludique",
-      "Lieu avec de l’ambiance"
-    ],
-    "theme": "premiers_rendezvous",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_028"
-  },
-  {
-    "question": "Version osée : pour un premier rendez-vous réussi, tu choisis…",
-    "options": [
-      "Balade nocturne",
-      "Activité ludique",
-      "Lieu avec de l’ambiance"
-    ],
-    "theme": "premiers_rendezvous",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_029"
-  },
-  {
     "question": "Sans pouvoir répondre « ça dépend », ce qui rend un date mémorable, c’est…",
     "options": [
       "Restaurant vivant",
@@ -416,19 +338,6 @@
     "id": "minorite_adulte_032"
   },
   {
-    "question": "Sans esquiver la question, ton rythme idéal pour un premier date serait…",
-    "options": [
-      "Restaurant vivant",
-      "Longue discussion",
-      "Lieu avec de l’ambiance"
-    ],
-    "theme": "premiers_rendezvous",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_033"
-  },
-  {
     "question": "En suivant ton désir plutôt que la logique, pour un premier rendez-vous réussi, tu choisis…",
     "options": [
       "Balade nocturne",
@@ -455,19 +364,6 @@
     "id": "minorite_adulte_035"
   },
   {
-    "question": "Sans filtre : pour un premier rendez-vous réussi, tu choisis…",
-    "options": [
-      "Balade nocturne",
-      "Prendre seulement un verre",
-      "Un baiser"
-    ],
-    "theme": "premiers_rendezvous",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_036"
-  },
-  {
     "question": "Même si tu n’oses pas toujours l’avouer, ce qui rend un date mémorable, c’est…",
     "options": [
       "Prendre seulement un verre",
@@ -479,19 +375,6 @@
     "category": "adult",
     "adult": true,
     "id": "minorite_adulte_037"
-  },
-  {
-    "question": "Sans aucun filtre, pour éviter une soirée trop plate, tu préfères…",
-    "options": [
-      "Bar intimiste",
-      "Restaurant vivant",
-      "Une invitation à se revoir"
-    ],
-    "theme": "premiers_rendezvous",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_038"
   },
   {
     "question": "Si personne ne pouvait te juger, à la fin d’un bon premier rendez-vous, tu gardes…",
@@ -611,19 +494,6 @@
     "id": "minorite_adulte_047"
   },
   {
-    "question": "En suivant ton premier instinct, quand un crush te plaît vraiment, tu choisis…",
-    "options": [
-      "Attendre un signe évident",
-      "Envoyer un meme ciblé",
-      "Répondre à une ancienne story"
-    ],
-    "theme": "crushs",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_048"
-  },
-  {
     "question": "Sans demander l’avis du groupe, pour savoir si l’attirance est réciproque, tu préfères…",
     "options": [
       "Multiplier les sous-entendus",
@@ -702,19 +572,6 @@
     "id": "minorite_adulte_054"
   },
   {
-    "question": "En suivant ton désir plutôt que la logique, quand un crush te plaît vraiment, tu choisis…",
-    "options": [
-      "Répondre à une ancienne story",
-      "Parler tous les jours",
-      "Créer une occasion de se voir"
-    ],
-    "theme": "crushs",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_055"
-  },
-  {
     "question": "Si la situation arrivait ce soir, pour savoir si l’attirance est réciproque, tu préfères…",
     "options": [
       "Avouer clairement",
@@ -791,19 +648,6 @@
     "category": "adult",
     "adult": true,
     "id": "minorite_adulte_061"
-  },
-  {
-    "question": "Si tu devais trancher immédiatement, quand un crush te plaît vraiment, tu choisis…",
-    "options": [
-      "Multiplier les sous-entendus",
-      "Envoyer un meme ciblé",
-      "Parler tous les jours"
-    ],
-    "theme": "crushs",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_062"
   },
   {
     "question": "Sans protéger ton image, pour savoir si l’attirance est réciproque, tu préfères…",
@@ -897,19 +741,6 @@
     "id": "minorite_adulte_069"
   },
   {
-    "question": "Sans demander l’avis du groupe, face à un souvenir d’ancienne relation, tu préfères…",
-    "options": [
-      "Ignorer complètement",
-      "Demander ce qu’il ou elle veut",
-      "Profiter pour régler un vieux sujet"
-    ],
-    "theme": "ex",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_070"
-  },
-  {
     "question": "Version osée : si un ex revient dans ta vie, tu choisis…",
     "options": [
       "Ignorer complètement",
@@ -921,19 +752,6 @@
     "category": "adult",
     "adult": true,
     "id": "minorite_adulte_071"
-  },
-  {
-    "question": "Sans pouvoir répondre « ça dépend », face à un souvenir d’ancienne relation, tu préfères…",
-    "options": [
-      "Garder tes distances",
-      "Profiter pour régler un vieux sujet",
-      "Garder les anciennes photos"
-    ],
-    "theme": "ex",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_072"
   },
   {
     "question": "En assumant vraiment ton choix, pour gérer la place d’un ex, tu gardes…",
@@ -975,19 +793,6 @@
     "id": "minorite_adulte_075"
   },
   {
-    "question": "En suivant ton désir plutôt que la logique, si un ex revient dans ta vie, tu choisis…",
-    "options": [
-      "Ignorer complètement",
-      "Garder les anciennes photos",
-      "Archiver sans regarder"
-    ],
-    "theme": "ex",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_076"
-  },
-  {
     "question": "Si la situation arrivait ce soir, face à un souvenir d’ancienne relation, tu préfères…",
     "options": [
       "Répondre poliment",
@@ -999,19 +804,6 @@
     "category": "adult",
     "adult": true,
     "id": "minorite_adulte_077"
-  },
-  {
-    "question": "Sans filtre : si un ex revient dans ta vie, tu choisis…",
-    "options": [
-      "Répondre poliment",
-      "Profiter pour régler un vieux sujet",
-      "Demander d’abord pourquoi"
-    ],
-    "theme": "ex",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_078"
   },
   {
     "question": "Même si tu n’oses pas toujours l’avouer, face à un souvenir d’ancienne relation, tu préfères…",
@@ -1157,19 +949,6 @@
     "id": "minorite_adulte_089"
   },
   {
-    "question": "En suivant ton premier instinct, quand la jalousie apparaît, tu choisis…",
-    "options": [
-      "Observer avant de réagir",
-      "Faire confiance sans intervenir",
-      "Redéfinir clairement les limites"
-    ],
-    "theme": "jalousie_fidelite",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_090"
-  },
-  {
     "question": "Sans demander l’avis du groupe, si une limite devient floue, tu préfères…",
     "options": [
       "En parler immédiatement",
@@ -1222,19 +1001,6 @@
     "id": "minorite_adulte_094"
   },
   {
-    "question": "Si tu devais être totalement honnête, face à un flirt extérieur, ton réflexe serait…",
-    "options": [
-      "Faire confiance sans intervenir",
-      "Demander plus de transparence",
-      "Avouer ta jalousie"
-    ],
-    "theme": "jalousie_fidelite",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_095"
-  },
-  {
     "question": "Sans esquiver la question, après une confiance fragilisée, tu votes pour…",
     "options": [
       "En parler immédiatement",
@@ -1261,19 +1027,6 @@
     "id": "minorite_adulte_097"
   },
   {
-    "question": "Si la situation arrivait ce soir, si une limite devient floue, tu préfères…",
-    "options": [
-      "En parler immédiatement",
-      "Faire confiance sans intervenir",
-      "Chercher d’abord ce qui l’a déclenchée"
-    ],
-    "theme": "jalousie_fidelite",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_098"
-  },
-  {
     "question": "Sans filtre : quand la jalousie apparaît, tu choisis…",
     "options": [
       "En parler immédiatement",
@@ -1285,19 +1038,6 @@
     "category": "adult",
     "adult": true,
     "id": "minorite_adulte_099"
-  },
-  {
-    "question": "Même si tu n’oses pas toujours l’avouer, si une limite devient floue, tu préfères…",
-    "options": [
-      "Observer avant de réagir",
-      "Avouer ta jalousie",
-      "Chercher d’abord ce qui l’a déclenchée"
-    ],
-    "theme": "jalousie_fidelite",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_100"
   },
   {
     "question": "Sans aucun filtre, pour protéger la confiance, tu gardes…",
@@ -1430,32 +1170,6 @@
     "id": "minorite_adulte_110"
   },
   {
-    "question": "En suivant ton premier instinct, pour un moment intime réussi, tu choisis…",
-    "options": [
-      "Lumière tamisée",
-      "Obscurité complète",
-      "Laisser l’autre guider"
-    ],
-    "theme": "preferences_intimes",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_111"
-  },
-  {
-    "question": "Sans demander l’avis du groupe, ce qui te met le plus à l’aise, c’est…",
-    "options": [
-      "Lumière naturelle",
-      "Prendre les devants",
-      "Laisser l’autre guider"
-    ],
-    "theme": "preferences_intimes",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_112"
-  },
-  {
     "question": "Version osée : pour un moment intime réussi, tu choisis…",
     "options": [
       "Lumière naturelle",
@@ -1521,19 +1235,6 @@
     "id": "minorite_adulte_117"
   },
   {
-    "question": "En suivant ton désir plutôt que la logique, pour un moment intime réussi, tu choisis…",
-    "options": [
-      "Lumière tamisée",
-      "Obscurité complète",
-      "Beaucoup parler"
-    ],
-    "theme": "preferences_intimes",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_118"
-  },
-  {
     "question": "Si la situation arrivait ce soir, ce qui te met le plus à l’aise, c’est…",
     "options": [
       "Lumière tamisée",
@@ -1586,19 +1287,6 @@
     "id": "minorite_adulte_122"
   },
   {
-    "question": "Si personne ne pouvait te juger, dans l’intimité, ton style serait plutôt…",
-    "options": [
-      "Obscurité complète",
-      "Alterner naturellement",
-      "Tendresse lente"
-    ],
-    "theme": "preferences_intimes",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_123"
-  },
-  {
     "question": "En répondant avec une honnêteté brutale, pour communiquer sans casser l’ambiance, tu gardes…",
     "options": [
       "Obscurité complète",
@@ -1623,19 +1311,6 @@
     "category": "adult",
     "adult": true,
     "id": "minorite_adulte_125"
-  },
-  {
-    "question": "Sans protéger ton image, ce qui te met le plus à l’aise, c’est…",
-    "options": [
-      "Obscurité complète",
-      "Laisser l’autre guider",
-      "Alterner naturellement"
-    ],
-    "theme": "preferences_intimes",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_126"
   },
   {
     "question": "Pour explorer une envie nouvelle, tu choisis…",
@@ -1742,32 +1417,6 @@
     "id": "minorite_adulte_134"
   },
   {
-    "question": "Sans pouvoir répondre « ça dépend », si une curiosité devient possible, tu préfères…",
-    "options": [
-      "Commencer par une version très douce",
-      "Lieu inhabituel mais privé",
-      "Changement total d’ambiance"
-    ],
-    "theme": "fantasmes_curiosites",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_135"
-  },
-  {
-    "question": "En assumant vraiment ton choix, pour sortir des habitudes, tu gardes…",
-    "options": [
-      "En parler longtemps avant",
-      "Week-end entièrement dédié",
-      "Accessoire nouveau"
-    ],
-    "theme": "fantasmes_curiosites",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_136"
-  },
-  {
     "question": "Si tu devais être totalement honnête, face à un fantasme récurrent, tu votes pour…",
     "options": [
       "En parler longtemps avant",
@@ -1805,19 +1454,6 @@
     "category": "adult",
     "adult": true,
     "id": "minorite_adulte_139"
-  },
-  {
-    "question": "Si la situation arrivait ce soir, si une curiosité devient possible, tu préfères…",
-    "options": [
-      "Commencer par une version très douce",
-      "Lieu inhabituel mais privé",
-      "Accessoire nouveau"
-    ],
-    "theme": "fantasmes_curiosites",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_140"
   },
   {
     "question": "Sans filtre : pour explorer une envie nouvelle, tu choisis…",
@@ -1989,19 +1625,6 @@
     "id": "minorite_adulte_153"
   },
   {
-    "question": "Sans demander l’avis du groupe, dans un échange très osé, tu préfères…",
-    "options": [
-      "Envoyer puis attendre",
-      "Demander une réponse immédiate",
-      "Continuer progressivement"
-    ],
-    "theme": "sextos_numerique",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_154"
-  },
-  {
     "question": "Version osée : pour faire monter la tension à distance, tu choisis…",
     "options": [
       "Texte très suggestif",
@@ -2039,32 +1662,6 @@
     "category": "adult",
     "adult": true,
     "id": "minorite_adulte_157"
-  },
-  {
-    "question": "Si tu devais être totalement honnête, quand les messages deviennent explicites, tu votes pour…",
-    "options": [
-      "Photo soigneusement cadrée",
-      "Envoyer puis attendre",
-      "Aucun contenu identifiable"
-    ],
-    "theme": "sextos_numerique",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_158"
-  },
-  {
-    "question": "Sans esquiver la question, ton support préféré pour flirter à distance serait…",
-    "options": [
-      "Note vocale",
-      "Envoyer puis attendre",
-      "Demander une réponse immédiate"
-    ],
-    "theme": "sextos_numerique",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_159"
   },
   {
     "question": "En suivant ton désir plutôt que la logique, pour faire monter la tension à distance, tu choisis…",
@@ -2171,19 +1768,6 @@
     "id": "minorite_adulte_167"
   },
   {
-    "question": "Sans protéger ton image, dans un échange très osé, tu préfères…",
-    "options": [
-      "Messages éphémères",
-      "Aucun contenu identifiable",
-      "Laisser l’autre mener"
-    ],
-    "theme": "sextos_numerique",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_168"
-  },
-  {
     "question": "Pour une rencontre sans engagement, tu choisis…",
     "options": [
       "En parler juste après",
@@ -2234,1019 +1818,5 @@
     "category": "adult",
     "adult": true,
     "id": "minorite_adulte_172"
-  },
-  {
-    "question": "Si tu devais choisir maintenant, pour protéger tout le monde émotionnellement, tu choisis…",
-    "options": [
-      "Tout clarifier avant",
-      "En parler juste après",
-      "Envoyer un message léger"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_173"
-  },
-  {
-    "question": "En suivant ton premier instinct, pour une rencontre sans engagement, tu choisis…",
-    "options": [
-      "En parler juste après",
-      "Envoyer un message tendre",
-      "Attendre que l’autre écrive"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_174"
-  },
-  {
-    "question": "Sans demander l’avis du groupe, au lendemain d’une nuit spontanée, tu préfères…",
-    "options": [
-      "Tout clarifier avant",
-      "En parler juste après",
-      "Laisser la situation évoluer"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_175"
-  },
-  {
-    "question": "Version osée : pour une rencontre sans engagement, tu choisis…",
-    "options": [
-      "En parler juste après",
-      "Envoyer un message tendre",
-      "Décider selon l’ambiance"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_176"
-  },
-  {
-    "question": "Sans pouvoir répondre « ça dépend », au lendemain d’une nuit spontanée, tu préfères…",
-    "options": [
-      "Laisser la situation évoluer",
-      "Envoyer un message léger",
-      "Rester dormir"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_177"
-  },
-  {
-    "question": "En assumant vraiment ton choix, quand les attentes sont floues, tu gardes…",
-    "options": [
-      "Laisser la situation évoluer",
-      "Envoyer un message tendre",
-      "Rentrer chez toi"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_178"
-  },
-  {
-    "question": "Si tu devais être totalement honnête, si la relation ne peut pas devenir sérieuse, tu votes pour…",
-    "options": [
-      "Tout clarifier avant",
-      "Rester dormir",
-      "Décider selon l’ambiance"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_179"
-  },
-  {
-    "question": "Sans esquiver la question, pour protéger tout le monde émotionnellement, tu choisis…",
-    "options": [
-      "Tout clarifier avant",
-      "Envoyer un message tendre",
-      "Décider selon l’ambiance"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_180"
-  },
-  {
-    "question": "En suivant ton désir plutôt que la logique, pour une rencontre sans engagement, tu choisis…",
-    "options": [
-      "Tout clarifier avant",
-      "En parler juste après",
-      "Laisser la situation évoluer"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_181"
-  },
-  {
-    "question": "Si la situation arrivait ce soir, au lendemain d’une nuit spontanée, tu préfères…",
-    "options": [
-      "Tout clarifier avant",
-      "Envoyer un message tendre",
-      "Attendre que l’autre écrive"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_182"
-  },
-  {
-    "question": "Sans filtre : pour une rencontre sans engagement, tu choisis…",
-    "options": [
-      "Envoyer un message tendre",
-      "Rester dormir",
-      "Couper proprement"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_183"
-  },
-  {
-    "question": "Même si tu n’oses pas toujours l’avouer, au lendemain d’une nuit spontanée, tu préfères…",
-    "options": [
-      "Tout clarifier avant",
-      "Attendre que l’autre écrive",
-      "Garder cela privé"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_184"
-  },
-  {
-    "question": "Sans aucun filtre, quand les attentes sont floues, tu gardes…",
-    "options": [
-      "Décider selon l’ambiance",
-      "Couper proprement",
-      "Garder cela privé"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_185"
-  },
-  {
-    "question": "Si personne ne pouvait te juger, si la relation ne peut pas devenir sérieuse, tu votes pour…",
-    "options": [
-      "Tout clarifier avant",
-      "Rester dormir",
-      "Garder cela privé"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_186"
-  },
-  {
-    "question": "En répondant avec une honnêteté brutale, pour protéger tout le monde émotionnellement, tu choisis…",
-    "options": [
-      "Décider selon l’ambiance",
-      "En parler à un proche",
-      "Assumer ouvertement"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_187"
-  },
-  {
-    "question": "Si tu devais trancher immédiatement, pour une rencontre sans engagement, tu choisis…",
-    "options": [
-      "Tout clarifier avant",
-      "Se revoir sans promesse",
-      "Assumer ouvertement"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_188"
-  },
-  {
-    "question": "Sans protéger ton image, au lendemain d’une nuit spontanée, tu préfères…",
-    "options": [
-      "Laisser la situation évoluer",
-      "Envoyer un message tendre",
-      "Envoyer un message léger"
-    ],
-    "theme": "sans_engagement",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_189"
-  },
-  {
-    "question": "Pour poser une limite claire, tu choisis…",
-    "options": [
-      "Dire stop immédiatement",
-      "Prendre une pause complète",
-      "Vérifier au fur et à mesure"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_190"
-  },
-  {
-    "question": "Sans trop réfléchir, avant une nouveauté intime, tu préfères…",
-    "options": [
-      "Dire stop immédiatement",
-      "Parler des grandes limites seulement",
-      "Vérifier au fur et à mesure"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_191"
-  },
-  {
-    "question": "En restant dans le flirt léger, si quelqu’un change d’avis, ton réflexe serait…",
-    "options": [
-      "Proposer une alternative",
-      "Prendre une pause complète",
-      "Établir des règles précises"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_192"
-  },
-  {
-    "question": "Pour une réponse spontanée, pour créer un cadre rassurant, tu gardes…",
-    "options": [
-      "Dire stop immédiatement",
-      "Proposer une alternative",
-      "Prendre une pause complète"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_193"
-  },
-  {
-    "question": "Si tu devais choisir maintenant, quand quelque chose gêne, tu votes pour…",
-    "options": [
-      "Proposer une alternative",
-      "Prendre une pause complète",
-      "Vérifier au fur et à mesure"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_194"
-  },
-  {
-    "question": "En suivant ton premier instinct, pour poser une limite claire, tu choisis…",
-    "options": [
-      "Prendre une pause complète",
-      "Parler des grandes limites seulement",
-      "Vérifier au fur et à mesure"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_195"
-  },
-  {
-    "question": "Sans demander l’avis du groupe, avant une nouveauté intime, tu préfères…",
-    "options": [
-      "Proposer une alternative",
-      "Prendre une pause complète",
-      "Parler des grandes limites seulement"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_196"
-  },
-  {
-    "question": "Version osée : pour poser une limite claire, tu choisis…",
-    "options": [
-      "Proposer une alternative",
-      "Rassurer puis arrêter",
-      "Changer totalement d’activité"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_197"
-  },
-  {
-    "question": "Sans pouvoir répondre « ça dépend », avant une nouveauté intime, tu préfères…",
-    "options": [
-      "Établir des règles précises",
-      "Parler des grandes limites seulement",
-      "Changer totalement d’activité"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_198"
-  },
-  {
-    "question": "En assumant vraiment ton choix, si quelqu’un change d’avis, ton réflexe serait…",
-    "options": [
-      "Parler des grandes limites seulement",
-      "Rassurer puis arrêter",
-      "Changer totalement d’activité"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_199"
-  },
-  {
-    "question": "Si tu devais être totalement honnête, pour créer un cadre rassurant, tu gardes…",
-    "options": [
-      "Vérifier au fur et à mesure",
-      "Arrêter sans discuter",
-      "Rassurer puis arrêter"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_200"
-  },
-  {
-    "question": "Sans esquiver la question, quand quelque chose gêne, tu votes pour…",
-    "options": [
-      "Dire stop immédiatement",
-      "Vérifier au fur et à mesure",
-      "Rassurer puis arrêter"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_201"
-  },
-  {
-    "question": "En suivant ton désir plutôt que la logique, pour poser une limite claire, tu choisis…",
-    "options": [
-      "Proposer une alternative",
-      "Parler des grandes limites seulement",
-      "Vérifier au fur et à mesure"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_202"
-  },
-  {
-    "question": "Si la situation arrivait ce soir, avant une nouveauté intime, tu préfères…",
-    "options": [
-      "Établir des règles précises",
-      "Parler des grandes limites seulement",
-      "Vérifier au fur et à mesure"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_203"
-  },
-  {
-    "question": "Sans filtre : pour poser une limite claire, tu choisis…",
-    "options": [
-      "Le dire dès que la situation arrive",
-      "Mot de sécurité",
-      "Signaux non verbaux convenus"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_204"
-  },
-  {
-    "question": "Même si tu n’oses pas toujours l’avouer, avant une nouveauté intime, tu préfères…",
-    "options": [
-      "Arrêter sans discuter",
-      "Changer totalement d’activité",
-      "En parler hors du moment intime"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_205"
-  },
-  {
-    "question": "Sans aucun filtre, si quelqu’un change d’avis, ton réflexe serait…",
-    "options": [
-      "Proposer une alternative",
-      "Question régulière",
-      "Signaux non verbaux convenus"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_206"
-  },
-  {
-    "question": "Si personne ne pouvait te juger, pour créer un cadre rassurant, tu gardes…",
-    "options": [
-      "Prendre une pause complète",
-      "Vérifier au fur et à mesure",
-      "Signaux non verbaux convenus"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_207"
-  },
-  {
-    "question": "En répondant avec une honnêteté brutale, quand quelque chose gêne, tu votes pour…",
-    "options": [
-      "Arrêter sans discuter",
-      "Mot de sécurité",
-      "Signaux non verbaux convenus"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_208"
-  },
-  {
-    "question": "Si tu devais trancher immédiatement, pour poser une limite claire, tu choisis…",
-    "options": [
-      "Dire stop immédiatement",
-      "Parler des grandes limites seulement",
-      "Vérifier au fur et à mesure"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_209"
-  },
-  {
-    "question": "Sans protéger ton image, avant une nouveauté intime, tu préfères…",
-    "options": [
-      "Parler des grandes limites seulement",
-      "Changer totalement d’activité",
-      "Le dire dès que la situation arrive"
-    ],
-    "theme": "limites_consentement",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_210"
-  },
-  {
-    "question": "Face à une situation intime gênante, tu choisis…",
-    "options": [
-      "Assumer et rire",
-      "Prétendre que ce n’est rien",
-      "Demander de ne pas regarder"
-    ],
-    "theme": "compromettant",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_211"
-  },
-  {
-    "question": "Sans trop réfléchir, si un détail privé est découvert, tu préfères…",
-    "options": [
-      "Assumer et rire",
-      "Supprimer puis expliquer",
-      "Demander de ne pas regarder"
-    ],
-    "theme": "compromettant",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_212"
-  },
-  {
-    "question": "En restant dans le flirt léger, pour gérer un message envoyé au mauvais endroit, tu gardes…",
-    "options": [
-      "Prétendre que ce n’est rien",
-      "Changer immédiatement de sujet",
-      "Inventer une excuse crédible"
-    ],
-    "theme": "compromettant",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_213"
-  },
-  {
-    "question": "Pour une réponse spontanée, si une ancienne photo réapparaît, tu votes pour…",
-    "options": [
-      "Prétendre que ce n’est rien",
-      "Supprimer puis expliquer",
-      "Inventer une excuse crédible"
-    ],
-    "theme": "compromettant",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_214"
-  },
-  {
-    "question": "Si tu devais choisir maintenant, quand tout le monde attend ta réaction, tu choisis…",
-    "options": [
-      "Assumer et rire",
-      "Changer immédiatement de sujet",
-      "Demander de ne pas regarder"
-    ],
-    "theme": "compromettant",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_215"
-  },
-  {
-    "question": "En suivant ton premier instinct, face à une situation intime gênante, tu choisis…",
-    "options": [
-      "Supprimer puis expliquer",
-      "Demander de ne pas regarder",
-      "Inventer une excuse crédible"
-    ],
-    "theme": "compromettant",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_216"
-  },
-  {
-    "question": "Sans demander l’avis du groupe, si un détail privé est découvert, tu préfères…",
-    "options": [
-      "Prétendre que ce n’est rien",
-      "Changer immédiatement de sujet",
-      "Supprimer puis expliquer"
-    ],
-    "theme": "compromettant",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_217"
-  },
-  {
-    "question": "Version osée : face à une situation intime gênante, tu choisis…",
-    "options": [
-      "Changer immédiatement de sujet",
-      "Demander de ne pas regarder",
-      "Refuser d’en parler"
-    ],
-    "theme": "compromettant",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_218"
-  },
-  {
-    "question": "Sans pouvoir répondre « ça dépend », si un détail privé est découvert, tu préfères…",
-    "options": [
-      "Prétendre que ce n’est rien",
-      "Dire la vérité minimale",
-      "Refuser d’en parler"
-    ],
-    "theme": "compromettant",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_219"
-  },
-  {
-    "question": "En assumant vraiment ton choix, pour gérer un message envoyé au mauvais endroit, tu gardes…",
-    "options": [
-      "Supprimer puis expliquer",
-      "Dire la vérité minimale",
-      "Tout expliquer pour éviter les suppositions"
-    ],
-    "theme": "compromettant",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_220"
-  },
-  {
-    "question": "Si tu devais être totalement honnête, si une ancienne photo réapparaît, tu votes pour…",
-    "options": [
-      "Assumer et rire",
-      "Dire la vérité minimale",
-      "Tout expliquer pour éviter les suppositions"
-    ],
-    "theme": "compromettant",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_221"
-  },
-  {
-    "question": "Sans esquiver la question, quand tout le monde attend ta réaction, tu choisis…",
-    "options": [
-      "Prétendre que ce n’est rien",
-      "Changer immédiatement de sujet",
-      "Demander de ne pas regarder"
-    ],
-    "theme": "compromettant",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_222"
-  },
-  {
-    "question": "En suivant ton désir plutôt que la logique, face à une situation intime gênante, tu choisis…",
-    "options": [
-      "Changer immédiatement de sujet",
-      "Supprimer puis expliquer",
-      "Inventer une excuse crédible"
-    ],
-    "theme": "compromettant",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_223"
-  },
-  {
-    "question": "Si la situation arrivait ce soir, si un détail privé est découvert, tu préfères…",
-    "options": [
-      "Prétendre que ce n’est rien",
-      "Changer immédiatement de sujet",
-      "Tout expliquer pour éviter les suppositions"
-    ],
-    "theme": "compromettant",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_224"
-  },
-  {
-    "question": "Sans filtre : face à une situation intime gênante, tu choisis…",
-    "options": [
-      "Demander sa suppression",
-      "En parler à la personne concernée",
-      "Rester parfaitement impassible"
-    ],
-    "theme": "compromettant",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_225"
-  },
-  {
-    "question": "Même si tu n’oses pas toujours l’avouer, si un détail privé est découvert, tu préfères…",
-    "options": [
-      "Prétendre que ce n’est rien",
-      "Demander de ne pas regarder",
-      "Quitter la pièce"
-    ],
-    "theme": "compromettant",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_226"
-  },
-  {
-    "question": "Sans aucun filtre, pour gérer un message envoyé au mauvais endroit, tu gardes…",
-    "options": [
-      "Prétendre que ce n’est rien",
-      "Demander sa suppression",
-      "Rester parfaitement impassible"
-    ],
-    "theme": "compromettant",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_227"
-  },
-  {
-    "question": "Si personne ne pouvait te juger, si une ancienne photo réapparaît, tu votes pour…",
-    "options": [
-      "Tout expliquer pour éviter les suppositions",
-      "Quitter la pièce",
-      "Faire une blague"
-    ],
-    "theme": "compromettant",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_228"
-  },
-  {
-    "question": "En répondant avec une honnêteté brutale, quand tout le monde attend ta réaction, tu choisis…",
-    "options": [
-      "Inventer une excuse crédible",
-      "Dire la vérité minimale",
-      "L’ignorer complètement"
-    ],
-    "theme": "compromettant",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_229"
-  },
-  {
-    "question": "Si tu devais trancher immédiatement, face à une situation intime gênante, tu choisis…",
-    "options": [
-      "Dire la vérité minimale",
-      "Demander sa suppression",
-      "Quitter la pièce"
-    ],
-    "theme": "compromettant",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_230"
-  },
-  {
-    "question": "Pour parler d’un désir délicat, tu choisis…",
-    "options": [
-      "Message pour préparer le sujet",
-      "Discussion progressive",
-      "Dire exactement ce qui manquait"
-    ],
-    "theme": "communication_couple",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_231"
-  },
-  {
-    "question": "Sans trop réfléchir, après une déception intime, tu préfères…",
-    "options": [
-      "Conversation très directe",
-      "Discussion progressive",
-      "Dire exactement ce qui manquait"
-    ],
-    "theme": "communication_couple",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_232"
-  },
-  {
-    "question": "En restant dans le flirt léger, si vos envies ne coïncident pas, tu gardes…",
-    "options": [
-      "Message pour préparer le sujet",
-      "Discussion progressive",
-      "Attendre un moment plus neutre"
-    ],
-    "theme": "communication_couple",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_233"
-  },
-  {
-    "question": "Pour une réponse spontanée, pour maintenir la complicité, tu votes pour…",
-    "options": [
-      "Dire exactement ce qui manquait",
-      "Commencer par ce qui était bien",
-      "Attendre un moment plus neutre"
-    ],
-    "theme": "communication_couple",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_234"
-  },
-  {
-    "question": "Si tu devais choisir maintenant, pour protéger ton jardin secret, tu choisis…",
-    "options": [
-      "Discussion progressive",
-      "Commencer par ce qui était bien",
-      "Attendre un moment plus neutre"
-    ],
-    "theme": "communication_couple",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_235"
-  },
-  {
-    "question": "En suivant ton premier instinct, pour parler d’un désir délicat, tu choisis…",
-    "options": [
-      "Discussion progressive",
-      "Dire exactement ce qui manquait",
-      "Commencer par ce qui était bien"
-    ],
-    "theme": "communication_couple",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_236"
-  },
-  {
-    "question": "Sans demander l’avis du groupe, après une déception intime, tu préfères…",
-    "options": [
-      "Conversation très directe",
-      "Dire exactement ce qui manquait",
-      "Commencer par ce qui était bien"
-    ],
-    "theme": "communication_couple",
-    "intensity": "light",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_237"
-  },
-  {
-    "question": "Version osée : pour parler d’un désir délicat, tu choisis…",
-    "options": [
-      "Dire exactement ce qui manquait",
-      "Trouver un compromis",
-      "Créer un autre type de proximité"
-    ],
-    "theme": "communication_couple",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_238"
-  },
-  {
-    "question": "Sans pouvoir répondre « ça dépend », après une déception intime, tu préfères…",
-    "options": [
-      "Message pour préparer le sujet",
-      "Commencer par ce qui était bien",
-      "Reporter sans pression"
-    ],
-    "theme": "communication_couple",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_239"
-  },
-  {
-    "question": "En assumant vraiment ton choix, si vos envies ne coïncident pas, tu gardes…",
-    "options": [
-      "Message pour préparer le sujet",
-      "Dire exactement ce qui manquait",
-      "Attendre un moment plus neutre"
-    ],
-    "theme": "communication_couple",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_240"
-  },
-  {
-    "question": "Si tu devais être totalement honnête, pour maintenir la complicité, tu votes pour…",
-    "options": [
-      "Attendre un moment plus neutre",
-      "Trouver un compromis",
-      "Reporter sans pression"
-    ],
-    "theme": "communication_couple",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_241"
-  },
-  {
-    "question": "Sans esquiver la question, pour protéger ton jardin secret, tu choisis…",
-    "options": [
-      "Conversation très directe",
-      "Discussion progressive",
-      "Attendre un moment plus neutre"
-    ],
-    "theme": "communication_couple",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_242"
-  },
-  {
-    "question": "En suivant ton désir plutôt que la logique, pour parler d’un désir délicat, tu choisis…",
-    "options": [
-      "Conversation très directe",
-      "Dire exactement ce qui manquait",
-      "Reporter sans pression"
-    ],
-    "theme": "communication_couple",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_243"
-  },
-  {
-    "question": "Si la situation arrivait ce soir, après une déception intime, tu préfères…",
-    "options": [
-      "Conversation très directe",
-      "Dire exactement ce qui manquait",
-      "Trouver un compromis"
-    ],
-    "theme": "communication_couple",
-    "intensity": "bold",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_244"
-  },
-  {
-    "question": "Sans filtre : pour parler d’un désir délicat, tu choisis…",
-    "options": [
-      "Attendre un moment plus neutre",
-      "Partager seulement ceux qu’on veut explorer",
-      "Garder certaines pensées pour soi"
-    ],
-    "theme": "communication_couple",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_245"
-  },
-  {
-    "question": "Même si tu n’oses pas toujours l’avouer, après une déception intime, tu préfères…",
-    "options": [
-      "Message pour préparer le sujet",
-      "Partager seulement ceux qu’on veut explorer",
-      "Garder certaines pensées pour soi"
-    ],
-    "theme": "communication_couple",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_246"
-  },
-  {
-    "question": "Sans aucun filtre, si vos envies ne coïncident pas, tu gardes…",
-    "options": [
-      "Conversation très directe",
-      "Trouver un compromis",
-      "Privilégier la spontanéité"
-    ],
-    "theme": "communication_couple",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_247"
-  },
-  {
-    "question": "Si personne ne pouvait te juger, pour maintenir la complicité, tu votes pour…",
-    "options": [
-      "Trouver un compromis",
-      "Reporter sans pression",
-      "Créer un autre type de proximité"
-    ],
-    "theme": "communication_couple",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_248"
-  },
-  {
-    "question": "En répondant avec une honnêteté brutale, pour protéger ton jardin secret, tu choisis…",
-    "options": [
-      "Discussion progressive",
-      "Commencer par ce qui était bien",
-      "Garder certaines pensées pour soi"
-    ],
-    "theme": "communication_couple",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_249"
-  },
-  {
-    "question": "Si tu devais trancher immédiatement, pour parler d’un désir délicat, tu choisis…",
-    "options": [
-      "Créer un autre type de proximité",
-      "Prévoir des moments",
-      "Garder certaines pensées pour soi"
-    ],
-    "theme": "communication_couple",
-    "intensity": "no_filter",
-    "category": "adult",
-    "adult": true,
-    "id": "minorite_adulte_250"
   }
 ]

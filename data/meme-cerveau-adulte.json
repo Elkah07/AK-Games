@@ -168,13 +168,6 @@
     "category": "adult"
   },
   {
-    "id": "meme_cerveau_adulte_025",
-    "prompt": "Cite une chose qu’on peut regretter d’avoir dite pendant un rendez-vous.",
-    "theme": "dates",
-    "intensity": "hot",
-    "category": "adult"
-  },
-  {
     "id": "meme_cerveau_adulte_026",
     "prompt": "Donne une excuse utilisée pour ne pas rentrer immédiatement après un date.",
     "theme": "dates",
@@ -371,13 +364,6 @@
     "category": "adult"
   },
   {
-    "id": "meme_cerveau_adulte_054",
-    "prompt": "Cite une situation où l’on pourrait hésiter entre confiance et méfiance.",
-    "theme": "jealousy",
-    "intensity": "hot",
-    "category": "adult"
-  },
-  {
     "id": "meme_cerveau_adulte_055",
     "prompt": "Donne une chose qu’on pardonne difficilement dans une relation.",
     "theme": "jealousy",
@@ -417,13 +403,6 @@
     "prompt": "Cite une question qu’on poserait si l’on était certain d’obtenir une réponse honnête.",
     "theme": "jealousy",
     "intensity": "unfiltered",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_061",
-    "prompt": "Donne une raison de stalker discrètement un profil.",
-    "theme": "digital",
-    "intensity": "soft",
     "category": "adult"
   },
   {
@@ -546,13 +525,6 @@
     "category": "adult"
   },
   {
-    "id": "meme_cerveau_adulte_079",
-    "prompt": "Donne une chose simple qui peut faire sentir quelqu’un désiré.",
-    "theme": "intimacy",
-    "intensity": "soft",
-    "category": "adult"
-  },
-  {
     "id": "meme_cerveau_adulte_080",
     "prompt": "Cite une limite qu’il est important de pouvoir exprimer clairement.",
     "theme": "intimacy",
@@ -627,13 +599,6 @@
     "prompt": "Cite une situation où le consentement doit être vérifié une nouvelle fois.",
     "theme": "intimacy",
     "intensity": "unfiltered",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_091",
-    "prompt": "Donne un lieu où un baiser serait particulièrement mémorable.",
-    "theme": "fantasies",
-    "intensity": "soft",
     "category": "adult"
   },
   {
@@ -770,13 +735,6 @@
     "category": "adult"
   },
   {
-    "id": "meme_cerveau_adulte_111",
-    "prompt": "Donne une chose gênante qui peut arriver pendant un baiser.",
-    "theme": "awkward",
-    "intensity": "hot",
-    "category": "adult"
-  },
-  {
     "id": "meme_cerveau_adulte_112",
     "prompt": "Cite une situation où un silence devient beaucoup trop intense.",
     "theme": "awkward",
@@ -786,13 +744,6 @@
   {
     "id": "meme_cerveau_adulte_113",
     "prompt": "Donne une raison de devoir quitter discrètement la chambre de quelqu’un.",
-    "theme": "awkward",
-    "intensity": "hot",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_114",
-    "prompt": "Cite une phrase qui peut ruiner un moment de tension.",
     "theme": "awkward",
     "intensity": "hot",
     "category": "adult"
@@ -815,237 +766,6 @@
     "id": "meme_cerveau_adulte_117",
     "prompt": "Donne une raison particulièrement gênante d’interrompre un moment intime.",
     "theme": "awkward",
-    "intensity": "unfiltered",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_118",
-    "prompt": "Cite une chose qu’on pourrait découvrir trop tard chez quelqu’un.",
-    "theme": "awkward",
-    "intensity": "unfiltered",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_119",
-    "prompt": "Donne une excuse improbable après avoir été surpris dans une situation compromettante.",
-    "theme": "awkward",
-    "intensity": "unfiltered",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_120",
-    "prompt": "Cite une phrase qu’on ne voudrait jamais entendre d’un voisin le lendemain matin.",
-    "theme": "awkward",
-    "intensity": "unfiltered",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_121",
-    "prompt": "Cite une habitude qui peut renforcer un couple.",
-    "theme": "couple",
-    "intensity": "soft",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_122",
-    "prompt": "Donne une petite attention qui fait souvent plaisir.",
-    "theme": "couple",
-    "intensity": "soft",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_123",
-    "prompt": "Cite une cause de dispute très classique dans un couple.",
-    "theme": "couple",
-    "intensity": "soft",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_124",
-    "prompt": "Donne une chose importante à partager avant de vivre ensemble.",
-    "theme": "couple",
-    "intensity": "soft",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_125",
-    "prompt": "Cite un geste romantique qui fonctionne presque toujours.",
-    "theme": "couple",
-    "intensity": "soft",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_126",
-    "prompt": "Donne un sujet intime qu’un couple devrait aborder tôt ou tard.",
-    "theme": "couple",
-    "intensity": "hot",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_127",
-    "prompt": "Cite une habitude qui peut faire baisser le désir avec le temps.",
-    "theme": "couple",
-    "intensity": "hot",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_128",
-    "prompt": "Donne une façon de relancer la complicité après une période routine.",
-    "theme": "couple",
-    "intensity": "hot",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_129",
-    "prompt": "Cite une différence de préférence qui demande beaucoup de communication.",
-    "theme": "couple",
-    "intensity": "hot",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_130",
-    "prompt": "Donne une chose qu’on peut avoir peur d’avouer à son partenaire.",
-    "theme": "couple",
-    "intensity": "hot",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_131",
-    "prompt": "Cite une limite qui pourrait remettre un couple entier en question.",
-    "theme": "couple",
-    "intensity": "unfiltered",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_132",
-    "prompt": "Donne une envie intime difficile à négocier dans une relation longue.",
-    "theme": "couple",
-    "intensity": "unfiltered",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_133",
-    "prompt": "Cite une vérité sur le désir qui peut être douloureuse à entendre.",
-    "theme": "couple",
-    "intensity": "unfiltered",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_134",
-    "prompt": "Donne une situation où aimer quelqu’un ne suffit pas à rester ensemble.",
-    "theme": "couple",
-    "intensity": "unfiltered",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_135",
-    "prompt": "Cite une question très directe qu’un couple devrait parfois se poser.",
-    "theme": "couple",
-    "intensity": "unfiltered",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_136",
-    "prompt": "Donne un lieu où l’on pourrait rencontrer un crush inattendu.",
-    "theme": "casual",
-    "intensity": "soft",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_137",
-    "prompt": "Cite un signe qu’une personne cherche seulement quelque chose de léger.",
-    "theme": "casual",
-    "intensity": "soft",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_138",
-    "prompt": "Donne une règle utile pour éviter les malentendus après une rencontre.",
-    "theme": "casual",
-    "intensity": "soft",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_139",
-    "prompt": "Cite une chose qu’on peut apprécier dans une relation sans engagement.",
-    "theme": "casual",
-    "intensity": "soft",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_140",
-    "prompt": "Donne une raison de préférer rester célibataire quelque temps.",
-    "theme": "casual",
-    "intensity": "soft",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_141",
-    "prompt": "Cite une phrase qui indique clairement qu’on ne cherche rien de sérieux.",
-    "theme": "casual",
-    "intensity": "hot",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_142",
-    "prompt": "Donne une raison de revoir quelqu’un uniquement pour l’attirance.",
-    "theme": "casual",
-    "intensity": "hot",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_143",
-    "prompt": "Cite une limite importante dans une relation sans engagement.",
-    "theme": "casual",
-    "intensity": "hot",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_144",
-    "prompt": "Donne une chose qui peut rendre un lendemain de rencontre gênant.",
-    "theme": "casual",
-    "intensity": "hot",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_145",
-    "prompt": "Cite une raison de s’attacher alors que ce n’était pas prévu.",
-    "theme": "casual",
-    "intensity": "hot",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_146",
-    "prompt": "Donne une question qu’on devrait poser avant une rencontre purement physique.",
-    "theme": "casual",
-    "intensity": "unfiltered",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_147",
-    "prompt": "Cite une chose qu’on pourrait cacher pour ne pas compliquer une relation légère.",
-    "theme": "casual",
-    "intensity": "unfiltered",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_148",
-    "prompt": "Donne une situation où une relation sans engagement devient clairement sérieuse.",
-    "theme": "casual",
-    "intensity": "unfiltered",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_149",
-    "prompt": "Cite une raison de mettre fin immédiatement à une rencontre occasionnelle.",
-    "theme": "casual",
-    "intensity": "unfiltered",
-    "category": "adult"
-  },
-  {
-    "id": "meme_cerveau_adulte_150",
-    "prompt": "Donne une vérité difficile à admettre après s’être attaché à un plan régulier.",
-    "theme": "casual",
     "intensity": "unfiltered",
     "category": "adult"
   }

@@ -522,24 +522,6 @@
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_couple_014_notre_langage_amoureux_cest_envoyer_des_vi",
-    "setup": "Notre langage amoureux, c’est envoyer des vidéos depuis la même pièce.",
-    "punchline": "Surtout quand quelqu’un veut éviter de faire la vaisselle.",
-    "category": "couple",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_couple_015_confession_du_jour_jai_demande_tu_mecoutes",
-    "setup": "Confession du jour : j’ai demandé : « Tu m’écoutes ? »",
-    "punchline": "Il/Elle a répondu « oui » avec le courage de quelqu’un qui n’avait aucune idée de la question.",
-    "category": "couple",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
     "id": "blague_adulte_couple_016_on_ne_se_dispute_jamais_pour_le_choix_du_f",
     "setup": "On ne se dispute jamais pour le choix du film.",
     "punchline": "On organise seulement des sommets diplomatiques très sonores.",
@@ -547,15 +529,6 @@
     "style": "jeu_de_mots",
     "adult": true,
     "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_couple_017_mon_partenaire_ma_offert_un_mug",
-    "setup": "Mon partenaire m’a offert un mug.",
-    "punchline": "La carte disait : « J’ai paniqué au magasin. » C’est presque un poème.",
-    "category": "couple",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
   },
   {
     "id": "blague_adulte_couple_018_mon_partenaire_a_dit_je_ne_suis_pas_enerve",
@@ -574,150 +547,6 @@
     "style": "dialogue",
     "adult": true,
     "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_couple_020_notre_langage_amoureux_cest_se_rappeler_le",
-    "setup": "Notre langage amoureux, c’est se rappeler les rendez-vous.",
-    "punchline": "Surtout quand quelqu’un veut éviter de faire la vaisselle.",
-    "category": "couple",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_couple_021_moment_de_verite_jai_demande_tu_mecoutes",
-    "setup": "Moment de vérité : j’ai demandé : « Tu m’écoutes ? »",
-    "punchline": "Il/Elle a répondu « oui » avec le courage de quelqu’un qui n’avait aucune idée de la question.",
-    "category": "couple",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_couple_022_on_ne_se_dispute_jamais_pour_le_thermostat",
-    "setup": "On ne se dispute jamais pour le thermostat.",
-    "punchline": "On organise seulement des sommets diplomatiques très sonores.",
-    "category": "couple",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_couple_023_mon_partenaire_ma_offert_des_chaussettes",
-    "setup": "Mon partenaire m’a offert des chaussettes.",
-    "punchline": "La carte disait : « J’ai paniqué au magasin. » C’est presque un poème.",
-    "category": "couple",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_couple_024_mon_partenaire_a_dit_on_verra",
-    "setup": "Mon partenaire a dit « « on verra » ».",
-    "punchline": "J’ai compris que la soirée aurait besoin d’un médiateur et d’un dessert.",
-    "category": "couple",
-    "style": "observation",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_couple_025_on_a_decide_de_cuisiner_ensemble",
-    "setup": "On a décidé de cuisiner ensemble.",
-    "punchline": "La partie romantique a duré jusqu’au premier désaccord sur les règles.",
-    "category": "couple",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_couple_026_notre_langage_amoureux_cest_laisser_le_cot",
-    "setup": "Notre langage amoureux, c’est laisser le côté froid de l’oreiller.",
-    "punchline": "Surtout quand quelqu’un veut éviter de faire la vaisselle.",
-    "category": "couple",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_couple_027_spoiler_jai_demande_tu_mecoutes",
-    "setup": "Spoiler : j’ai demandé : « Tu m’écoutes ? »",
-    "punchline": "Il/Elle a répondu « oui » avec le courage de quelqu’un qui n’avait aucune idée de la question.",
-    "category": "couple",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_couple_028_on_ne_se_dispute_jamais_pour_la_vaisselle",
-    "setup": "On ne se dispute jamais pour la vaisselle.",
-    "punchline": "On organise seulement des sommets diplomatiques très sonores.",
-    "category": "couple",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_couple_029_mon_partenaire_ma_offert_un_livre_de_recet",
-    "setup": "Mon partenaire m’a offert un livre de recettes.",
-    "punchline": "La carte disait : « J’ai paniqué au magasin. » C’est presque un poème.",
-    "category": "couple",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_couple_030_mon_partenaire_a_dit_jai_rien",
-    "setup": "Mon partenaire a dit « « j’ai rien » ».",
-    "punchline": "J’ai compris que la soirée aurait besoin d’un médiateur et d’un dessert.",
-    "category": "couple",
-    "style": "observation",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_couple_031_on_a_decide_de_jouer_a_un_jeu_ensemble",
-    "setup": "On a décidé de jouer à un jeu ensemble.",
-    "punchline": "La partie romantique a duré jusqu’au premier désaccord sur les règles.",
-    "category": "couple",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_couple_032_notre_langage_amoureux_cest_faire_du_cafe",
-    "setup": "Notre langage amoureux, c’est faire du café.",
-    "punchline": "Surtout quand quelqu’un veut éviter de faire la vaisselle.",
-    "category": "couple",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_couple_033_pour_situer_lambiance_jai_demande_tu_mecou",
-    "setup": "Pour situer l’ambiance : j’ai demandé : « Tu m’écoutes ? »",
-    "punchline": "Il/Elle a répondu « oui » avec le courage de quelqu’un qui n’avait aucune idée de la question.",
-    "category": "couple",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_couple_034_on_ne_se_dispute_jamais_pour_la_couette",
-    "setup": "On ne se dispute jamais pour la couette.",
-    "punchline": "On organise seulement des sommets diplomatiques très sonores.",
-    "category": "couple",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_couple_035_mon_partenaire_ma_offert_une_plante",
-    "setup": "Mon partenaire m’a offert une plante.",
-    "punchline": "La carte disait : « J’ai paniqué au magasin. » C’est presque un poème.",
-    "category": "couple",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
   },
   {
     "id": "blague_adulte_rencontres_006_mon_rendez_vous_a_parle_de_son_ex_pendant_",
@@ -774,15 +603,6 @@
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_rencontres_012_mon_rendez_vous_a_parle_de_la_crypto_penda",
-    "setup": "Mon rendez-vous a parlé de la crypto pendant quarante minutes.",
-    "punchline": "J’ai découvert que le temps pouvait ralentir sans trou noir.",
-    "category": "rencontres",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
     "id": "blague_adulte_rencontres_013_confession_du_jour_jai_voulu_paraitre_myst",
     "setup": "Confession du jour : j’ai voulu paraître mystérieux/mystérieuse.",
     "punchline": "J’ai surtout oublié comment répondre à une question simple.",
@@ -801,15 +621,6 @@
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_rencontres_015_confession_du_jour_mon_rendez_vous_ma_dit_",
-    "setup": "Confession du jour : mon rendez-vous m’a dit qu’il/elle était spontané(e).",
-    "punchline": "Il/Elle avait déjà planifié notre rupture jusqu’à jeudi.",
-    "category": "rencontres",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
     "id": "blague_adulte_rencontres_016_confession_du_jour_jai_ri_a_sa_blague_pour",
     "setup": "Confession du jour : j’ai ri à sa blague pour être poli(e).",
     "punchline": "Nous sommes maintenant fiancés émotionnellement.",
@@ -817,24 +628,6 @@
     "style": "observation",
     "adult": true,
     "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_rencontres_017_confession_du_jour_la_conversation_etait_f",
-    "setup": "Confession du jour : la conversation était fluide.",
-    "punchline": "Comme une fuite d’eau : personne ne savait comment l’arrêter.",
-    "category": "rencontres",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_rencontres_018_mon_rendez_vous_a_parle_de_sa_salle_de_spo",
-    "setup": "Mon rendez-vous a parlé de sa salle de sport pendant quarante minutes.",
-    "punchline": "J’ai découvert que le temps pouvait ralentir sans trou noir.",
-    "category": "rencontres",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "ose"
   },
   {
     "id": "blague_adulte_rencontres_019_moment_de_verite_jai_voulu_paraitre_myster",
@@ -851,141 +644,6 @@
     "punchline": "Nous avons répondu à des vitesses très différentes.",
     "category": "rencontres",
     "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_rencontres_021_moment_de_verite_mon_rendez_vous_ma_dit_qu",
-    "setup": "Moment de vérité : mon rendez-vous m’a dit qu’il/elle était spontané(e).",
-    "punchline": "Il/Elle avait déjà planifié notre rupture jusqu’à jeudi.",
-    "category": "rencontres",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_rencontres_022_moment_de_verite_jai_ri_a_sa_blague_pour_e",
-    "setup": "Moment de vérité : j’ai ri à sa blague pour être poli(e).",
-    "punchline": "Nous sommes maintenant fiancés émotionnellement.",
-    "category": "rencontres",
-    "style": "observation",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_rencontres_023_moment_de_verite_la_conversation_etait_flu",
-    "setup": "Moment de vérité : la conversation était fluide.",
-    "punchline": "Comme une fuite d’eau : personne ne savait comment l’arrêter.",
-    "category": "rencontres",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_rencontres_024_mon_rendez_vous_a_parle_de_son_horoscope_p",
-    "setup": "Mon rendez-vous a parlé de son horoscope pendant quarante minutes.",
-    "punchline": "J’ai découvert que le temps pouvait ralentir sans trou noir.",
-    "category": "rencontres",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_rencontres_025_spoiler_jai_voulu_paraitre_mysterieux_myst",
-    "setup": "Spoiler : j’ai voulu paraître mystérieux/mystérieuse.",
-    "punchline": "J’ai surtout oublié comment répondre à une question simple.",
-    "category": "rencontres",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_rencontres_026_spoiler_le_serveur_a_demande_si_nous_etion",
-    "setup": "Spoiler : le serveur a demandé si nous étions ensemble.",
-    "punchline": "Nous avons répondu à des vitesses très différentes.",
-    "category": "rencontres",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_rencontres_027_spoiler_mon_rendez_vous_ma_dit_quil_elle_e",
-    "setup": "Spoiler : mon rendez-vous m’a dit qu’il/elle était spontané(e).",
-    "punchline": "Il/Elle avait déjà planifié notre rupture jusqu’à jeudi.",
-    "category": "rencontres",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_rencontres_028_spoiler_jai_ri_a_sa_blague_pour_etre_poli_",
-    "setup": "Spoiler : j’ai ri à sa blague pour être poli(e).",
-    "punchline": "Nous sommes maintenant fiancés émotionnellement.",
-    "category": "rencontres",
-    "style": "observation",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_rencontres_029_spoiler_la_conversation_etait_fluide",
-    "setup": "Spoiler : la conversation était fluide.",
-    "punchline": "Comme une fuite d’eau : personne ne savait comment l’arrêter.",
-    "category": "rencontres",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_rencontres_030_mon_rendez_vous_a_parle_de_sa_startup_pend",
-    "setup": "Mon rendez-vous a parlé de sa startup pendant quarante minutes.",
-    "punchline": "J’ai découvert que le temps pouvait ralentir sans trou noir.",
-    "category": "rencontres",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_rencontres_031_pour_situer_lambiance_jai_voulu_paraitre_m",
-    "setup": "Pour situer l’ambiance : j’ai voulu paraître mystérieux/mystérieuse.",
-    "punchline": "J’ai surtout oublié comment répondre à une question simple.",
-    "category": "rencontres",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_rencontres_032_pour_situer_lambiance_le_serveur_a_demande",
-    "setup": "Pour situer l’ambiance : le serveur a demandé si nous étions ensemble.",
-    "punchline": "Nous avons répondu à des vitesses très différentes.",
-    "category": "rencontres",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_rencontres_033_pour_situer_lambiance_mon_rendez_vous_ma_d",
-    "setup": "Pour situer l’ambiance : mon rendez-vous m’a dit qu’il/elle était spontané(e).",
-    "punchline": "Il/Elle avait déjà planifié notre rupture jusqu’à jeudi.",
-    "category": "rencontres",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_rencontres_034_pour_situer_lambiance_jai_ri_a_sa_blague_p",
-    "setup": "Pour situer l’ambiance : j’ai ri à sa blague pour être poli(e).",
-    "punchline": "Nous sommes maintenant fiancés émotionnellement.",
-    "category": "rencontres",
-    "style": "observation",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_rencontres_035_pour_situer_lambiance_la_conversation_etai",
-    "setup": "Pour situer l’ambiance : la conversation était fluide.",
-    "punchline": "Comme une fuite d’eau : personne ne savait comment l’arrêter.",
-    "category": "rencontres",
-    "style": "dialogue",
     "adult": true,
     "intensity": "leger"
   },
@@ -1044,33 +702,6 @@
     "intensity": "sans_filtre"
   },
   {
-    "id": "blague_adulte_applis_012_son_profil_disait_aime_rire",
-    "setup": "Son profil disait « « aime rire » ».",
-    "punchline": "C’était moins une bio qu’un avertissement légal.",
-    "category": "applis",
-    "style": "observation",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_applis_013_jai_matche_avec_quelquun_a_7_km",
-    "setup": "J’ai matché avec quelqu’un à 7 km.",
-    "punchline": "L’amour n’a pas de frontières, mais mon abonnement de train si.",
-    "category": "applis",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_applis_014_confession_du_jour_il_elle_a_demande_mon_r",
-    "setup": "Confession du jour : il/Elle a demandé mon réseau social.",
-    "punchline": "J’ai envoyé celui où ma vie ressemble le moins à une zone de travaux.",
-    "category": "applis",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
     "id": "blague_adulte_applis_015_confession_du_jour_lalgorithme_dit_quon_es",
     "setup": "Confession du jour : l’algorithme dit qu’on est compatibles à 98 %.",
     "punchline": "Les 2 % restants contenaient apparemment toute la conversation.",
@@ -1080,47 +711,11 @@
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_applis_016_confession_du_jour_jai_mis_une_photo_natur",
-    "setup": "Confession du jour : j’ai mis une photo naturelle sur mon profil.",
-    "punchline": "Naturelle après quarante-sept essais et une réunion éditoriale.",
-    "category": "applis",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
     "id": "blague_adulte_applis_017_confession_du_jour_mon_match_a_disparu_en_",
     "setup": "Confession du jour : mon match a disparu en pleine conversation.",
     "punchline": "Il/Elle a probablement été rappelé(e) par sa planète.",
     "category": "applis",
     "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_applis_018_son_profil_disait_entrepreneur",
-    "setup": "Son profil disait « « entrepreneur » ».",
-    "punchline": "C’était moins une bio qu’un avertissement légal.",
-    "category": "applis",
-    "style": "observation",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_applis_019_jai_matche_avec_quelquun_a_18_km",
-    "setup": "J’ai matché avec quelqu’un à 18 km.",
-    "punchline": "L’amour n’a pas de frontières, mais mon abonnement de train si.",
-    "category": "applis",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_applis_020_moment_de_verite_il_elle_a_demande_mon_res",
-    "setup": "Moment de vérité : il/Elle a demandé mon réseau social.",
-    "punchline": "J’ai envoyé celui où ma vie ressemble le moins à une zone de travaux.",
-    "category": "applis",
-    "style": "question_reponse",
     "adult": true,
     "intensity": "sans_filtre"
   },
@@ -1134,101 +729,11 @@
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_applis_022_moment_de_verite_jai_mis_une_photo_naturel",
-    "setup": "Moment de vérité : j’ai mis une photo naturelle sur mon profil.",
-    "punchline": "Naturelle après quarante-sept essais et une réunion éditoriale.",
-    "category": "applis",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
     "id": "blague_adulte_applis_023_moment_de_verite_mon_match_a_disparu_en_pl",
     "setup": "Moment de vérité : mon match a disparu en pleine conversation.",
     "punchline": "Il/Elle a probablement été rappelé(e) par sa planète.",
     "category": "applis",
     "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_applis_024_son_profil_disait_cherche_du_serieux_sans_",
-    "setup": "Son profil disait « « cherche du sérieux sans se prendre au sérieux » ».",
-    "punchline": "C’était moins une bio qu’un avertissement légal.",
-    "category": "applis",
-    "style": "observation",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_applis_025_jai_matche_avec_quelquun_a_42_km",
-    "setup": "J’ai matché avec quelqu’un à 42 km.",
-    "punchline": "L’amour n’a pas de frontières, mais mon abonnement de train si.",
-    "category": "applis",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_applis_026_spoiler_il_elle_a_demande_mon_reseau_socia",
-    "setup": "Spoiler : il/Elle a demandé mon réseau social.",
-    "punchline": "J’ai envoyé celui où ma vie ressemble le moins à une zone de travaux.",
-    "category": "applis",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_applis_027_spoiler_lalgorithme_dit_quon_est_compatibl",
-    "setup": "Spoiler : l’algorithme dit qu’on est compatibles à 98 %.",
-    "punchline": "Les 2 % restants contenaient apparemment toute la conversation.",
-    "category": "applis",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_applis_028_spoiler_jai_mis_une_photo_naturelle_sur_mo",
-    "setup": "Spoiler : j’ai mis une photo naturelle sur mon profil.",
-    "punchline": "Naturelle après quarante-sept essais et une réunion éditoriale.",
-    "category": "applis",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_applis_029_spoiler_mon_match_a_disparu_en_pleine_conv",
-    "setup": "Spoiler : mon match a disparu en pleine conversation.",
-    "punchline": "Il/Elle a probablement été rappelé(e) par sa planète.",
-    "category": "applis",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_applis_030_son_profil_disait_voyageur",
-    "setup": "Son profil disait « « voyageur » ».",
-    "punchline": "C’était moins une bio qu’un avertissement légal.",
-    "category": "applis",
-    "style": "observation",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_applis_031_jai_matche_avec_quelquun_a_85_km",
-    "setup": "J’ai matché avec quelqu’un à 85 km.",
-    "punchline": "L’amour n’a pas de frontières, mais mon abonnement de train si.",
-    "category": "applis",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_applis_032_pour_situer_lambiance_il_elle_a_demande_mo",
-    "setup": "Pour situer l’ambiance : il/Elle a demandé mon réseau social.",
-    "punchline": "J’ai envoyé celui où ma vie ressemble le moins à une zone de travaux.",
-    "category": "applis",
-    "style": "question_reponse",
     "adult": true,
     "intensity": "sans_filtre"
   },
@@ -1240,24 +745,6 @@
     "style": "mini_histoire",
     "adult": true,
     "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_applis_034_pour_situer_lambiance_jai_mis_une_photo_na",
-    "setup": "Pour situer l’ambiance : j’ai mis une photo naturelle sur mon profil.",
-    "punchline": "Naturelle après quarante-sept essais et une réunion éditoriale.",
-    "category": "applis",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_applis_035_pour_situer_lambiance_mon_match_a_disparu_",
-    "setup": "Pour situer l’ambiance : mon match a disparu en pleine conversation.",
-    "punchline": "Il/Elle a probablement été rappelé(e) par sa planète.",
-    "category": "applis",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
   },
   {
     "id": "blague_adulte_ex_006_mon_ex_a_publie_on_ne_perd_jamais_ce_qui_n",
@@ -1332,15 +819,6 @@
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_ex_014_mon_ex_ma_demande_de_rendre_une_brosse_a_d",
-    "setup": "Mon ex m’a demandé de rendre une brosse à dents.",
-    "punchline": "J’ai cherché si on pouvait aussi rendre les trois années.",
-    "category": "ex",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
     "id": "blague_adulte_ex_015_confession_du_jour_on_sest_quittes_en_bons",
     "setup": "Confession du jour : on s’est quittés en bons termes.",
     "punchline": "Les termes ont depuis engagé chacun leur avocat.",
@@ -1361,168 +839,6 @@
   {
     "id": "blague_adulte_ex_017_confession_du_jour_jai_efface_toutes_nos_p",
     "setup": "Confession du jour : j’ai effacé toutes nos photos.",
-    "punchline": "Le cloud a répondu : « Tu es sûr(e) ? » avec beaucoup trop de jugement.",
-    "category": "ex",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_ex_018_mon_ex_a_publie_proteger_sa_paix",
-    "setup": "Mon ex a publié « protéger sa paix ».",
-    "punchline": "J’ai admiré la capacité de transformer notre histoire en citation de mug.",
-    "category": "ex",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_ex_019_moment_de_verite_jai_jure_de_ne_plus_regar",
-    "setup": "Moment de vérité : j’ai juré de ne plus regarder son profil.",
-    "punchline": "Je vérifie seulement que la promesse fonctionne.",
-    "category": "ex",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_ex_020_mon_ex_ma_demande_de_rendre_un_chargeur",
-    "setup": "Mon ex m’a demandé de rendre un chargeur.",
-    "punchline": "J’ai cherché si on pouvait aussi rendre les trois années.",
-    "category": "ex",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_ex_021_moment_de_verite_on_sest_quittes_en_bons_t",
-    "setup": "Moment de vérité : on s’est quittés en bons termes.",
-    "punchline": "Les termes ont depuis engagé chacun leur avocat.",
-    "category": "ex",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_ex_022_moment_de_verite_mon_ex_disait_que_je_dram",
-    "setup": "Moment de vérité : mon ex disait que je dramatisais.",
-    "punchline": "J’ai donc quitté la scène sous la pluie avec une bande-son.",
-    "category": "ex",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_ex_023_moment_de_verite_jai_efface_toutes_nos_pho",
-    "setup": "Moment de vérité : j’ai effacé toutes nos photos.",
-    "punchline": "Le cloud a répondu : « Tu es sûr(e) ? » avec beaucoup trop de jugement.",
-    "category": "ex",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_ex_024_mon_ex_a_publie_certaines_personnes_sont_d",
-    "setup": "Mon ex a publié « certaines personnes sont des leçons ».",
-    "punchline": "J’ai admiré la capacité de transformer notre histoire en citation de mug.",
-    "category": "ex",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_ex_025_spoiler_jai_jure_de_ne_plus_regarder_son_p",
-    "setup": "Spoiler : j’ai juré de ne plus regarder son profil.",
-    "punchline": "Je vérifie seulement que la promesse fonctionne.",
-    "category": "ex",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_ex_026_mon_ex_ma_demande_de_rendre_un_livre",
-    "setup": "Mon ex m’a demandé de rendre un livre.",
-    "punchline": "J’ai cherché si on pouvait aussi rendre les trois années.",
-    "category": "ex",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_ex_027_spoiler_on_sest_quittes_en_bons_termes",
-    "setup": "Spoiler : on s’est quittés en bons termes.",
-    "punchline": "Les termes ont depuis engagé chacun leur avocat.",
-    "category": "ex",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_ex_028_spoiler_mon_ex_disait_que_je_dramatisais",
-    "setup": "Spoiler : mon ex disait que je dramatisais.",
-    "punchline": "J’ai donc quitté la scène sous la pluie avec une bande-son.",
-    "category": "ex",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_ex_029_spoiler_jai_efface_toutes_nos_photos",
-    "setup": "Spoiler : j’ai effacé toutes nos photos.",
-    "punchline": "Le cloud a répondu : « Tu es sûr(e) ? » avec beaucoup trop de jugement.",
-    "category": "ex",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_ex_030_mon_ex_a_publie_vivre_sans_regrets",
-    "setup": "Mon ex a publié « vivre sans regrets ».",
-    "punchline": "J’ai admiré la capacité de transformer notre histoire en citation de mug.",
-    "category": "ex",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_ex_031_pour_situer_lambiance_jai_jure_de_ne_plus_",
-    "setup": "Pour situer l’ambiance : j’ai juré de ne plus regarder son profil.",
-    "punchline": "Je vérifie seulement que la promesse fonctionne.",
-    "category": "ex",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_ex_032_mon_ex_ma_demande_de_rendre_une_cle",
-    "setup": "Mon ex m’a demandé de rendre une clé.",
-    "punchline": "J’ai cherché si on pouvait aussi rendre les trois années.",
-    "category": "ex",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_ex_033_pour_situer_lambiance_on_sest_quittes_en_b",
-    "setup": "Pour situer l’ambiance : on s’est quittés en bons termes.",
-    "punchline": "Les termes ont depuis engagé chacun leur avocat.",
-    "category": "ex",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_ex_034_pour_situer_lambiance_mon_ex_disait_que_je",
-    "setup": "Pour situer l’ambiance : mon ex disait que je dramatisais.",
-    "punchline": "J’ai donc quitté la scène sous la pluie avec une bande-son.",
-    "category": "ex",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_ex_035_pour_situer_lambiance_jai_efface_toutes_no",
-    "setup": "Pour situer l’ambiance : j’ai effacé toutes nos photos.",
     "punchline": "Le cloud a répondu : « Tu es sûr(e) ? » avec beaucoup trop de jugement.",
     "category": "ex",
     "style": "mini_histoire",
@@ -1584,24 +900,6 @@
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_intimite_012_confession_du_jour_jai_voulu_dire_quelque_",
-    "setup": "Confession du jour : j’ai voulu dire quelque chose de sexy.",
-    "punchline": "Ma voix a choisi le documentaire animalier.",
-    "category": "intimite",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_intimite_013_lambiance_etait_parfaite",
-    "setup": "L’ambiance était parfaite.",
-    "punchline": "Puis un appel de ma mère a interrompu le financement du projet.",
-    "category": "intimite",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
     "id": "blague_adulte_intimite_014_on_a_essaye_un_jeu_de_role",
     "setup": "On a essayé un jeu de rôle.",
     "punchline": "Disons que la théorie avait un meilleur service marketing.",
@@ -1638,164 +936,11 @@
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_intimite_018_moment_de_verite_jai_voulu_dire_quelque_ch",
-    "setup": "Moment de vérité : j’ai voulu dire quelque chose de sexy.",
-    "punchline": "Ma voix a choisi le documentaire animalier.",
-    "category": "intimite",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_intimite_019_lambiance_etait_parfaite",
-    "setup": "L’ambiance était parfaite.",
-    "punchline": "Puis une publicité a interrompu le financement du projet.",
-    "category": "intimite",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
     "id": "blague_adulte_intimite_020_on_a_essaye_une_playlist_speciale",
     "setup": "On a essayé une playlist spéciale.",
     "punchline": "Disons que la théorie avait un meilleur service marketing.",
     "category": "intimite",
     "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_intimite_021_moment_de_verite_le_moment_etait_tres_inte",
-    "setup": "Moment de vérité : le moment était très intense.",
-    "punchline": "Jusqu’à ce que quelqu’un demande : « Tu as fermé la porte ? »",
-    "category": "intimite",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_intimite_022_moment_de_verite_jai_voulu_etre_spontane_e",
-    "setup": "Moment de vérité : j’ai voulu être spontané(e).",
-    "punchline": "Mon genou a demandé un préavis.",
-    "category": "intimite",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_intimite_023_moment_de_verite_la_musique_etait_sensuell",
-    "setup": "Moment de vérité : la musique était sensuelle.",
-    "punchline": "Puis la playlist a enchaîné avec le générique d’un dessin animé.",
-    "category": "intimite",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_intimite_024_spoiler_jai_voulu_dire_quelque_chose_de_se",
-    "setup": "Spoiler : j’ai voulu dire quelque chose de sexy.",
-    "punchline": "Ma voix a choisi le documentaire animalier.",
-    "category": "intimite",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_intimite_025_lambiance_etait_parfaite",
-    "setup": "L’ambiance était parfaite.",
-    "punchline": "Puis le voisin avec sa perceuse a interrompu le financement du projet.",
-    "category": "intimite",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_intimite_026_on_a_essaye_un_massage_sensuel",
-    "setup": "On a essayé un massage sensuel.",
-    "punchline": "Disons que la théorie avait un meilleur service marketing.",
-    "category": "intimite",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_intimite_027_spoiler_le_moment_etait_tres_intense",
-    "setup": "Spoiler : le moment était très intense.",
-    "punchline": "Jusqu’à ce que quelqu’un demande : « Tu as fermé la porte ? »",
-    "category": "intimite",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_intimite_028_spoiler_jai_voulu_etre_spontane_e",
-    "setup": "Spoiler : j’ai voulu être spontané(e).",
-    "punchline": "Mon genou a demandé un préavis.",
-    "category": "intimite",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_intimite_029_spoiler_la_musique_etait_sensuelle",
-    "setup": "Spoiler : la musique était sensuelle.",
-    "punchline": "Puis la playlist a enchaîné avec le générique d’un dessin animé.",
-    "category": "intimite",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_intimite_030_pour_situer_lambiance_jai_voulu_dire_quelq",
-    "setup": "Pour situer l’ambiance : j’ai voulu dire quelque chose de sexy.",
-    "punchline": "Ma voix a choisi le documentaire animalier.",
-    "category": "intimite",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_intimite_031_lambiance_etait_parfaite",
-    "setup": "L’ambiance était parfaite.",
-    "punchline": "Puis une crampe a interrompu le financement du projet.",
-    "category": "intimite",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_intimite_032_on_a_essaye_un_bandeau_sur_les_yeux",
-    "setup": "On a essayé un bandeau sur les yeux.",
-    "punchline": "Disons que la théorie avait un meilleur service marketing.",
-    "category": "intimite",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_intimite_033_pour_situer_lambiance_le_moment_etait_tres",
-    "setup": "Pour situer l’ambiance : le moment était très intense.",
-    "punchline": "Jusqu’à ce que quelqu’un demande : « Tu as fermé la porte ? »",
-    "category": "intimite",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_intimite_034_pour_situer_lambiance_jai_voulu_etre_spont",
-    "setup": "Pour situer l’ambiance : j’ai voulu être spontané(e).",
-    "punchline": "Mon genou a demandé un préavis.",
-    "category": "intimite",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_intimite_035_pour_situer_lambiance_la_musique_etait_sen",
-    "setup": "Pour situer l’ambiance : la musique était sensuelle.",
-    "punchline": "Puis la playlist a enchaîné avec le générique d’un dessin animé.",
-    "category": "intimite",
-    "style": "mini_histoire",
     "adult": true,
     "intensity": "ose"
   },
@@ -1863,24 +1008,6 @@
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_soirees_013_quelquun_a_propose_je_nai_jamais",
-    "setup": "Quelqu’un a proposé Je n’ai jamais.",
-    "punchline": "Le groupe a perdu deux amitiés et gagné une anecdote éternelle.",
-    "category": "soirees",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_soirees_014_jai_envoye_un_message_a_mon_crush_apres_mi",
-    "setup": "J’ai envoyé un message à mon crush après minuit.",
-    "punchline": "Le matin, mon téléphone avait pris un air de témoin protégé.",
-    "category": "soirees",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
     "id": "blague_adulte_soirees_015_confession_du_jour_je_me_souviens_parfaite",
     "setup": "Confession du jour : je me souviens parfaitement de la soirée.",
     "punchline": "Sauf des parties documentées par huit vidéos.",
@@ -1915,159 +1042,6 @@
     "style": "question_reponse",
     "adult": true,
     "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_soirees_019_quelquun_a_propose_un_karaoke",
-    "setup": "Quelqu’un a proposé un karaoké.",
-    "punchline": "Le groupe a perdu deux amitiés et gagné une anecdote éternelle.",
-    "category": "soirees",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_soirees_020_jai_envoye_un_message_a_mon_patron_apres_m",
-    "setup": "J’ai envoyé un message à mon patron après minuit.",
-    "punchline": "Le matin, mon téléphone avait pris un air de témoin protégé.",
-    "category": "soirees",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_soirees_021_moment_de_verite_je_me_souviens_parfaiteme",
-    "setup": "Moment de vérité : je me souviens parfaitement de la soirée.",
-    "punchline": "Sauf des parties documentées par huit vidéos.",
-    "category": "soirees",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_soirees_022_moment_de_verite_jai_voulu_paraitre_sobre",
-    "setup": "Moment de vérité : j’ai voulu paraître sobre.",
-    "punchline": "J’ai salué deux fois le même miroir.",
-    "category": "soirees",
-    "style": "observation",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_soirees_023_moment_de_verite_le_videur_a_demande_si_ca",
-    "setup": "Moment de vérité : le videur a demandé si ça allait.",
-    "punchline": "J’ai répondu « parfaitement » à une plante décorative.",
-    "category": "soirees",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_soirees_024_jai_dit_je_ne_melange_pas_avant_la_soiree",
-    "setup": "J’ai dit « je ne mélange pas » avant la soirée.",
-    "punchline": "À minuit, cette personne n’existait plus juridiquement.",
-    "category": "soirees",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_soirees_025_quelquun_a_propose_un_concours_de_danse",
-    "setup": "Quelqu’un a proposé un concours de danse.",
-    "punchline": "Le groupe a perdu deux amitiés et gagné une anecdote éternelle.",
-    "category": "soirees",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_soirees_026_jai_envoye_un_message_a_ma_mere_apres_minu",
-    "setup": "J’ai envoyé un message à ma mère après minuit.",
-    "punchline": "Le matin, mon téléphone avait pris un air de témoin protégé.",
-    "category": "soirees",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_soirees_027_spoiler_je_me_souviens_parfaitement_de_la_",
-    "setup": "Spoiler : je me souviens parfaitement de la soirée.",
-    "punchline": "Sauf des parties documentées par huit vidéos.",
-    "category": "soirees",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_soirees_028_spoiler_jai_voulu_paraitre_sobre",
-    "setup": "Spoiler : j’ai voulu paraître sobre.",
-    "punchline": "J’ai salué deux fois le même miroir.",
-    "category": "soirees",
-    "style": "observation",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_soirees_029_spoiler_le_videur_a_demande_si_ca_allait",
-    "setup": "Spoiler : le videur a demandé si ça allait.",
-    "punchline": "J’ai répondu « parfaitement » à une plante décorative.",
-    "category": "soirees",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_soirees_030_jai_dit_je_garde_mes_chaussures_avant_la_s",
-    "setup": "J’ai dit « je garde mes chaussures » avant la soirée.",
-    "punchline": "À minuit, cette personne n’existait plus juridiquement.",
-    "category": "soirees",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_soirees_031_quelquun_a_propose_une_tournee_de_shots",
-    "setup": "Quelqu’un a proposé une tournée de shots.",
-    "punchline": "Le groupe a perdu deux amitiés et gagné une anecdote éternelle.",
-    "category": "soirees",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_soirees_032_jai_envoye_un_message_a_une_personne_bloqu",
-    "setup": "J’ai envoyé un message à une personne bloquée après minuit.",
-    "punchline": "Le matin, mon téléphone avait pris un air de témoin protégé.",
-    "category": "soirees",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_soirees_033_pour_situer_lambiance_je_me_souviens_parfa",
-    "setup": "Pour situer l’ambiance : je me souviens parfaitement de la soirée.",
-    "punchline": "Sauf des parties documentées par huit vidéos.",
-    "category": "soirees",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_soirees_034_pour_situer_lambiance_jai_voulu_paraitre_s",
-    "setup": "Pour situer l’ambiance : j’ai voulu paraître sobre.",
-    "punchline": "J’ai salué deux fois le même miroir.",
-    "category": "soirees",
-    "style": "observation",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_soirees_035_pour_situer_lambiance_le_videur_a_demande_",
-    "setup": "Pour situer l’ambiance : le videur a demandé si ça allait.",
-    "punchline": "J’ai répondu « parfaitement » à une plante décorative.",
-    "category": "soirees",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "leger"
   },
   {
     "id": "blague_adulte_messages_006_jai_recu_tu_dors_a_03_h_08",
@@ -2124,15 +1098,6 @@
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_messages_012_jai_recu_faut_quon_parle_a_23_h_59",
-    "setup": "J’ai reçu « faut qu’on parle » à 23 h 59.",
-    "punchline": "Aucun message sain ne commence à cette heure-là.",
-    "category": "messages",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
     "id": "blague_adulte_messages_013_confession_du_jour_jai_tape_une_reponse_tr",
     "setup": "Confession du jour : j’ai tapé une réponse très détachée.",
     "punchline": "Elle avait dix-sept brouillons et un comité de validation.",
@@ -2140,51 +1105,6 @@
     "style": "anti_blague",
     "adult": true,
     "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_messages_014_jai_envoye_un_vocal_de_4_minutes",
-    "setup": "J’ai envoyé un vocal de 4 minutes.",
-    "punchline": "C’est maintenant une série audio en plusieurs saisons.",
-    "category": "messages",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_messages_015_confession_du_jour_jai_vu_en_train_decrire",
-    "setup": "Confession du jour : j’ai vu « en train d’écrire… » pendant trois minutes.",
-    "punchline": "Le message final était « ok ». Le suspense a coûté cher.",
-    "category": "messages",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_messages_016_confession_du_jour_jai_supprime_mon_messag",
-    "setup": "Confession du jour : j’ai supprimé mon message avant qu’il/elle le lise.",
-    "punchline": "La notification, elle, avait déjà témoigné.",
-    "category": "messages",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_messages_017_confession_du_jour_jai_mis_un_cur_par_acci",
-    "setup": "Confession du jour : j’ai mis un cœur par accident.",
-    "punchline": "Mon corps a quitté le pays avant mon esprit.",
-    "category": "messages",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_messages_018_jai_recu_jai_pense_a_toi_a_02_h_22",
-    "setup": "J’ai reçu « j’ai pensé à toi » à 02 h 22.",
-    "punchline": "Aucun message sain ne commence à cette heure-là.",
-    "category": "messages",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
   },
   {
     "id": "blague_adulte_messages_019_moment_de_verite_jai_tape_une_reponse_tres",
@@ -2196,24 +1116,6 @@
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_messages_020_jai_envoye_un_vocal_de_6_minutes",
-    "setup": "J’ai envoyé un vocal de 6 minutes.",
-    "punchline": "C’est maintenant une série audio en plusieurs saisons.",
-    "category": "messages",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_messages_021_moment_de_verite_jai_vu_en_train_decrire_p",
-    "setup": "Moment de vérité : j’ai vu « en train d’écrire… » pendant trois minutes.",
-    "punchline": "Le message final était « ok ». Le suspense a coûté cher.",
-    "category": "messages",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
     "id": "blague_adulte_messages_022_moment_de_verite_jai_supprime_mon_message_",
     "setup": "Moment de vérité : j’ai supprimé mon message avant qu’il/elle le lise.",
     "punchline": "La notification, elle, avait déjà témoigné.",
@@ -2221,123 +1123,6 @@
     "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_messages_023_moment_de_verite_jai_mis_un_cur_par_accide",
-    "setup": "Moment de vérité : j’ai mis un cœur par accident.",
-    "punchline": "Mon corps a quitté le pays avant mon esprit.",
-    "category": "messages",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_messages_024_jai_recu_supprime_ca_a_05_h_00",
-    "setup": "J’ai reçu « supprime ça » à 05 h 00.",
-    "punchline": "Aucun message sain ne commence à cette heure-là.",
-    "category": "messages",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_messages_025_spoiler_jai_tape_une_reponse_tres_detachee",
-    "setup": "Spoiler : j’ai tapé une réponse très détachée.",
-    "punchline": "Elle avait dix-sept brouillons et un comité de validation.",
-    "category": "messages",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_messages_026_jai_envoye_un_vocal_de_8_minutes",
-    "setup": "J’ai envoyé un vocal de 8 minutes.",
-    "punchline": "C’est maintenant une série audio en plusieurs saisons.",
-    "category": "messages",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_messages_027_spoiler_jai_vu_en_train_decrire_pendant_tr",
-    "setup": "Spoiler : j’ai vu « en train d’écrire… » pendant trois minutes.",
-    "punchline": "Le message final était « ok ». Le suspense a coûté cher.",
-    "category": "messages",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_messages_028_spoiler_jai_supprime_mon_message_avant_qui",
-    "setup": "Spoiler : j’ai supprimé mon message avant qu’il/elle le lise.",
-    "punchline": "La notification, elle, avait déjà témoigné.",
-    "category": "messages",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_messages_029_spoiler_jai_mis_un_cur_par_accident",
-    "setup": "Spoiler : j’ai mis un cœur par accident.",
-    "punchline": "Mon corps a quitté le pays avant mon esprit.",
-    "category": "messages",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_messages_030_jai_recu_tes_ou_a_01_h_17",
-    "setup": "J’ai reçu « t’es où ? » à 01 h 17.",
-    "punchline": "Aucun message sain ne commence à cette heure-là.",
-    "category": "messages",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_messages_031_pour_situer_lambiance_jai_tape_une_reponse",
-    "setup": "Pour situer l’ambiance : j’ai tapé une réponse très détachée.",
-    "punchline": "Elle avait dix-sept brouillons et un comité de validation.",
-    "category": "messages",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_messages_032_jai_envoye_un_vocal_de_11_minutes",
-    "setup": "J’ai envoyé un vocal de 11 minutes.",
-    "punchline": "C’est maintenant une série audio en plusieurs saisons.",
-    "category": "messages",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_messages_033_pour_situer_lambiance_jai_vu_en_train_decr",
-    "setup": "Pour situer l’ambiance : j’ai vu « en train d’écrire… » pendant trois minutes.",
-    "punchline": "Le message final était « ok ». Le suspense a coûté cher.",
-    "category": "messages",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_messages_034_pour_situer_lambiance_jai_supprime_mon_mes",
-    "setup": "Pour situer l’ambiance : j’ai supprimé mon message avant qu’il/elle le lise.",
-    "punchline": "La notification, elle, avait déjà témoigné.",
-    "category": "messages",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_messages_035_pour_situer_lambiance_jai_mis_un_cur_par_a",
-    "setup": "Pour situer l’ambiance : j’ai mis un cœur par accident.",
-    "punchline": "Mon corps a quitté le pays avant mon esprit.",
-    "category": "messages",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
   },
   {
     "id": "blague_adulte_jalousie_006_je_lui_ai_demande_qui_etait_cette_personne",
@@ -2394,15 +1179,6 @@
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_jalousie_012_je_lui_ai_demande_qui_etait_son_sa_collegu",
-    "setup": "Je lui ai demandé qui était son/sa collègue.",
-    "punchline": "C’était une question simple avec annexes, graphiques et droit de réponse.",
-    "category": "jalousie",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
     "id": "blague_adulte_jalousie_013_confession_du_jour_je_ne_fouille_jamais",
     "setup": "Confession du jour : je ne fouille jamais.",
     "punchline": "Je remarque simplement des détails que la police scientifique aurait ignorés.",
@@ -2410,24 +1186,6 @@
     "style": "anti_blague",
     "adult": true,
     "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_jalousie_014_confession_du_jour_mon_partenaire_a_dit_ce",
-    "setup": "Confession du jour : mon partenaire a dit « c’est juste un(e) ami(e) ».",
-    "punchline": "Mon cerveau a lancé une mini-série en huit épisodes.",
-    "category": "jalousie",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_jalousie_015_jai_vu_un_commentaire_avec_deux_flammes",
-    "setup": "J’ai vu un commentaire avec deux flammes.",
-    "punchline": "J’ai ouvert une commission d’enquête sur la ponctuation.",
-    "category": "jalousie",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
   },
   {
     "id": "blague_adulte_jalousie_016_confession_du_jour_je_fais_confiance_a_cen",
@@ -2448,15 +1206,6 @@
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_jalousie_018_je_lui_ai_demande_qui_etait_son_ex",
-    "setup": "Je lui ai demandé qui était son ex.",
-    "punchline": "C’était une question simple avec annexes, graphiques et droit de réponse.",
-    "category": "jalousie",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
     "id": "blague_adulte_jalousie_019_moment_de_verite_je_ne_fouille_jamais",
     "setup": "Moment de vérité : je ne fouille jamais.",
     "punchline": "Je remarque simplement des détails que la police scientifique aurait ignorés.",
@@ -2464,24 +1213,6 @@
     "style": "anti_blague",
     "adult": true,
     "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_jalousie_020_moment_de_verite_mon_partenaire_a_dit_cest",
-    "setup": "Moment de vérité : mon partenaire a dit « c’est juste un(e) ami(e) ».",
-    "punchline": "Mon cerveau a lancé une mini-série en huit épisodes.",
-    "category": "jalousie",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_jalousie_021_jai_vu_un_commentaire_avec_un_clin_dil",
-    "setup": "J’ai vu un commentaire avec un clin d’œil.",
-    "punchline": "J’ai ouvert une commission d’enquête sur la ponctuation.",
-    "category": "jalousie",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
   },
   {
     "id": "blague_adulte_jalousie_022_moment_de_verite_je_fais_confiance_a_cent_",
@@ -2502,96 +1233,6 @@
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_jalousie_024_je_lui_ai_demande_qui_etait_le_nouveau_con",
-    "setup": "Je lui ai demandé qui était le nouveau contact.",
-    "punchline": "C’était une question simple avec annexes, graphiques et droit de réponse.",
-    "category": "jalousie",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_jalousie_025_spoiler_je_ne_fouille_jamais",
-    "setup": "Spoiler : je ne fouille jamais.",
-    "punchline": "Je remarque simplement des détails que la police scientifique aurait ignorés.",
-    "category": "jalousie",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_jalousie_026_spoiler_mon_partenaire_a_dit_cest_juste_un",
-    "setup": "Spoiler : mon partenaire a dit « c’est juste un(e) ami(e) ».",
-    "punchline": "Mon cerveau a lancé une mini-série en huit épisodes.",
-    "category": "jalousie",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_jalousie_027_jai_vu_un_commentaire_avec_un_cur_blanc",
-    "setup": "J’ai vu un commentaire avec un cœur blanc.",
-    "punchline": "J’ai ouvert une commission d’enquête sur la ponctuation.",
-    "category": "jalousie",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_jalousie_028_spoiler_je_fais_confiance_a_cent_pour_cent",
-    "setup": "Spoiler : je fais confiance à cent pour cent.",
-    "punchline": "Je vérifie seulement les cent pour cent.",
-    "category": "jalousie",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_jalousie_029_spoiler_je_nai_rien_dit",
-    "setup": "Spoiler : je n’ai rien dit.",
-    "punchline": "Mon silence avait une bande-annonce et une date de sortie.",
-    "category": "jalousie",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_jalousie_030_je_lui_ai_demande_qui_etait_la_personne_su",
-    "setup": "Je lui ai demandé qui était la personne sur la photo.",
-    "punchline": "C’était une question simple avec annexes, graphiques et droit de réponse.",
-    "category": "jalousie",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_jalousie_031_pour_situer_lambiance_je_ne_fouille_jamais",
-    "setup": "Pour situer l’ambiance : je ne fouille jamais.",
-    "punchline": "Je remarque simplement des détails que la police scientifique aurait ignorés.",
-    "category": "jalousie",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_jalousie_032_pour_situer_lambiance_mon_partenaire_a_dit",
-    "setup": "Pour situer l’ambiance : mon partenaire a dit « c’est juste un(e) ami(e) ».",
-    "punchline": "Mon cerveau a lancé une mini-série en huit épisodes.",
-    "category": "jalousie",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_jalousie_033_jai_vu_un_commentaire_avec_trois_yeux",
-    "setup": "J’ai vu un commentaire avec trois yeux.",
-    "punchline": "J’ai ouvert une commission d’enquête sur la ponctuation.",
-    "category": "jalousie",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
     "id": "blague_adulte_jalousie_034_pour_situer_lambiance_je_fais_confiance_a_",
     "setup": "Pour situer l’ambiance : je fais confiance à cent pour cent.",
     "punchline": "Je vérifie seulement les cent pour cent.",
@@ -2599,15 +1240,6 @@
     "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_jalousie_035_pour_situer_lambiance_je_nai_rien_dit",
-    "setup": "Pour situer l’ambiance : je n’ai rien dit.",
-    "punchline": "Mon silence avait une bande-annonce et une date de sortie.",
-    "category": "jalousie",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
   },
   {
     "id": "blague_adulte_vie_commune_006_petite_precision_on_setait_promis_de_ne_ja",
@@ -2664,15 +1296,6 @@
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_vie_commune_012_confession_du_jour_on_setait_promis_de_ne_",
-    "setup": "Confession du jour : on s’était promis de ne jamais se coucher fâchés.",
-    "punchline": "On reste donc réveillés jusqu’à ce que quelqu’un oublie pourquoi.",
-    "category": "vie_commune",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
     "id": "blague_adulte_vie_commune_013_mon_partenaire_a_remplace_la_bouteille_de_",
     "setup": "Mon partenaire a remplacé la bouteille de lait.",
     "punchline": "Il/Elle a laissé l’emballage vide comme certificat de passage.",
@@ -2691,42 +1314,6 @@
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_vie_commune_015_vivre_ensemble_cest_partager_le_canape",
-    "setup": "Vivre ensemble, c’est partager le canapé.",
-    "punchline": "Et négocier chaque centimètre de couette comme une frontière historique.",
-    "category": "vie_commune",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_vie_commune_016_jai_demande_ou_etait_la_bouteille_de_lait",
-    "setup": "J’ai demandé où était la bouteille de lait.",
-    "punchline": "On a découvert qu’il/elle avait été rangé(e) dans un endroit « logique » inaccessible à l’humanité.",
-    "category": "vie_commune",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_vie_commune_017_confession_du_jour_on_cuisine_ensemble",
-    "setup": "Confession du jour : on cuisine ensemble.",
-    "punchline": "L’un cuisine, l’autre goûte et dit « manque un truc » sans préciser lequel.",
-    "category": "vie_commune",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_vie_commune_018_moment_de_verite_on_setait_promis_de_ne_ja",
-    "setup": "Moment de vérité : on s’était promis de ne jamais se coucher fâchés.",
-    "punchline": "On reste donc réveillés jusqu’à ce que quelqu’un oublie pourquoi.",
-    "category": "vie_commune",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
     "id": "blague_adulte_vie_commune_019_mon_partenaire_a_remplace_le_sac_poubelle",
     "setup": "Mon partenaire a remplacé le sac-poubelle.",
     "punchline": "Il/Elle a laissé l’emballage vide comme certificat de passage.",
@@ -2741,141 +1328,6 @@
     "punchline": "Le système consiste à attendre que l’autre craque en premier.",
     "category": "vie_commune",
     "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_vie_commune_021_vivre_ensemble_cest_partager_le_chargeur",
-    "setup": "Vivre ensemble, c’est partager le chargeur.",
-    "punchline": "Et négocier chaque centimètre de couette comme une frontière historique.",
-    "category": "vie_commune",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_vie_commune_022_jai_demande_ou_etait_le_sac_poubelle",
-    "setup": "J’ai demandé où était le sac-poubelle.",
-    "punchline": "On a découvert qu’il/elle avait été rangé(e) dans un endroit « logique » inaccessible à l’humanité.",
-    "category": "vie_commune",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_vie_commune_023_moment_de_verite_on_cuisine_ensemble",
-    "setup": "Moment de vérité : on cuisine ensemble.",
-    "punchline": "L’un cuisine, l’autre goûte et dit « manque un truc » sans préciser lequel.",
-    "category": "vie_commune",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_vie_commune_024_spoiler_on_setait_promis_de_ne_jamais_se_c",
-    "setup": "Spoiler : on s’était promis de ne jamais se coucher fâchés.",
-    "punchline": "On reste donc réveillés jusqu’à ce que quelqu’un oublie pourquoi.",
-    "category": "vie_commune",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_vie_commune_025_mon_partenaire_a_remplace_le_savon",
-    "setup": "Mon partenaire a remplacé le savon.",
-    "punchline": "Il/Elle a laissé l’emballage vide comme certificat de passage.",
-    "category": "vie_commune",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_vie_commune_026_spoiler_on_a_un_systeme_pour_les_taches",
-    "setup": "Spoiler : on a un système pour les tâches.",
-    "punchline": "Le système consiste à attendre que l’autre craque en premier.",
-    "category": "vie_commune",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_vie_commune_027_vivre_ensemble_cest_partager_le_frigo",
-    "setup": "Vivre ensemble, c’est partager le frigo.",
-    "punchline": "Et négocier chaque centimètre de couette comme une frontière historique.",
-    "category": "vie_commune",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_vie_commune_028_jai_demande_ou_etait_le_savon",
-    "setup": "J’ai demandé où était le savon.",
-    "punchline": "On a découvert qu’il/elle avait été rangé(e) dans un endroit « logique » inaccessible à l’humanité.",
-    "category": "vie_commune",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_vie_commune_029_spoiler_on_cuisine_ensemble",
-    "setup": "Spoiler : on cuisine ensemble.",
-    "punchline": "L’un cuisine, l’autre goûte et dit « manque un truc » sans préciser lequel.",
-    "category": "vie_commune",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_vie_commune_030_pour_situer_lambiance_on_setait_promis_de_",
-    "setup": "Pour situer l’ambiance : on s’était promis de ne jamais se coucher fâchés.",
-    "punchline": "On reste donc réveillés jusqu’à ce que quelqu’un oublie pourquoi.",
-    "category": "vie_commune",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_vie_commune_031_mon_partenaire_a_remplace_le_dentifrice",
-    "setup": "Mon partenaire a remplacé le dentifrice.",
-    "punchline": "Il/Elle a laissé l’emballage vide comme certificat de passage.",
-    "category": "vie_commune",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_vie_commune_032_pour_situer_lambiance_on_a_un_systeme_pour",
-    "setup": "Pour situer l’ambiance : on a un système pour les tâches.",
-    "punchline": "Le système consiste à attendre que l’autre craque en premier.",
-    "category": "vie_commune",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_vie_commune_033_vivre_ensemble_cest_partager_la_couette",
-    "setup": "Vivre ensemble, c’est partager la couette.",
-    "punchline": "Et négocier chaque centimètre de couette comme une frontière historique.",
-    "category": "vie_commune",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_vie_commune_034_jai_demande_ou_etait_le_dentifrice",
-    "setup": "J’ai demandé où était le dentifrice.",
-    "punchline": "On a découvert qu’il/elle avait été rangé(e) dans un endroit « logique » inaccessible à l’humanité.",
-    "category": "vie_commune",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_vie_commune_035_pour_situer_lambiance_on_cuisine_ensemble",
-    "setup": "Pour situer l’ambiance : on cuisine ensemble.",
-    "punchline": "L’un cuisine, l’autre goûte et dit « manque un truc » sans préciser lequel.",
-    "category": "vie_commune",
-    "style": "mini_histoire",
     "adult": true,
     "intensity": "ose"
   },
@@ -2943,24 +1395,6 @@
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_famille_indiscrete_013_confession_du_jour_ma_famille_a_rencontre_",
-    "setup": "Confession du jour : ma famille a rencontré mon/ma partenaire.",
-    "punchline": "En vingt minutes, elle connaissait déjà sa date de naissance, son salaire rêvé et son avis sur les enfants.",
-    "category": "famille_indiscrete",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_014_confession_du_jour_au_repas_quelquun_a_dit",
-    "setup": "Confession du jour : au repas, quelqu’un a dit « on peut tout se dire ici ».",
-    "punchline": "C’était clairement une menace.",
-    "category": "famille_indiscrete",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
     "id": "blague_adulte_famille_indiscrete_015_confession_du_jour_ma_mere_a_demande_si_ce",
     "setup": "Confession du jour : ma mère a demandé si c’était sérieux.",
     "punchline": "J’ai dit oui. Elle a ouvert un tableau comparatif.",
@@ -2968,24 +1402,6 @@
     "style": "mini_histoire",
     "adult": true,
     "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_016_confession_du_jour_mon_oncle_a_voulu_racon",
-    "setup": "Confession du jour : mon oncle a voulu raconter une anecdote gênante.",
-    "punchline": "Toute la table connaissait déjà le titre et la chorégraphie.",
-    "category": "famille_indiscrete",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_017_confession_du_jour_ma_grand_mere_a_demande",
-    "setup": "Confession du jour : ma grand-mère a demandé si nous dormions dans la même chambre.",
-    "punchline": "J’ai soudain trouvé la météo passionnante.",
-    "category": "famille_indiscrete",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
   },
   {
     "id": "blague_adulte_famille_indiscrete_018_ma_tante_a_demande_si_nous_voulions_des_en",
@@ -2997,24 +1413,6 @@
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_famille_indiscrete_019_moment_de_verite_ma_famille_a_rencontre_mo",
-    "setup": "Moment de vérité : ma famille a rencontré mon/ma partenaire.",
-    "punchline": "En vingt minutes, elle connaissait déjà sa date de naissance, son salaire rêvé et son avis sur les enfants.",
-    "category": "famille_indiscrete",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_020_moment_de_verite_au_repas_quelquun_a_dit_o",
-    "setup": "Moment de vérité : au repas, quelqu’un a dit « on peut tout se dire ici ».",
-    "punchline": "C’était clairement une menace.",
-    "category": "famille_indiscrete",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
     "id": "blague_adulte_famille_indiscrete_021_moment_de_verite_ma_mere_a_demande_si_ceta",
     "setup": "Moment de vérité : ma mère a demandé si c’était sérieux.",
     "punchline": "J’ai dit oui. Elle a ouvert un tableau comparatif.",
@@ -3022,131 +1420,5 @@
     "style": "mini_histoire",
     "adult": true,
     "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_022_moment_de_verite_mon_oncle_a_voulu_raconte",
-    "setup": "Moment de vérité : mon oncle a voulu raconter une anecdote gênante.",
-    "punchline": "Toute la table connaissait déjà le titre et la chorégraphie.",
-    "category": "famille_indiscrete",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_023_moment_de_verite_ma_grand_mere_a_demande_s",
-    "setup": "Moment de vérité : ma grand-mère a demandé si nous dormions dans la même chambre.",
-    "punchline": "J’ai soudain trouvé la météo passionnante.",
-    "category": "famille_indiscrete",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_024_ma_tante_a_demande_qui_avait_fait_le_premi",
-    "setup": "Ma tante a demandé qui avait fait le premier pas.",
-    "punchline": "J’ai répondu par une question sur son mot de passe bancaire. L’ambiance s’est équilibrée.",
-    "category": "famille_indiscrete",
-    "style": "observation",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_025_spoiler_ma_famille_a_rencontre_mon_ma_part",
-    "setup": "Spoiler : ma famille a rencontré mon/ma partenaire.",
-    "punchline": "En vingt minutes, elle connaissait déjà sa date de naissance, son salaire rêvé et son avis sur les enfants.",
-    "category": "famille_indiscrete",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_026_spoiler_au_repas_quelquun_a_dit_on_peut_to",
-    "setup": "Spoiler : au repas, quelqu’un a dit « on peut tout se dire ici ».",
-    "punchline": "C’était clairement une menace.",
-    "category": "famille_indiscrete",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_027_spoiler_ma_mere_a_demande_si_cetait_serieu",
-    "setup": "Spoiler : ma mère a demandé si c’était sérieux.",
-    "punchline": "J’ai dit oui. Elle a ouvert un tableau comparatif.",
-    "category": "famille_indiscrete",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_028_spoiler_mon_oncle_a_voulu_raconter_une_ane",
-    "setup": "Spoiler : mon oncle a voulu raconter une anecdote gênante.",
-    "punchline": "Toute la table connaissait déjà le titre et la chorégraphie.",
-    "category": "famille_indiscrete",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_029_spoiler_ma_grand_mere_a_demande_si_nous_do",
-    "setup": "Spoiler : ma grand-mère a demandé si nous dormions dans la même chambre.",
-    "punchline": "J’ai soudain trouvé la météo passionnante.",
-    "category": "famille_indiscrete",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_030_ma_tante_a_demande_si_mon_ex_etait_mieux",
-    "setup": "Ma tante a demandé si mon ex était mieux.",
-    "punchline": "J’ai répondu par une question sur son mot de passe bancaire. L’ambiance s’est équilibrée.",
-    "category": "famille_indiscrete",
-    "style": "observation",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_031_pour_situer_lambiance_ma_famille_a_rencont",
-    "setup": "Pour situer l’ambiance : ma famille a rencontré mon/ma partenaire.",
-    "punchline": "En vingt minutes, elle connaissait déjà sa date de naissance, son salaire rêvé et son avis sur les enfants.",
-    "category": "famille_indiscrete",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_032_pour_situer_lambiance_au_repas_quelquun_a_",
-    "setup": "Pour situer l’ambiance : au repas, quelqu’un a dit « on peut tout se dire ici ».",
-    "punchline": "C’était clairement une menace.",
-    "category": "famille_indiscrete",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_033_pour_situer_lambiance_ma_mere_a_demande_si",
-    "setup": "Pour situer l’ambiance : ma mère a demandé si c’était sérieux.",
-    "punchline": "J’ai dit oui. Elle a ouvert un tableau comparatif.",
-    "category": "famille_indiscrete",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_034_pour_situer_lambiance_mon_oncle_a_voulu_ra",
-    "setup": "Pour situer l’ambiance : mon oncle a voulu raconter une anecdote gênante.",
-    "punchline": "Toute la table connaissait déjà le titre et la chorégraphie.",
-    "category": "famille_indiscrete",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_035_pour_situer_lambiance_ma_grand_mere_a_dema",
-    "setup": "Pour situer l’ambiance : ma grand-mère a demandé si nous dormions dans la même chambre.",
-    "punchline": "J’ai soudain trouvé la météo passionnante.",
-    "category": "famille_indiscrete",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
   }
 ]
