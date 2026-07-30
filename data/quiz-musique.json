@@ -1,0 +1,1952 @@
+[
+  {
+    "question": "Quel artiste a interprété « Uptown Funk » avec Mark Ronson ?",
+    "options": [
+      "Bruno Mars",
+      "Coldplay",
+      "Eminem",
+      "Michael Jackson"
+    ],
+    "answer": 0,
+    "explanation": "Bruno Mars chante sur Uptown Funk.",
+    "difficulty": "easy",
+    "id": "q_001_quel_artiste_a_interprete_uptown_funk_avec"
+  },
+  {
+    "question": "Quel genre musical utilise souvent des guitares saturées et une batterie puissante ?",
+    "options": [
+      "Blues",
+      "House",
+      "Rock",
+      "Country"
+    ],
+    "answer": 2,
+    "explanation": "Le rock utilise fréquemment des guitares électriques saturées.",
+    "difficulty": "easy",
+    "id": "q_002_quel_genre_musical_utilise_souvent_des_gui"
+  },
+  {
+    "question": "Quel genre de musique électronique est associé aux clubs et à un rythme régulier à quatre temps ?",
+    "options": [
+      "Rock",
+      "Country",
+      "Blues",
+      "House"
+    ],
+    "answer": 3,
+    "explanation": "La house utilise souvent un rythme régulier en quatre temps.",
+    "difficulty": "easy",
+    "id": "q_003_quel_genre_de_musique_electronique_est_ass"
+  },
+  {
+    "question": "Quel groupe a interprété « We Will Rock You » ?",
+    "options": [
+      "Madonna",
+      "Bruno Mars",
+      "Eminem",
+      "Queen"
+    ],
+    "answer": 3,
+    "explanation": "We Will Rock You est un titre de Queen.",
+    "difficulty": "easy",
+    "id": "q_004_quel_groupe_a_interprete_we_will_rock_you"
+  },
+  {
+    "question": "Comment appelle-t-on un groupe de quatre musiciens ?",
+    "options": [
+      "Couplet",
+      "Registre",
+      "Dièse",
+      "Quatuor"
+    ],
+    "answer": 3,
+    "explanation": "Un groupe de quatre musiciens est un quatuor.",
+    "difficulty": "easy",
+    "id": "q_005_comment_appelle_t_on_un_groupe_de_quatre_m"
+  },
+  {
+    "question": "Quelle chanteuse a interprété « Like a Prayer » ?",
+    "options": [
+      "Queen",
+      "Madonna",
+      "Bruno Mars",
+      "Britney Spears"
+    ],
+    "answer": 1,
+    "explanation": "Like a Prayer est une chanson de Madonna.",
+    "difficulty": "easy",
+    "id": "q_006_quelle_chanteuse_a_interprete_like_a_praye"
+  },
+  {
+    "question": "Comment appelle-t-on la personne qui dirige un orchestre ?",
+    "options": [
+      "Couplet",
+      "Quatuor",
+      "Accord",
+      "Chef d’orchestre"
+    ],
+    "answer": 3,
+    "explanation": "Le chef d’orchestre coordonne les musiciens.",
+    "difficulty": "easy",
+    "id": "q_007_comment_appelle_t_on_la_personne_qui_dirig"
+  },
+  {
+    "id": "q_008_quel_artiste_est_surnomme_le_king_of_pop",
+    "question": "Quel artiste est surnommé le King of Pop ?",
+    "options": [
+      "Michael Jackson",
+      "Elvis Presley",
+      "Prince",
+      "Bruno Mars"
+    ],
+    "answer": 0,
+    "explanation": "Michael Jackson est couramment surnommé ainsi.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quel instrument est composé de lames que l’on frappe avec des mailloches ?",
+    "options": [
+      "Cornemuse",
+      "Xylophone",
+      "Gong",
+      "Harmonica"
+    ],
+    "answer": 1,
+    "explanation": "Le xylophone possède des lames frappées.",
+    "difficulty": "easy",
+    "id": "q_009_quel_instrument_est_compose_de_lames_que_l"
+  },
+  {
+    "question": "Quel instrument à vent écossais possède une poche remplie d’air ?",
+    "options": [
+      "Clavecin",
+      "Xylophone",
+      "Harpe",
+      "Cornemuse"
+    ],
+    "answer": 3,
+    "explanation": "La cornemuse utilise une poche d’air.",
+    "difficulty": "easy",
+    "id": "q_010_quel_instrument_a_vent_ecossais_possede_un"
+  },
+  {
+    "id": "q_011_quel_duo_francais_est_connu_pour_porter_de",
+    "question": "Quel duo français est connu pour porter des casques de robots ?",
+    "options": [
+      "Cassius",
+      "Justice",
+      "Daft Punk",
+      "Air"
+    ],
+    "answer": 2,
+    "explanation": "Daft Punk a popularisé cette identité visuelle.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quel groupe français est connu pour « L’Aventurier » ?",
+    "options": [
+      "Indochine",
+      "The Rolling Stones",
+      "The Cranberries",
+      "The Beatles"
+    ],
+    "answer": 0,
+    "explanation": "L’Aventurier est un titre d’Indochine.",
+    "difficulty": "easy",
+    "id": "q_012_quel_groupe_francais_est_connu_pour_lavent"
+  },
+  {
+    "question": "Quelle chanteuse a interprété « Toxic » ?",
+    "options": [
+      "Britney Spears",
+      "The Beatles",
+      "Michael Jackson",
+      "Whitney Houston"
+    ],
+    "answer": 0,
+    "explanation": "Toxic est une chanson de Britney Spears.",
+    "difficulty": "easy",
+    "id": "q_013_quelle_chanteuse_a_interprete_toxic"
+  },
+  {
+    "question": "Quel genre musical est né dans les communautés afro-américaines du sud des États-Unis et utilise souvent une grille de douze mesures ?",
+    "options": [
+      "Rock",
+      "House",
+      "Country",
+      "Blues"
+    ],
+    "answer": 3,
+    "explanation": "Le blues est associé à la grille de douze mesures.",
+    "difficulty": "easy",
+    "id": "q_014_quel_genre_musical_est_ne_dans_les_communa"
+  },
+  {
+    "id": "q_015_quel_instrument_possede_des_touches_noires",
+    "question": "Quel instrument possède des touches noires et blanches ?",
+    "options": [
+      "Piano",
+      "Violon",
+      "Batterie",
+      "Trompette"
+    ],
+    "answer": 0,
+    "explanation": "Le clavier du piano utilise ces touches.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quel instrument possède habituellement quatre cordes et se joue avec un archet sous le menton ?",
+    "options": [
+      "Violon",
+      "Harpe",
+      "Gong",
+      "Harmonica"
+    ],
+    "answer": 0,
+    "explanation": "Le violon possède généralement quatre cordes.",
+    "difficulty": "easy",
+    "id": "q_016_quel_instrument_possede_habituellement_qua"
+  },
+  {
+    "question": "Quel groupe est associé au chanteur Mick Jagger ?",
+    "options": [
+      "The Rolling Stones",
+      "The Beatles",
+      "Indochine",
+      "The Cranberries"
+    ],
+    "answer": 0,
+    "explanation": "Mick Jagger est le chanteur des Rolling Stones.",
+    "difficulty": "easy",
+    "id": "q_017_quel_groupe_est_associe_au_chanteur_mick_j"
+  },
+  {
+    "id": "q_018_comment_appelle_t_on_un_groupe_de_trois_mu",
+    "question": "Comment appelle-t-on un groupe de trois musiciens ?",
+    "options": [
+      "Quatuor",
+      "Duo",
+      "Chœur",
+      "Trio"
+    ],
+    "answer": 3,
+    "explanation": "Trois musiciens forment un trio.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Comment appelle-t-on plusieurs notes jouées en même temps ?",
+    "options": [
+      "Accord",
+      "Dièse",
+      "Couplet",
+      "Registre"
+    ],
+    "answer": 0,
+    "explanation": "Un accord réunit plusieurs notes simultanées.",
+    "difficulty": "easy",
+    "id": "q_019_comment_appelle_t_on_plusieurs_notes_jouee"
+  },
+  {
+    "id": "q_020_quel_groupe_a_interprete_bohemian_rhapsody",
+    "question": "Quel groupe a interprété « Bohemian Rhapsody » ?",
+    "options": [
+      "ABBA",
+      "U2",
+      "Queen",
+      "The Beatles"
+    ],
+    "answer": 2,
+    "explanation": "Le titre est de Queen.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quel terme désigne une zone de hauteur comme le grave, le médium ou l’aigu ?",
+    "options": [
+      "Quatuor",
+      "Registre",
+      "Accord",
+      "Chef d’orchestre"
+    ],
+    "answer": 1,
+    "explanation": "Le registre désigne une zone de hauteur vocale ou instrumentale.",
+    "difficulty": "easy",
+    "id": "q_021_quel_terme_designe_une_zone_de_hauteur_com"
+  },
+  {
+    "question": "Quel genre musical est associé aux cow-boys et à Nashville ?",
+    "options": [
+      "Country",
+      "Rock",
+      "House",
+      "Blues"
+    ],
+    "answer": 0,
+    "explanation": "La country est fortement associée à Nashville.",
+    "difficulty": "easy",
+    "id": "q_022_quel_genre_musical_est_associe_aux_cow_boy"
+  },
+  {
+    "id": "q_023_quel_artiste_francais_est_connu_pour_alors",
+    "question": "Quel artiste français est connu pour « Alors on danse » ?",
+    "options": [
+      "Orelsan",
+      "Stromae",
+      "Soprano",
+      "M"
+    ],
+    "answer": 1,
+    "explanation": "Le titre est de Stromae.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quel artiste français a interprété « Formidable » ?",
+    "options": [
+      "Whitney Houston",
+      "Stromae",
+      "Britney Spears",
+      "The Black Eyed Peas"
+    ],
+    "answer": 1,
+    "explanation": "Formidable est une chanson de Stromae.",
+    "difficulty": "easy",
+    "id": "q_024_quel_artiste_francais_a_interprete_formida"
+  },
+  {
+    "question": "Quel petit instrument se joue en soufflant et en aspirant à travers des trous ?",
+    "options": [
+      "Harmonica",
+      "Cornemuse",
+      "Clarinette",
+      "Violon"
+    ],
+    "answer": 0,
+    "explanation": "L’harmonica se joue par souffle et aspiration.",
+    "difficulty": "easy",
+    "id": "q_025_quel_petit_instrument_se_joue_en_soufflant"
+  },
+  {
+    "id": "q_026_quel_instrument_utilise_des_baguettes_et_d",
+    "question": "Quel instrument utilise des baguettes et des cymbales ?",
+    "options": [
+      "Accordéon",
+      "Batterie",
+      "Harpe",
+      "Flûte"
+    ],
+    "answer": 1,
+    "explanation": "La batterie combine fûts et cymbales.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quel groupe a interprété « Yellow Submarine » ?",
+    "options": [
+      "The Black Eyed Peas",
+      "Katy Perry",
+      "The Beatles",
+      "Queen"
+    ],
+    "answer": 2,
+    "explanation": "Yellow Submarine est une chanson des Beatles.",
+    "difficulty": "easy",
+    "id": "q_027_quel_groupe_a_interprete_yellow_submarine"
+  },
+  {
+    "question": "Quel artiste a interprété « Billie Jean » ?",
+    "options": [
+      "Michael Jackson",
+      "The Beatles",
+      "Queen",
+      "Madonna"
+    ],
+    "answer": 0,
+    "explanation": "Billie Jean est une chanson de Michael Jackson.",
+    "difficulty": "easy",
+    "id": "q_028_quel_artiste_a_interprete_billie_jean"
+  },
+  {
+    "question": "Quel instrument de percussion est formé d’un grand disque métallique suspendu ?",
+    "options": [
+      "Clavecin",
+      "Cornemuse",
+      "Gong",
+      "Harmonica"
+    ],
+    "answer": 2,
+    "explanation": "Le gong est un disque métallique frappé.",
+    "difficulty": "easy",
+    "id": "q_029_quel_instrument_de_percussion_est_forme_du"
+  },
+  {
+    "question": "Comment appelle-t-on la partie d’une chanson située entre deux refrains ?",
+    "options": [
+      "Couplet",
+      "Registre",
+      "Accord",
+      "Dièse"
+    ],
+    "answer": 0,
+    "explanation": "Le couplet alterne généralement avec le refrain.",
+    "difficulty": "easy",
+    "id": "q_030_comment_appelle_t_on_la_partie_dune_chanso"
+  },
+  {
+    "id": "q_031_quel_artiste_a_chante_shape_of_you",
+    "question": "Quel artiste a chanté « Shape of You » ?",
+    "options": [
+      "Shawn Mendes",
+      "Sam Smith",
+      "Harry Styles",
+      "Ed Sheeran"
+    ],
+    "answer": 3,
+    "explanation": "Le morceau est d’Ed Sheeran.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quel signe augmente une note d’un demi-ton ?",
+    "options": [
+      "Registre",
+      "Dièse",
+      "Chef d’orchestre",
+      "Quatuor"
+    ],
+    "answer": 1,
+    "explanation": "Le dièse élève une note d’un demi-ton.",
+    "difficulty": "easy",
+    "id": "q_032_quel_signe_augmente_une_note_dun_demi_ton"
+  },
+  {
+    "id": "q_033_quelle_chanteuse_a_interprete_bad_romance",
+    "question": "Quelle chanteuse a interprété « Bad Romance » ?",
+    "options": [
+      "Britney Spears",
+      "Katy Perry",
+      "Miley Cyrus",
+      "Lady Gaga"
+    ],
+    "answer": 3,
+    "explanation": "Bad Romance est un titre de Lady Gaga.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quel groupe a interprété « I Gotta Feeling » ?",
+    "options": [
+      "Madonna",
+      "Katy Perry",
+      "The Black Eyed Peas",
+      "Coldplay"
+    ],
+    "answer": 2,
+    "explanation": "I Gotta Feeling est un titre des Black Eyed Peas.",
+    "difficulty": "easy",
+    "id": "q_034_quel_groupe_a_interprete_i_gotta_feeling"
+  },
+  {
+    "id": "q_035_quel_groupe_suedois_a_chante_dancing_queen",
+    "question": "Quel groupe suédois a chanté « Dancing Queen » ?",
+    "options": [
+      "ABBA",
+      "Ace of Base",
+      "Europe",
+      "Roxette"
+    ],
+    "answer": 0,
+    "explanation": "Dancing Queen est un tube d’ABBA.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quel groupe comptait John Lennon, Paul McCartney, George Harrison et Ringo Starr ?",
+    "options": [
+      "Indochine",
+      "The Rolling Stones",
+      "The Cranberries",
+      "The Beatles"
+    ],
+    "answer": 3,
+    "explanation": "Ces quatre musiciens formaient les Beatles.",
+    "difficulty": "easy",
+    "id": "q_036_quel_groupe_comptait_john_lennon_paul_mcca"
+  },
+  {
+    "id": "q_037_quelle_chanteuse_a_sorti_lalbum_21",
+    "question": "Quelle chanteuse a sorti l’album « 21 » ?",
+    "options": [
+      "Pink",
+      "Rihanna",
+      "Adele",
+      "Beyoncé"
+    ],
+    "answer": 2,
+    "explanation": "21 est un album d’Adele.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_038_quel_genre_musical_est_associe_a_des_artis",
+    "question": "Quel genre musical est associé à des artistes comme Mozart et Beethoven ?",
+    "options": [
+      "Classique",
+      "Rap",
+      "Techno",
+      "Reggae"
+    ],
+    "answer": 0,
+    "explanation": "Ils sont des figures majeures de la musique classique.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_039_quelle_chanteuse_est_connue_pour_rolling_i",
+    "question": "Quelle chanteuse est connue pour « Rolling in the Deep » ?",
+    "options": [
+      "Dua Lipa",
+      "Lorde",
+      "Adele",
+      "Sia"
+    ],
+    "answer": 2,
+    "explanation": "Le titre est interprété par Adele.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quel instrument à cordes triangulaire se pince avec les doigts ?",
+    "options": [
+      "Clavecin",
+      "Harpe",
+      "Clarinette",
+      "Harmonica"
+    ],
+    "answer": 1,
+    "explanation": "La harpe se joue en pinçant ses cordes.",
+    "difficulty": "easy",
+    "id": "q_040_quel_instrument_a_cordes_triangulaire_se_p"
+  },
+  {
+    "question": "Quel groupe a interprété « Zombie » en 1994 ?",
+    "options": [
+      "The Cranberries",
+      "Indochine",
+      "The Beatles",
+      "The Rolling Stones"
+    ],
+    "answer": 0,
+    "explanation": "Zombie est une chanson des Cranberries.",
+    "difficulty": "easy",
+    "id": "q_041_quel_groupe_a_interprete_zombie_en_1994"
+  },
+  {
+    "question": "Quel instrument à vent possède des touches et une anche simple ?",
+    "options": [
+      "Harmonica",
+      "Violon",
+      "Harpe",
+      "Clarinette"
+    ],
+    "answer": 3,
+    "explanation": "La clarinette utilise une anche simple.",
+    "difficulty": "easy",
+    "id": "q_042_quel_instrument_a_vent_possede_des_touches"
+  },
+  {
+    "question": "Quelle chanteuse a interprété « Firework » ?",
+    "options": [
+      "Katy Perry",
+      "Eminem",
+      "Stromae",
+      "Coldplay"
+    ],
+    "answer": 0,
+    "explanation": "Firework est une chanson de Katy Perry.",
+    "difficulty": "easy",
+    "id": "q_043_quelle_chanteuse_a_interprete_firework"
+  },
+  {
+    "id": "q_044_quel_style_musical_est_ne_en_jamaique",
+    "question": "Quel style musical est né en Jamaïque ?",
+    "options": [
+      "Flamenco",
+      "Reggae",
+      "Country",
+      "K-pop"
+    ],
+    "answer": 1,
+    "explanation": "Le reggae est né en Jamaïque.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quel instrument à clavier produit historiquement le son en pinçant les cordes ?",
+    "options": [
+      "Harmonica",
+      "Xylophone",
+      "Gong",
+      "Clavecin"
+    ],
+    "answer": 3,
+    "explanation": "Le clavecin pince les cordes, contrairement au piano qui les frappe.",
+    "difficulty": "easy",
+    "id": "q_045_quel_instrument_a_clavier_produit_historiq"
+  },
+  {
+    "question": "Quel groupe a interprété « Viva la Vida » ?",
+    "options": [
+      "Queen",
+      "Coldplay",
+      "Britney Spears",
+      "Eminem"
+    ],
+    "answer": 1,
+    "explanation": "Viva la Vida est un titre de Coldplay.",
+    "difficulty": "easy",
+    "id": "q_046_quel_groupe_a_interprete_viva_la_vida"
+  },
+  {
+    "question": "Quelle chanteuse a interprété « I Will Always Love You » dans une version célèbre ?",
+    "options": [
+      "Madonna",
+      "The Beatles",
+      "Whitney Houston",
+      "Bruno Mars"
+    ],
+    "answer": 2,
+    "explanation": "Whitney Houston a popularisé cette version.",
+    "difficulty": "easy",
+    "id": "q_047_quelle_chanteuse_a_interprete_i_will_alway"
+  },
+  {
+    "question": "Quel mot indique qu’un morceau doit être joué doucement ?",
+    "options": [
+      "Registre",
+      "Dièse",
+      "Piano",
+      "Accord"
+    ],
+    "answer": 2,
+    "explanation": "En notation musicale, piano signifie doucement.",
+    "difficulty": "easy",
+    "id": "q_048_quel_mot_indique_quun_morceau_doit_etre_jo"
+  },
+  {
+    "id": "q_049_quel_instrument_possede_generalement_six_c",
+    "question": "Quel instrument possède généralement six cordes ?",
+    "options": [
+      "Mandoline",
+      "Ukulélé",
+      "Guitare",
+      "Violoncelle"
+    ],
+    "answer": 2,
+    "explanation": "La guitare standard possède six cordes.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quel artiste a interprété « Lose Yourself » ?",
+    "options": [
+      "Bruno Mars",
+      "Whitney Houston",
+      "Eminem",
+      "Coldplay"
+    ],
+    "answer": 2,
+    "explanation": "Lose Yourself est une chanson d’Eminem.",
+    "difficulty": "easy",
+    "id": "q_050_quel_artiste_a_interprete_lose_yourself"
+  },
+  {
+    "question": "Quel genre jamaïcain a précédé et influencé le reggae ?",
+    "options": [
+      "Hip-hop",
+      "Ska",
+      "La Nouvelle-Orléans",
+      "Son cubain"
+    ],
+    "answer": 1,
+    "explanation": "Le ska a précédé le rocksteady puis le reggae.",
+    "difficulty": "medium",
+    "id": "q_051_quel_genre_jamaicain_a_precede_et_influenc"
+  },
+  {
+    "id": "q_052_quel_instrument_est_associe_a_louis_armstr",
+    "question": "Quel instrument est associé à Louis Armstrong ?",
+    "options": [
+      "Piano",
+      "Saxophone",
+      "Trompette",
+      "Guitare"
+    ],
+    "answer": 2,
+    "explanation": "Louis Armstrong était trompettiste.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_053_quel_type_de_voix_est_generalement_la_plus",
+    "question": "Quel type de voix est généralement la plus aiguë chez les femmes ?",
+    "options": [
+      "Ténor",
+      "Alto",
+      "Baryton",
+      "Soprano"
+    ],
+    "answer": 3,
+    "explanation": "La soprano est la tessiture la plus aiguë courante.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_054_quelle_chanteuse_est_liee_a_lalbum_lemonad",
+    "question": "Quelle chanteuse est liée à l’album « Lemonade » ?",
+    "options": [
+      "Beyoncé",
+      "Rihanna",
+      "Alicia Keys",
+      "Taylor Swift"
+    ],
+    "answer": 0,
+    "explanation": "Lemonade est un album de Beyoncé.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quel groupe a sorti l’album Nevermind ?",
+    "options": [
+      "Red Hot Chili Peppers",
+      "Bruce Springsteen",
+      "Alanis Morissette",
+      "Nirvana"
+    ],
+    "answer": 3,
+    "explanation": "Nevermind est un album de Nirvana.",
+    "difficulty": "medium",
+    "id": "q_055_quel_groupe_a_sorti_lalbum_nevermind"
+  },
+  {
+    "question": "Quel artiste a sorti l’album Songs in the Key of Life ?",
+    "options": [
+      "Bruce Springsteen",
+      "Lauryn Hill",
+      "Michael Jackson",
+      "Stevie Wonder"
+    ],
+    "answer": 3,
+    "explanation": "Songs in the Key of Life est un album de Stevie Wonder.",
+    "difficulty": "medium",
+    "id": "q_056_quel_artiste_a_sorti_lalbum_songs_in_the_k"
+  },
+  {
+    "question": "Qui a composé la Symphonie du Nouveau Monde ?",
+    "options": [
+      "Ludwig van Beethoven",
+      "Jean-Sébastien Bach",
+      "Antonín Dvořák",
+      "Piotr Ilitch Tchaïkovski"
+    ],
+    "answer": 2,
+    "explanation": "La Neuvième Symphonie de Dvořák est dite Du Nouveau Monde.",
+    "difficulty": "medium",
+    "id": "q_057_qui_a_compose_la_symphonie_du_nouveau_mond"
+  },
+  {
+    "question": "Quel signe abaisse une note d’un demi-ton ?",
+    "options": [
+      "Bémol",
+      "Diminuendo",
+      "Clé de sol",
+      "12"
+    ],
+    "answer": 0,
+    "explanation": "Le bémol abaisse la note d’un demi-ton.",
+    "difficulty": "medium",
+    "id": "q_058_quel_signe_abaisse_une_note_dun_demi_ton"
+  },
+  {
+    "question": "Quelle chanteuse était la voix principale de The Cranberries ?",
+    "options": [
+      "Dolores O’Riordan",
+      "Flea",
+      "Ringo Starr",
+      "Brian May"
+    ],
+    "answer": 0,
+    "explanation": "Dolores O’Riordan chantait dans The Cranberries.",
+    "difficulty": "medium",
+    "id": "q_059_quelle_chanteuse_etait_la_voix_principale_"
+  },
+  {
+    "id": "q_060_quel_mot_designe_une_suite_de_notes_jouees",
+    "question": "Quel mot désigne une suite de notes jouées l’une après l’autre ?",
+    "options": [
+      "Mesure",
+      "Accord",
+      "Rythme",
+      "Mélodie"
+    ],
+    "answer": 3,
+    "explanation": "Une mélodie est une succession organisée de notes.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_061_quel_groupe_britannique_a_sorti_wonderwall",
+    "question": "Quel groupe britannique a sorti « Wonderwall » ?",
+    "options": [
+      "Muse",
+      "Oasis",
+      "Radiohead",
+      "Coldplay"
+    ],
+    "answer": 1,
+    "explanation": "Wonderwall est un titre d’Oasis.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quel chanteur est le leader du groupe U2 ?",
+    "options": [
+      "Ringo Starr",
+      "Brian May",
+      "Dolores O’Riordan",
+      "Bono"
+    ],
+    "answer": 3,
+    "explanation": "Bono est le chanteur de U2.",
+    "difficulty": "medium",
+    "id": "q_062_quel_chanteur_est_le_leader_du_groupe_u2"
+  },
+  {
+    "question": "Quel groupe a sorti l’album The Dark Side of the Moon ?",
+    "options": [
+      "Red Hot Chili Peppers",
+      "Daft Punk",
+      "Alanis Morissette",
+      "Pink Floyd"
+    ],
+    "answer": 3,
+    "explanation": "The Dark Side of the Moon est un album de Pink Floyd.",
+    "difficulty": "medium",
+    "id": "q_063_quel_groupe_a_sorti_lalbum_the_dark_side_o"
+  },
+  {
+    "id": "q_064_quel_instrument_a_vent_est_souvent_en_meta",
+    "question": "Quel instrument à vent est souvent en métal et possède une coulisse ?",
+    "options": [
+      "Flûte",
+      "Hautbois",
+      "Trombone",
+      "Clarinette"
+    ],
+    "answer": 2,
+    "explanation": "Le trombone utilise une coulisse.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_065_quel_artiste_est_associe_a_la_chanson_purp",
+    "question": "Quel artiste est associé à la chanson « Purple Rain » ?",
+    "options": [
+      "George Michael",
+      "David Bowie",
+      "Prince",
+      "Stevie Wonder"
+    ],
+    "answer": 2,
+    "explanation": "Purple Rain est une œuvre de Prince.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quel intervalle sépare do de sol ?",
+    "options": [
+      "Diminuendo",
+      "Quinte",
+      "A tempo",
+      "Staccato"
+    ],
+    "answer": 1,
+    "explanation": "Do à sol forme une quinte juste.",
+    "difficulty": "medium",
+    "id": "q_066_quel_intervalle_separe_do_de_sol"
+  },
+  {
+    "question": "Qui a composé la Toccata et fugue en ré mineur traditionnellement attribuée à son nom ?",
+    "options": [
+      "Ludwig van Beethoven",
+      "Jean-Sébastien Bach",
+      "Gustav Holst",
+      "Claude Debussy"
+    ],
+    "answer": 1,
+    "explanation": "Cette œuvre est traditionnellement attribuée à Bach.",
+    "difficulty": "medium",
+    "id": "q_067_qui_a_compose_la_toccata_et_fugue_en_re_mi"
+  },
+  {
+    "id": "q_068_combien_de_cordes_possede_generalement_une",
+    "question": "Combien de cordes possède généralement une basse électrique ?",
+    "options": [
+      "8",
+      "5",
+      "4",
+      "6"
+    ],
+    "answer": 2,
+    "explanation": "La basse standard possède quatre cordes.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quel duo a sorti l’album Random Access Memories ?",
+    "options": [
+      "Lauryn Hill",
+      "Michael Jackson",
+      "Daft Punk",
+      "Alanis Morissette"
+    ],
+    "answer": 2,
+    "explanation": "Random Access Memories est un album de Daft Punk.",
+    "difficulty": "medium",
+    "id": "q_069_quel_duo_a_sorti_lalbum_random_access_memo"
+  },
+  {
+    "question": "Quelle chanteuse a sorti l’album The Miseducation of Lauryn Hill ?",
+    "options": [
+      "Red Hot Chili Peppers",
+      "Amy Winehouse",
+      "Alanis Morissette",
+      "Lauryn Hill"
+    ],
+    "answer": 3,
+    "explanation": "Cet album est de Lauryn Hill.",
+    "difficulty": "medium",
+    "id": "q_070_quelle_chanteuse_a_sorti_lalbum_the_misedu"
+  },
+  {
+    "question": "Qui a composé Le Sacre du printemps ?",
+    "options": [
+      "Gustav Holst",
+      "Igor Stravinsky",
+      "Piotr Ilitch Tchaïkovski",
+      "Jean-Sébastien Bach"
+    ],
+    "answer": 1,
+    "explanation": "Le Sacre du printemps est d’Igor Stravinsky.",
+    "difficulty": "medium",
+    "id": "q_071_qui_a_compose_le_sacre_du_printemps"
+  },
+  {
+    "question": "Qui a composé Clair de lune ?",
+    "options": [
+      "Igor Stravinsky",
+      "Jean-Sébastien Bach",
+      "Claude Debussy",
+      "Piotr Ilitch Tchaïkovski"
+    ],
+    "answer": 2,
+    "explanation": "Clair de lune est une pièce de Claude Debussy.",
+    "difficulty": "medium",
+    "id": "q_072_qui_a_compose_clair_de_lune"
+  },
+  {
+    "id": "q_073_quel_groupe_a_interprete_smells_like_teen_",
+    "question": "Quel groupe a interprété « Smells Like Teen Spirit » ?",
+    "options": [
+      "Oasis",
+      "Metallica",
+      "Nirvana",
+      "Blur"
+    ],
+    "answer": 2,
+    "explanation": "C’est un titre emblématique de Nirvana.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quelle artiste a sorti l’album Back to Black ?",
+    "options": [
+      "Red Hot Chili Peppers",
+      "Lauryn Hill",
+      "Amy Winehouse",
+      "Bruce Springsteen"
+    ],
+    "answer": 2,
+    "explanation": "Back to Black est un album d’Amy Winehouse.",
+    "difficulty": "medium",
+    "id": "q_074_quelle_artiste_a_sorti_lalbum_back_to_blac"
+  },
+  {
+    "id": "q_075_quel_genre_est_fortement_associe_aux_plati",
+    "question": "Quel genre est fortement associé aux platines et au scratching ?",
+    "options": [
+      "Blues",
+      "Hip-hop",
+      "Opéra",
+      "Folk"
+    ],
+    "answer": 1,
+    "explanation": "Le DJing et le scratching sont des éléments historiques du hip-hop.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quel genre cubain est à l’origine d’une grande partie de la salsa moderne ?",
+    "options": [
+      "Bossa nova",
+      "Son cubain",
+      "La Nouvelle-Orléans",
+      "Hip-hop"
+    ],
+    "answer": 1,
+    "explanation": "Le son cubain a fortement nourri la salsa.",
+    "difficulty": "medium",
+    "id": "q_076_quel_genre_cubain_est_a_lorigine_dune_gran"
+  },
+  {
+    "id": "q_077_quel_terme_designe_la_vitesse_dun_morceau",
+    "question": "Quel terme désigne la vitesse d’un morceau ?",
+    "options": [
+      "Accord",
+      "Tempo",
+      "Octave",
+      "Timbre"
+    ],
+    "answer": 1,
+    "explanation": "Le tempo indique la vitesse.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Qui a composé La Neuvième Symphonie ?",
+    "options": [
+      "Antonín Dvořák",
+      "Gustav Holst",
+      "Ludwig van Beethoven",
+      "George Gershwin"
+    ],
+    "answer": 2,
+    "explanation": "La Neuvième Symphonie est de Beethoven.",
+    "difficulty": "medium",
+    "id": "q_078_qui_a_compose_la_neuvieme_symphonie"
+  },
+  {
+    "question": "Quel terme indique une diminution progressive du volume ?",
+    "options": [
+      "Staccato",
+      "Diminuendo",
+      "A tempo",
+      "12"
+    ],
+    "answer": 1,
+    "explanation": "Diminuendo indique de jouer progressivement moins fort.",
+    "difficulty": "medium",
+    "id": "q_079_quel_terme_indique_une_diminution_progress"
+  },
+  {
+    "question": "Quelle chanteuse a sorti l’album Jagged Little Pill ?",
+    "options": [
+      "Bruce Springsteen",
+      "Amy Winehouse",
+      "Alanis Morissette",
+      "Michael Jackson"
+    ],
+    "answer": 2,
+    "explanation": "Jagged Little Pill est un album d’Alanis Morissette.",
+    "difficulty": "medium",
+    "id": "q_080_quelle_chanteuse_a_sorti_lalbum_jagged_lit"
+  },
+  {
+    "question": "Qui a composé Le Lac des cygnes ?",
+    "options": [
+      "Jean-Sébastien Bach",
+      "Piotr Ilitch Tchaïkovski",
+      "Claude Debussy",
+      "George Gershwin"
+    ],
+    "answer": 1,
+    "explanation": "Le Lac des cygnes est un ballet de Tchaïkovski.",
+    "difficulty": "medium",
+    "id": "q_081_qui_a_compose_le_lac_des_cygnes"
+  },
+  {
+    "id": "q_082_quel_symbole_musical_indique_un_silence",
+    "question": "Quel symbole musical indique un silence ?",
+    "options": [
+      "Une note liée",
+      "Une clé",
+      "Une pause",
+      "Un dièse"
+    ],
+    "answer": 2,
+    "explanation": "Les figures de silence indiquent une interruption sonore.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Qui a composé Les Planètes ?",
+    "options": [
+      "Gustav Holst",
+      "Ludwig van Beethoven",
+      "Igor Stravinsky",
+      "Jean-Sébastien Bach"
+    ],
+    "answer": 0,
+    "explanation": "Les Planètes est une suite orchestrale de Gustav Holst.",
+    "difficulty": "medium",
+    "id": "q_083_qui_a_compose_les_planetes"
+  },
+  {
+    "question": "Quel groupe a sorti l’album Californication ?",
+    "options": [
+      "Nirvana",
+      "Red Hot Chili Peppers",
+      "Bruce Springsteen",
+      "Michael Jackson"
+    ],
+    "answer": 1,
+    "explanation": "Californication est un album des Red Hot Chili Peppers.",
+    "difficulty": "medium",
+    "id": "q_084_quel_groupe_a_sorti_lalbum_californication"
+  },
+  {
+    "question": "Comment appelle-t-on une note jouée très brièvement et détachée ?",
+    "options": [
+      "Quinte",
+      "Staccato",
+      "Clé de sol",
+      "12"
+    ],
+    "answer": 1,
+    "explanation": "Le staccato produit des notes détachées.",
+    "difficulty": "medium",
+    "id": "q_085_comment_appelle_t_on_une_note_jouee_tres_b"
+  },
+  {
+    "question": "Quel musicien était le batteur des Beatles ?",
+    "options": [
+      "Bono",
+      "Brian May",
+      "Ringo Starr",
+      "Flea"
+    ],
+    "answer": 2,
+    "explanation": "Ringo Starr était le batteur des Beatles.",
+    "difficulty": "medium",
+    "id": "q_086_quel_musicien_etait_le_batteur_des_beatles"
+  },
+  {
+    "question": "Dans quelle ville américaine le jazz est-il généralement considéré comme étant né ?",
+    "options": [
+      "Son cubain",
+      "La Nouvelle-Orléans",
+      "Bossa nova",
+      "Ska"
+    ],
+    "answer": 1,
+    "explanation": "La Nouvelle-Orléans est souvent considérée comme le berceau du jazz.",
+    "difficulty": "medium",
+    "id": "q_087_dans_quelle_ville_americaine_le_jazz_est_i"
+  },
+  {
+    "question": "Quel genre brésilien est associé à Antônio Carlos Jobim ?",
+    "options": [
+      "Son cubain",
+      "La Nouvelle-Orléans",
+      "Bossa nova",
+      "Hip-hop"
+    ],
+    "answer": 2,
+    "explanation": "Jobim est une figure majeure de la bossa nova.",
+    "difficulty": "medium",
+    "id": "q_088_quel_genre_bresilien_est_associe_a_antonio"
+  },
+  {
+    "id": "q_089_comment_appelle_t_on_la_partie_repetee_dun",
+    "question": "Comment appelle-t-on la partie répétée d’une chanson ?",
+    "options": [
+      "Intro",
+      "Pont",
+      "Refrain",
+      "Coda"
+    ],
+    "answer": 2,
+    "explanation": "Le refrain revient plusieurs fois.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quel terme indique un retour au tempo initial ?",
+    "options": [
+      "A tempo",
+      "Bémol",
+      "12",
+      "Staccato"
+    ],
+    "answer": 0,
+    "explanation": "A tempo demande de reprendre le tempo initial.",
+    "difficulty": "medium",
+    "id": "q_090_quel_terme_indique_un_retour_au_tempo_init"
+  },
+  {
+    "question": "Quelle clé est généralement utilisée pour les notes aiguës du piano ?",
+    "options": [
+      "Diminuendo",
+      "Clé de sol",
+      "12",
+      "A tempo"
+    ],
+    "answer": 1,
+    "explanation": "La main droite du piano lit souvent en clé de sol.",
+    "difficulty": "medium",
+    "id": "q_091_quelle_cle_est_generalement_utilisee_pour_"
+  },
+  {
+    "question": "Qui a composé Rhapsody in Blue ?",
+    "options": [
+      "Gustav Holst",
+      "Piotr Ilitch Tchaïkovski",
+      "Ludwig van Beethoven",
+      "George Gershwin"
+    ],
+    "answer": 3,
+    "explanation": "Rhapsody in Blue est de George Gershwin.",
+    "difficulty": "medium",
+    "id": "q_092_qui_a_compose_rhapsody_in_blue"
+  },
+  {
+    "question": "Quel musicien est le bassiste et chanteur de Red Hot Chili Peppers ?",
+    "options": [
+      "Ringo Starr",
+      "Flea",
+      "Dolores O’Riordan",
+      "Bono"
+    ],
+    "answer": 1,
+    "explanation": "Flea est le bassiste du groupe.",
+    "difficulty": "medium",
+    "id": "q_093_quel_musicien_est_le_bassiste_et_chanteur_"
+  },
+  {
+    "question": "Quel musicien était le guitariste principal de Queen ?",
+    "options": [
+      "Bono",
+      "Dolores O’Riordan",
+      "Ringo Starr",
+      "Brian May"
+    ],
+    "answer": 3,
+    "explanation": "Brian May est le guitariste de Queen.",
+    "difficulty": "medium",
+    "id": "q_094_quel_musicien_etait_le_guitariste_principa"
+  },
+  {
+    "question": "Quel artiste a sorti l’album Born in the U.S.A. ?",
+    "options": [
+      "Stevie Wonder",
+      "Amy Winehouse",
+      "Lauryn Hill",
+      "Bruce Springsteen"
+    ],
+    "answer": 3,
+    "explanation": "Born in the U.S.A. est un album de Bruce Springsteen.",
+    "difficulty": "medium",
+    "id": "q_095_quel_artiste_a_sorti_lalbum_born_in_the_u_"
+  },
+  {
+    "question": "Quel artiste a sorti l’album Thriller ?",
+    "options": [
+      "Pink Floyd",
+      "Michael Jackson",
+      "Alanis Morissette",
+      "Nirvana"
+    ],
+    "answer": 1,
+    "explanation": "Thriller est un album de Michael Jackson.",
+    "difficulty": "medium",
+    "id": "q_096_quel_artiste_a_sorti_lalbum_thriller"
+  },
+  {
+    "id": "q_097_quel_artiste_a_chante_happy",
+    "question": "Quel artiste a chanté « Happy » ?",
+    "options": [
+      "Drake",
+      "The Weeknd",
+      "Pharrell Williams",
+      "Usher"
+    ],
+    "answer": 2,
+    "explanation": "Happy est interprété par Pharrell Williams.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_098_quel_instrument_est_le_plus_grave_dans_un_",
+    "question": "Quel instrument est le plus grave dans un quatuor à cordes ?",
+    "options": [
+      "Alto",
+      "Violoncelle",
+      "Violon",
+      "Mandoline"
+    ],
+    "answer": 1,
+    "explanation": "Le violoncelle tient généralement le registre grave.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quel genre né à New York combine rap, DJing, breakdance et graffiti ?",
+    "options": [
+      "Ska",
+      "Bossa nova",
+      "La Nouvelle-Orléans",
+      "Hip-hop"
+    ],
+    "answer": 3,
+    "explanation": "Le hip-hop est une culture née à New York.",
+    "difficulty": "medium",
+    "id": "q_099_quel_genre_ne_a_new_york_combine_rap_djing"
+  },
+  {
+    "question": "Combien de demi-tons contient une octave dans le système occidental tempéré ?",
+    "options": [
+      "12",
+      "Clé de sol",
+      "Diminuendo",
+      "A tempo"
+    ],
+    "answer": 0,
+    "explanation": "Une octave est divisée en douze demi-tons.",
+    "difficulty": "medium",
+    "id": "q_100_combien_de_demi_tons_contient_une_octave_d"
+  },
+  {
+    "question": "Qui a composé le ballet Daphnis et Chloé ?",
+    "options": [
+      "Richard Strauss",
+      "Erich Wolfgang Korngold",
+      "Hector Berlioz",
+      "Maurice Ravel"
+    ],
+    "answer": 3,
+    "explanation": "Daphnis et Chloé est un ballet de Maurice Ravel.",
+    "difficulty": "hard",
+    "id": "q_101_qui_a_compose_le_ballet_daphnis_et_chloe"
+  },
+  {
+    "question": "Qui a composé le cycle de lieder Winterreise ?",
+    "options": [
+      "Alban Berg",
+      "John Adams",
+      "Franz Schubert",
+      "Benjamin Britten"
+    ],
+    "answer": 2,
+    "explanation": "Winterreise est un cycle de Schubert.",
+    "difficulty": "hard",
+    "id": "q_102_qui_a_compose_le_cycle_de_lieder_winterrei"
+  },
+  {
+    "question": "Combien de dièses comporte l’armure de si majeur ?",
+    "options": [
+      "Dorien",
+      "Cadence",
+      "5",
+      "Appoggiature"
+    ],
+    "answer": 2,
+    "explanation": "Si majeur comporte cinq dièses.",
+    "difficulty": "hard",
+    "id": "q_103_combien_de_dieses_comporte_larmure_de_si_m"
+  },
+  {
+    "question": "Quel contrebassiste a composé « Goodbye Pork Pie Hat » ?",
+    "options": [
+      "John Coltrane",
+      "Miles Davis",
+      "Billie Holiday",
+      "Charles Mingus"
+    ],
+    "answer": 3,
+    "explanation": "Goodbye Pork Pie Hat est de Charles Mingus.",
+    "difficulty": "hard",
+    "id": "q_104_quel_contrebassiste_a_compose_goodbye_pork"
+  },
+  {
+    "id": "q_105_quelle_tonalite_majeure_comporte_tradition",
+    "question": "Quelle tonalité majeure comporte traditionnellement un seul dièse à l’armure ?",
+    "options": [
+      "Fa majeur",
+      "Ré majeur",
+      "Sol majeur",
+      "La majeur"
+    ],
+    "answer": 2,
+    "explanation": "Sol majeur comporte un seul dièse, le fa dièse.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Qui a composé Ainsi parlait Zarathoustra ?",
+    "options": [
+      "Olivier Messiaen",
+      "Benjamin Britten",
+      "Alban Berg",
+      "Richard Strauss"
+    ],
+    "answer": 3,
+    "explanation": "Ainsi parlait Zarathoustra est un poème symphonique de Richard Strauss.",
+    "difficulty": "hard",
+    "id": "q_106_qui_a_compose_ainsi_parlait_zarathoustra"
+  },
+  {
+    "id": "q_107_quel_opera_de_bizet_raconte_lhistoire_dune",
+    "question": "Quel opéra de Bizet raconte l’histoire d’une bohémienne à Séville ?",
+    "options": [
+      "Tosca",
+      "Aida",
+      "Carmen",
+      "La Traviata"
+    ],
+    "answer": 2,
+    "explanation": "Carmen est un opéra de Georges Bizet.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_108_quel_saxophoniste_de_jazz_a_enregistre_lal",
+    "question": "Quel saxophoniste de jazz a enregistré l’album A Love Supreme ?",
+    "options": [
+      "Miles Davis",
+      "Duke Ellington",
+      "John Coltrane",
+      "Charlie Parker"
+    ],
+    "answer": 2,
+    "explanation": "A Love Supreme est un album majeur de John Coltrane.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Quel groupe a sorti l’album Marquee Moon ?",
+    "options": [
+      "Kate Bush",
+      "My Bloody Valentine",
+      "Joni Mitchell",
+      "Television"
+    ],
+    "answer": 3,
+    "explanation": "Marquee Moon est un album de Television.",
+    "difficulty": "hard",
+    "id": "q_109_quel_groupe_a_sorti_lalbum_marquee_moon"
+  },
+  {
+    "question": "Quel instrument indien possède des cordes sympathiques et est associé à Ravi Shankar ?",
+    "options": [
+      "Sitar",
+      "Fado",
+      "Tempérament égal",
+      "Koto"
+    ],
+    "answer": 0,
+    "explanation": "Ravi Shankar était un maître du sitar.",
+    "difficulty": "hard",
+    "id": "q_110_quel_instrument_indien_possede_des_cordes_"
+  },
+  {
+    "question": "Quel accord est formé d’une fondamentale, d’une tierce mineure et d’une quinte diminuée ?",
+    "options": [
+      "Ostinato",
+      "Triton",
+      "Retard",
+      "Accord diminué"
+    ],
+    "answer": 3,
+    "explanation": "Cette structure forme un accord diminué.",
+    "difficulty": "hard",
+    "id": "q_111_quel_accord_est_forme_dune_fondamentale_du"
+  },
+  {
+    "id": "q_112_quel_chanteur_est_ne_sous_le_nom_de_farrok",
+    "question": "Quel chanteur est né sous le nom de Farrokh Bulsara ?",
+    "options": [
+      "Freddie Mercury",
+      "Elton John",
+      "George Michael",
+      "David Bowie"
+    ],
+    "answer": 0,
+    "explanation": "Farrokh Bulsara est le nom de naissance de Freddie Mercury.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_113_quelle_chanteuse_a_popularise_feeling_good",
+    "question": "Quelle chanteuse a popularisé « Feeling Good » dans une version devenue emblématique en 1965 ?",
+    "options": [
+      "Aretha Franklin",
+      "Nina Simone",
+      "Ella Fitzgerald",
+      "Billie Holiday"
+    ],
+    "answer": 1,
+    "explanation": "La version de Nina Simone est sortie en 1965.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Qui a composé l’opéra Peter Grimes ?",
+    "options": [
+      "Richard Strauss",
+      "Maurice Ravel",
+      "Erich Wolfgang Korngold",
+      "Benjamin Britten"
+    ],
+    "answer": 3,
+    "explanation": "Peter Grimes est de Benjamin Britten.",
+    "difficulty": "hard",
+    "id": "q_114_qui_a_compose_lopera_peter_grimes"
+  },
+  {
+    "question": "Quel instrument japonais à treize cordes se joue posé au sol ?",
+    "options": [
+      "Koto",
+      "Fado",
+      "Phil Spector",
+      "Tempérament égal"
+    ],
+    "answer": 0,
+    "explanation": "Le koto traditionnel possède treize cordes.",
+    "difficulty": "hard",
+    "id": "q_115_quel_instrument_japonais_a_treize_cordes_s"
+  },
+  {
+    "question": "Quel terme désigne l’utilisation simultanée de plusieurs rythmes différents ?",
+    "options": [
+      "Dorien",
+      "Retard",
+      "Polyrythmie",
+      "Canon"
+    ],
+    "answer": 2,
+    "explanation": "La polyrythmie superpose plusieurs organisations rythmiques.",
+    "difficulty": "hard",
+    "id": "q_116_quel_terme_designe_lutilisation_simultanee"
+  },
+  {
+    "question": "Qui a composé le Quatuor pour la fin du Temps ?",
+    "options": [
+      "Olivier Messiaen",
+      "Hector Berlioz",
+      "Maurice Ravel",
+      "Benjamin Britten"
+    ],
+    "answer": 0,
+    "explanation": "Cette œuvre a été composée par Olivier Messiaen.",
+    "difficulty": "hard",
+    "id": "q_117_qui_a_compose_le_quatuor_pour_la_fin_du_te"
+  },
+  {
+    "question": "Quel pianiste de jazz a composé « Round Midnight » ?",
+    "options": [
+      "Miles Davis",
+      "Billie Holiday",
+      "Charles Mingus",
+      "Thelonious Monk"
+    ],
+    "answer": 3,
+    "explanation": "Round Midnight est une composition de Thelonious Monk.",
+    "difficulty": "hard",
+    "id": "q_118_quel_pianiste_de_jazz_a_compose_round_midn"
+  },
+  {
+    "question": "Quel style vocal portugais est associé à l’expression de la saudade ?",
+    "options": [
+      "Sitar",
+      "Koto",
+      "Fado",
+      "Phil Spector"
+    ],
+    "answer": 2,
+    "explanation": "Le fado exprime souvent la saudade.",
+    "difficulty": "hard",
+    "id": "q_119_quel_style_vocal_portugais_est_associe_a_l"
+  },
+  {
+    "id": "q_120_quel_artiste_francais_a_ecrit_et_interpret",
+    "question": "Quel artiste français a écrit et interprété « La Javanaise » ?",
+    "options": [
+      "Serge Gainsbourg",
+      "Charles Aznavour",
+      "Jacques Brel",
+      "Georges Brassens"
+    ],
+    "answer": 0,
+    "explanation": "La Javanaise est une chanson de Serge Gainsbourg.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Qui a composé la suite Peer Gynt ?",
+    "options": [
+      "Erich Wolfgang Korngold",
+      "Edvard Grieg",
+      "Maurice Ravel",
+      "John Adams"
+    ],
+    "answer": 1,
+    "explanation": "Peer Gynt est une musique de scène d’Edvard Grieg.",
+    "difficulty": "hard",
+    "id": "q_121_qui_a_compose_la_suite_peer_gynt"
+  },
+  {
+    "question": "Quel pianiste a enregistré l’album Time Out avec son quartet ?",
+    "options": [
+      "Charlie Parker",
+      "John Coltrane",
+      "Dave Brubeck",
+      "Thelonious Monk"
+    ],
+    "answer": 2,
+    "explanation": "Time Out est un album du Dave Brubeck Quartet.",
+    "difficulty": "hard",
+    "id": "q_122_quel_pianiste_a_enregistre_lalbum_time_out"
+  },
+  {
+    "question": "Quel artiste a sorti l’album Hounds of Love ?",
+    "options": [
+      "Kate Bush",
+      "Portishead",
+      "Joni Mitchell",
+      "Television"
+    ],
+    "answer": 0,
+    "explanation": "Hounds of Love est un album de Kate Bush.",
+    "difficulty": "hard",
+    "id": "q_123_quel_artiste_a_sorti_lalbum_hounds_of_love"
+  },
+  {
+    "id": "q_124_quel_groupe_a_sorti_le_titre_blue_monday",
+    "question": "Quel groupe a sorti le titre « Blue Monday » ?",
+    "options": [
+      "New Order",
+      "Depeche Mode",
+      "The Cure",
+      "Joy Division"
+    ],
+    "answer": 0,
+    "explanation": "Blue Monday est un titre de New Order.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_125_quel_rappeur_a_sorti_lalbum_to_pimp_a_butt",
+    "question": "Quel rappeur a sorti l’album To Pimp a Butterfly ?",
+    "options": [
+      "Kendrick Lamar",
+      "Drake",
+      "J. Cole",
+      "Tyler, The Creator"
+    ],
+    "answer": 0,
+    "explanation": "To Pimp a Butterfly est un album de Kendrick Lamar.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Quel intervalle contient six demi-tons ?",
+    "options": [
+      "Ostinato",
+      "Retard",
+      "Triton",
+      "Cadence"
+    ],
+    "answer": 2,
+    "explanation": "Le triton couvre six demi-tons.",
+    "difficulty": "hard",
+    "id": "q_126_quel_intervalle_contient_six_demi_tons"
+  },
+  {
+    "question": "Quel saxophoniste ténor a enregistré Giant Steps ?",
+    "options": [
+      "John Coltrane",
+      "Miles Davis",
+      "Thelonious Monk",
+      "Billie Holiday"
+    ],
+    "answer": 0,
+    "explanation": "Giant Steps est un album de John Coltrane.",
+    "difficulty": "hard",
+    "id": "q_127_quel_saxophoniste_tenor_a_enregistre_giant"
+  },
+  {
+    "question": "Quel terme désigne une note étrangère tenue depuis l’accord précédent puis résolue ?",
+    "options": [
+      "Ostinato",
+      "Retard",
+      "Madrigal",
+      "Triton"
+    ],
+    "answer": 1,
+    "explanation": "Le retard prolonge une note avant sa résolution.",
+    "difficulty": "hard",
+    "id": "q_128_quel_terme_designe_une_note_etrangere_tenu"
+  },
+  {
+    "question": "Quel producteur est associé à la technique du « Wall of Sound » ?",
+    "options": [
+      "Tempérament égal",
+      "Fado",
+      "Phil Spector",
+      "Koto"
+    ],
+    "answer": 2,
+    "explanation": "Phil Spector a popularisé le Wall of Sound.",
+    "difficulty": "hard",
+    "id": "q_129_quel_producteur_est_associe_a_la_technique"
+  },
+  {
+    "id": "q_130_qui_a_compose_les_quatre_saisons",
+    "question": "Qui a composé Les Quatre Saisons ?",
+    "options": [
+      "Wolfgang Amadeus Mozart",
+      "Johann Sebastian Bach",
+      "Antonio Vivaldi",
+      "Georg Friedrich Haendel"
+    ],
+    "answer": 2,
+    "explanation": "Les Quatre Saisons sont un ensemble de concertos de Vivaldi.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_131_quel_groupe_a_sorti_lalbum_ok_computer",
+    "question": "Quel groupe a sorti l’album OK Computer ?",
+    "options": [
+      "Blur",
+      "Muse",
+      "Oasis",
+      "Radiohead"
+    ],
+    "answer": 3,
+    "explanation": "OK Computer est un album de Radiohead.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_132_qui_a_compose_le_bolero",
+    "question": "Qui a composé le Boléro ?",
+    "options": [
+      "Gabriel Fauré",
+      "Claude Debussy",
+      "Maurice Ravel",
+      "Erik Satie"
+    ],
+    "answer": 2,
+    "explanation": "Le Boléro a été composé par Maurice Ravel.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Quelle chanteuse de jazz était surnommée Lady Day ?",
+    "options": [
+      "Charlie Parker",
+      "Billie Holiday",
+      "Miles Davis",
+      "Thelonious Monk"
+    ],
+    "answer": 1,
+    "explanation": "Billie Holiday était surnommée Lady Day.",
+    "difficulty": "hard",
+    "id": "q_133_quelle_chanteuse_de_jazz_etait_surnommee_l"
+  },
+  {
+    "question": "Qui a composé l’opéra Wozzeck ?",
+    "options": [
+      "Franz Schubert",
+      "Hector Berlioz",
+      "Alban Berg",
+      "Maurice Ravel"
+    ],
+    "answer": 2,
+    "explanation": "Wozzeck est un opéra d’Alban Berg.",
+    "difficulty": "hard",
+    "id": "q_134_qui_a_compose_lopera_wozzeck"
+  },
+  {
+    "question": "Quel trompettiste a enregistré l’album Kind of Blue ?",
+    "options": [
+      "Billie Holiday",
+      "Miles Davis",
+      "Charlie Parker",
+      "Thelonious Monk"
+    ],
+    "answer": 1,
+    "explanation": "Kind of Blue est un album de Miles Davis.",
+    "difficulty": "hard",
+    "id": "q_135_quel_trompettiste_a_enregistre_lalbum_kind"
+  },
+  {
+    "question": "Comment appelle-t-on une œuvre vocale profane de la Renaissance pour plusieurs voix ?",
+    "options": [
+      "Canon",
+      "Madrigal",
+      "Accord diminué",
+      "Triton"
+    ],
+    "answer": 1,
+    "explanation": "Le madrigal est une forme vocale polyphonique profane.",
+    "difficulty": "hard",
+    "id": "q_136_comment_appelle_t_on_une_uvre_vocale_profa"
+  },
+  {
+    "question": "Quel groupe a sorti l’album Loveless ?",
+    "options": [
+      "Portishead",
+      "Television",
+      "My Bloody Valentine",
+      "Kate Bush"
+    ],
+    "answer": 2,
+    "explanation": "Loveless est un album de My Bloody Valentine.",
+    "difficulty": "hard",
+    "id": "q_137_quel_groupe_a_sorti_lalbum_loveless"
+  },
+  {
+    "id": "q_138_quel_instrument_a_vent_utilise_une_anche_d",
+    "question": "Quel instrument à vent utilise une anche double et appartient à la famille des bois ?",
+    "options": [
+      "Saxophone",
+      "Flûte traversière",
+      "Clarinette",
+      "Hautbois"
+    ],
+    "answer": 3,
+    "explanation": "Le hautbois utilise une anche double.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Quel système d’accordage divise l’octave en douze demi-tons égaux ?",
+    "options": [
+      "Fado",
+      "Sitar",
+      "Phil Spector",
+      "Tempérament égal"
+    ],
+    "answer": 3,
+    "explanation": "Le tempérament égal répartit l’octave en douze intervalles égaux.",
+    "difficulty": "hard",
+    "id": "q_139_quel_systeme_daccordage_divise_loctave_en_"
+  },
+  {
+    "question": "Qui a composé la Symphonie fantastique ?",
+    "options": [
+      "Alban Berg",
+      "Hector Berlioz",
+      "Edvard Grieg",
+      "Franz Schubert"
+    ],
+    "answer": 1,
+    "explanation": "La Symphonie fantastique est de Berlioz.",
+    "difficulty": "hard",
+    "id": "q_140_qui_a_compose_la_symphonie_fantastique"
+  },
+  {
+    "id": "q_141_quelle_mesure_est_la_plus_courante_pour_un",
+    "question": "Quelle mesure est la plus courante pour une valse ?",
+    "options": [
+      "4/4",
+      "3/4",
+      "2/4",
+      "6/8 uniquement"
+    ],
+    "answer": 1,
+    "explanation": "La valse est généralement écrite à trois temps, souvent en 3/4.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Quel saxophoniste est associé au style bebop et au surnom Bird ?",
+    "options": [
+      "John Coltrane",
+      "Thelonious Monk",
+      "Charles Mingus",
+      "Charlie Parker"
+    ],
+    "answer": 3,
+    "explanation": "Charlie Parker était surnommé Bird.",
+    "difficulty": "hard",
+    "id": "q_142_quel_saxophoniste_est_associe_au_style_beb"
+  },
+  {
+    "question": "Qui a composé l’opéra Nixon in China ?",
+    "options": [
+      "John Adams",
+      "Franz Schubert",
+      "Erich Wolfgang Korngold",
+      "Richard Strauss"
+    ],
+    "answer": 0,
+    "explanation": "Nixon in China est un opéra de John Adams.",
+    "difficulty": "hard",
+    "id": "q_143_qui_a_compose_lopera_nixon_in_china"
+  },
+  {
+    "question": "Qui a composé l’opéra La Ville morte ?",
+    "options": [
+      "Olivier Messiaen",
+      "Hector Berlioz",
+      "Benjamin Britten",
+      "Erich Wolfgang Korngold"
+    ],
+    "answer": 3,
+    "explanation": "La Ville morte est un opéra de Korngold.",
+    "difficulty": "hard",
+    "id": "q_144_qui_a_compose_lopera_la_ville_morte"
+  },
+  {
+    "question": "Quel artiste a sorti l’album Blue ?",
+    "options": [
+      "Television",
+      "My Bloody Valentine",
+      "Portishead",
+      "Joni Mitchell"
+    ],
+    "answer": 3,
+    "explanation": "Blue est un album de Joni Mitchell.",
+    "difficulty": "hard",
+    "id": "q_145_quel_artiste_a_sorti_lalbum_blue"
+  },
+  {
+    "id": "q_146_quel_terme_musical_indique_quil_faut_jouer",
+    "question": "Quel terme musical indique qu’il faut jouer de plus en plus fort ?",
+    "options": [
+      "Staccato",
+      "Crescendo",
+      "Diminuendo",
+      "Legato"
+    ],
+    "answer": 1,
+    "explanation": "Crescendo signifie augmenter progressivement l’intensité.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Quel groupe a sorti l’album Dummy ?",
+    "options": [
+      "Portishead",
+      "Kate Bush",
+      "My Bloody Valentine",
+      "Television"
+    ],
+    "answer": 0,
+    "explanation": "Dummy est un album de Portishead.",
+    "difficulty": "hard",
+    "id": "q_147_quel_groupe_a_sorti_lalbum_dummy"
+  },
+  {
+    "question": "Comment appelle-t-on une succession d’accords qui ramène vers la tonalité principale ?",
+    "options": [
+      "Retard",
+      "Fugue",
+      "Cadence",
+      "Polyrythmie"
+    ],
+    "answer": 2,
+    "explanation": "Une cadence conclut ou articule une phrase harmonique.",
+    "difficulty": "hard",
+    "id": "q_148_comment_appelle_t_on_une_succession_daccor"
+  },
+  {
+    "id": "q_149_quel_groupe_a_sorti_lalbum_rumours",
+    "question": "Quel groupe a sorti l’album Rumours ?",
+    "options": [
+      "The Eagles",
+      "Fleetwood Mac",
+      "Pink Floyd",
+      "The Doors"
+    ],
+    "answer": 1,
+    "explanation": "Rumours est un album de Fleetwood Mac.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Quel mode musical correspond à une gamme majeure commençant sur son deuxième degré ?",
+    "options": [
+      "Dorien",
+      "Retard",
+      "Fugue",
+      "Triton"
+    ],
+    "answer": 0,
+    "explanation": "Le mode dorien se construit à partir du deuxième degré de la gamme majeure.",
+    "difficulty": "hard",
+    "id": "q_150_quel_mode_musical_correspond_a_une_gamme_m"
+  }
+]

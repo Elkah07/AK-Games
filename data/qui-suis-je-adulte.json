@@ -1,0 +1,1262 @@
+[
+  {
+    "id": "who_a_001",
+    "label": "Un ex",
+    "category": "relations",
+    "clues": [
+      "J’appartiens au passé.",
+      "Je réapparais parfois dans les conversations.",
+      "Mon prénom peut changer l’ambiance."
+    ]
+  },
+  {
+    "id": "who_a_002",
+    "label": "Un crush",
+    "category": "relations",
+    "clues": [
+      "J’occupe beaucoup de pensées.",
+      "Je peux ne rien savoir de mon rôle.",
+      "Un simple message peut devenir important."
+    ]
+  },
+  {
+    "id": "who_a_003",
+    "label": "Un match Tinder",
+    "category": "relations",
+    "clues": [
+      "Je commence par un écran.",
+      "Je peux disparaître sans explication.",
+      "Une photo a beaucoup de responsabilités."
+    ]
+  },
+  {
+    "id": "who_a_004",
+    "label": "Un date catastrophique",
+    "category": "relations",
+    "clues": [
+      "Je deviens souvent une bonne anecdote.",
+      "Les silences y sont trop visibles.",
+      "On regarde parfois l’heure discrètement."
+    ]
+  },
+  {
+    "id": "who_a_005",
+    "label": "Un premier baiser",
+    "category": "relations",
+    "clues": [
+      "Je peux être très court.",
+      "Je reste longtemps dans la mémoire.",
+      "Le timing compte beaucoup."
+    ]
+  },
+  {
+    "id": "who_a_006",
+    "label": "Un sexto",
+    "category": "adulte",
+    "clues": [
+      "Je me relit avant d’être envoyé.",
+      "Je demande de choisir les mots avec soin.",
+      "Une capture d’écran serait dangereuse."
+    ]
+  },
+  {
+    "id": "who_a_007",
+    "label": "Un nude",
+    "category": "adulte",
+    "clues": [
+      "Je demande de la confiance.",
+      "Le cadrage est important.",
+      "Je ne devrait jamais être partagé sans accord."
+    ]
+  },
+  {
+    "id": "who_a_008",
+    "label": "Un plan cul",
+    "category": "adulte",
+    "clues": [
+      "Je nécessite de la clarté.",
+      "Les attentes doivent être dites.",
+      "Je ne suis pas forcément une relation."
+    ]
+  },
+  {
+    "id": "who_a_009",
+    "label": "Une love room",
+    "category": "adulte",
+    "clues": [
+      "Je suis une chambre très thématique.",
+      "J’assume beaucoup son ambiance.",
+      "Je ne suis pas choisie pour travailler."
+    ]
+  },
+  {
+    "id": "who_a_010",
+    "label": "Un strip-tease",
+    "category": "adulte",
+    "clues": [
+      "Je demande du rythme.",
+      "Je peux être sexy ou très drôle.",
+      "Les vêtements diminuent progressivement."
+    ]
+  },
+  {
+    "id": "who_a_011",
+    "label": "Un ami avec bénéfices",
+    "category": "relations",
+    "clues": [
+      "Je mélange deux catégories.",
+      "Les règles sont importantes.",
+      "Les émotions peuvent compliquer le contrat."
+    ]
+  },
+  {
+    "id": "who_a_012",
+    "label": "Une relation secrète",
+    "category": "relations",
+    "clues": [
+      "Je demande de la discrétion.",
+      "Je crée beaucoup de messages prudents.",
+      "Les emplois du temps deviennent stratégiques."
+    ]
+  },
+  {
+    "id": "who_a_013",
+    "label": "Un baiser volé",
+    "category": "relations",
+    "clues": [
+      "J’arrive vite.",
+      "Je peux lancer un très long débrief.",
+      "Le consentement reste essentiel."
+    ]
+  },
+  {
+    "id": "who_a_014",
+    "label": "Une nuit blanche à deux",
+    "category": "adulte",
+    "clues": [
+      "Je contiens peu de sommeil.",
+      "Le temps passe vite.",
+      "Le lendemain se voit souvent."
+    ]
+  },
+  {
+    "id": "who_a_015",
+    "label": "Une déclaration",
+    "category": "relations",
+    "clues": [
+      "Je demande du courage.",
+      "Je peux changer une relation.",
+      "Le silence juste après semble très long."
+    ]
+  },
+  {
+    "id": "who_a_016",
+    "label": "Un flirt",
+    "category": "relations",
+    "clues": [
+      "Je joue avec les sous-entendus.",
+      "J’utilise beaucoup le regard.",
+      "Il peut être léger ou très clair."
+    ]
+  },
+  {
+    "id": "who_a_017",
+    "label": "Une jalousie mal cachée",
+    "category": "relations",
+    "clues": [
+      "Je prétends souvent que tout va bien.",
+      "Je regarde certains détails de trop près.",
+      "Je me remarque dans le ton."
+    ]
+  },
+  {
+    "id": "who_a_018",
+    "label": "Un message envoyé trop tard",
+    "category": "relations",
+    "clues": [
+      "Je pars souvent après minuit.",
+      "Je contiens parfois trop de sincérité.",
+      "Le réveil peut apporter des regrets."
+    ]
+  },
+  {
+    "id": "who_a_019",
+    "label": "Une photo compromettante",
+    "category": "dossiers",
+    "clues": [
+      "Je deviens dangereuse dans une conversation de groupe.",
+      "Je rappelle une soirée précise.",
+      "Quelqu’un promet toujours de ne pas la montrer."
+    ]
+  },
+  {
+    "id": "who_a_020",
+    "label": "Un retour chez son ex",
+    "category": "relations",
+    "clues": [
+      "Je ressemble rarement à une décision purement logique.",
+      "Je réveille de vieux souvenirs.",
+      "Les amis ont souvent un avis."
+    ]
+  },
+  {
+    "id": "who_a_021",
+    "label": "Un coup de foudre",
+    "category": "relations",
+    "clues": [
+      "J’arrive sans prévenir.",
+      "J’ignore le calendrier.",
+      "Il peut changer une soirée."
+    ]
+  },
+  {
+    "id": "who_a_022",
+    "label": "Une tenue très sexy",
+    "category": "adulte",
+    "clues": [
+      "J’attire les regards.",
+      "Je demande parfois de l’assurance.",
+      "Je peux devenir le sujet d’un compliment."
+    ]
+  },
+  {
+    "id": "who_a_023",
+    "label": "Un secret de couple",
+    "category": "relations",
+    "clues": [
+      "Je n’appartient qu’à deux personnes.",
+      "Je crée un langage privé.",
+      "Il peut être tendre ou gênant."
+    ]
+  },
+  {
+    "id": "who_a_024",
+    "label": "Un fantasme",
+    "category": "adulte",
+    "clues": [
+      "J’existe d’abord dans l’imagination.",
+      "Je demande de la confiance pour être partagé.",
+      "Il ne devient jamais une obligation."
+    ]
+  },
+  {
+    "id": "who_a_025",
+    "label": "Un date improvisé",
+    "category": "relations",
+    "clues": [
+      "Je demande peu de préparation.",
+      "Je peux devenir le meilleur souvenir.",
+      "Le hasard fait une partie du travail."
+    ]
+  },
+  {
+    "label": "Un premier rendez-vous",
+    "category": "relations",
+    "clues": [
+      "Je mélange préparation et nervosité.",
+      "On vérifie souvent son téléphone avant mon début.",
+      "Je peux lancer une histoire ou devenir une anecdote."
+    ],
+    "id": "who_a_026"
+  },
+  {
+    "label": "Un rendez-vous arrangé",
+    "category": "relations",
+    "clues": [
+      "Deux personnes m’organisent sans se connaître vraiment.",
+      "Des amis jouent parfois les entremetteurs.",
+      "La surprise fait partie du programme."
+    ],
+    "id": "who_a_027"
+  },
+  {
+    "label": "Un speed dating",
+    "category": "relations",
+    "clues": [
+      "J’enchaîne plusieurs rencontres très courtes.",
+      "Une cloche peut marquer les changements.",
+      "Quelques minutes servent à décider si l’on veut se revoir."
+    ],
+    "id": "who_a_028"
+  },
+  {
+    "label": "Une relation à distance",
+    "category": "relations",
+    "clues": [
+      "Je demande beaucoup de messages et d’organisation.",
+      "Les retrouvailles ont une importance particulière.",
+      "Des kilomètres séparent les partenaires."
+    ],
+    "id": "who_a_029"
+  },
+  {
+    "label": "Une relation libre",
+    "category": "relations",
+    "clues": [
+      "Je repose sur des accords précis.",
+      "L’exclusivité n’y fonctionne pas de façon classique.",
+      "Communication et consentement sont indispensables."
+    ],
+    "id": "who_a_030"
+  },
+  {
+    "label": "Un couple secret",
+    "category": "relations",
+    "clues": [
+      "J’existe sans être officiellement montré.",
+      "Les messages doivent parfois rester discrets.",
+      "Les proches ne connaissent pas forcément la relation."
+    ],
+    "id": "who_a_031"
+  },
+  {
+    "label": "Une rupture par message",
+    "category": "relations",
+    "clues": [
+      "J’évite une conversation en face à face.",
+      "Quelques lignes peuvent mettre fin à des mois.",
+      "Je suis rarement considérée comme très élégante."
+    ],
+    "id": "who_a_032"
+  },
+  {
+    "label": "Un ghosting",
+    "category": "relations",
+    "clues": [
+      "Je transforme soudainement une conversation en silence.",
+      "Aucune explication claire ne m’accompagne.",
+      "Les messages restent sans réponse."
+    ],
+    "id": "who_a_033"
+  },
+  {
+    "label": "Un breadcrumbing",
+    "category": "relations",
+    "clues": [
+      "Je donne juste assez d’attention pour maintenir l’espoir.",
+      "J’alterne signes d’intérêt et disparition.",
+      "Je ne conduit presque jamais à un vrai engagement."
+    ],
+    "id": "who_a_034"
+  },
+  {
+    "label": "Une friendzone",
+    "category": "relations",
+    "clues": [
+      "Une personne espère plus que l’autre.",
+      "L’amitié devient parfois inconfortable.",
+      "Je suis souvent annoncée par une phrase sur le fait d’être formidable mais pas de cette façon."
+    ],
+    "id": "who_a_035"
+  },
+  {
+    "label": "Une réconciliation",
+    "category": "relations",
+    "clues": [
+      "Je viens après une dispute ou une séparation.",
+      "Des excuses et des changements peuvent me permettre.",
+      "Je remet deux personnes du même côté."
+    ],
+    "id": "who_a_036"
+  },
+  {
+    "label": "Une demande en mariage",
+    "category": "relations",
+    "clues": [
+      "Je contient une grande question.",
+      "Une bague m’accompagne souvent sans être obligatoire.",
+      "Une réponse change officiellement un projet de vie."
+    ],
+    "id": "who_a_037"
+  },
+  {
+    "label": "Un anniversaire de couple",
+    "category": "relations",
+    "clues": [
+      "Je marque une date importante à deux.",
+      "Un dîner ou un cadeau peut me célébrer.",
+      "Oublier mon jour crée parfois une crise."
+    ],
+    "id": "who_a_038"
+  },
+  {
+    "label": "Un ex qui revient",
+    "category": "relations",
+    "clues": [
+      "J’appartiens au passé mais réapparaît dans les messages.",
+      "J’affirme souvent avoir changé.",
+      "Ma présence teste les limites actuelles."
+    ],
+    "id": "who_a_039"
+  },
+  {
+    "label": "Un crush au travail",
+    "category": "relations",
+    "clues": [
+      "Je rends les pauses et réunions plus intéressantes.",
+      "La discrétion devient importante.",
+      "Vie professionnelle et attirance se mélangent."
+    ],
+    "id": "who_a_040"
+  },
+  {
+    "label": "Un crush sur un ami",
+    "category": "relations",
+    "clues": [
+      "Je complique une relation déjà proche.",
+      "Avouer mes sentiments peut tout changer.",
+      "Le groupe remarque parfois avant les personnes concernées."
+    ],
+    "id": "who_a_041"
+  },
+  {
+    "label": "Un amour de vacances",
+    "category": "relations",
+    "clues": [
+      "Je nais loin du quotidien.",
+      "Une date de retour plane au-dessus de moi.",
+      "Je peux durer une semaine ou traverser les années."
+    ],
+    "id": "who_a_042"
+  },
+  {
+    "label": "Une relation pansement",
+    "category": "relations",
+    "clues": [
+      "Je commence peu après une rupture.",
+      "Une personne précédente reste encore très présente émotionnellement.",
+      "J’aide parfois à oublier sans vraiment guérir."
+    ],
+    "id": "who_a_043"
+  },
+  {
+    "label": "Une jalousie rétroactive",
+    "category": "relations",
+    "clues": [
+      "Je concerne des histoires terminées avant la relation actuelle.",
+      "Des ex deviennent importants sans être présents.",
+      "Je transforme le passé du partenaire en source d’angoisse."
+    ],
+    "id": "who_a_044"
+  },
+  {
+    "label": "Une relation toxique",
+    "category": "relations",
+    "clues": [
+      "J’alterne souvent intensité et souffrance.",
+      "Contrôle, peur ou humiliation peuvent m’accompagner.",
+      "Partir de moi peut demander de l’aide."
+    ],
+    "id": "who_a_045"
+  },
+  {
+    "label": "Une relation saine",
+    "category": "relations",
+    "clues": [
+      "Je laisse de la place à chacun.",
+      "Respect, confiance et communication me structurent.",
+      "Les désaccords ne menacent pas la sécurité de l’autre."
+    ],
+    "id": "who_a_046"
+  },
+  {
+    "label": "Un râteau",
+    "category": "relations",
+    "clues": [
+      "J’arrive après une tentative de séduction.",
+      "Une réponse négative me définit.",
+      "L’ego met parfois un moment à se relever."
+    ],
+    "id": "who_a_047"
+  },
+  {
+    "label": "Un sex-toy",
+    "category": "adulte",
+    "clues": [
+      "Je suis conçu pour le plaisir.",
+      "Je peux être utilisé seul ou à plusieurs adultes consentants.",
+      "Hygiène, communication et choix personnel m’accompagnent."
+    ],
+    "id": "who_a_058"
+  },
+  {
+    "label": "Un préservatif",
+    "category": "adulte",
+    "clues": [
+      "Je forme une barrière.",
+      "Je réduit les risques de grossesse et de nombreuses infections.",
+      "Je dois être utilisé correctement et une seule fois."
+    ],
+    "id": "who_a_059"
+  },
+  {
+    "label": "Un lubrifiant",
+    "category": "adulte",
+    "clues": [
+      "Je réduit les frottements.",
+      "J’existe à base d’eau, de silicone ou d’autres formulations.",
+      "Sa compatibilité avec le reste du matériel compte."
+    ],
+    "id": "who_a_060"
+  },
+  {
+    "label": "Un dépistage",
+    "category": "adulte",
+    "clues": [
+      "Je concerne la santé sexuelle.",
+      "Je peux se faire même sans symptôme.",
+      "J’aide à protéger soi-même et ses partenaires."
+    ],
+    "id": "who_a_061"
+  },
+  {
+    "label": "Un consentement",
+    "category": "adulte",
+    "clues": [
+      "Je dois être libre, clair et réversible.",
+      "Le silence ne me remplace pas.",
+      "Je suis nécessaire à chaque étape d’une interaction intime."
+    ],
+    "id": "who_a_062"
+  },
+  {
+    "label": "Un safeword",
+    "category": "adulte",
+    "clues": [
+      "Je suis choisi avant certaines pratiques.",
+      "Je permets d’arrêter immédiatement sans ambiguïté.",
+      "Un mot simple et inattendu me rend efficace."
+    ],
+    "id": "who_a_063"
+  },
+  {
+    "label": "Un strip-poker",
+    "category": "adulte",
+    "clues": [
+      "Je mélange cartes et vêtements.",
+      "Une perte peut enlever une couche.",
+      "Mes règles doivent être acceptées avant de commencer."
+    ],
+    "id": "who_a_064"
+  },
+  {
+    "label": "Une douche à deux",
+    "category": "adulte",
+    "clues": [
+      "Je parsage un espace assez petit.",
+      "L’eau chaude peut ne pas suffire pour tout le monde.",
+      "Je peux être intime ou simplement peu pratique."
+    ],
+    "id": "who_a_065"
+  },
+  {
+    "label": "Un massage sensuel",
+    "category": "adulte",
+    "clues": [
+      "J’utilise les mains et une ambiance calme.",
+      "Le rythme est plus important que la force.",
+      "Les limites doivent être discutées."
+    ],
+    "id": "who_a_066"
+  },
+  {
+    "label": "Un baiser dans le cou",
+    "category": "adulte",
+    "clues": [
+      "Je ne vise pas les lèvres.",
+      "Je peux provoquer des frissons.",
+      "Je me situe près d’une zone très sensible."
+    ],
+    "id": "who_a_067"
+  },
+  {
+    "label": "Une marque de succion",
+    "category": "adulte",
+    "clues": [
+      "Je peux apparaître après un moment intime.",
+      "Je reste visible plusieurs jours.",
+      "Un col haut tente parfois de me cacher."
+    ],
+    "id": "who_a_068"
+  },
+  {
+    "label": "Un jeu de rôle intime",
+    "category": "adulte",
+    "clues": [
+      "Je fais incarner une situation ou un personnage.",
+      "L’imagination compte autant que les accessoires.",
+      "Les règles et limites se discutent à l’avance."
+    ],
+    "id": "who_a_069"
+  },
+  {
+    "label": "Une tenue sexy",
+    "category": "adulte",
+    "clues": [
+      "Je suis choisie pour séduire ou se sentir désirable.",
+      "Confiance et confort restent plus importants que le regard extérieur.",
+      "Elle peut être montrée ou gardée pour soi."
+    ],
+    "id": "who_a_070"
+  },
+  {
+    "label": "Une playlist sensuelle",
+    "category": "adulte",
+    "clues": [
+      "J’accompagne une ambiance intime.",
+      "Un mauvais morceau peut casser le moment.",
+      "Rythme et paroles sont sélectionnés avec attention."
+    ],
+    "id": "who_a_071"
+  },
+  {
+    "label": "Une chambre d’hôtel",
+    "category": "adulte",
+    "clues": [
+      "J’offre un décor temporaire loin du quotidien.",
+      "Personne n’y range vraiment ses affaires.",
+      "Elle accueille parfois des moments plus intimes que touristiques."
+    ],
+    "id": "who_a_072"
+  },
+  {
+    "label": "Un jacuzzi privé",
+    "category": "adulte",
+    "clues": [
+      "Je mélange eau chaude et bulles.",
+      "Je suis souvent vendu comme romantique.",
+      "Il ne remplace pas une vraie conversation sur l’hygiène et les limites."
+    ],
+    "id": "who_a_073"
+  },
+  {
+    "label": "Un fantasme partagé",
+    "category": "adulte",
+    "clues": [
+      "Je quitte l’imagination pour entrer dans une conversation.",
+      "Parler de moi ne crée jamais une obligation.",
+      "Confiance et absence de jugement me rendent plus facile."
+    ],
+    "id": "who_a_074"
+  },
+  {
+    "label": "Une photo suggestive",
+    "category": "adulte",
+    "clues": [
+      "Je montre sans tout montrer.",
+      "Le cadrage et la lumière comptent beaucoup.",
+      "Elle ne doit être envoyée qu’à une personne de confiance et consentante."
+    ],
+    "id": "who_a_075"
+  },
+  {
+    "label": "Un message vocal sexy",
+    "category": "adulte",
+    "clues": [
+      "J’utilise la voix plutôt qu’une image.",
+      "Le réécouter peut être très gênant au mauvais endroit.",
+      "Des écouteurs sont fortement recommandés."
+    ],
+    "id": "who_a_076"
+  },
+  {
+    "label": "Une caméra allumée au mauvais moment",
+    "category": "adulte",
+    "clues": [
+      "Je transforme un oubli en panique.",
+      "Un appel vidéo me rend possible.",
+      "Le bouton couper l’image devient soudain vital."
+    ],
+    "id": "who_a_077"
+  },
+  {
+    "label": "Une notification compromettante",
+    "category": "adulte",
+    "clues": [
+      "J’apparais sur un écran visible.",
+      "Quelques mots suffisent à créer un silence.",
+      "Le mode aperçu des messages me donne du pouvoir."
+    ],
+    "id": "who_a_078"
+  },
+  {
+    "label": "Un colis discret",
+    "category": "adulte",
+    "clues": [
+      "Je ne révèle pas clairement son contenu.",
+      "Il protège la vie privée lors d’un achat intime.",
+      "Le livreur ne sait pas nécessairement ce qu’il transporte."
+    ],
+    "id": "who_a_079"
+  },
+  {
+    "label": "Une soirée libertine",
+    "category": "adulte",
+    "clues": [
+      "Je me déroule dans un lieu réservé aux adultes.",
+      "Codes, consentement et respect y sont centraux.",
+      "Observer ou participer doit toujours rester un choix."
+    ],
+    "id": "who_a_080"
+  },
+  {
+    "label": "Un club de strip-tease",
+    "category": "adulte",
+    "clues": [
+      "Je propose des performances érotiques.",
+      "Des règles encadrent le contact et les photos.",
+      "Je suis un lieu pour adultes."
+    ],
+    "id": "who_a_081"
+  },
+  {
+    "label": "Une love box",
+    "category": "adulte",
+    "clues": [
+      "Je rassemble plusieurs objets ou idées pour un moment à deux.",
+      "Elle peut être achetée ou composée soi-même.",
+      "Le contenu reste une invitation, jamais une obligation."
+    ],
+    "id": "who_a_082"
+  },
+  {
+    "label": "Un jeu de cartes coquin",
+    "category": "adulte",
+    "clues": [
+      "Je pose des questions ou propose des défis intimes.",
+      "Chaque carte doit pouvoir être refusée.",
+      "Je sert surtout à lancer une conversation ou une ambiance."
+    ],
+    "id": "who_a_083"
+  },
+  {
+    "label": "Une nuit sans téléphone",
+    "category": "adulte",
+    "clues": [
+      "Je mets les écrans de côté.",
+      "Je demande de supporter le silence ou de créer de vraies activités.",
+      "Elle peut rendre un moment plus présent et plus intime."
+    ],
+    "id": "who_a_084"
+  },
+  {
+    "label": "Un réveil après une nuit imprévue",
+    "category": "adulte",
+    "clues": [
+      "Je mélange souvenirs, fatigue et recherche de vêtements.",
+      "La lumière du matin change l’ambiance.",
+      "Une conversation sur la suite devient souvent nécessaire."
+    ],
+    "id": "who_a_085"
+  },
+  {
+    "label": "Un petit-déjeuner après un date",
+    "category": "adulte",
+    "clues": [
+      "Je me déroule le lendemain plutôt que le soir.",
+      "Il peut confirmer une connexion ou révéler un malaise.",
+      "Café et croissants doivent parfois sauver la discussion."
+    ],
+    "id": "who_a_086"
+  },
+  {
+    "label": "Une trace de maquillage sur un vêtement",
+    "category": "adulte",
+    "clues": [
+      "Je peux trahir un rapprochement.",
+      "J’apparais sur un col, une manche ou une joue.",
+      "Une machine à laver devient complice."
+    ],
+    "id": "who_a_087"
+  },
+  {
+    "label": "Un like accidentel sur une vieille photo",
+    "category": "dossiers",
+    "clues": [
+      "J’arrive pendant une exploration trop profonde d’un profil.",
+      "Une notification peut me dénoncer immédiatement.",
+      "Retirer le cœur ne garantit pas l’oubli."
+    ],
+    "id": "who_a_090"
+  },
+  {
+    "label": "Un message envoyé au mauvais contact",
+    "category": "dossiers",
+    "clues": [
+      "Je transforme une conversation privée en catastrophe.",
+      "Le prénom affiché n’était pas le bon.",
+      "Le bouton supprimer pour tout le monde devient une course."
+    ],
+    "id": "who_a_091"
+  },
+  {
+    "label": "Une capture d’écran envoyée à la personne concernée",
+    "category": "dossiers",
+    "clues": [
+      "Je devais commenter un message avec quelqu’un d’autre.",
+      "Je contient souvent le nom exact de mon destinataire involontaire.",
+      "Aucune excuse ne semble assez rapide."
+    ],
+    "id": "who_a_092"
+  },
+  {
+    "label": "Un mensonge sur son âge",
+    "category": "dossiers",
+    "clues": [
+      "Je modifie quelques années pour séduire ou rassurer.",
+      "Une date de naissance finit souvent par me contredire.",
+      "J’abîme la confiance plus que le chiffre lui-même."
+    ],
+    "id": "who_a_093"
+  },
+  {
+    "label": "Un faux profil de rencontre",
+    "category": "dossiers",
+    "clues": [
+      "J’utilise une identité ou des photos trompeuses.",
+      "La personne réelle ne correspond pas à la promesse.",
+      "Une rencontre en lieu public et des vérifications réduisent mes risques."
+    ],
+    "id": "who_a_094"
+  },
+  {
+    "label": "Un historique de recherche gênant",
+    "category": "dossiers",
+    "clues": [
+      "Je conserve des questions très personnelles ou absurdes.",
+      "Un partage d’écran peut me révéler.",
+      "Le mode navigation privée arrive parfois trop tard."
+    ],
+    "id": "who_a_095"
+  },
+  {
+    "label": "Une playlist d’ex",
+    "category": "dossiers",
+    "clues": [
+      "Je contient des chansons associées à une ancienne histoire.",
+      "Elle peut être cachée sans être supprimée.",
+      "Un morceau suffit à ramener plusieurs souvenirs."
+    ],
+    "id": "who_a_096"
+  },
+  {
+    "label": "Un prénom tatoué",
+    "category": "dossiers",
+    "clues": [
+      "Je transforme une relation en inscription durable.",
+      "Une rupture ne m’efface pas.",
+      "Un recouvrement créatif peut devenir nécessaire."
+    ],
+    "id": "who_a_097"
+  },
+  {
+    "label": "Une rencontre avec deux ex à la même soirée",
+    "category": "dossiers",
+    "clues": [
+      "Je réunit plusieurs chapitres qu’on aurait préféré séparer.",
+      "Les présentations deviennent étrangement polies.",
+      "La stratégie de placement dans la pièce prend une importance capitale."
+    ],
+    "id": "who_a_098"
+  },
+  {
+    "id": "who_a_nouveau_001",
+    "label": "Un date catastrophique",
+    "category": "relations",
+    "clues": [
+      "Tout devait être séduisant.",
+      "Chaque détail a empiré le précédent.",
+      "On le raconte mieux qu’on ne l’a vécu."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_002",
+    "label": "Un crush interdit",
+    "category": "rencontres",
+    "clues": [
+      "On évite de trop me regarder.",
+      "Je rends les décisions moins raisonnables.",
+      "Mon existence compliquerait plusieurs relations."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_003",
+    "label": "Un sexto",
+    "category": "intimite",
+    "clues": [
+      "Je voyage souvent la nuit.",
+      "Une faute de destinataire peut être fatale.",
+      "Je mélange mots et imagination."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_004",
+    "label": "Un plan cul",
+    "category": "soirée",
+    "clues": [
+      "Je repose sur des règles parfois floues.",
+      "Les sentiments peuvent me compliquer.",
+      "Je ne suis pas officiellement un couple."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_005",
+    "label": "Une gueule de bois",
+    "category": "relations",
+    "clues": [
+      "J’arrive après une décision festive.",
+      "La lumière devient mon ennemie.",
+      "Je promets souvent que ce sera la dernière fois."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_006",
+    "label": "Un ex qui revient",
+    "category": "rencontres",
+    "clues": [
+      "Je connais déjà tes anciennes faiblesses.",
+      "Mon message commence souvent par une excuse banale.",
+      "Je teste si une porte est vraiment fermée."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_007",
+    "label": "Une relation secrète",
+    "category": "intimite",
+    "clues": [
+      "Je demande beaucoup de discrétion.",
+      "Le moindre message peut me trahir.",
+      "Je transforme les lieux publics en terrain à risques."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_008",
+    "label": "Un coup d’un soir",
+    "category": "soirée",
+    "clues": [
+      "Je peux commencer sans projet de lendemain.",
+      "Mon souvenir varie selon les personnes.",
+      "Je dure moins longtemps que les questions que je provoque."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_009",
+    "label": "Une application de rencontre",
+    "category": "relations",
+    "clues": [
+      "On me consulte parfois sans l’avouer.",
+      "Je transforme des personnes en profils.",
+      "Un glissement de doigt peut tout commencer."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_010",
+    "label": "Un préservatif",
+    "category": "rencontres",
+    "clues": [
+      "Je suis petit mais important.",
+      "On vérifie ma date avant de me faire confiance.",
+      "Je protège mieux quand on m’utilise correctement."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_011",
+    "label": "Un fantasme",
+    "category": "intimite",
+    "clues": [
+      "Je peux rester secret toute une vie.",
+      "Je n’ai pas besoin d’être réalisé pour exister.",
+      "L’imagination est mon terrain."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_012",
+    "label": "Une nuit blanche",
+    "category": "soirée",
+    "clues": [
+      "Je peux être romantique ou catastrophique.",
+      "Le café tente souvent de réparer mes conséquences.",
+      "Le lendemain me révèle sur les visages."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_013",
+    "label": "Un lendemain gênant",
+    "category": "relations",
+    "clues": [
+      "Je commence souvent par vérifier ses messages.",
+      "Certains souvenirs reviennent par morceaux.",
+      "Je donne envie de déménager très loin."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_014",
+    "label": "Un message supprimé",
+    "category": "rencontres",
+    "clues": [
+      "J’ai existé assez longtemps pour créer un doute.",
+      "Une notification peut laisser ma trace.",
+      "On m’imagine souvent pire que je n’étais."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_015",
+    "label": "Une chambre d’hôtel",
+    "category": "intimite",
+    "clues": [
+      "Je ne ressemble à la maison de personne.",
+      "Ma porte se ferme avec une carte.",
+      "Je garde beaucoup d’histoires sans les raconter."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_016",
+    "label": "Un baiser volé",
+    "category": "soirée",
+    "clues": [
+      "Je surprends plus que je ne préviens.",
+      "Je peux être romantique ou déplacé selon le consentement.",
+      "Je dure peu mais change l’ambiance."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_017",
+    "label": "Une déclaration après minuit",
+    "category": "relations",
+    "clues": [
+      "L’heure diminue parfois mon filtre.",
+      "Je peux être courageuse ou regrettable.",
+      "Le matin décide souvent de ma valeur."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_018",
+    "label": "Un ami avec avantages",
+    "category": "rencontres",
+    "clues": [
+      "Mon nom cherche à simplifier une situation compliquée.",
+      "L’amitié me précède.",
+      "Les règles émotionnelles sont mon point faible."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_019",
+    "label": "Un date arrangé",
+    "category": "intimite",
+    "clues": [
+      "Une autre personne a cru bien faire.",
+      "On connaît parfois mon CV avant mon visage.",
+      "La politesse me sauve quand l’alchimie manque."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_020",
+    "label": "Une photo intime",
+    "category": "soirée",
+    "clues": [
+      "Je demande de la confiance.",
+      "Je ne devrais jamais circuler sans consentement.",
+      "Un nuage numérique peut me rendre moins privée qu’on le croit."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_021",
+    "label": "Une panne pendant un rendez-vous",
+    "category": "relations",
+    "clues": [
+      "Je détruis le programme prévu.",
+      "Je force parfois à vraiment parler.",
+      "Je peux sauver ou ruiner la soirée."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_022",
+    "label": "Un mot de passe partagé",
+    "category": "rencontres",
+    "clues": [
+      "Je ressemble à une preuve de confiance.",
+      "Je donne accès à plus qu’une conversation.",
+      "Je peux devenir une très mauvaise idée après une rupture."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_023",
+    "label": "Une jalousie mal cachée",
+    "category": "intimite",
+    "clues": [
+      "Je dis « ça va » avec une voix qui dit l’inverse.",
+      "Je remarque des détails soudain très importants.",
+      "Une simple notification peut me réveiller."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_024",
+    "label": "Une relation à distance",
+    "category": "soirée",
+    "clues": [
+      "Les kilomètres font partie de mon quotidien.",
+      "Les retrouvailles comptent double.",
+      "Mon couple vit beaucoup dans un écran."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_025",
+    "label": "Un date sans téléphone",
+    "category": "relations",
+    "clues": [
+      "Je retire la sortie de secours numérique.",
+      "Les silences deviennent plus visibles.",
+      "Je force deux personnes à être vraiment présentes."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_026",
+    "label": "Une mauvaise excuse",
+    "category": "rencontres",
+    "clues": [
+      "Je tente de sauver une situation déjà fragile.",
+      "Plus je donne de détails, moins je parais crédible.",
+      "On me démonte avec une seule question."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_027",
+    "label": "Un message à 3 h du matin",
+    "category": "intimite",
+    "clues": [
+      "Mon heure révèle souvent mon intention.",
+      "Je peux contenir un manque, un désir ou une erreur.",
+      "Le matin me rend parfois embarrassant."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_028",
+    "label": "Une liste de red flags",
+    "category": "soirée",
+    "clues": [
+      "Je transforme des comportements en avertissements.",
+      "On me repère mieux chez les autres.",
+      "L’attirance pousse parfois à m’ignorer."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_029",
+    "label": "Un amour de vacances",
+    "category": "relations",
+    "clues": [
+      "Le décor joue beaucoup pour moi.",
+      "Ma date de fin existe dès le début.",
+      "Je laisse des souvenirs plus simples que la suite."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_030",
+    "label": "Une rencontre avec la belle-famille",
+    "category": "rencontres",
+    "clues": [
+      "Je mélange sourire, observation et pression.",
+      "Une anecdote d’enfance peut surgir sans prévenir.",
+      "Je compte beaucoup pour une relation sérieuse."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_031",
+    "label": "Un compte commun",
+    "category": "intimite",
+    "clues": [
+      "Je demande plus de confiance que de romantisme.",
+      "Les dépenses deviennent visibles à deux.",
+      "Je peux simplifier la vie ou compliquer les disputes."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_032",
+    "label": "Une pause dans le couple",
+    "category": "soirée",
+    "clues": [
+      "Je ne suis pas tout à fait une rupture.",
+      "Mes règles doivent être dites clairement.",
+      "Deux personnes peuvent me comprendre très différemment."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_033",
+    "label": "Un mariage surprise",
+    "category": "relations",
+    "clues": [
+      "Une personne croit organiser un événement ordinaire.",
+      "Le consentement reste plus important que le spectacle.",
+      "Je transforme une journée en engagement."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_034",
+    "label": "Un mensonge par omission",
+    "category": "rencontres",
+    "clues": [
+      "Je m’abrite derrière ce qui n’a pas été dit.",
+      "Je peux sembler moins grave qu’une fausse phrase.",
+      "La vérité tardive me rend souvent plus lourd."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_035",
+    "label": "Une playlist de séduction",
+    "category": "intimite",
+    "clues": [
+      "Chaque chanson cherche à installer une ambiance.",
+      "Un mauvais titre peut me rendre ridicule.",
+      "Je dis parfois ce que la personne n’ose pas dire."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_036",
+    "label": "Un petit-déjeuner au lit",
+    "category": "soirée",
+    "clues": [
+      "Je demande de l’attention et un plateau stable.",
+      "Les miettes sont mon principal défaut.",
+      "Je transforme un matin en geste romantique."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_037",
+    "label": "Une danse très rapprochée",
+    "category": "relations",
+    "clues": [
+      "La musique me donne une excuse.",
+      "La distance entre deux personnes devient minuscule.",
+      "Le langage du corps parle avant les mots."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_038",
+    "label": "Une conversation sur les limites",
+    "category": "rencontres",
+    "clues": [
+      "Je peux être gênante mais je sécurise la suite.",
+      "Je demande d’écouter sans négocier.",
+      "Le consentement devient plus clair grâce à moi."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_039",
+    "label": "Un cadeau trop intime",
+    "category": "intimite",
+    "clues": [
+      "Je prouve que quelqu’un a beaucoup observé.",
+      "Je peux toucher juste ou mettre très mal à l’aise.",
+      "Le niveau de relation décide de mon effet."
+    ]
+  },
+  {
+    "id": "who_a_nouveau_040",
+    "label": "Une double vie",
+    "category": "soirée",
+    "clues": [
+      "Je demande des histoires cohérentes.",
+      "Les horaires et notifications me menacent.",
+      "Je fais du mensonge une organisation quotidienne."
+    ]
+  }
+]

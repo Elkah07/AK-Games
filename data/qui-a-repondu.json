@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "qui_repondu_001",
+    "prompt": "Quelle invention complètement inutile défendrais-tu comme si elle allait changer le monde?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_002",
+    "prompt": "Quel animal choisirais-tu pour te représenter devant un tribunal?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_003",
+    "prompt": "Quel objet du quotidien serait ton pire colocataire?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_004",
+    "prompt": "Quelle règle absurde imposerais-tu si tu dirigeais le pays pendant une journée?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_005",
+    "prompt": "Quel bruit pourrais-tu imiter beaucoup trop longtemps sans te lasser?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_006",
+    "prompt": "Quel nom donnerais-tu à un bateau alors que tu n’y connais rien en navigation?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_007",
+    "prompt": "Quelle chose ridicule pourrais-tu collectionner très sérieusement?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_008",
+    "prompt": "Quel déguisement porterais-tu pour aller faire tes courses sans explication?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_009",
+    "prompt": "Quelle célébrité imaginaire inventerais-tu pour gagner un débat?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_010",
+    "prompt": "Quel objet choisirais-tu comme arme pendant une guerre de bureau?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_011",
+    "prompt": "Quelle activité banale pourrait devenir un sport olympique si tu décidais des règles?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_012",
+    "prompt": "Quel mensonge absurde serait étonnamment crédible raconté par toi?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_013",
+    "prompt": "Quelle phrase pourrait devenir le slogan officiel de ta vie?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_014",
+    "prompt": "Quel personnage de dessin animé ferait un excellent thérapeute pour toi?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_015",
+    "prompt": "Quel objet mériterait selon toi une cérémonie d’adieu quand il casse?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_016",
+    "prompt": "Quelle petite catastrophe provoquerais-tu probablement dans un château?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_018",
+    "prompt": "Quelle chanson choisirais-tu comme hymne pour entrer dans une pièce?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_019",
+    "prompt": "Quel aliment pourrait devenir ton ennemi juré dans un film?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_020",
+    "prompt": "Quelle théorie ridicule pourrais-tu défendre pendant dix minutes juste pour voir?",
+    "category": "drole_absurde",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_040",
+    "prompt": "Quelle est la première chose que tu fais en te réveillant?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_041",
+    "prompt": "Quel objet égares-tu le plus souvent chez toi?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_042",
+    "prompt": "Quelle tâche ménagère repousses-tu jusqu’à la dernière limite?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_043",
+    "prompt": "Quel petit rituel te met immédiatement de bonne humeur?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_044",
+    "prompt": "Quelle habitude as-tu quand tu attends quelqu’un en retard?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_045",
+    "prompt": "Quel détail vérifies-tu toujours avant de quitter ton logement?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_046",
+    "prompt": "Quelle chose fais-tu systématiquement en rentrant chez toi?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_047",
+    "prompt": "Quel vêtement portes-tu beaucoup plus souvent que tu ne l’avoues?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_048",
+    "prompt": "Quelle dépense minuscule revient beaucoup trop souvent dans ton quotidien?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_050",
+    "prompt": "Quelle excuse utilises-tu pour rester encore cinq minutes au lit?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_051",
+    "prompt": "Quel bruit de la maison t’énerve immédiatement?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_052",
+    "prompt": "Quelle chose oublies-tu presque toujours quand tu pars trop vite?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_053",
+    "prompt": "Quel coin de ton logement finit le plus vite en bazar?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_054",
+    "prompt": "Quelle application ou quel objet consultes-tu sans même y penser?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_055",
+    "prompt": "Quel est ton repas de secours quand tu n’as envie de rien préparer?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_056",
+    "prompt": "Quelle habitude prends-tu dès que tu es seul(e) chez toi?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_057",
+    "prompt": "Quel objet gardes-tu alors qu’il devrait être jeté depuis longtemps?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_058",
+    "prompt": "Quelle petite victoire quotidienne te satisfait beaucoup trop?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_059",
+    "prompt": "Quel moment de la journée est généralement ton meilleur?",
+    "category": "quotidien",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_079",
+    "prompt": "Quelle est l’excuse la moins crédible que tu aies déjà donnée?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_080",
+    "prompt": "Quel achat honteux cacherais-tu volontiers au groupe?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_081",
+    "prompt": "Quelle vieille photo de toi devrait rester définitivement enterrée?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_082",
+    "prompt": "Quel ancien surnom ne voudrais-tu surtout pas entendre ce soir?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_083",
+    "prompt": "Quelle chanson connais-tu par cœur mais refuses-tu généralement d’assumer?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_084",
+    "prompt": "Quel comportement ridicule as-tu quand tu crois que personne ne te regarde?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_085",
+    "prompt": "Quelle recherche Internet récente serait la plus difficile à expliquer?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_086",
+    "prompt": "Quel mensonge d’enfant as-tu maintenu beaucoup trop longtemps?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_087",
+    "prompt": "Quelle mode passée regrettes-tu le plus d’avoir suivie?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_088",
+    "prompt": "Quel message envoyé trop vite aimerais-tu pouvoir effacer de l’histoire?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_089",
+    "prompt": "Quelle compétence prétends-tu parfois avoir alors que tu improvises totalement?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_090",
+    "prompt": "Quel sujet te fait parler avec assurance alors que tu n’y connais presque rien?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_091",
+    "prompt": "Quelle situation t’a déjà fait prétendre ne pas reconnaître quelqu’un?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_092",
+    "prompt": "Quel objet cassé as-tu déjà essayé de remettre en place discrètement?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_093",
+    "prompt": "Quelle promesse as-tu déjà oubliée presque immédiatement?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_094",
+    "prompt": "Quel prétexte utilises-tu quand tu veux partir plus tôt?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_095",
+    "prompt": "Quel est le pire conseil que tu aies déjà donné avec beaucoup de conviction?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_096",
+    "prompt": "Quelle petite tricherie quotidienne pourrais-tu avouer sans trop de honte?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_097",
+    "prompt": "Quel compliment as-tu accepté alors qu’il ne t’était probablement pas destiné?",
+    "category": "dossiers",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_118",
+    "prompt": "Quelle opinion impopulaire assumes-tu sans difficulté?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_119",
+    "prompt": "Quel défaut chez les autres t’agace alors que tu l’as parfois aussi?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_120",
+    "prompt": "Quelle qualité apprécies-tu le plus chez quelqu’un?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_121",
+    "prompt": "Quelle critique te touche plus que tu ne le montres?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_122",
+    "prompt": "Quel compliment te fait le plus plaisir?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_123",
+    "prompt": "Quelle décision prends-tu beaucoup trop longtemps à réfléchir?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_125",
+    "prompt": "Quelle situation fait ressortir ton côté le plus compétitif?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_126",
+    "prompt": "Quel type de personne te met immédiatement à l’aise?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_128",
+    "prompt": "Quelle règle sociale trouves-tu complètement dépassée?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_129",
+    "prompt": "Quel luxe juges-tu inutile même si beaucoup de gens l’adorent?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_130",
+    "prompt": "Quelle habitude des autres pourrais-tu difficilement supporter au quotidien?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_131",
+    "prompt": "Quel sujet pourrait te faire changer d’avis après une bonne discussion?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_133",
+    "prompt": "Quelle valeur aimerais-tu transmettre à tout le monde?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_134",
+    "prompt": "Quel trait de personnalité te représente le moins?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_135",
+    "prompt": "Quelle émotion as-tu le plus de mal à cacher?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_136",
+    "prompt": "Quel choix révèle le mieux ta manière de fonctionner?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_137",
+    "prompt": "Quelle responsabilité prends-tu naturellement dans un groupe?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_139",
+    "prompt": "Sur quel sujet pourrais-tu parler pendant une heure sans préparation?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_140",
+    "prompt": "Sur quel sujet préfères-tu éviter les débats?",
+    "category": "opinions_personnalite",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_157",
+    "prompt": "Quel métier voulais-tu faire quand tu étais enfant?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_158",
+    "prompt": "Quel dessin animé regardais-tu le plus volontiers?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_159",
+    "prompt": "Quelle matière scolaire aimais-tu le moins?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_160",
+    "prompt": "Quel goûter te rappelle immédiatement ton enfance?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_161",
+    "prompt": "Quelle bêtise d’enfant te ressemble le plus?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_162",
+    "prompt": "Quel jouet aurais-tu refusé de prêter?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_163",
+    "prompt": "Quelle peur étrange avais-tu plus jeune?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_164",
+    "prompt": "Quel adulte t’impressionnait énormément quand tu étais petit(e)?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_165",
+    "prompt": "Quelle expression familiale utilises-tu encore aujourd’hui?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_166",
+    "prompt": "Quel souvenir de vacances te revient le plus souvent?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_167",
+    "prompt": "Quel vêtement d’enfance mériterait une photo compromettante?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_168",
+    "prompt": "Quel était ton talent le plus inutile à l’école?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_169",
+    "prompt": "Quelle punition recevais-tu le plus probablement?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_170",
+    "prompt": "Quel anniversaire d’enfance as-tu le mieux retenu?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_171",
+    "prompt": "Quelle odeur te ramène immédiatement chez tes parents ou grands-parents?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_172",
+    "prompt": "Quel aliment refusais-tu catégoriquement de manger?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_173",
+    "prompt": "Quel personnage imaginaire admirais-tu secrètement?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_174",
+    "prompt": "Quelle chanson entendue enfant connais-tu encore par cœur?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_175",
+    "prompt": "Quel objet gardais-tu toujours près de toi?",
+    "category": "enfance_souvenirs",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_196",
+    "prompt": "Quel rôle prends-tu naturellement pendant un voyage entre amis?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_197",
+    "prompt": "Pour quel type d’urgence tes proches peuvent-ils t’appeler?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_199",
+    "prompt": "Quel comportement pourrait mettre fin à une amitié pour toi?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_200",
+    "prompt": "Quelle activité proposes-tu le plus facilement au groupe?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_201",
+    "prompt": "Quel souvenir avec des amis te fait toujours rire?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_202",
+    "prompt": "Quelle personne du groupe appellerais-tu en premier en cas de problème?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_203",
+    "prompt": "Quel type de secret peut-on facilement te confier?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_204",
+    "prompt": "Quelle tâche d’organisation acceptes-tu volontiers?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_205",
+    "prompt": "Quelle tâche d’organisation évites-tu toujours?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_206",
+    "prompt": "Quel cadeau collectif serais-tu le plus doué(e) pour choisir?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_207",
+    "prompt": "Quelle excuse donnerais-tu pour annuler une sortie au dernier moment?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_208",
+    "prompt": "Quel sujet pourrait créer ton plus gros débat avec tes amis?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_209",
+    "prompt": "Quelle attention d’un ami te touche particulièrement?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_210",
+    "prompt": "Quel défaut pardonnes-tu facilement chez tes proches?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_211",
+    "prompt": "Quelle tradition aimerais-tu créer avec ton groupe?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_212",
+    "prompt": "Quel membre imaginaire ajouterais-tu à votre bande?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_213",
+    "prompt": "Quelle phrase pourrait résumer ta place dans le groupe?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_214",
+    "prompt": "Quel service rends-tu souvent sans qu’on te le demande?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_215",
+    "prompt": "Quelle sortie de groupe te ressemble le plus?",
+    "category": "amitie_groupe",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_235",
+    "prompt": "Quelle application ou quel site consultes-tu le plus souvent?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_236",
+    "prompt": "Quel type de notification ouvres-tu immédiatement?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_237",
+    "prompt": "Quel type de message laisses-tu le plus longtemps sans réponse?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_238",
+    "prompt": "Quelle photo gardes-tu alors qu’elle est objectivement ratée?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_239",
+    "prompt": "Quel emoji utilises-tu beaucoup trop?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_240",
+    "prompt": "Quel sujet pourrait t’aspirer dans une recherche Internet interminable?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_241",
+    "prompt": "Quelle vidéo pourrais-tu regarder plusieurs fois sans raison?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_242",
+    "prompt": "Quel est ton réflexe quand quelqu’un t’appelle sans prévenir?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_243",
+    "prompt": "Quelle est ta pire habitude avec les onglets ouverts?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_244",
+    "prompt": "Quel contenu partages-tu le plus volontiers avec tes proches?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_245",
+    "prompt": "Quel ancien statut ou publication te ferait le plus honte aujourd’hui?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_246",
+    "prompt": "Quelle conversation archivée pourrais-tu relire pendant des heures?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_247",
+    "prompt": "Quel filtre ou effet photo n’utiliserais-tu jamais?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_248",
+    "prompt": "Quelle faute de frappe fais-tu étonnamment souvent?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_249",
+    "prompt": "Quel compte suis-tu alors que tu n’assumes pas vraiment son contenu?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_250",
+    "prompt": "Quelle fonction de ton téléphone utilises-tu le moins bien?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_251",
+    "prompt": "Quel fond d’écran te correspondrait parfaitement?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_252",
+    "prompt": "Quelle recherche récente résume le mieux ta semaine?",
+    "category": "telephone_reseaux",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_273",
+    "prompt": "Quel plat pourrais-tu manger plusieurs jours de suite?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_274",
+    "prompt": "Quel aliment refuses-tu presque toujours de partager?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_275",
+    "prompt": "Quelle combinaison alimentaire étrange pourrais-tu défendre?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_276",
+    "prompt": "Quel repas commandes-tu quand tu ne sais pas quoi choisir?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_277",
+    "prompt": "Quel dessert choisis-tu le plus facilement?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_278",
+    "prompt": "Quel ingrédient enlèves-tu presque toujours de ton assiette?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_279",
+    "prompt": "Quelle odeur de cuisine te met immédiatement en appétit?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_280",
+    "prompt": "Quel plat rates-tu malgré tous tes efforts?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_281",
+    "prompt": "Quelle boisson représente le mieux ton humeur habituelle?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_282",
+    "prompt": "Quel aliment adoré par beaucoup de gens ne comprends-tu pas?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_283",
+    "prompt": "Quel snack achètes-tu pour le groupe mais manges-tu presque seul(e)?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_284",
+    "prompt": "Quelle recette familiale voudrais-tu savoir refaire parfaitement?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_285",
+    "prompt": "Quel restaurant choisirais-tu pour fêter une excellente nouvelle?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_286",
+    "prompt": "Quel est ton repas idéal après une longue soirée?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_287",
+    "prompt": "Quel aliment te rappelle immédiatement des vacances?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_288",
+    "prompt": "Quelle règle de table pourrais-tu abolir?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_289",
+    "prompt": "Quel plat serais-tu capable de commander dans un pays inconnu sans comprendre le menu?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_290",
+    "prompt": "Quel ingrédient pourrait ruiner un plat pour toi?",
+    "category": "nourriture",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_311",
+    "prompt": "Quelle destination choisirais-tu pour partir demain matin?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_312",
+    "prompt": "Quel objet oublies-tu le plus probablement dans une valise?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_313",
+    "prompt": "Quel type de voyage te ressemble le plus?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_314",
+    "prompt": "Quelle activité touristique pourrais-tu éviter sans regret?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_315",
+    "prompt": "Quel souvenir rapportes-tu le plus volontiers?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_316",
+    "prompt": "Quel détail peut facilement gâcher un séjour pour toi?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_317",
+    "prompt": "Quelle langue aimerais-tu parler parfaitement en voyage?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_318",
+    "prompt": "Quel moyen de transport supportes-tu le moins bien?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_320",
+    "prompt": "Quel paysage aimerais-tu voir au moins une fois?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_321",
+    "prompt": "Quelle est ta priorité en choisissant un hébergement?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_322",
+    "prompt": "Quel repas local serais-tu le plus curieux ou la plus curieuse de goûter?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_323",
+    "prompt": "Quelle erreur de voyage pourrais-tu facilement commettre?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_325",
+    "prompt": "Quelle personne serait ton partenaire de voyage idéal?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_326",
+    "prompt": "Quel budget de voyage dépenses-tu le plus facilement?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_327",
+    "prompt": "Quelle photo prends-tu toujours pendant des vacances?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_328",
+    "prompt": "Quel endroit très touristique aimerais-tu malgré tout découvrir?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_329",
+    "prompt": "Quelle aventure imprévue pourrais-tu finalement apprécier?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_330",
+    "prompt": "Quel pays te ressemble le moins mais t’intrigue beaucoup?",
+    "category": "voyages",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_349",
+    "prompt": "Quel métier pourrais-tu essayer pendant une semaine par curiosité?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_350",
+    "prompt": "Quelle compétence professionnelle aimerais-tu apprendre instantanément?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_351",
+    "prompt": "Quelle tâche repousses-tu le plus facilement?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_352",
+    "prompt": "Quel type de collègue ou camarade te fatigue rapidement?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_353",
+    "prompt": "Quelle excuse de retard serais-tu capable d’improviser?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_354",
+    "prompt": "Quel cours aurais-tu volontiers suivi toute ta vie?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_355",
+    "prompt": "Quelle réunion pourrait presque toujours être remplacée par un message?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_356",
+    "prompt": "Quel détail de ton espace de travail te ressemble le plus?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_357",
+    "prompt": "Quelle réussite scolaire ou professionnelle t’a rendu(e) particulièrement fier ou fière?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_358",
+    "prompt": "Quel métier ne pourrais-tu jamais exercer?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_360",
+    "prompt": "Quel conseil donnerais-tu à ta version du premier jour?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_361",
+    "prompt": "Quelle situation te fait perdre toute motivation?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_362",
+    "prompt": "Quel type de projet réveille ton côté perfectionniste?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_363",
+    "prompt": "Quelle récompense te motive vraiment à terminer une tâche?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_364",
+    "prompt": "Quel est ton réflexe devant une consigne incompréhensible?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_365",
+    "prompt": "Quelle matière ou compétence sembles-tu oublier dès qu’elle n’est plus utile?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_366",
+    "prompt": "Quel objet devrait être interdit dans toutes les réunions?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_367",
+    "prompt": "Quelle phrase de professeur ou de manager entends-tu encore dans ta tête?",
+    "category": "travail_etudes",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_387",
+    "prompt": "Quel projet aimerais-tu réellement accomplir dans les cinq prochaines années?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_388",
+    "prompt": "Dans quel type de logement imagines-tu ta vie idéale?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_389",
+    "prompt": "Quelle compétence voudrais-tu maîtriser parfaitement un jour?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_390",
+    "prompt": "Quel changement de vie pourrais-tu faire sur un coup de tête?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_391",
+    "prompt": "Quelle habitude aimerais-tu avoir dans dix ans?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_392",
+    "prompt": "Quel rêve as-tu mis de côté sans l’abandonner complètement?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_393",
+    "prompt": "Quel luxe quotidien choisirais-tu si l’argent n’était pas un problème?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_394",
+    "prompt": "Quelle cause aimerais-tu pouvoir aider davantage?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_395",
+    "prompt": "Quel souvenir aimerais-tu créer avec tes proches?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_396",
+    "prompt": "Quelle ville ou région pourrais-tu envisager d’habiter?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_397",
+    "prompt": "Quel risque serais-tu prêt(e) à prendre pour un grand projet?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_398",
+    "prompt": "Quelle version future de toi aimerais-tu rencontrer pendant une heure?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_399",
+    "prompt": "Quel objet du futur aimerais-tu posséder en premier?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_400",
+    "prompt": "Quelle tradition voudrais-tu conserver toute ta vie?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_402",
+    "prompt": "Quelle peur aimerais-tu avoir dépassée?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_403",
+    "prompt": "Quel voyage rêvé comptes-tu vraiment faire un jour?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_404",
+    "prompt": "Quelle personne aimerais-tu remercier correctement avant qu’il soit trop tard?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_405",
+    "prompt": "Quel talent créatif voudrais-tu développer?",
+    "category": "futur_reves",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_425",
+    "prompt": "Si tu devenais célèbre demain, pour quelle raison serait-ce probablement?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_426",
+    "prompt": "Si tu étais enfermé(e) toute une nuit dans un magasin, où irais-tu en premier?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_427",
+    "prompt": "Si des extraterrestres te demandaient de représenter l’humanité, que leur montrerais-tu?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_428",
+    "prompt": "Si tu gagnais une île, quel nom lui donnerais-tu?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_429",
+    "prompt": "Si tu devais survivre avec un seul objet de ta chambre, lequel choisirais-tu?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_430",
+    "prompt": "Si un animal pouvait parler pendant une heure, lequel interrogerais-tu?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_431",
+    "prompt": "Si tu pouvais effacer une invention de l’histoire, laquelle choisirais-tu?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_432",
+    "prompt": "Si tu devais ouvrir un musée sur un sujet absurde, lequel choisirais-tu?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_433",
+    "prompt": "Si tu échangeais ta vie avec une célébrité pendant une journée, qui choisirais-tu?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_434",
+    "prompt": "Si tu recevais une invitation mystérieuse pour minuit, quelle serait ta première hypothèse?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_435",
+    "prompt": "Si tu pouvais arrêter le temps pendant une heure, que ferais-tu?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_436",
+    "prompt": "Si tu te réveillais dans un film, lequel serait le pire pour toi?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_437",
+    "prompt": "Si tu devenais maire de ta ville, quelle serait ta première mesure?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_438",
+    "prompt": "Si tu étais poursuivi(e) par une mascotte géante, où te cacherais-tu?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_439",
+    "prompt": "Si tu devais porter le même costume pendant un mois, lequel choisirais-tu?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_440",
+    "prompt": "Si tu pouvais rendre un objet illégal pendant vingt-quatre heures, lequel serait-ce?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_441",
+    "prompt": "Si tu découvrais une pièce secrète chez toi, qu’espérerais-tu y trouver?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_442",
+    "prompt": "Si tu devais vivre dans une époque différente, laquelle tenterais-tu?",
+    "category": "situations_improbables",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_463",
+    "prompt": "Quel détail te fait immédiatement apprécier quelqu’un?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_464",
+    "prompt": "Quel comportement te fait perdre tout intérêt pour une personne?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_465",
+    "prompt": "Quel est ton signe le plus évident quand quelqu’un te plaît?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_466",
+    "prompt": "Quelle qualité pourrait te faire pardonner un premier rendez-vous maladroit?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_467",
+    "prompt": "Quel type de message te donne envie de répondre immédiatement?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_468",
+    "prompt": "Quelle attention romantique trouves-tu vraiment touchante?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_469",
+    "prompt": "Quel conseil relationnel donnes-tu mieux que tu ne l’appliques?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_470",
+    "prompt": "Quelle activité serait idéale pour apprendre à connaître quelqu’un?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_471",
+    "prompt": "Quel détail d’un premier rendez-vous retiendrais-tu le plus?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_472",
+    "prompt": "Quelle phrase de drague te ferait rire sans forcément fonctionner?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_473",
+    "prompt": "Quel comportement dans un couple te semble particulièrement sain?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_474",
+    "prompt": "Quelle habitude relationnelle te paraît difficile à supporter?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_475",
+    "prompt": "Quel est ton langage d’affection le plus naturel?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_476",
+    "prompt": "Quelle preuve de confiance compte beaucoup pour toi?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_477",
+    "prompt": "Quel sujet aimerais-tu aborder plus tôt dans une relation?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_478",
+    "prompt": "Quelle différence de personnalité pourrait bien compléter la tienne?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_479",
+    "prompt": "Quel souvenir d’un crush ancien te fait encore sourire?",
+    "category": "relations_crush",
+    "adult": false
+  },
+  {
+    "id": "qui_repondu_480",
+    "prompt": "Quelle chanson pourrais-tu associer à une histoire sentimentale?",
+    "category": "relations_crush",
+    "adult": false
+  }
+]

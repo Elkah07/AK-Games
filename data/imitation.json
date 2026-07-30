@@ -1,0 +1,2580 @@
+[
+  {
+    "id": "imitation_142",
+    "text": "Quelqu’un qui prépare le petit déjeuner alors que tout lui échappe des mains, avec une mauvaise humeur impossible à dissimuler.",
+    "answer": "Quelqu’un qui prépare le petit déjeuner alors que tout lui échappe des mains",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "dissimuler"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_143",
+    "text": "Quelqu’un qui prépare le petit déjeuner en essayant de ne faire absolument aucun bruit, comme s’il racontait un tutoriel beaucoup trop sérieux.",
+    "answer": "Quelqu’un qui prépare le petit déjeuner en essayant de ne faire absolument aucun bruit",
+    "category": "quotidien",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "absolument",
+      "racontait"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_144",
+    "text": "Quelqu’un qui prépare le petit déjeuner avec un objet qui refuse de fonctionner normalement, en essayant de rester discret alors que tout va mal.",
+    "answer": "Quelqu’un qui prépare le petit déjeuner avec un objet qui refuse de fonctionner normalement",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "fonctionner"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_145",
+    "text": "Quelqu’un qui prépare le petit déjeuner tout en prétendant au téléphone que tout se passe parfaitement bien, avec une joie disproportionnée pour le résultat obtenu.",
+    "answer": "Quelqu’un qui prépare le petit déjeuner tout en prétendant au téléphone que tout se passe parfaitement bien",
+    "category": "quotidien",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "disproportionnee",
+      "parfaitement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_147",
+    "text": "Quelqu’un qui fait son lit alors que tout lui échappe des mains, en parlant à chaque objet comme à une vraie personne.",
+    "answer": "Quelqu’un qui fait son lit alors que tout lui échappe des mains",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "echappe"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_148",
+    "text": "Quelqu’un qui fait son lit en essayant de ne faire absolument aucun bruit, comme s’il découvrait cette activité pour la première fois.",
+    "answer": "Quelqu’un qui fait son lit en essayant de ne faire absolument aucun bruit",
+    "category": "quotidien",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "absolument",
+      "decouvrait"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_149",
+    "text": "Quelqu’un qui fait son lit avec un objet qui refuse de fonctionner normalement, avec l’assurance de quelqu’un qui refuse de lire la notice.",
+    "answer": "Quelqu’un qui fait son lit avec un objet qui refuse de fonctionner normalement",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "fonctionner"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_150",
+    "text": "Quelqu’un qui fait son lit tout en prétendant au téléphone que tout se passe parfaitement bien, comme si tout le voisinage l’observait.",
+    "answer": "Quelqu’un qui fait son lit tout en prétendant au téléphone que tout se passe parfaitement bien",
+    "category": "quotidien",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "parfaitement",
+      "pretendant"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_152",
+    "text": "Quelqu’un qui prend une douche alors que tout lui échappe des mains, avec une mauvaise humeur impossible à dissimuler.",
+    "answer": "Quelqu’un qui prend une douche alors que tout lui échappe des mains",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "dissimuler"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_153",
+    "text": "Quelqu’un qui prend une douche en essayant de ne faire absolument aucun bruit, comme s’il racontait un tutoriel beaucoup trop sérieux.",
+    "answer": "Quelqu’un qui prend une douche en essayant de ne faire absolument aucun bruit",
+    "category": "quotidien",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "absolument",
+      "racontait"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_154",
+    "text": "Quelqu’un qui prend une douche avec un objet qui refuse de fonctionner normalement, en essayant de rester discret alors que tout va mal.",
+    "answer": "Quelqu’un qui prend une douche avec un objet qui refuse de fonctionner normalement",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "fonctionner"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_155",
+    "text": "Quelqu’un qui prend une douche tout en prétendant au téléphone que tout se passe parfaitement bien, avec une joie disproportionnée pour le résultat obtenu.",
+    "answer": "Quelqu’un qui prend une douche tout en prétendant au téléphone que tout se passe parfaitement bien",
+    "category": "quotidien",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "disproportionnee",
+      "parfaitement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_157",
+    "text": "Quelqu’un qui fait les courses alors que tout lui échappe des mains, en parlant à chaque objet comme à une vraie personne.",
+    "answer": "Quelqu’un qui fait les courses alors que tout lui échappe des mains",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "courses"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_158",
+    "text": "Quelqu’un qui fait les courses en essayant de ne faire absolument aucun bruit, comme s’il découvrait cette activité pour la première fois.",
+    "answer": "Quelqu’un qui fait les courses en essayant de ne faire absolument aucun bruit",
+    "category": "quotidien",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "absolument",
+      "decouvrait"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_162",
+    "text": "Quelqu’un qui range sa chambre alors que tout lui échappe des mains, avec une mauvaise humeur impossible à dissimuler.",
+    "answer": "Quelqu’un qui range sa chambre alors que tout lui échappe des mains",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "dissimuler"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_169",
+    "text": "Quelqu’un qui se brosse les dents avec un objet qui refuse de fonctionner normalement, avec l’assurance de quelqu’un qui refuse de lire la notice.",
+    "answer": "Quelqu’un qui se brosse les dents avec un objet qui refuse de fonctionner normalement",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "fonctionner"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_172",
+    "text": "Quelqu’un qui cuisine des pâtes alors que tout lui échappe des mains, avec une mauvaise humeur impossible à dissimuler.",
+    "answer": "Quelqu’un qui cuisine des pâtes alors que tout lui échappe des mains",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "dissimuler"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_182",
+    "text": "Quelqu’un qui ouvre un colis alors que tout lui échappe des mains, avec une mauvaise humeur impossible à dissimuler.",
+    "answer": "Quelqu’un qui ouvre un colis alors que tout lui échappe des mains",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "dissimuler"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_186",
+    "text": "Quelqu’un qui essaie de s’endormir, comme si quelqu’un le chronométrait sans prévenir.",
+    "answer": "Quelqu’un qui essaie de s’endormir",
+    "category": "quotidien",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_192",
+    "text": "Quelqu’un qui vient de recevoir une excellente nouvelle devant une personne qui ne remarque rien, comme s’il essayait très mal de la cacher.",
+    "answer": "Quelqu’un qui vient de recevoir une excellente nouvelle devant une personne qui ne remarque rien",
+    "category": "attitudes",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "excellente"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_193",
+    "text": "Quelqu’un qui vient de recevoir une excellente nouvelle tout en devant garder un visage complètement neutre, avec un changement d’humeur toutes les trois secondes.",
+    "answer": "Quelqu’un qui vient de recevoir une excellente nouvelle tout en devant garder un visage complètement neutre",
+    "category": "attitudes",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "completement",
+      "changement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_194",
+    "text": "Quelqu’un qui vient de recevoir une excellente nouvelle puis essaie immédiatement de faire comme si de rien n’était, comme dans une série dramatique à très petit budget.",
+    "answer": "Quelqu’un qui vient de recevoir une excellente nouvelle puis essaie immédiatement de faire comme si de rien n’était",
+    "category": "attitudes",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "immediatement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_195",
+    "text": "Quelqu’un qui vient de recevoir une excellente nouvelle pendant une cérémonie où il est interdit de parler ou de réagir, en faisant semblant que tout va parfaitement bien.",
+    "answer": "Quelqu’un qui vient de recevoir une excellente nouvelle pendant une cérémonie où il est interdit de parler ou de réagir",
+    "category": "attitudes",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "parfaitement",
+      "excellente"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_197",
+    "text": "Quelqu’un qui essaie de cacher sa jalousie devant une personne qui ne remarque rien, comme s’il venait d’être pris en flagrant délit.",
+    "answer": "Quelqu’un qui essaie de cacher sa jalousie devant une personne qui ne remarque rien",
+    "category": "attitudes",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "flagrant"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_198",
+    "text": "Quelqu’un qui essaie de cacher sa jalousie tout en devant garder un visage complètement neutre, en transformant chaque silence en suspense.",
+    "answer": "Quelqu’un qui essaie de cacher sa jalousie tout en devant garder un visage complètement neutre",
+    "category": "attitudes",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "completement",
+      "transformant"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_199",
+    "text": "Quelqu’un qui essaie de cacher sa jalousie puis essaie immédiatement de faire comme si de rien n’était, comme si la situation était retransmise en direct.",
+    "answer": "Quelqu’un qui essaie de cacher sa jalousie puis essaie immédiatement de faire comme si de rien n’était",
+    "category": "attitudes",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "immediatement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_200",
+    "text": "Quelqu’un qui essaie de cacher sa jalousie pendant une cérémonie où il est interdit de parler ou de réagir, avec une dignité qui disparaît progressivement.",
+    "answer": "Quelqu’un qui essaie de cacher sa jalousie pendant une cérémonie où il est interdit de parler ou de réagir",
+    "category": "attitudes",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "progressivement",
+      "ceremonie"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_202",
+    "text": "Quelqu’un qui est terrifié mais veut paraître courageux devant une personne qui ne remarque rien, comme s’il essayait très mal de la cacher.",
+    "answer": "Quelqu’un qui est terrifié mais veut paraître courageux devant une personne qui ne remarque rien",
+    "category": "attitudes",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "courageux"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_203",
+    "text": "Quelqu’un qui est terrifié mais veut paraître courageux tout en devant garder un visage complètement neutre, avec un changement d’humeur toutes les trois secondes.",
+    "answer": "Quelqu’un qui est terrifié mais veut paraître courageux tout en devant garder un visage complètement neutre",
+    "category": "attitudes",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "completement",
+      "changement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_204",
+    "text": "Quelqu’un qui est terrifié mais veut paraître courageux puis essaie immédiatement de faire comme si de rien n’était, comme dans une série dramatique à très petit budget.",
+    "answer": "Quelqu’un qui est terrifié mais veut paraître courageux puis essaie immédiatement de faire comme si de rien n’était",
+    "category": "attitudes",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "immediatement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_205",
+    "text": "Quelqu’un qui est terrifié mais veut paraître courageux pendant une cérémonie où il est interdit de parler ou de réagir, en faisant semblant que tout va parfaitement bien.",
+    "answer": "Quelqu’un qui est terrifié mais veut paraître courageux pendant une cérémonie où il est interdit de parler ou de réagir",
+    "category": "attitudes",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "parfaitement",
+      "ceremonie"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_207",
+    "text": "Quelqu’un qui retient un fou rire devant une personne qui ne remarque rien, comme s’il venait d’être pris en flagrant délit.",
+    "answer": "Quelqu’un qui retient un fou rire devant une personne qui ne remarque rien",
+    "category": "attitudes",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "flagrant"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_208",
+    "text": "Quelqu’un qui retient un fou rire tout en devant garder un visage complètement neutre, en transformant chaque silence en suspense.",
+    "answer": "Quelqu’un qui retient un fou rire tout en devant garder un visage complètement neutre",
+    "category": "attitudes",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "completement",
+      "transformant"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_210",
+    "text": "Quelqu’un qui retient un fou rire pendant une cérémonie où il est interdit de parler ou de réagir, avec une dignité qui disparaît progressivement.",
+    "answer": "Quelqu’un qui retient un fou rire pendant une cérémonie où il est interdit de parler ou de réagir",
+    "category": "attitudes",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "progressivement",
+      "ceremonie"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_212",
+    "text": "Quelqu’un qui se sent soudainement très coupable devant une personne qui ne remarque rien, comme s’il essayait très mal de la cacher.",
+    "answer": "Quelqu’un qui se sent soudainement très coupable devant une personne qui ne remarque rien",
+    "category": "attitudes",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "soudainement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_213",
+    "text": "Quelqu’un qui se sent soudainement très coupable tout en devant garder un visage complètement neutre, avec un changement d’humeur toutes les trois secondes.",
+    "answer": "Quelqu’un qui se sent soudainement très coupable tout en devant garder un visage complètement neutre",
+    "category": "attitudes",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "completement",
+      "soudainement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_214",
+    "text": "Quelqu’un qui se sent soudainement très coupable puis essaie immédiatement de faire comme si de rien n’était, comme dans une série dramatique à très petit budget.",
+    "answer": "Quelqu’un qui se sent soudainement très coupable puis essaie immédiatement de faire comme si de rien n’était",
+    "category": "attitudes",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "immediatement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_215",
+    "text": "Quelqu’un qui se sent soudainement très coupable pendant une cérémonie où il est interdit de parler ou de réagir, en faisant semblant que tout va parfaitement bien.",
+    "answer": "Quelqu’un qui se sent soudainement très coupable pendant une cérémonie où il est interdit de parler ou de réagir",
+    "category": "attitudes",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "parfaitement",
+      "soudainement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_217",
+    "text": "Quelqu’un qui tombe amoureux au premier regard devant une personne qui ne remarque rien, comme s’il venait d’être pris en flagrant délit.",
+    "answer": "Quelqu’un qui tombe amoureux au premier regard devant une personne qui ne remarque rien",
+    "category": "attitudes",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "amoureux"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_218",
+    "text": "Quelqu’un qui tombe amoureux au premier regard tout en devant garder un visage complètement neutre, en transformant chaque silence en suspense.",
+    "answer": "Quelqu’un qui tombe amoureux au premier regard tout en devant garder un visage complètement neutre",
+    "category": "attitudes",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "completement",
+      "transformant"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_220",
+    "text": "Quelqu’un qui tombe amoureux au premier regard pendant une cérémonie où il est interdit de parler ou de réagir, avec une dignité qui disparaît progressivement.",
+    "answer": "Quelqu’un qui tombe amoureux au premier regard pendant une cérémonie où il est interdit de parler ou de réagir",
+    "category": "attitudes",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "progressivement",
+      "ceremonie"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_222",
+    "text": "Quelqu’un qui boude sans vouloir l’avouer devant une personne qui ne remarque rien, comme s’il essayait très mal de la cacher.",
+    "answer": "Quelqu’un qui boude sans vouloir l’avouer devant une personne qui ne remarque rien",
+    "category": "attitudes",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "essayait"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_223",
+    "text": "Quelqu’un qui boude sans vouloir l’avouer tout en devant garder un visage complètement neutre, avec un changement d’humeur toutes les trois secondes.",
+    "answer": "Quelqu’un qui boude sans vouloir l’avouer tout en devant garder un visage complètement neutre",
+    "category": "attitudes",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "completement",
+      "changement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_412",
+    "text": "Quelqu’un plongé dans une panne de courant et essaie de réparer la situation avant que quelqu’un ne remarque, comme si personne autour de lui ne comprenait l’urgence.",
+    "answer": "Quelqu’un plongé dans une panne de courant et essaie de réparer la situation avant que quelqu’un ne remarque",
+    "category": "situations",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "comprenait"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_413",
+    "text": "Quelqu’un plongé dans une panne de courant tout en donnant l’impression que cela faisait partie du plan, avec une panique très forte mais une voix étonnamment calme.",
+    "answer": "Quelqu’un plongé dans une panne de courant tout en donnant l’impression que cela faisait partie du plan",
+    "category": "situations",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "etonnamment",
+      "impression"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_414",
+    "text": "Quelqu’un plongé dans une panne de courant puis accuse discrètement un objet innocent, comme s’il essayait de sauver les apparences devant une caméra.",
+    "answer": "Quelqu’un plongé dans une panne de courant puis accuse discrètement un objet innocent",
+    "category": "situations",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "discretement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_415",
+    "text": "Quelqu’un plongé dans une panne de courant au moment exact où une personne importante entre dans la pièce, en donnant des ordres contradictoires à tout le monde.",
+    "answer": "Quelqu’un plongé dans une panne de courant au moment exact où une personne importante entre dans la pièce",
+    "category": "situations",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "contradictoires",
+      "importante"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_417",
+    "text": "Quelqu’un dont le gâteau brûle et essaie de réparer la situation avant que quelqu’un ne remarque, avec une solution brillante qui empire immédiatement le problème.",
+    "answer": "Quelqu’un dont le gâteau brûle et essaie de réparer la situation avant que quelqu’un ne remarque",
+    "category": "situations",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "immediatement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_418",
+    "text": "Quelqu’un dont le gâteau brûle tout en donnant l’impression que cela faisait partie du plan, comme s’il répétait une scène d’action sans budget.",
+    "answer": "Quelqu’un dont le gâteau brûle tout en donnant l’impression que cela faisait partie du plan",
+    "category": "situations",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "impression",
+      "repetait"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_419",
+    "text": "Quelqu’un dont le gâteau brûle puis accuse discrètement un objet innocent, en essayant de négocier avec la situation elle-même.",
+    "answer": "Quelqu’un dont le gâteau brûle puis accuse discrètement un objet innocent",
+    "category": "situations",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "discretement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_420",
+    "text": "Quelqu’un dont le gâteau brûle au moment exact où une personne importante entre dans la pièce, comme si une musique dramatique jouait dans sa tête.",
+    "answer": "Quelqu’un dont le gâteau brûle au moment exact où une personne importante entre dans la pièce",
+    "category": "situations",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "dramatique",
+      "importante"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_422",
+    "text": "Quelqu’un qui casse un objet très précieux et essaie de réparer la situation avant que quelqu’un ne remarque, comme si personne autour de lui ne comprenait l’urgence.",
+    "answer": "Quelqu’un qui casse un objet très précieux et essaie de réparer la situation avant que quelqu’un ne remarque",
+    "category": "situations",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "comprenait"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_423",
+    "text": "Quelqu’un qui casse un objet très précieux tout en donnant l’impression que cela faisait partie du plan, avec une panique très forte mais une voix étonnamment calme.",
+    "answer": "Quelqu’un qui casse un objet très précieux tout en donnant l’impression que cela faisait partie du plan",
+    "category": "situations",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "etonnamment",
+      "impression"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_425",
+    "text": "Quelqu’un qui casse un objet très précieux au moment exact où une personne importante entre dans la pièce, en donnant des ordres contradictoires à tout le monde.",
+    "answer": "Quelqu’un qui casse un objet très précieux au moment exact où une personne importante entre dans la pièce",
+    "category": "situations",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "contradictoires",
+      "importante"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_432",
+    "text": "Quelqu’un surpris par une pluie torrentielle et essaie de réparer la situation avant que quelqu’un ne remarque, comme si personne autour de lui ne comprenait l’urgence.",
+    "answer": "Quelqu’un surpris par une pluie torrentielle et essaie de réparer la situation avant que quelqu’un ne remarque",
+    "category": "situations",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "torrentielle"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_433",
+    "text": "Quelqu’un surpris par une pluie torrentielle tout en donnant l’impression que cela faisait partie du plan, avec une panique très forte mais une voix étonnamment calme.",
+    "answer": "Quelqu’un surpris par une pluie torrentielle tout en donnant l’impression que cela faisait partie du plan",
+    "category": "situations",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "torrentielle",
+      "etonnamment"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_434",
+    "text": "Quelqu’un surpris par une pluie torrentielle puis accuse discrètement un objet innocent, comme s’il essayait de sauver les apparences devant une caméra.",
+    "answer": "Quelqu’un surpris par une pluie torrentielle puis accuse discrètement un objet innocent",
+    "category": "situations",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "discretement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_435",
+    "text": "Quelqu’un surpris par une pluie torrentielle au moment exact où une personne importante entre dans la pièce, en donnant des ordres contradictoires à tout le monde.",
+    "answer": "Quelqu’un surpris par une pluie torrentielle au moment exact où une personne importante entre dans la pièce",
+    "category": "situations",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "contradictoires",
+      "torrentielle"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_442",
+    "text": "Quelqu’un dont le pantalon se déchire en public et essaie de réparer la situation avant que quelqu’un ne remarque, comme si personne autour de lui ne comprenait l’urgence.",
+    "answer": "Quelqu’un dont le pantalon se déchire en public et essaie de réparer la situation avant que quelqu’un ne remarque",
+    "category": "situations",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "comprenait"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_443",
+    "text": "Quelqu’un dont le pantalon se déchire en public tout en donnant l’impression que cela faisait partie du plan, avec une panique très forte mais une voix étonnamment calme.",
+    "answer": "Quelqu’un dont le pantalon se déchire en public tout en donnant l’impression que cela faisait partie du plan",
+    "category": "situations",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "etonnamment",
+      "impression"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_444",
+    "text": "Quelqu’un dont le pantalon se déchire en public puis accuse discrètement un objet innocent, comme s’il essayait de sauver les apparences devant une caméra.",
+    "answer": "Quelqu’un dont le pantalon se déchire en public puis accuse discrètement un objet innocent",
+    "category": "situations",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "discretement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_445",
+    "text": "Quelqu’un dont le pantalon se déchire en public au moment exact où une personne importante entre dans la pièce, en donnant des ordres contradictoires à tout le monde.",
+    "answer": "Quelqu’un dont le pantalon se déchire en public au moment exact où une personne importante entre dans la pièce",
+    "category": "situations",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "contradictoires",
+      "importante"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_447",
+    "text": "Quelqu’un qui renverse un plateau entier et essaie de réparer la situation avant que quelqu’un ne remarque, avec une solution brillante qui empire immédiatement le problème.",
+    "answer": "Quelqu’un qui renverse un plateau entier et essaie de réparer la situation avant que quelqu’un ne remarque",
+    "category": "situations",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "immediatement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_452",
+    "text": "Quelqu’un qui déclenche une alarme par erreur et essaie de réparer la situation avant que quelqu’un ne remarque, comme si cette catastrophe était devenue une attraction touristique, sans expliquer directement ce qui se passe.",
+    "answer": "Quelqu’un qui déclenche une alarme par erreur et essaie de réparer la situation avant que quelqu’un ne remarque",
+    "category": "situations",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "challenge",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "catastrophe",
+      "directement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_454",
+    "text": "Quelqu’un qui déclenche une alarme par erreur puis accuse discrètement un objet innocent, comme s’il répétait une scène d’action sans budget, sans expliquer directement ce qui se passe.",
+    "answer": "Quelqu’un qui déclenche une alarme par erreur puis accuse discrètement un objet innocent",
+    "category": "situations",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "challenge",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "discretement",
+      "directement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_455",
+    "text": "Quelqu’un qui déclenche une alarme par erreur au moment exact où une personne importante entre dans la pièce, en essayant de négocier avec la situation elle-même, sans expliquer directement ce qui se passe.",
+    "answer": "Quelqu’un qui déclenche une alarme par erreur au moment exact où une personne importante entre dans la pièce",
+    "category": "situations",
+    "difficulty": "hard",
+    "actors": 1,
+    "collection": "challenge",
+    "soundMode": "required",
+    "forbiddenWords": [
+      "directement",
+      "importante"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_510",
+    "text": "Un flamant rose qui remarque une caméra et change soudainement de comportement, avec une voix intérieure de documentaire animalier mais comme si chaque mot prononcé déclenchait une mini-panique.",
+    "answer": "Un flamant rose qui remarque une caméra et change soudainement de comportement",
+    "category": "absurde_chaos",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "challenge",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "comportement",
+      "documentaire",
+      "mini-panique"
+    ],
+    "acceptedAnswers": [],
+    "twist": "mais comme si chaque mot prononcé déclenchait une mini-panique"
+  },
+  {
+    "id": "imitation_517",
+    "text": "Un cheval qui traverse une pièce sans réveiller un bébé endormi, comme s’il venait de comprendre une mauvaise nouvelle mais avec une politesse excessive alors que tout s’effondre.",
+    "answer": "Un cheval qui traverse une pièce sans réveiller un bébé endormi",
+    "category": "absurde_chaos",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "challenge",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "comprendre",
+      "excessive",
+      "politesse"
+    ],
+    "acceptedAnswers": [],
+    "twist": "mais avec une politesse excessive alors que tout s’effondre"
+  },
+  {
+    "id": "imitation_529",
+    "text": "Un professeur qui doit continuer son travail pendant qu’une catastrophe se déroule derrière lui, comme si son patron l’observait juste derrière lui mais en essayant de vendre la scène dans une publicité.",
+    "answer": "Un professeur qui doit continuer son travail pendant qu’une catastrophe se déroule derrière lui",
+    "category": "absurde_chaos",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "challenge",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "catastrophe",
+      "professeur",
+      "continuer"
+    ],
+    "acceptedAnswers": [],
+    "twist": "mais en essayant de vendre la scène dans une publicité"
+  },
+  {
+    "id": "imitation_530",
+    "text": "Un professeur qui découvre avoir choisi le mauvais métier mais doit faire semblant de tout maîtriser, en transformant chaque geste en grande démonstration mais comme si chaque mot prononcé déclenchait une mini-panique.",
+    "answer": "Un professeur qui découvre avoir choisi le mauvais métier mais doit faire semblant de tout maîtriser",
+    "category": "absurde_chaos",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "challenge",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "demonstration",
+      "mini-panique",
+      "transformant"
+    ],
+    "acceptedAnswers": [],
+    "twist": "mais comme si chaque mot prononcé déclenchait une mini-panique"
+  },
+  {
+    "id": "imitation_534",
+    "text": "Un pompier qui découvre avoir choisi le mauvais métier mais doit faire semblant de tout maîtriser, avec une voix professionnelle qui craque peu à peu mais en faisant croire qu’un pigeon est le véritable chef.",
+    "answer": "Un pompier qui découvre avoir choisi le mauvais métier mais doit faire semblant de tout maîtriser",
+    "category": "absurde_chaos",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "challenge",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "professionnelle",
+      "maitriser",
+      "veritable"
+    ],
+    "acceptedAnswers": [],
+    "twist": "mais en faisant croire qu’un pigeon est le véritable chef"
+  },
+  {
+    "id": "imitation_550",
+    "text": "Une nageuse qui doit terminer son épreuve tout en évitant un obstacle invisible, en donnant des consignes imaginaires à toute une équipe mais comme si chaque mot prononcé déclenchait une mini-panique.",
+    "answer": "Une nageuse qui doit terminer son épreuve tout en évitant un obstacle invisible",
+    "category": "absurde_chaos",
+    "difficulty": "chaos",
+    "actors": 1,
+    "collection": "challenge",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "mini-panique",
+      "declenchait",
+      "imaginaires"
+    ],
+    "acceptedAnswers": [],
+    "twist": "mais comme si chaque mot prononcé déclenchait une mini-panique"
+  },
+  {
+    "id": "imitation_552",
+    "text": "Un dentiste et un patient très inquiet, mais chacun essaie de prendre le contrôle de la situation, comme si chacun avait compris une scène différente.",
+    "answer": "Un dentiste et un patient très inquiet, mais chacun essaie de prendre le contrôle de la situation",
+    "category": "duo",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "differente"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_553",
+    "text": "Un dentiste et un patient très inquiet tout en cachant au public qu’un énorme problème vient d’apparaître, avec un désaccord silencieux qui devient monumental.",
+    "answer": "Un dentiste et un patient très inquiet tout en cachant au public qu’un énorme problème vient d’apparaître",
+    "category": "duo",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "apparaitre"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_554",
+    "text": "Un dentiste et un patient très inquiet, puis leurs rôles s’inversent soudainement, comme dans une publicité beaucoup trop enthousiaste.",
+    "answer": "Un dentiste et un patient très inquiet, puis leurs rôles s’inversent soudainement",
+    "category": "duo",
+    "difficulty": "hard",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "enthousiaste",
+      "soudainement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_555",
+    "text": "Un dentiste et un patient très inquiet sans pouvoir se parler et avec une urgence qui devient de plus en plus grave, en inversant progressivement leurs personnalités.",
+    "answer": "Un dentiste et un patient très inquiet sans pouvoir se parler et avec une urgence qui devient de plus en plus grave",
+    "category": "duo",
+    "difficulty": "chaos",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "progressivement",
+      "personnalites",
+      "inversant"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_557",
+    "text": "Deux personnes qui portent une vitre invisible, mais chacun essaie de prendre le contrôle de la situation, avec un secret évident que personne ne veut avouer.",
+    "answer": "Deux personnes qui portent une vitre invisible, mais chacun essaie de prendre le contrôle de la situation",
+    "category": "duo",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "invisible"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_558",
+    "text": "Deux personnes qui portent une vitre invisible tout en cachant au public qu’un énorme problème vient d’apparaître, comme s’ils devaient tout faire sans réveiller quelqu’un.",
+    "answer": "Deux personnes qui portent une vitre invisible tout en cachant au public qu’un énorme problème vient d’apparaître",
+    "category": "duo",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "apparaitre"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_559",
+    "text": "Deux personnes qui portent une vitre invisible, puis leurs rôles s’inversent soudainement, en transformant la scène en duel dramatique.",
+    "answer": "Deux personnes qui portent une vitre invisible, puis leurs rôles s’inversent soudainement",
+    "category": "duo",
+    "difficulty": "hard",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "soudainement",
+      "transformant"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_560",
+    "text": "Deux personnes qui portent une vitre invisible sans pouvoir se parler et avec une urgence qui devient de plus en plus grave, comme s’ils étaient les seuls à ne pas comprendre la situation.",
+    "answer": "Deux personnes qui portent une vitre invisible sans pouvoir se parler et avec une urgence qui devient de plus en plus grave",
+    "category": "duo",
+    "difficulty": "chaos",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "comprendre",
+      "invisible",
+      "personnes"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_562",
+    "text": "Un professeur et un élève qui n’a rien révisé, mais chacun essaie de prendre le contrôle de la situation, comme si chacun avait compris une scène différente.",
+    "answer": "Un professeur et un élève qui n’a rien révisé, mais chacun essaie de prendre le contrôle de la situation",
+    "category": "duo",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "differente"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_563",
+    "text": "Un professeur et un élève qui n’a rien révisé tout en cachant au public qu’un énorme problème vient d’apparaître, avec un désaccord silencieux qui devient monumental.",
+    "answer": "Un professeur et un élève qui n’a rien révisé tout en cachant au public qu’un énorme problème vient d’apparaître",
+    "category": "duo",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "apparaitre"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_564",
+    "text": "Un professeur et un élève qui n’a rien révisé, puis leurs rôles s’inversent soudainement, comme dans une publicité beaucoup trop enthousiaste.",
+    "answer": "Un professeur et un élève qui n’a rien révisé, puis leurs rôles s’inversent soudainement",
+    "category": "duo",
+    "difficulty": "hard",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "enthousiaste",
+      "soudainement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_565",
+    "text": "Un professeur et un élève qui n’a rien révisé sans pouvoir se parler et avec une urgence qui devient de plus en plus grave, en inversant progressivement leurs personnalités.",
+    "answer": "Un professeur et un élève qui n’a rien révisé sans pouvoir se parler et avec une urgence qui devient de plus en plus grave",
+    "category": "duo",
+    "difficulty": "chaos",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "progressivement",
+      "personnalites",
+      "professeur"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_567",
+    "text": "Deux espions qui pensent chacun que l’autre ne les a pas vus, mais chacun essaie de prendre le contrôle de la situation, avec un secret évident que personne ne veut avouer.",
+    "answer": "Deux espions qui pensent chacun que l’autre ne les a pas vus, mais chacun essaie de prendre le contrôle de la situation",
+    "category": "duo",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "situation"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_568",
+    "text": "Deux espions qui pensent chacun que l’autre ne les a pas vus tout en cachant au public qu’un énorme problème vient d’apparaître, comme s’ils devaient tout faire sans réveiller quelqu’un.",
+    "answer": "Deux espions qui pensent chacun que l’autre ne les a pas vus tout en cachant au public qu’un énorme problème vient d’apparaître",
+    "category": "duo",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "apparaitre"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_569",
+    "text": "Deux espions qui pensent chacun que l’autre ne les a pas vus, puis leurs rôles s’inversent soudainement, en transformant la scène en duel dramatique.",
+    "answer": "Deux espions qui pensent chacun que l’autre ne les a pas vus, puis leurs rôles s’inversent soudainement",
+    "category": "duo",
+    "difficulty": "hard",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "soudainement",
+      "transformant"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_572",
+    "text": "Un serveur et un client extrêmement difficile, mais chacun essaie de prendre le contrôle de la situation, comme si chacun avait compris une scène différente.",
+    "answer": "Un serveur et un client extrêmement difficile, mais chacun essaie de prendre le contrôle de la situation",
+    "category": "duo",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "extremement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_577",
+    "text": "Un médecin et un patient persuadé d’avoir une maladie imaginaire, mais chacun essaie de prendre le contrôle de la situation, avec un secret évident que personne ne veut avouer.",
+    "answer": "Un médecin et un patient persuadé d’avoir une maladie imaginaire, mais chacun essaie de prendre le contrôle de la situation",
+    "category": "duo",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "imaginaire"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_579",
+    "text": "Un médecin et un patient persuadé d’avoir une maladie imaginaire, puis leurs rôles s’inversent soudainement, en transformant la scène en duel dramatique.",
+    "answer": "Un médecin et un patient persuadé d’avoir une maladie imaginaire, puis leurs rôles s’inversent soudainement",
+    "category": "duo",
+    "difficulty": "hard",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "soudainement",
+      "transformant"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_587",
+    "text": "Un coach sportif et une personne qui déteste le sport, mais chacun essaie de prendre le contrôle de la situation, avec un secret évident que personne ne veut avouer.",
+    "answer": "Un coach sportif et une personne qui déteste le sport, mais chacun essaie de prendre le contrôle de la situation",
+    "category": "duo",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "situation"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_589",
+    "text": "Un coach sportif et une personne qui déteste le sport, puis leurs rôles s’inversent soudainement, en transformant la scène en duel dramatique.",
+    "answer": "Un coach sportif et une personne qui déteste le sport, puis leurs rôles s’inversent soudainement",
+    "category": "duo",
+    "difficulty": "hard",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "soudainement",
+      "transformant"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_597",
+    "text": "Deux danseurs qui ne connaissent pas la même chorégraphie, mais chacun essaie de prendre le contrôle de la situation, avec un secret évident que personne ne veut avouer.",
+    "answer": "Deux danseurs qui ne connaissent pas la même chorégraphie, mais chacun essaie de prendre le contrôle de la situation",
+    "category": "duo",
+    "difficulty": "medium",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "choregraphie"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_599",
+    "text": "Deux danseurs qui ne connaissent pas la même chorégraphie, puis leurs rôles s’inversent soudainement, en transformant la scène en duel dramatique.",
+    "answer": "Deux danseurs qui ne connaissent pas la même chorégraphie, puis leurs rôles s’inversent soudainement",
+    "category": "duo",
+    "difficulty": "hard",
+    "actors": 2,
+    "collection": "duo",
+    "soundMode": "optional",
+    "forbiddenWords": [
+      "choregraphie",
+      "soudainement"
+    ],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_001",
+    "text": "Un GPS beaucoup trop susceptible qui prend chaque erreur d’itinéraire personnellement, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un GPS beaucoup trop susceptible qui prend chaque erreur d’itinéraire personnellement",
+    "category": "voix",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_002",
+    "text": "Une présentatrice météo qui annonce une pluie de confettis avec un sérieux absolu, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une présentatrice météo qui annonce une pluie de confettis avec un sérieux absolu",
+    "category": "personnages",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_003",
+    "text": "Un commentateur sportif qui décrit quelqu’un en train de tartiner une biscotte, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un commentateur sportif qui décrit quelqu’un en train de tartiner une biscotte",
+    "category": "personnages",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_004",
+    "text": "Un robot de caisse automatique qui commence à douter du sens de son existence, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un robot de caisse automatique qui commence à douter du sens de son existence",
+    "category": "objets",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_005",
+    "text": "Une sorcière enrhumée dont les formules magiques finissent toutes en éternuement, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une sorcière enrhumée dont les formules magiques finissent toutes en éternuement",
+    "category": "personnages",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_006",
+    "text": "Un pirate qui essaie de commander discrètement un menu enfant, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un pirate qui essaie de commander discrètement un menu enfant",
+    "category": "personnages",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_007",
+    "text": "Un vampire qui découvre qu’il a peur du noir, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un vampire qui découvre qu’il a peur du noir",
+    "category": "personnages",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_008",
+    "text": "Un détective persuadé qu’une chaussette disparue cache un complot international, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un détective persuadé qu’une chaussette disparue cache un complot international",
+    "category": "personnages",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_009",
+    "text": "Une influenceuse qui tente de vendre un caillou comme accessoire révolutionnaire, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une influenceuse qui tente de vendre un caillou comme accessoire révolutionnaire",
+    "category": "personnages",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_010",
+    "text": "Un professeur qui improvise complètement une leçon sur un sujet qu’il ne connaît pas, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un professeur qui improvise complètement une leçon sur un sujet qu’il ne connaît pas",
+    "category": "metiers",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_011",
+    "text": "Un serveur vocal qui devient passif-agressif après trois réponses incomprises, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un serveur vocal qui devient passif-agressif après trois réponses incomprises",
+    "category": "voix",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_012",
+    "text": "Une grand-mère qui raconte une partie de jeu vidéo comme un souvenir de guerre, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une grand-mère qui raconte une partie de jeu vidéo comme un souvenir de guerre",
+    "category": "personnages",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_013",
+    "text": "Un enfant qui négocie cinq minutes de coucher supplémentaires comme un avocat, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un enfant qui négocie cinq minutes de coucher supplémentaires comme un avocat",
+    "category": "personnages",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_014",
+    "text": "Un avocat qui défend une pizza accusée d’avoir de l’ananas, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un avocat qui défend une pizza accusée d’avoir de l’ananas",
+    "category": "metiers",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_015",
+    "text": "Un chef étoilé qui goûte des coquillettes au beurre et vit une révélation, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un chef étoilé qui goûte des coquillettes au beurre et vit une révélation",
+    "category": "metiers",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_016",
+    "text": "Une star de cinéma qui essaie de rester incognito dans une boulangerie, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une star de cinéma qui essaie de rester incognito dans une boulangerie",
+    "category": "personnages",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_017",
+    "text": "Un super-vilain qui présente son plan machiavélique mais perd constamment ses notes, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un super-vilain qui présente son plan machiavélique mais perd constamment ses notes",
+    "category": "personnages",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_018",
+    "text": "Une fée marraine qui en a assez des demandes impossibles, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une fée marraine qui en a assez des demandes impossibles",
+    "category": "personnages",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_019",
+    "text": "Un fantôme débutant qui demande poliment si sa victime a eu peur, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un fantôme débutant qui demande poliment si sa victime a eu peur",
+    "category": "personnages",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_020",
+    "text": "Un extraterrestre qui tente d’expliquer pourquoi les humains mettent des vêtements aux chiens, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un extraterrestre qui tente d’expliquer pourquoi les humains mettent des vêtements aux chiens",
+    "category": "personnages",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_021",
+    "text": "Une bande-annonce dramatique pour l’ouverture d’un pot de cornichons, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une bande-annonce dramatique pour l’ouverture d’un pot de cornichons",
+    "category": "voix",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_022",
+    "text": "Un documentaire animalier sur deux personnes qui se disputent la télécommande, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un documentaire animalier sur deux personnes qui se disputent la télécommande",
+    "category": "voix",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_023",
+    "text": "Une publicité luxueuse pour une éponge de cuisine usagée, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une publicité luxueuse pour une éponge de cuisine usagée",
+    "category": "voix",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_024",
+    "text": "Un bulletin d’information urgent consacré à la disparition d’un chargeur, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un bulletin d’information urgent consacré à la disparition d’un chargeur",
+    "category": "voix",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_025",
+    "text": "Un podcast de développement personnel animé par quelqu’un au bord de la crise de nerfs, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un podcast de développement personnel animé par quelqu’un au bord de la crise de nerfs",
+    "category": "voix",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_026",
+    "text": "Une voix de dessin animé qui essaie d’annoncer une très mauvaise nouvelle, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une voix de dessin animé qui essaie d’annoncer une très mauvaise nouvelle",
+    "category": "voix",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_027",
+    "text": "Un narrateur de conte qui réalise que le héros a pris le mauvais chemin, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un narrateur de conte qui réalise que le héros a pris le mauvais chemin",
+    "category": "voix",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_028",
+    "text": "Un animateur radio qui doit meubler parce que son invité ne répond que par oui ou non, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un animateur radio qui doit meubler parce que son invité ne répond que par oui ou non",
+    "category": "metiers",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_029",
+    "text": "Une voix de cinéma d’horreur qui lit une liste de courses banale, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une voix de cinéma d’horreur qui lit une liste de courses banale",
+    "category": "voix",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_030",
+    "text": "Un assistant vocal jaloux parce qu’on utilise un autre téléphone, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un assistant vocal jaloux parce qu’on utilise un autre téléphone",
+    "category": "objets",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_031",
+    "text": "Une machine à café qui refuse de travailler avant d’avoir elle-même bu un café, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une machine à café qui refuse de travailler avant d’avoir elle-même bu un café",
+    "category": "objets",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_032",
+    "text": "Une alarme incendie qui s’excuse de déranger tout le monde, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une alarme incendie qui s’excuse de déranger tout le monde",
+    "category": "objets",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_033",
+    "text": "Un réveil qui tente de convaincre son propriétaire qu’il est déjà midi, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un réveil qui tente de convaincre son propriétaire qu’il est déjà midi",
+    "category": "objets",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_034",
+    "text": "Un ascenseur bavard qui révèle les secrets de chaque étage, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un ascenseur bavard qui révèle les secrets de chaque étage",
+    "category": "objets",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_035",
+    "text": "Une imprimante qui invente des excuses pour ne jamais imprimer, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une imprimante qui invente des excuses pour ne jamais imprimer",
+    "category": "objets",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_036",
+    "text": "Un frigo qui commente les choix alimentaires à trois heures du matin, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un frigo qui commente les choix alimentaires à trois heures du matin",
+    "category": "objets",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_037",
+    "text": "Une voiture vexée qu’on ait critiqué son créneau, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une voiture vexée qu’on ait critiqué son créneau",
+    "category": "objets",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_038",
+    "text": "Un micro qui répète uniquement les mots embarrassants, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un micro qui répète uniquement les mots embarrassants",
+    "category": "objets",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_039",
+    "text": "Une porte automatique qui choisit à qui elle accepte de s’ouvrir, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une porte automatique qui choisit à qui elle accepte de s’ouvrir",
+    "category": "objets",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_040",
+    "text": "Un coiffeur qui rassure son client après avoir clairement raté la coupe, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un coiffeur qui rassure son client après avoir clairement raté la coupe",
+    "category": "metiers",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_041",
+    "text": "Une hôtesse de l’air qui annonce une turbulence provoquée par un pigeon, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une hôtesse de l’air qui annonce une turbulence provoquée par un pigeon",
+    "category": "metiers",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_042",
+    "text": "Un médecin qui essaie d’expliquer très sérieusement une allergie aux lundis, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un médecin qui essaie d’expliquer très sérieusement une allergie aux lundis",
+    "category": "metiers",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_043",
+    "text": "Un agent immobilier qui présente un placard comme un loft à fort potentiel, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un agent immobilier qui présente un placard comme un loft à fort potentiel",
+    "category": "metiers",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_044",
+    "text": "Un guide touristique qui s’est perdu mais refuse catégoriquement de l’admettre, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un guide touristique qui s’est perdu mais refuse catégoriquement de l’admettre",
+    "category": "metiers",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_045",
+    "text": "Un vendeur de matelas qui s’endort pendant sa propre démonstration, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un vendeur de matelas qui s’endort pendant sa propre démonstration",
+    "category": "metiers",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_046",
+    "text": "Une standardiste qui transfère un appel de service en service depuis vingt minutes, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une standardiste qui transfère un appel de service en service depuis vingt minutes",
+    "category": "metiers",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_047",
+    "text": "Un coach sportif qui encourage quelqu’un à se lever du canapé, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un coach sportif qui encourage quelqu’un à se lever du canapé",
+    "category": "metiers",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_048",
+    "text": "Un arbitre qui commente une dispute pour la dernière part de gâteau, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un arbitre qui commente une dispute pour la dernière part de gâteau",
+    "category": "metiers",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_049",
+    "text": "Une bibliothécaire qui poursuit quelqu’un ayant plié le coin d’une page, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une bibliothécaire qui poursuit quelqu’un ayant plié le coin d’une page",
+    "category": "metiers",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_050",
+    "text": "Un magicien qui rate son tour puis prétend que l’échec faisait partie du spectacle, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un magicien qui rate son tour puis prétend que l’échec faisait partie du spectacle",
+    "category": "metiers",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_051",
+    "text": "Un roi qui découvre que personne n’a réservé la salle pour son couronnement, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un roi qui découvre que personne n’a réservé la salle pour son couronnement",
+    "category": "personnages",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_052",
+    "text": "Une princesse qui refuse d’être sauvée parce qu’elle avait presque fini son livre, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une princesse qui refuse d’être sauvée parce qu’elle avait presque fini son livre",
+    "category": "personnages",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_053",
+    "text": "Un chevalier qui demande une pause au dragon pour relire les règles du duel, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un chevalier qui demande une pause au dragon pour relire les règles du duel",
+    "category": "personnages",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_054",
+    "text": "Un lutin syndicaliste qui réclame de meilleures conditions de fabrication des cadeaux, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un lutin syndicaliste qui réclame de meilleures conditions de fabrication des cadeaux",
+    "category": "personnages",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_055",
+    "text": "Une momie qui se plaint que ses bandages sortent froissés de la machine, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une momie qui se plaint que ses bandages sortent froissés de la machine",
+    "category": "personnages",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_056",
+    "text": "Un zombie végétarien qui cherche une alternative crédible au cerveau, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un zombie végétarien qui cherche une alternative crédible au cerveau",
+    "category": "personnages",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_057",
+    "text": "Un génie de lampe qui explique les petites lignes du contrat des trois vœux, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un génie de lampe qui explique les petites lignes du contrat des trois vœux",
+    "category": "personnages",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_058",
+    "text": "Un cow-boy qui essaie d’impressionner un cheval totalement indifférent, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un cow-boy qui essaie d’impressionner un cheval totalement indifférent",
+    "category": "personnages",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_059",
+    "text": "Un espion qui donne son mot de passe secret à la mauvaise personne, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un espion qui donne son mot de passe secret à la mauvaise personne",
+    "category": "personnages",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_060",
+    "text": "Un ninja qui marche sur un jouet bruyant pendant une mission d’infiltration, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un ninja qui marche sur un jouet bruyant pendant une mission d’infiltration",
+    "category": "personnages",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_061",
+    "text": "Un bébé qui fait semblant de ne pas comprendre pourquoi le vase est cassé, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un bébé qui fait semblant de ne pas comprendre pourquoi le vase est cassé",
+    "category": "personnages",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_062",
+    "text": "Un ado qui explique pourquoi ranger sa chambre nuirait à son processus créatif, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un ado qui explique pourquoi ranger sa chambre nuirait à son processus créatif",
+    "category": "personnages",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_063",
+    "text": "Un voisin qui vient se plaindre du bruit mais finit par demander à rejoindre la fête, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un voisin qui vient se plaindre du bruit mais finit par demander à rejoindre la fête",
+    "category": "personnages",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_064",
+    "text": "Une tante qui transforme une question banale en interrogatoire familial complet, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une tante qui transforme une question banale en interrogatoire familial complet",
+    "category": "personnages",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_065",
+    "text": "Un ami qui raconte un rêve interminable en oubliant constamment la suite, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un ami qui raconte un rêve interminable en oubliant constamment la suite",
+    "category": "personnages",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_066",
+    "text": "Un gagnant de loterie qui essaie très mal de garder la nouvelle secrète, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un gagnant de loterie qui essaie très mal de garder la nouvelle secrète",
+    "category": "personnages",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_067",
+    "text": "Quelqu’un qui laisse un message vocal puis oublie pourquoi il appelait, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Quelqu’un qui laisse un message vocal puis oublie pourquoi il appelait",
+    "category": "quotidien",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_068",
+    "text": "Quelqu’un qui prétend connaître les paroles d’une chanson inventée, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Quelqu’un qui prétend connaître les paroles d’une chanson inventée",
+    "category": "quotidien",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_069",
+    "text": "Quelqu’un qui explique les règles d’un jeu en les découvrant au même moment, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Quelqu’un qui explique les règles d’un jeu en les découvrant au même moment",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_070",
+    "text": "Quelqu’un qui appelle le service client et lutte pour rester calme, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Quelqu’un qui appelle le service client et lutte pour rester calme",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_071",
+    "text": "Quelqu’un qui commande au drive avec trois personnes parlant en même temps, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Quelqu’un qui commande au drive avec trois personnes parlant en même temps",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_072",
+    "text": "Quelqu’un qui présente son animal comme s’il participait à un concours de beauté, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Quelqu’un qui présente son animal comme s’il participait à un concours de beauté",
+    "category": "quotidien",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_073",
+    "text": "Quelqu’un qui invente une excuse après avoir envoyé un message à la mauvaise personne, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Quelqu’un qui invente une excuse après avoir envoyé un message à la mauvaise personne",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_074",
+    "text": "Quelqu’un qui essaie de raconter une blague mais rit avant chaque mot important, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Quelqu’un qui essaie de raconter une blague mais rit avant chaque mot important",
+    "category": "quotidien",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_075",
+    "text": "Quelqu’un qui découvre le prix de son panier au moment de payer, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Quelqu’un qui découvre le prix de son panier au moment de payer",
+    "category": "quotidien",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_076",
+    "text": "Quelqu’un qui se fait passer pour un expert en vin après avoir lu l’étiquette, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Quelqu’un qui se fait passer pour un expert en vin après avoir lu l’étiquette",
+    "category": "quotidien",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_077",
+    "text": "Un chat aristocrate qui exige que sa pâtée soit servie à température ambiante, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un chat aristocrate qui exige que sa pâtée soit servie à température ambiante",
+    "category": "animaux",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_078",
+    "text": "Un chien détective qui interroge tout le monde sur un biscuit disparu, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un chien détective qui interroge tout le monde sur un biscuit disparu",
+    "category": "animaux",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_079",
+    "text": "Un pigeon parisien qui donne des conseils de circulation aux touristes, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un pigeon parisien qui donne des conseils de circulation aux touristes",
+    "category": "animaux",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_080",
+    "text": "Une mouette qui revendique officiellement la propriété d’un sandwich volé, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une mouette qui revendique officiellement la propriété d’un sandwich volé",
+    "category": "animaux",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_081",
+    "text": "Un hamster coach de vie qui parle uniquement de sa roue, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un hamster coach de vie qui parle uniquement de sa roue",
+    "category": "animaux",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_082",
+    "text": "Un perroquet qui révèle au pire moment une conversation privée, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un perroquet qui révèle au pire moment une conversation privée",
+    "category": "animaux",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_083",
+    "text": "Une vache qui auditionne pour devenir chanteuse d’opéra, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une vache qui auditionne pour devenir chanteuse d’opéra",
+    "category": "animaux",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_084",
+    "text": "Un canard professeur de diction vexé qu’on ne comprenne pas son accent, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un canard professeur de diction vexé qu’on ne comprenne pas son accent",
+    "category": "animaux",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_085",
+    "text": "Un poisson rouge persuadé de découvrir son aquarium toutes les dix secondes, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un poisson rouge persuadé de découvrir son aquarium toutes les dix secondes",
+    "category": "animaux",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_086",
+    "text": "Un escargot qui commente une course comme si tout allait extrêmement vite, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un escargot qui commente une course comme si tout allait extrêmement vite",
+    "category": "animaux",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_087",
+    "text": "Une chèvre critique gastronomique qui note tout ce qu’elle trouve, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une chèvre critique gastronomique qui note tout ce qu’elle trouve",
+    "category": "animaux",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_088",
+    "text": "Un hibou insomniaque qui anime une émission de radio matinale, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un hibou insomniaque qui anime une émission de radio matinale",
+    "category": "animaux",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_089",
+    "text": "Une météo catastrophique annoncée avec une joie beaucoup trop enthousiaste, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une météo catastrophique annoncée avec une joie beaucoup trop enthousiaste",
+    "category": "voix",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_090",
+    "text": "Une demande en mariage récitée comme les conditions générales d’un contrat, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une demande en mariage récitée comme les conditions générales d’un contrat",
+    "category": "voix",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_091",
+    "text": "Une recette de cuisine expliquée comme une mission militaire top secrète, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une recette de cuisine expliquée comme une mission militaire top secrète",
+    "category": "voix",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_092",
+    "text": "Le résumé d’une soirée ratée raconté comme une victoire historique, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Le résumé d’une soirée ratée raconté comme une victoire historique",
+    "category": "voix",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_093",
+    "text": "Une dispute de couple doublée comme un combat final de dessin animé, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une dispute de couple doublée comme un combat final de dessin animé",
+    "category": "voix",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_094",
+    "text": "Une annonce de gare faite par quelqu’un qui a oublié le nom de la destination, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une annonce de gare faite par quelqu’un qui a oublié le nom de la destination",
+    "category": "voix",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_095",
+    "text": "Un message de répondeur tellement dramatique qu’on croit à la fin du monde, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un message de répondeur tellement dramatique qu’on croit à la fin du monde",
+    "category": "voix",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_096",
+    "text": "Une cérémonie de remise de prix pour la personne qui a sorti les poubelles, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une cérémonie de remise de prix pour la personne qui a sorti les poubelles",
+    "category": "voix",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_097",
+    "text": "Un tutoriel beauté présenté par quelqu’un qui n’a aucun des produits nécessaires, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un tutoriel beauté présenté par quelqu’un qui n’a aucun des produits nécessaires",
+    "category": "voix",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_098",
+    "text": "Une critique culinaire passionnée d’un simple sandwich triangle, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une critique culinaire passionnée d’un simple sandwich triangle",
+    "category": "voix",
+    "difficulty": "easy",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_099",
+    "text": "Un débat télévisé entre une personne du matin et une personne du soir, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Un débat télévisé entre une personne du matin et une personne du soir",
+    "category": "voix",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  },
+  {
+    "id": "imitation_final_100",
+    "text": "Une méditation guidée interrompue par la colère croissante de l’animateur, en jouant surtout la voix, le rythme et les bruitages.",
+    "answer": "Une méditation guidée interrompue par la colère croissante de l’animateur",
+    "category": "voix",
+    "difficulty": "medium",
+    "actors": 1,
+    "collection": "classic",
+    "soundMode": "required",
+    "forbiddenWords": [],
+    "acceptedAnswers": []
+  }
+]

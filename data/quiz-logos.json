@@ -1,0 +1,1952 @@
+[
+  {
+    "question": "Quelle marque de céréales utilise un tigre nommé Tony ?",
+    "options": [
+      "Goodyear",
+      "Pringles",
+      "Frosties",
+      "M&M’s"
+    ],
+    "answer": 2,
+    "explanation": "Tony le tigre est la mascotte des Frosties.",
+    "difficulty": "easy",
+    "id": "q_001_quelle_marque_de_cereales_utilise_un_tigre"
+  },
+  {
+    "id": "q_002_quelle_application_de_messagerie_utilise_u",
+    "question": "Quelle application de messagerie utilise un fantôme blanc ?",
+    "options": [
+      "Messenger",
+      "Snapchat",
+      "WhatsApp",
+      "Telegram"
+    ],
+    "answer": 1,
+    "explanation": "Le fantôme est celui de Snapchat.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle marque de soda utilise un cercle rouge, blanc et bleu ?",
+    "options": [
+      "Google Maps",
+      "Duracell",
+      "Pepsi",
+      "Citroën"
+    ],
+    "answer": 2,
+    "explanation": "Pepsi utilise un globe tricolore.",
+    "difficulty": "easy",
+    "id": "q_003_quelle_marque_de_soda_utilise_un_cercle_ro"
+  },
+  {
+    "question": "Quelle marque automobile utilise un double chevron ?",
+    "options": [
+      "Citroën",
+      "Gmail",
+      "IKEA",
+      "Red Bull"
+    ],
+    "answer": 0,
+    "explanation": "Citroën utilise deux chevrons superposés.",
+    "difficulty": "easy",
+    "id": "q_004_quelle_marque_automobile_utilise_un_double"
+  },
+  {
+    "question": "Quelle application reconnaissant les chansons utilise un symbole blanc entrelacé sur fond bleu ?",
+    "options": [
+      "Waze",
+      "Shazam",
+      "YouTube Music",
+      "Spotify"
+    ],
+    "answer": 1,
+    "explanation": "Shazam utilise un symbole blanc entrelacé sur fond bleu.",
+    "difficulty": "easy",
+    "id": "q_005_quelle_application_reconnaissant_les_chans"
+  },
+  {
+    "question": "Quelle marque de jouets utilise son nom en lettres blanches dans un carré rouge ?",
+    "options": [
+      "PlayStation",
+      "Citroën",
+      "Red Bull",
+      "LEGO"
+    ],
+    "answer": 3,
+    "explanation": "LEGO utilise un carré rouge avec son nom.",
+    "difficulty": "easy",
+    "id": "q_006_quelle_marque_de_jouets_utilise_son_nom_en"
+  },
+  {
+    "question": "Quelle marque de consoles utilise quatre symboles : triangle, rond, croix et carré ?",
+    "options": [
+      "PlayStation",
+      "BMW",
+      "Shell",
+      "Citroën"
+    ],
+    "answer": 0,
+    "explanation": "Ces quatre symboles sont ceux des manettes PlayStation.",
+    "difficulty": "easy",
+    "id": "q_007_quelle_marque_de_consoles_utilise_quatre_s"
+  },
+  {
+    "question": "Quelle chaîne de restauration utilise une jeune fille rousse avec des nattes ?",
+    "options": [
+      "M&M’s",
+      "Pringles",
+      "Frosties",
+      "Wendy’s"
+    ],
+    "answer": 3,
+    "explanation": "Wendy’s utilise le portrait d’une jeune fille rousse.",
+    "difficulty": "easy",
+    "id": "q_008_quelle_chaine_de_restauration_utilise_une_"
+  },
+  {
+    "question": "Quelle chaîne de magasins de meubles utilise un logo bleu et jaune ?",
+    "options": [
+      "IKEA",
+      "LEGO",
+      "Milka",
+      "Roblox"
+    ],
+    "answer": 0,
+    "explanation": "IKEA utilise les couleurs bleu et jaune.",
+    "difficulty": "easy",
+    "id": "q_009_quelle_chaine_de_magasins_de_meubles_utili"
+  },
+  {
+    "question": "Quelle marque de biscuits utilise un logo bleu avec le mot blanc de la marque ?",
+    "options": [
+      "Polo Ralph Lauren",
+      "Taco Bell",
+      "Oreo",
+      "PlayStation"
+    ],
+    "answer": 2,
+    "explanation": "Oreo utilise généralement un logo bleu et blanc.",
+    "difficulty": "easy",
+    "id": "q_010_quelle_marque_de_biscuits_utilise_un_logo_"
+  },
+  {
+    "id": "q_011_quel_navigateur_utilise_un_cercle_multicol",
+    "question": "Quel navigateur utilise un cercle multicolore avec un centre bleu ?",
+    "options": [
+      "Chrome",
+      "Firefox",
+      "Edge",
+      "Safari"
+    ],
+    "answer": 0,
+    "explanation": "Google Chrome utilise ce logo.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle application de cartes utilise une épingle multicolore ?",
+    "options": [
+      "Roblox",
+      "Taco Bell",
+      "Google Maps",
+      "Red Bull"
+    ],
+    "answer": 2,
+    "explanation": "Google Maps utilise une épingle multicolore.",
+    "difficulty": "easy",
+    "id": "q_012_quelle_application_de_cartes_utilise_une_e"
+  },
+  {
+    "question": "Quelle application de messagerie utilise une bulle verte avec un téléphone blanc ?",
+    "options": [
+      "Deezer",
+      "DHL",
+      "Tommy Hilfiger",
+      "WhatsApp"
+    ],
+    "answer": 3,
+    "explanation": "WhatsApp utilise une bulle verte avec un combiné.",
+    "difficulty": "easy",
+    "id": "q_013_quelle_application_de_messagerie_utilise_u"
+  },
+  {
+    "question": "Quelle marque de messagerie utilise une enveloppe rouge en forme de M ?",
+    "options": [
+      "Red Bull",
+      "BMW",
+      "Gmail",
+      "Tesla"
+    ],
+    "answer": 2,
+    "explanation": "Le logo de Gmail évoque une enveloppe formant un M.",
+    "difficulty": "easy",
+    "id": "q_014_quelle_marque_de_messagerie_utilise_une_en"
+  },
+  {
+    "question": "Quelle marque de boisson énergétique utilise deux taureaux rouges face à face ?",
+    "options": [
+      "Gmail",
+      "Red Bull",
+      "IKEA",
+      "LEGO"
+    ],
+    "answer": 1,
+    "explanation": "Deux taureaux rouges figurent dans le logo.",
+    "difficulty": "easy",
+    "id": "q_015_quelle_marque_de_boisson_energetique_utili"
+  },
+  {
+    "question": "Quelle marque de paiement utilise deux cercles rouge et orange qui se chevauchent ?",
+    "options": [
+      "Spotify",
+      "Mastercard",
+      "Tommy Hilfiger",
+      "WhatsApp"
+    ],
+    "answer": 1,
+    "explanation": "Mastercard utilise deux cercles qui se chevauchent.",
+    "difficulty": "easy",
+    "id": "q_016_quelle_marque_de_paiement_utilise_deux_cer"
+  },
+  {
+    "question": "Quelle marque de sport utilise un félin bondissant ?",
+    "options": [
+      "Coca-Cola",
+      "TikTok",
+      "Puma",
+      "Waze"
+    ],
+    "answer": 2,
+    "explanation": "Puma utilise un félin bondissant.",
+    "difficulty": "easy",
+    "id": "q_017_quelle_marque_de_sport_utilise_un_felin_bo"
+  },
+  {
+    "id": "q_018_quelle_chaine_de_restauration_rapide_utili",
+    "question": "Quelle chaîne de restauration rapide utilise de grandes arches jaunes ?",
+    "options": [
+      "Burger King",
+      "McDonald’s",
+      "KFC",
+      "Subway"
+    ],
+    "answer": 1,
+    "explanation": "Les arches dorées sont celles de McDonald’s.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle marque de vêtements utilise un petit drapeau rouge, blanc et bleu ?",
+    "options": [
+      "WhatsApp",
+      "Visa",
+      "Google Play",
+      "Tommy Hilfiger"
+    ],
+    "answer": 3,
+    "explanation": "Tommy Hilfiger utilise un drapeau rectangulaire tricolore.",
+    "difficulty": "easy",
+    "id": "q_019_quelle_marque_de_vetements_utilise_un_peti"
+  },
+  {
+    "question": "Quelle marque utilise un coquillage jaune et rouge comme logo ?",
+    "options": [
+      "Red Bull",
+      "Milka",
+      "LEGO",
+      "Shell"
+    ],
+    "answer": 3,
+    "explanation": "Shell utilise une coquille Saint-Jacques stylisée.",
+    "difficulty": "easy",
+    "id": "q_020_quelle_marque_utilise_un_coquillage_jaune_"
+  },
+  {
+    "question": "Quelle plateforme audio utilise un nuage orange avec des barres verticales ?",
+    "options": [
+      "TikTok",
+      "Shazam",
+      "SoundCloud",
+      "Waze"
+    ],
+    "answer": 2,
+    "explanation": "SoundCloud utilise un nuage composé de barres.",
+    "difficulty": "easy",
+    "id": "q_021_quelle_plateforme_audio_utilise_un_nuage_o"
+  },
+  {
+    "id": "q_022_quelle_marque_de_sport_utilise_une_virgule",
+    "question": "Quelle marque de sport utilise une virgule appelée Swoosh ?",
+    "options": [
+      "Asics",
+      "Nike",
+      "Adidas",
+      "Fila"
+    ],
+    "answer": 1,
+    "explanation": "Le Swoosh est le symbole de Nike.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle marque de restauration rapide utilise une cloche ?",
+    "options": [
+      "Target",
+      "Taco Bell",
+      "Milka",
+      "Ford"
+    ],
+    "answer": 1,
+    "explanation": "Taco Bell utilise une cloche.",
+    "difficulty": "easy",
+    "id": "q_023_quelle_marque_de_restauration_rapide_utili"
+  },
+  {
+    "id": "q_024_quel_constructeur_automobile_utilise_une_e",
+    "question": "Quel constructeur automobile utilise une étoile à trois branches ?",
+    "options": [
+      "Audi",
+      "Peugeot",
+      "Renault",
+      "Mercedes-Benz"
+    ],
+    "answer": 3,
+    "explanation": "L’étoile à trois branches est celle de Mercedes.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle marque de livraison utilise principalement le jaune et le rouge ?",
+    "options": [
+      "DHL",
+      "Spotify",
+      "Google Play",
+      "Visa"
+    ],
+    "answer": 0,
+    "explanation": "DHL utilise le jaune et le rouge.",
+    "difficulty": "easy",
+    "id": "q_025_quelle_marque_de_livraison_utilise_princip"
+  },
+  {
+    "question": "Quelle application de navigation utilise une bulle blanche souriante sur fond bleu ?",
+    "options": [
+      "Spotify",
+      "TikTok",
+      "Waze",
+      "Shazam"
+    ],
+    "answer": 2,
+    "explanation": "Waze utilise une bulle souriante sur roues.",
+    "difficulty": "easy",
+    "id": "q_026_quelle_application_de_navigation_utilise_u"
+  },
+  {
+    "id": "q_027_quel_service_de_streaming_utilise_un_n_rou",
+    "question": "Quel service de streaming utilise un N rouge ?",
+    "options": [
+      "Netflix",
+      "Disney+",
+      "Prime Video",
+      "Hulu"
+    ],
+    "answer": 0,
+    "explanation": "Netflix utilise un N rouge.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle marque de chocolat utilise un personnage rouge et un personnage jaune ?",
+    "options": [
+      "Goodyear",
+      "Pringles",
+      "Frosties",
+      "M&M’s"
+    ],
+    "answer": 3,
+    "explanation": "Les personnages rouge et jaune représentent des M&M’s.",
+    "difficulty": "easy",
+    "id": "q_028_quelle_marque_de_chocolat_utilise_un_perso"
+  },
+  {
+    "question": "Quelle marque utilise une cible rouge et blanche ?",
+    "options": [
+      "Gmail",
+      "Citroën",
+      "Target",
+      "Duracell"
+    ],
+    "answer": 2,
+    "explanation": "Target utilise une cible rouge et blanche.",
+    "difficulty": "easy",
+    "id": "q_029_quelle_marque_utilise_une_cible_rouge_et_b"
+  },
+  {
+    "id": "q_030_quelle_entreprise_utilise_quatre_carres_co",
+    "question": "Quelle entreprise utilise quatre carrés colorés formant une fenêtre ?",
+    "options": [
+      "Google",
+      "IBM",
+      "Meta",
+      "Microsoft"
+    ],
+    "answer": 3,
+    "explanation": "La fenêtre colorée est associée à Microsoft.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle marque automobile utilise une hélice bleue et blanche dans un cercle ?",
+    "options": [
+      "BMW",
+      "Taco Bell",
+      "Twitter",
+      "Ford"
+    ],
+    "answer": 0,
+    "explanation": "BMW utilise un cercle divisé en quartiers bleus et blancs.",
+    "difficulty": "easy",
+    "id": "q_031_quelle_marque_automobile_utilise_une_helic"
+  },
+  {
+    "question": "Quelle marque de pneus utilise un pied ailé comme emblème ?",
+    "options": [
+      "Pringles",
+      "Frosties",
+      "Goodyear",
+      "Wendy’s"
+    ],
+    "answer": 2,
+    "explanation": "Goodyear utilise un pied ailé inspiré du dieu Mercure.",
+    "difficulty": "easy",
+    "id": "q_032_quelle_marque_de_pneus_utilise_un_pied_ail"
+  },
+  {
+    "id": "q_033_quel_reseau_social_est_associe_a_une_note_",
+    "question": "Quel réseau social est associé à une note de musique stylisée ?",
+    "options": [
+      "Instagram",
+      "Pinterest",
+      "Snapchat",
+      "TikTok"
+    ],
+    "answer": 3,
+    "explanation": "TikTok utilise une note de musique.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_034_quel_service_de_musique_utilise_un_cercle_",
+    "question": "Quel service de musique utilise un cercle vert avec trois courbes noires ?",
+    "options": [
+      "Spotify",
+      "Deezer",
+      "Apple Music",
+      "SoundCloud"
+    ],
+    "answer": 0,
+    "explanation": "Spotify utilise ces trois ondes.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_035_quelle_marque_automobile_utilise_un_cheval",
+    "question": "Quelle marque automobile utilise un cheval cabré ?",
+    "options": [
+      "Porsche uniquement",
+      "Maserati",
+      "Lamborghini",
+      "Ferrari"
+    ],
+    "answer": 3,
+    "explanation": "Le cheval cabré est emblématique de Ferrari.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_036_quelle_marque_automobile_utilise_quatre_an",
+    "question": "Quelle marque automobile utilise quatre anneaux entrelacés ?",
+    "options": [
+      "Mercedes",
+      "Volvo",
+      "BMW",
+      "Audi"
+    ],
+    "answer": 3,
+    "explanation": "Les quatre anneaux représentent Audi.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle marque de chocolat utilise souvent une vache violette ?",
+    "options": [
+      "Gmail",
+      "Twitter",
+      "Target",
+      "Milka"
+    ],
+    "answer": 3,
+    "explanation": "Milka est associée à une vache violette.",
+    "difficulty": "easy",
+    "id": "q_037_quelle_marque_de_chocolat_utilise_souvent_"
+  },
+  {
+    "question": "Quelle entreprise utilise un oiseau bleu comme ancien emblème historique de son réseau social ?",
+    "options": [
+      "Duracell",
+      "IKEA",
+      "Twitter",
+      "Citroën"
+    ],
+    "answer": 2,
+    "explanation": "Twitter a longtemps utilisé un oiseau bleu.",
+    "difficulty": "easy",
+    "id": "q_038_quelle_entreprise_utilise_un_oiseau_bleu_c"
+  },
+  {
+    "id": "q_039_quelle_plateforme_video_utilise_un_bouton_",
+    "question": "Quelle plateforme vidéo utilise un bouton lecture blanc dans un rectangle rouge ?",
+    "options": [
+      "Twitch",
+      "YouTube",
+      "Dailymotion",
+      "Vimeo"
+    ],
+    "answer": 1,
+    "explanation": "C’est le logo de YouTube.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle marque de piles utilise un lapin rose comme mascotte en Europe ?",
+    "options": [
+      "BMW",
+      "Target",
+      "Duracell",
+      "Polo Ralph Lauren"
+    ],
+    "answer": 2,
+    "explanation": "En Europe, Duracell utilise un lapin rose comme mascotte.",
+    "difficulty": "easy",
+    "id": "q_040_quelle_marque_de_piles_utilise_un_lapin_ro"
+  },
+  {
+    "question": "Quelle marque de chips utilise un homme moustachu sur son logo ?",
+    "options": [
+      "Wendy’s",
+      "M&M’s",
+      "Goodyear",
+      "Pringles"
+    ],
+    "answer": 3,
+    "explanation": "Le visage moustachu est celui de la mascotte Pringles.",
+    "difficulty": "easy",
+    "id": "q_041_quelle_marque_de_chips_utilise_un_homme_mo"
+  },
+  {
+    "question": "Quelle plateforme de jeux utilise un carré incliné avec un trou au centre ?",
+    "options": [
+      "Roblox",
+      "Red Bull",
+      "Pepsi",
+      "Twitter"
+    ],
+    "answer": 0,
+    "explanation": "Roblox utilise un carré incliné évidé.",
+    "difficulty": "easy",
+    "id": "q_042_quelle_plateforme_de_jeux_utilise_un_carre"
+  },
+  {
+    "id": "q_043_quelle_marque_utilise_trois_bandes_paralle",
+    "question": "Quelle marque utilise trois bandes parallèles ?",
+    "options": [
+      "Adidas",
+      "Reebok",
+      "Nike",
+      "Puma"
+    ],
+    "answer": 0,
+    "explanation": "Les trois bandes sont associées à Adidas.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle marque automobile utilise un ovale bleu avec son nom en écriture blanche ?",
+    "options": [
+      "Taco Bell",
+      "BMW",
+      "Ford",
+      "Gmail"
+    ],
+    "answer": 2,
+    "explanation": "Ford utilise un ovale bleu.",
+    "difficulty": "easy",
+    "id": "q_044_quelle_marque_automobile_utilise_un_ovale_"
+  },
+  {
+    "question": "Quelle marque de vêtements utilise un joueur de polo à cheval ?",
+    "options": [
+      "Citroën",
+      "Tesla",
+      "Taco Bell",
+      "Polo Ralph Lauren"
+    ],
+    "answer": 3,
+    "explanation": "Le joueur de polo est l’emblème de Ralph Lauren.",
+    "difficulty": "easy",
+    "id": "q_045_quelle_marque_de_vetements_utilise_un_joue"
+  },
+  {
+    "id": "q_046_quelle_marque_de_cafe_utilise_une_sirene_v",
+    "question": "Quelle marque de café utilise une sirène verte ?",
+    "options": [
+      "Nespresso",
+      "Costa",
+      "Starbucks",
+      "Lavazza"
+    ],
+    "answer": 2,
+    "explanation": "Starbucks utilise une sirène.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle boutique d’applications et de contenus numériques utilise un triangle multicolore ?",
+    "options": [
+      "Spotify",
+      "Tommy Hilfiger",
+      "Google Play",
+      "Waze"
+    ],
+    "answer": 2,
+    "explanation": "Google Play utilise un triangle multicolore.",
+    "difficulty": "easy",
+    "id": "q_047_quelle_boutique_dapplications_et_de_conten"
+  },
+  {
+    "question": "Quelle marque utilise principalement les couleurs rouge et blanc avec une écriture cursive ?",
+    "options": [
+      "Coca-Cola",
+      "Waze",
+      "Puma",
+      "Tommy Hilfiger"
+    ],
+    "answer": 0,
+    "explanation": "Coca-Cola utilise une écriture cursive blanche sur rouge.",
+    "difficulty": "easy",
+    "id": "q_048_quelle_marque_utilise_principalement_les_c"
+  },
+  {
+    "question": "Quelle marque de voitures électriques utilise un T rouge stylisé ?",
+    "options": [
+      "Tesla",
+      "Milka",
+      "BMW",
+      "Duracell"
+    ],
+    "answer": 0,
+    "explanation": "Tesla utilise un T stylisé.",
+    "difficulty": "easy",
+    "id": "q_049_quelle_marque_de_voitures_electriques_util"
+  },
+  {
+    "id": "q_050_quel_logo_est_represente_par_une_pomme_cro",
+    "question": "Quel logo est représenté par une pomme croquée ?",
+    "options": [
+      "Samsung",
+      "Apple",
+      "Microsoft",
+      "Pear"
+    ],
+    "answer": 1,
+    "explanation": "La pomme croquée est le logo d’Apple.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_051_quel_operateur_de_paiement_utilise_un_p_bl",
+    "question": "Quel opérateur de paiement utilise un P bleu composé de deux formes ?",
+    "options": [
+      "Visa",
+      "PayPal",
+      "Mastercard",
+      "Stripe"
+    ],
+    "answer": 1,
+    "explanation": "PayPal utilise un double P stylisé.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quelle marque de sport utilise un logo en forme de diamant double ?",
+    "options": [
+      "Converse",
+      "Umbro",
+      "The North Face",
+      "ASICS"
+    ],
+    "answer": 1,
+    "explanation": "Umbro utilise un double diamant.",
+    "difficulty": "medium",
+    "id": "q_052_quelle_marque_de_sport_utilise_un_logo_en_"
+  },
+  {
+    "id": "q_053_quelle_marque_utilise_un_crocodile_vert",
+    "question": "Quelle marque utilise un crocodile vert ?",
+    "options": [
+      "Le Coq Sportif",
+      "Puma",
+      "Timberland",
+      "Lacoste"
+    ],
+    "answer": 3,
+    "explanation": "Le crocodile est celui de Lacoste.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_054_quelle_marque_automobile_francaise_utilise",
+    "question": "Quelle marque automobile française utilise un lion ?",
+    "options": [
+      "Alpine",
+      "Citroën",
+      "Peugeot",
+      "Renault"
+    ],
+    "answer": 2,
+    "explanation": "Le lion est l’emblème de Peugeot.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quelle entreprise de cybersécurité utilise un faucon rouge stylisé ?",
+    "options": [
+      "DuckDuckGo",
+      "Zoom",
+      "Asana",
+      "CrowdStrike"
+    ],
+    "answer": 3,
+    "explanation": "CrowdStrike utilise un faucon rouge.",
+    "difficulty": "medium",
+    "id": "q_055_quelle_entreprise_de_cybersecurite_utilise"
+  },
+  {
+    "question": "Quelle plateforme de développement utilise une silhouette de chat appelée Octocat ?",
+    "options": [
+      "DuckDuckGo",
+      "Uber",
+      "GitHub",
+      "Notion"
+    ],
+    "answer": 2,
+    "explanation": "GitHub utilise l’Octocat.",
+    "difficulty": "medium",
+    "id": "q_056_quelle_plateforme_de_developpement_utilise"
+  },
+  {
+    "question": "Quelle marque automobile utilise six étoiles dans un ovale bleu ?",
+    "options": [
+      "Opel",
+      "Subaru",
+      "Maserati",
+      "Volkswagen"
+    ],
+    "answer": 1,
+    "explanation": "Subaru utilise un amas de six étoiles.",
+    "difficulty": "medium",
+    "id": "q_057_quelle_marque_automobile_utilise_six_etoil"
+  },
+  {
+    "id": "q_058_quel_reseau_social_utilise_un_appareil_pho",
+    "question": "Quel réseau social utilise un appareil photo dans un dégradé rose-orange-violet ?",
+    "options": [
+      "BeReal",
+      "Instagram",
+      "Pinterest",
+      "Flickr"
+    ],
+    "answer": 1,
+    "explanation": "Instagram utilise ce dégradé.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_059_quel_constructeur_utilise_un_taureau_dore",
+    "question": "Quel constructeur utilise un taureau doré ?",
+    "options": [
+      "Ferrari",
+      "Aston Martin",
+      "Maserati",
+      "Lamborghini"
+    ],
+    "answer": 3,
+    "explanation": "Lamborghini utilise un taureau.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quelle marque automobile utilise une tête de bélier ?",
+    "options": [
+      "Aston Martin",
+      "Opel",
+      "Subaru",
+      "Ram"
+    ],
+    "answer": 3,
+    "explanation": "Ram utilise une tête de bélier.",
+    "difficulty": "medium",
+    "id": "q_060_quelle_marque_automobile_utilise_une_tete_"
+  },
+  {
+    "id": "q_061_quel_reseau_social_professionnel_utilise_l",
+    "question": "Quel réseau social professionnel utilise les lettres « in » ?",
+    "options": [
+      "LinkedIn",
+      "Indeed",
+      "Xing",
+      "Slack"
+    ],
+    "answer": 0,
+    "explanation": "LinkedIn utilise le monogramme « in ».",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quelle marque automobile utilise un éclair traversant un cercle ?",
+    "options": [
+      "Alfa Romeo",
+      "Opel",
+      "Aston Martin",
+      "Suzuki"
+    ],
+    "answer": 1,
+    "explanation": "Opel utilise un éclair, appelé Blitz, traversant un cercle.",
+    "difficulty": "medium",
+    "id": "q_062_quelle_marque_automobile_utilise_un_eclair"
+  },
+  {
+    "question": "Quelle plateforme de discussion utilise une manette blanche stylisée appelée Clyde ?",
+    "options": [
+      "Discord",
+      "CrowdStrike",
+      "Zoom",
+      "Trello"
+    ],
+    "answer": 0,
+    "explanation": "La mascotte-logo de Discord est appelée Clyde.",
+    "difficulty": "medium",
+    "id": "q_063_quelle_plateforme_de_discussion_utilise_un"
+  },
+  {
+    "id": "q_064_quelle_marque_de_luxe_utilise_deux_c_entre",
+    "question": "Quelle marque de luxe utilise deux C entrelacés ?",
+    "options": [
+      "Dior",
+      "Gucci",
+      "Chanel",
+      "Prada"
+    ],
+    "answer": 2,
+    "explanation": "Chanel utilise deux C opposés.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quelle marque de chocolat utilise un éléphant dans un losange ?",
+    "options": [
+      "LU",
+      "Haribo",
+      "Côte d’Or",
+      "Nespresso"
+    ],
+    "answer": 2,
+    "explanation": "Côte d’Or utilise un éléphant.",
+    "difficulty": "medium",
+    "id": "q_065_quelle_marque_de_chocolat_utilise_un_eleph"
+  },
+  {
+    "question": "Quelle marque de vêtements utilise une couronne de laurier ?",
+    "options": [
+      "Umbro",
+      "ASICS",
+      "Fred Perry",
+      "Converse"
+    ],
+    "answer": 2,
+    "explanation": "Fred Perry utilise une couronne de laurier.",
+    "difficulty": "medium",
+    "id": "q_066_quelle_marque_de_vetements_utilise_une_cou"
+  },
+  {
+    "question": "Quelle marque automobile utilise un serpent mangeant un homme à côté d’une croix rouge ?",
+    "options": [
+      "Suzuki",
+      "Saab",
+      "Alfa Romeo",
+      "Volkswagen"
+    ],
+    "answer": 2,
+    "explanation": "Le logo Alfa Romeo associe la croix de Milan et le biscione.",
+    "difficulty": "medium",
+    "id": "q_067_quelle_marque_automobile_utilise_un_serpen"
+  },
+  {
+    "question": "Quelle marque de plein air utilise une silhouette de montagne en forme de demi-dôme ?",
+    "options": [
+      "ASICS",
+      "The North Face",
+      "Fred Perry",
+      "Converse"
+    ],
+    "answer": 1,
+    "explanation": "The North Face s’inspire du Half Dome.",
+    "difficulty": "medium",
+    "id": "q_068_quelle_marque_de_plein_air_utilise_une_sil"
+  },
+  {
+    "question": "Quelle marque de bonbons utilise un ourson jaune comme mascotte ?",
+    "options": [
+      "Lindt",
+      "Starbucks",
+      "Haribo",
+      "Algida"
+    ],
+    "answer": 2,
+    "explanation": "Haribo est associé à l’ours d’or.",
+    "difficulty": "medium",
+    "id": "q_069_quelle_marque_de_bonbons_utilise_un_ourson"
+  },
+  {
+    "question": "Quelle marque de chaussures utilise une étoile dans un cercle ?",
+    "options": [
+      "Fred Perry",
+      "Umbro",
+      "Converse",
+      "ASICS"
+    ],
+    "answer": 2,
+    "explanation": "Converse utilise une étoile dans son écusson.",
+    "difficulty": "medium",
+    "id": "q_070_quelle_marque_de_chaussures_utilise_une_et"
+  },
+  {
+    "question": "Quelle marque italienne de café utilise principalement un mot-symbole bleu en capitales ?",
+    "options": [
+      "Lavazza",
+      "Burger King",
+      "Haribo",
+      "Twinings"
+    ],
+    "answer": 0,
+    "explanation": "Lavazza utilise principalement son nom en lettres bleues.",
+    "difficulty": "medium",
+    "id": "q_071_quelle_marque_italienne_de_cafe_utilise_pr"
+  },
+  {
+    "question": "Quelle marque de glace utilise un cœur rouge et blanc ?",
+    "options": [
+      "Haribo",
+      "Algida",
+      "Lavazza",
+      "Côte d’Or"
+    ],
+    "answer": 1,
+    "explanation": "Algida utilise un cœur en spirale.",
+    "difficulty": "medium",
+    "id": "q_072_quelle_marque_de_glace_utilise_un_cur_roug"
+  },
+  {
+    "question": "Quelle marque de tortillas cache deux personnes partageant une chips entre les lettres centrales de son nom ?",
+    "options": [
+      "FedEx",
+      "LG",
+      "Goodwill",
+      "Tostitos"
+    ],
+    "answer": 3,
+    "explanation": "Le logo Tostitos cache deux personnes partageant une chips.",
+    "difficulty": "medium",
+    "id": "q_073_quelle_marque_de_tortillas_cache_deux_pers"
+  },
+  {
+    "question": "Quelle marque de sport japonaise utilise des bandes croisées formant un motif sur les côtés des chaussures ?",
+    "options": [
+      "ASICS",
+      "The North Face",
+      "Converse",
+      "Fred Perry"
+    ],
+    "answer": 0,
+    "explanation": "ASICS utilise des bandes croisées caractéristiques.",
+    "difficulty": "medium",
+    "id": "q_074_quelle_marque_de_sport_japonaise_utilise_d"
+  },
+  {
+    "id": "q_075_quelle_marque_de_restauration_utilise_un_c",
+    "question": "Quelle marque de restauration utilise un colonel barbu ?",
+    "options": [
+      "KFC",
+      "Five Guys",
+      "Quick",
+      "Domino’s"
+    ],
+    "answer": 0,
+    "explanation": "Le colonel Sanders représente KFC.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quelle marque automobile utilise une lettre S stylisée ressemblant à un éclair ?",
+    "options": [
+      "Volkswagen",
+      "Suzuki",
+      "Alfa Romeo",
+      "Maserati"
+    ],
+    "answer": 1,
+    "explanation": "Suzuki utilise un S rouge stylisé.",
+    "difficulty": "medium",
+    "id": "q_076_quelle_marque_automobile_utilise_une_lettr"
+  },
+  {
+    "question": "Quelle marque de surf forme un cœur en assemblant deux emblèmes de Quiksilver ?",
+    "options": [
+      "LG",
+      "Milwaukee Brewers",
+      "Baskin-Robbins",
+      "Roxy"
+    ],
+    "answer": 3,
+    "explanation": "Le cœur de Roxy est formé de deux logos Quiksilver.",
+    "difficulty": "medium",
+    "id": "q_077_quelle_marque_de_surf_forme_un_cur_en_asse"
+  },
+  {
+    "id": "q_078_quel_service_de_stockage_utilise_un_cerf_v",
+    "question": "Quel service de stockage utilise un cerf-volant triangulaire multicolore ?",
+    "options": [
+      "OneDrive",
+      "Dropbox",
+      "Google Drive",
+      "Box"
+    ],
+    "answer": 2,
+    "explanation": "Google Drive utilise un triangle tricolore.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quelle marque cache un sourire dans la lettre g de son logo historique ?",
+    "options": [
+      "Goodwill",
+      "Roxy",
+      "FedEx",
+      "Milwaukee Brewers"
+    ],
+    "answer": 0,
+    "explanation": "Le logo Goodwill combine un visage souriant et la lettre g.",
+    "difficulty": "medium",
+    "id": "q_079_quelle_marque_cache_un_sourire_dans_la_let"
+  },
+  {
+    "question": "Quelle application de productivité utilise un N noir dans un cube ?",
+    "options": [
+      "Notion",
+      "Slack",
+      "Discord",
+      "GitHub"
+    ],
+    "answer": 0,
+    "explanation": "Notion utilise un cube blanc et noir avec un N.",
+    "difficulty": "medium",
+    "id": "q_080_quelle_application_de_productivite_utilise"
+  },
+  {
+    "question": "Quelle marque automobile utilise un scorpion ?",
+    "options": [
+      "Maserati",
+      "Abarth",
+      "Suzuki",
+      "Ram"
+    ],
+    "answer": 1,
+    "explanation": "Abarth utilise un scorpion dans son emblème.",
+    "difficulty": "medium",
+    "id": "q_081_quelle_marque_automobile_utilise_un_scorpi"
+  },
+  {
+    "question": "Quelle marque automobile utilise un trident ?",
+    "options": [
+      "Opel",
+      "Subaru",
+      "Maserati",
+      "Volkswagen"
+    ],
+    "answer": 2,
+    "explanation": "Maserati utilise un trident.",
+    "difficulty": "medium",
+    "id": "q_082_quelle_marque_automobile_utilise_un_triden"
+  },
+  {
+    "question": "Quelle équipe de baseball utilise un gant qui forme aussi les lettres M et B ?",
+    "options": [
+      "Milwaukee Brewers",
+      "FedEx",
+      "Goodwill",
+      "LG"
+    ],
+    "answer": 0,
+    "explanation": "Le gant du logo historique des Brewers cache les lettres M et B.",
+    "difficulty": "medium",
+    "id": "q_083_quelle_equipe_de_baseball_utilise_un_gant_"
+  },
+  {
+    "question": "Quelle marque française de biscuits utilise les lettres LU blanches dans un carré rouge ?",
+    "options": [
+      "Twinings",
+      "LU",
+      "Lindt",
+      "Algida"
+    ],
+    "answer": 1,
+    "explanation": "LU utilise les deux lettres blanches dans un carré rouge.",
+    "difficulty": "medium",
+    "id": "q_084_quelle_marque_francaise_de_biscuits_utilis"
+  },
+  {
+    "id": "q_085_quelle_marque_de_jeux_video_utilise_souven",
+    "question": "Quelle marque de jeux vidéo utilise souvent un N rouge sur fond blanc ?",
+    "options": [
+      "Naughty Dog",
+      "Namco",
+      "Nvidia",
+      "Nintendo"
+    ],
+    "answer": 3,
+    "explanation": "Nintendo utilise son nom dans un cartouche rouge.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quelle chaîne de cafés utilise le prénom d’un personnage de Moby Dick ?",
+    "options": [
+      "Twinings",
+      "Burger King",
+      "Starbucks",
+      "Lavazza"
+    ],
+    "answer": 2,
+    "explanation": "Le nom Starbucks vient de Starbuck, personnage de Moby Dick.",
+    "difficulty": "medium",
+    "id": "q_086_quelle_chaine_de_cafes_utilise_le_prenom_d"
+  },
+  {
+    "question": "Quelle marque automobile utilise un griffon couronné ?",
+    "options": [
+      "Opel",
+      "Saab",
+      "Alfa Romeo",
+      "Abarth"
+    ],
+    "answer": 1,
+    "explanation": "Saab utilise un griffon couronné.",
+    "difficulty": "medium",
+    "id": "q_087_quelle_marque_automobile_utilise_un_griffo"
+  },
+  {
+    "question": "Quelle marque automobile utilise des ailes avec son nom au centre ?",
+    "options": [
+      "Alfa Romeo",
+      "Opel",
+      "Aston Martin",
+      "Ram"
+    ],
+    "answer": 2,
+    "explanation": "Aston Martin utilise un emblème ailé.",
+    "difficulty": "medium",
+    "id": "q_088_quelle_marque_automobile_utilise_des_ailes"
+  },
+  {
+    "question": "Quelle plateforme de streaming en direct utilise une bulle de dialogue violette anguleuse ?",
+    "options": [
+      "Free Now",
+      "Twitch",
+      "Lipton",
+      "Bolt"
+    ],
+    "answer": 1,
+    "explanation": "Twitch utilise une bulle de dialogue violette.",
+    "difficulty": "medium",
+    "id": "q_089_quelle_plateforme_de_streaming_en_direct_u"
+  },
+  {
+    "id": "q_090_quelle_application_de_visioconference_util",
+    "question": "Quelle application de visioconférence utilise une caméra blanche sur fond bleu ?",
+    "options": [
+      "Teams",
+      "Meet",
+      "Skype",
+      "Zoom"
+    ],
+    "answer": 3,
+    "explanation": "Zoom est associé à cette caméra.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quelle application de transport utilise principalement un mot-symbole noir très épuré ?",
+    "options": [
+      "Uber",
+      "Grab",
+      "Free Now",
+      "Lipton"
+    ],
+    "answer": 0,
+    "explanation": "Uber utilise une identité typographique noire et blanche.",
+    "difficulty": "medium",
+    "id": "q_091_quelle_application_de_transport_utilise_pr"
+  },
+  {
+    "question": "Quelle plateforme de travail collaboratif utilise un symbole multicolore en forme de moulin ?",
+    "options": [
+      "Notion",
+      "Slack",
+      "Twitch",
+      "GitHub"
+    ],
+    "answer": 1,
+    "explanation": "Slack utilise un symbole multicolore entrelacé.",
+    "difficulty": "medium",
+    "id": "q_092_quelle_plateforme_de_travail_collaboratif_"
+  },
+  {
+    "question": "Quelle marque automobile utilise un V au-dessus d’un W dans un cercle ?",
+    "options": [
+      "Volkswagen",
+      "Alfa Romeo",
+      "Saab",
+      "Suzuki"
+    ],
+    "answer": 0,
+    "explanation": "Volkswagen combine les lettres V et W.",
+    "difficulty": "medium",
+    "id": "q_093_quelle_marque_automobile_utilise_un_v_au_d"
+  },
+  {
+    "id": "q_094_quelle_marque_de_pneus_utilise_un_personna",
+    "question": "Quelle marque de pneus utilise un personnage blanc fait de pneus ?",
+    "options": [
+      "Continental",
+      "Pirelli",
+      "Michelin",
+      "Goodyear"
+    ],
+    "answer": 2,
+    "explanation": "Bibendum est la mascotte Michelin.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quelle marque de thé utilise un cartouche jaune en forme de soleil derrière son nom ?",
+    "options": [
+      "Free Now",
+      "Lipton",
+      "Uber",
+      "Grab"
+    ],
+    "answer": 1,
+    "explanation": "Lipton utilise un disque jaune évoquant le soleil.",
+    "difficulty": "medium",
+    "id": "q_095_quelle_marque_de_the_utilise_un_cartouche_"
+  },
+  {
+    "id": "q_096_quel_service_de_livraison_utilise_une_flec",
+    "question": "Quel service de livraison utilise une flèche de A à Z dans son logo ?",
+    "options": [
+      "AliExpress",
+      "eBay",
+      "Etsy",
+      "Amazon"
+    ],
+    "answer": 3,
+    "explanation": "La flèche d’Amazon relie A à Z.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_097_quelle_marque_de_voiture_utilise_un_losang",
+    "question": "Quelle marque de voiture utilise un losange ?",
+    "options": [
+      "Peugeot",
+      "Citroën",
+      "Renault",
+      "Dacia"
+    ],
+    "answer": 2,
+    "explanation": "Le losange est le symbole de Renault.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_098_quelle_encyclopedie_en_ligne_utilise_un_gl",
+    "question": "Quelle encyclopédie en ligne utilise un globe composé de pièces de puzzle ?",
+    "options": [
+      "Britannica",
+      "Quora",
+      "Larousse",
+      "Wikipédia"
+    ],
+    "answer": 3,
+    "explanation": "Wikipédia utilise ce globe incomplet.",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Quel moteur de recherche utilise un canard portant un nœud papillon ?",
+    "options": [
+      "Twitch",
+      "Zoom",
+      "DuckDuckGo",
+      "Discord"
+    ],
+    "answer": 2,
+    "explanation": "DuckDuckGo utilise un canard nommé Dax.",
+    "difficulty": "medium",
+    "id": "q_099_quel_moteur_de_recherche_utilise_un_canard"
+  },
+  {
+    "question": "Quelle chaîne de restauration place son nom entre deux formes évoquant des pains à burger ?",
+    "options": [
+      "Lindt",
+      "Côte d’Or",
+      "Burger King",
+      "Algida"
+    ],
+    "answer": 2,
+    "explanation": "Le logo de Burger King place son nom entre deux formes de pain.",
+    "difficulty": "medium",
+    "id": "q_100_quelle_chaine_de_restauration_place_son_no"
+  },
+  {
+    "question": "Quelle entreprise de cristal utilise un cygne stylisé ?",
+    "options": [
+      "Rolex",
+      "Canon",
+      "Swarovski",
+      "Nikon"
+    ],
+    "answer": 2,
+    "explanation": "Swarovski utilise un cygne.",
+    "difficulty": "hard",
+    "id": "q_101_quelle_entreprise_de_cristal_utilise_un_cy"
+  },
+  {
+    "id": "q_102_quelle_marque_automobile_utilise_une_flech",
+    "question": "Quelle marque automobile utilise une flèche ailée dans un cercle ?",
+    "options": [
+      "Saab",
+      "Suzuki",
+      "Škoda",
+      "Seat"
+    ],
+    "answer": 2,
+    "explanation": "Škoda utilise une flèche ailée comme emblème.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Quel studio a conçu le logo actuel simplifié de Mastercard dévoilé en 2016 ?",
+    "options": [
+      "Pentagram",
+      "Bibendum",
+      "Leo",
+      "Saul Bass"
+    ],
+    "answer": 0,
+    "explanation": "Pentagram a travaillé sur la simplification de l’identité Mastercard.",
+    "difficulty": "hard",
+    "id": "q_103_quel_studio_a_concu_le_logo_actuel_simplif"
+  },
+  {
+    "id": "q_104_quelle_enseigne_francaise_cache_un_c_blanc",
+    "question": "Quelle enseigne française cache un C blanc entre deux formes rouge et bleue ?",
+    "options": [
+      "Monoprix",
+      "E.Leclerc",
+      "Carrefour",
+      "Auchan"
+    ],
+    "answer": 2,
+    "explanation": "Le C de Carrefour apparaît dans l’espace négatif du logo.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Quelle marque de glaces utilise un logo en cœur appelé Heartbrand ?",
+    "options": [
+      "Hershey’s Kisses",
+      "London Symphony Orchestra",
+      "Algida",
+      "Organisation des Nations unies"
+    ],
+    "answer": 2,
+    "explanation": "Algida appartient à la famille de marques Heartbrand.",
+    "difficulty": "hard",
+    "id": "q_105_quelle_marque_de_glaces_utilise_un_logo_en"
+  },
+  {
+    "question": "Quelle organisation utilise une carte du monde entourée de branches d’olivier ?",
+    "options": [
+      "Sun Microsystems",
+      "NBC",
+      "Organisation des Nations unies",
+      "Hershey’s Kisses"
+    ],
+    "answer": 2,
+    "explanation": "Le logo de l’ONU montre une carte entourée de branches d’olivier.",
+    "difficulty": "hard",
+    "id": "q_106_quelle_organisation_utilise_une_carte_du_m"
+  },
+  {
+    "question": "Quelle entreprise pétrolière a longtemps utilisé un pégase rouge comme emblème ?",
+    "options": [
+      "Canon",
+      "Mitsubishi",
+      "Mobil",
+      "Nikon"
+    ],
+    "answer": 2,
+    "explanation": "Mobil a longtemps utilisé un pégase rouge comme emblème.",
+    "difficulty": "hard",
+    "id": "q_107_quelle_entreprise_petroliere_a_longtemps_u"
+  },
+  {
+    "question": "Quelle marque automobile américaine utilise une étoile boussole à quatre pointes ?",
+    "options": [
+      "Polestar",
+      "Lincoln",
+      "Cadillac",
+      "Buick"
+    ],
+    "answer": 1,
+    "explanation": "Lincoln utilise une étoile stylisée à quatre pointes.",
+    "difficulty": "hard",
+    "id": "q_108_quelle_marque_automobile_americaine_utilis"
+  },
+  {
+    "id": "q_109_quel_constructeur_automobile_utilise_trois",
+    "question": "Quel constructeur automobile utilise trois ovales qui se chevauchent ?",
+    "options": [
+      "Toyota",
+      "Mazda",
+      "Nissan",
+      "Subaru"
+    ],
+    "answer": 0,
+    "explanation": "Le logo Toyota est composé de trois ovales imbriqués.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_110_quel_evenement_sportif_cache_un_cycliste_d",
+    "question": "Quel événement sportif cache un cycliste dans son logo typographique ?",
+    "options": [
+      "Tour de France",
+      "Giro d’Italia",
+      "24 Heures du Mans",
+      "Roland-Garros"
+    ],
+    "answer": 0,
+    "explanation": "Le logo du Tour de France intègre un cycliste dans ses lettres.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_111_quelle_chaine_de_glaces_integre_le_nombre_",
+    "question": "Quelle chaîne de glaces intègre le nombre 31 dans les lettres B et R ?",
+    "options": [
+      "Häagen-Dazs",
+      "Ben & Jerry’s",
+      "Amorino",
+      "Baskin-Robbins"
+    ],
+    "answer": 3,
+    "explanation": "Le logo Baskin-Robbins fait apparaître le nombre 31.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_112_quel_reseau_social_transforme_la_lettre_p_",
+    "question": "Quel réseau social transforme la lettre P de son logo en épingle ?",
+    "options": [
+      "Pocket",
+      "Periscope",
+      "Pinterest",
+      "Patreon"
+    ],
+    "answer": 2,
+    "explanation": "Le P de Pinterest reprend la forme d’une épingle.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Quelle marque automobile utilise une étoile polaire à quatre branches ?",
+    "options": [
+      "Jaguar",
+      "Polestar",
+      "Genesis",
+      "Mini"
+    ],
+    "answer": 1,
+    "explanation": "Polestar utilise une étoile abstraite à quatre branches.",
+    "difficulty": "hard",
+    "id": "q_113_quelle_marque_automobile_utilise_une_etoil"
+  },
+  {
+    "question": "Quelle organisation de protection animale utilise un panda noir et blanc ?",
+    "options": [
+      "Sun Microsystems",
+      "NBC",
+      "WWF",
+      "Algida"
+    ],
+    "answer": 2,
+    "explanation": "Le panda est l’emblème du WWF.",
+    "difficulty": "hard",
+    "id": "q_114_quelle_organisation_de_protection_animale_"
+  },
+  {
+    "question": "Quel designer a créé le logo « I ❤️ NY » ?",
+    "options": [
+      "Leo",
+      "Octocat",
+      "Bibendum",
+      "Milton Glaser"
+    ],
+    "answer": 3,
+    "explanation": "Milton Glaser a créé ce logo en 1977.",
+    "difficulty": "hard",
+    "id": "q_115_quel_designer_a_cree_le_logo_i_ny"
+  },
+  {
+    "question": "Quel nom porte le symbole en forme de virgule de Nike ?",
+    "options": [
+      "Milton Glaser",
+      "Swoosh",
+      "Leo",
+      "Paul Rand"
+    ],
+    "answer": 1,
+    "explanation": "Le symbole Nike s’appelle le Swoosh.",
+    "difficulty": "hard",
+    "id": "q_116_quel_nom_porte_le_symbole_en_forme_de_virg"
+  },
+  {
+    "question": "Quelle marque d’appareils photo utilise un logo jaune avec son nom noir ?",
+    "options": [
+      "Cartier",
+      "Swarovski",
+      "Mitsubishi",
+      "Nikon"
+    ],
+    "answer": 3,
+    "explanation": "Nikon utilise un rectangle jaune et son nom noir.",
+    "difficulty": "hard",
+    "id": "q_117_quelle_marque_dappareils_photo_utilise_un_"
+  },
+  {
+    "question": "Quel zoo américain utilise un arbre dont les espaces négatifs dessinent un gorille et un lion ?",
+    "options": [
+      "Quiksilver",
+      "Algida",
+      "Pittsburgh Zoo",
+      "NBC"
+    ],
+    "answer": 2,
+    "explanation": "Le logo du Pittsburgh Zoo cache un gorille et un lion dans l’arbre.",
+    "difficulty": "hard",
+    "id": "q_118_quel_zoo_americain_utilise_un_arbre_dont_l"
+  },
+  {
+    "question": "Quelle marque de moto utilise un diapason triple dans un cercle ?",
+    "options": [
+      "Mini",
+      "Volvo",
+      "Emirates",
+      "Yamaha"
+    ],
+    "answer": 3,
+    "explanation": "Yamaha utilise trois diapasons croisés.",
+    "difficulty": "hard",
+    "id": "q_119_quelle_marque_de_moto_utilise_un_diapason_"
+  },
+  {
+    "question": "Quelle marque automobile utilise un blason divisé en quatre avec un cheval au centre ?",
+    "options": [
+      "Bentley",
+      "Porsche",
+      "Yamaha",
+      "Polestar"
+    ],
+    "answer": 1,
+    "explanation": "Le blason Porsche intègre le cheval de Stuttgart.",
+    "difficulty": "hard",
+    "id": "q_120_quelle_marque_automobile_utilise_un_blason"
+  },
+  {
+    "question": "Quelle entreprise japonaise utilise trois diamants rouges formant son emblème ?",
+    "options": [
+      "Olympus",
+      "Mitsubishi",
+      "Rolex",
+      "Mobil"
+    ],
+    "answer": 1,
+    "explanation": "Mitsubishi signifie littéralement trois losanges.",
+    "difficulty": "hard",
+    "id": "q_121_quelle_entreprise_japonaise_utilise_trois_"
+  },
+  {
+    "question": "Quelle marque de chocolat cache la forme d’un baiser entre les lettres K et I de son nom ?",
+    "options": [
+      "Pittsburgh Zoo",
+      "WWF",
+      "Hershey’s Kisses",
+      "London Symphony Orchestra"
+    ],
+    "answer": 2,
+    "explanation": "Un petit chocolat est visible dans l’espace entre K et I.",
+    "difficulty": "hard",
+    "id": "q_122_quelle_marque_de_chocolat_cache_la_forme_d"
+  },
+  {
+    "question": "Comment s’appelle la mascotte-chat de GitHub ?",
+    "options": [
+      "Massimo Vignelli",
+      "Clyde",
+      "Octocat",
+      "Leo"
+    ],
+    "answer": 2,
+    "explanation": "La mascotte de GitHub est l’Octocat.",
+    "difficulty": "hard",
+    "id": "q_123_comment_sappelle_la_mascotte_chat_de_githu"
+  },
+  {
+    "question": "Quelle marque automobile utilise une lettre B ailée ?",
+    "options": [
+      "Genesis",
+      "Porsche",
+      "Lufthansa",
+      "Bentley"
+    ],
+    "answer": 3,
+    "explanation": "Bentley utilise un B entouré d’ailes.",
+    "difficulty": "hard",
+    "id": "q_124_quelle_marque_automobile_utilise_une_lettr"
+  },
+  {
+    "id": "q_125_quelle_entreprise_technologique_utilise_de",
+    "question": "Quelle entreprise technologique utilise des barres inspirées du Golden Gate Bridge ?",
+    "options": [
+      "Oracle",
+      "Cisco",
+      "SAP",
+      "Intel"
+    ],
+    "answer": 1,
+    "explanation": "Les barres du logo Cisco évoquent le Golden Gate Bridge.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Quelle marque de matériel photo utilise un cercle rouge portant son nom en écriture blanche ?",
+    "options": [
+      "Mobil",
+      "Leica",
+      "Mitsubishi",
+      "Rolex"
+    ],
+    "answer": 1,
+    "explanation": "Leica utilise un disque rouge avec son nom.",
+    "difficulty": "hard",
+    "id": "q_126_quelle_marque_de_materiel_photo_utilise_un"
+  },
+  {
+    "id": "q_127_quelle_marque_electronique_utilise_un_logo",
+    "question": "Quelle marque électronique utilise un logo qui peut ressembler à un visage avec les lettres L et G ?",
+    "options": [
+      "LG",
+      "Garmin",
+      "Lenovo",
+      "Logitech"
+    ],
+    "answer": 0,
+    "explanation": "Le symbole de LG forme un visage stylisé.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_128_quelle_entreprise_utilise_un_grand_u_compo",
+    "question": "Quelle entreprise utilise un grand U composé de nombreux petits pictogrammes ?",
+    "options": [
+      "Unilever",
+      "United Airlines",
+      "Ubisoft",
+      "Universal"
+    ],
+    "answer": 0,
+    "explanation": "Le U d’Unilever est formé de nombreux symboles liés à ses activités.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Quel orchestre utilise un logo dont les lettres LSO dessinent aussi un chef d’orchestre avec sa baguette ?",
+    "options": [
+      "London Symphony Orchestra",
+      "Formule 1",
+      "Quiksilver",
+      "Organisation des Nations unies"
+    ],
+    "answer": 0,
+    "explanation": "Le monogramme du London Symphony Orchestra évoque un chef d’orchestre.",
+    "difficulty": "hard",
+    "id": "q_129_quel_orchestre_utilise_un_logo_dont_les_le"
+  },
+  {
+    "question": "Quelle marque de surf a un logo inspiré de La Grande Vague de Kanagawa et du mont Fuji ?",
+    "options": [
+      "NBC",
+      "Organisation des Nations unies",
+      "WWF",
+      "Quiksilver"
+    ],
+    "answer": 3,
+    "explanation": "Le logo Quiksilver s’inspire de la vague d’Hokusai et du mont Fuji.",
+    "difficulty": "hard",
+    "id": "q_130_quelle_marque_de_surf_a_un_logo_inspire_de"
+  },
+  {
+    "question": "Quelle société de transport ferroviaire française utilise un logo magenta en forme de mouvement ?",
+    "options": [
+      "Mobil",
+      "SNCF",
+      "Mitsubishi",
+      "Nikon"
+    ],
+    "answer": 1,
+    "explanation": "SNCF utilise un mot-symbole magenta dynamique.",
+    "difficulty": "hard",
+    "id": "q_131_quelle_societe_de_transport_ferroviaire_fr"
+  },
+  {
+    "question": "Quel réseau de télévision américain utilise un paon multicolore comme emblème ?",
+    "options": [
+      "NBC",
+      "Organisation des Nations unies",
+      "Hershey’s Kisses",
+      "Pittsburgh Zoo"
+    ],
+    "answer": 0,
+    "explanation": "NBC utilise un paon multicolore.",
+    "difficulty": "hard",
+    "id": "q_132_quel_reseau_de_television_americain_utilis"
+  },
+  {
+    "question": "Quelle compagnie aérienne utilise une tête d’oryx sur fond bordeaux ?",
+    "options": [
+      "Bentley",
+      "Qatar Airways",
+      "Mini",
+      "Lincoln"
+    ],
+    "answer": 1,
+    "explanation": "Qatar Airways utilise une tête d’oryx.",
+    "difficulty": "hard",
+    "id": "q_133_quelle_compagnie_aerienne_utilise_une_tete"
+  },
+  {
+    "question": "Quelle compagnie aérienne utilise un kangourou blanc sur une queue rouge ?",
+    "options": [
+      "Qantas",
+      "Emirates",
+      "Mini",
+      "Porsche"
+    ],
+    "answer": 0,
+    "explanation": "Qantas utilise un kangourou.",
+    "difficulty": "hard",
+    "id": "q_134_quelle_compagnie_aerienne_utilise_un_kango"
+  },
+  {
+    "question": "Quelle compagnie aérienne utilise une calligraphie arabe rouge au-dessus de son nom anglais ?",
+    "options": [
+      "Bentley",
+      "Volvo",
+      "Emirates",
+      "Yamaha"
+    ],
+    "answer": 2,
+    "explanation": "Emirates utilise une calligraphie arabe rouge avec son nom anglais.",
+    "difficulty": "hard",
+    "id": "q_135_quelle_compagnie_aerienne_utilise_une_call"
+  },
+  {
+    "question": "Quelle entreprise informatique utilisait un ambigramme carré permettant de lire son nom dans plusieurs directions ?",
+    "options": [
+      "Organisation des Nations unies",
+      "Algida",
+      "London Symphony Orchestra",
+      "Sun Microsystems"
+    ],
+    "answer": 3,
+    "explanation": "Le logo de Sun Microsystems répète le mot SUN en ambigramme.",
+    "difficulty": "hard",
+    "id": "q_136_quelle_entreprise_informatique_utilisait_u"
+  },
+  {
+    "question": "Quelle marque de montres utilise une couronne à cinq pointes ?",
+    "options": [
+      "Nikon",
+      "Mobil",
+      "Rolex",
+      "Mitsubishi"
+    ],
+    "answer": 2,
+    "explanation": "Rolex utilise une couronne dorée à cinq pointes.",
+    "difficulty": "hard",
+    "id": "q_137_quelle_marque_de_montres_utilise_une_couro"
+  },
+  {
+    "question": "Quel nom porte le lion de la Metro-Goldwyn-Mayer apparaissant au début des films ?",
+    "options": [
+      "Leo",
+      "Paul Rand",
+      "Octocat",
+      "Massimo Vignelli"
+    ],
+    "answer": 0,
+    "explanation": "Le lion emblématique de MGM est couramment appelé Leo.",
+    "difficulty": "hard",
+    "id": "q_138_quel_nom_porte_le_lion_de_la_metro_goldwyn"
+  },
+  {
+    "question": "Quelle compagnie aérienne utilise une grue stylisée dans un cercle jaune ?",
+    "options": [
+      "Qantas",
+      "Polestar",
+      "Porsche",
+      "Lufthansa"
+    ],
+    "answer": 3,
+    "explanation": "Lufthansa utilise une grue stylisée.",
+    "difficulty": "hard",
+    "id": "q_139_quelle_compagnie_aerienne_utilise_une_grue"
+  },
+  {
+    "question": "Quel ancien logo de championnat automobile cachait un chiffre 1 entre une forme noire et une zone rouge ?",
+    "options": [
+      "WWF",
+      "Formule 1",
+      "Quiksilver",
+      "Organisation des Nations unies"
+    ],
+    "answer": 1,
+    "explanation": "L’ancien logo de la Formule 1 cachait un 1 dans l’espace négatif.",
+    "difficulty": "hard",
+    "id": "q_140_quel_ancien_logo_de_championnat_automobile"
+  },
+  {
+    "id": "q_141_quelle_marque_audio_utilise_un_b_blanc_dan",
+    "question": "Quelle marque audio utilise un b blanc dans un cercle rouge évoquant un casque ?",
+    "options": [
+      "Beats",
+      "Marshall",
+      "Bose",
+      "JBL"
+    ],
+    "answer": 0,
+    "explanation": "Le b du logo Beats évoque une oreillette de casque.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_142_quelle_plateforme_dhebergement_utilise_un_",
+    "question": "Quelle plateforme d’hébergement utilise un symbole appelé « Bélo » ?",
+    "options": [
+      "Booking.com",
+      "Airbnb",
+      "Expedia",
+      "Tripadvisor"
+    ],
+    "answer": 1,
+    "explanation": "Airbnb appelle son symbole principal le Bélo.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_143_quelle_marque_cache_un_ours_dans_la_montag",
+    "question": "Quelle marque cache un ours dans la montagne de son logo ?",
+    "options": [
+      "Milka",
+      "Lindt",
+      "Toblerone",
+      "Haribo"
+    ],
+    "answer": 2,
+    "explanation": "Un ours est dissimulé dans la montagne du logo Toblerone.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Quelle marque automobile britannique utilise un félin bondissant ?",
+    "options": [
+      "Lincoln",
+      "Genesis",
+      "Jaguar",
+      "Qatar Airways"
+    ],
+    "answer": 2,
+    "explanation": "Jaguar utilise un félin bondissant.",
+    "difficulty": "hard",
+    "id": "q_144_quelle_marque_automobile_britannique_utili"
+  },
+  {
+    "id": "q_145_quel_constructeur_automobile_presente_un_h",
+    "question": "Quel constructeur automobile présente un H stylisé pouvant représenter deux personnes se serrant la main ?",
+    "options": [
+      "Hyundai",
+      "Hummer",
+      "Honda",
+      "Holden"
+    ],
+    "answer": 0,
+    "explanation": "Le H du logo Hyundai est souvent présenté comme une poignée de main stylisée.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Quel nom porte le petit personnage Michelin ?",
+    "options": [
+      "Pentagram",
+      "Massimo Vignelli",
+      "Wally Olins",
+      "Bibendum"
+    ],
+    "answer": 3,
+    "explanation": "La mascotte Michelin s’appelle Bibendum.",
+    "difficulty": "hard",
+    "id": "q_146_quel_nom_porte_le_petit_personnage_micheli"
+  },
+  {
+    "id": "q_147_quelle_marque_dordinateurs_combine_une_ond",
+    "question": "Quelle marque d’ordinateurs combine une onde analogique et les chiffres 1 et 0 dans son logo ?",
+    "options": [
+      "VAIO",
+      "Dell",
+      "Asus",
+      "Acer"
+    ],
+    "answer": 0,
+    "explanation": "Le logo VAIO mêle une onde analogique et une représentation binaire.",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Quel graphiste a conçu le logo IBM à huit bandes ?",
+    "options": [
+      "Bibendum",
+      "Wally Olins",
+      "Pentagram",
+      "Paul Rand"
+    ],
+    "answer": 3,
+    "explanation": "Paul Rand a conçu le célèbre logo IBM à bandes.",
+    "difficulty": "hard",
+    "id": "q_148_quel_graphiste_a_concu_le_logo_ibm_a_huit_"
+  },
+  {
+    "question": "Comment s’appelle la mascotte en forme de manette du logo Discord ?",
+    "options": [
+      "Saul Bass",
+      "Massimo Vignelli",
+      "Wally Olins",
+      "Clyde"
+    ],
+    "answer": 3,
+    "explanation": "Discord appelle sa mascotte Clyde.",
+    "difficulty": "hard",
+    "id": "q_149_comment_sappelle_la_mascotte_en_forme_de_m"
+  },
+  {
+    "id": "q_150_quel_transporteur_cache_une_fleche_entre_l",
+    "question": "Quel transporteur cache une flèche entre les lettres E et x ?",
+    "options": [
+      "FedEx",
+      "UPS",
+      "DHL",
+      "TNT"
+    ],
+    "answer": 0,
+    "explanation": "Le logo FedEx cache une flèche dans l’espace négatif.",
+    "difficulty": "hard"
+  }
+]

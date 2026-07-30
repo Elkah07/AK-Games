@@ -1,0 +1,3152 @@
+[
+  {
+    "id": "alerte_001",
+    "title": "Le téléphone disparu",
+    "text": "Le téléphone du groupe a disparu cinq minutes avant le départ. Que faites-vous?",
+    "options": [
+      {
+        "label": "Tout le monde vide ses poches",
+        "outcome": "Vous trouvez trois chargeurs mais aucun téléphone."
+      },
+      {
+        "label": "On retrace les déplacements",
+        "outcome": "La piste mène au canapé."
+      },
+      {
+        "label": "On le fait sonner discrètement",
+        "outcome": "Il vibre dans une veste oubliée."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "petit_probleme"
+  },
+  {
+    "id": "alerte_002",
+    "title": "La porte verrouillée",
+    "text": "Vous êtes enfermés dehors alors que la musique tourne à l’intérieur.",
+    "options": [
+      {
+        "label": "Appeler un voisin",
+        "outcome": "Le voisin arrive avec un trousseau énorme."
+      },
+      {
+        "label": "Tenter une fenêtre",
+        "outcome": "La fenêtre est entrouverte mais très haute."
+      },
+      {
+        "label": "Transformer le palier en fête",
+        "outcome": "Le palier devient étonnamment populaire."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_003",
+    "title": "Le message anonyme",
+    "text": "Un message apparaît : « Ne faites confiance à personne ».",
+    "options": [
+      {
+        "label": "Ignorer",
+        "outcome": "Le silence devient suspect."
+      },
+      {
+        "label": "Interroger tout le monde",
+        "outcome": "Chacun invente un alibi catastrophique."
+      },
+      {
+        "label": "Répondre au numéro",
+        "outcome": "Le numéro répond avec un emoji cactus."
+      }
+    ],
+    "theme": "secrets_groupe",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_004",
+    "title": "La panne générale",
+    "text": "Toutes les lumières s’éteignent au milieu de la partie.",
+    "options": [
+      {
+        "label": "Allumer les téléphones",
+        "outcome": "Les visages deviennent des films d’horreur."
+      },
+      {
+        "label": "Chercher le tableau électrique",
+        "outcome": "Un disjoncteur avait sauté."
+      },
+      {
+        "label": "Continuer dans le noir",
+        "outcome": "La partie devient deux fois plus intense."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_005",
+    "title": "Le colis mystérieux",
+    "text": "Un colis sans nom arrive devant la porte.",
+    "options": [
+      {
+        "label": "L’ouvrir ensemble",
+        "outcome": "Il contient des accessoires de fête."
+      },
+      {
+        "label": "Le laisser dehors",
+        "outcome": "Le colis commence à faire du bruit."
+      },
+      {
+        "label": "Chercher l’expéditeur",
+        "outcome": "Le reçu indique l’adresse du voisin."
+      }
+    ],
+    "theme": "objets_disparus",
+    "intensity": "petit_probleme"
+  },
+  {
+    "id": "alerte_006",
+    "title": "L’alarme incendie",
+    "text": "L’alarme se déclenche sans fumée visible.",
+    "options": [
+      {
+        "label": "Sortir immédiatement",
+        "outcome": "Tout le monde se retrouve dehors en chaussettes."
+      },
+      {
+        "label": "Chercher l’origine",
+        "outcome": "Une bougie est coupable."
+      },
+      {
+        "label": "Appeler le propriétaire",
+        "outcome": "Le propriétaire répond avec dix minutes de retard."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_007",
+    "title": "Le double parfait",
+    "text": "Une personne identique à l’un des joueurs frappe à la porte.",
+    "options": [
+      {
+        "label": "Laisser entrer",
+        "outcome": "Les deux affirment être l’original."
+      },
+      {
+        "label": "Poser des questions pièges",
+        "outcome": "Le double connaît presque tout."
+      },
+      {
+        "label": "Fermer les rideaux",
+        "outcome": "Le double attend patiemment dehors."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_008",
+    "title": "La vidéo compromettante",
+    "text": "Une vieille vidéo gênante apparaît sur la télévision.",
+    "options": [
+      {
+        "label": "La regarder jusqu’au bout",
+        "outcome": "Le groupe découvre un talent oublié."
+      },
+      {
+        "label": "Couper l’écran",
+        "outcome": "Le son continue malgré l’écran noir."
+      },
+      {
+        "label": "Trouver qui l’a lancée",
+        "outcome": "La télécommande était sous un coussin."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_009",
+    "title": "Le compte à rebours",
+    "text": "Un compte à rebours de cinq minutes apparaît sur tous les téléphones.",
+    "options": [
+      {
+        "label": "Éteindre les téléphones",
+        "outcome": "Ils se rallument immédiatement."
+      },
+      {
+        "label": "Chercher un indice",
+        "outcome": "Un QR code mène à une énigme."
+      },
+      {
+        "label": "Attendre ensemble",
+        "outcome": "À zéro, une playlist démarre."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "petit_probleme"
+  },
+  {
+    "id": "alerte_010",
+    "title": "La pièce interdite",
+    "text": "Une porte habituellement fermée est maintenant ouverte.",
+    "options": [
+      {
+        "label": "Entrer tous ensemble",
+        "outcome": "La pièce contient une décoration surprise."
+      },
+      {
+        "label": "Envoyer une personne",
+        "outcome": "La personne revient avec une couronne."
+      },
+      {
+        "label": "Refermer sans regarder",
+        "outcome": "Un bruit se fait entendre derrière."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_011",
+    "title": "Le voisin furieux",
+    "text": "Le voisin sonne et affirme que quelque chose traverse son plafond.",
+    "options": [
+      {
+        "label": "Baisser la musique",
+        "outcome": "Il repart légèrement apaisé."
+      },
+      {
+        "label": "L’inviter à vérifier",
+        "outcome": "Il reconnaît la chanson et reste."
+      },
+      {
+        "label": "Chercher l’objet perdu",
+        "outcome": "Une balle rebondissante est retrouvée."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_012",
+    "title": "Le joueur absent",
+    "text": "Un joueur disparaît pendant deux minutes sans répondre.",
+    "options": [
+      {
+        "label": "Former des équipes de recherche",
+        "outcome": "Il est retrouvé dans la cuisine."
+      },
+      {
+        "label": "L’appeler",
+        "outcome": "Son téléphone sonne sous la table."
+      },
+      {
+        "label": "Continuer la partie",
+        "outcome": "Il revient avec un gâteau."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_013",
+    "title": "La photo impossible",
+    "text": "Une photo de groupe montre une personne que personne ne reconnaît.",
+    "options": [
+      {
+        "label": "Zoomer",
+        "outcome": "La silhouette porte votre logo."
+      },
+      {
+        "label": "Refaire la photo",
+        "outcome": "La personne n’apparaît plus."
+      },
+      {
+        "label": "Supprimer l’image",
+        "outcome": "La photo revient dans la corbeille."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "petit_probleme"
+  },
+  {
+    "id": "alerte_014",
+    "title": "Le son dans le mur",
+    "text": "Des coups réguliers viennent du mur.",
+    "options": [
+      {
+        "label": "Répondre en rythme",
+        "outcome": "Le mur répond parfaitement."
+      },
+      {
+        "label": "Écouter en silence",
+        "outcome": "Le rythme forme un code."
+      },
+      {
+        "label": "Prévenir le voisin",
+        "outcome": "Le voisin entend la même chose."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_015",
+    "title": "L’invitation secrète",
+    "text": "Une invitation annonce une fête dans votre propre salon demain.",
+    "options": [
+      {
+        "label": "Annuler",
+        "outcome": "L’événement disparaît en ligne."
+      },
+      {
+        "label": "Préparer la fête",
+        "outcome": "Tout le monde propose un thème."
+      },
+      {
+        "label": "Découvrir l’organisateur",
+        "outcome": "L’organisateur utilise un faux nom."
+      }
+    ],
+    "theme": "secrets_groupe",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_016",
+    "title": "La valise inconnue",
+    "text": "Une valise apparaît au milieu de la pièce.",
+    "options": [
+      {
+        "label": "L’ouvrir",
+        "outcome": "Elle contient des costumes."
+      },
+      {
+        "label": "La peser",
+        "outcome": "Elle est beaucoup trop légère."
+      },
+      {
+        "label": "Chercher une étiquette",
+        "outcome": "L’étiquette porte un prénom du groupe."
+      }
+    ],
+    "theme": "objets_disparus",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_017",
+    "title": "Le Wi-Fi fantôme",
+    "text": "Un nouveau réseau Wi-Fi porte le nom d’un secret du groupe.",
+    "options": [
+      {
+        "label": "Se connecter",
+        "outcome": "Une page affiche une énigme."
+      },
+      {
+        "label": "Changer votre mot de passe",
+        "outcome": "Le réseau change de nom."
+      },
+      {
+        "label": "Chercher le routeur",
+        "outcome": "Le routeur clignote dans le couloir."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "petit_probleme"
+  },
+  {
+    "id": "alerte_018",
+    "title": "Le miroir retardé",
+    "text": "Le reflet d’une personne bouge avec une seconde de retard.",
+    "options": [
+      {
+        "label": "Tester le miroir",
+        "outcome": "Le décalage augmente."
+      },
+      {
+        "label": "Le couvrir",
+        "outcome": "Le tissu bouge seul."
+      },
+      {
+        "label": "Filmer",
+        "outcome": "La vidéo paraît normale."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_019",
+    "title": "La carte sous la table",
+    "text": "Une carte indique un point précis de l’appartement.",
+    "options": [
+      {
+        "label": "Suivre la carte",
+        "outcome": "Elle mène à une boîte de bonbons."
+      },
+      {
+        "label": "La déchirer",
+        "outcome": "Les morceaux se recollent."
+      },
+      {
+        "label": "Comparer avec le plan",
+        "outcome": "Un passage semble manquer au plan."
+      }
+    ],
+    "theme": "objets_disparus",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_020",
+    "title": "La voix dans l’enceinte",
+    "text": "L’enceinte prononce les prénoms du groupe sans être connectée.",
+    "options": [
+      {
+        "label": "Lui poser une question",
+        "outcome": "Elle répond par des indices."
+      },
+      {
+        "label": "La débrancher",
+        "outcome": "Elle continue quelques secondes."
+      },
+      {
+        "label": "Enregistrer la voix",
+        "outcome": "L’enregistrement ne contient que du silence."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_021",
+    "title": "Le faux livreur",
+    "text": "Un livreur affirme que quelqu’un du groupe a commandé un coffre fermé, mais aucun nom ne correspond.",
+    "options": [
+      {
+        "label": "Ouvrir devant lui",
+        "outcome": "Le coffre contient vos propres chaussures, soigneusement étiquetées."
+      },
+      {
+        "label": "Refuser le colis",
+        "outcome": "Le livreur repart, puis le coffre réapparaît dans l’ascenseur."
+      },
+      {
+        "label": "Appeler le numéro du reçu",
+        "outcome": "Un téléphone sonne dans la poche d’un joueur."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_022",
+    "title": "L’étage qui n’existe pas",
+    "text": "L’ascenseur propose soudain un étage 13 absent du panneau une minute plus tôt.",
+    "options": [
+      {
+        "label": "Appuyer sur 13",
+        "outcome": "Les portes s’ouvrent sur une copie silencieuse du hall."
+      },
+      {
+        "label": "Descendre par l’escalier",
+        "outcome": "Chaque palier porte désormais le même numéro."
+      },
+      {
+        "label": "Bloquer les portes",
+        "outcome": "L’écran affiche vos prénoms puis revient à la normale."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_023",
+    "title": "Le groupe fantôme",
+    "text": "Une conversation portant le nom de votre soirée apparaît sur tous les téléphones, avec un membre inconnu.",
+    "options": [
+      {
+        "label": "Écrire « Qui es-tu ? »",
+        "outcome": "Le compte répond avec une photo prise dix secondes plus tôt."
+      },
+      {
+        "label": "Supprimer le groupe",
+        "outcome": "Il revient avec un message : « Mauvaise décision »."
+      },
+      {
+        "label": "Couper Internet",
+        "outcome": "Les messages continuent d’arriver hors connexion."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_024",
+    "title": "La note du voisin",
+    "text": "Une enveloppe sous la porte dit : « Faites moins de bruit, surtout celui de demain ».",
+    "options": [
+      {
+        "label": "Aller sonner",
+        "outcome": "L’appartement voisin est vide depuis des mois."
+      },
+      {
+        "label": "Répondre sur la lettre",
+        "outcome": "Une nouvelle phrase apparaît avec votre écriture."
+      },
+      {
+        "label": "Baisser la musique",
+        "outcome": "Un bruit de fête identique démarre à l’étage au-dessus."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_025",
+    "title": "Le gâteau au mauvais prénom",
+    "text": "Le gâteau livré porte le prénom d’une personne absente que personne ne connaît.",
+    "options": [
+      {
+        "label": "Le découper quand même",
+        "outcome": "À l’intérieur, une clé est cuite dans la génoise."
+      },
+      {
+        "label": "Retrouver la commande",
+        "outcome": "Le numéro client appartient à votre adresse depuis dix ans."
+      },
+      {
+        "label": "Poster une photo",
+        "outcome": "Le compte inconnu répond : « Gardez-moi une part »."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "petit_probleme"
+  },
+  {
+    "id": "alerte_v3_026",
+    "title": "Le taxi déjà payé",
+    "text": "Un taxi attend dehors, payé d’avance, et connaît la destination secrète du groupe.",
+    "options": [
+      {
+        "label": "Monter tous ensemble",
+        "outcome": "Le chauffeur vous dépose devant la maison où la soirée a commencé."
+      },
+      {
+        "label": "Questionner le chauffeur",
+        "outcome": "Il montre une réservation faite depuis votre propre téléphone."
+      },
+      {
+        "label": "Annuler la course",
+        "outcome": "Le paiement est remboursé en pièces déposées sur le trottoir."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_027",
+    "title": "La vidéo en avance",
+    "text": "Une vidéo reçue montre le groupe dans cinq minutes, avec une vitre cassée derrière lui.",
+    "options": [
+      {
+        "label": "Changer immédiatement de pièce",
+        "outcome": "La nouvelle vidéo s’actualise avec la pièce choisie."
+      },
+      {
+        "label": "Protéger toutes les vitres",
+        "outcome": "Un bruit de verre vient de l’intérieur d’un placard."
+      },
+      {
+        "label": "Attendre sans bouger",
+        "outcome": "La vidéo se réalise, sauf qu’aucune vitre réelle ne casse."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_028",
+    "title": "Le cadeau qui respire",
+    "text": "Un paquet posé sous la table se soulève lentement comme s’il respirait.",
+    "options": [
+      {
+        "label": "L’ouvrir doucement",
+        "outcome": "Il contient un ballon et un téléphone qui diffuse un souffle."
+      },
+      {
+        "label": "Le sortir sur le balcon",
+        "outcome": "Le souffle s’arrête, mais toutes les plantes se tournent vers lui."
+      },
+      {
+        "label": "Le filmer sans toucher",
+        "outcome": "Sur la vidéo, le paquet est déjà ouvert."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_029",
+    "title": "La playlist des secrets",
+    "text": "L’enceinte lance des titres dont les premières paroles décrivent exactement les secrets du groupe.",
+    "options": [
+      {
+        "label": "Débrancher l’enceinte",
+        "outcome": "La chanson continue depuis les téléphones."
+      },
+      {
+        "label": "Passer au titre suivant",
+        "outcome": "Le morceau suivant annonce qui va quitter la pièce."
+      },
+      {
+        "label": "Laisser jouer",
+        "outcome": "La dernière chanson n’a qu’un seul mot : « courez »."
+      }
+    ],
+    "theme": "secrets_groupe",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_030",
+    "title": "Le double dans la rue",
+    "text": "Depuis la fenêtre, vous voyez un membre du groupe attendre devant l’immeuble alors qu’il est dans la pièce.",
+    "options": [
+      {
+        "label": "L’appeler en visio",
+        "outcome": "Les deux versions décrochent en même temps."
+      },
+      {
+        "label": "Descendre vérifier",
+        "outcome": "La silhouette laisse un sac puis disparaît au coin de la rue."
+      },
+      {
+        "label": "Fermer les rideaux",
+        "outcome": "Quelqu’un frappe aussitôt à la fenêtre."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_031",
+    "title": "Le frigo verrouillé",
+    "text": "Le réfrigérateur se verrouille et affiche un compte à rebours de dix minutes.",
+    "options": [
+      {
+        "label": "Couper le courant",
+        "outcome": "Le compteur continue dans le noir."
+      },
+      {
+        "label": "Composer 0000",
+        "outcome": "La porte s’ouvre sur un repas complet encore chaud."
+      },
+      {
+        "label": "Attendre la fin",
+        "outcome": "À zéro, une voix demande : « Vous avez choisi qui ? »."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_032",
+    "title": "Le direct impossible",
+    "text": "Un live montre votre salon depuis un angle où aucune caméra n’est placée.",
+    "options": [
+      {
+        "label": "Signaler le direct",
+        "outcome": "La plateforme répond que le compte n’existe pas."
+      },
+      {
+        "label": "Chercher la caméra",
+        "outcome": "Vous trouvez seulement une photo imprimée du même angle."
+      },
+      {
+        "label": "Faire signe au live",
+        "outcome": "L’image répond avec trois secondes d’avance."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_033",
+    "title": "La valise du palier",
+    "text": "Une valise identique à celle d’un joueur apparaît sur le palier, mais la sienne est toujours dans la chambre.",
+    "options": [
+      {
+        "label": "Comparer le contenu",
+        "outcome": "Chaque objet existe en double, sauf une photo inconnue."
+      },
+      {
+        "label": "Garder une seule valise",
+        "outcome": "Celle laissée dehors revient derrière la porte."
+      },
+      {
+        "label": "Appeler la police",
+        "outcome": "La valise disparaît pendant que vous décrivez son contenu."
+      }
+    ],
+    "theme": "objets_disparus",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_034",
+    "title": "L’invitation pour hier",
+    "text": "Une invitation glissée sous la porte vous convie à cette même soirée, datée de la veille.",
+    "options": [
+      {
+        "label": "Scanner le QR code",
+        "outcome": "Il ouvre une galerie de photos que vous n’avez pas encore prises."
+      },
+      {
+        "label": "Déchirer l’invitation",
+        "outcome": "Chaque morceau porte désormais une heure différente."
+      },
+      {
+        "label": "Suivre l’adresse",
+        "outcome": "L’adresse indiquée est celle de l’immeuble d’en face."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_035",
+    "title": "Le mot de passe collectif",
+    "text": "Tous les téléphones se verrouillent et demandent le même mot de passe à quatre chiffres.",
+    "options": [
+      {
+        "label": "Tester une date connue",
+        "outcome": "Un téléphone s’ouvre et affiche la caméra d’un autre."
+      },
+      {
+        "label": "Éteindre les appareils",
+        "outcome": "Ils redémarrent seuls avec une minute de moins au compteur."
+      },
+      {
+        "label": "Chercher un indice",
+        "outcome": "Quatre objets de la pièce clignotent dans un ordre précis."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_036",
+    "title": "La porte murée",
+    "text": "La porte d’entrée ne s’ouvre plus : derrière, il y a un mur peint comme le couloir.",
+    "options": [
+      {
+        "label": "Passer par une fenêtre",
+        "outcome": "La rue semble normale, mais personne ne vous entend."
+      },
+      {
+        "label": "Défoncer le faux mur",
+        "outcome": "La peinture se fend et révèle la vraie porte intacte."
+      },
+      {
+        "label": "Appeler un voisin",
+        "outcome": "Il répond depuis l’intérieur de votre salle de bain."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_037",
+    "title": "Le sondage anonyme",
+    "text": "Un sondage apparaît : « Qui du groupe faut-il croire ? » avec vos noms et déjà cent votes.",
+    "options": [
+      {
+        "label": "Voter pour soi",
+        "outcome": "Le résultat révèle un nouveau choix nommé « Aucun »."
+      },
+      {
+        "label": "Fermer la page",
+        "outcome": "Le sondage s’affiche sur la télévision."
+      },
+      {
+        "label": "Partager le lien",
+        "outcome": "Les destinataires disent que la page raconte une autre soirée."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_038",
+    "title": "La pizza inversée",
+    "text": "La pizza arrive glacée dessous, brûlante dessus, dans une boîte qui porte une heure future.",
+    "options": [
+      {
+        "label": "La manger quand même",
+        "outcome": "Chaque part a un goût différent décrit sur le reçu."
+      },
+      {
+        "label": "Rappeler la pizzeria",
+        "outcome": "Elle est fermée depuis cinq ans."
+      },
+      {
+        "label": "Conserver la boîte",
+        "outcome": "L’heure imprimée recule à chaque fois que quelqu’un parle."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "petit_probleme"
+  },
+  {
+    "id": "alerte_v3_039",
+    "title": "Les clés au plafond",
+    "text": "Le trousseau disparu est collé au plafond au centre de la pièce.",
+    "options": [
+      {
+        "label": "Monter sur une chaise",
+        "outcome": "Les clés glissent jusqu’au plafond de la pièce voisine."
+      },
+      {
+        "label": "Lancer un objet",
+        "outcome": "L’objet reste lui aussi collé au plafond."
+      },
+      {
+        "label": "Éteindre la lumière",
+        "outcome": "Tout retombe, sauf les clés."
+      }
+    ],
+    "theme": "objets_disparus",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_040",
+    "title": "Le message vocal muet",
+    "text": "Un message vocal silencieux dure exactement autant que le temps restant avant minuit.",
+    "options": [
+      {
+        "label": "L’écouter au ralenti",
+        "outcome": "On entend vos voix prononcer une adresse."
+      },
+      {
+        "label": "Avancer jusqu’à la fin",
+        "outcome": "La dernière seconde contient un cri venu du couloir."
+      },
+      {
+        "label": "Le supprimer",
+        "outcome": "Le compteur réapparaît sur l’écran du four."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_041",
+    "title": "La chambre réservée",
+    "text": "Un hôtel appelle : votre chambre est prête, alors que personne n’a réservé.",
+    "options": [
+      {
+        "label": "Demander le nom du client",
+        "outcome": "La réception donne tous vos prénoms dans le bon ordre."
+      },
+      {
+        "label": "Ignorer l’appel",
+        "outcome": "Une carte de chambre glisse sous la porte."
+      },
+      {
+        "label": "Aller à l’hôtel",
+        "outcome": "La chambre contient les manteaux laissés chez vous."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_042",
+    "title": "Le miroir en retard",
+    "text": "Le reflet du groupe accuse plusieurs secondes de retard.",
+    "options": [
+      {
+        "label": "Bouger tous ensemble",
+        "outcome": "Un reflet reste parfaitement immobile."
+      },
+      {
+        "label": "Couvrir le miroir",
+        "outcome": "Quelqu’un frappe depuis l’autre côté du tissu."
+      },
+      {
+        "label": "Filmer le phénomène",
+        "outcome": "La vidéo montre des reflets parfaitement normaux, mais pas les joueurs."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_043",
+    "title": "Le voisin trop précis",
+    "text": "Un voisin se plaint d’une dispute qui n’a pas encore eu lieu et cite les phrases exactes.",
+    "options": [
+      {
+        "label": "Lui demander la suite",
+        "outcome": "Il prédit qu’une personne renversera son verre."
+      },
+      {
+        "label": "Changer de sujet",
+        "outcome": "Il récite votre nouvelle conversation derrière la porte."
+      },
+      {
+        "label": "Le faire entrer",
+        "outcome": "L’appartement voisin devient soudain silencieux et vide."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_044",
+    "title": "La photo ajoutée",
+    "text": "Une photo inconnue apparaît dans la galerie commune : le groupe dort dans le salon.",
+    "options": [
+      {
+        "label": "Vérifier les métadonnées",
+        "outcome": "La photo est datée de demain à 6 h 12."
+      },
+      {
+        "label": "Reproduire la pose",
+        "outcome": "Un visage supplémentaire apparaît entre deux joueurs."
+      },
+      {
+        "label": "Supprimer la photo",
+        "outcome": "Elle devient le fond d’écran de tous les appareils."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_045",
+    "title": "Le robinet noir",
+    "text": "L’eau de la cuisine devient noire pendant dix secondes puis redevient claire.",
+    "options": [
+      {
+        "label": "Remplir un verre",
+        "outcome": "Le liquide clair révèle des lettres au fond du verre."
+      },
+      {
+        "label": "Appeler le propriétaire",
+        "outcome": "Il conseille de ne surtout pas ouvrir la salle de bain."
+      },
+      {
+        "label": "Couper l’arrivée d’eau",
+        "outcome": "La douche démarre seule."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_046",
+    "title": "Le manteau inconnu",
+    "text": "Un manteau mouillé apparaît au milieu des vôtres avec une invitation dans la poche.",
+    "options": [
+      {
+        "label": "Lire l’invitation",
+        "outcome": "Elle demande de rendre le manteau avant minuit."
+      },
+      {
+        "label": "Le mettre dehors",
+        "outcome": "Une traînée d’eau mène maintenant jusqu’au canapé."
+      },
+      {
+        "label": "Essayer le manteau",
+        "outcome": "Il contient exactement les objets perdus par le groupe."
+      }
+    ],
+    "theme": "objets_disparus",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_047",
+    "title": "Le profil certifié",
+    "text": "Un profil certifié portant le nom d’un joueur publie des photos de la soirée en temps réel.",
+    "options": [
+      {
+        "label": "Contacter le profil",
+        "outcome": "Il répond avec une phrase que le joueur pensait seulement."
+      },
+      {
+        "label": "Changer les paramètres",
+        "outcome": "Le profil devient privé mais compte déjà vos proches parmi ses abonnés."
+      },
+      {
+        "label": "Faire une photo-test",
+        "outcome": "La publication apparaît avant la prise."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_048",
+    "title": "Le courant sélectif",
+    "text": "La panne éteint tout sauf une lampe qui suit la personne qui parle.",
+    "options": [
+      {
+        "label": "Se taire complètement",
+        "outcome": "La lampe éclaire la porte du placard."
+      },
+      {
+        "label": "Parler tous en même temps",
+        "outcome": "Elle clignote selon un rythme qui ressemble à un code."
+      },
+      {
+        "label": "Retirer l’ampoule",
+        "outcome": "La lumière reste suspendue sans support."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_049",
+    "title": "Le colis de souvenirs",
+    "text": "Un paquet contient des objets que chacun croyait avoir perdus dans son enfance.",
+    "options": [
+      {
+        "label": "Prendre son objet",
+        "outcome": "Une nouvelle étiquette indique une date future."
+      },
+      {
+        "label": "Chercher l’expéditeur",
+        "outcome": "Le bordereau porte l’adresse de la pièce où vous êtes."
+      },
+      {
+        "label": "Tout remettre",
+        "outcome": "Le paquet se referme seul et devient beaucoup plus lourd."
+      }
+    ],
+    "theme": "secrets_groupe",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_050",
+    "title": "La sonnerie sous le sol",
+    "text": "Un téléphone sonne sous le parquet et affiche le numéro d’un joueur.",
+    "options": [
+      {
+        "label": "Répondre depuis son téléphone",
+        "outcome": "Une voix demande de ne pas déplacer le canapé."
+      },
+      {
+        "label": "Soulever une lame",
+        "outcome": "Vous trouvez un vieux téléphone chargé à 100 %."
+      },
+      {
+        "label": "Déplacer le canapé",
+        "outcome": "La sonnerie se déplace sous la table."
+      }
+    ],
+    "theme": "objets_disparus",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_051",
+    "title": "Le prénom effacé",
+    "text": "Le prénom d’un joueur disparaît de toutes les conversations, photos légendées et contacts.",
+    "options": [
+      {
+        "label": "Le réécrire partout",
+        "outcome": "Les lettres s’effacent dès qu’on prononce le prénom."
+      },
+      {
+        "label": "Utiliser un surnom",
+        "outcome": "Le surnom apparaît sur un badge posé dans l’entrée."
+      },
+      {
+        "label": "Redémarrer les appareils",
+        "outcome": "Le prénom revient, mais associé à une autre photo."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_052",
+    "title": "La fenêtre sur une autre ville",
+    "text": "La fenêtre montre soudain une rue inconnue sous la neige alors qu’il fait chaud dehors.",
+    "options": [
+      {
+        "label": "L’ouvrir",
+        "outcome": "Un air glacé entre avec un ticket de métro étranger."
+      },
+      {
+        "label": "Fermer les rideaux",
+        "outcome": "La neige commence à tomber à l’intérieur."
+      },
+      {
+        "label": "Filmer dehors",
+        "outcome": "La caméra montre votre rue normale et ensoleillée."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_053",
+    "title": "L’addition du futur",
+    "text": "Un reçu sous la table détaille toutes les boissons que vous allez commander demain.",
+    "options": [
+      {
+        "label": "Changer vos choix",
+        "outcome": "Les lignes du reçu se corrigent instantanément."
+      },
+      {
+        "label": "Déchirer le reçu",
+        "outcome": "Le total apparaît sur chaque écran."
+      },
+      {
+        "label": "Payer le montant",
+        "outcome": "Une notification confirme une réservation inconnue."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_054",
+    "title": "Le compte à rebours du balcon",
+    "text": "Des chiffres rouges apparaissent sur la vitre du balcon et descendent depuis 300.",
+    "options": [
+      {
+        "label": "Sortir vérifier",
+        "outcome": "Les chiffres ne sont visibles que depuis l’intérieur."
+      },
+      {
+        "label": "Couvrir la vitre",
+        "outcome": "Le compteur se transfère au miroir."
+      },
+      {
+        "label": "Attendre zéro",
+        "outcome": "À zéro, quelqu’un sonne avec exactement 300 secondes de retard."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_055",
+    "title": "Le faux souvenir",
+    "text": "Tous les joueurs se rappellent soudain avoir invité la même personne, mais aucun ne peut la décrire.",
+    "options": [
+      {
+        "label": "Chercher dans les messages",
+        "outcome": "Chacun trouve une conversation différente avec elle."
+      },
+      {
+        "label": "Comparer les souvenirs",
+        "outcome": "Les détails incompatibles forment pourtant une adresse réelle."
+      },
+      {
+        "label": "Appeler son numéro",
+        "outcome": "Le téléphone posé au centre de la table sonne."
+      }
+    ],
+    "theme": "secrets_groupe",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_056",
+    "title": "Le dîner remplacé",
+    "text": "En ouvrant le four, le plat préparé a été remplacé par un repas de fête complet.",
+    "options": [
+      {
+        "label": "Goûter un plat",
+        "outcome": "Il a exactement le goût d’un souvenir d’enfance."
+      },
+      {
+        "label": "Tout jeter",
+        "outcome": "Les assiettes reviennent propres sur la table."
+      },
+      {
+        "label": "Chercher qui est entré",
+        "outcome": "La caméra ne montre qu’une minute d’écran noir."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_057",
+    "title": "La notification « rentrez »",
+    "text": "Tous les téléphones affichent « Rentrez chez vous », y compris celui de la personne qui reçoit.",
+    "options": [
+      {
+        "label": "Obéir et partir",
+        "outcome": "Chaque GPS ramène finalement à la même adresse."
+      },
+      {
+        "label": "Demander « Pourquoi ? »",
+        "outcome": "La réponse est : « Parce que vous êtes déjà partis »."
+      },
+      {
+        "label": "Ignorer",
+        "outcome": "Les lumières de la rue s’éteignent une à une vers l’immeuble."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_058",
+    "title": "Le livre ouvert",
+    "text": "Un livre inconnu raconte la soirée au présent et s’écrit au fil des décisions.",
+    "options": [
+      {
+        "label": "Lire la page suivante",
+        "outcome": "Elle décrit qui vient d’ouvrir le livre."
+      },
+      {
+        "label": "Sauter à la fin",
+        "outcome": "La dernière page manque et porte des traces de brûlure."
+      },
+      {
+        "label": "Fermer le livre",
+        "outcome": "Une phrase apparaît sur la couverture : « Trop tard »."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_059",
+    "title": "Le badge visiteur",
+    "text": "Un badge « VISITEUR 7 » apparaît, alors que vous n’êtes que six.",
+    "options": [
+      {
+        "label": "Le porter",
+        "outcome": "L’interphone appelle aussitôt l’appartement."
+      },
+      {
+        "label": "Le cacher",
+        "outcome": "Le compteur de personnes de l’ascenseur affiche 7."
+      },
+      {
+        "label": "Le couper en deux",
+        "outcome": "Chaque moitié devient un badge complet."
+      }
+    ],
+    "theme": "objets_disparus",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_060",
+    "title": "La boîte à musique",
+    "text": "Une boîte à musique joue une mélodie que tous connaissent sans savoir d’où.",
+    "options": [
+      {
+        "label": "La remonter",
+        "outcome": "La mélodie révèle des paroles avec vos prénoms."
+      },
+      {
+        "label": "La laisser finir",
+        "outcome": "Le dernier accord ouvre le placard."
+      },
+      {
+        "label": "La casser",
+        "outcome": "Chaque morceau continue de jouer une note différente."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_061",
+    "title": "Le commentaire privé",
+    "text": "Sous une photo jamais publiée, un commentaire dit : « Ne laissez pas la personne en rouge partir ».",
+    "options": [
+      {
+        "label": "Identifier la personne en rouge",
+        "outcome": "Tous les vêtements paraissent rouges sur l’écran."
+      },
+      {
+        "label": "Répondre au commentaire",
+        "outcome": "L’auteur demande une preuve que vous êtes encore ensemble."
+      },
+      {
+        "label": "Supprimer la photo",
+        "outcome": "Le commentaire apparaît imprimé sur le mur."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_062",
+    "title": "Les chaussures devant la porte",
+    "text": "Une paire de chaussures boueuses apparaît devant la porte, pointée vers l’intérieur.",
+    "options": [
+      {
+        "label": "Chercher leur propriétaire",
+        "outcome": "Elles sont à la pointure exacte de trois joueurs différents."
+      },
+      {
+        "label": "Les déplacer",
+        "outcome": "De nouvelles traces partent vers la cuisine."
+      },
+      {
+        "label": "Fermer à double tour",
+        "outcome": "La clé tourne seule de l’autre côté."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_063",
+    "title": "La radio locale",
+    "text": "La radio annonce un incident à votre adresse et demande aux habitants de ne pas regarder dehors.",
+    "options": [
+      {
+        "label": "Regarder dehors",
+        "outcome": "Tous les voisins sont à leur fenêtre et vous observent."
+      },
+      {
+        "label": "Changer de station",
+        "outcome": "Chaque fréquence diffuse la même annonce avec une heure différente."
+      },
+      {
+        "label": "Appeler la radio",
+        "outcome": "Le standard vous demande comment l’incident s’est terminé."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_064",
+    "title": "Le message dans la buée",
+    "text": "La buée du miroir forme : « Il manque quelqu’un ».",
+    "options": [
+      {
+        "label": "Compter le groupe",
+        "outcome": "Le compte change chaque fois que la lumière s’éteint."
+      },
+      {
+        "label": "Effacer la phrase",
+        "outcome": "Elle revient sur toutes les vitres."
+      },
+      {
+        "label": "Demander qui manque",
+        "outcome": "Un prénom apparaît, mais personne ne le reconnaît."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_065",
+    "title": "Le téléphone sans propriétaire",
+    "text": "Un téléphone déverrouillé apparaît avec des photos de chacun prises depuis des années.",
+    "options": [
+      {
+        "label": "Faire défiler la galerie",
+        "outcome": "La dernière photo montre le téléphone entre vos mains."
+      },
+      {
+        "label": "Appeler « Maman »",
+        "outcome": "Le numéro appelé appartient à l’un des joueurs."
+      },
+      {
+        "label": "Éteindre le téléphone",
+        "outcome": "Il vibre et affiche : « Ne me rendez pas »."
+      }
+    ],
+    "theme": "objets_disparus",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_066",
+    "title": "Le voisin dans l’interphone",
+    "text": "L’interphone affiche la vidéo d’un voisin qui vous parle depuis votre propre salon.",
+    "options": [
+      {
+        "label": "Se retourner",
+        "outcome": "Le salon est vide derrière vous."
+      },
+      {
+        "label": "Lui ouvrir",
+        "outcome": "La porte de l’immeuble s’ouvre, puis celle du placard aussi."
+      },
+      {
+        "label": "Couper l’interphone",
+        "outcome": "Sa voix continue dans l’enceinte Bluetooth."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_067",
+    "title": "La réservation au nom du groupe",
+    "text": "Un restaurant confirme une table pour tout le groupe dans quinze minutes, à 200 km.",
+    "options": [
+      {
+        "label": "Appeler pour annuler",
+        "outcome": "Le serveur dit que vous êtes déjà assis."
+      },
+      {
+        "label": "Vérifier la caméra du restaurant",
+        "outcome": "On distingue des silhouettes portant vos vêtements."
+      },
+      {
+        "label": "Ignorer",
+        "outcome": "Une addition détaillée arrive par message."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_068",
+    "title": "Le jeu inconnu",
+    "text": "Une boîte de jeu apparaît avec vos portraits sur les pions et une règle : « Personne ne quitte la table ».",
+    "options": [
+      {
+        "label": "Commencer la partie",
+        "outcome": "Le premier défi décrit un objet caché dans la pièce."
+      },
+      {
+        "label": "Ranger la boîte",
+        "outcome": "Les pions restent debout sur la table."
+      },
+      {
+        "label": "Sortir un pion",
+        "outcome": "La personne représentée ne peut plus ouvrir la porte."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_069",
+    "title": "La minute manquante",
+    "text": "Toutes les horloges sautent de 23 h 14 à 23 h 16, et un objet a changé de place.",
+    "options": [
+      {
+        "label": "Comparer les vidéos",
+        "outcome": "Chaque téléphone contient une minute différente."
+      },
+      {
+        "label": "Remettre l’objet",
+        "outcome": "Il revient à sa nouvelle place dès que vous détournez les yeux."
+      },
+      {
+        "label": "Ignorer",
+        "outcome": "À minuit, la minute manquante recommence."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_070",
+    "title": "Le mot sous les verres",
+    "text": "Sous chaque verre apparaît une instruction différente écrite au feutre.",
+    "options": [
+      {
+        "label": "Lire à voix haute",
+        "outcome": "Les instructions forment ensemble une phrase d’avertissement."
+      },
+      {
+        "label": "Échanger les verres",
+        "outcome": "Les messages suivent leurs premiers propriétaires."
+      },
+      {
+        "label": "Laver les verres",
+        "outcome": "Les mots réapparaissent sur vos mains."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_071",
+    "title": "La caméra du palier",
+    "text": "La caméra montre quelqu’un déposer une enveloppe, mais le palier est vide en direct.",
+    "options": [
+      {
+        "label": "Ouvrir immédiatement",
+        "outcome": "L’enveloppe est là, chaude, avec une photo de la porte ouverte."
+      },
+      {
+        "label": "Attendre dix minutes",
+        "outcome": "La vidéo montre le groupe sortir avant que vous le décidiez."
+      },
+      {
+        "label": "Remonter l’enregistrement",
+        "outcome": "La silhouette entre dans l’appartement sans ouvrir."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_072",
+    "title": "Le contact « Moi demain »",
+    "text": "Un nouveau contact envoie : « Ne choisissez pas la troisième option ».",
+    "options": [
+      {
+        "label": "Demander une preuve",
+        "outcome": "Il transmet une photo du groupe avec un objet cassé."
+      },
+      {
+        "label": "Bloquer le contact",
+        "outcome": "Le message arrive depuis le numéro d’un autre joueur."
+      },
+      {
+        "label": "Suivre le conseil",
+        "outcome": "Aucune troisième option n’apparaît jusqu’au prochain vote."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_073",
+    "title": "La boîte aux lettres pleine",
+    "text": "La boîte aux lettres contient des dizaines de cartes postales écrites par le groupe depuis des lieux jamais visités.",
+    "options": [
+      {
+        "label": "Lire les dates",
+        "outcome": "Toutes sont datées de la semaine suivante."
+      },
+      {
+        "label": "Comparer les écritures",
+        "outcome": "Chacun reconnaît la sienne jusque dans ses fautes."
+      },
+      {
+        "label": "Brûler une carte",
+        "outcome": "La destination disparaît aussi de la carte du téléphone."
+      }
+    ],
+    "theme": "secrets_groupe",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_074",
+    "title": "Le plafond étoilé",
+    "text": "Toutes les lumières s’éteignent et le plafond montre un ciel étoilé parfaitement mobile.",
+    "options": [
+      {
+        "label": "Pointer une constellation",
+        "outcome": "Une étoile tombe et devient un point brûlant sur la table."
+      },
+      {
+        "label": "Rallumer au disjoncteur",
+        "outcome": "Le vrai plafond revient avec un trou minuscule."
+      },
+      {
+        "label": "Ouvrir la fenêtre",
+        "outcome": "Le ciel dehors est entièrement noir."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_075",
+    "title": "Le sac qui sonne",
+    "text": "Un sac abandonné devant l’immeuble diffuse la sonnerie personnalisée d’un joueur.",
+    "options": [
+      {
+        "label": "L’ouvrir dehors",
+        "outcome": "Il contient un téléphone cassé avec un appel en cours."
+      },
+      {
+        "label": "Le laisser au gardien",
+        "outcome": "Le sac apparaît quelques minutes plus tard dans l’entrée."
+      },
+      {
+        "label": "Répondre sans ouvrir",
+        "outcome": "La voix décrit ce que fait le groupe."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_076",
+    "title": "L’emoji inconnu",
+    "text": "Tous les messages du groupe sont remplacés par un emoji qui n’existe sur aucun clavier.",
+    "options": [
+      {
+        "label": "Faire une capture",
+        "outcome": "Sur la capture, l’emoji devient un plan de l’appartement."
+      },
+      {
+        "label": "Le copier-coller",
+        "outcome": "Le texte collé indique une heure et un prénom."
+      },
+      {
+        "label": "Quitter la conversation",
+        "outcome": "Le symbole apparaît sur la porte."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_077",
+    "title": "Le portrait retouché",
+    "text": "Une vieille photo encadrée change : le groupe y apparaît à la place de la famille d’origine.",
+    "options": [
+      {
+        "label": "Retirer le cadre",
+        "outcome": "Au dos, une date future est écrite au crayon."
+      },
+      {
+        "label": "Prendre une nouvelle photo",
+        "outcome": "L’image encadrée adopte la nouvelle pose."
+      },
+      {
+        "label": "Cacher le portrait",
+        "outcome": "Toutes les photos de la pièce changent à leur tour."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_078",
+    "title": "La glace qui ne fond pas",
+    "text": "Un glaçon reste intact dans une boisson chaude et contient une petite clé.",
+    "options": [
+      {
+        "label": "Briser le glaçon",
+        "outcome": "La clé ouvre une boîte que personne n’avait remarquée."
+      },
+      {
+        "label": "Le laisser dans le verre",
+        "outcome": "La boisson gèle progressivement autour."
+      },
+      {
+        "label": "Mettre le glaçon au four",
+        "outcome": "Le four s’éteint et affiche « NON »."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_079",
+    "title": "Le plan sous le tapis",
+    "text": "Un plan détaillé de l’appartement révèle une pièce supplémentaire derrière le mur.",
+    "options": [
+      {
+        "label": "Mesurer le mur",
+        "outcome": "La pièce devrait exister, mais aucune porte n’est visible."
+      },
+      {
+        "label": "Percer un petit trou",
+        "outcome": "Un courant d’air souffle avec de la musique."
+      },
+      {
+        "label": "Ignorer le plan",
+        "outcome": "Une poignée apparaît lentement sur le papier peint."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_080",
+    "title": "Le livreur identique",
+    "text": "Deux livreurs identiques arrivent avec deux commandes opposées : l’un dit d’ouvrir, l’autre de refuser.",
+    "options": [
+      {
+        "label": "Choisir le premier",
+        "outcome": "Son sac contient la commande du second."
+      },
+      {
+        "label": "Choisir le second",
+        "outcome": "Il vous remet une photo du premier devant votre porte."
+      },
+      {
+        "label": "Les faire se rencontrer",
+        "outcome": "La caméra du palier s’éteint et un seul reste là."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_081",
+    "title": "La story de minuit",
+    "text": "Une story programmée sur le compte d’un joueur montre une pièce vide avec « Vous auriez dû partir ».",
+    "options": [
+      {
+        "label": "Annuler la publication",
+        "outcome": "L’application indique que la story a déjà été vue demain."
+      },
+      {
+        "label": "Changer le mot de passe",
+        "outcome": "Le nouveau mot de passe apparaît dans la vidéo."
+      },
+      {
+        "label": "Attendre minuit",
+        "outcome": "La pièce filmée se vide exactement comme annoncé."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_082",
+    "title": "La clé sans serrure",
+    "text": "Une grande clé ancienne tombe du canapé, mais aucune serrure de la maison ne lui correspond.",
+    "options": [
+      {
+        "label": "Essayer sur la porte",
+        "outcome": "La clé tourne dans le bois et ouvre sur l’escalier."
+      },
+      {
+        "label": "La garder",
+        "outcome": "Une serrure apparaît sur la table basse."
+      },
+      {
+        "label": "La jeter dehors",
+        "outcome": "Quelqu’un la glisse immédiatement sous la porte."
+      }
+    ],
+    "theme": "objets_disparus",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_083",
+    "title": "Le repas qui refroidit le temps",
+    "text": "Chaque fois qu’un plat refroidit, les horloges reculent d’une minute.",
+    "options": [
+      {
+        "label": "Réchauffer tous les plats",
+        "outcome": "Les horloges avancent trop vite pendant trente secondes."
+      },
+      {
+        "label": "Laisser tout refroidir",
+        "outcome": "La même chanson recommence depuis le début."
+      },
+      {
+        "label": "Jeter la nourriture",
+        "outcome": "Les montres reviennent à l’heure, mais le repas est de nouveau servi."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_084",
+    "title": "Les appels croisés",
+    "text": "Chaque joueur reçoit un appel venant du téléphone d’un autre, alors que tous les appareils sont sur la table.",
+    "options": [
+      {
+        "label": "Décrocher ensemble",
+        "outcome": "Vous entendez la conversation que vous allez avoir ensuite."
+      },
+      {
+        "label": "Décrocher un seul appel",
+        "outcome": "Une voix donne trois chiffres puis raccroche."
+      },
+      {
+        "label": "Refuser tous les appels",
+        "outcome": "Le téléphone fixe sonne alors qu’il n’est pas branché."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_085",
+    "title": "La pièce silencieuse",
+    "text": "Dès qu’une personne entre dans la cuisine, plus aucun son ne peut en sortir.",
+    "options": [
+      {
+        "label": "Entrer tous ensemble",
+        "outcome": "À l’intérieur, une voix reste pourtant audible sous l’évier."
+      },
+      {
+        "label": "Lancer un objet",
+        "outcome": "L’objet tombe sans bruit et revient mouillé."
+      },
+      {
+        "label": "Fermer la cuisine",
+        "outcome": "Des mots apparaissent sur la porte au rythme de coups silencieux."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_086",
+    "title": "Le double ticket",
+    "text": "Deux tickets de caisse identiques indiquent deux totaux différents et deux décisions du groupe.",
+    "options": [
+      {
+        "label": "Suivre le ticket le moins cher",
+        "outcome": "Le commerçant rend une monnaie composée de jetons."
+      },
+      {
+        "label": "Suivre l’autre",
+        "outcome": "Le reçu imprime la prochaine phrase prononcée."
+      },
+      {
+        "label": "Comparer les codes-barres",
+        "outcome": "Ils renvoient vers une photo privée du groupe."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "petit_probleme"
+  },
+  {
+    "id": "alerte_v3_087",
+    "title": "Le balcon occupé",
+    "text": "La porte du balcon est verrouillée de l’intérieur et une silhouette est assise dehors.",
+    "options": [
+      {
+        "label": "Allumer la lumière",
+        "outcome": "La silhouette porte le même vêtement qu’un joueur."
+      },
+      {
+        "label": "Frapper à la vitre",
+        "outcome": "Elle se retourne, mais son visage est masqué par le reflet."
+      },
+      {
+        "label": "Ouvrir par la fenêtre",
+        "outcome": "Le balcon est vide, avec une chaise encore chaude."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_088",
+    "title": "La liste des absents",
+    "text": "Une feuille affiche vos prénoms sous le titre « Absents », sauf celui d’une personne.",
+    "options": [
+      {
+        "label": "Demander à la personne épargnée",
+        "outcome": "Elle trouve la même feuille avec un autre prénom manquant."
+      },
+      {
+        "label": "Rayer tous les noms",
+        "outcome": "Les noms reviennent dans un ordre différent."
+      },
+      {
+        "label": "Ajouter un faux prénom",
+        "outcome": "Quelqu’un répond « présent » depuis le couloir."
+      }
+    ],
+    "theme": "secrets_groupe",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_089",
+    "title": "L’adresse effacée",
+    "text": "L’adresse de l’immeuble disparaît des cartes, des factures et de la plaque de rue.",
+    "options": [
+      {
+        "label": "Sortir vérifier",
+        "outcome": "Les passants jurent que le bâtiment n’a pas de numéro."
+      },
+      {
+        "label": "Partager sa position",
+        "outcome": "Le point GPS se déplace au milieu d’un parc."
+      },
+      {
+        "label": "Appeler les secours",
+        "outcome": "Ils demandent pourquoi vous appelez depuis un terrain vide."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_090",
+    "title": "Le réveil collectif",
+    "text": "Tous les réveils sonnent à une heure différente avec le même intitulé : « Dernière chance ».",
+    "options": [
+      {
+        "label": "Suivre le premier réveil",
+        "outcome": "Une porte de placard s’ouvre au même instant."
+      },
+      {
+        "label": "Désactiver les alarmes",
+        "outcome": "Elles migrent vers les appareils ménagers."
+      },
+      {
+        "label": "Attendre la dernière",
+        "outcome": "Elle ne sonne pas, mais toutes les lumières s’éteignent."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_091",
+    "title": "Le mur qui répond",
+    "text": "Trois coups frappés sur un mur obtiennent exactement trois coups en retour.",
+    "options": [
+      {
+        "label": "Changer de rythme",
+        "outcome": "Le mur répète puis ajoute un coup."
+      },
+      {
+        "label": "Écrire une question",
+        "outcome": "Des lettres se dessinent dans la poussière : « Derrière vous »."
+      },
+      {
+        "label": "Avertir le voisin",
+        "outcome": "Il dit entendre les coups depuis votre côté."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_092",
+    "title": "Le menu secret",
+    "text": "Une application de livraison propose uniquement des plats portant les surnoms du groupe.",
+    "options": [
+      {
+        "label": "Commander un plat",
+        "outcome": "Le livreur apporte un objet personnel au lieu de nourriture."
+      },
+      {
+        "label": "Fermer l’application",
+        "outcome": "Le menu apparaît sur l’écran de la télévision."
+      },
+      {
+        "label": "Contacter le support",
+        "outcome": "Il répond : « Votre table est déjà servie »."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_093",
+    "title": "Le cadeau interdit",
+    "text": "Une étiquette sur un cadeau dit : « À ouvrir seulement si quelqu’un ment ».",
+    "options": [
+      {
+        "label": "Accuser quelqu’un au hasard",
+        "outcome": "Le paquet se met à vibrer sans s’ouvrir."
+      },
+      {
+        "label": "Dire tous une vérité",
+        "outcome": "L’étiquette devient : « Une vérité manque »."
+      },
+      {
+        "label": "Ouvrir de force",
+        "outcome": "Il contient un miroir fendu et une nouvelle étiquette."
+      }
+    ],
+    "theme": "secrets_groupe",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_094",
+    "title": "Le bus vide",
+    "text": "Un bus sans numéro s’arrête devant l’immeuble et ouvre ses portes uniquement quand vous regardez.",
+    "options": [
+      {
+        "label": "Monter à plusieurs",
+        "outcome": "Le plan de ligne affiche les pièces de l’appartement."
+      },
+      {
+        "label": "Demander au chauffeur",
+        "outcome": "Le siège conducteur est vide, mais une voix annonce vos prénoms."
+      },
+      {
+        "label": "Le laisser repartir",
+        "outcome": "Il refait le tour du pâté de maisons en quelques secondes."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_095",
+    "title": "La bougie impossible",
+    "text": "Une bougie s’allume seule et sa flamme pointe vers le sol.",
+    "options": [
+      {
+        "label": "La souffler",
+        "outcome": "Chaque autre source de lumière s’éteint."
+      },
+      {
+        "label": "La retourner",
+        "outcome": "La flamme reste dirigée vers la même dalle."
+      },
+      {
+        "label": "La laisser brûler",
+        "outcome": "La cire dessine une clé puis cesse de fondre."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_096",
+    "title": "La conversation supprimée",
+    "text": "Une ancienne conversation que tous avaient supprimée revient avec de nouveaux messages.",
+    "options": [
+      {
+        "label": "Lire les nouveaux messages",
+        "outcome": "Ils racontent une dispute que personne n’a encore eue."
+      },
+      {
+        "label": "Répondre avec une blague",
+        "outcome": "Une personne inconnue écrit : « Ce n’est pas le moment »."
+      },
+      {
+        "label": "Supprimer à nouveau",
+        "outcome": "La conversation revient sous le nom « Deuxième avertissement »."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_097",
+    "title": "Le portrait-robot",
+    "text": "Un avis de recherche apparaît dans l’ascenseur avec un portrait mélangeant les visages du groupe.",
+    "options": [
+      {
+        "label": "Lire la description",
+        "outcome": "Elle mentionne les vêtements portés ce soir."
+      },
+      {
+        "label": "Retirer l’affiche",
+        "outcome": "Une seconde est déjà collée dessous avec une récompense plus élevée."
+      },
+      {
+        "label": "Appeler le numéro",
+        "outcome": "L’un des téléphones du groupe sonne."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_098",
+    "title": "La boîte de votes",
+    "text": "Une urne transparente apparaît avec un bulletin au nom de chaque joueur.",
+    "options": [
+      {
+        "label": "Compter les bulletins",
+        "outcome": "Il y en a un de plus portant « L’invité »."
+      },
+      {
+        "label": "Voter sans consigne",
+        "outcome": "L’urne affiche immédiatement le classement des choix."
+      },
+      {
+        "label": "Renverser l’urne",
+        "outcome": "Les bulletins disparaissent et vos téléphones demandent de confirmer."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_099",
+    "title": "Le passage derrière l’écran",
+    "text": "La télévision éteinte reflète un couloir qui n’existe pas derrière vous.",
+    "options": [
+      {
+        "label": "Allumer la télévision",
+        "outcome": "Le couloir devient une image de caméra en direct."
+      },
+      {
+        "label": "Toucher l’écran",
+        "outcome": "Une main laisse une trace de l’autre côté."
+      },
+      {
+        "label": "Déplacer la télévision",
+        "outcome": "Une vraie porte étroite est révélée dans le mur."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_100",
+    "title": "La commande vocale",
+    "text": "L’assistant vocal obéit uniquement à une voix qu’aucun joueur ne reconnaît.",
+    "options": [
+      {
+        "label": "Lui demander qui parle",
+        "outcome": "Il répond : « La personne qui manque »."
+      },
+      {
+        "label": "Couper le micro",
+        "outcome": "Il continue de transcrire des ordres sur l’écran."
+      },
+      {
+        "label": "Imiter la voix",
+        "outcome": "Toutes les portes se verrouillent."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_101",
+    "title": "Le bracelet numéroté",
+    "text": "Chacun trouve à son poignet un bracelet numéroté impossible à retirer.",
+    "options": [
+      {
+        "label": "Comparer les numéros",
+        "outcome": "Ils correspondent à l’ordre exact d’arrivée, sauf deux inversés."
+      },
+      {
+        "label": "Couper un bracelet",
+        "outcome": "Le numéro réapparaît au feutre sur la peau."
+      },
+      {
+        "label": "Suivre l’ordre",
+        "outcome": "Une notification valide chaque personne puis refuse la dernière."
+      }
+    ],
+    "theme": "secrets_groupe",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_102",
+    "title": "La neige dans le couloir",
+    "text": "De la neige tombe dans le couloir de l’immeuble sans fondre ni entrer dans les appartements.",
+    "options": [
+      {
+        "label": "Traverser le couloir",
+        "outcome": "Vos traces forment des mots derrière vous."
+      },
+      {
+        "label": "Fermer la porte",
+        "outcome": "La neige commence à passer sous le seuil."
+      },
+      {
+        "label": "Prévenir les voisins",
+        "outcome": "Personne d’autre ne voit la neige, seulement vos traces."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_103",
+    "title": "L’objet préféré",
+    "text": "Chaque joueur retrouve son objet préféré posé en cercle, même ceux laissés ailleurs.",
+    "options": [
+      {
+        "label": "Reprendre les objets",
+        "outcome": "Un emplacement reste vide au centre."
+      },
+      {
+        "label": "Ajouter un objet",
+        "outcome": "Tous les autres se tournent vers lui."
+      },
+      {
+        "label": "Photographier le cercle",
+        "outcome": "La photo montre quelqu’un assis au milieu."
+      }
+    ],
+    "theme": "objets_disparus",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_104",
+    "title": "La facture d’électricité",
+    "text": "Une facture énorme détaille la consommation d’une pièce absente de l’appartement.",
+    "options": [
+      {
+        "label": "Chercher le compteur",
+        "outcome": "Un nouveau cadran tourne quand quelqu’un pense à la pièce."
+      },
+      {
+        "label": "Appeler le fournisseur",
+        "outcome": "Il confirme que la pièce est occupée depuis ce soir."
+      },
+      {
+        "label": "Couper le disjoncteur",
+        "outcome": "Une lumière reste visible derrière un mur."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_105",
+    "title": "Le dernier abonné",
+    "text": "Un compte sans photo s’abonne simultanément à tous les joueurs et connaît leur position exacte.",
+    "options": [
+      {
+        "label": "Le bloquer tous ensemble",
+        "outcome": "Il revient sous autant de comptes qu’il y a de joueurs."
+      },
+      {
+        "label": "Lui écrire une fausse position",
+        "outcome": "Il envoie une photo prise à cette fausse adresse."
+      },
+      {
+        "label": "L’appeler",
+        "outcome": "Une sonnerie retentit derrière la porte."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_106",
+    "title": "La chaise de trop",
+    "text": "Une chaise supplémentaire apparaît autour de la table après chaque passage dans la cuisine.",
+    "options": [
+      {
+        "label": "Empiler les chaises",
+        "outcome": "Elles se remettent seules en cercle."
+      },
+      {
+        "label": "S’asseoir sur toutes",
+        "outcome": "Une chaise reste toujours libre."
+      },
+      {
+        "label": "Jeter la dernière",
+        "outcome": "Une nouvelle chaise attend sur le palier."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_107",
+    "title": "Le plan d’évacuation",
+    "text": "Le plan d’évacuation de l’immeuble change et indique une sortie par votre chambre.",
+    "options": [
+      {
+        "label": "Suivre le plan",
+        "outcome": "La flèche mène à une porte dessinée au mur."
+      },
+      {
+        "label": "Arracher le plan",
+        "outcome": "Un second plan apparaît sur l’écran du téléphone."
+      },
+      {
+        "label": "Prendre l’escalier normal",
+        "outcome": "Chaque étage renvoie au même palier."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_108",
+    "title": "La voix dans la photo",
+    "text": "Une photo papier diffuse un murmure lorsque quelqu’un approche l’oreille.",
+    "options": [
+      {
+        "label": "Écouter chacun son tour",
+        "outcome": "La voix donne un secret différent à chaque personne."
+      },
+      {
+        "label": "Déchirer la photo",
+        "outcome": "Chaque morceau murmure plus fort."
+      },
+      {
+        "label": "L’enfermer",
+        "outcome": "Le murmure vient ensuite de toutes les poches."
+      }
+    ],
+    "theme": "secrets_groupe",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_109",
+    "title": "Le clavier incomplet",
+    "text": "Toutes les lettres des claviers disparaissent sauf celles nécessaires pour écrire une phrase.",
+    "options": [
+      {
+        "label": "Former la phrase",
+        "outcome": "Elle dit : « Regardez sous la table »."
+      },
+      {
+        "label": "Écrire autre chose",
+        "outcome": "Chaque tentative corrige automatiquement le même message."
+      },
+      {
+        "label": "Éteindre les téléphones",
+        "outcome": "Les touches lumineuses apparaissent sur le mur."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_110",
+    "title": "Le commerçant fermé",
+    "text": "L’épicerie fermée d’en face s’allume et un vendeur vous fait signe.",
+    "options": [
+      {
+        "label": "Entrer acheter quelque chose",
+        "outcome": "Les rayons contiennent uniquement des objets perdus par le groupe."
+      },
+      {
+        "label": "Demander le prix",
+        "outcome": "Le vendeur réclame un souvenir précis."
+      },
+      {
+        "label": "Repartir",
+        "outcome": "La boutique redevient murée et l’objet choisi reste dans votre main."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_111",
+    "title": "La pluie intérieure",
+    "text": "Il pleut uniquement au-dessus de la table sans qu’aucun plafond ne fuie.",
+    "options": [
+      {
+        "label": "Déplacer la table",
+        "outcome": "La pluie suit un joueur à la place."
+      },
+      {
+        "label": "Poser un récipient",
+        "outcome": "L’eau recueillie contient du sable noir."
+      },
+      {
+        "label": "Ouvrir un parapluie",
+        "outcome": "La pluie tombe désormais vers le haut."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_112",
+    "title": "Le classement secret",
+    "text": "Une feuille classe les joueurs selon une catégorie non indiquée.",
+    "options": [
+      {
+        "label": "Deviner la catégorie",
+        "outcome": "À chaque proposition, deux noms échangent leur place."
+      },
+      {
+        "label": "Déchirer la feuille",
+        "outcome": "Le classement apparaît sur le réfrigérateur."
+      },
+      {
+        "label": "Accepter le classement",
+        "outcome": "Un dernier nom inconnu se place premier."
+      }
+    ],
+    "theme": "secrets_groupe",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_113",
+    "title": "La sonnette sans visiteur",
+    "text": "La sonnette retentit toutes les 30 secondes, mais la caméra montre le groupe devant la porte.",
+    "options": [
+      {
+        "label": "Ouvrir à la prochaine sonnerie",
+        "outcome": "Le palier est vide et la caméra vous montre toujours dehors."
+      },
+      {
+        "label": "Débrancher la sonnette",
+        "outcome": "Le même son vient des téléphones."
+      },
+      {
+        "label": "Sortir par l’escalier",
+        "outcome": "La caméra montre alors le salon vide."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_114",
+    "title": "Le filtre permanent",
+    "text": "Un filtre de visage inconnu s’applique à toutes les caméras et désigne une personne avec une flèche.",
+    "options": [
+      {
+        "label": "Changer de téléphone",
+        "outcome": "La flèche reste sur la même personne."
+      },
+      {
+        "label": "Cacher la personne",
+        "outcome": "La flèche pointe vers le placard."
+      },
+      {
+        "label": "Supprimer l’application",
+        "outcome": "Le filtre apparaît dans le miroir réel."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_115",
+    "title": "La pièce de monnaie",
+    "text": "Une pièce lancée retombe toujours sur la tranche et roule vers la même porte.",
+    "options": [
+      {
+        "label": "Suivre la pièce",
+        "outcome": "Elle s’arrête devant une latte de parquet mobile."
+      },
+      {
+        "label": "La relancer ailleurs",
+        "outcome": "Elle revient par un trajet différent."
+      },
+      {
+        "label": "La garder en poche",
+        "outcome": "Elle devient brûlante quand quelqu’un ment."
+      }
+    ],
+    "theme": "objets_disparus",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_116",
+    "title": "Le générique de fin",
+    "text": "La télévision lance un générique avec les noms du groupe et la mention « inspiré de faits réels ».",
+    "options": [
+      {
+        "label": "Mettre sur pause",
+        "outcome": "L’image s’arrête sur la porte qui s’ouvre en direct."
+      },
+      {
+        "label": "Avancer le générique",
+        "outcome": "Une scène post-générique montre le lendemain."
+      },
+      {
+        "label": "Éteindre l’écran",
+        "outcome": "La musique continue depuis l’appartement voisin."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_117",
+    "title": "La règle ajoutée",
+    "text": "Une nouvelle règle apparaît sur la porte : « Ne prononcez plus le mot oui ».",
+    "options": [
+      {
+        "label": "Tester le mot",
+        "outcome": "Toutes les lampes passent au rouge."
+      },
+      {
+        "label": "Refuser de jouer",
+        "outcome": "La règle se remplace par « Trop tard »."
+      },
+      {
+        "label": "Utiliser des gestes",
+        "outcome": "Une seconde règle interdit de montrer la porte."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_118",
+    "title": "Le voisin sans visage",
+    "text": "Quelqu’un attend sur le palier, mais la caméra floute uniquement son visage.",
+    "options": [
+      {
+        "label": "Lui parler par l’interphone",
+        "outcome": "Il répond avec la voix d’un joueur."
+      },
+      {
+        "label": "Ouvrir avec la chaîne",
+        "outcome": "Il tend une enveloppe portant votre code d’entrée."
+      },
+      {
+        "label": "Éteindre la caméra",
+        "outcome": "Trois coups retentissent depuis l’intérieur."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_119",
+    "title": "Le calendrier vide",
+    "text": "Tous les événements futurs disparaissent des calendriers sauf un : « Retrouvailles », demain ici.",
+    "options": [
+      {
+        "label": "Ouvrir les détails",
+        "outcome": "La liste des invités contient vos noms et un inconnu."
+      },
+      {
+        "label": "Supprimer l’événement",
+        "outcome": "Il revient chaque année pendant cent ans."
+      },
+      {
+        "label": "Changer le lieu",
+        "outcome": "L’adresse se corrige toute seule."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_120",
+    "title": "Les glaçons parlants",
+    "text": "Chaque glaçon craque en prononçant un mot lorsqu’il fond.",
+    "options": [
+      {
+        "label": "Les réunir",
+        "outcome": "Les mots forment : « Ne buvez pas le dernier verre »."
+      },
+      {
+        "label": "Faire fondre le dernier",
+        "outcome": "Il prononce le prénom de la personne qui le tient."
+      },
+      {
+        "label": "Jeter les boissons",
+        "outcome": "Le congélateur recommence à produire des glaçons."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_121",
+    "title": "Le reflet manquant",
+    "text": "Une personne n’apparaît plus dans aucun reflet mais reste visible normalement.",
+    "options": [
+      {
+        "label": "La filmer",
+        "outcome": "Elle apparaît sur la vidéo, mais quelqu’un d’autre manque."
+      },
+      {
+        "label": "Changer de miroir",
+        "outcome": "Tous reflètent une pièce légèrement différente."
+      },
+      {
+        "label": "Éteindre les lumières",
+        "outcome": "Une silhouette reste visible dans le miroir."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_122",
+    "title": "L’itinéraire secret",
+    "text": "Le GPS de tous les téléphones propose le même trajet à pied intitulé « Sortie ».",
+    "options": [
+      {
+        "label": "Suivre le trajet",
+        "outcome": "Il tourne en cercle autour de l’immeuble puis s’arrête au sous-sol."
+      },
+      {
+        "label": "Ignorer le GPS",
+        "outcome": "La distance diminue quand même."
+      },
+      {
+        "label": "Choisir un autre lieu",
+        "outcome": "Toutes les destinations sont remplacées par « chez vous »."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_123",
+    "title": "Le polaroid vide",
+    "text": "Un appareil photo instantané imprime une image blanche après chaque photo.",
+    "options": [
+      {
+        "label": "Attendre le développement",
+        "outcome": "La scène apparaît peu à peu, mais sans les joueurs."
+      },
+      {
+        "label": "Photographier une pièce vide",
+        "outcome": "L’image montre le groupe réuni dedans."
+      },
+      {
+        "label": "Ouvrir l’appareil",
+        "outcome": "Une dernière photo déjà développée tombe du boîtier."
+      }
+    ],
+    "theme": "objets_disparus",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_124",
+    "title": "La coupure de vingt secondes",
+    "text": "Pendant vingt secondes, tout le quartier s’éteint sauf votre appartement.",
+    "options": [
+      {
+        "label": "Regarder par la fenêtre",
+        "outcome": "Des dizaines de téléphones vous filment depuis la rue."
+      },
+      {
+        "label": "Éteindre vos propres lumières",
+        "outcome": "Une seule fenêtre d’en face s’allume et clignote en morse."
+      },
+      {
+        "label": "Attendre le retour",
+        "outcome": "Le quartier se rallume, mais l’immeuble d’en face a disparu."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_125",
+    "title": "Le nom sur la poussière",
+    "text": "Un prénom est tracé dans la poussière sous un meuble pourtant nettoyé.",
+    "options": [
+      {
+        "label": "Appeler ce prénom",
+        "outcome": "Le téléphone inconnu répond par un souffle."
+      },
+      {
+        "label": "Effacer les lettres",
+        "outcome": "Elles réapparaissent sur la vitre."
+      },
+      {
+        "label": "Chercher le prénom en ligne",
+        "outcome": "Les résultats montrent des photos de votre appartement."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_126",
+    "title": "La dernière part",
+    "text": "Une part de gâteau réapparaît chaque fois que quelqu’un la mange.",
+    "options": [
+      {
+        "label": "La partager entre tous",
+        "outcome": "Chaque assiette reçoit une part entière."
+      },
+      {
+        "label": "La jeter",
+        "outcome": "Le sac poubelle revient fermé sur la table."
+      },
+      {
+        "label": "La laisser intacte",
+        "outcome": "Une petite bougie s’allume dessus à minuit."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "petit_probleme"
+  },
+  {
+    "id": "alerte_v3_127",
+    "title": "Le code sur les murs",
+    "text": "Des chiffres apparaissent dans chaque pièce, un par joueur.",
+    "options": [
+      {
+        "label": "Les entrer sur un téléphone",
+        "outcome": "Un dossier nommé avec la date s’ouvre."
+      },
+      {
+        "label": "Les lire dans l’ordre d’arrivée",
+        "outcome": "La porte d’entrée se déverrouille."
+      },
+      {
+        "label": "Les ignorer",
+        "outcome": "Les chiffres se mettent à compter à rebours."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_128",
+    "title": "La photo du voisin",
+    "text": "Le voisin vous montre une photo où votre groupe est chez lui, prise quelques minutes plus tôt.",
+    "options": [
+      {
+        "label": "Demander à entrer",
+        "outcome": "Son salon est identique au vôtre, mais inversé."
+      },
+      {
+        "label": "Comparer les photos",
+        "outcome": "Un joueur change de côté entre chaque image."
+      },
+      {
+        "label": "Rentrer chez vous",
+        "outcome": "Un objet du voisin est maintenant sur votre table."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_129",
+    "title": "Le mode avion",
+    "text": "Tous les téléphones passent en mode avion, mais reçoivent un message : « Atterrissage dans 8 minutes ».",
+    "options": [
+      {
+        "label": "Désactiver le mode avion",
+        "outcome": "Le compteur accélère."
+      },
+      {
+        "label": "Répondre « Où ? »",
+        "outcome": "Une carte montre votre immeuble vu du ciel."
+      },
+      {
+        "label": "Attendre l’atterrissage",
+        "outcome": "Un grondement passe au-dessus sans rien de visible."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_130",
+    "title": "La porte numérotée",
+    "text": "Un numéro différent apparaît sur chaque porte intérieure.",
+    "options": [
+      {
+        "label": "Ouvrir dans l’ordre",
+        "outcome": "Chaque pièce contient un objet déplacé de la suivante."
+      },
+      {
+        "label": "Ouvrir la dernière d’abord",
+        "outcome": "Elle donne sur l’entrée, mais vue de l’extérieur."
+      },
+      {
+        "label": "Effacer les numéros",
+        "outcome": "Ils reviennent sur les mains des joueurs."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_131",
+    "title": "Le témoin lumineux",
+    "text": "Une petite lumière rouge clignote derrière une prise murale.",
+    "options": [
+      {
+        "label": "Démonter la prise",
+        "outcome": "Vous trouvez une minuscule caméra sans batterie."
+      },
+      {
+        "label": "Couvrir la lumière",
+        "outcome": "Un direct s’arrête sur tous les téléphones."
+      },
+      {
+        "label": "Suivre le câble",
+        "outcome": "Il traverse le mur vers l’appartement vide."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_132",
+    "title": "La phrase commune",
+    "text": "Sans se concerter, tous les joueurs écrivent exactement la même phrase dans leurs notes.",
+    "options": [
+      {
+        "label": "Lire la phrase ensemble",
+        "outcome": "Les téléphones ajoutent chacun un mot différent."
+      },
+      {
+        "label": "Chercher son origine",
+        "outcome": "La phrase figure dans un livre présent sur l’étagère."
+      },
+      {
+        "label": "Effacer les notes",
+        "outcome": "La phrase apparaît dans l’historique de recherche."
+      }
+    ],
+    "theme": "secrets_groupe",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_133",
+    "title": "L’écran fissuré",
+    "text": "Une fissure identique apparaît sur tous les écrans au même instant.",
+    "options": [
+      {
+        "label": "Aligner les téléphones",
+        "outcome": "Les fissures forment une carte complète."
+      },
+      {
+        "label": "Changer l’orientation",
+        "outcome": "La carte pointe toujours vers la salle de bain."
+      },
+      {
+        "label": "Éteindre les écrans",
+        "outcome": "Les fissures brillent encore dans le noir."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_134",
+    "title": "Le colis minuscule",
+    "text": "Un colis de la taille d’une boîte d’allumettes pèse plusieurs kilos.",
+    "options": [
+      {
+        "label": "L’ouvrir",
+        "outcome": "Il contient une porte miniature donnant sur une pièce éclairée."
+      },
+      {
+        "label": "Le secouer",
+        "outcome": "Quelqu’un frappe de l’intérieur."
+      },
+      {
+        "label": "Le déposer dehors",
+        "outcome": "Le bâtiment entier semble devenir plus léger."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_135",
+    "title": "La carte d’identité",
+    "text": "Une carte d’identité inconnue montre le visage d’un joueur avec un autre nom.",
+    "options": [
+      {
+        "label": "Comparer la signature",
+        "outcome": "Le joueur reconnaît sa propre écriture."
+      },
+      {
+        "label": "Scanner la carte",
+        "outcome": "Elle est déclarée valide mais née demain."
+      },
+      {
+        "label": "La couper",
+        "outcome": "La photo change pour montrer un autre joueur."
+      }
+    ],
+    "theme": "objets_disparus",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_136",
+    "title": "Le message du plafond",
+    "text": "Un projecteur invisible écrit : « Choisissez une personne » au plafond.",
+    "options": [
+      {
+        "label": "Désigner quelqu’un",
+        "outcome": "Son téléphone reçoit une clé numérique."
+      },
+      {
+        "label": "Refuser de choisir",
+        "outcome": "Le plafond lance un compte à rebours."
+      },
+      {
+        "label": "Choisir au hasard",
+        "outcome": "Toutes les portes s’ouvrent sauf celle de la personne choisie."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_137",
+    "title": "Le restaurant silencieux",
+    "text": "Le restaurant du rez-de-chaussée est plein de clients immobiles et silencieux.",
+    "options": [
+      {
+        "label": "Entrer demander de l’aide",
+        "outcome": "Tous les clients tournent la tête en même temps."
+      },
+      {
+        "label": "Filmer depuis dehors",
+        "outcome": "La vidéo montre des tables vides."
+      },
+      {
+        "label": "Appeler le restaurant",
+        "outcome": "Un serveur répond depuis derrière vous."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_138",
+    "title": "La batterie partagée",
+    "text": "Le pourcentage de batterie total reste toujours à 100 entre tous les téléphones.",
+    "options": [
+      {
+        "label": "Charger un appareil",
+        "outcome": "Un autre perd exactement la même quantité."
+      },
+      {
+        "label": "Éteindre le plus faible",
+        "outcome": "Son pourcentage apparaît sur la télévision."
+      },
+      {
+        "label": "Laisser une batterie à zéro",
+        "outcome": "Toutes les lumières s’éteignent avec elle."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_139",
+    "title": "Le message dans la nourriture",
+    "text": "En coupant le pain, des lettres apparaissent dans la mie.",
+    "options": [
+      {
+        "label": "Assembler les tranches",
+        "outcome": "Le message donne un code et l’heure de minuit."
+      },
+      {
+        "label": "Manger les lettres",
+        "outcome": "Le même mot apparaît au fond des verres."
+      },
+      {
+        "label": "Jeter le pain",
+        "outcome": "Une miche intacte attend devant la porte."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_140",
+    "title": "La marche supplémentaire",
+    "text": "L’escalier compte soudain une marche de plus entre deux étages.",
+    "options": [
+      {
+        "label": "Marcher dessus",
+        "outcome": "Vous entendez une porte claquer sous vos pieds."
+      },
+      {
+        "label": "L’éviter",
+        "outcome": "La marche se déplace devant la personne suivante."
+      },
+      {
+        "label": "La marquer à la craie",
+        "outcome": "La marque apparaît sur le plafond du palier."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_141",
+    "title": "La diffusion pirate",
+    "text": "Toutes les télévisions du voisinage montrent un vote avec les noms du groupe.",
+    "options": [
+      {
+        "label": "Observer les résultats",
+        "outcome": "Les voix augmentent chaque fois que quelqu’un hésite."
+      },
+      {
+        "label": "Débrancher votre télé",
+        "outcome": "Le vote continue dans les fenêtres d’en face."
+      },
+      {
+        "label": "Choisir un nom",
+        "outcome": "La personne reçoit immédiatement un appel masqué."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_142",
+    "title": "Le dossier partagé",
+    "text": "Un dossier partagé apparaît avec une fiche détaillée sur chaque joueur.",
+    "options": [
+      {
+        "label": "Ouvrir sa propre fiche",
+        "outcome": "La dernière ligne décrit l’action en cours."
+      },
+      {
+        "label": "Lire celle d’un autre",
+        "outcome": "Une partie est censurée sauf un secret exact."
+      },
+      {
+        "label": "Télécharger le dossier",
+        "outcome": "Le fichier pèse zéro octet mais reste lisible."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_143",
+    "title": "Les ombres en avance",
+    "text": "Les ombres bougent une seconde avant les personnes.",
+    "options": [
+      {
+        "label": "Tester un geste imprévu",
+        "outcome": "L’ombre le réalise quand même avant."
+      },
+      {
+        "label": "Éteindre la lampe",
+        "outcome": "Les ombres restent visibles sur le mur."
+      },
+      {
+        "label": "Sortir de la pièce",
+        "outcome": "Une ombre supplémentaire reste sur place."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_144",
+    "title": "Le verrou de couleur",
+    "text": "La porte d’entrée change de couleur et refuse toutes les clés.",
+    "options": [
+      {
+        "label": "Choisir la même couleur dans la pièce",
+        "outcome": "La poignée chauffe et un cadenas apparaît."
+      },
+      {
+        "label": "Éteindre toutes les couleurs",
+        "outcome": "La porte devient transparente quelques secondes."
+      },
+      {
+        "label": "Frapper un code",
+        "outcome": "Une voix répond : « Mauvaise équipe »."
+      }
+    ],
+    "theme": "soiree_maison",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_145",
+    "title": "Le drone immobile",
+    "text": "Un drone reste face à votre fenêtre sans bouger malgré le vent.",
+    "options": [
+      {
+        "label": "Fermer les volets",
+        "outcome": "Il projette une image à travers les lames."
+      },
+      {
+        "label": "Lui faire signe",
+        "outcome": "Il dépose une clé USB sur le balcon."
+      },
+      {
+        "label": "Appeler la police",
+        "outcome": "Le drone affiche le numéro de votre appel."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_146",
+    "title": "Le fichier audio inversé",
+    "text": "Un enregistrement inconnu contient vos voix à l’envers.",
+    "options": [
+      {
+        "label": "Inverser la piste",
+        "outcome": "Vous entendez des consignes pour les prochaines minutes."
+      },
+      {
+        "label": "Suivre la première consigne",
+        "outcome": "Un objet tombe exactement au moment annoncé."
+      },
+      {
+        "label": "Supprimer le fichier",
+        "outcome": "Il réapparaît plus long de dix secondes."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_147",
+    "title": "La date sur la peau",
+    "text": "Une date apparaît au feutre sur la main de chaque joueur pendant qu’il ne regarde pas.",
+    "options": [
+      {
+        "label": "Comparer les dates",
+        "outcome": "Elles forment une suite qui mène à demain."
+      },
+      {
+        "label": "Effacer l’encre",
+        "outcome": "Une heure apparaît dessous."
+      },
+      {
+        "label": "Photographier les mains",
+        "outcome": "La photo montre une date différente."
+      }
+    ],
+    "theme": "secrets_groupe",
+    "intensity": "alerte_rouge"
+  },
+  {
+    "id": "alerte_v3_148",
+    "title": "Le couloir raccourci",
+    "text": "Le couloir devient plus court à chaque aller-retour.",
+    "options": [
+      {
+        "label": "Cesser de bouger",
+        "outcome": "Les murs continuent d’avancer lentement."
+      },
+      {
+        "label": "Ouvrir toutes les portes",
+        "outcome": "Chaque porte donne sur la même pièce."
+      },
+      {
+        "label": "Mesurer la distance",
+        "outcome": "Le mètre indique toujours cinq mètres."
+      }
+    ],
+    "theme": "mystere_paranormal",
+    "intensity": "chaos"
+  },
+  {
+    "id": "alerte_v3_149",
+    "title": "La livraison annulée",
+    "text": "Une commande annulée arrive tout de même, accompagnée d’un mot : « Vous en aurez besoin ».",
+    "options": [
+      {
+        "label": "Garder le contenu",
+        "outcome": "Le sac contient lampes, craie et corde."
+      },
+      {
+        "label": "Refuser la livraison",
+        "outcome": "Le livreur laisse seulement la craie devant la porte."
+      },
+      {
+        "label": "Demander pourquoi",
+        "outcome": "Il répond : « Pour retrouver la sortie »."
+      }
+    ],
+    "theme": "voisins_ville",
+    "intensity": "panique"
+  },
+  {
+    "id": "alerte_v3_150",
+    "title": "La dernière connexion",
+    "text": "Tous les comptes indiquent une connexion active depuis votre adresse, dans une pièce différente.",
+    "options": [
+      {
+        "label": "Déconnecter toutes les sessions",
+        "outcome": "Une session intitulée « salon » reste impossible à fermer."
+      },
+      {
+        "label": "Changer les mots de passe",
+        "outcome": "La session connaît immédiatement les nouveaux."
+      },
+      {
+        "label": "Chercher l’appareil",
+        "outcome": "Un écran s’allume derrière un meuble scellé."
+      }
+    ],
+    "theme": "telephone_reseaux",
+    "intensity": "alerte_rouge"
+  }
+]

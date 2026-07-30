@@ -1,0 +1,2242 @@
+[
+  {
+    "id": "jamais_001",
+    "text": "Je n’ai jamais repoussé mon réveil jusqu’à être vraiment en retard.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_002",
+    "text": "Je n’ai jamais passé une journée entière en pyjama sans être malade.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_003",
+    "text": "Je n’ai jamais quitté la maison avec deux chaussettes différentes.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_004",
+    "text": "Je n’ai jamais oublié pourquoi j’étais entré(e) dans une pièce.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_005",
+    "text": "Je n’ai jamais cherché mon téléphone alors que je l’avais dans la main.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_006",
+    "text": "Je n’ai jamais parlé tout(e) seul(e) chez moi.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_007",
+    "text": "Je n’ai jamais chanté face au miroir comme si j’étais en concert.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_008",
+    "text": "Je n’ai jamais laissé traîner du linge propre plusieurs jours avant de le ranger.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_009",
+    "text": "Je n’ai jamais mangé directement dans la casserole pour éviter la vaisselle.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_010",
+    "text": "Je n’ai jamais utilisé une tasse propre parce que tous les verres étaient sales.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_011",
+    "text": "Je n’ai jamais remis un vêtement en prétendant qu’il était encore propre.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_012",
+    "text": "Je n’ai jamais oublié une lessive dans la machine toute une nuit.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_013",
+    "text": "Je n’ai jamais ouvert le frigo plusieurs fois en espérant qu’un nouveau plat apparaisse.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_014",
+    "text": "Je n’ai jamais fait semblant de ne pas entendre mon réveil.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_015",
+    "text": "Je n’ai jamais dormi avec la lumière allumée par flemme de me relever.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_016",
+    "text": "Je n’ai jamais commandé à manger alors que j’avais de quoi cuisiner.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_017",
+    "text": "Je n’ai jamais laissé une alarme sonner sans savoir à quoi elle servait.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_018",
+    "text": "Je n’ai jamais porté un vêtement à l’envers sans m’en rendre compte.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_020",
+    "text": "Je n’ai jamais pris une douche beaucoup trop longue juste pour réfléchir.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_021",
+    "text": "Je n’ai jamais utilisé mon téléphone aux toilettes plus longtemps que nécessaire.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_022",
+    "text": "Je n’ai jamais commencé à ranger puis fini par regarder de vieux objets pendant une heure.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_023",
+    "text": "Je n’ai jamais fait une sieste qui s’est transformée en vraie nuit.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_024",
+    "text": "Je n’ai jamais mangé un repas inhabituel au petit-déjeuner.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_025",
+    "text": "Je n’ai jamais ignoré une petite tâche pendant plusieurs semaines.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_026",
+    "text": "Je n’ai jamais mis un objet dans un endroit tellement sûr que je ne l’ai plus retrouvé.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_027",
+    "text": "Je n’ai jamais porté des lunettes de soleil uniquement pour cacher ma fatigue.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_028",
+    "text": "Je n’ai jamais attendu le dernier rouleau de papier toilette avant d’en racheter.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_029",
+    "text": "Je n’ai jamais mis cinq alarmes pour être sûr(e) de me lever.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_031",
+    "text": "Je n’ai jamais passé plus de temps à choisir quoi regarder qu’à regarder réellement.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_032",
+    "text": "Je n’ai jamais changé de tenue plus de trois fois avant de sortir.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_033",
+    "text": "Je n’ai jamais fait demi-tour parce que je pensais avoir oublié de fermer la porte.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_034",
+    "text": "Je n’ai jamais laissé mon téléphone se décharger alors que le chargeur était à côté.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_035",
+    "text": "Je n’ai jamais utilisé une chaise comme armoire temporaire.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_036",
+    "text": "Je n’ai jamais mangé debout dans la cuisine en pleine nuit.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_037",
+    "text": "Je n’ai jamais oublié un rendez-vous pourtant noté dans mon agenda.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_038",
+    "text": "Je n’ai jamais gardé un carton vide en me disant qu’il pourrait servir.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_039",
+    "text": "Je n’ai jamais acheté un carnet sans jamais écrire dedans.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_040",
+    "text": "Je n’ai jamais lancé une machine juste pour un vêtement précis.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_041",
+    "text": "Je n’ai jamais répondu “j’arrive” alors que je n’étais pas encore prêt(e).",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_042",
+    "text": "Je n’ai jamais vérifié trois fois que mon réveil était bien activé.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_043",
+    "text": "Je n’ai jamais attendu d’avoir presque plus d’essence ou de batterie avant de réagir.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_044",
+    "text": "Je n’ai jamais utilisé une application météo puis regardé quand même par la fenêtre.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_045",
+    "text": "Je n’ai jamais choisi un trajet plus long juste pour éviter de croiser quelqu’un.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_046",
+    "text": "Je n’ai jamais eu un tiroir rempli d’objets impossibles à classer.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_047",
+    "text": "Je n’ai jamais gardé une boîte ou un joli emballage sans raison précise.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_048",
+    "text": "Je n’ai jamais oublié ce que je voulais acheter une fois arrivé(e) au magasin.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_050",
+    "text": "Je n’ai jamais regardé l’heure puis oublié immédiatement quelle heure il était.",
+    "category": "classic",
+    "theme": "quotidien",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_051",
+    "text": "Je n’ai jamais trébuché puis fait semblant que rien ne s’était passé.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_052",
+    "text": "Je n’ai jamais salué quelqu’un qui ne me saluait pas.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_053",
+    "text": "Je n’ai jamais poussé une porte sur laquelle il était écrit “tirer”.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_054",
+    "text": "Je n’ai jamais ri sans avoir compris la blague.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_055",
+    "text": "Je n’ai jamais appelé quelqu’un par le mauvais prénom.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_056",
+    "text": "Je n’ai jamais répondu à une personne qui parlait en réalité à quelqu’un derrière moi.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_057",
+    "text": "Je n’ai jamais envoyé un message à la mauvaise conversation.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_059",
+    "text": "Je n’ai jamais chanté faux avec énormément de confiance.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_061",
+    "text": "Je n’ai jamais oublié les paroles d’une chanson que je prétendais connaître par cœur.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_062",
+    "text": "Je n’ai jamais raconté une histoire à quelqu’un qui était déjà présent(e) quand elle est arrivée.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_063",
+    "text": "Je n’ai jamais fait semblant de reconnaître quelqu’un alors que je ne savais plus qui c’était.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_064",
+    "text": "Je n’ai jamais prononcé un mot de travers devant plusieurs personnes.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_065",
+    "text": "Je n’ai jamais envoyé une capture d’écran à la personne concernée.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_066",
+    "text": "Je n’ai jamais eu un fou rire à un moment totalement inapproprié.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_067",
+    "text": "Je n’ai jamais marché dans la mauvaise direction après avoir dit au revoir.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_068",
+    "text": "Je n’ai jamais essayé d’ouvrir la mauvaise voiture.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_069",
+    "text": "Je n’ai jamais fait semblant de recevoir un appel pour quitter une situation gênante.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_071",
+    "text": "Je n’ai jamais parlé avec de la nourriture dans la bouche puis regretté immédiatement.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_072",
+    "text": "Je n’ai jamais fait une blague qui n’a fait rire absolument personne.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_073",
+    "text": "Je n’ai jamais cru reconnaître quelqu’un dans la rue et découvert que c’était un inconnu.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_074",
+    "text": "Je n’ai jamais renversé une boisson sur moi avant même le début d’une soirée.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_075",
+    "text": "Je n’ai jamais eu une étiquette de vêtement visible toute la journée.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_076",
+    "text": "Je n’ai jamais répondu “toi aussi” à une phrase qui ne s’y prêtait pas.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_077",
+    "text": "Je n’ai jamais oublié le prénom d’une personne juste après sa présentation.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_078",
+    "text": "Je n’ai jamais raconté un secret devant la seule personne qui ne devait pas l’entendre.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_079",
+    "text": "Je n’ai jamais fait tomber mon téléphone sur mon visage en étant allongé(e).",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_080",
+    "text": "Je n’ai jamais envoyé un vocal puis eu peur de le réécouter.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_081",
+    "text": "Je n’ai jamais souri à quelqu’un avant de réaliser qu’il regardait ailleurs.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_082",
+    "text": "Je n’ai jamais eu un vêtement coincé dans ma fermeture éclair ou ma ceinture.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_083",
+    "text": "Je n’ai jamais laissé échapper un bruit gênant en public.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_084",
+    "text": "Je n’ai jamais improvisé une réponse alors que je n’avais pas entendu la question.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_085",
+    "text": "Je n’ai jamais oublié d’enlever une étiquette de prix avant de sortir.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_086",
+    "text": "Je n’ai jamais appelé un professeur, un collègue ou un responsable “maman” ou “papa”.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_087",
+    "text": "Je n’ai jamais confondu une personne avec son frère, sa sœur ou son sosie.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_088",
+    "text": "Je n’ai jamais ri à ma propre blague avant de réussir à la terminer.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_089",
+    "text": "Je n’ai jamais essayé de rester naturel(le) après avoir été surpris(e) en train de regarder quelqu’un.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_091",
+    "text": "Je n’ai jamais envoyé un emoji complètement inadapté au contexte.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_092",
+    "text": "Je n’ai jamais fait semblant de comprendre une référence culturelle inconnue.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_093",
+    "text": "Je n’ai jamais applaudi au mauvais moment.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_094",
+    "text": "Je n’ai jamais répondu trop vite à une question dont je n’avais compris que la moitié.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_095",
+    "text": "Je n’ai jamais raconté une anecdote en réalisant au milieu qu’elle n’avait aucun intérêt.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_096",
+    "text": "Je n’ai jamais voulu faire une entrée stylée et raté mon effet.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_097",
+    "text": "Je n’ai jamais eu un blanc total en me présentant.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_098",
+    "text": "Je n’ai jamais ouvert la caméra frontale par accident en public.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_099",
+    "text": "Je n’ai jamais oublié qu’une vitre était transparente.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_100",
+    "text": "Je n’ai jamais tenté de rattraper un objet et aggravé la catastrophe.",
+    "category": "classic",
+    "theme": "petites_hontes",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_101",
+    "text": "Je n’ai jamais annulé une sortie au dernier moment parce que mon canapé gagnait.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_102",
+    "text": "Je n’ai jamais créé un groupe de discussion qui est devenu complètement incontrôlable.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_103",
+    "text": "Je n’ai jamais raconté la même anecdote à mes amis plus de cinq fois.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_104",
+    "text": "Je n’ai jamais été la personne qui voulait continuer la soirée quand tout le monde voulait rentrer.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_105",
+    "text": "Je n’ai jamais quitté une soirée sans dire au revoir à tout le monde.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_106",
+    "text": "Je n’ai jamais prétexté être fatigué(e) pour éviter une sortie.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_107",
+    "text": "Je n’ai jamais gardé un objet emprunté à un ami pendant des mois.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_108",
+    "text": "Je n’ai jamais oublié l’anniversaire d’un ami proche.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_109",
+    "text": "Je n’ai jamais organisé une surprise qui a failli être révélée trop tôt.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_110",
+    "text": "Je n’ai jamais participé à une soirée dont je ne connaissais presque personne.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_111",
+    "text": "Je n’ai jamais été la personne chargée de la musique sans satisfaire le groupe.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_112",
+    "text": "Je n’ai jamais fait semblant d’aimer un cadeau offert par un ami.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_113",
+    "text": "Je n’ai jamais refusé de prêter mon chargeur parce que ma batterie était trop basse.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_114",
+    "text": "Je n’ai jamais inventé une excuse collective avec mes amis.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_115",
+    "text": "Je n’ai jamais envoyé un message dans le groupe pour vérifier que tout le monde était bien rentré.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_116",
+    "text": "Je n’ai jamais été la dernière personne éveillée après une soirée.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_117",
+    "text": "Je n’ai jamais gardé une photo gênante d’un ami comme moyen de pression affectueux.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_119",
+    "text": "Je n’ai jamais présenté deux personnes en étant persuadé(e) qu’elles allaient devenir amies.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_120",
+    "text": "Je n’ai jamais refusé un jeu de soirée par peur de ce qu’il allait révéler.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_121",
+    "text": "Je n’ai jamais dormi chez quelqu’un sans l’avoir prévu.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_122",
+    "text": "Je n’ai jamais fait un trajet beaucoup trop long uniquement pour voir mes amis.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_123",
+    "text": "Je n’ai jamais eu une dispute ridicule dans un groupe de discussion.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_124",
+    "text": "Je n’ai jamais donné un conseil que je ne suivais absolument pas moi-même.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_125",
+    "text": "Je n’ai jamais inventé un surnom qui est resté pendant des années.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_126",
+    "text": "Je n’ai jamais été désigné(e) photographe officiel(le) de la soirée.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_127",
+    "text": "Je n’ai jamais forcé mes amis à regarder une vidéo que je trouvais hilarante.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_128",
+    "text": "Je n’ai jamais ramené quelqu’un chez lui parce qu’il ou elle était trop fatigué(e).",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_129",
+    "text": "Je n’ai jamais prétendu connaître les règles d’un jeu avant de les inventer au fur et à mesure.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_130",
+    "text": "Je n’ai jamais lancé un défi à un ami puis regretté qu’il accepte.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_131",
+    "text": "Je n’ai jamais fait partie d’un groupe avec un nom vraiment honteux.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_132",
+    "text": "Je n’ai jamais organisé une sortie qui s’est transformée en tout autre chose.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_133",
+    "text": "Je n’ai jamais appelé un ami uniquement parce que j’avais besoin d’un avis immédiat.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_134",
+    "text": "Je n’ai jamais ri d’une blague privée devant des gens qui ne pouvaient pas comprendre.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_135",
+    "text": "Je n’ai jamais été celui ou celle qui avait toujours des snacks dans son sac.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_136",
+    "text": "Je n’ai jamais essayé de réconcilier deux amis en conflit.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_137",
+    "text": "Je n’ai jamais promis de ne rien dire puis raconté quand même à une seule personne.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_138",
+    "text": "Je n’ai jamais fait une soirée improvisée qui était meilleure qu’une soirée prévue.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_139",
+    "text": "Je n’ai jamais accepté une sortie seulement parce qu’une personne précise venait.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_140",
+    "text": "Je n’ai jamais quitté un groupe de discussion puis demandé ce que j’avais manqué.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_141",
+    "text": "Je n’ai jamais eu un ami que tout le monde croyait être mon frère ou ma sœur.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_142",
+    "text": "Je n’ai jamais menti sur l’heure à laquelle je comptais rentrer.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_143",
+    "text": "Je n’ai jamais proposé de partager une addition puis regretté mon idée.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_144",
+    "text": "Je n’ai jamais oublié où j’avais posé mes affaires chez quelqu’un.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_145",
+    "text": "Je n’ai jamais défendu un ami alors que je savais qu’il ou elle avait tort.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_146",
+    "text": "Je n’ai jamais fait une liste de choses à faire entre amis qui n’a jamais été terminée.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_147",
+    "text": "Je n’ai jamais envoyé plus de vingt messages d’affilée dans un groupe.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_148",
+    "text": "Je n’ai jamais gardé une place à quelqu’un pendant un temps déraisonnable.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_149",
+    "text": "Je n’ai jamais changé d’avis sur quelqu’un après une seule soirée.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_150",
+    "text": "Je n’ai jamais pensé qu’une soirée serait nulle avant de finalement passer un excellent moment.",
+    "category": "classic",
+    "theme": "amitie_soirees",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_151",
+    "text": "Je n’ai jamais rendu un travail à la dernière minute.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_152",
+    "text": "Je n’ai jamais prétendu avoir compris une consigne alors que ce n’était pas le cas.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_153",
+    "text": "Je n’ai jamais utilisé une excuse douteuse pour justifier un retard.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_154",
+    "text": "Je n’ai jamais oublié le nom d’un collègue ou d’un camarade après plusieurs semaines.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_155",
+    "text": "Je n’ai jamais fait semblant d’être occupé(e) quand quelqu’un approchait.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_156",
+    "text": "Je n’ai jamais envoyé un document sans vérifier la pièce jointe.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_157",
+    "text": "Je n’ai jamais eu une réunion qui aurait pu être un simple message.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_158",
+    "text": "Je n’ai jamais attendu le dernier moment pour réviser.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_159",
+    "text": "Je n’ai jamais copié les devoirs de quelqu’un.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_160",
+    "text": "Je n’ai jamais laissé quelqu’un copier sur moi.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_161",
+    "text": "Je n’ai jamais dormi ou presque dormi pendant un cours ou une réunion.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_162",
+    "text": "Je n’ai jamais répondu au hasard à une question en espérant tomber juste.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_163",
+    "text": "Je n’ai jamais oublié un stylo le jour où j’en avais vraiment besoin.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_164",
+    "text": "Je n’ai jamais inventé une référence dans un exposé.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_165",
+    "text": "Je n’ai jamais travaillé sur autre chose pendant une visioconférence.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_166",
+    "text": "Je n’ai jamais oublié de couper mon micro pendant une réunion.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_167",
+    "text": "Je n’ai jamais fait une présentation avec une faute énorme sur la première diapositive.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_168",
+    "text": "Je n’ai jamais utilisé un mot compliqué sans être totalement sûr(e) de sa signification.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_169",
+    "text": "Je n’ai jamais attendu qu’une autre personne pose la question que je n’osais pas poser.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_170",
+    "text": "Je n’ai jamais prétendu avoir lu un document que j’avais seulement survolé.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_171",
+    "text": "Je n’ai jamais compté les minutes avant la fin d’une journée.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_172",
+    "text": "Je n’ai jamais oublié une échéance importante.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_173",
+    "text": "Je n’ai jamais fait un travail de groupe presque entièrement seul(e).",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_174",
+    "text": "Je n’ai jamais laissé quelqu’un d’autre faire la majorité d’un travail de groupe.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_176",
+    "text": "Je n’ai jamais utilisé une calculatrice pour une opération très simple.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_177",
+    "text": "Je n’ai jamais cherché une réponse sur internet en plein cours ou en pleine réunion.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_178",
+    "text": "Je n’ai jamais fait semblant de prendre des notes alors que je dessinais.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_179",
+    "text": "Je n’ai jamais oublié que ma caméra était activée.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_181",
+    "text": "Je n’ai jamais donné une réponse avec beaucoup d’assurance alors qu’elle était fausse.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_182",
+    "text": "Je n’ai jamais choisi une place uniquement pour éviter d’être interrogé(e).",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_183",
+    "text": "Je n’ai jamais apporté un repas qui a parfumé toute la pièce.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_184",
+    "text": "Je n’ai jamais eu un bureau ou un casier tellement désordonné que j’en avais honte.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_185",
+    "text": "Je n’ai jamais feint une panne de connexion.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_186",
+    "text": "Je n’ai jamais oublié une formule ou une information juste après l’examen.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_187",
+    "text": "Je n’ai jamais lu un message professionnel puis attendu volontairement avant de répondre.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_188",
+    "text": "Je n’ai jamais fait une pause qui a duré beaucoup plus longtemps que prévu.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_189",
+    "text": "Je n’ai jamais pris un appel personnel pendant les heures de travail ou de cours.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_190",
+    "text": "Je n’ai jamais mis une tenue plus sérieuse uniquement pour une visioconférence.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_191",
+    "text": "Je n’ai jamais oublié de changer le nom d’un fichier avant de l’envoyer.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_192",
+    "text": "Je n’ai jamais souhaité secrètement qu’un cours ou une réunion soit annulé(e).",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_194",
+    "text": "Je n’ai jamais reçu une remarque méritée que j’ai quand même mal prise.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_195",
+    "text": "Je n’ai jamais parlé d’un week-end entier au lieu de travailler.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_196",
+    "text": "Je n’ai jamais utilisé une intelligence artificielle pour m’aider sur une tâche.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_197",
+    "text": "Je n’ai jamais accepté une mission sans comprendre exactement ce qu’on attendait.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_198",
+    "text": "Je n’ai jamais oublié de sauvegarder un travail important.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_199",
+    "text": "Je n’ai jamais recommencé un document après avoir perdu la mauvaise version.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_200",
+    "text": "Je n’ai jamais célébré discrètement l’absence d’une personne difficile.",
+    "category": "classic",
+    "theme": "ecole_travail",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_201",
+    "text": "Je n’ai jamais supprimé puis réécrit un message plusieurs fois avant de l’envoyer.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_202",
+    "text": "Je n’ai jamais regardé le profil de quelqu’un beaucoup trop loin dans le passé.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_203",
+    "text": "Je n’ai jamais aimé une ancienne publication par accident.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_204",
+    "text": "Je n’ai jamais fait une capture d’écran d’une conversation pour l’envoyer à quelqu’un.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_205",
+    "text": "Je n’ai jamais ignoré un appel puis envoyé “tu voulais quoi?”.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_206",
+    "text": "Je n’ai jamais lu un message depuis la notification pour ne pas apparaître en ligne.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_208",
+    "text": "Je n’ai jamais utilisé un filtre puis affirmé que la photo était naturelle.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_209",
+    "text": "Je n’ai jamais supprimé une publication parce qu’elle n’avait pas assez de réactions.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_210",
+    "text": "Je n’ai jamais vérifié qui avait vu ma story plusieurs fois.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_211",
+    "text": "Je n’ai jamais créé un compte secondaire ou secret.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_212",
+    "text": "Je n’ai jamais oublié mon propre mot de passe.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_213",
+    "text": "Je n’ai jamais fait défiler mon téléphone sans même regarder ce qui passait.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_214",
+    "text": "Je n’ai jamais passé plus d’une heure sur une application sans m’en rendre compte.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_215",
+    "text": "Je n’ai jamais envoyé un vocal de plus de cinq minutes.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_216",
+    "text": "Je n’ai jamais accéléré un vocal reçu.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_217",
+    "text": "Je n’ai jamais mis quelqu’un en sourdine sans lui dire.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_218",
+    "text": "Je n’ai jamais archivé une conversation pour ne plus la voir.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_219",
+    "text": "Je n’ai jamais utilisé le téléphone de quelqu’un pour me prendre en photo.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_220",
+    "text": "Je n’ai jamais eu plus de cinquante onglets ouverts en même temps.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_221",
+    "text": "Je n’ai jamais sauvegardé un mème sans jamais l’envoyer.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_222",
+    "text": "Je n’ai jamais fait une recherche internet tellement étrange que j’ai effacé l’historique.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_223",
+    "text": "Je n’ai jamais répondu avec un simple emoji parce que je ne savais pas quoi dire.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_225",
+    "text": "Je n’ai jamais envoyé un message très long qui a reçu “ok” comme réponse.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_226",
+    "text": "Je n’ai jamais regardé une vidéo sans le son puis compris complètement de travers.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_227",
+    "text": "Je n’ai jamais utilisé un faux prétexte pour demander le profil de quelqu’un.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_228",
+    "text": "Je n’ai jamais changé ma photo de profil après avoir pris une bonne photo.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_229",
+    "text": "Je n’ai jamais oublié de désactiver le flash en prenant une photo discrète.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_230",
+    "text": "Je n’ai jamais gardé des milliers de photos inutiles dans mon téléphone.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_231",
+    "text": "Je n’ai jamais laissé un message en “vu” parce que je ne savais pas comment répondre.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_232",
+    "text": "Je n’ai jamais envoyé une publication à la personne qui l’avait elle-même publiée.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_233",
+    "text": "Je n’ai jamais regardé le téléphone de quelqu’un par-dessus son épaule.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_234",
+    "text": "Je n’ai jamais utilisé mon téléphone avec moins de 2 % de batterie en prenant des risques.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_235",
+    "text": "Je n’ai jamais eu une conversation entière uniquement avec des GIF ou des mèmes.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_236",
+    "text": "Je n’ai jamais recherché mon propre nom sur internet.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_237",
+    "text": "Je n’ai jamais consulté le profil d’un ex ou d’une ancienne connaissance par curiosité.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_238",
+    "text": "Je n’ai jamais bloqué puis débloqué quelqu’un.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_239",
+    "text": "Je n’ai jamais pris une photo d’un plat avant de le manger.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_240",
+    "text": "Je n’ai jamais mis mon téléphone en mode avion pour éviter des messages.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_243",
+    "text": "Je n’ai jamais regardé mes propres anciennes publications avec gêne.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_244",
+    "text": "Je n’ai jamais utilisé une application pour voir qui ne me suivait plus.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_245",
+    "text": "Je n’ai jamais répondu à un message dans ma tête sans l’envoyer réellement.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_246",
+    "text": "Je n’ai jamais appelé quelqu’un par accident en mettant le téléphone dans ma poche.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_247",
+    "text": "Je n’ai jamais envoyé une photo sans vérifier ce qu’il y avait à l’arrière-plan.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_249",
+    "text": "Je n’ai jamais regardé une série entière sur un écran minuscule.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_250",
+    "text": "Je n’ai jamais passé une soirée à côté de mes amis tout en discutant avec eux par messages.",
+    "category": "classic",
+    "theme": "telephone_reseaux",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_252",
+    "text": "Je n’ai jamais dit “je suis en route” alors que je n’étais pas parti(e).",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_254",
+    "text": "Je n’ai jamais caché une petite bêtise pendant des années.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_255",
+    "text": "Je n’ai jamais inventé une excuse parce que la vraie raison était trop embarrassante.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_256",
+    "text": "Je n’ai jamais fait semblant de ne pas connaître une information que je connaissais déjà.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_257",
+    "text": "Je n’ai jamais gardé un secret qu’on me demandait pourtant de révéler.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_258",
+    "text": "Je n’ai jamais raconté une version légèrement améliorée d’une histoire.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_259",
+    "text": "Je n’ai jamais menti sur le prix d’un achat.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_260",
+    "text": "Je n’ai jamais dit que j’avais oublié alors que je n’avais simplement pas envie.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_261",
+    "text": "Je n’ai jamais caché de la nourriture pour ne pas avoir à partager.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_262",
+    "text": "Je n’ai jamais prétendu être malade pour rester chez moi.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_263",
+    "text": "Je n’ai jamais fait semblant de dormir pour éviter une conversation.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_264",
+    "text": "Je n’ai jamais menti sur l’endroit où j’étais.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_265",
+    "text": "Je n’ai jamais dit “ça ne me dérange pas” alors que ça me dérangeait beaucoup.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_267",
+    "text": "Je n’ai jamais gardé une surprise au point de devenir suspect(e).",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_268",
+    "text": "Je n’ai jamais découvert un secret par accident.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_271",
+    "text": "Je n’ai jamais menti sur mon niveau dans une activité.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_273",
+    "text": "Je n’ai jamais prétendu avoir déjà vu un film que je ne connaissais pas.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_274",
+    "text": "Je n’ai jamais supprimé une preuve avant que quelqu’un ne la voie.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_275",
+    "text": "Je n’ai jamais gardé une information uniquement pour voir combien de temps elle resterait secrète.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_276",
+    "text": "Je n’ai jamais menti à propos d’un cadeau.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_277",
+    "text": "Je n’ai jamais donné une fausse raison pour quitter une conversation.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_278",
+    "text": "Je n’ai jamais prétendu ne pas être jaloux ou jalouse.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_279",
+    "text": "Je n’ai jamais caché une note, un résultat ou une nouvelle décevante.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_280",
+    "text": "Je n’ai jamais utilisé “je n’avais pas de réseau” comme excuse.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_281",
+    "text": "Je n’ai jamais laissé quelqu’un croire une chose fausse parce que ça m’arrangeait.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_282",
+    "text": "Je n’ai jamais raconté une histoire sans préciser que je n’en étais pas le héros ou l’héroïne.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_283",
+    "text": "Je n’ai jamais menti pour protéger un ami.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_284",
+    "text": "Je n’ai jamais caché une conversation innocente parce qu’elle pouvait être mal comprise.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_285",
+    "text": "Je n’ai jamais prétendu être occupé(e) pour ne pas répondre.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_286",
+    "text": "Je n’ai jamais fait une promesse que je savais difficile à tenir.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_287",
+    "text": "Je n’ai jamais omis volontairement un détail important.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_288",
+    "text": "Je n’ai jamais dit que j’adorais un repas que je n’aimais pas.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "medium",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_289",
+    "text": "Je n’ai jamais inventé une urgence pour partir plus tôt.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_290",
+    "text": "Je n’ai jamais caché un achat dans un placard ou un sac.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_293",
+    "text": "Je n’ai jamais nié avoir mangé la dernière part.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_294",
+    "text": "Je n’ai jamais gardé un secret qui aurait surpris tout le monde ici.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_295",
+    "text": "Je n’ai jamais menti sur la durée réelle de mon retard.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_296",
+    "text": "Je n’ai jamais fait croire que mon téléphone était silencieux.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_297",
+    "text": "Je n’ai jamais caché une mauvaise nouvelle pour attendre le bon moment.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_298",
+    "text": "Je n’ai jamais exagéré un problème pour obtenir de l’aide.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_299",
+    "text": "Je n’ai jamais prétendu avoir oublié le prénom de quelqu’un pour éviter de l’utiliser.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_300",
+    "text": "Je n’ai jamais découvert que quelqu’un me mentait sans le confronter.",
+    "category": "classic",
+    "theme": "mensonges_secrets",
+    "level": "bold",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_301",
+    "text": "Je n’ai jamais raté un train, un bus ou un avion.",
+    "category": "classic",
+    "theme": "voyages_aventures",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_302",
+    "text": "Je n’ai jamais fait ma valise quelques heures avant de partir.",
+    "category": "classic",
+    "theme": "voyages_aventures",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_303",
+    "text": "Je n’ai jamais oublié un objet essentiel en voyage.",
+    "category": "classic",
+    "theme": "voyages_aventures",
+    "level": "soft",
+    "alcoholCompatible": true
+  },
+  {
+    "id": "jamais_304",
+    "text": "Je n’ai jamais pris le mauvais transport.",
+    "category": "classic",
+    "theme": "voyages_aventures",
+    "level": "soft",
+    "alcoholCompatible": true
+  }
+]

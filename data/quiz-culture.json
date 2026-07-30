@@ -1,0 +1,1952 @@
+[
+  {
+    "id": "q_001_combien_de_joueurs_une_equipe_de_football_",
+    "question": "Combien de joueurs une équipe de football aligne-t-elle sur le terrain ?",
+    "options": [
+      "9",
+      "10",
+      "12",
+      "11"
+    ],
+    "answer": 3,
+    "explanation": "Une équipe compte onze joueurs sur le terrain.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_002_quel_pays_a_la_forme_dune_botte_sur_la_car",
+    "question": "Quel pays a la forme d’une botte sur la carte ?",
+    "options": [
+      "Grèce",
+      "Italie",
+      "Croatie",
+      "Portugal"
+    ],
+    "answer": 1,
+    "explanation": "L’Italie est souvent comparée à une botte.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_003_quelle_couleur_obtient_on_en_melangeant_du",
+    "question": "Quelle couleur obtient-on en mélangeant du bleu et du jaune ?",
+    "options": [
+      "Violet",
+      "Vert",
+      "Orange",
+      "Marron"
+    ],
+    "answer": 1,
+    "explanation": "Le bleu et le jaune donnent du vert en synthèse picturale.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_004_quel_est_le_plus_grand_ocean_de_la_planete",
+    "question": "Quel est le plus grand océan de la planète ?",
+    "options": [
+      "Atlantique",
+      "Arctique",
+      "Indien",
+      "Pacifique"
+    ],
+    "answer": 3,
+    "explanation": "Le Pacifique est le plus vaste océan.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle est la capitale de la Suisse ?",
+    "options": [
+      "Vienne",
+      "Stockholm",
+      "Dublin",
+      "Berne"
+    ],
+    "answer": 3,
+    "explanation": "Berne est la ville fédérale de la Suisse.",
+    "difficulty": "easy",
+    "id": "q_005_quelle_est_la_capitale_de_la_suisse"
+  },
+  {
+    "question": "Dans quel pays se trouve le Taj Mahal ?",
+    "options": [
+      "Inde",
+      "Thaïlande",
+      "Pérou",
+      "Pays-Bas"
+    ],
+    "answer": 0,
+    "explanation": "Le Taj Mahal se trouve en Inde.",
+    "difficulty": "easy",
+    "id": "q_006_dans_quel_pays_se_trouve_le_taj_mahal"
+  },
+  {
+    "question": "Dans quel pays se trouve la tour de Pise ?",
+    "options": [
+      "Égypte",
+      "Inde",
+      "Italie",
+      "Pérou"
+    ],
+    "answer": 2,
+    "explanation": "La tour de Pise se trouve en Italie.",
+    "difficulty": "easy",
+    "id": "q_007_dans_quel_pays_se_trouve_la_tour_de_pise"
+  },
+  {
+    "question": "Quel monument parisien a été construit pour l’Exposition universelle de 1889 ?",
+    "options": [
+      "Superman",
+      "La tour Eiffel",
+      "Antoine de Saint-Exupéry",
+      "Vincent van Gogh"
+    ],
+    "answer": 1,
+    "explanation": "La tour Eiffel a été construite pour l’Exposition universelle de 1889.",
+    "difficulty": "easy",
+    "id": "q_008_quel_monument_parisien_a_ete_construit_pou"
+  },
+  {
+    "id": "q_009_combien_de_minutes_dure_une_heure_et_demie",
+    "question": "Combien de minutes dure une heure et demie ?",
+    "options": [
+      "100",
+      "80",
+      "120",
+      "90"
+    ],
+    "answer": 3,
+    "explanation": "Une heure et demie correspond à 90 minutes.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle force nous maintient au sol ?",
+    "options": [
+      "Le Soleil",
+      "Solide",
+      "La gravité",
+      "L’ouïe"
+    ],
+    "answer": 2,
+    "explanation": "La gravité attire les corps vers la Terre.",
+    "difficulty": "easy",
+    "id": "q_010_quelle_force_nous_maintient_au_sol"
+  },
+  {
+    "id": "q_011_quel_est_le_satellite_naturel_de_la_terre",
+    "question": "Quel est le satellite naturel de la Terre ?",
+    "options": [
+      "Mars",
+      "Titan",
+      "Europe",
+      "La Lune"
+    ],
+    "answer": 3,
+    "explanation": "La Lune est le satellite naturel de la Terre.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quel est généralement l’état de l’eau en dessous de 0 °C, à pression normale ?",
+    "options": [
+      "Les racines",
+      "Les poumons",
+      "Oxygène",
+      "Solide"
+    ],
+    "answer": 3,
+    "explanation": "En dessous de 0 °C, l’eau est généralement solide sous forme de glace.",
+    "difficulty": "easy",
+    "id": "q_012_quel_est_generalement_letat_de_leau_en_des"
+  },
+  {
+    "id": "q_013_qui_a_peint_la_joconde",
+    "question": "Qui a peint La Joconde ?",
+    "options": [
+      "Léonard de Vinci",
+      "Raphaël",
+      "Van Gogh",
+      "Michel-Ange"
+    ],
+    "answer": 0,
+    "explanation": "La Joconde est attribuée à Léonard de Vinci.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quel héros porte une cape rouge et un S sur la poitrine ?",
+    "options": [
+      "Vincent van Gogh",
+      "Superman",
+      "Antoine de Saint-Exupéry",
+      "Blanche-Neige"
+    ],
+    "answer": 1,
+    "explanation": "Superman est représenté avec un S sur la poitrine.",
+    "difficulty": "easy",
+    "id": "q_014_quel_heros_porte_une_cape_rouge_et_un_s_su"
+  },
+  {
+    "question": "Dans quel pays se trouve Amsterdam ?",
+    "options": [
+      "Argentine",
+      "Italie",
+      "Pays-Bas",
+      "Maroc"
+    ],
+    "answer": 2,
+    "explanation": "Amsterdam se trouve aux Pays-Bas.",
+    "difficulty": "easy",
+    "id": "q_015_dans_quel_pays_se_trouve_amsterdam"
+  },
+  {
+    "question": "Quel conte met en scène une jeune fille et sept nains ?",
+    "options": [
+      "Vincent van Gogh",
+      "Blanche-Neige",
+      "Antoine de Saint-Exupéry",
+      "La tour Eiffel"
+    ],
+    "answer": 1,
+    "explanation": "Blanche-Neige vit avec les sept nains.",
+    "difficulty": "easy",
+    "id": "q_016_quel_conte_met_en_scene_une_jeune_fille_et"
+  },
+  {
+    "question": "Dans quel pays se trouve le Machu Picchu ?",
+    "options": [
+      "Égypte",
+      "Inde",
+      "Pérou",
+      "Pays-Bas"
+    ],
+    "answer": 2,
+    "explanation": "Le Machu Picchu se trouve au Pérou.",
+    "difficulty": "easy",
+    "id": "q_017_dans_quel_pays_se_trouve_le_machu_picchu"
+  },
+  {
+    "question": "Qui a écrit Le Petit Prince ?",
+    "options": [
+      "La tour Eiffel",
+      "Vincent van Gogh",
+      "Antoine de Saint-Exupéry",
+      "Superman"
+    ],
+    "answer": 2,
+    "explanation": "Le Petit Prince est d’Antoine de Saint-Exupéry.",
+    "difficulty": "easy",
+    "id": "q_018_qui_a_ecrit_le_petit_prince"
+  },
+  {
+    "question": "Quel est le résultat de 9 × 9 ?",
+    "options": [
+      "12",
+      "180",
+      "81",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "Neuf fois neuf égale 81.",
+    "difficulty": "easy",
+    "id": "q_019_quel_est_le_resultat_de_9_9"
+  },
+  {
+    "question": "Qui a peint La Nuit étoilée ?",
+    "options": [
+      "Vincent van Gogh",
+      "Antoine de Saint-Exupéry",
+      "Blanche-Neige",
+      "Superman"
+    ],
+    "answer": 0,
+    "explanation": "La Nuit étoilée a été peinte par Vincent van Gogh.",
+    "difficulty": "easy",
+    "id": "q_020_qui_a_peint_la_nuit_etoilee"
+  },
+  {
+    "question": "Quel organe permet principalement de respirer ?",
+    "options": [
+      "La gravité",
+      "Les poumons",
+      "Le Soleil",
+      "L’ouïe"
+    ],
+    "answer": 1,
+    "explanation": "Les poumons assurent les échanges gazeux.",
+    "difficulty": "easy",
+    "id": "q_021_quel_organe_permet_principalement_de_respi"
+  },
+  {
+    "id": "q_022_quel_animal_est_le_plus_grand_mammifere_vi",
+    "question": "Quel animal est le plus grand mammifère vivant ?",
+    "options": [
+      "Baleine bleue",
+      "Requin-baleine",
+      "Éléphant d’Afrique",
+      "Girafe"
+    ],
+    "answer": 0,
+    "explanation": "La baleine bleue est le plus grand mammifère connu.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle est la capitale de l’Allemagne ?",
+    "options": [
+      "Berlin",
+      "Lisbonne",
+      "Oslo",
+      "Athènes"
+    ],
+    "answer": 0,
+    "explanation": "Berlin est la capitale de l’Allemagne.",
+    "difficulty": "easy",
+    "id": "q_023_quelle_est_la_capitale_de_lallemagne"
+  },
+  {
+    "question": "Quelle est la capitale de la Grèce ?",
+    "options": [
+      "Vienne",
+      "Athènes",
+      "Berne",
+      "Bruxelles"
+    ],
+    "answer": 1,
+    "explanation": "Athènes est la capitale de la Grèce.",
+    "difficulty": "easy",
+    "id": "q_024_quelle_est_la_capitale_de_la_grece"
+  },
+  {
+    "question": "Dans quel pays se trouvent les pyramides de Gizeh ?",
+    "options": [
+      "Argentine",
+      "Maroc",
+      "Pays-Bas",
+      "Égypte"
+    ],
+    "answer": 3,
+    "explanation": "Les pyramides de Gizeh se trouvent en Égypte.",
+    "difficulty": "easy",
+    "id": "q_025_dans_quel_pays_se_trouvent_les_pyramides_d"
+  },
+  {
+    "id": "q_026_dans_quel_pays_se_trouve_la_ville_de_kyoto",
+    "question": "Dans quel pays se trouve la ville de Kyoto ?",
+    "options": [
+      "Thaïlande",
+      "Japon",
+      "Chine",
+      "Corée du Sud"
+    ],
+    "answer": 1,
+    "explanation": "Kyoto se situe au Japon.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Comment appelle-t-on un animal qui mange uniquement des végétaux ?",
+    "options": [
+      "Herbivore",
+      "Les poumons",
+      "Solide",
+      "L’ouïe"
+    ],
+    "answer": 0,
+    "explanation": "Un herbivore se nourrit de végétaux.",
+    "difficulty": "easy",
+    "id": "q_027_comment_appelle_t_on_un_animal_qui_mange_u"
+  },
+  {
+    "id": "q_028_quelle_planete_est_surnommee_la_planete_ro",
+    "question": "Quelle planète est surnommée la planète rouge ?",
+    "options": [
+      "Vénus",
+      "Mars",
+      "Mercure",
+      "Jupiter"
+    ],
+    "answer": 1,
+    "explanation": "Mars doit sa couleur à l’oxyde de fer présent à sa surface.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_029_quelle_langue_est_principalement_parlee_au",
+    "question": "Quelle langue est principalement parlée au Brésil ?",
+    "options": [
+      "Italien",
+      "Portugais",
+      "Espagnol",
+      "Français"
+    ],
+    "answer": 1,
+    "explanation": "Le portugais est la langue officielle du Brésil.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle est la capitale de la Belgique ?",
+    "options": [
+      "Stockholm",
+      "Berlin",
+      "Dublin",
+      "Bruxelles"
+    ],
+    "answer": 3,
+    "explanation": "Bruxelles est la capitale de la Belgique.",
+    "difficulty": "easy",
+    "id": "q_030_quelle_est_la_capitale_de_la_belgique"
+  },
+  {
+    "question": "Quelle étoile éclaire la Terre ?",
+    "options": [
+      "Oxygène",
+      "Les racines",
+      "Le Soleil",
+      "Herbivore"
+    ],
+    "answer": 2,
+    "explanation": "Le Soleil est l’étoile de notre système.",
+    "difficulty": "easy",
+    "id": "q_031_quelle_etoile_eclaire_la_terre"
+  },
+  {
+    "question": "Quelle est la capitale de la Suède ?",
+    "options": [
+      "Bruxelles",
+      "Athènes",
+      "Dublin",
+      "Stockholm"
+    ],
+    "answer": 3,
+    "explanation": "Stockholm est la capitale de la Suède.",
+    "difficulty": "easy",
+    "id": "q_032_quelle_est_la_capitale_de_la_suede"
+  },
+  {
+    "question": "Dans quel pays se trouve la ville de Marrakech ?",
+    "options": [
+      "Thaïlande",
+      "Maroc",
+      "Inde",
+      "Italie"
+    ],
+    "answer": 1,
+    "explanation": "Marrakech se trouve au Maroc.",
+    "difficulty": "easy",
+    "id": "q_033_dans_quel_pays_se_trouve_la_ville_de_marra"
+  },
+  {
+    "question": "Quel gaz est indispensable à la respiration humaine ?",
+    "options": [
+      "Oxygène",
+      "Herbivore",
+      "L’ouïe",
+      "Solide"
+    ],
+    "answer": 0,
+    "explanation": "Les humains respirent de l’oxygène.",
+    "difficulty": "easy",
+    "id": "q_034_quel_gaz_est_indispensable_a_la_respiratio"
+  },
+  {
+    "id": "q_035_combien_de_cotes_possede_un_hexagone",
+    "question": "Combien de côtés possède un hexagone ?",
+    "options": [
+      "6",
+      "5",
+      "8",
+      "7"
+    ],
+    "answer": 0,
+    "explanation": "Un hexagone possède six côtés.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle est la capitale de la Norvège ?",
+    "options": [
+      "Oslo",
+      "Lisbonne",
+      "Bruxelles",
+      "Copenhague"
+    ],
+    "answer": 0,
+    "explanation": "Oslo est la capitale de la Norvège.",
+    "difficulty": "easy",
+    "id": "q_036_quelle_est_la_capitale_de_la_norvege"
+  },
+  {
+    "id": "q_037_dans_quelle_unite_mesure_t_on_la_temperatu",
+    "question": "Dans quelle unité mesure-t-on la température en France ?",
+    "options": [
+      "Celsius",
+      "Fahrenheit",
+      "Joule",
+      "Kelvin uniquement"
+    ],
+    "answer": 0,
+    "explanation": "Le degré Celsius est l’unité courante.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Quelle est la capitale de l’Autriche ?",
+    "options": [
+      "Vienne",
+      "Athènes",
+      "Stockholm",
+      "Bruxelles"
+    ],
+    "answer": 0,
+    "explanation": "Vienne est la capitale de l’Autriche.",
+    "difficulty": "easy",
+    "id": "q_038_quelle_est_la_capitale_de_lautriche"
+  },
+  {
+    "id": "q_039_quel_organe_pompe_le_sang_dans_le_corps",
+    "question": "Quel organe pompe le sang dans le corps ?",
+    "options": [
+      "Rein",
+      "Cœur",
+      "Poumon",
+      "Foie"
+    ],
+    "answer": 1,
+    "explanation": "Le cœur assure la circulation du sang.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Dans quel pays se trouve Bangkok ?",
+    "options": [
+      "Pays-Bas",
+      "Italie",
+      "Argentine",
+      "Thaïlande"
+    ],
+    "answer": 3,
+    "explanation": "Bangkok se trouve en Thaïlande.",
+    "difficulty": "easy",
+    "id": "q_040_dans_quel_pays_se_trouve_bangkok"
+  },
+  {
+    "question": "Quel sens utilise-t-on avec les oreilles ?",
+    "options": [
+      "Les racines",
+      "L’ouïe",
+      "Solide",
+      "Herbivore"
+    ],
+    "answer": 1,
+    "explanation": "Les oreilles permettent d’entendre.",
+    "difficulty": "easy",
+    "id": "q_041_quel_sens_utilise_t_on_avec_les_oreilles"
+  },
+  {
+    "question": "Dans quel pays se trouve Buenos Aires ?",
+    "options": [
+      "Pérou",
+      "Maroc",
+      "Argentine",
+      "Égypte"
+    ],
+    "answer": 2,
+    "explanation": "Buenos Aires se trouve en Argentine.",
+    "difficulty": "easy",
+    "id": "q_042_dans_quel_pays_se_trouve_buenos_aires"
+  },
+  {
+    "id": "q_043_quel_fleuve_traverse_paris",
+    "question": "Quel fleuve traverse Paris ?",
+    "options": [
+      "Seine",
+      "Garonne",
+      "Rhône",
+      "Loire"
+    ],
+    "answer": 0,
+    "explanation": "La Seine traverse Paris.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Combien de mois compte une année ?",
+    "options": [
+      "10",
+      "180",
+      "100",
+      "12"
+    ],
+    "answer": 3,
+    "explanation": "Une année compte douze mois.",
+    "difficulty": "easy",
+    "id": "q_044_combien_de_mois_compte_une_annee"
+  },
+  {
+    "question": "Quelle est la capitale du Danemark ?",
+    "options": [
+      "Dublin",
+      "Copenhague",
+      "Oslo",
+      "Vienne"
+    ],
+    "answer": 1,
+    "explanation": "Copenhague est la capitale du Danemark.",
+    "difficulty": "easy",
+    "id": "q_045_quelle_est_la_capitale_du_danemark"
+  },
+  {
+    "question": "Quelle est la capitale du Portugal ?",
+    "options": [
+      "Bruxelles",
+      "Lisbonne",
+      "Copenhague",
+      "Berlin"
+    ],
+    "answer": 1,
+    "explanation": "Lisbonne est la capitale du Portugal.",
+    "difficulty": "easy",
+    "id": "q_046_quelle_est_la_capitale_du_portugal"
+  },
+  {
+    "question": "Quelle partie d’une plante absorbe principalement l’eau du sol ?",
+    "options": [
+      "Herbivore",
+      "Le Soleil",
+      "Les racines",
+      "Oxygène"
+    ],
+    "answer": 2,
+    "explanation": "Les racines absorbent l’eau et les sels minéraux.",
+    "difficulty": "easy",
+    "id": "q_047_quelle_partie_dune_plante_absorbe_principa"
+  },
+  {
+    "question": "Quelle est la capitale de l’Irlande ?",
+    "options": [
+      "Vienne",
+      "Stockholm",
+      "Berne",
+      "Dublin"
+    ],
+    "answer": 3,
+    "explanation": "Dublin est la capitale de l’Irlande.",
+    "difficulty": "easy",
+    "id": "q_048_quelle_est_la_capitale_de_lirlande"
+  },
+  {
+    "question": "Combien de degrés mesure un angle droit ?",
+    "options": [
+      "90",
+      "12",
+      "60",
+      "7"
+    ],
+    "answer": 0,
+    "explanation": "Un angle droit mesure 90 degrés.",
+    "difficulty": "easy",
+    "id": "q_049_combien_de_degres_mesure_un_angle_droit"
+  },
+  {
+    "question": "Combien de jours compte une semaine ?",
+    "options": [
+      "10",
+      "7",
+      "90",
+      "12"
+    ],
+    "answer": 1,
+    "explanation": "Une semaine compte sept jours.",
+    "difficulty": "easy",
+    "id": "q_050_combien_de_jours_compte_une_semaine"
+  },
+  {
+    "question": "Quel dramaturge a écrit Hamlet ?",
+    "options": [
+      "Pablo Picasso",
+      "William Shakespeare",
+      "Poséidon",
+      "Thor"
+    ],
+    "answer": 1,
+    "explanation": "Hamlet est une tragédie de Shakespeare.",
+    "difficulty": "medium",
+    "id": "q_051_quel_dramaturge_a_ecrit_hamlet"
+  },
+  {
+    "question": "Quelle est la capitale de la Roumanie ?",
+    "options": [
+      "Bucarest",
+      "Sofia",
+      "Helsinki",
+      "Budapest"
+    ],
+    "answer": 0,
+    "explanation": "Bucarest est la capitale de la Roumanie.",
+    "difficulty": "medium",
+    "id": "q_052_quelle_est_la_capitale_de_la_roumanie"
+  },
+  {
+    "question": "Quelle molécule porte l’information génétique ?",
+    "options": [
+      "Vaporisation",
+      "ADN",
+      "Isaac Newton",
+      "Na"
+    ],
+    "answer": 1,
+    "explanation": "L’ADN porte l’information génétique.",
+    "difficulty": "medium",
+    "id": "q_053_quelle_molecule_porte_linformation_genetiq"
+  },
+  {
+    "question": "Quel pays est composé de deux îles principales appelées île du Nord et île du Sud ?",
+    "options": [
+      "Le Sahara",
+      "La Volga",
+      "Nouvelle-Zélande",
+      "Détroit de Gibraltar"
+    ],
+    "answer": 2,
+    "explanation": "La Nouvelle-Zélande comprend principalement ces deux îles.",
+    "difficulty": "medium",
+    "id": "q_054_quel_pays_est_compose_de_deux_iles_princip"
+  },
+  {
+    "question": "Quel organe produit l’insuline ?",
+    "options": [
+      "Le pancréas",
+      "Isaac Newton",
+      "Vaporisation",
+      "Mercure"
+    ],
+    "answer": 0,
+    "explanation": "Le pancréas produit notamment l’insuline.",
+    "difficulty": "medium",
+    "id": "q_055_quel_organe_produit_linsuline"
+  },
+  {
+    "question": "Quelle échelle mesure la dureté des minéraux ?",
+    "options": [
+      "Na",
+      "Isaac Newton",
+      "Mercure",
+      "Échelle de Mohs"
+    ],
+    "answer": 3,
+    "explanation": "L’échelle de Mohs classe la dureté des minéraux.",
+    "difficulty": "medium",
+    "id": "q_056_quelle_echelle_mesure_la_durete_des_minera"
+  },
+  {
+    "question": "Quel est le plus long fleuve entièrement situé en France ?",
+    "options": [
+      "Dmitri Mendeleïev",
+      "Foie",
+      "46",
+      "La Loire"
+    ],
+    "answer": 3,
+    "explanation": "La Loire est le plus long fleuve entièrement français.",
+    "difficulty": "medium",
+    "id": "q_057_quel_est_le_plus_long_fleuve_entierement_s"
+  },
+  {
+    "question": "Comment appelle-t-on le passage de l’état liquide à l’état gazeux ?",
+    "options": [
+      "Vaporisation",
+      "Échelle de Mohs",
+      "Na",
+      "Isaac Newton"
+    ],
+    "answer": 0,
+    "explanation": "La vaporisation transforme un liquide en gaz.",
+    "difficulty": "medium",
+    "id": "q_058_comment_appelle_t_on_le_passage_de_letat_l"
+  },
+  {
+    "question": "Quel peuple a construit le Colisée de Rome ?",
+    "options": [
+      "Marie Curie",
+      "Les Romains",
+      "Christophe Colomb",
+      "Pompéi"
+    ],
+    "answer": 1,
+    "explanation": "Le Colisée a été construit sous l’Empire romain.",
+    "difficulty": "medium",
+    "id": "q_059_quel_peuple_a_construit_le_colisee_de_rome"
+  },
+  {
+    "question": "Dans la mythologie grecque, qui est le dieu de la mer ?",
+    "options": [
+      "Pablo Picasso",
+      "Victor Hugo",
+      "Poséidon",
+      "Thor"
+    ],
+    "answer": 2,
+    "explanation": "Poséidon est le dieu grec de la mer.",
+    "difficulty": "medium",
+    "id": "q_060_dans_la_mythologie_grecque_qui_est_le_dieu"
+  },
+  {
+    "question": "Qui a peint Guernica ?",
+    "options": [
+      "William Shakespeare",
+      "Wolfgang Amadeus Mozart",
+      "Thor",
+      "Pablo Picasso"
+    ],
+    "answer": 3,
+    "explanation": "Guernica a été peinte par Pablo Picasso.",
+    "difficulty": "medium",
+    "id": "q_061_qui_a_peint_guernica"
+  },
+  {
+    "question": "Dans quel pays se trouve la ville d’Istanbul ?",
+    "options": [
+      "Fe",
+      "Turquie",
+      "La Loire",
+      "George Orwell"
+    ],
+    "answer": 1,
+    "explanation": "Istanbul se trouve en Turquie.",
+    "difficulty": "medium",
+    "id": "q_062_dans_quel_pays_se_trouve_la_ville_distanbu"
+  },
+  {
+    "question": "Quel est le symbole chimique du fer ?",
+    "options": [
+      "1918",
+      "Fe",
+      "Petite Ourse",
+      "Turquie"
+    ],
+    "answer": 1,
+    "explanation": "Le fer a pour symbole Fe.",
+    "difficulty": "medium",
+    "id": "q_063_quel_est_le_symbole_chimique_du_fer"
+  },
+  {
+    "question": "Dans quelle constellation se trouve l’étoile Polaire ?",
+    "options": [
+      "46",
+      "Petite Ourse",
+      "Foie",
+      "La Loire"
+    ],
+    "answer": 1,
+    "explanation": "L’étoile Polaire appartient à la Petite Ourse.",
+    "difficulty": "medium",
+    "id": "q_064_dans_quelle_constellation_se_trouve_letoil"
+  },
+  {
+    "question": "Dans quel pays se trouve le mont Fuji ?",
+    "options": [
+      "Allemand",
+      "Japon",
+      "Alexander Fleming",
+      "George Orwell"
+    ],
+    "answer": 1,
+    "explanation": "Le mont Fuji se trouve au Japon.",
+    "difficulty": "medium",
+    "id": "q_065_dans_quel_pays_se_trouve_le_mont_fuji"
+  },
+  {
+    "question": "Quelle est la capitale de la République tchèque ?",
+    "options": [
+      "Prague",
+      "Budapest",
+      "Sofia",
+      "Bucarest"
+    ],
+    "answer": 0,
+    "explanation": "Prague est la capitale de la République tchèque.",
+    "difficulty": "medium",
+    "id": "q_066_quelle_est_la_capitale_de_la_republique_tc"
+  },
+  {
+    "question": "En quelle année a commencé la Révolution française ?",
+    "options": [
+      "1789",
+      "Marie Curie",
+      "Les Romains",
+      "Louis XIV"
+    ],
+    "answer": 0,
+    "explanation": "La Révolution française a commencé en 1789.",
+    "difficulty": "medium",
+    "id": "q_067_en_quelle_annee_a_commence_la_revolution_f"
+  },
+  {
+    "question": "Quelle est la capitale du Chili ?",
+    "options": [
+      "Bucarest",
+      "Helsinki",
+      "Prague",
+      "Santiago"
+    ],
+    "answer": 3,
+    "explanation": "Santiago est la capitale du Chili.",
+    "difficulty": "medium",
+    "id": "q_068_quelle_est_la_capitale_du_chili"
+  },
+  {
+    "question": "Qui a écrit le roman 1984 ?",
+    "options": [
+      "George Orwell",
+      "Dmitri Mendeleïev",
+      "Fe",
+      "Alexander Fleming"
+    ],
+    "answer": 0,
+    "explanation": "1984 est un roman de George Orwell.",
+    "difficulty": "medium",
+    "id": "q_069_qui_a_ecrit_le_roman_1984"
+  },
+  {
+    "question": "Quelle est la plus grande planète du Système solaire ?",
+    "options": [
+      "Alexander Fleming",
+      "Jupiter",
+      "Japon",
+      "46"
+    ],
+    "answer": 1,
+    "explanation": "Jupiter est la plus grande planète du Système solaire.",
+    "difficulty": "medium",
+    "id": "q_070_quelle_est_la_plus_grande_planete_du_syste"
+  },
+  {
+    "question": "Quel est le symbole chimique du sodium ?",
+    "options": [
+      "Isaac Newton",
+      "Vaporisation",
+      "Na",
+      "Roche magmatique"
+    ],
+    "answer": 2,
+    "explanation": "Le sodium a pour symbole Na.",
+    "difficulty": "medium",
+    "id": "q_071_quel_est_le_symbole_chimique_du_sodium"
+  },
+  {
+    "question": "Quelle est la capitale de la Finlande ?",
+    "options": [
+      "Budapest",
+      "Wellington",
+      "Prague",
+      "Helsinki"
+    ],
+    "answer": 3,
+    "explanation": "Helsinki est la capitale de la Finlande.",
+    "difficulty": "medium",
+    "id": "q_072_quelle_est_la_capitale_de_la_finlande"
+  },
+  {
+    "question": "En quelle année la Première Guerre mondiale s’est-elle terminée ?",
+    "options": [
+      "Turquie",
+      "Fe",
+      "1918",
+      "Allemand"
+    ],
+    "answer": 2,
+    "explanation": "L’armistice mettant fin aux combats a été signé en 1918.",
+    "difficulty": "medium",
+    "id": "q_073_en_quelle_annee_la_premiere_guerre_mondial"
+  },
+  {
+    "question": "Quel scientifique est associé à la découverte de la pénicilline ?",
+    "options": [
+      "12",
+      "Alexander Fleming",
+      "46",
+      "Ampère"
+    ],
+    "answer": 1,
+    "explanation": "Alexander Fleming a découvert l’action antibactérienne de la pénicilline.",
+    "difficulty": "medium",
+    "id": "q_074_quel_scientifique_est_associe_a_la_decouve"
+  },
+  {
+    "question": "Quelle langue est principalement parlée en Autriche ?",
+    "options": [
+      "Jupiter",
+      "George Orwell",
+      "Allemand",
+      "Fe"
+    ],
+    "answer": 2,
+    "explanation": "L’allemand est la langue officielle principale de l’Autriche.",
+    "difficulty": "medium",
+    "id": "q_075_quelle_langue_est_principalement_parlee_en"
+  },
+  {
+    "question": "Quelle ville antique a été ensevelie par le Vésuve en 79 ?",
+    "options": [
+      "Louis XIV",
+      "Marie Curie",
+      "Pompéi",
+      "Les Romains"
+    ],
+    "answer": 2,
+    "explanation": "Pompéi a été ensevelie lors de l’éruption du Vésuve.",
+    "difficulty": "medium",
+    "id": "q_076_quelle_ville_antique_a_ete_ensevelie_par_l"
+  },
+  {
+    "question": "Combien de chromosomes possède normalement une cellule humaine non sexuelle ?",
+    "options": [
+      "46",
+      "Foie",
+      "Dmitri Mendeleïev",
+      "12"
+    ],
+    "answer": 0,
+    "explanation": "Une cellule somatique humaine possède normalement 46 chromosomes.",
+    "difficulty": "medium",
+    "id": "q_077_combien_de_chromosomes_possede_normalement"
+  },
+  {
+    "question": "Quelle chaîne de montagnes sépare en partie la France et l’Espagne ?",
+    "options": [
+      "Les Pyrénées",
+      "Le Sahara",
+      "Nouvelle-Zélande",
+      "Détroit de Gibraltar"
+    ],
+    "answer": 0,
+    "explanation": "Les Pyrénées forment une frontière naturelle entre les deux pays.",
+    "difficulty": "medium",
+    "id": "q_078_quelle_chaine_de_montagnes_separe_en_parti"
+  },
+  {
+    "question": "Quelle est l’unité de l’intensité électrique ?",
+    "options": [
+      "Foie",
+      "Ampère",
+      "Fe",
+      "Turquie"
+    ],
+    "answer": 1,
+    "explanation": "L’intensité électrique se mesure en ampères.",
+    "difficulty": "medium",
+    "id": "q_079_quelle_est_lunite_de_lintensite_electrique"
+  },
+  {
+    "question": "Quelle est la racine carrée de 144 ?",
+    "options": [
+      "Japon",
+      "Turquie",
+      "Allemand",
+      "12"
+    ],
+    "answer": 3,
+    "explanation": "Douze multiplié par douze égale 144.",
+    "difficulty": "medium",
+    "id": "q_080_quelle_est_la_racine_carree_de_144"
+  },
+  {
+    "question": "Quelle planète est la plus proche du Soleil ?",
+    "options": [
+      "ADN",
+      "Isaac Newton",
+      "Mercure",
+      "Vaporisation"
+    ],
+    "answer": 2,
+    "explanation": "Mercure est la planète la plus proche du Soleil.",
+    "difficulty": "medium",
+    "id": "q_081_quelle_planete_est_la_plus_proche_du_solei"
+  },
+  {
+    "question": "Quel mur est tombé en novembre 1989 ?",
+    "options": [
+      "Les Égyptiens",
+      "Le mur de Berlin",
+      "Marie Curie",
+      "Pompéi"
+    ],
+    "answer": 1,
+    "explanation": "Le mur de Berlin est tombé en novembre 1989.",
+    "difficulty": "medium",
+    "id": "q_082_quel_mur_est_tombe_en_novembre_1989"
+  },
+  {
+    "question": "Qui a écrit Les Misérables ?",
+    "options": [
+      "Pablo Picasso",
+      "Wolfgang Amadeus Mozart",
+      "Victor Hugo",
+      "Thor"
+    ],
+    "answer": 2,
+    "explanation": "Les Misérables est un roman de Victor Hugo.",
+    "difficulty": "medium",
+    "id": "q_083_qui_a_ecrit_les_miserables"
+  },
+  {
+    "question": "Quelle est la capitale de la Bulgarie ?",
+    "options": [
+      "Wellington",
+      "Bucarest",
+      "Sofia",
+      "Reykjavik"
+    ],
+    "answer": 2,
+    "explanation": "Sofia est la capitale de la Bulgarie.",
+    "difficulty": "medium",
+    "id": "q_084_quelle_est_la_capitale_de_la_bulgarie"
+  },
+  {
+    "question": "Quel type de roche se forme par refroidissement du magma ?",
+    "options": [
+      "Vaporisation",
+      "Roche magmatique",
+      "Isaac Newton",
+      "Échelle de Mohs"
+    ],
+    "answer": 1,
+    "explanation": "Les roches magmatiques proviennent du refroidissement du magma.",
+    "difficulty": "medium",
+    "id": "q_085_quel_type_de_roche_se_forme_par_refroidiss"
+  },
+  {
+    "question": "Quelle est la capitale de l’Islande ?",
+    "options": [
+      "Sofia",
+      "Budapest",
+      "Reykjavik",
+      "Bucarest"
+    ],
+    "answer": 2,
+    "explanation": "Reykjavik est la capitale de l’Islande.",
+    "difficulty": "medium",
+    "id": "q_086_quelle_est_la_capitale_de_lislande"
+  },
+  {
+    "question": "Quelle est la capitale de la Nouvelle-Zélande ?",
+    "options": [
+      "Helsinki",
+      "Reykjavik",
+      "Santiago",
+      "Wellington"
+    ],
+    "answer": 3,
+    "explanation": "Wellington est la capitale de la Nouvelle-Zélande.",
+    "difficulty": "medium",
+    "id": "q_087_quelle_est_la_capitale_de_la_nouvelle_zela"
+  },
+  {
+    "question": "Qui fut la première femme à obtenir un prix Nobel ?",
+    "options": [
+      "Le mur de Berlin",
+      "Pompéi",
+      "Marie Curie",
+      "Christophe Colomb"
+    ],
+    "answer": 2,
+    "explanation": "Marie Curie fut la première femme lauréate d’un prix Nobel.",
+    "difficulty": "medium",
+    "id": "q_088_qui_fut_la_premiere_femme_a_obtenir_un_pri"
+  },
+  {
+    "question": "Quel roi français était surnommé le Roi-Soleil ?",
+    "options": [
+      "Les Romains",
+      "Pompéi",
+      "Marie Curie",
+      "Louis XIV"
+    ],
+    "answer": 3,
+    "explanation": "Louis XIV était surnommé le Roi-Soleil.",
+    "difficulty": "medium",
+    "id": "q_089_quel_roi_francais_etait_surnomme_le_roi_so"
+  },
+  {
+    "question": "Quel est le plus grand organe interne du corps humain ?",
+    "options": [
+      "Foie",
+      "La Loire",
+      "Alexander Fleming",
+      "Fe"
+    ],
+    "answer": 0,
+    "explanation": "Le foie est le plus grand organe interne.",
+    "difficulty": "medium",
+    "id": "q_090_quel_est_le_plus_grand_organe_interne_du_c"
+  },
+  {
+    "question": "Quelle civilisation antique utilisait les hiéroglyphes ?",
+    "options": [
+      "Les Égyptiens",
+      "Louis XIV",
+      "1789",
+      "Les Romains"
+    ],
+    "answer": 0,
+    "explanation": "Les anciens Égyptiens utilisaient les hiéroglyphes.",
+    "difficulty": "medium",
+    "id": "q_091_quelle_civilisation_antique_utilisait_les_"
+  },
+  {
+    "question": "Qui a composé La Flûte enchantée ?",
+    "options": [
+      "Wolfgang Amadeus Mozart",
+      "Thor",
+      "Victor Hugo",
+      "Poséidon"
+    ],
+    "answer": 0,
+    "explanation": "La Flûte enchantée est un opéra de Mozart.",
+    "difficulty": "medium",
+    "id": "q_092_qui_a_compose_la_flute_enchantee"
+  },
+  {
+    "question": "Quel scientifique est associé à la première classification périodique des éléments ?",
+    "options": [
+      "Petite Ourse",
+      "Turquie",
+      "Foie",
+      "Dmitri Mendeleïev"
+    ],
+    "answer": 3,
+    "explanation": "Mendeleïev a organisé les éléments dans une table périodique.",
+    "difficulty": "medium",
+    "id": "q_093_quel_scientifique_est_associe_a_la_premier"
+  },
+  {
+    "question": "Quel détroit sépare l’Espagne du Maroc ?",
+    "options": [
+      "Les Pyrénées",
+      "Détroit de Gibraltar",
+      "La Volga",
+      "Nouvelle-Zélande"
+    ],
+    "answer": 1,
+    "explanation": "Le détroit de Gibraltar sépare l’Europe de l’Afrique.",
+    "difficulty": "medium",
+    "id": "q_094_quel_detroit_separe_lespagne_du_maroc"
+  },
+  {
+    "question": "Quel navigateur a atteint les Amériques en 1492 ?",
+    "options": [
+      "Marie Curie",
+      "Les Égyptiens",
+      "1789",
+      "Christophe Colomb"
+    ],
+    "answer": 3,
+    "explanation": "Christophe Colomb a atteint les Caraïbes en 1492.",
+    "difficulty": "medium",
+    "id": "q_095_quel_navigateur_a_atteint_les_ameriques_en"
+  },
+  {
+    "question": "Quel scientifique a formulé les lois du mouvement et de la gravitation universelle ?",
+    "options": [
+      "Vaporisation",
+      "Mercure",
+      "Isaac Newton",
+      "Na"
+    ],
+    "answer": 2,
+    "explanation": "Isaac Newton a formulé ces lois.",
+    "difficulty": "medium",
+    "id": "q_096_quel_scientifique_a_formule_les_lois_du_mo"
+  },
+  {
+    "question": "Quelle est la capitale de la Hongrie ?",
+    "options": [
+      "Prague",
+      "Budapest",
+      "Bucarest",
+      "Reykjavik"
+    ],
+    "answer": 1,
+    "explanation": "Budapest est la capitale de la Hongrie.",
+    "difficulty": "medium",
+    "id": "q_097_quelle_est_la_capitale_de_la_hongrie"
+  },
+  {
+    "question": "Quel désert couvre une grande partie du nord de l’Afrique ?",
+    "options": [
+      "Le Sahara",
+      "Nouvelle-Zélande",
+      "Détroit de Gibraltar",
+      "La Volga"
+    ],
+    "answer": 0,
+    "explanation": "Le Sahara s’étend sur une grande partie de l’Afrique du Nord.",
+    "difficulty": "medium",
+    "id": "q_098_quel_desert_couvre_une_grande_partie_du_no"
+  },
+  {
+    "question": "Dans la mythologie nordique, quel dieu manie le marteau Mjöllnir ?",
+    "options": [
+      "William Shakespeare",
+      "Victor Hugo",
+      "Poséidon",
+      "Thor"
+    ],
+    "answer": 3,
+    "explanation": "Thor manie le marteau Mjöllnir.",
+    "difficulty": "medium",
+    "id": "q_099_dans_la_mythologie_nordique_quel_dieu_mani"
+  },
+  {
+    "question": "Quel est le plus long fleuve d’Europe ?",
+    "options": [
+      "La Volga",
+      "Le Sahara",
+      "Nouvelle-Zélande",
+      "Les Pyrénées"
+    ],
+    "answer": 0,
+    "explanation": "La Volga est le plus long fleuve d’Europe.",
+    "difficulty": "medium",
+    "id": "q_100_quel_est_le_plus_long_fleuve_deurope"
+  },
+  {
+    "question": "Quelle est la capitale du Kirghizistan ?",
+    "options": [
+      "Oulan-Bator",
+      "Chișinău",
+      "Thimphou",
+      "Bichkek"
+    ],
+    "answer": 3,
+    "explanation": "Bichkek est la capitale du Kirghizistan.",
+    "difficulty": "hard",
+    "id": "q_101_quelle_est_la_capitale_du_kirghizistan"
+  },
+  {
+    "question": "Quelle est la capitale du Bhoutan ?",
+    "options": [
+      "Thimphou",
+      "Bichkek",
+      "Chișinău",
+      "Windhoek"
+    ],
+    "answer": 0,
+    "explanation": "Thimphou est la capitale du Bhoutan.",
+    "difficulty": "hard",
+    "id": "q_102_quelle_est_la_capitale_du_bhoutan"
+  },
+  {
+    "question": "Quelle lune de Saturne possède une atmosphère dense ?",
+    "options": [
+      "Jérôme Bosch",
+      "Titan",
+      "Bosphore",
+      "Emmanuel Kant"
+    ],
+    "answer": 1,
+    "explanation": "Titan possède une atmosphère dense riche en azote.",
+    "difficulty": "hard",
+    "id": "q_103_quelle_lune_de_saturne_possede_une_atmosph"
+  },
+  {
+    "question": "Quel mouvement artistique est associé à Claude Monet ?",
+    "options": [
+      "Impressionnisme",
+      "Charles Baudelaire",
+      "Primo Levi",
+      "Antoni Gaudí"
+    ],
+    "answer": 0,
+    "explanation": "Claude Monet est l’une des figures majeures de l’impressionnisme.",
+    "difficulty": "hard",
+    "id": "q_104_quel_mouvement_artistique_est_associe_a_cl"
+  },
+  {
+    "question": "Quel fleuve traverse Budapest ?",
+    "options": [
+      "Le Danube",
+      "Méridien de Greenwich",
+      "Hongrois",
+      "Lac Victoria"
+    ],
+    "answer": 0,
+    "explanation": "Le Danube traverse Budapest.",
+    "difficulty": "hard",
+    "id": "q_105_quel_fleuve_traverse_budapest"
+  },
+  {
+    "question": "Quelle est l’unité SI de l’intensité lumineuse ?",
+    "options": [
+      "Aztèques",
+      "Traité de Versailles",
+      "Candela",
+      "Veines pulmonaires"
+    ],
+    "answer": 2,
+    "explanation": "La candela est l’unité SI d’intensité lumineuse.",
+    "difficulty": "hard",
+    "id": "q_106_quelle_est_lunite_si_de_lintensite_lumineu"
+  },
+  {
+    "question": "Quel scientifique a établi les lois de l’hérédité grâce à des expériences sur les pois ?",
+    "options": [
+      "Calcite",
+      "Mitose",
+      "Gregor Mendel",
+      "Parasite"
+    ],
+    "answer": 2,
+    "explanation": "Gregor Mendel est considéré comme un fondateur de la génétique.",
+    "difficulty": "hard",
+    "id": "q_107_quel_scientifique_a_etabli_les_lois_de_lhe"
+  },
+  {
+    "question": "Quel pharaon est associé à une tombe découverte presque intacte en 1922 ?",
+    "options": [
+      "Toutânkhamon",
+      "Dynastie Ming",
+      "Justinien Ier",
+      "Waterloo"
+    ],
+    "answer": 0,
+    "explanation": "La tombe de Toutânkhamon a été découverte par Howard Carter.",
+    "difficulty": "hard",
+    "id": "q_108_quel_pharaon_est_associe_a_une_tombe_decou"
+  },
+  {
+    "question": "Qui a écrit Si c’est un homme ?",
+    "options": [
+      "Impressionnisme",
+      "Diego Vélasquez",
+      "Albert Camus",
+      "Primo Levi"
+    ],
+    "answer": 3,
+    "explanation": "Si c’est un homme est un récit de Primo Levi.",
+    "difficulty": "hard",
+    "id": "q_109_qui_a_ecrit_si_cest_un_homme"
+  },
+  {
+    "question": "Quel est le plus grand lac d’Afrique par superficie ?",
+    "options": [
+      "10",
+      "Lac Victoria",
+      "Le Danube",
+      "Méridien de Paris"
+    ],
+    "answer": 1,
+    "explanation": "Le lac Victoria est le plus vaste lac d’Afrique par superficie.",
+    "difficulty": "hard",
+    "id": "q_110_quel_est_le_plus_grand_lac_dafrique_par_su"
+  },
+  {
+    "question": "Quel écrivain a créé le personnage de Meursault ?",
+    "options": [
+      "Mikhaïl Boulgakov",
+      "Albert Camus",
+      "Primo Levi",
+      "Charles Baudelaire"
+    ],
+    "answer": 1,
+    "explanation": "Meursault est le narrateur de L’Étranger d’Albert Camus.",
+    "difficulty": "hard",
+    "id": "q_111_quel_ecrivain_a_cree_le_personnage_de_meur"
+  },
+  {
+    "question": "Comment appelle-t-on un organisme qui vit aux dépens d’un autre ?",
+    "options": [
+      "Parasite",
+      "Gregor Mendel",
+      "Mitose",
+      "Tungstène"
+    ],
+    "answer": 0,
+    "explanation": "Un parasite tire profit d’un organisme hôte.",
+    "difficulty": "hard",
+    "id": "q_112_comment_appelle_t_on_un_organisme_qui_vit_"
+  },
+  {
+    "question": "Quelle dynastie chinoise a fait construire une grande partie de la Cité interdite ?",
+    "options": [
+      "Dynastie Ming",
+      "Waterloo",
+      "Toutânkhamon",
+      "Paix de Westphalie"
+    ],
+    "answer": 0,
+    "explanation": "La Cité interdite fut construite principalement sous les Ming.",
+    "difficulty": "hard",
+    "id": "q_113_quelle_dynastie_chinoise_a_fait_construire"
+  },
+  {
+    "question": "Quelle particule porte une charge électrique négative ?",
+    "options": [
+      "Troposphère",
+      "Électron",
+      "Gregor Mendel",
+      "Mitose"
+    ],
+    "answer": 1,
+    "explanation": "L’électron porte une charge négative.",
+    "difficulty": "hard",
+    "id": "q_114_quelle_particule_porte_une_charge_electriq"
+  },
+  {
+    "question": "Quel vaisseau ramène le sang oxygéné des poumons vers le cœur ?",
+    "options": [
+      "Gabriel García Márquez",
+      "Candela",
+      "Veines pulmonaires",
+      "Basque"
+    ],
+    "answer": 2,
+    "explanation": "Les veines pulmonaires ramènent le sang oxygéné vers l’oreillette gauche.",
+    "difficulty": "hard",
+    "id": "q_115_quel_vaisseau_ramene_le_sang_oxygene_des_p"
+  },
+  {
+    "question": "Quel est le lac le plus profond du monde ?",
+    "options": [
+      "Lac Baïkal",
+      "Gabriel García Márquez",
+      "Emmanuel Kant",
+      "Jérôme Bosch"
+    ],
+    "answer": 0,
+    "explanation": "Le lac Baïkal est le lac le plus profond du monde.",
+    "difficulty": "hard",
+    "id": "q_116_quel_est_le_lac_le_plus_profond_du_monde"
+  },
+  {
+    "question": "Quelle est la capitale de la Moldavie ?",
+    "options": [
+      "Paramaribo",
+      "Bichkek",
+      "Chișinău",
+      "Thimphou"
+    ],
+    "answer": 2,
+    "explanation": "Chișinău est la capitale de la Moldavie.",
+    "difficulty": "hard",
+    "id": "q_117_quelle_est_la_capitale_de_la_moldavie"
+  },
+  {
+    "question": "Quelle est la capitale de la Namibie ?",
+    "options": [
+      "Bichkek",
+      "Chișinău",
+      "Windhoek",
+      "Bandar Seri Begawan"
+    ],
+    "answer": 2,
+    "explanation": "Windhoek est la capitale de la Namibie.",
+    "difficulty": "hard",
+    "id": "q_118_quelle_est_la_capitale_de_la_namibie"
+  },
+  {
+    "question": "Quelle est la capitale du Brunei ?",
+    "options": [
+      "Bandar Seri Begawan",
+      "Paramaribo",
+      "Bichkek",
+      "Chișinău"
+    ],
+    "answer": 0,
+    "explanation": "Bandar Seri Begawan est la capitale du Brunei.",
+    "difficulty": "hard",
+    "id": "q_119_quelle_est_la_capitale_du_brunei"
+  },
+  {
+    "question": "Quelle est la capitale de la Mongolie ?",
+    "options": [
+      "Paramaribo",
+      "Thimphou",
+      "Oulan-Bator",
+      "Bandar Seri Begawan"
+    ],
+    "answer": 2,
+    "explanation": "Oulan-Bator est la capitale de la Mongolie.",
+    "difficulty": "hard",
+    "id": "q_120_quelle_est_la_capitale_de_la_mongolie"
+  },
+  {
+    "question": "Quel minéral constitue principalement la craie ?",
+    "options": [
+      "Tungstène",
+      "Gregor Mendel",
+      "Parasite",
+      "Calcite"
+    ],
+    "answer": 3,
+    "explanation": "La craie est principalement composée de calcite.",
+    "difficulty": "hard",
+    "id": "q_121_quel_mineral_constitue_principalement_la_c"
+  },
+  {
+    "question": "Quel est le nom de la couche atmosphérique où se produisent la plupart des phénomènes météo ?",
+    "options": [
+      "Électron",
+      "Troposphère",
+      "Parasite",
+      "Calcite"
+    ],
+    "answer": 1,
+    "explanation": "La météo se déroule principalement dans la troposphère.",
+    "difficulty": "hard",
+    "id": "q_122_quel_est_le_nom_de_la_couche_atmospherique"
+  },
+  {
+    "question": "Quel empereur byzantin a fait compiler le Corpus juris civilis ?",
+    "options": [
+      "Dynastie Ming",
+      "Waterloo",
+      "Justinien Ier",
+      "Paix de Westphalie"
+    ],
+    "answer": 2,
+    "explanation": "Justinien Ier a lancé cette grande compilation du droit romain.",
+    "difficulty": "hard",
+    "id": "q_123_quel_empereur_byzantin_a_fait_compiler_le_"
+  },
+  {
+    "question": "Quel physicien a proposé le principe d’incertitude ?",
+    "options": [
+      "Mitose",
+      "Gregor Mendel",
+      "Werner Heisenberg",
+      "Calcite"
+    ],
+    "answer": 2,
+    "explanation": "Werner Heisenberg a formulé le principe d’incertitude.",
+    "difficulty": "hard",
+    "id": "q_124_quel_physicien_a_propose_le_principe_dince"
+  },
+  {
+    "question": "Quel détroit relie la mer Noire à la mer de Marmara ?",
+    "options": [
+      "Titan",
+      "Candela",
+      "Traité de Versailles",
+      "Bosphore"
+    ],
+    "answer": 3,
+    "explanation": "Le Bosphore relie la mer Noire à la mer de Marmara.",
+    "difficulty": "hard",
+    "id": "q_125_quel_detroit_relie_la_mer_noire_a_la_mer_d"
+  },
+  {
+    "question": "Quel philosophe a écrit Critique de la raison pure ?",
+    "options": [
+      "Or",
+      "Aztèques",
+      "Emmanuel Kant",
+      "Gabriel García Márquez"
+    ],
+    "answer": 2,
+    "explanation": "Critique de la raison pure est une œuvre d’Emmanuel Kant.",
+    "difficulty": "hard",
+    "id": "q_126_quel_philosophe_a_ecrit_critique_de_la_rai"
+  },
+  {
+    "question": "Combien de faces possède un dodécaèdre régulier ?",
+    "options": [
+      "20",
+      "12",
+      "10",
+      "Hongrois"
+    ],
+    "answer": 1,
+    "explanation": "Un dodécaèdre possède douze faces.",
+    "difficulty": "hard",
+    "id": "q_127_combien_de_faces_possede_un_dodecaedre_reg"
+  },
+  {
+    "question": "Quelle civilisation avait pour capitale Tenochtitlan ?",
+    "options": [
+      "Basque",
+      "Bosphore",
+      "Aztèques",
+      "Emmanuel Kant"
+    ],
+    "answer": 2,
+    "explanation": "Tenochtitlan était la capitale de l’Empire aztèque.",
+    "difficulty": "hard",
+    "id": "q_128_quelle_civilisation_avait_pour_capitale_te"
+  },
+  {
+    "question": "Quel peintre est associé au tableau Les Ménines ?",
+    "options": [
+      "Charles Baudelaire",
+      "Diego Vélasquez",
+      "Antoni Gaudí",
+      "Mikhaïl Boulgakov"
+    ],
+    "answer": 1,
+    "explanation": "Les Ménines est une œuvre de Diego Vélasquez.",
+    "difficulty": "hard",
+    "id": "q_129_quel_peintre_est_associe_au_tableau_les_me"
+  },
+  {
+    "question": "Quel élément chimique possède le numéro atomique 79 ?",
+    "options": [
+      "6,022 × 10²³",
+      "Veines pulmonaires",
+      "Or",
+      "Bosphore"
+    ],
+    "answer": 2,
+    "explanation": "L’or possède le numéro atomique 79.",
+    "difficulty": "hard",
+    "id": "q_130_quel_element_chimique_possede_le_numero_at"
+  },
+  {
+    "question": "Quelle est la capitale du Suriname ?",
+    "options": [
+      "Chișinău",
+      "Paramaribo",
+      "Bandar Seri Begawan",
+      "Thimphou"
+    ],
+    "answer": 1,
+    "explanation": "Paramaribo est la capitale du Suriname.",
+    "difficulty": "hard",
+    "id": "q_131_quelle_est_la_capitale_du_suriname"
+  },
+  {
+    "question": "Qui a écrit Cent ans de solitude ?",
+    "options": [
+      "Veines pulmonaires",
+      "Gabriel García Márquez",
+      "Ouagadougou",
+      "Bosphore"
+    ],
+    "answer": 1,
+    "explanation": "Cent ans de solitude est un roman de Gabriel García Márquez.",
+    "difficulty": "hard",
+    "id": "q_132_qui_a_ecrit_cent_ans_de_solitude"
+  },
+  {
+    "question": "Quel traité signé en 1919 règle notamment la paix entre l’Allemagne et les Alliés ?",
+    "options": [
+      "Ouagadougou",
+      "Traité de Versailles",
+      "Lac Baïkal",
+      "Aztèques"
+    ],
+    "answer": 1,
+    "explanation": "Le traité de Versailles a été signé en 1919.",
+    "difficulty": "hard",
+    "id": "q_133_quel_traite_signe_en_1919_regle_notamment_"
+  },
+  {
+    "question": "Quel architecte a conçu la Casa Batlló à Barcelone ?",
+    "options": [
+      "Albert Camus",
+      "Mikhaïl Boulgakov",
+      "Antoni Gaudí",
+      "Charles Baudelaire"
+    ],
+    "answer": 2,
+    "explanation": "La Casa Batlló est une œuvre d’Antoni Gaudí.",
+    "difficulty": "hard",
+    "id": "q_134_quel_architecte_a_concu_la_casa_batllo_a_b"
+  },
+  {
+    "question": "Quel méridien sert de référence pour les longitudes ?",
+    "options": [
+      "10",
+      "Méridien de Paris",
+      "Méridien de Greenwich",
+      "20"
+    ],
+    "answer": 2,
+    "explanation": "Les longitudes sont mesurées à partir du méridien de Greenwich.",
+    "difficulty": "hard",
+    "id": "q_135_quel_meridien_sert_de_reference_pour_les_l"
+  },
+  {
+    "question": "Quelle bataille de 1815 marque la défaite finale de Napoléon Ier ?",
+    "options": [
+      "Waterloo",
+      "Dynastie Ming",
+      "Les Phéniciens",
+      "Justinien Ier"
+    ],
+    "answer": 0,
+    "explanation": "Napoléon est définitivement vaincu à Waterloo en 1815.",
+    "difficulty": "hard",
+    "id": "q_136_quelle_bataille_de_1815_marque_la_defaite_"
+  },
+  {
+    "question": "Quelle langue appartient à la famille finno-ougrienne ?",
+    "options": [
+      "Hongrois",
+      "8",
+      "Équateur",
+      "10"
+    ],
+    "answer": 0,
+    "explanation": "Le hongrois appartient à la famille ouralienne, branche finno-ougrienne.",
+    "difficulty": "hard",
+    "id": "q_137_quelle_langue_appartient_a_la_famille_finn"
+  },
+  {
+    "question": "Quelle est la capitale du Burkina Faso ?",
+    "options": [
+      "Candela",
+      "Ouagadougou",
+      "Traité de Versailles",
+      "Or"
+    ],
+    "answer": 1,
+    "explanation": "Ouagadougou est la capitale du Burkina Faso.",
+    "difficulty": "hard",
+    "id": "q_138_quelle_est_la_capitale_du_burkina_faso"
+  },
+  {
+    "question": "Quelle langue européenne est généralement considérée comme un isolat linguistique ?",
+    "options": [
+      "Basque",
+      "Jérôme Bosch",
+      "Bosphore",
+      "Titan"
+    ],
+    "answer": 0,
+    "explanation": "Le basque ne possède pas de parenté démontrée avec les autres langues vivantes.",
+    "difficulty": "hard",
+    "id": "q_139_quelle_langue_europeenne_est_generalement_"
+  },
+  {
+    "question": "Quel peuple fonda la cité de Carthage ?",
+    "options": [
+      "Les Phéniciens",
+      "Dynastie Ming",
+      "Justinien Ier",
+      "Waterloo"
+    ],
+    "answer": 0,
+    "explanation": "Carthage fut fondée par des colons phéniciens.",
+    "difficulty": "hard",
+    "id": "q_140_quel_peuple_fonda_la_cite_de_carthage"
+  },
+  {
+    "question": "Quel théorème relie les longueurs des côtés d’un triangle rectangle ?",
+    "options": [
+      "Ouagadougou",
+      "Or",
+      "Gabriel García Márquez",
+      "Théorème de Pythagore"
+    ],
+    "answer": 3,
+    "explanation": "Le théorème de Pythagore relie les deux côtés de l’angle droit à l’hypoténuse.",
+    "difficulty": "hard",
+    "id": "q_141_quel_theoreme_relie_les_longueurs_des_cote"
+  },
+  {
+    "question": "Quel pays enclavé se trouve entièrement à l’intérieur de l’Afrique du Sud ?",
+    "options": [
+      "Lesotho",
+      "Équateur",
+      "8",
+      "10"
+    ],
+    "answer": 0,
+    "explanation": "Le Lesotho est enclavé dans l’Afrique du Sud.",
+    "difficulty": "hard",
+    "id": "q_142_quel_pays_enclave_se_trouve_entierement_a_"
+  },
+  {
+    "question": "Quel traité de 1648 met fin à la guerre de Trente Ans ?",
+    "options": [
+      "Toutânkhamon",
+      "Waterloo",
+      "Jean sans Terre",
+      "Paix de Westphalie"
+    ],
+    "answer": 3,
+    "explanation": "Les traités de Westphalie mettent fin à la guerre de Trente Ans.",
+    "difficulty": "hard",
+    "id": "q_143_quel_traite_de_1648_met_fin_a_la_guerre_de"
+  },
+  {
+    "question": "Quel élément chimique possède le numéro atomique 74 ?",
+    "options": [
+      "Werner Heisenberg",
+      "Troposphère",
+      "Tungstène",
+      "Calcite"
+    ],
+    "answer": 2,
+    "explanation": "Le tungstène possède le numéro atomique 74.",
+    "difficulty": "hard",
+    "id": "q_144_quel_element_chimique_possede_le_numero_at"
+  },
+  {
+    "question": "Quel poète a écrit Les Fleurs du mal ?",
+    "options": [
+      "Mikhaïl Boulgakov",
+      "Charles Baudelaire",
+      "Albert Camus",
+      "Primo Levi"
+    ],
+    "answer": 1,
+    "explanation": "Les Fleurs du mal est un recueil de Baudelaire.",
+    "difficulty": "hard",
+    "id": "q_145_quel_poete_a_ecrit_les_fleurs_du_mal"
+  },
+  {
+    "question": "Quel souverain anglais a signé la Magna Carta en 1215 ?",
+    "options": [
+      "Waterloo",
+      "Les Phéniciens",
+      "Toutânkhamon",
+      "Jean sans Terre"
+    ],
+    "answer": 3,
+    "explanation": "Jean sans Terre a scellé la Magna Carta en 1215.",
+    "difficulty": "hard",
+    "id": "q_146_quel_souverain_anglais_a_signe_la_magna_ca"
+  },
+  {
+    "question": "Quel peintre a réalisé Le Jardin des délices ?",
+    "options": [
+      "6,022 × 10²³",
+      "Or",
+      "Jérôme Bosch",
+      "Veines pulmonaires"
+    ],
+    "answer": 2,
+    "explanation": "Le Jardin des délices est attribué à Jérôme Bosch.",
+    "difficulty": "hard",
+    "id": "q_147_quel_peintre_a_realise_le_jardin_des_delic"
+  },
+  {
+    "question": "Quelle valeur approche la constante d’Avogadro ?",
+    "options": [
+      "6,022 × 10²³",
+      "Emmanuel Kant",
+      "Basque",
+      "Gabriel García Márquez"
+    ],
+    "answer": 0,
+    "explanation": "La constante d’Avogadro vaut environ 6,022 × 10²³ par mole.",
+    "difficulty": "hard",
+    "id": "q_148_quelle_valeur_approche_la_constante_davoga"
+  },
+  {
+    "question": "Qui a écrit Le Maître et Marguerite ?",
+    "options": [
+      "Albert Camus",
+      "Diego Vélasquez",
+      "Mikhaïl Boulgakov",
+      "Primo Levi"
+    ],
+    "answer": 2,
+    "explanation": "Le Maître et Marguerite est de Mikhaïl Boulgakov.",
+    "difficulty": "hard",
+    "id": "q_149_qui_a_ecrit_le_maitre_et_marguerite"
+  },
+  {
+    "question": "Comment appelle-t-on la division cellulaire produisant deux cellules identiques ?",
+    "options": [
+      "Werner Heisenberg",
+      "Parasite",
+      "Troposphère",
+      "Mitose"
+    ],
+    "answer": 3,
+    "explanation": "La mitose produit deux cellules filles génétiquement identiques.",
+    "difficulty": "hard",
+    "id": "q_150_comment_appelle_t_on_la_division_cellulair"
+  }
+]

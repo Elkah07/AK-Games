@@ -1,0 +1,2642 @@
+[
+  {
+    "id": "connais_001",
+    "question": "Si je commande à manger après une soirée, qu’est-ce que je choisis le plus probablement?",
+    "options": [
+      "Un kebab",
+      "Une pizza",
+      "Un burger",
+      "Des sushis"
+    ],
+    "pack": "food"
+  },
+  {
+    "id": "connais_002",
+    "question": "Quand mon réveil sonne, quelle est ma réaction la plus probable?",
+    "options": [
+      "Je me lève tout de suite",
+      "Je repousse une fois",
+      "Je repousse jusqu’à l’urgence",
+      "Je l’éteins sans m’en souvenir"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_003",
+    "question": "Quelle application est-ce que j’ouvre le plus souvent sans même y penser?",
+    "options": [
+      "Mes messages",
+      "Un réseau social",
+      "Une appli de vidéos",
+      "La météo"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_004",
+    "question": "Quand je rentre chez moi, qu’est-ce que je fais généralement en premier?",
+    "options": [
+      "Je retire mes chaussures",
+      "Je regarde mon téléphone",
+      "Je vais boire ou manger",
+      "Je m’affale quelque part"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_005",
+    "question": "Quel objet ai-je le plus de chances d’oublier en sortant?",
+    "options": [
+      "Mes clés",
+      "Mon chargeur",
+      "Mes écouteurs",
+      "Une bouteille d’eau"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_006",
+    "question": "À quelle heure suis-je le plus agréable à vivre?",
+    "options": [
+      "Tôt le matin",
+      "En fin de matinée",
+      "En soirée",
+      "Très tard la nuit"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_007",
+    "question": "Quand je dois choisir un film, comment est-ce que je m’y prends?",
+    "options": [
+      "Je choisis très vite",
+      "Je regarde les bandes-annonces",
+      "Je lis les avis",
+      "Je fais défiler sans décider"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_008",
+    "question": "Quel type de message est-ce que j’envoie le plus naturellement?",
+    "options": [
+      "Des messages courts",
+      "De longs pavés",
+      "Des vocaux",
+      "Des mèmes ou des GIF"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_009",
+    "question": "Quand ma batterie passe sous les 10 %, que fais-je?",
+    "options": [
+      "Je cherche immédiatement un chargeur",
+      "Je passe en économie d’énergie",
+      "Je continue normalement",
+      "Je panique mais je ne change rien"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_010",
+    "question": "Quelle boisson est-ce que je choisis le plus souvent au restaurant?",
+    "options": [
+      "De l’eau",
+      "Un soda",
+      "Un jus ou un mocktail",
+      "Une boisson chaude"
+    ],
+    "pack": "food"
+  },
+  {
+    "id": "connais_012",
+    "question": "Comment est généralement mon espace personnel?",
+    "options": [
+      "Très bien rangé",
+      "Rangé en apparence",
+      "En chaos organisé",
+      "Complètement imprévisible"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_013",
+    "question": "Quel vêtement est-ce que je pourrais porter trois jours de suite sans honte?",
+    "options": [
+      "Un sweat",
+      "Un jean",
+      "Un jogging",
+      "Une veste préférée"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_014",
+    "question": "Quand je fais une liste de courses, comment cela finit-il?",
+    "options": [
+      "Je respecte tout",
+      "J’oublie un article",
+      "J’achète plein de choses en plus",
+      "Je perds ou j’oublie la liste"
+    ],
+    "pack": "food"
+  },
+  {
+    "id": "connais_015",
+    "question": "Quel bruit est-ce que je supporte le moins?",
+    "options": [
+      "Quelqu’un qui mâche",
+      "Une alarme répétitive",
+      "Un stylo qui clique",
+      "Une vidéo jouée trop fort"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_016",
+    "question": "Quelle température est idéale pour que je dorme bien?",
+    "options": [
+      "Une chambre bien fraîche",
+      "Une température moyenne",
+      "Une chambre chaude",
+      "Peu importe avec une grosse couette"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_018",
+    "question": "Comment est-ce que je mange mes frites le plus souvent?",
+    "options": [
+      "Avec du ketchup",
+      "Avec de la mayonnaise",
+      "Avec une autre sauce",
+      "Sans sauce"
+    ],
+    "pack": "food"
+  },
+  {
+    "id": "connais_019",
+    "question": "Quelle partie de la journée ai-je le plus tendance à perdre sur mon téléphone?",
+    "options": [
+      "Le réveil",
+      "La pause de midi",
+      "Le début de soirée",
+      "Juste avant de dormir"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_020",
+    "question": "Quand je reçois un colis, que fais-je?",
+    "options": [
+      "Je l’ouvre immédiatement",
+      "J’attends d’être tranquille",
+      "Je filme ou photographie l’ouverture",
+      "Je le laisse traîner un moment"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_021",
+    "question": "Si je dois faire le ménage, par quoi est-ce que je commence?",
+    "options": [
+      "La cuisine",
+      "La salle de bain",
+      "Le sol",
+      "Je commence par déplacer le désordre"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_022",
+    "question": "Quelle petite chose peut me mettre de mauvaise humeur très vite?",
+    "options": [
+      "Avoir faim",
+      "Être en retard",
+      "Un problème de transport",
+      "Une connexion qui ne fonctionne pas"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_023",
+    "question": "Quand je suis malade, comment est-ce que je me comporte?",
+    "options": [
+      "Je me repose sagement",
+      "Je me plains beaucoup",
+      "Je continue comme si de rien n’était",
+      "Je cherche tous mes symptômes"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_024",
+    "question": "Quel est mon rapport aux notifications?",
+    "options": [
+      "Je les ouvre tout de suite",
+      "Je les laisse s’accumuler",
+      "Je coupe presque tout",
+      "Je lis sans répondre"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_025",
+    "question": "Quand je trouve une chanson que j’adore, que fais-je?",
+    "options": [
+      "Je l’écoute en boucle",
+      "Je l’ajoute à toutes mes playlists",
+      "Je l’envoie à tout le monde",
+      "Je la garde secrètement pour moi"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_026",
+    "question": "Quand quelqu’un raconte une histoire beaucoup trop longue, que fais-je généralement?",
+    "options": [
+      "J’écoute jusqu’au bout",
+      "Je pose plein de questions",
+      "Je décroche discrètement",
+      "Je coupe pour aller à l’essentiel"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_027",
+    "question": "Dans un groupe où je connais peu de monde, comment suis-je au début?",
+    "options": [
+      "Très sociable",
+      "Je commence par observer",
+      "Je reste avec la personne que je connais",
+      "Je fais de l’humour pour briser la glace"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_028",
+    "question": "Quand un débat commence, quel rôle est-ce que je prends?",
+    "options": [
+      "Je défends fortement mon avis",
+      "Je cherche le compromis",
+      "Je provoque pour rire",
+      "J’écoute avant de parler"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_029",
+    "question": "Si quelqu’un annule au dernier moment, quelle est ma vraie réaction?",
+    "options": [
+      "Je suis soulagé·e",
+      "Je suis déçu·e mais je comprends",
+      "Je suis franchement agacé·e",
+      "Je propose immédiatement un autre plan"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_030",
+    "question": "Quand je suis vexé·e, comment cela se voit-il le plus?",
+    "options": [
+      "Je deviens silencieux",
+      "Je fais des petites piques",
+      "Je dis directement ce qui ne va pas",
+      "Je prétends que tout va bien"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_031",
+    "question": "Face à une personne qui pleure, que fais-je spontanément?",
+    "options": [
+      "Je la prends dans mes bras",
+      "Je cherche une solution",
+      "Je l’écoute sans parler",
+      "Je panique un peu"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_032",
+    "question": "Quand je rencontre quelqu’un pour la première fois, qu’est-ce que je remarque le plus?",
+    "options": [
+      "Son regard",
+      "Sa façon de parler",
+      "Son style",
+      "Son énergie générale"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_033",
+    "question": "Dans une conversation de groupe, quel comportement me ressemble le plus?",
+    "options": [
+      "Je relance toujours",
+      "Je lis sans répondre",
+      "J’envoie des blagues",
+      "Je réponds plusieurs heures plus tard"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_035",
+    "question": "Si une personne me coupe la parole plusieurs fois, que fais-je?",
+    "options": [
+      "Je le fais remarquer",
+      "Je parle plus fort",
+      "Je laisse tomber",
+      "Je plaisante dessus"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_036",
+    "question": "Quel type de personne m’épuise le plus vite?",
+    "options": [
+      "Quelqu’un de très négatif",
+      "Quelqu’un qui monopolise la parole",
+      "Quelqu’un d’indécis",
+      "Quelqu’un qui veut tout contrôler"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_037",
+    "question": "Quand quelqu’un me fait un compliment, quelle est ma réaction la plus probable?",
+    "options": [
+      "Je remercie simplement",
+      "Je minimise",
+      "Je rends immédiatement un compliment",
+      "Je suis gêné·e et je plaisante"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_038",
+    "question": "Si je sens une mauvaise ambiance dans un groupe, que fais-je?",
+    "options": [
+      "J’essaie de détendre l’atmosphère",
+      "Je demande ce qui se passe",
+      "Je reste en retrait",
+      "Je cherche une excuse pour partir"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_040",
+    "question": "Quelle place est-ce que je prends naturellement lors d’un projet de groupe?",
+    "options": [
+      "Je dirige",
+      "J’organise discrètement",
+      "Je donne les idées",
+      "Je fais ma partie au dernier moment"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_042",
+    "question": "Si deux amis se disputent devant moi, comment est-ce que je réagis?",
+    "options": [
+      "Je tente de les réconcilier",
+      "Je prends parti",
+      "Je refuse de m’en mêler",
+      "Je fais diversion"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_043",
+    "question": "Quand j’ai tort, à quel moment est-ce que je l’admets?",
+    "options": [
+      "Tout de suite",
+      "Après quelques explications",
+      "Plus tard en privé",
+      "Très difficilement"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_044",
+    "question": "Quel genre d’attention me touche le plus?",
+    "options": [
+      "Qu’on se souvienne d’un détail",
+      "Qu’on m’aide concrètement",
+      "Qu’on m’écrive un beau message",
+      "Qu’on m’organise une surprise"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_045",
+    "question": "Comment est-ce que je montre le plus souvent que j’apprécie quelqu’un?",
+    "options": [
+      "Je prends de ses nouvelles",
+      "Je rends service",
+      "Je taquine beaucoup",
+      "Je propose de passer du temps ensemble"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_046",
+    "question": "Si quelqu’un se trompe sur mon prénom, comment réagis-je?",
+    "options": [
+      "Je corrige tout de suite",
+      "J’attends que quelqu’un d’autre corrige",
+      "Je laisse passer",
+      "J’invente une blague avec le mauvais prénom"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_047",
+    "question": "Dans une soirée, à quel moment ai-je le plus de chances de vouloir partir?",
+    "options": [
+      "Avant tout le monde",
+      "Quand l’ambiance retombe",
+      "Quand je suis fatigué·e",
+      "Jamais avant la fermeture"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_048",
+    "question": "Quand un ami me demande un avis honnête, que fais-je?",
+    "options": [
+      "Je dis tout franchement",
+      "J’adoucis beaucoup",
+      "Je pose d’abord des questions",
+      "Je dis seulement ce qui peut l’aider"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_049",
+    "question": "Si je dois faire connaissance avec quelqu’un, quel sujet est-ce que j’aborde le plus facilement?",
+    "options": [
+      "Le travail ou les études",
+      "Les voyages",
+      "Les séries et la musique",
+      "Une anecdote drôle"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_050",
+    "question": "Quel petit-déjeuner me correspond le mieux?",
+    "options": [
+      "Sucré et copieux",
+      "Salé",
+      "Très léger",
+      "Je saute le petit-déjeuner"
+    ],
+    "pack": "food"
+  },
+  {
+    "id": "connais_051",
+    "question": "Quel plat pourrais-je manger plusieurs fois dans la même semaine?",
+    "options": [
+      "Des pâtes",
+      "Une pizza",
+      "Un plat asiatique",
+      "Un plat fait maison précis"
+    ],
+    "pack": "food"
+  },
+  {
+    "id": "connais_052",
+    "question": "Au restaurant, comment est-ce que je choisis mon plat?",
+    "options": [
+      "Je prends mon habitude",
+      "Je teste une nouveauté",
+      "Je copie le choix de quelqu’un",
+      "J’hésite jusqu’à la commande"
+    ],
+    "pack": "food"
+  },
+  {
+    "id": "connais_053",
+    "question": "Quel aliment ai-je le plus de chances de retirer d’un plat?",
+    "options": [
+      "Les oignons",
+      "Les tomates",
+      "Le fromage",
+      "Les herbes ou les épices"
+    ],
+    "pack": "food"
+  },
+  {
+    "id": "connais_054",
+    "question": "Devant un buffet à volonté, quelle est ma stratégie?",
+    "options": [
+      "Je goûte un peu de tout",
+      "Je remplis une énorme assiette",
+      "Je retourne plusieurs fois",
+      "Je garde surtout de la place pour le dessert"
+    ],
+    "pack": "food"
+  },
+  {
+    "id": "connais_055",
+    "question": "Quelle gourmandise me ferait le plus facilement craquer?",
+    "options": [
+      "Du chocolat",
+      "Des bonbons",
+      "Une pâtisserie",
+      "Des chips"
+    ],
+    "pack": "food"
+  },
+  {
+    "id": "connais_056",
+    "question": "Si on partage des tapas, quel comportement me ressemble?",
+    "options": [
+      "Je partage équitablement",
+      "Je protège mes préférés",
+      "Je goûte dans toutes les assiettes",
+      "Je laisse les autres choisir"
+    ],
+    "pack": "food"
+  },
+  {
+    "id": "connais_057",
+    "question": "Pour un voyage, quelle partie est-ce que je préfère?",
+    "options": [
+      "La préparation",
+      "Le trajet",
+      "La découverte sur place",
+      "Le retour avec les souvenirs"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_058",
+    "question": "Quand je prépare une valise, comment cela se passe-t-il?",
+    "options": [
+      "Tout est prêt plusieurs jours avant",
+      "Je fais une liste précise",
+      "Je la fais la veille",
+      "Je la termine juste avant de partir"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_059",
+    "question": "Quel problème de voyage me contrarierait le plus?",
+    "options": [
+      "Rater un transport",
+      "Perdre ma valise",
+      "Avoir une mauvaise chambre",
+      "Subir une météo horrible"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_060",
+    "question": "Pour des vacances, quel rythme est-ce que je préfère?",
+    "options": [
+      "Tout visiter",
+      "Alterner visites et repos",
+      "Ne presque rien prévoir",
+      "Faire la fête tous les soirs"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_061",
+    "question": "Quelle destination m’attire le plus spontanément?",
+    "options": [
+      "Une grande ville",
+      "Une île au soleil",
+      "La montagne",
+      "Un endroit froid et sauvage"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_062",
+    "question": "Dans un hôtel, quel détail est le plus important pour moi?",
+    "options": [
+      "Le lit",
+      "La propreté",
+      "Le petit-déjeuner",
+      "L’emplacement"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_063",
+    "question": "Quel moyen de transport est-ce que je choisis si le prix est similaire?",
+    "options": [
+      "Le train",
+      "L’avion",
+      "La voiture",
+      "Le bus"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_064",
+    "question": "Au cinéma, qu’est-ce qui risque le plus de m’agacer?",
+    "options": [
+      "Les gens qui parlent",
+      "Les téléphones allumés",
+      "Le bruit des emballages",
+      "Les personnes qui arrivent en retard"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_065",
+    "question": "Quel type de film est-ce que je choisis pour une soirée facile?",
+    "options": [
+      "Une comédie",
+      "Un thriller",
+      "Un film d’animation",
+      "Un film déjà vu"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_066",
+    "question": "Quand je commence une série qui me plaît, quel est mon comportement?",
+    "options": [
+      "Un épisode de temps en temps",
+      "Plusieurs épisodes d’affilée",
+      "Je cherche déjà les spoilers",
+      "Je force mes proches à la regarder"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_067",
+    "question": "Quelle fin de film me satisfait le plus?",
+    "options": [
+      "Une fin heureuse",
+      "Une grosse surprise",
+      "Une fin ouverte",
+      "Une fin triste mais marquante"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_068",
+    "question": "Face à un film très mauvais, que fais-je?",
+    "options": [
+      "Je le termine quand même",
+      "J’abandonne rapidement",
+      "Je me moque pendant tout le film",
+      "Je vérifie les critiques pour comprendre"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_069",
+    "question": "Quel concert me conviendrait le mieux?",
+    "options": [
+      "Une immense salle",
+      "Une petite salle intimiste",
+      "Un festival",
+      "Un concert assis et tranquille"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_070",
+    "question": "Dans une playlist collective, quel morceau est-ce que j’ajoute?",
+    "options": [
+      "Un tube que tout le monde connaît",
+      "Une découverte personnelle",
+      "Un vieux classique",
+      "Une chanson volontairement honteuse"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_071",
+    "question": "Quel jeu est-ce que je préfère lors d’une soirée?",
+    "options": [
+      "Un jeu de stratégie",
+      "Un jeu de bluff",
+      "Un jeu de culture générale",
+      "Un jeu très simple et drôle"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_072",
+    "question": "Quand je perds à un jeu, comment est-ce que je réagis?",
+    "options": [
+      "Je félicite tranquillement",
+      "Je réclame une revanche",
+      "Je cherche l’erreur dans les règles",
+      "Je prétends que je ne jouais pas sérieusement"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_074",
+    "question": "Quel souvenir de voyage est-ce que je rapporte le plus volontiers?",
+    "options": [
+      "Un objet utile",
+      "Une spécialité à manger",
+      "Un magnet ou un bibelot",
+      "Des centaines de photos"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_075",
+    "question": "Si je trébuche devant tout le monde sans tomber, que fais-je?",
+    "options": [
+      "Je continue comme si de rien n’était",
+      "Je regarde si quelqu’un a vu",
+      "Je ris immédiatement",
+      "J’accuse le sol"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_076",
+    "question": "Quand j’envoie un message à la mauvaise personne, quelle est ma première réaction?",
+    "options": [
+      "Je supprime en panique",
+      "J’explique honnêtement",
+      "J’invente une excuse",
+      "Je pose mon téléphone et j’abandonne la société"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_077",
+    "question": "Quelle erreur gênante suis-je le plus susceptible de faire?",
+    "options": [
+      "Saluer quelqu’un qui ne me saluait pas",
+      "Oublier le prénom d’une personne",
+      "Entrer dans la mauvaise pièce",
+      "Rire au mauvais moment"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_078",
+    "question": "Si mon téléphone affiche une vieille photo embarrassante devant des amis, que fais-je?",
+    "options": [
+      "Je l’assume",
+      "Je cache immédiatement l’écran",
+      "Je raconte toute l’histoire",
+      "Je change de sujet très vite"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_079",
+    "question": "Quel mensonge innocent ai-je le plus de chances d’utiliser?",
+    "options": [
+      "J’arrive dans cinq minutes",
+      "Je n’avais pas vu ton message",
+      "Je vais me coucher tôt",
+      "Je n’ai pas faim"
+    ],
+    "pack": "dossiers"
+  },
+  {
+    "id": "connais_080",
+    "question": "Quand je chante sans public, quel niveau de spectacle est-ce que je donne?",
+    "options": [
+      "Je fredonne à peine",
+      "Je chante normalement",
+      "Je fais un vrai concert",
+      "Je joue aussi tous les instruments imaginaires"
+    ],
+    "pack": "dossiers"
+  },
+  {
+    "id": "connais_081",
+    "question": "Si une caméra me filme soudainement, quel réflexe ai-je?",
+    "options": [
+      "Je souris",
+      "Je me cache",
+      "Je fais une grimace",
+      "Je demande pourquoi on me filme"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_082",
+    "question": "Quel achat inutile peut le plus facilement me tenter?",
+    "options": [
+      "Un gadget",
+      "Une décoration",
+      "Un vêtement presque identique à un autre",
+      "De la nourriture juste parce que l’emballage est joli"
+    ],
+    "pack": "dossiers"
+  },
+  {
+    "id": "connais_083",
+    "question": "Si je reçois un appel d’un numéro inconnu, que fais-je?",
+    "options": [
+      "Je réponds",
+      "Je laisse sonner",
+      "Je cherche le numéro sur Internet",
+      "Je rappelle seulement s’il y a un message"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_084",
+    "question": "Quelle tâche suis-je le plus susceptible de repousser jusqu’au dernier moment?",
+    "options": [
+      "Répondre à un mail",
+      "Ranger",
+      "Prendre un rendez-vous",
+      "Faire une démarche administrative"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_085",
+    "question": "Si je trouve de l’argent par terre dans un lieu vide, quel est mon premier réflexe?",
+    "options": [
+      "Je cherche à qui il appartient",
+      "Je le donne à l’accueil",
+      "Je le garde en attendant",
+      "Je reste sur place à réfléchir"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_086",
+    "question": "Quand je vois une araignée dans une pièce, que fais-je?",
+    "options": [
+      "Je la sors calmement",
+      "J’appelle quelqu’un",
+      "Je l’élimine",
+      "Je quitte la pièce et lui cède le logement"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_087",
+    "question": "Si je dois parler devant beaucoup de personnes, comment suis-je juste avant?",
+    "options": [
+      "Très calme",
+      "Stressé·e mais fonctionnel·le",
+      "Je répète tout en boucle",
+      "Je regrette toutes mes décisions"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_088",
+    "question": "Quel est mon comportement le plus probable dans un ascenseur silencieux?",
+    "options": [
+      "Je regarde mon téléphone",
+      "Je fixe les numéros",
+      "Je lance une petite conversation",
+      "Je retiens un rire sans raison"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_089",
+    "question": "Si je suis chez moi sans personne et que j’entends un bruit étrange, que fais-je?",
+    "options": [
+      "Je vais vérifier",
+      "Je reste immobile pour écouter",
+      "J’allume toutes les lumières",
+      "J’envoie un message à quelqu’un"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_090",
+    "question": "Quand une publicité devient impossible à passer, que fais-je?",
+    "options": [
+      "Je l’attends patiemment",
+      "Je coupe le son",
+      "Je change d’application",
+      "Je râle contre l’écran"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_091",
+    "question": "Si je pouvais supprimer une petite corvée de ma vie, laquelle choisirais-je?",
+    "options": [
+      "Faire la vaisselle",
+      "Plier le linge",
+      "Faire les courses",
+      "Répondre aux démarches et formulaires"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_092",
+    "question": "Quelle est ma technique la plus probable pour éviter une conversation?",
+    "options": [
+      "Regarder mon téléphone",
+      "Prétendre être pressé",
+      "Faire semblant de ne pas entendre",
+      "Changer brutalement de sujet"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_093",
+    "question": "Si je dois garder un secret amusant, combien de temps est-ce que je tiens?",
+    "options": [
+      "Indéfiniment",
+      "Jusqu’à ce qu’on me questionne",
+      "Quelques jours",
+      "Presque aucune minute"
+    ],
+    "pack": "dossiers"
+  },
+  {
+    "id": "connais_094",
+    "question": "Quand je ris vraiment fort, qu’est-ce qui m’arrive le plus?",
+    "options": [
+      "Je n’arrive plus à parler",
+      "Je pleure",
+      "Je fais un bruit étrange",
+      "Je me plie en deux"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_095",
+    "question": "Si je suis pris en photo sans prévenir, quel résultat est le plus probable?",
+    "options": [
+      "La photo est étonnamment réussie",
+      "J’ai les yeux fermés",
+      "Je fais une tête incompréhensible",
+      "Je suis déjà en train de bouger"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_096",
+    "question": "Quel détail ridicule peut me faire abandonner un vêtement?",
+    "options": [
+      "Une étiquette qui gratte",
+      "Des poches trop petites",
+      "Un bruit étrange en marchant",
+      "Une fermeture peu pratique"
+    ],
+    "pack": "dossiers"
+  },
+  {
+    "id": "connais_098",
+    "question": "Quel comportement ai-je le plus de chances d’avoir devant un miroir?",
+    "options": [
+      "Je vérifie rapidement ma tenue",
+      "Je replace mes cheveux",
+      "Je teste une expression",
+      "Je commence une conversation imaginaire"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_099",
+    "question": "Si je gagne un petit lot complètement inutile, que fais-je?",
+    "options": [
+      "Je le garde fièrement",
+      "Je l’offre",
+      "Je tente de l’échanger",
+      "Je raconte quand même que j’ai gagné"
+    ],
+    "pack": "dossiers"
+  },
+  {
+    "id": "connais_100",
+    "question": "Quelle qualité est-ce que j’attends le plus d’un ami proche?",
+    "options": [
+      "La loyauté",
+      "L’honnêteté",
+      "L’humour",
+      "La disponibilité"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_101",
+    "question": "Quelle trahison amicale me blesserait le plus?",
+    "options": [
+      "Répéter un secret",
+      "Mentir longtemps",
+      "M’exclure volontairement",
+      "Ne pas me défendre en mon absence"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_102",
+    "question": "Après une dispute, qui suis-je le plus souvent?",
+    "options": [
+      "La personne qui revient parler vite",
+      "La personne qui a besoin de temps",
+      "La personne qui envoie un long message",
+      "La personne qui attend que l’autre revienne"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_103",
+    "question": "Quand un proche fait une grosse erreur, que fais-je d’abord?",
+    "options": [
+      "Je le soutiens",
+      "Je lui dis franchement ce que j’en pense",
+      "Je l’aide à réparer",
+      "Je lui laisse de l’espace"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_104",
+    "question": "Quel comportement me fait perdre confiance le plus rapidement?",
+    "options": [
+      "Les petits mensonges",
+      "Les promesses non tenues",
+      "Les moqueries blessantes",
+      "Le fait de changer selon les personnes"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_105",
+    "question": "Quelle excuse est-ce que je pardonne le moins facilement?",
+    "options": [
+      "J’ai oublié",
+      "Je n’ai pas eu le temps",
+      "Tout le monde le fait",
+      "Ce n’était pas mon intention"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_106",
+    "question": "Si je découvre qu’un ami parle de moi derrière mon dos, que fais-je?",
+    "options": [
+      "Je le confronte directement",
+      "Je vérifie d’abord les faits",
+      "Je prends mes distances",
+      "J’en parle à une autre personne de confiance"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_107",
+    "question": "Dans une amitié, qu’est-ce qui compte le plus pour moi?",
+    "options": [
+      "Se parler souvent",
+      "Pouvoir tout se dire",
+      "Être présent dans les moments importants",
+      "Pouvoir reprendre comme si rien n’avait changé"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_109",
+    "question": "Quand je sens qu’un proche ne va pas bien, que fais-je?",
+    "options": [
+      "Je pose directement la question",
+      "J’envoie un message discret",
+      "Je propose une sortie",
+      "J’attends qu’il vienne vers moi"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_110",
+    "question": "Quelle marque d’affection amicale me ressemble le plus?",
+    "options": [
+      "Les messages spontanés",
+      "Les petits cadeaux",
+      "Les services rendus",
+      "Les taquineries constantes"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_112",
+    "question": "Quel conflit ai-je le plus tendance à éviter?",
+    "options": [
+      "Un conflit familial",
+      "Un conflit au travail",
+      "Un conflit entre amis",
+      "Un conflit avec un inconnu"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_113",
+    "question": "Quelle limite est-ce que je pose le plus facilement?",
+    "options": [
+      "Refuser de prêter de l’argent",
+      "Refuser une sortie",
+      "Refuser qu’on fouille dans mes affaires",
+      "Refuser de parler d’un sujet personnel"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_114",
+    "question": "Si on se moque gentiment de moi, jusqu’où est-ce que cela me va?",
+    "options": [
+      "Je ris de presque tout",
+      "Seulement avec mes proches",
+      "Cela dépend du sujet",
+      "Je le prends vite personnellement"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_115",
+    "question": "Quand quelqu’un me déçoit, qu’est-ce qui peut le mieux réparer la situation?",
+    "options": [
+      "Des excuses sincères",
+      "Un changement concret",
+      "Du temps",
+      "Une vraie discussion"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_116",
+    "question": "Quel conseil est-ce que je donne le plus souvent?",
+    "options": [
+      "Fais ce qui te fait du bien",
+      "Réfléchis avant d’agir",
+      "Dis-lui franchement",
+      "Arrête de trop penser"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_117",
+    "question": "Quand un proche prend une mauvaise décision, comment est-ce que je réagis?",
+    "options": [
+      "Je tente de l’en empêcher",
+      "Je donne mon avis puis je le laisse choisir",
+      "Je reste à ses côtés sans juger",
+      "Je prends mes distances du problème"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_118",
+    "question": "Quelle chose ai-je le plus de mal à demander?",
+    "options": [
+      "De l’aide",
+      "Des excuses",
+      "De l’argent",
+      "Du temps ou de l’attention"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_121",
+    "question": "Quel comportement est-ce que je trouve le plus courageux?",
+    "options": [
+      "Reconnaître ses torts",
+      "Défendre quelqu’un",
+      "Demander de l’aide",
+      "Quitter une situation toxique"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_122",
+    "question": "Si un ami oublie mon anniversaire, comment est-ce que je le vis?",
+    "options": [
+      "Je m’en fiche vraiment",
+      "Je suis un peu déçu·e",
+      "Je le taquine longtemps",
+      "Je le prends très mal"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_123",
+    "question": "Quelle situation me ferait le plus facilement couper les ponts?",
+    "options": [
+      "Une trahison",
+      "Des humiliations répétées",
+      "Une manipulation",
+      "Une absence totale dans un moment grave"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_124",
+    "question": "Quand j’aime beaucoup quelqu’un, qu’est-ce que je fais sans m’en rendre compte?",
+    "options": [
+      "Je lui raconte tout",
+      "Je lui envoie des choses qui me font penser à lui",
+      "Je cherche souvent à le voir",
+      "Je deviens très protecteur·rice"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_126",
+    "question": "Si je pouvais maîtriser instantanément une compétence, laquelle choisirais-je?",
+    "options": [
+      "Parler plusieurs langues",
+      "Jouer d’un instrument",
+      "Cuisiner comme un chef",
+      "Savoir réparer presque tout"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_127",
+    "question": "Si je pouvais vivre une journée dans une autre époque, laquelle choisirais-je?",
+    "options": [
+      "L’Antiquité",
+      "Le Moyen Âge",
+      "Les années 1920",
+      "Les années 1990"
+    ],
+    "pack": "past"
+  },
+  {
+    "id": "connais_128",
+    "question": "Si je devais participer à une émission, laquelle me conviendrait le mieux?",
+    "options": [
+      "Un jeu de culture générale",
+      "Une aventure de survie",
+      "Un concours de cuisine",
+      "Une émission de rencontres"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_129",
+    "question": "Si je pouvais être célèbre pour une seule chose, laquelle choisirais-je?",
+    "options": [
+      "Mon talent",
+      "Mon humour",
+      "Une invention",
+      "Une action utile aux autres"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_130",
+    "question": "Si je devais changer de métier demain, vers quoi irais-je le plus naturellement?",
+    "options": [
+      "Un métier créatif",
+      "Un métier avec des animaux",
+      "Un métier d’aide",
+      "Un métier très rémunérateur"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_131",
+    "question": "Si je pouvais avoir une maison secondaire, où serait-elle?",
+    "options": [
+      "Au bord de la mer",
+      "À la montagne",
+      "Dans une grande capitale",
+      "En pleine campagne"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_132",
+    "question": "Si je devais supprimer une application de mon téléphone pour toujours, laquelle choisirais-je?",
+    "options": [
+      "Un réseau social",
+      "Une appli de vidéos",
+      "Une appli de shopping",
+      "Une appli de livraison"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_133",
+    "question": "Si je pouvais revivre un seul type de moment, lequel choisirais-je?",
+    "options": [
+      "Un fou rire",
+      "Un voyage",
+      "Une réussite personnelle",
+      "Une soirée avec des proches"
+    ],
+    "pack": "past"
+  },
+  {
+    "id": "connais_135",
+    "question": "Si je devais passer une semaine sans une chose, laquelle serait la moins difficile?",
+    "options": [
+      "Les réseaux sociaux",
+      "La télévision et les séries",
+      "La musique",
+      "Les plats préparés ou livrés"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_136",
+    "question": "Si je gagnais un voyage surprise, quelle information voudrais-je connaître avant de partir?",
+    "options": [
+      "La destination",
+      "La météo",
+      "Avec qui je pars",
+      "Le programme prévu"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_137",
+    "question": "Si je pouvais échanger ma vie avec quelqu’un pendant 24 heures, qui choisirais-je?",
+    "options": [
+      "Une célébrité",
+      "Une personne très riche",
+      "Un sportif de haut niveau",
+      "Quelqu’un vivant dans un autre pays"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_138",
+    "question": "Si je devais ouvrir un commerce, lequel me ressemblerait le plus?",
+    "options": [
+      "Un café",
+      "Une librairie",
+      "Un restaurant",
+      "Une boutique de jeux ou de loisirs"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_139",
+    "question": "Si je pouvais rendre une règle obligatoire pour tout le monde, laquelle choisirais-je?",
+    "options": [
+      "Toujours dire merci",
+      "Respecter les files d’attente",
+      "Répondre clairement aux invitations",
+      "Ne pas mettre le son du téléphone en public"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_140",
+    "question": "Si je devais porter une seule couleur pendant un an, laquelle choisirais-je?",
+    "options": [
+      "Noir",
+      "Bleu",
+      "Beige ou blanc",
+      "Une couleur vive"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_141",
+    "question": "Si je pouvais téléporter une chose à volonté, laquelle serait la plus utile?",
+    "options": [
+      "Moi-même",
+      "Mes proches",
+      "Mes affaires",
+      "De la nourriture"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_142",
+    "question": "Si je devais dormir dans un lieu insolite, lequel choisirais-je?",
+    "options": [
+      "Une cabane dans les arbres",
+      "Un aquarium",
+      "Un château",
+      "Une bulle sous les étoiles"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_143",
+    "question": "Si je pouvais instaurer une journée fériée personnelle, que célébrerait-elle?",
+    "options": [
+      "Le repos",
+      "L’amitié",
+      "La nourriture",
+      "Une passion précise"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_144",
+    "question": "Si je devais vivre sans l’un de ces conforts, lequel sacrifierais-je?",
+    "options": [
+      "Le chauffage",
+      "La livraison à domicile",
+      "Le streaming",
+      "La voiture"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_145",
+    "question": "Si je pouvais effacer une peur, laquelle choisirais-je?",
+    "options": [
+      "L’échec",
+      "La solitude",
+      "Le regard des autres",
+      "Les accidents et les maladies"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_146",
+    "question": "Si je devais confier mon téléphone déverrouillé à quelqu’un, qui choisirais-je?",
+    "options": [
+      "La personne la plus proche de moi",
+      "Un membre de ma famille",
+      "Mon partenaire",
+      "Personne, même sous la menace"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_147",
+    "question": "Si je pouvais ajouter une heure à ma journée, comment l’utiliserais-je?",
+    "options": [
+      "Pour dormir",
+      "Pour voir mes proches",
+      "Pour un loisir",
+      "Pour avancer sur mes projets"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_148",
+    "question": "Si je devais être bloqué une nuit dans un lieu, lequel choisirais-je?",
+    "options": [
+      "Un grand magasin",
+      "Un musée",
+      "Un cinéma",
+      "Un parc d’attractions"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_149",
+    "question": "Si je pouvais recevoir chaque semaine une chose gratuitement, laquelle choisirais-je?",
+    "options": [
+      "Les courses alimentaires",
+      "Un repas au restaurant",
+      "Un billet de train ou d’avion",
+      "Un vêtement ou un objet au choix"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_150",
+    "question": "Si je devais choisir un super-pouvoir très pratique, lequel me tenterait le plus?",
+    "options": [
+      "Ne jamais avoir besoin de dormir",
+      "Toujours trouver une place de stationnement",
+      "Comprendre toutes les langues",
+      "Pouvoir mettre le temps en pause dix minutes"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_151",
+    "question": "Quel type de souvenir est-ce que je raconte encore des années plus tard?",
+    "options": [
+      "Une énorme honte",
+      "Une soirée mémorable",
+      "Un voyage improbable",
+      "Une petite victoire personnelle"
+    ],
+    "pack": "past"
+  },
+  {
+    "id": "connais_152",
+    "question": "Dans mes souvenirs d’école, quel détail revient le plus souvent?",
+    "options": [
+      "Un professeur marquant",
+      "Une bêtise avec des amis",
+      "Une matière que j’adorais",
+      "Un moment très gênant"
+    ],
+    "pack": "past"
+  },
+  {
+    "id": "connais_153",
+    "question": "Quelle vieille photo ai-je le plus de chances de garder précieusement?",
+    "options": [
+      "Une photo de famille",
+      "Une photo de groupe ratée",
+      "Une photo de voyage",
+      "Une photo ridicule de moi"
+    ],
+    "pack": "past"
+  },
+  {
+    "id": "connais_154",
+    "question": "Quand je raconte une anecdote, qu’est-ce que j’ai tendance à faire?",
+    "options": [
+      "Exagérer les détails",
+      "Imiter les personnes",
+      "Oublier la fin",
+      "Donner beaucoup trop de contexte"
+    ],
+    "pack": "past"
+  },
+  {
+    "id": "connais_155",
+    "question": "Quel souvenir d’enfance me ferait sourire le plus vite?",
+    "options": [
+      "Un dessin animé",
+      "Une tradition familiale",
+      "Un jeu avec des amis",
+      "Une bêtise interdite"
+    ],
+    "pack": "past"
+  },
+  {
+    "id": "connais_156",
+    "question": "Si je pouvais revivre une seule soirée avec mes proches, laquelle choisirais-je?",
+    "options": [
+      "Une fête complètement folle",
+      "Une soirée très simple",
+      "Une grande célébration",
+      "Une soirée improvisée"
+    ],
+    "pack": "past"
+  },
+  {
+    "id": "connais_157",
+    "question": "Quel objet ancien pourrait déclencher chez moi le plus de nostalgie?",
+    "options": [
+      "Un vieux téléphone",
+      "Un jouet",
+      "Un vêtement",
+      "Un carnet ou une lettre"
+    ],
+    "pack": "past"
+  },
+  {
+    "id": "connais_158",
+    "question": "Dans une histoire que je raconte souvent, quel rôle est-ce que j’avais probablement?",
+    "options": [
+      "La personne raisonnable",
+      "La personne qui a lancé l’idée",
+      "La personne qui a aggravé la situation",
+      "La personne qui observait tout"
+    ],
+    "pack": "past"
+  },
+  {
+    "id": "connais_159",
+    "question": "Quelle période de ma vie est-ce que j’évoque le plus volontiers?",
+    "options": [
+      "Mon enfance",
+      "Mon adolescence",
+      "Mes premières années d’adulte",
+      "Une période très récente"
+    ],
+    "pack": "past"
+  },
+  {
+    "id": "connais_160",
+    "question": "Si mes amis devaient ressortir un vieux dossier sur moi, lequel serait le plus probable?",
+    "options": [
+      "Une coupe de cheveux",
+      "Une déclaration gênante",
+      "Une tenue catastrophique",
+      "Une obsession passagère"
+    ],
+    "pack": "past"
+  },
+  {
+    "id": "connais_161",
+    "question": "Quand je lis un menu en ligne avant d’aller au restaurant, que fais-je?",
+    "options": [
+      "Je choisis déjà mon plat",
+      "Je regarde seulement les prix",
+      "Je vérifie les photos",
+      "Je préfère garder la surprise"
+    ],
+    "pack": "food"
+  },
+  {
+    "id": "connais_162",
+    "question": "Quand je marche avec quelqu’un, où est-ce que je me place naturellement?",
+    "options": [
+      "Toujours du même côté",
+      "Du côté de la route",
+      "Un peu devant",
+      "Cela change sans arrêt"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_163",
+    "question": "Quand je ferme la porte en partant, quel doute peut me faire revenir?",
+    "options": [
+      "Ai-je pris mes clés ?",
+      "Ai-je éteint une lumière ?",
+      "Ai-je fermé une fenêtre ?",
+      "Ai-je oublié mon téléphone ?"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_164",
+    "question": "Quand je bois dans une bouteille, que fais-je souvent sans y penser?",
+    "options": [
+      "Je remets immédiatement le bouchon",
+      "Je laisse le bouchon quelque part",
+      "Je bois plusieurs gorgées d’un coup",
+      "Je vérifie combien il en reste"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_165",
+    "question": "Quelle manie ai-je le plus de chances d’avoir pendant un appel?",
+    "options": [
+      "Marcher dans la pièce",
+      "Jouer avec un objet",
+      "Regarder ailleurs sur mon téléphone",
+      "M’allonger confortablement"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_166",
+    "question": "Quand je dois attendre cinq minutes, comment est-ce que je m’occupe?",
+    "options": [
+      "Je prends mon téléphone",
+      "J’observe les gens",
+      "Je vérifie l’heure plusieurs fois",
+      "Je ne fais rien du tout"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_168",
+    "question": "Quand je mets de la musique chez moi, quel volume me ressemble le plus?",
+    "options": [
+      "À peine audible",
+      "Juste assez pour accompagner",
+      "Assez fort pour chanter",
+      "Beaucoup trop fort"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_169",
+    "question": "Quel geste est-ce que je fais le plus quand je réfléchis?",
+    "options": [
+      "Je fronce les sourcils",
+      "Je regarde dans le vide",
+      "Je bouge les mains",
+      "Je murmure ma réflexion"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_170",
+    "question": "Quand je m’installe quelque part, quel objet est-ce que je pose en premier?",
+    "options": [
+      "Mon téléphone",
+      "Mes clés",
+      "Mon sac",
+      "Ma boisson"
+    ],
+    "pack": "details"
+  },
+  {
+    "id": "connais_171",
+    "question": "Si je dois prendre une décision en dix secondes, que fais-je?",
+    "options": [
+      "Je tranche au hasard",
+      "Je choisis mon premier instinct",
+      "Je demande l’avis de quelqu’un",
+      "Je bloque jusqu’à la dernière seconde"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_172",
+    "question": "Si je me rends compte que je suis en retard, quelle est ma réaction immédiate?",
+    "options": [
+      "Je préviens tout de suite",
+      "J’accélère sans rien dire",
+      "Je cherche une excuse",
+      "Je panique intérieurement"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_174",
+    "question": "Si quelqu’un me pose une question à laquelle je ne veux pas répondre, que fais-je?",
+    "options": [
+      "Je détourne avec humour",
+      "Je réponds vaguement",
+      "Je dis clairement que je ne répondrai pas",
+      "Je retourne la question"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_175",
+    "question": "Si je dois improviser un discours, quel est mon style?",
+    "options": [
+      "Court et efficace",
+      "Drôle pour masquer le stress",
+      "Très sincère",
+      "Complètement décousu"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_176",
+    "question": "Quand plusieurs choses urgentes arrivent en même temps, par quoi est-ce que je commence?",
+    "options": [
+      "La plus rapide",
+      "La plus importante",
+      "La plus stressante",
+      "Celle qu’on me réclame le plus"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_178",
+    "question": "Si je suis accusé·e à tort dans un jeu, comment est-ce que je me défends?",
+    "options": [
+      "Avec des arguments précis",
+      "En accusant quelqu’un d’autre",
+      "En riant nerveusement",
+      "En jurant que je suis innocent·e"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_179",
+    "question": "Quand une situation devient vraiment tendue, quel réflexe me ressemble le plus?",
+    "options": [
+      "Calmer tout le monde",
+      "Prendre mes distances",
+      "Dire exactement ce que je pense",
+      "Faire une blague pour détendre"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_180",
+    "question": "Si je dois choisir entre être rapide ou être parfait·e, que choisis-je généralement?",
+    "options": [
+      "Rapide, quitte à corriger",
+      "Parfait·e, même en retard",
+      "Un compromis raisonnable",
+      "Cela dépend de qui va voir le résultat"
+    ],
+    "pack": "extreme"
+  },
+  {
+    "id": "connais_181",
+    "question": "Quand j’arrive à une soirée déjà bien commencée, que fais-je en premier?",
+    "options": [
+      "Je salue tout le monde",
+      "Je cherche les personnes que je connais",
+      "Je vais directement chercher à boire",
+      "J’observe l’ambiance avant d’entrer"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_182",
+    "question": "Quel rôle ai-je le plus souvent dans l’organisation d’une sortie?",
+    "options": [
+      "Je propose la date",
+      "Je trouve le lieu",
+      "Je relance les indécis",
+      "Je me contente de suivre"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_183",
+    "question": "Dans une soirée karaoké, à quel moment est-ce que je chante?",
+    "options": [
+      "Dès la première chanson",
+      "Quand quelqu’un m’entraîne",
+      "Après avoir pris confiance",
+      "Jamais volontairement"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_184",
+    "question": "Quand une soirée devient un peu chaotique, quel rôle est-ce que je prends?",
+    "options": [
+      "Je filme les dossiers",
+      "Je surveille que tout le monde va bien",
+      "Je participe au chaos",
+      "Je cherche une sortie discrète"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_186",
+    "question": "Dans un groupe d’amis, quel type de discussion me fait le plus participer?",
+    "options": [
+      "Les potins",
+      "Les débats sérieux",
+      "Les souvenirs communs",
+      "Les projets futurs"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_187",
+    "question": "Quand quelqu’un propose une photo de groupe, que fais-je?",
+    "options": [
+      "Je me place immédiatement",
+      "Je vérifie ma tête",
+      "Je propose de prendre la photo",
+      "J’essaie d’y échapper"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_188",
+    "question": "À une table où personne ne se connaît vraiment, que fais-je le plus probablement?",
+    "options": [
+      "Je lance des questions",
+      "Je parle à une seule personne",
+      "J’attends que quelqu’un anime",
+      "Je fais des remarques sur ce qui se passe autour"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_189",
+    "question": "Quand mes amis hésitent entre plusieurs plans, comment est-ce que je réagis?",
+    "options": [
+      "Je décide pour tout le monde",
+      "Je fais voter",
+      "Je dis que tout me va",
+      "Je change encore les options"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_190",
+    "question": "Quel signe montre le plus clairement que je passe une bonne soirée?",
+    "options": [
+      "Je parle beaucoup",
+      "Je ris très fort",
+      "Je ne regarde plus mon téléphone",
+      "Je veux prolonger la soirée"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_191",
+    "question": "Quel type de contenu ai-je le plus de chances d’envoyer à mes amis sans contexte?",
+    "options": [
+      "Un mème",
+      "Une capture d’écran",
+      "Une vidéo étrange",
+      "Une vieille photo"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_192",
+    "question": "Quand je lis un message auquel je ne sais pas quoi répondre, que fais-je?",
+    "options": [
+      "Je mets une réaction",
+      "Je réponds plus tard",
+      "Je change de sujet",
+      "Je laisse le message sans réponse"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_193",
+    "question": "Quelle faute dans un message peut le plus m’agacer?",
+    "options": [
+      "Un prénom mal écrit",
+      "Un ton trop sec",
+      "Un message incompréhensible",
+      "Une réponse qui ne répond à rien"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_194",
+    "question": "Quand je reçois un vocal de cinq minutes, quelle est ma réaction?",
+    "options": [
+      "Je l’écoute immédiatement",
+      "Je l’écoute en vitesse accélérée",
+      "Je demande un résumé",
+      "Je le garde pour plus tard"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_195",
+    "question": "Quel comportement ai-je dans un groupe de discussion très actif?",
+    "options": [
+      "Je réponds à tout",
+      "Je lis sans participer",
+      "Je reviens plusieurs heures après",
+      "Je ne lis que les messages où l’on me cite"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_197",
+    "question": "Quelle réaction me ressemble le plus après avoir envoyé un message risqué?",
+    "options": [
+      "Je ferme l’application",
+      "Je surveille la réponse",
+      "Je regrette immédiatement",
+      "J’envoie un second message pour expliquer"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_198",
+    "question": "Quand quelqu’un répond seulement “ok”, comment est-ce que je l’interprète?",
+    "options": [
+      "Comme une réponse normale",
+      "Comme de la froideur",
+      "Comme de l’agacement",
+      "Cela dépend complètement de la personne"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_199",
+    "question": "Si je vois qu’un ami a supprimé un message, que fais-je?",
+    "options": [
+      "Je demande immédiatement ce que c’était",
+      "Je fais semblant de ne pas avoir vu",
+      "Je plaisante dessus",
+      "Je garde ma curiosité pour moi"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_200",
+    "question": "Quel type de publication ai-je le plus de chances de regarder jusqu’au bout?",
+    "options": [
+      "Une recette",
+      "Une histoire racontée",
+      "Une vidéo drôle",
+      "Une transformation avant-après"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_201",
+    "question": "Quel vieux comportement me ferait le plus honte si une vidéo ressortait?",
+    "options": [
+      "Ma façon de danser",
+      "Ma façon de parler",
+      "Une crise dramatique",
+      "Une imitation ratée"
+    ],
+    "pack": "past"
+  },
+  {
+    "id": "connais_202",
+    "question": "Si mes recherches internet étaient projetées devant mes amis, qu’est-ce qui serait le plus gênant?",
+    "options": [
+      "Une question très basique",
+      "Une recherche sur une personne",
+      "Un problème de santé banal",
+      "Une obsession complètement aléatoire"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_203",
+    "question": "Quelle situation pourrait me faire rougir instantanément?",
+    "options": [
+      "Un compliment public",
+      "Une vieille histoire racontée",
+      "Une personne qui me plaît qui arrive",
+      "Une erreur annoncée devant tout le monde"
+    ],
+    "pack": "dossiers"
+  },
+  {
+    "id": "connais_204",
+    "question": "Si quelqu’un imite ma façon de parler, comment est-ce que je réagis?",
+    "options": [
+      "Je ris avec lui",
+      "Je l’imite à mon tour",
+      "Je nie parler comme ça",
+      "Je me vexe un peu"
+    ],
+    "pack": "dossiers"
+  },
+  {
+    "id": "connais_205",
+    "question": "Quel dossier mes amis pourraient utiliser pour me faire céder?",
+    "options": [
+      "Une ancienne photo",
+      "Un ancien message",
+      "Une chanson que j’adore en secret",
+      "Un surnom oublié"
+    ],
+    "pack": "dossiers"
+  },
+  {
+    "id": "connais_207",
+    "question": "Si mon téléphone se connecte accidentellement à une enceinte, quel contenu me ferait le plus paniquer?",
+    "options": [
+      "Une chanson honteuse",
+      "Un vocal privé",
+      "Une vidéo étrange",
+      "Un appel en cours"
+    ],
+    "pack": "digital"
+  },
+  {
+    "id": "connais_209",
+    "question": "Si je dois raconter mon pire rendez-vous ou ma pire rencontre, quel ton est-ce que j’emploie?",
+    "options": [
+      "Très dramatique",
+      "Très moqueur",
+      "Très factuel",
+      "Je refuse de raconter"
+    ],
+    "pack": "dossiers"
+  },
+  {
+    "id": "connais_210",
+    "question": "Quand une personne ressort une phrase gênante que j’ai dite, que fais-je?",
+    "options": [
+      "Je prétends ne jamais l’avoir dite",
+      "J’assume complètement",
+      "Je change de sujet",
+      "Je menace de sortir un dossier sur elle"
+    ],
+    "pack": "dossiers"
+  },
+  {
+    "id": "connais_211",
+    "question": "Quand je compare deux produits, quel critère finit le plus souvent par gagner?",
+    "options": [
+      "Le prix",
+      "La qualité",
+      "L’apparence",
+      "Les avis"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_212",
+    "question": "Pour quel achat suis-je le plus susceptible de dépasser mon budget?",
+    "options": [
+      "Un voyage",
+      "Un vêtement ou accessoire",
+      "De la nourriture",
+      "Un objet technologique"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_214",
+    "question": "Quel type de promotion peut le plus facilement me piéger?",
+    "options": [
+      "Deux pour le prix d’un",
+      "Une livraison gratuite",
+      "Une réduction limitée dans le temps",
+      "Un cadeau offert"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_215",
+    "question": "Quand un ami me doit une petite somme, comment est-ce que je réagis?",
+    "options": [
+      "Je lui rappelle rapidement",
+      "J’attends qu’il s’en souvienne",
+      "Je laisse tomber",
+      "Je transforme ça en blague récurrente"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_216",
+    "question": "Sur quelle dépense ai-je le plus tendance à me dire “ce n’est pas si grave”?",
+    "options": [
+      "Les repas livrés",
+      "Les abonnements",
+      "Les petits achats répétés",
+      "Les sorties"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_217",
+    "question": "Quand je fais un achat important, combien de temps est-ce que j’y réfléchis?",
+    "options": [
+      "Quelques minutes",
+      "Quelques heures",
+      "Plusieurs jours",
+      "Jusqu’à ce que l’offre disparaisse"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_218",
+    "question": "Quel objet ai-je le plus de chances d’acheter en double?",
+    "options": [
+      "Un vêtement que j’aime",
+      "Un produit du quotidien",
+      "Un accessoire de téléphone",
+      "Un objet de collection"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_219",
+    "question": "Si je devais économiser fortement pendant un mois, qu’est-ce que je réduirais en premier?",
+    "options": [
+      "Les sorties",
+      "Les achats plaisir",
+      "Les livraisons de repas",
+      "Les transports payants"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_220",
+    "question": "Quand quelqu’un m’offre un cadeau trop cher, quelle est ma réaction?",
+    "options": [
+      "Je suis très touché·e",
+      "Je suis gêné·e",
+      "Je cherche immédiatement comment rendre la pareille",
+      "Je demande pourquoi il a dépensé autant"
+    ],
+    "pack": "contradictions"
+  },
+  {
+    "id": "connais_221",
+    "question": "Quand je découvre une nouvelle ville, qu’est-ce qui m’attire en premier?",
+    "options": [
+      "Les rues et quartiers",
+      "La nourriture locale",
+      "Les monuments",
+      "Les boutiques"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_222",
+    "question": "Quel type d’imprévu de voyage pourrais-je finalement trouver amusant?",
+    "options": [
+      "Rater un transport",
+      "Se perdre",
+      "Changer de logement",
+      "Une météo complètement différente"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_223",
+    "question": "Pour une journée d’excursion, qu’est-ce que je préfère?",
+    "options": [
+      "Un programme très rempli",
+      "Deux activités bien choisies",
+      "Une seule grande visite",
+      "Aucun plan précis"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_224",
+    "question": "Quand je pars avec un groupe, quel sujet risque le plus de créer un débat avec moi?",
+    "options": [
+      "L’heure de départ",
+      "Le budget",
+      "Le choix des activités",
+      "Le rythme des repas"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_225",
+    "question": "Quel souvenir matériel de voyage me ressemble le plus?",
+    "options": [
+      "Un aimant",
+      "Une spécialité à manger",
+      "Une photo imprimée",
+      "Un objet artisanal"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_226",
+    "question": "Si je pouvais partir demain sans préparation, quel voyage choisirais-je?",
+    "options": [
+      "Un week-end dans une capitale",
+      "Une plage au soleil",
+      "Un séjour nature",
+      "Une destination surprise"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_228",
+    "question": "Quand je visite un lieu célèbre, quelle photo ai-je le plus de chances de prendre?",
+    "options": [
+      "Le monument seul",
+      "Moi devant le monument",
+      "Un détail original",
+      "Une photo volontairement drôle"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_229",
+    "question": "Quel confort de voyage suis-je le moins prêt·e à sacrifier?",
+    "options": [
+      "Un bon lit",
+      "Une salle de bain correcte",
+      "Une connexion internet",
+      "Un trajet raisonnable"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_230",
+    "question": "Si le groupe veut changer tous les plans au dernier moment, comment est-ce que je réagis?",
+    "options": [
+      "Je m’adapte facilement",
+      "J’accepte mais je râle",
+      "Je défends le plan initial",
+      "Je propose une troisième option"
+    ],
+    "pack": "ideal"
+  },
+  {
+    "id": "connais_231",
+    "question": "Quel geste d’un ami me ferait sentir le plus soutenu·e?",
+    "options": [
+      "Venir me voir",
+      "M’appeler régulièrement",
+      "Prendre ma défense",
+      "M’aider concrètement"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_232",
+    "question": "Si un ami me confie une mauvaise nouvelle, quelle est ma première réponse?",
+    "options": [
+      "Je l’écoute",
+      "Je cherche des solutions",
+      "Je le rassure",
+      "Je lui demande ce dont il a besoin"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_233",
+    "question": "Quelle qualité me fait le plus rapidement m’attacher à quelqu’un?",
+    "options": [
+      "L’humour",
+      "La loyauté",
+      "La douceur",
+      "La spontanéité"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_234",
+    "question": "Quand je sens qu’une amitié s’éloigne, que fais-je?",
+    "options": [
+      "Je relance la personne",
+      "Je laisse du temps",
+      "Je demande directement ce qui se passe",
+      "Je me protège en prenant mes distances"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_235",
+    "question": "Si un ami est mal traité devant moi, comment est-ce que je réagis?",
+    "options": [
+      "J’interviens immédiatement",
+      "Je soutiens mon ami après",
+      "Je cherche à calmer la situation",
+      "Je confronte la personne plus tard"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_236",
+    "question": "Quel oubli d’un proche me toucherait le plus?",
+    "options": [
+      "Une date importante",
+      "Une promesse",
+      "Un détail personnel",
+      "Un moment où j’avais besoin de lui"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_238",
+    "question": "Quel signe me ferait penser qu’une amitié est vraiment solide?",
+    "options": [
+      "On peut rester longtemps sans se parler",
+      "On peut tout se dire",
+      "On répond présent dans les moments difficiles",
+      "On se comprend sans beaucoup expliquer"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_240",
+    "question": "Dans une amitié, quel déséquilibre me gênerait le plus?",
+    "options": [
+      "Toujours écrire en premier",
+      "Toujours organiser",
+      "Toujours écouter les problèmes",
+      "Toujours faire des efforts pour se voir"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_241",
+    "question": "Quel comportement dans un lieu public me dérange le plus?",
+    "options": [
+      "Parler très fort",
+      "Être impoli avec le personnel",
+      "Bloquer le passage",
+      "Regarder des vidéos sans écouteurs"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_242",
+    "question": "Sur quel sujet ai-je le plus de mal à faire semblant d’être d’accord?",
+    "options": [
+      "Le respect",
+      "L’argent",
+      "Les relations",
+      "Les choix de vie"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_243",
+    "question": "Quelle attitude me semble la plus hypocrite?",
+    "options": [
+      "Critiquer puis faire pareil",
+      "Être gentil seulement en public",
+      "Prétendre ne pas être jaloux",
+      "Donner des conseils jamais appliqués"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_244",
+    "question": "Quel défaut suis-je le plus capable de tolérer chez quelqu’un?",
+    "options": [
+      "Être désordonné",
+      "Être en retard",
+      "Être têtu",
+      "Être maladroit socialement"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_245",
+    "question": "Quel comportement pourrait me faire quitter une discussion immédiatement?",
+    "options": [
+      "Les insultes",
+      "La mauvaise foi",
+      "Les moqueries personnelles",
+      "Le refus total d’écouter"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_247",
+    "question": "Dans quelle situation ai-je le plus de chances de dire franchement non?",
+    "options": [
+      "Quand je suis épuisé·e",
+      "Quand cela va contre mes valeurs",
+      "Quand je n’ai pas les moyens",
+      "Quand je n’aime pas les personnes présentes"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_248",
+    "question": "Quelle forme de manque de respect me touche le plus personnellement?",
+    "options": [
+      "Être ignoré·e",
+      "Être ridiculisé·e",
+      "Être interrompu·e",
+      "Être accusé·e injustement"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_249",
+    "question": "Quel type de vérité est-ce que je préfère entendre directement?",
+    "options": [
+      "Une critique sur mon travail",
+      "Un problème dans une relation",
+      "Une mauvaise impression",
+      "Une erreur que j’ai commise"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_250",
+    "question": "Quel compromis ai-je le plus de mal à accepter?",
+    "options": [
+      "Un compromis sur mon temps",
+      "Sur mon confort",
+      "Sur mes principes",
+      "Sur mes projets"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_251",
+    "question": "Quelle qualité est-ce que je pense sous-estimer chez moi?",
+    "options": [
+      "Ma patience",
+      "Mon courage",
+      "Ma créativité",
+      "Ma capacité à aider"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_252",
+    "question": "Dans quel domaine ai-je tendance à manquer de confiance?",
+    "options": [
+      "Mon apparence",
+      "Mes compétences",
+      "Mes décisions",
+      "Mes relations sociales"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_253",
+    "question": "Quel compliment ai-je le plus de mal à croire?",
+    "options": [
+      "Tu es très drôle",
+      "Tu es très beau ou belle",
+      "Tu es vraiment talentueux·se",
+      "Tu inspires confiance"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_254",
+    "question": "Quelle image aimerais-je le plus donner aux autres?",
+    "options": [
+      "Quelqu’un de fiable",
+      "Quelqu’un de drôle",
+      "Quelqu’un d’indépendant",
+      "Quelqu’un de bienveillant"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_255",
+    "question": "Quel défaut est-ce que je reconnais le plus facilement chez moi?",
+    "options": [
+      "Je procrastine",
+      "Je suis têtu·e",
+      "Je réfléchis trop",
+      "Je prends certaines choses trop à cœur"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_257",
+    "question": "Quelle version de moi-même est la plus différente de l’image que les autres ont?",
+    "options": [
+      "Moi quand je suis seul·e",
+      "Moi en famille",
+      "Moi quand je suis stressé·e",
+      "Moi quand je suis amoureux·se"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_258",
+    "question": "Quel trait de caractère aimerais-je le plus améliorer?",
+    "options": [
+      "Ma patience",
+      "Ma confiance",
+      "Mon organisation",
+      "Ma capacité à lâcher prise"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_259",
+    "question": "Qu’est-ce que je considère comme ma plus grande force dans un groupe?",
+    "options": [
+      "Je crée du lien",
+      "Je trouve des solutions",
+      "Je garde le moral",
+      "Je remarque ce que les autres ne voient pas"
+    ],
+    "pack": "intimate"
+  },
+  {
+    "id": "connais_262",
+    "question": "Dans un groupe qui se perd, quel rôle est-ce que je prends?",
+    "options": [
+      "Je vérifie la carte",
+      "Je demande à quelqu’un",
+      "Je suis la personne la plus sûre d’elle",
+      "Je laisse les autres décider"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_263",
+    "question": "Quand le groupe doit garder un secret, quel rôle ai-je?",
+    "options": [
+      "Je suis la personne fiable",
+      "Je suis la personne trop curieuse",
+      "Je suis la personne qui oublie le secret",
+      "Je suis la personne qui vérifie que personne ne parle"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_264",
+    "question": "Si le groupe doit préparer une surprise, que fais-je le mieux?",
+    "options": [
+      "Trouver l’idée",
+      "Gérer les détails",
+      "Occuper la personne",
+      "Créer l’ambiance le jour même"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_265",
+    "question": "Dans un jeu d’équipe, quelle place me convient le plus?",
+    "options": [
+      "Le chef",
+      "Le stratège",
+      "Le motivé qui agit",
+      "Le soutien discret"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_266",
+    "question": "Quand une nouvelle personne rejoint le groupe, comment est-ce que je l’accueille?",
+    "options": [
+      "Je lui pose des questions",
+      "Je l’inclus dans les blagues",
+      "Je lui explique les habitudes du groupe",
+      "J’attends qu’elle vienne vers moi"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_267",
+    "question": "Quand tout le monde manque d’énergie, que fais-je?",
+    "options": [
+      "Je propose une activité",
+      "Je lance une blague",
+      "Je laisse le calme s’installer",
+      "Je propose de rentrer"
+    ],
+    "pack": "group"
+  },
+  {
+    "id": "connais_268",
+    "question": "Quel rôle pourrais-je jouer dans une émission de survie avec mes amis?",
+    "options": [
+      "Chercher de la nourriture",
+      "Construire l’abri",
+      "Gérer les conflits",
+      "Faire rire pendant la catastrophe"
+    ],
+    "pack": "group"
+  }
+]

@@ -1,0 +1,3202 @@
+[
+  {
+    "id": "fra_rencontres_002_f",
+    "question": "La même personne doit toujours payer le premier rendez-vous.",
+    "statement": "La même personne doit toujours payer le premier rendez-vous.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le partage ou l’invitation se décide selon les préférences et la discussion.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_images_vie_privee_008_r",
+    "question": "Toutes les applications ne préviennent pas systématiquement lorsqu’une capture d’écran est réalisée.",
+    "statement": "Toutes les applications ne préviennent pas systématiquement lorsqu’une capture d’écran est réalisée.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les fonctions de notification varient et peuvent être contournées par un autre appareil.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_corps_reactions_001_r",
+    "question": "Une érection ou une lubrification peut survenir sans désir ni consentement.",
+    "statement": "Une érection ou une lubrification peut survenir sans désir ni consentement.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les réactions corporelles peuvent être réflexes et ne déterminent pas l’accord d’une personne.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_contraception_009_r",
+    "question": "Tous les antibiotiques ne diminuent pas l’efficacité de la pilule.",
+    "statement": "Tous les antibiotiques ne diminuent pas l’efficacité de la pilule.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Seuls certains médicaments, notamment des inducteurs enzymatiques, nécessitent des précautions particulières ; un professionnel peut vérifier les interactions.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_ist_depistage_009_r",
+    "question": "L’herpès peut parfois se transmettre sans lésion visible.",
+    "statement": "L’herpès peut parfois se transmettre sans lésion visible.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Une excrétion virale peut survenir en dehors des poussées apparentes.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_couple_communication_012_r",
+    "question": "Prendre une pause annoncée pour se calmer n’est pas la même chose qu’ignorer l’autre pour le punir.",
+    "statement": "Prendre une pause annoncée pour se calmer n’est pas la même chose qu’ignorer l’autre pour le punir.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Une pause saine est expliquée, limitée et suivie d’une reprise de la discussion.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_couple_communication_008_r",
+    "question": "Un conflit peut être géré sans insultes ni humiliation.",
+    "statement": "Un conflit peut être géré sans insultes ni humiliation.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "On peut exprimer colère et désaccord tout en respectant la personne.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_couple_communication_003_r",
+    "question": "Des excuses sans changement de comportement peuvent ne pas suffire à réparer une blessure.",
+    "statement": "Des excuses sans changement de comportement peuvent ne pas suffire à réparer une blessure.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La réparation peut demander de comprendre l’impact et de modifier les actes.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_ist_depistage_005_f",
+    "question": "Une première IST protège définitivement contre toutes les autres.",
+    "statement": "Une première IST protège définitivement contre toutes les autres.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Une personne peut être réinfectée ou contracter une autre infection.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_corps_reactions_011_f",
+    "question": "Les spermatozoïdes meurent toujours immédiatement après un rapport.",
+    "statement": "Les spermatozoïdes meurent toujours immédiatement après un rapport.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Dans des conditions favorables, ils peuvent rester fécondants plusieurs jours.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_corps_reactions_008_f",
+    "question": "Tout le monde possède exactement la même période réfractaire.",
+    "statement": "Tout le monde possède exactement la même période réfractaire.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. L’âge, la physiologie, la fatigue et le contexte peuvent modifier sa durée ou son existence.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_couple_communication_009_r",
+    "question": "Un couple n’est pas obligé de partager tous ses mots de passe.",
+    "statement": "Un couple n’est pas obligé de partager tous ses mots de passe.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La confiance n’exige pas la disparition complète de toute vie privée.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_consentement_010_r",
+    "question": "La tenue d’une personne ne dit rien de son consentement.",
+    "statement": "La tenue d’une personne ne dit rien de son consentement.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les vêtements ne constituent jamais une autorisation.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_contraception_009_f",
+    "question": "Chaque antibiotique annule systématiquement l’effet de la pilule.",
+    "statement": "Chaque antibiotique annule systématiquement l’effet de la pilule.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Seuls certains médicaments, notamment des inducteurs enzymatiques, nécessitent des précautions particulières ; un professionnel peut vérifier les interactions.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_plaisir_intimite_010_r",
+    "question": "Les besoins après une expérience intime varient selon les personnes.",
+    "statement": "Les besoins après une expérience intime varient selon les personnes.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Certaines personnes recherchent du contact, d’autres du calme, une discussion ou simplement du repos.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_ist_depistage_007_r",
+    "question": "Le papillomavirus humain est très fréquent.",
+    "statement": "Le papillomavirus humain est très fréquent.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le HPV est l’une des infections sexuellement transmissibles les plus courantes.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_rencontres_013_r",
+    "question": "Les attentes sur l’exclusivité gagnent à être discutées clairement.",
+    "statement": "Les attentes sur l’exclusivité gagnent à être discutées clairement.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les personnes peuvent avoir des définitions différentes du dating et de l’engagement.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_rencontres_012_r",
+    "question": "Un bon rendez-vous n’établit pas automatiquement une relation exclusive.",
+    "statement": "Un bon rendez-vous n’établit pas automatiquement une relation exclusive.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "L’exclusivité nécessite une discussion et un accord explicites.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_images_vie_privee_012_f",
+    "question": "Ajouter un filigrane rend techniquement impossible toute redistribution.",
+    "statement": "Ajouter un filigrane rend techniquement impossible toute redistribution.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Un filigrane peut identifier l’origine ou compliquer l’usage, mais il peut être recadré ou retouché.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_corps_reactions_012_f",
+    "question": "Une libido saine reste toujours identique toute la vie.",
+    "statement": "Une libido saine reste toujours identique toute la vie.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Les hormones, le stress, la santé, le sommeil, les relations et d’autres facteurs peuvent la modifier.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_couple_communication_013_r",
+    "question": "Une thérapie de couple peut être utilisée avant une crise majeure.",
+    "statement": "Une thérapie de couple peut être utilisée avant une crise majeure.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Certaines personnes consultent pour améliorer leur communication ou prévenir l’escalade des conflits.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_ex_jalousie_002_r",
+    "question": "Aimer une photo sur un réseau social ne prouve pas à lui seul une infidélité.",
+    "statement": "Aimer une photo sur un réseau social ne prouve pas à lui seul une infidélité.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Un geste numérique isolé ne suffit pas à établir les intentions ou les actes d’une personne.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_images_vie_privee_003_r",
+    "question": "Une image intime peut être copiée même si l’application l’affiche une seule fois.",
+    "statement": "Une image intime peut être copiée même si l’application l’affiche une seule fois.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Une capture, un autre appareil ou une sauvegarde peut permettre une copie.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_consentement_005_f",
+    "question": "Une personne endormie peut consentir simplement parce qu’elle n’a pas dit non.",
+    "statement": "Une personne endormie peut consentir simplement parce qu’elle n’a pas dit non.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Une personne doit être en état de comprendre et de choisir librement.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_ist_depistage_010_r",
+    "question": "La chlamydiose est une infection bactérienne qui peut être traitée.",
+    "statement": "La chlamydiose est une infection bactérienne qui peut être traitée.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La chlamydiose est due à une bactérie et se traite avec des antibiotiques adaptés.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_contraception_003_f",
+    "question": "Porter deux préservatifs en même temps double toujours la protection.",
+    "statement": "Porter deux préservatifs en même temps double toujours la protection.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. La friction entre deux préservatifs peut les fragiliser ; il faut suivre les instructions d’utilisation.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_ex_jalousie_011_f",
+    "question": "Toute menace de rupture est forcément une limite saine.",
+    "statement": "Toute menace de rupture est forcément une limite saine.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Une limite décrit ce que l’on fera pour se protéger ; un ultimatum peut aussi servir à contrôler l’autre.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_plaisir_intimite_001_r",
+    "question": "Parler de ses préférences peut améliorer le confort et le plaisir.",
+    "statement": "Parler de ses préférences peut améliorer le confort et le plaisir.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La communication permet d’ajuster les gestes, les limites et le rythme.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_corps_reactions_004_r",
+    "question": "L’alcool peut altérer le jugement et certaines réponses sexuelles.",
+    "statement": "L’alcool peut altérer le jugement et certaines réponses sexuelles.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "L’alcool peut réduire les inhibitions, mais aussi diminuer la sensibilité, l’érection, la lubrification ou la capacité de décider clairement.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_ist_depistage_004_r",
+    "question": "Un test réalisé trop tôt après une exposition peut devoir être répété.",
+    "statement": "Un test réalisé trop tôt après une exposition peut devoir être répété.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Chaque infection et chaque test possède une période fenêtre différente.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_images_vie_privee_005_f",
+    "question": "Une photo numérique ne contient jamais aucune donnée technique.",
+    "statement": "Une photo numérique ne contient jamais aucune donnée technique.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Selon l’appareil et les réglages, le fichier peut inclure des métadonnées EXIF.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_corps_reactions_007_r",
+    "question": "La taille du pénis ne détermine pas à elle seule le plaisir d’un partenaire.",
+    "statement": "La taille du pénis ne détermine pas à elle seule le plaisir d’un partenaire.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le plaisir dépend de nombreux facteurs, notamment la communication, la stimulation, le confort et les préférences.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_ist_depistage_004_f",
+    "question": "Tous les tests d’IST sont fiables dès la minute suivant une exposition.",
+    "statement": "Tous les tests d’IST sont fiables dès la minute suivant une exposition.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Chaque infection et chaque test possède une période fenêtre différente.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_ex_jalousie_003_r",
+    "question": "Partager sa localisation ne crée pas automatiquement la confiance.",
+    "statement": "Partager sa localisation ne crée pas automatiquement la confiance.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La confiance repose sur la communication et les comportements, pas seulement sur la surveillance.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_ex_jalousie_001_f",
+    "question": "Toute amitié avec un ex constitue forcément une infidélité.",
+    "statement": "Toute amitié avec un ex constitue forcément une infidélité.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le sens de cette relation dépend du comportement, des accords et de la transparence du couple.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_applications_messages_001_r",
+    "question": "Un message éphémère peut parfois être conservé par capture ou avec un autre appareil.",
+    "statement": "Un message éphémère peut parfois être conservé par capture ou avec un autre appareil.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les fonctions temporaires réduisent la persistance dans l’application, mais ne contrôlent pas tous les moyens de copie.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_plaisir_intimite_009_f",
+    "question": "Le lubrifiant fragilise toujours tous les préservatifs.",
+    "statement": "Le lubrifiant fragilise toujours tous les préservatifs.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Les lubrifiants compatibles, notamment à base d’eau ou de silicone avec le latex, réduisent les frottements.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_applications_messages_011_f",
+    "question": "Un grand nombre de photos prouve toujours qu’un profil est authentique.",
+    "statement": "Un grand nombre de photos prouve toujours qu’un profil est authentique.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Des images peuvent être volées ou réutilisées sur un faux compte.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_consentement_001_f",
+    "question": "Une fois donné, le consentement ne peut plus être retiré pendant l’acte.",
+    "statement": "Une fois donné, le consentement ne peut plus être retiré pendant l’acte.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le consentement doit rester libre et peut être retiré à tout moment.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_couple_communication_002_f",
+    "question": "Le moindre désaccord prouve qu’un couple doit se séparer.",
+    "statement": "Le moindre désaccord prouve qu’un couple doit se séparer.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. La manière de gérer les désaccords compte souvent davantage que leur existence.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_ist_depistage_002_r",
+    "question": "Certaines IST peuvent se transmettre lors de rapports oraux.",
+    "statement": "Certaines IST peuvent se transmettre lors de rapports oraux.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Des infections peuvent se transmettre par contact oral-génital ou oral-anal.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_couple_communication_006_r",
+    "question": "Fouiller secrètement le téléphone de son partenaire peut abîmer la confiance.",
+    "statement": "Fouiller secrètement le téléphone de son partenaire peut abîmer la confiance.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La surveillance sans accord porte atteinte à la vie privée et ne résout pas la cause de l’insécurité.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_rencontres_010_f",
+    "question": "Arriver en retard prouve toujours que la personne n’est pas intéressée.",
+    "statement": "Arriver en retard prouve toujours que la personne n’est pas intéressée.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le contexte compte ; il vaut mieux observer la communication et le comportement global.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_contraception_003_r",
+    "question": "Superposer deux préservatifs peut augmenter le risque de rupture par frottement.",
+    "statement": "Superposer deux préservatifs peut augmenter le risque de rupture par frottement.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La friction entre deux préservatifs peut les fragiliser ; il faut suivre les instructions d’utilisation.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_images_vie_privee_001_f",
+    "question": "Donner son accord pour une photo autorise automatiquement sa diffusion publique.",
+    "statement": "Donner son accord pour une photo autorise automatiquement sa diffusion publique.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le consentement à la prise de vue et celui à la diffusion sont distincts.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_consentement_008_r",
+    "question": "Flirter avec quelqu’un ne vaut pas consentement à une relation sexuelle.",
+    "statement": "Flirter avec quelqu’un ne vaut pas consentement à une relation sexuelle.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le flirt exprime un intérêt possible, pas un accord à une pratique précise.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_contraception_004_f",
+    "question": "L’huile de cuisine est toujours compatible avec les préservatifs en latex.",
+    "statement": "L’huile de cuisine est toujours compatible avec les préservatifs en latex.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Les lubrifiants à base d’eau ou de silicone sont généralement recommandés avec le latex.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_ex_jalousie_009_r",
+    "question": "Une nouvelle limite devrait être discutée avant d’être utilisée pour punir rétroactivement.",
+    "statement": "Une nouvelle limite devrait être discutée avant d’être utilisée pour punir rétroactivement.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Une limite claire doit être communiquée pour permettre à chacun de choisir comment agir.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_images_vie_privee_007_f",
+    "question": "Un recadrage rend automatiquement toute photo anonyme.",
+    "statement": "Un recadrage rend automatiquement toute photo anonyme.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Des détails visibles ou des données du fichier peuvent rester exploitables.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_corps_reactions_009_f",
+    "question": "Le clitoris se limite au petit bouton visible à l’extérieur.",
+    "statement": "Le clitoris se limite au petit bouton visible à l’extérieur.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le gland visible n’est qu’une partie d’un organe comprenant des structures internes.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_ist_depistage_001_r",
+    "question": "De nombreuses IST peuvent être asymptomatiques.",
+    "statement": "De nombreuses IST peuvent être asymptomatiques.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Beaucoup d’infections sexuellement transmissibles ne donnent aucun symptôme, surtout au début.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_contraception_004_r",
+    "question": "Les corps gras peuvent fragiliser certains préservatifs en latex.",
+    "statement": "Les corps gras peuvent fragiliser certains préservatifs en latex.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les lubrifiants à base d’eau ou de silicone sont généralement recommandés avec le latex.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_plaisir_intimite_004_r",
+    "question": "Les orgasmes simultanés ne sont pas une obligation ni une norme universelle.",
+    "statement": "Les orgasmes simultanés ne sont pas une obligation ni une norme universelle.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le rythme et les réponses de chacun peuvent être différents.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_images_vie_privee_010_r",
+    "question": "Le chiffrement protège la transmission, mais n’empêche pas le destinataire de recopier le contenu.",
+    "statement": "Le chiffrement protège la transmission, mais n’empêche pas le destinataire de recopier le contenu.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le chiffrement protège surtout les données en transit ou stockées, pas les actions de la personne qui les reçoit.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_images_vie_privee_001_r",
+    "question": "Accepter d’être photographié ne signifie pas accepter la publication de la photo.",
+    "statement": "Accepter d’être photographié ne signifie pas accepter la publication de la photo.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le consentement à la prise de vue et celui à la diffusion sont distincts.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_applications_messages_005_r",
+    "question": "Un match ne vaut pas consentement à recevoir des messages ou images sexuelles.",
+    "statement": "Un match ne vaut pas consentement à recevoir des messages ou images sexuelles.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Un match ouvre une conversation, pas un accord à n’importe quel contenu.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_couple_communication_004_f",
+    "question": "Une limite exprimée une fois ne peut jamais changer.",
+    "statement": "Une limite exprimée une fois ne peut jamais changer.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Les besoins et les contextes évoluent ; les changements doivent être communiqués.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_applications_messages_009_r",
+    "question": "Un algorithme de rencontre ne garantit pas une compatibilité réelle.",
+    "statement": "Un algorithme de rencontre ne garantit pas une compatibilité réelle.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "L’algorithme repose sur des données et critères limités, pas sur l’ensemble d’une relation humaine.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_corps_reactions_004_f",
+    "question": "L’alcool améliore toujours les performances sexuelles.",
+    "statement": "L’alcool améliore toujours les performances sexuelles.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. L’alcool peut réduire les inhibitions, mais aussi diminuer la sensibilité, l’érection, la lubrification ou la capacité de décider clairement.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_plaisir_intimite_012_r",
+    "question": "L’anxiété de performance peut perturber l’excitation ou le plaisir.",
+    "statement": "L’anxiété de performance peut perturber l’excitation ou le plaisir.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La pression et la peur de « réussir » peuvent détourner l’attention des sensations.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_contraception_011_f",
+    "question": "Un préservatif reste fiable indéfiniment tant que l’emballage est fermé.",
+    "statement": "Un préservatif reste fiable indéfiniment tant que l’emballage est fermé.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le matériau peut se dégrader avec le temps ; il faut vérifier la date et l’état de l’emballage.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_contraception_007_f",
+    "question": "Le dispositif intra-utérin au cuivre ne peut jamais servir de contraception d’urgence.",
+    "statement": "Le dispositif intra-utérin au cuivre ne peut jamais servir de contraception d’urgence.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le DIU au cuivre fait partie des méthodes de contraception d’urgence reconnues et est particulièrement efficace.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_rencontres_008_r",
+    "question": "Partager son lieu de rendez-vous à une personne de confiance peut être une mesure de sécurité facultative.",
+    "statement": "Partager son lieu de rendez-vous à une personne de confiance peut être une mesure de sécurité facultative.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Certaines personnes utilisent cette précaution pour se sentir plus en sécurité.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_applications_messages_006_r",
+    "question": "Envoyer une image intime non sollicitée peut violer les limites et parfois la loi.",
+    "statement": "Envoyer une image intime non sollicitée peut violer les limites et parfois la loi.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le consentement doit précéder l’envoi de contenu sexuel.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_couple_communication_004_r",
+    "question": "Les limites d’une personne peuvent évoluer avec le temps.",
+    "statement": "Les limites d’une personne peuvent évoluer avec le temps.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les besoins et les contextes évoluent ; les changements doivent être communiqués.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_consentement_005_r",
+    "question": "Une personne inconsciente ne peut pas donner un consentement valable.",
+    "statement": "Une personne inconsciente ne peut pas donner un consentement valable.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Une personne doit être en état de comprendre et de choisir librement.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_ex_jalousie_007_f",
+    "question": "Tous les couples considèrent exactement les mêmes comportements comme du flirt.",
+    "statement": "Tous les couples considèrent exactement les mêmes comportements comme du flirt.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le contexte culturel, personnel et relationnel influence les limites.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_rencontres_009_r",
+    "question": "Une forte connexion par messages ne garantit pas la même alchimie en personne.",
+    "statement": "Une forte connexion par messages ne garantit pas la même alchimie en personne.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le ton, la présence, le rythme et les attentes peuvent être différents lors d’une rencontre réelle.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_rencontres_001_r",
+    "question": "Un premier rendez-vous réussi n’a pas besoin de finir par un baiser.",
+    "statement": "Un premier rendez-vous réussi n’a pas besoin de finir par un baiser.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La réussite d’un rendez-vous dépend des attentes et du confort des personnes, pas d’une étape obligatoire.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_plaisir_intimite_008_r",
+    "question": "On peut consentir à une activité tout en posant des limites précises.",
+    "statement": "On peut consentir à une activité tout en posant des limites précises.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le consentement peut inclure des conditions, des pauses ou des gestes refusés.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_ist_depistage_003_f",
+    "question": "Le préservatif empêche absolument toutes les IST dans toutes les situations.",
+    "statement": "Le préservatif empêche absolument toutes les IST dans toutes les situations.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Il protège très efficacement contre de nombreuses infections, mais certaines peuvent toucher des zones de peau non couvertes.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_consentement_003_f",
+    "question": "L’absence de refus verbal signifie automatiquement oui.",
+    "statement": "L’absence de refus verbal signifie automatiquement oui.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Un consentement doit être libre, clair et sans pression ; le silence n’est pas un accord automatique.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_contraception_008_r",
+    "question": "La fertilité revient généralement rapidement après l’arrêt de la pilule.",
+    "statement": "La fertilité revient généralement rapidement après l’arrêt de la pilule.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les contraceptifs oraux ne provoquent pas une infertilité durable et la fertilité revient habituellement rapidement.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_ex_jalousie_003_f",
+    "question": "La géolocalisation permanente garantit une relation sans mensonge.",
+    "statement": "La géolocalisation permanente garantit une relation sans mensonge.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. La confiance repose sur la communication et les comportements, pas seulement sur la surveillance.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_ex_jalousie_010_r",
+    "question": "Une relation non monogame consentie n’est pas la même chose qu’une tromperie.",
+    "statement": "Une relation non monogame consentie n’est pas la même chose qu’une tromperie.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La différence essentielle repose sur l’information, le consentement et les accords entre partenaires.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_images_vie_privee_004_f",
+    "question": "Une photo sans visage est toujours impossible à identifier.",
+    "statement": "Une photo sans visage est toujours impossible à identifier.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Tatouages, décor, bijoux, silhouette ou contexte peuvent rendre une personne reconnaissable.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_applications_messages_012_f",
+    "question": "Recevoir une image intime donne automatiquement le droit de la partager.",
+    "statement": "Recevoir une image intime donne automatiquement le droit de la partager.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le consentement à l’envoi et le consentement à la diffusion sont deux choses distinctes.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_ex_jalousie_007_r",
+    "question": "Les limites concernant le flirt peuvent être différentes d’un couple à l’autre.",
+    "statement": "Les limites concernant le flirt peuvent être différentes d’un couple à l’autre.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le contexte culturel, personnel et relationnel influence les limites.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_consentement_009_f",
+    "question": "Accepter de rentrer chez quelqu’un signifie accepter tout ce qui peut suivre.",
+    "statement": "Accepter de rentrer chez quelqu’un signifie accepter tout ce qui peut suivre.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Un lieu ou une invitation ne remplace jamais un accord clair.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_images_vie_privee_006_f",
+    "question": "Supprimer une photo du téléphone efface automatiquement toutes les sauvegardes en ligne.",
+    "statement": "Supprimer une photo du téléphone efface automatiquement toutes les sauvegardes en ligne.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Les services cloud et corbeilles possèdent leurs propres règles de conservation.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_contraception_012_r",
+    "question": "Le liquide pré-éjaculatoire peut parfois contenir des spermatozoïdes.",
+    "statement": "Le liquide pré-éjaculatoire peut parfois contenir des spermatozoïdes.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Une grossesse reste possible avant l’éjaculation, notamment si des spermatozoïdes sont présents.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_consentement_006_r",
+    "question": "Avoir accepté hier ne garantit pas l’accord aujourd’hui.",
+    "statement": "Avoir accepté hier ne garantit pas l’accord aujourd’hui.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le consentement doit être renouvelé selon le contexte et le moment.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_contraception_005_r",
+    "question": "La contraception d’urgence n’interrompt pas une grossesse déjà installée.",
+    "statement": "La contraception d’urgence n’interrompt pas une grossesse déjà installée.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Elle agit principalement en empêchant ou retardant l’ovulation ; ce n’est pas un médicament d’interruption de grossesse.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_plaisir_intimite_005_r",
+    "question": "Se masturber en couple ne signifie pas automatiquement être insatisfait de son partenaire.",
+    "statement": "Se masturber en couple ne signifie pas automatiquement être insatisfait de son partenaire.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La masturbation peut coexister avec une vie sexuelle satisfaisante.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_plaisir_intimite_005_f",
+    "question": "Toute masturbation en couple prouve que la relation sexuelle va mal.",
+    "statement": "Toute masturbation en couple prouve que la relation sexuelle va mal.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. La masturbation peut coexister avec une vie sexuelle satisfaisante.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_couple_communication_002_r",
+    "question": "Un désaccord ne signifie pas automatiquement que deux personnes sont incompatibles.",
+    "statement": "Un désaccord ne signifie pas automatiquement que deux personnes sont incompatibles.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La manière de gérer les désaccords compte souvent davantage que leur existence.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_consentement_004_f",
+    "question": "Dans un couple stable, le consentement est acquis une fois pour toutes.",
+    "statement": "Dans un couple stable, le consentement est acquis une fois pour toutes.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le consentement reste nécessaire dans toutes les relations, y compris durables.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_rencontres_006_r",
+    "question": "Un appel vidéo peut aider à vérifier une identité sans garantir totalement la sécurité.",
+    "statement": "Un appel vidéo peut aider à vérifier une identité sans garantir totalement la sécurité.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La vérification visuelle réduit certaines incertitudes, mais ne remplace pas les précautions.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_applications_messages_012_r",
+    "question": "Autoriser une personne à recevoir une image intime n’autorise pas sa redistribution.",
+    "statement": "Autoriser une personne à recevoir une image intime n’autorise pas sa redistribution.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le consentement à l’envoi et le consentement à la diffusion sont deux choses distinctes.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_applications_messages_009_f",
+    "question": "Un score de compatibilité garantit une relation réussie.",
+    "statement": "Un score de compatibilité garantit une relation réussie.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. L’algorithme repose sur des données et critères limités, pas sur l’ensemble d’une relation humaine.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_rencontres_007_r",
+    "question": "Choisir un lieu public pour une première rencontre peut faciliter le départ et réduire certains risques.",
+    "statement": "Choisir un lieu public pour une première rencontre peut faciliter le départ et réduire certains risques.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Un lieu public offre davantage de visibilité et de possibilités de quitter la rencontre.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_corps_reactions_010_r",
+    "question": "Avoir ses règles ne rend pas une grossesse absolument impossible.",
+    "statement": "Avoir ses règles ne rend pas une grossesse absolument impossible.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "L’ovulation peut varier et les spermatozoïdes peuvent survivre plusieurs jours.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_rencontres_011_f",
+    "question": "Une personne nerveuse paraît toujours immédiatement enthousiaste.",
+    "statement": "Une personne nerveuse paraît toujours immédiatement enthousiaste.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le stress peut modifier le regard, la parole, les gestes et la spontanéité.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_rencontres_011_r",
+    "question": "La nervosité peut parfois ressembler à de la froideur ou du désintérêt.",
+    "statement": "La nervosité peut parfois ressembler à de la froideur ou du désintérêt.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le stress peut modifier le regard, la parole, les gestes et la spontanéité.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_couple_communication_001_f",
+    "question": "Dans un bon couple, chacun devine toujours les besoins de l’autre sans discussion.",
+    "statement": "Dans un bon couple, chacun devine toujours les besoins de l’autre sans discussion.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Même des partenaires proches peuvent interpréter différemment une situation.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_consentement_012_r",
+    "question": "Le consentement doit être éclairé, sans tromperie sur un élément essentiel.",
+    "statement": "Le consentement doit être éclairé, sans tromperie sur un élément essentiel.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Un choix libre suppose de disposer des informations essentielles à la décision.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_applications_messages_007_r",
+    "question": "Bloquer une personne n’efface pas forcément les messages déjà reçus par celle-ci.",
+    "statement": "Bloquer une personne n’efface pas forcément les messages déjà reçus par celle-ci.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le blocage empêche généralement de nouveaux échanges, mais ne supprime pas nécessairement l’historique de l’autre appareil.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_consentement_008_f",
+    "question": "Un flirt appuyé vaut automatiquement consentement pour la suite.",
+    "statement": "Un flirt appuyé vaut automatiquement consentement pour la suite.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le flirt exprime un intérêt possible, pas un accord à une pratique précise.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_contraception_013_r",
+    "question": "Le retrait avant l’éjaculation n’est pas une méthode contraceptive parfaitement fiable.",
+    "statement": "Le retrait avant l’éjaculation n’est pas une méthode contraceptive parfaitement fiable.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le moment peut être mal évalué et du sperme peut être présent avant l’éjaculation complète.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_consentement_011_f",
+    "question": "Commencer une pratique oblige à la terminer.",
+    "statement": "Commencer une pratique oblige à la terminer.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Toute personne peut demander l’arrêt ou une modification à n’importe quel moment.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_plaisir_intimite_007_r",
+    "question": "Il n’existe pas de fréquence sexuelle universellement normale pour tous les couples.",
+    "statement": "Il n’existe pas de fréquence sexuelle universellement normale pour tous les couples.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La fréquence varie selon les personnes, les périodes et les accords du couple.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_applications_messages_011_r",
+    "question": "Un profil comportant beaucoup de photos peut malgré tout être faux.",
+    "statement": "Un profil comportant beaucoup de photos peut malgré tout être faux.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Des images peuvent être volées ou réutilisées sur un faux compte.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_images_vie_privee_011_f",
+    "question": "Effacer un message supprime toujours toutes les copies et sauvegardes.",
+    "statement": "Effacer un message supprime toujours toutes les copies et sauvegardes.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Des copies peuvent subsister sur d’autres appareils, dans une corbeille ou dans un cloud.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_couple_communication_006_f",
+    "question": "Fouiller le téléphone de l’autre est une preuve saine d’amour.",
+    "statement": "Fouiller le téléphone de l’autre est une preuve saine d’amour.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. La surveillance sans accord porte atteinte à la vie privée et ne résout pas la cause de l’insécurité.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_corps_reactions_005_f",
+    "question": "Tous les cycles menstruels durent exactement 28 jours.",
+    "statement": "Tous les cycles menstruels durent exactement 28 jours.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Vingt-huit jours est une moyenne courante, pas une règle universelle.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_ist_depistage_001_f",
+    "question": "Une IST provoque toujours des symptômes immédiatement visibles.",
+    "statement": "Une IST provoque toujours des symptômes immédiatement visibles.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Beaucoup d’infections sexuellement transmissibles ne donnent aucun symptôme, surtout au début.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_plaisir_intimite_008_f",
+    "question": "Dire oui à une activité interdit de poser des limites pendant celle-ci.",
+    "statement": "Dire oui à une activité interdit de poser des limites pendant celle-ci.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le consentement peut inclure des conditions, des pauses ou des gestes refusés.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_corps_reactions_006_r",
+    "question": "La lubrification vaginale peut varier selon le contexte, les hormones, le stress ou les médicaments.",
+    "statement": "La lubrification vaginale peut varier selon le contexte, les hormones, le stress ou les médicaments.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La lubrification ne reflète pas parfaitement l’envie et peut changer pour de nombreuses raisons.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_ex_jalousie_006_f",
+    "question": "Il existe une définition universelle identique de l’infidélité émotionnelle pour tous les couples.",
+    "statement": "Il existe une définition universelle identique de l’infidélité émotionnelle pour tous les couples.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Les partenaires doivent clarifier ce qu’ils considèrent comme une transgression.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_contraception_006_f",
+    "question": "Attendre plusieurs jours rend toujours la contraception d’urgence plus efficace.",
+    "statement": "Attendre plusieurs jours rend toujours la contraception d’urgence plus efficace.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Elle doit être utilisée dans la fenêtre prévue et agit mieux lorsqu’elle est prise le plus tôt possible.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_applications_messages_010_r",
+    "question": "Un badge de vérification ne garantit pas un comportement honnête ou respectueux.",
+    "statement": "Un badge de vérification ne garantit pas un comportement honnête ou respectueux.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La vérification peut confirmer certains éléments d’identité, pas toutes les intentions.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_ex_jalousie_013_r",
+    "question": "Comparer constamment son partenaire à un ex peut fragiliser la relation.",
+    "statement": "Comparer constamment son partenaire à un ex peut fragiliser la relation.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les comparaisons répétées peuvent créer de l’insécurité et détourner la discussion du problème présent.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_couple_communication_008_f",
+    "question": "Les insultes sont une étape normale et nécessaire de tous les conflits de couple.",
+    "statement": "Les insultes sont une étape normale et nécessaire de tous les conflits de couple.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. On peut exprimer colère et désaccord tout en respectant la personne.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_consentement_013_r",
+    "question": "Demander régulièrement si l’autre va bien peut aider à vérifier le consentement.",
+    "statement": "Demander régulièrement si l’autre va bien peut aider à vérifier le consentement.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La communication et les vérifications peuvent rendre l’échange plus clair et plus sûr.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_corps_reactions_005_r",
+    "question": "La durée d’un cycle menstruel varie d’une personne à l’autre et d’un mois à l’autre.",
+    "statement": "La durée d’un cycle menstruel varie d’une personne à l’autre et d’un mois à l’autre.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Vingt-huit jours est une moyenne courante, pas une règle universelle.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_applications_messages_007_f",
+    "question": "Bloquer quelqu’un détruit automatiquement toutes ses anciennes copies.",
+    "statement": "Bloquer quelqu’un détruit automatiquement toutes ses anciennes copies.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le blocage empêche généralement de nouveaux échanges, mais ne supprime pas nécessairement l’historique de l’autre appareil.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_contraception_008_f",
+    "question": "La pilule rend forcément stérile pendant plusieurs années après l’arrêt.",
+    "statement": "La pilule rend forcément stérile pendant plusieurs années après l’arrêt.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Les contraceptifs oraux ne provoquent pas une infertilité durable et la fertilité revient habituellement rapidement.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_rencontres_004_r",
+    "question": "Refuser un deuxième rendez-vous ne nécessite pas une justification détaillée.",
+    "statement": "Refuser un deuxième rendez-vous ne nécessite pas une justification détaillée.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Chacun peut mettre fin à une rencontre ou décliner poliment sans devoir se défendre longuement.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_ist_depistage_010_f",
+    "question": "La chlamydiose est un virus incurable.",
+    "statement": "La chlamydiose est un virus incurable.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. La chlamydiose est due à une bactérie et se traite avec des antibiotiques adaptés.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_applications_messages_003_r",
+    "question": "Un accusé de lecture ne prouve pas que la personne était disponible pour répondre.",
+    "statement": "Un accusé de lecture ne prouve pas que la personne était disponible pour répondre.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Une notification peut être ouverte rapidement, par erreur ou dans un moment peu disponible.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_contraception_006_r",
+    "question": "La contraception d’urgence est généralement plus efficace lorsqu’elle est prise rapidement.",
+    "statement": "La contraception d’urgence est généralement plus efficace lorsqu’elle est prise rapidement.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Elle doit être utilisée dans la fenêtre prévue et agit mieux lorsqu’elle est prise le plus tôt possible.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_ex_jalousie_009_f",
+    "question": "On peut inventer une règle après coup et reprocher immédiatement à l’autre de ne pas l’avoir respectée.",
+    "statement": "On peut inventer une règle après coup et reprocher immédiatement à l’autre de ne pas l’avoir respectée.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Une limite claire doit être communiquée pour permettre à chacun de choisir comment agir.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_corps_reactions_012_r",
+    "question": "La libido peut fluctuer au cours de la vie.",
+    "statement": "La libido peut fluctuer au cours de la vie.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les hormones, le stress, la santé, le sommeil, les relations et d’autres facteurs peuvent la modifier.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_ist_depistage_005_r",
+    "question": "Avoir déjà eu une IST ne rend pas immunisé contre toutes les futures infections.",
+    "statement": "Avoir déjà eu une IST ne rend pas immunisé contre toutes les futures infections.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Une personne peut être réinfectée ou contracter une autre infection.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_contraception_010_r",
+    "question": "Des vomissements ou une diarrhée importante peuvent perturber l’absorption d’une pilule.",
+    "statement": "Des vomissements ou une diarrhée importante peuvent perturber l’absorption d’une pilule.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Une mauvaise absorption peut nécessiter de suivre les consignes de la notice ou d’un professionnel.",
+    "theme": "contraception",
+    "themeLabel": "Contraception",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · contraception et préservatifs"
+  },
+  {
+    "id": "fra_corps_reactions_007_f",
+    "question": "Une plus grande taille garantit toujours davantage de plaisir.",
+    "statement": "Une plus grande taille garantit toujours davantage de plaisir.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le plaisir dépend de nombreux facteurs, notamment la communication, la stimulation, le confort et les préférences.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_couple_communication_007_f",
+    "question": "Plus une personne est jalouse, plus son amour est forcément profond.",
+    "statement": "Plus une personne est jalouse, plus son amour est forcément profond.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. La jalousie est une émotion qui peut exister avec l’amour, mais aussi avec la peur ou le contrôle.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_plaisir_intimite_004_f",
+    "question": "Un couple compatible atteint toujours l’orgasme exactement au même moment.",
+    "statement": "Un couple compatible atteint toujours l’orgasme exactement au même moment.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Le rythme et les réponses de chacun peuvent être différents.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_corps_reactions_008_r",
+    "question": "La période réfractaire après un orgasme varie beaucoup selon les personnes.",
+    "statement": "La période réfractaire après un orgasme varie beaucoup selon les personnes.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "L’âge, la physiologie, la fatigue et le contexte peuvent modifier sa durée ou son existence.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_plaisir_intimite_013_r",
+    "question": "L’intimité peut aussi être non sexuelle.",
+    "statement": "L’intimité peut aussi être non sexuelle.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La proximité émotionnelle, les gestes tendres et les conversations peuvent être intimes sans sexualité.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_ex_jalousie_004_f",
+    "question": "Protéger son téléphone signifie forcément cacher une infidélité.",
+    "statement": "Protéger son téléphone signifie forcément cacher une infidélité.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Une personne peut préserver sa vie privée ou celle de ses proches sans tromper son partenaire.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_ex_jalousie_012_r",
+    "question": "La jalousie est une émotion, pas une autorisation à surveiller ou isoler quelqu’un.",
+    "statement": "La jalousie est une émotion, pas une autorisation à surveiller ou isoler quelqu’un.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Une émotion peut être entendue sans justifier des comportements de contrôle.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_plaisir_intimite_003_r",
+    "question": "La pénétration n’est pas obligatoire pour qu’une expérience soit sexuelle ou intime.",
+    "statement": "La pénétration n’est pas obligatoire pour qu’une expérience soit sexuelle ou intime.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La sexualité comprend de nombreuses pratiques et formes de proximité.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_corps_reactions_011_r",
+    "question": "Des spermatozoïdes peuvent survivre plusieurs jours dans les voies génitales.",
+    "statement": "Des spermatozoïdes peuvent survivre plusieurs jours dans les voies génitales.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Dans des conditions favorables, ils peuvent rester fécondants plusieurs jours.",
+    "theme": "corps_reactions",
+    "themeLabel": "Corps & réactions",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France · santé sexuelle"
+  },
+  {
+    "id": "fra_rencontres_010_r",
+    "question": "Un retard peut avoir plusieurs causes et ne prouve pas automatiquement un manque d’intérêt.",
+    "statement": "Un retard peut avoir plusieurs causes et ne prouve pas automatiquement un manque d’intérêt.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le contexte compte ; il vaut mieux observer la communication et le comportement global.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_applications_messages_004_f",
+    "question": "Un statut en ligne décrit toujours exactement ce que fait la personne à la seconde près.",
+    "statement": "Un statut en ligne décrit toujours exactement ce que fait la personne à la seconde près.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Les applications mettent à jour ces statuts de manière variable.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_applications_messages_004_r",
+    "question": "Le statut « en ligne » d’une application peut être approximatif ou différé.",
+    "statement": "Le statut « en ligne » d’une application peut être approximatif ou différé.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les applications mettent à jour ces statuts de manière variable.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_images_vie_privee_002_r",
+    "question": "En France, diffuser une image intime sans l’accord de la personne peut être pénalement sanctionné.",
+    "statement": "En France, diffuser une image intime sans l’accord de la personne peut être pénalement sanctionné.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La diffusion non consentie d’une image sexuelle est sanctionnée, même lorsque l’image avait été obtenue avec accord.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_images_vie_privee_008_f",
+    "question": "Chaque application envoie toujours une alerte fiable pour toute capture d’écran.",
+    "statement": "Chaque application envoie toujours une alerte fiable pour toute capture d’écran.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Les fonctions de notification varient et peuvent être contournées par un autre appareil.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_rencontres_004_f",
+    "question": "Après un premier rendez-vous, on est obligé d’en accepter un deuxième sauf motif grave.",
+    "statement": "Après un premier rendez-vous, on est obligé d’en accepter un deuxième sauf motif grave.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Chacun peut mettre fin à une rencontre ou décliner poliment sans devoir se défendre longuement.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_rencontres_012_f",
+    "question": "Un seul rendez-vous crée automatiquement une exclusivité.",
+    "statement": "Un seul rendez-vous crée automatiquement une exclusivité.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. L’exclusivité nécessite une discussion et un accord explicites.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_images_vie_privee_011_r",
+    "question": "Supprimer une image d’une conversation ne garantit pas sa suppression des sauvegardes.",
+    "statement": "Supprimer une image d’une conversation ne garantit pas sa suppression des sauvegardes.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Des copies peuvent subsister sur d’autres appareils, dans une corbeille ou dans un cloud.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_consentement_003_r",
+    "question": "Le silence ne suffit pas à établir un consentement clair.",
+    "statement": "Le silence ne suffit pas à établir un consentement clair.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Un consentement doit être libre, clair et sans pression ; le silence n’est pas un accord automatique.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_plaisir_intimite_012_f",
+    "question": "Se concentrer sur la performance améliore toujours automatiquement le plaisir.",
+    "statement": "Se concentrer sur la performance améliore toujours automatiquement le plaisir.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. La pression et la peur de « réussir » peuvent détourner l’attention des sensations.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_ist_depistage_006_f",
+    "question": "Les antibiotiques guérissent toutes les IST, y compris les infections virales.",
+    "statement": "Les antibiotiques guérissent toutes les IST, y compris les infections virales.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Les antibiotiques agissent sur les bactéries, pas sur les virus.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_couple_communication_003_f",
+    "question": "Dire pardon suffit toujours, même si le comportement recommence immédiatement.",
+    "statement": "Dire pardon suffit toujours, même si le comportement recommence immédiatement.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. La réparation peut demander de comprendre l’impact et de modifier les actes.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_couple_communication_011_r",
+    "question": "L’amour ne résout pas toujours à lui seul des projets de vie incompatibles.",
+    "statement": "L’amour ne résout pas toujours à lui seul des projets de vie incompatibles.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Des sujets comme les enfants, le lieu de vie ou les valeurs peuvent nécessiter des choix concrets.",
+    "theme": "couple_communication",
+    "themeLabel": "Couple & communication",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de communication respectueuse"
+  },
+  {
+    "id": "fra_ist_depistage_013_r",
+    "question": "Selon l’IST recherchée, un dépistage peut utiliser du sang, de l’urine ou un prélèvement local.",
+    "statement": "Selon l’IST recherchée, un dépistage peut utiliser du sang, de l’urine ou un prélèvement local.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La méthode dépend de l’infection, du type d’exposition et du site à tester.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_plaisir_intimite_007_f",
+    "question": "Tous les couples heureux ont exactement le même nombre de rapports par semaine.",
+    "statement": "Tous les couples heureux ont exactement le même nombre de rapports par semaine.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. La fréquence varie selon les personnes, les périodes et les accords du couple.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_images_vie_privee_007_r",
+    "question": "Recadrer une photo ne supprime pas toujours tous les éléments identifiants.",
+    "statement": "Recadrer une photo ne supprime pas toujours tous les éléments identifiants.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Des détails visibles ou des données du fichier peuvent rester exploitables.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_images_vie_privee_005_r",
+    "question": "Les métadonnées d’une photo peuvent parfois contenir des informations de lieu ou d’appareil.",
+    "statement": "Les métadonnées d’une photo peuvent parfois contenir des informations de lieu ou d’appareil.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Selon l’appareil et les réglages, le fichier peut inclure des métadonnées EXIF.",
+    "theme": "images_vie_privee",
+    "themeLabel": "Images & vie privée",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image et vie privée"
+  },
+  {
+    "id": "fra_consentement_007_f",
+    "question": "Un oui reste toujours valable même s’il est obtenu sous pression.",
+    "statement": "Un oui reste toujours valable même s’il est obtenu sous pression.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. La liberté de choix est une condition essentielle du consentement.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_consentement_010_f",
+    "question": "Une tenue sexy peut être interprétée comme un consentement.",
+    "statement": "Une tenue sexy peut être interprétée comme un consentement.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Les vêtements ne constituent jamais une autorisation.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "OMS · éducation complète à la sexualité"
+  },
+  {
+    "id": "fra_rencontres_003_f",
+    "question": "Accepter un verre oblige à embrasser ou revoir la personne.",
+    "statement": "Accepter un verre oblige à embrasser ou revoir la personne.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Un cadeau ou une invitation n’achète jamais le consentement.",
+    "theme": "rencontres",
+    "themeLabel": "Rencontres",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de sécurité et de consentement"
+  },
+  {
+    "id": "fra_applications_messages_002_r",
+    "question": "Supprimer un message de son propre téléphone ne garantit pas sa disparition chez le destinataire.",
+    "statement": "Supprimer un message de son propre téléphone ne garantit pas sa disparition chez le destinataire.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le destinataire peut conserver le message, une capture ou une sauvegarde.",
+    "theme": "applications_messages",
+    "themeLabel": "Applications & messages",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de sécurité numérique et de consentement"
+  },
+  {
+    "id": "fra_ex_jalousie_012_f",
+    "question": "Être jaloux autorise à contrôler les amis et les déplacements de son partenaire.",
+    "statement": "Être jaloux autorise à contrôler les amis et les déplacements de son partenaire.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. Une émotion peut être entendue sans justifier des comportements de contrôle.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_ist_depistage_006_r",
+    "question": "Les antibiotiques ne traitent pas les IST virales comme le VIH ou l’herpès.",
+    "statement": "Les antibiotiques ne traitent pas les IST virales comme le VIH ou l’herpès.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les antibiotiques agissent sur les bactéries, pas sur les virus.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "unfiltered",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_ist_depistage_008_r",
+    "question": "La vaccination peut prévenir des infections par certains types de HPV.",
+    "statement": "La vaccination peut prévenir des infections par certains types de HPV.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La vaccination cible plusieurs types importants, sans couvrir absolument toutes les souches.",
+    "theme": "ist_depistage",
+    "themeLabel": "IST & dépistage",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · infections sexuellement transmissibles"
+  },
+  {
+    "id": "fra_plaisir_intimite_002_f",
+    "question": "Un rapport sans orgasme est forcément un échec.",
+    "statement": "Un rapport sans orgasme est forcément un échec.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "C’est faux. La satisfaction peut venir du plaisir, de la proximité, de la détente ou d’autres dimensions.",
+    "theme": "plaisir_intimite",
+    "themeLabel": "Plaisir & intimité",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "OMS · santé sexuelle positive"
+  },
+  {
+    "id": "fra_ex_jalousie_008_r",
+    "question": "La vie privée et le secret ne sont pas exactement la même chose.",
+    "statement": "La vie privée et le secret ne sont pas exactement la même chose.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La vie privée peut protéger un espace personnel légitime ; un secret vise parfois à dissimuler une information importante.",
+    "theme": "ex_jalousie",
+    "themeLabel": "Ex, jalousie & limites",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_v5_001",
+    "question": "Le consentement donné au début vaut automatiquement jusqu’à la fin.",
+    "statement": "Le consentement donné au début vaut automatiquement jusqu’à la fin.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Le consentement peut être retiré à tout moment, même après avoir commencé.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_002",
+    "question": "Une personne peut changer d’avis après avoir dit oui.",
+    "statement": "Une personne peut changer d’avis après avoir dit oui.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Un accord n’est jamais irrévocable : chacun peut demander d’arrêter.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_003",
+    "question": "L’absence de « non » suffit toujours à prouver le consentement.",
+    "statement": "L’absence de « non » suffit toujours à prouver le consentement.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Un silence ou une absence de résistance ne constitue pas un accord clair.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_004",
+    "question": "Être en couple dispense de demander l’accord de l’autre.",
+    "statement": "Être en couple dispense de demander l’accord de l’autre.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "La relation ne crée jamais un consentement permanent.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_005",
+    "question": "Une personne endormie peut donner un consentement valable.",
+    "statement": "Une personne endormie peut donner un consentement valable.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Une personne endormie n’est pas en mesure de donner un accord libre et actuel.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_006",
+    "question": "On peut demander une pause sans devoir se justifier.",
+    "statement": "On peut demander une pause sans devoir se justifier.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le confort et les limites suffisent pour demander d’arrêter ou de ralentir.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_007",
+    "question": "Le consentement à une pratique implique celui à toutes les autres.",
+    "statement": "Le consentement à une pratique implique celui à toutes les autres.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Chaque pratique peut nécessiter un accord distinct.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_008",
+    "question": "Demander « ça va ? » pendant un rapport peut faire partie du consentement continu.",
+    "statement": "Demander « ça va ? » pendant un rapport peut faire partie du consentement continu.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Vérifier régulièrement l’accord aide à maintenir une expérience consentie.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_009",
+    "question": "Le préservatif réduit fortement le risque de nombreuses IST s’il est bien utilisé.",
+    "statement": "Le préservatif réduit fortement le risque de nombreuses IST s’il est bien utilisé.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Une utilisation correcte et régulière offre une protection importante, sans supprimer tous les risques.",
+    "theme": "prevention",
+    "themeLabel": "Prévention",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_010",
+    "question": "Deux préservatifs superposés protègent mieux qu’un seul.",
+    "statement": "Deux préservatifs superposés protègent mieux qu’un seul.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Le frottement entre deux préservatifs peut augmenter le risque de rupture.",
+    "theme": "prevention",
+    "themeLabel": "Prévention",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_011",
+    "question": "Un préservatif périmé doit être remplacé.",
+    "statement": "Un préservatif périmé doit être remplacé.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La date et l’état de l’emballage doivent être contrôlés avant utilisation.",
+    "theme": "prevention",
+    "themeLabel": "Prévention",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_012",
+    "question": "Les préservatifs éliminent totalement le risque de HPV.",
+    "statement": "Les préservatifs éliminent totalement le risque de HPV.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Ils réduisent le risque mais ne couvrent pas toute la peau génitale.",
+    "theme": "prevention",
+    "themeLabel": "Prévention",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_013",
+    "question": "Certaines IST peuvent être présentes sans symptôme.",
+    "statement": "Certaines IST peuvent être présentes sans symptôme.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "L’absence de signe visible n’exclut pas une infection.",
+    "theme": "ist",
+    "themeLabel": "IST",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_014",
+    "question": "Le dépistage ne concerne que les personnes ayant beaucoup de partenaires.",
+    "statement": "Le dépistage ne concerne que les personnes ayant beaucoup de partenaires.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Le besoin dépend des expositions et des pratiques, pas d’un jugement sur le nombre de partenaires.",
+    "theme": "ist",
+    "themeLabel": "IST",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_015",
+    "question": "Une vaccination peut prévenir certains types de HPV.",
+    "statement": "Une vaccination peut prévenir certains types de HPV.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les vaccins ciblent plusieurs types de papillomavirus responsables de maladies.",
+    "theme": "ist",
+    "themeLabel": "IST",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_016",
+    "question": "Toutes les IST sont visibles à l’œil nu.",
+    "statement": "Toutes les IST sont visibles à l’œil nu.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Beaucoup peuvent rester asymptomatiques ou provoquer des signes non spécifiques.",
+    "theme": "ist",
+    "themeLabel": "IST",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_017",
+    "question": "Une douche après un rapport empêche les IST.",
+    "statement": "Une douche après un rapport empêche les IST.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Se laver ne remplace ni la protection ni le dépistage.",
+    "theme": "ist",
+    "themeLabel": "IST",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_018",
+    "question": "La PrEP protège spécifiquement contre le VIH, pas contre toutes les IST.",
+    "statement": "La PrEP protège spécifiquement contre le VIH, pas contre toutes les IST.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La PrEP est une stratégie de prévention du VIH ; d’autres protections restent utiles.",
+    "theme": "prevention",
+    "themeLabel": "Prévention",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_019",
+    "question": "Un traitement post-exposition au VIH doit être demandé rapidement.",
+    "statement": "Un traitement post-exposition au VIH doit être demandé rapidement.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "L’efficacité dépend notamment de la rapidité de la prise en charge médicale.",
+    "theme": "prevention",
+    "themeLabel": "Prévention",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_020",
+    "question": "Le sexe oral peut transmettre certaines IST.",
+    "statement": "Le sexe oral peut transmettre certaines IST.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Plusieurs infections peuvent se transmettre lors de contacts bucco-génitaux.",
+    "theme": "ist",
+    "themeLabel": "IST",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_021",
+    "question": "Partager une image intime reçue exige l’accord de la personne représentée.",
+    "statement": "Partager une image intime reçue exige l’accord de la personne représentée.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Recevoir une image ne donne pas le droit de la diffuser.",
+    "theme": "vie_privee",
+    "themeLabel": "Vie privée",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_022",
+    "question": "Une photo éphémère est impossible à conserver.",
+    "statement": "Une photo éphémère est impossible à conserver.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Une capture, un autre appareil ou une faille peuvent permettre de la conserver.",
+    "theme": "vie_privee",
+    "themeLabel": "Vie privée",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_023",
+    "question": "Masquer son visage supprime tous les risques d’identification d’un nude.",
+    "statement": "Masquer son visage supprime tous les risques d’identification d’un nude.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Tatouages, décor, métadonnées ou autres détails peuvent identifier une personne.",
+    "theme": "vie_privee",
+    "themeLabel": "Vie privée",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_024",
+    "question": "Supprimer une image envoyée garantit qu’aucune copie n’existe.",
+    "statement": "Supprimer une image envoyée garantit qu’aucune copie n’existe.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Des copies ou sauvegardes peuvent déjà avoir été faites.",
+    "theme": "vie_privee",
+    "themeLabel": "Vie privée",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_025",
+    "question": "Le droit à l’image permet de refuser la diffusion publique de son image.",
+    "statement": "Le droit à l’image permet de refuser la diffusion publique de son image.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "En France, une personne peut autoriser ou refuser la reproduction et la diffusion de son image.",
+    "theme": "vie_privee",
+    "themeLabel": "Vie privée",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_026",
+    "question": "Un mot de passe partagé une fois doit rester accessible après une rupture.",
+    "statement": "Un mot de passe partagé une fois doit rester accessible après une rupture.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Chacun peut reprendre le contrôle de ses comptes et modifier ses accès.",
+    "theme": "numerique",
+    "themeLabel": "Numérique",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_027",
+    "question": "La jalousie justifie de lire les messages privés de son partenaire.",
+    "statement": "La jalousie justifie de lire les messages privés de son partenaire.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "La jalousie n’annule pas le droit à la vie privée ; la discussion reste nécessaire.",
+    "theme": "numerique",
+    "themeLabel": "Numérique",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_028",
+    "question": "Une application peut ne pas signaler toutes les captures d’écran.",
+    "statement": "Une application peut ne pas signaler toutes les captures d’écran.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les fonctions varient selon les services et un second appareil contourne toute notification.",
+    "theme": "numerique",
+    "themeLabel": "Numérique",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_029",
+    "question": "Un compte privé rend impossible la copie de ses publications.",
+    "statement": "Un compte privé rend impossible la copie de ses publications.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Les abonnés peuvent toujours enregistrer ou reproduire un contenu.",
+    "theme": "numerique",
+    "themeLabel": "Numérique",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_030",
+    "question": "La sextorsion peut commencer par une relation de confiance en ligne.",
+    "statement": "La sextorsion peut commencer par une relation de confiance en ligne.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Un auteur peut obtenir des contenus intimes puis menacer de les diffuser.",
+    "theme": "numerique",
+    "themeLabel": "Numérique",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_031",
+    "question": "Une réaction corporelle prouve forcément le désir.",
+    "statement": "Une réaction corporelle prouve forcément le désir.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Certaines réactions physiques sont réflexes et ne valent ni envie ni accord.",
+    "theme": "corps",
+    "themeLabel": "Corps",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_032",
+    "question": "Ne pas atteindre l’orgasme signifie forcément que le rapport était raté.",
+    "statement": "Ne pas atteindre l’orgasme signifie forcément que le rapport était raté.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Le plaisir et la satisfaction ne se résument pas à l’orgasme.",
+    "theme": "corps",
+    "themeLabel": "Corps",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_033",
+    "question": "La libido peut varier avec le stress, la fatigue ou certains médicaments.",
+    "statement": "La libido peut varier avec le stress, la fatigue ou certains médicaments.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le désir fluctue selon de nombreux facteurs physiques et psychologiques.",
+    "theme": "corps",
+    "themeLabel": "Corps",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_034",
+    "question": "La douleur pendant un rapport doit toujours être supportée pour faire plaisir.",
+    "statement": "La douleur pendant un rapport doit toujours être supportée pour faire plaisir.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "La douleur est une raison valable d’arrêter et peut justifier un avis médical.",
+    "theme": "corps",
+    "themeLabel": "Corps",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_035",
+    "question": "Utiliser davantage de lubrifiant peut réduire certains frottements.",
+    "statement": "Utiliser davantage de lubrifiant peut réduire certains frottements.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Un lubrifiant adapté peut améliorer le confort, notamment avec un préservatif compatible.",
+    "theme": "corps",
+    "themeLabel": "Corps",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_036",
+    "question": "Une relation ouverte fonctionne sans règles puisque tout est permis.",
+    "statement": "Une relation ouverte fonctionne sans règles puisque tout est permis.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Les partenaires définissent habituellement des accords, limites et pratiques de prévention.",
+    "theme": "relations",
+    "themeLabel": "Relations",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_037",
+    "question": "L’exclusivité doit être supposée dès le premier rendez-vous.",
+    "statement": "L’exclusivité doit être supposée dès le premier rendez-vous.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Les attentes relationnelles gagnent à être discutées explicitement.",
+    "theme": "relations",
+    "themeLabel": "Relations",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_038",
+    "question": "On peut être fidèle et garder une part de vie privée.",
+    "statement": "On peut être fidèle et garder une part de vie privée.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Fidélité et absence totale d’intimité personnelle ne sont pas la même chose.",
+    "theme": "relations",
+    "themeLabel": "Relations",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_039",
+    "question": "Une limite peut évoluer avec le temps.",
+    "statement": "Une limite peut évoluer avec le temps.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les préférences et le confort peuvent changer ; les accords doivent pouvoir être rediscutés.",
+    "theme": "relations",
+    "themeLabel": "Relations",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_040",
+    "question": "Refuser une pratique n’oblige pas à proposer une compensation.",
+    "statement": "Refuser une pratique n’oblige pas à proposer une compensation.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Un refus doit être respecté sans dette ni échange imposé.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  }
+]
