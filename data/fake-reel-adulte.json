@@ -2558,5 +2558,645 @@
     "difficulty": "bold",
     "adult": true,
     "source": "Principes de limites et de respect"
+  },
+  {
+    "id": "fra_v5_001",
+    "question": "Le consentement donné au début vaut automatiquement jusqu’à la fin.",
+    "statement": "Le consentement donné au début vaut automatiquement jusqu’à la fin.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Le consentement peut être retiré à tout moment, même après avoir commencé.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_002",
+    "question": "Une personne peut changer d’avis après avoir dit oui.",
+    "statement": "Une personne peut changer d’avis après avoir dit oui.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Un accord n’est jamais irrévocable : chacun peut demander d’arrêter.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_003",
+    "question": "L’absence de « non » suffit toujours à prouver le consentement.",
+    "statement": "L’absence de « non » suffit toujours à prouver le consentement.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Un silence ou une absence de résistance ne constitue pas un accord clair.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_004",
+    "question": "Être en couple dispense de demander l’accord de l’autre.",
+    "statement": "Être en couple dispense de demander l’accord de l’autre.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "La relation ne crée jamais un consentement permanent.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_005",
+    "question": "Une personne endormie peut donner un consentement valable.",
+    "statement": "Une personne endormie peut donner un consentement valable.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Une personne endormie n’est pas en mesure de donner un accord libre et actuel.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_006",
+    "question": "On peut demander une pause sans devoir se justifier.",
+    "statement": "On peut demander une pause sans devoir se justifier.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le confort et les limites suffisent pour demander d’arrêter ou de ralentir.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_007",
+    "question": "Le consentement à une pratique implique celui à toutes les autres.",
+    "statement": "Le consentement à une pratique implique celui à toutes les autres.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Chaque pratique peut nécessiter un accord distinct.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_008",
+    "question": "Demander « ça va ? » pendant un rapport peut faire partie du consentement continu.",
+    "statement": "Demander « ça va ? » pendant un rapport peut faire partie du consentement continu.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Vérifier régulièrement l’accord aide à maintenir une expérience consentie.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_009",
+    "question": "Le préservatif réduit fortement le risque de nombreuses IST s’il est bien utilisé.",
+    "statement": "Le préservatif réduit fortement le risque de nombreuses IST s’il est bien utilisé.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Une utilisation correcte et régulière offre une protection importante, sans supprimer tous les risques.",
+    "theme": "prevention",
+    "themeLabel": "Prévention",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_010",
+    "question": "Deux préservatifs superposés protègent mieux qu’un seul.",
+    "statement": "Deux préservatifs superposés protègent mieux qu’un seul.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Le frottement entre deux préservatifs peut augmenter le risque de rupture.",
+    "theme": "prevention",
+    "themeLabel": "Prévention",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_011",
+    "question": "Un préservatif périmé doit être remplacé.",
+    "statement": "Un préservatif périmé doit être remplacé.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La date et l’état de l’emballage doivent être contrôlés avant utilisation.",
+    "theme": "prevention",
+    "themeLabel": "Prévention",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_012",
+    "question": "Les préservatifs éliminent totalement le risque de HPV.",
+    "statement": "Les préservatifs éliminent totalement le risque de HPV.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Ils réduisent le risque mais ne couvrent pas toute la peau génitale.",
+    "theme": "prevention",
+    "themeLabel": "Prévention",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_013",
+    "question": "Certaines IST peuvent être présentes sans symptôme.",
+    "statement": "Certaines IST peuvent être présentes sans symptôme.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "L’absence de signe visible n’exclut pas une infection.",
+    "theme": "ist",
+    "themeLabel": "IST",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_014",
+    "question": "Le dépistage ne concerne que les personnes ayant beaucoup de partenaires.",
+    "statement": "Le dépistage ne concerne que les personnes ayant beaucoup de partenaires.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Le besoin dépend des expositions et des pratiques, pas d’un jugement sur le nombre de partenaires.",
+    "theme": "ist",
+    "themeLabel": "IST",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_015",
+    "question": "Une vaccination peut prévenir certains types de HPV.",
+    "statement": "Une vaccination peut prévenir certains types de HPV.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les vaccins ciblent plusieurs types de papillomavirus responsables de maladies.",
+    "theme": "ist",
+    "themeLabel": "IST",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_016",
+    "question": "Toutes les IST sont visibles à l’œil nu.",
+    "statement": "Toutes les IST sont visibles à l’œil nu.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Beaucoup peuvent rester asymptomatiques ou provoquer des signes non spécifiques.",
+    "theme": "ist",
+    "themeLabel": "IST",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_017",
+    "question": "Une douche après un rapport empêche les IST.",
+    "statement": "Une douche après un rapport empêche les IST.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Se laver ne remplace ni la protection ni le dépistage.",
+    "theme": "ist",
+    "themeLabel": "IST",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_018",
+    "question": "La PrEP protège spécifiquement contre le VIH, pas contre toutes les IST.",
+    "statement": "La PrEP protège spécifiquement contre le VIH, pas contre toutes les IST.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "La PrEP est une stratégie de prévention du VIH ; d’autres protections restent utiles.",
+    "theme": "prevention",
+    "themeLabel": "Prévention",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_019",
+    "question": "Un traitement post-exposition au VIH doit être demandé rapidement.",
+    "statement": "Un traitement post-exposition au VIH doit être demandé rapidement.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "L’efficacité dépend notamment de la rapidité de la prise en charge médicale.",
+    "theme": "prevention",
+    "themeLabel": "Prévention",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_020",
+    "question": "Le sexe oral peut transmettre certaines IST.",
+    "statement": "Le sexe oral peut transmettre certaines IST.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Plusieurs infections peuvent se transmettre lors de contacts bucco-génitaux.",
+    "theme": "ist",
+    "themeLabel": "IST",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_021",
+    "question": "Partager une image intime reçue exige l’accord de la personne représentée.",
+    "statement": "Partager une image intime reçue exige l’accord de la personne représentée.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Recevoir une image ne donne pas le droit de la diffuser.",
+    "theme": "vie_privee",
+    "themeLabel": "Vie privée",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_022",
+    "question": "Une photo éphémère est impossible à conserver.",
+    "statement": "Une photo éphémère est impossible à conserver.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Une capture, un autre appareil ou une faille peuvent permettre de la conserver.",
+    "theme": "vie_privee",
+    "themeLabel": "Vie privée",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_023",
+    "question": "Masquer son visage supprime tous les risques d’identification d’un nude.",
+    "statement": "Masquer son visage supprime tous les risques d’identification d’un nude.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Tatouages, décor, métadonnées ou autres détails peuvent identifier une personne.",
+    "theme": "vie_privee",
+    "themeLabel": "Vie privée",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_024",
+    "question": "Supprimer une image envoyée garantit qu’aucune copie n’existe.",
+    "statement": "Supprimer une image envoyée garantit qu’aucune copie n’existe.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Des copies ou sauvegardes peuvent déjà avoir été faites.",
+    "theme": "vie_privee",
+    "themeLabel": "Vie privée",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_025",
+    "question": "Le droit à l’image permet de refuser la diffusion publique de son image.",
+    "statement": "Le droit à l’image permet de refuser la diffusion publique de son image.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "En France, une personne peut autoriser ou refuser la reproduction et la diffusion de son image.",
+    "theme": "vie_privee",
+    "themeLabel": "Vie privée",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_026",
+    "question": "Un mot de passe partagé une fois doit rester accessible après une rupture.",
+    "statement": "Un mot de passe partagé une fois doit rester accessible après une rupture.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Chacun peut reprendre le contrôle de ses comptes et modifier ses accès.",
+    "theme": "numerique",
+    "themeLabel": "Numérique",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_027",
+    "question": "La jalousie justifie de lire les messages privés de son partenaire.",
+    "statement": "La jalousie justifie de lire les messages privés de son partenaire.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "La jalousie n’annule pas le droit à la vie privée ; la discussion reste nécessaire.",
+    "theme": "numerique",
+    "themeLabel": "Numérique",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_028",
+    "question": "Une application peut ne pas signaler toutes les captures d’écran.",
+    "statement": "Une application peut ne pas signaler toutes les captures d’écran.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les fonctions varient selon les services et un second appareil contourne toute notification.",
+    "theme": "numerique",
+    "themeLabel": "Numérique",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_029",
+    "question": "Un compte privé rend impossible la copie de ses publications.",
+    "statement": "Un compte privé rend impossible la copie de ses publications.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Les abonnés peuvent toujours enregistrer ou reproduire un contenu.",
+    "theme": "numerique",
+    "themeLabel": "Numérique",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_030",
+    "question": "La sextorsion peut commencer par une relation de confiance en ligne.",
+    "statement": "La sextorsion peut commencer par une relation de confiance en ligne.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Un auteur peut obtenir des contenus intimes puis menacer de les diffuser.",
+    "theme": "numerique",
+    "themeLabel": "Numérique",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Service-Public.fr · droit à l’image, vie privée et risques en ligne"
+  },
+  {
+    "id": "fra_v5_031",
+    "question": "Une réaction corporelle prouve forcément le désir.",
+    "statement": "Une réaction corporelle prouve forcément le désir.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Certaines réactions physiques sont réflexes et ne valent ni envie ni accord.",
+    "theme": "corps",
+    "themeLabel": "Corps",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_032",
+    "question": "Ne pas atteindre l’orgasme signifie forcément que le rapport était raté.",
+    "statement": "Ne pas atteindre l’orgasme signifie forcément que le rapport était raté.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Le plaisir et la satisfaction ne se résument pas à l’orgasme.",
+    "theme": "corps",
+    "themeLabel": "Corps",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_033",
+    "question": "La libido peut varier avec le stress, la fatigue ou certains médicaments.",
+    "statement": "La libido peut varier avec le stress, la fatigue ou certains médicaments.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Le désir fluctue selon de nombreux facteurs physiques et psychologiques.",
+    "theme": "corps",
+    "themeLabel": "Corps",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_034",
+    "question": "La douleur pendant un rapport doit toujours être supportée pour faire plaisir.",
+    "statement": "La douleur pendant un rapport doit toujours être supportée pour faire plaisir.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "La douleur est une raison valable d’arrêter et peut justifier un avis médical.",
+    "theme": "corps",
+    "themeLabel": "Corps",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_035",
+    "question": "Utiliser davantage de lubrifiant peut réduire certains frottements.",
+    "statement": "Utiliser davantage de lubrifiant peut réduire certains frottements.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Un lubrifiant adapté peut améliorer le confort, notamment avec un préservatif compatible.",
+    "theme": "corps",
+    "themeLabel": "Corps",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_036",
+    "question": "Une relation ouverte fonctionne sans règles puisque tout est permis.",
+    "statement": "Une relation ouverte fonctionne sans règles puisque tout est permis.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Les partenaires définissent habituellement des accords, limites et pratiques de prévention.",
+    "theme": "relations",
+    "themeLabel": "Relations",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_037",
+    "question": "L’exclusivité doit être supposée dès le premier rendez-vous.",
+    "statement": "L’exclusivité doit être supposée dès le premier rendez-vous.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 0,
+    "explanation": "Les attentes relationnelles gagnent à être discutées explicitement.",
+    "theme": "relations",
+    "themeLabel": "Relations",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_038",
+    "question": "On peut être fidèle et garder une part de vie privée.",
+    "statement": "On peut être fidèle et garder une part de vie privée.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Fidélité et absence totale d’intimité personnelle ne sont pas la même chose.",
+    "theme": "relations",
+    "themeLabel": "Relations",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_039",
+    "question": "Une limite peut évoluer avec le temps.",
+    "statement": "Une limite peut évoluer avec le temps.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Les préférences et le confort peuvent changer ; les accords doivent pouvoir être rediscutés.",
+    "theme": "relations",
+    "themeLabel": "Relations",
+    "difficulty": "soft",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
+  },
+  {
+    "id": "fra_v5_040",
+    "question": "Refuser une pratique n’oblige pas à proposer une compensation.",
+    "statement": "Refuser une pratique n’oblige pas à proposer une compensation.",
+    "options": [
+      "Fake",
+      "Réel"
+    ],
+    "answer": 1,
+    "explanation": "Un refus doit être respecté sans dette ni échange imposé.",
+    "theme": "consentement",
+    "themeLabel": "Consentement",
+    "difficulty": "bold",
+    "adult": true,
+    "source": "Santé publique France et OMS · santé sexuelle, consentement et prévention"
   }
 ]

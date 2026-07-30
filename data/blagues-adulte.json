@@ -405,1020 +405,1398 @@
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_famille_indiscrete_001_a_table_ma_tante_a_demande_si_javais_quelq",
-    "setup": "À table, ma tante a demandé si j’avais quelqu’un.",
-    "punchline": "J’ai demandé si elle avait encore des limites. Match nul.",
-    "category": "famille_indiscrete",
-    "style": "observation",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_002_ma_famille_adore_ma_vie_sentimentale",
-    "setup": "Ma famille adore ma vie sentimentale.",
-    "punchline": "Surtout les saisons qu’elle invente elle-même.",
-    "category": "famille_indiscrete",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_003_mon_pere_a_voulu_donner_un_conseil_de_coup",
-    "setup": "Mon père a voulu donner un conseil de couple.",
-    "punchline": "Ma mère a ri avant même qu’il commence.",
-    "category": "famille_indiscrete",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_004_ma_grand_mere_a_demande_quand_venait_le_ma",
-    "setup": "Ma grand-mère a demandé quand venait le mariage.",
-    "punchline": "Je venais juste de donner mon prénom à la personne.",
-    "category": "famille_indiscrete",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_005_le_repas_de_famille_etait_calme",
-    "setup": "Le repas de famille était calme.",
-    "punchline": "Puis quelqu’un a prononcé le nom de mon ex comme un mot de passe interdit.",
-    "category": "famille_indiscrete",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_couple_006_mon_partenaire_a_dit_il_faut_quon_parle",
-    "setup": "Mon partenaire a dit « « il faut qu’on parle » ».",
-    "punchline": "J’ai compris que la soirée aurait besoin d’un médiateur et d’un dessert.",
-    "category": "couple",
-    "style": "observation",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_couple_007_on_a_decide_de_monter_un_meuble_ensemble",
-    "setup": "On a décidé de monter un meuble ensemble.",
-    "punchline": "La partie romantique a duré jusqu’au premier désaccord sur les règles.",
-    "category": "couple",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_couple_008_notre_langage_amoureux_cest_se_voler_les_f",
-    "setup": "Notre langage amoureux, c’est se voler les frites.",
-    "punchline": "Surtout quand quelqu’un veut éviter de faire la vaisselle.",
+    "id": "blague_adulte_v5_001",
+    "setup": "Pourquoi les célibataires aiment-ils les prises électriques ?",
+    "punchline": "Parce qu’au moins, elles donnent toujours un contact.",
     "category": "couple",
     "style": "question_reponse",
     "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_couple_009_petite_precision_jai_demande_tu_mecoutes",
-    "setup": "Petite précision : j’ai demandé : « Tu m’écoutes ? »",
-    "punchline": "Il/Elle a répondu « oui » avec le courage de quelqu’un qui n’avait aucune idée de la question.",
-    "category": "couple",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_couple_010_on_ne_se_dispute_jamais_pour_la_temperatur",
-    "setup": "On ne se dispute jamais pour la température de la chambre.",
-    "punchline": "On organise seulement des sommets diplomatiques très sonores.",
-    "category": "couple",
-    "style": "jeu_de_mots",
-    "adult": true,
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_couple_011_mon_partenaire_ma_offert_une_bougie",
-    "setup": "Mon partenaire m’a offert une bougie.",
-    "punchline": "La carte disait : « J’ai paniqué au magasin. » C’est presque un poème.",
-    "category": "couple",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_couple_012_mon_partenaire_a_dit_tu_fais_comme_tu_veux",
-    "setup": "Mon partenaire a dit « « tu fais comme tu veux » ».",
-    "punchline": "J’ai compris que la soirée aurait besoin d’un médiateur et d’un dessert.",
-    "category": "couple",
-    "style": "observation",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_couple_013_on_a_decide_de_choisir_un_film_ensemble",
-    "setup": "On a décidé de choisir un film ensemble.",
-    "punchline": "La partie romantique a duré jusqu’au premier désaccord sur les règles.",
-    "category": "couple",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_couple_016_on_ne_se_dispute_jamais_pour_le_choix_du_f",
-    "setup": "On ne se dispute jamais pour le choix du film.",
-    "punchline": "On organise seulement des sommets diplomatiques très sonores.",
-    "category": "couple",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_couple_018_mon_partenaire_a_dit_je_ne_suis_pas_enerve",
-    "setup": "Mon partenaire a dit « « je ne suis pas énervé(e) » ».",
-    "punchline": "J’ai compris que la soirée aurait besoin d’un médiateur et d’un dessert.",
-    "category": "couple",
-    "style": "observation",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_couple_019_on_a_decide_de_faire_les_courses_ensemble",
-    "setup": "On a décidé de faire les courses ensemble.",
-    "punchline": "La partie romantique a duré jusqu’au premier désaccord sur les règles.",
-    "category": "couple",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_rencontres_006_mon_rendez_vous_a_parle_de_son_ex_pendant_",
-    "setup": "Mon rendez-vous a parlé de son ex pendant quarante minutes.",
-    "punchline": "J’ai découvert que le temps pouvait ralentir sans trou noir.",
+    "id": "blague_adulte_v5_002",
+    "setup": "Pourquoi le date a-t-il apporté une échelle ?",
+    "punchline": "Parce qu’on lui avait promis une relation au niveau supérieur.",
     "category": "rencontres",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_rencontres_007_petite_precision_jai_voulu_paraitre_myster",
-    "setup": "Petite précision : j’ai voulu paraître mystérieux/mystérieuse.",
-    "punchline": "J’ai surtout oublié comment répondre à une question simple.",
-    "category": "rencontres",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_rencontres_008_petite_precision_le_serveur_a_demande_si_n",
-    "setup": "Petite précision : le serveur a demandé si nous étions ensemble.",
-    "punchline": "Nous avons répondu à des vitesses très différentes.",
-    "category": "rencontres",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_rencontres_009_petite_precision_mon_rendez_vous_ma_dit_qu",
-    "setup": "Petite précision : mon rendez-vous m’a dit qu’il/elle était spontané(e).",
-    "punchline": "Il/Elle avait déjà planifié notre rupture jusqu’à jeudi.",
-    "category": "rencontres",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_rencontres_010_petite_precision_jai_ri_a_sa_blague_pour_e",
-    "setup": "Petite précision : j’ai ri à sa blague pour être poli(e).",
-    "punchline": "Nous sommes maintenant fiancés émotionnellement.",
-    "category": "rencontres",
-    "style": "observation",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_rencontres_011_petite_precision_la_conversation_etait_flu",
-    "setup": "Petite précision : la conversation était fluide.",
-    "punchline": "Comme une fuite d’eau : personne ne savait comment l’arrêter.",
-    "category": "rencontres",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_rencontres_013_confession_du_jour_jai_voulu_paraitre_myst",
-    "setup": "Confession du jour : j’ai voulu paraître mystérieux/mystérieuse.",
-    "punchline": "J’ai surtout oublié comment répondre à une question simple.",
-    "category": "rencontres",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_rencontres_014_confession_du_jour_le_serveur_a_demande_si",
-    "setup": "Confession du jour : le serveur a demandé si nous étions ensemble.",
-    "punchline": "Nous avons répondu à des vitesses très différentes.",
-    "category": "rencontres",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_rencontres_016_confession_du_jour_jai_ri_a_sa_blague_pour",
-    "setup": "Confession du jour : j’ai ri à sa blague pour être poli(e).",
-    "punchline": "Nous sommes maintenant fiancés émotionnellement.",
-    "category": "rencontres",
-    "style": "observation",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_rencontres_019_moment_de_verite_jai_voulu_paraitre_myster",
-    "setup": "Moment de vérité : j’ai voulu paraître mystérieux/mystérieuse.",
-    "punchline": "J’ai surtout oublié comment répondre à une question simple.",
-    "category": "rencontres",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_rencontres_020_moment_de_verite_le_serveur_a_demande_si_n",
-    "setup": "Moment de vérité : le serveur a demandé si nous étions ensemble.",
-    "punchline": "Nous avons répondu à des vitesses très différentes.",
-    "category": "rencontres",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_applis_006_son_profil_disait_epicurien",
-    "setup": "Son profil disait « « épicurien » ».",
-    "punchline": "C’était moins une bio qu’un avertissement légal.",
-    "category": "applis",
-    "style": "observation",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_applis_007_jai_matche_avec_quelquun_a_2_km",
-    "setup": "J’ai matché avec quelqu’un à 2 km.",
-    "punchline": "L’amour n’a pas de frontières, mais mon abonnement de train si.",
-    "category": "applis",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_applis_008_petite_precision_il_elle_a_demande_mon_res",
-    "setup": "Petite précision : il/Elle a demandé mon réseau social.",
-    "punchline": "J’ai envoyé celui où ma vie ressemble le moins à une zone de travaux.",
-    "category": "applis",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_applis_009_petite_precision_lalgorithme_dit_quon_est_",
-    "setup": "Petite précision : l’algorithme dit qu’on est compatibles à 98 %.",
-    "punchline": "Les 2 % restants contenaient apparemment toute la conversation.",
-    "category": "applis",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_applis_010_petite_precision_jai_mis_une_photo_naturel",
-    "setup": "Petite précision : j’ai mis une photo naturelle sur mon profil.",
-    "punchline": "Naturelle après quarante-sept essais et une réunion éditoriale.",
-    "category": "applis",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_applis_011_petite_precision_mon_match_a_disparu_en_pl",
-    "setup": "Petite précision : mon match a disparu en pleine conversation.",
-    "punchline": "Il/Elle a probablement été rappelé(e) par sa planète.",
-    "category": "applis",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_applis_015_confession_du_jour_lalgorithme_dit_quon_es",
-    "setup": "Confession du jour : l’algorithme dit qu’on est compatibles à 98 %.",
-    "punchline": "Les 2 % restants contenaient apparemment toute la conversation.",
-    "category": "applis",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_applis_017_confession_du_jour_mon_match_a_disparu_en_",
-    "setup": "Confession du jour : mon match a disparu en pleine conversation.",
-    "punchline": "Il/Elle a probablement été rappelé(e) par sa planète.",
-    "category": "applis",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_applis_021_moment_de_verite_lalgorithme_dit_quon_est_",
-    "setup": "Moment de vérité : l’algorithme dit qu’on est compatibles à 98 %.",
-    "punchline": "Les 2 % restants contenaient apparemment toute la conversation.",
-    "category": "applis",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_applis_023_moment_de_verite_mon_match_a_disparu_en_pl",
-    "setup": "Moment de vérité : mon match a disparu en pleine conversation.",
-    "punchline": "Il/Elle a probablement été rappelé(e) par sa planète.",
-    "category": "applis",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_applis_033_pour_situer_lambiance_lalgorithme_dit_quon",
-    "setup": "Pour situer l’ambiance : l’algorithme dit qu’on est compatibles à 98 %.",
-    "punchline": "Les 2 % restants contenaient apparemment toute la conversation.",
-    "category": "applis",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_ex_006_mon_ex_a_publie_on_ne_perd_jamais_ce_qui_n",
-    "setup": "Mon ex a publié « on ne perd jamais ce qui nous est destiné ».",
-    "punchline": "J’ai admiré la capacité de transformer notre histoire en citation de mug.",
-    "category": "ex",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_ex_007_petite_precision_jai_jure_de_ne_plus_regar",
-    "setup": "Petite précision : j’ai juré de ne plus regarder son profil.",
-    "punchline": "Je vérifie seulement que la promesse fonctionne.",
-    "category": "ex",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_ex_008_mon_ex_ma_demande_de_rendre_un_pull",
-    "setup": "Mon ex m’a demandé de rendre un pull.",
-    "punchline": "J’ai cherché si on pouvait aussi rendre les trois années.",
-    "category": "ex",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_ex_009_petite_precision_on_sest_quittes_en_bons_t",
-    "setup": "Petite précision : on s’est quittés en bons termes.",
-    "punchline": "Les termes ont depuis engagé chacun leur avocat.",
-    "category": "ex",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_ex_010_petite_precision_mon_ex_disait_que_je_dram",
-    "setup": "Petite précision : mon ex disait que je dramatisais.",
-    "punchline": "J’ai donc quitté la scène sous la pluie avec une bande-son.",
-    "category": "ex",
     "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_ex_011_petite_precision_jai_efface_toutes_nos_pho",
-    "setup": "Petite précision : j’ai effacé toutes nos photos.",
-    "punchline": "Le cloud a répondu : « Tu es sûr(e) ? » avec beaucoup trop de jugement.",
-    "category": "ex",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_ex_012_mon_ex_a_publie_nouveau_depart",
-    "setup": "Mon ex a publié « nouveau départ ».",
-    "punchline": "J’ai admiré la capacité de transformer notre histoire en citation de mug.",
-    "category": "ex",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_ex_013_confession_du_jour_jai_jure_de_ne_plus_reg",
-    "setup": "Confession du jour : j’ai juré de ne plus regarder son profil.",
-    "punchline": "Je vérifie seulement que la promesse fonctionne.",
-    "category": "ex",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_ex_015_confession_du_jour_on_sest_quittes_en_bons",
-    "setup": "Confession du jour : on s’est quittés en bons termes.",
-    "punchline": "Les termes ont depuis engagé chacun leur avocat.",
-    "category": "ex",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_ex_016_confession_du_jour_mon_ex_disait_que_je_dr",
-    "setup": "Confession du jour : mon ex disait que je dramatisais.",
-    "punchline": "J’ai donc quitté la scène sous la pluie avec une bande-son.",
-    "category": "ex",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_ex_017_confession_du_jour_jai_efface_toutes_nos_p",
-    "setup": "Confession du jour : j’ai effacé toutes nos photos.",
-    "punchline": "Le cloud a répondu : « Tu es sûr(e) ? » avec beaucoup trop de jugement.",
-    "category": "ex",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_intimite_006_petite_precision_jai_voulu_dire_quelque_ch",
-    "setup": "Petite précision : j’ai voulu dire quelque chose de sexy.",
-    "punchline": "Ma voix a choisi le documentaire animalier.",
-    "category": "intimite",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_intimite_007_lambiance_etait_parfaite",
-    "setup": "L’ambiance était parfaite.",
-    "punchline": "Puis le chat a interrompu le financement du projet.",
-    "category": "intimite",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_intimite_008_on_a_essaye_une_nouvelle_position",
-    "setup": "On a essayé une nouvelle position.",
-    "punchline": "Disons que la théorie avait un meilleur service marketing.",
-    "category": "intimite",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_intimite_009_petite_precision_le_moment_etait_tres_inte",
-    "setup": "Petite précision : le moment était très intense.",
-    "punchline": "Jusqu’à ce que quelqu’un demande : « Tu as fermé la porte ? »",
-    "category": "intimite",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_intimite_010_petite_precision_jai_voulu_etre_spontane_e",
-    "setup": "Petite précision : j’ai voulu être spontané(e).",
-    "punchline": "Mon genou a demandé un préavis.",
+    "id": "blague_adulte_v5_003",
+    "setup": "Comment appelle-t-on un ex qui revient avec des fleurs ?",
+    "punchline": "Une erreur en bouquet.",
     "category": "intimite",
     "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_intimite_011_petite_precision_la_musique_etait_sensuell",
-    "setup": "Petite précision : la musique était sensuelle.",
-    "punchline": "Puis la playlist a enchaîné avec le générique d’un dessin animé.",
+    "id": "blague_adulte_v5_004",
+    "setup": "Pourquoi les couples regardent-ils la météo avant de se disputer ?",
+    "punchline": "Pour savoir qui va prendre la foudre.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_005",
+    "setup": "Pourquoi Cupidon a-t-il été renvoyé ?",
+    "punchline": "Il faisait trop de flèches dans ses dossiers.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_006",
+    "setup": "Quel est le comble pour une appli de rencontre ?",
+    "punchline": "Ne jamais trouver son type.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_007",
+    "setup": "Pourquoi mon crush travaille-t-il à la poste ?",
+    "punchline": "Parce qu’il me laisse toujours en attente de son colis-cœur.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_008",
+    "setup": "Comment appelle-t-on un rendez-vous chez le boulanger ?",
+    "punchline": "Un coup de foudre au premier croissant.",
     "category": "intimite",
-    "style": "mini_histoire",
+    "style": "question_reponse",
     "adult": true,
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_intimite_014_on_a_essaye_un_jeu_de_role",
-    "setup": "On a essayé un jeu de rôle.",
-    "punchline": "Disons que la théorie avait un meilleur service marketing.",
+    "id": "blague_adulte_v5_009",
+    "setup": "Pourquoi le flirt est-il allé chez l’ophtalmo ?",
+    "punchline": "Parce qu’il ne voyait aucun signe.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_010",
+    "setup": "Quel fruit déteste les ruptures ?",
+    "punchline": "La poire, parce qu’elle finit toujours coupée en deux.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_011",
+    "setup": "Pourquoi les amoureux aiment-ils les maths ?",
+    "punchline": "Parce qu’ils cherchent leur moitié.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_012",
+    "setup": "Comment appelle-t-on deux électriciens amoureux ?",
+    "punchline": "Un couple au courant.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_013",
+    "setup": "Pourquoi le vampire n’utilise-t-il pas d’appli de rencontre ?",
+    "punchline": "Il préfère les relations qui ont du mordant.",
     "category": "intimite",
-    "style": "observation",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_014",
+    "setup": "Quel est le réseau social préféré des ex ?",
+    "punchline": "Re-TikTok, parce qu’ils reviennent toujours.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_015",
+    "setup": "Pourquoi l’ex a-t-il pris un GPS ?",
+    "punchline": "Pour retrouver le chemin qu’on lui avait pourtant demandé d’oublier.",
+    "category": "numerique",
+    "style": "question_reponse",
     "adult": true,
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_intimite_015_confession_du_jour_le_moment_etait_tres_in",
-    "setup": "Confession du jour : le moment était très intense.",
-    "punchline": "Jusqu’à ce que quelqu’un demande : « Tu as fermé la porte ? »",
+    "id": "blague_adulte_v5_016",
+    "setup": "Comment appelle-t-on une rupture au restaurant ?",
+    "punchline": "L’addition salée.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_017",
+    "setup": "Pourquoi mon ex est-il devenu jardinier ?",
+    "punchline": "Parce qu’il adorait planter les gens.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_018",
+    "setup": "Quel est le comble pour un jaloux ?",
+    "punchline": "Faire confiance à son propre reflet.",
     "category": "intimite",
-    "style": "dialogue",
+    "style": "question_reponse",
     "adult": true,
-    "intensity": "sans_filtre"
+    "intensity": "leger"
   },
   {
-    "id": "blague_adulte_intimite_016_confession_du_jour_jai_voulu_etre_spontane",
-    "setup": "Confession du jour : j’ai voulu être spontané(e).",
-    "punchline": "Mon genou a demandé un préavis.",
+    "id": "blague_adulte_v5_019",
+    "setup": "Pourquoi la jalousie prend-elle toujours l’ascenseur ?",
+    "punchline": "Parce qu’elle monte très vite.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_020",
+    "setup": "Comment appelle-t-on un couple qui se dispute sur la clim ?",
+    "punchline": "Une relation chaud-froid.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_021",
+    "setup": "Pourquoi le lit a-t-il porté plainte ?",
+    "punchline": "Il en avait marre des histoires de couple.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_022",
+    "setup": "Pourquoi la couette refuse-t-elle de choisir un camp ?",
+    "punchline": "Parce qu’elle veut rester bien couverte.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_023",
+    "setup": "Quel meuble connaît tous les secrets d’un couple ?",
+    "punchline": "La table de nuit.",
     "category": "intimite",
     "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_intimite_017_confession_du_jour_la_musique_etait_sensue",
-    "setup": "Confession du jour : la musique était sensuelle.",
-    "punchline": "Puis la playlist a enchaîné avec le générique d’un dessin animé.",
+    "id": "blague_adulte_v5_024",
+    "setup": "Pourquoi le canapé est-il un excellent thérapeute de couple ?",
+    "punchline": "Il supporte tout le monde sans répondre.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_025",
+    "setup": "Comment appelle-t-on un baiser dans un ascenseur ?",
+    "punchline": "Un moment qui fait monter la tension.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_026",
+    "setup": "Pourquoi les bougies détestent-elles les rendez-vous romantiques ?",
+    "punchline": "Parce qu’elles finissent toujours par tenir la chandelle.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_027",
+    "setup": "Quel est le comble pour un préservatif ?",
+    "punchline": "Avoir une vie pleine de trous.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_028",
+    "setup": "Pourquoi le préservatif est-il calme ?",
+    "punchline": "Parce qu’il sait garder la tête froide sous pression.",
     "category": "intimite",
-    "style": "mini_histoire",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_029",
+    "setup": "Comment appelle-t-on un préservatif détective ?",
+    "punchline": "Un agent très couvert.",
+    "category": "soirée",
+    "style": "question_reponse",
     "adult": true,
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_intimite_020_on_a_essaye_une_playlist_speciale",
-    "setup": "On a essayé une playlist spéciale.",
-    "punchline": "Disons que la théorie avait un meilleur service marketing.",
+    "id": "blague_adulte_v5_030",
+    "setup": "Pourquoi le lubrifiant a-t-il été élu employé du mois ?",
+    "punchline": "Parce qu’il facilite toutes les relations.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_031",
+    "setup": "Quel est le comble pour un sexologue ?",
+    "punchline": "Ne jamais trouver le bon point.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_032",
+    "setup": "Pourquoi le massage a-t-il raté son examen ?",
+    "punchline": "Il n’avait pas assez de pression.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_033",
+    "setup": "Pourquoi les draps rougissent-ils ?",
+    "punchline": "Parce qu’ils ont vu la chambre se déshabiller.",
     "category": "intimite",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_soirees_006_jai_dit_je_rentre_tot_avant_la_soiree",
-    "setup": "J’ai dit « je rentre tôt » avant la soirée.",
-    "punchline": "À minuit, cette personne n’existait plus juridiquement.",
-    "category": "soirees",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_soirees_007_quelquun_a_propose_action_ou_verite",
-    "setup": "Quelqu’un a proposé Action ou Vérité.",
-    "punchline": "Le groupe a perdu deux amitiés et gagné une anecdote éternelle.",
-    "category": "soirees",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_soirees_008_jai_envoye_un_message_a_mon_ex_apres_minui",
-    "setup": "J’ai envoyé un message à mon ex après minuit.",
-    "punchline": "Le matin, mon téléphone avait pris un air de témoin protégé.",
-    "category": "soirees",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_soirees_009_petite_precision_je_me_souviens_parfaiteme",
-    "setup": "Petite précision : je me souviens parfaitement de la soirée.",
-    "punchline": "Sauf des parties documentées par huit vidéos.",
-    "category": "soirees",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_soirees_010_petite_precision_jai_voulu_paraitre_sobre",
-    "setup": "Petite précision : j’ai voulu paraître sobre.",
-    "punchline": "J’ai salué deux fois le même miroir.",
-    "category": "soirees",
-    "style": "observation",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_soirees_011_petite_precision_le_videur_a_demande_si_ca",
-    "setup": "Petite précision : le videur a demandé si ça allait.",
-    "punchline": "J’ai répondu « parfaitement » à une plante décorative.",
-    "category": "soirees",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_soirees_012_jai_dit_je_reste_raisonnable_avant_la_soir",
-    "setup": "J’ai dit « je reste raisonnable » avant la soirée.",
-    "punchline": "À minuit, cette personne n’existait plus juridiquement.",
-    "category": "soirees",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_soirees_015_confession_du_jour_je_me_souviens_parfaite",
-    "setup": "Confession du jour : je me souviens parfaitement de la soirée.",
-    "punchline": "Sauf des parties documentées par huit vidéos.",
-    "category": "soirees",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_soirees_016_confession_du_jour_jai_voulu_paraitre_sobr",
-    "setup": "Confession du jour : j’ai voulu paraître sobre.",
-    "punchline": "J’ai salué deux fois le même miroir.",
-    "category": "soirees",
-    "style": "observation",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_soirees_017_confession_du_jour_le_videur_a_demande_si_",
-    "setup": "Confession du jour : le videur a demandé si ça allait.",
-    "punchline": "J’ai répondu « parfaitement » à une plante décorative.",
-    "category": "soirees",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_soirees_018_jai_dit_je_nenvoie_aucun_message_avant_la_",
-    "setup": "J’ai dit « je n’envoie aucun message » avant la soirée.",
-    "punchline": "À minuit, cette personne n’existait plus juridiquement.",
-    "category": "soirees",
-    "style": "question_reponse",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_messages_006_jai_recu_tu_dors_a_03_h_08",
-    "setup": "J’ai reçu « tu dors ? » à 03 h 08.",
-    "punchline": "Aucun message sain ne commence à cette heure-là.",
-    "category": "messages",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_messages_007_petite_precision_jai_tape_une_reponse_tres",
-    "setup": "Petite précision : j’ai tapé une réponse très détachée.",
-    "punchline": "Elle avait dix-sept brouillons et un comité de validation.",
-    "category": "messages",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_messages_008_jai_envoye_un_vocal_de_2_minutes",
-    "setup": "J’ai envoyé un vocal de 2 minutes.",
-    "punchline": "C’est maintenant une série audio en plusieurs saisons.",
-    "category": "messages",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_messages_009_petite_precision_jai_vu_en_train_decrire_p",
-    "setup": "Petite précision : j’ai vu « en train d’écrire… » pendant trois minutes.",
-    "punchline": "Le message final était « ok ». Le suspense a coûté cher.",
-    "category": "messages",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_messages_010_petite_precision_jai_supprime_mon_message_",
-    "setup": "Petite précision : j’ai supprimé mon message avant qu’il/elle le lise.",
-    "punchline": "La notification, elle, avait déjà témoigné.",
-    "category": "messages",
     "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_messages_011_petite_precision_jai_mis_un_cur_par_accide",
-    "setup": "Petite précision : j’ai mis un cœur par accident.",
-    "punchline": "Mon corps a quitté le pays avant mon esprit.",
-    "category": "messages",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_messages_013_confession_du_jour_jai_tape_une_reponse_tr",
-    "setup": "Confession du jour : j’ai tapé une réponse très détachée.",
-    "punchline": "Elle avait dix-sept brouillons et un comité de validation.",
-    "category": "messages",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_messages_019_moment_de_verite_jai_tape_une_reponse_tres",
-    "setup": "Moment de vérité : j’ai tapé une réponse très détachée.",
-    "punchline": "Elle avait dix-sept brouillons et un comité de validation.",
-    "category": "messages",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_messages_022_moment_de_verite_jai_supprime_mon_message_",
-    "setup": "Moment de vérité : j’ai supprimé mon message avant qu’il/elle le lise.",
-    "punchline": "La notification, elle, avait déjà témoigné.",
-    "category": "messages",
+    "id": "blague_adulte_v5_034",
+    "setup": "Comment appelle-t-on une nuit torride avec une panne de chauffage ?",
+    "punchline": "Une économie d’énergie très engagée.",
+    "category": "soirée",
     "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_jalousie_006_je_lui_ai_demande_qui_etait_cette_personne",
-    "setup": "Je lui ai demandé qui était cette personne.",
-    "punchline": "C’était une question simple avec annexes, graphiques et droit de réponse.",
-    "category": "jalousie",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_jalousie_007_petite_precision_je_ne_fouille_jamais",
-    "setup": "Petite précision : je ne fouille jamais.",
-    "punchline": "Je remarque simplement des détails que la police scientifique aurait ignorés.",
-    "category": "jalousie",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_jalousie_008_petite_precision_mon_partenaire_a_dit_cest",
-    "setup": "Petite précision : mon partenaire a dit « c’est juste un(e) ami(e) ».",
-    "punchline": "Mon cerveau a lancé une mini-série en huit épisodes.",
-    "category": "jalousie",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_jalousie_009_jai_vu_un_commentaire_avec_un_cur_rouge",
-    "setup": "J’ai vu un commentaire avec un cœur rouge.",
-    "punchline": "J’ai ouvert une commission d’enquête sur la ponctuation.",
-    "category": "jalousie",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_jalousie_010_petite_precision_je_fais_confiance_a_cent_",
-    "setup": "Petite précision : je fais confiance à cent pour cent.",
-    "punchline": "Je vérifie seulement les cent pour cent.",
-    "category": "jalousie",
+    "id": "blague_adulte_v5_035",
+    "setup": "Pourquoi le voisin met-il de la musique forte ?",
+    "punchline": "Pour ne pas devenir expert malgré lui.",
+    "category": "numerique",
     "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_jalousie_011_petite_precision_je_nai_rien_dit",
-    "setup": "Petite précision : je n’ai rien dit.",
-    "punchline": "Mon silence avait une bande-annonce et une date de sortie.",
-    "category": "jalousie",
-    "style": "mini_histoire",
+    "id": "blague_adulte_v5_036",
+    "setup": "Quel est le comble pour une chambre d’hôtel ?",
+    "punchline": "Avoir trop d’histoires sans pouvoir en raconter une seule.",
+    "category": "couple",
+    "style": "question_reponse",
     "adult": true,
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_jalousie_013_confession_du_jour_je_ne_fouille_jamais",
-    "setup": "Confession du jour : je ne fouille jamais.",
-    "punchline": "Je remarque simplement des détails que la police scientifique aurait ignorés.",
-    "category": "jalousie",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_jalousie_016_confession_du_jour_je_fais_confiance_a_cen",
-    "setup": "Confession du jour : je fais confiance à cent pour cent.",
-    "punchline": "Je vérifie seulement les cent pour cent.",
-    "category": "jalousie",
+    "id": "blague_adulte_v5_037",
+    "setup": "Pourquoi le réveil sonne-t-il toujours après une bonne nuit ?",
+    "punchline": "Parce qu’il est jaloux.",
+    "category": "rencontres",
     "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_jalousie_017_confession_du_jour_je_nai_rien_dit",
-    "setup": "Confession du jour : je n’ai rien dit.",
-    "punchline": "Mon silence avait une bande-annonce et une date de sortie.",
-    "category": "jalousie",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_jalousie_019_moment_de_verite_je_ne_fouille_jamais",
-    "setup": "Moment de vérité : je ne fouille jamais.",
-    "punchline": "Je remarque simplement des détails que la police scientifique aurait ignorés.",
-    "category": "jalousie",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_jalousie_022_moment_de_verite_je_fais_confiance_a_cent_",
-    "setup": "Moment de vérité : je fais confiance à cent pour cent.",
-    "punchline": "Je vérifie seulement les cent pour cent.",
-    "category": "jalousie",
+    "id": "blague_adulte_v5_038",
+    "setup": "Comment appelle-t-on un lendemain de soirée sans souvenirs ?",
+    "punchline": "Une mise à jour sans notes de version.",
+    "category": "intimite",
     "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_jalousie_023_moment_de_verite_je_nai_rien_dit",
-    "setup": "Moment de vérité : je n’ai rien dit.",
-    "punchline": "Mon silence avait une bande-annonce et une date de sortie.",
-    "category": "jalousie",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_jalousie_034_pour_situer_lambiance_je_fais_confiance_a_",
-    "setup": "Pour situer l’ambiance : je fais confiance à cent pour cent.",
-    "punchline": "Je vérifie seulement les cent pour cent.",
-    "category": "jalousie",
+    "id": "blague_adulte_v5_039",
+    "setup": "Pourquoi le cocktail a-t-il envoyé un message à son ex ?",
+    "punchline": "Parce qu’il était mélangé.",
+    "category": "soirée",
     "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_vie_commune_006_petite_precision_on_setait_promis_de_ne_ja",
-    "setup": "Petite précision : on s’était promis de ne jamais se coucher fâchés.",
-    "punchline": "On reste donc réveillés jusqu’à ce que quelqu’un oublie pourquoi.",
-    "category": "vie_commune",
-    "style": "jeu_de_mots",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_vie_commune_007_mon_partenaire_a_remplace_le_rouleau_de_pa",
-    "setup": "Mon partenaire a remplacé le rouleau de papier toilette.",
-    "punchline": "Il/Elle a laissé l’emballage vide comme certificat de passage.",
-    "category": "vie_commune",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_vie_commune_008_petite_precision_on_a_un_systeme_pour_les_",
-    "setup": "Petite précision : on a un système pour les tâches.",
-    "punchline": "Le système consiste à attendre que l’autre craque en premier.",
-    "category": "vie_commune",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_vie_commune_009_vivre_ensemble_cest_partager_la_salle_de_b",
-    "setup": "Vivre ensemble, c’est partager la salle de bains.",
-    "punchline": "Et négocier chaque centimètre de couette comme une frontière historique.",
-    "category": "vie_commune",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_vie_commune_010_jai_demande_ou_etait_le_rouleau_de_papier_",
-    "setup": "J’ai demandé où était le rouleau de papier toilette.",
-    "punchline": "On a découvert qu’il/elle avait été rangé(e) dans un endroit « logique » inaccessible à l’humanité.",
-    "category": "vie_commune",
+    "id": "blague_adulte_v5_040",
+    "setup": "Quel est le comble pour un barman ?",
+    "punchline": "Servir des verres à quelqu’un qui manque déjà de clarté.",
+    "category": "numerique",
     "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_vie_commune_011_petite_precision_on_cuisine_ensemble",
-    "setup": "Petite précision : on cuisine ensemble.",
-    "punchline": "L’un cuisine, l’autre goûte et dit « manque un truc » sans préciser lequel.",
-    "category": "vie_commune",
-    "style": "mini_histoire",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_vie_commune_013_mon_partenaire_a_remplace_la_bouteille_de_",
-    "setup": "Mon partenaire a remplacé la bouteille de lait.",
-    "punchline": "Il/Elle a laissé l’emballage vide comme certificat de passage.",
-    "category": "vie_commune",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_vie_commune_014_confession_du_jour_on_a_un_systeme_pour_le",
-    "setup": "Confession du jour : on a un système pour les tâches.",
-    "punchline": "Le système consiste à attendre que l’autre craque en premier.",
-    "category": "vie_commune",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_vie_commune_019_mon_partenaire_a_remplace_le_sac_poubelle",
-    "setup": "Mon partenaire a remplacé le sac-poubelle.",
-    "punchline": "Il/Elle a laissé l’emballage vide comme certificat de passage.",
-    "category": "vie_commune",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_vie_commune_020_moment_de_verite_on_a_un_systeme_pour_les_",
-    "setup": "Moment de vérité : on a un système pour les tâches.",
-    "punchline": "Le système consiste à attendre que l’autre craque en premier.",
-    "category": "vie_commune",
-    "style": "observation",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_006_ma_tante_a_demande_quand_venait_le_mariage",
-    "setup": "Ma tante a demandé quand venait le mariage.",
-    "punchline": "J’ai répondu par une question sur son mot de passe bancaire. L’ambiance s’est équilibrée.",
-    "category": "famille_indiscrete",
-    "style": "observation",
-    "adult": true,
-    "intensity": "leger"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_007_petite_precision_ma_famille_a_rencontre_mo",
-    "setup": "Petite précision : ma famille a rencontré mon/ma partenaire.",
-    "punchline": "En vingt minutes, elle connaissait déjà sa date de naissance, son salaire rêvé et son avis sur les enfants.",
-    "category": "famille_indiscrete",
-    "style": "dialogue",
-    "adult": true,
-    "intensity": "ose"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_008_petite_precision_au_repas_quelquun_a_dit_o",
-    "setup": "Petite précision : au repas, quelqu’un a dit « on peut tout se dire ici ».",
-    "punchline": "C’était clairement une menace.",
-    "category": "famille_indiscrete",
+    "id": "blague_adulte_v5_041",
+    "setup": "Pourquoi le téléphone dort-il loin du lit après une soirée ?",
+    "punchline": "Pour éviter les appels de l’extrême.",
+    "category": "couple",
     "style": "question_reponse",
     "adult": true,
-    "intensity": "sans_filtre"
+    "intensity": "leger"
   },
   {
-    "id": "blague_adulte_famille_indiscrete_009_petite_precision_ma_mere_a_demande_si_ceta",
-    "setup": "Petite précision : ma mère a demandé si c’était sérieux.",
-    "punchline": "J’ai dit oui. Elle a ouvert un tableau comparatif.",
-    "category": "famille_indiscrete",
-    "style": "mini_histoire",
+    "id": "blague_adulte_v5_042",
+    "setup": "Comment appelle-t-on un sexto envoyé au mauvais groupe ?",
+    "punchline": "Une reconversion professionnelle immédiate.",
+    "category": "rencontres",
+    "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_famille_indiscrete_010_petite_precision_mon_oncle_a_voulu_raconte",
-    "setup": "Petite précision : mon oncle a voulu raconter une anecdote gênante.",
-    "punchline": "Toute la table connaissait déjà le titre et la chorégraphie.",
-    "category": "famille_indiscrete",
-    "style": "jeu_de_mots",
+    "id": "blague_adulte_v5_043",
+    "setup": "Pourquoi le message « tu dors ? » arrive-t-il toujours tard ?",
+    "punchline": "Parce qu’en journée, il aurait honte.",
+    "category": "intimite",
+    "style": "question_reponse",
     "adult": true,
     "intensity": "ose"
   },
   {
-    "id": "blague_adulte_famille_indiscrete_011_petite_precision_ma_grand_mere_a_demande_s",
-    "setup": "Petite précision : ma grand-mère a demandé si nous dormions dans la même chambre.",
-    "punchline": "J’ai soudain trouvé la météo passionnante.",
-    "category": "famille_indiscrete",
-    "style": "anti_blague",
-    "adult": true,
-    "intensity": "sans_filtre"
-  },
-  {
-    "id": "blague_adulte_famille_indiscrete_012_ma_tante_a_demande_combien_je_gagnais",
-    "setup": "Ma tante a demandé combien je gagnais.",
-    "punchline": "J’ai répondu par une question sur son mot de passe bancaire. L’ambiance s’est équilibrée.",
-    "category": "famille_indiscrete",
-    "style": "observation",
+    "id": "blague_adulte_v5_044",
+    "setup": "Quel emoji est le plus mauvais menteur ?",
+    "punchline": "Le clin d’œil : il se trahit tout seul.",
+    "category": "soirée",
+    "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_famille_indiscrete_015_confession_du_jour_ma_mere_a_demande_si_ce",
-    "setup": "Confession du jour : ma mère a demandé si c’était sérieux.",
-    "punchline": "J’ai dit oui. Elle a ouvert un tableau comparatif.",
-    "category": "famille_indiscrete",
-    "style": "mini_histoire",
+    "id": "blague_adulte_v5_045",
+    "setup": "Pourquoi l’autocorrect déteste-t-il les sextos ?",
+    "punchline": "Parce qu’il préfère mettre son grain de sel.",
+    "category": "numerique",
+    "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_famille_indiscrete_018_ma_tante_a_demande_si_nous_voulions_des_en",
-    "setup": "Ma tante a demandé si nous voulions des enfants.",
-    "punchline": "J’ai répondu par une question sur son mot de passe bancaire. L’ambiance s’est équilibrée.",
-    "category": "famille_indiscrete",
-    "style": "observation",
+    "id": "blague_adulte_v5_046",
+    "setup": "Comment appelle-t-on un nude envoyé avec le visage ?",
+    "punchline": "Une pièce d’identité très mal habillée.",
+    "category": "couple",
+    "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
   },
   {
-    "id": "blague_adulte_famille_indiscrete_021_moment_de_verite_ma_mere_a_demande_si_ceta",
-    "setup": "Moment de vérité : ma mère a demandé si c’était sérieux.",
-    "punchline": "J’ai dit oui. Elle a ouvert un tableau comparatif.",
-    "category": "famille_indiscrete",
-    "style": "mini_histoire",
+    "id": "blague_adulte_v5_047",
+    "setup": "Pourquoi la capture d’écran ne garde-t-elle jamais un secret ?",
+    "punchline": "Parce qu’elle prend tout au mot.",
+    "category": "rencontres",
+    "style": "question_reponse",
     "adult": true,
     "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_048",
+    "setup": "Quel est le comble pour un ghosteur ?",
+    "punchline": "Être vu partout.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_049",
+    "setup": "Pourquoi le match n’a-t-il pas répondu ?",
+    "punchline": "Il cherchait encore une personnalité dans sa bio.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_050",
+    "setup": "Comment appelle-t-on un profil sans photo récente ?",
+    "punchline": "Un musée des beaux souvenirs.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_051",
+    "setup": "Pourquoi les applis de rencontre aiment-elles les pêcheurs ?",
+    "punchline": "Parce qu’ils savent déjà lancer des lignes.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_052",
+    "setup": "Quel est le comble pour Tinder ?",
+    "punchline": "Avoir des flammes mais aucune chaleur humaine.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_053",
+    "setup": "Pourquoi le premier rendez-vous ressemble-t-il à un entretien ?",
+    "punchline": "Parce que tout le monde ment sur ses défauts.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_054",
+    "setup": "Comment appelle-t-on un date qui parle uniquement de son ex ?",
+    "punchline": "Un podcast non sollicité.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_055",
+    "setup": "Pourquoi le serveur apporte-t-il toujours l’addition au mauvais moment ?",
+    "punchline": "Parce qu’il sait quand la magie est finie.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_056",
+    "setup": "Quel dessert commande-t-on après un rendez-vous gênant ?",
+    "punchline": "Un blanc-manger.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_057",
+    "setup": "Pourquoi le restaurant romantique n’a-t-il qu’une étoile ?",
+    "punchline": "Parce que le serveur connaît tous les ex.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_058",
+    "setup": "Comment appelle-t-on un rendez-vous qui finit avant l’apéritif ?",
+    "punchline": "Un speed dating vraiment motivé.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_059",
+    "setup": "Pourquoi le crush a-t-il pris un parapluie ?",
+    "punchline": "Parce que je lui ai déclaré ma flamme sous une pluie de râteaux.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_060",
+    "setup": "Quel est le comble pour Cupidon ?",
+    "punchline": "Tomber sur quelqu’un qui n’est pas sa cible.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_061",
+    "setup": "Pourquoi le cœur a-t-il quitté le cerveau ?",
+    "punchline": "Parce qu’il en avait assez de réfléchir à la relation.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_062",
+    "setup": "Comment appelle-t-on un couple de fantômes ?",
+    "punchline": "Des âmes sœurs transparentes.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_063",
+    "setup": "Pourquoi les squelettes évitent-ils les coups d’un soir ?",
+    "punchline": "Ils n’ont pas la peau pour ça.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_064",
+    "setup": "Quel monstre est le plus romantique ?",
+    "punchline": "Le loup-garou, parce qu’il décroche la lune.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_065",
+    "setup": "Pourquoi la sorcière a-t-elle quitté son match ?",
+    "punchline": "Il manquait de charme.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_066",
+    "setup": "Comment appelle-t-on un vampire après un mauvais date ?",
+    "punchline": "Un célibattant.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_067",
+    "setup": "Pourquoi le zombie a-t-il été ghosté ?",
+    "punchline": "Il manquait de conversation vivante.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_068",
+    "setup": "Quel est le parfum préféré des couples en crise ?",
+    "punchline": "Eau de reproche.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_069",
+    "setup": "Pourquoi le parfum a-t-il rompu ?",
+    "punchline": "La relation ne sentait plus bon.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_070",
+    "setup": "Comment appelle-t-on une lingerie qui raconte tout ?",
+    "punchline": "Un dessous de l’affaire.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_071",
+    "setup": "Pourquoi les chaussettes sont-elles de mauvaises amantes ?",
+    "punchline": "Elles disparaissent toujours après la nuit.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_072",
+    "setup": "Quel vêtement flirte le mieux ?",
+    "punchline": "Le soutien-gorge : il sait mettre en valeur ses arguments.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_073",
+    "setup": "Pourquoi le boxer a-t-il pris des vacances ?",
+    "punchline": "Il avait besoin de prendre le large.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_074",
+    "setup": "Comment appelle-t-on une chemise déboutonnée au mauvais moment ?",
+    "punchline": "Une ouverture non négociée.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_075",
+    "setup": "Pourquoi le miroir est-il mauvais au lit ?",
+    "punchline": "Il ne pense qu’à lui.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_076",
+    "setup": "Quel est le comble pour une douche froide ?",
+    "punchline": "Arriver juste quand l’ambiance chauffe.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_077",
+    "setup": "Pourquoi le savon a-t-il quitté l’éponge ?",
+    "punchline": "Elle était trop collante.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_078",
+    "setup": "Comment appelle-t-on un bain romantique qui déborde ?",
+    "punchline": "Une relation qui va trop loin.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_079",
+    "setup": "Pourquoi la salle de bains garde-t-elle bien les secrets ?",
+    "punchline": "Parce que tout finit dans la douche.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_080",
+    "setup": "Quel est le comble pour un voisin indiscret ?",
+    "punchline": "Avoir des murs qui parlent mieux que lui.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_081",
+    "setup": "Pourquoi l’oreiller sait-il tout ?",
+    "punchline": "Parce qu’on finit toujours par se confier sur lui.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_082",
+    "setup": "Comment appelle-t-on un matelas très expérimenté ?",
+    "punchline": "Un sommier de connaissances.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_083",
+    "setup": "Pourquoi la tête de lit demande-t-elle une prime ?",
+    "punchline": "Pour travail de nuit.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_084",
+    "setup": "Quel est le plat préféré des amoureux jaloux ?",
+    "punchline": "Les nouilles, parce qu’ils aiment faire des nœuds.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_085",
+    "setup": "Pourquoi la banane a-t-elle refusé le date ?",
+    "punchline": "Elle ne voulait pas finir en compote émotionnelle.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_086",
+    "setup": "Comment appelle-t-on un avocat amoureux ?",
+    "punchline": "Quelqu’un qui veut officialiser le guacamole.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_087",
+    "setup": "Pourquoi le piment a-t-il autant de succès ?",
+    "punchline": "Parce qu’il sait relever une soirée.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_088",
+    "setup": "Quel fruit envoie les meilleurs sextos ?",
+    "punchline": "La pêche, elle a toujours la forme.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_089",
+    "setup": "Pourquoi le concombre évite-t-il les blagues adultes ?",
+    "punchline": "Il en a assez des sous-entendus.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_090",
+    "setup": "Comment appelle-t-on une aubergine sans emoji ?",
+    "punchline": "Un légume enfin tranquille.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_091",
+    "setup": "Pourquoi la cerise a-t-elle quitté le gâteau ?",
+    "punchline": "Elle refusait d’être juste un plan au sommet.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_092",
+    "setup": "Quel est le comble pour une fraise ?",
+    "punchline": "Rougir avant même le premier baiser.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_093",
+    "setup": "Pourquoi le café est-il idéal après une nuit courte ?",
+    "punchline": "Parce qu’il ne pose aucune question.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_094",
+    "setup": "Comment appelle-t-on deux cafés qui flirtent ?",
+    "punchline": "Un expresso mutuel.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_095",
+    "setup": "Pourquoi le vin donne-t-il de mauvais conseils amoureux ?",
+    "punchline": "Parce qu’il manque toujours de bouteille.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_096",
+    "setup": "Quel cocktail ressemble le plus à une relation compliquée ?",
+    "punchline": "Le mélange maison : personne ne connaît vraiment les ingrédients.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_097",
+    "setup": "Pourquoi la bière a-t-elle bloqué son ex ?",
+    "punchline": "Il revenait toujours avec les mêmes pressions.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_098",
+    "setup": "Comment appelle-t-on du champagne après une rupture ?",
+    "punchline": "Une bulle de soulagement.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_099",
+    "setup": "Pourquoi le frigo connaît-il les disputes de couple ?",
+    "punchline": "Parce que quelqu’un finit toujours par claquer sa porte.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_100",
+    "setup": "Quel est le comble pour un célibataire ?",
+    "punchline": "Avoir un lit double et dormir en diagonale par obligation morale.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_101",
+    "setup": "Pourquoi le célibataire a-t-il acheté deux oreillers ?",
+    "punchline": "Pour avoir quelqu’un à ignorer pendant la nuit.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_102",
+    "setup": "Comment appelle-t-on une Saint-Valentin en solo ?",
+    "punchline": "Une soirée où personne ne vole les frites.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_103",
+    "setup": "Pourquoi les célibataires aiment-ils les soldes ?",
+    "punchline": "Parce qu’ils peuvent enfin trouver une moitié à moitié prix.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_104",
+    "setup": "Quel est le meilleur partenaire de voyage ?",
+    "punchline": "La valise : elle accepte tout ton baggage émotionnel.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_105",
+    "setup": "Pourquoi la bague est-elle stressée ?",
+    "punchline": "Tout le monde attend qu’elle s’engage.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_106",
+    "setup": "Comment appelle-t-on un mariage sans Wi-Fi ?",
+    "punchline": "Une union vraiment déconnectée.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_107",
+    "setup": "Pourquoi le témoin de mariage connaît-il trop de choses ?",
+    "punchline": "Parce qu’il a juré de ne rien dire avant le dessert.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_108",
+    "setup": "Quel est le comble pour des jeunes mariés ?",
+    "punchline": "Se disputer sur le nom du réseau Wi-Fi.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_109",
+    "setup": "Pourquoi la lune de miel est-elle courte ?",
+    "punchline": "Parce qu’après, il faut déballer les valises et les défauts.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_110",
+    "setup": "Comment appelle-t-on une demande en mariage au supermarché ?",
+    "punchline": "Une mise en rayon de sentiments.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_111",
+    "setup": "Pourquoi l’alliance tourne-t-elle autour du doigt ?",
+    "punchline": "Pour vérifier que l’engagement tient.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_112",
+    "setup": "Quel métier réussit le mieux ses dates ?",
+    "punchline": "Le géomètre : il sait prendre les bonnes mesures.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_113",
+    "setup": "Pourquoi le plombier est-il romantique ?",
+    "punchline": "Il sait réparer les fuites de sentiments.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_114",
+    "setup": "Comment appelle-t-on un électricien très séduisant ?",
+    "punchline": "Un beau courant alternatif.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_115",
+    "setup": "Pourquoi le boulanger est-il bon en couple ?",
+    "punchline": "Il sait donner de la mie.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_116",
+    "setup": "Quel est le comble pour un facteur amoureux ?",
+    "punchline": "Rester sans adresse.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_117",
+    "setup": "Pourquoi le dentiste évite-t-il les baisers ?",
+    "punchline": "Il voit trop vite les problèmes de fond.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_118",
+    "setup": "Comment appelle-t-on un avocat après une rupture ?",
+    "punchline": "Le seul qui gagne encore à la séparation.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_119",
+    "setup": "Pourquoi le psy ne drague-t-il jamais au travail ?",
+    "punchline": "Il sait déjà où ça va mener.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_120",
+    "setup": "Quel sportif est le pire au lit ?",
+    "punchline": "Le sprinteur : il veut toujours finir trop vite.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_121",
+    "setup": "Pourquoi le marathonien réussit-il ses relations ?",
+    "punchline": "Il connaît l’importance de l’endurance.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_122",
+    "setup": "Comment appelle-t-on un footballeur infidèle ?",
+    "punchline": "Un joueur hors-jeu.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_123",
+    "setup": "Pourquoi le gardien de but est-il jaloux ?",
+    "punchline": "Il ne laisse rien passer.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_124",
+    "setup": "Quel est le sport préféré des ex ?",
+    "punchline": "Le retour de service.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_125",
+    "setup": "Pourquoi le yoga aide-t-il les couples ?",
+    "punchline": "Parce qu’il apprend à respirer avant de répondre.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_126",
+    "setup": "Comment appelle-t-on une séance de sport après un date ?",
+    "punchline": "Du cardio émotionnel.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_127",
+    "setup": "Pourquoi l’haltère refuse-t-elle de s’engager ?",
+    "punchline": "Elle trouve déjà la relation trop lourde.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_128",
+    "setup": "Quel animal est le meilleur séducteur ?",
+    "punchline": "Le paon : il maîtrise la photo de profil.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_129",
+    "setup": "Pourquoi le chat est-il mauvais en couple ?",
+    "punchline": "Il veut de l’attention puis demande qu’on le laisse tranquille.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_130",
+    "setup": "Comment appelle-t-on deux hérissons amoureux ?",
+    "punchline": "Un couple très attachant, mais à distance raisonnable.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_131",
+    "setup": "Pourquoi le chien pardonne-t-il toujours ?",
+    "punchline": "Parce qu’il ne garde pas de rancœur, seulement des bâtons.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_132",
+    "setup": "Quel est le comble pour un lapin amoureux ?",
+    "punchline": "Poser un lapin.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_133",
+    "setup": "Pourquoi le coq est-il célibataire ?",
+    "punchline": "Il réveille tout le monde après une nuit.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_134",
+    "setup": "Comment appelle-t-on un poisson qui drague ?",
+    "punchline": "Un thon sûr de lui.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_135",
+    "setup": "Pourquoi la pieuvre est-elle populaire sur les applis ?",
+    "punchline": "Elle peut tenir huit conversations à la fois.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_136",
+    "setup": "Quel animal déteste les relations à distance ?",
+    "punchline": "Le pot de colle.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_137",
+    "setup": "Pourquoi le hibou réussit-il ses rendez-vous tardifs ?",
+    "punchline": "Parce qu’il sait toujours « où » aller.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_138",
+    "setup": "Comment appelle-t-on un couple de canards ?",
+    "punchline": "Deux personnes qui se donnent des becs.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_139",
+    "setup": "Pourquoi le téléphone a-t-il rompu avec le chargeur ?",
+    "punchline": "La relation manquait de connexion.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_140",
+    "setup": "Quel est le comble pour le mode avion ?",
+    "punchline": "Recevoir un râteau.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_141",
+    "setup": "Pourquoi le Wi-Fi est-il jaloux ?",
+    "punchline": "Tout le monde cherche une meilleure connexion.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_142",
+    "setup": "Comment appelle-t-on un couple sans réseau ?",
+    "punchline": "Une relation en mode réel.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_143",
+    "setup": "Pourquoi la batterie quitte-t-elle toujours les soirées ?",
+    "punchline": "Elle n’a plus l’énergie pour ces histoires.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_144",
+    "setup": "Quel est le message le plus romantique d’un chargeur ?",
+    "punchline": "« Je te redonne de l’énergie quand tu es à plat. »",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_145",
+    "setup": "Pourquoi le mot de passe ne se marie-t-il pas ?",
+    "punchline": "Il refuse de se partager.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_146",
+    "setup": "Comment appelle-t-on une dispute par messages ?",
+    "punchline": "Un clavier de crise.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_147",
+    "setup": "Pourquoi l’emoji cœur est-il épuisé ?",
+    "punchline": "On l’envoie à des gens qu’on ne rappelle jamais.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_148",
+    "setup": "Quel est le comble pour une story privée ?",
+    "punchline": "Faire le tour du groupe en capture d’écran.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
+  },
+  {
+    "id": "blague_adulte_v5_149",
+    "setup": "Pourquoi le cloud déteste-t-il les ruptures ?",
+    "punchline": "Il garde tous les souvenirs.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_150",
+    "setup": "Comment appelle-t-on un ex supprimé mais toujours sauvegardé ?",
+    "punchline": "Un fantôme dans la machine.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_151",
+    "setup": "Pourquoi le calendrier est-il romantique ?",
+    "punchline": "Il se souvient des dates que toi tu oublies.",
+    "category": "couple",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_152",
+    "setup": "Quel est le comble pour une alarme de rendez-vous ?",
+    "punchline": "Sonner quand la personne est déjà partie.",
+    "category": "rencontres",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_153",
+    "setup": "Pourquoi le GPS donne-t-il de mauvais conseils amoureux ?",
+    "punchline": "Il demande toujours de faire demi-tour.",
+    "category": "intimite",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_154",
+    "setup": "Comment appelle-t-on un week-end romantique sans budget ?",
+    "punchline": "Une relation à découvert.",
+    "category": "soirée",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "leger"
+  },
+  {
+    "id": "blague_adulte_v5_155",
+    "setup": "Pourquoi la carte bancaire déteste-t-elle les premiers dates ?",
+    "punchline": "Elle ne sait jamais qui va la sortir.",
+    "category": "numerique",
+    "style": "question_reponse",
+    "adult": true,
+    "intensity": "ose"
   }
 ]

@@ -2233,5 +2233,770 @@
       "Playlist d’ex"
     ],
     "theme": "ex"
+  },
+  {
+    "id": "imp_a_v5_001",
+    "word": "Aftercare",
+    "hints": {
+      "hard": "Ce qui vient après compte autant.",
+      "medium": "Je rassure et je prends soin.",
+      "easy": "Moment tendre après l’intimité."
+    },
+    "decoys": [
+      "câlin après",
+      "verre d’eau",
+      "discussion douce"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_v5_002",
+    "word": "Safe word",
+    "hints": {
+      "hard": "Je peux arrêter une scène en un mot.",
+      "medium": "Je dois être compris immédiatement.",
+      "easy": "Mot de sécurité convenu à l’avance."
+    },
+    "decoys": [
+      "limite",
+      "pause",
+      "feu vert"
+    ],
+    "theme": "consentement"
+  },
+  {
+    "id": "imp_a_v5_003",
+    "word": "Date désastreux",
+    "hints": {
+      "hard": "On espérait une étincelle.",
+      "medium": "Les silences ont gagné la soirée.",
+      "easy": "Rendez-vous qui tourne très mal."
+    },
+    "decoys": [
+      "addition gênante",
+      "retard énorme",
+      "conversation vide"
+    ],
+    "theme": "rencontres"
+  },
+  {
+    "id": "imp_a_v5_006",
+    "word": "Walk of shame",
+    "hints": {
+      "hard": "Le matin me rend très visible.",
+      "medium": "Ma tenue raconte parfois la nuit.",
+      "easy": "Retour chez soi après avoir dormi ailleurs."
+    },
+    "decoys": [
+      "taxi matinal",
+      "chaussures à la main",
+      "lendemain de fête"
+    ],
+    "theme": "soirée"
+  },
+  {
+    "id": "imp_a_v5_008",
+    "word": "Nudes",
+    "hints": {
+      "hard": "Je demande une confiance numérique.",
+      "medium": "Je ne dois jamais être partagé sans accord.",
+      "easy": "Photo intime envoyée volontairement."
+    },
+    "decoys": [
+      "selfie miroir",
+      "photo éphémère",
+      "album verrouillé"
+    ],
+    "theme": "vie_privee"
+  },
+  {
+    "id": "imp_a_v5_009",
+    "word": "Ghosting",
+    "hints": {
+      "hard": "Je transforme une conversation en silence.",
+      "medium": "Je laisse l’autre sans explication.",
+      "easy": "Disparition soudaine après une rencontre."
+    },
+    "decoys": [
+      "vu sans réponse",
+      "blocage",
+      "message ignoré"
+    ],
+    "theme": "rencontres"
+  },
+  {
+    "id": "imp_a_v5_010",
+    "word": "Love bombing",
+    "hints": {
+      "hard": "Je ressemble d’abord à un conte de fées.",
+      "medium": "Mon intensité arrive trop vite.",
+      "easy": "Avalanche d’attention pouvant servir à contrôler."
+    },
+    "decoys": [
+      "cadeaux excessifs",
+      "déclarations rapides",
+      "messages constants"
+    ],
+    "theme": "relations"
+  },
+  {
+    "id": "imp_a_v5_011",
+    "word": "Situationship",
+    "hints": {
+      "hard": "Je vis dans le flou.",
+      "medium": "On agit en couple sans le nommer.",
+      "easy": "Relation sans statut clairement défini."
+    },
+    "decoys": [
+      "presque couple",
+      "relation ambiguë",
+      "exclusivité floue"
+    ],
+    "theme": "relations"
+  },
+  {
+    "id": "imp_a_v5_012",
+    "word": "Friends with benefits",
+    "hints": {
+      "hard": "L’amitié ne résume plus tout.",
+      "medium": "Nos règles évitent les malentendus.",
+      "easy": "Amis ayant aussi une relation sexuelle."
+    },
+    "decoys": [
+      "plan cul régulier",
+      "amitié ambiguë",
+      "relation libre"
+    ],
+    "theme": "relations"
+  },
+  {
+    "id": "imp_a_v5_013",
+    "word": "Thirst trap",
+    "hints": {
+      "hard": "Je suis publié pour attirer les regards.",
+      "medium": "Ma pose paraît rarement accidentelle.",
+      "easy": "Photo séduisante destinée à provoquer des réactions."
+    },
+    "decoys": [
+      "selfie miroir",
+      "story privée",
+      "photo de sport"
+    ],
+    "theme": "reseaux"
+  },
+  {
+    "id": "imp_a_v5_014",
+    "word": "Body count",
+    "hints": {
+      "hard": "Je transforme des histoires en nombre.",
+      "medium": "On me demande souvent sans délicatesse.",
+      "easy": "Nombre de partenaires sexuels passés."
+    },
+    "decoys": [
+      "liste d’ex",
+      "expérience",
+      "question indiscrète"
+    ],
+    "theme": "confidences"
+  },
+  {
+    "id": "imp_a_v5_015",
+    "word": "Crush interdit",
+    "hints": {
+      "hard": "Mon attirance complique les loyautés.",
+      "medium": "Je concerne quelqu’un qu’il vaudrait mieux éviter.",
+      "easy": "Attirance pour une personne socialement risquée."
+    },
+    "decoys": [
+      "ex d’un ami",
+      "collègue pris",
+      "beau-frère"
+    ],
+    "theme": "attirance"
+  },
+  {
+    "id": "imp_a_v5_017",
+    "word": "Relation ouverte",
+    "hints": {
+      "hard": "Je ne supprime pas les règles.",
+      "medium": "Je distingue engagement et exclusivité.",
+      "easy": "Couple autorisant d’autres relations selon un accord."
+    },
+    "decoys": [
+      "polyamour",
+      "libertinage",
+      "pause"
+    ],
+    "theme": "relations"
+  },
+  {
+    "id": "imp_a_v5_020",
+    "word": "Micro-tromperie",
+    "hints": {
+      "hard": "Je vis dans les zones grises.",
+      "medium": "Je peux sembler minuscule mais briser un accord.",
+      "easy": "Petit comportement secret perçu comme infidèle."
+    },
+    "decoys": [
+      "messages cachés",
+      "flirt discret",
+      "like ambigu"
+    ],
+    "theme": "fidelite"
+  },
+  {
+    "id": "imp_a_v5_021",
+    "word": "Breadcrumbing",
+    "hints": {
+      "hard": "Je donne juste assez pour retenir quelqu’un.",
+      "medium": "Mes miettes sont des messages irréguliers.",
+      "easy": "Attention minimale maintenant l’intérêt sans engagement."
+    },
+    "decoys": [
+      "réponse tardive",
+      "like occasionnel",
+      "promesse floue"
+    ],
+    "theme": "rencontres"
+  },
+  {
+    "id": "imp_a_v5_022",
+    "word": "Benching",
+    "hints": {
+      "hard": "Je garde quelqu’un sur le côté.",
+      "medium": "Je réapparais quand les autres options échouent.",
+      "easy": "Maintenir une personne en attente comme solution de repli."
+    },
+    "decoys": [
+      "plan B",
+      "message mensuel",
+      "relation floue"
+    ],
+    "theme": "rencontres"
+  },
+  {
+    "id": "imp_a_v5_023",
+    "word": "Catfishing",
+    "hints": {
+      "hard": "Mon identité ne résiste pas à la rencontre.",
+      "medium": "Mes photos appartiennent parfois à quelqu’un d’autre.",
+      "easy": "Fausse identité utilisée en ligne pour séduire."
+    },
+    "decoys": [
+      "faux profil",
+      "photo volée",
+      "arnaque sentimentale"
+    ],
+    "theme": "reseaux"
+  },
+  {
+    "id": "imp_a_v5_024",
+    "word": "Orbiting",
+    "hints": {
+      "hard": "Je disparais mais je reste spectateur.",
+      "medium": "Je regarde toutes les stories sans parler.",
+      "easy": "Suivre en ligne quelqu’un qu’on a cessé de fréquenter."
+    },
+    "decoys": [
+      "ghosting",
+      "like silencieux",
+      "abonné fantôme"
+    ],
+    "theme": "reseaux"
+  },
+  {
+    "id": "imp_a_v5_025",
+    "word": "Soft launch",
+    "hints": {
+      "hard": "Je montre une relation sans la révéler.",
+      "medium": "Une main ou deux verres me suffisent.",
+      "easy": "Publication discrète laissant deviner un couple."
+    },
+    "decoys": [
+      "photo de dos",
+      "story mystère",
+      "deux assiettes"
+    ],
+    "theme": "reseaux"
+  },
+  {
+    "id": "imp_a_v5_026",
+    "word": "Hard launch",
+    "hints": {
+      "hard": "Je mets fin aux suppositions.",
+      "medium": "Les deux visages apparaissent enfin.",
+      "easy": "Annonce publique et claire d’une relation."
+    },
+    "decoys": [
+      "photo de couple",
+      "statut officiel",
+      "présentation publique"
+    ],
+    "theme": "reseaux"
+  },
+  {
+    "id": "imp_a_v5_027",
+    "word": "Hall pass",
+    "hints": {
+      "hard": "Je suis une exception imaginaire ou négociée.",
+      "medium": "Une célébrité me rend souvent théorique.",
+      "easy": "Permission ponctuelle d’avoir une aventure."
+    },
+    "decoys": [
+      "joker de couple",
+      "célébrité autorisée",
+      "soirée libre"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_v5_028",
+    "word": "Dirty talk",
+    "hints": {
+      "hard": "Mes mots cherchent à exciter.",
+      "medium": "Je nécessite aussi des limites consenties.",
+      "easy": "Paroles érotiques pendant un échange intime."
+    },
+    "decoys": [
+      "sexting",
+      "compliment osé",
+      "jeu de rôle"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_v5_029",
+    "word": "Jeu de rôle",
+    "hints": {
+      "hard": "Je change les identités pour un moment.",
+      "medium": "Un scénario me guide.",
+      "easy": "Mise en scène consentie de personnages intimes."
+    },
+    "decoys": [
+      "costume",
+      "fantasme",
+      "improvisation"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_v5_030",
+    "word": "Fantasme",
+    "hints": {
+      "hard": "Je peux rester uniquement dans l’imaginaire.",
+      "medium": "Me partager ne crée aucune obligation.",
+      "easy": "Scénario ou désir érotique imaginé."
+    },
+    "decoys": [
+      "rêve",
+      "préférence",
+      "jeu de rôle"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_v5_031",
+    "word": "Libido",
+    "hints": {
+      "hard": "Je varie sans mesurer l’amour.",
+      "medium": "Stress et santé peuvent m’influencer.",
+      "easy": "Niveau de désir sexuel."
+    },
+    "decoys": [
+      "envie",
+      "attirance",
+      "excitation"
+    ],
+    "theme": "corps"
+  },
+  {
+    "id": "imp_a_v5_033",
+    "word": "Préservatif interne",
+    "hints": {
+      "hard": "Je forme une barrière placée à l’intérieur.",
+      "medium": "Je protège aussi contre de nombreuses IST.",
+      "easy": "Préservatif inséré dans le vagin ou l’anus."
+    },
+    "decoys": [
+      "préservatif externe",
+      "diaphragme",
+      "digue dentaire"
+    ],
+    "theme": "sante"
+  },
+  {
+    "id": "imp_a_v5_034",
+    "word": "Digue dentaire",
+    "hints": {
+      "hard": "Je suis une barrière fine et plate.",
+      "medium": "Je peux servir lors du sexe oral.",
+      "easy": "Protection en latex ou polyuréthane pour contact bucco-génital."
+    },
+    "decoys": [
+      "préservatif",
+      "gant",
+      "film plastique"
+    ],
+    "theme": "sante"
+  },
+  {
+    "id": "imp_a_v5_036",
+    "word": "Dépistage IST",
+    "hints": {
+      "hard": "Je peux rassurer sans juger.",
+      "medium": "Je concerne parfois des infections sans symptôme.",
+      "easy": "Tests recherchant des infections sexuellement transmissibles."
+    },
+    "decoys": [
+      "prise de sang",
+      "check-up",
+      "test grossesse"
+    ],
+    "theme": "sante"
+  },
+  {
+    "id": "imp_a_v5_037",
+    "word": "PrEP",
+    "hints": {
+      "hard": "Je précède le risque.",
+      "medium": "Je vise spécifiquement la prévention du VIH.",
+      "easy": "Traitement préventif contre le VIH pour personnes séronégatives."
+    },
+    "decoys": [
+      "PEP",
+      "vaccin HPV",
+      "contraception"
+    ],
+    "theme": "sante"
+  },
+  {
+    "id": "imp_a_v5_038",
+    "word": "PEP",
+    "hints": {
+      "hard": "Le temps compte beaucoup pour moi.",
+      "medium": "Je commence après une exposition possible.",
+      "easy": "Traitement d’urgence post-exposition au VIH."
+    },
+    "decoys": [
+      "PrEP",
+      "pilule du lendemain",
+      "antibiotique"
+    ],
+    "theme": "sante"
+  },
+  {
+    "id": "imp_a_v5_039",
+    "word": "Vaginisme",
+    "hints": {
+      "hard": "Je suis involontaire.",
+      "medium": "Je peux rendre la pénétration douloureuse ou impossible.",
+      "easy": "Contraction réflexe des muscles autour du vagin."
+    },
+    "decoys": [
+      "sécheresse",
+      "endométriose",
+      "crampe"
+    ],
+    "theme": "corps"
+  },
+  {
+    "id": "imp_a_v5_040",
+    "word": "Érection matinale",
+    "hints": {
+      "hard": "Je n’indique pas forcément un désir conscient.",
+      "medium": "Le sommeil participe à mon apparition.",
+      "easy": "Érection spontanée au réveil."
+    },
+    "decoys": [
+      "excitation",
+      "rêve érotique",
+      "libido"
+    ],
+    "theme": "corps"
+  },
+  {
+    "id": "imp_a_v5_041",
+    "word": "Zone érogène",
+    "hints": {
+      "hard": "Je ne suis pas identique chez tout le monde.",
+      "medium": "Le toucher peut me rendre très sensible.",
+      "easy": "Partie du corps pouvant provoquer du plaisir."
+    },
+    "decoys": [
+      "point G",
+      "cou",
+      "préférence"
+    ],
+    "theme": "corps"
+  },
+  {
+    "id": "imp_a_v5_042",
+    "word": "Orgasme simulé",
+    "hints": {
+      "hard": "Je donne l’apparence d’un plaisir absent.",
+      "medium": "La communication vaut mieux que ma performance.",
+      "easy": "Fait de feindre un orgasme."
+    },
+    "decoys": [
+      "bruit exagéré",
+      "mensonge intime",
+      "plaisir forcé"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_v5_043",
+    "word": "Blue balls",
+    "hints": {
+      "hard": "Mon nom populaire dramatise une gêne.",
+      "medium": "Je ne justifie jamais de faire pression.",
+      "easy": "Inconfort testiculaire temporaire après excitation sans orgasme."
+    },
+    "decoys": [
+      "douleur testiculaire",
+      "frustration",
+      "érection"
+    ],
+    "theme": "corps"
+  },
+  {
+    "id": "imp_a_v5_044",
+    "word": "Morning after",
+    "hints": {
+      "hard": "Je commence quand la soirée est finie.",
+      "medium": "Je peux mêler gêne, rire et débrief.",
+      "easy": "Matin suivant une rencontre intime."
+    },
+    "decoys": [
+      "petit-déjeuner",
+      "walk of shame",
+      "message du lendemain"
+    ],
+    "theme": "rencontres"
+  },
+  {
+    "id": "imp_a_v5_045",
+    "word": "Couette volée",
+    "hints": {
+      "hard": "Je déclenche des conflits nocturnes.",
+      "medium": "Une personne se réveille souvent sans couverture.",
+      "easy": "Accaparement involontaire de la couette."
+    },
+    "decoys": [
+      "ronflement",
+      "lit trop petit",
+      "pieds froids"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_v5_046",
+    "word": "Ronflement sexy",
+    "hints": {
+      "hard": "Mon adjectif est souvent ironique.",
+      "medium": "Je ruine l’ambiance après l’endormissement.",
+      "easy": "Ronflement d’un partenaire après une soirée romantique."
+    },
+    "decoys": [
+      "respiration forte",
+      "parler en dormant",
+      "nez bouché"
+    ],
+    "theme": "couple"
+  },
+  {
+    "id": "imp_a_v5_047",
+    "word": "Message à l’ex",
+    "hints": {
+      "hard": "Je voyage souvent trop tard.",
+      "medium": "Le lendemain peut me rendre regrettable.",
+      "easy": "Texto envoyé à une ancienne relation."
+    },
+    "decoys": [
+      "tu dors",
+      "nostalgie",
+      "rechute"
+    ],
+    "theme": "ex"
+  },
+  {
+    "id": "imp_a_v5_048",
+    "word": "Date avec colocataire",
+    "hints": {
+      "hard": "Je rends le retour à la maison délicat.",
+      "medium": "La proximité continue après le rendez-vous.",
+      "easy": "Rendez-vous amoureux avec la personne qui partage le logement."
+    },
+    "decoys": [
+      "collègue",
+      "ami proche",
+      "voisin"
+    ],
+    "theme": "rencontres"
+  },
+  {
+    "id": "imp_a_v5_049",
+    "word": "Crush au travail",
+    "hints": {
+      "hard": "Je transforme les réunions en spectacle.",
+      "medium": "Les frontières professionnelles me compliquent.",
+      "easy": "Attirance pour un collègue."
+    },
+    "decoys": [
+      "patron séduisant",
+      "romance de bureau",
+      "afterwork"
+    ],
+    "theme": "attirance"
+  },
+  {
+    "id": "imp_a_v5_050",
+    "word": "Plan à trois",
+    "hints": {
+      "hard": "Je nécessite trois accords, pas un seul.",
+      "medium": "La jalousie doit être discutée avant.",
+      "easy": "Relation sexuelle impliquant trois personnes."
+    },
+    "decoys": [
+      "trouple",
+      "échangisme",
+      "fantasme"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_v5_051",
+    "word": "Échangisme",
+    "hints": {
+      "hard": "Je concerne des couples et des partenaires consentants.",
+      "medium": "Mes règles se négocient avant la rencontre.",
+      "easy": "Échange de partenaires entre adultes consentants."
+    },
+    "decoys": [
+      "libertinage",
+      "couple ouvert",
+      "plan à quatre"
+    ],
+    "theme": "relations"
+  },
+  {
+    "id": "imp_a_v5_052",
+    "word": "Demisexuel",
+    "hints": {
+      "hard": "L’attirance ne vient pas immédiatement chez moi.",
+      "medium": "Un lien émotionnel précède souvent le désir sexuel.",
+      "easy": "Personne ressentant généralement une attirance sexuelle après un lien affectif fort."
+    },
+    "decoys": [
+      "asexualité",
+      "sapiosexualité",
+      "attachement"
+    ],
+    "theme": "identite"
+  },
+  {
+    "id": "imp_a_v5_053",
+    "word": "Compersion",
+    "hints": {
+      "hard": "Je prends le contre-pied de la jalousie.",
+      "medium": "Le bonheur amoureux de mon partenaire peut me réjouir.",
+      "easy": "Joie ressentie en voyant un partenaire heureux avec une autre personne."
+    },
+    "decoys": [
+      "jalousie",
+      "polyamour",
+      "fierté"
+    ],
+    "theme": "relations"
+  },
+  {
+    "id": "imp_a_v5_054",
+    "word": "Métamour",
+    "hints": {
+      "hard": "Je ne suis pas forcément mon ami.",
+      "medium": "Nous partageons un lien indirect par la même personne.",
+      "easy": "Partenaire d’un de ses partenaires dans une relation polyamoureuse."
+    },
+    "decoys": [
+      "trouple",
+      "rival",
+      "ex"
+    ],
+    "theme": "relations"
+  },
+  {
+    "id": "imp_a_v5_055",
+    "word": "Anulingus",
+    "hints": {
+      "hard": "Mon nom savant évite une expression plus directe.",
+      "medium": "Je suis une pratique orale nécessitant accord et prévention.",
+      "easy": "Stimulation orale de l’anus."
+    },
+    "decoys": [
+      "cunnilingus",
+      "fellation",
+      "digue dentaire"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_v5_056",
+    "word": "Edging",
+    "hints": {
+      "hard": "Je retarde volontairement un point culminant.",
+      "medium": "Les pauses font partie de ma mécanique.",
+      "easy": "Pratique consistant à approcher l’orgasme puis ralentir ou arrêter."
+    },
+    "decoys": [
+      "orgasme différé",
+      "teasing",
+      "contrôle"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_v5_057",
+    "word": "Pegging",
+    "hints": {
+      "hard": "Un accessoire inverse parfois les rôles attendus.",
+      "medium": "Je désigne une pénétration avec un gode-ceinture.",
+      "easy": "Pratique où une personne pénètre l’anus de son partenaire avec un strap-on."
+    },
+    "decoys": [
+      "strap-on",
+      "anal",
+      "jeu de rôle"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_v5_058",
+    "word": "Queening",
+    "hints": {
+      "hard": "Mon nom évoque un trône.",
+      "medium": "Je place le visage du partenaire sous la vulve.",
+      "easy": "Position de sexe oral où une personne s’assoit au-dessus du visage de l’autre."
+    },
+    "decoys": [
+      "cunnilingus",
+      "facesitting",
+      "position 69"
+    ],
+    "theme": "intimite"
+  },
+  {
+    "id": "imp_a_v5_059",
+    "word": "Vanilla",
+    "hints": {
+      "hard": "Je ne suis pas une glace ici.",
+      "medium": "Je décris des pratiques perçues comme conventionnelles.",
+      "easy": "Terme informel pour une sexualité sans pratiques kink."
+    },
+    "decoys": [
+      "missionnaire",
+      "classique",
+      "sans accessoire"
+    ],
+    "theme": "intimite"
   }
 ]
