@@ -2126,5 +2126,1677 @@
     "category": "bizarre_mais_vrai",
     "difficulty": "easy",
     "adult": false
+  },
+  {
+    "id": "exp_c_v3_001",
+    "topic": "Pourquoi les chats ont-ils des moustaches ?",
+    "facts": [
+      "Elles détectent de très faibles mouvements d’air.",
+      "Leur largeur aide à évaluer certains passages étroits.",
+      "Leur base est riche en terminaisons nerveuses."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les chats ont-ils des moustaches  » sur une glande saisonnière.",
+      "Présente un comportement appris uniquement par les petits comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une adaptation à un prédateur aujourd’hui disparu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les chats ont-ils des moustaches  » sur une glande saisonnière.",
+    "theme": "animaux",
+    "category": "animaux",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_002",
+    "topic": "Comment les geckos marchent-ils au plafond ?",
+    "facts": [
+      "Leurs doigts portent des millions de poils microscopiques.",
+      "Ces structures exploitent des forces d’attraction moléculaires.",
+      "Ils décollent leurs doigts selon un angle précis."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment les geckos marchent-ils au plafond  » sur une glande saisonnière.",
+      "Présente un comportement appris uniquement par les petits comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une adaptation à un prédateur aujourd’hui disparu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment les geckos marchent-ils au plafond  » sur une glande saisonnière.",
+    "theme": "animaux",
+    "category": "animaux",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_003",
+    "topic": "Pourquoi les loutres se tiennent-elles parfois la patte ?",
+    "facts": [
+      "Cela peut éviter qu’elles dérivent en dormant.",
+      "Les loutres de mer se regroupent aussi en radeaux.",
+      "Elles peuvent s’ancrer dans le varech."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les loutres se tiennent-elles parfois la patte  » sur une glande saisonnière.",
+      "Présente un comportement appris uniquement par les petits comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une adaptation à un prédateur aujourd’hui disparu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les loutres se tiennent-elles parfois la patte  » sur une glande saisonnière.",
+    "theme": "animaux",
+    "category": "animaux",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_004",
+    "topic": "Pourquoi les hiboux tournent-ils autant la tête ?",
+    "facts": [
+      "Leurs yeux bougent très peu dans leurs orbites.",
+      "Leur cou possède quatorze vertèbres.",
+      "Leur circulation comporte des adaptations limitant l’interruption du sang."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les hiboux tournent-ils autant la tête  » sur une glande saisonnière.",
+      "Présente un comportement appris uniquement par les petits comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une adaptation à un prédateur aujourd’hui disparu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les hiboux tournent-ils autant la tête  » sur une glande saisonnière.",
+    "theme": "animaux",
+    "category": "animaux",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_005",
+    "topic": "Pourquoi les pigeons hochent-ils la tête en marchant ?",
+    "facts": [
+      "Le mouvement stabilise brièvement leur vision.",
+      "La tête reste immobile pendant que le corps avance.",
+      "Elle est ensuite projetée rapidement vers une nouvelle position."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les pigeons hochent-ils la tête en marchant  » sur une glande saisonnière.",
+      "Présente un comportement appris uniquement par les petits comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une adaptation à un prédateur aujourd’hui disparu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les pigeons hochent-ils la tête en marchant  » sur une glande saisonnière.",
+    "theme": "animaux",
+    "category": "animaux",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_006",
+    "topic": "Pourquoi les chiens tournent-ils avant de se coucher ?",
+    "facts": [
+      "Le comportement vient probablement de la préparation d’une couche.",
+      "Il permet aussi d’inspecter l’endroit.",
+      "Il persiste même sur un coussin moderne."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les chiens tournent-ils avant de se coucher  » sur une glande saisonnière.",
+      "Présente un comportement appris uniquement par les petits comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une adaptation à un prédateur aujourd’hui disparu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les chiens tournent-ils avant de se coucher  » sur une glande saisonnière.",
+    "theme": "animaux",
+    "category": "animaux",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_007",
+    "topic": "Comment les caméléons changent-ils de couleur ?",
+    "facts": [
+      "Ils modifient l’organisation de nanocristaux dans leur peau.",
+      "Le changement sert à communiquer et réguler la température.",
+      "Il ne sert pas uniquement au camouflage."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment les caméléons changent-ils de couleur  » sur une glande saisonnière.",
+      "Présente un comportement appris uniquement par les petits comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une adaptation à un prédateur aujourd’hui disparu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment les caméléons changent-ils de couleur  » sur une glande saisonnière.",
+    "theme": "animaux",
+    "category": "animaux",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_008",
+    "topic": "Pourquoi les requins doivent-ils parfois continuer à nager ?",
+    "facts": [
+      "Certaines espèces ventilent leurs branchies en avançant.",
+      "D’autres pompent l’eau tout en restant immobiles.",
+      "La règle ne concerne donc pas tous les requins."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les requins doivent-ils parfois continuer à nager  » sur une glande saisonnière.",
+      "Présente un comportement appris uniquement par les petits comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une adaptation à un prédateur aujourd’hui disparu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les requins doivent-ils parfois continuer à nager  » sur une glande saisonnière.",
+    "theme": "animaux",
+    "category": "animaux",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_009",
+    "topic": "Pourquoi les chèvres ont-elles des pupilles rectangulaires ?",
+    "facts": [
+      "Leur pupille horizontale offre un large champ de vision.",
+      "Elle aide à surveiller l’horizon tout en broutant.",
+      "Leurs yeux pivotent pour garder la pupille alignée avec le sol."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les chèvres ont-elles des pupilles rectangulaires  » sur une glande saisonnière.",
+      "Présente un comportement appris uniquement par les petits comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une adaptation à un prédateur aujourd’hui disparu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les chèvres ont-elles des pupilles rectangulaires  » sur une glande saisonnière.",
+    "theme": "animaux",
+    "category": "animaux",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_010",
+    "topic": "Pourquoi les flammes n’ont-elles pas d’ombre nette ?",
+    "facts": [
+      "Une flamme émet elle-même de la lumière.",
+      "Elle peut néanmoins dévier ou absorber une partie d’un faisceau.",
+      "Avec une source intense, une faible ombre peut apparaître."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les flammes n’ont-elles pas d’ombre nette  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les flammes n’ont-elles pas d’ombre nette  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_011",
+    "topic": "Pourquoi voit-on l’éclair avant le tonnerre ?",
+    "facts": [
+      "La lumière voyage bien plus vite que le son.",
+      "Le délai permet d’estimer grossièrement la distance.",
+      "Environ trois secondes correspondent à près d’un kilomètre."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi voit-on l’éclair avant le tonnerre  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi voit-on l’éclair avant le tonnerre  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_012",
+    "topic": "Pourquoi la mer paraît-elle bleue ?",
+    "facts": [
+      "L’eau absorbe davantage les longues longueurs d’onde rouges.",
+      "Les bleues pénètrent et sont diffusées vers l’observateur.",
+      "Le reflet du ciel contribue selon l’angle mais n’explique pas tout."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi la mer paraît-elle bleue  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi la mer paraît-elle bleue  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_013",
+    "topic": "Pourquoi le ciel devient-il rouge au coucher du soleil ?",
+    "facts": [
+      "La lumière traverse davantage d’atmosphère.",
+      "Les courtes longueurs d’onde sont davantage diffusées.",
+      "Les rouges et orangés dominent alors le trajet direct."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi le ciel devient-il rouge au coucher du soleil  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi le ciel devient-il rouge au coucher du soleil  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_014",
+    "topic": "Pourquoi l’eau mouille-t-elle ?",
+    "facts": [
+      "Ses molécules adhèrent à de nombreuses surfaces.",
+      "Elles s’attirent aussi entre elles par cohésion.",
+      "L’équilibre entre adhésion et cohésion détermine l’étalement."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi l’eau mouille-t-elle  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi l’eau mouille-t-elle  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_015",
+    "topic": "Comment les aurores boréales se forment-elles ?",
+    "facts": [
+      "Des particules solaires atteignent la haute atmosphère.",
+      "Le champ magnétique les guide vers les régions polaires.",
+      "Les gaz excités émettent différentes couleurs."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment les aurores boréales se forment-elles  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment les aurores boréales se forment-elles  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_016",
+    "topic": "Pourquoi un ballon gonflé rétrécit-il au froid ?",
+    "facts": [
+      "Les molécules de gaz se déplacent moins vite.",
+      "La pression intérieure diminue si le volume peut changer.",
+      "Le ballon regonfle souvent en se réchauffant."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi un ballon gonflé rétrécit-il au froid  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi un ballon gonflé rétrécit-il au froid  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_017",
+    "topic": "Pourquoi le métal paraît-il plus froid que le bois ?",
+    "facts": [
+      "Le métal conduit rapidement la chaleur de la main.",
+      "Le bois est un bien meilleur isolant.",
+      "À température égale, la sensation peut donc différer."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi le métal paraît-il plus froid que le bois  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi le métal paraît-il plus froid que le bois  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_018",
+    "topic": "Comment un thermos conserve-t-il la température ?",
+    "facts": [
+      "Une double paroi limite la conduction.",
+      "Le vide entre les parois réduit convection et conduction.",
+      "Une surface réfléchissante limite le rayonnement."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment un thermos conserve-t-il la température  » sur un composant caché ajouté par les fabricants.",
+      "Présente une norme industrielle abandonnée comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec de l’électricité statique stockée dans l’objet."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment un thermos conserve-t-il la température  » sur un composant caché ajouté par les fabricants.",
+    "theme": "objets_quotidien",
+    "category": "objets_quotidien",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_019",
+    "topic": "Comment un stylo à bille contrôle-t-il son encre ?",
+    "facts": [
+      "Une petite bille tourne dans son logement à la pointe.",
+      "Elle prend l’encre du réservoir puis la dépose sur le papier.",
+      "La viscosité limite les fuites lorsque le stylo n’écrit pas."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment un stylo à bille contrôle-t-il son encre  » sur un composant caché ajouté par les fabricants.",
+      "Présente une norme industrielle abandonnée comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec de l’électricité statique stockée dans l’objet."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment un stylo à bille contrôle-t-il son encre  » sur un composant caché ajouté par les fabricants.",
+    "theme": "objets_quotidien",
+    "category": "objets_quotidien",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_020",
+    "topic": "Comment fonctionne une fermeture éclair ?",
+    "facts": [
+      "Le curseur guide deux rangées de dents imbriquées.",
+      "Dans l’autre sens, il les sépare par un coin interne.",
+      "La forme des dents maintient la liaison sous tension."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment fonctionne une fermeture éclair  » sur un composant caché ajouté par les fabricants.",
+      "Présente une norme industrielle abandonnée comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec de l’électricité statique stockée dans l’objet."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment fonctionne une fermeture éclair  » sur un composant caché ajouté par les fabricants.",
+    "theme": "objets_quotidien",
+    "category": "objets_quotidien",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_021",
+    "topic": "Pourquoi le papier se froisse-t-il durablement ?",
+    "facts": [
+      "Le pli déforme et casse localement des fibres.",
+      "Les liaisons entre fibres se réorganisent.",
+      "La feuille ne revient donc pas complètement à plat."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi le papier se froisse-t-il durablement  » sur un composant caché ajouté par les fabricants.",
+      "Présente une norme industrielle abandonnée comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec de l’électricité statique stockée dans l’objet."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi le papier se froisse-t-il durablement  » sur un composant caché ajouté par les fabricants.",
+    "theme": "objets_quotidien",
+    "category": "objets_quotidien",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_022",
+    "topic": "Comment une gomme efface-t-elle le crayon ?",
+    "facts": [
+      "Le graphite adhère davantage à la gomme qu’au papier.",
+      "Le frottement détache les particules.",
+      "La gomme s’use en emportant le graphite."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment une gomme efface-t-elle le crayon  » sur un composant caché ajouté par les fabricants.",
+      "Présente une norme industrielle abandonnée comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec de l’électricité statique stockée dans l’objet."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment une gomme efface-t-elle le crayon  » sur un composant caché ajouté par les fabricants.",
+    "theme": "objets_quotidien",
+    "category": "objets_quotidien",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_023",
+    "topic": "Pourquoi une ventouse tient-elle au mur ?",
+    "facts": [
+      "L’air est chassé sous la ventouse.",
+      "La pression extérieure devient supérieure à celle dessous.",
+      "Une fuite d’air finit par la décoller."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi une ventouse tient-elle au mur  » sur un composant caché ajouté par les fabricants.",
+      "Présente une norme industrielle abandonnée comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec de l’électricité statique stockée dans l’objet."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi une ventouse tient-elle au mur  » sur un composant caché ajouté par les fabricants.",
+    "theme": "objets_quotidien",
+    "category": "objets_quotidien",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_024",
+    "topic": "Comment une paille permet-elle de boire ?",
+    "facts": [
+      "Aspirer réduit la pression dans la paille.",
+      "La pression atmosphérique pousse le liquide vers le haut.",
+      "Ce n’est pas la bouche qui tire directement le liquide."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment une paille permet-elle de boire  » sur un composant caché ajouté par les fabricants.",
+      "Présente une norme industrielle abandonnée comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec de l’électricité statique stockée dans l’objet."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment une paille permet-elle de boire  » sur un composant caché ajouté par les fabricants.",
+    "theme": "objets_quotidien",
+    "category": "objets_quotidien",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_025",
+    "topic": "Pourquoi les glaçons collent-ils parfois à la langue ?",
+    "facts": [
+      "La langue humide réchauffe d’abord la glace.",
+      "L’eau formée regèle au contact très froid.",
+      "Cette fine couche gelée accroche la peau."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les glaçons collent-ils parfois à la langue  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les glaçons collent-ils parfois à la langue  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_026",
+    "topic": "Pourquoi l’oignon fait-il pleurer ?",
+    "facts": [
+      "Couper les cellules libère des enzymes et composés soufrés.",
+      "Un composé volatil atteint les yeux.",
+      "Les larmes servent à diluer l’irritant."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi l’oignon fait-il pleurer  » sur une enzyme activée par la salive.",
+      "Présente un gaz libéré seulement à température ambiante comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une ancienne technique de conservation."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi l’oignon fait-il pleurer  » sur une enzyme activée par la salive.",
+    "theme": "nourriture",
+    "category": "nourriture",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_027",
+    "topic": "Pourquoi le pain rassit-il ?",
+    "facts": [
+      "L’amidon se réorganise après la cuisson.",
+      "L’eau migre entre mie et croûte.",
+      "Le froid du réfrigérateur accélère souvent ce processus."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi le pain rassit-il  » sur une enzyme activée par la salive.",
+      "Présente un gaz libéré seulement à température ambiante comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une ancienne technique de conservation."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi le pain rassit-il  » sur une enzyme activée par la salive.",
+    "theme": "nourriture",
+    "category": "nourriture",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_028",
+    "topic": "Pourquoi les pommes brunissent-elles coupées ?",
+    "facts": [
+      "L’oxygène rencontre des enzymes de la chair.",
+      "Des pigments bruns se forment par oxydation.",
+      "L’acidité du citron ralentit la réaction."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les pommes brunissent-elles coupées  » sur une enzyme activée par la salive.",
+      "Présente un gaz libéré seulement à température ambiante comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une ancienne technique de conservation."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les pommes brunissent-elles coupées  » sur une enzyme activée par la salive.",
+    "theme": "nourriture",
+    "category": "nourriture",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_029",
+    "topic": "Comment le maïs devient-il pop-corn ?",
+    "facts": [
+      "Chaque grain contient un peu d’eau enfermée.",
+      "La vapeur augmente la pression interne.",
+      "L’amidon expansé se retourne lorsque l’enveloppe éclate."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment le maïs devient-il pop-corn  » sur une enzyme activée par la salive.",
+      "Présente un gaz libéré seulement à température ambiante comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une ancienne technique de conservation."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment le maïs devient-il pop-corn  » sur une enzyme activée par la salive.",
+    "theme": "nourriture",
+    "category": "nourriture",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_030",
+    "topic": "Pourquoi le piment brûle-t-il sans être chaud ?",
+    "facts": [
+      "La capsaïcine active des récepteurs sensibles à la chaleur.",
+      "Le cerveau interprète ce signal comme une brûlure.",
+      "Le gras du lait aide mieux que l’eau à la dissoudre."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi le piment brûle-t-il sans être chaud  » sur une enzyme activée par la salive.",
+      "Présente un gaz libéré seulement à température ambiante comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une ancienne technique de conservation."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi le piment brûle-t-il sans être chaud  » sur une enzyme activée par la salive.",
+    "theme": "nourriture",
+    "category": "nourriture",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_031",
+    "topic": "Pourquoi la mayonnaise peut-elle monter ?",
+    "facts": [
+      "Le jaune contient des molécules émulsifiantes.",
+      "Elles stabilisent de minuscules gouttes d’huile dans l’eau.",
+      "Ajouter l’huile progressivement facilite la dispersion."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi la mayonnaise peut-elle monter  » sur une enzyme activée par la salive.",
+      "Présente un gaz libéré seulement à température ambiante comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une ancienne technique de conservation."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi la mayonnaise peut-elle monter  » sur une enzyme activée par la salive.",
+    "theme": "nourriture",
+    "category": "nourriture",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_032",
+    "topic": "Comment la levure fait-elle gonfler la pâte ?",
+    "facts": [
+      "Elle transforme certains sucres en gaz carbonique.",
+      "Le réseau de gluten retient les bulles.",
+      "La chaleur dilate le gaz puis fixe la structure."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment la levure fait-elle gonfler la pâte  » sur une enzyme activée par la salive.",
+      "Présente un gaz libéré seulement à température ambiante comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une ancienne technique de conservation."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment la levure fait-elle gonfler la pâte  » sur une enzyme activée par la salive.",
+    "theme": "nourriture",
+    "category": "nourriture",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_033",
+    "topic": "Pourquoi le café décaféiné contient-il encore un peu de caféine ?",
+    "facts": [
+      "Les procédés retirent l’essentiel mais pas toujours la totalité.",
+      "La quantité dépend du grain et de la préparation.",
+      "Décaféiné ne signifie donc pas nécessairement zéro caféine."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi le café décaféiné contient-il encore un peu de caféine  » sur une enzyme activée par la salive.",
+      "Présente un gaz libéré seulement à température ambiante comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une ancienne technique de conservation."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi le café décaféiné contient-il encore un peu de caféine  » sur une enzyme activée par la salive.",
+    "theme": "nourriture",
+    "category": "nourriture",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_034",
+    "topic": "Pourquoi une banane fait-elle mûrir les fruits voisins ?",
+    "facts": [
+      "Elle libère de l’éthylène.",
+      "Ce gaz agit comme hormone de maturation.",
+      "Un sac fermé concentre l’éthylène et accélère le phénomène."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi une banane fait-elle mûrir les fruits voisins  » sur une enzyme activée par la salive.",
+      "Présente un gaz libéré seulement à température ambiante comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une ancienne technique de conservation."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi une banane fait-elle mûrir les fruits voisins  » sur une enzyme activée par la salive.",
+    "theme": "nourriture",
+    "category": "nourriture",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_035",
+    "topic": "Comment un QR code reste-t-il lisible abîmé ?",
+    "facts": [
+      "Il contient des données de correction d’erreurs.",
+      "Les grands carrés servent au repérage et à l’orientation.",
+      "Plusieurs niveaux de correction existent."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment un qr code reste-t-il lisible abîmé  » sur un satellite de secours.",
+      "Présente un algorithme qui devine avant de mesurer comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une fréquence secrète réservée aux fabricants."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment un qr code reste-t-il lisible abîmé  » sur un satellite de secours.",
+    "theme": "technologie",
+    "category": "technologie",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_036",
+    "topic": "Pourquoi le Wi-Fi ralentit-il derrière certains murs ?",
+    "facts": [
+      "Les matériaux absorbent ou réfléchissent les ondes.",
+      "Le métal et le béton armé sont particulièrement gênants.",
+      "La fréquence utilisée influence la pénétration."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi le wi-fi ralentit-il derrière certains murs  » sur un satellite de secours.",
+      "Présente un algorithme qui devine avant de mesurer comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une fréquence secrète réservée aux fabricants."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi le wi-fi ralentit-il derrière certains murs  » sur un satellite de secours.",
+    "theme": "technologie",
+    "category": "technologie",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_037",
+    "topic": "Comment un écran tactile détecte-t-il un doigt ?",
+    "facts": [
+      "La plupart mesurent une variation de capacité électrique.",
+      "Le doigt modifie le champ électrostatique local.",
+      "Le contrôleur calcule la position du contact."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment un écran tactile détecte-t-il un doigt  » sur un satellite de secours.",
+      "Présente un algorithme qui devine avant de mesurer comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une fréquence secrète réservée aux fabricants."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment un écran tactile détecte-t-il un doigt  » sur un satellite de secours.",
+    "theme": "technologie",
+    "category": "technologie",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_038",
+    "topic": "Pourquoi les vidéos compressées montrent-elles des carrés ?",
+    "facts": [
+      "L’image est découpée en blocs pour être codée.",
+      "Un débit trop faible supprime des détails.",
+      "Les erreurs deviennent visibles surtout dans les mouvements."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les vidéos compressées montrent-elles des carrés  » sur un satellite de secours.",
+      "Présente un algorithme qui devine avant de mesurer comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une fréquence secrète réservée aux fabricants."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les vidéos compressées montrent-elles des carrés  » sur un satellite de secours.",
+    "theme": "technologie",
+    "category": "technologie",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_039",
+    "topic": "Comment un casque à réduction de bruit fonctionne-t-il ?",
+    "facts": [
+      "Des microphones captent le bruit ambiant.",
+      "Le casque produit une onde de phase opposée.",
+      "La technique est plus efficace sur les sons réguliers et graves."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment un casque à réduction de bruit fonctionne-t-il  » sur un satellite de secours.",
+      "Présente un algorithme qui devine avant de mesurer comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une fréquence secrète réservée aux fabricants."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment un casque à réduction de bruit fonctionne-t-il  » sur un satellite de secours.",
+    "theme": "technologie",
+    "category": "technologie",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_040",
+    "topic": "Pourquoi un téléphone chauffe-t-il pendant un jeu ?",
+    "facts": [
+      "Le processeur et le circuit graphique consomment davantage.",
+      "Une partie de l’énergie devient de la chaleur.",
+      "La batterie peut aussi chauffer pendant la charge."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi un téléphone chauffe-t-il pendant un jeu  » sur un satellite de secours.",
+      "Présente un algorithme qui devine avant de mesurer comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une fréquence secrète réservée aux fabricants."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi un téléphone chauffe-t-il pendant un jeu  » sur un satellite de secours.",
+    "theme": "technologie",
+    "category": "technologie",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_041",
+    "topic": "Comment le mode avion agit-il ?",
+    "facts": [
+      "Il coupe les émetteurs radio principaux de l’appareil.",
+      "Le Wi-Fi ou Bluetooth peuvent souvent être réactivés séparément.",
+      "Il ne transforme pas le téléphone en appareil totalement inerte."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment le mode avion agit-il  » sur un satellite de secours.",
+      "Présente un algorithme qui devine avant de mesurer comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une fréquence secrète réservée aux fabricants."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment le mode avion agit-il  » sur un satellite de secours.",
+    "theme": "technologie",
+    "category": "technologie",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_042",
+    "topic": "Pourquoi les mots de passe longs sont-ils plus solides ?",
+    "facts": [
+      "Chaque caractère supplémentaire multiplie les possibilités.",
+      "La longueur résiste mieux aux essais automatisés.",
+      "Une phrase unique est souvent plus mémorable qu’une suite courte complexe."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les mots de passe longs sont-ils plus solides  » sur un satellite de secours.",
+      "Présente un algorithme qui devine avant de mesurer comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une fréquence secrète réservée aux fabricants."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les mots de passe longs sont-ils plus solides  » sur un satellite de secours.",
+    "theme": "technologie",
+    "category": "technologie",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_043",
+    "topic": "Comment la localisation d’un téléphone fonctionne-t-elle en ville ?",
+    "facts": [
+      "Le GPS fournit une base par satellites.",
+      "Le Wi-Fi et les antennes mobiles améliorent l’estimation.",
+      "Les capteurs de mouvement aident entre deux positions."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment la localisation d’un téléphone fonctionne-t-elle en ville  » sur un satellite de secours.",
+      "Présente un algorithme qui devine avant de mesurer comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une fréquence secrète réservée aux fabricants."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment la localisation d’un téléphone fonctionne-t-elle en ville  » sur un satellite de secours.",
+    "theme": "technologie",
+    "category": "technologie",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_044",
+    "topic": "Pourquoi les claviers commencent-ils par AZERTY en France ?",
+    "facts": [
+      "Ils dérivent de dispositions conçues pour les machines à écrire.",
+      "AZERTY est une adaptation francophone de QWERTY.",
+      "L’habitude et les standards ont maintenu cette organisation."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les claviers commencent-ils par azerty en france  » sur un décret oublié.",
+      "Présente une erreur de traduction devenue officielle comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une décision prise pour satisfaire un souverain."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les claviers commencent-ils par azerty en france  » sur un décret oublié.",
+    "theme": "histoire_geographie",
+    "category": "histoire_geographie",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_045",
+    "topic": "Pourquoi certains pays conduisent-ils à gauche ?",
+    "facts": [
+      "Les traditions de circulation ont divergé historiquement.",
+      "L’Empire britannique a diffusé la conduite à gauche.",
+      "Les choix se sont figés avec les réseaux routiers modernes."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi certains pays conduisent-ils à gauche  » sur un décret oublié.",
+      "Présente une erreur de traduction devenue officielle comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une décision prise pour satisfaire un souverain."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi certains pays conduisent-ils à gauche  » sur un décret oublié.",
+    "theme": "histoire_geographie",
+    "category": "histoire_geographie",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_046",
+    "topic": "Comment les fuseaux horaires ont-ils été standardisés ?",
+    "facts": [
+      "Le chemin de fer exigeait des horaires cohérents.",
+      "Des conférences internationales ont promu des méridiens de référence.",
+      "Les frontières politiques expliquent de nombreuses exceptions."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment les fuseaux horaires ont-ils été standardisés  » sur un décret oublié.",
+      "Présente une erreur de traduction devenue officielle comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une décision prise pour satisfaire un souverain."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment les fuseaux horaires ont-ils été standardisés  » sur un décret oublié.",
+    "theme": "histoire_geographie",
+    "category": "histoire_geographie",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_047",
+    "topic": "Pourquoi février est-il plus court ?",
+    "facts": [
+      "Le calendrier romain a subi plusieurs réformes.",
+      "Le calendrier julien a fixé une année de 365 jours avec bissextiles.",
+      "Le calendrier grégorien a corrigé la dérive sans égaliser les mois."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi février est-il plus court  » sur un décret oublié.",
+      "Présente une erreur de traduction devenue officielle comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une décision prise pour satisfaire un souverain."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi février est-il plus court  » sur un décret oublié.",
+    "theme": "histoire_geographie",
+    "category": "histoire_geographie",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_048",
+    "topic": "Pourquoi les cartes du monde déforment-elles les pays ?",
+    "facts": [
+      "Projeter une sphère sur un plan impose des distorsions.",
+      "Chaque projection privilégie angles, surfaces ou distances.",
+      "La projection de Mercator agrandit les hautes latitudes."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les cartes du monde déforment-elles les pays  » sur un décret oublié.",
+      "Présente une erreur de traduction devenue officielle comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une décision prise pour satisfaire un souverain."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les cartes du monde déforment-elles les pays  » sur un décret oublié.",
+    "theme": "histoire_geographie",
+    "category": "histoire_geographie",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_049",
+    "topic": "Comment une frontière peut-elle traverser un bâtiment ?",
+    "facts": [
+      "Les frontières suivent parfois d’anciens traités très précis.",
+      "Des constructions peuvent ensuite chevaucher la ligne.",
+      "Certains lieux ont donc des pièces dans deux pays."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment une frontière peut-elle traverser un bâtiment  » sur un décret oublié.",
+      "Présente une erreur de traduction devenue officielle comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une décision prise pour satisfaire un souverain."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment une frontière peut-elle traverser un bâtiment  » sur un décret oublié.",
+    "theme": "histoire_geographie",
+    "category": "histoire_geographie",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_050",
+    "topic": "Pourquoi les applaudissements se synchronisent-ils parfois ?",
+    "facts": [
+      "Les personnes ajustent inconsciemment leur rythme aux autres.",
+      "Un battement commun devient plus saillant.",
+      "Le groupe peut alterner entre rythme synchronisé et désordonné."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les applaudissements se synchronisent-ils parfois  » sur un réflexe hérité de la préhistoire.",
+      "Présente une règle sociale née à la cour royale comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un biais psychologique au nom inventé."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les applaudissements se synchronisent-ils parfois  » sur un réflexe hérité de la préhistoire.",
+    "theme": "culture_societe",
+    "category": "culture_societe",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_051",
+    "topic": "Pourquoi bâille-t-on en voyant quelqu’un bâiller ?",
+    "facts": [
+      "Le bâillement contagieux implique l’attention sociale.",
+      "Il apparaît aussi chez certaines autres espèces.",
+      "Son mécanisme exact reste étudié et n’est pas une simple imitation volontaire."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi bâille-t-on en voyant quelqu’un bâiller  » sur un réflexe hérité de la préhistoire.",
+      "Présente une règle sociale née à la cour royale comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un biais psychologique au nom inventé."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi bâille-t-on en voyant quelqu’un bâiller  » sur un réflexe hérité de la préhistoire.",
+    "theme": "culture_societe",
+    "category": "culture_societe",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_052",
+    "topic": "Pourquoi une chanson reste-t-elle dans la tête ?",
+    "facts": [
+      "Une mélodie simple et répétitive se mémorise facilement.",
+      "Le cerveau peut relancer une boucle inachevée.",
+      "La distraction ou l’écoute complète aide parfois à la faire passer."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi une chanson reste-t-elle dans la tête  » sur une contrainte des premières caméras.",
+      "Présente un trucage sonore breveté comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une règle cachée des studios."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi une chanson reste-t-elle dans la tête  » sur une contrainte des premières caméras.",
+    "theme": "cinema_musique_jeux",
+    "category": "cinema_musique_jeux",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_053",
+    "topic": "Pourquoi les rires enregistrés influencent-ils une comédie ?",
+    "facts": [
+      "Ils signalent socialement qu’un moment est humoristique.",
+      "Ils peuvent augmenter la perception du drôle.",
+      "L’effet dépend du public et peut aussi agacer."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les rires enregistrés influencent-ils une comédie  » sur une contrainte des premières caméras.",
+      "Présente un trucage sonore breveté comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une règle cachée des studios."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les rires enregistrés influencent-ils une comédie  » sur une contrainte des premières caméras.",
+    "theme": "cinema_musique_jeux",
+    "category": "cinema_musique_jeux",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_054",
+    "topic": "Comment un film crée-t-il une impression de mouvement ?",
+    "facts": [
+      "Des images fixes sont présentées rapidement.",
+      "Le système visuel intègre les changements successifs.",
+      "Le flou de mouvement renforce la continuité."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment un film crée-t-il une impression de mouvement  » sur une contrainte des premières caméras.",
+      "Présente un trucage sonore breveté comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une règle cachée des studios."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment un film crée-t-il une impression de mouvement  » sur une contrainte des premières caméras.",
+    "theme": "cinema_musique_jeux",
+    "category": "cinema_musique_jeux",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_055",
+    "topic": "Pourquoi les jeux vidéo ont-ils des temps de chargement ?",
+    "facts": [
+      "Les données doivent être lues puis placées en mémoire.",
+      "Textures, sons et niveaux sont préparés.",
+      "Les SSD et le chargement en arrière-plan réduisent l’attente."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les jeux vidéo ont-ils des temps de chargement  » sur une contrainte des premières caméras.",
+      "Présente un trucage sonore breveté comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une règle cachée des studios."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les jeux vidéo ont-ils des temps de chargement  » sur une contrainte des premières caméras.",
+    "theme": "cinema_musique_jeux",
+    "category": "cinema_musique_jeux",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_056",
+    "topic": "Pourquoi les balles de tennis sont-elles jaunes ?",
+    "facts": [
+      "La couleur fluorescente améliore la visibilité.",
+      "La télévision a accéléré son adoption.",
+      "Les règles autorisent aussi le blanc, devenu rare au haut niveau."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les balles de tennis sont-elles jaunes  » sur une obligation télévisuelle.",
+      "Présente un avantage aérodynamique imaginaire comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une superstition devenue règlement."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les balles de tennis sont-elles jaunes  » sur une obligation télévisuelle.",
+    "theme": "sport",
+    "category": "sport",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_057",
+    "topic": "Comment un ballon courbe-t-il en vol ?",
+    "facts": [
+      "Sa rotation crée une différence de pression autour de lui.",
+      "Cet effet Magnus dévie sa trajectoire.",
+      "La vitesse, l’air et la surface du ballon comptent aussi."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment un ballon courbe-t-il en vol  » sur une obligation télévisuelle.",
+      "Présente un avantage aérodynamique imaginaire comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une superstition devenue règlement."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment un ballon courbe-t-il en vol  » sur une obligation télévisuelle.",
+    "theme": "sport",
+    "category": "sport",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_058",
+    "topic": "Pourquoi les nageurs se rasent-ils parfois avant une compétition ?",
+    "facts": [
+      "Cela réduit légèrement la traînée et améliore les sensations d’eau.",
+      "Le rituel accompagne souvent une période d’entraînement.",
+      "Le gain principal reste faible face à la technique."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les nageurs se rasent-ils parfois avant une compétition  » sur une obligation télévisuelle.",
+      "Présente un avantage aérodynamique imaginaire comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une superstition devenue règlement."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les nageurs se rasent-ils parfois avant une compétition  » sur une obligation télévisuelle.",
+    "theme": "sport",
+    "category": "sport",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_059",
+    "topic": "Comment le faux départ est-il détecté en athlétisme ?",
+    "facts": [
+      "Des capteurs mesurent la pression sur les starting-blocks.",
+      "Un temps de réaction trop court est jugé anticipé.",
+      "Les officiels peuvent vérifier les données et la vidéo."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment le faux départ est-il détecté en athlétisme  » sur une obligation télévisuelle.",
+      "Présente un avantage aérodynamique imaginaire comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une superstition devenue règlement."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment le faux départ est-il détecté en athlétisme  » sur une obligation télévisuelle.",
+    "theme": "sport",
+    "category": "sport",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_060",
+    "topic": "Pourquoi une balle de golf a-t-elle des alvéoles ?",
+    "facts": [
+      "Les alvéoles modifient la couche d’air autour de la balle.",
+      "Elles réduisent la traînée dans une grande partie du vol.",
+      "Elles augmentent aussi la portance avec la rotation."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi une balle de golf a-t-elle des alvéoles  » sur une obligation télévisuelle.",
+      "Présente un avantage aérodynamique imaginaire comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une superstition devenue règlement."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi une balle de golf a-t-elle des alvéoles  » sur une obligation télévisuelle.",
+    "theme": "sport",
+    "category": "sport",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_061",
+    "topic": "Pourquoi les patineurs tournent-ils plus vite en serrant les bras ?",
+    "facts": [
+      "Leur moment d’inertie diminue.",
+      "Le moment cinétique se conserve approximativement.",
+      "La vitesse de rotation augmente donc."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les patineurs tournent-ils plus vite en serrant les bras  » sur une obligation télévisuelle.",
+      "Présente un avantage aérodynamique imaginaire comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une superstition devenue règlement."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les patineurs tournent-ils plus vite en serrant les bras  » sur une obligation télévisuelle.",
+    "theme": "sport",
+    "category": "sport",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_062",
+    "topic": "Pourquoi les souvenirs changent-ils avec le temps ?",
+    "facts": [
+      "La mémoire est reconstruite à chaque rappel.",
+      "De nouvelles informations peuvent modifier le récit.",
+      "La confiance dans un souvenir ne garantit pas son exactitude."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les souvenirs changent-ils avec le temps  » sur un réflexe hérité de la préhistoire.",
+      "Présente une règle sociale née à la cour royale comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un biais psychologique au nom inventé."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les souvenirs changent-ils avec le temps  » sur un réflexe hérité de la préhistoire.",
+    "theme": "culture_societe",
+    "category": "culture_societe",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_063",
+    "topic": "Pourquoi une attente paraît-elle plus longue sans information ?",
+    "facts": [
+      "L’incertitude attire l’attention sur le temps.",
+      "Une estimation ou une activité réduit cette surveillance.",
+      "La perception dépend davantage de l’expérience que du chronomètre."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi une attente paraît-elle plus longue sans information  » sur un réflexe hérité de la préhistoire.",
+      "Présente une règle sociale née à la cour royale comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un biais psychologique au nom inventé."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi une attente paraît-elle plus longue sans information  » sur un réflexe hérité de la préhistoire.",
+    "theme": "culture_societe",
+    "category": "culture_societe",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_064",
+    "topic": "Pourquoi parle-t-on plus fort dans un lieu bruyant ?",
+    "facts": [
+      "Le cerveau ajuste automatiquement la voix au bruit ambiant.",
+      "Ce phénomène est appelé effet Lombard.",
+      "Il aide à maintenir l’intelligibilité."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi parle-t-on plus fort dans un lieu bruyant  » sur un réflexe hérité de la préhistoire.",
+      "Présente une règle sociale née à la cour royale comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un biais psychologique au nom inventé."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi parle-t-on plus fort dans un lieu bruyant  » sur un réflexe hérité de la préhistoire.",
+    "theme": "culture_societe",
+    "category": "culture_societe",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_065",
+    "topic": "Pourquoi reconnaît-on son prénom dans le bruit ?",
+    "facts": [
+      "Le prénom est un signal personnel très familier.",
+      "L’attention peut le détecter même hors du foyer principal.",
+      "Cela illustre l’effet cocktail party."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi reconnaît-on son prénom dans le bruit  » sur un réflexe hérité de la préhistoire.",
+      "Présente une règle sociale née à la cour royale comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un biais psychologique au nom inventé."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi reconnaît-on son prénom dans le bruit  » sur un réflexe hérité de la préhistoire.",
+    "theme": "culture_societe",
+    "category": "culture_societe",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_066",
+    "topic": "Pourquoi une odeur réveille-t-elle un souvenir précis ?",
+    "facts": [
+      "L’odorat est fortement relié aux régions de mémoire et d’émotion.",
+      "Les souvenirs olfactifs sont souvent contextuels.",
+      "L’association peut rester longtemps sans être rappelée."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi une odeur réveille-t-elle un souvenir précis  » sur un réflexe hérité de la préhistoire.",
+      "Présente une règle sociale née à la cour royale comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un biais psychologique au nom inventé."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi une odeur réveille-t-elle un souvenir précis  » sur un réflexe hérité de la préhistoire.",
+    "theme": "culture_societe",
+    "category": "culture_societe",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_067",
+    "topic": "Pourquoi croit-on parfois sentir son téléphone vibrer ?",
+    "facts": [
+      "L’attente de notifications augmente la vigilance.",
+      "Des sensations banales sont interprétées comme une vibration.",
+      "Le phénomène est fréquent et appelé vibration fantôme."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi croit-on parfois sentir son téléphone vibrer  » sur un satellite de secours.",
+      "Présente un algorithme qui devine avant de mesurer comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une fréquence secrète réservée aux fabricants."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi croit-on parfois sentir son téléphone vibrer  » sur un satellite de secours.",
+    "theme": "technologie",
+    "category": "technologie",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_068",
+    "topic": "Comment un aimant attire-t-il le fer ?",
+    "facts": [
+      "Son champ organise certains domaines magnétiques du matériau.",
+      "Le fer devient temporairement aimanté.",
+      "L’attraction est plus forte à courte distance."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment un aimant attire-t-il le fer  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment un aimant attire-t-il le fer  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_069",
+    "topic": "Pourquoi l’huile flotte-t-elle sur l’eau ?",
+    "facts": [
+      "La plupart des huiles sont moins denses que l’eau.",
+      "Leurs molécules se mélangent mal avec l’eau.",
+      "La tension interfaciale aide à former une couche séparée."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi l’huile flotte-t-elle sur l’eau  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi l’huile flotte-t-elle sur l’eau  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_070",
+    "topic": "Pourquoi les bulles sont-elles rondes ?",
+    "facts": [
+      "La tension de surface cherche à minimiser l’aire.",
+      "La sphère enferme un volume avec une surface minimale.",
+      "La gravité ou le contact peut toutefois les déformer."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les bulles sont-elles rondes  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les bulles sont-elles rondes  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_071",
+    "topic": "Comment une boussole indique-t-elle le nord ?",
+    "facts": [
+      "Son aiguille aimantée s’aligne sur le champ terrestre.",
+      "Elle pointe vers le nord magnétique, pas exactement géographique.",
+      "La déclinaison varie selon le lieu et le temps."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment une boussole indique-t-elle le nord  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment une boussole indique-t-elle le nord  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_072",
+    "topic": "Pourquoi le savon enlève-t-il la graisse ?",
+    "facts": [
+      "Ses molécules ont une partie attirée par l’eau et une par le gras.",
+      "Elles entourent la graisse en petites structures.",
+      "L’eau peut alors emporter l’ensemble."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi le savon enlève-t-il la graisse  » sur un composant caché ajouté par les fabricants.",
+      "Présente une norme industrielle abandonnée comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec de l’électricité statique stockée dans l’objet."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi le savon enlève-t-il la graisse  » sur un composant caché ajouté par les fabricants.",
+    "theme": "objets_quotidien",
+    "category": "objets_quotidien",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_073",
+    "topic": "Pourquoi une canette siffle-t-elle à l’ouverture ?",
+    "facts": [
+      "Le gaz intérieur est sous pression.",
+      "Ouvrir crée une chute rapide de pression.",
+      "Du dioxyde de carbone s’échappe avec le son."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi une canette siffle-t-elle à l’ouverture  » sur une enzyme activée par la salive.",
+      "Présente un gaz libéré seulement à température ambiante comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une ancienne technique de conservation."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi une canette siffle-t-elle à l’ouverture  » sur une enzyme activée par la salive.",
+    "theme": "nourriture",
+    "category": "nourriture",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_074",
+    "topic": "Comment une plaque à induction chauffe-t-elle ?",
+    "facts": [
+      "Une bobine crée un champ magnétique variable.",
+      "Il induit des courants dans le fond compatible.",
+      "La chaleur est produite directement dans le récipient."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment une plaque à induction chauffe-t-elle  » sur un composant caché ajouté par les fabricants.",
+      "Présente une norme industrielle abandonnée comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec de l’électricité statique stockée dans l’objet."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment une plaque à induction chauffe-t-elle  » sur un composant caché ajouté par les fabricants.",
+    "theme": "objets_quotidien",
+    "category": "objets_quotidien",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_075",
+    "topic": "Pourquoi les vitres s’embuent-elles ?",
+    "facts": [
+      "L’air humide touche une surface froide.",
+      "La vapeur se condense en minuscules gouttes.",
+      "Ventiler ou réchauffer la vitre réduit la buée."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les vitres s’embuent-elles  » sur un composant caché ajouté par les fabricants.",
+      "Présente une norme industrielle abandonnée comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec de l’électricité statique stockée dans l’objet."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les vitres s’embuent-elles  » sur un composant caché ajouté par les fabricants.",
+    "theme": "objets_quotidien",
+    "category": "objets_quotidien",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_076",
+    "topic": "Pourquoi un coquillage semble-t-il contenir la mer ?",
+    "facts": [
+      "Sa forme amplifie certaines fréquences du bruit ambiant.",
+      "Le son vient surtout de l’environnement et du corps.",
+      "N’importe quelle cavité similaire produit un effet proche."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi un coquillage semble-t-il contenir la mer  » sur un organe humain vestigial.",
+      "Présente une force physique découverte par hasard comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un protocole scientifique classé secret."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi un coquillage semble-t-il contenir la mer  » sur un organe humain vestigial.",
+    "theme": "bizarre_mais_vrai",
+    "category": "bizarre_mais_vrai",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_077",
+    "topic": "Pourquoi une tartine tombe-t-elle souvent côté beurre ?",
+    "facts": [
+      "La hauteur d’une table permet souvent environ un demi-tour.",
+      "La tartine commence à tourner en basculant du bord.",
+      "Ce n’est pas une loi absolue et la hauteur change le résultat."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi une tartine tombe-t-elle souvent côté beurre  » sur un organe humain vestigial.",
+      "Présente une force physique découverte par hasard comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un protocole scientifique classé secret."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi une tartine tombe-t-elle souvent côté beurre  » sur un organe humain vestigial.",
+    "theme": "bizarre_mais_vrai",
+    "category": "bizarre_mais_vrai",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_078",
+    "topic": "Comment un boomerang revient-il ?",
+    "facts": [
+      "Ses pales profilées génèrent de la portance en rotation.",
+      "La pale supérieure avance plus vite dans l’air.",
+      "La différence de forces fait précesser la trajectoire."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment un boomerang revient-il  » sur un organe humain vestigial.",
+      "Présente une force physique découverte par hasard comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un protocole scientifique classé secret."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment un boomerang revient-il  » sur un organe humain vestigial.",
+    "theme": "bizarre_mais_vrai",
+    "category": "bizarre_mais_vrai",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_079",
+    "topic": "Pourquoi le hoquet produit-il ce son caractéristique ?",
+    "facts": [
+      "Le diaphragme se contracte involontairement.",
+      "La glotte se ferme brusquement juste après.",
+      "Cette fermeture produit le son bref du hoquet."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi le hoquet produit-il ce son caractéristique  » sur un organe humain vestigial.",
+      "Présente une force physique découverte par hasard comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un protocole scientifique classé secret."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi le hoquet produit-il ce son caractéristique  » sur un organe humain vestigial.",
+    "theme": "bizarre_mais_vrai",
+    "category": "bizarre_mais_vrai",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_080",
+    "topic": "Pourquoi entend-on sa voix différemment enregistrée ?",
+    "facts": [
+      "En parlant, le son atteint aussi l’oreille par les os.",
+      "Cette conduction renforce certaines basses fréquences.",
+      "Un enregistrement restitue surtout le son transmis par l’air."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi entend-on sa voix différemment enregistrée  » sur un organe humain vestigial.",
+      "Présente une force physique découverte par hasard comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un protocole scientifique classé secret."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi entend-on sa voix différemment enregistrée  » sur un organe humain vestigial.",
+    "theme": "bizarre_mais_vrai",
+    "category": "bizarre_mais_vrai",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_081",
+    "topic": "Pourquoi les portes grincent-elles ?",
+    "facts": [
+      "Les charnières frottent sous charge.",
+      "La corrosion ou le manque de lubrifiant augmente le frottement.",
+      "Les vibrations produisent le grincement."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les portes grincent-elles  » sur un composant caché ajouté par les fabricants.",
+      "Présente une norme industrielle abandonnée comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec de l’électricité statique stockée dans l’objet."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les portes grincent-elles  » sur un composant caché ajouté par les fabricants.",
+    "theme": "objets_quotidien",
+    "category": "objets_quotidien",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_082",
+    "topic": "Comment un antivol de magasin se déclenche-t-il ?",
+    "facts": [
+      "Une étiquette réagit à un champ près des portiques.",
+      "La caisse la désactive ou la retire.",
+      "Une étiquette active modifie le signal détecté."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment un antivol de magasin se déclenche-t-il  » sur un satellite de secours.",
+      "Présente un algorithme qui devine avant de mesurer comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec une fréquence secrète réservée aux fabricants."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment un antivol de magasin se déclenche-t-il  » sur un satellite de secours.",
+    "theme": "technologie",
+    "category": "technologie",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_083",
+    "topic": "Pourquoi la Lune montre-t-elle presque toujours la même face ?",
+    "facts": [
+      "Sa rotation sur elle-même dure autant que son orbite autour de la Terre.",
+      "Cette rotation synchrone vient des effets de marée sur le long terme.",
+      "Une petite libration permet toutefois d’observer plus de la moitié de sa surface."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi la lune montre-t-elle presque toujours la même face  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi la lune montre-t-elle presque toujours la même face  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_084",
+    "topic": "Pourquoi le mal des transports apparaît-il ?",
+    "facts": [
+      "Les yeux et l’oreille interne envoient parfois des signaux incompatibles.",
+      "Le cerveau interprète mal ce conflit sensoriel.",
+      "Regarder l’horizon aide certaines personnes."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi le mal des transports apparaît-il  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi le mal des transports apparaît-il  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_085",
+    "topic": "Pourquoi le sucre disparaît-il dans l’eau ?",
+    "facts": [
+      "Ses molécules se séparent et se dispersent entre celles de l’eau.",
+      "Il est dissous, pas détruit.",
+      "Évaporer l’eau permet de retrouver des cristaux."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi le sucre disparaît-il dans l’eau  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi le sucre disparaît-il dans l’eau  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "easy",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_086",
+    "topic": "Pourquoi la colle ne colle-t-elle pas dans son tube fermé ?",
+    "facts": [
+      "Le tube limite l’air ou l’humidité nécessaires au durcissement.",
+      "La formulation reste stable tant que le bouchon est étanche.",
+      "Une colle laissée ouverte finit par polymériser ou sécher."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi la colle ne colle-t-elle pas dans son tube fermé  » sur un composant caché ajouté par les fabricants.",
+      "Présente une norme industrielle abandonnée comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec de l’électricité statique stockée dans l’objet."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi la colle ne colle-t-elle pas dans son tube fermé  » sur un composant caché ajouté par les fabricants.",
+    "theme": "objets_quotidien",
+    "category": "objets_quotidien",
+    "difficulty": "medium",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_087",
+    "topic": "Comment un feu d’artifice produit-il ses couleurs ?",
+    "facts": [
+      "Des sels métalliques différents émettent des couleurs caractéristiques.",
+      "La chaleur excite leurs atomes.",
+      "La forme de l’explosion dépend de l’organisation des charges."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « comment un feu d’artifice produit-il ses couleurs  » sur une particule inventée.",
+      "Présente une inversion locale de gravité comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un changement de pression qui n’existe qu’à l’œil nu."
+    ],
+    "fakeTip": "Fais reposer ton explication de « comment un feu d’artifice produit-il ses couleurs  » sur une particule inventée.",
+    "theme": "science_nature",
+    "category": "science_nature",
+    "difficulty": "hard",
+    "adult": false
+  },
+  {
+    "id": "exp_c_v3_088",
+    "topic": "Pourquoi les avions paraissent-ils avancer lentement dans le ciel ?",
+    "facts": [
+      "Ils sont très éloignés de l’observateur.",
+      "Leur déplacement angulaire paraît donc faible.",
+      "L’absence de repères proches accentue cette impression."
+    ],
+    "fakeTips": [
+      "Fais reposer ton explication de « pourquoi les avions paraissent-ils avancer lentement dans le ciel  » sur un organe humain vestigial.",
+      "Présente une force physique découverte par hasard comme le détail que les autres experts oublient.",
+      "Pars d’un fait plausible, puis conclus avec un protocole scientifique classé secret."
+    ],
+    "fakeTip": "Fais reposer ton explication de « pourquoi les avions paraissent-ils avancer lentement dans le ciel  » sur un organe humain vestigial.",
+    "theme": "bizarre_mais_vrai",
+    "category": "bizarre_mais_vrai",
+    "difficulty": "easy",
+    "adult": false
   }
 ]
