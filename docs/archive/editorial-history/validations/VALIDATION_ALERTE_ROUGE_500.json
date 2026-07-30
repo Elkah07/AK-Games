@@ -1,0 +1,44 @@
+{
+  "pack": "AK-Games_modifs_alerte-rouge_500_V1",
+  "cards": 500,
+  "themes": {
+    "soiree_maison": 53,
+    "telephone_reseaux": 50,
+    "voisins_ville": 49,
+    "voyage_transport": 48,
+    "objets_disparus": 51,
+    "mystere_paranormal": 55,
+    "travail_ecole": 48,
+    "nature_exterieur": 48,
+    "secrets_groupe": 50,
+    "chaos_absurde": 48
+  },
+  "intensities": {
+    "petit_probleme": 125,
+    "panique": 125,
+    "alerte_rouge": 125,
+    "chaos": 125
+  },
+  "uniqueIds": 500,
+  "threeOptionsEverywhere": true,
+  "uniqueOptionTriplets": true,
+  "files": [
+    "app.js",
+    "multiplayer.js",
+    "styles.css",
+    "game-help.js",
+    "service-worker.js",
+    "index.html",
+    "data/alerte-rouge.json"
+  ],
+  "checks": [
+    "JSON valide",
+    "app.js syntaxe valide",
+    "multiplayer.js syntaxe valide",
+    "game-help.js syntaxe valide",
+    "service-worker.js syntaxe valide",
+    "filtres local intégrés",
+    "filtres multijoueur intégrés",
+    "cache PWA v4.6"
+  ]
+}

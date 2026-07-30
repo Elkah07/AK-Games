@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-07-30T12:25:57.201Z",
+  "counts": {
+    "alerte-rouge": 150,
+    "faux-expert": 200,
+    "faux-expert-adulte": 151
+  },
+  "notes": [
+    "Chaque scénario Alerte Rouge possède trois choix et trois conséquences propres.",
+    "Chaque entrée Faux Expert possède un sujet unique et trois faits spécifiques.",
+    "Aucune variante de formulation d’un même sujet n’a été ajoutée."
+  ]
+}

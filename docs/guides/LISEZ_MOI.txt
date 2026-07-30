@@ -1,0 +1,26 @@
+AK’GAMES — MODE CRÉATEUR V1.3 : GESTION DES ACCÈS
+
+Remplace uniquement les fichiers présents dans ce ZIP, puis valide et envoie les modifications sur GitHub.
+Le déploiement automatique mettra à jour Firebase Hosting ET les règles de la Realtime Database.
+
+IMPORTANT
+- Ne change rien à ton creatorAccess actuel :
+  6SdgafNlPkR6nj1vMtOB9VCt9yE3: true
+  Il est automatiquement reconnu comme le compte PROPRIÉTAIRE.
+- Le fichier database.rules.json doit impérativement être remplacé avec les autres fichiers.
+
+POUR INVITER TON AMIE
+1. Ouvre Mode créateur.
+2. Appuie sur « Gestion des accès ».
+3. Appuie sur « Inviter » et partage le lien généré.
+4. Ton amie ouvre le lien et renseigne son prénom ou son pseudo.
+5. Sa demande apparaît dans « Gestion des accès ».
+6. Appuie sur « Accepter » et choisis son rôle.
+
+RÔLES
+- Propriétaire : toi uniquement, tous les outils et gestion des accès.
+- Créateur : laboratoire, signalements, base de contenus, diagnostic et maintenance.
+- Testeur : laboratoire uniquement.
+- Modérateur : signalements uniquement.
+
+Tu peux modifier un rôle ou retirer un accès à tout moment. Une personne autorisée ne peut pas accorder de droits à quelqu’un d’autre.

@@ -1,0 +1,1174 @@
+{
+  "version": 3,
+  "characters": 17,
+  "validatedIdlePoses": 17,
+  "missingIllustratedPoses": 68,
+  "files": 233,
+  "integrity": [
+    {
+      "path": "POSES_A_GENERER.md",
+      "bytes": 990,
+      "sha256": "2bfaac8f23f45c0a09bdd38e3f61bf808f13218707f4d01e2c0c631135bed31b"
+    },
+    {
+      "path": "README_INTEGRATION.md",
+      "bytes": 1972,
+      "sha256": "bf482b67fec31ebda6959ccd83fee004631dd0cd3b74eb49c80c9a5a0321a31a"
+    },
+    {
+      "path": "assets/characters/bonnie/hype/POSE_A_CREER.txt",
+      "bytes": 98,
+      "sha256": "3833a764a9fe89f9093959cd6c335d6eb3c0b3da16ebcee6eec0bdfe2dd27279"
+    },
+    {
+      "path": "assets/characters/bonnie/idle/avatar-circle.png",
+      "bytes": 257585,
+      "sha256": "cf5ce0eeab3be9999dba791499041b84ae32a95c1ebed3f66b7ee1171ae608c7"
+    },
+    {
+      "path": "assets/characters/bonnie/idle/avatar-circle.webp",
+      "bytes": 39362,
+      "sha256": "db8dbd4cf5c383eb602a53f52115cd91eb731a9bd0992f253effb92d133d1972"
+    },
+    {
+      "path": "assets/characters/bonnie/idle/bust.png",
+      "bytes": 671145,
+      "sha256": "48fb03385480d9c856b2392c0fcc597ce5ffc145489b2531fc3de7587804eea3"
+    },
+    {
+      "path": "assets/characters/bonnie/idle/bust.webp",
+      "bytes": 94538,
+      "sha256": "df1c805cd81839e913158f0e9ec4045bf9e327ee1ef75a1f8620098c14c76325"
+    },
+    {
+      "path": "assets/characters/bonnie/idle/full.png",
+      "bytes": 705818,
+      "sha256": "48d0e2cdc8e26603fa4304c3156e056a3fae24919777c8091e3a50cd74608dd9"
+    },
+    {
+      "path": "assets/characters/bonnie/idle/full.webp",
+      "bytes": 103686,
+      "sha256": "20c635016ce70b2856d0d864b22b042080ba512afab1df4c25df222a69b3da45"
+    },
+    {
+      "path": "assets/characters/bonnie/idle/icon.png",
+      "bytes": 83101,
+      "sha256": "b6a71b4d0b6e71520b2aefc9f56fe77fc11f4f8c0e15589e8981b9c142eba39a"
+    },
+    {
+      "path": "assets/characters/bonnie/idle/icon.webp",
+      "bytes": 13256,
+      "sha256": "b2020401a5414a1d6a9bf2709ae6f003e3f7763e047735b1fcc84921609ad9d8"
+    },
+    {
+      "path": "assets/characters/bonnie/idle/master.png",
+      "bytes": 2008774,
+      "sha256": "01ad6362bcc65700225c1aeb8f988af8a0c6d90c70f5fa83b586aa09bb8dd3ad"
+    },
+    {
+      "path": "assets/characters/bonnie/lose/POSE_A_CREER.txt",
+      "bytes": 98,
+      "sha256": "5bfd43e7b17d0732796975b32d4581b682b4091a020ffed704aaea00d0f92e31"
+    },
+    {
+      "path": "assets/characters/bonnie/talk/POSE_A_CREER.txt",
+      "bytes": 98,
+      "sha256": "e7b44615d6e2f06cd657e5e11de5e534d2274d2c0172882bae1135b41c77d999"
+    },
+    {
+      "path": "assets/characters/bonnie/win/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "59021c95e22432cd82fa6489f261a6153a4a84abc6777b512574bed54e508763"
+    },
+    {
+      "path": "assets/characters/croa/hype/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "85a0377a7b6cfba76d59486c4b520c40c37128df72a1b2bb76fe8afb72e253f1"
+    },
+    {
+      "path": "assets/characters/croa/idle/avatar-circle.png",
+      "bytes": 236795,
+      "sha256": "b94085a0fef0fd791f791d288dc4ae1bd448a7a9adfe4b40eee1c6e57740da77"
+    },
+    {
+      "path": "assets/characters/croa/idle/avatar-circle.webp",
+      "bytes": 58320,
+      "sha256": "c1ec86ec214149e5d74db56e855b2eafeb7f1d4c1a781957f6abd39a5bfd6bf9"
+    },
+    {
+      "path": "assets/characters/croa/idle/bust.png",
+      "bytes": 578802,
+      "sha256": "931447664f711be0e99685065347417e5a339f18666f9867ee694a3d4fd09926"
+    },
+    {
+      "path": "assets/characters/croa/idle/bust.webp",
+      "bytes": 142106,
+      "sha256": "dd05aeba3eeae7572b628bce02f3870d6c53b3114e2ef36b45734762872353e6"
+    },
+    {
+      "path": "assets/characters/croa/idle/full.png",
+      "bytes": 530395,
+      "sha256": "0af60d3d1bd8b70365eace592e4266c4c5006a9a7c21c98d75da40c4c8adccb3"
+    },
+    {
+      "path": "assets/characters/croa/idle/full.webp",
+      "bytes": 153462,
+      "sha256": "68fc766b2298850743f06f1fb70d31f6eb07d9137984dfd9cdaac2683426698f"
+    },
+    {
+      "path": "assets/characters/croa/idle/icon.png",
+      "bytes": 92894,
+      "sha256": "c980b50aaa7ad1dff22d414ab5bc9259e76ec5820f35eb4acefb2ebe85fb2cda"
+    },
+    {
+      "path": "assets/characters/croa/idle/icon.webp",
+      "bytes": 25626,
+      "sha256": "6a38f442bedba0b8cf720ba17e5af1674f7e3563fcd27542a1a3e46e6f419975"
+    },
+    {
+      "path": "assets/characters/croa/idle/master.png",
+      "bytes": 843472,
+      "sha256": "80a1785a9271ead1564ed5c82cb13d989747bbfdcf88c10b1a62944e6bb8a5e4"
+    },
+    {
+      "path": "assets/characters/croa/lose/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "49bb5b3de6f898faa77ba87b40386e670f48401c482f468b69234cd2aa9aebc0"
+    },
+    {
+      "path": "assets/characters/croa/talk/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "86aec593aaf52657a598e541318a80aabc8f08512b7fc594e68f6053e8ac8f78"
+    },
+    {
+      "path": "assets/characters/croa/win/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "1e160d5bb19c693c7d6c778fa798aa072c1d8f9822a9000deaf792d817900f5c"
+    },
+    {
+      "path": "assets/characters/edgar/hype/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "3f81c6f436f7926267a698cf05caf9aa7db10b796c84d067c06bbfa3a58c932c"
+    },
+    {
+      "path": "assets/characters/edgar/idle/avatar-circle.png",
+      "bytes": 222470,
+      "sha256": "081ebab69b4d37d203da547b7ccb463e755bdeacaef74fd856e634a248fe72c1"
+    },
+    {
+      "path": "assets/characters/edgar/idle/avatar-circle.webp",
+      "bytes": 44760,
+      "sha256": "04e541d959941ff4bed98ffee8c7ce95cec0471406f5bae2f4f1e5185153d856"
+    },
+    {
+      "path": "assets/characters/edgar/idle/bust.png",
+      "bytes": 544586,
+      "sha256": "9bb2dffdb8a92177898bcab9c969fd70b3dc885337eb0e7e0d6666d9a5556e9b"
+    },
+    {
+      "path": "assets/characters/edgar/idle/bust.webp",
+      "bytes": 108214,
+      "sha256": "acd5b9e5a51d9c4d6c2362f821c2de0ebc99608e82c5df997e5efad6088aaa3e"
+    },
+    {
+      "path": "assets/characters/edgar/idle/full.png",
+      "bytes": 548998,
+      "sha256": "1bf7a4475cc6bede1149c8fb80003cf7be2f7a5818fd589dbb939b7a24817e09"
+    },
+    {
+      "path": "assets/characters/edgar/idle/full.webp",
+      "bytes": 117470,
+      "sha256": "93f73536cf8e723fca1ff750c54ecf3c8b76dd926a2cde9d0210c1a91d71dca8"
+    },
+    {
+      "path": "assets/characters/edgar/idle/icon.png",
+      "bytes": 82308,
+      "sha256": "a20af77d29e65a3c4ab8f827f2f1a270c146f92292c946c881b7bbeca5bd3d75"
+    },
+    {
+      "path": "assets/characters/edgar/idle/icon.webp",
+      "bytes": 17306,
+      "sha256": "ee73d0245da082ea83da612410be0194f7c2aa6a802911b3398446967653ac2c"
+    },
+    {
+      "path": "assets/characters/edgar/idle/master.png",
+      "bytes": 1472615,
+      "sha256": "1f2a7b247b272449712cd6f50a24c5cf5eedb77c6875955a770bad9b118a4803"
+    },
+    {
+      "path": "assets/characters/edgar/lose/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "24221722749c02e46085f47153e6c37b8cc2e32e37dbeb918f354a39d532c7ac"
+    },
+    {
+      "path": "assets/characters/edgar/talk/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "1de693302beecb809a725da547cb08cd131ba76e66b5ab1ad42d63e54fcce847"
+    },
+    {
+      "path": "assets/characters/edgar/win/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "ed103bc7ec945156327480a3b6ec04c0621bc5d96289b4ba8fba4e8585837f96"
+    },
+    {
+      "path": "assets/characters/filou/hype/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "03e78b1290d9da83cb8139e025063a73e11d781d9b0e22f815d3fd1af74c82fe"
+    },
+    {
+      "path": "assets/characters/filou/idle/avatar-circle.png",
+      "bytes": 179245,
+      "sha256": "624940aa3a498142facf9fbecd5127860b8ddecd3a9ea2dd997e1c1825fc3348"
+    },
+    {
+      "path": "assets/characters/filou/idle/avatar-circle.webp",
+      "bytes": 43368,
+      "sha256": "95822533a03f527b4420746b24aae4d67e787c1786d3c5cc1375455346ac1973"
+    },
+    {
+      "path": "assets/characters/filou/idle/bust.png",
+      "bytes": 451331,
+      "sha256": "e3e3e8e22b73a2bbc04bba8653789874fd7b5882b02d9c010a6ae7f6c5fa4f2a"
+    },
+    {
+      "path": "assets/characters/filou/idle/bust.webp",
+      "bytes": 113090,
+      "sha256": "9be00651f355808fc7cff1bc2541f0cce54d9373d862813abfbbfde374ade5ca"
+    },
+    {
+      "path": "assets/characters/filou/idle/full.png",
+      "bytes": 521204,
+      "sha256": "bcc51acc4595f6e0dff0e939a08f81243ef6f8718fa679bf7a77a04fdea32430"
+    },
+    {
+      "path": "assets/characters/filou/idle/full.webp",
+      "bytes": 146366,
+      "sha256": "4989d37a89226299e5268c1c6c0d7807c7dcc199198a8644236264efaed47ac9"
+    },
+    {
+      "path": "assets/characters/filou/idle/icon.png",
+      "bytes": 71830,
+      "sha256": "4fb1c3dbba4f568203952a5ad64026cc65b0e8f5a53bd9d297b908c3a33c6697"
+    },
+    {
+      "path": "assets/characters/filou/idle/icon.webp",
+      "bytes": 18602,
+      "sha256": "e95c652a0b9dc3afdfc53ff5166a82bb52db108595646bceeb06783761c80022"
+    },
+    {
+      "path": "assets/characters/filou/idle/master.png",
+      "bytes": 1982139,
+      "sha256": "1ab0a4ebd2bfb4c2633082a86ea14887da72c4668bd45d1af523011d7e381bfc"
+    },
+    {
+      "path": "assets/characters/filou/lose/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "bd4a5720d386a32f69890ddede1588e9ea6ffd64c12286a2654216724476e61c"
+    },
+    {
+      "path": "assets/characters/filou/talk/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "a1828dbb2e6a12d3f6810d5a7cc0926d38e270beb136c160731e892d48a05ab6"
+    },
+    {
+      "path": "assets/characters/filou/win/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "3e07f64c712c0157b5af3dcd750b094546b44adde103a7178aabe43da8064c35"
+    },
+    {
+      "path": "assets/characters/flash/hype/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "02b463b8449d7e066ee0f143dc2fe5f20f49168afbcea0b3bfa9e1bea1461bcf"
+    },
+    {
+      "path": "assets/characters/flash/idle/avatar-circle.png",
+      "bytes": 248755,
+      "sha256": "f4bc8a359ce8d9ff25ec1ad4864f3a7814081e4fb2f6d26c78a9f3442644598e"
+    },
+    {
+      "path": "assets/characters/flash/idle/avatar-circle.webp",
+      "bytes": 35742,
+      "sha256": "18e4180a96669496b69c0ca83608c2005dd7d63e2fbd16e5c436b7c24a876314"
+    },
+    {
+      "path": "assets/characters/flash/idle/bust.png",
+      "bytes": 600481,
+      "sha256": "a7b56a4cdadf0383d3303fd3fe7d5e91269230e7933022e61750a7cc4b3520fa"
+    },
+    {
+      "path": "assets/characters/flash/idle/bust.webp",
+      "bytes": 74788,
+      "sha256": "aced21d0d4c46d39e2caec985a51b4bb7086051963d8577470e2b458d41e371e"
+    },
+    {
+      "path": "assets/characters/flash/idle/full.png",
+      "bytes": 582416,
+      "sha256": "02ad3b5654db5290223e4d4cae26fcc81106dd3d79974b57e3261c07dbacb6b6"
+    },
+    {
+      "path": "assets/characters/flash/idle/full.webp",
+      "bytes": 87792,
+      "sha256": "5515337a8e0ee06de93e314f9cca96df2d5bee18e7e77d3646697c01a73ee60b"
+    },
+    {
+      "path": "assets/characters/flash/idle/icon.png",
+      "bytes": 87800,
+      "sha256": "933fc92e6600347089b25f0893712b9b93d278fadf1e4fc92c540a22b8c23948"
+    },
+    {
+      "path": "assets/characters/flash/idle/icon.webp",
+      "bytes": 13246,
+      "sha256": "e32067b5cac153bb851fcd4a0f958bf9e7211ded58b8d72ff05b47a035f68889"
+    },
+    {
+      "path": "assets/characters/flash/idle/master.png",
+      "bytes": 1692084,
+      "sha256": "c9c2883ffa617d6b3d0a23a76d40b0d2f849f2729533a2861cc43e212ecdc085"
+    },
+    {
+      "path": "assets/characters/flash/lose/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "36990b20ce5704fe863dc0f52ae4716956fe783b38f94dd850f8e95b92c01c79"
+    },
+    {
+      "path": "assets/characters/flash/talk/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "d6db889f93977db121e31b3dca2337918a97dc394d78ec7b54a0794031e1e2c8"
+    },
+    {
+      "path": "assets/characters/flash/win/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "fb57f94d4d4735a233e7d17ad5f7e77f36628673c099240fc8a05430fe0b4253"
+    },
+    {
+      "path": "assets/characters/honey/hype/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "bf0574b1144ec8e87fb25280b4ac1116b93b97472051a3319f30be1331429fc6"
+    },
+    {
+      "path": "assets/characters/honey/idle/avatar-circle.png",
+      "bytes": 233135,
+      "sha256": "ece7d368c6f2ef0e29af370981db585c6ea0350c1d59361f4ade683407329457"
+    },
+    {
+      "path": "assets/characters/honey/idle/avatar-circle.webp",
+      "bytes": 37386,
+      "sha256": "1acffb87a1de73d9e5e8c05f8d84468d61424096be118b00ea6fbfb4fe441fec"
+    },
+    {
+      "path": "assets/characters/honey/idle/bust.png",
+      "bytes": 559664,
+      "sha256": "4df29a034d80d9bae4f5948baec29760cf25b56984035aed6ff0ce0ab59d8d27"
+    },
+    {
+      "path": "assets/characters/honey/idle/bust.webp",
+      "bytes": 76926,
+      "sha256": "4006845a59afd0c95828055c8cc2b4a6515d97649bb9514ec343e9b7c0d758c8"
+    },
+    {
+      "path": "assets/characters/honey/idle/full.png",
+      "bytes": 538610,
+      "sha256": "3e4a25ec1ffaa1571394bc90e40b90f3f4082ff92c9869010d37f8611eb7ebd0"
+    },
+    {
+      "path": "assets/characters/honey/idle/full.webp",
+      "bytes": 82492,
+      "sha256": "0175e05d87874acd2af0b1efc0343e0aef4d3bc461cdffe851734e7bba541c51"
+    },
+    {
+      "path": "assets/characters/honey/idle/icon.png",
+      "bytes": 81732,
+      "sha256": "675e7ee1db7410cbf3daef72224502556e29bac5f0ba0b082e908d3125fa96cf"
+    },
+    {
+      "path": "assets/characters/honey/idle/icon.webp",
+      "bytes": 13412,
+      "sha256": "a73df498cd8fd51cf0cf20be97b93871012af408928941f2bb6601ae70fdbac6"
+    },
+    {
+      "path": "assets/characters/honey/idle/master.png",
+      "bytes": 1072945,
+      "sha256": "58a945db6dafa06b0a617cf03f1de5562d772e7df170f4ecdbd990b07c7d0770"
+    },
+    {
+      "path": "assets/characters/honey/lose/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "9630fd9577091c1101b197b27eed89eb3fb7e52655a96ddd4cb78263b735b8bb"
+    },
+    {
+      "path": "assets/characters/honey/talk/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "f84238a98d0eb37e970bb1d7fc2426fb7783e9cb35b09de0b40a9f3cea9ae0cb"
+    },
+    {
+      "path": "assets/characters/honey/win/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "31c6b7c34997464c1bdf960e7c6899b02d23a07971c0ca8b93165517a145c9f0"
+    },
+    {
+      "path": "assets/characters/kaia/hype/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "332da063a74eeacfe38fb710c8e3d023a477b22ed17cc1ccf0a3824973070b7b"
+    },
+    {
+      "path": "assets/characters/kaia/idle/avatar-circle.png",
+      "bytes": 215030,
+      "sha256": "17a7813bd40a328cb66d5a6716e0a631c164192b0dd8ad3d3c2e0fc05b1d1c7b"
+    },
+    {
+      "path": "assets/characters/kaia/idle/avatar-circle.webp",
+      "bytes": 45188,
+      "sha256": "517ac297c6394397f8e58576b74a1bdcd8a5c651121013aa87fe947c593616f1"
+    },
+    {
+      "path": "assets/characters/kaia/idle/bust.png",
+      "bytes": 532450,
+      "sha256": "7a560c23969aa32edfe332d171fa15e65a7f5ed5321e4839c167d3b2a1d7ee23"
+    },
+    {
+      "path": "assets/characters/kaia/idle/bust.webp",
+      "bytes": 110684,
+      "sha256": "9e1f9a2dc226cef929ece1c6fec4fc7bb89361e92339bdbbc58f8444d5c532f3"
+    },
+    {
+      "path": "assets/characters/kaia/idle/full.png",
+      "bytes": 527660,
+      "sha256": "f2083128f63f7a913eed9f6cac4221dafb5bb87f5d9d932543808e6b65ee7085"
+    },
+    {
+      "path": "assets/characters/kaia/idle/full.webp",
+      "bytes": 125402,
+      "sha256": "8698f11467af0221392db12786f49e76b692b0e13760460dce563936dabc6ccb"
+    },
+    {
+      "path": "assets/characters/kaia/idle/icon.png",
+      "bytes": 85355,
+      "sha256": "dd5eaadd15a9cda18f4b0715fe23916fe8df1a422208fc2663f35983b5a2c67f"
+    },
+    {
+      "path": "assets/characters/kaia/idle/icon.webp",
+      "bytes": 21794,
+      "sha256": "e7d115d3c91400cf62c0f4cdbca76b175046dd8bf71bf11d39d4408976f889d7"
+    },
+    {
+      "path": "assets/characters/kaia/idle/master.png",
+      "bytes": 1417355,
+      "sha256": "eb82f3eb660daafff1298ae5199207448b04b2f4ad4ca18847943f71916e0412"
+    },
+    {
+      "path": "assets/characters/kaia/lose/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "7f56d6a7c083f1214801e030e32648faf95fb0ec64cf9cd0048f53cb2351dcfb"
+    },
+    {
+      "path": "assets/characters/kaia/talk/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "87e327a3f7b6289059bafb829f77c08c1ced57014177a35f549b7fa60672ebba"
+    },
+    {
+      "path": "assets/characters/kaia/win/POSE_A_CREER.txt",
+      "bytes": 95,
+      "sha256": "4977b795b351f1b276a2693f5dec795a3d6e428cc38a2be1b7e760b589423c77"
+    },
+    {
+      "path": "assets/characters/loki/hype/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "16ae1dc0b7f7548656aba593624b73c26c23a4b5836332ea4881cd06536a5adf"
+    },
+    {
+      "path": "assets/characters/loki/idle/avatar-circle.png",
+      "bytes": 331707,
+      "sha256": "db355ce87ed60bd5bf9cac3ce2b20bf347d6e59cbc8dd92758bdb16526e79f2d"
+    },
+    {
+      "path": "assets/characters/loki/idle/avatar-circle.webp",
+      "bytes": 80614,
+      "sha256": "a82de6367350a369d06c94eba6b5d66a579d2af406b22c4d99ccd9dd10aea4ff"
+    },
+    {
+      "path": "assets/characters/loki/idle/bust.png",
+      "bytes": 835387,
+      "sha256": "088ee38b83d220ca0a2600f05645e23f5d43e52f1eee9b417bb564a4d272aa0f"
+    },
+    {
+      "path": "assets/characters/loki/idle/bust.webp",
+      "bytes": 200924,
+      "sha256": "4daba65e0a906657171e82a822df44678c08a258369aa4c115b676d2baf8553a"
+    },
+    {
+      "path": "assets/characters/loki/idle/full.png",
+      "bytes": 966119,
+      "sha256": "92c2542c75e1d43bf843227ae3e9ec40ed6794bdb0ea1aaa8c9f44db2aad3d23"
+    },
+    {
+      "path": "assets/characters/loki/idle/full.webp",
+      "bytes": 263504,
+      "sha256": "e394284137eb11f583cce0aeb3c4f557952663ad859f81bbccd732d3a672c490"
+    },
+    {
+      "path": "assets/characters/loki/idle/icon.png",
+      "bytes": 75999,
+      "sha256": "b1c0ada64ab335f4f519493b1df388ad312e5f3511762bdd6d43ea5fcafbc8db"
+    },
+    {
+      "path": "assets/characters/loki/idle/icon.webp",
+      "bytes": 20196,
+      "sha256": "1120df2ae9558d9837ac1adee77fbca9693444b1ef13514a3e5d8bb3d065db8b"
+    },
+    {
+      "path": "assets/characters/loki/idle/master.png",
+      "bytes": 2107570,
+      "sha256": "d3f14867991415840c0f63ae158f6a1930ccce08fb5df5fbb51e618c00e5d947"
+    },
+    {
+      "path": "assets/characters/loki/lose/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "36856ab2c5aa2588909658641aaf481054bbca9233f5c4e5d23f5a35cf01a402"
+    },
+    {
+      "path": "assets/characters/loki/talk/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "7dc50e50bb83b4e58cfaedd37f49635a74e1a99f0dd4418abeb9abaecc1d23c7"
+    },
+    {
+      "path": "assets/characters/loki/win/POSE_A_CREER.txt",
+      "bytes": 95,
+      "sha256": "c9e9b6576379b8caeca837bcd4987210c7b0fa8ad83d48954aaf067fbaffe915"
+    },
+    {
+      "path": "assets/characters/marcellius/hype/POSE_A_CREER.txt",
+      "bytes": 102,
+      "sha256": "1869e3b6376a8fbbe0715bc13477a0a4ce444e9f62a662936904954ec5112c8a"
+    },
+    {
+      "path": "assets/characters/marcellius/idle/avatar-circle.png",
+      "bytes": 314483,
+      "sha256": "d5cc0d8641857d0b3cbccd94d8433e062464e632555da675a579aa9580dbf401"
+    },
+    {
+      "path": "assets/characters/marcellius/idle/avatar-circle.webp",
+      "bytes": 37982,
+      "sha256": "992015debd0b7daa42a89fbbe87090335ea24d3d790dee51914e14624d104b76"
+    },
+    {
+      "path": "assets/characters/marcellius/idle/bust.png",
+      "bytes": 784250,
+      "sha256": "be5cf7ebf514b0a86f4325aee7a541912752693a3ff15b4c8c25ac7ce32b76e7"
+    },
+    {
+      "path": "assets/characters/marcellius/idle/bust.webp",
+      "bytes": 87724,
+      "sha256": "b91d56d796b71eb2218b3c290cd94847bcbfa02307c74d4a66093bd49074c1e0"
+    },
+    {
+      "path": "assets/characters/marcellius/idle/full.png",
+      "bytes": 1016188,
+      "sha256": "a4eba8ca7201752c24cc511c4de97eda5f9ada2e8e83fb70b800069935ac00a7"
+    },
+    {
+      "path": "assets/characters/marcellius/idle/full.webp",
+      "bytes": 106856,
+      "sha256": "0c7259c2d820a1e5148295b775a7ae8e5a62b17d48a590e076065e950c86b507"
+    },
+    {
+      "path": "assets/characters/marcellius/idle/icon.png",
+      "bytes": 82411,
+      "sha256": "db4c0478825b0e2e5f7b2a3de801be34a7808fd7037003a055b3dab44f47d5eb"
+    },
+    {
+      "path": "assets/characters/marcellius/idle/icon.webp",
+      "bytes": 11574,
+      "sha256": "03828a829ad5bbd1ce75271a7f83c2e5f83b488741b1e116455c48670de30d4c"
+    },
+    {
+      "path": "assets/characters/marcellius/idle/master.png",
+      "bytes": 2220031,
+      "sha256": "4856863839eb9a8b3d6bc635cd36b5b94fe57e816715a71ba4e4cc911f03c186"
+    },
+    {
+      "path": "assets/characters/marcellius/lose/POSE_A_CREER.txt",
+      "bytes": 102,
+      "sha256": "79b6349bc600dbf004e8d69b27a202188c0c71f16606e14cd6d7a3175201b9e9"
+    },
+    {
+      "path": "assets/characters/marcellius/talk/POSE_A_CREER.txt",
+      "bytes": 102,
+      "sha256": "9fa446245a663d627bf4803807350e2ac4e4dd657e09012915612210fc7187d7"
+    },
+    {
+      "path": "assets/characters/marcellius/win/POSE_A_CREER.txt",
+      "bytes": 101,
+      "sha256": "c775b003e384d27783b2310668cb336e03594598d73f8359a4b3b5cfc9af2bcc"
+    },
+    {
+      "path": "assets/characters/maurice/hype/POSE_A_CREER.txt",
+      "bytes": 99,
+      "sha256": "249d8bafa48bf4c6798bf2127e963bc721b99e8f3663fb068267b658ee63f149"
+    },
+    {
+      "path": "assets/characters/maurice/idle/avatar-circle.png",
+      "bytes": 283015,
+      "sha256": "d0a442712db77a94c5622b165936746e56f9546597d9cbc3316d480e6de57d32"
+    },
+    {
+      "path": "assets/characters/maurice/idle/avatar-circle.webp",
+      "bytes": 44458,
+      "sha256": "2ed7600bc17e7d36653b7773c01d64cd8ce2574abc11bbd1b4ec42467ae720ee"
+    },
+    {
+      "path": "assets/characters/maurice/idle/bust.png",
+      "bytes": 698307,
+      "sha256": "4c2d2f6f3ca4d89d21ad0567900082a3b7d4572a583f5108a34e3ed0cace939b"
+    },
+    {
+      "path": "assets/characters/maurice/idle/bust.webp",
+      "bytes": 102766,
+      "sha256": "afba862fc532f2e9502cbad0434b1399e18c5ef06a3f85bf5b47f27e7282f24e"
+    },
+    {
+      "path": "assets/characters/maurice/idle/full.png",
+      "bytes": 698674,
+      "sha256": "f569f6e7566b857b2696fb25bda5c8ddfd0bf9095ef321cb53cb231d6459896e"
+    },
+    {
+      "path": "assets/characters/maurice/idle/full.webp",
+      "bytes": 111496,
+      "sha256": "7187e92d0777d21b10c920ccb860209845269347d16a207d033f3922b1da5b78"
+    },
+    {
+      "path": "assets/characters/maurice/idle/icon.png",
+      "bytes": 102973,
+      "sha256": "0b392ec4321855584c183cfea85ac56c7a242c873a89c1b5d7144a79b58abcbc"
+    },
+    {
+      "path": "assets/characters/maurice/idle/icon.webp",
+      "bytes": 17216,
+      "sha256": "f7912ee745c9d600b831db46deb6370d7d71da92cad118823268b8cd6cf2075a"
+    },
+    {
+      "path": "assets/characters/maurice/idle/master.png",
+      "bytes": 1541714,
+      "sha256": "f215ec95bf02b932fefadbf4ec6370b079865a680a875045e6928fe921ae5f60"
+    },
+    {
+      "path": "assets/characters/maurice/lose/POSE_A_CREER.txt",
+      "bytes": 99,
+      "sha256": "1b043a6311a9fb1855081b0a546bf632463a4eb4cdc9c865d5e918e0e202e7ce"
+    },
+    {
+      "path": "assets/characters/maurice/talk/POSE_A_CREER.txt",
+      "bytes": 99,
+      "sha256": "76f04ec3912c68095b36da43ba1cca558d8de2bf1622a4402fd975cd3f85c642"
+    },
+    {
+      "path": "assets/characters/maurice/win/POSE_A_CREER.txt",
+      "bytes": 98,
+      "sha256": "e6105fcc7985fb7df105b061e2753a3e1be04369aced3f52168179997e7f7169"
+    },
+    {
+      "path": "assets/characters/moon/hype/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "725c2f44a5efa1ec956b69f8b273ecda3a9bd6a40f89b1a1de0059e622e128b3"
+    },
+    {
+      "path": "assets/characters/moon/idle/avatar-circle.png",
+      "bytes": 286121,
+      "sha256": "45a5f6e59e9d14e3415452b0ca701e33a97af033c48ab824e2b48e07c49ab720"
+    },
+    {
+      "path": "assets/characters/moon/idle/avatar-circle.webp",
+      "bytes": 38094,
+      "sha256": "f844bfc586d4cc861d6b6ffcd0f7542c41d76639d5d5718e5e2591e776fb4cb3"
+    },
+    {
+      "path": "assets/characters/moon/idle/bust.png",
+      "bytes": 712645,
+      "sha256": "e90edd0ed386789df9ce25f7456410198e69da45bcc677a67ed29208b9bbfa22"
+    },
+    {
+      "path": "assets/characters/moon/idle/bust.webp",
+      "bytes": 86724,
+      "sha256": "721ebf73dc78568fc3ced38b82b8a83e9d6c272287dffe3e91fd46383cced66e"
+    },
+    {
+      "path": "assets/characters/moon/idle/full.png",
+      "bytes": 713855,
+      "sha256": "884d0275b774de27a7d10fded926855542acfad22aafc1bd176c8ad8ae674e67"
+    },
+    {
+      "path": "assets/characters/moon/idle/full.webp",
+      "bytes": 100026,
+      "sha256": "135d6514250514472437269a0978e334e29e70c982b41598c46f2541141fa955"
+    },
+    {
+      "path": "assets/characters/moon/idle/icon.png",
+      "bytes": 94932,
+      "sha256": "7b1f1fcdcfa6fec347fed372e761db492132e2f100438c8fd77e1c006f7a8712"
+    },
+    {
+      "path": "assets/characters/moon/idle/icon.webp",
+      "bytes": 13822,
+      "sha256": "9adcc88224e718629eae027398e6931d2e19f58a05da2a20cffad56cd6893b0a"
+    },
+    {
+      "path": "assets/characters/moon/idle/master.png",
+      "bytes": 1661279,
+      "sha256": "36b1a01466134ba2484ada92ce06d4fc3a0746aa5fd5ce45bf4899439559fe7c"
+    },
+    {
+      "path": "assets/characters/moon/lose/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "b17026ec5b0ac9f81b3f49e818beb944f41d897b3f8f0151bc4b46f9b47b3523"
+    },
+    {
+      "path": "assets/characters/moon/talk/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "e297577e4e178afb7e61f4acba6bf5f91c0c4662a89986d94c014fd7c0c78abe"
+    },
+    {
+      "path": "assets/characters/moon/win/POSE_A_CREER.txt",
+      "bytes": 95,
+      "sha256": "36d762d20e9357870f56fb80bbdfc8fb48250c48a39e1ed82eb1c1c9de040024"
+    },
+    {
+      "path": "assets/characters/nuggets/hype/POSE_A_CREER.txt",
+      "bytes": 99,
+      "sha256": "37330989c1230c175b9d79e2fdcd777d604851f3f7d395d9e803d5cd9b8f1ae2"
+    },
+    {
+      "path": "assets/characters/nuggets/idle/avatar-circle.png",
+      "bytes": 315847,
+      "sha256": "a708006897d716346ca54f21eab0cfdb8fa28c08a7186b1c819de679ce811d24"
+    },
+    {
+      "path": "assets/characters/nuggets/idle/avatar-circle.webp",
+      "bytes": 84862,
+      "sha256": "781315ea8514a10738c2242621c22543cbc6fefe9998aa6aafcf4bd2c19ba7ec"
+    },
+    {
+      "path": "assets/characters/nuggets/idle/bust.png",
+      "bytes": 768222,
+      "sha256": "35d05e3ca4755a9f2489be4579e6000a51825ab2ebdd5d7e43b4d4624ca582a8"
+    },
+    {
+      "path": "assets/characters/nuggets/idle/bust.webp",
+      "bytes": 206836,
+      "sha256": "259ccdeffa76171f2a803adbcf52fb4ed341b9c3bf7f66a0c340c0bc7660d00d"
+    },
+    {
+      "path": "assets/characters/nuggets/idle/full.png",
+      "bytes": 827229,
+      "sha256": "7e12e332df810363ee343c3b1c238b41d37672ba2d8d8cafe66c650e5d75bec3"
+    },
+    {
+      "path": "assets/characters/nuggets/idle/full.webp",
+      "bytes": 245344,
+      "sha256": "0b62304eb83163e0df0067ab539904e59f401971bcf826dd3d322e4d12962a56"
+    },
+    {
+      "path": "assets/characters/nuggets/idle/icon.png",
+      "bytes": 98973,
+      "sha256": "38cc1b3ba8862eb06b9c747e748cf8d13f5fe72998b57e84aaf847fad23e52b6"
+    },
+    {
+      "path": "assets/characters/nuggets/idle/icon.webp",
+      "bytes": 25738,
+      "sha256": "cc813047ec4b505a692d9f07b24dcc5c1c79a2d4912fab94b896b88f0d5b0885"
+    },
+    {
+      "path": "assets/characters/nuggets/idle/master.png",
+      "bytes": 1579801,
+      "sha256": "7d875097a11caaed38822287feecb495f0a0e5904d2425dba03f7df3be84c80e"
+    },
+    {
+      "path": "assets/characters/nuggets/lose/POSE_A_CREER.txt",
+      "bytes": 99,
+      "sha256": "bd2c5e9950dfec4055487feff1ab2e3094e515db2098d20d6c4614a1982044b8"
+    },
+    {
+      "path": "assets/characters/nuggets/talk/POSE_A_CREER.txt",
+      "bytes": 99,
+      "sha256": "3ce18ed9228bae3ef228e42e4b226fb02592c9621b33d2c8e44789b2e450d427"
+    },
+    {
+      "path": "assets/characters/nuggets/win/POSE_A_CREER.txt",
+      "bytes": 98,
+      "sha256": "61c96ef02b29de0b977fe117c4f8c702a07047d976e0a22871ce1a2e31663fc2"
+    },
+    {
+      "path": "assets/characters/rrrrh/hype/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "4b834412458938d11db26cc4bc837b1dd324457752e30fd820919804a018b2c3"
+    },
+    {
+      "path": "assets/characters/rrrrh/idle/avatar-circle.png",
+      "bytes": 269396,
+      "sha256": "b69523f0a869269ab03521d558a5dc02b452d09d7ba08d623b55feeef1277c12"
+    },
+    {
+      "path": "assets/characters/rrrrh/idle/avatar-circle.webp",
+      "bytes": 44618,
+      "sha256": "f59fcab340299ad0837efa5c054efa44072621045a74ac73458732452fada7f2"
+    },
+    {
+      "path": "assets/characters/rrrrh/idle/bust.png",
+      "bytes": 631361,
+      "sha256": "46f84711cca00bf4857061c51397f4293e6facfff8697c81d789801639c58795"
+    },
+    {
+      "path": "assets/characters/rrrrh/idle/bust.webp",
+      "bytes": 91648,
+      "sha256": "92df395571a50c49c4d4ef4421ca0604d222ef1a375a86fa950d8f272ab4fbb8"
+    },
+    {
+      "path": "assets/characters/rrrrh/idle/full.png",
+      "bytes": 651870,
+      "sha256": "f1d64e0d1637c5d2f906ffc99e657bb480f431233d31c5f5e999fafc20aad6ed"
+    },
+    {
+      "path": "assets/characters/rrrrh/idle/full.webp",
+      "bytes": 106218,
+      "sha256": "8c5b2dabe972499bbbd12beb7bc103ef1f44f29821b6feb542f79b8131197e2c"
+    },
+    {
+      "path": "assets/characters/rrrrh/idle/icon.png",
+      "bytes": 97282,
+      "sha256": "c8e4b3153ce02f1c260c770fbc588a8d0e5facc0d9b3bb11fe9dd5dffc514472"
+    },
+    {
+      "path": "assets/characters/rrrrh/idle/icon.webp",
+      "bytes": 18028,
+      "sha256": "e28f695bece968d0e6ed5686d1e2166920ce4af5a34846568c802254a3580bf4"
+    },
+    {
+      "path": "assets/characters/rrrrh/idle/master.png",
+      "bytes": 1165296,
+      "sha256": "a9dbe01a7b31235532d795c91cf22ee1b07d8e8d7c9fc78050ee5a4bcb570503"
+    },
+    {
+      "path": "assets/characters/rrrrh/lose/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "e67cfad2ffc998ee1bf02439a38b0281b16bedf6c7efcf54a9b1cdec26dad473"
+    },
+    {
+      "path": "assets/characters/rrrrh/talk/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "70797f8f3abe4d952f1a83c8956381eff4c485fceaa539f14601eea87a7461e2"
+    },
+    {
+      "path": "assets/characters/rrrrh/win/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "6387eb96f7849aa8ee7ea3801fdafb15dad9817ed4d4e6c85546834772e3d650"
+    },
+    {
+      "path": "assets/characters/sir-moustache/hype/POSE_A_CREER.txt",
+      "bytes": 105,
+      "sha256": "2c457c7c3c037d45d6f6a599e2d598aa0d961ab96975c13d376df009e7d48fc6"
+    },
+    {
+      "path": "assets/characters/sir-moustache/idle/avatar-circle.png",
+      "bytes": 213016,
+      "sha256": "7e458df22b8e443569c014f94083a6f7d5a7d5d1fc74fe33f7da3b461fbc83a6"
+    },
+    {
+      "path": "assets/characters/sir-moustache/idle/avatar-circle.webp",
+      "bytes": 25846,
+      "sha256": "2d4a6b2e80be4b3fbf80eb6554b74eddb7f6b39c56d1962b24dc5ba7459c38f6"
+    },
+    {
+      "path": "assets/characters/sir-moustache/idle/bust.png",
+      "bytes": 538435,
+      "sha256": "983ce6c51245800a642eedfc846ea309d068708552d532af919d24c596df28bf"
+    },
+    {
+      "path": "assets/characters/sir-moustache/idle/bust.webp",
+      "bytes": 57144,
+      "sha256": "86eaf34a33e5cc9144d23f550e512c30cbe3110a2fb3bcdcb78288e8b139e039"
+    },
+    {
+      "path": "assets/characters/sir-moustache/idle/full.png",
+      "bytes": 489239,
+      "sha256": "c61b4cbdfe20fc0d909af62929b487d2df1990876b78cd51f1b0e977ff957021"
+    },
+    {
+      "path": "assets/characters/sir-moustache/idle/full.webp",
+      "bytes": 59568,
+      "sha256": "3f64282263ecf73a42ace2ee53aa453e03f6459bbb58889de4dfe5332dc2e8f9"
+    },
+    {
+      "path": "assets/characters/sir-moustache/idle/icon.png",
+      "bytes": 79169,
+      "sha256": "e9ba6fd1b5be2836fce7d18f2aae61a22625fa0aaa9aba9f4803945bcf92de59"
+    },
+    {
+      "path": "assets/characters/sir-moustache/idle/icon.webp",
+      "bytes": 10088,
+      "sha256": "bb5aba27d0af7285a6ae920b478de97c1c2a263d603ae387543ec7524a8bf8db"
+    },
+    {
+      "path": "assets/characters/sir-moustache/idle/master.png",
+      "bytes": 1455299,
+      "sha256": "c993cd0de2f850078a926f602c6e55063f45b0fe473cdd76f8897162a764e70e"
+    },
+    {
+      "path": "assets/characters/sir-moustache/lose/POSE_A_CREER.txt",
+      "bytes": 105,
+      "sha256": "b935f0f9d56b2bc9d40ceeacb7e69b520dd7e5259ba5eeeecaa56986bb2e83e2"
+    },
+    {
+      "path": "assets/characters/sir-moustache/talk/POSE_A_CREER.txt",
+      "bytes": 105,
+      "sha256": "d56052dc3b83bda21ea58a47f9b19c0d2c5eb92d647dfb609a9a2123adb8e76b"
+    },
+    {
+      "path": "assets/characters/sir-moustache/win/POSE_A_CREER.txt",
+      "bytes": 104,
+      "sha256": "ccb28d7e4db5fef2164f21ce7c2b70b3b1ca3b6dd709a95a0e15761c2a510fd3"
+    },
+    {
+      "path": "assets/characters/snow/hype/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "1f220d8537aefab701dddcc37b9c86e8235e3c620aa38d4d3edd96517a78cac5"
+    },
+    {
+      "path": "assets/characters/snow/idle/avatar-circle.png",
+      "bytes": 253713,
+      "sha256": "66d5ea0134c9d8038e46392159b5fc8de18c829fe1e44df23c4c45dbbea28022"
+    },
+    {
+      "path": "assets/characters/snow/idle/avatar-circle.webp",
+      "bytes": 35438,
+      "sha256": "75effcee8c2499ff709803a39285607024c7c67ca34dc3752cc8ae937795d88d"
+    },
+    {
+      "path": "assets/characters/snow/idle/bust.png",
+      "bytes": 621496,
+      "sha256": "83252fbc8658502b6da8cad89f8c86b998447a17634cf10467ad990d24d8f012"
+    },
+    {
+      "path": "assets/characters/snow/idle/bust.webp",
+      "bytes": 76196,
+      "sha256": "e17ebe09940f97b40b5b4e83e69451874f79e719222c13bb5358b10f93fa27fb"
+    },
+    {
+      "path": "assets/characters/snow/idle/full.png",
+      "bytes": 639623,
+      "sha256": "bcacbb854eccd7f22b31e51010bb57673623aad4fb6fea6dd9f235f49da8d75b"
+    },
+    {
+      "path": "assets/characters/snow/idle/full.webp",
+      "bytes": 88754,
+      "sha256": "3e3bb094dff33c51e8f4f7fe051d0c82ea84d2ff803ebca0c73ce7b2d855ce63"
+    },
+    {
+      "path": "assets/characters/snow/idle/icon.png",
+      "bytes": 86151,
+      "sha256": "54135fb25016c4d59a9b85c0db27cb0a9612ff7991a43b63d565056491260af0"
+    },
+    {
+      "path": "assets/characters/snow/idle/icon.webp",
+      "bytes": 15716,
+      "sha256": "c89252dc494290591262b0c574b47f8b9042ac5d98464d460d83c36ea5573159"
+    },
+    {
+      "path": "assets/characters/snow/idle/master.png",
+      "bytes": 1396502,
+      "sha256": "28209147f138506064f19dab815b20095da9b88e7a8ef31ebaef5f5ca053bdd7"
+    },
+    {
+      "path": "assets/characters/snow/lose/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "5d2d82acbb3493f19cf19d10fa4e08c4f9567dd0715fc85734039ecc5b88e181"
+    },
+    {
+      "path": "assets/characters/snow/talk/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "74775b7bdb0de94f62b32ddb8e53126fd105436744de740559e3078a1c2804ce"
+    },
+    {
+      "path": "assets/characters/snow/win/POSE_A_CREER.txt",
+      "bytes": 95,
+      "sha256": "0bf9f45c691acecc89ac7e962795bfb60f22b0b6d883e38651bc6f0fb496e50d"
+    },
+    {
+      "path": "assets/characters/spike/hype/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "e182ca1bb2516d256616cb3bc663cc7a756dfbfde5c761e187a01707e21092c6"
+    },
+    {
+      "path": "assets/characters/spike/idle/avatar-circle.png",
+      "bytes": 169821,
+      "sha256": "3ba991a12bde3b5cb7450f54a6b2728e141428575b13b896e68fa0714a2948ae"
+    },
+    {
+      "path": "assets/characters/spike/idle/avatar-circle.webp",
+      "bytes": 33414,
+      "sha256": "84483aef7b407eb64056f806cc8bdeaedfc6d10175768de4c9dbff649636db02"
+    },
+    {
+      "path": "assets/characters/spike/idle/bust.png",
+      "bytes": 405858,
+      "sha256": "a080bb8f90960b9fa97ef9a29ea0a7349245d7a7c83a559adc53b5196061fe69"
+    },
+    {
+      "path": "assets/characters/spike/idle/bust.webp",
+      "bytes": 68222,
+      "sha256": "18e543d7f5f4a3943bee7ab5fa46adfc6531e5d23236719bbf3b463419224868"
+    },
+    {
+      "path": "assets/characters/spike/idle/full.png",
+      "bytes": 406335,
+      "sha256": "5c734ece6dc75f6f4711f468cadef712b64a2ee6324c5805ca510f194a355fd9"
+    },
+    {
+      "path": "assets/characters/spike/idle/full.webp",
+      "bytes": 77842,
+      "sha256": "300219f139ac84ac52987e0e880dd5de6db5ef307f2646f6bc5e9e360a92ccb1"
+    },
+    {
+      "path": "assets/characters/spike/idle/icon.png",
+      "bytes": 66217,
+      "sha256": "86f6b335c46f8c86c43f188737f9aa0082c3e70cf2a925e577cf01ec8aae3cb7"
+    },
+    {
+      "path": "assets/characters/spike/idle/icon.webp",
+      "bytes": 15794,
+      "sha256": "be771f3825410e26331a1f19fca1e95e77b45b5971e61ecedea634c86cc9eeee"
+    },
+    {
+      "path": "assets/characters/spike/idle/master.png",
+      "bytes": 930834,
+      "sha256": "121eb143132a181274b1b07ea96b2638b74eb3c429f9d94e084df5d252ccf599"
+    },
+    {
+      "path": "assets/characters/spike/lose/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "ef057df610c1f2da6a041cc6d092eabe3abfb801eaf5a8aa05cea695e52cdbf6"
+    },
+    {
+      "path": "assets/characters/spike/talk/POSE_A_CREER.txt",
+      "bytes": 97,
+      "sha256": "91900859c2e97a5e370e3dd7a394f9372fc1fb12f4474c3d4eead98204a50a76"
+    },
+    {
+      "path": "assets/characters/spike/win/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "435e6e404aed83162588b55f280be4dd9521ac44eda14736ca52e430181618fb"
+    },
+    {
+      "path": "assets/characters/vapo/hype/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "b75cdcbb172570f1410dc6354468232c6cad3271b73d16cf93cee655ff2ac905"
+    },
+    {
+      "path": "assets/characters/vapo/idle/avatar-circle.png",
+      "bytes": 236381,
+      "sha256": "f5b85e396b45d6b6f42b0c8b100e43de7990f60557e421d11668eb085f7e7d5d"
+    },
+    {
+      "path": "assets/characters/vapo/idle/avatar-circle.webp",
+      "bytes": 23856,
+      "sha256": "bde7879fce38e726c66257bddafa9c2cdc27f1aeaefb74ac595587cf7f43daed"
+    },
+    {
+      "path": "assets/characters/vapo/idle/bust.png",
+      "bytes": 577733,
+      "sha256": "55aa103f2d8391e847880213d4a0403eb577c4b9255faf62e68684c3403f9f78"
+    },
+    {
+      "path": "assets/characters/vapo/idle/bust.webp",
+      "bytes": 52070,
+      "sha256": "d8b3f2f45f727729a66a38e6e717c475da487dea3be9de01081440668b3432d0"
+    },
+    {
+      "path": "assets/characters/vapo/idle/full.png",
+      "bytes": 572469,
+      "sha256": "c6ff4b006c28df04ea22f1a5f6896adc1f29e95ac7bf54f32f1c6d7112afc7d6"
+    },
+    {
+      "path": "assets/characters/vapo/idle/full.webp",
+      "bytes": 62272,
+      "sha256": "9d58e04750afe0ca8703ac86b95722875d586ce3d32f564e49c84e32d1b6788b"
+    },
+    {
+      "path": "assets/characters/vapo/idle/icon.png",
+      "bytes": 70366,
+      "sha256": "0f1a194d6c92bf7788fc32e92abe8c839dfb3c6d5df376e6e5136d97deef35af"
+    },
+    {
+      "path": "assets/characters/vapo/idle/icon.webp",
+      "bytes": 8906,
+      "sha256": "41db9eb4304bde9c56f08b7e2796b9300421521cbeb4b41cc2d87611f36f472b"
+    },
+    {
+      "path": "assets/characters/vapo/idle/master.png",
+      "bytes": 1622855,
+      "sha256": "dc99a0818e9574fdf056f64ea1910ac611bff51567904f84728a44338773ef4d"
+    },
+    {
+      "path": "assets/characters/vapo/lose/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "ed3a173f27e92c28cdeb283295c5a11fb1aade3b7de330cc0d36bb34015f942e"
+    },
+    {
+      "path": "assets/characters/vapo/talk/POSE_A_CREER.txt",
+      "bytes": 96,
+      "sha256": "ed09d1b122e5e929620222eb5b26b9dcde8da6305fb30fb7f8b115a2bc230b5d"
+    },
+    {
+      "path": "assets/characters/vapo/win/POSE_A_CREER.txt",
+      "bytes": 95,
+      "sha256": "acf74eb64c5421d8a914b10a60545cf8e43f12d51d8fc5d8acfd3698a4e5c0bf"
+    },
+    {
+      "path": "character-poses.css",
+      "bytes": 1599,
+      "sha256": "9d34075643dc03f5dfa50acdf893357fad7a2a0211cc88e5c656854c0cf07f24"
+    },
+    {
+      "path": "character-poses.js",
+      "bytes": 4797,
+      "sha256": "ddb48948728d244e58fc77316e47638239db49f9789c71439bf1f3a2d4991f83"
+    },
+    {
+      "path": "character-voice-engine.js",
+      "bytes": 1953,
+      "sha256": "6c8132c0272291c4eefb5b7a91c63089bd5517b403cdd6bd68cc7627e9eb6bd4"
+    },
+    {
+      "path": "data/akgames-characters.json",
+      "bytes": 143411,
+      "sha256": "5ba3fb909623c4921dcce303663fa92855233ad79199c018afc3501298ad4e5b"
+    },
+    {
+      "path": "data/characters-poses.json",
+      "bytes": 63189,
+      "sha256": "f92c9ae0419b12b6e791d67f5cf1ee21b978a38f0e2445111ad21cc9f1587e6e"
+    },
+    {
+      "path": "data/poses-a-generer.json",
+      "bytes": 5897,
+      "sha256": "b6d08dc527192c0045382ca049f94db295c00c3d8e4193c195a382d7a419007e"
+    },
+    {
+      "path": "docs/AKGames_Bible_officielle_des_poses_mascottes.docx",
+      "bytes": 51281,
+      "sha256": "7947c0d23f4603573b26568a631165ef86412f71a44364bcd5af87d12dd2fa09"
+    },
+    {
+      "path": "docs/APERÇU_17_MASCOTTES.jpg",
+      "bytes": 259943,
+      "sha256": "2dec0d1e2501270daa36ee3323aa8cb4cc39712f215a86a9e23f0eca343d7ef9"
+    },
+    {
+      "path": "docs/validation-assets-idle.json",
+      "bytes": 113,
+      "sha256": "86ae6c174d47ff0f4585ed5fd16b02807ec3bbba3446fc7ab71f35d0fa1bc949"
+    },
+    {
+      "path": "docs/validation-phrases.json",
+      "bytes": 149,
+      "sha256": "6d25f9d9599e3278f4500d946acb4f38f95d40fadae02c50ef8742ea6f6dac98"
+    }
+  ]
+}

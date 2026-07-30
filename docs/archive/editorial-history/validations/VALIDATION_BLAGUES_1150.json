@@ -1,0 +1,50 @@
+{
+  "pack": "AK-Games_modifs_blagues_1150_V1",
+  "classicCount": 800,
+  "adultCount": 350,
+  "total": 1150,
+  "classicCategories": {
+    "absurde": 80,
+    "quotidien": 80,
+    "travail_etudes": 80,
+    "technologie": 80,
+    "animaux": 80,
+    "nourriture": 80,
+    "famille_amis": 80,
+    "culture_pop": 80,
+    "jeux_de_mots": 80,
+    "anti_blagues": 80
+  },
+  "adultCategories": {
+    "couple": 35,
+    "rencontres": 35,
+    "applis": 35,
+    "ex": 35,
+    "intimite": 35,
+    "soirees": 35,
+    "messages": 35,
+    "jalousie": 35,
+    "vie_commune": 35,
+    "famille_indiscrete": 35
+  },
+  "styles": {
+    "observation": 197,
+    "dialogue": 198,
+    "question_reponse": 198,
+    "mini_histoire": 197,
+    "jeu_de_mots": 185,
+    "anti_blague": 175
+  },
+  "adultIntensities": {
+    "leger": 120,
+    "ose": 120,
+    "sans_filtre": 110
+  },
+  "checks": {
+    "uniqueIds": true,
+    "uniqueExactPairs": true,
+    "allHaveSetupPunchline": true,
+    "classicBalanced": true,
+    "adultBalanced": true
+  }
+}
