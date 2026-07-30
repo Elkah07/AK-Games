@@ -362,24 +362,82 @@
     });
   }
 
-  async function refreshMultiplayerTaken() {
-    if (state?.mode !== "multi-guest" || !state.pendingJoinCode || !window.AKFirebase?.getRoomPlayers) return;
-    try {
-      const players = await window.AKFirebase.getRoomPlayers(state.pendingJoinCode);
-      const owners = new Map(
-        Object.entries(players || {})
-          .filter(([, player]) => player?.avatarId)
-          .map(([id, player]) => [player.avatarId, { id, ...player }])
-      );
-      markTaken(owners);
-      if (state?.draftPlayer?.avatarId && owners.has(state.draftPlayer.avatarId)) {
-        state.draftPlayer.avatarId = null;
-        document.querySelector(".character-picker-quote")?.remove();
-        markTaken(owners);
-      }
-    } catch (error) {
-      console.warn("Impossible de charger les personnages déjà choisis", error);
+  let multiplayerTakenOwners = new Map();
+  let multiplayerTakenRoomCode = "";
+  let multiplayerTakenRequest = null;
+  let multiplayerTakenLastRefresh = 0;
+  let multiplayerTakenRefreshTimer = null;
+
+  function isPendingMultiplayerPicker() {
+    return state?.mode === "multi-guest" && Boolean(state?.pendingJoinCode) && !state?.currentUid;
+  }
+
+  function resetMultiplayerTakenCache() {
+    multiplayerTakenOwners = new Map();
+    multiplayerTakenRoomCode = "";
+    multiplayerTakenRequest = null;
+    multiplayerTakenLastRefresh = 0;
+    window.clearTimeout(multiplayerTakenRefreshTimer);
+    multiplayerTakenRefreshTimer = null;
+  }
+
+  function scheduleMultiplayerTakenRefresh() {
+    if (multiplayerTakenRefreshTimer || !isPendingMultiplayerPicker()) return;
+    multiplayerTakenRefreshTimer = window.setTimeout(async () => {
+      multiplayerTakenRefreshTimer = null;
+      if (!document.querySelector(".avatar-grid") || !isPendingMultiplayerPicker()) return;
+      await refreshMultiplayerTaken(true);
+      scheduleMultiplayerTakenRefresh();
+    }, 2500);
+  }
+
+  async function refreshMultiplayerTaken(force = false) {
+    if (!isPendingMultiplayerPicker() || !window.AKFirebase?.getRoomPlayers) return multiplayerTakenOwners;
+
+    const roomCode = String(state.pendingJoinCode || "");
+    if (multiplayerTakenRoomCode !== roomCode) {
+      multiplayerTakenOwners = new Map();
+      multiplayerTakenRoomCode = roomCode;
+      multiplayerTakenLastRefresh = 0;
     }
+
+    const now = Date.now();
+    if (multiplayerTakenRequest) return multiplayerTakenRequest;
+    if (!force && now - multiplayerTakenLastRefresh < 1200) return multiplayerTakenOwners;
+
+    multiplayerTakenRequest = (async () => {
+      try {
+        const players = await window.AKFirebase.getRoomPlayers(roomCode);
+        const owners = new Map(
+          Object.entries(players || {})
+            .filter(([, player]) => player?.avatarId)
+            .map(([id, player]) => [player.avatarId, { id, ...player }])
+        );
+
+        multiplayerTakenOwners = owners;
+        multiplayerTakenLastRefresh = Date.now();
+
+        // Le cache Firebase est la seule source d’état sur l’écran invité.
+        // Le rendu local ne remet donc plus les cartes à zéro entre deux lectures.
+        if (document.querySelector(".avatar-grid")) markTaken(multiplayerTakenOwners);
+
+        const selected = state?.draftPlayer?.avatarId;
+        if (selected && multiplayerTakenOwners.has(selected)) {
+          state.draftPlayer.avatarId = null;
+          hidePickerBubble(true);
+          markTaken(multiplayerTakenOwners);
+        }
+
+        return multiplayerTakenOwners;
+      } catch (error) {
+        console.warn("Impossible de charger les personnages déjà choisis", error);
+        return multiplayerTakenOwners;
+      } finally {
+        multiplayerTakenRequest = null;
+      }
+    })();
+
+    return multiplayerTakenRequest;
   }
 
 
@@ -393,10 +451,28 @@
 
   function enhanceCharacterPicker() {
     const grid = document.querySelector(".avatar-grid");
-    if (!grid) return;
-    markTaken(usedAvatarOwners());
+    if (!grid) {
+      window.clearTimeout(multiplayerTakenRefreshTimer);
+      multiplayerTakenRefreshTimer = null;
+      return;
+    }
+
+    if (isPendingMultiplayerPicker()) {
+      const roomCode = String(state.pendingJoinCode || "");
+      if (multiplayerTakenRoomCode && multiplayerTakenRoomCode !== roomCode) {
+        resetMultiplayerTakenCache();
+      }
+      // En mode invité, ne jamais repasser par state.players, encore vide avant
+      // l’entrée dans le salon. C’était cette remise à zéro qui provoquait le flash.
+      markTaken(multiplayerTakenOwners);
+      refreshMultiplayerTaken();
+      scheduleMultiplayerTakenRefresh();
+    } else {
+      if (multiplayerTakenRoomCode || multiplayerTakenRefreshTimer) resetMultiplayerTakenCache();
+      markTaken(usedAvatarOwners());
+    }
+
     addPickerPreview();
-    refreshMultiplayerTaken();
 
     const saveButton = document.querySelector("#savePlayer, #saveMultiplayerPlayer");
     if (saveButton && !saveButton.dataset.avatarGuardBound) {

@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "akgames-";
-const CACHE_VERSION = "akgames-v4.23-core-launch-audit";
+const CACHE_VERSION = "akgames-v4.24-multiplayer-mascot-stability";
 
 const CORE_SHELL = [
   "/",
@@ -14,7 +14,7 @@ const CORE_SHELL = [
   "/character-poses.js?v=characters-v5",
   "/sound-manager.js?v=sound-v1",
   "/character-voice-engine.js?v=characters-v5",
-  "/characters.js?v=characters-v10-stable",
+  "/characters.js?v=characters-v11-multi-stable",
   "/game-help.js?v=ui-v48",
   "/settings.js?v=settings-v4.14",
   "/pwa.js",
