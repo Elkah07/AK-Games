@@ -744,9 +744,9 @@
     "question": "Quel signe abaisse une note d’un demi-ton ?",
     "options": [
       "Bémol",
-      "Diminuendo",
-      "Clé de sol",
-      "12"
+      "Dièse",
+      "Bécarre",
+      "Double dièse"
     ],
     "answer": 0,
     "explanation": "Le bémol abaisse la note d’un demi-ton.",
@@ -1016,10 +1016,10 @@
   {
     "question": "Quel terme indique une diminution progressive du volume ?",
     "options": [
-      "Staccato",
+      "Crescendo",
       "Diminuendo",
-      "A tempo",
-      "12"
+      "Accelerando",
+      "Forte"
     ],
     "answer": 1,
     "explanation": "Diminuendo indique de jouer progressivement moins fort.",
@@ -1094,10 +1094,10 @@
   {
     "question": "Comment appelle-t-on une note jouée très brièvement et détachée ?",
     "options": [
-      "Quinte",
+      "Legato",
       "Staccato",
-      "Clé de sol",
-      "12"
+      "Tenuto",
+      "Glissando"
     ],
     "answer": 1,
     "explanation": "Le staccato produit des notes détachées.",
@@ -1160,9 +1160,9 @@
     "question": "Quel terme indique un retour au tempo initial ?",
     "options": [
       "A tempo",
-      "Bémol",
-      "12",
-      "Staccato"
+      "Ritardando",
+      "Accelerando",
+      "Rubato"
     ],
     "answer": 0,
     "explanation": "A tempo demande de reprendre le tempo initial.",
@@ -1172,10 +1172,10 @@
   {
     "question": "Quelle clé est généralement utilisée pour les notes aiguës du piano ?",
     "options": [
-      "Diminuendo",
+      "Clé de fa",
       "Clé de sol",
-      "12",
-      "A tempo"
+      "Clé d’ut",
+      "Clé de percussion"
     ],
     "answer": 1,
     "explanation": "La main droite du piano lit souvent en clé de sol.",
@@ -1290,9 +1290,9 @@
     "question": "Combien de demi-tons contient une octave dans le système occidental tempéré ?",
     "options": [
       "12",
-      "Clé de sol",
-      "Diminuendo",
-      "A tempo"
+      "8",
+      "10",
+      "24"
     ],
     "answer": 0,
     "explanation": "Une octave est divisée en douze demi-tons.",
@@ -1328,10 +1328,10 @@
   {
     "question": "Combien de dièses comporte l’armure de si majeur ?",
     "options": [
-      "Dorien",
-      "Cadence",
+      "4",
+      "6",
       "5",
-      "Appoggiature"
+      "7"
     ],
     "answer": 2,
     "explanation": "Si majeur comporte cinq dièses.",

@@ -730,9 +730,9 @@
   {
     "question": "Quel est le plus long fleuve entièrement situé en France ?",
     "options": [
-      "Dmitri Mendeleïev",
-      "Foie",
-      "46",
+      "La Seine",
+      "La Garonne",
+      "Le Rhône",
       "La Loire"
     ],
     "answer": 3,
@@ -808,10 +808,10 @@
   {
     "question": "Quel est le symbole chimique du fer ?",
     "options": [
-      "1918",
+      "Fr",
       "Fe",
-      "Petite Ourse",
-      "Turquie"
+      "F",
+      "Ir"
     ],
     "answer": 1,
     "explanation": "Le fer a pour symbole Fe.",
@@ -821,10 +821,10 @@
   {
     "question": "Dans quelle constellation se trouve l’étoile Polaire ?",
     "options": [
-      "46",
+      "Grande Ourse",
       "Petite Ourse",
-      "Foie",
-      "La Loire"
+      "Cassiopée",
+      "Orion"
     ],
     "answer": 1,
     "explanation": "L’étoile Polaire appartient à la Petite Ourse.",
@@ -861,9 +861,9 @@
     "question": "En quelle année a commencé la Révolution française ?",
     "options": [
       "1789",
-      "Marie Curie",
-      "Les Romains",
-      "Louis XIV"
+      "1776",
+      "1792",
+      "1815"
     ],
     "answer": 0,
     "explanation": "La Révolution française a commencé en 1789.",
@@ -899,10 +899,10 @@
   {
     "question": "Quelle est la plus grande planète du Système solaire ?",
     "options": [
-      "Alexander Fleming",
+      "Saturne",
       "Jupiter",
-      "Japon",
-      "46"
+      "Neptune",
+      "Terre"
     ],
     "answer": 1,
     "explanation": "Jupiter est la plus grande planète du Système solaire.",
@@ -938,10 +938,10 @@
   {
     "question": "En quelle année la Première Guerre mondiale s’est-elle terminée ?",
     "options": [
-      "Turquie",
-      "Fe",
+      "1914",
+      "1916",
       "1918",
-      "Allemand"
+      "1920"
     ],
     "answer": 2,
     "explanation": "L’armistice mettant fin aux combats a été signé en 1918.",
@@ -951,10 +951,10 @@
   {
     "question": "Quel scientifique est associé à la découverte de la pénicilline ?",
     "options": [
-      "12",
+      "Louis Pasteur",
       "Alexander Fleming",
-      "46",
-      "Ampère"
+      "Robert Koch",
+      "Edward Jenner"
     ],
     "answer": 1,
     "explanation": "Alexander Fleming a découvert l’action antibactérienne de la pénicilline.",
@@ -991,9 +991,9 @@
     "question": "Combien de chromosomes possède normalement une cellule humaine non sexuelle ?",
     "options": [
       "46",
-      "Foie",
-      "Dmitri Mendeleïev",
-      "12"
+      "23",
+      "44",
+      "48"
     ],
     "answer": 0,
     "explanation": "Une cellule somatique humaine possède normalement 46 chromosomes.",
@@ -1029,9 +1029,9 @@
   {
     "question": "Quelle est la racine carrée de 144 ?",
     "options": [
-      "Japon",
-      "Turquie",
-      "Allemand",
+      "10",
+      "11",
+      "14",
       "12"
     ],
     "answer": 3,
@@ -1173,9 +1173,9 @@
     "question": "Quelle civilisation antique utilisait les hiéroglyphes ?",
     "options": [
       "Les Égyptiens",
-      "Louis XIV",
-      "1789",
-      "Les Romains"
+      "Les Sumériens",
+      "Les Grecs",
+      "Les Phéniciens"
     ],
     "answer": 0,
     "explanation": "Les anciens Égyptiens utilisaient les hiéroglyphes.",
@@ -1224,9 +1224,9 @@
   {
     "question": "Quel navigateur a atteint les Amériques en 1492 ?",
     "options": [
-      "Marie Curie",
-      "Les Égyptiens",
-      "1789",
+      "Vasco de Gama",
+      "Fernand de Magellan",
+      "Amerigo Vespucci",
       "Christophe Colomb"
     ],
     "answer": 3,
@@ -1419,10 +1419,10 @@
   {
     "question": "Quel est le plus grand lac d’Afrique par superficie ?",
     "options": [
-      "10",
+      "Lac Tanganyika",
       "Lac Victoria",
-      "Le Danube",
-      "Méridien de Paris"
+      "Lac Malawi",
+      "Lac Tchad"
     ],
     "answer": 1,
     "explanation": "Le lac Victoria est le plus vaste lac d’Afrique par superficie.",
@@ -1643,7 +1643,7 @@
       "20",
       "12",
       "10",
-      "Hongrois"
+      "8"
     ],
     "answer": 1,
     "explanation": "Un dodécaèdre possède douze faces.",
@@ -1744,10 +1744,10 @@
   {
     "question": "Quel méridien sert de référence pour les longitudes ?",
     "options": [
-      "10",
+      "Méridien de Rome",
       "Méridien de Paris",
       "Méridien de Greenwich",
-      "20"
+      "Méridien de Washington"
     ],
     "answer": 2,
     "explanation": "Les longitudes sont mesurées à partir du méridien de Greenwich.",
@@ -1771,9 +1771,9 @@
     "question": "Quelle langue appartient à la famille finno-ougrienne ?",
     "options": [
       "Hongrois",
-      "8",
-      "Équateur",
-      "10"
+      "Basque",
+      "Albanais",
+      "Grec"
     ],
     "answer": 0,
     "explanation": "Le hongrois appartient à la famille ouralienne, branche finno-ougrienne.",
@@ -1836,9 +1836,9 @@
     "question": "Quel pays enclavé se trouve entièrement à l’intérieur de l’Afrique du Sud ?",
     "options": [
       "Lesotho",
-      "Équateur",
-      "8",
-      "10"
+      "Eswatini",
+      "Botswana",
+      "Zimbabwe"
     ],
     "answer": 0,
     "explanation": "Le Lesotho est enclavé dans l’Afrique du Sud.",
